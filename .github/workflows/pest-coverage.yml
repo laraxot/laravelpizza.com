@@ -13,14 +13,28 @@ env:
 jobs:
   pest-coverage:
     runs-on: ubuntu-latest
-    
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: laravelpizza_data_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Setup PHP
+      - name: Setup PHP with PCOV
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.php-version }}
@@ -28,11 +42,15 @@ jobs:
           coverage: pcov
           tools: composer:v2
 
+      - name: Create test databases
+        run: |
+          mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS laravelpizza_data_test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+          mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS laravelpizza_user_test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+
       - name: Get Composer Cache Directory
         id: composer-cache
-        run: |
-          cd laravel
-          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+        working-directory: laravel
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: Cache Composer Dependencies
         uses: actions/cache@v4
@@ -42,26 +60,74 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-composer-
 
+      - name: Add Flux Credentials
+        if: env.FLUX_USERNAME != ''
+        working-directory: laravel
+        run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
+        env:
+          FLUX_USERNAME: ${{ secrets.FLUX_USERNAME }}
+
       - name: Install Dependencies
+        working-directory: laravel
+        run: composer install --no-interaction --no-progress --prefer-dist --optimize-autoloader
+
+      - name: Setup Environment
+        working-directory: laravel
         run: |
-          cd laravel
-          composer install --no-interaction --no-progress --prefer-dist --optimize-autoloader
+          cp .env.testing .env
+          php artisan key:generate --force
+
+      - name: Run Migrations (NEVER migrate:fresh)
+        working-directory: laravel
+        env:
+          DB_CONNECTION: mysql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+          DB_DATABASE: laravelpizza_data_test
+          DB_USERNAME: root
+          DB_PASSWORD: password
+          DB_DATABASE_USER: laravelpizza_user_test
+          DB_USERNAME_USER: root
+          DB_PASSWORD_USER: password
+        run: php artisan migrate --env=testing --force
 
       - name: Run Pest Tests with Coverage
         id: pest-coverage
+        working-directory: laravel
+        env:
+          DB_CONNECTION: mysql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+          DB_DATABASE: laravelpizza_data_test
+          DB_USERNAME: root
+          DB_PASSWORD: password
+          DB_DATABASE_USER: laravelpizza_user_test
+          DB_USERNAME_USER: root
+          DB_PASSWORD_USER: password
         run: |
-          cd laravel
-          ./vendor/bin/pest --coverage --coverage-xml=coverage.xml --coverage-html=coverage-html --min=${{ env.coverage-minimum }} --colors=never 2>&1 | tee coverage-output.txt
-          
-          # Extract coverage percentage
-          COVERAGE=$(grep -oP '\d+\.?\d*(?=%)' coverage-output.txt | head -1 || echo "0")
+          ./vendor/bin/pest \
+            --compact \
+            --coverage \
+            --coverage-clover=coverage.xml \
+            --coverage-html=coverage-html \
+            --colors=never \
+            2>&1 | tee coverage-output.txt
+          exit ${PIPESTATUS[0]}
+
+      - name: Extract Coverage Percentage
+        id: extract-coverage
+        if: always()
+        run: |
+          COVERAGE=$(grep -oP '\d+\.?\d*(?=\s*%)' laravel/coverage-output.txt | tail -1 || echo "0")
+          if [ -z "$COVERAGE" ]; then COVERAGE="0"; fi
           echo "coverage=$COVERAGE" >> $GITHUB_OUTPUT
           echo "Coverage: $COVERAGE%"
 
       - name: Determine Badge Color
         id: badge-color
+        if: always()
         run: |
-          COVERAGE=${{ steps.pest-coverage.outputs.coverage }}
+          COVERAGE=${{ steps.extract-coverage.outputs.coverage }}
           COLOR="red"
           if (( $(echo "$COVERAGE >= 80" | bc -l) )); then
             COLOR="brightgreen"
@@ -74,29 +140,24 @@ jobs:
           echo "Badge color: $COLOR"
 
       - name: Generate Coverage Badge
+        if: always()
         run: |
-          COVERAGE="${{ steps.pest-coverage.outputs.coverage }}"
+          COVERAGE="${{ steps.extract-coverage.outputs.coverage }}"
           COLOR="${{ steps.badge-color.outputs.color }}"
-          
-          # Download badge from shields.io
           curl -s "https://img.shields.io/badge/coverage-${COVERAGE}%25-${COLOR}" > coverage-badge.svg
-          
           echo "Generated badge for ${COVERAGE}% coverage"
 
       - name: Commit Coverage Badge
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master') && always()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          
-          # Check if badge has changed
           if git diff --quiet coverage-badge.svg 2>/dev/null; then
             echo "Badge unchanged, skipping commit"
             exit 0
           fi
-          
           git add coverage-badge.svg
-          git commit -m "Update coverage badge: ${{ steps.pest-coverage.outputs.coverage }}%" || echo "No changes to commit"
+          git commit -m "chore: update coverage badge ${{ steps.extract-coverage.outputs.coverage }}%" || echo "No changes to commit"
           git push || echo "Nothing to push"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -112,34 +173,34 @@ jobs:
           retention-days: 30
 
       - name: Comment Coverage on PR
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && always()
         uses: actions/github-script@v7
         with:
           script: |
-            const coverage = '${{ steps.pest-coverage.outputs.coverage }}';
+            const coverage = '${{ steps.extract-coverage.outputs.coverage }}';
             const color = '${{ steps.badge-color.outputs.color }}';
             const minimum = '${{ env.coverage-minimum }}';
-            
-            const status = parseFloat(coverage) >= parseFloat(minimum) ? '✅ PASS' : '❌ FAIL';
-            const body = `## 🧪 Pest Test Coverage Report
-            
+
+            const pass = parseFloat(coverage) >= parseFloat(minimum);
+            const status = pass ? '✅ PASS' : '❌ FAIL';
+            const body = `## Pest Test Coverage Report
+
             ${status} - **${coverage}%** (minimum: ${minimum}%)
-            
+
             ![Coverage](https://img.shields.io/badge/coverage-${coverage}%25-${color})
-            
+
             <details>
-            <summary>📊 Coverage Details</summary>
-            
+            <summary>Coverage Details</summary>
+
             - **Coverage**: ${coverage}%
             - **Minimum Required**: ${minimum}%
             - **Status**: ${status}
-            - **Color**: ${color}
-            
+
             </details>
-            
+
             ---
-            *Generated by [Pest Coverage Action](https://github.com/laraxot/laravelpizza.com/actions/runs/${{ github.run_id }})*`;
-            
+            *Generated by [Pest Coverage Action](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})*`;
+
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
@@ -147,8 +208,8 @@ jobs:
               body: body
             });
 
-      - name: Fail if Coverage Too Low
-        if: ${{ steps.pest-coverage.outputs.coverage < env.coverage-minimum }}
+      - name: Fail if Coverage Below Minimum
+        if: steps.pest-coverage.outcome == 'failure'
         run: |
-          echo "❌ Coverage ${{ steps.pest-coverage.outputs.coverage }}% is below minimum ${{ env.coverage-minimum }}%"
+          echo "Coverage ${{ steps.extract-coverage.outputs.coverage }}% is below minimum ${{ env.coverage-minimum }}%"
           exit 1
