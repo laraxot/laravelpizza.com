@@ -1,74 +1,65 @@
-# Phase 1: Foundation - Context
+# Phase 1: Foundation & Models - Context
 
 **Gathered:** 2026-03-05
 **Status:** Ready for planning
+**Source:** PRD Express Path (docs/PRD.md)
 
 <domain>
 ## Phase Boundary
 
-Establish test infrastructure, coverage tools, and quality gates before writing module tests. This phase configures the testing foundation (PCOV, PHPStan, test conventions) that all subsequent module testing phases depend on.
+Establish the core data structure for the Meetup module, including Eloquent models, migrations, factories, and seeders for Events, Venues, Performers, and Sponsors.
 
 </domain>
 
 <decisions>
 ## Implementation Decisions
 
-### Coverage Driver
-- PCOV selected (2-5x faster than Xdebug, minimal memory usage)
-- Install via `pecl install pcov` or ensure extension enabled
-- Configuration: PCOV.enabled=1 in php.ini for coverage collection
+### Data Models
+- **Event**: id, slug, title, description, start_at, end_at, venue_id, published_at.
+- **Venue**: id, name, address, city, geo_comune_id.
+- **Performer**: id, name, bio, role.
+- **Sponsor**: id, name, logo, url.
+- **Pivot Tables**: EventUser (registrations), EventPerformer (speakers/organizers), EventSponsor (sponsorships).
+- **Relationships**: Use `$this->belongsToManyX()` for many-to-many, never `$this->belongsToMany()`.
 
-### Test Structure
-- Test files for modules live in `Modules/*/tests/` directories
-- Follow existing pattern: Feature/, Unit/, Traits/, Integration/ subdirectories
-- Each module should have its own TestCase if needed
+### Database & Migrations
+- One table, one create migration.
+- Use `XotBaseMigration` with `tableCreate()` and `tableUpdate()` methods.
+- No per-module database connections in `config/database.php`.
+
+### Code Quality
+- Every PHP file: `declare(strict_types=1);` at the top.
+- PHPStan level 10 compatibility (strict types, no property_exists).
+- Use `casts()` method instead of `protected $casts` for Laravel 11+.
+
+### Registration Logic (REGS-03)
+- Models must support capacity tracking to prevent over-registration.
 
 ### Claude's Discretion
-- Exact PHPStan level configuration (Level 10 target)
-- Type coverage threshold configuration (100% target)
-- CI pipeline integration approach
+- Specific column types (e.g., string vs text) for descriptions.
+- Detailed seeder data content.
+- Naming of pivot tables (standard Laraxot naming expected).
 
 </decisions>
 
 <specifics>
 ## Specific Ideas
 
-- "Every test file must use `uses(TestCase::class, DatabaseTransactions::class)` at the top" — from coverage initiative requirements
-- "Use DatabaseTransactions, never RefreshDatabase" — performance and isolation
-- "No `protected function` in test files" — Pest functional approach
-- "All test files must declare `declare(strict_types=1)`" — type safety
+- The project uses the "Laraxot" modular architecture.
+- Follow established patterns for BaseModels and XotBaseMigrations.
 
 </specifics>
-
-<code_context>
-## Existing Code Insights
-
-### Reusable Assets
-- `laravel/tests/TestCase.php` - Base test case
-- `laravel/tests/Pest.php` - Configures Pest with test discovery for Modules/*/tests/Feature, Units
-- `Modules/Job/tests/TestCase.php` - Module-specific TestCase
-- Existing test patterns in Modules/Xot/tests/Unit/ and Modules/Job/tests/Feature/
-
-### Established Patterns
-- Tests use `uses(TestCase::class, DatabaseTransactions::class)` pattern (from Job tests)
-- Feature tests use `$this->get()`, `$this->post()` for HTTP testing
-- Unit tests use `app(Action::class)->execute()` pattern for Actions
-
-### Integration Points
-- phpunit.xml already configured with Modules/*/tests/ discovery
-- Database connection overrides in phpunit.xml for testing (DB_DATABASE=laravelpizza_data_test)
-- Test bootstrap in vendor/autoload.php
-
-</code_context>
 
 <deferred>
 ## Deferred Ideas
 
-None — discussion stayed within phase scope (infrastructure setup)
+- Paid ticketing flows (Phase 2).
+- Real-time ticket counter (Phase 10).
+- Social networking features.
 
 </deferred>
 
 ---
 
 *Phase: 01-foundation*
-*Context gathered: 2026-03-05*
+*Context gathered: 2026-03-05 via PRD Express Path*
