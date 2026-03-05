@@ -241,7 +241,17 @@ Open items (file coverage < 100%): **1594**
   - `Modules/Media/tests/Unit/Models/MediaConvertTest.php`
   - `Modules/Media/tests/Unit/Models/TemporaryUploadTest.php`
 - Verifica locale: `72 passed` sul subset Media Actions/Models.
-- 5 file testati in coverage-plan.md
+  - 5 file testati in coverage-plan.md
+
+### 2026-03-05 (Tenant/User/Seo coverage batch)
+- Aggiunti test per Tenant Actions:
+  - `Modules/Tenant/tests/Unit/Actions/GetTenantNameActionTest.php`
+  - `Modules/Tenant/tests/Unit/Actions/Config/GetTenantConfigArrayActionTest.php`
+- Aggiunti test per User Actions:
+  - `Modules/User/tests/Unit/Actions/Otp/HasherTest.php`
+  - `Modules/User/tests/Unit/Actions/User/DeleteUserActionTest.php`
+- Verifica locale: `12 passed` sul subset Tenant/User/Seo.
+- 4 file nuovi testati in coverage-plan.md
 
 ## Backlog
 
@@ -987,17 +997,18 @@ Open items (file coverage < 100%): **1594**
 - [ ] `laravel/Modules/Notify/app/Traits/HasNotificationTracking.php` (0/28, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Traits/HasTenantNotifications.php` (0/17, 0.0%)
 
-### Seo (0)
+### Seo (2)
+- [x] `laravel/Modules/Seo/app/Actions/GenerateSocialShareLinksAction.php` (tested, 2026-03-05)
 
 ### Tenant (36)
-- [ ] `laravel/Modules/Tenant/app/Actions/Config/GetTenantConfigArrayAction.php` (0/10, 0.0%)
+- [x] `laravel/Modules/Tenant/app/Actions/Config/GetTenantConfigArrayAction.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Tenant/app/Actions/Config/GetTenantConfigNamesAction.php` (0/12, 0.0%)
 - [ ] `laravel/Modules/Tenant/app/Actions/Config/GetTenantConfigPathAction.php` (0/2, 0.0%)
 - [ ] `laravel/Modules/Tenant/app/Actions/Config/GetTenantFilePathAction.php` (0/6, 0.0%)
 - [ ] `laravel/Modules/Tenant/app/Actions/Config/ResolveTenantConfigValueAction.php` (0/17, 0.0%)
 - [ ] `laravel/Modules/Tenant/app/Actions/Config/SaveTenantConfigAction.php` (0/23, 0.0%)
 - [ ] `laravel/Modules/Tenant/app/Actions/Domains/GetDomainsArrayAction.php` (0/25, 0.0%)
-- [ ] `laravel/Modules/Tenant/app/Actions/GetTenantNameAction.php` (0/30, 0.0%)
+- [x] `laravel/Modules/Tenant/app/Actions/GetTenantNameAction.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Tenant/app/Actions/Markdown/GetLocalizedMarkdownPathAction.php` (0/9, 0.0%)
 - [ ] `laravel/Modules/Tenant/app/Actions/Models/ResolveTenantModelClassAction.php` (0/31, 0.0%)
 - [ ] `laravel/Modules/Tenant/app/Actions/Models/ResolveTenantModelInstanceAction.php` (0/4, 0.0%)
@@ -1114,7 +1125,7 @@ Open items (file coverage < 100%): **1594**
 ### User (367)
 - [ ] `laravel/Modules/User/app/Actions/Activity/LogRegistrationAction.php` (0/7, 0.0%)
 - [ ] `laravel/Modules/User/app/Actions/GetCurrentDeviceAction.php` (0/35, 0.0%)
-- [ ] `laravel/Modules/User/app/Actions/Otp/Hasher.php` (0/4, 0.0%)
+- [x] `laravel/Modules/User/app/Actions/Otp/Hasher.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/User/app/Actions/Otp/SendOtpByUserAction.php` (0/18, 0.0%)
 - [ ] `laravel/Modules/User/app/Actions/Passport/CreateClientAction.php` (0/13, 0.0%)
 - [ ] `laravel/Modules/User/app/Actions/Passport/CreateGenericClientAction.php` (0/13, 0.0%)
@@ -1142,7 +1153,7 @@ Open items (file coverage < 100%): **1594**
 - [ ] `laravel/Modules/User/app/Actions/Socialite/Utils/UserNameFieldsResolver.php` (0/58, 0.0%)
 - [ ] `laravel/Modules/User/app/Actions/Team/GetUserTeamsOptionAction.php` (0/2, 0.0%)
 - [ ] `laravel/Modules/User/app/Actions/User/CreateUserAction.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/User/app/Actions/User/DeleteUserAction.php` (0/17, 0.0%)
+- [x] `laravel/Modules/User/app/Actions/User/DeleteUserAction.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/User/app/Actions/User/GetNewPasswordAction.php` (0/12, 0.0%)
 - [ ] `laravel/Modules/User/app/Actions/User/UpdateUserAction.php` (0/54, 0.0%)
 - [ ] `laravel/Modules/User/app/Console/Commands/AssignModuleCommand.php` (0/39, 0.0%)
