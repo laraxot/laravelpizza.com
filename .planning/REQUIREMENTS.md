@@ -1,160 +1,107 @@
-# Requirements: LaravelPizza Coverage Initiative
+# Requirements: LaravelPizza
 
 **Defined:** 2026-03-05
-**Core Value:** Ship tested, type-safe code with 100% coverage — every line executable and verified, eliminating untested paths as a source of bugs.
+**Core Value:** Providing a robust, accessible, and community-driven platform for Italian Laravel developers to discover, register for, and manage meetup events.
 
 ## v1 Requirements
 
-### Foundation - Test Infrastructure
+Requirements for initial release. Each maps to roadmap phases.
 
-- [ ] **FND-01**: Every test file must use `uses(TestCase::class, DatabaseTransactions::class)` at the top
-- [ ] **FND-02**: All test files must declare `declare(strict_types=1);`
-- [ ] **FND-03**: No `protected function` allowed in test files — use global functions only
-- [ ] **FND-04**: No `mixed` type declarations allowed in test files
-- [ ] **FND-05**: Use `DatabaseTransactions` trait for all tests (never `RefreshDatabase`)
-- [ ] **FND-06**: All tests must pass verification via `php artisan test`
-- [ ] **FND-07**: All tests must verify behavior with assertions (not just execute code)
+### Admin Panel (Filament)
 
-### Foundation - Coverage Infrastructure
+- [ ] **ADMN-01**: Admin can create, edit, and delete events (FR-001)
+- [ ] **ADMN-02**: Admin can manage venues, performers, and sponsors (FR-001)
+- [ ] **ADMN-03**: Admin can view a dashboard with event and registration stats (FR-010)
+- [ ] **ADMN-04**: Admin can manage registrations and attendee lists (FR-001)
 
-- [ ] **FND-08**: PCOV or Xdebug configured for code coverage collection
-- [ ] **FND-09**: Run `php artisan test --coverage --min=100` returns 0 failures
-- [ ] **FND-10**: PHPStan configured for type analysis (no level 10 errors for type safety)
-- [ ] **FND-11**: Run `./vendor/bin/pest --type-coverage --min=100` returns 0 failures
+### Public Event Browsing
 
-### User Module (8,565 LOC)
+- [ ] **EVNT-01**: Visitor can browse upcoming events without authentication (FR-002)
+- [ ] **EVNT-02**: Visitor can view a list of past events (FR-002)
+- [ ] **EVNT-03**: Visitor can view event detail page with all metadata (FR-003)
+- [ ] **EVNT-04**: Visitor can search or filter events by city or date (EVNT-01 extension)
 
-- [ ] **USER-01**: 100% code coverage on User Actions (LoginUserAction, RegisterOauthUserAction, RevokeAllUserTokensAction, etc.)
-- [ ] **USER-02**: 100% code coverage on User Models (including relationships)
-- [ ] **USER-03**: 100% code coverage on User Controllers
-- [ ] **USER-04**: 100% code coverage on User Middleware (IsUserAllowedAction)
-- [ ] **USER-05**: 100% code coverage on User Providers (Socialite integration)
-- [ ] **USER-06**: OAuth authentication flow fully tested (Google, GitHub)
-- [ ] **USER-07**: Token-based authentication (Passport) fully tested
+### Registration Flow
 
-### Meetup Module (1,200 LOC)
+- [ ] **REGS-01**: Visitor can register for an event with a valid email (FR-004)
+- [ ] **REGS-02**: User receives immediate email confirmation after registration (REGS-01 extension)
+- [ ] **REGS-03**: System prevents over-registration beyond event capacity (REGS-01 extension)
 
-- [ ] **MEET-01**: 100% code coverage on Meetup Models
-- [ ] **MEET-02**: 100% code coverage on Meetup Actions
-- [ ] **MEET-03**: 100% code coverage on Meetup Controllers
-- [ ] **MEET-04**: Meetup CRUD operations fully tested
+### CMS & Content Strategy
 
-### Tenant Module (600 LOC)
+- [ ] **CMSP-01**: Public pages are rendered from JSON content files (FR-006)
+- [ ] **CMSP-02**: Content blocks support text, images, and event lists (CMSP-01 extension)
+- [ ] **CMSP-03**: Pages can be updated via JSON without code deployment (FR-006)
 
-- [ ] **TENA-01**: 100% code coverage on Tenant Models
-- [ ] **TENA-02**: 100% code coverage on Tenant Actions
-- [ ] **TENA-03**: Multi-tenancy isolation patterns tested
-- [ ] **TENA-04**: Tenant context resolution fully tested
+### Localization (IT/EN)
 
-### Xot Module (10,209 LOC)
+- [ ] **LOCL-01**: All public pages render in Italian and English via URL locale prefix (FR-005)
+- [ ] **LOCL-02**: Locale switcher allows users to change language on any page (FR-005)
+- [ ] **LOCL-03**: All UI strings are translated (no hardcoded text) (LOCL-01 extension)
 
-- [ ] **XOT-01**: 100% code coverage on Xot Models
-- [ ] **XOT-02**: 100% code coverage on Xot Actions
-- [ ] **XOT-03**: 100% code coverage on Xot Services
-- [ ] **XOT-04**: 100% code coverage on Xot Controllers
+### Quality & Compliance
 
-### Other Modules
-
-- [ ] **NOTI-01**: 100% code coverage on Notify module (4,676 LOC)
-- [ ] **GEO-01**: 100% code coverage on Geo module (4,265 LOC)
-- [ ] **JOB-01**: 100% code coverage on Job module (2,058 LOC)
-- [ ] **MEDI-01**: 100% code coverage on Media module (2,372 LOC)
-- [ ] **CMS-01**: 100% code coverage on Cms module (1,997 LOC)
-- [ ] **UI-01**: 100% code coverage on UI module (1,975 LOC)
-- [ ] **ACT-01**: 100% code coverage on Activity module (1,500 LOC)
-- [ ] **LANG-01**: 100% code coverage on Lang module (800 LOC)
-- [ ] **GDPR-01**: 100% code coverage on Gdpr module (600 LOC)
-- [ ] **SEO-01**: 100% code coverage on Seo module (500 LOC)
-
-### Type Coverage
-
-- [ ] **TYPE-01**: 100% type coverage on User module
-- [ ] **TYPE-02**: 100% type coverage on Meetup module
-- [ ] **TYPE-03**: 100% type coverage on Tenant module
-- [ ] **TYPE-04**: 100% type coverage on Xot module
-- [ ] **TYPE-05**: 100% type coverage on all remaining modules
-- [ ] **TYPE-06**: PHPStan Level 10 with 0 errors across all modules
+- [ ] **QUAL-01**: Cookie consent collected before non-essential cookies (FR-007)
+- [ ] **QUAL-02**: Public pages meet WCAG 2.1 AA accessibility standards (FR-008)
+- [ ] **QUAL-03**: Each public page has title, meta description, and canonical URL (FR-009)
+- [ ] **QUAL-04**: Each event detail page includes JSON-LD structured data (FR-009)
 
 ## v2 Requirements
 
-### Advanced Testing Patterns
+Deferred to future release. Tracked but not in current roadmap.
 
-- **[TYPE-07]**: Mutation testing (Infection) with score >80%
-- **[TYPE-08]**: Parallel test execution configured
-- **[TYPE-09]**: Architecture testing to enforce layer boundaries
-- **[TYPE-10]**: Custom expectations for domain-specific assertions
+### Payments & Tickets
 
-### Documentation
+- **PAYM-01**: Support for paid tickets via Stripe/Apple Pay
+- **PAYM-02**: Automated invoicing and receipt generation
 
-- **[DOC-01]**: Test strategy documented per module
-- **[DOC-02]**: README in tests/ directory explaining organization
-- **[DOC-03]**: CI pipeline documented with coverage enforcement
+### Community
+
+- **COMM-01**: User profiles showing attendance history
+- **COMM-02**: Public performer profiles and bios
 
 ## Out of Scope
 
+Explicitly excluded. Documented to prevent scope creep.
+
 | Feature | Reason |
 |---------|--------|
-| Adding new features | Coverage initiative focuses only on existing code |
-| Refactoring production code to improve coverage | Test existing code as-is, don't change implementation |
-| Performance optimization of production code | Focus is on test coverage, not runtime performance |
-| Browser/E2E testing | Out of scope for unit/integration coverage goal |
-| Visual regression testing | Not required for backend coverage |
-| Real external API testing | Use mocks/fakes for external services |
+| Real-time chat | Not core to the meetup discovery value |
+| Native Apps | Mobile-first web is sufficient for v1 |
+| Live streaming | High infrastructure complexity |
+| External OAuth | Email/password registration is v1 target |
 
 ## Traceability
 
+Which phases cover which requirements. Updated during roadmap creation.
+
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FND-01 | Phase 1: Foundation | Pending |
-| FND-02 | Phase 1: Foundation | Pending |
-| FND-03 | Phase 1: Foundation | Pending |
-| FND-04 | Phase 1: Foundation | Pending |
-| FND-05 | Phase 1: Foundation | Pending |
-| FND-06 | Phase 1: Foundation | Pending |
-| FND-07 | Phase 1: Foundation | Pending |
-| FND-08 | Phase 1: Foundation | Pending |
-| FND-09 | Phase 1: Foundation | Pending |
-| FND-10 | Phase 1: Foundation | Pending |
-| FND-11 | Phase 1: Foundation | Pending |
-| XOT-01 | Phase 2: Xot Module | Pending |
-| XOT-02 | Phase 2: Xot Module | Pending |
-| XOT-03 | Phase 2: Xot Module | Pending |
-| XOT-04 | Phase 2: Xot Module | Pending |
-| TENA-01 | Phase 3: Tenant Module | Pending |
-| TENA-02 | Phase 3: Tenant Module | Pending |
-| TENA-03 | Phase 3: Tenant Module | Pending |
-| TENA-04 | Phase 3: Tenant Module | Pending |
-| USER-01 | Phase 4: User Module | Pending |
-| USER-02 | Phase 4: User Module | Pending |
-| USER-03 | Phase 4: User Module | Pending |
-| USER-04 | Phase 4: User Module | Pending |
-| USER-05 | Phase 4: User Module | Pending |
-| USER-06 | Phase 4: User Module | Pending |
-| USER-07 | Phase 4: User Module | Pending |
-| MEET-01 | Phase 5: Meetup Module | Pending |
-| MEET-02 | Phase 5: Meetup Module | Pending |
-| MEET-03 | Phase 5: Meetup Module | Pending |
-| MEET-04 | Phase 5: Meetup Module | Pending |
-| NOTI-01 | Phase 6: Feature Modules | Pending |
-| GEO-01 | Phase 6: Feature Modules | Pending |
-| JOB-01 | Phase 6: Feature Modules | Pending |
-| MEDI-01 | Phase 7: Content Modules | Pending |
-| CMS-01 | Phase 7: Content Modules | Pending |
-| UI-01 | Phase 7: Content Modules | Pending |
-| ACT-01 | Phase 7: Content Modules | Pending |
-| LANG-01 | Phase 8: Compliance Modules | Pending |
-| GDPR-01 | Phase 8: Compliance Modules | Pending |
-| SEO-01 | Phase 8: Compliance Modules | Pending |
-| TYPE-01 | Phase 9: Type Coverage | Pending |
-| TYPE-02 | Phase 9: Type Coverage | Pending |
-| TYPE-03 | Phase 9: Type Coverage | Pending |
-| TYPE-04 | Phase 9: Type Coverage | Pending |
-| TYPE-05 | Phase 9: Type Coverage | Pending |
-| TYPE-06 | Phase 9: Type Coverage | Pending |
+| ADMN-01 | Phase 2 | Pending |
+| ADMN-02 | Phase 2 | Pending |
+| ADMN-03 | Phase 2 | Pending |
+| ADMN-04 | Phase 2 | Pending |
+| EVNT-01 | Phase 3 | Pending |
+| EVNT-02 | Phase 3 | Pending |
+| EVNT-03 | Phase 3 | Pending |
+| EVNT-04 | Phase 3 | Pending |
+| REGS-01 | Phase 3 | Pending |
+| REGS-02 | Phase 5 | Pending |
+| REGS-03 | Phase 1 | Pending |
+| CMSP-01 | Phase 3 | Pending |
+| CMSP-02 | Phase 3 | Pending |
+| CMSP-03 | Phase 3 | Pending |
+| LOCL-01 | Phase 4 | Pending |
+| LOCL-02 | Phase 4 | Pending |
+| LOCL-03 | Phase 4 | Pending |
+| QUAL-01 | Phase 5 | Pending |
+| QUAL-02 | Phase 3 | Pending |
+| QUAL-03 | Phase 4 | Pending |
+| QUAL-04 | Phase 4 | Pending |
 
 **Coverage:**
-- v1 requirements: 47 total
-- Mapped to phases: 47
+- v1 requirements: 21 total
+- Mapped to phases: 21
 - Unmapped: 0 ✓
 
 ---
