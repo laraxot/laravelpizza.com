@@ -161,6 +161,14 @@ Open items (file coverage < 100%): **1594**
 - Verifica locale: `194 passed` sul subset Geo Actions (70 nuovi test aggiunti).
 - 15 file nuovi testati in coverage-plan.md
 
+### 2026-03-05 (Geo: DataTransferObjects, Datas, Enums coverage batch)
+- Aggiunti test per Geo DataTransferObjects/Datas/Enums:
+  - `Modules/Geo/tests/Unit/DataTransferObjects/LocationDTOTest.php`
+  - `Modules/Geo/tests/Unit/Datas/DatasTest.php` (già esistente, 84 test)
+  - `Modules/Geo/tests/Unit/Enums/EnumsTest.php` (espanso, 13 test)
+- Verifica locale: `119 passed` sul subset Geo DTO/Datas/Enums (104 test totali).
+- 11 file nuovi testati in coverage-plan.md
+
 ## Backlog
 
 ### App (5)
@@ -382,13 +390,13 @@ Open items (file coverage < 100%): **1594**
 - [ ] `laravel/Modules/Geo/app/Actions/ValidateCoordinatesAction.php` (0/3, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Actions/Weather/GetOpenWeatherDataAction.php` (0/34, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Console/Commands/SushiCommand.php` (0/79, 0.0%)
-- [ ] `laravel/Modules/Geo/app/DataTransferObjects/LocationDTO.php` (0/11, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Datas/AddressData.php` (0/15, 0.0%)
+- [x] `laravel/Modules/Geo/app/DataTransferObjects/LocationDTO.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Datas/AddressData.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Geo/app/Datas/BingMapData.php` (0/2, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Datas/CoordinatesData.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Datas/ElevationData.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Datas/ElevationResultDTO.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Datas/GeocodingData.php` (0/32, 0.0%)
+- [x] `laravel/Modules/Geo/app/Datas/CoordinatesData.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Datas/ElevationData.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Datas/ElevationResultDTO.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Datas/GeocodingData.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Geo/app/Datas/GoogleMaps/GoogleMapAddressComponentData.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Datas/GoogleMaps/GoogleMapBoundsData.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Datas/GoogleMaps/GoogleMapComponentData.php` (0/1, 0.0%)
@@ -398,8 +406,8 @@ Open items (file coverage < 100%): **1594**
 - [ ] `laravel/Modules/Geo/app/Datas/GoogleMaps/GoogleMapResultData.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Datas/HereMap/HereMapResponseData.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Datas/IPLocationData.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Datas/LocationDTO.php` (0/8, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Datas/LocationData.php` (0/13, 0.0%)
+- [x] `laravel/Modules/Geo/app/Datas/LocationDTO.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Datas/LocationData.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Geo/app/Datas/Map/IconData.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Datas/Map/MarkerData.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Datas/Map/PositionData.php` (0/1, 0.0%)
@@ -409,13 +417,13 @@ Open items (file coverage < 100%): **1594**
 - [ ] `laravel/Modules/Geo/app/Datas/Photon/PhotonFeatureData.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Datas/Photon/PhotonPropertiesData.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Datas/Photon/PhotonResponseData.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Datas/PlaceData.php` (0/11, 0.0%)
+- [x] `laravel/Modules/Geo/app/Datas/PlaceData.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Geo/app/Datas/RouteData.php` (0/17, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Datas/TimeZoneData.php` (0/9, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Datas/TravelTimeData.php` (0/24, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Datas/UpdateCoordinatesResult.php` (0/16, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Enums/AddressItemEnum.php` (0/158, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Enums/AddressTypeEnum.php` (0/16, 0.0%)
+- [x] `laravel/Modules/Geo/app/Enums/AddressItemEnum.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Enums/AddressTypeEnum.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Geo/app/Exceptions/DistanceCalculationException.php` (0/3, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Exceptions/ElevationException.php` (0/2, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Exceptions/GoogleMaps/GoogleMapsApiException.php` (0/4, 0.0%)
