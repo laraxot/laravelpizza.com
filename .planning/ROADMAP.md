@@ -1,213 +1,173 @@
-# Roadmap: LaravelPizza Coverage Initiative
+# Roadmap: LaravelPizza
 
-**Created:** 2026-03-05
-**Granularity:** Fine (8-12 phases)
-**Core Value:** Ship tested, type-safe code with 100% coverage — every line executable and verified, eliminating untested paths as a source of bugs.
+## Overview
 
----
+LaravelPizza is a modernized meetup platform for the Italian Laravel community. This roadmap covers the end-to-end development of the v1 MVP, starting from the foundational data layer and modular architecture, through the CMS-driven front office, to the final quality and accessibility audits. Each phase is designed to deliver a specific, testable component of the platform, following Laraxot's strict architectural discipline.
 
 ## Phases
 
-- [ ] **Phase 1: Foundation** - Test and coverage infrastructure setup
-- [ ] **Phase 2: Xot Module** - Core framework 100% coverage (10,209 LOC)
-- [ ] **Phase 3: Tenant Module** - Multi-tenancy 100% coverage (600 LOC)
-- [ ] **Phase 4: User Module** - Authentication 100% coverage (8,565 LOC)
-- [ ] **Phase 5: Meetup Module** - Events 100% coverage (1,200 LOC)
-- [ ] **Phase 6: Feature Modules** - Notify, Geo, Job 100% coverage
-- [ ] **Phase 7: Content Modules** - Media, Cms, UI, Activity 100% coverage
-- [ ] **Phase 8: Compliance Modules** - Lang, Gdpr, Seo 100% coverage
-- [ ] **Phase 9: Type Coverage** - PHPStan Level 10 + type safety verification
-
----
+- [ ] **Phase 1: Foundation & Models** - Establish core Eloquent models and migrations for the Meetup module.
+- [ ] **Phase 2: Core Domain Actions** - Implement business logic for event registration and management via Spatie Actions.
+- [ ] **Phase 3: Admin Panel - Core** - Build Filament resources for Events and Venues using XotBase.
+- [ ] **Phase 4: Admin Panel - Support** - Build Filament resources for Performers and Sponsors.
+- [ ] **Phase 5: CMS Infrastructure** - Implement JSON-based page resolution and content block rendering.
+- [ ] **Phase 6: Front Office - Discovery** - Build localized event listing and search pages using Folio and Volt.
+- [ ] **Phase 7: Front Office - Detail & Registration** - Build interactive event detail pages and registration forms.
+- [ ] **Phase 8: Localization (IT/EN)** - Implement full translation support for all UI strings and routes.
+- [ ] **Phase 9: SEO & Social Metadata** - Integrate dynamic meta tags, sitemaps, and JSON-LD structured data.
+- [ ] **Phase 10: Notifications & Emails** - Implement email dispatching for registration confirmations.
+- [ ] **Phase 11: GDPR & Compliance** - Build cookie consent and privacy management features.
+- [ ] **Phase 12: Quality Audit & Coverage** - Achieve 100% Pest coverage and pass WCAG 2.1 AA audit.
 
 ## Phase Details
 
-### Phase 1: Foundation
-**Goal:** Establish test infrastructure, coverage tools, and quality gates before writing module tests.
+### Phase 1: Foundation & Models
+**Goal**: Establish the core data structure for the Meetup module.
+**Depends on**: Nothing
+**Requirements**: REGS-03
+**Success Criteria**:
+  1. Models for Event, Venue, Performer, Sponsor exist with proper types.
+  2. Migrations for all core entities are completed and tested.
+  3. Factories and Seeders generate realistic meetup data.
+**Plans**: 2 plans
+- [ ] 01-01: Create core migrations and models for Meetup module.
+- [ ] 01-02: Implement factories and seeders for realistic data generation.
 
-**Depends on:** Nothing (first phase)
+### Phase 2: Core Domain Actions
+**Goal**: Implement the business logic for event operations.
+**Depends on**: Phase 1
+**Requirements**: REGS-01, REGS-03
+**Success Criteria**:
+  1. `RegisterUserToEventAction` correctly handles registration and capacity limits.
+  2. All core actions are covered by Pest tests with 100% coverage.
+**Plans**: 2 plans
+- [ ] 02-01: Implement `RegisterUserToEventAction` with capacity validation.
+- [ ] 02-02: Implement supporting actions for event management.
 
-**Requirements:** FND-01, FND-02, FND-03, FND-04, FND-05, FND-06, FND-07, FND-08, FND-09, FND-10, FND-11
+### Phase 3: Admin Panel - Core
+**Goal**: Provide administrative control over primary meetup data.
+**Depends on**: Phase 1
+**Requirements**: ADMN-01, ADMN-02
+**Success Criteria**:
+  1. Admins can create and edit Events and Venues via Filament.
+  2. Resources extend `XotBaseResource` and follow project standards.
+**Plans**: 2 plans
+- [ ] 03-01: Create `EventResource` with full schema and relations.
+- [ ] 03-02: Create `VenueResource` with geographic data integration.
 
-**Success Criteria** (what must be TRUE):
-1. Every new test file uses `uses(TestCase::class, DatabaseTransactions::class)` at the top
-2. All test files declare `declare(strict_types=1);`
-3. No `protected function` exists in test files — all use global functions
-4. No `mixed` type declarations in test files
-5. PCOV or Xdebug is configured and collecting coverage data
-6. Running `php artisan test --coverage --min=100` returns 0 failures
-7. Running `php artisan test --type-coverage --min=100` returns 0 failures
-8. Running `./vendor/bin/phpstan analyse` returns 0 errors at Level 10
+### Phase 4: Admin Panel - Support
+**Goal**: Manage supporting entities like performers and sponsors.
+**Depends on**: Phase 3
+**Requirements**: ADMN-02
+**Success Criteria**:
+  1. Admins can manage Performers and Sponsors via Filament.
+  2. Relations between events and performers/sponsors are manageable.
+**Plans**: 2 plans
+- [ ] 04-01: Create `PerformerResource` and `SponsorResource`.
+- [ ] 04-02: Implement pivot management for Event-Performer and Event-Sponsor.
 
-**Plans:** TBD
+### Phase 5: CMS Infrastructure
+**Goal**: Enable data-driven page rendering.
+**Depends on**: Phase 1
+**Requirements**: CMSP-01, CMSP-02, CMSP-03
+**Success Criteria**:
+  1. `ResolvePageContentAction` correctly parses JSON files into content blocks.
+  2. A generic Folio page renders content based on the slug.
+**Plans**: 2 plans
+- [ ] 05-01: Implement JSON page resolution logic in Cms module.
+- [ ] 05-02: Build the base `x-page` component and block renderer.
 
----
+### Phase 6: Front Office - Discovery
+**Goal**: Enable users to find upcoming and past events.
+**Depends on**: Phase 5
+**Requirements**: EVNT-01, EVNT-02, EVNT-04
+**Success Criteria**:
+  1. Users can view a list of upcoming events on the homepage.
+  2. Search and filter functionality works for city and date.
+**Plans**: 2 plans
+- [ ] 06-01: Build the event listing Volt component.
+- [ ] 06-02: Implement search and filtering logic for events.
 
-### Phase 2: Xot Module
-**Goal:** Achieve 100% code coverage on Xot module (core framework, 10,209 LOC).
+### Phase 7: Front Office - Detail & Registration
+**Goal**: Provide full event information and allow registration.
+**Depends on**: Phase 2, Phase 6
+**Requirements**: EVNT-03, REGS-01, QUAL-02
+**Success Criteria**:
+  1. Event detail pages render correctly with all metadata.
+  2. The registration form is interactive, accessible, and functional.
+**Plans**: 2 plans
+- [ ] 07-01: Build the event detail Volt component.
+- [ ] 07-02: Build the interactive registration form with Volt.
 
-**Depends on:** Phase 1 (Foundation)
+### Phase 8: Localization (IT/EN)
+**Goal**: Ensure the platform is fully accessible in Italian and English.
+**Depends on**: Phase 7
+**Requirements**: LOCL-01, LOCL-02, LOCL-03
+**Success Criteria**:
+  1. All UI strings are translated and managed via module lang files.
+  2. URL locale switching works seamlessly across all pages.
+**Plans**: 2 plans
+- [ ] 08-01: Implement translation keys for all UI components.
+- [ ] 08-02: Configure and test `mcamara/laravel-localization` for all routes.
 
-**Requirements:** XOT-01, XOT-02, XOT-03, XOT-04
+### Phase 9: SEO & Social Metadata
+**Goal**: Optimize the platform for discovery and sharing.
+**Depends on**: Phase 8
+**Requirements**: QUAL-03, QUAL-04
+**Success Criteria**:
+  1. Every page has unique meta tags and canonical URLs.
+  2. JSON-LD structured data is present on event pages.
+**Plans**: 2 plans
+- [ ] 09-01: Implement SEO meta tag generation for CMS pages.
+- [ ] 09-02: Implement JSON-LD generation for events.
 
-**Success Criteria** (what must be TRUE):
-1. `php artisan test --coverage` reports 100% line coverage for Xot module
-2. All Xot Models have test coverage (100% on Models)
-3. All Xot Actions have test coverage (100% on Actions)
-4. All Xot Services have test coverage (100% on Services)
-5. All Xot Controllers have test coverage (100% on Controllers)
+### Phase 10: Notifications & Emails
+**Goal**: Finalize user communication for registrations.
+**Depends on**: Phase 7
+**Requirements**: REGS-02
+**Success Criteria**:
+  1. Registration confirmation emails are sent upon successful registration.
+  2. Emails are queued and use localized templates.
+**Plans**: 2 plans
+- [ ] 10-01: Create registration confirmation Mailable and templates.
+- [ ] 10-02: Integrate email dispatching into `RegisterUserToEventAction`.
 
-**Plans:** TBD
+### Phase 11: GDPR & Compliance
+**Goal**: Ensure legal compliance for user data and tracking.
+**Depends on**: Phase 9
+**Requirements**: QUAL-01
+**Success Criteria**:
+  1. Cookie consent banner correctly manages non-essential script loading.
+  2. Privacy policy and terms pages are accessible and localized.
+**Plans**: 2 plans
+- [ ] 11-01: Build the cookie consent Volt component.
+- [ ] 11-02: Create and configure compliance pages via CMS.
 
----
+### Phase 12: Quality Audit & Coverage
+**Goal**: Finalize the platform according to strict Laraxot standards.
+**Depends on**: Phase 11
+**Requirements**: QUAL-02
+**Success Criteria**:
+  1. 100% Pest coverage for all business-critical logic.
+  2. Zero PHPStan level 10 errors across all modules.
+  3. WCAG 2.1 AA audit passed with no critical violations.
+**Plans**: 2 plans
+- [ ] 12-01: Finalize test coverage and type safety audits.
+- [ ] 12-02: Conduct accessibility audit and remediation.
 
-### Phase 3: Tenant Module
-**Goal:** Achieve 100% code coverage on Tenant module (multi-tenancy, 600 LOC).
-
-**Depends on:** Phase 2 (Xot Module)
-
-**Requirements:** TENA-01, TENA-02, TENA-03, TENA-04
-
-**Success Criteria** (what must be TRUE):
-1. `php artisan test --coverage` reports 100% line coverage for Tenant module
-2. All Tenant Models have test coverage including relationships
-3. All Tenant Actions have test coverage
-4. Multi-tenancy isolation patterns are tested and verified
-5. Tenant context resolution is fully tested
-
-**Plans:** TBD
-
----
-
-### Phase 4: User Module
-**Goal:** Achieve 100% code coverage on User module (authentication, 8,565 LOC).
-
-**Depends on:** Phase 3 (Tenant Module)
-
-**Requirements:** USER-01, USER-02, USER-03, USER-04, USER-05, USER-06, USER-07
-
-**Success Criteria** (what must be TRUE):
-1. `php artisan test --coverage` reports 100% line coverage for User module
-2. All User Actions tested (LoginUserAction, RegisterOauthUserAction, RevokeAllUserTokensAction, etc.)
-3. All User Models and relationships tested
-4. All User Controllers tested
-5. All User Middleware tested (IsUserAllowedAction)
-6. OAuth authentication flow fully tested (Google, GitHub)
-7. Token-based authentication (Passport) fully tested
-
-**Plans:** TBD
-
----
-
-### Phase 5: Meetup Module
-**Goal:** Achieve 100% code coverage on Meetup module (events, 1,200 LOC).
-
-**Depends on:** Phase 4 (User Module)
-
-**Requirements:** MEET-01, MEET-02, MEET-03, MEET-04
-
-**Success Criteria** (what must be TRUE):
-1. `php artisan test --coverage` reports 100% line coverage for Meetup module
-2. All Meetup Models tested including relationships
-3. All Meetup Actions tested
-4. All Meetup Controllers tested
-5. Meetup CRUD operations fully tested
-
-**Plans:** TBD
-
----
-
-### Phase 6: Feature Modules
-**Goal:** Achieve 100% code coverage on Notify, Geo, and Job modules.
-
-**Depends on:** Phase 5 (Meetup Module)
-
-**Requirements:** NOTI-01, GEO-01, JOB-01
-
-**Success Criteria** (what must be TRUE):
-1. `php artisan test --coverage` reports 100% line coverage for Notify module
-2. `php artisan test --coverage` reports 100% line coverage for Geo module
-3. `php artisan test --coverage` reports 100% line coverage for Job module
-4. Queue fakes tested for notification dispatch
-5. Location/geographic features tested
-6. Queue job dispatch and handling tested
-
-**Plans:** TBD
-
----
-
-### Phase 7: Content Modules
-**Goal:** Achieve 100% code coverage on Media, Cms, UI, and Activity modules.
-
-**Depends on:** Phase 6 (Feature Modules)
-
-**Requirements:** MEDI-01, CMS-01, UI-01, ACT-01
-
-**Success Criteria** (what must be TRUE):
-1. `php artisan test --coverage` reports 100% line coverage for Media module
-2. `php artisan test --coverage` reports 100% line coverage for Cms module
-3. `php artisan test --coverage` reports 100% line coverage for UI module
-4. `php artisan test --coverage` reports 100% line coverage for Activity module
-5. File handling and conversions tested
-6. Component testing for UI module
-
-**Plans:** TBD
-
----
-
-### Phase 8: Compliance Modules
-**Goal:** Achieve 100% code coverage on Lang, Gdpr, and Seo modules.
-
-**Depends on:** Phase 7 (Content Modules)
-
-**Requirements:** LANG-01, GDPR-01, SEO-01
-
-**Success Criteria** (what must be TRUE):
-1. `php artisan test --coverage` reports 100% line coverage for Lang module
-2. `php artisan test --coverage` reports 100% line coverage for Gdpr module
-3. `php artisan test --coverage` reports 100% line coverage for Seo module
-4. Multi-language edge cases tested
-5. GDPR compliance testing verified
-6. Metadata and sitemap generation tested
-
-**Plans:** TBD
-
----
-
-### Phase 9: Type Coverage
-**Goal:** Achieve 100% type coverage across all modules + PHPStan Level 10.
-
-**Depends on:** Phase 8 (Compliance Modules)
-
-**Requirements:** TYPE-01, TYPE-02, TYPE-03, TYPE-04, TYPE-05, TYPE-06
-
-**Success Criteria** (what must be TRUE):
-1. `./vendor/bin/pest --type-coverage --min=100` reports 100% type coverage for User module
-2. `./vendor/bin/pest --type-coverage --min=100` reports 100% type coverage for Meetup module
-3. `./vendor/bin/pest --type-coverage --min=100` reports 100% type coverage for Tenant module
-4. `./vendor/bin/pest --type-coverage --min=100` reports 100% type coverage for Xot module
-5. `./vendor/bin/pest --type-coverage --min=100` reports 100% type coverage for all remaining modules
-6. `./vendor/bin/phpstan analyse` returns 0 errors at Level 10 across all modules
-
-**Plans:** TBD
-
----
-
-## Progress Table
+## Progress
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/1 | Not started | - |
-| 2. Xot Module | 0/1 | Not started | - |
-| 3. Tenant Module | 0/1 | Not started | - |
-| 4. User Module | 0/1 | Not started | - |
-| 5. Meetup Module | 0/1 | Not started | - |
-| 6. Feature Modules | 0/1 | Not started | - |
-| 7. Content Modules | 0/1 | Not started | - |
-| 8. Compliance Modules | 0/1 | Not started | - |
-| 9. Type Coverage | 0/1 | Not started | - |
-
----
-
-*Roadmap created: 2026-03-05*
-*Ready for planning: Yes*
+| 1. Foundation | 0/2 | Not started | - |
+| 2. Core Actions | 0/2 | Not started | - |
+| 3. Admin Core | 0/2 | Not started | - |
+| 4. Admin Support | 0/2 | Not started | - |
+| 5. CMS Infra | 0/2 | Not started | - |
+| 6. FO Discovery | 0/2 | Not started | - |
+| 7. FO Detail | 0/2 | Not started | - |
+| 8. Localization | 0/2 | Not started | - |
+| 9. SEO & Social | 0/2 | Not started | - |
+| 10. Notifications | 0/2 | Not started | - |
+| 11. GDPR | 0/2 | Not started | - |
+| 12. Quality Audit | 0/2 | Not started | - |
