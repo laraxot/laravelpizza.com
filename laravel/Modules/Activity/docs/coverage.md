@@ -1,6 +1,6 @@
 # Activity Coverage Report
 
-- Generated: 2026-03-05T08:01:21Z
+- Generated: 2026-03-05T08:11:39Z
 - Threshold: 100%
 - Exit code: 1
 
@@ -9,7 +9,7 @@
   ....................
 
   Tests:    20 passed (63 assertions)
-  Duration: 9.56s
+  Duration: 5.05s
 
   Actions/ActivityLogger [90m................................................[39m [31m0.0%[39m  
   Actions/LogActivityAction [90m.............................................[39m [31m0.0%[39m  
@@ -38,10 +38,11 @@
   Models/Policies/SnapshotPolicy [90m........................................[39m [31m0.0%[39m  
   Models/Policies/StoredEventPolicy [90m.....................................[39m [31m0.0%[39m  
   Models/Snapshot [90m.......................................................[39m [31m0.0%[39m  
+  Models/StoredEvent [90m..........................................[39m [33m76..77[39m[33m [39m[90m/[39m[33m 75.0%[39m  
   Providers/EventServiceProvider [90m........................................[39m [31m0.0%[39m  
   Traits/HasEvents [90m......................................................[39m [31m0.0%[39m  
   [90m────────────────────────────────────────────────────────────────────────────[39m  
-                                                                  [1mTotal: 5.5 %[22m  
+                                                                  [1mTotal: 5.1 %[22m  
 
-  [37;41;1m FAIL [39;49;22m Code coverage below expected [37;1m 100.0 %[39;22m, currently [31;1m 5.5 %[39;22m.
+  [37;41;1m FAIL [39;49;22m Code coverage below expected [37;1m 100.0 %[39;22m, currently [31;1m 5.1 %[39;22m.
 ```

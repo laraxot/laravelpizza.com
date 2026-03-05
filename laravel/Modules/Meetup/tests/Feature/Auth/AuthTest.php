@@ -25,9 +25,7 @@ it('register page loads successfully', function () {
 
 it('user can login with valid credentials', function () {
     $password = 'Password123!';
-    $user = User::factory()->create([
-        'password' => bcrypt($password),
-    ]);
+    $user = User::factory()->create(['password' => $password]);
 
     Livewire::test(LoginWidget::class)
         ->set('data.email', $user->email)
@@ -40,7 +38,7 @@ it('user can login with valid credentials', function () {
 
 it('user cannot login with invalid password', function () {
     $user = User::factory()->create([
-        'password' => bcrypt('correct-password'),
+        'password' => 'correct-password',
     ]);
 
     Livewire::test(LoginWidget::class)
