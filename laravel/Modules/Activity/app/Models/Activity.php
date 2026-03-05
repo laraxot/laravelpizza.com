@@ -107,7 +107,7 @@ class Activity extends SpatieActivity
 {
     use HasXotFactory;
 
-    protected $connection = 'activity';
+    protected $connection;
 
     /** @var list<string> */
     protected $fillable = [
