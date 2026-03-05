@@ -5515,5 +5515,380 @@
         "id": 662,
         "updated_at": "2026-03-05 08:57:16",
         "created_at": "2026-03-05 08:57:16"
+    },
+    {
+        "title": "{\"it\":\"Test Page\",\"en\":\"Test Page\"}",
+        "slug": "test-page",
+        "id": 663,
+        "updated_at": "2026-03-05 09:01:42",
+        "created_at": "2026-03-05 09:01:42"
+    },
+    {
+        "title": {
+            "it": "Updated Title",
+            "en": "Updated Title"
+        },
+        "slug": "original-title",
+        "id": "664",
+        "updated_at": "2026-03-05T08:01:43.000000Z",
+        "created_at": "2026-03-05T08:01:43.000000Z"
+    },
+    {
+        "title": "{\"it\":\"Page with Blocks\",\"en\":\"Page with Blocks\"}",
+        "slug": "page-with-blocks",
+        "content_blocks": "{\"it\":[{\"id\":\"block-1\",\"type\":\"hero\",\"content\":{\"it\":\"Hero content\",\"en\":\"Hero content\"}},{\"id\":\"block-2\",\"type\":\"text\",\"content\":{\"it\":\"Text content\",\"en\":\"Text content\"}}]}",
+        "id": 665,
+        "updated_at": "2026-03-05 09:01:44",
+        "created_at": "2026-03-05 09:01:44"
+    },
+    {
+        "title": "{\"it\":\"Page with Content\",\"en\":\"Page with Content\"}",
+        "slug": "page-with-content",
+        "description": "This is a test page description",
+        "content": "This is the main content of the page",
+        "id": 666,
+        "updated_at": "2026-03-05 09:01:44",
+        "created_at": "2026-03-05 09:01:44"
+    },
+    {
+        "title": "{\"it\":\"Titolo Italiano\",\"en\":\"English Title\",\"de\":\"Deutscher Titel\"}",
+        "slug": "multilingual-page",
+        "content_blocks": "{\"it\":[{\"id\":\"content-block\",\"type\":\"text\",\"content\":{\"it\":\"Contenuto in italiano\",\"en\":\"Content in English\",\"de\":\"Inhalt auf Deutsch\"}}]}",
+        "id": 667,
+        "updated_at": "2026-03-05 09:01:45",
+        "created_at": "2026-03-05 09:01:45"
+    },
+    {
+        "title": "{\"it\":\"Page with Sections\",\"en\":\"Page with Sections\"}",
+        "slug": "page-with-sections",
+        "content_blocks": "{\"it\":[{\"id\":\"section-1\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 1\",\"en\":\"Section 1\"},\"content\":{\"it\":\"Contenuto sezione 1\",\"en\":\"Section 1 content\"}},{\"id\":\"section-2\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 2\",\"en\":\"Section 2\"},\"content\":{\"it\":\"Contenuto sezione 2\",\"en\":\"Section 2 content\"}}]}",
+        "id": 668,
+        "updated_at": "2026-03-05 09:01:46",
+        "created_at": "2026-03-05 09:01:46"
+    },
+    {
+        "title": "{\"it\":\"Page with Template\",\"en\":\"Page with Template\"}",
+        "slug": "page-with-template",
+        "content_blocks": "{\"it\":[{\"id\":\"layout-block\",\"type\":\"layout\",\"template\":\"default\",\"content\":{\"it\":\"Layout content\",\"en\":\"Layout content\"}}]}",
+        "sidebar_blocks": "{\"it\":[{\"id\":\"sidebar-block\",\"type\":\"widget\",\"content\":{\"it\":\"Sidebar widget\",\"en\":\"Sidebar widget\"}}]}",
+        "footer_blocks": "{\"it\":[{\"id\":\"footer-block\",\"type\":\"footer\",\"content\":{\"it\":\"Footer content\",\"en\":\"Footer content\"}}]}",
+        "id": 669,
+        "updated_at": "2026-03-05 09:01:46",
+        "created_at": "2026-03-05 09:01:46"
+    },
+    {
+        "title": "{\"it\":\"Page with Permissions\",\"en\":\"Page with Permissions\"}",
+        "slug": "page-with-permissions",
+        "middleware": "[\"auth\",\"verified\"]",
+        "id": 670,
+        "updated_at": "2026-03-05 09:01:47",
+        "created_at": "2026-03-05 09:01:47"
+    },
+    {
+        "title": "{\"it\":\"Page with Timestamps\",\"en\":\"Page with Timestamps\"}",
+        "slug": "page-with-timestamps",
+        "id": 671,
+        "updated_at": "2026-03-05 09:01:47",
+        "created_at": "2026-03-05 09:01:47"
+    },
+    {
+        "title": "{\"it\":\"Test Page\",\"en\":\"Test Page\"}",
+        "slug": "test-page",
+        "id": 672,
+        "updated_at": "2026-03-05 09:01:51",
+        "created_at": "2026-03-05 09:01:51"
+    },
+    {
+        "title": {
+            "it": "Updated Title",
+            "en": "Updated Title"
+        },
+        "slug": "original-title",
+        "id": "673",
+        "updated_at": "2026-03-05T08:01:52.000000Z",
+        "created_at": "2026-03-05T08:01:52.000000Z"
+    },
+    {
+        "title": "{\"it\":\"Page with Blocks\",\"en\":\"Page with Blocks\"}",
+        "slug": "page-with-blocks",
+        "content_blocks": "{\"it\":[{\"id\":\"block-1\",\"type\":\"hero\",\"content\":{\"it\":\"Hero content\",\"en\":\"Hero content\"}},{\"id\":\"block-2\",\"type\":\"text\",\"content\":{\"it\":\"Text content\",\"en\":\"Text content\"}}]}",
+        "id": 674,
+        "updated_at": "2026-03-05 09:01:53",
+        "created_at": "2026-03-05 09:01:53"
+    },
+    {
+        "title": "{\"it\":\"Page with Content\",\"en\":\"Page with Content\"}",
+        "slug": "page-with-content",
+        "description": "This is a test page description",
+        "content": "This is the main content of the page",
+        "id": 675,
+        "updated_at": "2026-03-05 09:01:54",
+        "created_at": "2026-03-05 09:01:54"
+    },
+    {
+        "title": "{\"it\":\"Titolo Italiano\",\"en\":\"English Title\",\"de\":\"Deutscher Titel\"}",
+        "slug": "multilingual-page",
+        "content_blocks": "{\"it\":[{\"id\":\"content-block\",\"type\":\"text\",\"content\":{\"it\":\"Contenuto in italiano\",\"en\":\"Content in English\",\"de\":\"Inhalt auf Deutsch\"}}]}",
+        "id": 676,
+        "updated_at": "2026-03-05 09:01:54",
+        "created_at": "2026-03-05 09:01:54"
+    },
+    {
+        "title": "{\"it\":\"Page with Sections\",\"en\":\"Page with Sections\"}",
+        "slug": "page-with-sections",
+        "content_blocks": "{\"it\":[{\"id\":\"section-1\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 1\",\"en\":\"Section 1\"},\"content\":{\"it\":\"Contenuto sezione 1\",\"en\":\"Section 1 content\"}},{\"id\":\"section-2\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 2\",\"en\":\"Section 2\"},\"content\":{\"it\":\"Contenuto sezione 2\",\"en\":\"Section 2 content\"}}]}",
+        "id": 677,
+        "updated_at": "2026-03-05 09:01:55",
+        "created_at": "2026-03-05 09:01:55"
+    },
+    {
+        "title": "{\"it\":\"Page with Template\",\"en\":\"Page with Template\"}",
+        "slug": "page-with-template",
+        "content_blocks": "{\"it\":[{\"id\":\"layout-block\",\"type\":\"layout\",\"template\":\"default\",\"content\":{\"it\":\"Layout content\",\"en\":\"Layout content\"}}]}",
+        "sidebar_blocks": "{\"it\":[{\"id\":\"sidebar-block\",\"type\":\"widget\",\"content\":{\"it\":\"Sidebar widget\",\"en\":\"Sidebar widget\"}}]}",
+        "footer_blocks": "{\"it\":[{\"id\":\"footer-block\",\"type\":\"footer\",\"content\":{\"it\":\"Footer content\",\"en\":\"Footer content\"}}]}",
+        "id": 678,
+        "updated_at": "2026-03-05 09:01:55",
+        "created_at": "2026-03-05 09:01:55"
+    },
+    {
+        "title": "{\"it\":\"Page with Permissions\",\"en\":\"Page with Permissions\"}",
+        "slug": "page-with-permissions",
+        "middleware": "[\"auth\",\"verified\"]",
+        "id": 679,
+        "updated_at": "2026-03-05 09:01:55",
+        "created_at": "2026-03-05 09:01:55"
+    },
+    {
+        "title": "{\"it\":\"Page with Timestamps\",\"en\":\"Page with Timestamps\"}",
+        "slug": "page-with-timestamps",
+        "id": 680,
+        "updated_at": "2026-03-05 09:01:56",
+        "created_at": "2026-03-05 09:01:56"
+    },
+    {
+        "title": "{\"it\":\"Test Page\",\"en\":\"Test Page\"}",
+        "slug": "test-page",
+        "id": 681,
+        "updated_at": "2026-03-05 09:02:45",
+        "created_at": "2026-03-05 09:02:45"
+    },
+    {
+        "title": {
+            "it": "Updated Title",
+            "en": "Updated Title"
+        },
+        "slug": "original-title",
+        "id": "682",
+        "updated_at": "2026-03-05T08:02:46.000000Z",
+        "created_at": "2026-03-05T08:02:46.000000Z"
+    },
+    {
+        "title": "{\"it\":\"Page with Blocks\",\"en\":\"Page with Blocks\"}",
+        "slug": "page-with-blocks",
+        "content_blocks": "{\"it\":[{\"id\":\"block-1\",\"type\":\"hero\",\"content\":{\"it\":\"Hero content\",\"en\":\"Hero content\"}},{\"id\":\"block-2\",\"type\":\"text\",\"content\":{\"it\":\"Text content\",\"en\":\"Text content\"}}]}",
+        "id": 683,
+        "updated_at": "2026-03-05 09:02:46",
+        "created_at": "2026-03-05 09:02:46"
+    },
+    {
+        "title": "{\"it\":\"Page with Content\",\"en\":\"Page with Content\"}",
+        "slug": "page-with-content",
+        "description": "This is a test page description",
+        "content": "This is the main content of the page",
+        "id": 684,
+        "updated_at": "2026-03-05 09:02:46",
+        "created_at": "2026-03-05 09:02:46"
+    },
+    {
+        "title": "{\"it\":\"Titolo Italiano\",\"en\":\"English Title\",\"de\":\"Deutscher Titel\"}",
+        "slug": "multilingual-page",
+        "content_blocks": "{\"it\":[{\"id\":\"content-block\",\"type\":\"text\",\"content\":{\"it\":\"Contenuto in italiano\",\"en\":\"Content in English\",\"de\":\"Inhalt auf Deutsch\"}}]}",
+        "id": 685,
+        "updated_at": "2026-03-05 09:02:46",
+        "created_at": "2026-03-05 09:02:46"
+    },
+    {
+        "title": "{\"it\":\"Page with Sections\",\"en\":\"Page with Sections\"}",
+        "slug": "page-with-sections",
+        "content_blocks": "{\"it\":[{\"id\":\"section-1\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 1\",\"en\":\"Section 1\"},\"content\":{\"it\":\"Contenuto sezione 1\",\"en\":\"Section 1 content\"}},{\"id\":\"section-2\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 2\",\"en\":\"Section 2\"},\"content\":{\"it\":\"Contenuto sezione 2\",\"en\":\"Section 2 content\"}}]}",
+        "id": 686,
+        "updated_at": "2026-03-05 09:02:46",
+        "created_at": "2026-03-05 09:02:46"
+    },
+    {
+        "title": "{\"it\":\"Page with Template\",\"en\":\"Page with Template\"}",
+        "slug": "page-with-template",
+        "content_blocks": "{\"it\":[{\"id\":\"layout-block\",\"type\":\"layout\",\"template\":\"default\",\"content\":{\"it\":\"Layout content\",\"en\":\"Layout content\"}}]}",
+        "sidebar_blocks": "{\"it\":[{\"id\":\"sidebar-block\",\"type\":\"widget\",\"content\":{\"it\":\"Sidebar widget\",\"en\":\"Sidebar widget\"}}]}",
+        "footer_blocks": "{\"it\":[{\"id\":\"footer-block\",\"type\":\"footer\",\"content\":{\"it\":\"Footer content\",\"en\":\"Footer content\"}}]}",
+        "id": 687,
+        "updated_at": "2026-03-05 09:02:46",
+        "created_at": "2026-03-05 09:02:46"
+    },
+    {
+        "title": "{\"it\":\"Page with Permissions\",\"en\":\"Page with Permissions\"}",
+        "slug": "page-with-permissions",
+        "middleware": "[\"auth\",\"verified\"]",
+        "id": 688,
+        "updated_at": "2026-03-05 09:02:47",
+        "created_at": "2026-03-05 09:02:47"
+    },
+    {
+        "title": "{\"it\":\"Page with Timestamps\",\"en\":\"Page with Timestamps\"}",
+        "slug": "page-with-timestamps",
+        "id": 689,
+        "updated_at": "2026-03-05 09:02:47",
+        "created_at": "2026-03-05 09:02:47"
+    },
+    {
+        "title": "{\"it\":\"Test Page\",\"en\":\"Test Page\"}",
+        "slug": "test-page",
+        "id": 690,
+        "updated_at": "2026-03-05 09:04:45",
+        "created_at": "2026-03-05 09:04:45"
+    },
+    {
+        "title": {
+            "it": "Updated Title",
+            "en": "Updated Title"
+        },
+        "slug": "original-title",
+        "id": "691",
+        "updated_at": "2026-03-05T08:04:46.000000Z",
+        "created_at": "2026-03-05T08:04:46.000000Z"
+    },
+    {
+        "title": "{\"it\":\"Page with Blocks\",\"en\":\"Page with Blocks\"}",
+        "slug": "page-with-blocks",
+        "content_blocks": "{\"it\":[{\"id\":\"block-1\",\"type\":\"hero\",\"content\":{\"it\":\"Hero content\",\"en\":\"Hero content\"}},{\"id\":\"block-2\",\"type\":\"text\",\"content\":{\"it\":\"Text content\",\"en\":\"Text content\"}}]}",
+        "id": 692,
+        "updated_at": "2026-03-05 09:04:46",
+        "created_at": "2026-03-05 09:04:46"
+    },
+    {
+        "title": "{\"it\":\"Page with Content\",\"en\":\"Page with Content\"}",
+        "slug": "page-with-content",
+        "description": "This is a test page description",
+        "content": "This is the main content of the page",
+        "id": 693,
+        "updated_at": "2026-03-05 09:04:47",
+        "created_at": "2026-03-05 09:04:47"
+    },
+    {
+        "title": "{\"it\":\"Titolo Italiano\",\"en\":\"English Title\",\"de\":\"Deutscher Titel\"}",
+        "slug": "multilingual-page",
+        "content_blocks": "{\"it\":[{\"id\":\"content-block\",\"type\":\"text\",\"content\":{\"it\":\"Contenuto in italiano\",\"en\":\"Content in English\",\"de\":\"Inhalt auf Deutsch\"}}]}",
+        "id": 694,
+        "updated_at": "2026-03-05 09:04:47",
+        "created_at": "2026-03-05 09:04:47"
+    },
+    {
+        "title": "{\"it\":\"Page with Sections\",\"en\":\"Page with Sections\"}",
+        "slug": "page-with-sections",
+        "content_blocks": "{\"it\":[{\"id\":\"section-1\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 1\",\"en\":\"Section 1\"},\"content\":{\"it\":\"Contenuto sezione 1\",\"en\":\"Section 1 content\"}},{\"id\":\"section-2\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 2\",\"en\":\"Section 2\"},\"content\":{\"it\":\"Contenuto sezione 2\",\"en\":\"Section 2 content\"}}]}",
+        "id": 695,
+        "updated_at": "2026-03-05 09:04:47",
+        "created_at": "2026-03-05 09:04:47"
+    },
+    {
+        "title": "{\"it\":\"Page with Template\",\"en\":\"Page with Template\"}",
+        "slug": "page-with-template",
+        "content_blocks": "{\"it\":[{\"id\":\"layout-block\",\"type\":\"layout\",\"template\":\"default\",\"content\":{\"it\":\"Layout content\",\"en\":\"Layout content\"}}]}",
+        "sidebar_blocks": "{\"it\":[{\"id\":\"sidebar-block\",\"type\":\"widget\",\"content\":{\"it\":\"Sidebar widget\",\"en\":\"Sidebar widget\"}}]}",
+        "footer_blocks": "{\"it\":[{\"id\":\"footer-block\",\"type\":\"footer\",\"content\":{\"it\":\"Footer content\",\"en\":\"Footer content\"}}]}",
+        "id": 696,
+        "updated_at": "2026-03-05 09:04:47",
+        "created_at": "2026-03-05 09:04:47"
+    },
+    {
+        "title": "{\"it\":\"Page with Permissions\",\"en\":\"Page with Permissions\"}",
+        "slug": "page-with-permissions",
+        "middleware": "[\"auth\",\"verified\"]",
+        "id": 697,
+        "updated_at": "2026-03-05 09:04:47",
+        "created_at": "2026-03-05 09:04:47"
+    },
+    {
+        "title": "{\"it\":\"Page with Timestamps\",\"en\":\"Page with Timestamps\"}",
+        "slug": "page-with-timestamps",
+        "id": 698,
+        "updated_at": "2026-03-05 09:04:47",
+        "created_at": "2026-03-05 09:04:47"
+    },
+    {
+        "title": "{\"it\":\"Test Page\",\"en\":\"Test Page\"}",
+        "slug": "test-page",
+        "id": 699,
+        "updated_at": "2026-03-05 09:05:31",
+        "created_at": "2026-03-05 09:05:31"
+    },
+    {
+        "title": {
+            "it": "Updated Title",
+            "en": "Updated Title"
+        },
+        "slug": "original-title",
+        "id": "700",
+        "updated_at": "2026-03-05T08:05:32.000000Z",
+        "created_at": "2026-03-05T08:05:32.000000Z"
+    },
+    {
+        "title": "{\"it\":\"Page with Blocks\",\"en\":\"Page with Blocks\"}",
+        "slug": "page-with-blocks",
+        "content_blocks": "{\"it\":[{\"id\":\"block-1\",\"type\":\"hero\",\"content\":{\"it\":\"Hero content\",\"en\":\"Hero content\"}},{\"id\":\"block-2\",\"type\":\"text\",\"content\":{\"it\":\"Text content\",\"en\":\"Text content\"}}]}",
+        "id": 701,
+        "updated_at": "2026-03-05 09:05:32",
+        "created_at": "2026-03-05 09:05:32"
+    },
+    {
+        "title": "{\"it\":\"Page with Content\",\"en\":\"Page with Content\"}",
+        "slug": "page-with-content",
+        "description": "This is a test page description",
+        "content": "This is the main content of the page",
+        "id": 702,
+        "updated_at": "2026-03-05 09:05:32",
+        "created_at": "2026-03-05 09:05:32"
+    },
+    {
+        "title": "{\"it\":\"Titolo Italiano\",\"en\":\"English Title\",\"de\":\"Deutscher Titel\"}",
+        "slug": "multilingual-page",
+        "content_blocks": "{\"it\":[{\"id\":\"content-block\",\"type\":\"text\",\"content\":{\"it\":\"Contenuto in italiano\",\"en\":\"Content in English\",\"de\":\"Inhalt auf Deutsch\"}}]}",
+        "id": 703,
+        "updated_at": "2026-03-05 09:05:33",
+        "created_at": "2026-03-05 09:05:33"
+    },
+    {
+        "title": "{\"it\":\"Page with Sections\",\"en\":\"Page with Sections\"}",
+        "slug": "page-with-sections",
+        "content_blocks": "{\"it\":[{\"id\":\"section-1\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 1\",\"en\":\"Section 1\"},\"content\":{\"it\":\"Contenuto sezione 1\",\"en\":\"Section 1 content\"}},{\"id\":\"section-2\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 2\",\"en\":\"Section 2\"},\"content\":{\"it\":\"Contenuto sezione 2\",\"en\":\"Section 2 content\"}}]}",
+        "id": 704,
+        "updated_at": "2026-03-05 09:05:33",
+        "created_at": "2026-03-05 09:05:33"
+    },
+    {
+        "title": "{\"it\":\"Page with Template\",\"en\":\"Page with Template\"}",
+        "slug": "page-with-template",
+        "content_blocks": "{\"it\":[{\"id\":\"layout-block\",\"type\":\"layout\",\"template\":\"default\",\"content\":{\"it\":\"Layout content\",\"en\":\"Layout content\"}}]}",
+        "sidebar_blocks": "{\"it\":[{\"id\":\"sidebar-block\",\"type\":\"widget\",\"content\":{\"it\":\"Sidebar widget\",\"en\":\"Sidebar widget\"}}]}",
+        "footer_blocks": "{\"it\":[{\"id\":\"footer-block\",\"type\":\"footer\",\"content\":{\"it\":\"Footer content\",\"en\":\"Footer content\"}}]}",
+        "id": 705,
+        "updated_at": "2026-03-05 09:05:33",
+        "created_at": "2026-03-05 09:05:33"
+    },
+    {
+        "title": "{\"it\":\"Page with Permissions\",\"en\":\"Page with Permissions\"}",
+        "slug": "page-with-permissions",
+        "middleware": "[\"auth\",\"verified\"]",
+        "id": 706,
+        "updated_at": "2026-03-05 09:05:34",
+        "created_at": "2026-03-05 09:05:34"
+    },
+    {
+        "title": "{\"it\":\"Page with Timestamps\",\"en\":\"Page with Timestamps\"}",
+        "slug": "page-with-timestamps",
+        "id": 707,
+        "updated_at": "2026-03-05 09:05:34",
+        "created_at": "2026-03-05 09:05:34"
     }
 ]

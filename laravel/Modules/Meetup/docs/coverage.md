@@ -1,23 +1,30 @@
-# Code Coverage: Meetup
+# Meetup Coverage Report
 
-**Lines Coverage:** N/A
-**Methods Coverage:** N/A
-**Classes Coverage:** N/A
-**Functions Coverage:** N/A
-**Test Status:** ⚠️  OTHER ERROR
+- Generated: 2026-03-05T08:01:21Z
+- Threshold: 100%
+- Exit code: 1
 
-## Summary
+```text
 
-This module contains Meetup functionality for the application.
+  ..............⨯.............................................................
+  .....
+  ────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\Meetup\tests\Feature\Auth\AuthTest > it logout redirects…    
+  Failed asserting that an array contains 419.
 
-## Coverage Reflections
+  at Modules/Meetup/tests/Feature/Auth/AuthTest.php:176
+    172▕ 
+    173▕     $response = $this->actingAs($user)
+    174▕         ->post('/logout');
+    175▕ 
+  ➜ 176▕     expect($response->status())->toBeIn([200, 302, 303]);
+    177▕     $this->assertGuest();
+    178▕ });
+    179▕
 
-- ⚠️  **Low Coverage**: The module has low test coverage, indicating potential risks in production
-- Tests are not fully executed
-- 🏗️  **Foundation Module**: Meetup module is critical as it provides base functionality for all other modules
-- 📋 **Module Size**: Medium complexity with multiple components
+  1   Modules/Meetup/tests/Feature/Auth/AuthTest.php:176
 
-- 🔍 **Recommendations**: Focus on integration tests for complex workflows
-- 📋 **Module Size**: Medium complexity with multiple components
 
-- 🔍 **Recommendations**: Focus on integration tests for complex workflows
+  Tests:    1 failed, 80 passed (151 assertions)
+  Duration: 29.43s
+```
