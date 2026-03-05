@@ -13,6 +13,22 @@ Open items (file coverage < 100%): **1594**
 
 ## Aggiornamenti operativi
 
+### 2026-03-05 (Lang: Actions/Models coverage batch)
+- Aggiunti test per Lang Actions:
+  - `Modules/Lang/tests/Unit/Actions/GetTransPathActionTest.php`
+  - `Modules/Lang/tests/Unit/Actions/GetAllTranslationActionTest.php`
+  - `Modules/Lang/tests/Unit/Actions/TransArrayActionTest.php`
+  - `Modules/Lang/tests/Unit/Actions/TransCollectionActionTest.php`
+- Aggiunti test per Lang Models:
+  - `Modules/Lang/tests/Unit/Models/BaseModelTest.php`
+  - `Modules/Lang/tests/Unit/Models/BaseModelLangTest.php`
+  - `Modules/Lang/tests/Unit/Models/BaseMorphPivotTest.php`
+  - `Modules/Lang/tests/Unit/Models/PostTest.php`
+  - `Modules/Lang/tests/Unit/Models/TranslationTest.php`
+  - `Modules/Lang/tests/Unit/Models/TranslationFileTest.php`
+- Verifica locale: `90 passed` sul subset Lang (Actions/Models).
+- 12 file marcati come testati in coverage-plan.md
+
 ### 2026-03-05 (Cms: Resources/Http/Models coverage batch 15 file)
 - Aggiunti test per Cms Resources/Http/Models:
   - `Modules/Cms/tests/Unit/Models/PageTest.php`
@@ -661,17 +677,17 @@ Open items (file coverage < 100%): **1594**
 - [ ] `laravel/Modules/Lang/app/Filament/Widgets/LanguageSwitcherWidget.php` (0/43, 0.0%)
 - [ ] `laravel/Modules/Lang/app/Http/Livewire/Lang/Change.php` (0/20, 0.0%)
 - [ ] `laravel/Modules/Lang/app/Http/Livewire/Lang/Switcher.php` (0/19, 0.0%)
-- [ ] `laravel/Modules/Lang/app/Models/BaseModel.php` (0/7, 0.0%)
-- [ ] `laravel/Modules/Lang/app/Models/BaseModelLang.php` (0/7, 0.0%)
-- [ ] `laravel/Modules/Lang/app/Models/BaseMorphPivot.php` (0/7, 0.0%)
+- [x] `laravel/Modules/Lang/app/Models/BaseModel.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Lang/app/Models/BaseModelLang.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Lang/app/Models/BaseMorphPivot.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Lang/app/Models/Policies/LangBasePolicy.php` (0/4, 0.0%)
 - [ ] `laravel/Modules/Lang/app/Models/Policies/PostPolicy.php` (0/12, 0.0%)
 - [ ] `laravel/Modules/Lang/app/Models/Policies/TranslationFilePolicy.php` (0/12, 0.0%)
 - [ ] `laravel/Modules/Lang/app/Models/Policies/TranslationPolicy.php` (0/12, 0.0%)
-- [ ] `laravel/Modules/Lang/app/Models/Post.php` (0/55, 0.0%)
+- [x] `laravel/Modules/Lang/app/Models/Post.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Lang/app/Models/Traits/HasStrictTranslations.php` (0/10, 0.0%)
-- [ ] `laravel/Modules/Lang/app/Models/Translation.php` (0/9, 0.0%)
-- [ ] `laravel/Modules/Lang/app/Models/TranslationFile.php` (0/20, 0.0%)
+- [x] `laravel/Modules/Lang/app/Models/Translation.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Lang/app/Models/TranslationFile.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Lang/app/Providers/Filament/AdminPanelProvider.php` (0/6, 0.0%)
 - [ ] `laravel/Modules/Lang/app/Providers/Filament/LangBasePanelProvider.php` (0/6, 0.0%)
 - [ ] `laravel/Modules/Lang/app/Providers/LangServiceProvider.php` (0/59, 0.0%)
