@@ -21,7 +21,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Build root artifact
-        run: tar --warning=no-file-changed -czf project-artifact.tgz . || [ $? -eq 1 ]
+        run: tar -czf project-artifact.tgz .
       - name: Attest build provenance
         uses: actions/attest-build-provenance@v3
         with:

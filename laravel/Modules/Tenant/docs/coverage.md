@@ -1,9 +1,23 @@
-# Tenant Coverage Report
+# Code Coverage: Tenant
 
-- Generated: 2026-03-05T08:11:39Z
-- Threshold: 100%
-- Exit code: 1
+**Lines Coverage:** N/A
+**Methods Coverage:** N/A
+**Classes Coverage:** N/A
+**Functions Coverage:** N/A
+**Test Status:** ⚠️  OTHER ERROR
 
-```text
-Could not open input file: ./vendor/bin/pest
-```
+## Summary
+
+This module contains Tenant functionality for the application.
+
+## Coverage Reflections
+
+- ⚠️  **Low Coverage**: The module has low test coverage, indicating potential risks in production
+- Tests are not fully executed
+- 🏗️  **Foundation Module**: Tenant module is critical as it provides base functionality for all other modules
+- 📋 **Module Size**: Medium complexity with multiple components
+
+- 🔍 **Recommendations**: Focus on integration tests for complex workflows
+- 📋 **Module Size**: Medium complexity with multiple components
+
+- 🔍 **Recommendations**: Focus on integration tests for complex workflows

@@ -15,7 +15,7 @@ uses(TestCase::class, DatabaseTransactions::class);
 test('it can login a user with valid credentials', function () {
     $password = 'Password123!';
     $user = User::factory()->create([
-        'password' => bcrypt($password),
+        'password' => $password, // Model hashes it automatically
     ]);
 
     $result = app(LoginUserAction::class)->execute([
@@ -29,7 +29,7 @@ test('it can login a user with valid credentials', function () {
 
 test('it returns false with invalid credentials', function () {
     $user = User::factory()->create([
-        'password' => bcrypt('correct-password'),
+        'password' => 'correct-password',
     ]);
 
     $result = app(LoginUserAction::class)->execute([

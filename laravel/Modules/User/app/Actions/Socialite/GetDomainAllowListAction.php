@@ -21,6 +21,10 @@ class GetDomainAllowListAction
     {
         $res = config('filament-socialite.domain_allowlist');
         
+        if (empty($res)) {
+            return [];
+        }
+
         if (\is_string($res)) {
             return [$res];
         }
@@ -29,6 +33,6 @@ class GetDomainAllowListAction
             return $res;
         }
 
-        throw new \Exception('check config filament-socialite.domain_allowlist');
+        return [];
     }
 }

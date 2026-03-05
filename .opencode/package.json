@@ -1,6 +1,0 @@
-{
-  "type": "commonjs",
-  "dependencies": {
-    "@opencode-ai/plugin": "1.2.17"
-  }
-}

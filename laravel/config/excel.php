@@ -128,7 +128,7 @@ return [
             'enclosure' => '"',
             'escape_character' => '\\',
             'contiguous' => false,
-            'input_encoding' => Csv::GUESS_ENCODING,
+            'input_encoding' => \PhpOffice\PhpSpreadsheet\Reader\Csv::GUESS_ENCODING,
         ],
 
         /*

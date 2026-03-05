@@ -44,3 +44,9 @@ Snapshot: 2026-03-04
   - root cause: `pcov.directory` globale puntato a `laravel/app`;
   - impatto: codice in `Modules/*/app` escluso dalla strumentazione PCOV;
   - azione richiesta: allineare `pcov.directory` alla root `laravel/` in configurazione stabile di test coverage.
+- Backlog condiviso creato in `docs/coverage-plan.md`:
+  - sorgente automatica da `/tmp/pest_cov.xml`;
+  - 1599 file sotto 100% da gestire a micro-batch tra agenti.
+- Bug bloccanti emersi durante i test auth:
+  - `LoginWidget::login()` aggiungeva errore anche su login riuscito (mancava `return` nel ramo di successo);
+  - `RegisterWidget` usava `type = standard` non compatibile con mappa classi utente del progetto.

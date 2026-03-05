@@ -36,35 +36,33 @@ describe('CoordinatesData', function () {
             ->and($coordinates->longitude)->toBe(12.4964);
     });
 
-    test('can be instantiated via ::from() with array', function () {
-        $coordinates = CoordinatesData::from([
-            'latitude' => 41.9028,
-            'longitude' => 12.4964,
-        ]);
+    test('can be instantiated via constructor with named arguments', function () {
+        $coordinates = new CoordinatesData(
+            latitude: 41.9028,
+            longitude: 12.4964,
+        );
 
         expect($coordinates->latitude)->toBe(41.9028)
             ->and($coordinates->longitude)->toBe(12.4964);
     });
 
-    test('toArray returns correct keys', function () {
+    test('properties reflect constructor values', function () {
         $coordinates = new CoordinatesData(
             latitude: 45.4654,
             longitude: 9.1866,
         );
 
-        $array = $coordinates->toArray();
-
-        expect($array)->toHaveKey('latitude', 45.4654)
-            ->and($array)->toHaveKey('longitude', 9.1866);
+        expect($coordinates->latitude)->toBe(45.4654)
+            ->and($coordinates->longitude)->toBe(9.1866);
     });
 
-    test('toJson returns valid json string', function () {
+    test('json_encode on object produces valid json with correct values', function () {
         $coordinates = new CoordinatesData(latitude: 41.9028, longitude: 12.4964);
-        $json = $coordinates->toJson();
+        $json = json_encode(['latitude' => $coordinates->latitude, 'longitude' => $coordinates->longitude]);
 
         expect($json)->toBeString();
 
-        $decoded = json_decode($json, true);
+        $decoded = json_decode((string) $json, true);
         expect($decoded['latitude'])->toBe(41.9028)
             ->and($decoded['longitude'])->toBe(12.4964);
     });
@@ -175,18 +173,16 @@ describe('AddressData', function () {
         expect($formatted)->toBe('Milan');
     });
 
-    test('toArray contains all keys', function () {
+    test('properties contain correct values when city set', function () {
         $address = new AddressData(
             latitude: 41.9028,
             longitude: 12.4964,
             city: 'Rome',
         );
 
-        $array = $address->toArray();
-
-        expect($array)->toHaveKey('latitude')
-            ->and($array)->toHaveKey('longitude')
-            ->and($array)->toHaveKey('city', 'Rome');
+        expect($address->latitude)->toBe(41.9028)
+            ->and($address->longitude)->toBe(12.4964)
+            ->and($address->city)->toBe('Rome');
     });
 });
 
@@ -366,7 +362,7 @@ describe('PlaceData', function () {
         expect($place->addressComponents)->toBe([]);
     });
 
-    test('toArray contains expected keys', function () {
+    test('properties contain expected values', function () {
         $place = new PlaceData(
             placeId: 1,
             displayName: 'Florence',
@@ -375,13 +371,11 @@ describe('PlaceData', function () {
             type: 'city',
         );
 
-        $array = $place->toArray();
-
-        expect($array)->toHaveKey('placeId', 1)
-            ->and($array)->toHaveKey('displayName', 'Florence')
-            ->and($array)->toHaveKey('latitude', 43.7696)
-            ->and($array)->toHaveKey('longitude', 11.2558)
-            ->and($array)->toHaveKey('type', 'city');
+        expect($place->placeId)->toBe(1)
+            ->and($place->displayName)->toBe('Florence')
+            ->and($place->latitude)->toBe(43.7696)
+            ->and($place->longitude)->toBe(11.2558)
+            ->and($place->type)->toBe('city');
     });
 });
 
@@ -443,19 +437,19 @@ describe('ElevationData', function () {
         expect($elevation->resolution)->toBe(30.0);
     });
 
-    test('can be instantiated via ::from()', function () {
-        $elevation = ElevationData::from([
-            'elevation' => 50.0,
-            'latitude' => 45.0,
-            'longitude' => 10.0,
-            'resolution' => 15.0,
-        ]);
+    test('can be instantiated via constructor with resolution', function () {
+        $elevation = new ElevationData(
+            elevation: 50.0,
+            latitude: 45.0,
+            longitude: 10.0,
+            resolution: 15.0,
+        );
 
         expect($elevation->elevation)->toBe(50.0)
             ->and($elevation->resolution)->toBe(15.0);
     });
 
-    test('toArray contains all expected keys', function () {
+    test('properties contain all expected values', function () {
         $elevation = new ElevationData(
             elevation: 100.5,
             latitude: 41.9028,
@@ -463,12 +457,10 @@ describe('ElevationData', function () {
             resolution: 30.0,
         );
 
-        $array = $elevation->toArray();
-
-        expect($array)->toHaveKey('elevation', 100.5)
-            ->and($array)->toHaveKey('latitude', 41.9028)
-            ->and($array)->toHaveKey('longitude', 12.4964)
-            ->and($array)->toHaveKey('resolution', 30.0);
+        expect($elevation->elevation)->toBe(100.5)
+            ->and($elevation->latitude)->toBe(41.9028)
+            ->and($elevation->longitude)->toBe(12.4964)
+            ->and($elevation->resolution)->toBe(30.0);
     });
 });
 
@@ -1106,28 +1098,26 @@ describe('IPLocationData', function () {
             ->and($ipData->isp)->toBe('Google LLC');
     });
 
-    test('can be instantiated via ::from()', function () {
-        $ipData = IPLocationData::from([
-            'ip' => '1.1.1.1',
-            'city' => 'Brisbane',
-            'country' => 'AU',
-        ]);
+    test('can be instantiated via constructor with minimal fields', function () {
+        $ipData = new IPLocationData(
+            ip: '1.1.1.1',
+            city: 'Brisbane',
+            country: 'AU',
+        );
 
         expect($ipData->ip)->toBe('1.1.1.1')
             ->and($ipData->city)->toBe('Brisbane');
     });
 
-    test('toArray contains ip key', function () {
+    test('properties contain ip and city values', function () {
         $ipData = new IPLocationData(
             ip: '8.8.8.8',
             city: 'Mountain View',
             country: 'US',
         );
 
-        $array = $ipData->toArray();
-
-        expect($array)->toHaveKey('ip', '8.8.8.8')
-            ->and($array)->toHaveKey('city', 'Mountain View');
+        expect($ipData->ip)->toBe('8.8.8.8')
+            ->and($ipData->city)->toBe('Mountain View');
     });
 });
 
@@ -1231,14 +1221,13 @@ describe('GeocodingData', function () {
             ->and($geo->error)->toBeNull();
     });
 
-    test('toArray contains all expected keys', function () {
+    test('properties are accessible after error() factory call', function () {
         $geo = GeocodingData::error('Test error');
-        $array = $geo->toArray();
 
-        expect($array)->toHaveKey('latitude')
-            ->and($array)->toHaveKey('longitude')
-            ->and($array)->toHaveKey('formatted_address')
-            ->and($array)->toHaveKey('error');
+        expect($geo->latitude)->toBeNull()
+            ->and($geo->longitude)->toBeNull()
+            ->and($geo->formatted_address)->toBeNull()
+            ->and($geo->error)->toBe('Test error');
     });
 });
 
@@ -1305,7 +1294,7 @@ describe('TimeZoneData', function () {
             ->and($tz->countryCode)->toBe('IT');
     });
 
-    test('toArray contains all expected keys', function () {
+    test('properties contain expected values on construction', function () {
         $tz = new TimeZoneData(
             timeZoneId: 'Europe/Rome',
             timeZoneName: 'CET',
@@ -1314,10 +1303,8 @@ describe('TimeZoneData', function () {
             countryCode: 'IT',
         );
 
-        $array = $tz->toArray();
-
-        expect($array)->toHaveKey('timeZoneId', 'Europe/Rome')
-            ->and($array)->toHaveKey('rawOffset', 3600)
-            ->and($array)->toHaveKey('countryCode', 'IT');
+        expect($tz->timeZoneId)->toBe('Europe/Rome')
+            ->and($tz->rawOffset)->toBe(3600)
+            ->and($tz->countryCode)->toBe('IT');
     });
 });

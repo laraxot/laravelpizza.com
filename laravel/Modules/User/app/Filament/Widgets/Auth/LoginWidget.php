@@ -64,6 +64,7 @@ class LoginWidget extends XotBaseWidget
         if (Auth::attempt($credentials, $remember)) {
             session()->regenerate();
             redirect()->intended('/');
+            return;
         }
 
         $userClass = XotData::make()->getUserClass();

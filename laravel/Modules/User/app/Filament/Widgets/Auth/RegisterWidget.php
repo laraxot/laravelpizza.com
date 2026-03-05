@@ -128,7 +128,7 @@ class RegisterWidget extends XotBaseWidget
             'password' => Hash::make(
                 app(SafeStringCastAction::class)->execute($data['password']),
             ),
-            'type' => 'standard',
+            'type' => 'customer_user',
             'state' => 'pending',
             'email_verified_at' => null,
         ];

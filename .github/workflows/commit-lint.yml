@@ -74,7 +74,7 @@ jobs:
                   'Limesurvey',
                   'Media',
                   'Notify',
-                  'Quaeris',
+                  'healthcare_app',
                   'Tenant',
                   'UI',
                   'User',
@@ -142,7 +142,7 @@ jobs:
               - \`module\`: Module-specific changes
               
               ### Available Scopes:
-              \`Activity\`, \`Chart\`, \`CloudStorage\`, \`Cms\`, \`DbForge\`, \`Gdpr\`, \`Geo\`, \`Job\`, \`Lang\`, \`Limesurvey\`, \`Media\`, \`Notify\`, \`Quaeris\`, \`Tenant\`, \`UI\`, \`User\`, \`Xot\`, \`core\`, \`deps\`, \`config\`
+              \`Activity\`, \`Chart\`, \`CloudStorage\`, \`Cms\`, \`DbForge\`, \`Gdpr\`, \`Geo\`, \`Job\`, \`Lang\`, \`Limesurvey\`, \`Media\`, \`Notify\`, \`healthcare_app\`, \`Tenant\`, \`UI\`, \`User\`, \`Xot\`, \`core\`, \`deps\`, \`config\`
               
               ### Examples:
               - \`feat(User): add authentication API\`
