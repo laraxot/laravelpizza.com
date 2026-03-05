@@ -13,6 +13,22 @@ Open items (file coverage < 100%): **1594**
 
 ## Aggiornamenti operativi
 
+### 2026-03-05 (Cms: Resources/Http/Models coverage batch 15 file)
+- Aggiunti test per Cms Resources/Http/Models:
+  - `Modules/Cms/tests/Unit/Models/PageTest.php`
+  - `Modules/Cms/tests/Unit/Models/BaseModelTest.php`
+  - `Modules/Cms/tests/Unit/Models/PageContentModelTest.php`
+  - `Modules/Cms/tests/Unit/Models/SectionModelTest.php`
+  - `Modules/Cms/tests/Unit/Filament/Resources/AttachmentResourceTest.php`
+  - `Modules/Cms/tests/Unit/Filament/Resources/MenuResourceTest.php`
+  - `Modules/Cms/tests/Unit/Filament/Resources/PageResourceTest.php`
+  - `Modules/Cms/tests/Unit/Filament/Resources/SectionResourceTest.php`
+  - `Modules/Cms/tests/Unit/Http/Controllers/Admin/XotPanelControllerTest.php`
+  - `Modules/Cms/tests/Unit/Http/Volt/LoginComponentTest.php`
+  - `Modules/Cms/tests/Unit/Http/Volt/CounterComponentTest.php`
+- Verifica locale: `90 passed` sul subset Cms (Resources/Http/Models).
+- 11 file marcati come testati in coverage-plan.md
+
 ### 2026-03-05 (Meetup: fix test mancanti censiti)
 - Completati e verificati i test regressivi su:
   - `Modules/Meetup/tests/Unit/Actions/Event/ImportEventsFromJsonActionTest.php`
@@ -159,44 +175,44 @@ Open items (file coverage < 100%): **1594**
 - [x] `laravel/Modules/Cms/app/Filament/Front/Pages/Home.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Cms/app/Filament/Front/Pages/Welcome.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Cms/app/Filament/Pages/Themes.php` (tested, 2026-03-05)
-- [ ] `laravel/Modules/Cms/app/Filament/Resources/AttachmentResource.php` (0/21, 0.0%)
+- [x] `laravel/Modules/Cms/app/Filament/Resources/AttachmentResource.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Filament/Resources/AttachmentResource/Pages/CreateAttachment.php` (0/8, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Filament/Resources/AttachmentResource/Pages/EditAttachment.php` (0/6, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Filament/Resources/AttachmentResource/Pages/ListAttachments.php` (0/5, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Filament/Resources/MenuResource.php` (0/21, 0.0%)
+- [x] `laravel/Modules/Cms/app/Filament/Resources/MenuResource.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Filament/Resources/MenuResource/Pages/EditMenu.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Filament/Resources/MenuResource/Pages/ListMenus.php` (0/6, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Filament/Resources/PageContentResource.php` (0/16, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Filament/Resources/PageContentResource/Pages/EditPageContent.php` (0/5, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Filament/Resources/PageContentResource/Pages/ListPageContents.php` (0/8, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Filament/Resources/PageContentResource/Pages/ViewPageContent.php` (0/12, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Filament/Resources/PageResource.php` (0/22, 0.0%)
+- [x] `laravel/Modules/Cms/app/Filament/Resources/PageResource.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Filament/Resources/PageResource/Pages/ListPages.php` (0/4, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Filament/Resources/SectionResource.php` (0/9, 0.0%)
+- [x] `laravel/Modules/Cms/app/Filament/Resources/SectionResource.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Filament/Resources/SectionResource/Pages/ListSections.php` (0/4, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Filament/Resources/SectionResource/Pages/ViewSection.php` (0/10, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Http/Controllers/Admin/XotPanelController.php` (0/13, 0.0%)
+- [x] `laravel/Modules/Cms/app/Http/Controllers/Admin/XotPanelController.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Http/Livewire/Page/Show.php` (0/46, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Http/Middleware/PageSlugMiddleware.php` (0/52, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Http/Middleware/SetFolioLocale.php` (0/15, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Http/View/Composers/XotComposer.php` (0/15, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Http/Volt/CounterComponent.php` (0/2, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Http/Volt/LoginComponent.php` (0/11, 0.0%)
+- [x] `laravel/Modules/Cms/app/Http/Volt/CounterComponent.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Cms/app/Http/Volt/LoginComponent.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Http/Volt/Password/ConfirmComponent.php` (0/3, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Http/Volt/Password/ResetComponent.php` (0/9, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Http/Volt/Password/TokenComponent.php` (0/27, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Http/Volt/RegisterComponent.php` (0/9, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Http/Volt/VerifyComponent.php` (0/9, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Models/Attachment.php` (0/44, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Models/BaseModel.php` (0/7, 0.0%)
+- [x] `laravel/Modules/Cms/app/Models/BaseModel.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Models/BaseModelLang.php` (0/14, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Models/BaseMorphPivot.php` (0/7, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Models/BaseTreeModel.php` (0/6, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Models/Conf.php` (0/2, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Models/Menu.php` (0/9, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Models/Module.php` (0/13, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Models/Page.php` (0/19, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Models/PageContent.php` (0/15, 0.0%)
+- [x] `laravel/Modules/Cms/app/Models/Page.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Cms/app/Models/PageContent.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Models/Policies/CmsBasePolicy.php` (0/4, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Models/Policies/ConfPolicy.php` (0/7, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Models/Policies/MenuPolicy.php` (0/7, 0.0%)
@@ -204,7 +220,7 @@ Open items (file coverage < 100%): **1594**
 - [ ] `laravel/Modules/Cms/app/Models/Policies/PageContentPolicy.php` (0/7, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Models/Policies/PagePolicy.php` (0/7, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Models/Policies/SectionPolicy.php` (0/7, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Models/Section.php` (0/9, 0.0%)
+- [x] `laravel/Modules/Cms/app/Models/Section.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Models/Traits/.php-cs-fixer.dist.php` (0/22, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Models/Traits/HasBlocks.php` (0/55, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Providers/CmsServiceProvider.php` (0/31, 0.0%)
