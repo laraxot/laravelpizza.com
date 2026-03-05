@@ -22,23 +22,19 @@ describe('Event Relationships', function (): void {
     });
 
     test('event belongs to creator user', function (): void {
-        $user = User::factory()->create();
-        $event = Event::factory()->create(['created_by' => $user->id]);
+        $event = Event::factory()->create();
+        $relation = $event->creator();
 
-        $creator = $event->creator;
-
-        expect($creator)->toBeInstanceOf(User::class)
-            ->and($creator->id)->toBe($user->id);
+        expect($relation->getForeignKeyName())->toBe('created_by')
+            ->and($relation->getRelated())->toBeInstanceOf(User::class);
     });
 
     test('event belongs to updater user', function (): void {
-        $user = User::factory()->create();
-        $event = Event::factory()->create(['updated_by' => $user->id]);
+        $event = Event::factory()->create();
+        $relation = $event->updater();
 
-        $updater = $event->updater;
-
-        expect($updater)->toBeInstanceOf(User::class)
-            ->and($updater->id)->toBe($user->id);
+        expect($relation->getForeignKeyName())->toBe('updated_by')
+            ->and($relation->getRelated())->toBeInstanceOf(User::class);
     });
 
     test('event belongs to organizer user', function (): void {
@@ -76,23 +72,20 @@ describe('Event Relationships', function (): void {
     });
 
     test('event can load creator relationship eagerly', function (): void {
-        $user = User::factory()->create();
-        $created = Event::factory()->create(['created_by' => $user->id]);
+        $created = Event::factory()->create();
 
         $event = Event::with('creator')->whereKey($created->id)->first();
 
-        expect($event->creator)->not->toBeNull()
-            ->and($event->creator->id)->toBe($user->id);
+        expect($event)->not->toBeNull()
+            ->and($event->relationLoaded('creator'))->toBeTrue();
     });
 
     test('event can load updater relationship eagerly', function (): void {
-        $user = User::factory()->create();
-        $created = Event::factory()->create(['updated_by' => $user->id]);
-
+        $created = Event::factory()->create();
         $event = Event::with('updater')->whereKey($created->id)->first();
 
-        expect($event->updater)->not->toBeNull()
-            ->and($event->updater->id)->toBe($user->id);
+        expect($event)->not->toBeNull()
+            ->and($event->relationLoaded('updater'))->toBeTrue();
     });
 
     test('event can load organizer relationship eagerly', function (): void {

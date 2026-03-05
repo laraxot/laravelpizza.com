@@ -40,10 +40,9 @@ class MeetupDatabaseSeeder extends Seeder
         $performers = Performer::factory(10)->create();
         $this->command?->info('Performers created: '.$performers->count());
 
-        // 3. Create sponsors across tiers
+        // 3. Create sponsors across tiers (gold + silver/bronze)
         /** @var \Illuminate\Database\Eloquent\Collection<int, Sponsor> $sponsors */
-        $sponsors = Sponsor::factory()->gold()->create();
-        $sponsors = $sponsors->concat(Sponsor::factory(2)->create());
+        $sponsors = Sponsor::factory(3)->create();
         $this->command?->info('Sponsors created: '.$sponsors->count());
 
         // 4. Create upcoming events and attach to venues

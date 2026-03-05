@@ -32,8 +32,8 @@ class SponsorFactory extends Factory
             'website' => $this->faker->url(),
             'logo' => $this->faker->imageUrl(400, 200, 'business'),
             'description' => $this->faker->paragraph(),
-            'email' => $this->faker->companyEmail(),
-            'contact_person' => $this->faker->name(),
+            'contact_email' => $this->faker->companyEmail(),
+            'contact_name' => $this->faker->name(),
             'meta_data' => [
                 'industry' => $this->faker->word(),
                 'employees' => $this->faker->numberBetween(10, 10000),

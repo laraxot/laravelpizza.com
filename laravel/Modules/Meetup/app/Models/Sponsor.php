@@ -41,8 +41,9 @@ class Sponsor extends BaseModel
         'website',
         'logo',
         'description',
-        'email',
-        'contact_person',
+        'contact_email',
+        'contact_name',
+        'order',
         'meta_data',
     ];
 
