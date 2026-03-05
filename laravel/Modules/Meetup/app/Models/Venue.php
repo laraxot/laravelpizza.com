@@ -70,6 +70,6 @@ class Venue extends BaseModel
      */
     public function events(): HasMany
     {
-        return $this->hasMany(Event::class, 'venue_id', 'id');
+        return $this->hasMany(Event::class, 'location_id', 'id');
     }
 }
