@@ -13,6 +13,7 @@
     <source>
         <include>
             <directory suffix=".php">./Modules/*/app</directory>
+            <directory suffix=".php">./app</directory>
         </include>
     </source>
     <php>

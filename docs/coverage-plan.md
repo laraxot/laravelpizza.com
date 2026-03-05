@@ -13,6 +13,13 @@ Open items (file coverage < 100%): **1627**
 
 ## Backlog
 
+### App (5)
+- [x] `laravel/app/Livewire/Actions/Logout.php` (3/3, 100.0%)
+- [x] `laravel/app/Providers/AppServiceProvider.php` (2/2, 100.0%)
+- [x] `laravel/app/Providers/FolioServiceProvider.php` (19/19, 100.0%)
+- [ ] `laravel/app/Providers/FortifyServiceProvider.php` (1/20, 5.0%) - *Requires Fortify package*
+- [x] `laravel/app/Providers/VoltServiceProvider.php` (17/17, 100.0%)
+
 ### Activity (32)
 - [x] `laravel/Modules/Activity/app/Actions/ActivityLogger.php` (104/104, 100.0%)
 - [x] `laravel/Modules/Activity/app/Actions/LogActivityAction.php` (21/21, 100.0%)
