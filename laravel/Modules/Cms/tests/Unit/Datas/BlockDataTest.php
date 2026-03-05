@@ -69,3 +69,40 @@ test('BlockData stores data array correctly', function (): void {
 
     expect($blockData->data)->toEqual($testData);
 });
+
+test('BlockData can be instantiated with slug', function (): void {
+    $blockData = new BlockData('hero', ['view' => 'ui::empty'], 'hero-section');
+
+    expect($blockData)->toBeInstanceOf(BlockData::class)
+        ->and($blockData->type)->toBe('hero')
+        ->and($blockData->slug)->toBe('hero-section');
+});
+
+test('BlockData slug is null when not provided', function (): void {
+    $blockData = new BlockData('hero', ['view' => 'ui::empty']);
+
+    expect($blockData->slug)->toBeNull();
+});
+
+test('BlockData livewire is false by default', function (): void {
+    $blockData = new BlockData('hero', ['view' => 'ui::empty']);
+
+    expect($blockData->livewire)->toBeFalse();
+});
+
+test('BlockData livewireComponentName is empty by default', function (): void {
+    $blockData = new BlockData('hero', ['view' => 'ui::empty']);
+
+    expect($blockData->livewireComponentName)->toBe('');
+});
+
+test('BlockData throws exception for non-existent view', function (): void {
+    expect(fn () => new BlockData('test', ['view' => 'non.existent.view']))
+        ->toThrow(\Exception::class, 'view not found');
+})->skip(fn () => ! view()->exists('ui::empty'), 'ui::empty view does not exist');
+
+test('BlockData detects ui::empty as non-livewire', function (): void {
+    $blockData = new BlockData('simple', ['view' => 'ui::empty']);
+
+    expect($blockData->livewire)->toBeFalse();
+});

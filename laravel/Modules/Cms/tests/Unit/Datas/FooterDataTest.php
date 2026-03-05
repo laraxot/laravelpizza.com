@@ -83,3 +83,43 @@ test('FooterData can be converted to array', function (): void {
     expect($array)->toBeArray()
         ->and($array)->toHaveKey('background_color');
 });
+
+test('FooterData has _tpl property', function (): void {
+    $footerData = new FooterData;
+
+    expect($footerData->_tpl)->toBeNull();
+});
+
+test('FooterData can set _tpl property', function (): void {
+    $footerData = FooterData::from(['_tpl' => 'custom-template']);
+
+    expect($footerData->_tpl)->toBe('custom-template');
+});
+
+test('FooterData rules includes _tpl', function (): void {
+    $rules = FooterData::rules();
+
+    expect($rules)->toHaveKey('_tpl');
+});
+
+test('FooterData has nullable _tpl in validation rules', function (): void {
+    $rules = FooterData::rules();
+
+    expect($rules['_tpl'])->toContain('nullable');
+});
+
+test('FooterData toArray includes all properties', function (): void {
+    $footerData = FooterData::from([
+        'background_color' => '#ffffff',
+        'background' => 'footer-bg.jpg',
+        'overlay_color' => 'rgba(0,0,0,0.5)',
+        '_tpl' => 'custom',
+    ]);
+
+    $array = $footerData->toArray();
+
+    expect($array)->toHaveKey('background_color')
+        ->and($array)->toHaveKey('background')
+        ->and($array)->toHaveKey('overlay_color')
+        ->and($array)->toHaveKey('_tpl');
+});
