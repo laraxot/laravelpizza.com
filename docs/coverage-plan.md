@@ -113,6 +113,32 @@ Open items (file coverage < 100%): **1594**
   - `Modules/Activity/tests/Unit/BaseModelTest.php`
 - Verifica locale: `13 passed`.
 
+### 2026-03-05 (Notify: enums/models/providers quick-win batch)
+- Aggiunti/verificati test su:
+  - `Modules/Notify/tests/Unit/Enums/ChannelEnumTest.php`
+  - `Modules/Notify/tests/Unit/Models/BaseModelTest.php`
+  - `Modules/Notify/tests/Unit/Providers/EventServiceProviderTest.php`
+  - `Modules/Notify/tests/Unit/Providers/AdminPanelProviderTest.php`
+  - `Modules/Notify/tests/Unit/Providers/NotifyServiceProviderTest.php`
+- Verifica locale: `10 passed`.
+
+### 2026-03-05 (Notify: NotificationLogStatusEnum quick-win)
+- Aggiunto test:
+  - `Modules/Notify/tests/Unit/Enums/NotificationLogStatusEnumTest.php`
+- Verifica locale: `3 passed`.
+
+### 2026-03-05 (Notify: enum consolidation batch su runner Pest)
+- Aggiunto test consolidato:
+  - `Modules/Notify/tests/Unit/Enums/NotifyEnumsCoverageTest.php`
+- Coperti enum:
+  - `ContactTypeEnum`
+  - `MediaTypeEnum`
+  - `NotificationTypeEnum`
+  - `SmsDriverEnum`
+  - `TelegramDriverEnum`
+  - `WhatsAppDriverEnum`
+- Verifica locale: `6 passed`.
+
 ### 2026-03-05 (Cms/Gdpr: Providers/View/Traits/Actions coverage batch)
 - Aggiunti test per Cms Providers:
   - `Modules/Cms/tests/Unit/Providers/CmsServiceProviderTest.php`
@@ -824,7 +850,7 @@ Open items (file coverage < 100%): **1594**
   - Verifica: 234 tests passano (490 assertions)
   - Total added: 21 tests, 542 LOC
 
-### Notify (147)
+### Notify (135)
 - [x] `laravel/Modules/Notify/app/Actions/BuildMailMessageAction.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Notify/app/Actions/DetermineSeasonalContentViewPathAction.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Notify/app/Actions/EsendexSendAction.php` (tested, 2026-03-05)
@@ -862,40 +888,32 @@ Open items (file coverage < 100%): **1594**
 - [x] `laravel/Modules/Notify/app/Channels/SmsChannel.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Notify/app/Channels/TelegramChannel.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Notify/app/Channels/WhatsAppChannel.php` (tested, 2026-03-05)
-- [ ] `laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php` (0/110, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Console/Commands/SendMailCommand.php` (0/12, 0.0%)
+- [x] `laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Console/Commands/SendMailCommand.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Notify/app/Console/Commands/TelegramWebhook.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Datas/EmailAttachmentData.php` (0/2, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Datas/EmailData.php` (0/32, 0.0%)
+- [x] `laravel/Modules/Notify/app/Datas/EmailAttachmentData.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Datas/EmailData.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Notify/app/Datas/FirebaseNotificationData.php` (0/8, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Datas/NetfunSmsData.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Datas/NetfunSmsMessage.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Datas/NetfunSmsRequestData.php` (0/7, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Datas/NetfunSmsResponseData.php` (0/11, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Datas/NotificationData.php` (0/8, 0.0%)
+- [x] `laravel/Modules/Notify/app/Datas/NotificationData.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Notify/app/Datas/RecordNotificationData.php` (0/9, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Datas/SMS/AgiletelecomData.php` (0/20, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Datas/SMS/GammuData.php` (0/7, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Datas/SMS/NexmoData.php` (0/12, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Datas/SMS/PlivoData.php` (0/12, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Datas/SMS/SmsFactorData.php` (0/13, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Datas/SMS/TwilioData.php` (0/12, 0.0%)
+- [x] `laravel/Modules/Notify/app/Datas/SMS/TwilioData.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Notify/app/Datas/SendNotificationBulkResultData.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Datas/SmsData.php` (0/4, 0.0%)
+- [x] `laravel/Modules/Notify/app/Datas/SmsData.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Notify/app/Datas/SmsMessageData.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Datas/SmtpData.php` (0/30, 0.0%)
+- [x] `laravel/Modules/Notify/app/Datas/SmtpData.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Notify/app/Datas/TelegramData.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Datas/WhatsAppData.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Emails/EmailDataEmail.php` (0/21, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Emails/SpatieEmail.php` (0/97, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Enums/ChannelEnum.php` (0/39, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Enums/ContactTypeEnum.php` (0/32, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Enums/MediaTypeEnum.php` (0/14, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Enums/NotificationLogStatusEnum.php` (0/30, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Enums/NotificationTypeEnum.php` (0/15, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Enums/SmsDriverEnum.php` (0/6, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Enums/TelegramDriverEnum.php` (0/13, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Enums/WhatsAppDriverEnum.php` (0/15, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Factories/SmsActionFactory.php` (0/20, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Factories/TelegramActionFactory.php` (0/14, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Factories/WhatsAppActionFactory.php` (0/17, 0.0%)
@@ -940,7 +958,6 @@ Open items (file coverage < 100%): **1594**
 - [ ] `laravel/Modules/Notify/app/Jobs/SendScheduledPushNotification.php` (0/35, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Mail/AppointmentNotificationMail.php` (0/39, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Mail/ChristmasGreetingMailable.php` (0/14, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Models/BaseModel.php` (0/13, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Models/BaseMorphPivot.php` (0/10, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Models/BasePivot.php` (0/10, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Models/Contact.php` (0/12, 0.0%)
@@ -962,9 +979,6 @@ Open items (file coverage < 100%): **1594**
 - [ ] `laravel/Modules/Notify/app/Notifications/TicketAssignedNotification.php` (0/9, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Notifications/TicketStatusChangedNotification.php` (0/10, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Notifications/WhatsAppNotification.php` (0/18, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Providers/EventServiceProvider.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Providers/Filament/AdminPanelProvider.php` (0/8, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php` (0/6, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Services/MailEngines/MailtrapEngine.php` (0/16, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Services/NotificationManager.php` (0/31, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Services/PushNotificationService.php` (0/274, 0.0%)
