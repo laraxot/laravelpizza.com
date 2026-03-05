@@ -105,52 +105,52 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FND-01 | Phase 1 | Pending |
-| FND-02 | Phase 1 | Pending |
-| FND-03 | Phase 1 | Pending |
-| FND-04 | Phase 1 | Pending |
-| FND-05 | Phase 1 | Pending |
-| FND-06 | Phase 1 | Pending |
-| FND-07 | Phase 1 | Pending |
-| FND-08 | Phase 1 | Pending |
-| FND-09 | Phase 1 | Pending |
-| FND-10 | Phase 1 | Pending |
-| FND-11 | Phase 1 | Pending |
-| USER-01 | Phase 2 | Pending |
-| USER-02 | Phase 2 | Pending |
-| USER-03 | Phase 2 | Pending |
-| USER-04 | Phase 2 | Pending |
-| USER-05 | Phase 2 | Pending |
-| USER-06 | Phase 2 | Pending |
-| USER-07 | Phase 2 | Pending |
-| MEET-01 | Phase 3 | Pending |
-| MEET-02 | Phase 3 | Pending |
-| MEET-03 | Phase 3 | Pending |
-| MEET-04 | Phase 3 | Pending |
-| TENA-01 | Phase 4 | Pending |
-| TENA-02 | Phase 4 | Pending |
-| TENA-03 | Phase 4 | Pending |
-| TENA-04 | Phase 4 | Pending |
-| XOT-01 | Phase 5 | Pending |
-| XOT-02 | Phase 5 | Pending |
-| XOT-03 | Phase 5 | Pending |
-| XOT-04 | Phase 5 | Pending |
-| NOTI-01 | Phase 6 | Pending |
-| GEO-01 | Phase 6 | Pending |
-| JOB-01 | Phase 6 | Pending |
-| MEDI-01 | Phase 7 | Pending |
-| CMS-01 | Phase 7 | Pending |
-| UI-01 | Phase 7 | Pending |
-| ACT-01 | Phase 7 | Pending |
-| LANG-01 | Phase 8 | Pending |
-| GDPR-01 | Phase 8 | Pending |
-| SEO-01 | Phase 8 | Pending |
-| TYPE-01 | Phase 9 | Pending |
-| TYPE-02 | Phase 9 | Pending |
-| TYPE-03 | Phase 9 | Pending |
-| TYPE-04 | Phase 9 | Pending |
-| TYPE-05 | Phase 9 | Pending |
-| TYPE-06 | Phase 9 | Pending |
+| FND-01 | Phase 1: Foundation | Pending |
+| FND-02 | Phase 1: Foundation | Pending |
+| FND-03 | Phase 1: Foundation | Pending |
+| FND-04 | Phase 1: Foundation | Pending |
+| FND-05 | Phase 1: Foundation | Pending |
+| FND-06 | Phase 1: Foundation | Pending |
+| FND-07 | Phase 1: Foundation | Pending |
+| FND-08 | Phase 1: Foundation | Pending |
+| FND-09 | Phase 1: Foundation | Pending |
+| FND-10 | Phase 1: Foundation | Pending |
+| FND-11 | Phase 1: Foundation | Pending |
+| XOT-01 | Phase 2: Xot Module | Pending |
+| XOT-02 | Phase 2: Xot Module | Pending |
+| XOT-03 | Phase 2: Xot Module | Pending |
+| XOT-04 | Phase 2: Xot Module | Pending |
+| TENA-01 | Phase 3: Tenant Module | Pending |
+| TENA-02 | Phase 3: Tenant Module | Pending |
+| TENA-03 | Phase 3: Tenant Module | Pending |
+| TENA-04 | Phase 3: Tenant Module | Pending |
+| USER-01 | Phase 4: User Module | Pending |
+| USER-02 | Phase 4: User Module | Pending |
+| USER-03 | Phase 4: User Module | Pending |
+| USER-04 | Phase 4: User Module | Pending |
+| USER-05 | Phase 4: User Module | Pending |
+| USER-06 | Phase 4: User Module | Pending |
+| USER-07 | Phase 4: User Module | Pending |
+| MEET-01 | Phase 5: Meetup Module | Pending |
+| MEET-02 | Phase 5: Meetup Module | Pending |
+| MEET-03 | Phase 5: Meetup Module | Pending |
+| MEET-04 | Phase 5: Meetup Module | Pending |
+| NOTI-01 | Phase 6: Feature Modules | Pending |
+| GEO-01 | Phase 6: Feature Modules | Pending |
+| JOB-01 | Phase 6: Feature Modules | Pending |
+| MEDI-01 | Phase 7: Content Modules | Pending |
+| CMS-01 | Phase 7: Content Modules | Pending |
+| UI-01 | Phase 7: Content Modules | Pending |
+| ACT-01 | Phase 7: Content Modules | Pending |
+| LANG-01 | Phase 8: Compliance Modules | Pending |
+| GDPR-01 | Phase 8: Compliance Modules | Pending |
+| SEO-01 | Phase 8: Compliance Modules | Pending |
+| TYPE-01 | Phase 9: Type Coverage | Pending |
+| TYPE-02 | Phase 9: Type Coverage | Pending |
+| TYPE-03 | Phase 9: Type Coverage | Pending |
+| TYPE-04 | Phase 9: Type Coverage | Pending |
+| TYPE-05 | Phase 9: Type Coverage | Pending |
+| TYPE-06 | Phase 9: Type Coverage | Pending |
 
 **Coverage:**
 - v1 requirements: 47 total
