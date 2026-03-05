@@ -6,8 +6,9 @@ use Modules\Geo\Actions\GetCoordinatesAction;
 use Modules\Geo\Actions\UpdateCoordinatesAction;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Models\Place;
+use Modules\Xot\Tests\XotBaseTestCase;
 
-uses(Modules\Geo\Tests\TestCase::class);
+uses(XotBaseTestCase::class);
 
 it('updates coordinates for a place with valid address', function (): void {
     $address = (object) ['formatted_address' => 'Via Roma 123, Milano, Italia'];
