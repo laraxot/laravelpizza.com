@@ -142,6 +142,25 @@ Open items (file coverage < 100%): **1594**
 - Verifica locale: `113 passed` sul subset Geo Actions.
 - 11 file marcati come testati in coverage-plan.md
 
+### 2026-03-05 (Geo: Additional Actions coverage batch - 15 file)
+- Aggiunti test per Geo Actions (Bing, GoogleMaps, Here, IPGeolocation, LocationIQ, Mapbox):
+  - `Modules/Geo/tests/Unit/Actions/Bing/GetAddressFromBingMapsActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/GoogleMaps/CalculateDistanceMatrixActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/GoogleMaps/CalculateTravelTimeActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/GoogleMaps/GetAddressByLatLngFromGoogleMapsActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/GoogleMaps/GetAddressFromGoogleMapsActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/GoogleMaps/GetCoordinatesFromGoogleMapsActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/GoogleMaps/GetGeocodingDataActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/GoogleMaps/OptimizeRouteActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/Here/GetAddressFromHereMapsActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/IPGeolocation/FetchIPLocationActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/IPGeolocation/GetLocationFromIPActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/LocationIQ/GetAddressFromLocationIQActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/Mapbox/GetAddressFromMapboxActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/Mapbox/GetAddressFromMapboxLatLngActionTest.php`
+- Verifica locale: `194 passed` sul subset Geo Actions (70 nuovi test aggiunti).
+- 15 file nuovi testati in coverage-plan.md
+
 ## Backlog
 
 ### App (5)
