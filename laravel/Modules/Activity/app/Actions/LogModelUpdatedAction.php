@@ -10,39 +10,25 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Log Model Updated Action.
- *
- * Logs when a model is updated using Queueable Actions
+ * Optimized for Laraxot architecture.
  */
 class LogModelUpdatedAction
 {
     use QueueableAction;
 
-    public function __construct(
-        public Model $model,
-        public ?Model $user = null,
-    ) {
-        if ($user !== null) {
-            // Type already narrowed to Model|null, assertion not needed
-        }
-    }
-
-    public function execute(): Activity
+    /**
+     * Execute the action.
+     */
+    public function execute(Model $model): Activity
     {
-        // PHPStan Level 10: Explicit type guard for nullable Model
-        $user = $this->user instanceof Model ? $this->user : null;
-
-        $action = new LogActivityAction(
+        return app(LogActivityAction::class)->execute(
             type: 'updated',
-            user: $user,
-            subject: $this->model,
+            subject: $model,
+            description: sprintf('%s was updated', class_basename($model)),
             properties: [
-                'old' => $this->model->getOriginal(),
-                'new' => $this->model->getAttributes(),
-                'changes' => $this->model->getChanges(),
-            ],
-            description: sprintf('%s updated', class_basename($this->model))
+                'old' => $model->getOriginal(),
+                'attributes' => $model->getChanges(),
+            ]
         );
-
-        return $action->execute();
     }
 }

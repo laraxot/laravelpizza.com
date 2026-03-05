@@ -30,3 +30,18 @@ test('it has correct columns', function () {
     $page = new MeetupDashboard();
     expect($page->getColumns())->toBe(1);
 });
+
+test('it exposes empty form schema', function () {
+    $page = new MeetupDashboard();
+
+    expect($page->getFormSchema())->toBe([]);
+});
+
+test('it uses meetup dashboard blade view', function () {
+    $page = new MeetupDashboard();
+    $reflection = new \ReflectionClass($page);
+    $property = $reflection->getProperty('view');
+    $property->setAccessible(true);
+
+    expect($property->getValue($page))->toBe('meetup::filament.pages.meetup-dashboard');
+});

@@ -19,6 +19,16 @@ test('event service provider is registered', function () {
     expect(app()->getProvider(EventServiceProvider::class))->toBeInstanceOf(EventServiceProvider::class);
 });
 
+test('event service provider boot can be invoked', function () {
+    $provider = app()->getProvider(EventServiceProvider::class);
+
+    expect($provider)->toBeInstanceOf(EventServiceProvider::class);
+
+    $provider->boot();
+
+    expect(true)->toBeTrue();
+});
+
 test('route service provider is registered', function () {
     expect(app()->getProvider(RouteServiceProvider::class))->toBeInstanceOf(RouteServiceProvider::class);
 });

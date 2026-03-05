@@ -33,4 +33,16 @@ describe('LoginUserAction', function (): void {
 
         Event::assertDispatched(SocialiteUserConnected::class);
     });
+
+    test('throws when related user is not authenticatable', function (): void {
+        $socialiteUser = new SocialiteUser([
+            'provider' => 'test-provider',
+            'provider_id' => 'provider-id-2',
+            'email' => 'not-authenticatable@example.com',
+        ]);
+
+        $socialiteUser->setRelation('user', new stdClass());
+
+        app(LoginUserAction::class)->execute($socialiteUser);
+    })->throws(LogicException::class, 'User instance must implement Authenticatable.');
 });

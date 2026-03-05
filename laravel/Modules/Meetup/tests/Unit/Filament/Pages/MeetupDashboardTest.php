@@ -25,3 +25,13 @@ test('it has correct widgets in dashboard', function () {
         ->and($widgets)->toContain(EventCalendarWidget::class)
         ->and($widgets)->toContain(RecentEventsWidget::class);
 });
+
+test('it returns exactly three widgets in expected order', function () {
+    $page = new Dashboard();
+
+    expect($page->getWidgets())->toBe([
+        MeetupStatsOverviewWidget::class,
+        EventCalendarWidget::class,
+        RecentEventsWidget::class,
+    ]);
+});

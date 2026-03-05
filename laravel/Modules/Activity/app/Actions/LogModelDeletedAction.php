@@ -10,35 +10,22 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Log Model Deleted Action.
- *
- * Logs when a model is deleted using Queueable Actions
+ * Optimized for Laraxot architecture.
  */
 class LogModelDeletedAction
 {
     use QueueableAction;
 
-    public function __construct(
-        public Model $model,
-        public ?Model $user = null,
-    ) {
-        if ($user !== null) {
-            // Type already narrowed to Model|null, assertion not needed
-        }
-    }
-
-    public function execute(): Activity
+    /**
+     * Execute the action.
+     */
+    public function execute(Model $model): Activity
     {
-        // PHPStan Level 10: Explicit type guard for nullable Model
-        $user = $this->user instanceof Model ? $this->user : null;
-
-        $action = new LogActivityAction(
+        return app(LogActivityAction::class)->execute(
             type: 'deleted',
-            user: $user,
-            subject: $this->model,
-            properties: ['attributes' => $this->model->getAttributes()],
-            description: sprintf('%s deleted', class_basename($this->model))
+            subject: $model,
+            description: sprintf('%s was deleted', class_basename($model)),
+            properties: $model->toArray()
         );
-
-        return $action->execute();
     }
 }

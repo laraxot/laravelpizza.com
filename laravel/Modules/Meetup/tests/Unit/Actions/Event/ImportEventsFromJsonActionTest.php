@@ -71,6 +71,15 @@ test('it falls back to module data path when file is missing', function () {
     expect($count)->toBeGreaterThan(0);
 });
 
+test('it logs warning if no file found', function () {
+    $log = \Mockery::mock(\Psr\Log\LoggerInterface::class);
+    $log->shouldReceive('warning')->zeroOrMoreTimes();
+    app()->instance('log', $log);
+
+    $count = app(ImportEventsFromJsonAction::class)->execute('/completely/non/existent/path/that/does/not/contain/data/events');
+    expect($count)->toBeGreaterThan(0);
+});
+
 test('it correctly parses duration', function() {
     $action = new ImportEventsFromJsonAction();
     $reflection = new \ReflectionClass($action);

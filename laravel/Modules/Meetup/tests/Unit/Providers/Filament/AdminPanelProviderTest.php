@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Unit\Providers\Filament;
 
+use Filament\Panel;
 use Modules\Meetup\Providers\Filament\AdminPanelProvider;
 use Modules\Meetup\Tests\TestCase;
 
@@ -21,4 +22,14 @@ test('it has correct module name', function () {
     $property->setAccessible(true);
     
     expect($property->getValue($provider))->toBe('Meetup');
+});
+
+test('it returns a panel instance from panel method', function () {
+    $provider = new AdminPanelProvider(app());
+    $panel = Panel::make();
+
+    $result = $provider->panel($panel);
+
+    expect($result)->toBeInstanceOf(Panel::class)
+        ->and($result->getId())->toBe('meetup::admin');
 });

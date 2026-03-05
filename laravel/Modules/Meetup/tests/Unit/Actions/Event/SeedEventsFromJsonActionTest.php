@@ -40,9 +40,10 @@ test('it can seed events from json file', function () {
 });
 
 test('it logs error if file does not exist', function () {
-    $log = Mockery::mock(\Psr\Log\LoggerInterface::class);
-    $log->shouldReceive('error')->once()->with(Mockery::pattern('/Event seeding failed: File not found/'));
+    $log = \Mockery::mock(\Psr\Log\LoggerInterface::class);
+    $log->shouldReceive('error')->once()->with(\Mockery::pattern('/Event seeding failed: File not found/'));
     app()->instance('log', $log);
+
 
     app(SeedEventsFromJsonAction::class)->execute('/non/existent/file.json');
 });

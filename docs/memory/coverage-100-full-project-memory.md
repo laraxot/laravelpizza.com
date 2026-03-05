@@ -50,3 +50,6 @@ Snapshot: 2026-03-04
 - Bug bloccanti emersi durante i test auth:
   - `LoginWidget::login()` aggiungeva errore anche su login riuscito (mancava `return` nel ramo di successo);
   - `RegisterWidget` usava `type = standard` non compatibile con mappa classi utente del progetto.
+- Batch corrente pianificato (Activity):
+  - target rapido su file infrastrutturali a bassa complessita (`Listeners`, `Policies`, `Providers`, `Models` base, `EditActivity`);
+  - criterio: chiudere prima i file con poche linee/branch per ridurre backlog condiviso in `docs/coverage-plan.md` senza introdurre test fragili su Filament pages complesse.

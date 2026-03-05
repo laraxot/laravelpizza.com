@@ -774,6 +774,10 @@ Open items (file coverage < 100%): **1594**
 
 ### Meetup (0)
 - [x] `laravel/Modules/Meetup/*` blocco corrente completato nei batch del 2026-03-05.
+  - [x] CreateEventActionTest.php - 7 tests (175 LOC)
+  - [x] UpdateEventActionTest.php - 7 tests (195 LOC)
+  - [x] DeleteEventActionTest.php - 7 tests (172 LOC)
+  - Total added: 21 tests, 542 LOC
 
 ### Notify (147)
 - [ ] `laravel/Modules/Notify/app/Actions/BuildMailMessageAction.php` (0/33, 0.0%)
