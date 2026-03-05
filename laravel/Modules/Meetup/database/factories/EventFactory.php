@@ -33,6 +33,7 @@ class EventFactory extends Factory
         $title = $this->faker->sentence(4);
         $startDate = $this->faker->dateTimeBetween('now', '+6 months');
         $endDate = (clone $startDate)->modify('+'.rand(1, 4).' hours');
+        $user = User::factory()->create();
 
         return [
             'title' => $title,
@@ -47,10 +48,10 @@ class EventFactory extends Factory
             'event_attendance_mode' => EventAttendanceMode::OFFLINE,
             'attendees_count' => 0,
             'max_attendees' => $this->faker->numberBetween(50, 200),
-            'user_id' => User::factory(),
-            'organizer_id' => User::factory(),
-            'created_by' => User::factory(),
-            'updated_by' => User::factory(),
+            'user_id' => $user->id,
+            'organizer_id' => User::factory()->create()->id,
+            'created_by' => $user->id,
+            'updated_by' => $user->id,
         ];
     }
 

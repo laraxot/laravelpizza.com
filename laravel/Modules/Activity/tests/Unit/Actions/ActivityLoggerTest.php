@@ -123,5 +123,40 @@ describe('ActivityLogger', function (): void {
         expect($aliceStats['by_type'])->toHaveKey('alpha')
             ->and($aliceStats['by_type'])->not->toHaveKey('beta');
     });
-});
 
+    it('logs custom event using provided description', function (): void {
+        $subject = User::factory()->create();
+        $logger = app(ActivityLogger::class);
+
+        $activity = $logger->custom(
+            type: 'custom-action',
+            description: 'Custom event description',
+            subject: $subject,
+            properties: ['source' => 'test']
+        );
+
+        expect($activity->event)->toBe('custom-action')
+            ->and($activity->description)->toBe('Custom event description')
+            ->and($activity->subject_id)->toBe($subject->id);
+    });
+
+    it('ignores null event buckets in by_type statistics', function (): void {
+        $user = User::factory()->create();
+        $logger = app(ActivityLogger::class);
+
+        $logger->log(type: 'valid-event', user: $user);
+
+        Activity::query()->create([
+            'log_name' => 'default',
+            'description' => 'nullable event row',
+            'causer_type' => User::class,
+            'causer_id' => $user->id,
+            'event' => null,
+        ]);
+
+        $stats = $logger->getStatistics();
+
+        expect($stats['by_type'])->toHaveKey('valid-event')
+            ->and($stats['by_type'])->not->toHaveKey('');
+    });
+});
