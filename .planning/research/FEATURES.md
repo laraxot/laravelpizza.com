@@ -1,181 +1,124 @@
-# Feature Research: Laravel/Pest Testing Patterns
+# Feature Research
 
-**Domain:** Code Coverage & Testing Framework Patterns
+**Domain:** Laravel Meetup Platform
 **Researched:** 2026-03-05
 **Confidence:** HIGH
 
 ## Feature Landscape
 
-### Table Stakes (Fundamental Testing Patterns)
+### Table Stakes (Users Expect These)
 
-These are the non-negotiable patterns required for achieving comprehensive test coverage in Laravel. Missing these makes proper coverage impossible.
+Features users assume exist. Missing these = product feels incomplete.
 
 | Feature | Why Expected | Complexity | Notes |
 |---------|--------------|------------|-------|
-| **Test file structure (`it()`, `describe()`)** | Pest's core syntax — tests read like natural language | LOW | Use `it('description', closure)` for single tests, `describe('group', closure)` to organize related tests |
-| **Expectation API (`expect()->toBe()`)** | Replaces verbose PHPUnit assertions with chainable, readable methods | LOW | `expect($value)->toBe(10)`, `expect($user)->toBeInstanceOf(User::class)` |
-| **Database transactions** | Isolates each test without polluting database | LOW | Must use `DatabaseTransactions` per PROJECT.md — NOT `RefreshDatabase` |
-| **HTTP feature testing** | Tests complete request-response cycles | MEDIUM | `$this->get()`, `$this->post()`, `$this->put()`, `$this->delete()` with assertions |
-| **Model factories** | Creates test data without boilerplate | LOW | `User::factory()->create()`, `User::factory()->count(5)->create()` |
-| **Basic assertions** | Validates test outcomes | LOW | `assertOk()`, `assertSee()`, `assertJson()`, `assertDatabaseHas()`, `assertRedirect()` |
-| **Authentication helpers** | Tests protected routes and auth flows | MEDIUM | `$this->actingAs($user)`, token-based auth for APIs |
-| **TestCase setup** | Provides Laravel testing base | LOW | Every test file must use `uses(TestCase::class)` |
-| **Global test functions** | Pest's functional approach | LOW | No `protected function` in test files — use global `it()`, `test()`, `describe()` |
+| Event Browsing | Fundamental to finding meetups. | LOW | Displayed on homepage/events list. |
+| Event Detail Page | Provides essential meetup info. | LOW | SEO-friendly URL using slug. |
+| Registration Flow | Primary goal for attendees. | MEDIUM | Multi-step form with email confirmation. |
+| Localization (IT/EN) | Target audience is multilingual. | MEDIUM | Localized URLs and content. |
+| Admin Panel | Necessary for managing content. | LOW | Filament Resources for events/users. |
+| SEO Meta Tags | Crucial for event discovery. | LOW | Dynamic titles and structured data. |
 
-### Differentiators (Advanced Coverage Patterns)
+### Differentiators (Competitive Advantage)
 
-These patterns differentiate between basic coverage and production-grade, maintainable test suites. They enable 100% coverage goals while keeping tests maintainable.
+Features that set the product apart. Not required, but valuable.
 
 | Feature | Value Proposition | Complexity | Notes |
 |---------|-------------------|------------|-------|
-| **Data providers / Datasets** | Test multiple scenarios in single test | LOW | `dataset('name', $data)`, run same test with different inputs |
-| **Parallel testing** | 60-80% faster CI through multi-process execution | MEDIUM | `--parallel --processes=4` in phpunit.xml, reduces 45s to ~12s |
-| **Type coverage analysis** | Ensures PHP type safety across codebase | MEDIUM | Pest v4 plugin: `--type-coverage --min=90` |
-| **Higher-order tests** | Reduces boilerplate via fluent chainable tests | MEDIUM | `$user->expect(fn() => $user->name)->toBe('John')` |
-| **Mockery integration** | Mocks external dependencies (HTTP, Redis, external APIs) | MEDIUM | `Mockery::mock()`, `double()` for isolating units |
-| **Laravel Fakes (Mail/Queue/Event/Notification)** | Tests async behavior without side effects | MEDIUM | `Mail::fake()`, `Queue::fake()`, `Event::fake()`, `Notification::fake()` |
-| **Architecture testing (Arch)** | Enforces layer boundaries in tests | HIGH | "Controllers should not access models directly", validates architectural rules |
-| **Browser testing (Pest v4/Playwright)** | E2E tests for JavaScript interactions | HIGH | Full browser automation, not just HTTP — for complex UI flows |
-| **Visual regression testing** | Catches unintended UI changes | HIGH | `assertScreenshotsMatch()` for pixel-perfect regression detection |
-| **Smoke testing** | Quick health-check for many routes | LOW | `--smoke` flag to visit multiple routes and fail on JS errors |
-| **Custom expectations** | Extends Pest with domain-specific assertions | MEDIUM | `expect($email)->toBeValidEmail()`, reusable across tests |
-| **Coverage sharding** | Distributes coverage checks across CI jobs | MEDIUM | `--shard=1/4` for parallel coverage analysis |
+| CMS-driven JSON Pages | No-code updates for pages. | HIGH | Content defined in JSON, rendered via Cms module. |
+| WCAG 2.1 AA Accessibility | Inclusive design for all. | MEDIUM | Accessible UI/UX according to standards. |
+| QR Code Check-in | Streamlined on-site experience. | MEDIUM | QR generation for tickets, scans for attendance. |
+| Real-time Ticket Counter | FOMO and accurate availability. | MEDIUM | Laravel Reverb for live updates. |
+| Multilingual by Default | Italian/English out of the box. | MEDIUM | Not just translated, but localized. |
 
-### Anti-Features (Patterns to Avoid)
+### Anti-Features (Commonly Requested, Often Problematic)
 
-These patterns seem beneficial but create problems for coverage-focused initiatives.
+Features that seem good but create problems.
 
 | Feature | Why Requested | Why Problematic | Alternative |
 |---------|---------------|-----------------|-------------|
-| **Testing Laravel internals** | "We should test everything" | Tests become fragile, break on framework upgrades, don't verify behavior | Test your **behavior**, not Laravel's internals — test what your code does, not how Laravel does it |
-| **Using `RefreshDatabase`** | "Clean slate for every test" | Slower than transactions, unnecessary for most tests | Use `DatabaseTransactions` as specified in PROJECT.md — faster, same isolation |
-| **Aiming for 100% of everything** | "Complete coverage sounds good" | Diminishing returns, tests become write-only, slows development | Focus on critical paths first (auth, CRUD, business logic), expand outward |
-| **End-to-end everything** | "Most realistic testing" | Slow, flaky, expensive to maintain | Use Pyramid: many unit tests (fast), fewer feature tests (medium), minimal E2E (critical flows only) |
-| **`protected function` in tests** | "OO organization" | Pest is functional by design, conflicts with Pest conventions | Use global functions: `it()`, `test()`, `describe()` |
-| **Testing against real external APIs** | "Production-like" | Tests become non-deterministic, depend on third-party availability, slow | Fake external services, test your **handling** of responses, not the responses themselves |
-| **Over-mocking** | "Isolate units completely" | Tests lose connection to real behavior, become unit tests that verify implementation, not outcomes | Mock at integration boundaries (HTTP, queue), not at every dependency |
-| **Skipping coverage on complex code** | "Too hard to test" | Creates blind spots, technical debt, becomes excuse for untested legacy | Use datasets for edge cases, extract hard-to-test logic into smaller, testable units |
+| Paid Ticketing | To monetize events. | HIGH | Adds payment gateways, tax/invoice complexity. | Deferred to Phase 2. |
+| In-app Social Feed | For community engagement. | HIGH | High maintenance, moderation needs. | Use existing social platforms or simple comments. |
+| Mobile Native Apps | For better engagement. | HIGH | Expensive and adds cross-platform dev burden. | Responsive PWA (Mobile First). |
 
 ## Feature Dependencies
 
 ```
-[Pest Installation & Configuration]
-    └──requires──> [Basic Test Structure (it, describe)]
-                        └──requires──> [Expectation API]
-                                            └──requires──> [Database Transactions]
-                                                └──requires──> [Model Factories]
+[Registration Flow]
+    └──requires──> [User Authentication]
+                       └──requires──> [User Module]
 
-[HTTP Feature Testing]
-    └──requires──> [Authentication Helpers]
-    └──requires──> [Basic Assertions]
+[Event Detail Page] ──requires──> [Meetup Module]
 
-[Parallel Testing]
-    └──enhances──> [All Testing Patterns] (faster feedback)
+[CMS Pages] ──enhances──> [Event Browsing]
 
-[Type Coverage]
-    └──enhances──> [All Testing Patterns] (catches type errors)
-
-[Architecture Testing]
-    └──conflicts──> [Testing Laravel Internals] (opposite goals)
-
-[Browser Testing]
-    └──requires──> [Basic Test Structure]
-    └──requires──> [Visual Regression Testing]
+[QR Check-in] ──requires──> [Registration Flow]
 ```
 
 ### Dependency Notes
 
-- **Pest Installation requires Basic Test Structure:** Cannot write effective tests without `it()`, `describe()`, `expect()` syntax
-- **Database Transactions requires Model Factories:** Transactions isolate data, factories create data to be isolated
-- **HTTP Feature Testing requires Authentication Helpers:** Most routes need auth context
-- **Parallel Testing enhances all patterns:** 60-80% speedup applies to any test suite
-- **Type Coverage enhances all patterns:** Catches type mismatches that unit tests miss
-- **Browser Testing conflicts with pure unit approach:** Requires full Laravel bootstrap, different execution model
-- **Architecture Testing conflicts with Testing Laravel Internals:** Arch tests enforce boundaries, internal tests break them
+- **Registration Flow requires User Authentication:** Attendees must be logged in or identified to register.
+- **Event Detail Page requires Meetup Module:** Core domain models (Event, Venue, Performer) reside there.
+- **CMS Pages enhances Event Browsing:** Allows organizers to create custom landing pages for special events.
+- **QR Check-in requires Registration Flow:** You can't check in without a registration record.
 
 ## MVP Definition
 
-### Launch With (v1 — Initial Coverage)
+### Launch With (v1)
 
-Minimum patterns to achieve basic code coverage on initial modules.
+Minimum viable product — what's needed to validate the concept.
 
-- [ ] **Test file setup** — Pest.php configuration with TestCase and DatabaseTransactions
-- [ ] **Basic test syntax** — `it()`, `describe()`, `expect()` in all test files
-- [ ] **Model factory usage** — Create test data for User, Meetup, Tenant modules
-- [ ] **HTTP testing** — Test controllers and routes with `$this->get()`, assertions
-- [ ] **Database assertions** — `assertDatabaseHas()`, `assertDatabaseMissing()`
-- [ ] **Authentication testing** — `$this->actingAs()` for protected routes
+- [ ] FR-001: Event CRUD for Admins — essential for platform content.
+- [ ] FR-002: Public Event Browsing — essential for attendees.
+- [ ] FR-004: Event Registration — essential for community hub.
+- [ ] FR-005: IT/EN Localization — essential for target audience.
+- [ ] FR-008: WCAG 2.1 AA Compliance — essential for inclusivity.
 
-### Add After Validation (v1.x — Coverage Expansion)
+### Add After Validation (v1.x)
 
-Patterns to add as coverage expands to more modules.
+Features to add once core is working.
 
-- [ ] **Data providers/datasets** — When testing validation rules, edge cases
-- [ ] **Parallel testing setup** — Enable `--parallel` in CI after base tests pass
-- [ ] **Mockery integration** — When tests need to isolate from external services
-- [ ] **Laravel Fakes** — When testing Mail, Queue, Events, Notifications
-- [ ] **Custom expectations** — When domain assertions become repetitive
+- [ ] QR Code Check-in — once registrations are active and users are attending events.
+- [ ] Real-time Ticket Counter — once event popularity requires managing limits.
+- [ ] Extended Profiles — once the community starts growing.
 
-### Future Consideration (v2+ — Advanced Coverage)
+### Future Consideration (v2+)
 
-Patterns for achieving 100% coverage with maintainability.
+Features to defer until product-market fit is established.
 
-- [ ] **Type coverage analysis** — `--type-coverage --min=100` once basic tests stable
-- [ ] **Architecture testing** — Enforce layer boundaries after modules tested
-- [ ] **Browser testing (Pest v4)** — For JavaScript-dependent features only
-- [ ] **Visual regression testing** — If UI changes are frequent, for early detection
+- [ ] Paid Ticketing — once the platform needs monetization.
+- [ ] Partner/Sponsor Management — once larger events are planned.
 
 ## Feature Prioritization Matrix
 
 | Feature | User Value | Implementation Cost | Priority |
 |---------|------------|---------------------|----------|
-| Test file structure | HIGH | LOW | P1 |
-| Expectation API | HIGH | LOW | P1 |
-| Database transactions | HIGH | LOW | P1 |
-| Model factories | HIGH | LOW | P1 |
-| HTTP feature testing | HIGH | MEDIUM | P1 |
-| Basic assertions | HIGH | LOW | P1 |
-| Authentication helpers | HIGH | MEDIUM | P1 |
-| Data providers | MEDIUM | LOW | P2 |
-| Parallel testing | HIGH | MEDIUM | P2 |
-| Mockery integration | MEDIUM | MEDIUM | P2 |
-| Laravel Fakes | MEDIUM | MEDIUM | P2 |
-| Type coverage | MEDIUM | MEDIUM | P2 |
-| Architecture testing | MEDIUM | HIGH | P3 |
-| Browser testing | LOW | HIGH | P3 |
-| Visual regression | LOW | HIGH | P3 |
+| Event Browsing | HIGH | LOW | P1 |
+| Event Registration | HIGH | MEDIUM | P1 |
+| Localization | MEDIUM | MEDIUM | P1 |
+| CMS-driven Pages | HIGH | HIGH | P1 |
+| QR Check-in | MEDIUM | MEDIUM | P2 |
+| Real-time Counter | LOW | MEDIUM | P3 |
 
 **Priority key:**
-- **P1:** Must have for basic coverage (all v1 items)
-- **P2:** Should have for expanded coverage (v1.x items)
-- **P3:** Nice to have for 100% coverage (v2+ items)
+- P1: Must have for launch
+- P2: Should have, add when possible
+- P3: Nice to have, future consideration
 
-## Testing Patterns by Module Type
+## Competitor Feature Analysis
 
-Based on LaravelPizza's module structure, different modules require different testing approaches:
-
-| Module Type | Recommended Patterns | Coverage Target |
-|-------------|---------------------|-----------------|
-| **User (8,565 LOC)** | Full feature testing, auth flows, OAuth | 100% — critical security |
-| **Xot (10,209 LOC)** | Unit tests for services, feature tests for controllers | 100% — core framework |
-| **Meetup (1,200 LOC)** | CRUD operations, relationships | 100% — clear boundaries |
-| **Tenant (600 LOC)** | Isolation, multi-tenancy patterns | 100% — critical for SaaS |
-| **Notify, Geo, Job** | Queue fakes, job dispatching | 100% — background processing |
-| **Media** | File handling, conversions | 100% — external integrations |
-| **Cms, UI, Activity** | Content management, UI components | 100% — user-facing |
-| **Lang, Gdpr, Seo** | Edge cases, compliance | 100% — legal requirements |
+| Feature | Competitor (Meetup.com) | Competitor (Eventbrite) | Our Approach |
+|---------|-------------------------|-------------------------|--------------|
+| Custom Content | Limited templates. | Rigid event pages. | Fully customizable JSON-driven pages. |
+| Localization | Basic. | Good. | Native IT/EN with localized routing. |
+| Architecture | Monolithic/Opaque. | API-first but complex. | Modular Laraxot Monolith — fast and clean. |
 
 ## Sources
 
-- Pest PHP official documentation (pestphp.com)
-- Laravel 12 testing documentation (laravel.com/docs/master/testing)
-- "Complete Laravel Testing Guide — Laravel 12 and Pest 4" — Dominik Dev (2025-09)
-- "What's New in Pest v4 for Laravel 12" — Tilly The Coder (2025-08)
-- "Laravel Testing Strategy — Pest/PHPUnit" — Greeden (2026-01)
-- "PestPHP: 5 Test Patterns That Transform Your Workflow" — Medium (2025-11)
-- Laravel Community best practices (dev.to, forem.com)
+- laravelpizza.com (Existing static site)
+- Meetup.com & Eventbrite Feature Comparisons
+- Laraxot Architectural Standards
 
 ---
-
-*Feature research for: Laravel/Pest Testing Patterns*
+*Feature research for: Laravel Meetup Platform*
 *Researched: 2026-03-05*
