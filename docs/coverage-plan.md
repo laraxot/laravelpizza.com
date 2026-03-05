@@ -97,6 +97,21 @@ Open items (file coverage < 100%): **1594**
   - `Modules/Activity/tests/Unit/BaseModelTest.php`
 - Verifica locale: `13 passed`.
 
+### 2026-03-05 (Cms/Gdpr: Providers/View/Traits/Actions coverage batch)
+- Aggiunti test per Cms Providers:
+  - `Modules/Cms/tests/Unit/Providers/CmsServiceProviderTest.php`
+- Aggiunti test per Cms View Components:
+  - `Modules/Cms/tests/Unit/View/ViewComponentsTest.php`
+  - `Modules/Cms/tests/Unit/View/Composers/ThemeComposerTest.php`
+- Aggiunti test per Gdpr Actions:
+  - `Modules/Gdpr/tests/Unit/Actions/CollectGdprConsentsActionTest.php`
+  - `Modules/Gdpr/tests/Unit/Actions/ValidateGdprConsentActionTest.php`
+  - `Modules/Gdpr/tests/Unit/Actions/ValidateUserDataActionTest.php`
+  - `Modules/Gdpr/tests/Unit/Actions/SaveGdprConsentsActionTest.php`
+  - `Modules/Gdpr/tests/Unit/Actions/HandleRegistrationErrorActionTest.php`
+  - `Modules/Gdpr/tests/Unit/Actions/HandleSuccessfulRegistrationActionTest.php`
+- Verifica locale: `47 passed` sul subset Cms/Gdpr (Providers/View/Actions).
+
 ## Backlog
 
 ### App (5)
@@ -223,25 +238,25 @@ Open items (file coverage < 100%): **1594**
 - [x] `laravel/Modules/Cms/app/Models/Section.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Models/Traits/.php-cs-fixer.dist.php` (0/22, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Models/Traits/HasBlocks.php` (0/55, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Providers/CmsServiceProvider.php` (0/31, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Providers/EventServiceProvider.php` (0/1, 0.0%)
+- [x] `laravel/Modules/Cms/app/Providers/CmsServiceProvider.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Cms/app/Providers/EventServiceProvider.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Providers/Filament/AdminPanelProvider.php` (0/4, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Providers/Filament/FrontPanelProvider.php` (0/40, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php` (0/50, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Providers/RouteServiceProvider.php` (0/19, 0.0%)
-- [ ] `laravel/Modules/Cms/app/View/Components/AppLayout.php` (0/5, 0.0%)
-- [ ] `laravel/Modules/Cms/app/View/Components/GuestLayout.php` (0/2, 0.0%)
-- [ ] `laravel/Modules/Cms/app/View/Components/Metatags.php` (0/8, 0.0%)
+- [x] `laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Cms/app/Providers/RouteServiceProvider.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Cms/app/View/Components/AppLayout.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Cms/app/View/Components/GuestLayout.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Cms/app/View/Components/Metatags.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/View/Components/Page.php` (0/20, 0.0%)
 - [ ] `laravel/Modules/Cms/app/View/Components/PageContent.php` (0/17, 0.0%)
 - [ ] `laravel/Modules/Cms/app/View/Components/Section.php` (0/11, 0.0%)
-- [ ] `laravel/Modules/Cms/app/View/Composers/ThemeComposer.php` (0/40, 0.0%)
+- [x] `laravel/Modules/Cms/app/View/Composers/ThemeComposer.php` (tested, 2026-03-05)
 
 ### Gdpr (32)
-- [ ] `laravel/Modules/Gdpr/app/Actions/Consent/CollectGdprConsentsAction.php` (0/5, 0.0%)
-- [ ] `laravel/Modules/Gdpr/app/Actions/Registration/HandleRegistrationErrorAction.php` (0/11, 0.0%)
-- [ ] `laravel/Modules/Gdpr/app/Actions/Registration/HandleSuccessfulRegistrationAction.php` (0/7, 0.0%)
-- [ ] `laravel/Modules/Gdpr/app/Actions/SaveGdprConsentsAction.php` (0/33, 0.0%)
+- [x] `laravel/Modules/Gdpr/app/Actions/Consent/CollectGdprConsentsAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Gdpr/app/Actions/Registration/HandleRegistrationErrorAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Gdpr/app/Actions/Registration/HandleSuccessfulRegistrationAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Gdpr/app/Actions/SaveGdprConsentsAction.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Gdpr/app/Actions/Validation/ValidateGdprConsentAction.php` (0/16, 0.0%)
 - [ ] `laravel/Modules/Gdpr/app/Actions/Validation/ValidateUserDataAction.php` (0/14, 0.0%)
 - [ ] `laravel/Modules/Gdpr/app/Datas/GdprData.php` (0/4, 0.0%)
