@@ -112,6 +112,26 @@ Open items (file coverage < 100%): **1594**
   - `Modules/Gdpr/tests/Unit/Actions/HandleSuccessfulRegistrationActionTest.php`
 - Verifica locale: `47 passed` sul subset Cms/Gdpr (Providers/View/Actions).
 
+### 2026-03-05 (Gdpr: Models/Providers/Traits/Filament Resources coverage batch)
+- Aggiunti test per Gdpr Models:
+  - `Modules/Gdpr/tests/Unit/Models/ConsentModelTest.php`
+  - `Modules/Gdpr/tests/Unit/Models/EventModelTest.php`
+  - `Modules/Gdpr/tests/Unit/Models/TreatmentModelTest.php`
+  - `Modules/Gdpr/tests/Unit/Models/ProfileModelTest.php`
+  - `Modules/Gdpr/tests/Unit/Models/BaseModelTest.php`
+- Aggiunti test per Gdpr Providers:
+  - `Modules/Gdpr/tests/Unit/Providers/GdprServiceProviderTest.php`
+  - `Modules/Gdpr/tests/Unit/Providers/EventServiceProviderTest.php`
+  - `Modules/Gdpr/tests/Unit/Providers/AdminPanelProviderTest.php`
+- Aggiunti test per Gdpr Traits:
+  - `Modules/Gdpr/tests/Unit/Traits/HasGdprTraitTest.php`
+- Aggiunti test per Gdpr Filament Resources:
+  - `Modules/Gdpr/tests/Unit/Filament/Resources/ConsentResourceTest.php`
+  - `Modules/Gdpr/tests/Unit/Filament/Resources/EventResourceTest.php`
+  - `Modules/Gdpr/tests/Unit/Filament/Resources/ProfileResourceTest.php`
+  - `Modules/Gdpr/tests/Unit/Filament/Resources/TreatmentResourceTest.php`
+- Verifica locale: `74 passed` sul subset Gdpr (Models/Providers/Traits/Filament Resources).
+
 ## Backlog
 
 ### App (5)
@@ -257,34 +277,36 @@ Open items (file coverage < 100%): **1594**
 - [x] `laravel/Modules/Gdpr/app/Actions/Registration/HandleRegistrationErrorAction.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Gdpr/app/Actions/Registration/HandleSuccessfulRegistrationAction.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Gdpr/app/Actions/SaveGdprConsentsAction.php` (tested, 2026-03-05)
-- [ ] `laravel/Modules/Gdpr/app/Actions/Validation/ValidateGdprConsentAction.php` (0/16, 0.0%)
-- [ ] `laravel/Modules/Gdpr/app/Actions/Validation/ValidateUserDataAction.php` (0/14, 0.0%)
+- [x] `laravel/Modules/Gdpr/app/Actions/Validation/ValidateGdprConsentAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Gdpr/app/Actions/Validation/ValidateUserDataAction.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Gdpr/app/Datas/GdprData.php` (0/4, 0.0%)
 - [ ] `laravel/Modules/Gdpr/app/Enums/ConsentType.php` (0/17, 0.0%)
 - [ ] `laravel/Modules/Gdpr/app/Filament/Clusters/Profile/Resources/ConsentResource.php` (0/7, 0.0%)
 - [ ] `laravel/Modules/Gdpr/app/Filament/Clusters/Profile/Resources/ConsentResource/Pages/ListConsents.php` (0/8, 0.0%)
 - [ ] `laravel/Modules/Gdpr/app/Filament/Clusters/Profile/Resources/ProfileResource.php` (0/6, 0.0%)
-- [ ] `laravel/Modules/Gdpr/app/Filament/Resources/ConsentResource.php` (0/24, 0.0%)
+- [x] `laravel/Modules/Gdpr/app/Filament/Resources/ConsentResource.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Gdpr/app/Filament/Resources/ConsentResource/Pages/ListConsents.php` (0/13, 0.0%)
-- [ ] `laravel/Modules/Gdpr/app/Filament/Resources/EventResource.php` (0/14, 0.0%)
+- [x] `laravel/Modules/Gdpr/app/Filament/Resources/EventResource.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Gdpr/app/Filament/Resources/EventResource/Pages/ListEvents.php` (0/28, 0.0%)
-- [ ] `laravel/Modules/Gdpr/app/Filament/Resources/ProfileResource.php` (0/21, 0.0%)
+- [x] `laravel/Modules/Gdpr/app/Filament/Resources/ProfileResource.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Gdpr/app/Filament/Resources/ProfileResource/Pages/ListProfiles.php` (0/25, 0.0%)
-- [ ] `laravel/Modules/Gdpr/app/Filament/Resources/TreatmentResource.php` (0/14, 0.0%)
+- [x] `laravel/Modules/Gdpr/app/Filament/Resources/TreatmentResource.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Gdpr/app/Filament/Resources/TreatmentResource/Pages/ListTreatments.php` (0/16, 0.0%)
 - [ ] `laravel/Modules/Gdpr/app/Filament/Widgets/Auth/RegisterWidget.php` (0/33, 0.0%)
 - [ ] `laravel/Modules/Gdpr/app/Listeners/SaveGdprConsents.php` (0/43, 0.0%)
-- [ ] `laravel/Modules/Gdpr/app/Models/Consent.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Gdpr/app/Models/Event.php` (0/3, 0.0%)
+- [x] `laravel/Modules/Gdpr/app/Models/Consent.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Gdpr/app/Models/Event.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Gdpr/app/Models/Policies/ConsentPolicy.php` (0/7, 0.0%)
 - [ ] `laravel/Modules/Gdpr/app/Models/Policies/EventPolicy.php` (0/7, 0.0%)
 - [ ] `laravel/Modules/Gdpr/app/Models/Policies/GdprBasePolicy.php` (0/3, 0.0%)
+- [x] `laravel/Modules/Gdpr/app/Models/Profile.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Gdpr/app/Models/Policies/ProfilePolicy.php` (0/7, 0.0%)
+- [x] `laravel/Modules/Gdpr/app/Models/Treatment.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Gdpr/app/Models/Policies/TreatmentPolicy.php` (0/7, 0.0%)
-- [ ] `laravel/Modules/Gdpr/app/Models/Traits/HasGdpr.php` (0/42, 0.0%)
-- [ ] `laravel/Modules/Gdpr/app/Providers/EventServiceProvider.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Gdpr/app/Providers/Filament/AdminPanelProvider.php` (0/9, 0.0%)
-- [ ] `laravel/Modules/Gdpr/app/Providers/GdprServiceProvider.php` (0/10, 0.0%)
+- [x] `laravel/Modules/Gdpr/app/Models/Traits/HasGdpr.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Gdpr/app/Providers/EventServiceProvider.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Gdpr/app/Providers/Filament/AdminPanelProvider.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Gdpr/app/Providers/GdprServiceProvider.php` (tested, 2026-03-05)
 
 ### Geo (160)
 - [ ] `laravel/Modules/Geo/app/Actions/.php-cs-fixer.dist.php` (0/22, 0.0%)
