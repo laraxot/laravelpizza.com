@@ -1,59 +1,70 @@
-# LaravelPizza Coverage Initiative
+# LaravelPizza
 
 ## What This Is
 
-Systematic effort to achieve 100% Pest code coverage and 100% type coverage across the LaravelPizza modular codebase. This is a quality assurance and technical debt reduction initiative for an existing Laravel 12 application with ~40,000 LOC.
+LaravelPizza is a modernized conversion of laravelpizza.com, the Italian Laravel developer meetup platform. It is a community hub designed to be engaging, share-worthy, and conversion-optimized, built with a modular architecture (Laraxot) using Laravel 12, Folio, Volt, and Filament.
 
 ## Core Value
 
-Ship tested, type-safe code with 100% coverage — every line executable and verified, eliminating untested paths as a source of bugs.
+Providing a robust, accessible, and community-driven platform for Italian Laravel developers to discover, register for, and manage meetup events.
 
 ## Requirements
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Modular architecture (Laraxot) — established
+- ✓ Core modules (Xot, Tenant, User, Cms, etc.) — established
+- ✓ Folio + Volt for front office — established
+- ✓ Filament for admin panel — established
+- ✓ Italian and English localization support — established
 
 ### Active
 
-- [ ] Achieve 100% code coverage on User module (8,565 LOC)
-- [ ] Achieve 100% code coverage on Meetup module (1,200 LOC)
-- [ ] Achieve 100% code coverage on Tenant module (600 LOC)
-- [ ] Achieve 100% code coverage on Xot module (10,209 LOC)
-- [ ] Achieve 100% code coverage on Notify, Geo, Job, Media, Cms, UI, Activity, Lang, Gdpr, Seo modules
-- [ ] Achieve 100% type coverage across all modules
-- [ ] Establish testing patterns and conventions for future development
+- [ ] FR-001: Admins must be able to create, edit, and delete events via Filament
+- [ ] FR-002: Visitors must be able to browse upcoming events without authentication
+- [ ] FR-003: Each event must have a public detail page: title, description, date, venue, speakers, sponsors
+- [ ] FR-004: Visitors must be able to register for an event with a valid email address
+- [ ] FR-005: All public pages must render in Italian and English via URL locale prefix
+- [ ] FR-006: All public pages must be rendered from JSON content files
+- [ ] FR-007: Cookie consent must be collected before analytics or marketing cookies are set
+- [ ] FR-008: All public pages must meet WCAG 2.1 AA requirements
+- [ ] FR-009: Each public page must have title, meta description, canonical URL, and JSON-LD structured data
+- [ ] FR-010: Admins must have a Filament dashboard showing event count, registration count, recent activity
 
 ### Out of Scope
 
-- Adding new features — coverage only, no feature work
-- Refactoring production code to improve coverage — test existing code as-is
-- Performance optimization — focus is test coverage, not runtime performance
+- Paid ticket / e-commerce flows — Phase 2
+- Live streaming integration — Future release
+- Mobile native apps — Future release
+- Real-time chat during events — Future release
+- A/B testing infrastructure — Future release
+- External OAuth for event providers (Eventbrite, Meetup.com) — Future release
+- CDN configuration — Infrastructure concern
 
 ## Context
 
-- **Current State**: 4.1% code coverage (316 tests, 1,669/40,247 LOC)
-- **Existing Coverage**: Xot module at 16.3%, others at 0%
-- **Test Framework**: Pest (Laravel's preferred testing framework)
-- **Database**: Use DatabaseTransactions, never RefreshDatabase
-- **Code Style**: declare(strict_types=1) required in all files
+- The project is an elevation of the original laravelpizza.com, addressing its lack of event discovery, registration, and profile tracking.
+- It uses the "Laraxot" modular architecture, which emphasizes strict architectural discipline, type safety (PHPStan level 10), and separation of concerns.
+- Content is CMS-driven, utilizing JSON files for page structure and content blocks.
 
 ## Constraints
 
-- **Testing**: Use `php artisan test --coverage --min=100` for verification
-- **Test Structure**: Every test file must use `uses(TestCase::class, DatabaseTransactions::class)`
-- **Type Safety**: No `mixed` type declarations allowed
-- **Test Functions**: No `protected function` in test files — use global functions
+- **Tech Stack**: Laravel 12, Folio, Volt, Filament, Laraxot — Project standards
+- **Architecture**: Modular Monolith — Must follow Laraxot conventions
+- **Front Office**: Folio + Volt only — No traditional controllers for public pages
+- **Admin**: Filament via XotBase — Custom wrappers for consistency
+- **Quality**: PHPStan Level 10 + Zero Errors — Mandatory static analysis
+- **Accessibility**: WCAG 2.1 AA — Compliance requirement
+- **Database**: Single connection for modules — Dynamic routing via Tenant module
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Fine-grained phases (8-12) | Each module treated as separate phase for parallel execution | — Pending |
-| Parallel execution | Independent modules can be tested simultaneously | — Pending |
-| Agent micro-batches | Each agent takes 1 module or 5-15 related files | — Pending |
-| User module first | Largest uncovered LOC (8,565), critical auth/OAuth | — Pending |
+| Modular Architecture | Laraxot pattern for scalability and isolation | ✓ Good |
+| Folio + Volt | Modern, file-based routing and reactive UI for front office | ✓ Good |
+| JSON-based CMS | Decouples content management from code deployments | ✓ Good |
+| XotBase Wrappers | Standardizes Filament implementation across modules | ✓ Good |
 
 ---
-
 *Last updated: 2026-03-05 after initialization*
