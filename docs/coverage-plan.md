@@ -132,6 +132,16 @@ Open items (file coverage < 100%): **1594**
   - `Modules/Gdpr/tests/Unit/Filament/Resources/TreatmentResourceTest.php`
 - Verifica locale: `74 passed` sul subset Gdpr (Models/Providers/Traits/Filament Resources).
 
+### 2026-03-05 (Geo: Actions coverage batch - 15 file)
+- Aggiunti test per Geo Actions:
+  - `Modules/Geo/tests/Unit/Actions/GetBoundingBoxActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/GetCoordinatesByAddressActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/Elevation/GetElevationActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/Elevation/FetchOpenElevationActionTest.php`
+  - `Modules/Geo/tests/Unit/Actions/FilterCoordinatesInRadiusActionTest.php`
+- Verifica locale: `113 passed` sul subset Geo Actions.
+- 11 file marcati come testati in coverage-plan.md
+
 ## Backlog
 
 ### App (5)
@@ -312,18 +322,18 @@ Open items (file coverage < 100%): **1594**
 - [ ] `laravel/Modules/Geo/app/Actions/.php-cs-fixer.dist.php` (0/22, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Actions/Bing/GetAddressFromBingMapsAction.php` (0/92, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Actions/BingMaps/GetAddressFromBingMapsAction.php` (0/41, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Actions/CalculateDistanceAction.php` (0/22, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Actions/ClusterLocationsAction.php` (0/27, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Actions/Elevation/FetchOpenElevationAction.php` (0/25, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Actions/Elevation/GetElevationAction.php` (0/18, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Actions/FilterCoordinatesAction.php` (0/27, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Actions/FilterCoordinatesInRadius.php` (0/22, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Actions/FilterCoordinatesInRadiusAction.php` (0/15, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Actions/FormatCoordinatesAction.php` (0/17, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Actions/GetAddressDataFromFullAddressAction.php` (0/30, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Actions/GetBoundingBoxAction.php` (0/11, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Actions/GetCoordinatesAction.php` (0/20, 0.0%)
-- [ ] `laravel/Modules/Geo/app/Actions/GetCoordinatesByAddressAction.php` (0/141, 0.0%)
+- [x] `laravel/Modules/Geo/app/Actions/CalculateDistanceAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Actions/ClusterLocationsAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Actions/Elevation/FetchOpenElevationAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Actions/Elevation/GetElevationAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Actions/FilterCoordinatesAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Actions/FilterCoordinatesInRadius.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Actions/FilterCoordinatesInRadiusAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Actions/FormatCoordinatesAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Actions/GetAddressDataFromFullAddressAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Actions/GetBoundingBoxAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Actions/GetCoordinatesAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Geo/app/Actions/GetCoordinatesByAddressAction.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Geo/app/Actions/GoogleMaps/CalculateDistanceMatrixAction.php` (0/28, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Actions/GoogleMaps/CalculateTravelTimeAction.php` (0/43, 0.0%)
 - [ ] `laravel/Modules/Geo/app/Actions/GoogleMaps/GetAddressByLatLngFromGoogleMapsAction.php` (0/30, 0.0%)
