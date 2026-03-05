@@ -15,12 +15,27 @@ return new class extends XotBaseMigration
      */
     public function up(): void
     {
-        $this->tableCreate(function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->uuid('event_id')->index();
-            $table->uuid('sponsor_id')->index();
-            $table->string('sponsorship_details')->nullable();
-            $this->updateTimestamps($table, true);
-        });
+        if (! $this->tableExists()) {
+            $this->tableCreate(function (Blueprint $table): void {
+                $table->id();
+                $table->unsignedBigInteger('event_id')->index();
+                $table->unsignedBigInteger('sponsor_id')->index();
+                $table->json('sponsorship_details')->nullable();
+                $table->unique(['event_id', 'sponsor_id']);
+                $this->timestamps($table);
+            });
+        } else {
+            $this->tableUpdate(function (Blueprint $table): void {
+                if (! $this->hasColumn('event_id')) {
+                    $table->unsignedBigInteger('event_id')->index()->after('id');
+                }
+                if (! $this->hasColumn('sponsor_id')) {
+                    $table->unsignedBigInteger('sponsor_id')->index()->after('event_id');
+                }
+                if (! $this->hasColumn('sponsorship_details')) {
+                    $table->json('sponsorship_details')->nullable()->after('sponsor_id');
+                }
+            });
+        }
     }
 };

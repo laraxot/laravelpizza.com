@@ -3,12 +3,12 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-use Modules\Meetup\Models\EventPerformer;
+use Modules\Meetup\Models\EventUser;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 return new class extends XotBaseMigration
 {
-    protected ?string $model_class = EventPerformer::class;
+    protected ?string $model_class = EventUser::class;
 
     /**
      * Run the migrations.
@@ -19,10 +19,10 @@ return new class extends XotBaseMigration
             $this->tableCreate(function (Blueprint $table): void {
                 $table->id();
                 $table->unsignedBigInteger('event_id')->index();
-                $table->unsignedBigInteger('performer_id')->index();
-                $table->string('role')->nullable();
-                $table->unsignedInteger('order')->default(0);
-                $table->unique(['event_id', 'performer_id']);
+                $table->string('user_id', 36)->index();
+                $table->string('status')->default('attending')->index();
+                $table->timestamp('registered_at')->nullable();
+                $table->unique(['event_id', 'user_id']);
                 $this->timestamps($table);
             });
         } else {
@@ -30,14 +30,14 @@ return new class extends XotBaseMigration
                 if (! $this->hasColumn('event_id')) {
                     $table->unsignedBigInteger('event_id')->index()->after('id');
                 }
-                if (! $this->hasColumn('performer_id')) {
-                    $table->unsignedBigInteger('performer_id')->index()->after('event_id');
+                if (! $this->hasColumn('user_id')) {
+                    $table->string('user_id', 36)->index()->after('event_id');
                 }
-                if (! $this->hasColumn('role')) {
-                    $table->string('role')->nullable()->after('performer_id');
+                if (! $this->hasColumn('status')) {
+                    $table->string('status')->default('attending')->index()->after('user_id');
                 }
-                if (! $this->hasColumn('order')) {
-                    $table->unsignedInteger('order')->default(0)->after('role');
+                if (! $this->hasColumn('registered_at')) {
+                    $table->timestamp('registered_at')->nullable()->after('status');
                 }
             });
         }
