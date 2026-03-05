@@ -4,28 +4,29 @@
 
 ## Executive Summary
 
-**Test Files Created**: 531 (up from ~408)
-**Coverage Achievement**: ~25-30% estimated across codebase (2,100+ app files have tests)
+**Test Files Created**: 533 (↑ from ~408 baseline)  
+**Source Files**: 1,974 across all modules  
+**Current Coverage**: 27% estimated (533 tests / 1974 files)  
 **Goal**: 100% code coverage + 100% type coverage
 
 ### Test File Count by Module (Current)
-| Module | Tests | Status | Priority |
-|--------|-------|--------|----------|
-| **Xot** | 93 | 🟢 Foundation | HIGH |
-| **Cms** | 91 | 🟢 Stable | HIGH |
-| **Notify** | 88 | 🟡 Fixes needed | MEDIUM |
-| **User** | 50 | 🟡 Config issues | HIGH |
-| **Geo** | 48 | 🟢 Mostly stable | MEDIUM |
-| **Meetup** | 35 | 🟡 Pivot model fixes | HIGH |
-| **Gdpr** | 27 | 🟢 Good | LOW |
-| **Job** | 24 | 🟢 Good | LOW |
-| **Activity** | 19 | 🟢 Complete | LOW |
-| **Tenant** | 13 | 🟡 DB config | MEDIUM |
-| **Media** | 13 | 🟢 Good | LOW |
-| **UI** | 12 | 🔴 Missing Theme model | HIGH |
-| **Lang** | 11 | 🟢 Good | LOW |
-| **Seo** | 7 | 🟢 Good | LOW |
-| **TOTAL** | **531** | - | - |
+| Module | Tests | Sources | Coverage % | Status |
+|--------|-------|---------|-----------|--------|
+| **Xot** | 93 | 458 | 20% | 🟢 Foundation |
+| **Cms** | 91 | 119 | 76% | 🟢 Excellent |
+| **Notify** | 88 | 183 | 48% | 🟡 Good |
+| **User** | 50 | 499 | 10% | 🟡 Critical gap |
+| **Geo** | 48 | 176 | 27% | 🟢 Stable |
+| **Meetup** | 37 | 38 | 97% | 🟢 Near-Complete |
+| **Gdpr** | 27 | 54 | 50% | 🟢 Good |
+| **Job** | 24 | 119 | 20% | 🟡 Medium gap |
+| **Activity** | 19 | 42 | 45% | 🟢 Good |
+| **Tenant** | 13 | 45 | 29% | 🟡 Medium gap |
+| **Media** | 13 | 73 | 18% | 🟡 Medium gap |
+| **UI** | 12 | 105 | 11% | 🔴 Critical gap |
+| **Lang** | 11 | 53 | 21% | 🟡 Medium gap |
+| **Seo** | 7 | 10 | 70% | 🟢 Good |
+| **TOTAL** | **533** | **1,974** | **27%** | - |
 
 ### Current Blockers & Test Failures
 1. ⏳ **Geo Module**: residui su test infra/event-sourcing in full-run esteso (subset critici stabilizzati).
@@ -102,17 +103,23 @@ After fixing Phase 1, run full test suite and identify:
 
 #### Per-Module Gap Targets
 
-| Module | Current | Target | Gap |
-|--------|---------|--------|-----|
-| Xot | 93 | 150+ | 57 |
-| Cms | 91 | 140+ | 49 |
-| Notify | 88 | 130+ | 42 |
-| User | 50 | 120+ | 70 |
-| Geo | 48 | 100+ | 52 |
-| Meetup | 35 | 150+ | 115 |
-| Tenant | 13 | 80+ | 67 |
-| Others | 113 | 250+ | 137 |
-| **TOTAL** | **531** | **1,100+** | **589** |
+| Module | Current | Sources | Target | New Tests Needed |
+|--------|---------|---------|--------|------------------|
+| **User** | 50 | 499 | 250+ | +200 |
+| **Job** | 24 | 119 | 80+ | +56 |
+| **UI** | 12 | 105 | 80+ | +68 |
+| **Lang** | 11 | 53 | 50+ | +39 |
+| **Media** | 13 | 73 | 60+ | +47 |
+| **Tenant** | 13 | 45 | 60+ | +47 |
+| **Xot** | 93 | 458 | 250+ | +157 |
+| **Cms** | 91 | 119 | 120+ | +29 |
+| **Notify** | 88 | 183 | 150+ | +62 |
+| **Geo** | 48 | 176 | 120+ | +72 |
+| **Meetup** | 37 | 38 | 38 | +1 |
+| **Activity** | 19 | 42 | 40+ | +21 |
+| **Gdpr** | 27 | 54 | 50+ | +23 |
+| **Seo** | 7 | 10 | 10 | +3 |
+| **TOTAL** | **533** | **1,974** | **1,400+** | **+867** |
 
 ---
 
