@@ -3,13 +3,10 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-use Modules\Meetup\Models\Event;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 return new class extends XotBaseMigration
 {
-    protected ?string $model_class = Event::class;
-
     /**
      * Run the migrations.
      */
@@ -25,19 +22,14 @@ return new class extends XotBaseMigration
                 $table->string('in_language', 10)->default('it');
                 $table->dateTime('start_date')->index();
                 $table->dateTime('end_date')->index();
-                $table->dateTime('start_at')->nullable()->index();
-                $table->dateTime('end_at')->nullable()->index();
                 $table->string('duration')->nullable();
                 $table->string('location')->nullable();
                 $table->unsignedBigInteger('location_id')->nullable()->index();
-                $table->unsignedBigInteger('venue_id')->nullable()->index();
                 $table->string('status')->default('draft')->index();
                 $table->string('event_status')->default('EventScheduled')->index();
                 $table->string('event_attendance_mode')->default('OfflineEventAttendanceMode')->index();
                 $table->integer('attendees_count')->default(0);
                 $table->integer('max_attendees')->default(100);
-                $table->integer('attendees_current')->default(0);
-                $table->integer('attendees_max')->default(100);
                 $table->string('cover_image')->nullable();
                 $table->string('url')->nullable();
                 $table->json('offers')->nullable();
@@ -77,15 +69,6 @@ return new class extends XotBaseMigration
                 if (! $this->hasColumn('in_language')) {
                     $table->string('in_language', 10)->default('it')->after('description');
                 }
-                if (! $this->hasColumn('start_at')) {
-                    $table->dateTime('start_at')->nullable()->index()->after('end_date');
-                }
-                if (! $this->hasColumn('end_at')) {
-                    $table->dateTime('end_at')->nullable()->index()->after('start_at');
-                }
-                if (! $this->hasColumn('venue_id')) {
-                    $table->unsignedBigInteger('venue_id')->nullable()->index()->after('location_id');
-                }
                 if (! $this->hasColumn('event_status')) {
                     $table->string('event_status')->default('EventScheduled')->index()->after('status');
                 }
@@ -115,12 +98,6 @@ return new class extends XotBaseMigration
                 }
                 if (! $this->hasColumn('registration_url')) {
                     $table->string('registration_url')->nullable()->after('registration_opens_at');
-                }
-                if (! $this->hasColumn('attendees_current')) {
-                    $table->integer('attendees_current')->default(0)->after('max_attendees');
-                }
-                if (! $this->hasColumn('attendees_max')) {
-                    $table->integer('attendees_max')->default(100)->after('attendees_current');
                 }
                 if (! $this->hasColumn('repeat_frequency')) {
                     $table->string('repeat_frequency')->nullable()->after('previous_start_date');

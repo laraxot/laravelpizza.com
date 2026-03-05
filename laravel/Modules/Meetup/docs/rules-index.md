@@ -62,9 +62,3 @@
 - **2026-03-02**: Aggiunta Chaos Monkey Readiness
 - **2026-03-02**: Aggiunto Chaos Monkey Event Rendering Playbook
 - **2026-03-02**: Aggiunto Package Dependency Chaos Map
-
-## Pre-Edit Rule Link
-
-- [Pre-Edit Docs-First Rule](../../../../docs/rules/pre-edit-docs-first-rule.md)
-- [Pre-Edit Docs-First Memory](../../../../docs/memory/pre-edit-docs-first-memory.md)
-- [Pre-Edit Docs-First Skill](../../../../docs/skills/pre-edit-docs-first-skill.md)

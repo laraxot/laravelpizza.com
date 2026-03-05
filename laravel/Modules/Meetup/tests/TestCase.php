@@ -19,7 +19,6 @@ abstract class TestCase extends XotBaseTestCase
     protected $connectionsToTransact = [
         'mysql',
         'user',
-        'meetup',
     ];
 
     /**

@@ -6,7 +6,6 @@ namespace Modules\Meetup\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Carbon;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Activity\Traits\HasEvents;
@@ -208,67 +207,6 @@ class Event extends BaseModel
     public function organizer(): BelongsTo
     {
         return $this->belongsTo(User::class, 'organizer_id', 'id');
-    }
-
-    /**
-     * Event venue relation.
-     * The current schema uses `location_id` as the venue foreign key.
-     *
-     * @return BelongsTo<Venue, $this>
-     */
-    public function venue(): BelongsTo
-    {
-        return $this->belongsTo(Venue::class, 'location_id', 'id');
-    }
-
-    /**
-     * Performers linked to the event.
-     *
-     * @return BelongsToMany<Performer, $this>
-     */
-    public function performers(): BelongsToMany
-    {
-        return $this->belongsToManyX(Performer::class, 'event_performer');
-    }
-
-    /**
-     * Sponsors linked to the event.
-     *
-     * @return BelongsToMany<Sponsor, $this>
-     */
-    public function sponsors(): BelongsToMany
-    {
-        return $this->belongsToManyX(Sponsor::class, 'event_sponsor')
-            ->withPivot(['sponsorship_details'])
-            ->withTimestamps();
-    }
-
-    /**
-     * Registered attendees (users) for this event.
-     *
-     * @return BelongsToMany<User, $this>
-     */
-    public function attendees(): BelongsToMany
-    {
-        return $this->belongsToManyX(User::class, 'event_user')
-            ->withPivot(['status'])
-            ->withTimestamps();
-    }
-
-    /**
-     * Check if event is at full capacity (for REGS-03).
-     */
-    public function isFull(): bool
-    {
-        return $this->attendees_count >= $this->max_attendees;
-    }
-
-    /**
-     * Get available spots.
-     */
-    public function availableSpots(): int
-    {
-        return max(0, $this->max_attendees - $this->attendees_count);
     }
 
     /**
