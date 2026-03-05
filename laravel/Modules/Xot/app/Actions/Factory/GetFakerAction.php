@@ -24,7 +24,7 @@ class GetFakerAction
 
     public function execute(string $name, ?string $type = null, ?string $_table = null): string
     {
-        if ($type !== null && Str::startsWith($type, 'factory(')) {
+        if (null !== $type && Str::startsWith($type, 'factory(')) {
             return $type;
         }
 

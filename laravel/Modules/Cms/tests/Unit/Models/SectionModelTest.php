@@ -44,13 +44,13 @@ describe('Section Model', function (): void {
     test('section model uses HasBlocks trait', function (): void {
         $model = new Section();
 
-        expect(in_array(\Modules\Cms\Models\Traits\HasBlocks::class, class_uses_recursive($model)))->toBeTrue();
+        expect(in_array(Modules\Cms\Models\Traits\HasBlocks::class, class_uses_recursive($model)))->toBeTrue();
     });
 
     test('section model uses SushiToJsons trait', function (): void {
         $model = new Section();
 
-        expect(in_array(\Modules\Tenant\Models\Traits\SushiToJsons::class, class_uses_recursive($model)))->toBeTrue();
+        expect(in_array(Modules\Tenant\Models\Traits\SushiToJsons::class, class_uses_recursive($model)))->toBeTrue();
     });
 
     test('section model has getRows method', function (): void {
@@ -62,6 +62,6 @@ describe('Section Model', function (): void {
     test('section model extends BaseModelLang', function (): void {
         $model = new Section();
 
-        expect($model)->toBeInstanceOf(\Modules\Cms\Models\BaseModelLang::class);
+        expect($model)->toBeInstanceOf(Modules\Cms\Models\BaseModelLang::class);
     });
 });

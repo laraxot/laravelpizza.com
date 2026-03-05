@@ -59,11 +59,12 @@ class LoginWidget extends XotBaseWidget
             'password' => is_string($data['password'] ?? null) ? $data['password'] : '',
         ];
 
-        $remember = isset($data['remember']) && $data['remember'] === true;
+        $remember = isset($data['remember']) && true === $data['remember'];
 
         if (Auth::attempt($credentials, $remember)) {
             session()->regenerate();
             redirect()->intended('/');
+
             return;
         }
 

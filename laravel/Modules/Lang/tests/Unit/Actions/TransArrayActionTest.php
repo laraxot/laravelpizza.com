@@ -7,7 +7,7 @@ uses(Modules\Lang\Tests\TestCase::class);
 use Modules\Lang\Actions\TransArrayAction;
 
 beforeEach(function () {
-    $this->action = new TransArrayAction;
+    $this->action = new TransArrayAction();
 });
 
 describe('TransArrayAction Business Logic', function () {

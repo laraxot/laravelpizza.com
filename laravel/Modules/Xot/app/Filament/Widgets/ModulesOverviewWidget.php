@@ -113,7 +113,8 @@ class ModulesOverviewWidget extends Widget
     /**
      * Ottiene la descrizione per un modulo.
      *
-     * @param  string  $module  Nome del modulo
+     * @param string $module Nome del modulo
+     *
      * @return string Descrizione del modulo
      */
     private function getModuleDescription(string $module): string

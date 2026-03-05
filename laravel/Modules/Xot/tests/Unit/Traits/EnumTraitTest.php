@@ -115,8 +115,7 @@ it('gets column names', function (): void {
 
 it('has default empty column definitions', function (): void {
     // Need a different enum without overrides
-    $enum = new class
-    {
+    $enum = new class {
         use EnumTrait;
 
         public static function cases()

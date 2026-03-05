@@ -20,5 +20,6 @@ class InvalidState
      */
     public function __construct(
         public InvalidStateException $exception,
-    ) {}
+    ) {
+    }
 }

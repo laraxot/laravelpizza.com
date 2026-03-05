@@ -192,6 +192,25 @@ Open items (file coverage < 100%): **1375**
   - `WhatsAppNotification`
 - Verifica locale: `8 passed`.
 
+### 2026-03-05 (Notify: Filament small components/pages quick-win)
+- Aggiunti test su:
+  - `Modules/Notify/tests/Unit/Filament/Forms/Components/NotifyFormComponentsTest.php`
+  - `Modules/Notify/tests/Unit/Filament/Pages/SettingPageTest.php`
+- Verifica locale: `4 passed`.
+
+### 2026-03-05 (Notify: models consolidation batch)
+- Aggiunto test consolidato:
+  - `Modules/Notify/tests/Unit/Models/NotifyModelsCoverageTest.php`
+- Coperti models:
+  - `BaseMorphPivot`
+  - `BasePivot`
+  - `Contact`
+  - `MailTemplate`
+  - `Notification`
+  - `NotificationTemplate`
+  - `NotifyTheme`
+- Verifica locale: `6 passed`.
+
 ### 2026-03-05 (Cms/Gdpr: Providers/View/Traits/Actions coverage batch)
 - Aggiunti test per Cms Providers:
   - `Modules/Cms/tests/Unit/Providers/CmsServiceProviderTest.php`
@@ -899,7 +918,7 @@ Open items (file coverage < 100%): **1375**
   - Verifica: 234 tests passano (490 assertions)
   - Total added: 21 tests, 542 LOC
 
-### Notify (98)
+### Notify (86)
 - [x] `laravel/Modules/Notify/app/Actions/BuildMailMessageAction.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Notify/app/Actions/DetermineSeasonalContentViewPathAction.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Notify/app/Actions/EsendexSendAction.php` (tested, 2026-03-05)
@@ -959,11 +978,6 @@ Open items (file coverage < 100%): **1375**
 - [ ] `laravel/Modules/Notify/app/Filament/Clusters/Test/Pages/SendTelegramPage.php` (0/71, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Filament/Clusters/Test/Pages/SendWhatsAppPage.php` (0/65, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Filament/Clusters/Test/Pages/TestSmtpPage.php` (0/60, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Filament/Forms/Components/ChannelCheckboxList.php` (0/7, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Filament/Forms/Components/ContactSection.php` (0/4, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Filament/Forms/Components/HtmlLayoutPathSelect.php` (0/14, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Filament/Forms/Components/MailTemplateSelect.php` (0/11, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Filament/Pages/SettingPage.php` (0/7, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Filament/Resources/ContactResource.php` (0/12, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Filament/Resources/ContactResource/Pages/EditContact.php` (0/3, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Filament/Resources/ContactResource/Pages/ListContacts.php` (0/16, 0.0%)
@@ -986,13 +1000,6 @@ Open items (file coverage < 100%): **1375**
 - [ ] `laravel/Modules/Notify/app/Jobs/SendScheduledPushNotification.php` (0/35, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Mail/AppointmentNotificationMail.php` (0/39, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Mail/ChristmasGreetingMailable.php` (0/14, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Models/BaseMorphPivot.php` (0/10, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Models/BasePivot.php` (0/10, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Models/Contact.php` (0/12, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Models/MailTemplate.php` (0/12, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Models/Notification.php` (0/9, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Models/NotificationTemplate.php` (0/58, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Models/NotifyTheme.php` (0/17, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Notifications/FirebaseAndroidNotification.php` (0/54, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Services/MailEngines/MailtrapEngine.php` (0/16, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Services/NotificationManager.php` (0/31, 0.0%)

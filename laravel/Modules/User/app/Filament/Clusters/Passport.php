@@ -16,4 +16,6 @@ use Modules\Xot\Filament\Clusters\XotBaseCluster;
  *
  * @see XotBaseCluster
  */
-class Passport extends XotBaseCluster {}
+class Passport extends XotBaseCluster
+{
+}

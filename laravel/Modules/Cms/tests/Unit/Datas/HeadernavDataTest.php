@@ -7,61 +7,61 @@ uses(Modules\Cms\Tests\TestCase::class);
 use Modules\Cms\Datas\HeadernavData;
 
 test('HeadernavData can be instantiated', function (): void {
-    $headernavData = new HeadernavData;
+    $headernavData = new HeadernavData();
 
     expect($headernavData)->toBeInstanceOf(HeadernavData::class);
 });
 
 test('HeadernavData extends Spatie Data', function (): void {
-    $headernavData = new HeadernavData;
+    $headernavData = new HeadernavData();
 
     expect($headernavData)->toBeInstanceOf(Spatie\LaravelData\Data::class);
 });
 
 test('HeadernavData implements Wireable interface', function (): void {
-    $headernavData = new HeadernavData;
+    $headernavData = new HeadernavData();
 
     expect($headernavData)->toBeInstanceOf(Livewire\Wireable::class);
 });
 
 test('HeadernavData has default view path', function (): void {
-    $headernavData = new HeadernavData;
+    $headernavData = new HeadernavData();
 
     expect($headernavData->view)->toBe('cms::components.headernav');
 });
 
 test('HeadernavData has nullable background_color property', function (): void {
-    $headernavData = new HeadernavData;
+    $headernavData = new HeadernavData();
 
     expect($headernavData->background_color)->toBeNull();
 });
 
 test('HeadernavData has nullable background property', function (): void {
-    $headernavData = new HeadernavData;
+    $headernavData = new HeadernavData();
 
     expect($headernavData->background)->toBeNull();
 });
 
 test('HeadernavData has nullable overlay_color property', function (): void {
-    $headernavData = new HeadernavData;
+    $headernavData = new HeadernavData();
 
     expect($headernavData->overlay_color)->toBeNull();
 });
 
 test('HeadernavData has nullable overlay_opacity property', function (): void {
-    $headernavData = new HeadernavData;
+    $headernavData = new HeadernavData();
 
     expect($headernavData->overlay_opacity)->toBeNull();
 });
 
 test('HeadernavData has nullable class property', function (): void {
-    $headernavData = new HeadernavData;
+    $headernavData = new HeadernavData();
 
     expect($headernavData->class)->toBeNull();
 });
 
 test('HeadernavData has nullable style property', function (): void {
-    $headernavData = new HeadernavData;
+    $headernavData = new HeadernavData();
 
     expect($headernavData->style)->toBeNull();
 });

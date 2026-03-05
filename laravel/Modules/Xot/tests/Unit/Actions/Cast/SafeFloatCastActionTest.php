@@ -38,8 +38,7 @@ it('casts various values to float correctly', function (): void {
     expect($action->execute(['a', 'b'], 2.2))->toBe(2.2);
 
     // Objects with toString
-    $obj = new class
-    {
+    $obj = new class {
         public function __toString()
         {
             return '10.5';

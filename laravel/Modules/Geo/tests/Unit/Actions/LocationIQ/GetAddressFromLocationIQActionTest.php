@@ -10,14 +10,14 @@ use Modules\Geo\Actions\LocationIQ\GetAddressFromLocationIQAction;
 use Modules\Geo\Datas\AddressData;
 
 beforeEach(function () {
-    $this->action = new GetAddressFromLocationIQAction;
+    $this->action = new GetAddressFromLocationIQAction();
 });
 
 it('throws exception when api key is not configured', function (): void {
     config(['services.locationiq.key' => null]);
 
     expect(fn () => $this->action->execute('Milano, Italia'))
-        ->toThrow(\Exception::class, 'LocationIQ API key not configured');
+        ->toThrow(Exception::class, 'LocationIQ API key not configured');
 });
 
 it('returns null when api response is not successful', function (): void {

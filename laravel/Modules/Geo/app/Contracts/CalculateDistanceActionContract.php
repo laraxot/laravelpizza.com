@@ -14,8 +14,9 @@ interface CalculateDistanceActionContract
     /**
      * Calculate the distance and travel time between two points.
      *
-     * @param  LocationData  $origin  Origin point with valid coordinates
-     * @param  LocationData  $destination  Destination point with valid coordinates
+     * @param LocationData $origin      Origin point with valid coordinates
+     * @param LocationData $destination Destination point with valid coordinates
+     *
      * @return array{
      *     distance: array{text: string, value: int},
      *     duration: array{text: string, value: int},
@@ -27,7 +28,7 @@ interface CalculateDistanceActionContract
     /**
      * Format distance in meters to a human-readable string.
      *
-     * @param  int  $meters  Distance in meters
+     * @param int $meters Distance in meters
      */
     public function formatDistance(int $meters): string;
 }

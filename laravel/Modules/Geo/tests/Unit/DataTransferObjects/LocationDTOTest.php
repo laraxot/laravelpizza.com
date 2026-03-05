@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Modules\Geo\DataTransferObjects\LocationDTO;
 use Modules\Geo\Datas\LocationData;
+use Modules\Geo\DataTransferObjects\LocationDTO;
 
 describe('LocationDTO', function () {
     test('can be instantiated with required fields', function () {

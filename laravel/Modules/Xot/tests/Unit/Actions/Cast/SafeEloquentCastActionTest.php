@@ -10,8 +10,7 @@ uses(TestCase::class);
 
 beforeEach(function (): void {
     $this->action = app(SafeEloquentCastAction::class);
-    $this->model = new class extends Model
-    {
+    $this->model = new class extends Model {
         protected $guarded = [];
     };
     $this->model->forceFill([

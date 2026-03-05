@@ -10,7 +10,7 @@ describe('LoginComponent', function (): void {
     test('login component extends volt component', function (): void {
         $component = new LoginComponent();
 
-        expect($component)->toBeInstanceOf(\Livewire\Volt\Component::class);
+        expect($component)->toBeInstanceOf(Livewire\Volt\Component::class);
     });
 
     test('login component has email property', function (): void {

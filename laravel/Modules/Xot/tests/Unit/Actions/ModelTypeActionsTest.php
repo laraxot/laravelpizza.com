@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit\Actions;
 
 use Illuminate\Support\Facades\Config;
-use Mockery;
 use Modules\Xot\Actions\GetModelClassByModelTypeAction;
 use Modules\Xot\Actions\GetModelTypeByModelAction;
 use Modules\Xot\Contracts\ModelContract;
@@ -22,11 +21,11 @@ it('resolves model types correctly', function (): void {
 
     // Test GetModelTypeByModelAction with Mock
     $typeAction = app(GetModelTypeByModelAction::class);
-    $mock = Mockery::mock(ModelContract::class);
+    $mock = \Mockery::mock(ModelContract::class);
 
     // class_basename of mock is something like "Mockery_0_Modules_Xot_Contracts_ModelContract"
     $result = $typeAction->execute($mock);
     expect($result)->toBeString();
 
-    Mockery::close();
+    \Mockery::close();
 });

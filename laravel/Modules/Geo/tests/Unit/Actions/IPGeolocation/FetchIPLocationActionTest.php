@@ -10,7 +10,7 @@ use Modules\Geo\Actions\IPGeolocation\FetchIPLocationAction;
 use Modules\Geo\Datas\IPLocationData;
 
 beforeEach(function () {
-    $this->action = new FetchIPLocationAction;
+    $this->action = new FetchIPLocationAction();
 });
 
 it('throws exception when ip-api returns failure status', function (): void {
@@ -22,7 +22,7 @@ it('throws exception when ip-api returns failure status', function (): void {
     ]);
 
     expect(fn () => $this->action->execute('8.8.8.8'))
-        ->toThrow(\RuntimeException::class, 'Failed to get IP location: invalid query');
+        ->toThrow(RuntimeException::class, 'Failed to get IP location: invalid query');
 });
 
 it('returns ip location data for valid response', function (): void {

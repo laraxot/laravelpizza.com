@@ -8,7 +8,7 @@ use Modules\Gdpr\Filament\Resources\EventResource;
 use Modules\Gdpr\Models\Event;
 
 test('event_resource_extends_xot_base_resource', function () {
-    expect(is_subclass_of(EventResource::class, \Modules\Xot\Filament\Resources\XotBaseResource::class))->toBeTrue();
+    expect(is_subclass_of(EventResource::class, Modules\Xot\Filament\Resources\XotBaseResource::class))->toBeTrue();
 });
 
 test('event_resource_model_is_event', function () {

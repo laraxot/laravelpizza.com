@@ -11,15 +11,15 @@ describe('BaseMorphPivot Model', function () {
         $model = new class extends BaseMorphPivot {
             protected $table = 'test';
         };
-        
-        expect($model)->toBeInstanceOf(\Illuminate\Database\Eloquent\Relations\MorphPivot::class);
+
+        expect($model)->toBeInstanceOf(Illuminate\Database\Eloquent\Relations\MorphPivot::class);
     });
 
     test('has correct connection', function () {
         $model = new class extends BaseMorphPivot {
             protected $table = 'test';
         };
-        
+
         expect($model->getConnectionName())->toBe('lang');
     });
 
@@ -31,7 +31,7 @@ describe('BaseMorphPivot Model', function () {
         $model = new class extends BaseMorphPivot {
             protected $table = 'test';
         };
-        
+
         expect($model->timestamps)->toBeTrue();
     });
 
@@ -39,7 +39,7 @@ describe('BaseMorphPivot Model', function () {
         $model = new class extends BaseMorphPivot {
             protected $table = 'test';
         };
-        
+
         expect($model->incrementing)->toBeTrue();
     });
 
@@ -47,7 +47,7 @@ describe('BaseMorphPivot Model', function () {
         $model = new class extends BaseMorphPivot {
             protected $table = 'test';
         };
-        
+
         expect($model->getPerPage())->toBe(30);
     });
 
@@ -56,7 +56,7 @@ describe('BaseMorphPivot Model', function () {
             protected $table = 'test';
         };
         $fillable = $model->getFillable();
-        
+
         expect($fillable)->toContain('id');
         expect($fillable)->toContain('post_id');
         expect($fillable)->toContain('post_type');
@@ -69,7 +69,7 @@ describe('BaseMorphPivot Model', function () {
         $model = new class extends BaseMorphPivot {
             protected $table = 'test';
         };
-        
+
         $casts = $model->getCasts();
         expect($casts['id'])->toBe('string');
     });
@@ -78,7 +78,7 @@ describe('BaseMorphPivot Model', function () {
         $model = new class extends BaseMorphPivot {
             protected $table = 'test';
         };
-        
+
         $casts = $model->getCasts();
         expect($casts['created_at'])->toBe('datetime');
         expect($casts['updated_at'])->toBe('datetime');

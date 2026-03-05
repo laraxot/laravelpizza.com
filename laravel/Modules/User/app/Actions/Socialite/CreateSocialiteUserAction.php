@@ -20,7 +20,8 @@ class CreateSocialiteUserAction
 
     public function __construct(
         private readonly SocialiteUser $socialiteUserModel,
-    ) {}
+    ) {
+    }
 
     /**
      * Execute the action.

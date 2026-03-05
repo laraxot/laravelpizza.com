@@ -9,13 +9,13 @@ use Modules\Cms\Datas\ResolvePageData;
 use Modules\Cms\Models\Page;
 
 test('ResolvePageAction can be instantiated', function () {
-    $action = new ResolvePageAction;
+    $action = new ResolvePageAction();
 
     expect($action)->toBeInstanceOf(ResolvePageAction::class);
 });
 
 test('ResolvePageAction execute returns ResolvePageData', function () {
-    $action = new ResolvePageAction;
+    $action = new ResolvePageAction();
 
     $result = $action->execute('events', 'test-event');
 
@@ -24,7 +24,7 @@ test('ResolvePageAction execute returns ResolvePageData', function () {
 
 test('ResolvePageAction loads dynamic model when exists', function () {
     // This test verifies the path - actual model loading would require a real model
-    $action = new ResolvePageAction;
+    $action = new ResolvePageAction();
 
     $result = $action->execute('nonexistent_container', 'nonexistent-slug');
 
@@ -33,7 +33,7 @@ test('ResolvePageAction loads dynamic model when exists', function () {
 });
 
 test('ResolvePageAction returns cms mode with full slug when page exists', function () {
-    $action = new ResolvePageAction;
+    $action = new ResolvePageAction();
 
     // Without an actual page in DB, it will try dynamic model first
     $result = $action->execute('test', 'test');
@@ -42,7 +42,7 @@ test('ResolvePageAction returns cms mode with full slug when page exists', funct
 });
 
 test('ResolvePageAction uses known mappings for events', function () {
-    $action = new ResolvePageAction;
+    $action = new ResolvePageAction();
 
     // This should try to load from Events model first
     $result = $action->execute('events', 'some-event-slug');
@@ -52,9 +52,9 @@ test('ResolvePageAction uses known mappings for events', function () {
 
 test('ResolvePageAction falls back to config mappings', function () {
     // Add a custom config mapping
-    config(['xra.container0_model_map' => ['custom' => \Modules\Cms\Models\Page::class]]);
+    config(['xra.container0_model_map' => ['custom' => Page::class]]);
 
-    $action = new ResolvePageAction;
+    $action = new ResolvePageAction();
 
     $result = $action->execute('custom', 'test');
 
@@ -62,7 +62,7 @@ test('ResolvePageAction falls back to config mappings', function () {
 });
 
 test('ResolvePageAction tries conventional model paths', function () {
-    $action = new ResolvePageAction;
+    $action = new ResolvePageAction();
 
     // Should try various conventional paths
     $result = $action->execute('pages', 'test');
@@ -71,7 +71,7 @@ test('ResolvePageAction tries conventional model paths', function () {
 });
 
 test('ResolvePageAction resolvePageData has correct structure', function () {
-    $action = new ResolvePageAction;
+    $action = new ResolvePageAction();
 
     $result = $action->execute('test', 'test');
 

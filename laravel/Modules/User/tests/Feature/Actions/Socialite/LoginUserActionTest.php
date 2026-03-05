@@ -3,13 +3,13 @@
 declare(strict_types=1);
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Support\Facades\Event;
-use Modules\User\Events\SocialiteUserConnected;
-use Modules\User\Models\User;
-use Modules\User\Actions\Socialite\LoginUserAction;
-use Modules\User\Models\SocialiteUser;
-use Modules\User\Tests\TestCase;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Event;
+use Modules\User\Actions\Socialite\LoginUserAction;
+use Modules\User\Events\SocialiteUserConnected;
+use Modules\User\Models\SocialiteUser;
+use Modules\User\Models\User;
+use Modules\User\Tests\TestCase;
 
 uses(TestCase::class, DatabaseTransactions::class);
 
@@ -48,7 +48,7 @@ describe('LoginUserAction', function (): void {
 
     test('redirects to intended page when available', function (): void {
         $user = User::factory()->create();
-        
+
         $socialiteUser = new SocialiteUser([
             'provider' => 'google',
             'provider_id' => 'google-123',
@@ -66,7 +66,7 @@ describe('LoginUserAction', function (): void {
         Event::fake();
 
         $user = User::factory()->create();
-        
+
         $socialiteUser = new SocialiteUser([
             'provider' => 'github',
             'provider_id' => 'github-456',
@@ -109,7 +109,7 @@ describe('LoginUserAction', function (): void {
 
     test('returns redirect response instance', function (): void {
         $user = User::factory()->create();
-        
+
         $socialiteUser = new SocialiteUser([
             'provider' => 'test',
             'provider_id' => 'test-789',
@@ -127,23 +127,23 @@ describe('LoginUserAction', function (): void {
         $socialiteUser = new SocialiteUser([
             'provider' => 'test',
             'provider_id' => 'test-null',
-            'email' => 'test-null-' . uniqid() . '@example.com',
+            'email' => 'test-null-'.uniqid().'@example.com',
         ]);
         $socialiteUser->setRelation('user', null);
 
         app(LoginUserAction::class)->execute($socialiteUser);
-    })->throws(\InvalidArgumentException::class);
+    })->throws(InvalidArgumentException::class);
 
     test('preserves user attributes after login', function (): void {
         $user = User::factory()->create([
-            'email' => 'preserve-' . uniqid() . '@example.com',
+            'email' => 'preserve-'.uniqid().'@example.com',
             'name' => 'John Doe',
             'is_active' => true,
         ]);
 
         $socialiteUser = new SocialiteUser([
             'provider' => 'oauth',
-            'provider_id' => 'oauth-' . uniqid(),
+            'provider_id' => 'oauth-'.uniqid(),
             'email' => (string) $user->email,
         ]);
         $socialiteUser->setRelation('user', $user);

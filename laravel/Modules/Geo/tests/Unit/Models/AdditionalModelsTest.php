@@ -10,25 +10,37 @@ use Modules\Geo\Models\PlaceType;
 use Modules\Geo\Models\State;
 
 test('State model can be instantiated', function () {
-    expect(class_exists(State::class))->toBeTrue();
+    $state = new State();
+
+    expect($state)->toBeInstanceOf(State::class);
 });
 
 test('County model can be instantiated', function () {
-    expect(class_exists(County::class))->toBeTrue();
+    $county = new County();
+
+    expect($county)->toBeInstanceOf(County::class);
 });
 
 test('Locality model can be instantiated', function () {
-    expect(class_exists(Locality::class))->toBeTrue();
+    $locality = new Locality();
+
+    expect($locality)->toBeInstanceOf(Locality::class);
 });
 
 test('Place model can be instantiated', function () {
-    expect(class_exists(Place::class))->toBeTrue();
+    $place = new Place();
+
+    expect($place)->toBeInstanceOf(Place::class);
 });
 
 test('PlaceType model can be instantiated', function () {
-    expect(class_exists(PlaceType::class))->toBeTrue();
+    $placeType = new PlaceType();
+
+    expect($placeType)->toBeInstanceOf(PlaceType::class);
 });
 
 test('GeoNamesCap model can be instantiated', function () {
-    expect(class_exists(GeoNamesCap::class))->toBeTrue();
+    $geoNamesCap = new GeoNamesCap();
+
+    expect($geoNamesCap)->toBeInstanceOf(GeoNamesCap::class);
 });

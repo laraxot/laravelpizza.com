@@ -9,7 +9,7 @@ use Modules\Gdpr\Providers\GdprServiceProvider;
 test('gdpr_service_provider_extends_xot_base_service_provider', function () {
     $provider = new GdprServiceProvider(app());
 
-    expect($provider)->toBeInstanceOf(\Modules\Xot\Providers\XotBaseServiceProvider::class);
+    expect($provider)->toBeInstanceOf(Modules\Xot\Providers\XotBaseServiceProvider::class);
 });
 
 test('gdpr_service_provider_has_name', function () {

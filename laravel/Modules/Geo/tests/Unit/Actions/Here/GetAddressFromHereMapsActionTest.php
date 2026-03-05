@@ -10,14 +10,14 @@ use Modules\Geo\Actions\Here\GetAddressFromHereMapsAction;
 use Modules\Geo\Datas\AddressData;
 
 beforeEach(function () {
-    $this->action = new GetAddressFromHereMapsAction;
+    $this->action = new GetAddressFromHereMapsAction();
 });
 
 it('throws exception when api key is not configured', function (): void {
     config(['services.here.key' => null]);
 
     expect(fn () => $this->action->execute('Milano, Italia'))
-        ->toThrow(\Exception::class, 'Here Maps API key not configured');
+        ->toThrow(Exception::class, 'Here Maps API key not configured');
 });
 
 it('returns null when api response is not successful', function (): void {

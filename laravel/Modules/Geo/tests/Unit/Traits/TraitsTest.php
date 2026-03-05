@@ -2,20 +2,15 @@
 
 declare(strict_types=1);
 
-use Illuminate\Database\Eloquent\Model;
 use Modules\Geo\Traits\HandlesCoordinates;
 use Modules\Geo\Traits\HasAddresses;
-use Modules\Geo\Tests\LightTestCase;
-
-uses(LightTestCase::class);
 
 test('HasAddresses trait can be used', function () {
     // Check if trait exists
     expect(trait_exists(HasAddresses::class))->toBeTrue();
 
     // Create an anonymous class that uses the trait
-    $model = new class extends Model
-    {
+    $model = new class extends Modules\Geo\Models\BaseModel {
         use HasAddresses;
 
         protected $table = 'addresses';
@@ -30,8 +25,7 @@ test('HandlesCoordinates trait can be used', function () {
     expect(trait_exists(HandlesCoordinates::class))->toBeTrue();
 
     // Create an anonymous class that uses the trait
-    $model = new class extends Model
-    {
+    $model = new class extends Modules\Geo\Models\BaseModel {
         use HandlesCoordinates;
 
         protected $table = 'addresses';

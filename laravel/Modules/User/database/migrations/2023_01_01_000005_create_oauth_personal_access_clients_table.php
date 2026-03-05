@@ -6,8 +6,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\User\Models\OauthClient;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends XotBaseMigration
-{
+return new class extends XotBaseMigration {
     public function up(): void
     {
         $this->tableCreate(static function (Blueprint $table): void {

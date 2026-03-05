@@ -6,4 +6,6 @@ namespace Modules\Xot\Filament\Actions;
 
 use Filament\Actions\ActionGroup;
 
-abstract class XotBaseActionGroup extends ActionGroup {}
+abstract class XotBaseActionGroup extends ActionGroup
+{
+}

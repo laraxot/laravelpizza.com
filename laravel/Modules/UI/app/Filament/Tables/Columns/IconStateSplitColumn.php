@@ -34,8 +34,8 @@ final class IconStateSplitColumn extends Column
     /**
      * Configure the state class and model class for this column.
      *
-     * @param  string  $stateClass  The state machine class (e.g., AppointmentState::class)
-     * @param  string  $modelClass  The model class (e.g., Appointment::class)
+     * @param string $stateClass The state machine class (e.g., AppointmentState::class)
+     * @param string $modelClass The model class (e.g., Appointment::class)
      */
     public function stateClass(string $stateClass, string $modelClass): static
     {
@@ -128,7 +128,7 @@ final class IconStateSplitColumn extends Column
     #[On('table-action')]
     public function handleTableAction(string $action, int|string $recordId): void
     {
-        if ($action === 'prova') {
+        if ('prova' === $action) {
             $this->prova($recordId);
         }
     }
@@ -220,14 +220,14 @@ final class IconStateSplitColumn extends Column
     }
 
     /**
-     * @param  array{class: StateContract, icon: string, label: string, color: string, tooltip: string}  $stateData
+     * @param array{class: StateContract, icon: string, label: string, color: string, tooltip: string} $stateData
      */
     private function getTransitionAction(string $stateKey, array $stateData): ?Action
     {
         $record = $this->getRecord();
         $recordIdRaw = is_object($record) && isset($record->id) ? $record->id : null;
 
-        if ($recordIdRaw === null || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
+        if (null === $recordIdRaw || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
             return null;
         }
 

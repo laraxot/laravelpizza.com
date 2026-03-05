@@ -69,7 +69,7 @@ describe('Authentication Flow with Reorganized Components', function (): void {
         // Accept either 200 (page loads) or 500 (misconfigured route in test env)
         // The important thing is the route exists and responds
         expect($response->status())->toBeLessThanOrEqual(500);
-        if ($response->status() === 200) {
+        if (200 === $response->status()) {
             /* @phpstan-ignore-next-line method.nonObject */
             $response->assertSee('Login');
         } else {

@@ -82,21 +82,21 @@ test('ActionsBlock schema contains Repeater for items', function () {
         ->toHaveCount(3);
 
     // Check first element is a Repeater (items)
-    expect($schema[0])->toBeInstanceOf(Filament\Forms\Components\Repeater::class);
+    expect($schema[0])->toBeInstanceOf(Repeater::class);
 });
 
 test('ActionsBlock schema has alignment Select', function () {
     $schema = ActionsBlock::getBlockSchema();
 
     // Second element is alignment Select
-    expect($schema[1])->toBeInstanceOf(Filament\Forms\Components\Select::class);
+    expect($schema[1])->toBeInstanceOf(Select::class);
 });
 
 test('ActionsBlock schema has gap Select', function () {
     $schema = ActionsBlock::getBlockSchema();
 
     // Third element is gap Select
-    expect($schema[2])->toBeInstanceOf(Filament\Forms\Components\Select::class);
+    expect($schema[2])->toBeInstanceOf(Select::class);
 });
 
 test('ContactBlock schema returns array', function () {
@@ -115,43 +115,43 @@ test('ContactBlock has getBlockLabel method', function () {
 test('CtaBlock schema contains title TextInput', function () {
     $schema = CtaBlock::getBlockSchema();
 
-    expect($schema[0])->toBeInstanceOf(Filament\Forms\Components\TextInput::class);
+    expect($schema[0])->toBeInstanceOf(TextInput::class);
 });
 
 test('CtaBlock schema contains description Textarea', function () {
     $schema = CtaBlock::getBlockSchema();
 
-    expect($schema[1])->toBeInstanceOf(Filament\Forms\Components\Textarea::class);
+    expect($schema[1])->toBeInstanceOf(Textarea::class);
 });
 
 test('FeatureSectionsBlock schema contains title TextInput', function () {
     $schema = FeatureSectionsBlock::getBlockSchema();
 
-    expect($schema[0])->toBeInstanceOf(Filament\Forms\Components\TextInput::class);
+    expect($schema[0])->toBeInstanceOf(TextInput::class);
 });
 
 test('FeatureSectionsBlock schema contains sections Repeater', function () {
     $schema = FeatureSectionsBlock::getBlockSchema();
 
-    expect($schema[1])->toBeInstanceOf(Filament\Forms\Components\Repeater::class);
+    expect($schema[1])->toBeInstanceOf(Repeater::class);
 });
 
 test('HeroBlock schema contains required title TextInput', function () {
     $schema = HeroBlock::getBlockSchema();
 
-    expect($schema[0])->toBeInstanceOf(Filament\Forms\Components\TextInput::class);
+    expect($schema[0])->toBeInstanceOf(TextInput::class);
 });
 
 test('HeroBlock schema contains FileUpload for image', function () {
     $schema = HeroBlock::getBlockSchema();
 
-    expect($schema[2])->toBeInstanceOf(Filament\Forms\Components\FileUpload::class);
+    expect($schema[2])->toBeInstanceOf(FileUpload::class);
 });
 
 test('HeroBlock schema contains ColorPickers', function () {
     $schema = HeroBlock::getBlockSchema();
 
     // Background, text, and CTA colors
-    expect($schema[5])->toBeInstanceOf(Filament\Forms\Components\ColorPicker::class);
-    expect($schema[6])->toBeInstanceOf(Filament\Forms\Components\ColorPicker::class);
+    expect($schema[5])->toBeInstanceOf(ColorPicker::class);
+    expect($schema[6])->toBeInstanceOf(ColorPicker::class);
 });

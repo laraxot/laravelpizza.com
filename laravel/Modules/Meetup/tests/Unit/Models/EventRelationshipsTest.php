@@ -4,13 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Unit\Models;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Meetup\Models\Event;
-use Modules\Meetup\Models\Performer;
 use Modules\Meetup\Tests\TestCase;
 use Modules\User\Models\User;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('Event Relationships', function (): void {
     test('event belongs to owner user', function (): void {
@@ -79,9 +77,9 @@ describe('Event Relationships', function (): void {
 
     test('event can load creator relationship eagerly', function (): void {
         $user = User::factory()->create();
-        Event::factory()->create(['created_by' => $user->id]);
+        $created = Event::factory()->create(['created_by' => $user->id]);
 
-        $event = Event::with('creator')->first();
+        $event = Event::with('creator')->whereKey($created->id)->first();
 
         expect($event->creator)->not->toBeNull()
             ->and($event->creator->id)->toBe($user->id);
@@ -89,9 +87,9 @@ describe('Event Relationships', function (): void {
 
     test('event can load updater relationship eagerly', function (): void {
         $user = User::factory()->create();
-        Event::factory()->create(['updated_by' => $user->id]);
+        $created = Event::factory()->create(['updated_by' => $user->id]);
 
-        $event = Event::with('updater')->first();
+        $event = Event::with('updater')->whereKey($created->id)->first();
 
         expect($event->updater)->not->toBeNull()
             ->and($event->updater->id)->toBe($user->id);
@@ -99,9 +97,9 @@ describe('Event Relationships', function (): void {
 
     test('event can load organizer relationship eagerly', function (): void {
         $user = User::factory()->create();
-        Event::factory()->create(['organizer_id' => $user->id]);
+        $created = Event::factory()->create(['organizer_id' => $user->id]);
 
-        $event = Event::with('organizer')->first();
+        $event = Event::with('organizer')->whereKey($created->id)->first();
 
         expect($event->organizer)->not->toBeNull()
             ->and($event->organizer->id)->toBe($user->id);

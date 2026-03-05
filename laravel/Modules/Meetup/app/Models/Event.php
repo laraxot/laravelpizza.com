@@ -6,6 +6,8 @@ namespace Modules\Meetup\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Carbon;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Activity\Traits\HasEvents;
@@ -153,6 +155,8 @@ class Event extends BaseModel
         'meta_data',
         'user_id',
         'organizer_id',
+        'created_by',
+        'updated_by',
     ];
 
     /**
@@ -187,6 +191,37 @@ class Event extends BaseModel
                 $model->slug = \Illuminate\Support\Str::slug($model->title);
             }
         });
+    }
+
+    /**
+     * Get performers (speakers/hosts) scheduled for this event.
+     *
+     * @return BelongsToMany<Performer>
+     */
+    public function performers(): BelongsToMany
+    {
+        return $this->belongsToManyX(Performer::class, 'event_performer')
+            ->withPivot(['role', 'order'])
+            ->withTimestamps();
+    }
+
+    /**
+     * Get sponsors associated with this event.
+     *
+     * @return BelongsToMany<Sponsor>
+     */
+    public function sponsors(): BelongsToMany
+    {
+        return $this->belongsToManyX(Sponsor::class, 'event_sponsor')
+            ->withTimestamps();
+    }
+
+    /**
+     * Get the venue where this event is held.
+     */
+    public function venue(): BelongsTo
+    {
+        return $this->belongsTo(Venue::class, 'location_id', 'id');
     }
 
     public function owner(): BelongsTo

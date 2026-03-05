@@ -17,7 +17,7 @@ class FilamentMemoryMonitorMiddleware
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(Request):Response  $next
+     * @param \Closure(Request):Response $next
      */
     public function handle(Request $request, \Closure $next): Response
     {
@@ -113,7 +113,7 @@ class FilamentMemoryMonitorMiddleware
     /**
      * Logga l'uso della memoria.
      *
-     * @param  array<string, mixed>  $metrics
+     * @param array<string, mixed> $metrics
      */
     private function logMemoryUsage(Request $request, array $metrics): void
     {
@@ -147,7 +147,7 @@ class FilamentMemoryMonitorMiddleware
     /**
      * Determina il livello di log basato sulle metriche.
      *
-     * @param  array<string, mixed>  $metrics
+     * @param array<string, mixed> $metrics
      */
     private function determineLogLevel(array $metrics): string
     {

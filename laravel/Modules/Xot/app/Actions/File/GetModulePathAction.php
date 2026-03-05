@@ -7,9 +7,10 @@ namespace Modules\Xot\Actions\File;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Nwidart\Modules\Facades\Module;
-use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\scandir;
+
+use Spatie\QueueableAction\QueueableAction;
 
 class GetModulePathAction
 {
@@ -18,7 +19,8 @@ class GetModulePathAction
     /**
      * Ottiene il percorso di un modulo.
      *
-     * @param  string  $moduleName  Il nome del modulo
+     * @param string $moduleName Il nome del modulo
+     *
      * @return string Il percorso completo del modulo
      */
     public function execute(string $moduleName): string
@@ -43,7 +45,7 @@ class GetModulePathAction
             })->first();
 
             // Se non troviamo il modulo, restituiamo un percorso di fallback
-            if ($foundModule === null || ! is_string($foundModule)) {
+            if (null === $foundModule || ! is_string($foundModule)) {
                 return base_path('Modules/'.$moduleName);
             }
 

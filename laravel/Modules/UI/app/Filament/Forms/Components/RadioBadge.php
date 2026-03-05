@@ -51,18 +51,18 @@ class RadioBadge extends Radio
         $enum = $this->getEnumValue($value);
         if ($enum instanceof HasColor) {
             $color = $enum->getColor();
-            if ($color === null) {
+            if (null === $color) {
                 return $this->selectedColor;
             }
 
             if (is_array($color)) {
                 $first = reset($color);
 
-                return is_string($first) && $first !== '' ? $first : $this->selectedColor;
+                return is_string($first) && '' !== $first ? $first : $this->selectedColor;
             }
 
             // PHPStan L10: $color è già verificato come non-array e non-null, quindi è string
-            if ($color !== '') {
+            if ('' !== $color) {
                 return $color;
             }
 
@@ -81,7 +81,7 @@ class RadioBadge extends Radio
         $icon = $enum->getIcon();
 
         // getIcon() può restituire Htmlable|string|null, ma dobbiamo restituire solo string|null
-        if ($icon === null) {
+        if (null === $icon) {
             return null;
         }
 

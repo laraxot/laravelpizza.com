@@ -30,10 +30,10 @@ describe('MenuResource', function (): void {
 
         foreach ($schema as $item) {
             $name = $item->getName();
-            if ($name === 'title') {
+            if ('title' === $name) {
                 $hasTitle = true;
             }
-            if ($name === 'items') {
+            if ('items' === $name) {
                 $hasItems = true;
             }
         }
@@ -43,6 +43,6 @@ describe('MenuResource', function (): void {
     });
 
     test('menu resource extends XotBaseResource', function (): void {
-        expect(is_subclass_of(MenuResource::class, \Modules\Xot\Filament\Resources\XotBaseResource::class))->toBeTrue();
+        expect(is_subclass_of(MenuResource::class, Modules\Xot\Filament\Resources\XotBaseResource::class))->toBeTrue();
     });
 });

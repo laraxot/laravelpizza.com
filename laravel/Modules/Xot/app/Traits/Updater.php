@@ -14,9 +14,9 @@ use Webmozart\Assert\Assert;
  * Trait Updater.
  * https://dev.to/hasanmn/automatically-update-createdby-and-updatedby-in-laravel-using-bootable-traits-28g9.
  *
- * @property int|null $created_by ID dell'utente che ha creato il record
- * @property int|null $updated_by ID dell'utente che ha aggiornato il record
- * @property int|null $deleted_by ID dell'utente che ha eliminato il record
+ * @property int|null             $created_by ID dell'utente che ha creato il record
+ * @property int|null             $updated_by ID dell'utente che ha aggiornato il record
+ * @property int|null             $deleted_by ID dell'utente che ha eliminato il record
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  * @property ProfileContract|null $deleter

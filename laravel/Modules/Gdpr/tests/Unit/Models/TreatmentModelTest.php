@@ -36,5 +36,5 @@ test('treatment_is_uuid', function () {
 test('treatment_extends_base_model', function () {
     $treatment = new Treatment();
 
-    expect($treatment)->toBeInstanceOf(\Modules\Gdpr\Models\BaseModel::class);
+    expect($treatment)->toBeInstanceOf(Modules\Gdpr\Models\BaseModel::class);
 });

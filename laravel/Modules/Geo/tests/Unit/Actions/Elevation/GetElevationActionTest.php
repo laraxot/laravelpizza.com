@@ -140,7 +140,7 @@ it('throws exception when service throws generic exception', function (): void {
     $this->mockGoogleMapsService
         ->shouldReceive('getElevation')
         ->once()
-        ->andThrow(new \Exception('Network error'));
+        ->andThrow(new Exception('Network error'));
 
     // Act & Assert
     expect(fn () => $this->action->execute($location))

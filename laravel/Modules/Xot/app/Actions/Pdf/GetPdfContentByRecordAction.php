@@ -29,11 +29,12 @@ class GetPdfContentByRecordAction
     /**
      * Genera contenuto PDF binario da un record Eloquent.
      *
-     * @param  Model  $record  Record Eloquent da cui generare il PDF
-     * @param  string|null  $filename  Nome file PDF personalizzato (opzionale)
-     * @return string Contenuto binario del PDF
+     * @param Model       $record   Record Eloquent da cui generare il PDF
+     * @param string|null $filename Nome file PDF personalizzato (opzionale)
      *
      * @throws \Exception Se la vista non esiste o si verificano errori di generazione
+     *
+     * @return string Contenuto binario del PDF
      */
     public function execute(Model $record, ?string $filename = null): string
     {
@@ -59,7 +60,7 @@ class GetPdfContentByRecordAction
         }
 
         // Generate filename if not provided
-        if ($filename === null) {
+        if (null === $filename) {
             $filename = $this->generateFilename($record);
         }
 
@@ -70,8 +71,9 @@ class GetPdfContentByRecordAction
     /**
      * Metodo di convenienza per generare PDF da record con nome file personalizzato.
      *
-     * @param  Model  $record  Record Eloquent
-     * @param  string  $filename  Nome file personalizzato
+     * @param Model  $record   Record Eloquent
+     * @param string $filename Nome file personalizzato
+     *
      * @return string Contenuto binario del PDF
      */
     public function fromRecord(Model $record, string $filename): string
@@ -82,7 +84,8 @@ class GetPdfContentByRecordAction
     /**
      * Genera il nome della vista seguendo le convenzioni Laraxot.
      *
-     * @param  Model  $record  Record Eloquent
+     * @param Model $record Record Eloquent
+     *
      * @return string Nome della vista nel formato {module}::{model-kebab}.show.pdf
      */
     protected function generateViewName(Model $record): string
@@ -97,8 +100,9 @@ class GetPdfContentByRecordAction
     /**
      * Prepara i parametri standard per la vista.
      *
-     * @param  Model  $record  Record Eloquent
-     * @param  string  $viewName  Nome della vista
+     * @param Model  $record   Record Eloquent
+     * @param string $viewName Nome della vista
+     *
      * @return array<string, mixed> Parametri per la vista
      */
     protected function prepareViewParameters(Model $record, string $viewName): array
@@ -131,7 +135,8 @@ class GetPdfContentByRecordAction
     /**
      * Genera nome file automatico basato sul record.
      *
-     * @param  Model  $record  Record Eloquent
+     * @param Model $record Record Eloquent
+     *
      * @return string Nome file generato
      */
     protected function generateFilename(Model $record): string
@@ -161,11 +166,12 @@ class GetPdfContentByRecordAction
     /**
      * Genera contenuto PDF binario utilizzando spipu/html2pdf.
      *
-     * @param  string  $html  Contenuto HTML da convertire
-     * @param  string  $filename  Nome file per riferimento
-     * @return string Contenuto binario del PDF
+     * @param string $html     Contenuto HTML da convertire
+     * @param string $filename Nome file per riferimento
      *
      * @throws \Exception Se si verificano errori durante la generazione PDF
+     *
+     * @return string Contenuto binario del PDF
      */
     protected function generatePdfContent(string $html, string $filename): string
     {

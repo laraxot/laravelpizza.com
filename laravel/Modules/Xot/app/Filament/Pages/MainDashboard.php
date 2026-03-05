@@ -41,14 +41,14 @@ class MainDashboard extends XotBaseDashboard
         // Usa roles() come metodo invece della magic property per type safety
         $modules = $user->getModules();
 
-        if (count($modules) === 0) {
+        if (0 === count($modules)) {
             $url = '/'.app()->getLocale();
             redirect($url);
 
             return;
         }
 
-        if (count($modules) === 1) {
+        if (1 === count($modules)) {
             $module_first = Arr::first($modules);
             Assert::isInstanceOf($module_first, Module::class);
             $module_name = $module_first->getLowerName();

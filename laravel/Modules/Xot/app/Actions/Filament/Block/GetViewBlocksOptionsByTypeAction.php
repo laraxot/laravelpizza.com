@@ -26,8 +26,9 @@ class GetViewBlocksOptionsByTypeAction
     /**
      * Ottiene le opzioni dei blocchi di vista per un determinato tipo.
      *
-     * @param  string  $type  Il tipo di blocco da cercare
-     * @param  bool  $img  Se includere i percorsi delle immagini invece dei nomi
+     * @param string $type Il tipo di blocco da cercare
+     * @param bool   $img  Se includere i percorsi delle immagini invece dei nomi
+     *
      * @return array<string, string> Array di opzioni con chiave = vista e valore = nome o percorso immagine
      */
     public function execute(string $type, bool $img = false): array
@@ -40,7 +41,7 @@ class GetViewBlocksOptionsByTypeAction
         $globPattern = $basePath.'/*/resources/views/components/blocks/'.$type.'/*.blade.php';
         $files = File::glob($globPattern);
 
-        if ($files === false) {
+        if (false === $files) {
             return []; // Ritorna un array vuoto se non ci sono file
         }
 

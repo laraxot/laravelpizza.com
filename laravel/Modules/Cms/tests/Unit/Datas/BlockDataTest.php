@@ -98,7 +98,7 @@ test('BlockData livewireComponentName is empty by default', function (): void {
 
 test('BlockData throws exception for non-existent view', function (): void {
     expect(fn () => new BlockData('test', ['view' => 'non.existent.view']))
-        ->toThrow(\Exception::class, 'view not found');
+        ->toThrow(Exception::class, 'view not found');
 })->skip(fn () => ! view()->exists('ui::empty'), 'ui::empty view does not exist');
 
 test('BlockData detects ui::empty as non-livewire', function (): void {

@@ -13,8 +13,7 @@ uses(TestCase::class);
 
 test('safe object cast action works', function () {
     $action = app(SafeObjectCastAction::class);
-    $obj = new class
-    {
+    $obj = new class {
         public $str = 'test';
 
         public $int = 123;
@@ -67,8 +66,7 @@ test('safe object cast action works', function () {
 
 test('safe eloquent cast action works', function () {
     $action = app(SafeEloquentCastAction::class);
-    $model = new class extends XotBaseModel
-    {
+    $model = new class extends XotBaseModel {
         protected $attributes = [
             'str' => 'test',
             'int' => 123,
@@ -98,7 +96,7 @@ test('safe eloquent cast action works', function () {
 
     expect($action->getValidatedAttribute($model, 'int', 'int', fn ($v) => $v > 100))->toBe(123);
 
-    expect($action->hasAttributeCondition($model, 'int', fn ($v) => $v === 123))->toBeTrue();
+    expect($action->hasAttributeCondition($model, 'int', fn ($v) => 123 === $v))->toBeTrue();
 
     expect($action->getAttributeWithFallback($model, 'null_val', 'str', 'string'))->toBe('test')
         ->and($action->getAttributeWithFallback($model, 'str', 'null_val', 'string'))->toBe('test');

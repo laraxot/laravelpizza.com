@@ -21,14 +21,14 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  * This widget handles the user logout process including session invalidation,
  * event dispatching, and proper redirection with localization support.
  *
- * @method void mount() Initialize the widget and form state.
- * @method array<string, Component> getFormSchema() Define the form schema for the logout confirmation.
- * @method void logout() Handle the user logout process.
- * @method array<string, Action> getFormActions() Define the form actions (logout and cancel buttons).
- * @method array<string, string> getViewData() Get additional data to pass to the view.
+ * @method void                     mount()          Initialize the widget and form state.
+ * @method array<string, Component> getFormSchema()  Define the form schema for the logout confirmation.
+ * @method void                     logout()         Handle the user logout process.
+ * @method array<string, Action>    getFormActions() Define the form actions (logout and cancel buttons).
+ * @method array<string, string>    getViewData()    Get additional data to pass to the view.
  *
- * @property array<string, mixed>|null $data Widget data array managed by XotBaseWidget.
- * @property bool $isLoggingOut Flag indicating if logout is in progress.
+ * @property array<string, mixed>|null $data         Widget data array managed by XotBaseWidget.
+ * @property bool                      $isLoggingOut Flag indicating if logout is in progress.
  */
 class LogoutWidget extends XotBaseWidget
 {
@@ -107,7 +107,7 @@ class LogoutWidget extends XotBaseWidget
 
             // Get the authenticated user before logging out
             $user = $this->getAuthenticatedUser();
-            if ($user === null) {
+            if (null === $user) {
                 $this->handleNoUserScenario();
 
                 return;

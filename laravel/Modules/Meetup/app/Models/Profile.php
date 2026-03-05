@@ -103,6 +103,23 @@ class Profile extends BaseProfile
     ];
 
     /**
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'id' => 'string',
+            'user_id' => 'string',
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'deleted_at' => 'datetime',
+            'updated_by' => 'string',
+            'created_by' => 'string',
+            'deleted_by' => 'string',
+        ];
+    }
+
+    /**
      * Boot: la tabella Meetup non ha colonna uuid (solo id come UUID).
      * Rimuove uuid dagli attributi prima del save per evitare SQL error.
      * Imposta id come UUID se vuoto.

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use Modules\UI\Filament\Forms\Components\InlineDatePicker;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
+use Modules\UI\Filament\Forms\Components\InlineDatePicker;
 use Tests\TestCase;
 
 uses(TestCase::class);

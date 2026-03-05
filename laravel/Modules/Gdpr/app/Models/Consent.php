@@ -13,21 +13,21 @@ use Modules\Xot\Contracts\ProfileContract;
 /**
  * Modules\Gdpr\Models\Consent.
  *
- * @property string $id
- * @property string|null $treatment_id
- * @property string|null $subject_id
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property string $user_type
- * @property string|null $user_id
- * @property string|null $type
- * @property string|null $accepted_at
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $subject_id
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property string               $user_type
+ * @property string|null          $user_id
+ * @property string|null          $type
+ * @property string|null          $accepted_at
  * @property ProfileContract|null $creator
- * @property Treatment|null $treatment
+ * @property Treatment|null       $treatment
  * @property ProfileContract|null $updater
  *
  * @method static Builder<static>|Consent newModelQuery()
@@ -48,12 +48,12 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Consent whereUserType($value)
  *
  * @property ProfileContract|null $deleter
- * @property string|null $ip_address
- * @property string|null $user_agent
+ * @property string|null          $ip_address
+ * @property string|null          $user_agent
  *
  * @method static \Modules\Gdpr\Database\Factories\ConsentFactory factory($count = null, $state = [])
- * @method static Builder<static>|Consent whereIpAddress($value)
- * @method static Builder<static>|Consent whereUserAgent($value)
+ * @method static Builder<static>|Consent                         whereIpAddress($value)
+ * @method static Builder<static>|Consent                         whereUserAgent($value)
  *
  * @mixin \Eloquent
  */

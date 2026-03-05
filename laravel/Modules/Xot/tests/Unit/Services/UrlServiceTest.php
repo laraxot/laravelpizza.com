@@ -10,7 +10,7 @@ use Modules\Xot\Tests\TestCase;
 uses(TestCase::class);
 
 it('can be instantiated', function (): void {
-    $service = new UrlService;
+    $service = new UrlService();
     expect($service)->toBeInstanceOf(UrlService::class);
 });
 

@@ -21,7 +21,7 @@ it('casts various values to string correctly', function (): void {
 
     // Non-scalar
     expect($action->execute(['a']))->toBe('');
-    expect($action->execute(new \stdClass))->toBe('');
+    expect($action->execute(new \stdClass()))->toBe('');
 });
 
 it('uses static string cast method correctly', function (): void {

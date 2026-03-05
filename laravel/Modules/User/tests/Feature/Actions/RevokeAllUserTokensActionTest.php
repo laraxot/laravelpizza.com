@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-use Modules\User\Models\User;
-use Modules\User\Actions\Passport\RevokeAllUserTokensAction;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Modules\User\Actions\Passport\RevokeAllUserTokensAction;
+use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 uses(TestCase::class, DatabaseTransactions::class);
 

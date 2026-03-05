@@ -7,7 +7,7 @@ uses(Modules\Lang\Tests\TestCase::class);
 use Modules\Lang\Actions\GetTransPathAction;
 
 beforeEach(function () {
-    $this->action = new GetTransPathAction;
+    $this->action = new GetTransPathAction();
 });
 
 describe('GetTransPathAction Business Logic', function () {

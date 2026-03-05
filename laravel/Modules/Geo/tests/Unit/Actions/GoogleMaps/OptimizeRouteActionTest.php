@@ -11,7 +11,7 @@ use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Datas\RouteData;
 
 beforeEach(function () {
-    $this->action = new OptimizeRouteAction;
+    $this->action = new OptimizeRouteAction();
 });
 
 it('throws exception when api key is not configured', function (): void {
@@ -24,7 +24,7 @@ it('throws exception when api key is not configured', function (): void {
     $destination = new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma');
 
     expect(fn () => $this->action->execute($locations, $origin, $destination))
-        ->toThrow(\RuntimeException::class, 'API key not found');
+        ->toThrow(RuntimeException::class, 'API key not found');
 });
 
 it('returns empty array for empty locations', function (): void {
@@ -125,5 +125,5 @@ it('throws exception when api request fails', function (): void {
     $destination = new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma');
 
     expect(fn () => $this->action->execute($locations, $origin, $destination))
-        ->toThrow(\RuntimeException::class, 'Failed to get directions');
+        ->toThrow(RuntimeException::class, 'Failed to get directions');
 });

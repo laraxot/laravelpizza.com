@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions\Cast;
 
-use Mockery;
 use Modules\Activity\Models\Activity;
 use Modules\Xot\Actions\Cast\SafeAttributeCastAction;
 use Modules\Xot\Tests\TestCase;
@@ -12,7 +11,7 @@ use Modules\Xot\Tests\TestCase;
 uses(TestCase::class);
 
 it('manages eloquent attributes safely', function (): void {
-    $model = Mockery::mock(Activity::class);
+    $model = \Mockery::mock(Activity::class);
     $model->shouldReceive('getAttribute')->with('name')->andReturn('Test User');
     $model->shouldReceive('getAttribute')->with('email')->andReturn('');
     $model->shouldReceive('getAttribute')->with('id')->andReturn(123);
@@ -41,5 +40,5 @@ it('manages eloquent attributes safely', function (): void {
     // hasAttributeValue
     expect($action->hasAttributeValue($model, 'id', 123))->toBeTrue();
 
-    Mockery::close();
+    \Mockery::close();
 });

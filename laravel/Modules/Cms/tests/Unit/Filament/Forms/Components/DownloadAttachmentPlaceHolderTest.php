@@ -7,7 +7,7 @@ uses(Modules\Cms\Tests\TestCase::class);
 use Modules\Cms\Filament\Forms\Components\DownloadAttachmentPlaceHolder;
 
 test('DownloadAttachmentPlaceHolder extends XotBasePlaceholder', function () {
-    expect(is_a(DownloadAttachmentPlaceHolder::class, \Modules\Xot\Filament\Forms\Components\XotBasePlaceholder::class, true))->toBeTrue();
+    expect(is_a(DownloadAttachmentPlaceHolder::class, Modules\Xot\Filament\Forms\Components\XotBasePlaceholder::class, true))->toBeTrue();
 });
 
 test('DownloadAttachmentPlaceHolder has setUp method', function () {

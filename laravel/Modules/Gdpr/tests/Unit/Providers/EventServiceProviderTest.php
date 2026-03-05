@@ -9,7 +9,7 @@ use Modules\Gdpr\Providers\EventServiceProvider;
 test('event_service_provider_extends_xot_base_event_service_provider', function () {
     $provider = new EventServiceProvider(app());
 
-    expect($provider)->toBeInstanceOf(\Modules\Xot\Providers\XotBaseEventServiceProvider::class);
+    expect($provider)->toBeInstanceOf(Modules\Xot\Providers\XotBaseEventServiceProvider::class);
 });
 
 test('event_service_provider_has_empty_listen_array', function () {

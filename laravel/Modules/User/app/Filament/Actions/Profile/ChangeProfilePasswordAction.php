@@ -32,13 +32,13 @@ final class ChangeProfilePasswordAction extends Action
             ->action(static function (ProfileContract $record, array $data): void {
                 $user = $record->user;
                 $profile_data = Arr::except($record->toArray(), ['id']);
-                if ($user === null) {
+                if (null === $user) {
                     $user_class = XotData::make()->getUserClass();
                     /** @var UserContract */
                     $user = XotData::make()->getUserByEmail($record->email);
                 }
 
-                if ($user === null) {
+                if (null === $user) {
                     /** @var array<string, mixed> $profile_data */
                     $user = $record->user()->create($profile_data);
                 }
@@ -67,7 +67,7 @@ final class ChangeProfilePasswordAction extends Action
                         ->rule(
                             'required',
                             /**
-                             * @param  callable(string): mixed  $get
+                             * @param callable(string): mixed $get
                              */
                             static fn (callable $get): bool => (bool) $get('new_password')
                         )

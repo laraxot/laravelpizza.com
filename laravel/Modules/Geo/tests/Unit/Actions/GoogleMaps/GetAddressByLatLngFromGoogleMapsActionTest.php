@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Modules\Geo\Tests\LightTestCase;
 use GuzzleHttp\Client;
+use Modules\Geo\Tests\LightTestCase;
 
 uses(LightTestCase::class);
 use GuzzleHttp\Handler\MockHandler;
@@ -13,7 +13,7 @@ use Modules\Geo\Actions\GoogleMaps\GetAddressByLatLngFromGoogleMapsAction;
 use Modules\Geo\Datas\LocationData;
 
 beforeEach(function () {
-    $this->mockHandler = new MockHandler;
+    $this->mockHandler = new MockHandler();
     $handlerStack = HandlerStack::create($this->mockHandler);
     $this->client = new Client(['handler' => $handlerStack]);
     $this->action = new GetAddressByLatLngFromGoogleMapsAction($this->client);
@@ -23,44 +23,44 @@ it('throws exception when api key is not configured', function (): void {
     config(['services.google.maps_api_key' => null]);
 
     expect(fn () => $this->action->execute(45.4642, 9.1900))
-        ->toThrow(\RuntimeException::class, 'Google Maps API key not configured');
+        ->toThrow(RuntimeException::class, 'Google Maps API key not configured');
 });
 
 it('throws exception for invalid latitude below -90', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
     expect(fn () => $this->action->execute(-91.0, 9.1900))
-        ->toThrow(\InvalidArgumentException::class, 'Invalid latitude');
+        ->toThrow(InvalidArgumentException::class, 'Invalid latitude');
 });
 
 it('throws exception for invalid latitude above 90', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
     expect(fn () => $this->action->execute(91.0, 9.1900))
-        ->toThrow(\InvalidArgumentException::class, 'Invalid latitude');
+        ->toThrow(InvalidArgumentException::class, 'Invalid latitude');
 });
 
 it('throws exception for invalid longitude below -180', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
     expect(fn () => $this->action->execute(45.0, -181.0))
-        ->toThrow(\InvalidArgumentException::class, 'Invalid longitude');
+        ->toThrow(InvalidArgumentException::class, 'Invalid longitude');
 });
 
 it('throws exception for invalid longitude above 180', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
     expect(fn () => $this->action->execute(45.0, 181.0))
-        ->toThrow(\InvalidArgumentException::class, 'Invalid longitude');
+        ->toThrow(InvalidArgumentException::class, 'Invalid longitude');
 });
 
 it('throws exception for guzzle exception', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    $this->mockHandler->append(new \GuzzleHttp\Exception\RequestException('Error', new \GuzzleHttp\Psr7\Request('GET', 'http://test')));
+    $this->mockHandler->append(new GuzzleHttp\Exception\RequestException('Error', new GuzzleHttp\Psr7\Request('GET', 'http://test')));
 
     expect(fn () => $this->action->execute(45.4642, 9.1900))
-        ->toThrow(\RuntimeException::class, 'Failed to get address from coordinates');
+        ->toThrow(RuntimeException::class, 'Failed to get address from coordinates');
 });
 
 it('throws exception when no results found', function (): void {
@@ -72,7 +72,7 @@ it('throws exception when no results found', function (): void {
     ])));
 
     expect(fn () => $this->action->execute(45.4642, 9.1900))
-        ->toThrow(\RuntimeException::class, 'No address found');
+        ->toThrow(RuntimeException::class, 'No address found');
 });
 
 it('throws exception for invalid response status', function (): void {
@@ -84,7 +84,7 @@ it('throws exception for invalid response status', function (): void {
     ])));
 
     expect(fn () => $this->action->execute(45.4642, 9.1900))
-        ->toThrow(\RuntimeException::class, 'No address found');
+        ->toThrow(RuntimeException::class, 'No address found');
 });
 
 it('returns location data for valid coordinates', function (): void {

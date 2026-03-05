@@ -17,13 +17,13 @@ class SetDefaultLocaleForUrls
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(Request):Response  $next
+     * @param \Closure(Request):Response $next
      */
     public function handle(Request $request, \Closure $next): Response
     {
         $user = $request->user();
         $lang = app()->getLocale();
-        if ($user !== null) {
+        if (null !== $user) {
             $lang = $user->lang ?? app()->getLocale();
         }
 

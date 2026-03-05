@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Modules\Geo\Tests\LightTestCase;
 use GuzzleHttp\Client;
+use Modules\Geo\Tests\LightTestCase;
 
 uses(LightTestCase::class);
 use GuzzleHttp\Handler\MockHandler;
@@ -14,7 +14,7 @@ use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Datas\TravelTimeData;
 
 beforeEach(function () {
-    $this->mockHandler = new MockHandler;
+    $this->mockHandler = new MockHandler();
     $handlerStack = HandlerStack::create($this->mockHandler);
     $this->client = new Client(['handler' => $handlerStack]);
     $this->action = new CalculateTravelTimeAction($this->client);
@@ -27,7 +27,7 @@ it('throws exception when api key is not configured', function (): void {
     $destination = new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma');
 
     expect(fn () => $this->action->execute($origin, $destination))
-        ->toThrow(\RuntimeException::class, 'Google Maps API key not configured');
+        ->toThrow(RuntimeException::class, 'Google Maps API key not configured');
 });
 
 it('throws exception when origin and destination are the same', function (): void {
@@ -36,7 +36,7 @@ it('throws exception when origin and destination are the same', function (): voi
     $location = new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano');
 
     expect(fn () => $this->action->execute($location, $location))
-        ->toThrow(\InvalidArgumentException::class, 'Origin and destination cannot be the same');
+        ->toThrow(InvalidArgumentException::class, 'Origin and destination cannot be the same');
 });
 
 it('returns error travel time data for failed api request', function (): void {

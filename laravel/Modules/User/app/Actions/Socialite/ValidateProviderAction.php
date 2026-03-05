@@ -15,7 +15,7 @@ class ValidateProviderAction
     {
         $hasConfig = config()->has('services.'.$provider);
         if (! $hasConfig) {
-            $ex = new ProviderNotConfigured;
+            $ex = new ProviderNotConfigured();
             throw $ex->make($provider);
         }
     }

@@ -9,10 +9,10 @@ use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
 
 test('ValidateUserDataAction returns valid user data', function () {
     $action = new ValidateUserDataAction();
-    
+
     // Use unique email to avoid uniqueness constraint issues
     $uniqueEmail = 'test'.uniqid().'@example.com';
-    
+
     $formData = [
         'first_name' => 'John',
         'last_name' => 'Doe',
@@ -33,9 +33,9 @@ test('ValidateUserDataAction returns valid user data', function () {
 
 test('ValidateUserDataAction hashes password', function () {
     $action = new ValidateUserDataAction();
-    
+
     $uniqueEmail = 'test'.uniqid().'@example.com';
-    
+
     $formData = [
         'first_name' => 'John',
         'last_name' => 'Doe',

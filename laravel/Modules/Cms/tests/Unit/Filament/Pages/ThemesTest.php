@@ -13,7 +13,7 @@ test('Themes page can be instantiated', function () {
 
 test('Themes page has themes property', function () {
     $page = new Themes();
-    $reflection = new \ReflectionClass($page);
+    $reflection = new ReflectionClass($page);
     $property = $reflection->getProperty('themes');
     $property->setAccessible(true);
 

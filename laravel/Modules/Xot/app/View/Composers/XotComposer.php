@@ -26,7 +26,7 @@ class XotComposer
     /**
      * Undocumented function.
      *
-     * @param  array<mixed|void>  $arguments
+     * @param array<mixed|void> $arguments
      */
     public function __call(string $name, array $arguments): mixed
     {
@@ -68,7 +68,7 @@ class XotComposer
         $view->with('_theme', $this);
 
         if (class_exists('\Jenssegers\Agent\Agent')) {
-            $agent = new Agent;
+            $agent = new Agent();
             $view->with('isMobile', $agent->isMobile());
             $view->with('isTablet', $agent->isTablet());
             $view->with('isDesktop', $agent->isDesktop());

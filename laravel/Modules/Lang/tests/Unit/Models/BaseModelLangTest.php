@@ -11,17 +11,17 @@ describe('BaseModelLang', function () {
         $model = new class extends BaseModelLang {
             protected $table = 'test';
         };
-        
+
         expect($model->getConnectionName())->toBe('lang');
     });
 
     test('has LinkedTrait in traits list', function () {
         // Check if BaseModelLang uses the LinkedTrait
-        $reflection = new \ReflectionClass(BaseModelLang::class);
+        $reflection = new ReflectionClass(BaseModelLang::class);
         $traits = $reflection->getTraitNames();
-        
+
         // Check if any trait contains 'Linked' in its name
-        $hasLinked = count(array_filter($traits, fn($t) => str_contains($t, 'Linked'))) > 0;
+        $hasLinked = count(array_filter($traits, fn ($t) => str_contains($t, 'Linked'))) > 0;
         expect($hasLinked)->toBeTrue();
     });
 
@@ -33,7 +33,7 @@ describe('BaseModelLang', function () {
         $model = new class extends BaseModelLang {
             protected $table = 'test';
         };
-        
+
         expect($model->timestamps)->toBeTrue();
     });
 
@@ -41,7 +41,7 @@ describe('BaseModelLang', function () {
         $model = new class extends BaseModelLang {
             protected $table = 'test';
         };
-        
+
         expect($model->incrementing)->toBeTrue();
     });
 
@@ -49,7 +49,7 @@ describe('BaseModelLang', function () {
         $model = new class extends BaseModelLang {
             protected $table = 'test';
         };
-        
+
         expect($model->getPerPage())->toBe(30);
     });
 
@@ -57,7 +57,7 @@ describe('BaseModelLang', function () {
         $model = new class extends BaseModelLang {
             protected $table = 'test';
         };
-        
+
         $casts = $model->getCasts();
         expect($casts['id'])->toBe('string');
     });
@@ -66,7 +66,7 @@ describe('BaseModelLang', function () {
         $model = new class extends BaseModelLang {
             protected $table = 'test';
         };
-        
+
         $casts = $model->getCasts();
         expect($casts['published_at'])->toBe('datetime');
         expect($casts['created_at'])->toBe('datetime');

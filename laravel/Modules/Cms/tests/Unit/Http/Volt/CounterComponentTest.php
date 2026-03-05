@@ -10,7 +10,7 @@ describe('CounterComponent', function (): void {
     test('counter component extends volt component', function (): void {
         $component = new CounterComponent();
 
-        expect($component)->toBeInstanceOf(\Livewire\Volt\Component::class);
+        expect($component)->toBeInstanceOf(Livewire\Volt\Component::class);
     });
 
     test('counter component has count property', function (): void {

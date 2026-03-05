@@ -10,8 +10,7 @@ use Modules\Xot\Datas\XotData;
 /*
  * Class CreateModelHasPermissionsTable.
  */
-return new class extends XotBaseMigration
-{
+return new class extends XotBaseMigration {
     /**
      * Run the migrations.
      */
@@ -29,7 +28,7 @@ return new class extends XotBaseMigration
             if (! $this->hasColumn('team_id')) {
                 $table->foreignIdFor($team_class, 'team_id')->nullable();
             }
-            if ($this->getColumnType('model_id') === 'uuid') {
+            if ('uuid' === $this->getColumnType('model_id')) {
                 $table->string('model_id', 36)->index()->change();
             }
             $this->updateTimestamps($table);

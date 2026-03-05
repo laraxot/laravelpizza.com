@@ -5,22 +5,21 @@ declare(strict_types=1);
 namespace Modules\User\Tests\Feature\Actions\Socialite;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Actions\Socialite\SetDefaultRolesBySocialiteUserAction;
 use Modules\User\Models\Role;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
-use Laravel\Socialite\Contracts\User as SocialiteUserContract;
-use Mockery;
 
 uses(TestCase::class, DatabaseTransactions::class);
 
 describe('SetDefaultRolesBySocialiteUserAction', function (): void {
-    
     $getMockUser = static function (string $email = 'user@example.com'): SocialiteUserContract {
-        $mock = Mockery::mock(SocialiteUserContract::class);
+        $mock = \Mockery::mock(SocialiteUserContract::class);
         $mock->shouldReceive('getEmail')->andReturn($email);
         $mock->shouldReceive('getId')->andReturn(uniqid());
         $mock->shouldReceive('getName')->andReturn('Test User');
+
         return $mock;
     };
 
@@ -62,7 +61,7 @@ describe('SetDefaultRolesBySocialiteUserAction', function (): void {
 
     test('does not assign roles to user with existing roles', function () use ($getMockUser): void {
         $user = User::factory()->create();
-        
+
         // The action should not crash when user already has roles
         $oauthUser = $getMockUser();
 
@@ -113,7 +112,7 @@ describe('SetDefaultRolesBySocialiteUserAction', function (): void {
 
     test('preserves existing roles when user already has some', function () use ($getMockUser): void {
         $user = User::factory()->create();
-        
+
         // Verify the action doesn't crash when user has existing roles
         $oauthUser = $getMockUser();
 

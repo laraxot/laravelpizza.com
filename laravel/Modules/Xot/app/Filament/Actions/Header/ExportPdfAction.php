@@ -32,7 +32,7 @@ class ExportPdfAction extends Action
                     collect($livewire->tableFilters)->flatten()->implode('-').
                     '.pdf';
                 $query = $livewire->getFilteredTableQuery();
-                if ($query === null) {
+                if (null === $query) {
                     throw new \Exception('Query is null');
                 }
                 $rows = $query->get();

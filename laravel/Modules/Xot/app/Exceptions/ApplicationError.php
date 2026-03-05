@@ -18,7 +18,8 @@ readonly class ApplicationError implements \JsonSerializable, Arrayable, Jsonabl
     public function __construct(
         private string $help = '',
         private string $error = '',
-    ) {}
+    ) {
+    }
 
     public function toArray(): array
     {

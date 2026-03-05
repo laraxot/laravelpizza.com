@@ -30,6 +30,6 @@ describe('SectionResource', function (): void {
     });
 
     test('section resource extends LangBaseResource', function (): void {
-        expect(is_subclass_of(SectionResource::class, \Modules\Lang\Filament\Resources\LangBaseResource::class))->toBeTrue();
+        expect(is_subclass_of(SectionResource::class, Modules\Lang\Filament\Resources\LangBaseResource::class))->toBeTrue();
     });
 });

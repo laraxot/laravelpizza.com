@@ -13,7 +13,7 @@ test('Footer page can be instantiated', function () {
 
 test('Footer page has data property', function () {
     $page = new Footer();
-    $reflection = new \ReflectionClass($page);
+    $reflection = new ReflectionClass($page);
     $property = $reflection->getProperty('data');
     $property->setAccessible(true);
 
@@ -22,7 +22,7 @@ test('Footer page has data property', function () {
 
 test('Footer page has footerData property', function () {
     $page = new Footer();
-    $reflection = new \ReflectionClass($page);
+    $reflection = new ReflectionClass($page);
     $property = $reflection->getProperty('footerData');
     $property->setAccessible(true);
 

@@ -6,11 +6,12 @@ namespace Modules\Xot\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Symfony\Component\HttpFoundation\Response;
-use Webmozart\Assert\Assert;
 
 use function Safe\json_encode;
 use function Safe\preg_match;
+
+use Symfony\Component\HttpFoundation\Response;
+use Webmozart\Assert\Assert;
 
 /**
  * Middleware di sicurezza avanzato.
@@ -277,7 +278,7 @@ class SecurityMiddleware
         }
 
         // Log tentativi di accesso falliti
-        if ($response->getStatusCode() === 401 || $response->getStatusCode() === 403) {
+        if (401 === $response->getStatusCode() || 403 === $response->getStatusCode()) {
             Log::warning('Failed access attempt', $securityData);
         }
 
@@ -330,7 +331,7 @@ class SecurityMiddleware
         ];
 
         foreach ($suspiciousUserAgents as $suspicious) {
-            if ($userAgent !== null && stripos($userAgent, $suspicious) !== false) {
+            if (null !== $userAgent && false !== stripos($userAgent, $suspicious)) {
                 return true;
             }
         }
@@ -346,7 +347,7 @@ class SecurityMiddleware
         $inputs = $request->all();
 
         foreach ($inputs as $key => $value) {
-            if ($value !== null && is_string($value)) {
+            if (null !== $value && is_string($value)) {
                 $this->validateStringInput($key, $value);
             } elseif (is_array($value)) {
                 $this->validateArrayInput($key, $value);

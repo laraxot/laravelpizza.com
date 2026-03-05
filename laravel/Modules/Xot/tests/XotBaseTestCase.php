@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests;
 
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Throwable;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Providers\XotServiceProvider;
@@ -47,7 +46,7 @@ abstract class XotBaseTestCase extends BaseTestCase
         if (! $this->app->bound('translator')) {
             $this->app->singleton('translator', function ($app) {
                 return new \Illuminate\Translation\Translator(
-                    new \Illuminate\Translation\ArrayLoader,
+                    new \Illuminate\Translation\ArrayLoader(),
                     'en'
                 );
             });
@@ -71,7 +70,7 @@ abstract class XotBaseTestCase extends BaseTestCase
                 $db->disconnect();
                 $db->purge();
             }
-        } catch (Throwable) {
+        } catch (\Throwable) {
             // Ignore teardown disconnection issues to avoid masking test failures.
         }
 
@@ -99,7 +98,7 @@ abstract class XotBaseTestCase extends BaseTestCase
     /**
      * Create a test user with optional attributes.
      *
-     * @param  array<string, mixed>  $attributes
+     * @param array<string, mixed> $attributes
      */
     protected static function createTestUser(array $attributes = []): UserContract
     {

@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Modules\Geo\Actions\GetBoundingBoxAction;
 
 beforeEach(function () {
-    $this->action = new GetBoundingBoxAction;
+    $this->action = new GetBoundingBoxAction();
 });
 
 it('calculates bounding box correctly for milan', function (): void {

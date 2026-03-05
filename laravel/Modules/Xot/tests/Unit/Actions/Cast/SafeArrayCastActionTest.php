@@ -23,13 +23,12 @@ it('casts various values to array correctly', function (): void {
     expect($action->execute(collect(['b' => 2])))->toBe(['b' => 2]);
 
     // stdClass
-    $obj = new \stdClass;
+    $obj = new \stdClass();
     $obj->c = 3;
     expect($action->execute($obj))->toBe(['c' => 3]);
 
     // Object with toArray
-    $objToArray = new class
-    {
+    $objToArray = new class {
         public function toArray()
         {
             return ['d' => 4];
@@ -38,8 +37,7 @@ it('casts various values to array correctly', function (): void {
     expect($action->execute($objToArray))->toBe(['d' => 4]);
 
     // Object with __toArray
-    $objUnderscoreToArray = new class
-    {
+    $objUnderscoreToArray = new class {
         public function __toArray()
         {
             return ['e' => 5];
@@ -48,8 +46,7 @@ it('casts various values to array correctly', function (): void {
     expect($action->execute($objUnderscoreToArray))->toBe(['e' => 5]);
 
     // Regular object (public properties)
-    $regObj = new class
-    {
+    $regObj = new class {
         public $f = 6;
     };
     expect($action->execute($regObj))->toBe(['f' => 6]);
@@ -93,7 +90,7 @@ it('checks if value can be cast', function (): void {
     expect($action->canCast([]))->toBeTrue();
     expect($action->canCast(null))->toBeTrue();
     expect($action->canCast('str'))->toBeTrue();
-    expect($action->canCast(new \stdClass))->toBeTrue();
+    expect($action->canCast(new \stdClass()))->toBeTrue();
 });
 
 it('uses static cast method correctly', function (): void {

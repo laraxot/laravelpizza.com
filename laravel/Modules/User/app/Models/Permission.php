@@ -13,19 +13,19 @@ use Modules\Xot\Traits\Updater;
 use Spatie\Permission\Models\Permission as SpatiePermission;
 
 /**
- * @property int $id
- * @property string $name
- * @property string $guard_name
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
+ * @property int                         $id
+ * @property string                      $name
+ * @property string                      $guard_name
+ * @property Carbon|null                 $created_at
+ * @property Carbon|null                 $updated_at
+ * @property string|null                 $updated_by
+ * @property string|null                 $created_by
  * @property Collection<int, Permission> $permissions
- * @property int|null $permissions_count
- * @property Collection<int, Role> $roles
- * @property int|null $roles_count
- * @property Collection<int, User> $users
- * @property int|null $users_count
+ * @property int|null                    $permissions_count
+ * @property Collection<int, Role>       $roles
+ * @property int|null                    $roles_count
+ * @property Collection<int, User>       $users
+ * @property int|null                    $users_count
  *
  * @method static Builder<static>|Permission newModelQuery()
  * @method static Builder<static>|Permission newQuery()
@@ -41,8 +41,8 @@ use Spatie\Permission\Models\Permission as SpatiePermission;
  * @method static Builder<static>|Permission whereUpdatedBy($value)
  * @method static Builder<static>|Permission withoutPermission($permissions)
  * @method static Builder<static>|Permission withoutRole($roles, $guard = null)
- * @method static static firstOrCreate(array $attributes, array $values = [])
- * @method static static updateOrCreate(array $attributes, array $values = [])
+ * @method static static                     firstOrCreate(array $attributes, array $values = [])
+ * @method static static                     updateOrCreate(array $attributes, array $values = [])
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $deleter

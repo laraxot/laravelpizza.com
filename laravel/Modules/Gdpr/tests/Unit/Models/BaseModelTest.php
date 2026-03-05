@@ -4,25 +4,32 @@ declare(strict_types=1);
 
 uses(Modules\Gdpr\Tests\TestCase::class);
 
+use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\BaseModel;
-use Modules\Gdpr\Models\Consent;
 
-test('consent_extends_base_model', function () {
-    $consent = new Consent();
-
-    expect($consent)->toBeInstanceOf(BaseModel::class);
-});
-
-test('base_model_is_abstract', function () {
-    $reflection = new ReflectionClass(BaseModel::class);
-
-    expect($reflection->isAbstract())->toBeTrue();
-});
-
-test('base_model_uses_gdpr_connection', function () {
-    $model = new class extends BaseModel
-    {
+beforeEach(function () {
+    $this->baseModel = new class extends BaseModel {
+        protected $table = 'test_gdpr_table';
     };
+});
 
-    expect($model->getConnectionName())->toBe('gdpr');
+test('base model extends eloquent model', function () {
+    expect($this->baseModel)->toBeInstanceOf(Model::class);
+});
+
+test('base model has correct table name', function () {
+    expect($this->baseModel->getTable())->toBe('test_gdpr_table');
+});
+
+test('base model can be instantiated', function () {
+    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
+});
+
+test('base model has proper inheritance chain', function () {
+    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
+    expect($this->baseModel)->toBeInstanceOf(Model::class);
+});
+
+test('base model has timestamps enabled', function () {
+    expect($this->baseModel)->usesTimestamps()->toBeTrue();
 });

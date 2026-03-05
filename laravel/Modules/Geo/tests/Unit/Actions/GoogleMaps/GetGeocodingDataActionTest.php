@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Modules\Geo\Tests\LightTestCase;
 use GuzzleHttp\Client;
+use Modules\Geo\Tests\LightTestCase;
 
 uses(LightTestCase::class);
 use GuzzleHttp\Handler\MockHandler;
@@ -13,7 +13,7 @@ use Modules\Geo\Actions\GoogleMaps\GetGeocodingDataAction;
 use Modules\Geo\Datas\GeocodingData;
 
 beforeEach(function () {
-    $this->mockHandler = new MockHandler;
+    $this->mockHandler = new MockHandler();
     $handlerStack = HandlerStack::create($this->mockHandler);
     $this->client = new Client(['handler' => $handlerStack]);
     $this->action = new GetGeocodingDataAction($this->client);
@@ -23,14 +23,14 @@ it('throws exception when api key is not configured', function (): void {
     config(['services.google.maps_api_key' => null]);
 
     expect(fn () => $this->action->execute('Milano, Italia'))
-        ->toThrow(\RuntimeException::class, 'Chiave API Google Maps non configurata');
+        ->toThrow(RuntimeException::class, 'Chiave API Google Maps non configurata');
 });
 
 it('throws exception for empty address', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
     expect(fn () => $this->action->execute(''))
-        ->toThrow(\RuntimeException::class, 'Indirizzo non può essere vuoto');
+        ->toThrow(RuntimeException::class, 'Indirizzo non può essere vuoto');
 });
 
 it('throws exception for too long address', function (): void {
@@ -39,13 +39,13 @@ it('throws exception for too long address', function (): void {
     $longAddress = str_repeat('a', 1001);
 
     expect(fn () => $this->action->execute($longAddress))
-        ->toThrow(\RuntimeException::class, 'Indirizzo troppo lungo');
+        ->toThrow(RuntimeException::class, 'Indirizzo troppo lungo');
 });
 
 it('returns error geocoding data for guzzle exception', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    $this->mockHandler->append(new \GuzzleHttp\Exception\RequestException('Error', new \GuzzleHttp\Psr7\Request('GET', 'http://test')));
+    $this->mockHandler->append(new GuzzleHttp\Exception\RequestException('Error', new GuzzleHttp\Psr7\Request('GET', 'http://test')));
 
     $result = $this->action->execute('Milano, Italia');
 

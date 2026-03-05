@@ -10,7 +10,7 @@ describe('XotPanelController', function (): void {
     test('xot panel controller extends base controller', function (): void {
         $controller = new XotPanelController();
 
-        expect($controller)->toBeInstanceOf(\Modules\Cms\Http\Controllers\BaseController::class);
+        expect($controller)->toBeInstanceOf(Modules\Cms\Http\Controllers\BaseController::class);
     });
 
     test('xot panel controller has __call method', function (): void {

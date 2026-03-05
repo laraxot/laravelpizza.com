@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
+use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Actions\Socialite\IsUserAllowedAction;
 use Modules\User\Tests\TestCase;
-use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 
 uses(TestCase::class);
 
 function fakeSocialiteUser(string $email): SocialiteUserContract
 {
-    $user = \Mockery::mock(SocialiteUserContract::class);
+    $user = Mockery::mock(SocialiteUserContract::class);
     $user->shouldReceive('getEmail')->andReturn($email);
 
     return $user;

@@ -9,7 +9,7 @@ use Modules\Gdpr\Providers\Filament\AdminPanelProvider;
 test('admin_panel_provider_extends_xot_base_panel_provider', function () {
     $provider = new AdminPanelProvider(app());
 
-    expect($provider)->toBeInstanceOf(\Modules\Xot\Providers\Filament\XotBasePanelProvider::class);
+    expect($provider)->toBeInstanceOf(Modules\Xot\Providers\Filament\XotBasePanelProvider::class);
 });
 
 test('admin_panel_provider_has_module_property', function () {

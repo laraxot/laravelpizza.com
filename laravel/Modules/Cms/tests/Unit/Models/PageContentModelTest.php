@@ -43,13 +43,13 @@ describe('PageContent Model', function (): void {
     test('page content model uses HasTranslations trait', function (): void {
         $model = new PageContent();
 
-        expect(in_array(\Spatie\Translatable\HasTranslations::class, class_uses_recursive($model)))->toBeTrue();
+        expect(in_array(Spatie\Translatable\HasTranslations::class, class_uses_recursive($model)))->toBeTrue();
     });
 
     test('page content model uses SushiToJsons trait', function (): void {
         $model = new PageContent();
 
-        expect(in_array(\Modules\Tenant\Models\Traits\SushiToJsons::class, class_uses_recursive($model)))->toBeTrue();
+        expect(in_array(Modules\Tenant\Models\Traits\SushiToJsons::class, class_uses_recursive($model)))->toBeTrue();
     });
 
     test('page content model has getRows method', function (): void {

@@ -13,7 +13,7 @@ test('Headernav page can be instantiated', function () {
 
 test('Headernav page has data property', function () {
     $page = new Headernav();
-    $reflection = new \ReflectionClass($page);
+    $reflection = new ReflectionClass($page);
     $property = $reflection->getProperty('data');
     $property->setAccessible(true);
 
@@ -22,7 +22,7 @@ test('Headernav page has data property', function () {
 
 test('Headernav page has headernavData property', function () {
     $page = new Headernav();
-    $reflection = new \ReflectionClass($page);
+    $reflection = new ReflectionClass($page);
     $property = $reflection->getProperty('headernavData');
     $property->setAccessible(true);
 
@@ -51,11 +51,11 @@ test('Headernav page has getUpdateFormActions method', function () {
 
 test('Headernav page implements HasForms', function () {
     $interfaces = class_implements(Headernav::class);
-    expect($interfaces)->toContain(\Filament\Forms\Contracts\HasForms::class);
+    expect($interfaces)->toContain(Filament\Forms\Contracts\HasForms::class);
 });
 
 test('Headernav page uses InteractsWithForms trait', function () {
-    $reflection = new \ReflectionClass(Headernav::class);
+    $reflection = new ReflectionClass(Headernav::class);
     $traits = $reflection->getTraitNames();
-    expect($traits)->toContain(\Filament\Forms\Concerns\InteractsWithForms::class);
+    expect($traits)->toContain(Filament\Forms\Concerns\InteractsWithForms::class);
 });

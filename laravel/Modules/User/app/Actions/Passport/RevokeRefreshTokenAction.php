@@ -16,12 +16,14 @@ class RevokeRefreshTokenAction
 
     public function __construct(
         private readonly OauthRefreshToken $refreshTokenModel,
-    ) {}
+    ) {
+    }
 
     /**
      * Revoca un refresh token OAuth2.
      *
-     * @param  OauthRefreshToken|string  $token  Il token da revocare (istanza o ID)
+     * @param OauthRefreshToken|string $token Il token da revocare (istanza o ID)
+     *
      * @return bool True se il token è stato revocato con successo
      */
     public function execute(OauthRefreshToken|string $token): bool

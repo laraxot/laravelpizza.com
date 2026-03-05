@@ -32,7 +32,7 @@ class GetThemeContextAction
         $day = $today->day;
 
         // Christmas season: December 1 to January 10
-        if (($month === 12 && $day >= 1) || ($month === 1 && $day <= 10)) {
+        if ((12 === $month && $day >= 1) || (1 === $month && $day <= 10)) {
             return 'christmas';
         }
 
@@ -46,12 +46,12 @@ class GetThemeContextAction
         }
 
         // Summer period: July 15 to August 31
-        if (($month === 7 && $day >= 15) || ($month === 8)) {
+        if ((7 === $month && $day >= 15) || (8 === $month)) {
             return 'summer';
         }
 
         // Halloween: October 25 to November 1
-        if (($month === 10 && $day >= 25) || ($month === 11 && $day <= 1)) {
+        if ((10 === $month && $day >= 25) || (11 === $month && $day <= 1)) {
             return 'halloween';
         }
 

@@ -11,7 +11,7 @@ use Modules\Geo\Actions\IPGeolocation\GetLocationFromIPAction;
 use Modules\Geo\Datas\IPLocationData;
 
 beforeEach(function () {
-    $this->fetchAction = new FetchIPLocationAction;
+    $this->fetchAction = new FetchIPLocationAction();
     $this->action = new GetLocationFromIPAction($this->fetchAction);
 });
 
@@ -43,5 +43,5 @@ it('returns null when fetch action returns null', function (): void {
     ]);
 
     expect(fn () => $this->action->execute('192.168.1.1'))
-        ->toThrow(\RuntimeException::class);
+        ->toThrow(RuntimeException::class);
 });

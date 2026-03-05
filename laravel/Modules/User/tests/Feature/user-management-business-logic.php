@@ -7,18 +7,14 @@ namespace Modules\User\Tests\Feature;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\DB;
 use Modules\Xot\Datas\XotData;
-use Webmozart\Assert\Assert;
 
 uses(TestCase::class, DatabaseTransactions::class);
 
 describe('User Management Business Logic', function () {
-    
     it('can create user with profile', function () {
-        $email = 'test-' . uniqid() . '@example.com';
-        
+        $email = 'test-'.uniqid().'@example.com';
+
         /** @var User $user */
         $user = User::factory()->create([
             'first_name' => 'Mario',
@@ -28,7 +24,7 @@ describe('User Management Business Logic', function () {
 
         $profileClass = XotData::make()->getProfileClass();
         /** @var \Illuminate\Database\Eloquent\Model $profile */
-        $profile = new $profileClass;
+        $profile = new $profileClass();
         $connection = $profile->getConnectionName();
         $table = $profile->getTable();
 
@@ -55,10 +51,10 @@ describe('User Management Business Logic', function () {
     it('can update user profile', function () {
         /** @var User $user */
         $user = User::factory()->create();
-        
+
         $profileClass = XotData::make()->getProfileClass();
         /** @var \Illuminate\Database\Eloquent\Model $profile */
-        $profile = new $profileClass;
+        $profile = new $profileClass();
         $profile->fill(['user_id' => $user->id]);
         $profile->save();
 
@@ -83,11 +79,11 @@ describe('User Management Business Logic', function () {
     });
 
     it('can validate user email uniqueness', function () {
-        $email = 'unique-' . uniqid() . '@example.com';
+        $email = 'unique-'.uniqid().'@example.com';
         User::factory()->create(['email' => $email]);
 
         $this->expectException(\Illuminate\Database\UniqueConstraintViolationException::class);
-        
+
         User::factory()->create(['email' => $email]);
     });
 

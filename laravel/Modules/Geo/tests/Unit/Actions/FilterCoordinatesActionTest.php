@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Modules\Geo\Actions\FilterCoordinatesAction;
 
 beforeEach(function () {
-    $this->action = new FilterCoordinatesAction;
+    $this->action = new FilterCoordinatesAction();
 });
 
 it('filters coordinates within radius correctly', function (): void {

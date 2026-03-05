@@ -37,7 +37,6 @@ expect()->extend('toBeTeam', fn () => $this->toBeInstanceOf(Team::class));
 
 expect()->extend('toBeProfile', fn () => $this->toBeInstanceOf(Profile::class));
 
-
 /*
  * |--------------------------------------------------------------------------
  * | Functions

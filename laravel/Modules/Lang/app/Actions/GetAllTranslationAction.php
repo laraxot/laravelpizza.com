@@ -6,9 +6,10 @@ namespace Modules\Lang\Actions;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\glob;
+
+use Spatie\QueueableAction\QueueableAction;
 
 class GetAllTranslationAction
 {

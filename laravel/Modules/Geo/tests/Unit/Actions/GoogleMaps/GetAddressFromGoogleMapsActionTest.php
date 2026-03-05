@@ -11,7 +11,7 @@ use Modules\Geo\Datas\AddressData;
 use Modules\Geo\Exceptions\GoogleMaps\GoogleMapsApiException;
 
 beforeEach(function () {
-    $this->action = new GetAddressFromGoogleMapsAction;
+    $this->action = new GetAddressFromGoogleMapsAction();
 });
 
 it('throws exception when api key is not configured', function (): void {

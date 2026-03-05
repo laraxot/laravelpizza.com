@@ -9,4 +9,6 @@ use Modules\Xot\Models\XotBaseModel;
 /**
  * Base model for UI module.
  */
-abstract class BaseModel extends XotBaseModel {}
+abstract class BaseModel extends XotBaseModel
+{
+}

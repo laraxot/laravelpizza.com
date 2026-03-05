@@ -9,11 +9,12 @@
  * and that the email has not already been verified. If the verification is
  * successful, it marks the email as verified and dispatches a Verified event.
  *
- * @param  string  $id  the ID of the user to be verified
- * @param  string  $hash  the hash of the user's email address
- * @return RedirectResponse a redirect response to the home page
+ * @param string $id   the ID of the user to be verified
+ * @param string $hash the hash of the user's email address
  *
  * @throws AuthorizationException if the verification fails
+ *
+ * @return RedirectResponse a redirect response to the home page
  */
 declare(strict_types=1);
 
@@ -31,16 +32,16 @@ class EmailVerificationController extends Controller
     public function __invoke(string $id, string $hash): RedirectResponse
     {
         $user = Auth::user();
-        if ($user === null) {
-            throw new AuthorizationException;
+        if (null === $user) {
+            throw new AuthorizationException();
         }
 
         if (! hash_equals($id, (string) Auth::id())) {
-            throw new AuthorizationException;
+            throw new AuthorizationException();
         }
 
         if (! hash_equals($hash, sha1($user->getEmailForVerification()))) {
-            throw new AuthorizationException;
+            throw new AuthorizationException();
         }
 
         if ($user->hasVerifiedEmail()) {

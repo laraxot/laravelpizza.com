@@ -6,10 +6,11 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Request;
 use Modules\Xot\Services\ArtisanService;
-use Tests\TestCase;
 
 use function Safe\ob_end_clean;
 use function Safe\ob_start;
+
+use Tests\TestCase;
 
 uses(TestCase::class);
 

@@ -37,7 +37,7 @@ describe('AttachmentResource', function (): void {
     });
 
     test('attachment resource extends LangBaseResource', function (): void {
-        expect(is_subclass_of(AttachmentResource::class, \Modules\Lang\Filament\Resources\LangBaseResource::class))->toBeTrue();
+        expect(is_subclass_of(AttachmentResource::class, Modules\Lang\Filament\Resources\LangBaseResource::class))->toBeTrue();
     });
 
     test('attachment resource has navigation icon', function (): void {

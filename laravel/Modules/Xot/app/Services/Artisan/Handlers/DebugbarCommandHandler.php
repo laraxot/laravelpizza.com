@@ -19,6 +19,6 @@ class DebugbarCommandHandler implements CommandHandlerInterface
 
     public function supports(string $command): bool
     {
-        return $command === 'debugbar:clear';
+        return 'debugbar:clear' === $command;
     }
 }

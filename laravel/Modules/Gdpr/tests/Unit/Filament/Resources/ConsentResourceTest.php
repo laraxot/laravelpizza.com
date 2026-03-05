@@ -8,7 +8,7 @@ use Modules\Gdpr\Filament\Resources\ConsentResource;
 use Modules\Gdpr\Models\Consent;
 
 test('consent_resource_extends_xot_base_resource', function () {
-    expect(is_subclass_of(ConsentResource::class, \Modules\Xot\Filament\Resources\XotBaseResource::class))->toBeTrue();
+    expect(is_subclass_of(ConsentResource::class, Modules\Xot\Filament\Resources\XotBaseResource::class))->toBeTrue();
 });
 
 test('consent_resource_model_is_consent', function () {

@@ -63,13 +63,13 @@ class UserDropdown extends XotBaseWidget
 
         if (method_exists($profile, 'getAvatarUrl')) {
             $url = $profile->getAvatarUrl();
-            if (\is_string($url) && $url !== '') {
+            if (\is_string($url) && '' !== $url) {
                 return $url;
             }
         }
 
         $avatarUrl = $profile->avatar_url ?? null;
 
-        return \is_string($avatarUrl) && $avatarUrl !== '' ? $avatarUrl : $fallback;
+        return \is_string($avatarUrl) && '' !== $avatarUrl ? $avatarUrl : $fallback;
     }
 }

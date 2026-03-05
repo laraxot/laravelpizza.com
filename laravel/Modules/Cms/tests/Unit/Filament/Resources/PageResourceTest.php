@@ -31,6 +31,6 @@ describe('PageResource', function (): void {
     });
 
     test('page resource extends LangBaseResource', function (): void {
-        expect(is_subclass_of(PageResource::class, \Modules\Lang\Filament\Resources\LangBaseResource::class))->toBeTrue();
+        expect(is_subclass_of(PageResource::class, Modules\Lang\Filament\Resources\LangBaseResource::class))->toBeTrue();
     });
 });

@@ -11,8 +11,8 @@ use Modules\Xot\Contracts\ProfileContract;
 /**
  * Modules\User\Models\ModelHasPermission.
  *
- * @property int $id
- * @property int $permission_id
+ * @property int    $id
+ * @property int    $permission_id
  * @property string $model_type
  * @property string $model_id
  *
@@ -36,7 +36,7 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- * @property string|null $team_id
+ * @property string|null          $team_id
  *
  * @method static Builder|ModelHasPermission whereTeamId($value)
  *

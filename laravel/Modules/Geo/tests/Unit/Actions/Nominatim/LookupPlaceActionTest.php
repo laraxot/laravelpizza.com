@@ -11,7 +11,7 @@ use Modules\Geo\Datas\LocationData;
 
 beforeEach(function (): void {
     $this->mockClient = Mockery::mock(Client::class);
-    $this->action = new LookupPlaceAction;
+    $this->action = new LookupPlaceAction();
 
     // Replace the client instance with our mock
     /** @phpstan-ignore-next-line property.notFound */
@@ -96,7 +96,7 @@ test('lookup place action uses correct user agent header', function (): void {
             /* @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
             return isset($options['headers']['User-Agent'])
                    /* @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
-                   && $options['headers']['User-Agent'] === 'Xot/1.0';
+                   && 'Xot/1.0' === $options['headers']['User-Agent'];
         })
         ->andReturn($mockResponse);
 

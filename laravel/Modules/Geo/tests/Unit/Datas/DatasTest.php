@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use Illuminate\Support\Collection;
 use Modules\Geo\Datas\AddressData;
 use Modules\Geo\Datas\BingMapData;
 use Modules\Geo\Datas\CoordinatesData;
@@ -386,7 +385,7 @@ describe('PlaceData', function () {
 describe('GeoData', function () {
     test('class exists and extends Data', function () {
         expect(class_exists(GeoData::class))->toBeTrue();
-        expect(is_subclass_of(GeoData::class, \Spatie\LaravelData\Data::class))->toBeTrue();
+        expect(is_subclass_of(GeoData::class, Spatie\LaravelData\Data::class))->toBeTrue();
     });
 
     test('can be instantiated and properties set', function () {
@@ -604,7 +603,7 @@ describe('BingMapData', function () {
 
     test('class exists and extends Data', function () {
         expect(class_exists(BingMapData::class))->toBeTrue();
-        expect(is_subclass_of(BingMapData::class, \Spatie\LaravelData\Data::class))->toBeTrue();
+        expect(is_subclass_of(BingMapData::class, Spatie\LaravelData\Data::class))->toBeTrue();
     });
 });
 

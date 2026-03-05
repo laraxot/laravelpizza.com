@@ -8,11 +8,12 @@ use Filament\Forms\Components\Builder\Block;
 use Modules\Cms\Tests\TestCase;
 use Modules\UI\Actions\Block\GetAllBlocksAction;
 use Modules\UI\View\Components\Render\Blocks;
-use Spatie\LaravelData\DataCollection;
 
 use function Pest\Laravel\get;
 use function Safe\file_get_contents;
 use function Safe\json_decode;
+
+use Spatie\LaravelData\DataCollection;
 
 uses(TestCase::class);
 
@@ -39,7 +40,7 @@ describe('Filament Builder Blocks System', function () {
     test('xot base block pattern is followed by cms blocks', function () {
         $allBlocks = app(GetAllBlocksAction::class)->execute();
 
-        $cmsBlocks = $allBlocks->filter(fn ($block) => $block->module === 'Cms');
+        $cmsBlocks = $allBlocks->filter(fn ($block) => 'Cms' === $block->module);
 
         $this->assertGreaterThan(0, $cmsBlocks->count(), 'CMS module should have blocks');
 
@@ -198,7 +199,7 @@ describe('Filament Builder Blocks System', function () {
     test('page component integration with blocks system', function () {
         $response = get('/');
         $status = $response->getStatusCode();
-        if ($status !== 200) {
+        if (200 !== $status) {
             $this->assertTrue(true);
 
             return;
@@ -241,7 +242,7 @@ describe('Filament Builder Blocks System', function () {
             }
 
             $title = $data['title'] ?? null;
-            if (is_string($title) && $title !== '') {
+            if (is_string($title) && '' !== $title) {
                 $this->assertStringContainsString($title, $content);
             }
         }
@@ -294,7 +295,7 @@ describe('Filament Builder Blocks System', function () {
 
     test('cms module blocks extend xot base block correctly', function () {
         $allBlocks = app(GetAllBlocksAction::class)->execute();
-        $cmsBlocks = $allBlocks->filter(fn ($block) => $block->module === 'Cms');
+        $cmsBlocks = $allBlocks->filter(fn ($block) => 'Cms' === $block->module);
 
         $cmsBlocks->each(function ($block) {
             $blockClass = $block->class;
@@ -340,7 +341,7 @@ describe('Filament Builder Blocks System', function () {
         $startTime = microtime(true);
 
         $response = get('/');
-        if ($response->getStatusCode() !== 200) {
+        if (200 !== $response->getStatusCode()) {
             $this->assertTrue(true);
 
             return;

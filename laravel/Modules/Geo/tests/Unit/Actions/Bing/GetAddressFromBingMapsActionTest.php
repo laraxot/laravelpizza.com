@@ -2,18 +2,17 @@
 
 declare(strict_types=1);
 
-use Modules\Geo\Tests\LightTestCase;
 use GuzzleHttp\Client;
+use Modules\Geo\Tests\LightTestCase;
 
 uses(LightTestCase::class);
-use GuzzleHttp\Psr7\Response;
 use Modules\Geo\Actions\Bing\GetAddressFromBingMapsAction;
 use Modules\Geo\Datas\AddressData;
 use Modules\Geo\Exceptions\InvalidLocationException;
 
 beforeEach(function () {
-    $this->client = new Client;
-    $this->action = new GetAddressFromBingMapsAction;
+    $this->client = new Client();
+    $this->action = new GetAddressFromBingMapsAction();
 });
 
 it('throws exception when api key is not configured', function (): void {

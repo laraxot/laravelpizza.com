@@ -7,7 +7,7 @@ uses(Modules\Lang\Tests\TestCase::class);
 use Modules\Lang\Actions\GetAllTranslationAction;
 
 beforeEach(function () {
-    $this->action = new GetAllTranslationAction;
+    $this->action = new GetAllTranslationAction();
 });
 
 describe('GetAllTranslationAction Business Logic', function () {
@@ -28,7 +28,7 @@ describe('GetAllTranslationAction Business Logic', function () {
 
     test('handles session locale setting', function () {
         session()->put('locale', 'it');
-        
+
         $result = $this->action->execute();
 
         expect($result)->toBeArray();
@@ -36,7 +36,7 @@ describe('GetAllTranslationAction Business Logic', function () {
 
     test('handles invalid session locale gracefully', function () {
         session()->put('locale', 'invalid_locale');
-        
+
         $result = $this->action->execute();
 
         expect($result)->toBeArray();

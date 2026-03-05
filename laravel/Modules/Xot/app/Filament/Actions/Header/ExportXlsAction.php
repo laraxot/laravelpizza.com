@@ -34,7 +34,7 @@ class ExportXlsAction extends Action
                 $transKey = app(GetTransKeyAction::class)->execute($livewire::class);
                 $transKey .= '.fields';
                 $query = $livewire->getFilteredTableQuery();
-                if ($query === null) {
+                if (null === $query) {
                     throw new \Exception('Query is null');
                 }
                 $rows = $query->get();

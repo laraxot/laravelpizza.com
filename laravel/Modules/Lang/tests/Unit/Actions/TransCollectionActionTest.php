@@ -8,7 +8,7 @@ use Illuminate\Support\Collection;
 use Modules\Lang\Actions\TransCollectionAction;
 
 beforeEach(function () {
-    $this->action = new TransCollectionAction;
+    $this->action = new TransCollectionAction();
 });
 
 describe('TransCollectionAction Business Logic', function () {

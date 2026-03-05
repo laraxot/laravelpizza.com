@@ -77,7 +77,7 @@ class StateOverviewWidget extends XotBaseWidget
 
             return $cacheKey;
         } catch (\Error $e) {
-            if ($this->cacheKey === '') {
+            if ('' === $this->cacheKey) {
                 $this->cacheKey = Str::uuid()->toString();
             }
 

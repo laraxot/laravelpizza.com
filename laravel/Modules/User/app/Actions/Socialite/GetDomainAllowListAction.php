@@ -8,11 +8,17 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\Socialite;
 
+use Illuminate\Support\Arr;
 use Spatie\QueueableAction\QueueableAction;
 
 class GetDomainAllowListAction
 {
     use QueueableAction;
+
+    public function __construct(
+        private readonly Arr $arrHelper,
+    ) {
+    }
 
     /**
      * Execute the action.
@@ -20,19 +26,14 @@ class GetDomainAllowListAction
     public function execute(): array
     {
         $res = config('filament-socialite.domain_allowlist');
-        
-        if (empty($res)) {
-            return [];
-        }
-
         if (\is_string($res)) {
-            return [$res];
+            return $this->arrHelper->wrap($res);
         }
 
         if (\is_array($res)) {
             return $res;
         }
 
-        return [];
+        throw new \Exception('check config filament-socialite.domain_allowlist');
     }
 }

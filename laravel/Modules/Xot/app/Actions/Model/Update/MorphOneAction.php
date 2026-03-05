@@ -23,11 +23,11 @@ final class MorphOneAction
     /**
      * Execute the morphOne relationship action.
      *
-     * @param  Model  $model  The model instance
-     * @param  RelationDTO  $relationDTO  The relation data transfer object
+     * @param Model       $model       The model instance
+     * @param RelationDTO $relationDTO The relation data transfer object
      *
      * @throws \InvalidArgumentException When relation is not MorphOne
-     * @throws \RuntimeException When data array is invalid
+     * @throws \RuntimeException         When data array is invalid
      */
     public function execute(Model $model, RelationDTO $relationDTO): void
     {
@@ -49,7 +49,8 @@ final class MorphOneAction
     /**
      * Validate and prepare the data array.
      *
-     * @param  array<string, mixed>  $data  The input data array
+     * @param array<string, mixed> $data The input data array
+     *
      * @return array<string, mixed> The validated and prepared data
      */
     private function validateAndPrepareData(array $data): array
@@ -60,6 +61,6 @@ final class MorphOneAction
         }
 
         // Remove null values from the data array
-        return array_filter($data, static fn ($value): bool => $value !== null);
+        return array_filter($data, static fn ($value): bool => null !== $value);
     }
 }

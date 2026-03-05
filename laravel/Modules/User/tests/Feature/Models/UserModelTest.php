@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Modules\User\Tests\Feature\Models;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Modules\User\Models\Role;
-use Modules\User\Models\User;
-use Modules\User\Models\SocialiteUser;
 use Modules\User\Models\Permission;
+use Modules\User\Models\Role;
+use Modules\User\Models\SocialiteUser;
+use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class, DatabaseTransactions::class);
@@ -24,7 +24,7 @@ describe('User Model', function (): void {
     });
 
     test('user has email attribute', function (): void {
-        $email = 'test-' . uniqid() . '@example.com';
+        $email = 'test-'.uniqid().'@example.com';
         $user = User::factory()->create(['email' => $email]);
 
         expect($user->email)->toBe($email);
@@ -75,7 +75,7 @@ describe('User Model', function (): void {
 
     test('user can have permissions', function (): void {
         $user = User::factory()->create();
-        $permission = Permission::factory()->create(['guard_name' => 'web', 'name' => 'permission-' . uniqid()]);
+        $permission = Permission::factory()->create(['guard_name' => 'web', 'name' => 'permission-'.uniqid()]);
 
         $user->givePermissionTo($permission);
 
@@ -84,7 +84,7 @@ describe('User Model', function (): void {
 
     test('user can check if has role', function (): void {
         $user = User::factory()->create();
-        $role = Role::factory()->create(['name' => 'admin-' . uniqid(), 'guard_name' => 'web']);
+        $role = Role::factory()->create(['name' => 'admin-'.uniqid(), 'guard_name' => 'web']);
 
         $user->assignRole($role);
 
@@ -94,7 +94,7 @@ describe('User Model', function (): void {
 
     test('user can check if has permission', function (): void {
         $user = User::factory()->create();
-        $permission = Permission::factory()->create(['name' => 'perm-' . uniqid(), 'guard_name' => 'web']);
+        $permission = Permission::factory()->create(['name' => 'perm-'.uniqid(), 'guard_name' => 'web']);
 
         $user->givePermissionTo($permission);
 
@@ -216,7 +216,7 @@ describe('User Model', function (): void {
         $user->update(['name' => 'Updated Name']);
 
         expect($user->name)->toBe('Updated Name');
-        
+
         $refreshed = User::find($originalId);
         expect($refreshed->name)->toBe('Updated Name');
     });

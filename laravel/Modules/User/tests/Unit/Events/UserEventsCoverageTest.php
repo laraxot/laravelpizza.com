@@ -38,8 +38,8 @@ use Modules\Xot\Contracts\UserContract;
 
 describe('User events coverage', function (): void {
     it('instantiates team and membership events', function (): void {
-        $team = \Mockery::mock(TeamContract::class);
-        $user = \Mockery::mock(UserContract::class);
+        $team = Mockery::mock(TeamContract::class);
+        $user = Mockery::mock(UserContract::class);
 
         expect(new AddingTeam($user))->toBeInstanceOf(AddingTeam::class)
             ->and(new AddingTeamMember($team, $user))->toBeInstanceOf(AddingTeamMember::class)
@@ -55,8 +55,8 @@ describe('User events coverage', function (): void {
     });
 
     it('instantiates socialite and auth events', function (): void {
-        $socialiteUser = new SocialiteUser();
-        $oauthUser = \Mockery::mock(SocialiteUserContract::class);
+        $socialiteUser = $this->createMock(SocialiteUser::class);
+        $oauthUser = Mockery::mock(SocialiteUserContract::class);
 
         expect(new Login($socialiteUser))->toBeInstanceOf(Login::class)
             ->and(new Registered($socialiteUser))->toBeInstanceOf(Registered::class)
@@ -66,7 +66,7 @@ describe('User events coverage', function (): void {
     });
 
     it('instantiates recovery and invalid-state events', function (): void {
-        $auth = \Mockery::mock(Authenticatable::class);
+        $auth = Mockery::mock(Authenticatable::class);
         $exception = new InvalidStateException('state invalid');
 
         expect(new RecoveryCodeReplaced($auth, '123456'))->toBeInstanceOf(RecoveryCodeReplaced::class)
@@ -74,7 +74,7 @@ describe('User events coverage', function (): void {
     });
 
     it('instantiates two-factor events', function (): void {
-        $user = \Mockery::mock(UserContract::class);
+        $user = Mockery::mock(UserContract::class);
 
         expect(new TwoFactorAuthenticationEnabled($user))->toBeInstanceOf(TwoFactorAuthenticationEnabled::class)
             ->and(new TwoFactorAuthenticationDisabled($user))->toBeInstanceOf(TwoFactorAuthenticationDisabled::class)
@@ -83,7 +83,7 @@ describe('User events coverage', function (): void {
     });
 
     it('exposes broadcast channel for new password set event', function (): void {
-        $user = \Mockery::mock(UserContract::class);
+        $user = Mockery::mock(UserContract::class);
         $event = new NewPasswordSet($user);
 
         $channels = $event->broadcastOn();
@@ -93,7 +93,7 @@ describe('User events coverage', function (): void {
     });
 
     it('instantiates recovery-generated and user-registered events', function (): void {
-        $userContract = \Mockery::mock(UserContract::class);
+        $userContract = Mockery::mock(UserContract::class);
         $user = new User();
 
         $generated = new RecoveryCodesGenerated($userContract);

@@ -98,8 +98,9 @@ trait HasBlocks
      * Cercato il record per slug, itera sui blocchi e filtra per side quando fornito.
      * Struttura attesa: blocks = [{type, data, slug?, side?}, ...]
      *
-     * @param  string  $slug  The section/page slug
-     * @param  string|null  $side  The side to get blocks for (null for all blocks)
+     * @param string      $slug The section/page slug
+     * @param string|null $side The side to get blocks for (null for all blocks)
+     *
      * @return array<string, BlockData>
      */
     public static function getBlocksBySlug(string $slug, ?string $side = null): array
@@ -137,7 +138,7 @@ trait HasBlocks
             try {
                 $blockDataObj = new BlockData($blockType, $blockData, $blockSlug);
 
-                if ($side === null) {
+                if (null === $side) {
                     $result[$blockSlug ?? $blockType] = $blockDataObj;
                 } elseif (isset($block['side']) && (string) $block['side'] === $side) {
                     $result[$blockSlug ?? $blockType] = $blockDataObj;

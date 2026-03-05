@@ -7,10 +7,11 @@ namespace Modules\Xot\Http\Middleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
-use Symfony\Component\HttpFoundation\Response;
-use Webmozart\Assert\Assert;
 
 use function Safe\sys_getloadavg;
+
+use Symfony\Component\HttpFoundation\Response;
+use Webmozart\Assert\Assert;
 
 /**
  * Middleware per il monitoring delle performance.
@@ -20,7 +21,9 @@ use function Safe\sys_getloadavg;
  */
 class PerformanceMonitoringMiddleware
 {
-    public function __construct() {}
+    public function __construct()
+    {
+    }
 
     /**
      * Handle an incoming request.

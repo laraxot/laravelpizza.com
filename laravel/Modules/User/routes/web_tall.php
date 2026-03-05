@@ -18,7 +18,6 @@ use Webmozart\Assert\Assert;
  */
 
 Route::prefix('{lang}')->group(function (): void {
-    
     Route::middleware('auth')
         ->group(static function (): void {
             $route = Route::get('email/verify/{id}/{hash}', EmailVerificationController::class);

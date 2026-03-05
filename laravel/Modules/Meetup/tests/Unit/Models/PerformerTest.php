@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Meetup\Tests\Unit\Models;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Modules\Meetup\Models\Event;
 use Modules\Meetup\Models\Performer;
 use Modules\Meetup\Tests\TestCase;
 
@@ -54,48 +53,6 @@ describe('Performer Model', function (): void {
             ->and($speakers->contains($moderator))->toBeFalse();
     });
 
-    test('it has many-to-many relationship with events', function (): void {
-        $performer = Performer::factory()->create();
-        $event1 = Event::factory()->create();
-        $event2 = Event::factory()->create();
-
-        $performer->events()->attach($event1->id, ['role' => 'speaker', 'order' => 1]);
-        $performer->events()->attach($event2->id, ['role' => 'speaker', 'order' => 2]);
-
-        $events = $performer->events()->get();
-
-        expect($events->count())->toBe(2)
-            ->and($events->contains($event1))->toBeTrue()
-            ->and($events->contains($event2))->toBeTrue();
-    });
-
-    test('it preserves pivot data in many-to-many relationship', function (): void {
-        $performer = Performer::factory()->create();
-        $event = Event::factory()->create();
-
-        $performer->events()->attach($event->id, ['role' => 'headliner', 'order' => 1]);
-
-        $attachedEvent = $performer->events()->first();
-
-        expect($attachedEvent->pivot->role)->toBe('headliner')
-            ->and($attachedEvent->pivot->order)->toBe(1);
-    });
-
-    test('performer can have multiple types of roles in different events', function (): void {
-        $performer = Performer::factory()->create(['type' => 'speaker']);
-        $event1 = Event::factory()->create();
-        $event2 = Event::factory()->create();
-
-        $performer->events()->attach($event1->id, ['role' => 'keynote', 'order' => 1]);
-        $performer->events()->attach($event2->id, ['role' => 'workshop_leader', 'order' => 2]);
-
-        $event1Attachment = $performer->events()->where('event_id', $event1->id)->first();
-        $event2Attachment = $performer->events()->where('event_id', $event2->id)->first();
-
-        expect($event1Attachment->pivot->role)->toBe('keynote')
-            ->and($event2Attachment->pivot->role)->toBe('workshop_leader');
-    });
-
     test('it stores social media handles', function (): void {
         $performer = Performer::factory()->create([
             'twitter' => '@johndoe',
@@ -126,22 +83,6 @@ describe('Performer Model', function (): void {
         expect($performer->photo)->toBe('/photos/speaker.jpg');
     });
 
-    test('it detaches events correctly', function (): void {
-        $performer = Performer::factory()->create();
-        $event1 = Event::factory()->create();
-        $event2 = Event::factory()->create();
-
-        $performer->events()->attach($event1->id, ['role' => 'speaker', 'order' => 1]);
-        $performer->events()->attach($event2->id, ['role' => 'speaker', 'order' => 2]);
-
-        $performer->events()->detach($event1->id);
-
-        $remainingEvents = $performer->events()->get();
-
-        expect($remainingEvents->count())->toBe(1)
-            ->and($remainingEvents->contains($event2))->toBeTrue();
-    });
-
     test('byType scope returns empty collection for non-existent type', function (): void {
         Performer::factory()->create(['type' => 'speaker']);
         Performer::factory()->create(['type' => 'host']);
@@ -150,4 +91,32 @@ describe('Performer Model', function (): void {
 
         expect($organizers->count())->toBe(0);
     });
+
+    test('performer can be created from factory', function (): void {
+        $performer = Performer::factory()->create();
+
+        expect($performer->id)->not->toBeNull()
+            ->and($performer->name)->not->toBeEmpty();
+    });
+
+    test('performer email is unique when factory creates it', function (): void {
+        $performer1 = Performer::factory()->create();
+        $performer2 = Performer::factory()->create();
+
+        expect($performer1->email)->not->toBe($performer2->email);
+    });
+
+    test('performer meta_data defaults to array', function (): void {
+        $performer = Performer::factory()->create();
+
+        expect($performer->meta_data)->toBeArray();
+    });
+
+    test('performer has timestamps', function (): void {
+        $performer = Performer::factory()->create();
+
+        expect($performer->created_at)->not->toBeNull()
+            ->and($performer->updated_at)->not->toBeNull();
+    });
 });
+

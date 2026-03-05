@@ -24,10 +24,10 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $updater
  *
  * @method static \Modules\Geo\Database\Factories\CountyFactory factory($count = null, $state = [])
- * @method static Builder<static>|County newModelQuery()
- * @method static Builder<static>|County newQuery()
- * @method static Builder<static>|County query()
- *                                               >>>>>>> 65bf1208 (.)
+ * @method static Builder<static>|County                        newModelQuery()
+ * @method static Builder<static>|County                        newQuery()
+ * @method static Builder<static>|County                        query()
+ *                                                                                                  >>>>>>> 65bf1208 (.)
  *
  * @mixin \Eloquent
  */

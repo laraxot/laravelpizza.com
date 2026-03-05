@@ -3,13 +3,13 @@
 declare(strict_types=1);
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Support\Facades\Event;
-use Modules\User\Events\SocialiteUserConnected;
-use Modules\User\Models\User;
-use Modules\User\Actions\Socialite\LoginUserAction;
-use Modules\User\Models\SocialiteUser;
-use Modules\User\Tests\TestCase;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Event;
+use Modules\User\Actions\Socialite\LoginUserAction;
+use Modules\User\Events\SocialiteUserConnected;
+use Modules\User\Models\SocialiteUser;
+use Modules\User\Models\User;
+use Modules\User\Tests\TestCase;
 
 uses(TestCase::class, DatabaseTransactions::class);
 

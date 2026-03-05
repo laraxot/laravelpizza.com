@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\View;
 use Modules\Cms\Actions\View\GetCmsViewAction;
 
 test('GetCmsViewAction can be instantiated', function () {
-    $action = new GetCmsViewAction;
+    $action = new GetCmsViewAction();
 
     expect($action)->toBeInstanceOf(GetCmsViewAction::class);
 });
@@ -19,7 +19,7 @@ test('GetCmsViewAction execute method with existing view', function () {
         ->with('ui::empty')
         ->andReturn(true);
 
-    $action = new GetCmsViewAction;
+    $action = new GetCmsViewAction();
     $result = $action->execute('ui::empty');
 
     expect($result)->toBeString()
@@ -32,7 +32,7 @@ test('GetCmsViewAction execute method throws exception for non-existing view', f
         ->with('non.existing.view')
         ->andReturn(false);
 
-    $action = new GetCmsViewAction;
+    $action = new GetCmsViewAction();
 
     expect(fn () => $action->execute('non.existing.view'))->toThrow(Exception::class);
 });

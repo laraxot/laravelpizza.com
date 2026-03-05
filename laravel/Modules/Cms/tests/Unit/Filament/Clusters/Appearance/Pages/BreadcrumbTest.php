@@ -9,7 +9,7 @@ use Modules\Cms\Filament\Clusters\Appearance\Pages\Breadcrumb;
 test('Breadcrumb page uses correct view', function () {
     $page = new Breadcrumb();
     // Access protected property via reflection
-    $reflection = new \ReflectionClass($page);
+    $reflection = new ReflectionClass($page);
     $property = $reflection->getProperty('view');
     $property->setAccessible(true);
 
@@ -23,7 +23,7 @@ test('Breadcrumb page can be instantiated', function () {
 
 test('Breadcrumb page has data property', function () {
     $page = new Breadcrumb();
-    $reflection = new \ReflectionClass($page);
+    $reflection = new ReflectionClass($page);
     $property = $reflection->getProperty('data');
     $property->setAccessible(true);
 

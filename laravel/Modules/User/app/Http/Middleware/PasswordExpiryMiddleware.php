@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 class PasswordExpiryMiddleware
 {
     /**
-     * @param  \Closure(Request):((Response|RedirectResponse))  $next
+     * @param \Closure(Request):((Response|RedirectResponse)) $next
      */
     public function handle(Request $request, \Closure $next): Response|RedirectResponse
     {

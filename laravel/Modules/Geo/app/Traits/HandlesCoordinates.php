@@ -12,13 +12,13 @@ trait HandlesCoordinates
     /**
      * Valida le coordinate geografiche.
      *
-     * @param  float|null  $latitude  La latitudine da validare
-     * @param  float|null  $longitude  La longitudine da validare
+     * @param float|null $latitude  La latitudine da validare
+     * @param float|null $longitude La longitudine da validare
      */
     protected function areValidCoordinates(?float $latitude, ?float $longitude): bool
     {
-        return $latitude !== null
-            && $longitude !== null
+        return null !== $latitude
+            && null !== $longitude
             && $latitude >= -90
             && $latitude <= 90
             && $longitude >= -180
@@ -28,10 +28,10 @@ trait HandlesCoordinates
     /**
      * Calcola la distanza tra due punti in chilometri.
      *
-     * @param  float  $lat1  Latitudine del primo punto
-     * @param  float  $lon1  Longitudine del primo punto
-     * @param  float  $lat2  Latitudine del secondo punto
-     * @param  float  $lon2  Longitudine del secondo punto
+     * @param float $lat1 Latitudine del primo punto
+     * @param float $lon1 Longitudine del primo punto
+     * @param float $lat2 Latitudine del secondo punto
+     * @param float $lon2 Longitudine del secondo punto
      */
     protected function calculateDistance(float $lat1, float $lon1, float $lat2, float $lon2): float
     {
@@ -52,9 +52,9 @@ trait HandlesCoordinates
     /**
      * Formatta le coordinate in una stringa leggibile.
      *
-     * @param  float  $latitude  La latitudine da formattare
-     * @param  float  $longitude  La longitudine da formattare
-     * @param  int  $decimals  Il numero di decimali da mostrare
+     * @param float $latitude  La latitudine da formattare
+     * @param float $longitude La longitudine da formattare
+     * @param int   $decimals  Il numero di decimali da mostrare
      */
     protected function formatCoordinates(float $latitude, float $longitude, int $decimals = 6): string
     {

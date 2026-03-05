@@ -30,7 +30,7 @@ class UserSeeder extends Seeder
         $this->command->info('👤 Inizializzazione seeding User...');
 
         // Disabilita i controlli di foreign key (solo per MySQL)
-        if (DB::getDriverName() !== 'sqlite') {
+        if ('sqlite' !== DB::getDriverName()) {
             DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         }
 
@@ -41,7 +41,7 @@ class UserSeeder extends Seeder
             $this->command->info('✅ Seeding User completato con successo!');
         } finally {
             // Riabilita i controlli di foreign key (solo per MySQL)
-            if (DB::getDriverName() !== 'sqlite') {
+            if ('sqlite' !== DB::getDriverName()) {
                 DB::statement('SET FOREIGN_KEY_CHECKS=1;');
             }
         }

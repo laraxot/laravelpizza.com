@@ -31,7 +31,7 @@ test('ResolvePageData can store null item', function (): void {
 });
 
 test('ResolvePageData can store object item', function (): void {
-    $item = new \stdClass();
+    $item = new stdClass();
     $item->title = 'Test Page';
 
     $data = new ResolvePageData('cms', $item, 'test');
@@ -45,7 +45,7 @@ test('ResolvePageData can store array cast as object', function (): void {
 
     $data = new ResolvePageData('cms', $item, 'test');
 
-    expect($data->item)->toBeInstanceOf(\stdClass::class);
+    expect($data->item)->toBeInstanceOf(stdClass::class);
 });
 
 test('ResolvePageData extends Spatie Data', function (): void {

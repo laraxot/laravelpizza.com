@@ -53,15 +53,15 @@ it('fetches elevation successfully', function (): void {
 
 it('throws exception for failed API request', function (): void {
     // Arrange
-    $request = new \GuzzleHttp\Psr7\Request('POST', 'https://api.open-elevation.com/api/v1/lookup');
+    $request = new GuzzleHttp\Psr7\Request('POST', 'https://api.open-elevation.com/api/v1/lookup');
     $this->mockClient
         ->shouldReceive('post')
         ->once()
-        ->andThrow(\GuzzleHttp\Exception\RequestException::create($request, null, new \Exception('Connection failed')));
+        ->andThrow(GuzzleHttp\Exception\RequestException::create($request, null, new Exception('Connection failed')));
 
     // Act & Assert
     expect(fn () => $this->action->execute(45.4642, 9.1900))
-        ->toThrow(\RuntimeException::class, 'Failed to get elevation data');
+        ->toThrow(RuntimeException::class, 'Failed to get elevation data');
 });
 
 it('throws exception for invalid response', function (): void {
@@ -79,7 +79,7 @@ it('throws exception for invalid response', function (): void {
 
     // Act & Assert
     expect(fn () => $this->action->execute(45.4642, 9.1900))
-        ->toThrow(\RuntimeException::class, 'Invalid elevation data response');
+        ->toThrow(RuntimeException::class, 'Invalid elevation data response');
 });
 
 it('handles negative elevation', function (): void {
@@ -187,6 +187,7 @@ it('sends correct API payload', function (): void {
             'https://api.open-elevation.com/api/v1/lookup',
             Mockery::on(function ($options) use (&$capturedOptions) {
                 $capturedOptions = $options;
+
                 return isset($options['json']['locations']);
             })
         )

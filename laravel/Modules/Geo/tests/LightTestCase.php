@@ -11,4 +11,6 @@ use Modules\Xot\Tests\XotBaseTestCase;
  *
  * Extends XotBaseTestCase (DRY + KISS + Laraxot).
  */
-abstract class LightTestCase extends XotBaseTestCase {}
+abstract class LightTestCase extends XotBaseTestCase
+{
+}

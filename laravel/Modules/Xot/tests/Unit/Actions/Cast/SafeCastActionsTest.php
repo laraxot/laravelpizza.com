@@ -20,19 +20,16 @@ test('safe array cast action works', function () {
         ->and($action->execute(collect(['b' => 2])))->toBe(['b' => 2])
         ->and($action->execute((object) ['c' => 3]))->toBe(['c' => 3])
         ->and($action->execute('scalar'))->toBe(['scalar'])
-        ->and($action->execute(new class
-        {
+        ->and($action->execute(new class {
             public $d = 4;
         }))->toBe(['d' => 4])
-        ->and($action->execute(new class
-        {
+        ->and($action->execute(new class {
             public function toArray()
             {
                 return ['e' => 5];
             }
         }))->toBe(['e' => 5])
-        ->and($action->execute(new class
-        {
+        ->and($action->execute(new class {
             public function __toArray()
             {
                 return ['f' => 6];
@@ -75,8 +72,7 @@ test('safe int cast action works', function () {
         ->and($action->execute(' +123 '))->toBe(123)
         ->and($action->execute(true))->toBe(1)
         ->and($action->execute(['789']))->toBe(789)
-        ->and($action->execute(new class
-        {
+        ->and($action->execute(new class {
             public function __toString()
             {
                 return '1011';

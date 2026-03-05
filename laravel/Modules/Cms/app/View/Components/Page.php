@@ -28,7 +28,7 @@ class Page extends Component
     {
         $this->data = $data;
         $this->side = $side;
-        if ($type !== null) {
+        if (null !== $type) {
             $slug = $type.'-'.$slug;
         }
         $this->slug = $slug;

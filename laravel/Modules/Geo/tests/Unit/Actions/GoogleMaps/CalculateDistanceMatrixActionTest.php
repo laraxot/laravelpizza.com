@@ -6,13 +6,12 @@ use Modules\Geo\Tests\LightTestCase;
 
 uses(LightTestCase::class);
 
-use Illuminate\Support\Collection;
 use Modules\Geo\Actions\GoogleMaps\CalculateDistanceMatrixAction;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Exceptions\GoogleMaps\GoogleMapsApiException;
 
 beforeEach(function () {
-    $this->action = new CalculateDistanceMatrixAction;
+    $this->action = new CalculateDistanceMatrixAction();
 });
 
 it('throws exception when google maps api key is not configured', function (): void {

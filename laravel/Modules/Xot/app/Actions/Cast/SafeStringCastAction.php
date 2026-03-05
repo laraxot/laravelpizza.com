@@ -16,7 +16,8 @@ class SafeStringCastAction
      * Converte in modo sicuro un valore mixed in string.
      * impostare delle eccezzioni ?
      *
-     * @param  mixed  $value  Il valore da convertire
+     * @param mixed $value Il valore da convertire
+     *
      * @return string Il valore convertito in string
      */
     public function execute(mixed $value): string
@@ -49,7 +50,8 @@ class SafeStringCastAction
     /**
      * Metodo statico di convenienza per chiamate dirette.
      *
-     * @param  mixed  $value  Il valore da convertire
+     * @param mixed $value Il valore da convertire
+     *
      * @return string Il valore convertito in string
      */
     public static function cast(mixed $value): string

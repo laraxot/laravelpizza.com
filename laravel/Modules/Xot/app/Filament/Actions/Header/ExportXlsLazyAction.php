@@ -70,7 +70,7 @@ class ExportXlsLazyAction extends Action
                 }
 
                 $lazy = $livewire->getFilteredTableQuery();
-                if ($lazy === null) {
+                if (null === $lazy) {
                     throw new \Exception('Query is null');
                 }
 
