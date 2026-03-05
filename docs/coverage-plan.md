@@ -777,6 +777,8 @@ Open items (file coverage < 100%): **1594**
   - [x] CreateEventActionTest.php - 7 tests (175 LOC)
   - [x] UpdateEventActionTest.php - 7 tests (195 LOC)
   - [x] DeleteEventActionTest.php - 7 tests (172 LOC)
+  - [x] phpunit.xml.dist aggiunto per abilitare coverage (2026-03-05)
+  - Verifica: 234 tests passano (490 assertions)
   - Total added: 21 tests, 542 LOC
 
 ### Notify (147)
