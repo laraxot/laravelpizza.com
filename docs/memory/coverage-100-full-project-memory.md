@@ -31,3 +31,12 @@ Snapshot: 2026-03-04
 1. Nessun skip nuovo nei test `.php` attivi.
 2. Ogni test non sistemabile nel ciclo corrente va in `.old` con nota nel changelog.
 3. Ogni incremento coverage deve essere tracciato nel piano docs.
+
+## Incidenti operativi osservati (2026-03-05)
+
+- Errore `Interface "PHPUnit\\Framework\\Test" not found` dovuto a file vendor rinominato:
+  - `vendor/phpunit/phpunit/src/Framework/Test.php.old` al posto di `Test.php`.
+  - Ripristino eseguito rinominando a `Test.php`.
+- Errore `No tests found` dovuto a rinomina massiva dei test in `.old`:
+  - trovati 255 file `*.php.old` sotto `tests/` e `Modules/*/tests/`;
+  - con tutti i test in `.old`, Pest non esegue suite e la coverage risulta `0.0%`.

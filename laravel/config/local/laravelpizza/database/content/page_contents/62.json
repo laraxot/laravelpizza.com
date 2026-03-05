@@ -1,0 +1,20 @@
+{
+    "id": "62",
+    "name": {
+        "it": "Test Content",
+        "en": "Test Content"
+    },
+    "slug": "test-content",
+    "blocks": {
+        "it": [
+            {
+                "type": "text",
+                "content": "Test block content"
+            }
+        ]
+    },
+    "created_at": "2026-03-04T22:20:07.000000Z",
+    "updated_at": "2026-03-04T22:20:07.000000Z",
+    "created_by": null,
+    "updated_by": null
+}

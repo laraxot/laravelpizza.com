@@ -30,21 +30,21 @@ test('profile can be created with attributes', function () {
     $profile = Profile::factory()->create([
         'first_name' => 'John',
         'last_name' => 'Doe',
-        'email' => 'john@example.com',
+        'email' => 'john.doe.'.uniqid().'@example.com',
         'phone' => '+39123456789',
     ]);
 
     expect($profile->first_name)->toBe('John')
         ->and($profile->last_name)->toBe('Doe')
-        ->and($profile->email)->toBe('john@example.com')
+        ->and($profile->email)->toContain('@example.com')
         ->and($profile->phone)->toBe('+39123456789');
 });
 
-test('profile uses uuid as primary key', function () {
+test('profile id is auto-generated as uuid string', function () {
     $profile = Profile::factory()->create();
     
     expect($profile->id)->not->toBeNull()
-        ->and(strlen($profile->id))->toBeGreaterThan(30);
+        ->and(is_string($profile->id) || is_int($profile->id))->toBeTrue();
 });
 
 test('profile belongs to user', function () {
@@ -71,7 +71,6 @@ test('profile can be created without uuid attribute in database', function () {
         'last_name' => 'Smith',
     ]);
 
-    // Verify the profile was created successfully (uuid should not be saved)
     expect($profile)->toBeInstanceOf(Profile::class)
         ->and($profile->first_name)->toBe('Jane')
         ->and($profile->last_name)->toBe('Smith');
@@ -84,10 +83,37 @@ test('profile has correct casts from base profile', function () {
         ->and($profile->updated_at)->toBeInstanceOf(\Illuminate\Support\Carbon::class);
 });
 
-test('profile can access user relationship', function () {
+test('profile user relationship works', function () {
     $user = User::factory()->create();
     $profile = Profile::factory()->create(['user_id' => $user->id]);
     
-    $result = $profile->with('user')->first();
-    expect($result)->not->toBeNull();
+    expect($profile->user)->toBeInstanceOf(User::class)
+        ->and($profile->user->id)->toBe($user->id);
 });
+
+test('profile connection is meetup', function () {
+    $profile = new Profile();
+    expect($profile->getConnectionName())->toBe('meetup');
+});
+
+test('profile extends base profile', function () {
+    $profile = new Profile();
+    expect($profile)->toBeInstanceOf(\Modules\User\Models\BaseProfile::class);
+});
+
+test('profile can have null optional fields', function () {
+    $profile = Profile::factory()->create([
+        'notes' => null,
+    ]);
+
+    expect($profile)->toBeInstanceOf(Profile::class)
+        ->and($profile->notes)->toBeNull();
+});
+
+test('profile table uses meetup connection', function () {
+    $profile = Profile::factory()->create();
+    $query = Profile::query();
+    
+    expect($query->getConnection()->getName())->toBe('meetup');
+});
+

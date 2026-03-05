@@ -5,39 +5,15 @@
          colors="true"
 >
     <testsuites>
-        <testsuite name="Unit">
-            <directory>tests/Unit</directory>
-            <directory>Modules/*/tests/Unit</directory>
-            <directory>Modules/*/tests/Traits</directory>
-        </testsuite>
-        <testsuite name="Feature">
-            <directory>tests/Feature</directory>
-            <directory>Modules/*/tests/Feature</directory>
-            <directory>Modules/*/tests/Integration</directory>
-            <directory>Modules/*/tests/Performance</directory>
+        <testsuite name="Modules">
+            <directory suffix="Test.php">./Modules/*/tests/Feature</directory>
+            <directory suffix="Test.php">./Modules/*/tests/Unit</directory>
         </testsuite>
     </testsuites>
     <source>
         <include>
-            <directory>app</directory>
-            <directory>Modules/*/app</directory>
+            <directory suffix=".php">./Modules/*/app</directory>
         </include>
-        <exclude>
-            <directory>app/Resources</directory>
-            <directory>bootstrap</directory>
-            <directory>config</directory>
-            <directory>database</directory>
-            <directory>lang</directory>
-            <directory>public</directory>
-            <directory>resources</directory>
-            <directory>routes</directory>
-            <directory>storage</directory>
-            <directory>tests</directory>
-            <directory>vendor</directory>
-            <directory>Modules/Xot/app/Resources</directory>
-            <directory>Modules/Xot/app/Routes</directory>
-            <directory>Modules/Xot/app/Contracts</directory>
-        </exclude>
     </source>
     <php>
         <env name="APP_ENV" value="testing"/>

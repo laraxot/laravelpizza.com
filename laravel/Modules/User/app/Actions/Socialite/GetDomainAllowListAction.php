@@ -15,10 +15,6 @@ class GetDomainAllowListAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly Arr $arrHelper,
-    ) {}
-
     /**
      * Execute the action.
      */
@@ -26,7 +22,7 @@ class GetDomainAllowListAction
     {
         $res = config('filament-socialite.domain_allowlist');
         if (\is_string($res)) {
-            return $this->arrHelper->wrap($res);
+            return \is_array($res) ? [$res] : [$res];
         }
 
         if (\is_array($res)) {

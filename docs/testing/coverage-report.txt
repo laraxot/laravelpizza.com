@@ -1,0 +1,1448 @@
+
+   PASS  Modules\Cms\tests\Feature\Auth\AuthenticationTest
+  ✓ Authentication → authentication placeholder                          0.67s  
+
+   PASS  Modules\Cms\tests\Feature\Auth\LoginTest
+  ✓ Frontend Login Page → login feature tests require theme setup        0.31s  
+
+   PASS  Modules\Cms\tests\Feature\Auth\LoginVoltTest
+  ✓ Login Volt Component → volt component tests require full setup       0.30s  
+
+   PASS  Modules\Cms\tests\Feature\Auth\LoginWidgetTest
+  ✓ Login Widget → login widget placeholder                              0.30s  
+
+   PASS  Modules\Cms\tests\Feature\Auth\PasswordConfirmationTest
+  ✓ Password Confirmation → password confirmation placeholder            0.31s  
+
+   PASS  Modules\Cms\tests\Feature\Auth\PasswordUpdateTest
+  ✓ password can be updated                                              0.30s  
+  ✓ current password must be correct                                     0.30s  
+
+   PASS  Modules\Cms\tests\Feature\Auth\ProfileUpdateTest
+  ✓ Profile Update → profile update placeholder                          0.31s  
+  ✓ email verification status is not reset if email does not change      0.33s  
+  ✓ user account can be deleted                                          0.31s  
+  ✓ user account deletion fails with wrong password                      0.35s  
+
+   PASS  Modules\Cms\tests\Feature\Auth\RegisterTest
+  ✓ Register Page → register page placeholder                            0.32s  
+
+   PASS  Modules\Cms\tests\Feature\Auth\RegisterTypeTest
+  ✓ Register Type → register type placeholder                            0.36s  
+
+   PASS  Modules\Cms\tests\Feature\Auth\RegisterTypeWidgetTest
+  ✓ Register Type Widget → registration widget placeholder               0.32s  
+
+   PASS  Modules\Cms\tests\Feature\FilamentBuilderBlocksTest
+  ✓ Filament Builder Blocks System → blocks discovery system finds all…  0.31s  
+  ✓ Filament Builder Blocks System → xot base block pattern is followed… 0.30s  
+  ✓ Filament Builder Blocks System → page component renders blocks corr… 0.33s  
+  ✓ Filament Builder Blocks System → block naming conventions are consi… 0.31s  
+  ✓ Filament Builder Blocks System → block views follow theme pattern    0.31s  
+  ✓ Filament Builder Blocks System → json storage pattern is consistent  0.31s  
+  ✓ Filament Builder Blocks System → blocks rendering component exists…  0.33s  
+  ✓ Filament Builder Blocks System → page component integration with bl… 0.32s  
+  ✓ Filament Builder Blocks System → block data validation and security  0.30s  
+  ✓ Filament Builder Blocks System → cms module blocks extend xot base…  0.46s  
+  ✓ Filament Builder Blocks System → performance considerations are imp… 0.30s  
+
+   PASS  Modules\Cms\tests\Feature\Frontoffice\FolioRoutes\AuthLoginRouteTest
+  ✓ it GET /it/auth/login is reachable                                   0.49s  
+
+   PASS  Modules\Cms\tests\Feature\Frontoffice\FolioRoutes\AuthLogoutFixedRouteTest
+  ✓ it GET /it/auth/logout_fixed acceptable                              0.32s  
+
+   PASS  Modules\Cms\tests\Feature\Frontoffice\FolioRoutes\AuthLogoutRouteTest
+  ✓ it GET /it/auth/logout acceptable (may redirect)                     0.35s  
+
+   PASS  Modules\Cms\tests\Feature\Frontoffice\FolioRoutes\AuthPasswordConfirmRouteTest
+  ✓ it GET /it/auth/password/confirm acceptable                          0.37s  
+
+   PASS  Modules\Cms\tests\Feature\Frontoffice\FolioRoutes\AuthPasswordResetRouteTest
+  ✓ it GET /it/auth/password/reset acceptable                            0.35s  
+
+   PASS  Modules\Cms\tests\Feature\Frontoffice\FolioRoutes\AuthRegisterRouteTest
+  ✓ it GET /it/auth/register is reachable                                0.42s  
+
+   PASS  Modules\Cms\tests\Feature\Frontoffice\FolioRoutes\AuthRegisterThankYouRouteTest
+  ✓ it GET /it/auth/register/thank-you acceptable                        0.33s  
+
+   PASS  Modules\Cms\tests\Feature\Frontoffice\FolioRoutes\AuthThankYouRouteTest
+  ✓ it GET /it/auth/thank-you acceptable                                 0.38s  
+
+   PASS  Modules\Cms\tests\Feature\Frontoffice\FolioRoutes\AuthVerifyRouteTest
+  ✓ it GET /it/auth/verify acceptable                                    0.33s  
+
+   PASS  Modules\Cms\tests\Feature\Frontoffice\FolioRoutes\ClassiCssRouteTest
+  ✓ it GET /it/classi-css acceptable                                     0.47s  
+
+   PASS  Modules\Cms\tests\Feature\Frontoffice\FolioRoutes\PatientRefertoRouteTest
+  ✓ it GET /it/events acceptable (LaravelPizza Meetup route)             0.43s  
+
+   PASS  Modules\Cms\tests\Feature\Frontoffice\FolioRoutes\ProfileIndexRouteTest
+  ✓ it GET /it/profile acceptable (likely auth required)                 0.42s  
+
+   PASS  Modules\Cms\tests\Feature\Frontoffice\FolioRoutes\RootRouteTest
+  ✓ it GET / redirects to /{locale}                                      0.31s  
+
+   PASS  Modules\Cms\tests\Feature\Frontoffice\FolioRoutes\SettingsRouteTest
+  ✓ it GET /it/settings acceptable (likely auth required)                0.61s  
+
+   PASS  Modules\Cms\tests\Feature\HomepageContentManagementTest
+  ✓ Homepage Content Management → homepage content placeholder           0.31s  
+
+   PASS  Modules\Cms\tests\Feature\HomepageFilamentBlocksArchitectureTest
+  ✓ Homepage Filament Blocks → filament blocks placeholder               0.38s  
+
+   PASS  Modules\Cms\tests\Feature\IndividualFolioRoutesTest
+  ✓ CMS Individual Folio Routes → folio routes placeholder               0.35s  
+
+   PASS  Modules\Cms\tests\Feature\PageManagementBusinessLogicTest
+  ✓ it can work with pages using SushiToJsons system                     0.41s  
+  ✓ it can work with page content using SushiToJsons system              0.32s  
+  ✓ it can work with sections using SushiToJsons system                  0.34s  
+  ✓ it can update page content                                           0.39s  
+  ✓ it can delete a page                                                 0.37s  
+  ✓ it can handle page relationships and data structure                  0.42s  
+  ✓ it can manage page description and content                           0.47s  
+  ✓ it can handle multilingual content                                   0.36s  
+  ✓ it can manage page sections                                          0.40s  
+  ✓ it can handle page templates and layouts                             0.39s  
+  ✓ it can handle page permissions and access control                    0.38s  
+  ✓ it can manage page timestamps                                        0.44s  
+
+   PASS  Modules\Gdpr\tests\Feature\ConflictResolutionTest
+  ✓ it verifica che le classi corrette siano istanziabili                0.37s  
+  ✓ it verifica che le proprietà delle classi siano accessibili          0.35s  
+
+   PASS  Modules\Gdpr\tests\Feature\DatabaseConnectionTest
+  ✓ it can access database connection                                    0.92s  
+  ✓ it can create user via factory                                       0.35s  
+
+   PASS  Modules\Gdpr\tests\Feature\RegisterLocalizationTest
+  ✓ it has all required keys in Italian locale                           0.36s  
+  ✓ it has all required keys in English locale                           0.30s  
+  ✓ it has all required keys in Spanish locale                           0.31s  
+  ✓ it has all required keys in German locale                            0.34s  
+  ✓ it has all required keys in French locale                            0.35s  
+  ✓ it has all required keys in Russian locale                           0.32s  
+  ✓ it detects Italian locale from URL                                   0.42s  
+  ✓ it detects English locale from URL                                   0.39s  
+  ✓ it detects Spanish locale from URL                                   0.44s  
+  ✓ it detects German locale from URL                                    0.38s  
+  ✓ it detects French locale from URL                                    0.40s  
+  ✓ it detects Russian locale from URL                                   0.37s  
+  ✓ it Italian title contains pizza reference                            0.37s  
+  ✓ it English title contains pizza reference                            0.30s  
+  ✓ it Italian CTA is action-oriented                                    0.31s  
+  ✓ it English CTA is action-oriented                                    0.31s  
+
+   PASS  Modules\Gdpr\tests\Feature\RegisterPageComprehensiveTest
+  ✓ it returns 200 for English registration page                         0.47s  
+  ✓ it returns 200 for Italian registration page                         0.43s  
+  ✓ it returns 200 for Spanish registration page                         0.38s  
+  ✓ it returns 200 for German registration page                          0.42s  
+  ✓ it returns 200 for French registration page                          0.37s  
+  ✓ it returns 200 for Russian registration page                         0.41s  
+  ✓ it redirects authenticated users away from registration              0.33s  
+  ✓ it displays correct English title on registration page               0.41s  
+  ✓ it displays English CTA title                                        0.39s  
+  ✓ it displays English form trust notice                                0.38s  
+  ✓ it displays English terms notice                                     0.40s  
+  ✓ it displays English benefits section                                 0.38s  
+  ✓ it displays English social proof                                     0.41s  
+  ✓ it displays correct Italian title on registration page               0.38s  
+  ✓ it displays Italian CTA title                                        0.43s  
+  ✓ it displays Italian form trust notice                                0.43s  
+  ✓ it displays Italian terms notice                                     0.38s  
+  ✓ it displays Italian benefits section                                 0.41s  
+  ✓ it displays first name input field                                   0.38s  
+  ✓ it displays last name input field                                    0.41s  
+  ✓ it displays email input field                                        0.38s  
+  ✓ it displays password input field                                     0.40s  
+  ✓ it displays password confirmation input field                        0.40s  
+  ✓ it displays privacy policy checkbox                                  0.37s  
+  ✓ it displays terms checkbox                                           0.41s  
+  ✓ it displays marketing consent checkbox                               0.43s  
+  ✓ it displays GDPR sections                                            0.40s  
+  ✓ it displays submit button                                            0.38s  
+  ✓ it has registration form                                             0.39s  
+  ✓ it displays login link                                               0.40s  
+  ✓ it displays Italian login link                                       0.41s  
+  ✓ it includes proper title tag                                         0.40s  
+  ✓ it includes livewire or csrf token                                   0.38s  
+  ✓ it has proper language attribute                                     0.40s  
+  ✓ it has Italian language attribute                                    0.38s  
+  ✓ it has form labels for accessibility                                 0.42s  
+  ✓ it has all required English translation keys                         0.31s  
+  ✓ it has all required Italian translation keys                         0.30s  
+  ✓ it widget is not visible to authenticated users                      0.35s  
+  ✓ it widget is visible to guest users                                  0.31s  
+
+   PASS  Modules\Gdpr\tests\Feature\RegisterPageFeatureTest
+  ✓ it renders the English register page with hero and form texts        0.52s  
+  ✓ it uses the localized login link on the register page                0.37s  
+  ✓ it has all required translation keys used by the register page       0.34s  
+
+   PASS  Modules\Gdpr\tests\Feature\RegistrationPageTest
+  ✓ it renders registration page successfully for English locale         0.39s  
+  ✓ it renders registration page successfully for Italian locale         0.40s  
+  ✓ it renders registration page successfully for all supported locales  0.63s  
+  ✓ it displays correct title in English                                 0.41s  
+  ✓ it displays correct title in Italian                                 0.41s  
+  ✓ it displays form fields with correct placeholders                    0.39s  
+  ✓ it displays GDPR consent checkboxes                                  0.41s  
+  ✓ it displays marketing consent checkbox                               0.38s  
+  ✓ it has correct page title in English                                 0.41s  
+  ✓ it has meta description in English                                   0.37s  
+  ✓ it redirects authenticated users away from registration              0.37s  
+  ✓ it registration page is accessible to guests only                    0.37s  
+  ✓ it contains Livewire registration form                               0.39s  
+  ✓ it has submit button with correct text                               0.41s  
+  ✓ it displays benefits section in English                              0.38s  
+  ✓ it displays benefits section in Italian                              0.41s  
+  ✓ it displays trust indicators                                         0.38s  
+
+   PASS  Modules\Gdpr\tests\Feature\RegistrationTest
+  ✓ GDPR Registration → gdpr registration placeholder                    0.38s  
+
+   PASS  Modules\Gdpr\tests\Feature\SimpleRegisterTest
+  ✓ it can render registration page                                      0.39s  
+
+   PASS  Modules\Geo\tests\Feature\AddressIntegrationTest
+  ✓ Address Integration → it can attach address to patient via polymorp… 0.34s  
+  ✓ Address Integration → it generates proper full address from compone… 0.33s  
+  ✓ Address Integration → it handles geolocation data correctly          0.31s  
+  ✓ Address Integration → it can store Google Places API data            0.38s  
+  ✓ Address Integration → it supports multiple addresses per entity      0.31s  
+  ✓ Address Integration → it handles soft deletion correctly             0.33s  
+
+   PASS  Modules\Job\tests\Feature\DatabaseConnectionTest
+  ✓ default database connection is configured                            0.32s  
+  ✓ database configuration has required connections                      0.29s  
+
+   PASS  Modules\Job\tests\Feature\GetTaskFrequenciesActionIntegrationTest
+  ✓ GetTaskFrequenciesAction Integration → it returns array when config… 0.33s  
+  ✓ GetTaskFrequenciesAction Integration → it throws exception when con… 0.37s  
+  ✓ GetTaskFrequenciesAction Integration → it throws exception when con… 0.30s  
+  ✓ GetTaskFrequenciesAction Integration → it handles empty array confi… 0.30s  
+  ✓ GetTaskFrequenciesAction Integration → it can be queued              0.33s  
+  ✓ GetTaskFrequenciesAction Integration → it integrates with Laravel s… 0.30s  
+  ✓ GetTaskFrequenciesAction Integration → it handles configuration cha… 0.30s  
+  ✓ GetTaskFrequenciesAction Integration → it returns string keys and m… 0.32s  
+  ✓ GetTaskFrequenciesAction Integration → it preserves array key types  0.33s  
+  ✓ GetTaskFrequenciesAction Integration → it maintains consistency acr… 0.31s  
+  ✓ GetTaskFrequenciesAction Integration → it works with realistic tote… 0.30s  
+
+   PASS  Modules\Job\tests\Feature\JobBatchBusinessLogicTest
+  ✓ Job Batch Business Logic → it job batch business logic placeholder   0.38s  
+
+   PASS  Modules\Job\tests\Feature\JobBusinessLogicTest
+  ✓ Job Business Logic → it can instantiate job with basic attributes    0.34s  
+  ✓ Job Business Logic → it returns waiting status when not reserved     0.30s  
+  ✓ Job Business Logic → it returns running status when reserved         0.32s  
+  ✓ Job Business Logic → it extracts display name from payload           0.32s  
+  ✓ Job Business Logic → it handles complex payload structures           0.31s  
+  ✓ Job Business Logic → it handles job with future available_at         0.31s  
+  ✓ Job Business Logic → it handles different queue names                0.30s  
+  ✓ Job Business Logic → it returns null for invalid payload             0.33s  
+  ✓ Job Business Logic → it model has correct fillable attributes        0.30s  
+
+   PASS  Modules\Job\tests\Feature\ResultBusinessLogicTest
+  ✓ Result Business Logic → it result business logic placeholder         0.33s  
+
+   PASS  Modules\Job\tests\Feature\SimpleJobTest
+  ✓ Job Business Logic → it job business logic placeholder               0.32s  
+
+   PASS  Modules\Job\tests\Feature\SimpleTest
+  ✓ it has a simple passing test
+
+   PASS  Modules\Job\tests\Feature\TaskBusinessLogicTest
+  ✓ Task Business Logic → it task business logic placeholder             0.30s  
+
+   PASS  Modules\Job\tests\Feature\TaskFrequenciesIntegrationTest
+  ✓ TaskFrequencies Integration → it integrates with Laravel config sys… 0.30s  
+  ✓ TaskFrequencies Integration → it handles real-world frequency confi… 0.30s  
+  ✓ TaskFrequencies Integration → it can be used in queue context        0.33s  
+  ✓ TaskFrequencies Integration → it handles configuration changes dyna… 0.31s  
+  ✓ TaskFrequencies Integration → it validates configuration file struc… 0.30s  
+  ✓ TaskFrequencies Integration → it handles empty configuration gracef… 0.29s  
+  ✓ TaskFrequencies Integration → it works with string and numeric keys  0.33s  
+  ✓ TaskFrequencies Integration → it integrates with Laravel service co… 0.31s  
+  ✓ TaskFrequencies Integration → it handles concurrent access correctl… 0.34s  
+  ✓ TaskFrequencies Integration → it validates error handling in produc… 0.31s  
+  ✓ TaskFrequencies Integration → it maintains consistency across multi… 0.34s  
+  ✓ TaskFrequencies Integration → it works with realistic totem configu… 0.31s  
+
+   PASS  Modules\Media\tests\Feature\MediaBusinessLogicTest
+  ✓ Media Business Logic → it media business logic placeholder           0.35s  
+
+   PASS  Modules\Meetup\tests\Feature\Auth\AuthTest
+  ✓ it login page loads successfully                                     0.43s  
+  ✓ it login page contains required form elements                        0.43s  
+  ✓ it login page shows register link                                    0.41s  
+  ✓ it register page loads successfully                                  0.38s  
+  ✓ it register page contains all required fields                        0.45s  
+  ✓ it register page shows privacy consent checkbox                      0.38s  
+  ✓ it register page shows terms consent checkbox                        0.40s  
+  ✓ it user can login with valid credentials                             0.77s  
+  ✓ it user cannot login with invalid password                           0.79s  
+  ✓ it user can create account with valid data                           0.66s  
+  ✓ it registration fails without email                                  0.60s  
+  ✓ it registration fails without privacy consent                        0.73s  
+  ✓ it registration fails without terms consent                          0.60s  
+  ✓ it authenticated user is redirected from login page                  0.53s  
+  ✓ it logout redirects to login page                                    0.51s  
+
+   PASS  Modules\Meetup\tests\Feature\Auth\LoginTest
+  ✓ it can display login page                                            0.50s  
+  ✓ it can display login page in english                                 0.42s  
+  ✓ it can display register page                                         0.41s  
+  ✓ it can display register page in english                              0.37s  
+  ✓ it shows login link on register page                                 0.41s  
+  ✓ it shows register link on login page                                 0.44s  
+  ✓ it register page has proper form structure                           0.38s  
+  ✓ it login page has proper form structure                              0.45s  
+
+   PASS  Modules\Meetup\tests\Feature\HeaderNavigationTest
+  ✓ header renders correct navigation items for guests                   0.44s  
+  ✓ header renders avatar dropdown for authenticated users               0.51s  
+
+   PASS  Modules\Notify\tests\Feature\ContactManagementBusinessLogicTest
+  ✓ Contact Management Business Logic → it can create contact with basi… 0.35s  
+  ✓ Contact Management Business Logic → it can update a contact          0.32s  
+  ✓ Contact Management Business Logic → it can delete a contact          0.35s  
+
+   PASS  Modules\Notify\tests\Feature\EmailTemplatesTest
+  ✓ html template contains optional function                             0.35s  
+  ✓ sunny sample template exists                                         0.30s  
+  ✓ ark sample template exists                                           0.30s  
+
+   PASS  Modules\Notify\tests\Feature\JsonComponentsTest
+  ✓ components json is valid and contains expected components            0.31s  
+
+   PASS  Modules\Notify\tests\Feature\MailTemplateTest
+  ✓ MailTemplate Model Tests → it can create a mail template             0.38s  
+  ✓ MailTemplate Model Tests → it can update a mail template             0.38s  
+  ✓ MailTemplate Model Tests → it can delete a mail template             0.32s  
+
+   PASS  Modules\Seo\tests\Feature\MetatagServiceTest
+  ✓ it can set title                                                     0.01s  
+  ✓ it can set description
+  ✓ it can set keywords
+  ✓ it can set robots
+  ✓ it can set canonical url
+  ✓ it can set colors
+
+   PASS  Modules\UI\tests\Feature\Filament\Widgets\StatsOverviewWidgetTest
+  ✓ stats overview widget extends correct base class                     0.36s  
+  ✓ stats overview widget has correct namespace                          0.30s  
+  ✓ stats overview widget has getStats method                            0.30s  
+  ✓ stats overview widget returns correct stats                          0.30s  
+  ✓ stats overview widget stats are instances of Stat class              0.34s  
+  ✓ stats overview widget can be instantiated                            0.31s  
+  ✓ stats overview widget has correct strict types declaration           0.31s  
+  ✓ stats overview widget getStats method is protected                   0.30s  
+  ✓ stats overview widget getStats method has correct return type        0.34s  
+  ✓ stats overview widget has correct use statements                     0.30s  
+
+   PASS  Modules\UI\tests\Feature\GroupColumnTest
+  ✓ GroupColumn class → it can be instantiated with make()               0.04s  
+  ✓ GroupColumn class → it accepts schema with TextColumn instances
+  ✓ GroupColumn class → it filters out non-Column instances from schema
+  ✓ GroupColumn class → it handles empty schema
+  ✓ GroupColumn class → it uses correct view path
+  ✓ GroupColumn view rendering → it renders direct attribute values
+  ✓ GroupColumn view rendering → it renders nested relation values with dot notation
+  ✓ GroupColumn view rendering → it returns null for missing nested relations
+  ✓ GroupColumn view rendering → it handles deep nesting
+  ✓ GroupColumn view rendering → it preserves zero values
+  ✓ GroupColumn view rendering → it renders view with nested relation when view system available
+  ✓ GroupColumn view rendering → it renders multiple fields in view
+  ✓ GroupColumn view rendering → it skips empty values but keeps zeros
+
+   PASS  Modules\UI\tests\Feature\InlineDatePickerTest
+  ✓ it can be instantiated                                               0.33s  
+  ✓ it can set and get enabled dates                                     0.35s  
+  ✓ it accepts closure for enabled dates                                 0.32s  
+  ✓ it checks if date is enabled                                         0.31s  
+  ✓ it generates calendar data and marks enabled dates                   0.47s  
+  ✓ it respects locale in calendar data                                  0.45s  
+  ✓ it can be used in a form                                             0.36s  
+  ✓ it handles empty enabled dates                                       0.31s  
+  ✓ it throws on invalid enabled dates input                             0.31s  
+  ✓ it handles different date formats                                    0.35s  
+  ✓ it handles time portion gracefully                                   0.36s  
+  ✓ it uses carbon for localization                                      0.31s  
+  ✓ it generates correct calendar data                                   0.50s  
+  ✓ it handles enabled dates correctly                                   0.31s  
+  ✓ it is dry no code duplication                                        0.30s  
+  ✓ it is kiss simple and clear                                          0.31s  
+
+   PASS  Modules\User\tests\Feature\Auth\MicrosoftLoginButtonTest
+  ✓ Microsoft Login Button → social login widget renders correctly when… 0.38s  
+  ✓ Microsoft Login Button → social login widget returns empty when no…  0.31s  
+  ✓ Microsoft Login Button → socialite microsoft redirect route exists   0.31s  
+
+   PASS  Modules\User\tests\Feature\AuthComponentsTest
+  ✓ Auth Components Tests → auth components exist and work correctly     0.35s  
+  ✓ Auth Components Tests → auth layout components exist and work corre… 0.36s  
+  ✓ Auth Components Tests → login page loads correctly                   0.43s  
+  ✓ Auth Components Tests → register page loads correctly                0.38s  
+  ✓ Auth Components Tests → auth-session-status component renders corre… 0.36s  
+  ✓ Auth Components Tests → auth header component exists and renders     0.36s  
+  ✓ Authentication Flow with Reorganized Components → login form compon… 0.44s  
+  ✓ Authentication Flow with Reorganized Components → password confirma… 0.37s  
+  ✓ User Profile Components Tests → profile pages use reorganized compo… 0.93s  
+
+   PASS  Modules\User\tests\Feature\Authentication\UserAuthenticationTest
+  ✓ User Authentication → user authentication placeholder                0.36s  
+
+   PASS  Modules\User\tests\Feature\Filament\Actions\ChangePasswordActionTest
+  ✓ Change Password Action → change password placeholder                 0.32s  
+
+   PASS  Modules\Xot\tests\Feature\Filament\XotBaseResourceCoverageTest
+  ✓ it covers model resolution and model cache                           0.34s  
+  ✓ it covers default relation discovery with missing relation manager…  0.32s  
+  ✓ it covers default page discovery including optional view page        0.31s  
+  ✓ it covers translation helper key normalization                       0.30s  
+  ✓ it covers translation helper edit and widget normalization branches  0.48s  
+  ✓ it covers translation helper string path and missing key fallback    0.39s  
+  ✓ it covers translation helper array and fix fallback branches         0.31s  
+  ✓ it covers translation helper exception branch                        0.32s  
+  ✓ it covers navigation badge success and fallback                      0.35s  
+  ✓ it covers get attachments schema branches                            0.30s  
+  ✓ it covers wizard submit action success and failure paths             0.32s  
+  ✓ it covers step builder branches                                      0.31s  
+  ✓ it covers simple base helpers                                        0.33s  
+
+   PASS  Modules\Activity\tests\Unit\EventSourcingBusinessLogicTest
+  ✓ Event Sourcing Business Logic → Activity Logging Business Logic → i… 0.36s  
+  ✓ Event Sourcing Business Logic → Activity Logging Business Logic → i… 0.31s  
+  ✓ Event Sourcing Business Logic → Activity Logging Business Logic → i… 0.34s  
+  ✓ Event Sourcing Business Logic → Activity Logging Business Logic → i… 0.31s  
+  ✓ Event Sourcing Business Logic → Activity Logging Business Logic → i… 0.33s  
+  ✓ Event Sourcing Business Logic → Event Sourcing Business Logic → it…  0.30s  
+  ✓ Event Sourcing Business Logic → Event Sourcing Business Logic → it…  0.34s  
+  ✓ Event Sourcing Business Logic → Event Sourcing Business Logic → it…  0.31s  
+  ✓ Event Sourcing Business Logic → Event Sourcing Business Logic → it…  0.30s  
+  ✓ Event Sourcing Business Logic → Event Sourcing Business Logic → it…  0.31s  
+  ✓ Event Sourcing Business Logic → Snapshot Business Logic → it create… 0.37s  
+  ✓ Event Sourcing Business Logic → Snapshot Business Logic → it preser… 0.34s  
+  ✓ Event Sourcing Business Logic → Snapshot Business Logic → it valida… 0.31s  
+  ✓ Event Sourcing Business Logic → Snapshot Business Logic → it ensure… 0.31s  
+  ✓ Event Sourcing Business Logic → Event Replay Business Logic → it ha… 0.33s  
+  ✓ Event Sourcing Business Logic → Event Replay Business Logic → it va… 0.30s  
+  ✓ Event Sourcing Business Logic → Event Replay Business Logic → it ha… 0.31s  
+  ✓ Event Sourcing Business Logic → Performance and Scalability Logic →… 0.39s  
+  ✓ Event Sourcing Business Logic → Performance and Scalability Logic →… 0.38s  
+  ✓ Event Sourcing Business Logic → Performance and Scalability Logic →… 0.31s  
+
+   PASS  Modules\Cms\tests\Unit\Actions\GetViewThemeByViewActionTest
+  ✓ GetViewThemeByViewAction can be executed                             0.41s  
+  ✓ GetViewThemeByViewAction returns string when executed with empty vi… 0.35s  
+  ✓ GetViewThemeByViewAction returns string when executed with view      0.31s  
+  ✓ GetViewThemeByViewAction returns original view when view does not e… 0.31s  
+
+   PASS  Modules\Cms\tests\Unit\Actions\SaveFooterConfigActionTest
+  ✓ SaveFooterConfigAction can be executed                               0.32s  
+  ✓ SaveFooterConfigAction can execute with FooterData                   0.35s  
+
+   PASS  Modules\Cms\tests\Unit\Actions\SaveHeadernavConfigActionTest
+  ✓ SaveHeadernavConfigAction can be instantiated                        0.33s  
+  ✓ SaveHeadernavConfigAction execute method exists                      0.31s  
+
+   PASS  Modules\Cms\tests\Unit\Actions\View\GetCmsViewActionTest
+  ✓ GetCmsViewAction can be instantiated                                 0.35s  
+  ✓ GetCmsViewAction execute method with existing view                   0.31s  
+  ✓ GetCmsViewAction execute method throws exception for non-existing v… 0.31s  
+
+   PASS  Modules\Cms\tests\Unit\DashboardTest
+  ✓ dashboard routes placeholder                                         0.32s  
+
+   PASS  Modules\Cms\tests\Unit\Datas\BlockDataTest
+  ✓ BlockData can be instantiated with type and data                     0.35s  
+  ✓ BlockData uses WireableData trait                                    0.32s  
+  ✓ BlockData extends Spatie Data                                        0.30s  
+  ✓ BlockData implements Wireable interface                              0.31s  
+  ✓ BlockData collection method returns DataCollection                   0.33s  
+  ✓ BlockData sets default view when not provided                        0.31s  
+  ✓ BlockData stores type correctly                                      0.35s  
+  ✓ BlockData stores data array correctly                                0.32s  
+
+   PASS  Modules\Cms\tests\Unit\Datas\FooterDataTest
+  ✓ FooterData can be instantiated                                       0.36s  
+  ✓ FooterData extends Spatie Data                                       0.31s  
+  ✓ FooterData implements Wireable interface                             0.31s  
+  ✓ FooterData has default view path                                     0.31s  
+  ✓ FooterData has nullable background_color property                    0.39s  
+  ✓ FooterData has nullable background property                          0.31s  
+  ✓ FooterData has nullable overlay_color property                       0.30s  
+  ✓ FooterData rules method returns validation rules                     0.30s  
+  ✓ FooterData can be created from array using from method               0.37s  
+  ✓ FooterData can be converted to array                                 0.31s  
+
+   PASS  Modules\Cms\tests\Unit\Enums\AttachmentDiskEnumTest
+  ✓ AttachmentDiskEnum has all cases                                     0.34s  
+  ✓ AttachmentDiskEnum cases have correct values                         0.31s  
+  ✓ AttachmentDiskEnum getLabel method exists                            0.36s  
+  ✓ AttachmentDiskEnum getColor method exists                            0.32s  
+  ✓ AttachmentDiskEnum getIcon method exists                             0.30s  
+  ✓ AttachmentDiskEnum getDescription method exists                      0.30s  
+
+   PASS  Modules\Cms\tests\Unit\ExampleTest
+  ✓ CMS Module → it cms module placeholder                               0.36s  
+
+   PASS  Modules\Cms\tests\Unit\Filament\Blocks\BlockClassesTest
+  ✓ ActionsBlock can be instantiated                                     0.32s  
+  ✓ ActionsBlock has getBlockSchema method                               0.31s  
+  ✓ ContactBlock can be instantiated                                     0.30s  
+  ✓ CtaBlock can be instantiated                                         0.34s  
+  ✓ HeroBlock can be instantiated                                        0.40s  
+  ✓ InfoBlock can be instantiated                                        0.32s  
+  ✓ LinksBlock can be instantiated                                       0.32s  
+  ✓ LogoBlock can be instantiated                                        0.34s  
+  ✓ NewsletterBlock can be instantiated                                  0.30s  
+  ✓ ParagraphBlock can be instantiated                                   0.30s  
+
+   PASS  Modules\Cms\tests\Unit\Filament\Fields\PageContentBuilderTest
+  ✓ PageContentBuilder can be instantiated                               0.53s  
+
+   PASS  Modules\Cms\tests\Unit\Middleware\PageSlugMiddlewareTest
+  ✓ PageSlugMiddleware can be instantiated                               0.31s  
+  ✓ PageSlugMiddleware handle method exists                              0.31s  
+
+   PASS  Modules\Cms\tests\Unit\Models\AttachmentTest
+  ✓ Attachment model can be instantiated                                 0.35s  
+  ✓ Attachment model has expected fillable fields                        0.30s  
+  ✓ Attachment model has expected casts                                  0.33s  
+  ✓ Attachment model implements HasMedia interface                       0.31s  
+
+   PASS  Modules\Cms\tests\Unit\Models\BaseTreeModelTest
+  ✓ BaseTreeModel is abstract and extends BaseModel                      0.35s  
+  ✓ BaseTreeModel implements HasRecursiveRelationships                   0.32s  
+  ✓ BaseTreeModel has expected fillable fields                           0.32s  
+  ✓ BaseTreeModel has expected casts                                     0.30s  
+
+   PASS  Modules\Cms\tests\Unit\Models\ConfBusinessLogicTest
+  ✓ Conf Business Logic → conf business logic placeholder                0.36s  
+
+   PASS  Modules\Cms\tests\Unit\Models\ConfTest
+  ✓ Conf model can be instantiated                                       0.32s  
+  ✓ Conf model has expected fillable fields                              0.31s  
+  ✓ Conf model has name as route key                                     0.31s  
+  ✓ Conf model uses Sushi trait                                          0.34s  
+
+   PASS  Modules\Cms\tests\Unit\Models\MenuBusinessLogicTest
+  ✓ Menu Business Logic → menu business logic placeholder                0.33s  
+
+   PASS  Modules\Cms\tests\Unit\Models\MenuTest
+  ✓ Menu model can be instantiated                                       0.31s  
+  ✓ Menu model has expected fillable fields                              0.34s  
+  ✓ Menu model implements HasRecursiveRelationships                      0.31s  
+  ✓ Menu model uses SushiToJsons trait                                   0.30s  
+
+   PASS  Modules\Cms\tests\Unit\Models\ModuleTest
+  ✓ Module model can be instantiated                                     0.37s  
+  ✓ Module model has expected fillable fields                            0.35s  
+  ✓ Module model extends BaseModel                                       0.31s  
+  ✓ Module model uses Sushi trait                                        0.31s  
+  ✓ Module model has id as route key                                     0.31s  
+
+   PASS  Modules\Cms\tests\Unit\Models\PageBusinessLogicTest
+  ✓ Page Business Logic → page business logic placeholder                0.37s  
+
+   PASS  Modules\Cms\tests\Unit\Models\PageContentBusinessLogicTest
+  ✓ page content model can be instantiated                               0.33s  
+  ✓ page content extends BaseModel                                       0.31s  
+  ✓ page content uses SushiToJsons trait                                 0.31s  
+  ✓ page content uses HasTranslations trait                              0.35s  
+  ✓ page content has correct translatable attributes                     0.31s  
+  ✓ page content has correct fillable attributes                         0.31s  
+  ✓ page content has correct schema definition                           0.31s  
+  ✓ page content has correct casts                                       0.35s  
+  ✓ page content getRows method returns array                            0.31s  
+  ✓ page content has sluggable configuration                             0.33s  
+  ✓ page content blocks cast to array                                    0.31s  
+  ✓ page content has datetime casts for timestamps                       0.47s  
+
+   PASS  Modules\Cms\tests\Unit\Models\PageContentTest
+  ✓ PageContent model can be instantiated                                0.38s  
+  ✓ PageContent model has expected fillable fields                       0.31s  
+  ✓ PageContent model extends BaseModel                                  0.34s  
+  ✓ PageContent model has translatable fields                            0.31s  
+
+   PASS  Modules\Cms\tests\Unit\Models\PageTest
+  ✓ Page Model → page model placeholder                                  0.32s  
+
+   PASS  Modules\Cms\tests\Unit\Models\Policies\PoliciesTest
+  ✓ PagePolicy can be instantiated                                       0.34s  
+  ✓ MenuPolicy can be instantiated                                       0.37s  
+  ✓ SectionPolicy can be instantiated                                    0.31s  
+
+   PASS  Modules\Cms\tests\Unit\Models\Policies\PolicyClassesTest
+  ✓ CmsBasePolicy is an abstract class                                   0.31s  
+  ✓ PagePolicy can be instantiated                                       0.30s  
+  ✓ SectionPolicy can be instantiated                                    0.35s  
+  ✓ PageContentPolicy can be instantiated                                0.37s  
+  ✓ ConfPolicy can be instantiated                                       0.33s  
+  ✓ MenuPolicy can be instantiated                                       0.35s  
+  ✓ ModulePolicy can be instantiated                                     0.34s  
+  ✓ PagePolicy has expected methods                                      0.41s  
+
+   PASS  Modules\Cms\tests\Unit\Models\SectionBusinessLogicTest
+  ✓ Section Business Logic → section business logic placeholder          0.34s  
+
+   PASS  Modules\Cms\tests\Unit\Models\SectionTest
+  ✓ Section model can be instantiated                                    0.35s  
+  ✓ Section model has expected fillable fields                           0.34s  
+  ✓ Section model extends BaseModelLang                                  0.31s  
+  ✓ Section model has expected casts                                     0.31s  
+
+   PASS  Modules\Cms\tests\Unit\Models\Traits\HasBlocksTest
+  ✓ HasBlocks trait can be used                                          0.36s  
+  ✓ HasBlocks trait has static method getBlocksBySlug                    0.30s  
+
+   PASS  Modules\Cms\tests\Unit\View\ComponentsTest
+  ✓ Section component can be instantiated                                0.33s  
+  ✓ Page component can be instantiated                                   0.38s  
+  ✓ PageContent component can be instantiated                            0.35s  
+
+   PASS  Modules\Geo\tests\Unit\Actions\CalculateDistanceActionTest
+  ✓ it calculates distance between two valid locations                   0.02s  
+  ✓ it throws exception for invalid latitude
+  ✓ it throws exception for invalid longitude
+  ✓ it throws exception for negative latitude
+  ✓ it throws exception for negative longitude
+  ✓ it throws exception for empty response
+  ✓ it throws exception for malformed response
+  ✓ it throws exception when distance matrix fails
+  ✓ it formats distance in meters correctly
+  ✓ it formats distance in kilometers correctly
+  ✓ it formats distance with decimal kilometers
+  ✓ it formats exact kilometer distance
+  ✓ it throws exception for negative distance
+  ✓ it handles zero distance
+  ✓ it handles very small distances
+  ✓ it handles very large distances
+  ✓ it handles boundary latitude values
+  ✓ it handles boundary longitude values
+  ✓ it handles same origin and destination
+
+   PASS  Modules\Geo\tests\Unit\Actions\ClusterLocationsActionTest
+  ✓ it clusters locations that are close together                        0.02s  
+  ✓ it creates separate clusters for distant locations
+  ✓ it throws exception when location is not LocationData
+  ✓ it handles single location correctly
+  ✓ it handles empty locations array
+  ✓ it works with different max distance parameter
+  ✓ it updates cluster centers correctly
+
+   PASS  Modules\Geo\tests\Unit\Actions\FilterCoordinatesActionTest
+  ✓ it filters coordinates within radius correctly                       0.01s  
+  ✓ it returns empty array when no coordinates are within radius
+  ✓ it handles single coordinate within radius
+  ✓ it handles coordinates with string values
+  ✓ it throws exception for invalid center latitude
+  ✓ it throws exception for invalid center longitude
+  ✓ it throws exception for invalid radius
+  ✓ it throws exception for invalid coordinate latitude
+  ✓ it throws exception for invalid coordinate longitude
+  ✓ it sorts results by distance
+
+   PASS  Modules\Geo\tests\Unit\Actions\FormatCoordinatesActionTest
+  ✓ it formats coordinates in decimal format                             0.01s  
+  ✓ it formats coordinates in DMS format
+  ✓ it formats coordinates in Google Maps URL format
+  ✓ it uses decimal format as default
+  ✓ it throws exception for unsupported format
+  ✓ it handles edge case coordinates
+  ✓ it handles high precision coordinates
+
+   PASS  Modules\Geo\tests\Unit\Actions\GetAddressDataFromFullAddressActionTest
+  ✓ it returns AddressData when first service succeeds                   0.32s  
+  ✓ it initializes with empty errors collection                          0.35s  
+  ✓ it executes without throwing error for basic call                    0.54s  
+
+   PASS  Modules\Geo\tests\Unit\Actions\GetCoordinatesActionTest
+  ✓ it returns coordinates for valid address                             0.32s  
+  ✓ it throws exception when api key missing                             0.30s  
+  ✓ it throws exception when api request fails                           0.36s  
+  ✓ it returns null for invalid address                                  0.30s  
+  ✓ it returns null for over query limit status                          0.32s  
+  ✓ it returns null for request denied status                            0.31s  
+  ✓ it handles empty results array                                       0.35s  
+  ✓ it handles multiple results and returns first                        0.32s  
+  ✓ it handles special characters in address                             0.31s  
+  ✓ it handles numeric coordinates correctly                             0.30s  
+  ✓ it handles very long addresses                                       0.34s  
+  ✓ it handles coordinates with high precision                           0.30s  
+  ✓ it handles network timeout gracefully                                0.37s  
+  ✓ it handles invalid json response                                     0.31s  
+
+   PASS  Modules\Geo\tests\Unit\Actions\Nominatim\LookupPlaceActionTest
+  ✓ lookup place action returns location data for valid osm id           0.07s  
+  ✓ lookup place action throws exception for empty results
+  ✓ lookup place action handles guzzle exceptions
+  ✓ lookup place action uses correct user agent header
+
+   PASS  Modules\Geo\tests\Unit\Actions\OptimizeRouteActionTest
+  ✓ it returns same locations when count is 2 or less                    0.01s  
+  ✓ it optimizes route for three locations
+  ✓ it handles empty collection
+  ✓ it handles route optimization with multiple locations
+  ✓ it stops optimization when no more locations remain
+  ✓ it correctly calculates nearest location
+
+   PASS  Modules\Geo\tests\Unit\Actions\ValidateCoordinatesActionTest
+  ✓ it validates valid coordinates correctly                             0.01s  
+  ✓ it rejects invalid latitude
+  ✓ it rejects invalid longitude
+  ✓ it validates boundary coordinates
+  ✓ it handles decimal coordinates correctly
+  ✓ it handles zero coordinates
+  ✓ it rejects coordinates with extreme values
+
+   PASS  Modules\Geo\tests\Unit\AddressModelTest
+  ✓ Address Model → it address model placeholder                         0.01s  
+
+   PASS  Modules\Geo\tests\Unit\Datas\DatasTest
+  ✓ CoordinatesData can be instantiated
+  ✓ AddressData can be instantiated
+  ✓ LocationData can be instantiated
+  ✓ PlaceData can be instantiated
+  ✓ GeoData can be instantiated
+  ✓ ElevationData can be instantiated
+  ✓ ElevationResultDTO can be instantiated
+  ✓ LocationDTO can be instantiated
+  ✓ BingMapData can be instantiated
+  ✓ MapboxMapData can be instantiated
+  ✓ UpdateCoordinatesResult can be instantiated
+  ✓ RouteData can be instantiated
+  ✓ TravelTimeData can be instantiated
+  ✓ IPLocationData can be instantiated
+  ✓ GeocodingData can be instantiated
+  ✓ TimeZoneData can be instantiated
+
+   PASS  Modules\Geo\tests\Unit\Datas\GoogleMapsDatasTest
+  ✓ GoogleMapGeometryData can be instantiated                            0.01s  
+  ✓ GoogleMapAddressComponentData can be instantiated
+  ✓ GoogleMapResultData can be instantiated
+  ✓ GoogleMapResponseData can be instantiated
+  ✓ GoogleMapBoundsData can be instantiated
+  ✓ GoogleMapLocationData can be instantiated
+  ✓ GoogleMapComponentData can be instantiated
+
+   PASS  Modules\Geo\tests\Unit\Datas\MapDatasTest
+  ✓ IconData can be instantiated                                         0.01s  
+  ✓ MarkerData can be instantiated
+  ✓ PositionData can be instantiated
+  ✓ SizeData can be instantiated
+
+   PASS  Modules\Geo\tests\Unit\Datas\PhotonDatasTest
+  ✓ PhotonAddressData can be instantiated                                0.01s  
+  ✓ PhotonFeatureData can be instantiated
+  ✓ PhotonPropertiesData can be instantiated
+  ✓ PhotonResponseData can be instantiated
+
+   PASS  Modules\Geo\tests\Unit\Enums\EnumsTest
+  ✓ AddressItemEnum has expected cases                                   0.01s  
+  ✓ AddressTypeEnum has expected cases
+  ✓ AddressItemEnum getLabel method exists
+  ✓ AddressTypeEnum has label method
+
+   PASS  Modules\Geo\tests\Unit\Filament\FilamentComponentsTest
+  ✓ AddressField can be instantiated                                     0.31s  
+  ✓ LocationWidget can be instantiated                                   0.29s  
+  ✓ LatLngWidget can be instantiated                                     0.33s  
+  ✓ UpdateCoordinatesBulkAction can be instantiated                      0.31s  
+
+   PASS  Modules\Geo\tests\Unit\GeocodingBusinessLogicTest
+  ✓ Geocoding Business Logic → Italian Address Validation → it validate… 0.02s  
+  ✓ Geocoding Business Logic → Italian Address Validation → it validates Italian province codes
+  ✓ Geocoding Business Logic → Italian Address Validation → it validates Italian address structure
+  ✓ Geocoding Business Logic → Italian Address Validation → it validates Italian street address format
+  ✓ Geocoding Business Logic → Italian Address Validation → it validates Italian regional hierarchy
+  ✓ Geocoding Business Logic → Geocoding Provider Logic → it validates geocoding coordinate precision
+  ✓ Geocoding Business Logic → Geocoding Provider Logic → it ensures geocoding accuracy levels
+  ✓ Geocoding Business Logic → Geocoding Provider Logic → it validates provider response structure
+  ✓ Geocoding Business Logic → Geocoding Provider Logic → it validates bounding box calculations
+  ✓ Geocoding Business Logic → Geocoding Provider Logic → it handles provider failover logic
+  ✓ Geocoding Business Logic → Weather Data Integration → it validates weather data structure
+  ✓ Geocoding Business Logic → Weather Data Integration → it validates humidity and pressure ranges
+  ✓ Geocoding Business Logic → Weather Data Integration → it validates wind measurements
+  ✓ Geocoding Business Logic → Weather Data Integration → it validates weather condition categories
+  ✓ Geocoding Business Logic → Weather Data Integration → it validates UV index ranges
+  ✓ Geocoding Business Logic → Place Classification Logic → it validates place hierarchy and types
+  ✓ Geocoding Business Logic → Place Classification Logic → it validates population data for cities
+  ✓ Geocoding Business Logic → Place Classification Logic → it validates geographic measurements
+  ✓ Geocoding Business Logic → Place Classification Logic → it validates timezone assignments
+  ✓ Geocoding Business Logic → Distance and Route Calculations → it calculates distance between coordinates
+  ✓ Geocoding Business Logic → Distance and Route Calculations → it validates coordinate bounds checking
+  ✓ Geocoding Business Logic → Distance and Route Calculations → it validates proximity search radius
+  ✓ Geocoding Business Logic → Data Quality and Validation → it ensures coordinate precision limits
+  ✓ Geocoding Business Logic → Data Quality and Validation → it validates address completeness scoring
+  ✓ Geocoding Business Logic → Data Quality and Validation → it validates geocoding cache invalidation logic
+
+   PASS  Modules\Geo\tests\Unit\Models\AdditionalModelsTest
+  ✓ State model can be instantiated                                      0.03s  
+  ✓ County model can be instantiated
+  ✓ Locality model can be instantiated
+  ✓ Place model can be instantiated
+  ✓ PlaceType model can be instantiated
+  ✓ GeoNamesCap model can be instantiated
+
+   PASS  Modules\Geo\tests\Unit\Models\Policies\PoliciesTest
+  ✓ StatePolicy can be instantiated                                      0.01s  
+  ✓ CountyPolicy can be instantiated
+  ✓ LocalityPolicy can be instantiated
+  ✓ PlacePolicy can be instantiated
+  ✓ PlaceTypePolicy can be instantiated
+  ✓ GeoNamesCapPolicy can be instantiated
+
+   PASS  Modules\Geo\tests\Unit\Services\GoogleMapsServiceTest
+  ✓ it can be instantiated                                               0.01s  
+  ✓ it has correct constants defined
+  ✓ it has required methods
+
+   PASS  Modules\Geo\tests\Unit\Services\HereServiceTest
+  ✓ it has correct base URL                                              0.01s  
+  ✓ it has static method for getting duration and length
+
+   PASS  Modules\Geo\tests\Unit\Services\ServicesTest
+  ✓ GeoService can be instantiated                                       0.01s  
+  ✓ GoogleMapsService can be instantiated
+  ✓ HereService can be instantiated
+
+   PASS  Modules\Geo\tests\Unit\Traits\TraitsTest
+  ✓ HasAddresses trait can be used                                       0.34s  
+  ✓ HandlesCoordinates trait can be used                                 0.31s  
+
+   PASS  Modules\Geo\tests\Unit\Transformers\TransformerTest
+  ✓ GeoJsonResource can be instantiated                                  0.01s  
+  ✓ GeoJsonCollection can be instantiated
+
+   PASS  Modules\Job\tests\Unit\GetTaskFrequenciesActionTest
+  ✓ GetTaskFrequenciesAction → it can be instantiated                    0.01s  
+  ✓ GetTaskFrequenciesAction → it has queueable action trait
+  ✓ GetTaskFrequenciesAction → it has correct method signature
+  ✓ GetTaskFrequenciesAction → it has proper return type annotation
+  ✓ GetTaskFrequenciesAction → it uses correct exception handling
+  ✓ GetTaskFrequenciesAction → it has proper class structure
+  ✓ GetTaskFrequenciesAction → it implements queueable functionality
+  ✓ GetTaskFrequenciesAction → it has correct namespace
+  ✓ GetTaskFrequenciesAction → it uses strict types
+  ✓ GetTaskFrequenciesAction → it has proper imports
+  ✓ GetTaskFrequenciesAction → it validates class dependencies
+  ✓ GetTaskFrequenciesAction → it has correct method implementation structure
+  ✓ GetTaskFrequenciesAction → it follows Laravel action conventions
+  ✓ GetTaskFrequenciesAction → it can be used with dependency injection
+  ✓ GetTaskFrequenciesAction → it has proper error handling implementation
+  ✓ GetTaskFrequenciesAction → it validates config function usage
+
+   PASS  Modules\Lang\tests\Unit\Actions\ReadTranslationFileActionTest
+  ✓ ReadTranslationFileAction Business Logic → can read valid translati… 0.34s  
+  ✓ ReadTranslationFileAction Business Logic → throws exception for non… 0.42s  
+  ✓ ReadTranslationFileAction Business Logic → throws exception for unr… 0.30s  
+  ✓ ReadTranslationFileAction Business Logic → throws exception for inv… 0.31s  
+  ✓ ReadTranslationFileAction Business Logic → converts array to php fo… 0.30s  
+  ✓ ReadTranslationFileAction Business Logic → handles special characte… 0.34s  
+  ✓ ReadTranslationFileAction Business Logic → handles deeply nested ar… 0.33s  
+  ✓ ReadTranslationFileAction Business Logic → generates proper indenta… 0.30s  
+  ✓ ReadTranslationFileAction Business Logic → handles empty arrays      0.30s  
+  ✓ ReadTranslationFileAction Business Logic → handles numeric values i… 0.35s  
+  ✓ ReadTranslationFileAction Business Logic → preserves key order in o… 0.38s  
+
+   PASS  Modules\Media\tests\Unit\Actions\GetAttachmentsSchemaActionTest
+  ✓ it returns attachment schema                                         0.37s  
+  ✓ it has correct names                                                 0.34s  
+  ✓ it has correct validation                                            0.30s  
+  ✓ it has correct storage                                               0.30s  
+  ✓ it has correct directory                                             0.31s  
+  ✓ it has correct visibility                                            0.34s  
+  ✓ it has correct max size                                              0.30s  
+  ✓ it has correct multiple setting                                      0.31s  
+  ✓ it has correct preview setting                                       0.31s  
+  ✓ it has correct download setting                                      0.34s  
+  ✓ it has correct remove setting                                        0.31s  
+  ✓ it has correct reorder setting                                       0.33s  
+  ✓ it has correct labels                                                0.31s  
+  ✓ it has correct append setting                                        0.34s  
+  ✓ it has correct panel                                                 0.31s  
+  ✓ it has correct help text                                             0.31s  
+  ✓ it has correct placeholder                                           0.31s  
+
+   PASS  Modules\Media\tests\Unit\Actions\SaveAttachmentsActionTest
+  ✓ it executes save attachments successfully                            0.44s  
+  ✓ it handles empty attachments                                         0.31s  
+  ✓ it skips nonexistent files                                           0.31s  
+  ✓ it handles storage errors gracefully                                 0.34s  
+  ✓ it uses correct disk                                                 0.31s  
+  ✓ it cleans up temp files                                              0.32s  
+  ✓ it handles multiple attachments                                      0.31s  
+
+   PASS  Modules\Media\tests\Unit\Models\MediaTest
+  ✓ Media Business Logic → it media business logic placeholder           0.38s  
+
+   PASS  Modules\Meetup\tests\Unit\Models\EventTest
+  ✓ it can create an event and has correct defaults                      0.34s  
+  ✓ event has expected fillable fields                                   0.32s  
+  ✓ event owner relation loads correctly                                 0.37s  
+  ✓ upcoming scope filters events correctly                              0.37s  
+  ✓ past scope filters events correctly                                  0.36s  
+  ✓ bySlug scope filters events correctly                                0.39s  
+  ✓ dateRange scope filters events correctly                             0.35s  
+  ✓ getBySlug static method returns correct event                        0.33s  
+  ✓ toBlockArray returns correct data structure                          0.33s  
+  ✓ toSchemaOrg returns valid structured data                            0.37s  
+  ✓ getSocialShareData returns seo share data                            0.36s  
+  ✓ getRouteKeyName returns slug                                         0.31s  
+  ✓ event slug auto-generation from title                                0.38s  
+  ✓ event casts dates correctly                                          0.34s  
+  ✓ event casts meta_data as array                                       0.32s  
+  ✓ event casts offers as array                                          0.33s  
+  ✓ event casts attendees_count as integer                               0.42s  
+  ✓ event casts event_status to enum                                     0.33s  
+  ✓ event casts event_attendance_mode to enum                            0.37s  
+  ✓ event can have null optional fields                                  0.38s  
+  ✓ toBlockArray includes correct status for upcoming event              0.33s  
+  ✓ toBlockArray includes correct status for past event                  0.33s  
+  ✓ toBlockArray includes attendee counts                                0.33s  
+  ✓ toBlockArray includes asset url for cover image                      0.37s  
+  ✓ toBlockArray image is null when no cover image                       0.34s  
+  ✓ toSchemaOrg includes description when provided                       0.33s  
+  ✓ toSchemaOrg excludes description when null                           0.36s  
+  ✓ toSchemaOrg includes image array when cover image provided           0.33s  
+  ✓ toSchemaOrg excludes image when no cover image                       0.34s  
+  ✓ toSchemaOrg includes organizer when available                        0.34s  
+  ✓ toSchemaOrg excludes organizer when null                             0.37s  
+  ✓ getSocialShareData includes event title                              0.33s  
+  ✓ getSocialShareData includes localized url                            0.32s  
+  ✓ getSocialShareData includes description truncated as text            0.37s  
+  ✓ getSocialShareData text returns empty string when no description     0.33s  
+  ✓ getSocialShareData includes asset url for image                      0.33s  
+  ✓ getSocialShareData image is null when no cover image                 0.33s  
+  ✓ event factory online state sets attendance mode                      0.38s  
+  ✓ event factory past state sets past dates                             0.33s  
+  ✓ event connection is meetup                                           0.32s  
+  ✓ event has timestamps                                                 0.37s  
+  ✓ event can be found by slug                                           0.34s  
+
+   PASS  Modules\Meetup\tests\Unit\Models\ProfileTest
+  ✓ profile model can be instantiated                                    0.57s  
+  ✓ profile has correct fillable fields                                  0.35s  
+  ✓ profile can be created with attributes                               0.32s  
+  ✓ profile id is auto-generated as uuid string                          0.34s  
+  ✓ profile belongs to user                                              0.34s  
+  ✓ profile has incremented as false                                     0.37s  
+  ✓ profile has key type as string                                       0.32s  
+  ✓ profile can be created without uuid attribute in database            0.33s  
+  ✓ profile has correct casts from base profile                          0.36s  
+  ✓ profile user relationship works                                      0.35s  
+  ✓ profile connection is meetup                                         0.31s  
+  ✓ profile extends base profile                                         0.31s  
+  ✓ profile can have null optional fields                                0.37s  
+  ✓ profile table uses meetup connection                                 0.33s  
+
+   PASS  Modules\Notify\tests\Unit\Enums\ContactTypeEnumTest
+  ✓ it has correct cases                                                 0.36s  
+  ✓ it implements filament contracts                                     0.39s  
+  ✓ it has trans trait                                                   0.35s  
+  ✓ it has required methods                                              0.36s  
+  ✓ it getSearchable returns all values                                  0.40s  
+  ✓ it getFormSchema returns TextInput components                        0.40s  
+  ✓ it each case has a unique value                                      0.37s  
+
+   PASS  Modules\Notify\tests\Unit\GenericNotificationTest
+  ✓ GenericNotification getRecipientName → it prefers getFullName() whe… 0.44s  
+  ✓ GenericNotification getRecipientName → it uses Eloquent model full_… 0.34s  
+  ✓ GenericNotification getRecipientName → it falls back to first_name…  0.32s  
+
+   PASS  Modules\Notify\tests\Unit\Models\ContactBusinessLogicTest
+  ✓ Contact Business Logic → contact extends base model                  0.36s  
+  ✓ Contact Business Logic → contact can store polymorphic model relati… 0.30s  
+  ✓ Contact Business Logic → contact can store contact information with… 0.40s  
+  ✓ Contact Business Logic → contact can track sms communication         0.34s  
+  ✓ Contact Business Logic → contact can track email communication       0.32s  
+  ✓ Contact Business Logic → contact can store personal information      0.30s  
+  ✓ Contact Business Logic → contact has verification tracking           0.35s  
+  ✓ Contact Business Logic → contact has flexible attribute storage      0.31s  
+  ✓ Contact Business Logic → contact can track duplicate count           0.32s  
+  ✓ Contact Business Logic → contact has order column for sorting        0.33s  
+
+   PASS  Modules\Notify\tests\Unit\Models\ContactTest
+  ✓ Contact Model → it contact model placeholder                         0.40s  
+
+   PASS  Modules\Notify\tests\Unit\Models\NotificationTemplateTest
+  ✓ it has correct fillable fields                                       0.31s  
+  ✓ it has correct casts                                                 0.31s  
+  ✓ it has translatable fields                                           0.32s  
+
+   PASS  Modules\Notify\tests\Unit\Models\NotificationTest
+  ✓ Notification Model → it notification model placeholder               0.35s  
+
+   PASS  Modules\Notify\tests\Unit\Models\NotificationTypeBusinessLogicTest
+  ✓ NotificationType Business Logic → notification type extends eloquen… 0.33s  
+  ✓ NotificationType Business Logic → notification type has expected fi… 0.31s  
+  ✓ NotificationType Business Logic → notification type model structure… 0.36s  
+
+   PASS  Modules\Seo\tests\Unit\Actions\GenerateSocialShareLinksActionTest
+  ✓ it generates social share links for all platforms                    0.37s  
+  ✓ it includes via and hashtags in twitter link when provided           0.30s  
+
+   PASS  Modules\Tenant\tests\Unit\ApplicationPublicPathCoverageTest
+  ✓ it returns real path when requested public path exists               0.01s  
+  ✓ it returns base real path plus requested segment when segment does not exist
+  ✓ it returns plain fallback path when public_html base path does not exist
+
+   PASS  Modules\Tenant\tests\Unit\DomainTest
+  ✓ domain model can be instantiated                                     0.33s  
+  ✓ get rows method works correctly                                      0.35s  
+
+   PASS  Modules\UI\tests\Unit\Components\ComponentTest
+  ✓ ui components can be rendered                                        0.32s  
+  ✓ ui button component has correct attributes                           0.38s  
+  ✓ ui card component renders content                                    0.32s  
+
+   PASS  Modules\UI\tests\Unit\Enums\TableLayoutEnumTest
+  ✓ it has enum values                                                   0.40s  
+  ✓ it has default layout                                                0.36s  
+  ✓ it toggles between layouts                                           0.43s  
+  ✓ it checks layout types correctly                                     0.46s  
+  ✓ it has grid configuration                                            0.45s  
+  ✓ it returns correct table columns based on layout                     0.35s  
+  ✓ it has options                                                       0.35s  
+  ✓ it has container classes                                             0.36s  
+  ✓ it has translation support                                           0.44s  
+  ✓ it has color and icon methods                                        0.33s  
+
+   PASS  Modules\UI\tests\Unit\Filament\Widgets\RowWidgetTest
+  ✓ row widget extends filament widget                                   0.43s  
+  ✓ row widget can be instantiated                                       0.37s  
+  ✓ row widget has correct view                                          0.47s  
+  ✓ row widget has proper properties                                     0.42s  
+  ✓ row widget can render                                                0.36s  
+
+   PASS  Modules\UI\tests\Unit\Filament\Widgets\StatWithIconWidgetTest
+  ✓ stat with icon widget extends filament widget                        0.37s  
+  ✓ stat with icon widget can be instantiated                            0.44s  
+  ✓ stat with icon widget has correct view                               0.35s  
+  ✓ stat with icon widget has proper properties                          0.33s  
+  ✓ stat with icon widget can render                                     0.32s  
+  ✓ stat with icon widget has default values                             0.36s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Arr\DiffAssocRecursiveActionTest
+  ✓ it calculates recursive diff correctly                               0.34s  
+  ✓ it handles numeric strings in diff                                   0.32s  
+  ✓ it throws exception for non-array items in fixType                   0.32s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Arr\RangeIntersectActionTest
+  ✓ it calculates range intersection correctly                           0.37s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Arr\SaveArrayActionTest
+  ✓ save array action saves as php by default                            0.32s  
+  ✓ save array action saves as json                                      0.31s  
+  ✓ save array action throws exception for unsupported format            0.32s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Arr\SaveArrayActionsTest
+  ✓ it saves array as php file                                           0.37s  
+  ✓ it saves array as json file                                          0.32s  
+  ✓ it saves array via SaveArrayAction dispatcher                        0.35s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Arr\SaveJsonArrayActionTest
+  ✓ it saves array to json file                                          0.02s  
+  ✓ it saves empty array
+
+   PASS  Modules\Xot\tests\Unit\Actions\Arr\SavePhpArrayActionTest
+  ✓ it saves array to php file                                           0.34s  
+  ✓ it saved file has strict types                                       0.36s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Array\ArrayToRawJsActionTest
+  ✓ it converts array to raw js string correctly                         0.34s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Array\DiffAssocRecursiveActionTest
+  ✓ diff assoc recursive action works correctly                          0.32s  
+  ✓ diff assoc recursive action handles numeric strings                  0.31s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Array\RangeIntersectActionTest
+  ✓ range intersect action handles basic intersection                    0.42s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Array\SaveArrayActionTest
+  ✓ it saves array in json format                                        0.01s  
+  ✓ it saves array in php format by default
+  ✓ it throws for unsupported format
+
+   PASS  Modules\Xot\tests\Unit\Actions\Array\SaveArrayActionsTest
+  ✓ save json array action works                                         0.34s  
+  ✓ save php array action works                                          0.35s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Array\SaveJsonArrayActionTest
+  ✓ it saves array to json                                               0.01s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Array\SavePhpArrayActionTest
+  ✓ it saves array to php                                                0.01s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\ArrayArrActionsTest
+  ✓ it normalizes nested numeric strings in diff fixType for Arr namesp… 0.01s  
+  ✓ it throws when fixType receives a non-array item for Arr namespace
+  ✓ it returns recursive diff in Arr namespace
+  ✓ it normalizes nested numeric strings in diff fixType for Array namespace
+  ✓ it throws when fixType receives a non-array item for Array namespace
+  ✓ it returns recursive diff in Array namespace
+  ✓ it covers all branches of range intersect in Arr namespace
+  ✓ it covers all branches of range intersect in Array namespace
+  ✓ it writes JSON and PHP arrays via Arr actions
+  ✓ it writes JSON and PHP arrays via Array actions
+  ✓ it dispatches save strategy by format in SaveArrayAction
+  ✓ it throws on unsupported save format in SaveArrayAction
+  ✓ it converts mixed PHP arrays to RawJs correctly
+
+   PASS  Modules\Xot\tests\Unit\Actions\Blade\RegisterBladeComponentsActionTest
+  ✓ it registers blade components correctly                              0.40s  
+  ✓ it does nothing if no components found                               0.33s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\EloquentCastActionsTest
+  ✓ safe array by model cast action works                                0.37s  
+  ✓ safe attribute cast action works                                     0.36s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeArrayByModelCastActionTest
+  ✓ it converts model attributes to array correctly                      0.33s  
+  ✓ it falls back to safeExecute on error                                0.35s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeArrayCastActionTest
+  ✓ it casts various values to array correctly                           0.40s  
+  ✓ it validates required keys correctly                                 0.33s  
+  ✓ it filters keys correctly                                            0.34s  
+  ✓ it casts values to specific type correctly                           0.31s  
+  ✓ it checks if value can be cast                                       0.36s  
+  ✓ it uses static cast method correctly                                 0.34s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeAttributeCastActionTest
+  ✓ it manages eloquent attributes safely                                0.41s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeBooleanCastActionTest
+  ✓ it casts various values to boolean correctly                         0.35s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeCastActionsTest
+  ✓ safe array cast action works                                         0.33s  
+  ✓ safe string cast action works                                        0.35s  
+  ✓ safe int cast action works                                           0.37s  
+  ✓ safe boolean cast action works                                       0.36s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeEloquentCastActionTest
+  ✓ it checks attribute presence and emptiness                           0.33s  
+  ✓ it casts typed attribute getters                                     0.30s  
+  ✓ it returns defaults for missing attributes by type                   0.30s  
+  ✓ it casts generic typed getter and validation helpers                 0.35s  
+  ✓ it checks condition and fallback helpers                             0.31s  
+  ✓ it exposes static helper methods                                     0.31s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeFloatCastActionTest
+  ✓ it casts various values to float correctly                           0.37s  
+  ✓ it clams float within range correctly                                0.37s  
+  ✓ it rounds float with precision correctly                             0.32s  
+  ✓ it casts as percentage correctly                                     0.35s  
+  ✓ it casts as currency correctly                                       0.30s  
+  ✓ it uses static float cast methods correctly                          0.34s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeIntCastActionTest
+  ✓ it casts various values to integer correctly                         0.33s  
+  ✓ it clams integer within range correctly                              0.30s  
+  ✓ it casts as id correctly                                             0.30s  
+  ✓ it uses static int cast methods correctly                            0.35s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeObjectCastActionTest
+  ✓ it manages object properties safely                                  0.32s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeObjectEloquentCastActionsTest
+  ✓ safe object cast action works                                        0.31s  
+  ✓ safe eloquent cast action works                                      0.36s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeStringCastActionTest
+  ✓ it casts various values to string correctly                          0.31s  
+  ✓ it uses static string cast method correctly                          0.35s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Class\GetFilenameByClassnameActionTest
+  ✓ it gets filename from classname correctly                            0.32s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Collection\TransCollectionActionTest
+  ✓ it translates collection items correctly                             0.37s  
+  ✓ it returns original items if transKey is null                        0.33s  
+  ✓ it returns original item if translation not found                    0.33s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Config\GetTenantConfigActionsTest
+  ✓ it gets tenant config array correctly                                0.32s  
+  ✓ it returns empty array if tenant config file does not exist          0.35s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Config\GetTenantConfigArrayActionTest
+  ✓ it returns empty array when tenant config file does not exist        0.33s  
+  ✓ it returns config array when file exists and contains array          0.31s  
+  ✓ it returns empty array when required file does not return an array   0.33s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Config\GetTenantConfigPathActionTest
+  ✓ it delegates to tenant file path action with php filename            0.38s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Debug\MeasureActionTest
+  ✓ it measures performance                                              0.33s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Dummy\GetProductsArrayDummyActionTest
+  ✓ it maps only expected keys for each product                          0.32s  
+  ✓ it returns empty item when product entry is not an array             0.31s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\ExecuteArtisanCommandActionTest
+  ✓ it executes allowed artisan command correctly                        0.37s  
+  ✓ it throws exception for forbidden artisan command                    0.31s  
+  ✓ it handles failed artisan command correctly                          0.35s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\AddStrictTypesDeclarationActionTest
+  ✓ it adds strict types declaration to php file                         0.36s  
+  ✓ it does not duplicate strict types if already present                0.35s  
+  ✓ it handles file with existing namespace                              0.35s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\AssetActionsTest
+  ✓ it handles absolute urls in AssetAction                              0.35s  
+  ✓ it returns path if asset already exists in public folder             0.33s  
+  ✓ it resolves module assets correctly in AssetAction                   0.37s  
+  ✓ it calculates asset path correctly in AssetPathAction                0.32s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\CreateDirectoryForFilenameActionTest
+  ✓ it creates directory for filename                                    0.33s  
+  ✓ it does nothing when directory already exists                        0.35s  
+  ✓ it handles root level file                                           0.32s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\FileActionsTest
+  ✓ fix path action works                                                0.33s  
+  ✓ view path action works                                               0.31s  
+  ✓ asset path action works                                              0.34s  
+  ✓ asset action handles absolute urls                                   0.31s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\FixPathActionTest
+  ✓ it normalizes path slashes correctly                                 0.31s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\GetClassNameByPathActionTest
+  ✓ it gets class name from path correctly                               0.32s  
+  ✓ it gets class name from path without namespace correctly             0.36s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\GetComponentsActionTest
+  ✓ it gets and caches components correctly                              0.33s  
+  ✓ it skips abstract classes                                            0.32s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\GetModulePathActionTest
+  ✓ it gets module path from facade correctly                            0.32s  
+  ✓ it gets module path from fallback correctly                          0.34s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\GetViewNameSpacePathActionTest
+  ✓ it gets view namespace path from theme fallback correctly            0.34s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\SvgExistsActionTest
+  ✓ it verifies svg existence                                            0.31s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\ViewPathActionTest
+  ✓ it calculates view path correctly                                    0.40s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\GetModelActionsTest
+  ✓ it gets model class by model type from morph map                     0.31s  
+  ✓ it throws when morph map config is not an array                      0.31s  
+  ✓ it throws when model type key is missing in morph map                0.30s  
+  ✓ it instantiates model by type when id is null                        0.34s  
+  ✓ it loads model by id when record exists                              0.31s  
+  ✓ it throws when model id is provided but record is missing            0.30s  
+  ✓ it returns snake model type from model contract instance             0.35s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\GetTransKeyActionTest
+  ✓ it generates translation keys correctly                              0.35s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Model\DestroyActionTest
+  ✓ it deletes model and returns it                                      0.32s  
+  ✓ it flashes status message on successful delete                       0.37s  
+  ✓ it flashes failure message when delete returns false                 0.37s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\ModelClass\CountActionsTest
+  ✓ count actions work                                                   0.32s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\ModelTypeActionsTest
+  ✓ it resolves model types correctly                                    0.33s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Module\GetModuleConfigActionTest
+  ✓ it returns config array from module config file                      0.39s  
+  ✓ it throws when config file is missing                                0.31s  
+  ✓ it throws when config file does not return array                     0.31s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Module\GetModuleNameActionsTest
+  ✓ it extracts module name from class and model class                   0.32s  
+  ✓ it returns extracted fragment for non-module class signatures        0.34s  
+  ✓ it delegates model instance class to model class action              0.30s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Module\GetModulePathByGeneratorActionTest
+  ✓ it returns path using module_path helper in happy path               0.31s  
+  ✓ it returns module path for another existing generator directory      0.30s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Module\ModuleActionsTest
+  ✓ get module name by class action works                                0.35s  
+  ✓ get module config action works                                       0.31s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Parse\ParsePrintPageStringActionTest
+  ✓ it parses single pages and ranges                                    0.32s  
+  ✓ it throws when no valid page number exists                           0.30s  
+  ✓ it builds inclusive ranges from fromTo helper                        0.35s  
+  ✓ it throws when fromTo end is lower than start                        0.34s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Pdf\PdfActionsTest
+  ✓ it executes pdf by html action correctly                             0.32s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Query\QueryActionsTest
+  ✓ start query log action works                                         0.32s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\String\GetPronounceablePasswordActionTest
+  ✓ it generates pronounceable password correctly                        0.35s  
+  ✓ it handles small length correctly                                    0.29s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\String\GetStrBetweenStartsWithActionTest
+  ✓ it extracts string between markers correctly                         0.32s  
+  ✓ it throws exception when start marker is missing                     0.31s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\String\NormalizeDriverNameActionTest
+  ✓ it normalizes driver names correctly                                 0.35s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\String\SanitizeActionTest
+  ✓ it sanitizes strings correctly                                       0.31s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\String\StringActionsTest
+  ✓ get pronounceable password action works                              0.31s  
+  ✓ get str between starts with action works                             0.30s  
+  ✓ normalize driver name action works                                   0.37s  
+  ✓ sanitize action works                                                0.33s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\View\GetViewByClassActionTest
+  ✓ it converts class names to view names correctly                      0.32s  
+  ✓ it handles singular previous parts correctly                         0.30s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\ViewActionsTest
+  ✓ get view actions work                                                0.36s  
+
+   PASS  Modules\Xot\tests\Unit\HasExtraTraitTest
+  ✓ HasExtraTrait → it uses the trait correctly                          0.31s  
+  ✓ HasExtraTrait → it has extra relationship method                     0.30s  
+  ✓ HasExtraTrait → it returns null for non-existent extra               0.35s  
+  ✓ HasExtraTrait → it can get extra attributes                          0.34s  
+  ✓ HasExtraTrait → it has setExtra method                               0.33s  
+
+   PASS  Modules\Xot\tests\Unit\MetatagDataTest
+  ✓ MetatagData può essere istanziata                                    0.03s  
+  ✓ getFilamentColors restituisce i colori Filament corretti
+  ✓ getColors gestisce correttamente i colori personalizzati
+  ✓ getLogoHeight restituisce il valore corretto
+  ✓ Le proprietà hanno i valori di default corretti
+
+   PASS  Modules\Xot\tests\Unit\Models\XotBaseModelBusinessLogicTest
+  ✓ XotBaseModel Business Logic → xot base model extends eloquent model  0.38s  
+  ✓ XotBaseModel Business Logic → xot base model can be instantiated vi… 0.46s  
+  ✓ XotBaseModel Business Logic → xot base model provides foundation fo… 0.32s  
+
+   PASS  Modules\Xot\tests\Unit\ModuleServiceTest
+  ✓ ModuleService → it can be instantiated                               0.37s  
+  ✓ ModuleService → it has correct module name property                  0.33s  
+  ✓ ModuleService → it can be instantiated with different module names   0.36s  
+  ✓ ModuleService → it has getModels method                              0.31s  
+  ✓ ModuleService → it returns array from getModels method               0.30s  
+  ✓ ModuleService → it getModels returns correct array structure         0.31s  
+  ✓ ModuleService → it filters abstract classes correctly                0.37s  
+  ✓ ModuleService → it handles reflection exceptions gracefully          0.31s  
+  ✓ ModuleService → it processes model names correctly                   0.31s  
+  ✓ ModuleService → it has proper return type annotation                 0.37s  
+  ✓ ModuleService → it validates method signature                        0.35s  
+  ✓ ModuleService → it handles empty module gracefully                   0.35s  
+  ✓ ModuleService → it uses correct namespace patterns                   0.31s  
+  ✓ ModuleService → it uses setName method for configuration             0.31s  
+  ✓ ModuleService → it validates class structure                         0.34s  
+  ✓ ModuleService → it has proper method visibility                      0.31s  
+  ✓ ModuleService → it handles module facade interactions                0.30s  
+  ✓ ModuleService → it processes file extensions correctly               0.31s  
+  ✓ ModuleService → it validates string utilities usage                  0.35s  
+  ✓ ModuleService → it handles reflection class instantiation            0.33s  
+  ✓ ModuleService → it has proper error handling                         0.32s  
+
+   PASS  Modules\Xot\tests\Unit\SendMailByRecordActionTest
+  ✓ it throws if record has no email                                     0.41s  
+
+   PASS  Modules\Xot\tests\Unit\Services\ArtisanServiceTest
+  ✓ artisan service act method returns empty string for unknown command… 0.31s  
+  ✓ artisan service act method handles migrate command                   0.31s  
+  ✓ artisan service act method handles module parameter                  0.30s  
+  ✓ artisan service handles non-string module parameter                  0.35s  
+
+   PASS  Modules\Xot\tests\Unit\Services\ThemeServiceTest
+  ✓ it sets and gets theme                                               0.33s  
+  ✓ it checks if theme is active                                         0.31s  
+  ✓ it gets theme path                                                   0.30s  
+
+   PASS  Modules\Xot\tests\Unit\Services\UrlServiceTest
+  ✓ it can be instantiated                                               0.37s  
+  ✓ it can get instance via getInstance                                  0.30s  
+  ✓ it can get instance via make                                         0.30s  
+  ✓ it validates correct urls                                            0.30s  
+  ✓ it invalidates incorrect urls                                        0.34s  
+
+   PASS  Modules\Xot\tests\Unit\Traits\EnumTraitTest
+  ✓ it gets label via translation                                        0.32s  
+  ✓ it gets color via translation                                        0.30s  
+  ✓ it gets icon via translation                                         0.30s  
+  ✓ it gets description via translation                                  0.35s  
+  ✓ it gets searchable values                                            0.31s  
+  ✓ it gets form schema                                                  0.34s  
+  ✓ it adds columns to blueprint in create context                       0.31s  
+  ✓ it adds columns to blueprint in update context with hasColumn check  0.39s  
+  ✓ it updates columns calls columns                                     0.31s  
+  ✓ it drops columns                                                     0.30s  
+  ✓ it gets column names                                                 0.31s  
+  ✓ it has default empty column definitions                              0.35s  
+
+   PASS  Modules\Xot\tests\Unit\Traits\Filament\HasCustomModelLabelTest
+  ✓ it gets model label from property                                    0.35s  
+  ✓ it gets model label from model name                                  0.31s  
+  ✓ it gets plural model label from property                             0.35s  
+  ✓ it gets plural model label from singular label                       0.31s  
+  ✓ it gets navigation label                                             0.30s  
+  ✓ it gets breadcrumb                                                   0.31s  
+
+   PASS  Modules\Xot\tests\Unit\Traits\HasCsrfTokenTest
+  ✓ it sets csrf token on mount                                          0.36s  
+  ✓ it verifies csrf token                                               0.41s  
+
+   PASS  Modules\Xot\tests\Unit\Traits\HasCustomRelationsTest
+  ✓ it creates custom relation                                           0.32s  
+
+   PASS  Modules\Xot\tests\Unit\Traits\HasSchemalessAttributesTest
+  ✓ it handles extra attributes scope                                    0.36s  
+  ✓ it handles where extra attribute scope                               0.32s  
+  ✓ it gets and sets extra attributes                                    0.36s  
+  ✓ it returns all extra attributes as array                             0.34s  
+  ✓ it removes extra attribute                                           0.37s  
+  ✓ it syncs extra attributes calls save                                 0.31s  
+
+   PASS  Modules\Xot\tests\Unit\Traits\HasTableFunctionsTraitTest
+  ✓ it gets table columns                                                0.33s  
+  ✓ it gets table actions                                                0.31s  
+  ✓ it gets table bulk actions                                           0.35s  
+  ✓ it has default resource slug                                         0.30s  
+
+   PASS  Modules\Xot\tests\Unit\ValueObjects\EmailValueObjectTest
+  ✓ it accepts valid email                                               0.32s  
+  ✓ it throws on invalid email                                           0.30s  
+
+   PASS  Modules\Xot\tests\Unit\ValueObjects\PhoneValueObjectTest
+  ✓ it accepts valid phone                                               0.36s  
+  ✓ it throws on invalid phone                                           0.31s  
+
+   PASS  Modules\Xot\tests\Unit\XotBaseTransitionTest
+  ✓ XotBaseTransition → it can be instantiated                           0.31s  
+  ✓ XotBaseTransition → it has static name property                      0.34s  
+  ✓ XotBaseTransition → it can get record                                0.30s  
+  ✓ XotBaseTransition → it can send notifications without errors         0.32s  
+  ✓ XotBaseTransition → it returns correct notification recipients stru… 0.31s  
+  ✓ XotBaseTransition → it can send recipient notification               0.37s  
+  ✓ XotBaseTransition → it validates abstract class structure            0.31s  
+
+  Tests:    1002 passed (2739 assertions)
+  Duration: 279.83s
+

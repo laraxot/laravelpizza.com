@@ -1,0 +1,10 @@
+{
+  "permission": {
+    "read": {
+      "/var/www/_bases/base_laravelpizza/.opencode/get-shit-done/*": "allow"
+    },
+    "external_directory": {
+      "/var/www/_bases/base_laravelpizza/.opencode/get-shit-done/*": "allow"
+    }
+  }
+}

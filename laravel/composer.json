@@ -104,15 +104,7 @@
         "merge-plugin": {
             "include": [
                 "Modules/*/composer.json"
-            ],
-            "recurse": true,
-            "replace": false,
-            "ignore-duplicates": false,
-            "merge-dev": true,
-            "merge-extra": false,
-            "merge-extra-deep": false,
-            "merge-replace": true,
-            "merge-scripts": false
+            ]
         }
     },
     "config": {
@@ -127,10 +119,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require-dev": {
-        "filament/upgrade": "^5.0",
-        "nunomaduro/phpinsights": "^2.13",
-        "pestphp/pest-plugin-laravel": "^4.0"
-    }
+    "prefer-stable": true
 }

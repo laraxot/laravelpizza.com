@@ -1,0 +1,20 @@
+{
+    "id": "71",
+    "name": {
+        "it": "Test Section",
+        "en": "Test Section"
+    },
+    "slug": "test-section",
+    "blocks": {
+        "it": [
+            {
+                "type": "header",
+                "content": "Test section content"
+            }
+        ]
+    },
+    "created_at": "2026-03-05T07:51:11.000000Z",
+    "updated_at": "2026-03-05T07:51:11.000000Z",
+    "created_by": null,
+    "updated_by": null
+}

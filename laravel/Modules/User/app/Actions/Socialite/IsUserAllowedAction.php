@@ -17,11 +17,6 @@ class IsUserAllowedAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly Assert $assert,
-        private readonly Str $stringHelper,
-    ) {}
-
     /**
      * Execute the action.
      */
@@ -34,9 +29,9 @@ class IsUserAllowedAction
             return true;
         }
 
-        $this->assert->notNull($user->getEmail(), '['.__FILE__.']['.__LINE__.']');
+        Assert::notNull($user->getEmail(), '['.__FILE__.']['.__LINE__.']');
         // Get the domain of the email for the specified user
-        $emailDomain = $this->stringHelper->of($user->getEmail())
+        $emailDomain = Str::of($user->getEmail())
             ->afterLast('@')
             ->lower()
             ->__toString();
