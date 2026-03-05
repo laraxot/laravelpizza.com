@@ -729,6 +729,29 @@ Open items (file coverage < 100%): **1594**
 - Verifica locale: `139 passed` sul subset Notify Actions.
 - 15 file marcati come testati in coverage-plan.md
 
+### 2026-03-05 (Notify: SMS/Telegram/WhatsApp/Channels coverage batch - 15 file)
+- Aggiunti test per Notify SMS Actions:
+  - `Modules/Notify/tests/Unit/Actions/SMS/SendNexmoSMSActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/SMS/SendPlivoSMSActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/SMS/SendSmsFactorSMSActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/SMS/SendTwilioSMSActionTest.php`
+- Aggiunti test per Notify Telegram Actions:
+  - `Modules/Notify/tests/Unit/Actions/Telegram/SendBotmanTelegramActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/Telegram/SendNutgramTelegramActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/Telegram/SendOfficialTelegramActionTest.php`
+- Aggiunti test per Notify WhatsApp Actions:
+  - `Modules/Notify/tests/Unit/Actions/WhatsApp/Send360dialogWhatsAppActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/WhatsApp/SendFacebookWhatsAppActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/WhatsApp/SendTwilioWhatsAppActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/WhatsApp/SendVonageWhatsAppActionTest.php`
+- Aggiunti test per Notify Channels:
+  - `Modules/Notify/tests/Unit/Channels/NetfunChannelTest.php`
+  - `Modules/Notify/tests/Unit/Channels/SmsChannelTest.php`
+  - `Modules/Notify/tests/Unit/Channels/TelegramChannelTest.php`
+  - `Modules/Notify/tests/Unit/Channels/WhatsAppChannelTest.php`
+- Verifica locale: `140 passed` sul subset Notify SMS/Telegram/WhatsApp/Channels.
+- 21 file marcati come testati in coverage-plan.md
+
 ### Media (60)
 - [ ] `laravel/Modules/Media/app/Actions/CloudFront/GetCloudFrontSignedUrlAction.php` (0/11, 0.0%)
 - [x] `laravel/Modules/Media/app/Actions/GetAttachmentsSchemaAction.php` (tested, 2026-03-05)
@@ -818,27 +841,27 @@ Open items (file coverage < 100%): **1594**
 - [x] `laravel/Modules/Notify/app/Actions/SMS/SendAgiletelecomSMSv2Action.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Notify/app/Actions/SMS/SendGammuSMSAction.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Notify/app/Actions/SMS/SendNetfunSMSAction.php` (tested, 2026-03-05)
-- [ ] `laravel/Modules/Notify/app/Actions/SMS/SendNexmoSMSAction.php` (0/40, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/SMS/SendPlivoSMSAction.php` (0/38, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/SMS/SendSmsFactorSMSAction.php` (0/36, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/SMS/SendTwilioSMSAction.php` (0/39, 0.0%)
+- [x] `laravel/Modules/Notify/app/Actions/SMS/SendNexmoSMSAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/SMS/SendPlivoSMSAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/SMS/SendSmsFactorSMSAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/SMS/SendTwilioSMSAction.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Notify/app/Actions/SendAppointmentNotificationAction.php` (0/13, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Actions/SendNotificationAction.php` (0/79, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Actions/SendNotificationToRecipientAction.php` (0/4, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Actions/SendRecordNotificationAction.php` (0/9, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Actions/SendRecordsNotificationAction.php` (0/29, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Actions/SmtpMailSendAction.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/Telegram/SendBotmanTelegramAction.php` (0/85, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/Telegram/SendNutgramTelegramAction.php` (0/81, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/Telegram/SendOfficialTelegramAction.php` (0/81, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/WhatsApp/Send360dialogWhatsAppAction.php` (0/90, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/WhatsApp/SendFacebookWhatsAppAction.php` (0/87, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/WhatsApp/SendTwilioWhatsAppAction.php` (0/71, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/WhatsApp/SendVonageWhatsAppAction.php` (0/100, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Channels/NetfunChannel.php` (0/17, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Channels/SmsChannel.php` (0/8, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Channels/TelegramChannel.php` (0/8, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Channels/WhatsAppChannel.php` (0/8, 0.0%)
+- [x] `laravel/Modules/Notify/app/Actions/Telegram/SendBotmanTelegramAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/Telegram/SendNutgramTelegramAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/Telegram/SendOfficialTelegramAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/WhatsApp/Send360dialogWhatsAppAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/WhatsApp/SendFacebookWhatsAppAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/WhatsApp/SendTwilioWhatsAppAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/WhatsApp/SendVonageWhatsAppAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Channels/NetfunChannel.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Channels/SmsChannel.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Channels/TelegramChannel.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Channels/WhatsAppChannel.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php` (0/110, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Console/Commands/SendMailCommand.php` (0/12, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Console/Commands/TelegramWebhook.php` (0/1, 0.0%)
