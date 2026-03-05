@@ -25,7 +25,7 @@ class LogModelCreatedAction
             type: 'created',
             subject: $model,
             description: sprintf('%s was created', class_basename($model)),
-            properties: $model->toArray()
+            properties: (array) $model->toArray()
         );
     }
 }

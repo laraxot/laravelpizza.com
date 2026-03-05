@@ -168,6 +168,30 @@ Open items (file coverage < 100%): **1375**
 - Verifica locale: `11 passed`.
 - Nota tecnica: `TelegramActionFactory` attualmente lancia eccezione anche su driver `official` per mancata implementazione di `TelegramProviderActionInterface` nella action target; coperto con test comportamentale.
 
+### 2026-03-05 (Notify: small files quick-win batch)
+- Aggiunti test su:
+  - `Modules/Notify/tests/Unit/Console/TelegramWebhookCommandTest.php`
+  - `Modules/Notify/tests/Unit/Models/Policies/MailTemplatePolicyTest.php`
+  - `Modules/Notify/tests/Unit/Models/Traits/HasContactTest.php`
+  - `Modules/Notify/tests/Unit/Traits/NotifyTraitsCoverageTest.php`
+  - `Modules/Notify/tests/Unit/Notifications/Channels/NotificationsChannelsTest.php`
+- Verifica locale: `9 passed`.
+
+### 2026-03-05 (Notify: notifications consolidation batch)
+- Aggiunto test consolidato:
+  - `Modules/Notify/tests/Unit/Notifications/NotificationsCoverageTest.php`
+- Coperti notifications:
+  - `EmailDataNotification`
+  - `GenericNotification`
+  - `RecordNotification`
+  - `SmsNotification`
+  - `TelegramNotification`
+  - `ThemeNotification`
+  - `TicketAssignedNotification`
+  - `TicketStatusChangedNotification`
+  - `WhatsAppNotification`
+- Verifica locale: `8 passed`.
+
 ### 2026-03-05 (Cms/Gdpr: Providers/View/Traits/Actions coverage batch)
 - Aggiunti test per Cms Providers:
   - `Modules/Cms/tests/Unit/Providers/CmsServiceProviderTest.php`
@@ -875,7 +899,7 @@ Open items (file coverage < 100%): **1375**
   - Verifica: 234 tests passano (490 assertions)
   - Total added: 21 tests, 542 LOC
 
-### Notify (115)
+### Notify (98)
 - [x] `laravel/Modules/Notify/app/Actions/BuildMailMessageAction.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Notify/app/Actions/DetermineSeasonalContentViewPathAction.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Notify/app/Actions/EsendexSendAction.php` (tested, 2026-03-05)
@@ -912,7 +936,6 @@ Open items (file coverage < 100%): **1375**
 - [x] `laravel/Modules/Notify/app/Channels/WhatsAppChannel.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Notify/app/Console/Commands/SendMailCommand.php` (tested, 2026-03-05)
-- [ ] `laravel/Modules/Notify/app/Console/Commands/TelegramWebhook.php` (0/1, 0.0%)
 - [x] `laravel/Modules/Notify/app/Datas/EmailAttachmentData.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Notify/app/Datas/EmailData.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Notify/app/Datas/NotificationData.php` (tested, 2026-03-05)
@@ -970,27 +993,11 @@ Open items (file coverage < 100%): **1375**
 - [ ] `laravel/Modules/Notify/app/Models/Notification.php` (0/9, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Models/NotificationTemplate.php` (0/58, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Models/NotifyTheme.php` (0/17, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Models/Policies/MailTemplatePolicy.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Models/Traits/HasContact.php` (0/2, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Notifications/Channels/NetfunChannel.php` (0/5, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Notifications/Channels/TelegramChannel.php` (0/12, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Notifications/EmailDataNotification.php` (0/19, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Notifications/FirebaseAndroidNotification.php` (0/54, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Notifications/GenericNotification.php` (0/45, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Notifications/RecordNotification.php` (0/39, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Notifications/SmsNotification.php` (0/20, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Notifications/TelegramNotification.php` (0/5, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Notifications/ThemeNotification.php` (0/14, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Notifications/TicketAssignedNotification.php` (0/9, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Notifications/TicketStatusChangedNotification.php` (0/10, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Notifications/WhatsAppNotification.php` (0/18, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Services/MailEngines/MailtrapEngine.php` (0/16, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Services/NotificationManager.php` (0/31, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Services/PushNotificationService.php` (0/274, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Services/SmsService.php` (0/38, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Traits/HasNotificationRateLimiting.php` (0/17, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Traits/HasNotificationTracking.php` (0/28, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Traits/HasTenantNotifications.php` (0/17, 0.0%)
 
 ### Seo (2)
 - [x] `laravel/Modules/Seo/app/Actions/GenerateSocialShareLinksAction.php` (tested, 2026-03-05)

@@ -9,17 +9,18 @@ use Illuminate\Support\Str;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Models\Event;
+use Modules\Meetup\Models\Venue;
 use Modules\User\Models\User;
 
 /**
- * @extends Factory<\Modules\Meetup\Models\Event>
+ * @extends Factory<Event>
  */
 class EventFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
-     * @var class-string<\Modules\Meetup\Models\Event>
+     * @var class-string<Event>
      */
     protected $model = Event::class;
 
@@ -37,12 +38,13 @@ class EventFactory extends Factory
 
         return [
             'title' => $title,
-            'slug' => Str::slug($title),
+            'slug' => Str::slug($title).'-'.Str::random(4),
             'description' => $this->faker->paragraph(3),
             'in_language' => 'it',
             'start_date' => $startDate,
             'end_date' => $endDate,
             'location' => $this->faker->address(),
+            'location_id' => null,
             'status' => 'published',
             'event_status' => EventStatus::SCHEDULED,
             'event_attendance_mode' => EventAttendanceMode::OFFLINE,
@@ -60,10 +62,33 @@ class EventFactory extends Factory
      */
     public function past(): static
     {
-        return $this->state(fn (array $attributes) => [
-            'start_date' => $this->faker->dateTimeBetween('-1 year', '-1 month'),
-            'end_date' => $this->faker->dateTimeBetween('-1 year', '-1 month'),
-        ]);
+        return $this->state(function (array $attributes): array {
+            $startDate = $this->faker->dateTimeBetween('-1 year', '-1 month');
+            $endDate = (clone $startDate)->modify('+'.rand(1, 4).' hours');
+
+            return [
+                'start_date' => $startDate,
+                'end_date' => $endDate,
+                'event_status' => EventStatus::COMPLETED,
+            ];
+        });
+    }
+
+    /**
+     * Indicate that the event is upcoming.
+     */
+    public function upcoming(): static
+    {
+        return $this->state(function (array $attributes): array {
+            $startDate = $this->faker->dateTimeBetween('+1 week', '+6 months');
+            $endDate = (clone $startDate)->modify('+'.rand(1, 4).' hours');
+
+            return [
+                'start_date' => $startDate,
+                'end_date' => $endDate,
+                'event_status' => EventStatus::SCHEDULED,
+            ];
+        });
     }
 
     /**
@@ -75,5 +100,46 @@ class EventFactory extends Factory
             'event_attendance_mode' => EventAttendanceMode::ONLINE,
             'url' => $this->faker->url(),
         ]);
+    }
+
+    /**
+     * Assign a specific venue to the event.
+     */
+    public function withVenue(Venue $venue): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'location_id' => $venue->id,
+            'location' => $venue->name.', '.$venue->address.', '.$venue->city,
+        ]);
+    }
+
+    /**
+     * Indicate a nearly full event (for REGS-03 capacity testing).
+     */
+    public function nearlyFull(): static
+    {
+        return $this->state(function (array $attributes): array {
+            $max = $this->faker->numberBetween(20, 100);
+
+            return [
+                'max_attendees' => $max,
+                'attendees_count' => (int) ($max * 0.9),
+            ];
+        });
+    }
+
+    /**
+     * Indicate a fully booked event (for REGS-03 capacity testing).
+     */
+    public function fullyBooked(): static
+    {
+        return $this->state(function (array $attributes): array {
+            $max = $this->faker->numberBetween(20, 100);
+
+            return [
+                'max_attendees' => $max,
+                'attendees_count' => $max,
+            ];
+        });
     }
 }

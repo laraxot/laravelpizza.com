@@ -53,3 +53,6 @@ Snapshot: 2026-03-04
 - Batch corrente pianificato (Activity):
   - target rapido su file infrastrutturali a bassa complessita (`Listeners`, `Policies`, `Providers`, `Models` base, `EditActivity`);
   - criterio: chiudere prima i file con poche linee/branch per ridurre backlog condiviso in `docs/coverage-plan.md` senza introdurre test fragili su Filament pages complesse.
+- Batch successivo pianificato (User Events):
+  - target su `Modules/User/app/Events/*` con molti file a copertura minima (1-4 statement);
+  - approccio: test consolidato di istanziazione/proprieta e metodi specifici (`broadcastOn`) per ridurre rapidamente il backlog in `coverage-plan.md`.

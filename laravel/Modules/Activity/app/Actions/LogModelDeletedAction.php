@@ -25,7 +25,7 @@ class LogModelDeletedAction
             type: 'deleted',
             subject: $model,
             description: sprintf('%s was deleted', class_basename($model)),
-            properties: $model->toArray()
+            properties: (array) $model->toArray()
         );
     }
 }

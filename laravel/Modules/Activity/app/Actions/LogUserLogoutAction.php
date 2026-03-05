@@ -27,7 +27,7 @@ class LogUserLogoutAction
         return app(LogActivityAction::class)->execute(
             type: 'logout',
             user: $user,
-            description: sprintf('User %s logged out', $user?->name ?? 'unknown'),
+            description: sprintf('User %s logged out', $user->name ?? 'unknown'),
             properties: [
                 'ip' => request()->ip(),
                 'user_agent' => request()->userAgent(),

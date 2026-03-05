@@ -27,7 +27,7 @@ class LogUserLoginAction
         return app(LogActivityAction::class)->execute(
             type: 'login',
             user: $user,
-            description: sprintf('User %s logged in', $user?->name ?? 'unknown'),
+            description: sprintf('User %s logged in', $user->name ?? 'unknown'),
             properties: [
                 'ip' => request()->ip(),
                 'user_agent' => request()->userAgent(),
