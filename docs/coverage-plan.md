@@ -709,6 +709,26 @@ Open items (file coverage < 100%): **1594**
 - [ ] `laravel/Modules/Lang/app/View/Components/LanguageSwitcher.php` (0/10, 0.0%)
 - [ ] `laravel/Modules/Lang/app/View/Composers/ThemeComposer.php` (0/57, 0.0%)
 
+### 2026-03-05 (Notify: Actions coverage batch - 15 file)
+- Aggiunti test per Notify Actions:
+  - `Modules/Notify/tests/Unit/Actions/BuildMailMessageActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/DetermineSeasonalContentViewPathActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/EsendexSendActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/Mail/GetMailLayoutActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/NetfunSendActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/NormalizePhoneNumberActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/NotifyTheme/GetTest.php`
+  - `Modules/Notify/tests/Unit/Actions/NotifyTheme/Attachment/PdfTest.php`
+  - `Modules/Notify/tests/Unit/Actions/SMS/FormatSmsMessageActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/SMS/NormalizePhoneNumberActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/SMS/SendAgiletelecomSMSActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/SMS/SendAgiletelecomSMSv1ActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/SMS/SendAgiletelecomSMSv2ActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/SMS/SendGammuSMSActionTest.php`
+  - `Modules/Notify/tests/Unit/Actions/SMS/SendNetfunSMSActionTest.php`
+- Verifica locale: `139 passed` sul subset Notify Actions.
+- 15 file marcati come testati in coverage-plan.md
+
 ### Media (60)
 - [ ] `laravel/Modules/Media/app/Actions/CloudFront/GetCloudFrontSignedUrlAction.php` (0/11, 0.0%)
 - [x] `laravel/Modules/Media/app/Actions/GetAttachmentsSchemaAction.php` (tested, 2026-03-05)
@@ -782,22 +802,22 @@ Open items (file coverage < 100%): **1594**
   - Total added: 21 tests, 542 LOC
 
 ### Notify (147)
-- [ ] `laravel/Modules/Notify/app/Actions/BuildMailMessageAction.php` (0/33, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/DetermineSeasonalContentViewPathAction.php` (0/35, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/EsendexSendAction.php` (0/50, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/Mail/GetMailLayoutAction.php` (0/25, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/NetfunSendAction.php` (0/44, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/NormalizePhoneNumberAction.php` (0/13, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/NotifyTheme/Attachment/Pdf.php` (0/18, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/NotifyTheme/Get.php` (0/65, 0.0%)
+- [x] `laravel/Modules/Notify/app/Actions/BuildMailMessageAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/DetermineSeasonalContentViewPathAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/EsendexSendAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/Mail/GetMailLayoutAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/NetfunSendAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/NormalizePhoneNumberAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/NotifyTheme/Attachment/Pdf.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/NotifyTheme/Get.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Notify/app/Actions/SMS/.php-cs-fixer.dist.php` (0/22, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/SMS/FormatSmsMessageAction.php` (0/22, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/SMS/NormalizePhoneNumberAction.php` (0/9, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/SMS/SendAgiletelecomSMSAction.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/SMS/SendAgiletelecomSMSv1Action.php` (0/22, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/SMS/SendAgiletelecomSMSv2Action.php` (0/15, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/SMS/SendGammuSMSAction.php` (0/40, 0.0%)
-- [ ] `laravel/Modules/Notify/app/Actions/SMS/SendNetfunSMSAction.php` (0/45, 0.0%)
+- [x] `laravel/Modules/Notify/app/Actions/SMS/FormatSmsMessageAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/SMS/NormalizePhoneNumberAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/SMS/SendAgiletelecomSMSAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/SMS/SendAgiletelecomSMSv1Action.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/SMS/SendAgiletelecomSMSv2Action.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/SMS/SendGammuSMSAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Notify/app/Actions/SMS/SendNetfunSMSAction.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Notify/app/Actions/SMS/SendNexmoSMSAction.php` (0/40, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Actions/SMS/SendPlivoSMSAction.php` (0/38, 0.0%)
 - [ ] `laravel/Modules/Notify/app/Actions/SMS/SendSmsFactorSMSAction.php` (0/36, 0.0%)
