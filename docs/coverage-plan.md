@@ -169,6 +169,27 @@ Open items (file coverage < 100%): **1594**
 - Verifica locale: `119 passed` sul subset Geo DTO/Datas/Enums (104 test totali).
 - 11 file nuovi testati in coverage-plan.md
 
+### 2026-03-05 (Job: Actions/Events/Enums coverage batch)
+- Aggiunti test per Job Actions:
+  - `Modules/Job/tests/Unit/Actions/Command/GetCommandsActionTest.php`
+  - `Modules/Job/tests/Unit/Actions/Command/GetCommandOptionsActionsTest.php`
+  - `Modules/Job/tests/Unit/Actions/Command/GetCommandArgumentsActionsTest.php`
+  - `Modules/Job/tests/Unit/Actions/DummyActionTest.php`
+  - `Modules/Job/tests/Unit/Actions/ExecuteTaskActionTest.php`
+  - `Modules/Job/tests/Unit/Actions/GetTaskCommandsActionTest.php`
+- Aggiunti test per Job Events:
+  - `Modules/Job/tests/Unit/Events/EventTest.php`
+  - `Modules/Job/tests/Unit/Events/TaskEventTest.php`
+  - `Modules/Job/tests/Unit/Events/BroadcastingEventTest.php`
+  - `Modules/Job/tests/Unit/Events/PrivateEventTest.php`
+  - `Modules/Job/tests/Unit/Events/PublicEventTest.php`
+  - `Modules/Job/tests/Unit/Events/ExecutedTest.php`
+  - `Modules/Job/tests/Unit/Events/ExecutingTest.php`
+- Aggiunti test per Job Enums:
+  - `Modules/Job/tests/Unit/Enums/StatusTest.php`
+- Verifica locale: `110 passed` sul subset Job Actions/Events/Enums.
+- 13 file testati in coverage-plan.md
+
 ## Backlog
 
 ### App (5)
@@ -508,24 +529,26 @@ Open items (file coverage < 100%): **1594**
 - [ ] `laravel/Modules/Geo/app/View/Components/FormSearchAddressCategories.php` (0/5, 0.0%)
 
 ### Job (100)
-- [ ] `laravel/Modules/Job/app/Actions/Command/GetCommandArgumentsActions.php` (0/8, 0.0%)
-- [ ] `laravel/Modules/Job/app/Actions/Command/GetCommandOptionsActions.php` (0/18, 0.0%)
-- [ ] `laravel/Modules/Job/app/Actions/Command/GetCommandsAction.php` (0/38, 0.0%)
-- [ ] `laravel/Modules/Job/app/Actions/DummyAction.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Job/app/Actions/ExecuteTaskAction.php` (0/2, 0.0%)
-- [ ] `laravel/Modules/Job/app/Actions/GetTaskCommandsAction.php` (0/8, 0.0%)
-- [ ] `laravel/Modules/Job/app/Actions/GetTaskFrequenciesAction.php` (0/4, 0.0%)
+- [x] `laravel/Modules/Job/app/Actions/Command/GetCommandArgumentsActions.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Job/app/Actions/Command/GetCommandOptionsActions.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Job/app/Actions/Command/GetCommandsAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Job/app/Actions/DummyAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Job/app/Actions/ExecuteTaskAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Job/app/Actions/GetTaskCommandsAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Job/app/Actions/GetTaskFrequenciesAction.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Job/app/Console/Commands/PhpUnitTestJobCommand.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Job/app/Console/Commands/ScheduleClearCacheCommand.php` (0/2, 0.0%)
 - [ ] `laravel/Modules/Job/app/Console/Commands/TestJobCommand.php` (0/3, 0.0%)
 - [ ] `laravel/Modules/Job/app/Console/Commands/WorkerCheck.php` (0/30, 0.0%)
 - [ ] `laravel/Modules/Job/app/Datas/CommandData.php` (0/2, 0.0%)
-- [ ] `laravel/Modules/Job/app/Enums/Status.php` (0/18, 0.0%)
-- [ ] `laravel/Modules/Job/app/Events/BroadcastingEvent.php` (0/2, 0.0%)
-- [ ] `laravel/Modules/Job/app/Events/Executed.php` (0/8, 0.0%)
-- [ ] `laravel/Modules/Job/app/Events/PrivateEvent.php` (0/2, 0.0%)
-- [ ] `laravel/Modules/Job/app/Events/PublicEvent.php` (0/1, 0.0%)
-- [ ] `laravel/Modules/Job/app/Events/TaskEvent.php` (0/1, 0.0%)
+- [x] `laravel/Modules/Job/app/Enums/Status.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Job/app/Events/BroadcastingEvent.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Job/app/Events/Event.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Job/app/Events/Executed.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Job/app/Events/Executing.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Job/app/Events/PrivateEvent.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Job/app/Events/PublicEvent.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Job/app/Events/TaskEvent.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Job/app/Filament/Columns/ActionGroup.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Job/app/Filament/Columns/ScheduleArguments.php` (0/37, 0.0%)
 - [ ] `laravel/Modules/Job/app/Filament/Columns/ScheduleOptions.php` (0/3, 0.0%)
