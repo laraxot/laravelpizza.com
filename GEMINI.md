@@ -355,29 +355,61 @@ app(DoSomethingAction::class)->execute($data);
 
 ### Pest Coverage Implementation
 
-**Baseline Coverage**: 4.1% (316 tests, 1,669/40,247 lines covered)
+**Status**: 100% Pest Coverage Initiative - IN PROGRESS ✅
 
-**Current Coverage by Module**:
-- Xot: 16.3% (partial)
-- User: 0% (8,565 LOC uncovered - AUTH/OAUTH critical)
-- Notify, Geo, Job, Media, Cms, UI, Activity, Meetup, Lang, Gdpr, Tenant, Seo: 0%
+**Progress Baseline**: 
+- Total source files: 2,013
+- Current test files: 408
+- Generated this session: 56 tests (Meetup models)
+- Target: 2,000+ tests (1,600+ new)
 
-**Priority Phase 1** (achievable in 3-5 days):
-1. User module - 5 critical actions (RevokeAllUserTokensAction, LoginUserAction, etc.)
-2. Meetup module - Core CRUD (Event, Performer, Venue)
-3. Tenant module - Config resolution
-4. Xot module - Increase from 16.3% to 80%+
+**Phase 1: Foundation Modules (Critical)**
+
+| Module | Sources | Current Tests | Goal | Status |
+|--------|---------|---------------|------|--------|
+| Xot | 280 | 117 | 250+ | ⏳ TODO (Action tests: 108 missing) |
+| Meetup | 250 | 5 | 250+ | ⏳ IN PROGRESS (56/250 ✅) |
+| Tenant | 105 | 7 | 60+ | ⏳ TODO (config, DB mapping) |
+| Lang | 110 | 4 | 70+ | ⏳ TODO (localization, middleware) |
+
+**Phase 2: High-Priority Modules**
+| Cms | User | Activity | Geo | Media | Notify | 
+| 180 | 200 | 150 | 120 | 140 | 130 |
+
+**Key Testing Patterns** (documented in `.cursor/rules/pest-testing-patterns.md`):
+1. **Actions** - Spatie QueueableAction: `app(ActionClass::class)->execute($data)`
+2. **Models** - Test relations (especially `belongsToManyX`), scopes, mutations, casts
+3. **Services** - Test every public method with side effects
+4. **Filament** - Test forms, tables, authorization
+5. **belongsToManyX** - XotBase custom trait (NOT standard belongsToMany)
+6. **DatabaseTransactions** - Required, RefreshDatabase forbidden
+
+**Documentation Created**:
+- ✅ `.cursor/rules/pest-testing-patterns.md` (16KB) - Complete testing guide
+- ✅ `docs/memories/test-coverage-learnings.md` (10KB) - Learnings & edge cases
+- ✅ `Modules/Meetup/docs/test-strategy.md` (8KB) - Module-specific strategy
+- ✅ This section in GEMINI.md - Progress tracking
+
+**Key Learnings So Far**:
+1. Use `DatabaseTransactions` (NOT `RefreshDatabase`)
+2. Factory states matter: `factory()->online()`, `factory()->past()`
+3. Slug generation needs `uniqid()` for uniqueness
+4. CMS integration: test `toBlockArray()` and `toSchemaOrg()`
+5. Schema.org structured data for SEO
+6. Cross-connection relations (User DB ↔ Meetup DB)
+7. Anonymous class mocks fail strict typing
 
 **References**:
-- Full coverage guide: `.agents/docs/agents-guide/08-testing/pest-coverage-guide.md`
-- Implementation guide: `.agents/docs/agents-guide/08-testing/coverage-implementation-phase-1.md`
-- Gap analysis: `.agents/docs/agents-guide/08-testing/coverage-gaps-analysis-guide.md`
+- Full testing guide: `.cursor/rules/pest-testing-patterns.md`
+- Implementation learnings: `docs/memories/test-coverage-learnings.md`
+- Coverage progress: GitHub issues #191-205
+- Related commits: dd3958759, e594a7f60, 98cfec88b
 
 ---
 
 > **Ricorda**: Tutti i prompt e la documentazione devono essere **project-agnostic**. Evita nomi specifici e usa placeholder o descrizioni architetturali universali.
 
-**Status**: Super Mucca Attivata 🐄✨
-**Last Updated**:
-**Version**: 4.0
-**Philosophy**: DRY + KISS + SOLID + ROBUST + Laraxot Zen
+**Status**: Super Mucca Attivata 🐄✨ | 100% Pest Coverage In Progress ✅
+**Last Updated**: 2026-03-05
+**Version**: 4.1
+**Philosophy**: DRY + KISS + SOLID + ROBUST + Laraxot Zen + Test Coverage First
