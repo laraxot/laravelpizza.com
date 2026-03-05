@@ -25,7 +25,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [ ] **REGS-01**: Visitor can register for an event with a valid email (FR-004)
 - [ ] **REGS-02**: User receives immediate email confirmation after registration (REGS-01 extension)
-- [ ] **REGS-03**: System prevents over-registration beyond event capacity (REGS-01 extension)
+- [x] **REGS-03**: System prevents over-registration beyond event capacity (REGS-01 extension)
 
 ### CMS & Content Strategy
 
@@ -87,7 +87,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | EVNT-04 | Phase 3 | Pending |
 | REGS-01 | Phase 3 | Pending |
 | REGS-02 | Phase 5 | Pending |
-| REGS-03 | Phase 1 | Pending |
+| REGS-03 | Phase 1 | Complete |
 | CMSP-01 | Phase 3 | Pending |
 | CMSP-02 | Phase 3 | Pending |
 | CMSP-03 | Phase 3 | Pending |
