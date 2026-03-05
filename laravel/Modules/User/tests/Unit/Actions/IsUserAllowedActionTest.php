@@ -21,6 +21,12 @@ describe('IsUserAllowedAction', function (): void {
         return $mock;
     };
 
+    beforeEach(function () {
+        // Clear cached action instances before each test to ensure fresh config reading
+        app()->forgetInstance(IsUserAllowedAction::class);
+        app()->forgetInstance('Modules\User\Actions\Socialite\GetDomainAllowListAction');
+    });
+
     it('allows any user when no restrictions exist', function () use ($getMockUser) {
         // Clear allowlist
         config(['filament-socialite.domain_allowlist' => []]);

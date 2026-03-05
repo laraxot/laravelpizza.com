@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\File;
 use Modules\Meetup\Actions\Event\SeedEventsFromJsonAction;
 use Modules\Meetup\Models\Event;
 use Modules\Meetup\Tests\TestCase;
+use Mockery;
 
 uses(TestCase::class, DatabaseTransactions::class);
 
@@ -39,8 +40,8 @@ test('it can seed events from json file', function () {
 });
 
 test('it logs error if file does not exist', function () {
-    $log = \Mockery::mock(\Psr\Log\LoggerInterface::class);
-    $log->shouldReceive('error')->once()->with(\Mockery::pattern('/Event seeding failed: File not found/'));
+    $log = Mockery::mock(\Psr\Log\LoggerInterface::class);
+    $log->shouldReceive('error')->once()->with(Mockery::pattern('/Event seeding failed: File not found/'));
     app()->instance('log', $log);
 
     app(SeedEventsFromJsonAction::class)->execute('/non/existent/file.json');
@@ -57,8 +58,8 @@ test('it logs warning for invalid date format', function () {
     ];
     File::put($tempFile, json_encode($data));
 
-    $log = \Mockery::mock(\Psr\Log\LoggerInterface::class);
-    $log->shouldReceive('warning')->once()->with(\Mockery::pattern('/Skipping event/'));
+    $log = Mockery::mock(\Psr\Log\LoggerInterface::class);
+    $log->shouldReceive('warning')->once()->with(Mockery::pattern('/Skipping event/'));
     app()->instance('log', $log);
 
     app(SeedEventsFromJsonAction::class)->execute($tempFile);
