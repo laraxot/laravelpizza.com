@@ -1,4 +1,5 @@
 {
+  "$schema": "https://opencode.ai/config.json",
   "permission": {
     "read": {
       "/var/www/_bases/base_laravelpizza/.opencode/get-shit-done/*": "allow"

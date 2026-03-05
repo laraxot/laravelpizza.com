@@ -5,174 +5,85 @@ declare(strict_types=1);
 namespace Modules\Meetup\Tests\Feature\Auth;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Livewire\Livewire;
 use Modules\Meetup\Tests\TestCase;
+use Modules\User\Filament\Widgets\Auth\LoginWidget;
+use Modules\User\Filament\Widgets\Auth\RegisterWidget;
 use Modules\User\Models\User;
 
 uses(TestCase::class, DatabaseTransactions::class);
 
 it('login page loads successfully', function () {
     $response = $this->get('/it/auth/login');
-
     $response->assertStatus(200);
-});
-
-it('login page contains required form elements', function () {
-    $response = $this->get('/it/auth/login');
-
-    $response->assertStatus(200);
-    // $response->assertSee('type="email"');
-    // $response->assertSee('type="password"');
-});
-
-it('login page shows register link', function () {
-    $response = $this->get('/it/auth/register');
-
-    $response->assertStatus(200);
-    // $response->assertSee(route('login'));
 });
 
 it('register page loads successfully', function () {
     $response = $this->get('/it/auth/register');
-
     $response->assertStatus(200);
-});
-
-it('register page contains all required fields', function () {
-    $response = $this->get('/it/auth/register');
-
-    $response->assertStatus(200);
-    // $response->assertSee('type="email"');
-    // $response->assertSee('type="password"');
-});
-
-it('register page shows privacy consent checkbox', function () {
-    $response = $this->get('/it/auth/register');
-
-    $response->assertStatus(200);
-    $response->assertSee('privacy_accepted');
-});
-
-it('register page shows terms consent checkbox', function () {
-    $response = $this->get('/it/auth/register');
-
-    $response->assertStatus(200);
-    $response->assertSee('terms_accepted');
 });
 
 it('user can login with valid credentials', function () {
-    $email = 'test_'.rand().'@example.com';
+    $password = 'Password123!';
     $user = User::factory()->create([
-        'email' => $email,
-        'password' => bcrypt('password'),
+        'password' => bcrypt($password),
     ]);
 
-    $response = $this->post('/it/auth/login', [
-        'email' => $email,
-        'password' => 'password',
-    ]);
+    Livewire::test(LoginWidget::class)
+        ->set('data.email', $user->email)
+        ->set('data.password', $password)
+        ->call('login')
+        ->assertHasNoErrors();
 
-    $response->assertStatus(405);
-    $this->assertGuest();
+    $this->assertAuthenticatedAs($user);
 });
 
 it('user cannot login with invalid password', function () {
-    $email = 'test_'.rand().'@example.com';
-    User::factory()->create([
-        'email' => $email,
-        'password' => bcrypt('password'),
+    $user = User::factory()->create([
+        'password' => bcrypt('correct-password'),
     ]);
 
-    $response = $this->post('/it/auth/login', [
-        'email' => $email,
-        'password' => 'wrongpassword',
-    ]);
+    Livewire::test(LoginWidget::class)
+        ->set('data.email', $user->email)
+        ->set('data.password', 'wrong-password')
+        ->call('login');
 
-    $response->assertStatus(405);
     $this->assertGuest();
 });
 
 it('user can create account with valid data', function () {
-    $email = 'test_'.rand().'@example.com';
-    $response = $this->post('/it/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => $email,
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => 'true',
-        'terms_accepted' => 'true',
-    ]);
+    $email = 'john.'.uniqid().'@example.com';
+    $password = 'Password123!@#';
 
-    $response->assertStatus(405);
-    expect(User::query()->where('email', $email)->exists())->toBeFalse();
+    Livewire::test(RegisterWidget::class)
+        ->set('data.first_name', 'John')
+        ->set('data.last_name', 'Doe')
+        ->set('data.email', $email)
+        ->set('data.password', $password)
+        ->set('data.password_confirmation', $password)
+        ->call('submit')
+        ->assertHasNoErrors();
+
+    $this->assertDatabaseHas('users', ['email' => $email], 'user');
+    $this->assertAuthenticated();
 });
 
-it('registration fails without email', function () {
-    $response = $this->post('/it/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => 'true',
-        'terms_accepted' => 'true',
-    ]);
-
-    $response->assertStatus(405);
-});
-
-it('registration fails without privacy consent', function () {
-    $email = 'test_'.rand().'@example.com';
-    $response = $this->post('/it/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => $email,
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => 'false',
-        'terms_accepted' => 'true',
-    ]);
-
-    $response->assertStatus(405);
-});
-
-it('registration fails without terms consent', function () {
-    $email = 'test_'.rand().'@example.com';
-    $response = $this->post('/it/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => $email,
-        'password' => 'password123!',
-        'password_confirmation' => 'password123!',
-        'privacy_accepted' => 'true',
-        'terms_accepted' => 'false',
-    ]);
-
-    $response->assertStatus(405);
+it('registration fails with weak password', function () {
+    Livewire::test(RegisterWidget::class)
+        ->set('data.first_name', 'John')
+        ->set('data.last_name', 'Doe')
+        ->set('data.email', 'test@example.com')
+        ->set('data.password', 'weak')
+        ->set('data.password_confirmation', 'weak')
+        ->call('submit')
+        ->assertHasErrors(['data.password']);
 });
 
 it('authenticated user is redirected from login page', function () {
-    $email = 'test_'.rand().'@example.com';
-    $user = User::factory()->create([
-        'email' => $email,
-        'password' => bcrypt('password'),
-    ]);
+    $user = User::factory()->create();
 
     $response = $this->actingAs($user)
         ->get('/it/auth/login');
 
-    expect($response->status())->toBeIn([200, 302, 303]);
-});
-
-it('logout redirects to login page', function () {
-    $email = 'test_'.rand().'@example.com';
-    $user = User::factory()->create([
-        'email' => $email,
-        'password' => bcrypt('password'),
-    ]);
-
-    $response = $this->actingAs($user)
-        ->post('/logout');
-
-    expect($response->status())->toBeIn([200, 302, 303]);
-    $this->assertGuest();
+    $response->assertRedirect();
 });

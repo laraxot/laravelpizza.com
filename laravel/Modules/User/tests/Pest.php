@@ -37,36 +37,6 @@ expect()->extend('toBeTeam', fn () => $this->toBeInstanceOf(Team::class));
 
 expect()->extend('toBeProfile', fn () => $this->toBeInstanceOf(Profile::class));
 
-/*
- * |--------------------------------------------------------------------------
- * | Functions
- * |--------------------------------------------------------------------------
- * |
- * | While Pest is very powerful out-of-the-box, you may have some testing code specific to your
- * | project that you don't want to repeat in every file. Here you can also expose helpers as
- * | global functions to help you to reduce the number of lines of code in your test files.
- * |
- */
-
-function createUser(array $attributes = []): User
-{
-    return User::factory()->create($attributes);
-}
-
-function makeUser(array $attributes = []): User
-{
-    return User::factory()->make($attributes);
-}
-
-function createTeam(array $attributes = []): Team
-{
-    return Team::factory()->create($attributes);
-}
-
-function createProfile(array $attributes = []): Profile
-{
-    return Profile::factory()->create($attributes);
-}
 
 /*
  * |--------------------------------------------------------------------------
