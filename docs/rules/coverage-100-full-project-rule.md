@@ -23,9 +23,16 @@ Portare Pest al 100% in modo verificabile e ripetibile:
 ## Standard ufficiali da applicare
 
 - Pest code coverage richiede Xdebug/PCOV/phpdbg attivi.
+- Se si usa PCOV, `pcov.directory` deve includere l'intero progetto Laravel (`laravel/`) e non solo `laravel/app`, altrimenti i moduli `Modules/*` risultano sempre a `0.0%`.
 - Soglie: usare `--min` per gate minimo e `--exactly` quando si vuole match esatto.
 - Type coverage e separato dalla code coverage e richiede plugin dedicato.
 - Con Laravel Modules, la struttura test standard resta `Modules/*/tests/...` (Unit/Feature/Integration/Performance).
+
+## Guardrail operativi aggiuntivi
+
+1. Non rinominare in massa i test `*.php` in `*.old`: genera `No tests found` e produce una coverage non valida.
+2. Se si incontrano file vendor rinominati anomali (es. `Test.php.old`), ripristinare immediatamente prima di ogni run coverage.
+3. Prima di perseguire il 100%, la baseline deve essere: test discovery corretta + suite green senza errori infrastrutturali.
 
 ## Fonti
 

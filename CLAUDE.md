@@ -546,6 +546,44 @@ git push origin feature/your-feature
 14. ❌ Forgetting `npm run copy` after theme build
     ✅ Always run copy to deploy assets
 
+## Testing & Coverage (100% Pest Initiative)
+
+**Goal:** 100% Pest test coverage across all 14 modules.
+
+**Status:** In progress - Meetup models done (56 tests, 110 assertions ✅)
+
+**Key Rules:**
+- ✅ Use `DatabaseTransactions` trait
+- ❌ NEVER use `RefreshDatabase`
+- ✅ Test via `php artisan test`
+- ✅ Use Pest `#[Test]` attributes
+- ✅ Follow testing patterns in `.cursor/rules/pest-testing-patterns.md`
+
+**Testing belongsToManyX (Critical Pattern):**
+```php
+// XotBase uses belongsToManyX, NOT belongsToMany
+$event->participants()->attach($user->id, ['role' => 'speaker']);
+$this->assertCount(1, $event->participants);
+```
+
+**Coverage Location:** See `.cursor/rules/pest-testing-patterns.md` for complete guide
+
+**Related Documentation:**
+- `.cursor/rules/pest-testing-patterns.md` - All testing patterns
+- `docs/memories/test-coverage-learnings.md` - Key learnings & edge cases
+- `Modules/{Module}/docs/test-strategy.md` - Module-specific strategies
+
+**Baseline Metrics:**
+| Metric | Value |
+|--------|-------|
+| Total modules | 14 |
+| Total source files | 2,013 |
+| Current test files | 408 |
+| Target: New tests | ~1,600 |
+| Meetup models tested | 56 ✅ |
+
+---
+
 ## PHPStan Configuration
 
 The project uses PHPStan level 10 (maximum strictness):

@@ -40,3 +40,7 @@ Snapshot: 2026-03-04
 - Errore `No tests found` dovuto a rinomina massiva dei test in `.old`:
   - trovati 255 file `*.php.old` sotto `tests/` e `Modules/*/tests/`;
   - con tutti i test in `.old`, Pest non esegue suite e la coverage risulta `0.0%`.
+- Coverage globale ancora `0.0%` nonostante test passanti:
+  - root cause: `pcov.directory` globale puntato a `laravel/app`;
+  - impatto: codice in `Modules/*/app` escluso dalla strumentazione PCOV;
+  - azione richiesta: allineare `pcov.directory` alla root `laravel/` in configurazione stabile di test coverage.
