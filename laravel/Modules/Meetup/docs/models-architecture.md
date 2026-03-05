@@ -526,3 +526,20 @@ public function getImageUrlAttribute(): ?string
 - [Schema Database](./database-schema.md)
 - [Business Logic](./business-logic.md)
 - [Documentazione Xot Base](../../xot/docs/models/model_architecture.md)
+
+## Foundation Plan 01-01: Core Event Relations
+
+Per la foundation del modulo Meetup, il modello `Event` deve mantenere queste relazioni minime:
+
+- `venue(): BelongsTo<Venue, $this>` su colonna `venue_id` (nullable)
+- `performers(): BelongsToManyX<Performer, $this>` via pivot `event_performer`
+- `sponsors(): BelongsToManyX<Sponsor, $this>` via pivot `event_sponsor`
+- `users(): BelongsToManyX<User, $this>` via pivot `event_user` (registrazioni)
+
+Allineamento FK richiesto sui pivot:
+
+- `event_performer`: `event_id`, `performer_id`
+- `event_sponsor`: `event_id`, `sponsor_id`
+- `event_user`: `event_id`, `user_id`
+
+Nota: per relazioni many-to-many nel contesto Laraxot usare sempre `belongsToManyX()` e non `belongsToMany()`.
