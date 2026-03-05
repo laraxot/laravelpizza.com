@@ -29,9 +29,11 @@ LaravelPizza is a modernized meetup platform for the Italian Laravel community. 
   1. Models for Event, Venue, Performer, Sponsor exist with proper types.
   2. Migrations for all core entities are completed and tested.
   3. Factories and Seeders generate realistic meetup data.
-**Plans**: 2 plans
+**Plans**: 4 plans
 - [ ] 01-01: Create core migrations and models for Meetup module.
+- [ ] 01-04: Consolidate and verify migration set for entities and pivots.
 - [ ] 01-02: Implement factories and seeders for realistic data generation.
+- [ ] 01-03: Verify foundation artifacts and REGS-03 readiness with focused tests.
 
 ### Phase 2: Core Domain Actions
 **Goal**: Implement the business logic for event operations.
