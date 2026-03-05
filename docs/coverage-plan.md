@@ -206,6 +206,17 @@ Open items (file coverage < 100%): **1594**
 - Verifica locale: `110 passed` sul subset Job Actions/Events/Enums.
 - 13 file testati in coverage-plan.md
 
+### 2026-03-05 (Media: Actions/Models coverage batch)
+- Aggiunti test per Media Actions:
+  - `Modules/Media/tests/Unit/Actions/AttachMediaActionTest.php`
+- Aggiunti test per Media Models:
+  - `Modules/Media/tests/Unit/Models/BaseModelTest.php`
+  - `Modules/Media/tests/Unit/Models/MediaModelTest.php`
+  - `Modules/Media/tests/Unit/Models/MediaConvertTest.php`
+  - `Modules/Media/tests/Unit/Models/TemporaryUploadTest.php`
+- Verifica locale: `72 passed` sul subset Media Actions/Models.
+- 5 file testati in coverage-plan.md
+
 ## Backlog
 
 ### App (5)
@@ -700,7 +711,7 @@ Open items (file coverage < 100%): **1594**
 
 ### Media (60)
 - [ ] `laravel/Modules/Media/app/Actions/CloudFront/GetCloudFrontSignedUrlAction.php` (0/11, 0.0%)
-- [ ] `laravel/Modules/Media/app/Actions/GetAttachmentsSchemaAction.php` (0/29, 0.0%)
+- [x] `laravel/Modules/Media/app/Actions/GetAttachmentsSchemaAction.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Media/app/Actions/Image/Merge.php` (0/43, 0.0%)
 - [ ] `laravel/Modules/Media/app/Actions/Image/SvgExistsAction.php` (0/13, 0.0%)
 - [ ] `laravel/Modules/Media/app/Actions/S3/BaseS3Action.php` (0/17, 0.0%)
@@ -708,7 +719,8 @@ Open items (file coverage < 100%): **1594**
 - [ ] `laravel/Modules/Media/app/Actions/S3/DeleteFileAction.php` (0/26, 0.0%)
 - [ ] `laravel/Modules/Media/app/Actions/S3/GetFileInfoAction.php` (0/35, 0.0%)
 - [ ] `laravel/Modules/Media/app/Actions/S3/UploadFileAction.php` (0/58, 0.0%)
-- [ ] `laravel/Modules/Media/app/Actions/SaveAttachmentsAction.php` (0/42, 0.0%)
+- [x] `laravel/Modules/Media/app/Actions/SaveAttachmentsAction.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Media/app/Actions/AttachMediaAction.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Media/app/Actions/Video/ConvertVideoAction.php` (0/9, 0.0%)
 - [ ] `laravel/Modules/Media/app/Actions/Video/ConvertVideoByConvertDataAction.php` (0/20, 0.0%)
 - [ ] `laravel/Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php` (0/25, 0.0%)
@@ -744,14 +756,14 @@ Open items (file coverage < 100%): **1594**
 - [ ] `laravel/Modules/Media/app/Http/Controllers/ConvertController.php` (0/3, 0.0%)
 - [ ] `laravel/Modules/Media/app/Http/Livewire/Card/Video/Clip.php` (0/15, 0.0%)
 - [ ] `laravel/Modules/Media/app/Http/Requests/CreateTemporaryUploadFromDirectS3UploadRequest.php` (0/19, 0.0%)
-- [ ] `laravel/Modules/Media/app/Models/BaseModel.php` (0/11, 0.0%)
-- [ ] `laravel/Modules/Media/app/Models/Media.php` (0/48, 0.0%)
-- [ ] `laravel/Modules/Media/app/Models/MediaConvert.php` (0/11, 0.0%)
+- [x] `laravel/Modules/Media/app/Models/BaseModel.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Media/app/Models/Media.php` (tested, 2026-03-05)
+- [x] `laravel/Modules/Media/app/Models/MediaConvert.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Media/app/Models/Policies/MediaBasePolicy.php` (0/4, 0.0%)
 - [ ] `laravel/Modules/Media/app/Models/Policies/MediaConvertPolicy.php` (0/7, 0.0%)
 - [ ] `laravel/Modules/Media/app/Models/Policies/MediaPolicy.php` (0/7, 0.0%)
 - [ ] `laravel/Modules/Media/app/Models/Policies/TemporaryUploadPolicy.php` (0/7, 0.0%)
-- [ ] `laravel/Modules/Media/app/Models/TemporaryUpload.php` (0/62, 0.0%)
+- [x] `laravel/Modules/Media/app/Models/TemporaryUpload.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Media/app/Providers/EventServiceProvider.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Media/app/Providers/Filament/AdminPanelProvider.php` (0/1, 0.0%)
 - [ ] `laravel/Modules/Media/app/Rules/FileExtensionRule.php` (0/10, 0.0%)
