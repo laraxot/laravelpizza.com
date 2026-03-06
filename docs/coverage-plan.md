@@ -811,7 +811,7 @@ After fixing Phase 1, run full test suite and identify:
 - [x] `laravel/Modules/Cms/app/Http/View/Composers/XotComposer.php` (tested, 2026-03-06)
 - [x] `laravel/Modules/Cms/app/Http/Volt/CounterComponent.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Cms/app/Http/Volt/LoginComponent.php` (tested, 2026-03-05)
-- [ ] `laravel/Modules/Cms/app/Http/Volt/Password/ConfirmComponent.php` (0/3, 0.0%)
+- [x] `laravel/Modules/Cms/app/Http/Volt/Password/ConfirmComponent.php` (tested, 2026-03-06)
 - [ ] `laravel/Modules/Cms/app/Http/Volt/Password/ResetComponent.php` (0/9, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Http/Volt/Password/TokenComponent.php` (0/27, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Http/Volt/RegisterComponent.php` (0/9, 0.0%)
@@ -2493,3 +2493,11 @@ php artisan test --coverage
 # Specific test file
 ./vendor/bin/pest Modules/YourModule/tests/Unit/SomeTest.php --compact
 ```
+
+## Aggiornamento Operativo - 2026-03-06 (Cms Volt password confirm)
+- Aggiunto/assestato test unit:
+  - `Modules/Cms/tests/Unit/Http/Volt/Password/ConfirmComponentTest.php`
+- Verifica locale subset Volt Cms:
+  - `./vendor/bin/pest Modules/Cms/tests/Unit/Http/Volt/Password/ConfirmComponentTest.php Modules/Cms/tests/Unit/Http/Volt/LoginComponentTest.php Modules/Cms/tests/Unit/Http/Volt/CounterComponentTest.php --compact` -> `16 passed`
+- Stato backlog aggiornato:
+  - marcato come testato `laravel/Modules/Cms/app/Http/Volt/Password/ConfirmComponent.php`.

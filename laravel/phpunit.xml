@@ -12,9 +12,23 @@
     </testsuites>
     <source>
         <include>
-            <directory suffix=".php">./Modules/*/app</directory>
+            <directory suffix=".php">./Modules/*/app/Actions</directory>
+            <directory suffix=".php">./Modules/*/app/Models</directory>
+            <directory suffix=".php">./Modules/*/app/Services</directory>
+            <directory suffix=".php">./Modules/*/app/Traits</directory>
+            <directory suffix=".php">./Modules/*/app/Providers</directory>
+            <directory suffix=".php">./Modules/*/app/Contracts</directory>
+            <directory suffix=".php">./Modules/*/app/Exceptions</directory>
+            <directory suffix=".php">./Modules/*/app/Enums</directory>
+            <directory suffix=".php">./Modules/*/app/Transformers</directory>
+            <directory suffix=".php">./Modules/*/app/Datas</directory>
+            <directory suffix=".php">./Modules/*/app/DataTransferObjects</directory>
             <directory suffix=".php">./app</directory>
         </include>
+        <exclude>
+            <file>./Modules/*/app/Actions/.php-cs-fixer.dist.php</file>
+            <file>./Modules/*/app/Actions/.gitkeep</file>
+        </exclude>
     </source>
     <php>
         <env name="APP_ENV" value="testing"/>

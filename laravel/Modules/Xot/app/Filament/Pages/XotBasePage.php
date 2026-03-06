@@ -116,9 +116,12 @@ abstract class XotBasePage extends Page implements HasForms
         /* @phpstan-ignore property.staticAccess */
         if (null !== static::$model) {
             /** @phpstan-ignore property.staticAccess */
-            /** @var class-string<Model> $modelValue */
             $modelValue = static::$model;
+            if (! class_exists($modelValue) || ! is_subclass_of($modelValue, Model::class)) {
+                throw new \LogicException(sprintf('Configured model %s is not a valid Eloquent model', $modelValue));
+            }
 
+            /* @var class-string<Model> $modelValue */
             return $modelValue;
         }
 
@@ -143,6 +146,9 @@ abstract class XotBasePage extends Page implements HasForms
         // Verifica che la classe del modello esista
         if (! class_exists($modelNamespace)) {
             throw new \LogicException("Model class {$modelNamespace} does not exist");
+        }
+        if (! is_subclass_of($modelNamespace, Model::class)) {
+            throw new \LogicException("Model class {$modelNamespace} must extend ".Model::class);
         }
 
         /* @var class-string<Model> $modelNamespace */

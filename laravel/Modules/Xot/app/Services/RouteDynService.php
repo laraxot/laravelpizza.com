@@ -229,8 +229,17 @@ class RouteDynService
     public static function getMethod(array $v, ?string $_namespace): array
     {
         if (isset($v['method'])) {
-            /* @var array<int, string> */
-            return Arr::wrap($v['method']);
+            $methods = [];
+            foreach (Arr::wrap($v['method']) as $method) {
+                if (! is_string($method)) {
+                    continue;
+                }
+                $methods[] = mb_strtolower($method);
+            }
+
+            if ([] !== $methods) {
+                return $methods;
+            }
         }
 
         return ['get', 'post'];
@@ -321,8 +330,15 @@ class RouteDynService
 
         $sub_namespace = self::getNamespace($v, $namespace);
         $curr = null === $curr ? $sub_namespace : $curr;
-        Assert::isArray($subs = $v['subs']);
-        /* @var array<int, array<string, mixed>> $subs */
+        Assert::isArray($subsRaw = $v['subs']);
+        $subs = [];
+        foreach ($subsRaw as $sub) {
+            if (! is_array($sub)) {
+                continue;
+            }
+            /* @var array<string, mixed> $sub */
+            $subs[] = $sub;
+        }
         self::dynamic_route($subs, $sub_namespace, null, $curr);
     }
 
@@ -336,9 +352,12 @@ class RouteDynService
         }
 
         $controller = self::getController($v, $namespace);
-        foreach ($v['acts'] as $v1) {
-            Assert::isArray($v1);
-            /* @var array<string, mixed> $v1 */
+        foreach ($v['acts'] as $v1Raw) {
+            if (! is_array($v1Raw)) {
+                continue;
+            }
+            /** @var array<string, mixed> $v1 */
+            $v1 = $v1Raw;
             $v1['controller'] = $controller;
 
             $method = self::getMethod($v1, $namespace);

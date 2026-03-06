@@ -65,13 +65,6 @@ use Webmozart\Assert\Assert;
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
  * @method static \Modules\User\Database\Factories\RoleFactory factory($count = null, $state = [])
- *
- * @property \Modules\Meetup\Models\Profile|null $creator
- * @property \Modules\Meetup\Models\Profile|null $deleter
- * @property \Modules\Meetup\Models\Profile|null $updater
- *
- * @method static \Modules\User\Database\Factories\RoleFactory factory($count = null, $state = [])
- *                                                                                                 >>>>>>> da38c10 (.)
  * @method static Builder<static>|Role                         whereUuid($value)
  *
  * @mixin \Eloquent

@@ -38,14 +38,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static \Modules\User\Database\Factories\OauthPersonalAccessClientFactory factory($count = null, $state = [])
  * @method static Builder<static>|OauthPersonalAccessClient                         whereCreatedAt($value)
  *
- * @property \Modules\Meetup\Models\Profile|null $creator
- * @property \Modules\Meetup\Models\Profile|null $deleter
- * @property \Modules\Meetup\Models\Profile|null $updater
- *
- * @method static \Modules\User\Database\Factories\OauthPersonalAccessClientFactory factory($count = null, $state = [])
- * @method static Builder<static>|OauthPersonalAccessClient                         whereCreatedAt($value)
- *                                                                                                                      >>>>>>> da38c10 (.)
- *
  * @mixin \Eloquent
  */
 class OauthPersonalAccessClient extends BaseModel

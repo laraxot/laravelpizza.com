@@ -50,13 +50,6 @@ use Spatie\Permission\Models\Permission as SpatiePermission;
  *
  * @method static \Modules\User\Database\Factories\PermissionFactory factory($count = null, $state = [])
  *
- * @property \Modules\Meetup\Models\Profile|null $creator
- * @property \Modules\Meetup\Models\Profile|null $deleter
- * @property \Modules\Meetup\Models\Profile|null $updater
- *
- * @method static \Modules\User\Database\Factories\PermissionFactory factory($count = null, $state = [])
- *                                                                                                       >>>>>>> da38c10 (.)
- *
  * @mixin \Eloquent
  */
 class Permission extends SpatiePermission
