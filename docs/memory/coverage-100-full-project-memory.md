@@ -100,3 +100,6 @@ Snapshot: 2026-03-04
   - su suite condivisa con DB popolato, i test UI che assumono cardinalita fissa (`toHaveCount(1/2/3)`) diventano flaky;
   - preferire assert su condizioni di business (`>=`, subset, coerenza relazioni) o su delta rispetto al baseline locale del test;
   - su Geo alcune factory dipendono da formatter Faker non sempre disponibili nel contesto corrente: usare dataset statici/`array_rand` per stabilizzare.
+- Batch coverage corrente (2026-03-06, Cms middleware):
+  - target: `PageSlugMiddleware` con test unit su rami non-DB (`slug` non-stringa, parsing middleware, alias resolution, chain fallback);
+  - approccio: testare metodi `protected` via reflection per evitare coupling con statiche `Page::getMiddlewareBySlug()` e schema DB.

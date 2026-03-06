@@ -1,4 +1,4 @@
-# Coverage Plan - Updated 2026-03-06 09:10 UTC
+# Coverage Plan - Updated 2026-03-06 09:18 UTC
 
 **MULTI-AGENT STATUS**: 531 test files created across all 14 modules. Foundation laid; now focus on gap-filling and model configuration fixes.
 
@@ -58,9 +58,28 @@
 
 ### Missing Tests Batch (2026-03-06)
 - Added new middleware test coverage:
+
+### 2026-03-06 (Coverage Session - Phase 1 Foundation)
+- Added UI model tests:
+  - `laravel/Modules/UI/tests/Unit/Models/ThemeModelTest.php` - 9 tests
+  - `laravel/Modules/UI/tests/Unit/Models/AssetModelTest.php` - 10 tests
+  - `laravel/Modules/UI/tests/Unit/Models/ComponentModelTest.php` - 11 tests
+  - `laravel/Modules/UI/tests/Unit/Models/CollectionModelTest.php` - 3 tests
+- Added Meetup model tests:
+  - `laravel/Modules/Meetup/tests/Unit/Models/VenueTest.php` - 10 tests
+  - `laravel/Modules/Meetup/tests/Unit/Models/SponsorTest.php` - 9 tests
+- Added Lang actions tests:
+  - `laravel/Modules/Lang/tests/Unit/Actions/SaveTransActionTest.php` - 2 tests
+  - `laravel/Modules/Lang/tests/Unit/Actions/LangActionsCoverageTest.php` - 4 tests
+- Fixed Geo tests:
+  - Changed test base classes from TestCase to XotBaseTestCase (resolves dependency injection errors)
+- Fixed Venue model:
+  - Fixed events() relationship foreign key (`venue_id` → `location_id`)
+- Verifica locale: tests passing
   - `Modules/Cms/tests/Unit/Http/Middleware/SetFolioLocaleMiddlewareTest.php`
+  - `Modules/Cms/tests/Unit/Http/Middleware/PageSlugMiddlewareTest.php`
 - Verification:
-  - `./vendor/bin/pest Modules/Cms/tests/Unit/Http/Middleware/SetFolioLocaleMiddlewareTest.php --compact` -> `3 passed`
+  - `./vendor/bin/pest Modules/Cms/tests/Unit/Http/Middleware/PageSlugMiddlewareTest.php Modules/Cms/tests/Unit/Http/Middleware/SetFolioLocaleMiddlewareTest.php --compact` -> `8 passed`
   - regression subset (`Geo + Meetup`) -> `74 passed`
 
 ### Next Execution Batch (ready-to-run)
@@ -777,7 +796,7 @@ After fixing Phase 1, run full test suite and identify:
 - [ ] `laravel/Modules/Cms/app/Filament/Resources/SectionResource/Pages/ViewSection.php` (0/10, 0.0%)
 - [x] `laravel/Modules/Cms/app/Http/Controllers/Admin/XotPanelController.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Http/Livewire/Page/Show.php` (0/46, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Http/Middleware/PageSlugMiddleware.php` (0/52, 0.0%)
+- [x] `laravel/Modules/Cms/app/Http/Middleware/PageSlugMiddleware.php` (tested, 2026-03-06)
 - [x] `laravel/Modules/Cms/app/Http/Middleware/SetFolioLocale.php` (tested, 2026-03-06)
 - [ ] `laravel/Modules/Cms/app/Http/View/Composers/XotComposer.php` (0/15, 0.0%)
 - [x] `laravel/Modules/Cms/app/Http/Volt/CounterComponent.php` (tested, 2026-03-05)
