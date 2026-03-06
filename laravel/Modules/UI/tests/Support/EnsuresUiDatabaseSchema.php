@@ -111,6 +111,20 @@ trait EnsuresUiDatabaseSchema
             });
         }
 
+        if (! $schema->hasTable('collections')) {
+            $schema->create('collections', function (Blueprint $table): void {
+                $table->id();
+                $table->foreignId('theme_id');
+                $table->string('name');
+                $table->string('type')->nullable();
+                $table->text('description')->nullable();
+                $table->json('items')->nullable();
+                $table->boolean('is_active')->default(true);
+                $table->integer('order')->default(0);
+                $table->timestamps();
+            });
+        }
+
         self::$uiSchemaBootstrapped = true;
     }
 }

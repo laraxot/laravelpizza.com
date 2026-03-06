@@ -27,7 +27,13 @@ test('GetStyleClassAction handles exceptions gracefully', function () {
     }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> e1ecbe9 (.)
+||||||| parent of 6c6798449 (.)
+
+
+=======
+>>>>>>> 6c6798449 (.)

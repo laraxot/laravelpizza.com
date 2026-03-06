@@ -798,7 +798,7 @@ After fixing Phase 1, run full test suite and identify:
 - [x] `laravel/Modules/Cms/app/Actions/ResolvePageAction.php` (tested, 2026-03-06)
 - [x] `laravel/Modules/Cms/app/Actions/SaveFooterConfigAction.php` (tested, 2026-03-06)
 - [x] `laravel/Modules/Cms/app/Actions/SaveHeadernavConfigAction.php` (tested, 2026-03-06)
-- [ ] `laravel/Modules/Cms/app/Actions/View/GetCmsViewAction.php` (0/4, 0.0%)
+- [x] `laravel/Modules/Cms/app/Actions/View/GetCmsViewAction.php` (tested, 2026-03-06)
 - [ ] `laravel/Modules/Cms/app/Config/xra.php` (0/10, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Datas/.php-cs-fixer.dist.php` (0/22, 0.0%)
 - [x] `laravel/Modules/Cms/app/Datas/BlockData.php` (tested, 2026-03-05)
@@ -2594,3 +2594,9 @@ php artisan test --coverage
 - Stato backlog aggiornato con evidenze test gia' eseguite nel batch odierno:
   - marcato come testato `laravel/Modules/Cms/app/Actions/ResolveBlockQueryAction.php`;
   - marcato come testato `laravel/Modules/Cms/app/Actions/ResolvePageAction.php`.
+
+## Aggiornamento Operativo - 2026-03-06 (Cms GetCmsViewAction)
+- Verificato test dedicato:
+  - `./vendor/bin/pest Modules/Cms/tests/Unit/Actions/View/GetCmsViewActionTest.php --compact` -> `3 passed`
+- Stato backlog aggiornato:
+  - marcato come testato `laravel/Modules/Cms/app/Actions/View/GetCmsViewAction.php`.
