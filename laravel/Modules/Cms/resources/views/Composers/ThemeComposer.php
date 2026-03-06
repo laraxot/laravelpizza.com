@@ -19,7 +19,7 @@ class ThemeComposer
     /**
      * Get menu items by name.
      *
-     * @return array<string, mixed>|null
+     * @return array<mixed, mixed>|null
      */
     public function getMenu(string $menu_name): ?array
     {
@@ -31,6 +31,7 @@ class ThemeComposer
             return null;
         }
 
+<<<<<<< HEAD
         /** @var array<string, mixed> $normalized */
         $normalized = [];
         foreach ($items as $key => $value) {
@@ -38,6 +39,9 @@ class ThemeComposer
         }
 
         return $normalized;
+=======
+        return $items;
+>>>>>>> 1aff77744 (.)
     }
 
     public function getMenuUrl(array $menu): string

@@ -54,3 +54,52 @@ BMAD viene usato come **metodo di pensiero** per guidare analisi, architettura e
 - regole generali laraxot: `Xot/docs/laraxot-rules.md` (e `.cursor/rules/laraxot-rules.mdc`)
 - testing e qualità: `Xot/docs/testing-best-practices.md`, `Xot/docs/phpstan-code-quality-guide.md`
 
+---
+
+## BMAD-METHOD Overview
+
+BMAD (Build More Architect Dreams) è un framework completo per lo sviluppo Agile AI-Driven con **38k stelle** su GitHub.
+
+### Caratteristiche Principali
+
+- **AI Intelligent Help** — Ask `/bmad-help` anytime for guidance
+- **Scale-Domain-Adaptive** — Automatically adjusts planning depth based on project complexity
+- **Structured Workflows** — Grounded in agile best practices
+- **Specialized Agents** — 12+ domain experts (PM, Architect, Developer, UX, Scrum Master)
+- **Party Mode** — Bring multiple agent personas into one session
+- **Complete Lifecycle** — From brainstorming to deployment
+
+### Quick Start
+
+```bash
+# Installazione
+npx bmad-method install
+
+# Non-interactive
+npx bmad-method install --directory /path/to/project --modules bmm --tools claude-code --yes
+```
+
+### Moduli Ufficiali
+
+| Modulo | Scopo |
+|--------|-------|
+| BMM | Core framework con 34+ workflows |
+| BMB | Create custom BMad agents and workflows |
+| TEA | Risk-based test strategy and automation |
+| BMGD | Game development (Unity, Unreal, Godot) |
+| CIS | Innovation, brainstorming, design thinking |
+
+### Skills Architecture
+
+BMAD utilizza un sistema di **skills** che possono essere caricate dagli agenti AI (Claude Code, Cursor, Windsurf). Ogni skill contiene:
+- Istruzioni dettagliate per task specifici
+- Workflow strutturati
+- Best practices e pattern
+- Esempi di codice
+
+### Documentazione Ufficiale
+
+- [BMad Docs](http://docs.bmad-method.org)
+- [Getting Started](http://docs.bmad-method.org/tutorials/getting-started/)
+- [Roadmap](http://docs.bmad-method.org/roadmap/)
+
