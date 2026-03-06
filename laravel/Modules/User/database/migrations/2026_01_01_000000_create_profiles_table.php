@@ -16,11 +16,6 @@ return new class extends XotBaseMigration {
      */
     public function up(): void
     {
-        $conn = $this->model->getConnectionName();
-        $db = $this->getConn()->getConnection()->getDatabaseName();
-        $exists = $this->tableExists();
-        file_put_contents(base_path('migration_debug.log'), "MIGRATING profiles | CONN: $conn | DB: $db | EXISTS: ".($exists ? 'YES' : 'NO')."\n", FILE_APPEND);
-
         // -- CREATE --
         $this->tableCreate(static function (Blueprint $table): void {
             $table->uuid('id')->primary();
