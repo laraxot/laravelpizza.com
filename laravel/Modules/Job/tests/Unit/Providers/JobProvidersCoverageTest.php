@@ -19,6 +19,17 @@ describe('Job Providers Coverage', function () {
             expect($provider->name)->toBe('Job');
         });
 
+        it('has module directory via reflection', function () {
+            $reflection = new ReflectionProperty(JobServiceProvider::class, 'module_dir');
+            expect($reflection->isProtected())->toBeTrue();
+            expect($reflection->getDefaultValue())->not->toBeEmpty();
+        });
+
+        it('has module namespace via reflection', function () {
+            $reflection = new ReflectionProperty(JobServiceProvider::class, 'module_ns');
+            expect($reflection->isProtected())->toBeTrue();
+        });
+
         it('has registerQueue method', function () {
             $provider = new JobServiceProvider(app());
             expect(method_exists($provider, 'registerQueue'))->toBeTrue();
@@ -43,13 +54,14 @@ describe('Job Providers Coverage', function () {
         });
 
         it('has listen property', function () {
-            $provider = new EventServiceProvider(app());
-            $reflection = new ReflectionProperty($provider, 'listen');
-            expect($reflection->isPublic())->toBeTrue();
+            $reflection = new ReflectionProperty(EventServiceProvider::class, 'listen');
+            expect($reflection->isProtected())->toBeTrue();
         });
 
         it('has shouldDiscoverEvents static property', function () {
-            expect(EventServiceProvider::$shouldDiscoverEvents)->toBeTrue();
+            $reflection = new ReflectionProperty(EventServiceProvider::class, 'shouldDiscoverEvents');
+            expect($reflection->isStatic())->toBeTrue()
+                ->and($reflection->getDefaultValue())->toBeTrue();
         });
 
         it('has configureEmailVerification method', function () {
@@ -75,14 +87,16 @@ describe('Job Providers Coverage', function () {
             expect($provider->name)->toBe('Job');
         });
 
-        it('has module namespace', function () {
-            $provider = new RouteServiceProvider(app());
-            expect($provider->moduleNamespace)->toBe('Modules\Job\Http\Controllers');
+        it('has module namespace via reflection', function () {
+            $reflection = new ReflectionProperty(RouteServiceProvider::class, 'moduleNamespace');
+            expect($reflection->isProtected())->toBeTrue();
+            expect($reflection->getDefaultValue())->toBe('Modules\Job\Http\Controllers');
         });
 
-        it('has module directory', function () {
-            $provider = new RouteServiceProvider(app());
-            expect($provider->module_dir)->not->toBeEmpty();
+        it('has module directory via reflection', function () {
+            $reflection = new ReflectionProperty(RouteServiceProvider::class, 'module_dir');
+            expect($reflection->isProtected())->toBeTrue();
+            expect($reflection->getDefaultValue())->not->toBeEmpty();
         });
 
         it('uses strict types', function () {
@@ -100,9 +114,9 @@ describe('Job Providers Coverage', function () {
 
         it('has module property', function () {
             $provider = new AdminPanelProvider(app());
-            $reflection = new ReflectionProperty($provider, 'module');
-            expect($reflection->isPublic())->toBeTrue();
-            expect($provider->module)->toBe('Job');
+            $reflection = new ReflectionProperty(AdminPanelProvider::class, 'module');
+            expect($reflection->isProtected())->toBeTrue();
+            expect($reflection->getDefaultValue())->toBe('Job');
         });
 
         it('has panel method', function () {

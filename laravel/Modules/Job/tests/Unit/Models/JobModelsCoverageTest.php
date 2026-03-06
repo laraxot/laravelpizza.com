@@ -165,9 +165,9 @@ describe('Job Models Coverage', function () {
             expect($model)->toBeInstanceOf(Export::class);
         });
 
-        it('extends BaseModel', function () {
+        it('extends Filament Export', function () {
             $reflection = new ReflectionClass(Export::class);
-            expect($reflection->isSubclassOf(\Modules\Job\Models\BaseModel::class))->toBeTrue();
+            expect($reflection->isSubclassOf(\Filament\Actions\Exports\Models\Export::class))->toBeTrue();
         });
 
         it('uses strict types', function () {

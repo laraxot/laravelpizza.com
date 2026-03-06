@@ -5,9 +5,9 @@ declare(strict_types=1);
 use Modules\Geo\Enums\AddressTypeEnum;
 use Modules\Geo\Models\Address;
 use Modules\Geo\Models\BaseModel;
-use Modules\Xot\Tests\XotBaseTestCase;
+use Modules\Geo\Tests\TestCase;
 
-uses(XotBaseTestCase::class);
+uses(TestCase::class);
 
 describe('Address Business Logic', function () {
     test('address extends base model', function () {
