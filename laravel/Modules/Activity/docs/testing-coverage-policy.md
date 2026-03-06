@@ -15,8 +15,13 @@ Raggiungere e mantenere **100% coverage** con Pest sul modulo Activity.
 ### 2. .env.testing
 
 - `.env.testing` è uguale a `.env` tranne per i nomi database
+<<<<<<< HEAD
+- I database di test hanno suffisso `_test` (es. `<nome progetto>_data_test`)
+- Le variabili `DB_CONNECTION`, `DB_DATABASE` **NON** devono essere sovrascritte in phpunit.xml
+=======
 - I database di test hanno suffisso `_test` (es. `techplanner_data_test`)
 - Evitare override distruttivi in phpunit.xml che puntano a database non-test
+>>>>>>> a21dc33d (.)
 - Laravel carica `.env.testing` quando `APP_ENV=testing`
 
 ### 3. DatabaseTransactions
@@ -36,8 +41,8 @@ Raggiungere e mantenere **100% coverage** con Pest sul modulo Activity.
 
 **Setup minimo .env.testing:**
 ```env
-DB_DATABASE=techplanner_data_test
-DB_DATABASE_USER=techplanner_data_test
+DB_DATABASE=<nome progetto>_data_test
+DB_DATABASE_USER=<nome progetto>_data_test
 ```
 NON aggiungere DB_DATABASE_ACTIVITY: TenantServiceProvider usa il fallback dal default (stesso DB). Vedi [fix03](prompts/fix03.txt).
 

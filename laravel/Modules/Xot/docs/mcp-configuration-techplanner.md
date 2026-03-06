@@ -1,8 +1,8 @@
-# 🤖 Configurazione MCP per TechPlanner Fila4 Mono
+# 🤖 Configurazione MCP per <nome progetto> Fila4 Mono
 
 ## Panoramica
 
-Questa documentazione descrive la configurazione del Model Context Protocol (MCP) ottimizzata per il progetto TechPlanner Fila4 Mono, un'applicazione Laravel modulare basata sull'architettura Laraxot.
+Questa documentazione descrive la configurazione del Model Context Protocol (MCP) ottimizzata per il progetto <nome progetto> Fila4 Mono, un'applicazione Laravel modulare basata sull'architettura Laraxot.
 
 ## 🎯 Scopo del Sistema MCP
 
@@ -92,7 +92,7 @@ Il sistema MCP è configurato per supportare lo sviluppo e la manutenzione del p
 La configurazione MCP è specificamente ottimizzata per l'architettura modulare Laraxot:
 
 ### Supporto per Moduli
-- Accesso diretto a tutti i moduli (Xot, User, TechPlanner, ecc.)
+- Accesso diretto a tutti i moduli (Xot, User, <nome progetto>, ecc.)
 - Supporto per pattern XotBase* in tutte le interazioni
 - Verifica della corretta estensione delle classi base
 

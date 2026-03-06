@@ -9,4 +9,7 @@ This module follows the global Laraxot coding standards.
 - [Pre-Edit Docs-First Rule](../../../../docs/rules/pre-edit-docs-first-rule.md)
 - [Pre-Edit Docs-First Memory](../../../../docs/memory/pre-edit-docs-first-memory.md)
 - [Pre-Edit Docs-First Skill](../../../../docs/skills/pre-edit-docs-first-skill.md)
+<<<<<<< HEAD
+=======
 - [Coverage Coordination Workflow](./coverage-coordination-workflow.md)
+>>>>>>> a21dc33d (.)

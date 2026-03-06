@@ -8,7 +8,7 @@ MCP (Model Context Protocol) tools provide enhanced capabilities for database an
 MCP (Model Context Protocol) tools provide enhanced capabilities for database analysis, including access to the survey database used in the Limesurvey integration.
 =======
 MCP (Model Context Protocol) tools provide enhanced capabilities for database analysis, including access to the ptvx_survey database used in the Limesurvey integration.
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_RSP9XD
 
 ## Available MCP Tools for Database Work
@@ -20,7 +20,7 @@ MCP (Model Context Protocol) tools provide enhanced capabilities for database an
 {
   "command": "node",
   "args": [
-    "/var/www/_bases/base_techplanner_fila5_mono/bashscripts/mcp/mysql-db-connector.js"
+    "/var/www/_bases/base_<nome progetto>_fila5_mono/bashscripts/mcp/mysql-db-connector.js"
   ]
 }
 ```
@@ -32,7 +32,7 @@ MCP (Model Context Protocol) tools provide enhanced capabilities for database an
 **Use Cases for survey Database**:
 =======
 **Use Cases for ptvx_survey Database**:
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_RSP9XD
 - Query Limesurvey tables directly
 - Analyze survey responses in `lime_survey_{sid}` tables

@@ -29,7 +29,7 @@ app(SyncTranslationsAction::class)->execute('healthcare_app', ['it', 'en', 'de']
 app(SyncTranslationsAction::class)->execute('ExternalProject', ['it', 'en', 'de']);
 =======
 app(SyncTranslationsAction::class)->execute('ModuloEsempio', ['it', 'en', 'de']);
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_REzwt6
 
 // Modelli traducibili
@@ -142,7 +142,7 @@ Lang ──> healthcare_app    (titoli survey, etichette chart)
 Lang ──> ExternalProject    (titoli survey, etichette chart)
 =======
 Lang ──> ModuloEsempio    (titoli survey, etichette chart)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_REzwt6
 Lang ──> Limesurvey (traduzioni domande/risposte)
 Lang ──> Cms        (contenuto pagine multilingua)

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Traits;
 
+use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use Modules\UI\Enums\TableLayoutEnum;
@@ -21,6 +22,8 @@ use Modules\UI\Enums\TableLayoutEnum;
  */
 trait HasXotForm
 {
+    use InteractsWithForms;
+
     /** @var array<string, mixed> */
     public array $data = [];
 

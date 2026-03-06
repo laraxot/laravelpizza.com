@@ -99,12 +99,12 @@ abstract class TestCase extends BaseTestCase
 ```ini
 # Add Job module connection
 DB_CONNECTION=mysql
-DB_DATABASE=laravelpizza_data_test
+DB_DATABASE=<nome progetto>_data_test
 
 JOB_DB_CONNECTION=mysql
 JOB_DB_HOST=127.0.0.1
 JOB_DB_PORT=3306
-JOB_DB_DATABASE=laravelpizza_job_test
+JOB_DB_DATABASE=<nome progetto>_job_test
 JOB_DB_USERNAME=marco
 JOB_DB_PASSWORD=marco
 ```

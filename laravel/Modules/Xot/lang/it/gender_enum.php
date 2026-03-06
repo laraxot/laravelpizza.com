@@ -8,15 +8,21 @@ return [
         'f' => 'Femmina',
         'm' => 'Maschio',
     ],
-    'plural_label' => 'Gender Enum (Plurale)',
+    'f' => [
+        'label' => 'Femmina',
+    ],
+    'm' => [
+        'label' => 'Maschio',
+    ],
+    'plural_label' => 'Generi',
     'navigation' => [
-        'name' => 'Gender Enum',
-        'plural' => 'Gender Enum',
+        'name' => 'Genere',
+        'plural' => 'Generi',
         'group' => [
             'name' => 'General',
             'description' => 'General Settings',
         ],
-        'label' => 'Gender Enum',
+        'label' => 'Genere',
         'sort' => 1,
         'icon' => 'heroicon-o-collection',
     ],

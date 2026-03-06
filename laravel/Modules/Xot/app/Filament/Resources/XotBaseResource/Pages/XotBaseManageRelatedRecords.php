@@ -6,7 +6,6 @@ namespace Modules\Xot\Filament\Resources\XotBaseResource\Pages;
 
 use Filament\Actions\Action;
 use Filament\Actions\CreateAction;
-use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
@@ -14,6 +13,7 @@ use Filament\Tables\Columns\TextColumn;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Modules\Xot\Filament\Traits\HasXotForm;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Override;
 
@@ -27,7 +27,8 @@ use Override;
 abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 {
     use HasXotTable;
-    use InteractsWithForms;
+    use HasXotForm;
+
     // protected static string $resource;
 
     /**
@@ -36,24 +37,6 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
     public static function getNavigationGroup(): string
     {
         return '';
-    }
-
-    /**
-     * Restituisce lo schema del form per i record correlati.
-     *
-     * @return array<Component>
-     */
-    // abstract public static function getFormSchema(): array;
-
-    /**
-     * Configura lo schema per i record correlati.
-     */
-    public function schema(Schema $schema): Schema
-    {
-        // getFormSchema() sempre ritorna array per definizione
-        $formSchema = $this->getFormSchema();
-
-        return $schema->components($formSchema);
     }
 
     /**

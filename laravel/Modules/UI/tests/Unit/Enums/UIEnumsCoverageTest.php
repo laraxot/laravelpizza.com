@@ -63,9 +63,9 @@ it('FieldTypeEnum has correct values', function (): void {
 });
 
 it('FieldTypeEnum implements HasLabel, HasColor, HasIcon', function (): void {
-    expect(FieldTypeEnum::TEXT)->toBeInstanceOf(\Filament\Support\Contracts\HasLabel::class);
-    expect(FieldTypeEnum::TEXT)->toBeInstanceOf(\Filament\Support\Contracts\HasColor::class);
-    expect(FieldTypeEnum::TEXT)->toBeInstanceOf(\Filament\Support\Contracts\HasIcon::class);
+    expect(FieldTypeEnum::TEXT)->toBeInstanceOf(Filament\Support\Contracts\HasLabel::class);
+    expect(FieldTypeEnum::TEXT)->toBeInstanceOf(Filament\Support\Contracts\HasColor::class);
+    expect(FieldTypeEnum::TEXT)->toBeInstanceOf(Filament\Support\Contracts\HasIcon::class);
 });
 
 it('FieldTypeEnum getLabel returns a string', function (): void {

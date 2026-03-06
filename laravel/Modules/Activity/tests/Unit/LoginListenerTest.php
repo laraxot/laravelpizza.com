@@ -5,11 +5,19 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit;
 
 use Modules\Activity\Listeners\LoginListener;
+<<<<<<< HEAD
+use Modules\Activity\Tests\TestCase;
+=======
 use PHPUnit\Framework\TestCase;
+>>>>>>> a21dc33d (.)
 use PHPUnit\Framework\Attributes\Test;
 
 class LoginListenerTest extends TestCase
 {
+<<<<<<< HEAD
+    use \Illuminate\Foundation\Testing\DatabaseTransactions;
+=======
+>>>>>>> a21dc33d (.)
 
     #[Test]
     public function listener_class_exists(): void

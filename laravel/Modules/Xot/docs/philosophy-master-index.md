@@ -5,7 +5,7 @@
 
 ## 📋 Panoramica
 
-Questo documento fornisce un indice completo di tutta la documentazione filosofica (Logica, Religione, Politica, Zen) di tutti i moduli del progetto TechPlanner.
+Questo documento fornisce un indice completo di tutta la documentazione filosofica (Logica, Religione, Politica, Zen) di tutti i moduli del progetto <nome progetto>.
 
 ---
 
@@ -26,8 +26,8 @@ Questo documento fornisce un indice completo di tutta la documentazione filosofi
 
 ## 💼 Moduli Business
 
-### TechPlanner - Business Principale
-**File**: [../../TechPlanner/docs/philosophy-complete.md](../../techplanner/docs/philosophy-complete.md)
+### <nome progetto> - Business Principale
+**File**: [../../<nome progetto>/docs/philosophy-complete.md](../../<nome progetto>/docs/philosophy-complete.md)
 
 **Filosofia**: Client-Centric, Compliance-First, Integration Over Duplication
 
@@ -220,7 +220,7 @@ Xot (Foundation)
     ↓
 User (Identity Foundation)
     ↓
-├── TechPlanner (Business Logic)
+├── <nome progetto> (Business Logic)
 │   ├── Geo (Geolocalizzazione)
 │   ├── Notify (Comunicazioni)
 │   ├── Media (File Management)

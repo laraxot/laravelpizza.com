@@ -15,7 +15,8 @@ return new class extends XotBaseMigration
      */
     public function up(): void
     {
-        $this->tableCreate(function (Blueprint $table): void {
+        if (! $this->tableExists()) {
+            $this->tableCreate(function (Blueprint $table): void {
                 $table->string('id', 36)->primary();
                 $table->string('user_id', 36)->index()->nullable();
                 $table->string('first_name')->nullable()->index();
@@ -29,9 +30,9 @@ return new class extends XotBaseMigration
                     table: $table,
                     hasSoftDeletes: true,
                 );
-        });
-
-        $this->tableUpdate(function (Blueprint $table): void {
+            });
+        } else {
+            $this->tableUpdate(function (Blueprint $table): void {
                 if (! $this->hasColumn('user_id')) {
                     $table->string('user_id', 36)->index()->nullable()->after('id');
                 }
@@ -58,6 +59,7 @@ return new class extends XotBaseMigration
                     table: $table,
                     hasSoftDeletes: true,
                 );
-        });
+            });
+        }
     }
 };

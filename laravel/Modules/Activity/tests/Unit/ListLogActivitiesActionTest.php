@@ -5,6 +5,14 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit;
 
 use Modules\Activity\Filament\Actions\ListLogActivitiesAction;
+<<<<<<< HEAD
+use Modules\Activity\Tests\TestCase;
+use PHPUnit\Framework\Attributes\Test;
+
+class ListLogActivitiesActionTest extends TestCase
+{
+    use \Illuminate\Foundation\Testing\DatabaseTransactions;
+=======
 use Filament\Resources\Pages\ListRecords;
 use Illuminate\Database\Eloquent\Model;
 use PHPUnit\Framework\TestCase;
@@ -34,6 +42,7 @@ class ListLogActivitiesActionFakeListRecords extends ListRecords
 
 class ListLogActivitiesActionTest extends TestCase
 {
+>>>>>>> a21dc33d (.)
 
     #[Test]
     public function it_extends_xot_base_action(): void
@@ -73,6 +82,8 @@ class ListLogActivitiesActionTest extends TestCase
         $color = $action->getColor();
         $this->assertEquals('gray', $color);
     }
+<<<<<<< HEAD
+=======
 
     #[Test]
     public function it_builds_url_via_resource_callback(): void
@@ -95,4 +106,5 @@ class ListLogActivitiesActionTest extends TestCase
 
         $this->assertSame('/fake/log-activity/fake-id', $url);
     }
+>>>>>>> a21dc33d (.)
 }

@@ -123,7 +123,7 @@ public function createUser(array $data): User
 ### ExternalProject Module
 =======
 ### ModuloEsempio Module
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_DQ6zl7
 
 - Document survey management workflows

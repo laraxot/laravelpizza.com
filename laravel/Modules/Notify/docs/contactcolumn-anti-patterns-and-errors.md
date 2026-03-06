@@ -39,7 +39,7 @@
 
 ## PATTERN CORRETTO DA SEGUIRE
 
-### Implementazione Approvata (TechPlanner)
+### Implementazione Approvata (<nome progetto>)
 ```php
 // Nel ListClients.php
 'contacts' => TextColumn::make('contacts')
@@ -115,7 +115,7 @@ private function formatContacts(Client $record): string
 - [MEMORY 4b9bd23e]: Regole architetturali Filament
 
 ### Pattern Corretti
-- [TechPlanner ContactsColumn](../../techplanner/docs/contacts-column-implementation-complete.md)
+- [<nome progetto> ContactsColumn](../../<nome progetto>/docs/contacts-column-implementation-complete.md)
 - [Filament Best Practices](../../../../docs/filament-best-practices.md)
 
 ## AZIONI CORRETTIVE

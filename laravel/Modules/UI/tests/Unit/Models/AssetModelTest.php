@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use Modules\UI\Models\Asset;
-use Modules\UI\Models\Theme;
 
 describe('Asset Model', function (): void {
     it('can be instantiated', function (): void {
@@ -40,8 +39,8 @@ describe('Asset Model', function (): void {
         expect($asset->getTable())->toBe('assets');
     });
 
-    it('uses HasFactory trait', function (): void {
-        expect(in_array('Illuminate\Database\Eloquent\Factories\HasFactory', class_uses(Asset::class)))->toBeTrue();
+    it('has model base class', function (): void {
+        expect(is_a(Asset::class, 'Modules\UI\Models\BaseModel', true))->toBeTrue();
     });
 
     it('uses strict types', function (): void {

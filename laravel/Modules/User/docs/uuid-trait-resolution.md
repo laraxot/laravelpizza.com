@@ -200,7 +200,7 @@ $token = $user->createToken('test');
 - [ ] Verify ExternalProject contact token generation
 =======
 - [ ] Verify ModuloEsempio contact token generation
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_QSKi47
 - [ ] Test all authentication flows
 - [ ] Performance testing
@@ -281,7 +281,7 @@ $token = $user->createToken('test');
 - [ ] ExternalProject survey workflows operational
 =======
 - [ ] ModuloEsempio survey workflows operational
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_QSKi47
 
 ### **Philosophical Success** (Super Mucca)

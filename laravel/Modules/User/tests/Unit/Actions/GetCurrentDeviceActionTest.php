@@ -8,14 +8,13 @@ use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\Device;
 use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
-use Mockery;
 
 class GetCurrentDeviceActionTest extends TestCase
 {
     #[Test]
-    public function it_creates_device_from_agent_info(): void
+    public function itCreatesDeviceFromAgentInfo(): void
     {
-        $agent = Mockery::mock(\Jenssegers\Agent\Agent::class);
+        $agent = \Mockery::mock(\Jenssegers\Agent\Agent::class);
         $agent->shouldReceive('device')->andReturn('Macintosh');
         $agent->shouldReceive('platform')->andReturn('macOS');
         $agent->shouldReceive('browser')->andReturn('Chrome');
@@ -39,9 +38,9 @@ class GetCurrentDeviceActionTest extends TestCase
     }
 
     #[Test]
-    public function it_handles_null_device_info(): void
+    public function itHandlesNullDeviceInfo(): void
     {
-        $agent = Mockery::mock(\Jenssegers\Agent\Agent::class);
+        $agent = \Mockery::mock(\Jenssegers\Agent\Agent::class);
         $agent->shouldReceive('device')->andReturn(null);
         $agent->shouldReceive('platform')->andReturn(null);
         $agent->shouldReceive('browser')->andReturn(null);
@@ -64,9 +63,9 @@ class GetCurrentDeviceActionTest extends TestCase
     }
 
     #[Test]
-    public function it_detects_mobile_device(): void
+    public function itDetectsMobileDevice(): void
     {
-        $agent = Mockery::mock(\Jenssegers\Agent\Agent::class);
+        $agent = \Mockery::mock(\Jenssegers\Agent\Agent::class);
         $agent->shouldReceive('device')->andReturn('iPhone');
         $agent->shouldReceive('platform')->andReturn('iOS');
         $agent->shouldReceive('browser')->andReturn('Safari');
@@ -89,9 +88,9 @@ class GetCurrentDeviceActionTest extends TestCase
     }
 
     #[Test]
-    public function it_detects_tablet_device(): void
+    public function itDetectsTabletDevice(): void
     {
-        $agent = Mockery::mock(\Jenssegers\Agent\Agent::class);
+        $agent = \Mockery::mock(\Jenssegers\Agent\Agent::class);
         $agent->shouldReceive('device')->andReturn('iPad');
         $agent->shouldReceive('platform')->andReturn('iOS');
         $agent->shouldReceive('browser')->andReturn('Safari');

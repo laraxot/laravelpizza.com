@@ -2,7 +2,7 @@
 
 ## Panoramica
 
-Questo documento analizza quando usare il modello **User** rispetto al modello **Profile** nel progetto LaravelPizza, basandosi su best practice di settore e architettura specifica del progetto.
+Questo documento analizza quando usare il modello **User** rispetto al modello **Profile** nel progetto <nome progetto>, basandosi su best practice di settore e architettura specifica del progetto.
 
 ---
 
@@ -134,13 +134,13 @@ class Profile extends BaseProfile
 
 ---
 
-## 3. Analisi nel Contesto LaravelPizza
+## 3. Analisi nel Contesto <nome progetto>
 
 ### 3.1 Architettura Attuale
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
-│                        LARAVELPIZZA                              │
+│                        <nome progetto>                              │
 ├──────────────────────────────────────────────────────────────────┤
 │                                                                   │
 │  ┌─────────────────┐         ┌─────────────────┐              │
@@ -186,9 +186,9 @@ CURRENT STATE:
 
 ### 3.3 Soluzione Raccomandata
 
-**Opzione A: Consolidare in User (Simple) - CONSIGLIATA PER LARAVELPIZZA**
+**Opzione A: Consolidare in User (Simple) - CONSIGLIATA PER <nome progetto>**
 
-Per un progetto community come LaravelPizza dove:
+Per un progetto community come <nome progetto> dove:
 - Gli utenti sono principalmente "attendees" agli eventi
 - Non servono profili multipli
 - L'avatar è l'unico dato profilo essenziale
@@ -517,4 +517,4 @@ class User extends Authenticatable
 
 ---
 
-*Documento generato per LaravelPizza - Progetto Community Laravel*
+*Documento generato per <nome progetto> - Progetto Community Laravel*

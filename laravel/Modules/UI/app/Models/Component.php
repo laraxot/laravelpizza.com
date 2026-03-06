@@ -11,25 +11,24 @@ use Modules\UI\Database\Factories\ComponentFactory;
 /**
  * Component model for UI module.
  *
- * @property string               $id
- * @property string               $name
- * @property string               $theme_id
- * @property bool                 $is_active
- * @property string|null          $version
- * @property array|null           $dependencies
- * @property string|null          $template
- * @property bool                 $is_cacheable
- * @property int|null             $cache_ttl
- * @property array|null           $validation_rules
- * @property string|null          $view_path
- * @property array|null           $data_schema
- * @property array|null           $responsive_breakpoints
- * @property Carbon|null          $created_at
- * @property Carbon|null          $updated_at
+ * @property string      $id
+ * @property string      $name
+ * @property string      $theme_id
+ * @property bool        $is_active
+ * @property string|null $version
+ * @property array|null  $dependencies
+ * @property string|null $template
+ * @property bool        $is_cacheable
+ * @property int|null    $cache_ttl
+ * @property array|null  $validation_rules
+ * @property string|null $view_path
+ * @property array|null  $data_schema
+ * @property array|null  $responsive_breakpoints
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property Theme       $theme
  *
- * @property Theme                $theme
- *
- * @method static ComponentFactory             factory($count = null, $state = [])
+ * @method static ComponentFactory          factory($count = null, $state = [])
  * @method static Builder<static>|Component newModelQuery()
  * @method static Builder<static>|Component newQuery()
  * @method static Builder<static>|Component query()
@@ -72,6 +71,7 @@ class Component extends BaseModel
             'responsive_breakpoints' => 'array',
             'supports_lazy_loading' => 'boolean',
             'lazy_loading_threshold' => 'float',
+            'cache_ttl' => 'integer',
             'cache_duration' => 'integer',
         ];
     }

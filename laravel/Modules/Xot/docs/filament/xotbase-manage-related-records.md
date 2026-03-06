@@ -210,4 +210,4 @@ real fields, and `getFormSchema()` returns `[]`. The inline page `ManageQuestion
 calls `getFormSchemaBySurveyId()` correctly. The standalone page `EditQuestionChart` did
 not implement `getFormSchema()`, so the edit form was empty.
 
-See `laravel/Modules/Quaeris/docs/nested-resource-form-trap.md` for full analysis.
+See `laravel/Modules/<nome progetto>/docs/nested-resource-form-trap.md` for full analysis.

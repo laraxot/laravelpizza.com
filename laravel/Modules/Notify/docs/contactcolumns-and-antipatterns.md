@@ -9,7 +9,7 @@
 ## 📋 **ERRORI IDENTIFICATI**
 
 ### **1. VIOLAZIONE ARCHITETTURA FILAMENT**
-- ❌ **Errore**: Implementazione inconsistente tra TechPlanner e Notify
+- ❌ **Errore**: Implementazione inconsistente tra <nome progetto> e Notify
 - ❌ **Problema**: Due versioni diverse dello stesso file
 - ❌ **Impatto**: Confusione architetturale, manutenzione impossibile
 

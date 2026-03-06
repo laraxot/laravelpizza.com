@@ -278,7 +278,7 @@ if (isset($record->email)) {
 - ExternalProject/Filament (2 file)
 =======
 - ModuloEsempio/Filament (2 file)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_hPNDok
 
 **Impact**: Alto (UI user-facing)
@@ -414,7 +414,7 @@ if (method_exists($record, 'getUrl')) {
 | ExternalProject | 2 | Medium | Bassa |
 =======
 | ModuloEsempio | 2 | Medium | Bassa |
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_hPNDok
 | Others | 52 (docs) | Low | Zero |
 

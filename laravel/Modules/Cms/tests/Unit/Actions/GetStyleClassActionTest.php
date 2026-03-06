@@ -26,5 +26,8 @@ test('GetStyleClassAction handles exceptions gracefully', function () {
         expect(true)->toBeTrue();
     }
 });
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> e1ecbe9 (.)

@@ -44,7 +44,7 @@ Filament\Schemas\Components\Section (Filament v4 base)
 Modules\Xot\Filament\Schemas\Components\XotBaseSection (Laraxot base)
     ↓
 Modules\Geo\Filament\Forms\Components\AddressSection (Module-specific)
-Modules\TechPlanner\Filament\Forms\Components\CompanySection
+Modules\<nome progetto>\Filament\Forms\Components\CompanySection
 Modules\Notify\Filament\Forms\Components\ContactSection
 ...
 ```
@@ -122,7 +122,7 @@ class MySection extends XotBaseSection { }
 
 **Sintomo:**
 ```
-Method Modules\TechPlanner\Filament\Forms\Components\CompanySection::disableLiveUpdates does not exist.
+Method Modules\<nome progetto>\Filament\Forms\Components\CompanySection::disableLiveUpdates does not exist.
 ```
 
 **Causa:** `disableLiveUpdates` è una property, non un metodo. Deve essere impostata, non chiamata.

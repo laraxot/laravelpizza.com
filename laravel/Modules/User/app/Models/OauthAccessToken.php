@@ -65,14 +65,4 @@ class OauthAccessToken extends PassportToken
 {
     /** @var string */
     protected $connection = 'user';
-
-    // protected $fillable = ['id', 'user_id', 'client_id', 'name', 'scopes', 'revoked', 'expires_at'];
-
-    /**
-     * Create a new factory instance for the model.
-     */
-    protected static function newFactory(): \Modules\User\Database\Factories\OauthAccessTokenFactory
-    {
-        return \Modules\User\Database\Factories\OauthAccessTokenFactory::new();
-    }
 }

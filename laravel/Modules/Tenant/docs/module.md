@@ -148,7 +148,7 @@ Tenant Detection → Configuration Load → Bootstrap → Response
 - **User**: Tenant-aware user management
 - **Activity**: Tenant-isolated activity logging
 - **Limesurvey**: Tenant-specific survey data
-- **Quaeris**: Tenant-scoped reporting
+- **<nome progetto>**: Tenant-scoped reporting
 - **Notify**: Tenant notification channels
 
 ## Lacune e Funzionalità Mancanti

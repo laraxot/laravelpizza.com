@@ -295,7 +295,7 @@ php artisan test --filter TranslationTest
 ### 1. Hardcoded Strings
 ```php
 // ❌ WRONG
-<h1>Welcome to LaravelPizza</h1>
+<h1>Welcome to <nome progetto></h1>
 
 // ✅ CORRECT
 <h1>{{ __('gdpr::register.welcome') }}</h1>
@@ -305,10 +305,10 @@ php artisan test --filter TranslationTest
 ```php
 // ❌ WRONG - German file with English content
 // Modules/Gdpr/lang/de/register.php
-'title' => 'Welcome to LaravelPizza',
+'title' => 'Welcome to <nome progetto>',
 
 // ✅ CORRECT - German file with German content
-'title' => 'Willkommen bei LaravelPizza',
+'title' => 'Willkommen bei <nome progetto>',
 ```
 
 ### 3. Inconsistent Key Names

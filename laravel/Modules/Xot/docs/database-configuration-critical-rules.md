@@ -51,11 +51,11 @@ return $app;
 
 ```bash
 # .env.testing - WRONG!
-NOTIFY_DB_DATABASE=laravelpizza_data_test
-GEO_DB_DATABASE=laravelpizza_data_test
-MEDIA_DB_DATABASE=laravelpizza_data_test
-GDPR_DB_DATABASE=laravelpizza_data_test
-MEETUP_DB_DATABASE=laravelpizza_meetup_test
+NOTIFY_DB_DATABASE=<nome progetto>_data_test
+GEO_DB_DATABASE=<nome progetto>_data_test
+MEDIA_DB_DATABASE=<nome progetto>_data_test
+GDPR_DB_DATABASE=<nome progetto>_data_test
+MEETUP_DB_DATABASE=<nome progetto>_meetup_test
 # ... ecc
 ```
 
@@ -69,12 +69,12 @@ MEETUP_DB_DATABASE=laravelpizza_meetup_test
 
 ```bash
 # Se .env ha:
-DB_DATABASE=laravelpizza_data
-DB_DATABASE_USER=laravelpizza_user
+DB_DATABASE=<nome progetto>_data
+DB_DATABASE_USER=<nome progetto>_user
 
 # Allora .env.testing deve avere:
-DB_DATABASE=laravelpizza_data_test
-DB_DATABASE_USER=laravelpizza_user_test
+DB_DATABASE=<nome progetto>_data_test
+DB_DATABASE_USER=<nome progetto>_user_test
 
 # Tutto il resto IDENTICO!
 ```
@@ -88,12 +88,12 @@ DB_DATABASE_USER=laravelpizza_user_test
 'connections' => [
     'notify' => [
         'driver' => 'mysql',
-        'database' => env('NOTIFY_DB_DATABASE', 'laravelpizza_notify_test'),
+        'database' => env('NOTIFY_DB_DATABASE', '<nome progetto>_notify_test'),
         // ...
     ],
     'geo' => [
         'driver' => 'mysql',
-        'database' => env('GEO_DB_DATABASE', 'laravelpizza_geo_test'),
+        'database' => env('GEO_DB_DATABASE', '<nome progetto>_geo_test'),
         // ...
     ],
     // ... ecc per tutti i moduli
@@ -137,14 +137,14 @@ Il `TenantServiceProvider` gestisce le connessioni database in modo dinamico:
 ```
 .env.testing
     ↓
-DB_DATABASE=laravelpizza_data_test
+DB_DATABASE=<nome progetto>_data_test
     ↓
 TenantServiceProvider::registerDB()
     ↓
 Crea automaticamente:
-  - database.connections.user → laravelpizza_data_test
-  - database.connections.notify → laravelpizza_data_test
-  - database.connections.geo → laravelpizza_data_test
+  - database.connections.user → <nome progetto>_data_test
+  - database.connections.notify → <nome progetto>_data_test
+  - database.connections.geo → <nome progetto>_data_test
   - ... ecc per tutti i moduli
 ```
 

@@ -1,4 +1,4 @@
-# Strategia Inbound Marketing - TechPlanner
+# Strategia Inbound Marketing - <nome progetto>
 **Module**: Notify
 **Scope**: Strategia inbound marketing per lead generation
 
@@ -134,7 +134,7 @@ Il sito target ha una base di inbound marketing decente con lead magnets e newsl
 
 **Template 1: Welcome Email**
 ```
-Subject: Benvenuto in TechPlanner Radioprotezione!
+Subject: Benvenuto in <nome progetto> Radioprotezione!
 
 Ciao [Nome],
 

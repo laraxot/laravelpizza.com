@@ -12,7 +12,7 @@ use PHPUnit\Framework\Attributes\Test;
 class UserNameFieldsResolverTest extends TestCase
 {
     #[Test]
-    public function it_resolves_first_and_last_name_from_full_name(): void
+    public function itResolvesFirstAndLastNameFromFullName(): void
     {
         $ssoUser = $this->createMockSocialiteUser('John Doe', 'john@example.com');
         $resolver = UserNameFieldsResolver::make($ssoUser);
@@ -22,7 +22,7 @@ class UserNameFieldsResolverTest extends TestCase
     }
 
     #[Test]
-    public function it_resolves_name_from_single_word(): void
+    public function itResolvesNameFromSingleWord(): void
     {
         $ssoUser = $this->createMockSocialiteUser('John', 'john@example.com');
         $resolver = UserNameFieldsResolver::make($ssoUser);
@@ -33,7 +33,7 @@ class UserNameFieldsResolverTest extends TestCase
     }
 
     #[Test]
-    public function it_falls_back_to_email_when_name_is_empty(): void
+    public function itFallsBackToEmailWhenNameIsEmpty(): void
     {
         $ssoUser = $this->createMockSocialiteUser(null, 'john.doe@example.com');
         $resolver = UserNameFieldsResolver::make($ssoUser);
@@ -43,7 +43,7 @@ class UserNameFieldsResolverTest extends TestCase
     }
 
     #[Test]
-    public function it_handles_empty_name_and_email(): void
+    public function itHandlesEmptyNameAndEmail(): void
     {
         $ssoUser = $this->createMockSocialiteUser(null, null);
         $resolver = UserNameFieldsResolver::make($ssoUser);
@@ -53,7 +53,7 @@ class UserNameFieldsResolverTest extends TestCase
     }
 
     #[Test]
-    public function it_handles_empty_string_name(): void
+    public function itHandlesEmptyStringName(): void
     {
         $ssoUser = $this->createMockSocialiteUser('', '');
         $resolver = UserNameFieldsResolver::make($ssoUser);
@@ -63,7 +63,7 @@ class UserNameFieldsResolverTest extends TestCase
     }
 
     #[Test]
-    public function it_resolves_three_word_names(): void
+    public function itResolvesThreeWordNames(): void
     {
         $ssoUser = $this->createMockSocialiteUser('John Michael Doe', 'john@example.com');
         $resolver = UserNameFieldsResolver::make($ssoUser);

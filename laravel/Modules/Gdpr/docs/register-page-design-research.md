@@ -254,7 +254,7 @@ This document compiles the latest design patterns, UX best practices, and modern
 - **Success States**: Redirect or show confirmation
 - **Progressive Fields**: Show/hide based on validation
 
-## LaravelPizza-Specific Considerations
+## <nome progetto>-Specific Considerations
 
 ### Brand Integration
 - **Primary Colors**: Slate-900 (#0f172a) + Red-600 (#dc2626)

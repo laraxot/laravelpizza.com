@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Unit\Actions\User;
 
-use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Actions\Activity\LogRegistrationAction;
+use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Actions\Otp\SendOtpByUserAction;
 use Modules\User\Tests\TestCase;
 

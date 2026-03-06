@@ -5,9 +5,7 @@ declare(strict_types=1);
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Modules\User\Filament\Widgets\LoginWidget;
-use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
-use Illuminate\Support\Facades\Hash;
 
 uses(TestCase::class);
 
@@ -60,6 +58,6 @@ describe('LoginWidget', function (): void {
     test('login widget extends xot base widget', function (): void {
         $widget = new LoginWidget();
 
-        expect($widget)->toBeInstanceOf(\Modules\Xot\Filament\Widgets\XotBaseWidget::class);
+        expect($widget)->toBeInstanceOf(Modules\Xot\Filament\Widgets\XotBaseWidget::class);
     });
 });

@@ -73,7 +73,7 @@ The Notify module provides a comprehensive notification system for the Laraxot s
 **Parent Resource:** CustomerResource (from ExternalProject module)
 =======
 **Parent Resource:** CustomerResource (from ModuloEsempio module)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_y4v0o8
 **Child Resource:** NotificationLogResource
 **Relationship:** Customer-related notifications (via contacts/surveys)
@@ -87,7 +87,7 @@ The Notify module provides a comprehensive notification system for the Laraxot s
 **Parent Resource:** SurveyPdfResource (from ExternalProject module)
 =======
 **Parent Resource:** SurveyPdfResource (from ModuloEsempio module)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_y4v0o8
 **Child Resource:** NotificationLogResource
 **Relationship:** Survey-related notifications (via survey contacts)
@@ -202,7 +202,7 @@ Following the documented approach in `Modules/UI/docs/filament/nested-resource.m
 - Handle relationships with ExternalProject module (surveys and contacts)
 =======
 - Handle relationships with ModuloEsempio module (surveys and contacts)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_y4v0o8
 - Coordinate with User module for recipient management
 - Integrate with Tenant module for multi-tenant operations

@@ -43,7 +43,7 @@ Implementare `ContactColumn.php` come colonna Filament riutilizzabile che utiliz
 | **Righe PHP** | 79 | 46 | **-42%** |
 | **Duplicazione** | 6 blocchi | 1 loop | **-83%** |
 | **Manutenibilità** | 6 punti modifica | 1 punto modifica | **-83%** |
-| **Riutilizzabilità** | Solo TechPlanner | Qualsiasi modulo | **+100%** |
+| **Riutilizzabilità** | Solo <nome progetto> | Qualsiasi modulo | **+100%** |
 'verified_at',    // Data di verifica
 'user_id',        // ID utente associato
 ```

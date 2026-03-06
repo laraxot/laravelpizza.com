@@ -7,7 +7,7 @@
 
 ## Overview
 
-This report documents the implementation of Filament class extension rules across the TechPlanner application, focusing on replacing direct Filament class extensions with XotBase equivalents.
+This report documents the implementation of Filament class extension rules across the <nome progetto> application, focusing on replacing direct Filament class extensions with XotBase equivalents.
 
 ## Applied Rules
 

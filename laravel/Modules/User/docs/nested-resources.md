@@ -202,7 +202,7 @@ Following the documented approach in `Modules/UI/docs/filament/nested-resource.m
 - Enable nested resources that span multiple modules (User-ExternalProject, User-Notify)
 =======
 - Enable nested resources that span multiple modules (User-ModuloEsempio, User-Notify)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_tDYlRr
 - Implement cross-module relationship management
 

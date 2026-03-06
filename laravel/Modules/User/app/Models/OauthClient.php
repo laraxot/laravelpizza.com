@@ -94,7 +94,6 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static Builder<static>|OauthClient                               whereRedirectUris($value)
  * @method static Builder<static>|OauthClient                               withoutPermission($permissions)
  * @method static Builder<static>|OauthClient                               withoutRole($roles, ?string $guard = null)
- *                                                                                                                                     >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */

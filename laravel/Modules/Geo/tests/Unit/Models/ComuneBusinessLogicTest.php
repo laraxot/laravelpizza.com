@@ -9,7 +9,6 @@ use Modules\Geo\Models\BaseModel;
 use Modules\Geo\Models\Comune;
 use Modules\Geo\Tests\TestCase;
 use Modules\Tenant\Models\Traits\SushiToJson;
-use ReflectionClass;
 
 uses(TestCase::class);
 
@@ -54,7 +53,7 @@ describe('Comune Business Logic', function () {
 
     test('comune has schema definition for structured geographic data', function () {
         $comune = new Comune();
-        $reflection = new ReflectionClass($comune);
+        $reflection = new \ReflectionClass($comune);
         $schemaProperty = $reflection->getProperty('schema');
         $schemaProperty->setAccessible(true);
         /** @var array<string, string> $schema */

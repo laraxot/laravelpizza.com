@@ -41,8 +41,3 @@ Vedi [testcase-xotbase-extends](../../../.cursor/rules/testcase-xotbase-extends.
 1. **Build**: `cd Themes/Meetup && npm run build && npm run copy`
 2. **Test correlati**: eseguire `php artisan test --filter 'Meetup'` e `--filter 'Cms'`
 3. **Verifica browser**: `http://127.0.0.1:8000/it`
-
-## Coordinamento con Coverage Moduli
-
-Quando il lavoro è su coverage di un modulo (es. Activity), usare Issue/Discussion GitHub e il `coverage-plan.md` del modulo come fonte unica di handoff multi-agente.
-Se `--testsuite=<Modulo> --coverage` mostra file di moduli non target, trattarlo come problema di scope coverage e non come blocker del batch test.

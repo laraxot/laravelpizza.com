@@ -442,7 +442,7 @@ describe('UI Business Logic Integration', function () {
             $mobileBreakpoint = $component->responsive_breakpoints['mobile'] ?? '';
             $tabletBreakpoint = $component->responsive_breakpoints['tablet'] ?? '';
             $desktopBreakpoint = $component->responsive_breakpoints['desktop'] ?? '';
-            
+
             expect($mobileBreakpoint)->toContain('768px');
             expect($tabletBreakpoint)->toContain('769px');
             expect($tabletBreakpoint)->toContain('1024px');

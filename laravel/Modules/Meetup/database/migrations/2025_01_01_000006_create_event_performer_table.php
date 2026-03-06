@@ -15,7 +15,8 @@ return new class extends XotBaseMigration
      */
     public function up(): void
     {
-        $this->tableCreate(function (Blueprint $table): void {
+        if (! $this->tableExists()) {
+            $this->tableCreate(function (Blueprint $table): void {
                 $table->id();
                 $table->unsignedBigInteger('event_id')->index();
                 $table->unsignedBigInteger('performer_id')->index();
@@ -23,9 +24,9 @@ return new class extends XotBaseMigration
                 $table->unsignedInteger('order')->default(0);
                 $table->unique(['event_id', 'performer_id']);
                 $this->timestamps($table);
-        });
-
-        $this->tableUpdate(function (Blueprint $table): void {
+            });
+        } else {
+            $this->tableUpdate(function (Blueprint $table): void {
                 if (! $this->hasColumn('event_id')) {
                     $table->unsignedBigInteger('event_id')->index()->after('id');
                 }
@@ -38,6 +39,7 @@ return new class extends XotBaseMigration
                 if (! $this->hasColumn('order')) {
                     $table->unsignedInteger('order')->default(0)->after('role');
                 }
-        });
+            });
+        }
     }
 };

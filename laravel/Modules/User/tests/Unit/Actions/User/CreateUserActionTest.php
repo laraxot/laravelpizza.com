@@ -21,10 +21,10 @@ describe('CreateUserAction', function (): void {
 
     test('execute method accepts array parameter', function (): void {
         $action = app(CreateUserAction::class);
-        
+
         $reflection = new \ReflectionMethod($action, 'execute');
         $params = $reflection->getParameters();
-        
+
         expect(count($params))->toBe(1)
             ->and($params[0]->getName())->toBe('data');
     });

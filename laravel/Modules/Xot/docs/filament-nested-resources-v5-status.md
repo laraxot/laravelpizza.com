@@ -85,5 +85,5 @@ QuestionChartResource::getUrl('edit', ['record' => $chart]);
 ### Documenti Correlati
 
 - [XotBaseManageRelatedRecords Pattern](../../Xot/docs/architecture/xot-base-manage-related-records.md)
-- [Errore Form Vuoto in Edit](../../Quaeris/docs/manage-charts-edit-form-error.md)
+- [Errore Form Vuoto in Edit](../../<nome progetto>/docs/manage-charts-edit-form-error.md)
 - [Filament v5 Migration Guide](../../Xot/docs/packages/laravel-12-filament-5-migration.md)

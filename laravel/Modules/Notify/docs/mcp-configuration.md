@@ -36,14 +36,14 @@ The Notify module's MCP configuration enables AI assistants to interact with:
     },
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_laravelpizza/laravel"],
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_<nome progetto>/laravel"],
       "description": "Access to Notify module files"
     },
     "database": {
       "command": "npx",
       "args": ["-y", "@bytebase/dbhub"],
       "env": {
-        "DATABASE_URL": "sqlite:///var/www/_bases/base_laravelpizza/laravel/database/database.sqlite"
+        "DATABASE_URL": "sqlite:///var/www/_bases/base_<nome progetto>/laravel/database/database.sqlite"
       },
       "description": "SQLite database queries"
     }
@@ -58,7 +58,7 @@ The Notify module's MCP configuration enables AI assistants to interact with:
 ### Asana Integration
 ```bash
 # Create task
-"Create task in 'LaravelPizza - Notify Module' project: 'Implement template preview feature'"
+"Create task in '<nome progetto> - Notify Module' project: 'Implement template preview feature'"
 
 # Update status
 "Update task 'Test notification channels' status to 'In Progress'"

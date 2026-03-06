@@ -1,4 +1,4 @@
-# Analisi Pacchetti Installati - Quaeris Fila5 Mono
+# Analisi Pacchetti Installati - <nome progetto> Fila5 Mono
 
 Documentazione generata il 2026-02-26 basata su `composer show`.
 

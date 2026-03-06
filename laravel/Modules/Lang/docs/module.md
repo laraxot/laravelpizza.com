@@ -66,7 +66,7 @@ The Lang module provides comprehensive localization and translation management:
 - **ExternalProject**: Survey translation
 =======
 - **ModuloEsempio**: Survey translation
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_Z858ew
 - **Limesurvey**: Question translation
 - **Xot**: Base localization infrastructure

@@ -18,7 +18,7 @@ $table->uuid('uuid')->unique()->after('id');
 - Per API/Android: usare `Profile::where('uuid', $uuid)->first()`
 
 ## Migrazione esistente
-La migration `2026_02_22_000000_create_profiles_table.php` sta nel **modulo main** (TechPlanner) perché Profile è strettamente dipendente dal main_module. Crea la tabella con id bigint + uuid e converte tabelle esistenti con id UUID tramite `XotBaseMigration::convertIdFromUuidToBigintIfNeeded()`.
+La migration `2026_02_22_000000_create_profiles_table.php` sta nel **modulo main** (<nome progetto>) perché Profile è strettamente dipendente dal main_module. Crea la tabella con id bigint + uuid e converte tabelle esistenti con id UUID tramite `XotBaseMigration::convertIdFromUuidToBigintIfNeeded()`.
 
 ## Riferimenti
 - [user-profile.md](user-profile.md)

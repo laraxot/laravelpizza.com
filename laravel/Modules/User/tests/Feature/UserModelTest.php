@@ -313,4 +313,3 @@ describe('User Scopes and Queries', function () {
         expect($englishUsers->every(fn ($user) => 'en' === $user->lang))->toBe(true);
     });
 });
-

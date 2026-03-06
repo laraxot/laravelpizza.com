@@ -43,4 +43,3 @@ describe('Create specific passport client actions', function (): void {
         expect($result)->toBe($expectedClient);
     });
 });
-

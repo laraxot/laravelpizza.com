@@ -22,7 +22,7 @@ This guide provides a comprehensive overview of chart generation and PDF integra
 - **ExternalProject Module**: Handles survey data and PDF generation
 =======
 - **ModuloEsempio Module**: Handles survey data and PDF generation
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_LxvdoW
 - **Xot Module**: Provides core services including HTML to PDF conversion
 - **JpGraph Library**: Server-side chart generation

@@ -34,7 +34,7 @@ return [
             'cta' => 'Recruté par les meilleures entreprises Laravel',
         ],
     ],
-    'social_proof' => 'Rejoignez la communauté LaravelPizza',
+    'social_proof' => 'Rejoignez la communauté <nome progetto>',
     'fields' => [
         'first_name' => [
             'label' => 'Prénom',
@@ -107,7 +107,7 @@ return [
     'login' => 'Se connecter',
     'required_consent_missing' => 'Vous devez accepter tous les consentements requis pour procéder.',
     'success' => 'Inscription réussie ! Votre compte a été créé en conformité avec le RGPD.',
-    'success_message' => 'Bienvenue dans LaravelPizza Meetups ! Votre inscription est complète et tous vos consentements ont été correctement enregistrés.',
+    'success_message' => 'Bienvenue dans <nome progetto> Meetups ! Votre inscription est complète et tous vos consentements ont été correctement enregistrés.',
     'error' => 'Erreur d\'inscription',
     'error_message' => 'Une erreur s\'est produite lors de l\'inscription. Veuillez réessayer plus tard. Si le problème persiste, contactez notre support.',
     'clickbait' => [
@@ -123,14 +123,14 @@ return [
         'by_registering' => 'En vous inscrivant, vous acceptez nos Conditions et Politique de Confidentialité',
     ],
     'seo' => [
-        'description' => 'Rejoignez la communauté LaravelPizza pour des meetups exclusifs, des tutoriels premium et du réseautage. Accès gratuit aux ateliers et aux événements communautaires.',
+        'description' => 'Rejoignez la communauté <nome progetto> pour des meetups exclusifs, des tutoriels premium et du réseautage. Accès gratuit aux ateliers et aux événements communautaires.',
         'laravel_meetup' => 'meetup Laravel',
         'laravel_community' => 'communauté Laravel',
         'php_developer_community' => 'communauté développeurs PHP',
         'laravel_tutorials' => 'tutoriels Laravel',
         'laravel_workshops' => 'ateliers Laravel',
         'laravel_networking' => 'réseau Laravel',
-        'laravelpizza' => 'LaravelPizza',
+        '<nome progetto>' => '<nome progetto>',
     ],
     'navigation' => [
         'label' => 'Missing Navigation Label',

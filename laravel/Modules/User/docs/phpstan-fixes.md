@@ -41,17 +41,17 @@ protected static string $view = 'pub_theme::filament.widgets.edit-user';
 ### Problem
 PHPStan reports missing classes that are referenced but not found:
 ```
-Class Modules\TechPlanner\Models\Cliente not found.
-Class Modules\TechPlanner\Models\Apparecchio not found.
+Class Modules\<nome progetto>\Models\Cliente not found.
+Class Modules\<nome progetto>\Models\Apparecchio not found.
 ```
 
 ### Solution
 These classes need to be created or the references need to be updated to use existing models.
 
 ### Files Requiring Action
-- `Modules/TechPlanner/app/Console/Commands/ImportAccessDataCommand.php`
-- `Modules/TechPlanner/app/Contracts/PivotContract.php`
-- `Modules/TechPlanner/app/Contracts/WorkerContract.php`
+- `Modules/<nome progetto>/app/Console/Commands/ImportAccessDataCommand.php`
+- `Modules/<nome progetto>/app/Contracts/PivotContract.php`
+- `Modules/<nome progetto>/app/Contracts/WorkerContract.php`
 
 ## 3. Type Casting Issues
 
@@ -78,7 +78,7 @@ $value = is_string($mixedValue) ? $mixedValue : (string) $mixedValue;
 ### Problem
 Methods and properties without type declarations:
 ```
-Method Modules\TechPlanner\Models\Worker::setBirthDayAttribute() has parameter $value with no type specified.
+Method Modules\<nome progetto>\Models\Worker::setBirthDayAttribute() has parameter $value with no type specified.
 ```
 
 ### Solution
@@ -114,14 +114,14 @@ chmod($file, 0755);
 ### Problem
 Incorrect class references and missing methods:
 ```
-Call to static method make() on an unknown class Modules\TechPlanner\Filament\Resources\ClientResource\Pages\Filament\Infolists\Components\Section.
+Call to static method make() on an unknown class Modules\<nome progetto>\Filament\Resources\ClientResource\Pages\Filament\Infolists\Components\Section.
 ```
 
 ### Solution
 Use correct Filament component classes:
 ```php
 // Before
-use Modules\TechPlanner\Filament\Resources\ClientResource\Pages\Filament\Infolists\Components\Section;
+use Modules\<nome progetto>\Filament\Resources\ClientResource\Pages\Filament\Infolists\Components\Section;
 
 // After
 use Filament\Infolists\Components\Section;

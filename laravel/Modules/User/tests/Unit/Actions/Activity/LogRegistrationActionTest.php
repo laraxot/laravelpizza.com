@@ -12,7 +12,7 @@ use PHPUnit\Framework\Attributes\Test;
 class LogRegistrationActionTest extends TestCase
 {
     #[Test]
-    public function it_logs_registration_with_default_properties(): void
+    public function itLogsRegistrationWithDefaultProperties(): void
     {
         $user = new User(['type' => 'standard']);
         $user->forceFill(['id' => 1]);
@@ -24,7 +24,7 @@ class LogRegistrationActionTest extends TestCase
     }
 
     #[Test]
-    public function it_logs_registration_with_custom_properties(): void
+    public function itLogsRegistrationWithCustomProperties(): void
     {
         $user = new User(['type' => 'premium']);
         $user->forceFill(['id' => 2]);
@@ -36,7 +36,7 @@ class LogRegistrationActionTest extends TestCase
     }
 
     #[Test]
-    public function it_logs_registration_with_different_user_types(): void
+    public function itLogsRegistrationWithDifferentUserTypes(): void
     {
         $standardUser = new User(['type' => 'standard']);
         $standardUser->forceFill(['id' => 3]);

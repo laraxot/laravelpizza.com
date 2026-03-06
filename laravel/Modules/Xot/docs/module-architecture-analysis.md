@@ -43,7 +43,7 @@
 #### 3. **ExternalProject Module - Business Core**
 =======
 #### 3. **ModuloEsempio Module - Business Core**
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_mjdk5z
 **Role**: Survey management, reporting, analytics
 **Priority**: 0 (Standard priority)
@@ -243,7 +243,7 @@
 **Dependencies**: Xot, ExternalProject
 =======
 **Dependencies**: Xot, ModuloEsempio
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_mjdk5z
 
 **Key Components**:
@@ -299,7 +299,7 @@ Xot (Foundation)
 ├── ExternalProject (Business Core)
 =======
 ├── ModuloEsempio (Business Core)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_mjdk5z
 │   ├── Geo (Locations)
 │   ├── Media (Files)
@@ -416,7 +416,7 @@ public function register(): void
 - **ExternalProject**: Missing module.json description
 =======
 - **ModuloEsempio**: Missing module.json description
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_mjdk5z
 
 #### 🔧 Technical Debt
@@ -435,7 +435,7 @@ public function register(): void
 - **ExternalProject**: Survey processing and reporting
 =======
 - **ModuloEsempio**: Survey processing and reporting
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_mjdk5z
 - **Media**: File uploads and conversions
 - **Job**: Background processing

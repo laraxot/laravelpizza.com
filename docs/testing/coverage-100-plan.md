@@ -14,6 +14,16 @@ Raggiungere 100% su:
 - Type coverage non disponibile: plugin non installato (`pest-plugin-type-coverage` assente).
 - GitHub issue/discussion non aggiornabili da CLI per token `gh` invalido.
 
+## Baseline coordinamento (2026-03-06)
+
+- Issue GitHub: operative (epic/program aggiornati).
+- Discussion GitHub: operativa via `gh api graphql`.
+- Project GitHub: bloccato da scope mancante `read:project`.
+- Wiki GitHub: non gestibile da comando dedicato in questa build `gh`.
+- Fallback attivo:
+  - tracking decisionale in `docs/memory/coverage-100-full-project-memory.md`;
+  - tracking tecnico in `laravel/storage/app/private/coverage/coordination-log.md`.
+
 ## Strategia in 5 fasi
 
 1. **Perimetro coverage corretto**

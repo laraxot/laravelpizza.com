@@ -21,10 +21,10 @@ describe('Lang Actions Coverage', function (): void {
 
     test('SyncTranslationsAction has correct signature', function (): void {
         $action = app(SyncTranslationsAction::class);
-        
+
         $reflection = new \ReflectionMethod($action, 'execute');
         $params = $reflection->getParameters();
-        
+
         expect(count($params))->toBe(3)
             ->and($params[0]->getName())->toBe('sourceLang')
             ->and($params[1]->getName())->toBe('targetLangs')
@@ -33,10 +33,10 @@ describe('Lang Actions Coverage', function (): void {
 
     test('SyncTranslationsAction has default parameters', function (): void {
         $action = app(SyncTranslationsAction::class);
-        
+
         $reflection = new \ReflectionMethod($action, 'execute');
         $params = $reflection->getParameters();
-        
+
         expect($params[0]->isDefaultValueAvailable())->toBeTrue()
             ->and($params[1]->isDefaultValueAvailable())->toBeTrue()
             ->and($params[2]->isDefaultValueAvailable())->toBeTrue();

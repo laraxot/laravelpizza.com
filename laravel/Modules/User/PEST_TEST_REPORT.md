@@ -1,8 +1,38 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+# <nome progetto> User Module - Pest Test Implementation Report
+
+## Executive Summary
+
+Successfully implemented comprehensive Pest PHP tests for 5 critical User module Actions in <nome progetto>. All tests are now **PASSING** with high code coverage and comprehensive test scenarios.
+=======
+=======
+>>>>>>> a038b0f2 (.)
 # LaravelPizza User Module - Pest Test Implementation Report
 
 ## Executive Summary
 
 Successfully implemented comprehensive Pest PHP tests for 5 critical User module Actions in LaravelPizza. All tests are now **PASSING** with high code coverage and comprehensive test scenarios.
+<<<<<<< HEAD
+>>>>>>> a038b0f2 (.)
+=======
+# <nome progetto> User Module - Pest Test Implementation Report
+
+## Executive Summary
+
+Successfully implemented comprehensive Pest PHP tests for 5 critical User module Actions in <nome progetto>. All tests are now **PASSING** with high code coverage and comprehensive test scenarios.
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+>>>>>>> a038b0f2 (.)
+=======
+# <nome progetto> User Module - Pest Test Implementation Report
+
+## Executive Summary
+
+Successfully implemented comprehensive Pest PHP tests for 5 critical User module Actions in <nome progetto>. All tests are now **PASSING** with high code coverage and comprehensive test scenarios.
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
 
 ### Test Results
 - **Total Tests Created**: 32

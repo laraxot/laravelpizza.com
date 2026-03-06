@@ -321,7 +321,7 @@ Il modulo User è ora **completamente compliant** con PHPStan Level 10. I patter
 - **ExternalProject Module**: Vedi `Modules/ExternalProject/docs/phpstan-level10-app-fixes.md` per pattern simili
 =======
 - **ModuloEsempio Module**: Vedi `Modules/ModuloEsempio/docs/phpstan-level10-ptvx-fixes.md` per pattern simili
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_32qRWd
 
 **Status**: ✅ **COMPLETATO** - Pronto per production con type safety massima.

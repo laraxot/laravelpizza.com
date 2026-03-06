@@ -17,6 +17,7 @@
     <source>
         <include>
             <directory suffix=".php">./Modules/UI/app</directory>
+            <directory suffix=".php">./Modules/Activity/app</directory>
         </include>
         <exclude>
             <directory>./Modules/*/config</directory>

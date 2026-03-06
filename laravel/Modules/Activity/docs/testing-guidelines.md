@@ -19,8 +19,33 @@ All tests MUST use `.env.testing` configuration con MySQL (no SQLite), copia car
 ```env
 APP_ENV=testing
 DB_CONNECTION=mysql
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+DB_DATABASE=<nome progetto>_data_test
+DB_DATABASE_USER=<nome progetto>_user_test
+=======
 DB_DATABASE=laravelpizza_data_test
 DB_DATABASE_USER=laravelpizza_user_test
+>>>>>>> a038b0f2 (.)
+=======
+DB_DATABASE=<nome progetto>_data_test
+DB_DATABASE_USER=<nome progetto>_user_test
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+DB_DATABASE=laravelpizza_data_test
+DB_DATABASE_USER=laravelpizza_user_test
+>>>>>>> a038b0f2 (.)
+=======
+DB_DATABASE=<nome progetto>_data_test
+DB_DATABASE_USER=<nome progetto>_user_test
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+DB_DATABASE=laravelpizza_data_test
+DB_DATABASE_USER=laravelpizza_user_test
+>>>>>>> a21dc33d (.)
 ```
 
 ### Pest Framework Usage

@@ -10,7 +10,7 @@ use Laravel\Passport\Token as PassportToken;
 use Modules\Xot\Contracts\UserContract;
 
 /**
- * Modules\User\Models\OauthAccessToken.
+ * Modules\User\Models\OauthToken.
  *
  * @property string                 $id
  * @property string|null            $user_id
@@ -29,57 +29,23 @@ use Modules\Xot\Contracts\UserContract;
  * @property UserContract|null      $user
  * @property OauthRefreshToken|null $refreshToken
  *
- * @method static Builder|OauthAccessToken                                 newModelQuery()
- * @method static Builder|OauthAccessToken                                 newQuery()
- * @method static Builder|OauthAccessToken                                 query()
- * @method static Builder|OauthAccessToken                                 whereClientId($value)
- * @method static Builder|OauthAccessToken                                 whereCreatedAt($value)
- * @method static Builder|OauthAccessToken                                 whereExpiresAt($value)
- * @method static Builder|OauthAccessToken                                 whereId($value)
- * @method static Builder|OauthAccessToken                                 whereName($value)
- * @method static Builder|OauthAccessToken                                 whereRevoked($value)
- * @method static Builder|OauthAccessToken                                 whereScopes($value)
- * @method static Builder|OauthAccessToken                                 whereUpdatedAt($value)
- * @method static Builder|OauthAccessToken                                 whereUserId($value)
- * @method static Builder|OauthAccessToken                                 whereCreatedBy($value)
- * @method static Builder|OauthAccessToken                                 whereDeletedAt($value)
- * @method static Builder|OauthAccessToken                                 whereDeletedBy($value)
- * @method static Builder|OauthAccessToken                                 whereUpdatedBy($value)
+ * @method static Builder|OauthToken                                       newModelQuery()
+ * @method static Builder|OauthToken                                       newQuery()
+ * @method static Builder|OauthToken                                       query()
+ * @method static Builder|OauthToken                                       whereClientId($value)
+ * @method static Builder|OauthToken                                       whereCreatedAt($value)
+ * @method static Builder|OauthToken                                       whereExpiresAt($value)
+ * @method static Builder|OauthToken                                       whereId($value)
+ * @method static Builder|OauthToken                                       whereName($value)
+ * @method static Builder|OauthToken                                       whereRevoked($value)
+ * @method static Builder|OauthToken                                       whereScopes($value)
+ * @method static Builder|OauthToken                                       whereUpdatedAt($value)
+ * @method static Builder|OauthToken                                       whereUserId($value)
+ * @method static Builder|OauthToken                                       whereCreatedBy($value)
+ * @method static Builder|OauthToken                                       whereDeletedAt($value)
+ * @method static Builder|OauthToken                                       whereDeletedBy($value)
+ * @method static Builder|OauthToken                                       whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthToken existsIn(array $haystack)
- * @method static Builder|OauthAccessToken                                 newModelQuery()
- * @method static Builder|OauthAccessToken                                 newQuery()
- * @method static Builder|OauthAccessToken                                 query()
- * @method static Builder|OauthAccessToken                                 whereClientId($value)
- * @method static Builder|OauthAccessToken                                 whereCreatedAt($value)
- * @method static Builder|OauthAccessToken                                 whereExpiresAt($value)
- * @method static Builder|OauthAccessToken                                 whereId($value)
- * @method static Builder|OauthAccessToken                                 whereName($value)
- * @method static Builder|OauthAccessToken                                 whereRevoked($value)
- * @method static Builder|OauthAccessToken                                 whereScopes($value)
- * @method static Builder|OauthAccessToken                                 whereUpdatedAt($value)
- * @method static Builder|OauthAccessToken                                 whereUserId($value)
- * @method static Builder|OauthAccessToken                                 whereCreatedBy($value)
- * @method static Builder|OauthAccessToken                                 whereDeletedAt($value)
- * @method static Builder|OauthAccessToken                                 whereDeletedBy($value)
- * @method static Builder|OauthAccessToken                                 whereUpdatedBy($value)
- * @method static Builder|OauthAccessToken                                 newModelQuery()
- * @method static Builder|OauthAccessToken                                 newQuery()
- * @method static Builder|OauthAccessToken                                 query()
- * @method static Builder|OauthAccessToken                                 whereClientId($value)
- * @method static Builder|OauthAccessToken                                 whereCreatedAt($value)
- * @method static Builder|OauthAccessToken                                 whereExpiresAt($value)
- * @method static Builder|OauthAccessToken                                 whereId($value)
- * @method static Builder|OauthAccessToken                                 whereName($value)
- * @method static Builder|OauthAccessToken                                 whereRevoked($value)
- * @method static Builder|OauthAccessToken                                 whereScopes($value)
- * @method static Builder|OauthAccessToken                                 whereUpdatedAt($value)
- * @method static Builder|OauthAccessToken                                 whereUserId($value)
- * @method static Builder|OauthAccessToken                                 whereCreatedBy($value)
- * @method static Builder|OauthAccessToken                                 whereDeletedAt($value)
- * @method static Builder|OauthAccessToken                                 whereDeletedBy($value)
- * @method static Builder|OauthAccessToken                                 whereUpdatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthToken existsIn(array $haystack)
- *                                                                                                   >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */
@@ -87,4 +53,39 @@ class OauthToken extends PassportToken
 {
     /** @var string */
     protected $connection = 'user';
+
+    /**
+     * Get the user associated with this token.
+     * Override Passport's user() to handle null provider gracefully.
+     */
+    public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        $provider = $this->getTokenGuardProvider();
+
+        if (null === $provider) {
+            return $this->belongsTo(
+                config('auth.guards.api.provider') ?? User::class,
+                'user_id'
+            );
+        }
+
+        return $this->belongsTo(
+            config("auth.providers.{$provider}.model", User::class),
+            'user_id'
+        );
+    }
+
+    /**
+     * Get the token guard provider.
+     */
+    protected function getTokenGuardProvider(): ?string
+    {
+        foreach (config('auth.guards', []) as $guard => $config) {
+            if (($config['driver'] ?? null) === 'passport') {
+                return $config['provider'] ?? null;
+            }
+        }
+
+        return null;
+    }
 }

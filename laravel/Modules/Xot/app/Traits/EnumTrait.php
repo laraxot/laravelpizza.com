@@ -75,7 +75,7 @@ trait EnumTrait
      * - **Religion**: Strong typing through enum values
      * - **Zen**: Form without form - one method adapts to both contexts
      *
-     * Inspired by Modules/TechPlanner/database/migrations/2019_12_12_000004_create_workers_table.php:
+     * Inspired by Modules/<nome progetto>/database/migrations/2019_12_12_000004_create_workers_table.php:
      * ```php
      * $address_components = Place::$address_components;
      * foreach ($address_components as $el) {

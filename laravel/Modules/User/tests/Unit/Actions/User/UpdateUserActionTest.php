@@ -21,10 +21,10 @@ describe('UpdateUserAction', function (): void {
 
     test('execute method accepts user and data parameters', function (): void {
         $action = app(UpdateUserAction::class);
-        
+
         $reflection = new \ReflectionMethod($action, 'execute');
         $params = $reflection->getParameters();
-        
+
         expect(count($params))->toBe(2)
             ->and($params[0]->getName())->toBe('user')
             ->and($params[1]->getName())->toBe('data');

@@ -126,7 +126,7 @@ protected $listen = [
 1. Vai su [Azure Portal](https://portal.azure.com/)
 2. Naviga ad **Azure Active Directory** → **App registrations** → **New registration**
 3. Configura:
-   - **Name**: TechPlanner SSO
+   - **Name**: <nome progetto> SSO
    - **Supported account types**: 
      - ✅ Accounts in this organizational directory only (single tenant)
      - ✅ Accounts in any organizational directory (multi-tenant)
@@ -157,7 +157,7 @@ Aggiungi le seguenti permissions in **API permissions** → **Add a permission**
 ### **Step 4: Certificates & Secrets**
 
 1. Vai su **Certificates & secrets** → **New client secret**
-2. Aggiungi descrizione: `TechPlanner Production`
+2. Aggiungi descrizione: `<nome progetto> Production`
 3. Scadenza: 24 mesi (o secondo policy aziendale)
 4. **COPY IMMEDIATAMENTE** il valore del secret (non sarà più visibile)
 

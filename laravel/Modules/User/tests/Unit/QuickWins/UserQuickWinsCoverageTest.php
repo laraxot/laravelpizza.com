@@ -12,8 +12,6 @@ use Modules\User\Models\Team;
 use Modules\User\Models\TeamUser;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 
 uses(TestCase::class);
 

@@ -27,7 +27,7 @@ trait CreatesApplication
         $_ENV['APP_BASE_PATH'] = $basePath;
 
         // CRITICAL: Load .env.testing BEFORE app bootstrap so TenantServiceProvider
-        // and all module connections (activity, user, etc.) use laravelpizza_data_test
+        // and all module connections (activity, user, etc.) use <nome progetto>_data_test
         $envTesting = $basePath.'/.env.testing';
         if (file_exists($envTesting)) {
             $dotenv = \Dotenv\Dotenv::createMutable($basePath, '.env.testing');

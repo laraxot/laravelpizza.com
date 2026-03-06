@@ -104,4 +104,3 @@ describe('User datas and enums coverage', function (): void {
             ->and(NestedLanguageEnum::SPANISH->value)->toBe('es');
     });
 });
-

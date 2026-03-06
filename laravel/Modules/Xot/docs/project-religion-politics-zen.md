@@ -2,7 +2,7 @@
 
 ## 🧠 Logica del Progetto
 
-Il progetto Laravel Pizza è una conversione e miglioramento di https://laravelpizza.com/, costruito sull'architettura Laraxot. È un ecosistema completo di meetup, community e tema frontend super curato con i seguenti principi:
+Il progetto Laravel Pizza è una conversione e miglioramento di https://<nome progetto>.com/, costruito sull'architettura Laraxot. È un ecosistema completo di meetup, community e tema frontend super curato con i seguenti principi:
 
 - **Conversione e Miglioramento**: Non è una semplice copia, ma un'evoluzione del sito originale
 - **Architettura Modulare**: Moduli indipendenti (`Modules/*`) e temi separati (`Themes/*`)
@@ -51,7 +51,7 @@ Il progetto Laravel Pizza è una conversione e miglioramento di https://laravelp
 
 ## 🎯 Business Logic Principale
 
-- **Meetup Theme**: Tema principale basato su laravelpizza.com, con Folio + Volt
+- **Meetup Theme**: Tema principale basato su <nome progetto>.com, con Folio + Volt
 - **Folio + Volt**: Architettura obbligatoria per il frontoffice
 - **Filament**: Solo per il backoffice
 - **Laraxot Framework**: "Framework nel framework" con regole rigide

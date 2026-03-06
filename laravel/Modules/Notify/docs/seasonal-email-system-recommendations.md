@@ -1,7 +1,7 @@
 # Raccomandazioni per lo Sviluppo del Sistema Email Stagionali
 
 **Data**: 19 Dicembre 2025  
-**Progetto**: TechPlanner Laravel Multi-Tenant Application  
+**Progetto**: <nome progetto> Laravel Multi-Tenant Application  
 **Tipo**: Linee guida e raccomandazioni  
 **Stato**: ✅ Completato  
 

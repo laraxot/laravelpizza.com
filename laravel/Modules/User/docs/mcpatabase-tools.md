@@ -8,7 +8,7 @@ MCP (Model Context Protocol) tools provide enhanced capabilities for database an
 MCP (Model Context Protocol) tools provide enhanced capabilities for database analysis, including access to the app_survey database used in the Limesurvey integration.
 =======
 MCP (Model Context Protocol) tools provide enhanced capabilities for database analysis, including access to the ptvx_survey database used in the Limesurvey integration.
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_w0p22l
 
 ## Available MCP Tools for Database Work
@@ -20,7 +20,7 @@ MCP (Model Context Protocol) tools provide enhanced capabilities for database an
 {
   "command": "node",
   "args": [
-    "/var/www/_bases/base_techplanner_fila5_mono/bashscripts/mcp/mysql-db-connector.js"
+    "/var/www/_bases/base_<nome progetto>_fila5_mono/bashscripts/mcp/mysql-db-connector.js"
   ]
 }
 ```
@@ -32,7 +32,7 @@ MCP (Model Context Protocol) tools provide enhanced capabilities for database an
 **Use Cases for app_survey Database**:
 =======
 **Use Cases for ptvx_survey Database**:
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_w0p22l
 - Query Limesurvey tables directly
 - Analyze survey responses in `lime_survey_{sid}` tables
@@ -74,7 +74,7 @@ MCP (Model Context Protocol) tools provide enhanced capabilities for database an
 -- List all survey tables in app_survey database
 =======
 -- List all survey tables in ptvx_survey database
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_w0p22l
 SHOW TABLES LIKE 'lime_survey_%';
 
@@ -124,7 +124,7 @@ Current configuration includes MySQL access that automatically uses Laravel's .e
 Current configuration includes MySQL access that automatically uses Laravel's .env credentials, making it ideal for accessing the app_survey database without additional configuration.
 =======
 Current configuration includes MySQL access that automatically uses Laravel's .env credentials, making it ideal for accessing the ptvx_survey database without additional configuration.
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_w0p22l
 
 ## Best Practices for Database Analysis
@@ -137,7 +137,7 @@ Current configuration includes MySQL access that automatically uses Laravel's .e
 2. **Use proper connection** (`limesurvey` connection for app_survey database)
 =======
 2. **Use proper connection** (`limesurvey` connection for ptvx_survey database)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_w0p22l
 3. **Limit result sets** when exploring large survey response tables
 4. **Check table existence** before querying survey-specific tables

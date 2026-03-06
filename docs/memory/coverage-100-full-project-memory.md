@@ -125,3 +125,16 @@ Snapshot: 2026-03-04
 - Batch coverage corrente (2026-03-06, Cms resolve actions):
   - verifica dedicata `ResolveBlockQueryActionTest` -> `12 passed`;
   - allineato piano coverage: `ResolveBlockQueryAction.php` e `ResolvePageAction.php` marcati testati (quest'ultimo gia' verificato nel subset residual fail-batch odierno).
+
+## Snapshot coordinamento locale (2026-03-06)
+
+- Obiettivo confermato: mantenere coordinamento coverage 100% su Issue + Discussion + Project + Wiki.
+- Stato canali da questo ambiente:
+  - Issue: operativo (commenti pubblicati su #191 e #206).
+  - Discussion: operativa via GraphQL/API (`addDiscussionComment` su #207).
+  - Project: bloccato per scope token mancante `read:project`.
+  - Wiki: non disponibile comando `gh wiki` in questa build CLI.
+- Fallback attivato su richiesta utente:
+  - aggiornamento stato in `docs/` (rule + plan + memory);
+  - log operativo locale in `laravel/storage/app/private/coverage/coordination-log.md`.
+- Regola attiva: finche' Project/Wiki non sono accessibili, i delta operativi restano tracciati in locale e vengono riversati su GitHub appena sbloccato l'accesso.

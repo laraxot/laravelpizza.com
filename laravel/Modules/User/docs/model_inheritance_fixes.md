@@ -174,7 +174,7 @@ cd /var/www/_bases/base_app_fila5_mono/laravel/Modules/User
 =======
 cd /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/User
 ||||||| parent of da38c10 (.)
-cd /var/www/_bases/base_quaeris_fila5_mono/laravel/Modules/User
+cd /var/www/_bases/base_<nome progetto>_fila5_mono/laravel/Modules/User
 =======
 cd /var/www/_bases/base_healthcare_app_fila5_mono/laravel/Modules/User
 =======
@@ -183,7 +183,7 @@ cd /var/www/_bases/base_app_fila5_mono/laravel/Modules/User
 =======
 cd /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/User
 >>>>>>> da38c10 (.)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_0lPW2z
 grep -r "extends Model" app/Models/ --include="*.php" | grep -v "BaseModel\|BasePivot\|BaseMorphPivot"
 ```
@@ -202,7 +202,7 @@ cd /var/www/_bases/base_app_fila5_mono/laravel/Modules/User
 =======
 cd /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/User
 ||||||| parent of da38c10 (.)
-cd /var/www/_bases/base_quaeris_fila5_mono/laravel/Modules/User
+cd /var/www/_bases/base_<nome progetto>_fila5_mono/laravel/Modules/User
 =======
 cd /var/www/_bases/base_healthcare_app_fila5_mono/laravel/Modules/User
 =======
@@ -211,7 +211,7 @@ cd /var/www/_bases/base_app_fila5_mono/laravel/Modules/User
 =======
 cd /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/User
 >>>>>>> da38c10 (.)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_0lPW2z
 ./vendor/bin/phpstan analyse --memory-limit=2G
 ```

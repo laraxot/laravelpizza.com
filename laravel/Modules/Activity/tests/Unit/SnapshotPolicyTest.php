@@ -5,12 +5,20 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit;
 
 use Modules\Activity\Models\Policies\SnapshotPolicy;
+<<<<<<< HEAD
+use Modules\Activity\Tests\TestCase;
+=======
 use PHPUnit\Framework\TestCase;
+>>>>>>> a21dc33d (.)
 use Modules\User\Models\User;
 use PHPUnit\Framework\Attributes\Test;
 
 class SnapshotPolicyTest extends TestCase
 {
+<<<<<<< HEAD
+    use \Illuminate\Foundation\Testing\DatabaseTransactions;
+=======
+>>>>>>> a21dc33d (.)
 
     #[Test]
     public function policy_extends_user_base_policy(): void
@@ -84,6 +92,8 @@ class SnapshotPolicyTest extends TestCase
 
         $this->assertFalse($result);
     }
+<<<<<<< HEAD
+=======
 
     #[Test]
     public function create_update_delete_restore_force_delete_delegate_to_permissions(): void
@@ -107,4 +117,5 @@ class SnapshotPolicyTest extends TestCase
         $this->assertTrue($policy->restore($user));
         $this->assertTrue($policy->forceDelete($user));
     }
+>>>>>>> a21dc33d (.)
 }

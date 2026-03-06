@@ -198,7 +198,7 @@ Notify <── healthcare_app    (inviti survey, report PDF via email)
 Notify <── ExternalProject    (inviti survey, report PDF via email)
 =======
 Notify <── ModuloEsempio    (inviti survey, report PDF via email)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_dhasRq
 Notify <── Meetup     (inviti eventi, reminder, conferme)
 Notify <── User       (welcome email, reset password)

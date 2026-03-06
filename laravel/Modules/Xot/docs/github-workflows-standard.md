@@ -1,4 +1,4 @@
-# GitHub Workflows Standard - base_laravelpizza
+# GitHub Workflows Standard - base_<nome progetto>
 
 **
 **Principi**: DRY + KISS + SOLID + Robust

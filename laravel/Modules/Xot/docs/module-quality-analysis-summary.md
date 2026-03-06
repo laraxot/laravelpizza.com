@@ -2,7 +2,7 @@
 
 **Date**: 2025-12-18
 
-## TechPlanner Module
+## <nome progetto> Module
 - **Code Quality**: 80.4%
 - **Complexity**: 97.8%
 - **Architecture**: 82.4%
@@ -75,7 +75,7 @@
 4. **UI Module**: Improve architectural quality (76.5%)
 
 ### Module-Specific Notes:
-- **TechPlanner**: Good overall quality, may need refactoring for style issues (77.1%)
+- **<nome progetto>**: Good overall quality, may need refactoring for style issues (77.1%)
 - **Xot**: Core module needs architectural improvements but complexity is excellent
 - **User**: Well-balanced quality scores across all categories
 - **Tenant**: Excellent overall quality, especially in code and style
@@ -93,5 +93,5 @@ php phpmd.phar Modules/[ModuleName] text cleancode,codesize,controversial,design
 ## Next Steps
 1. Address architectural issues in Xot, Geo, and UI modules
 2. Improve documentation in Xot module
-3. Refactor style issues in TechPlanner module
+3. Refactor style issues in <nome progetto> module
 4. Maintain high standards in User, Tenant, Activity, and Media modules

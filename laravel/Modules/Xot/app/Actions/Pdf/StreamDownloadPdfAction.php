@@ -37,6 +37,7 @@ class StreamDownloadPdfAction
             $viewData = is_array($data) ? $data : [];
             $html = view($view, $viewData)->render();
         }
+
         Assert::string($html, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
         $html2pdf = new Html2Pdf('P', 'A4', 'it', true, 'UTF-8', [10, 10, 10, 10]);
         $html2pdf->writeHTML($html);

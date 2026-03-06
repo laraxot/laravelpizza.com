@@ -19,7 +19,7 @@ name('register');
 
 <x-layouts.app>
     <x-slot name="title">
-        {{ __('gdpr::register.title') }} - LaravelPizza Community
+        {{ __('gdpr::register.title') }} - <nome progetto> Community
     </x-slot>
 
     <x-slot name="description">
@@ -27,7 +27,7 @@ name('register');
     </x-slot>
 
     <x-slot name="keywords">
-        Laravel meetup, Laravel community, PHP developer community, Laravel tutorials, Laravel workshops, Laravel networking, LaravelPizza
+        Laravel meetup, Laravel community, PHP developer community, Laravel tutorials, Laravel workshops, Laravel networking, <nome progetto>
     </x-slot>
 
     <section

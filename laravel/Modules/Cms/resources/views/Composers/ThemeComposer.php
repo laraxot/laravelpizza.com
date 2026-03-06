@@ -32,6 +32,9 @@ class ThemeComposer
         }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e1ecbe9 (.)
         /** @var array<string, mixed> $normalized */
         $normalized = [];
         foreach ($items as $key => $value) {
@@ -39,9 +42,12 @@ class ThemeComposer
         }
 
         return $normalized;
+<<<<<<< HEAD
+=======
 =======
         return $items;
 >>>>>>> 1aff77744 (.)
+>>>>>>> e1ecbe9 (.)
     }
 
     public function getMenuUrl(array $menu): string

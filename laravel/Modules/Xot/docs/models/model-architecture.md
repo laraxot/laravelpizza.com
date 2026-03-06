@@ -377,7 +377,7 @@ public function getConnectionName(): ?string
 <<<<<<< HEAD
 - Namespace: `Modules\ModuloEsempio\Models\*` → Connection: `modulo_esempio`
 =======
-- Namespace: `Modules\ExternalProject\Models\*` → Connection: `quaeris`
+- Namespace: `Modules\ExternalProject\Models\*` → Connection: `<nome progetto>`
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 >>>>>>> .merge_file_flnzoR
 - Namespace: `Modules\Cms\Models\*` → Connection: `cms`
@@ -1253,7 +1253,7 @@ public function getConnectionName(): ?string
 <<<<<<< HEAD
 - Namespace: `Modules\ModuloEsempio\Models\*` → Connection: `modulo_esempio`
 =======
-- Namespace: `Modules\ExternalProject\Models\*` → Connection: `quaeris`
+- Namespace: `Modules\ExternalProject\Models\*` → Connection: `<nome progetto>`
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 >>>>>>> .merge_file_flnzoR
 - Namespace: `Modules\Cms\Models\*` → Connection: `cms`

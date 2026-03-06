@@ -299,7 +299,7 @@ public function view(User $user, Post $_post): bool
 ## Comparison with Other Modules
 
 Based on `PHPSTAN_JOURNEY.md`, the following modules have achieved Level 10:
-- Activity, Cms, CloudStorage, Gdpr, DbForge, Chart, Geo, Job, Quaeris
+- Activity, Cms, CloudStorage, Gdpr, DbForge, Chart, Geo, Job, <nome progetto>
 
 **Lang Module Status**:
 - ✅ PHPStan Level 10: **ACHIEVED**

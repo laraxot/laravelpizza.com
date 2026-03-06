@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 use Modules\User\Actions\Socialite\GetDomainAllowListAction;
 use Modules\User\Actions\Socialite\GetGuardAction;
 use Modules\User\Actions\Socialite\GetLoginRedirectRouteAction;
@@ -17,8 +17,8 @@ use Modules\User\Actions\Socialite\LogoutUserAction;
 use Modules\User\Actions\Socialite\RedirectToLoginAction;
 use Modules\User\Actions\Socialite\ValidateProviderAction;
 use Modules\User\Exceptions\ProviderNotConfigured;
-use Modules\Xot\Contracts\UserContract;
 use Modules\User\Tests\TestCase;
+use Modules\Xot\Contracts\UserContract;
 
 uses(TestCase::class);
 
@@ -134,7 +134,7 @@ describe('Socialite utility actions', function (): void {
             'updated_at' => now(),
         ]);
 
-        $user = \Mockery::mock(UserContract::class);
+        $user = Mockery::mock(UserContract::class);
         $user->shouldReceive('token')->once()->andReturn($accessToken);
         $user->shouldReceive('getKey')->once()->andReturn('user-1');
 

@@ -17,7 +17,7 @@ describe('EditUserWidget', function (): void {
     test('edit user widget extends xot base widget', function (): void {
         $widget = new EditUserWidget();
 
-        expect($widget)->toBeInstanceOf(\Modules\Xot\Filament\Widgets\XotBaseWidget::class);
+        expect($widget)->toBeInstanceOf(Modules\Xot\Filament\Widgets\XotBaseWidget::class);
     });
 
     test('edit user widget has type property', function (): void {

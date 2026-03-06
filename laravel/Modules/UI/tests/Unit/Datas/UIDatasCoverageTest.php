@@ -77,7 +77,7 @@ it('SliderDataCollection can be instantiated', function (): void {
 it('SliderDataCollection is a Spatie Data class', function (): void {
     $collection = new SliderDataCollection();
 
-    expect($collection)->toBeInstanceOf(\Spatie\LaravelData\Data::class);
+    expect($collection)->toBeInstanceOf(Spatie\LaravelData\Data::class);
 });
 
 // --- Datas/UserData ---
@@ -106,7 +106,7 @@ it('UI Datas UserData can be instantiated', function (): void {
 it('UI Datas UserData is a Spatie Data class', function (): void {
     $data = new UserData(1, 'Test', 'test@example.com', null, null, [], []);
 
-    expect($data)->toBeInstanceOf(\Spatie\LaravelData\Data::class);
+    expect($data)->toBeInstanceOf(Spatie\LaravelData\Data::class);
 });
 
 // --- Data/UserData ---
@@ -132,5 +132,5 @@ it('UI Data UserData can be instantiated', function (): void {
 it('UI Data UserData is a Spatie Data class', function (): void {
     $data = new DataUserData(1, 'Test', 'test@example.com', null, null, [], []);
 
-    expect($data)->toBeInstanceOf(\Spatie\LaravelData\Data::class);
+    expect($data)->toBeInstanceOf(Spatie\LaravelData\Data::class);
 });

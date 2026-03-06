@@ -25,7 +25,7 @@ describe('EmailDomainAnalyzer', function () {
 
     it('throws for empty provider', function () {
         expect(fn () => new EmailDomainAnalyzer(''))
-            ->toThrow(\InvalidArgumentException::class, 'Il provider SSO non può essere vuoto');
+            ->toThrow(InvalidArgumentException::class, 'Il provider SSO non può essere vuoto');
     });
 
     it('detects first party domain', function () {

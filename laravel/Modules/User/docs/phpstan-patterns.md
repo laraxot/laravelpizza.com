@@ -159,9 +159,9 @@ When fixing PHPStan errors:
 
 ## Related Files
 
-- [`RevokeClientAction.php`](file:///var/www/_bases/base_laravelpizza/laravel/Modules/User/app/Actions/Passport/RevokeClientAction.php)
-- [`UserNameFieldsResolver.php`](file:///var/www/_bases/base_laravelpizza/laravel/Modules/User/app/Actions/Socialite/Utils/UserNameFieldsResolver.php)
-- [`AssignModuleCommand.php`](file:///var/www/_bases/base_laravelpizza/laravel/Modules/User/app/Console/Commands/AssignModuleCommand.php)
+- [`RevokeClientAction.php`](file:///var/www/_bases/base_<nome progetto>/laravel/Modules/User/app/Actions/Passport/RevokeClientAction.php)
+- [`UserNameFieldsResolver.php`](file:///var/www/_bases/base_<nome progetto>/laravel/Modules/User/app/Actions/Socialite/Utils/UserNameFieldsResolver.php)
+- [`AssignModuleCommand.php`](file:///var/www/_bases/base_<nome progetto>/laravel/Modules/User/app/Console/Commands/AssignModuleCommand.php)
 
 ---
 

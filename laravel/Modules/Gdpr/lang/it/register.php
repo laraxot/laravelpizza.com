@@ -38,7 +38,7 @@ return [
             'cta' => 'Fatti assumere dalle migliori aziende',
         ],
     ],
-    'social_proof' => 'Unisciti alla community LaravelPizza',
+    'social_proof' => 'Unisciti alla community <nome progetto>',
     'fields' => [
         'first_name' => [
             'label' => 'Nome',

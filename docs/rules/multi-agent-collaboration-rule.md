@@ -58,3 +58,16 @@ La comunicazione tra agenti avviene **esclusivamente** tramite:
 ## Ultimo aggiornamento
 
 2026-03-05
+
+## Fallback locale obbligatorio (docs/storage)
+
+Se Project/Wiki non sono accessibili da CLI, il coordinamento non si ferma:
+
+1. Aggiornare sempre `docs/memory/coverage-100-full-project-memory.md` con snapshot data/ora.
+2. Aggiornare `docs/testing/coverage-100-plan.md` con stato reale (baseline, blocker, next step).
+3. Scrivere log tecnico in `laravel/storage/app/private/coverage/coordination-log.md` con:
+   - canale bloccato (`project` o `wiki`)
+   - comando tentato
+   - errore ottenuto
+   - azione alternativa applicata in `docs/`
+4. Quando l'accesso GitHub torna disponibile, riallineare subito Issue/Discussion con il delta registrato localmente.

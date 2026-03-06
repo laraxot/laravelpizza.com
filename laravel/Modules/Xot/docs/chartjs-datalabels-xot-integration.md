@@ -928,7 +928,7 @@ For a minimal, production-ready example showing 2 labels per bar using `RawJs::m
 **`Modules/ExternalProject/Filament/Widgets/SimpleChartWidget.php`**
 =======
 **`Modules/ModuloEsempio/Filament/Widgets/SimpleChartWidget.php`**
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_v1Gvow
 
 Key pattern:

@@ -19,7 +19,7 @@ return [
     'Laravel tutorials' => 'учебные материалы Laravel',
     'Laravel workshops' => 'мастер-классы Laravel',
     'Laravel networking' => 'нетворкинг Laravel',
-    'LaravelPizza' => 'LaravelPizza',
+    '<nome progetto>' => '<nome progetto>',
     'navigation' => [
         'label' => 'Missing Navigation Label',
         'plural_label' => 'Missing Navigation Plural Label',

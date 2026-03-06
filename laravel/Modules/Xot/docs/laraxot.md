@@ -35,7 +35,7 @@ Xot (Core Engine)
 ├── ExternalProject (Core Business Logic - Surveys)
 =======
 ├── ModuloEsempio (Core Business Logic - Surveys)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_mSTn06
 ├── Cms (Content Management)
 ├── Media (File Management)
@@ -123,7 +123,7 @@ TextInput::make('name');
 #### 3. **ExternalProject Module (The Economy)**
 =======
 #### 3. **ModuloEsempio Module (The Economy)**
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_mSTn06
 - **Role**: Core business logic, surveys, reporting
 - **Power**: Main revenue-generating functionality

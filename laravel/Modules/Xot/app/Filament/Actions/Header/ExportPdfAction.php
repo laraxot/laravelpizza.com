@@ -40,7 +40,8 @@ class ExportPdfAction extends Action
                 $resource = $livewire->getResource();
                 $modelClass = $resource::getModel();
                 Assert::string($modelClass);
-                $view = app(GetViewByModelClassAction::class)->execute($modelClass, '.index');
+                $view = app(GetViewByModelClassAction::class)->execute($modelClass, '.index.pdf');
+
                 $viewParams = [
                     'title' => $livewire->getTitle(),
                     'rows' => $rows,

@@ -27,12 +27,11 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null          $created_by
  * @property Carbon|null          $deleted_at
  * @property string|null          $deleted_by
- *
  * @property Theme|null           $parent
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *
- * @method static ThemeFactory             factory($count = null, $state = [])
+ * @method static ThemeFactory          factory($count = null, $state = [])
  * @method static Builder<static>|Theme newModelQuery()
  * @method static Builder<static>|Theme newQuery()
  * @method static Builder<static>|Theme query()
