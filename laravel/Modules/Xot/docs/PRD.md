@@ -154,17 +154,9 @@ Building modular Laravel applications requires a consistent foundation. Without 
 
 ## Testing & Coverage
 
-<<<<<<< HEAD
 Il modulo $(basename $(dirname $(dirname "$prd"))) segue la **Metodologia "Super Mucca" (Laraxot Zen)**:
 - **XotBaseTestCase**: Tutti i test estendono `Modules\Xot\Tests\XotBaseTestCase`.
 - **MySQL Only**: Test eseguiti contro MySQL (.env.testing).
 - **No RefreshDatabase**: Utilizzo di `DatabaseTransactions`.
-=======
-Il modulo Xot segue la **Metodologia "Super Mucca" (Laraxot Zen)**:
-- **XotBaseTestCase**: Tutti i test estendono `Modules\Xot\Tests\XotBaseTestCase`.
-- **MySQL Only**: Test eseguiti contro MySQL (.env.testing).
-- **No RefreshDatabase**: Utilizzo di `DatabaseTransactions`.
-- **Automated Migrations**: `XotBaseTestCase` esegue `artisan migrate` automaticamente **una sola volta** per sessione di test.
->>>>>>> 998c8857 (Remove deprecated files and update project structure, including the deletion of workspace configuration, documentation files, and changelogs. Update composer.json for module name and dependencies.)
 - **Obiettivo**: 100% di coverage. Se un test fallisce, va sistemato o eliminato se il sito è funzionale.
 
