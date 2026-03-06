@@ -1,4 +1,4 @@
-# Coverage Plan - Updated 2026-03-06 10:30 UTC
+# Coverage Plan - Updated 2026-03-06 10:34 UTC
 
 **MULTI-AGENT STATUS**: 540+ test files created across all 14 modules. Foundation laid; now focus on gap-filling and model configuration fixes.
 
@@ -76,10 +76,20 @@
 - Fixed Venue model:
   - Fixed events() relationship foreign key (`venue_id` → `location_id`)
 - Verifica locale: tests passing
+
+### 2026-03-06 (Coverage Session - Additional Actions)
+- Added User action tests:
+  - `laravel/Modules/User/tests/Unit/Actions/User/UpdateUserActionTest.php` - 3 tests
+  - `laravel/Modules/User/tests/Unit/Actions/User/CreateUserActionTest.php` - 3 tests
+  - `laravel/Modules/User/tests/Unit/Actions/User/UserMiscActionsTest.php` - 6 tests
+- Added Tenant action tests:
+  - `laravel/Modules/Tenant/tests/Unit/Actions/TenantAdditionalActionsTest.php` - 6 tests
+- Verifica locale: tests passing
   - `Modules/Cms/tests/Unit/Http/Middleware/SetFolioLocaleMiddlewareTest.php`
   - `Modules/Cms/tests/Unit/Http/Middleware/PageSlugMiddlewareTest.php`
+  - `Modules/Cms/tests/Unit/Http/View/Composers/XotComposerTest.php`
 - Verification:
-  - `./vendor/bin/pest Modules/Cms/tests/Unit/Http/Middleware/PageSlugMiddlewareTest.php Modules/Cms/tests/Unit/Http/Middleware/SetFolioLocaleMiddlewareTest.php --compact` -> `8 passed`
+  - `./vendor/bin/pest Modules/Cms/tests/Unit/Http/View/Composers/XotComposerTest.php Modules/Cms/tests/Unit/Http/Middleware/PageSlugMiddlewareTest.php Modules/Cms/tests/Unit/Http/Middleware/SetFolioLocaleMiddlewareTest.php --compact` -> `11 passed`
   - regression subset (`Geo + Meetup`) -> `74 passed`
 
 ### Next Execution Batch (ready-to-run)
@@ -798,7 +808,7 @@ After fixing Phase 1, run full test suite and identify:
 - [ ] `laravel/Modules/Cms/app/Http/Livewire/Page/Show.php` (0/46, 0.0%)
 - [x] `laravel/Modules/Cms/app/Http/Middleware/PageSlugMiddleware.php` (tested, 2026-03-06)
 - [x] `laravel/Modules/Cms/app/Http/Middleware/SetFolioLocale.php` (tested, 2026-03-06)
-- [ ] `laravel/Modules/Cms/app/Http/View/Composers/XotComposer.php` (0/15, 0.0%)
+- [x] `laravel/Modules/Cms/app/Http/View/Composers/XotComposer.php` (tested, 2026-03-06)
 - [x] `laravel/Modules/Cms/app/Http/Volt/CounterComponent.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Cms/app/Http/Volt/LoginComponent.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Http/Volt/Password/ConfirmComponent.php` (0/3, 0.0%)
