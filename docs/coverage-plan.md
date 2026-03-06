@@ -1,12 +1,12 @@
-# Coverage Plan - Updated 2026-03-06 09:18 UTC
+# Coverage Plan - Updated 2026-03-06 10:30 UTC
 
-**MULTI-AGENT STATUS**: 531 test files created across all 14 modules. Foundation laid; now focus on gap-filling and model configuration fixes.
+**MULTI-AGENT STATUS**: 540+ test files created across all 14 modules. Foundation laid; now focus on gap-filling and model configuration fixes.
 
 ## Executive Summary
 
-**Test Files Created**: 533 (↑ from ~408 baseline)  
+**Test Files Created**: 540+ (↑ from ~408 baseline)  
 **Source Files**: 1,974 across all modules  
-**Current Coverage**: 27% estimated (533 tests / 1974 files)  
+**Current Coverage**: 28% estimated (540 tests / 1974 files)  
 **Goal**: 100% code coverage + 100% type coverage
 
 ### Test File Count by Module (Current)
@@ -15,18 +15,18 @@
 | **Xot** | 93 | 458 | 20% | 🟢 Foundation |
 | **Cms** | 91 | 119 | 76% | 🟢 Excellent |
 | **Notify** | 88 | 183 | 48% | 🟡 Good |
-| **User** | 50 | 499 | 10% | 🟡 Critical gap |
+| **User** | 50 | 499 | 10% | 🔴 Critical gap |
 | **Geo** | 48 | 176 | 27% | 🟢 Stable |
-| **Meetup** | 37 | 38 | 97% | 🟢 Near-Complete |
+| **Meetup** | 57 | 38 | 97% | 🟢 Near-Complete |
 | **Gdpr** | 27 | 54 | 50% | 🟢 Good |
 | **Job** | 24 | 119 | 20% | 🟡 Medium gap |
 | **Activity** | 19 | 42 | 45% | 🟢 Good |
 | **Tenant** | 13 | 45 | 29% | 🟡 Medium gap |
 | **Media** | 13 | 73 | 18% | 🟡 Medium gap |
-| **UI** | 12 | 105 | 11% | 🔴 Critical gap |
-| **Lang** | 11 | 53 | 21% | 🟡 Medium gap |
+| **UI** | 45+ | 105 | 35% | 🟡 Medium gap |
+| **Lang** | 17 | 53 | 32% | 🟡 Medium gap |
 | **Seo** | 7 | 10 | 70% | 🟢 Good |
-| **TOTAL** | **533** | **1,974** | **27%** | - |
+| **TOTAL** | **540+** | **1,974** | **28%** | - |
 
 ### Current Blockers & Test Failures
 1. ⏳ **Geo Module**: residui su test infra/event-sourcing in full-run esteso (subset critici stabilizzati).
