@@ -4,9 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests;
 
+<<<<<<< HEAD
+=======
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+>>>>>>> 998c8857 (Remove deprecated files and update project structure, including the deletion of workspace configuration, documentation files, and changelogs. Update composer.json for module name and dependencies.)
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
@@ -21,6 +24,9 @@ use Modules\Xot\Providers\XotServiceProvider;
  */
 abstract class XotBaseTestCase extends BaseTestCase
 {
+<<<<<<< HEAD
+    use CreatesApplication;
+=======
     use CreatesApplication {
         createApplication as protected createBaseApplication;
     }
@@ -37,6 +43,7 @@ abstract class XotBaseTestCase extends BaseTestCase
      * Flag to ensure migrations run only once per test process.
      */
     protected static bool $migrated = false;
+>>>>>>> 998c8857 (Remove deprecated files and update project structure, including the deletion of workspace configuration, documentation files, and changelogs. Update composer.json for module name and dependencies.)
 
     /**
      * Package providers for module tests (Orchestra Testbench compatibility).
@@ -52,6 +59,8 @@ abstract class XotBaseTestCase extends BaseTestCase
     }
 
     /**
+<<<<<<< HEAD
+=======
      * Create and bootstrap the Laravel app for tests.
      * Must run migrate BEFORE DatabaseTransactions starts transactions.
      */
@@ -86,16 +95,20 @@ abstract class XotBaseTestCase extends BaseTestCase
     }
 
     /**
+>>>>>>> 998c8857 (Remove deprecated files and update project structure, including the deletion of workspace configuration, documentation files, and changelogs. Update composer.json for module name and dependencies.)
      * Setup the test environment.
      * Binds common dependencies required by tests.
      */
     protected function setUp(): void
     {
+<<<<<<< HEAD
+=======
         $this->forceSqliteEnvWhenMysqlUnavailable();
         if ('sqlite' === (string) env('DB_CONNECTION', 'mysql')) {
             $this->connectionsToTransact = ['mysql'];
         }
 
+>>>>>>> 998c8857 (Remove deprecated files and update project structure, including the deletion of workspace configuration, documentation files, and changelogs. Update composer.json for module name and dependencies.)
         parent::setUp();
 
         // Bind translator only if not already resolved (needed for some Filament tests).
@@ -110,6 +123,8 @@ abstract class XotBaseTestCase extends BaseTestCase
         }
     }
 
+<<<<<<< HEAD
+=======
     protected function forceSqliteEnvWhenMysqlUnavailable(): void
     {
         if ('sqlite' === (string) env('DB_CONNECTION', 'mysql')) {
@@ -213,6 +228,7 @@ abstract class XotBaseTestCase extends BaseTestCase
         }
     }
 
+>>>>>>> 998c8857 (Remove deprecated files and update project structure, including the deletion of workspace configuration, documentation files, and changelogs. Update composer.json for module name and dependencies.)
     protected function tearDown(): void
     {
         // Prevent connection accumulation across a long multi-connection suite.

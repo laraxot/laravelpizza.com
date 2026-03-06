@@ -34,8 +34,11 @@ trait CreatesApplication
             $dotenv->safeLoad();
         }
 
+<<<<<<< HEAD
+=======
         $this->fallbackToSqliteIfMysqlUnavailable($basePath);
 
+>>>>>>> 998c8857 (Remove deprecated files and update project structure, including the deletion of workspace configuration, documentation files, and changelogs. Update composer.json for module name and dependencies.)
         $app = require $basePath.'/bootstrap/app.php';
 
         // Bind essential paths if they are not correctly resolved
@@ -47,6 +50,8 @@ trait CreatesApplication
         $app->make(Kernel::class)->bootstrap();
         $app->boot(); // Ensure all service providers are booted
 
+<<<<<<< HEAD
+=======
         if ('sqlite' === (string) ($_ENV['DB_CONNECTION'] ?? 'mysql')) {
             $sqlitePath = $basePath.'/database/testing.sqlite';
             if (! file_exists($sqlitePath)) {
@@ -67,6 +72,7 @@ trait CreatesApplication
             }
         }
 
+>>>>>>> 998c8857 (Remove deprecated files and update project structure, including the deletion of workspace configuration, documentation files, and changelogs. Update composer.json for module name and dependencies.)
         // CRITICAL: Force purge of connections to ensure they pick up the
         // test database configuration from .env.testing mapped by TenantServiceProvider
         \Illuminate\Support\Facades\DB::purge('mysql');

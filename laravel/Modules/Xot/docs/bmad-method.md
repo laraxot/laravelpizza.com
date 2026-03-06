@@ -54,6 +54,8 @@ BMAD viene usato come **metodo di pensiero** per guidare analisi, architettura e
 - regole generali laraxot: `Xot/docs/laraxot-rules.md` (e `.cursor/rules/laraxot-rules.mdc`)
 - testing e qualità: `Xot/docs/testing-best-practices.md`, `Xot/docs/phpstan-code-quality-guide.md`
 
+<<<<<<< HEAD
+=======
 ---
 
 ## BMAD-METHOD Overview
@@ -103,3 +105,4 @@ BMAD utilizza un sistema di **skills** che possono essere caricate dagli agenti 
 - [Getting Started](http://docs.bmad-method.org/tutorials/getting-started/)
 - [Roadmap](http://docs.bmad-method.org/roadmap/)
 
+>>>>>>> 998c8857 (Remove deprecated files and update project structure, including the deletion of workspace configuration, documentation files, and changelogs. Update composer.json for module name and dependencies.)
