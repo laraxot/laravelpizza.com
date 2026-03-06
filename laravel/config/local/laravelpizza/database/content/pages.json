@@ -12617,5 +12617,551 @@
         "id": 1518,
         "updated_at": "2026-03-06 05:43:24",
         "created_at": "2026-03-06 05:43:24"
+    },
+    {
+        "title": "{\"it\":\"Test Page\",\"en\":\"Test Page\"}",
+        "slug": "test-page",
+        "id": 1519,
+        "updated_at": "2026-03-06 05:45:05",
+        "created_at": "2026-03-06 05:45:05"
+    },
+    {
+        "title": {
+            "it": "Updated Title",
+            "en": "Updated Title"
+        },
+        "slug": "original-title",
+        "id": "1520",
+        "updated_at": "2026-03-06T04:45:06.000000Z",
+        "created_at": "2026-03-06T04:45:06.000000Z"
+    },
+    {
+        "title": "{\"it\":\"Page with Blocks\",\"en\":\"Page with Blocks\"}",
+        "slug": "page-with-blocks",
+        "content_blocks": "{\"it\":[{\"id\":\"block-1\",\"type\":\"hero\",\"content\":{\"it\":\"Hero content\",\"en\":\"Hero content\"}},{\"id\":\"block-2\",\"type\":\"text\",\"content\":{\"it\":\"Text content\",\"en\":\"Text content\"}}]}",
+        "id": 1521,
+        "updated_at": "2026-03-06 05:45:06",
+        "created_at": "2026-03-06 05:45:06"
+    },
+    {
+        "title": "{\"it\":\"Page with Content\",\"en\":\"Page with Content\"}",
+        "slug": "page-with-content",
+        "description": "This is a test page description",
+        "content": "This is the main content of the page",
+        "id": 1522,
+        "updated_at": "2026-03-06 05:45:07",
+        "created_at": "2026-03-06 05:45:07"
+    },
+    {
+        "title": "{\"it\":\"Titolo Italiano\",\"en\":\"English Title\",\"de\":\"Deutscher Titel\"}",
+        "slug": "multilingual-page",
+        "content_blocks": "{\"it\":[{\"id\":\"content-block\",\"type\":\"text\",\"content\":{\"it\":\"Contenuto in italiano\",\"en\":\"Content in English\",\"de\":\"Inhalt auf Deutsch\"}}]}",
+        "id": 1523,
+        "updated_at": "2026-03-06 05:45:07",
+        "created_at": "2026-03-06 05:45:07"
+    },
+    {
+        "title": "{\"it\":\"Page with Sections\",\"en\":\"Page with Sections\"}",
+        "slug": "page-with-sections",
+        "content_blocks": "{\"it\":[{\"id\":\"section-1\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 1\",\"en\":\"Section 1\"},\"content\":{\"it\":\"Contenuto sezione 1\",\"en\":\"Section 1 content\"}},{\"id\":\"section-2\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 2\",\"en\":\"Section 2\"},\"content\":{\"it\":\"Contenuto sezione 2\",\"en\":\"Section 2 content\"}}]}",
+        "id": 1524,
+        "updated_at": "2026-03-06 05:45:07",
+        "created_at": "2026-03-06 05:45:07"
+    },
+    {
+        "title": "{\"it\":\"Page with Template\",\"en\":\"Page with Template\"}",
+        "slug": "page-with-template",
+        "content_blocks": "{\"it\":[{\"id\":\"layout-block\",\"type\":\"layout\",\"template\":\"default\",\"content\":{\"it\":\"Layout content\",\"en\":\"Layout content\"}}]}",
+        "sidebar_blocks": "{\"it\":[{\"id\":\"sidebar-block\",\"type\":\"widget\",\"content\":{\"it\":\"Sidebar widget\",\"en\":\"Sidebar widget\"}}]}",
+        "footer_blocks": "{\"it\":[{\"id\":\"footer-block\",\"type\":\"footer\",\"content\":{\"it\":\"Footer content\",\"en\":\"Footer content\"}}]}",
+        "id": 1525,
+        "updated_at": "2026-03-06 05:45:07",
+        "created_at": "2026-03-06 05:45:07"
+    },
+    {
+        "title": "{\"it\":\"Page with Permissions\",\"en\":\"Page with Permissions\"}",
+        "slug": "page-with-permissions",
+        "middleware": "[\"auth\",\"verified\"]",
+        "id": 1526,
+        "updated_at": "2026-03-06 05:45:08",
+        "created_at": "2026-03-06 05:45:08"
+    },
+    {
+        "title": "{\"it\":\"Page with Timestamps\",\"en\":\"Page with Timestamps\"}",
+        "slug": "page-with-timestamps",
+        "id": 1527,
+        "updated_at": "2026-03-06 05:45:08",
+        "created_at": "2026-03-06 05:45:08"
+    },
+    {
+        "title": "{\"it\":\"Test Page\",\"en\":\"Test Page\"}",
+        "slug": "test-page",
+        "id": 1528,
+        "updated_at": "2026-03-06 05:46:04",
+        "created_at": "2026-03-06 05:46:04"
+    },
+    {
+        "title": {
+            "it": "Updated Title",
+            "en": "Updated Title"
+        },
+        "slug": "original-title",
+        "id": "1529",
+        "updated_at": "2026-03-06T04:46:05.000000Z",
+        "created_at": "2026-03-06T04:46:05.000000Z"
+    },
+    {
+        "title": "{\"it\":\"Page with Blocks\",\"en\":\"Page with Blocks\"}",
+        "slug": "page-with-blocks",
+        "content_blocks": "{\"it\":[{\"id\":\"block-1\",\"type\":\"hero\",\"content\":{\"it\":\"Hero content\",\"en\":\"Hero content\"}},{\"id\":\"block-2\",\"type\":\"text\",\"content\":{\"it\":\"Text content\",\"en\":\"Text content\"}}]}",
+        "id": 1530,
+        "updated_at": "2026-03-06 05:46:06",
+        "created_at": "2026-03-06 05:46:06"
+    },
+    {
+        "title": "{\"it\":\"Page with Content\",\"en\":\"Page with Content\"}",
+        "slug": "page-with-content",
+        "description": "This is a test page description",
+        "content": "This is the main content of the page",
+        "id": 1531,
+        "updated_at": "2026-03-06 05:46:06",
+        "created_at": "2026-03-06 05:46:06"
+    },
+    {
+        "title": "{\"it\":\"Titolo Italiano\",\"en\":\"English Title\",\"de\":\"Deutscher Titel\"}",
+        "slug": "multilingual-page",
+        "content_blocks": "{\"it\":[{\"id\":\"content-block\",\"type\":\"text\",\"content\":{\"it\":\"Contenuto in italiano\",\"en\":\"Content in English\",\"de\":\"Inhalt auf Deutsch\"}}]}",
+        "id": 1532,
+        "updated_at": "2026-03-06 05:46:07",
+        "created_at": "2026-03-06 05:46:07"
+    },
+    {
+        "title": "{\"it\":\"Page with Sections\",\"en\":\"Page with Sections\"}",
+        "slug": "page-with-sections",
+        "content_blocks": "{\"it\":[{\"id\":\"section-1\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 1\",\"en\":\"Section 1\"},\"content\":{\"it\":\"Contenuto sezione 1\",\"en\":\"Section 1 content\"}},{\"id\":\"section-2\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 2\",\"en\":\"Section 2\"},\"content\":{\"it\":\"Contenuto sezione 2\",\"en\":\"Section 2 content\"}}]}",
+        "id": 1533,
+        "updated_at": "2026-03-06 05:46:07",
+        "created_at": "2026-03-06 05:46:07"
+    },
+    {
+        "title": "{\"it\":\"Page with Template\",\"en\":\"Page with Template\"}",
+        "slug": "page-with-template",
+        "content_blocks": "{\"it\":[{\"id\":\"layout-block\",\"type\":\"layout\",\"template\":\"default\",\"content\":{\"it\":\"Layout content\",\"en\":\"Layout content\"}}]}",
+        "sidebar_blocks": "{\"it\":[{\"id\":\"sidebar-block\",\"type\":\"widget\",\"content\":{\"it\":\"Sidebar widget\",\"en\":\"Sidebar widget\"}}]}",
+        "footer_blocks": "{\"it\":[{\"id\":\"footer-block\",\"type\":\"footer\",\"content\":{\"it\":\"Footer content\",\"en\":\"Footer content\"}}]}",
+        "id": 1534,
+        "updated_at": "2026-03-06 05:46:07",
+        "created_at": "2026-03-06 05:46:07"
+    },
+    {
+        "title": "{\"it\":\"Page with Permissions\",\"en\":\"Page with Permissions\"}",
+        "slug": "page-with-permissions",
+        "middleware": "[\"auth\",\"verified\"]",
+        "id": 1535,
+        "updated_at": "2026-03-06 05:46:08",
+        "created_at": "2026-03-06 05:46:08"
+    },
+    {
+        "title": "{\"it\":\"Page with Timestamps\",\"en\":\"Page with Timestamps\"}",
+        "slug": "page-with-timestamps",
+        "id": 1536,
+        "updated_at": "2026-03-06 05:46:08",
+        "created_at": "2026-03-06 05:46:08"
+    },
+    {
+        "slug": "about.us-69aa5c199a037",
+        "title": "{\"it\":\"Ad facere eum est\"}",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tortor vitae sem cursus ullamcorper. In pellentesque purus et ante eleifend finibus. Fusce quis sapien nunc. Donec molestie arcu vel suscipit tincidunt. Nunc non neque risus. Aliquam fringilla sed quam eu condimentum. Nam viverra enim ut iaculis vulputate. Aenean quis laoreet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel venenatis magna.<\/p><p>Curabitur feugiat sagittis imperdiet. Vestibulum cursus massa sed convallis aliquet. Proin in purus diam. Cras blandit justo in massa imperdiet euismod. Aliquam erat volutpat. Sed quis ornare urna. Cras quis tempus nunc. Vestibulum quis quam a ipsum accumsan gravida in nec arcu. Praesent ut eros eros. Proin vel bibendum eros. In egestas suscipit purus vel efficitur. Proin at elit risus. Nam volutpat massa in lacus bibendum placerat. Suspendisse auctor elit odio, in dapibus risus blandit ut. Sed eu consequat purus.<\/p><p>Sed sit amet fringilla nunc. Proin consequat dui suscipit magna porta blandit. Nam vel felis commodo, mattis sapien ac, laoreet ligula. Vestibulum egestas cursus nulla in tincidunt. Ut efficitur, purus in faucibus mattis, justo enim mollis elit, vitae rutrum sem orci nec mi. Duis tempus mattis elementum. Etiam faucibus et eros vel dictum. Cras ut elit massa. Fusce tristique lacus ac risus pulvinar tempor. Etiam ultricies sit amet lacus sed gravida. Suspendisse potenti. Donec in massa a sem egestas tincidunt eu at sem.<\/p><p>Aliquam eget tortor urna. Integer vel tincidunt tellus. Donec ultrices efficitur tortor, vel ullamcorper justo. Proin nec placerat diam, at malesuada metus. Praesent vitae blandit neque. Nulla gravida nulla et molestie placerat. Phasellus porta tortor eu massa laoreet egestas. In sed ultrices magna. Curabitur ut vestibulum metus. Integer porttitor risus at venenatis lobortis. Pellentesque eu libero purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a cursus leo.<\/p><p>Donec at diam ex. In eleifend commodo suscipit. Vivamus ultrices vehicula nunc quis mollis. Aliquam erat volutpat. Nam id dui consectetur, tristique ex non, fermentum dolor. Morbi lorem purus, lobortis at mauris vel, laoreet pretium dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus semper rhoncus augue at facilisis. Pellentesque ut iaculis justo. Suspendisse sed cursus quam. Duis sollicitudin velit vel eros pulvinar egestas. Donec feugiat massa ac dui elementum, quis mollis sem venenatis. Cras euismod, mauris non lobortis pulvinar, dolor risus gravida nisi, eu tristique mauris nulla eget sapien.<\/p>",
+        "id": 1537,
+        "updated_at": "2026-03-06 05:46:17",
+        "created_at": "2026-03-06 05:46:17"
+    },
+    {
+        "slug": "blog.view-69aa5c1a0d892",
+        "title": "{\"it\":\"Itaque ut quas dolor\"}",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tortor vitae sem cursus ullamcorper. In pellentesque purus et ante eleifend finibus. Fusce quis sapien nunc. Donec molestie arcu vel suscipit tincidunt. Nunc non neque risus. Aliquam fringilla sed quam eu condimentum. Nam viverra enim ut iaculis vulputate. Aenean quis laoreet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel venenatis magna.<\/p><p>Curabitur feugiat sagittis imperdiet. Vestibulum cursus massa sed convallis aliquet. Proin in purus diam. Cras blandit justo in massa imperdiet euismod. Aliquam erat volutpat. Sed quis ornare urna. Cras quis tempus nunc. Vestibulum quis quam a ipsum accumsan gravida in nec arcu. Praesent ut eros eros. Proin vel bibendum eros. In egestas suscipit purus vel efficitur. Proin at elit risus. Nam volutpat massa in lacus bibendum placerat. Suspendisse auctor elit odio, in dapibus risus blandit ut. Sed eu consequat purus.<\/p><p>Sed sit amet fringilla nunc. Proin consequat dui suscipit magna porta blandit. Nam vel felis commodo, mattis sapien ac, laoreet ligula. Vestibulum egestas cursus nulla in tincidunt. Ut efficitur, purus in faucibus mattis, justo enim mollis elit, vitae rutrum sem orci nec mi. Duis tempus mattis elementum. Etiam faucibus et eros vel dictum. Cras ut elit massa. Fusce tristique lacus ac risus pulvinar tempor. Etiam ultricies sit amet lacus sed gravida. Suspendisse potenti. Donec in massa a sem egestas tincidunt eu at sem.<\/p><p>Aliquam eget tortor urna. Integer vel tincidunt tellus. Donec ultrices efficitur tortor, vel ullamcorper justo. Proin nec placerat diam, at malesuada metus. Praesent vitae blandit neque. Nulla gravida nulla et molestie placerat. Phasellus porta tortor eu massa laoreet egestas. In sed ultrices magna. Curabitur ut vestibulum metus. Integer porttitor risus at venenatis lobortis. Pellentesque eu libero purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a cursus leo.<\/p><p>Donec at diam ex. In eleifend commodo suscipit. Vivamus ultrices vehicula nunc quis mollis. Aliquam erat volutpat. Nam id dui consectetur, tristique ex non, fermentum dolor. Morbi lorem purus, lobortis at mauris vel, laoreet pretium dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus semper rhoncus augue at facilisis. Pellentesque ut iaculis justo. Suspendisse sed cursus quam. Duis sollicitudin velit vel eros pulvinar egestas. Donec feugiat massa ac dui elementum, quis mollis sem venenatis. Cras euismod, mauris non lobortis pulvinar, dolor risus gravida nisi, eu tristique mauris nulla eget sapien.<\/p>",
+        "id": 1538,
+        "updated_at": "2026-03-06 05:46:18",
+        "created_at": "2026-03-06 05:46:18"
+    },
+    {
+        "title": "{\"it\":\"Test Page\",\"en\":\"Test Page\"}",
+        "slug": "test-page",
+        "id": 1539,
+        "updated_at": "2026-03-06 05:47:07",
+        "created_at": "2026-03-06 05:47:07"
+    },
+    {
+        "title": {
+            "it": "Updated Title",
+            "en": "Updated Title"
+        },
+        "slug": "original-title",
+        "id": "1540",
+        "updated_at": "2026-03-06T04:47:07.000000Z",
+        "created_at": "2026-03-06T04:47:07.000000Z"
+    },
+    {
+        "title": "{\"it\":\"Page with Blocks\",\"en\":\"Page with Blocks\"}",
+        "slug": "page-with-blocks",
+        "content_blocks": "{\"it\":[{\"id\":\"block-1\",\"type\":\"hero\",\"content\":{\"it\":\"Hero content\",\"en\":\"Hero content\"}},{\"id\":\"block-2\",\"type\":\"text\",\"content\":{\"it\":\"Text content\",\"en\":\"Text content\"}}]}",
+        "id": 1541,
+        "updated_at": "2026-03-06 05:47:08",
+        "created_at": "2026-03-06 05:47:08"
+    },
+    {
+        "title": "{\"it\":\"Page with Content\",\"en\":\"Page with Content\"}",
+        "slug": "page-with-content",
+        "description": "This is a test page description",
+        "content": "This is the main content of the page",
+        "id": 1542,
+        "updated_at": "2026-03-06 05:47:08",
+        "created_at": "2026-03-06 05:47:08"
+    },
+    {
+        "title": "{\"it\":\"Titolo Italiano\",\"en\":\"English Title\",\"de\":\"Deutscher Titel\"}",
+        "slug": "multilingual-page",
+        "content_blocks": "{\"it\":[{\"id\":\"content-block\",\"type\":\"text\",\"content\":{\"it\":\"Contenuto in italiano\",\"en\":\"Content in English\",\"de\":\"Inhalt auf Deutsch\"}}]}",
+        "id": 1543,
+        "updated_at": "2026-03-06 05:47:08",
+        "created_at": "2026-03-06 05:47:08"
+    },
+    {
+        "title": "{\"it\":\"Page with Sections\",\"en\":\"Page with Sections\"}",
+        "slug": "page-with-sections",
+        "content_blocks": "{\"it\":[{\"id\":\"section-1\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 1\",\"en\":\"Section 1\"},\"content\":{\"it\":\"Contenuto sezione 1\",\"en\":\"Section 1 content\"}},{\"id\":\"section-2\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 2\",\"en\":\"Section 2\"},\"content\":{\"it\":\"Contenuto sezione 2\",\"en\":\"Section 2 content\"}}]}",
+        "id": 1544,
+        "updated_at": "2026-03-06 05:47:09",
+        "created_at": "2026-03-06 05:47:09"
+    },
+    {
+        "title": "{\"it\":\"Page with Template\",\"en\":\"Page with Template\"}",
+        "slug": "page-with-template",
+        "content_blocks": "{\"it\":[{\"id\":\"layout-block\",\"type\":\"layout\",\"template\":\"default\",\"content\":{\"it\":\"Layout content\",\"en\":\"Layout content\"}}]}",
+        "sidebar_blocks": "{\"it\":[{\"id\":\"sidebar-block\",\"type\":\"widget\",\"content\":{\"it\":\"Sidebar widget\",\"en\":\"Sidebar widget\"}}]}",
+        "footer_blocks": "{\"it\":[{\"id\":\"footer-block\",\"type\":\"footer\",\"content\":{\"it\":\"Footer content\",\"en\":\"Footer content\"}}]}",
+        "id": 1545,
+        "updated_at": "2026-03-06 05:47:09",
+        "created_at": "2026-03-06 05:47:09"
+    },
+    {
+        "title": "{\"it\":\"Page with Permissions\",\"en\":\"Page with Permissions\"}",
+        "slug": "page-with-permissions",
+        "middleware": "[\"auth\",\"verified\"]",
+        "id": 1546,
+        "updated_at": "2026-03-06 05:47:09",
+        "created_at": "2026-03-06 05:47:09"
+    },
+    {
+        "title": "{\"it\":\"Page with Timestamps\",\"en\":\"Page with Timestamps\"}",
+        "slug": "page-with-timestamps",
+        "id": 1547,
+        "updated_at": "2026-03-06 05:47:09",
+        "created_at": "2026-03-06 05:47:09"
+    },
+    {
+        "slug": "about.us-69aa5c753ed06",
+        "title": "{\"it\":\"Eaque sunt quod\"}",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tortor vitae sem cursus ullamcorper. In pellentesque purus et ante eleifend finibus. Fusce quis sapien nunc. Donec molestie arcu vel suscipit tincidunt. Nunc non neque risus. Aliquam fringilla sed quam eu condimentum. Nam viverra enim ut iaculis vulputate. Aenean quis laoreet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel venenatis magna.<\/p><p>Curabitur feugiat sagittis imperdiet. Vestibulum cursus massa sed convallis aliquet. Proin in purus diam. Cras blandit justo in massa imperdiet euismod. Aliquam erat volutpat. Sed quis ornare urna. Cras quis tempus nunc. Vestibulum quis quam a ipsum accumsan gravida in nec arcu. Praesent ut eros eros. Proin vel bibendum eros. In egestas suscipit purus vel efficitur. Proin at elit risus. Nam volutpat massa in lacus bibendum placerat. Suspendisse auctor elit odio, in dapibus risus blandit ut. Sed eu consequat purus.<\/p><p>Sed sit amet fringilla nunc. Proin consequat dui suscipit magna porta blandit. Nam vel felis commodo, mattis sapien ac, laoreet ligula. Vestibulum egestas cursus nulla in tincidunt. Ut efficitur, purus in faucibus mattis, justo enim mollis elit, vitae rutrum sem orci nec mi. Duis tempus mattis elementum. Etiam faucibus et eros vel dictum. Cras ut elit massa. Fusce tristique lacus ac risus pulvinar tempor. Etiam ultricies sit amet lacus sed gravida. Suspendisse potenti. Donec in massa a sem egestas tincidunt eu at sem.<\/p><p>Aliquam eget tortor urna. Integer vel tincidunt tellus. Donec ultrices efficitur tortor, vel ullamcorper justo. Proin nec placerat diam, at malesuada metus. Praesent vitae blandit neque. Nulla gravida nulla et molestie placerat. Phasellus porta tortor eu massa laoreet egestas. In sed ultrices magna. Curabitur ut vestibulum metus. Integer porttitor risus at venenatis lobortis. Pellentesque eu libero purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a cursus leo.<\/p><p>Donec at diam ex. In eleifend commodo suscipit. Vivamus ultrices vehicula nunc quis mollis. Aliquam erat volutpat. Nam id dui consectetur, tristique ex non, fermentum dolor. Morbi lorem purus, lobortis at mauris vel, laoreet pretium dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus semper rhoncus augue at facilisis. Pellentesque ut iaculis justo. Suspendisse sed cursus quam. Duis sollicitudin velit vel eros pulvinar egestas. Donec feugiat massa ac dui elementum, quis mollis sem venenatis. Cras euismod, mauris non lobortis pulvinar, dolor risus gravida nisi, eu tristique mauris nulla eget sapien.<\/p>",
+        "id": 1548,
+        "updated_at": "2026-03-06 05:47:49",
+        "created_at": "2026-03-06 05:47:49"
+    },
+    {
+        "slug": "blog.view-69aa5c7591f33",
+        "title": "{\"it\":\"Eum dolorum ad voluptatibus\"}",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tortor vitae sem cursus ullamcorper. In pellentesque purus et ante eleifend finibus. Fusce quis sapien nunc. Donec molestie arcu vel suscipit tincidunt. Nunc non neque risus. Aliquam fringilla sed quam eu condimentum. Nam viverra enim ut iaculis vulputate. Aenean quis laoreet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel venenatis magna.<\/p><p>Curabitur feugiat sagittis imperdiet. Vestibulum cursus massa sed convallis aliquet. Proin in purus diam. Cras blandit justo in massa imperdiet euismod. Aliquam erat volutpat. Sed quis ornare urna. Cras quis tempus nunc. Vestibulum quis quam a ipsum accumsan gravida in nec arcu. Praesent ut eros eros. Proin vel bibendum eros. In egestas suscipit purus vel efficitur. Proin at elit risus. Nam volutpat massa in lacus bibendum placerat. Suspendisse auctor elit odio, in dapibus risus blandit ut. Sed eu consequat purus.<\/p><p>Sed sit amet fringilla nunc. Proin consequat dui suscipit magna porta blandit. Nam vel felis commodo, mattis sapien ac, laoreet ligula. Vestibulum egestas cursus nulla in tincidunt. Ut efficitur, purus in faucibus mattis, justo enim mollis elit, vitae rutrum sem orci nec mi. Duis tempus mattis elementum. Etiam faucibus et eros vel dictum. Cras ut elit massa. Fusce tristique lacus ac risus pulvinar tempor. Etiam ultricies sit amet lacus sed gravida. Suspendisse potenti. Donec in massa a sem egestas tincidunt eu at sem.<\/p><p>Aliquam eget tortor urna. Integer vel tincidunt tellus. Donec ultrices efficitur tortor, vel ullamcorper justo. Proin nec placerat diam, at malesuada metus. Praesent vitae blandit neque. Nulla gravida nulla et molestie placerat. Phasellus porta tortor eu massa laoreet egestas. In sed ultrices magna. Curabitur ut vestibulum metus. Integer porttitor risus at venenatis lobortis. Pellentesque eu libero purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a cursus leo.<\/p><p>Donec at diam ex. In eleifend commodo suscipit. Vivamus ultrices vehicula nunc quis mollis. Aliquam erat volutpat. Nam id dui consectetur, tristique ex non, fermentum dolor. Morbi lorem purus, lobortis at mauris vel, laoreet pretium dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus semper rhoncus augue at facilisis. Pellentesque ut iaculis justo. Suspendisse sed cursus quam. Duis sollicitudin velit vel eros pulvinar egestas. Donec feugiat massa ac dui elementum, quis mollis sem venenatis. Cras euismod, mauris non lobortis pulvinar, dolor risus gravida nisi, eu tristique mauris nulla eget sapien.<\/p>",
+        "id": 1549,
+        "updated_at": "2026-03-06 05:47:49",
+        "created_at": "2026-03-06 05:47:49"
+    },
+    {
+        "slug": "about.us-69aa5cc401c19",
+        "title": "{\"it\":\"Voluptates reiciendis quo\"}",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tortor vitae sem cursus ullamcorper. In pellentesque purus et ante eleifend finibus. Fusce quis sapien nunc. Donec molestie arcu vel suscipit tincidunt. Nunc non neque risus. Aliquam fringilla sed quam eu condimentum. Nam viverra enim ut iaculis vulputate. Aenean quis laoreet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel venenatis magna.<\/p><p>Curabitur feugiat sagittis imperdiet. Vestibulum cursus massa sed convallis aliquet. Proin in purus diam. Cras blandit justo in massa imperdiet euismod. Aliquam erat volutpat. Sed quis ornare urna. Cras quis tempus nunc. Vestibulum quis quam a ipsum accumsan gravida in nec arcu. Praesent ut eros eros. Proin vel bibendum eros. In egestas suscipit purus vel efficitur. Proin at elit risus. Nam volutpat massa in lacus bibendum placerat. Suspendisse auctor elit odio, in dapibus risus blandit ut. Sed eu consequat purus.<\/p><p>Sed sit amet fringilla nunc. Proin consequat dui suscipit magna porta blandit. Nam vel felis commodo, mattis sapien ac, laoreet ligula. Vestibulum egestas cursus nulla in tincidunt. Ut efficitur, purus in faucibus mattis, justo enim mollis elit, vitae rutrum sem orci nec mi. Duis tempus mattis elementum. Etiam faucibus et eros vel dictum. Cras ut elit massa. Fusce tristique lacus ac risus pulvinar tempor. Etiam ultricies sit amet lacus sed gravida. Suspendisse potenti. Donec in massa a sem egestas tincidunt eu at sem.<\/p><p>Aliquam eget tortor urna. Integer vel tincidunt tellus. Donec ultrices efficitur tortor, vel ullamcorper justo. Proin nec placerat diam, at malesuada metus. Praesent vitae blandit neque. Nulla gravida nulla et molestie placerat. Phasellus porta tortor eu massa laoreet egestas. In sed ultrices magna. Curabitur ut vestibulum metus. Integer porttitor risus at venenatis lobortis. Pellentesque eu libero purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a cursus leo.<\/p><p>Donec at diam ex. In eleifend commodo suscipit. Vivamus ultrices vehicula nunc quis mollis. Aliquam erat volutpat. Nam id dui consectetur, tristique ex non, fermentum dolor. Morbi lorem purus, lobortis at mauris vel, laoreet pretium dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus semper rhoncus augue at facilisis. Pellentesque ut iaculis justo. Suspendisse sed cursus quam. Duis sollicitudin velit vel eros pulvinar egestas. Donec feugiat massa ac dui elementum, quis mollis sem venenatis. Cras euismod, mauris non lobortis pulvinar, dolor risus gravida nisi, eu tristique mauris nulla eget sapien.<\/p>",
+        "id": 1550,
+        "updated_at": "2026-03-06 05:49:08",
+        "created_at": "2026-03-06 05:49:08"
+    },
+    {
+        "slug": "blog.view-69aa5cc43065e",
+        "title": "{\"it\":\"Facilis velit at ipsum\"}",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tortor vitae sem cursus ullamcorper. In pellentesque purus et ante eleifend finibus. Fusce quis sapien nunc. Donec molestie arcu vel suscipit tincidunt. Nunc non neque risus. Aliquam fringilla sed quam eu condimentum. Nam viverra enim ut iaculis vulputate. Aenean quis laoreet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel venenatis magna.<\/p><p>Curabitur feugiat sagittis imperdiet. Vestibulum cursus massa sed convallis aliquet. Proin in purus diam. Cras blandit justo in massa imperdiet euismod. Aliquam erat volutpat. Sed quis ornare urna. Cras quis tempus nunc. Vestibulum quis quam a ipsum accumsan gravida in nec arcu. Praesent ut eros eros. Proin vel bibendum eros. In egestas suscipit purus vel efficitur. Proin at elit risus. Nam volutpat massa in lacus bibendum placerat. Suspendisse auctor elit odio, in dapibus risus blandit ut. Sed eu consequat purus.<\/p><p>Sed sit amet fringilla nunc. Proin consequat dui suscipit magna porta blandit. Nam vel felis commodo, mattis sapien ac, laoreet ligula. Vestibulum egestas cursus nulla in tincidunt. Ut efficitur, purus in faucibus mattis, justo enim mollis elit, vitae rutrum sem orci nec mi. Duis tempus mattis elementum. Etiam faucibus et eros vel dictum. Cras ut elit massa. Fusce tristique lacus ac risus pulvinar tempor. Etiam ultricies sit amet lacus sed gravida. Suspendisse potenti. Donec in massa a sem egestas tincidunt eu at sem.<\/p><p>Aliquam eget tortor urna. Integer vel tincidunt tellus. Donec ultrices efficitur tortor, vel ullamcorper justo. Proin nec placerat diam, at malesuada metus. Praesent vitae blandit neque. Nulla gravida nulla et molestie placerat. Phasellus porta tortor eu massa laoreet egestas. In sed ultrices magna. Curabitur ut vestibulum metus. Integer porttitor risus at venenatis lobortis. Pellentesque eu libero purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a cursus leo.<\/p><p>Donec at diam ex. In eleifend commodo suscipit. Vivamus ultrices vehicula nunc quis mollis. Aliquam erat volutpat. Nam id dui consectetur, tristique ex non, fermentum dolor. Morbi lorem purus, lobortis at mauris vel, laoreet pretium dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus semper rhoncus augue at facilisis. Pellentesque ut iaculis justo. Suspendisse sed cursus quam. Duis sollicitudin velit vel eros pulvinar egestas. Donec feugiat massa ac dui elementum, quis mollis sem venenatis. Cras euismod, mauris non lobortis pulvinar, dolor risus gravida nisi, eu tristique mauris nulla eget sapien.<\/p>",
+        "id": 1551,
+        "updated_at": "2026-03-06 05:49:08",
+        "created_at": "2026-03-06 05:49:08"
+    },
+    {
+        "title": "{\"it\":\"Test Page\",\"en\":\"Test Page\"}",
+        "slug": "test-page",
+        "id": 1552,
+        "updated_at": "2026-03-06 05:51:18",
+        "created_at": "2026-03-06 05:51:18"
+    },
+    {
+        "title": {
+            "it": "Updated Title",
+            "en": "Updated Title"
+        },
+        "slug": "original-title",
+        "id": "1553",
+        "updated_at": "2026-03-06T04:51:19.000000Z",
+        "created_at": "2026-03-06T04:51:19.000000Z"
+    },
+    {
+        "title": "{\"it\":\"Page with Blocks\",\"en\":\"Page with Blocks\"}",
+        "slug": "page-with-blocks",
+        "content_blocks": "{\"it\":[{\"id\":\"block-1\",\"type\":\"hero\",\"content\":{\"it\":\"Hero content\",\"en\":\"Hero content\"}},{\"id\":\"block-2\",\"type\":\"text\",\"content\":{\"it\":\"Text content\",\"en\":\"Text content\"}}]}",
+        "id": 1554,
+        "updated_at": "2026-03-06 05:51:19",
+        "created_at": "2026-03-06 05:51:19"
+    },
+    {
+        "title": "{\"it\":\"Page with Content\",\"en\":\"Page with Content\"}",
+        "slug": "page-with-content",
+        "description": "This is a test page description",
+        "content": "This is the main content of the page",
+        "id": 1555,
+        "updated_at": "2026-03-06 05:51:20",
+        "created_at": "2026-03-06 05:51:20"
+    },
+    {
+        "title": "{\"it\":\"Titolo Italiano\",\"en\":\"English Title\",\"de\":\"Deutscher Titel\"}",
+        "slug": "multilingual-page",
+        "content_blocks": "{\"it\":[{\"id\":\"content-block\",\"type\":\"text\",\"content\":{\"it\":\"Contenuto in italiano\",\"en\":\"Content in English\",\"de\":\"Inhalt auf Deutsch\"}}]}",
+        "id": 1556,
+        "updated_at": "2026-03-06 05:51:20",
+        "created_at": "2026-03-06 05:51:20"
+    },
+    {
+        "title": "{\"it\":\"Page with Sections\",\"en\":\"Page with Sections\"}",
+        "slug": "page-with-sections",
+        "content_blocks": "{\"it\":[{\"id\":\"section-1\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 1\",\"en\":\"Section 1\"},\"content\":{\"it\":\"Contenuto sezione 1\",\"en\":\"Section 1 content\"}},{\"id\":\"section-2\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 2\",\"en\":\"Section 2\"},\"content\":{\"it\":\"Contenuto sezione 2\",\"en\":\"Section 2 content\"}}]}",
+        "id": 1557,
+        "updated_at": "2026-03-06 05:51:22",
+        "created_at": "2026-03-06 05:51:22"
+    },
+    {
+        "title": "{\"it\":\"Page with Template\",\"en\":\"Page with Template\"}",
+        "slug": "page-with-template",
+        "content_blocks": "{\"it\":[{\"id\":\"layout-block\",\"type\":\"layout\",\"template\":\"default\",\"content\":{\"it\":\"Layout content\",\"en\":\"Layout content\"}}]}",
+        "sidebar_blocks": "{\"it\":[{\"id\":\"sidebar-block\",\"type\":\"widget\",\"content\":{\"it\":\"Sidebar widget\",\"en\":\"Sidebar widget\"}}]}",
+        "footer_blocks": "{\"it\":[{\"id\":\"footer-block\",\"type\":\"footer\",\"content\":{\"it\":\"Footer content\",\"en\":\"Footer content\"}}]}",
+        "id": 1558,
+        "updated_at": "2026-03-06 05:51:22",
+        "created_at": "2026-03-06 05:51:22"
+    },
+    {
+        "title": "{\"it\":\"Page with Permissions\",\"en\":\"Page with Permissions\"}",
+        "slug": "page-with-permissions",
+        "middleware": "[\"auth\",\"verified\"]",
+        "id": 1559,
+        "updated_at": "2026-03-06 05:51:22",
+        "created_at": "2026-03-06 05:51:22"
+    },
+    {
+        "title": "{\"it\":\"Page with Timestamps\",\"en\":\"Page with Timestamps\"}",
+        "slug": "page-with-timestamps",
+        "id": 1560,
+        "updated_at": "2026-03-06 05:51:22",
+        "created_at": "2026-03-06 05:51:22"
+    },
+    {
+        "slug": "about.us-69aa5dc0c799a",
+        "title": "{\"it\":\"Ipsam repellat doloribus\"}",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tortor vitae sem cursus ullamcorper. In pellentesque purus et ante eleifend finibus. Fusce quis sapien nunc. Donec molestie arcu vel suscipit tincidunt. Nunc non neque risus. Aliquam fringilla sed quam eu condimentum. Nam viverra enim ut iaculis vulputate. Aenean quis laoreet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel venenatis magna.<\/p><p>Curabitur feugiat sagittis imperdiet. Vestibulum cursus massa sed convallis aliquet. Proin in purus diam. Cras blandit justo in massa imperdiet euismod. Aliquam erat volutpat. Sed quis ornare urna. Cras quis tempus nunc. Vestibulum quis quam a ipsum accumsan gravida in nec arcu. Praesent ut eros eros. Proin vel bibendum eros. In egestas suscipit purus vel efficitur. Proin at elit risus. Nam volutpat massa in lacus bibendum placerat. Suspendisse auctor elit odio, in dapibus risus blandit ut. Sed eu consequat purus.<\/p><p>Sed sit amet fringilla nunc. Proin consequat dui suscipit magna porta blandit. Nam vel felis commodo, mattis sapien ac, laoreet ligula. Vestibulum egestas cursus nulla in tincidunt. Ut efficitur, purus in faucibus mattis, justo enim mollis elit, vitae rutrum sem orci nec mi. Duis tempus mattis elementum. Etiam faucibus et eros vel dictum. Cras ut elit massa. Fusce tristique lacus ac risus pulvinar tempor. Etiam ultricies sit amet lacus sed gravida. Suspendisse potenti. Donec in massa a sem egestas tincidunt eu at sem.<\/p><p>Aliquam eget tortor urna. Integer vel tincidunt tellus. Donec ultrices efficitur tortor, vel ullamcorper justo. Proin nec placerat diam, at malesuada metus. Praesent vitae blandit neque. Nulla gravida nulla et molestie placerat. Phasellus porta tortor eu massa laoreet egestas. In sed ultrices magna. Curabitur ut vestibulum metus. Integer porttitor risus at venenatis lobortis. Pellentesque eu libero purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a cursus leo.<\/p><p>Donec at diam ex. In eleifend commodo suscipit. Vivamus ultrices vehicula nunc quis mollis. Aliquam erat volutpat. Nam id dui consectetur, tristique ex non, fermentum dolor. Morbi lorem purus, lobortis at mauris vel, laoreet pretium dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus semper rhoncus augue at facilisis. Pellentesque ut iaculis justo. Suspendisse sed cursus quam. Duis sollicitudin velit vel eros pulvinar egestas. Donec feugiat massa ac dui elementum, quis mollis sem venenatis. Cras euismod, mauris non lobortis pulvinar, dolor risus gravida nisi, eu tristique mauris nulla eget sapien.<\/p>",
+        "id": 1561,
+        "updated_at": "2026-03-06 05:53:20",
+        "created_at": "2026-03-06 05:53:20"
+    },
+    {
+        "slug": "blog.view-69aa5dc1088d0",
+        "title": "{\"it\":\"Ut laboriosam assumenda sunt\"}",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tortor vitae sem cursus ullamcorper. In pellentesque purus et ante eleifend finibus. Fusce quis sapien nunc. Donec molestie arcu vel suscipit tincidunt. Nunc non neque risus. Aliquam fringilla sed quam eu condimentum. Nam viverra enim ut iaculis vulputate. Aenean quis laoreet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel venenatis magna.<\/p><p>Curabitur feugiat sagittis imperdiet. Vestibulum cursus massa sed convallis aliquet. Proin in purus diam. Cras blandit justo in massa imperdiet euismod. Aliquam erat volutpat. Sed quis ornare urna. Cras quis tempus nunc. Vestibulum quis quam a ipsum accumsan gravida in nec arcu. Praesent ut eros eros. Proin vel bibendum eros. In egestas suscipit purus vel efficitur. Proin at elit risus. Nam volutpat massa in lacus bibendum placerat. Suspendisse auctor elit odio, in dapibus risus blandit ut. Sed eu consequat purus.<\/p><p>Sed sit amet fringilla nunc. Proin consequat dui suscipit magna porta blandit. Nam vel felis commodo, mattis sapien ac, laoreet ligula. Vestibulum egestas cursus nulla in tincidunt. Ut efficitur, purus in faucibus mattis, justo enim mollis elit, vitae rutrum sem orci nec mi. Duis tempus mattis elementum. Etiam faucibus et eros vel dictum. Cras ut elit massa. Fusce tristique lacus ac risus pulvinar tempor. Etiam ultricies sit amet lacus sed gravida. Suspendisse potenti. Donec in massa a sem egestas tincidunt eu at sem.<\/p><p>Aliquam eget tortor urna. Integer vel tincidunt tellus. Donec ultrices efficitur tortor, vel ullamcorper justo. Proin nec placerat diam, at malesuada metus. Praesent vitae blandit neque. Nulla gravida nulla et molestie placerat. Phasellus porta tortor eu massa laoreet egestas. In sed ultrices magna. Curabitur ut vestibulum metus. Integer porttitor risus at venenatis lobortis. Pellentesque eu libero purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a cursus leo.<\/p><p>Donec at diam ex. In eleifend commodo suscipit. Vivamus ultrices vehicula nunc quis mollis. Aliquam erat volutpat. Nam id dui consectetur, tristique ex non, fermentum dolor. Morbi lorem purus, lobortis at mauris vel, laoreet pretium dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus semper rhoncus augue at facilisis. Pellentesque ut iaculis justo. Suspendisse sed cursus quam. Duis sollicitudin velit vel eros pulvinar egestas. Donec feugiat massa ac dui elementum, quis mollis sem venenatis. Cras euismod, mauris non lobortis pulvinar, dolor risus gravida nisi, eu tristique mauris nulla eget sapien.<\/p>",
+        "id": 1562,
+        "updated_at": "2026-03-06 05:53:21",
+        "created_at": "2026-03-06 05:53:21"
+    },
+    {
+        "title": "{\"it\":\"Test Page\",\"en\":\"Test Page\"}",
+        "slug": "test-page",
+        "id": 1563,
+        "updated_at": "2026-03-06 05:56:38",
+        "created_at": "2026-03-06 05:56:38"
+    },
+    {
+        "title": {
+            "it": "Updated Title",
+            "en": "Updated Title"
+        },
+        "slug": "original-title",
+        "id": "1564",
+        "updated_at": "2026-03-06T04:56:38.000000Z",
+        "created_at": "2026-03-06T04:56:38.000000Z"
+    },
+    {
+        "title": "{\"it\":\"Page with Blocks\",\"en\":\"Page with Blocks\"}",
+        "slug": "page-with-blocks",
+        "content_blocks": "{\"it\":[{\"id\":\"block-1\",\"type\":\"hero\",\"content\":{\"it\":\"Hero content\",\"en\":\"Hero content\"}},{\"id\":\"block-2\",\"type\":\"text\",\"content\":{\"it\":\"Text content\",\"en\":\"Text content\"}}]}",
+        "id": 1565,
+        "updated_at": "2026-03-06 05:56:39",
+        "created_at": "2026-03-06 05:56:39"
+    },
+    {
+        "title": "{\"it\":\"Page with Content\",\"en\":\"Page with Content\"}",
+        "slug": "page-with-content",
+        "description": "This is a test page description",
+        "content": "This is the main content of the page",
+        "id": 1566,
+        "updated_at": "2026-03-06 05:56:40",
+        "created_at": "2026-03-06 05:56:40"
+    },
+    {
+        "title": "{\"it\":\"Titolo Italiano\",\"en\":\"English Title\",\"de\":\"Deutscher Titel\"}",
+        "slug": "multilingual-page",
+        "content_blocks": "{\"it\":[{\"id\":\"content-block\",\"type\":\"text\",\"content\":{\"it\":\"Contenuto in italiano\",\"en\":\"Content in English\",\"de\":\"Inhalt auf Deutsch\"}}]}",
+        "id": 1567,
+        "updated_at": "2026-03-06 05:56:40",
+        "created_at": "2026-03-06 05:56:40"
+    },
+    {
+        "title": "{\"it\":\"Page with Sections\",\"en\":\"Page with Sections\"}",
+        "slug": "page-with-sections",
+        "content_blocks": "{\"it\":[{\"id\":\"section-1\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 1\",\"en\":\"Section 1\"},\"content\":{\"it\":\"Contenuto sezione 1\",\"en\":\"Section 1 content\"}},{\"id\":\"section-2\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 2\",\"en\":\"Section 2\"},\"content\":{\"it\":\"Contenuto sezione 2\",\"en\":\"Section 2 content\"}}]}",
+        "id": 1568,
+        "updated_at": "2026-03-06 05:56:40",
+        "created_at": "2026-03-06 05:56:40"
+    },
+    {
+        "title": "{\"it\":\"Page with Template\",\"en\":\"Page with Template\"}",
+        "slug": "page-with-template",
+        "content_blocks": "{\"it\":[{\"id\":\"layout-block\",\"type\":\"layout\",\"template\":\"default\",\"content\":{\"it\":\"Layout content\",\"en\":\"Layout content\"}}]}",
+        "sidebar_blocks": "{\"it\":[{\"id\":\"sidebar-block\",\"type\":\"widget\",\"content\":{\"it\":\"Sidebar widget\",\"en\":\"Sidebar widget\"}}]}",
+        "footer_blocks": "{\"it\":[{\"id\":\"footer-block\",\"type\":\"footer\",\"content\":{\"it\":\"Footer content\",\"en\":\"Footer content\"}}]}",
+        "id": 1569,
+        "updated_at": "2026-03-06 05:56:41",
+        "created_at": "2026-03-06 05:56:41"
+    },
+    {
+        "title": "{\"it\":\"Page with Permissions\",\"en\":\"Page with Permissions\"}",
+        "slug": "page-with-permissions",
+        "middleware": "[\"auth\",\"verified\"]",
+        "id": 1570,
+        "updated_at": "2026-03-06 05:56:41",
+        "created_at": "2026-03-06 05:56:41"
+    },
+    {
+        "title": "{\"it\":\"Page with Timestamps\",\"en\":\"Page with Timestamps\"}",
+        "slug": "page-with-timestamps",
+        "id": 1571,
+        "updated_at": "2026-03-06 05:56:41",
+        "created_at": "2026-03-06 05:56:41"
+    },
+    {
+        "slug": "about.us-69aa5f34bd13b",
+        "title": "{\"it\":\"Id vero\"}",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tortor vitae sem cursus ullamcorper. In pellentesque purus et ante eleifend finibus. Fusce quis sapien nunc. Donec molestie arcu vel suscipit tincidunt. Nunc non neque risus. Aliquam fringilla sed quam eu condimentum. Nam viverra enim ut iaculis vulputate. Aenean quis laoreet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel venenatis magna.<\/p><p>Curabitur feugiat sagittis imperdiet. Vestibulum cursus massa sed convallis aliquet. Proin in purus diam. Cras blandit justo in massa imperdiet euismod. Aliquam erat volutpat. Sed quis ornare urna. Cras quis tempus nunc. Vestibulum quis quam a ipsum accumsan gravida in nec arcu. Praesent ut eros eros. Proin vel bibendum eros. In egestas suscipit purus vel efficitur. Proin at elit risus. Nam volutpat massa in lacus bibendum placerat. Suspendisse auctor elit odio, in dapibus risus blandit ut. Sed eu consequat purus.<\/p><p>Sed sit amet fringilla nunc. Proin consequat dui suscipit magna porta blandit. Nam vel felis commodo, mattis sapien ac, laoreet ligula. Vestibulum egestas cursus nulla in tincidunt. Ut efficitur, purus in faucibus mattis, justo enim mollis elit, vitae rutrum sem orci nec mi. Duis tempus mattis elementum. Etiam faucibus et eros vel dictum. Cras ut elit massa. Fusce tristique lacus ac risus pulvinar tempor. Etiam ultricies sit amet lacus sed gravida. Suspendisse potenti. Donec in massa a sem egestas tincidunt eu at sem.<\/p><p>Aliquam eget tortor urna. Integer vel tincidunt tellus. Donec ultrices efficitur tortor, vel ullamcorper justo. Proin nec placerat diam, at malesuada metus. Praesent vitae blandit neque. Nulla gravida nulla et molestie placerat. Phasellus porta tortor eu massa laoreet egestas. In sed ultrices magna. Curabitur ut vestibulum metus. Integer porttitor risus at venenatis lobortis. Pellentesque eu libero purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a cursus leo.<\/p><p>Donec at diam ex. In eleifend commodo suscipit. Vivamus ultrices vehicula nunc quis mollis. Aliquam erat volutpat. Nam id dui consectetur, tristique ex non, fermentum dolor. Morbi lorem purus, lobortis at mauris vel, laoreet pretium dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus semper rhoncus augue at facilisis. Pellentesque ut iaculis justo. Suspendisse sed cursus quam. Duis sollicitudin velit vel eros pulvinar egestas. Donec feugiat massa ac dui elementum, quis mollis sem venenatis. Cras euismod, mauris non lobortis pulvinar, dolor risus gravida nisi, eu tristique mauris nulla eget sapien.<\/p>",
+        "id": 1572,
+        "updated_at": "2026-03-06 05:59:32",
+        "created_at": "2026-03-06 05:59:32"
+    },
+    {
+        "slug": "blog.view-69aa5f3520ba8",
+        "title": "{\"it\":\"Harum cumque est\"}",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tortor vitae sem cursus ullamcorper. In pellentesque purus et ante eleifend finibus. Fusce quis sapien nunc. Donec molestie arcu vel suscipit tincidunt. Nunc non neque risus. Aliquam fringilla sed quam eu condimentum. Nam viverra enim ut iaculis vulputate. Aenean quis laoreet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel venenatis magna.<\/p><p>Curabitur feugiat sagittis imperdiet. Vestibulum cursus massa sed convallis aliquet. Proin in purus diam. Cras blandit justo in massa imperdiet euismod. Aliquam erat volutpat. Sed quis ornare urna. Cras quis tempus nunc. Vestibulum quis quam a ipsum accumsan gravida in nec arcu. Praesent ut eros eros. Proin vel bibendum eros. In egestas suscipit purus vel efficitur. Proin at elit risus. Nam volutpat massa in lacus bibendum placerat. Suspendisse auctor elit odio, in dapibus risus blandit ut. Sed eu consequat purus.<\/p><p>Sed sit amet fringilla nunc. Proin consequat dui suscipit magna porta blandit. Nam vel felis commodo, mattis sapien ac, laoreet ligula. Vestibulum egestas cursus nulla in tincidunt. Ut efficitur, purus in faucibus mattis, justo enim mollis elit, vitae rutrum sem orci nec mi. Duis tempus mattis elementum. Etiam faucibus et eros vel dictum. Cras ut elit massa. Fusce tristique lacus ac risus pulvinar tempor. Etiam ultricies sit amet lacus sed gravida. Suspendisse potenti. Donec in massa a sem egestas tincidunt eu at sem.<\/p><p>Aliquam eget tortor urna. Integer vel tincidunt tellus. Donec ultrices efficitur tortor, vel ullamcorper justo. Proin nec placerat diam, at malesuada metus. Praesent vitae blandit neque. Nulla gravida nulla et molestie placerat. Phasellus porta tortor eu massa laoreet egestas. In sed ultrices magna. Curabitur ut vestibulum metus. Integer porttitor risus at venenatis lobortis. Pellentesque eu libero purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a cursus leo.<\/p><p>Donec at diam ex. In eleifend commodo suscipit. Vivamus ultrices vehicula nunc quis mollis. Aliquam erat volutpat. Nam id dui consectetur, tristique ex non, fermentum dolor. Morbi lorem purus, lobortis at mauris vel, laoreet pretium dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus semper rhoncus augue at facilisis. Pellentesque ut iaculis justo. Suspendisse sed cursus quam. Duis sollicitudin velit vel eros pulvinar egestas. Donec feugiat massa ac dui elementum, quis mollis sem venenatis. Cras euismod, mauris non lobortis pulvinar, dolor risus gravida nisi, eu tristique mauris nulla eget sapien.<\/p>",
+        "id": 1573,
+        "updated_at": "2026-03-06 05:59:33",
+        "created_at": "2026-03-06 05:59:33"
+    },
+    {
+        "title": "{\"it\":\"Test Page\",\"en\":\"Test Page\"}",
+        "slug": "test-page",
+        "id": 1574,
+        "updated_at": "2026-03-06 06:08:29",
+        "created_at": "2026-03-06 06:08:29"
+    },
+    {
+        "title": {
+            "it": "Updated Title",
+            "en": "Updated Title"
+        },
+        "slug": "original-title",
+        "id": "1575",
+        "updated_at": "2026-03-06T05:08:30.000000Z",
+        "created_at": "2026-03-06T05:08:30.000000Z"
+    },
+    {
+        "title": "{\"it\":\"Page with Blocks\",\"en\":\"Page with Blocks\"}",
+        "slug": "page-with-blocks",
+        "content_blocks": "{\"it\":[{\"id\":\"block-1\",\"type\":\"hero\",\"content\":{\"it\":\"Hero content\",\"en\":\"Hero content\"}},{\"id\":\"block-2\",\"type\":\"text\",\"content\":{\"it\":\"Text content\",\"en\":\"Text content\"}}]}",
+        "id": 1576,
+        "updated_at": "2026-03-06 06:08:30",
+        "created_at": "2026-03-06 06:08:30"
+    },
+    {
+        "title": "{\"it\":\"Page with Content\",\"en\":\"Page with Content\"}",
+        "slug": "page-with-content",
+        "description": "This is a test page description",
+        "content": "This is the main content of the page",
+        "id": 1577,
+        "updated_at": "2026-03-06 06:08:31",
+        "created_at": "2026-03-06 06:08:31"
+    },
+    {
+        "title": "{\"it\":\"Titolo Italiano\",\"en\":\"English Title\",\"de\":\"Deutscher Titel\"}",
+        "slug": "multilingual-page",
+        "content_blocks": "{\"it\":[{\"id\":\"content-block\",\"type\":\"text\",\"content\":{\"it\":\"Contenuto in italiano\",\"en\":\"Content in English\",\"de\":\"Inhalt auf Deutsch\"}}]}",
+        "id": 1578,
+        "updated_at": "2026-03-06 06:08:31",
+        "created_at": "2026-03-06 06:08:31"
+    },
+    {
+        "title": "{\"it\":\"Page with Sections\",\"en\":\"Page with Sections\"}",
+        "slug": "page-with-sections",
+        "content_blocks": "{\"it\":[{\"id\":\"section-1\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 1\",\"en\":\"Section 1\"},\"content\":{\"it\":\"Contenuto sezione 1\",\"en\":\"Section 1 content\"}},{\"id\":\"section-2\",\"type\":\"section\",\"title\":{\"it\":\"Sezione 2\",\"en\":\"Section 2\"},\"content\":{\"it\":\"Contenuto sezione 2\",\"en\":\"Section 2 content\"}}]}",
+        "id": 1579,
+        "updated_at": "2026-03-06 06:08:31",
+        "created_at": "2026-03-06 06:08:31"
+    },
+    {
+        "title": "{\"it\":\"Page with Template\",\"en\":\"Page with Template\"}",
+        "slug": "page-with-template",
+        "content_blocks": "{\"it\":[{\"id\":\"layout-block\",\"type\":\"layout\",\"template\":\"default\",\"content\":{\"it\":\"Layout content\",\"en\":\"Layout content\"}}]}",
+        "sidebar_blocks": "{\"it\":[{\"id\":\"sidebar-block\",\"type\":\"widget\",\"content\":{\"it\":\"Sidebar widget\",\"en\":\"Sidebar widget\"}}]}",
+        "footer_blocks": "{\"it\":[{\"id\":\"footer-block\",\"type\":\"footer\",\"content\":{\"it\":\"Footer content\",\"en\":\"Footer content\"}}]}",
+        "id": 1580,
+        "updated_at": "2026-03-06 06:08:32",
+        "created_at": "2026-03-06 06:08:32"
+    },
+    {
+        "title": "{\"it\":\"Page with Permissions\",\"en\":\"Page with Permissions\"}",
+        "slug": "page-with-permissions",
+        "middleware": "[\"auth\",\"verified\"]",
+        "id": 1581,
+        "updated_at": "2026-03-06 06:08:32",
+        "created_at": "2026-03-06 06:08:32"
+    },
+    {
+        "title": "{\"it\":\"Page with Timestamps\",\"en\":\"Page with Timestamps\"}",
+        "slug": "page-with-timestamps",
+        "id": 1582,
+        "updated_at": "2026-03-06 06:08:32",
+        "created_at": "2026-03-06 06:08:32"
+    },
+    {
+        "slug": "about.us-69aa618b0c445",
+        "title": "{\"it\":\"Ex nulla dolores\"}",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tortor vitae sem cursus ullamcorper. In pellentesque purus et ante eleifend finibus. Fusce quis sapien nunc. Donec molestie arcu vel suscipit tincidunt. Nunc non neque risus. Aliquam fringilla sed quam eu condimentum. Nam viverra enim ut iaculis vulputate. Aenean quis laoreet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel venenatis magna.<\/p><p>Curabitur feugiat sagittis imperdiet. Vestibulum cursus massa sed convallis aliquet. Proin in purus diam. Cras blandit justo in massa imperdiet euismod. Aliquam erat volutpat. Sed quis ornare urna. Cras quis tempus nunc. Vestibulum quis quam a ipsum accumsan gravida in nec arcu. Praesent ut eros eros. Proin vel bibendum eros. In egestas suscipit purus vel efficitur. Proin at elit risus. Nam volutpat massa in lacus bibendum placerat. Suspendisse auctor elit odio, in dapibus risus blandit ut. Sed eu consequat purus.<\/p><p>Sed sit amet fringilla nunc. Proin consequat dui suscipit magna porta blandit. Nam vel felis commodo, mattis sapien ac, laoreet ligula. Vestibulum egestas cursus nulla in tincidunt. Ut efficitur, purus in faucibus mattis, justo enim mollis elit, vitae rutrum sem orci nec mi. Duis tempus mattis elementum. Etiam faucibus et eros vel dictum. Cras ut elit massa. Fusce tristique lacus ac risus pulvinar tempor. Etiam ultricies sit amet lacus sed gravida. Suspendisse potenti. Donec in massa a sem egestas tincidunt eu at sem.<\/p><p>Aliquam eget tortor urna. Integer vel tincidunt tellus. Donec ultrices efficitur tortor, vel ullamcorper justo. Proin nec placerat diam, at malesuada metus. Praesent vitae blandit neque. Nulla gravida nulla et molestie placerat. Phasellus porta tortor eu massa laoreet egestas. In sed ultrices magna. Curabitur ut vestibulum metus. Integer porttitor risus at venenatis lobortis. Pellentesque eu libero purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a cursus leo.<\/p><p>Donec at diam ex. In eleifend commodo suscipit. Vivamus ultrices vehicula nunc quis mollis. Aliquam erat volutpat. Nam id dui consectetur, tristique ex non, fermentum dolor. Morbi lorem purus, lobortis at mauris vel, laoreet pretium dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus semper rhoncus augue at facilisis. Pellentesque ut iaculis justo. Suspendisse sed cursus quam. Duis sollicitudin velit vel eros pulvinar egestas. Donec feugiat massa ac dui elementum, quis mollis sem venenatis. Cras euismod, mauris non lobortis pulvinar, dolor risus gravida nisi, eu tristique mauris nulla eget sapien.<\/p>",
+        "id": 1583,
+        "updated_at": "2026-03-06 06:09:31",
+        "created_at": "2026-03-06 06:09:31"
+    },
+    {
+        "slug": "blog.view-69aa618b5afbb",
+        "title": "{\"it\":\"Omnis dolorem expedita et\"}",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tortor vitae sem cursus ullamcorper. In pellentesque purus et ante eleifend finibus. Fusce quis sapien nunc. Donec molestie arcu vel suscipit tincidunt. Nunc non neque risus. Aliquam fringilla sed quam eu condimentum. Nam viverra enim ut iaculis vulputate. Aenean quis laoreet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel venenatis magna.<\/p><p>Curabitur feugiat sagittis imperdiet. Vestibulum cursus massa sed convallis aliquet. Proin in purus diam. Cras blandit justo in massa imperdiet euismod. Aliquam erat volutpat. Sed quis ornare urna. Cras quis tempus nunc. Vestibulum quis quam a ipsum accumsan gravida in nec arcu. Praesent ut eros eros. Proin vel bibendum eros. In egestas suscipit purus vel efficitur. Proin at elit risus. Nam volutpat massa in lacus bibendum placerat. Suspendisse auctor elit odio, in dapibus risus blandit ut. Sed eu consequat purus.<\/p><p>Sed sit amet fringilla nunc. Proin consequat dui suscipit magna porta blandit. Nam vel felis commodo, mattis sapien ac, laoreet ligula. Vestibulum egestas cursus nulla in tincidunt. Ut efficitur, purus in faucibus mattis, justo enim mollis elit, vitae rutrum sem orci nec mi. Duis tempus mattis elementum. Etiam faucibus et eros vel dictum. Cras ut elit massa. Fusce tristique lacus ac risus pulvinar tempor. Etiam ultricies sit amet lacus sed gravida. Suspendisse potenti. Donec in massa a sem egestas tincidunt eu at sem.<\/p><p>Aliquam eget tortor urna. Integer vel tincidunt tellus. Donec ultrices efficitur tortor, vel ullamcorper justo. Proin nec placerat diam, at malesuada metus. Praesent vitae blandit neque. Nulla gravida nulla et molestie placerat. Phasellus porta tortor eu massa laoreet egestas. In sed ultrices magna. Curabitur ut vestibulum metus. Integer porttitor risus at venenatis lobortis. Pellentesque eu libero purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a cursus leo.<\/p><p>Donec at diam ex. In eleifend commodo suscipit. Vivamus ultrices vehicula nunc quis mollis. Aliquam erat volutpat. Nam id dui consectetur, tristique ex non, fermentum dolor. Morbi lorem purus, lobortis at mauris vel, laoreet pretium dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus semper rhoncus augue at facilisis. Pellentesque ut iaculis justo. Suspendisse sed cursus quam. Duis sollicitudin velit vel eros pulvinar egestas. Donec feugiat massa ac dui elementum, quis mollis sem venenatis. Cras euismod, mauris non lobortis pulvinar, dolor risus gravida nisi, eu tristique mauris nulla eget sapien.<\/p>",
+        "id": 1584,
+        "updated_at": "2026-03-06 06:09:31",
+        "created_at": "2026-03-06 06:09:31"
     }
 ]

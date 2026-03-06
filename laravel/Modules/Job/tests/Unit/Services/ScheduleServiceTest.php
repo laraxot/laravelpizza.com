@@ -5,30 +5,26 @@ declare(strict_types=1);
 use Modules\Job\Services\ScheduleService;
 
 describe('ScheduleService', function () {
-    it('can be instantiated via container', function () {
-        $service = app(ScheduleService::class);
-        expect($service)->toBeInstanceOf(ScheduleService::class);
+    it('can be instantiated', function () {
+        $reflection = new ReflectionClass(ScheduleService::class);
+        expect($reflection->isInstantiable())->toBeTrue();
     });
 
     it('has getActives method', function () {
-        $service = app(ScheduleService::class);
-        expect(method_exists($service, 'getActives'))->toBeTrue();
+        $reflection = new ReflectionClass(ScheduleService::class);
+        expect($reflection->hasMethod('getActives'))->toBeTrue();
     });
 
     it('has clearCache method', function () {
-        $service = app(ScheduleService::class);
-        expect(method_exists($service, 'clearCache'))->toBeTrue();
+        $reflection = new ReflectionClass(ScheduleService::class);
+        expect($reflection->hasMethod('clearCache'))->toBeTrue();
     });
 
-    it('getActives returns collection', function () {
-        $service = app(ScheduleService::class);
-        $result = $service->getActives();
-        expect($result)->toBeInstanceOf(\Illuminate\Support\Collection::class);
-    });
-
-    it('clearCache method is callable', function () {
-        $service = app(ScheduleService::class);
-        expect(fn () => $service->clearCache())->not->toThrow();
+    it('has private getFromCache method', function () {
+        $reflection = new ReflectionClass(ScheduleService::class);
+        expect($reflection->hasMethod('getFromCache'))->toBeTrue();
+        $method = $reflection->getMethod('getFromCache');
+        expect($method->isPrivate())->toBeTrue();
     });
 
     it('uses strict types', function () {

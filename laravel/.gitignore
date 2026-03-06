@@ -32,3 +32,4 @@ yarn-error.log
 
 coverage_report_xotbase/
 coverage-xot/
+--cache-directory/

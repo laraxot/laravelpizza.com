@@ -107,3 +107,21 @@ Snapshot: 2026-03-04
   - test aggiunto: `Modules/Cms/tests/Unit/Http/Volt/Password/ConfirmComponentTest.php`;
   - fix namespace test: import esplicito `Livewire\\Volt\\Component` per evitare risoluzione relativa sotto namespace `Modules\\Cms\\Tests\\Unit\\Http\\Volt\\Password`;
   - verifica subset: `./vendor/bin/pest Modules/Cms/tests/Unit/Http/Volt/Password/ConfirmComponentTest.php Modules/Cms/tests/Unit/Http/Volt/LoginComponentTest.php Modules/Cms/tests/Unit/Http/Volt/CounterComponentTest.php --compact` -> `16 passed`.
+- Batch coverage corrente (2026-03-06, Geo + Cms Volt):
+  - fix strutturale Geo tests: sostituito `XotBaseTestCase` con `Modules\\Geo\\Tests\\TestCase` in `UpdateCoordinatesActionTest`, `AdditionalModelsTest`, `AddressBusinessLogicTest`;
+  - verifica: `./vendor/bin/pest Modules/Geo/tests/Unit/Actions/UpdateCoordinatesActionTest.php Modules/Geo/tests/Unit/Models/AdditionalModelsTest.php Modules/Geo/tests/Unit/Models/AddressBusinessLogicTest.php --compact` -> `25 passed`;
+  - verifica fail-batch residuale: `UIBusinessLogicTest + ResolvePageActionTest + ImportEventsActionTest + ResolveTenantModelClassActionTest` -> `32 passed`;
+  - verifica `Modules/Meetup/tests/Unit/Models/EventTest.php` -> `49 passed`;
+  - test nuovo: `Modules/Cms/tests/Unit/Http/Volt/Password/ResetComponentTest.php`;
+  - verifica Cms Volt subset (`Confirm + Reset + Login + Counter`) -> `20 passed`.
+- Batch coverage corrente (2026-03-06, Cms Volt register/verify):
+  - test aggiunti: `RegisterComponentTest`, `VerifyComponentTest`;
+  - verifica subset Cms Volt (`Register + Verify + Login + Counter + Password Confirm + Password Reset`) -> `27 passed`;
+  - `coverage-plan.md` aggiornato con `RegisterComponent.php` e `VerifyComponent.php` marcati come testati.
+- Batch coverage corrente (2026-03-06, Cms actions + token):
+  - test aggiunto: `Modules/Cms/tests/Unit/Http/Volt/Password/TokenComponentTest.php`;
+  - allineato backlog Actions Cms con test gia' presenti e verdi: `GetStyleClassAction`, `GetViewThemeByViewAction`, `SaveFooterConfigAction`, `SaveHeadernavConfigAction`;
+  - verifica subset combinato (Volt+Actions) -> `22 passed`.
+- Batch coverage corrente (2026-03-06, Cms resolve actions):
+  - verifica dedicata `ResolveBlockQueryActionTest` -> `12 passed`;
+  - allineato piano coverage: `ResolveBlockQueryAction.php` e `ResolvePageAction.php` marcati testati (quest'ultimo gia' verificato nel subset residual fail-batch odierno).

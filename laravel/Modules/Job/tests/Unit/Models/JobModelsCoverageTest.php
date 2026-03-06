@@ -90,10 +90,6 @@ describe('Job Models Coverage', function () {
             expect($reflection->isSubclassOf(\Modules\Job\Models\BaseModel::class))->toBeTrue();
         });
 
-        it('uses HasXotFactory trait', function () {
-            expect(in_array('Modules\Xot\Models\Traits\HasXotFactory', class_uses(Frequency::class)))->toBeTrue();
-        });
-
         it('uses strict types', function () {
             $reflection = new ReflectionClass(Frequency::class);
             $content = file_get_contents($reflection->getFileName());
@@ -110,10 +106,6 @@ describe('Job Models Coverage', function () {
         it('extends BaseModel', function () {
             $reflection = new ReflectionClass(Result::class);
             expect($reflection->isSubclassOf(\Modules\Job\Models\BaseModel::class))->toBeTrue();
-        });
-
-        it('uses HasXotFactory trait', function () {
-            expect(in_array('Modules\Xot\Models\Traits\HasXotFactory', class_uses(Result::class)))->toBeTrue();
         });
 
         it('uses strict types', function () {

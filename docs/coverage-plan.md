@@ -1,6 +1,31 @@
-# Coverage Plan - Updated 2026-03-06 10:34 UTC
+# Coverage Plan - Updated 2026-03-06 12:00 UTC
 
 **MULTI-AGENT STATUS**: 540+ test files created across all 14 modules. Foundation laid; now focus on gap-filling and model configuration fixes.
+
+## Current Session Status (2026-03-06 12:00 UTC)
+
+### Module Verification Results
+| Module | Tests | Status | Notes |
+|--------|-------|--------|-------|
+| **Geo** | 414 passed | ✅ Stable | Full module pass |
+| **UI** | 52 passed | ✅ Stable | Feature tests verified |
+| **Meetup** | 279 passed (8 risky) | ✅ Stable | No failures |
+| **Tenant** | 43 passed | ✅ Stable | All pass |
+| **Cms** | 4 passed (subset) | ✅ Stable | Key actions verified |
+
+### Full-Run Status
+- Full suite execution: ⏳ timeout (>300s)
+- Verified subsets: ✅ all passing
+- Next: continue gap-filling per Phase 2
+
+### 2026-03-06 (User Actions Coverage Batch)
+- Added tests for User actions:
+  - `Modules/User/tests/Unit/Actions/GetCurrentDeviceActionTest.php` - 4 tests
+  - `Modules/User/tests/Unit/Actions/Activity/LogRegistrationActionTest.php` - 3 tests
+  - `Modules/User/tests/Unit/Actions/Socialite/Utils/EmailDomainAnalyzerTest.php` - 6 tests
+  - `Modules/User/tests/Unit/Actions/Socialite/Utils/UserNameFieldsResolverTest.php` - 6 tests
+- Coverage targets: GetCurrentDeviceAction, LogRegistrationAction, EmailDomainAnalyzer, UserNameFieldsResolver
+- Verifica locale: `19 passed` on new User tests
 
 ## Executive Summary
 
@@ -91,6 +116,24 @@
 - Verification:
   - `./vendor/bin/pest Modules/Cms/tests/Unit/Http/View/Composers/XotComposerTest.php Modules/Cms/tests/Unit/Http/Middleware/PageSlugMiddlewareTest.php Modules/Cms/tests/Unit/Http/Middleware/SetFolioLocaleMiddlewareTest.php --compact` -> `11 passed`
   - regression subset (`Geo + Meetup`) -> `74 passed`
+
+### 2026-03-06 (Coverage Session - Job & Media Modules)
+- Added Job provider tests:
+  - `laravel/Modules/Job/tests/Unit/Providers/JobProvidersCoverageTest.php` - 21 tests
+  - Covers: JobServiceProvider, EventServiceProvider, RouteServiceProvider, AdminPanelProvider
+- Added Job model tests:
+  - `laravel/Modules/Job/tests/Unit/Models/JobModelsCoverageTest.php` - 36 tests
+  - Covers: Task, Frequency, Result, Schedule, Import, Export, JobBatch, JobManager, FailedJob
+- Added Job service tests:
+  - `laravel/Modules/Job/tests/Unit/Services/ScheduleServiceTest.php` - 7 tests
+- Added Media action tests:
+  - `laravel/Modules/Media/tests/Unit/Actions/MediaActionsCoverageTest.php` - 56 tests
+  - Covers: Image/Merge, Image/SvgExistsAction, Video/*, S3/*, CloudFront/*
+- Verifica locale:
+  - Job providers: `21 passed`
+  - Job models: `36 passed`
+  - Job services: `7 passed`
+  - Media actions: `56 passed`
 
 ### Next Execution Batch (ready-to-run)
 1. Full reconciliation run:
@@ -748,13 +791,13 @@ After fixing Phase 1, run full test suite and identify:
   - L’hack storico nel costruttore di `Activity` (override della connessione in testing) è stato rimosso ed è documentato come anti‑pattern in `Modules/Activity/docs/testing/testing-connection-hack.md`.
 
 ### Cms (102)
-- [ ] `laravel/Modules/Cms/app/Actions/GetStyleClassAction.php` (0/7, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Actions/GetViewThemeByViewAction.php` (0/6, 0.0%)
+- [x] `laravel/Modules/Cms/app/Actions/GetStyleClassAction.php` (tested, 2026-03-06)
+- [x] `laravel/Modules/Cms/app/Actions/GetViewThemeByViewAction.php` (tested, 2026-03-06)
 - [ ] `laravel/Modules/Cms/app/Actions/Module/FixJigSawByModuleAction.php` (0/19, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Actions/ResolveBlockQueryAction.php` (0/29, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Actions/ResolvePageAction.php` (0/51, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Actions/SaveFooterConfigAction.php` (0/2, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Actions/SaveHeadernavConfigAction.php` (0/2, 0.0%)
+- [x] `laravel/Modules/Cms/app/Actions/ResolveBlockQueryAction.php` (tested, 2026-03-06)
+- [x] `laravel/Modules/Cms/app/Actions/ResolvePageAction.php` (tested, 2026-03-06)
+- [x] `laravel/Modules/Cms/app/Actions/SaveFooterConfigAction.php` (tested, 2026-03-06)
+- [x] `laravel/Modules/Cms/app/Actions/SaveHeadernavConfigAction.php` (tested, 2026-03-06)
 - [ ] `laravel/Modules/Cms/app/Actions/View/GetCmsViewAction.php` (0/4, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Config/xra.php` (0/10, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Datas/.php-cs-fixer.dist.php` (0/22, 0.0%)
@@ -812,10 +855,10 @@ After fixing Phase 1, run full test suite and identify:
 - [x] `laravel/Modules/Cms/app/Http/Volt/CounterComponent.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Cms/app/Http/Volt/LoginComponent.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Cms/app/Http/Volt/Password/ConfirmComponent.php` (tested, 2026-03-06)
-- [ ] `laravel/Modules/Cms/app/Http/Volt/Password/ResetComponent.php` (0/9, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Http/Volt/Password/TokenComponent.php` (0/27, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Http/Volt/RegisterComponent.php` (0/9, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Http/Volt/VerifyComponent.php` (0/9, 0.0%)
+- [x] `laravel/Modules/Cms/app/Http/Volt/Password/ResetComponent.php` (tested, 2026-03-06)
+- [x] `laravel/Modules/Cms/app/Http/Volt/Password/TokenComponent.php` (tested, 2026-03-06)
+- [x] `laravel/Modules/Cms/app/Http/Volt/RegisterComponent.php` (tested, 2026-03-06)
+- [x] `laravel/Modules/Cms/app/Http/Volt/VerifyComponent.php` (tested, 2026-03-06)
 - [ ] `laravel/Modules/Cms/app/Models/Attachment.php` (0/44, 0.0%)
 - [x] `laravel/Modules/Cms/app/Models/BaseModel.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Models/BaseModelLang.php` (0/14, 0.0%)
@@ -2501,3 +2544,53 @@ php artisan test --coverage
   - `./vendor/bin/pest Modules/Cms/tests/Unit/Http/Volt/Password/ConfirmComponentTest.php Modules/Cms/tests/Unit/Http/Volt/LoginComponentTest.php Modules/Cms/tests/Unit/Http/Volt/CounterComponentTest.php --compact` -> `16 passed`
 - Stato backlog aggiornato:
   - marcato come testato `laravel/Modules/Cms/app/Http/Volt/Password/ConfirmComponent.php`.
+
+## Aggiornamento Operativo - 2026-03-06 (Geo stabilization + Cms Volt password batch)
+- Stabilizzati test Geo usando il base test case modulo (`Modules\\Geo\\Tests\\TestCase`) su:
+  - `Modules/Geo/tests/Unit/Actions/UpdateCoordinatesActionTest.php`
+  - `Modules/Geo/tests/Unit/Models/AdditionalModelsTest.php`
+  - `Modules/Geo/tests/Unit/Models/AddressBusinessLogicTest.php`
+- Verifica locale Geo:
+  - `./vendor/bin/pest Modules/Geo/tests/Unit/Actions/UpdateCoordinatesActionTest.php Modules/Geo/tests/Unit/Models/AdditionalModelsTest.php Modules/Geo/tests/Unit/Models/AddressBusinessLogicTest.php --compact` -> `25 passed`
+- Verifica locale fail-batch residuale UI/Cms/Meetup/Tenant:
+  - `./vendor/bin/pest Modules/UI/tests/Feature/UIBusinessLogicTest.php Modules/Cms/tests/Unit/Actions/ResolvePageActionTest.php Modules/Meetup/tests/Unit/Filament/Actions/ImportEventsActionTest.php Modules/Tenant/tests/Unit/Actions/Models/ResolveTenantModelClassActionTest.php --compact` -> `32 passed`
+- Verifica locale Meetup Event model:
+  - `./vendor/bin/pest Modules/Meetup/tests/Unit/Models/EventTest.php --compact` -> `49 passed`
+- Aggiunto test mancante Cms Volt password reset:
+  - `Modules/Cms/tests/Unit/Http/Volt/Password/ResetComponentTest.php`
+- Verifica locale subset Cms Volt password/login/counter:
+  - `./vendor/bin/pest Modules/Cms/tests/Unit/Http/Volt/Password/ConfirmComponentTest.php Modules/Cms/tests/Unit/Http/Volt/Password/ResetComponentTest.php Modules/Cms/tests/Unit/Http/Volt/LoginComponentTest.php Modules/Cms/tests/Unit/Http/Volt/CounterComponentTest.php --compact` -> `20 passed`
+- Stato backlog aggiornato:
+  - marcato come testato `laravel/Modules/Cms/app/Http/Volt/Password/ConfirmComponent.php`;
+  - marcato come testato `laravel/Modules/Cms/app/Http/Volt/Password/ResetComponent.php`.
+
+## Aggiornamento Operativo - 2026-03-06 (Cms Volt register/verify batch)
+- Aggiunti test unit:
+  - `Modules/Cms/tests/Unit/Http/Volt/RegisterComponentTest.php`
+  - `Modules/Cms/tests/Unit/Http/Volt/VerifyComponentTest.php`
+- Verifica locale subset Cms Volt completo (counter/login/password/register/verify):
+  - `./vendor/bin/pest Modules/Cms/tests/Unit/Http/Volt/RegisterComponentTest.php Modules/Cms/tests/Unit/Http/Volt/VerifyComponentTest.php Modules/Cms/tests/Unit/Http/Volt/LoginComponentTest.php Modules/Cms/tests/Unit/Http/Volt/CounterComponentTest.php Modules/Cms/tests/Unit/Http/Volt/Password/ConfirmComponentTest.php Modules/Cms/tests/Unit/Http/Volt/Password/ResetComponentTest.php --compact` -> `27 passed`
+- Stato backlog aggiornato:
+  - marcato come testato `laravel/Modules/Cms/app/Http/Volt/RegisterComponent.php`;
+  - marcato come testato `laravel/Modules/Cms/app/Http/Volt/VerifyComponent.php`.
+
+## Aggiornamento Operativo - 2026-03-06 (Cms Actions alignment + Password token)
+- Aggiunto test unit:
+  - `Modules/Cms/tests/Unit/Http/Volt/Password/TokenComponentTest.php`
+- Verificati test Actions gia' presenti ma non allineati in backlog:
+  - `Modules/Cms/tests/Unit/Actions/GetStyleClassActionTest.php`
+  - `Modules/Cms/tests/Unit/Actions/GetViewThemeByViewActionTest.php`
+  - `Modules/Cms/tests/Unit/Actions/SaveFooterConfigActionTest.php`
+  - `Modules/Cms/tests/Unit/Actions/SaveHeadernavConfigActionTest.php`
+- Verifica locale subset combinato:
+  - `./vendor/bin/pest Modules/Cms/tests/Unit/Http/Volt/RegisterComponentTest.php Modules/Cms/tests/Unit/Http/Volt/VerifyComponentTest.php Modules/Cms/tests/Unit/Http/Volt/Password/TokenComponentTest.php Modules/Cms/tests/Unit/Actions/GetStyleClassActionTest.php Modules/Cms/tests/Unit/Actions/GetViewThemeByViewActionTest.php Modules/Cms/tests/Unit/Actions/SaveFooterConfigActionTest.php Modules/Cms/tests/Unit/Actions/SaveHeadernavConfigActionTest.php --compact` -> `22 passed`
+- Stato backlog aggiornato:
+  - marcato come testato `laravel/Modules/Cms/app/Http/Volt/Password/TokenComponent.php`;
+  - marcati come testati `GetStyleClassAction.php`, `GetViewThemeByViewAction.php`, `SaveFooterConfigAction.php`, `SaveHeadernavConfigAction.php`.
+
+## Aggiornamento Operativo - 2026-03-06 (Cms resolve actions alignment)
+- Verificato test esistente:
+  - `./vendor/bin/pest Modules/Cms/tests/Unit/Actions/ResolveBlockQueryActionTest.php --compact` -> `12 passed`
+- Stato backlog aggiornato con evidenze test gia' eseguite nel batch odierno:
+  - marcato come testato `laravel/Modules/Cms/app/Actions/ResolveBlockQueryAction.php`;
+  - marcato come testato `laravel/Modules/Cms/app/Actions/ResolvePageAction.php`.

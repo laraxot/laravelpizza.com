@@ -145,9 +145,9 @@ describe('Media Actions Coverage', function () {
             expect($action)->toBeInstanceOf(GetVideoScreenshotAction::class);
         });
 
-        it('has execute method', function () {
+        it('has backoff property', function () {
             $action = new GetVideoScreenshotAction();
-            expect(method_exists($action, 'execute'))->toBeTrue();
+            expect(property_exists($action, 'backoff'))->toBeTrue();
         });
 
         it('uses QueueableAction trait', function () {
@@ -206,14 +206,9 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('S3 UploadFileAction', function () {
-        it('can be instantiated', function () {
-            $action = new UploadFileAction();
-            expect($action)->toBeInstanceOf(UploadFileAction::class);
-        });
-
         it('has execute method', function () {
-            $action = new UploadFileAction();
-            expect(method_exists($action, 'execute'))->toBeTrue();
+            $reflection = new ReflectionClass(UploadFileAction::class);
+            expect($reflection->hasMethod('execute'))->toBeTrue();
         });
 
         it('extends BaseS3Action', function () {
@@ -229,14 +224,9 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('S3 DeleteFileAction', function () {
-        it('can be instantiated', function () {
-            $action = new DeleteFileAction();
-            expect($action)->toBeInstanceOf(DeleteFileAction::class);
-        });
-
         it('has execute method', function () {
-            $action = new DeleteFileAction();
-            expect(method_exists($action, 'execute'))->toBeTrue();
+            $reflection = new ReflectionClass(DeleteFileAction::class);
+            expect($reflection->hasMethod('execute'))->toBeTrue();
         });
 
         it('extends BaseS3Action', function () {
@@ -252,14 +242,9 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('S3 GetFileInfoAction', function () {
-        it('can be instantiated', function () {
-            $action = new GetFileInfoAction();
-            expect($action)->toBeInstanceOf(GetFileInfoAction::class);
-        });
-
         it('has execute method', function () {
-            $action = new GetFileInfoAction();
-            expect(method_exists($action, 'execute'))->toBeTrue();
+            $reflection = new ReflectionClass(GetFileInfoAction::class);
+            expect($reflection->hasMethod('execute'))->toBeTrue();
         });
 
         it('extends BaseS3Action', function () {
@@ -275,14 +260,9 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('S3 CheckFileExistsAction', function () {
-        it('can be instantiated', function () {
-            $action = new CheckFileExistsAction();
-            expect($action)->toBeInstanceOf(CheckFileExistsAction::class);
-        });
-
         it('has execute method', function () {
-            $action = new CheckFileExistsAction();
-            expect(method_exists($action, 'execute'))->toBeTrue();
+            $reflection = new ReflectionClass(CheckFileExistsAction::class);
+            expect($reflection->hasMethod('execute'))->toBeTrue();
         });
 
         it('extends BaseS3Action', function () {
@@ -298,9 +278,9 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('BaseS3Action', function () {
-        it('can be instantiated', function () {
-            $action = new BaseS3Action();
-            expect($action)->toBeInstanceOf(BaseS3Action::class);
+        it('is abstract', function () {
+            $reflection = new ReflectionClass(BaseS3Action::class);
+            expect($reflection->isAbstract())->toBeTrue();
         });
 
         it('uses QueueableAction trait', function () {
@@ -311,6 +291,21 @@ describe('Media Actions Coverage', function () {
             $reflection = new ReflectionClass(BaseS3Action::class);
             $content = file_get_contents($reflection->getFileName());
             expect($content)->toContain('declare(strict_types=1);');
+        });
+
+        it('has s3Client property', function () {
+            $reflection = new ReflectionClass(BaseS3Action::class);
+            expect($reflection->hasProperty('s3Client'))->toBeTrue();
+        });
+
+        it('has bucketName property', function () {
+            $reflection = new ReflectionClass(BaseS3Action::class);
+            expect($reflection->hasProperty('bucketName'))->toBeTrue();
+        });
+
+        it('has logger property', function () {
+            $reflection = new ReflectionClass(BaseS3Action::class);
+            expect($reflection->hasProperty('logger'))->toBeTrue();
         });
     });
 

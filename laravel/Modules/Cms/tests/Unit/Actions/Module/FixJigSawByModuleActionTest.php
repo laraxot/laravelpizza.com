@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 uses(Modules\Cms\Tests\TestCase::class, Illuminate\Foundation\Testing\DatabaseTransactions::class);
 
-use Mockery;
 use Modules\Cms\Actions\Module\FixJigSawByModuleAction;
 use Nwidart\Modules\Laravel\Module;
 
