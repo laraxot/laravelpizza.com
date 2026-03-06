@@ -78,6 +78,7 @@ return [
             'helper_text' => 'Data e ora di lettura della notifica',
             'tooltip' => '',
             'description' => '',
+            'placeholder' => 'read_at',
         ],
         'archived_at' => [
             'label' => 'Archiviata il',
@@ -166,6 +167,56 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+        ],
+        'id' => [
+            'label' => 'id',
+        ],
+        'notifiable' => [
+            'name' => [
+                'label' => 'notifiable.name',
+            ],
+        ],
+        'data' => [
+            'label' => 'data',
+            'placeholder' => 'data',
+            'helper_text' => 'data',
+            'description' => 'data',
+        ],
+        'created_at' => [
+            'label' => 'created_at',
+        ],
+        'updated_at' => [
+            'label' => 'updated_at',
+        ],
+        'is_read' => [
+            'label' => 'is_read',
+        ],
+        'is_unread' => [
+            'label' => 'is_unread',
+        ],
+        'notifiable_type' => [
+            'label' => 'notifiable_type',
+            'placeholder' => 'notifiable_type',
+            'helper_text' => 'notifiable_type',
+            'description' => 'notifiable_type',
+        ],
+        'notifiable_id' => [
+            'label' => 'notifiable_id',
+            'placeholder' => 'notifiable_id',
+            'helper_text' => 'notifiable_id',
+            'description' => 'notifiable_id',
+        ],
+        'created_by' => [
+            'label' => 'created_by',
+            'placeholder' => 'created_by',
+            'helper_text' => 'created_by',
+            'description' => 'created_by',
+        ],
+        'updated_by' => [
+            'label' => 'updated_by',
+            'placeholder' => 'updated_by',
+            'helper_text' => 'updated_by',
+            'description' => 'updated_by',
         ],
     ],
     'actions' => [

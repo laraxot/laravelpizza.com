@@ -35,7 +35,7 @@ test('it can register a user with valid data', function () {
 
 test('it throws exception if first_name is not a string', function () {
     app(RegisterUserAction::class)->execute([
-        'first_name' => null,
+        'first_name' => [],
         'last_name' => 'Doe',
         'email' => 'test@example.com',
         'password' => 'password',

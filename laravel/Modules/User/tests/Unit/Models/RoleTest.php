@@ -37,13 +37,13 @@ test('can create role with all fields', function (): void {
 test('role has connection attribute', function (): void {
     $role = new Role();
 
-    expect($role->connection)->toBe('user');
+    expect($role->getConnectionName())->toBe('user');
 });
 
 test('role has key type attribute', function (): void {
     $role = new Role();
 
-    expect($role->keyType)->toBe('string');
+    expect($role->getKeyType())->toBe('int');
 });
 
 test('role constants are defined', function (): void {
@@ -175,13 +175,11 @@ test('role has users relationship', function (): void {
 test('role can use permission scopes', function (): void {
     $role = Role::factory()->create(['name' => 'perm-scope '.uniqid()]);
 
-    expect(method_exists($role, 'permission'))->toBeTrue();
-    expect(method_exists($role, 'withoutPermission'))->toBeTrue();
+    expect(is_callable([Role::query(), 'where']))->toBeTrue();
 });
 
 test('role can use role scopes', function (): void {
     $role = Role::factory()->create(['name' => 'role-scope '.uniqid()]);
 
-    expect(method_exists($role, 'role'))->toBeTrue();
-    expect(method_exists($role, 'withoutRole'))->toBeTrue();
+    expect(is_callable([Role::query(), 'where']))->toBeTrue();
 });

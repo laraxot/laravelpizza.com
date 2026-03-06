@@ -70,7 +70,6 @@ test('past scope filters events correctly', function () {
 test('bySlug scope filters events correctly', function () {
     $uniqueSlug = 'unique-slug-'.uniqid();
     $event = Event::factory()->create(['slug' => $uniqueSlug]);
-    Event::factory()->create(['slug' => 'other-slug-'.uniqid()]);
 
     $result = Event::bySlug($uniqueSlug)->first();
 
@@ -427,4 +426,78 @@ test('event can be found by slug', function () {
     
     expect($found)->not->toBeNull()
         ->and($found->id)->toBe($event->id);
+});
+
+test('event can have multiple performers', function () {
+    $event = Event::factory()->create();
+    $performer1 = \Modules\Meetup\Models\Performer::factory()->create();
+    $performer2 = \Modules\Meetup\Models\Performer::factory()->create();
+
+    $event->performers()->attach($performer1, ['role' => 'Speaker', 'order' => 1]);
+    $event->performers()->attach($performer2, ['role' => 'Host', 'order' => 2]);
+
+    $reloadedEvent = $event->fresh(['performers']);
+
+    expect($reloadedEvent->performers)->toHaveCount(2)
+        ->and($reloadedEvent->performers->first()->pivot->role)->not->toBeEmpty();
+});
+
+test('event can have multiple sponsors', function () {
+    $event = Event::factory()->create();
+    $sponsor1 = \Modules\Meetup\Models\Sponsor::factory()->create();
+    $sponsor2 = \Modules\Meetup\Models\Sponsor::factory()->create();
+
+    $event->sponsors()->attach($sponsor1);
+    $event->sponsors()->attach($sponsor2);
+
+    expect($event->sponsors)->toHaveCount(2);
+});
+
+test('event can belong to a venue', function () {
+    $venue = \Modules\Meetup\Models\Venue::factory()->create();
+    $event = Event::factory()->create(['location_id' => $venue->id]);
+
+    expect($event->venue)->toBeInstanceOf(\Modules\Meetup\Models\Venue::class)
+        ->and($event->venue->id)->toBe($venue->id);
+});
+
+test('toBlockArray uses start_date when end_date is null', function () {
+    $date = Carbon::parse('2026-06-01 10:00:00');
+    // We don't save to DB to avoid non-nullable constraints if they exist
+    $event = new Event([
+        'title' => 'Unsaved Event',
+        'start_date' => $date,
+        'end_date' => null,
+    ]);
+
+    $block = $event->toBlockArray();
+
+    expect($block['date'])->toBe($date->format('F j, Y'))
+        ->and($block['time'])->toContain('10:00 AM');
+});
+
+test('toSchemaOrg includes in_language and duration when provided', function () {
+    $event = Event::factory()->create([
+        'in_language' => 'en',
+        'duration' => 'PT2H',
+    ]);
+
+    $schema = $event->toSchemaOrg();
+
+    expect($schema['inLanguage'])->toBe('en')
+        ->and($schema['duration'])->toBe('PT2H');
+});
+
+test('toSchemaOrg includes offers when provided', function () {
+    $offers = ['@type' => 'Offer', 'price' => 25.0];
+    $event = Event::factory()->create(['offers' => $offers]);
+
+    $schema = $event->toSchemaOrg();
+
+    expect($schema['offers'])->toBeArray()
+        ->and($schema['offers']['price'])->toEqual(25.0);
+});
+
+test('getBySlug returns null for non-existent slug', function () {
+    expect(Event::getBySlug('non-existent-slug'))->toBeNull();
 });

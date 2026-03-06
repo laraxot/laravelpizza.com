@@ -7,7 +7,7 @@ namespace Modules\Meetup\Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Meetup\Models\Event;
 use Modules\Meetup\Models\EventPerformer;
-use Modules\User\Models\User;
+use Modules\Meetup\Models\Performer;
 
 /**
  * @extends Factory<\Modules\Meetup\Models\EventPerformer>
@@ -30,7 +30,9 @@ class EventPerformerFactory extends Factory
     {
         return [
             'event_id' => Event::factory(),
-            'user_id' => User::factory(),
+            'performer_id' => Performer::factory(),
+            'role' => $this->faker->randomElement(['speaker', 'host', 'panelist']),
+            'order' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

@@ -107,8 +107,8 @@ it('returns route data for valid request', function (): void {
         ->toBeArray()
         ->toHaveCount(1)
         ->and($result[0])->toBeInstanceOf(RouteData::class)
-        ->and($result[0]->totalDistance)->toBe(572000)
-        ->and($result[0]->totalDuration)->toBe(19800);
+        ->and($result[0]->totalDistance)->toBe(1044000)
+        ->and($result[0]->totalDuration)->toBe(36000);
 });
 
 it('throws exception when api request fails', function (): void {

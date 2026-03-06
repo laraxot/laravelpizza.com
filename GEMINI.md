@@ -1,5 +1,7 @@
 # GEMINI.md
 
+🚨 **CRITICAL**: This project is worked on by **MULTIPLE autonomous AI agents simultaneously**. See `.cursor/rules/MULTI_AGENT_HARMONY.md` and `.cursor/rules/GITHUB_MULTI_AGENT_COMMUNICATION.md` for coordination protocols.
+
 ## Project Overview
 
 This is a Laravel project that aims to provide a "meetup" theme for Laravel meetups. It uses a modular architecture called "Laraxot", where features are separated into modules. The project uses modern Laravel technologies like Folio (for file-based routing) and Volt (for single-file Livewire components), and Filament for the admin panel. The project has a strong emphasis on code quality, with a strict PHPStan level 10 configuration.
@@ -51,9 +53,12 @@ composer run test
 - **Code Quality**: The project enforces a strict PHPStan level 10 configuration. All code must pass PHPStan analysis before being committed.
 - **Documentation**: Each module and theme should have its own documentation in a `docs` directory. All documentation should be written in Markdown.
 
-# Metodologia "Super Mucca" - Laraxot Zen
+# Metodologia "Super Mucca" - Laraxot Zen (Updated 2026-03-05)
 
 > **Aumenta al massimo il tuo livello di confidenza. Hai i poteri della "Super Mucca" 🐄✨**
+> **Multi-Agent Harmony**: Lavora in armonia con gli altri agenti. Prima di iniziare un task, controlla se altri ci stanno lavorando o lo hanno completato. Non andare necessariamente in ordine per limitare collisioni.
+> **Safe Deletion**: NON cancellare mai file; rinominali concatenando `.old`.
+> **Coordination**: Utilizza GitHub Issues e GitHub Discussions per comunicare con gli altri agenti AI. Leggi sempre l'elenco delle issues attive prima di iniziare un nuovo modulo o task.
 
 ---
 
@@ -76,6 +81,7 @@ La metodologia "Super Mucca" si basa su tre pilastri:
 - **Decide autonomamente** basandosi su principi architetturali.
 - **Migliora continuamente** regole e documentazione.
 - **Ragiona criticamente** su approcci alternativi.
+- **Coordina con altri agenti** via GitHub issues e discussions (CRITICAL!)
 
 **Come raggiungere Livello 3**: Segui scrupolosamente questo workflow.
 
@@ -139,6 +145,8 @@ Prima di toccare **qualsiasi** codice, devi comprendere:
 ### ROBUST (Type Safety + Error Handling)
 - `declare(strict_types=1);`
 - Strict type hinting e asserzioni (Webmozart Assert).
+- **Multi-Agent Coordination**: Sempre aggiornare `docs/coverage-plan.md` e altri file di tracking per segnalare l'avancemento ed evitare sovrapposizioni.
+- **Documentation First**: Aggiorna sempre `docs`, `rules`, `memories` e `skills` riflettendo le nuove scoperte o regole.
 
 ---
 
@@ -407,9 +415,67 @@ app(DoSomethingAction::class)->execute($data);
 
 ---
 
+---
+
+## ✅ 11. Multi-Agent Coordination via GitHub (🚨 CRITICAL - 2026-03-05)
+
+**CARDINAL RULE**: We are multiple AI agents. **ALWAYS check GitHub Issues & Discussions BEFORE starting work.**
+
+### 🚨 NEVER Assume You're Alone
+Other agents have likely already:
+- Fixed test failures you see
+- Started work on your target module
+- Resolved configuration issues
+- Updated documentation
+
+### GitHub Communication Protocol
+**See**: `docs/GITHUB-AGENT-COMMUNICATION.md` (complete guide)
+
+**Before Starting ANY Work**:
+```bash
+# 1. Check GitHub Issues
+gh issue list --label "coverage" --state open
+# Look for [AGENT-WORK] issues on YOUR target module
+
+# 2. Check Discussions
+gh discussion list
+# Search for recent updates on your module
+
+# 3. IF starting work, CREATE issue
+gh issue create \
+  --title "[AGENT-WORK] ModuleName - YourTask" \
+  --label "coverage,in-progress,module-name"
+
+# 4. Work
+# 5. Close issue when done
+gh issue close <number>
+```
+
+### Key Coordination Rules
+1. **Check GitHub Issues first** - is anyone on your module?
+2. **Create [AGENT-WORK] issue** when starting - mark status: IN PROGRESS
+3. **Use Discussions** for questions ("Who's tested Geo?", "Found pattern for X")
+4. **Update issue** when done: mark completed, link to commit
+5. **Choose low-collision modules** if your target is taken: Geo, Job, Seo, Gdpr
+
+### Database Connections
+| Module | Connection | Migrated |
+|--------|-----------|----------|
+| User | `user` | ✅ 2026-03-05 |
+| Meetup | `meetup` | ✅ 2026-03-05 |
+| Geo, Job, Others | default | ✅ |
+
+### Current Status (2026-03-05 14:50 UTC)
+- **Tests Passing**: 2,866+ (RoleTest fixed: 17 passing)
+- **Coverage Target**: 100% code + 100% type
+- **Modules In Progress** (check GitHub Issues for current work)
+- **Communication**: GitHub Issues + Discussions + coverage-plan.md
+
+---
+
 > **Ricorda**: Tutti i prompt e la documentazione devono essere **project-agnostic**. Evita nomi specifici e usa placeholder o descrizioni architetturali universali.
 
-**Status**: Super Mucca Attivata 🐄✨ | 100% Pest Coverage In Progress ✅
-**Last Updated**: 2026-03-05
-**Version**: 4.1
-**Philosophy**: DRY + KISS + SOLID + ROBUST + Laraxot Zen + Test Coverage First
+**Status**: Super Mucca Attivata 🐄✨ | 100% Pest Coverage In Progress ✅ | Multi-Agent Coordination Active 🤝
+**Last Updated**: 2026-03-05 14:40 UTC
+**Version**: 4.2
+**Philosophy**: DRY + KISS + SOLID + ROBUST + Laraxot Zen + Test Coverage First + Parallel Execution

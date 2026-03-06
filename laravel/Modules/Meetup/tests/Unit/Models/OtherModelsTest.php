@@ -33,7 +33,7 @@ test('event performer model works', function () {
 
     expect($performer->getTable())->toBe('event_performer')
         ->and($performer->getFillable())->toContain('event_id')
-        ->and($performer->getFillable())->toContain('user_id');
+        ->and($performer->getFillable())->toContain('performer_id');
 });
 
 test('event sponsor model works', function () {
@@ -41,5 +41,5 @@ test('event sponsor model works', function () {
 
     expect($sponsor->getTable())->toBe('event_sponsor')
         ->and($sponsor->getFillable())->toContain('event_id')
-        ->and($sponsor->getFillable())->toContain('user_id');
+        ->and($sponsor->getFillable())->toContain('sponsor_id');
 });

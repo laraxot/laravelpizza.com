@@ -18,19 +18,21 @@ class LocalityFactory extends Factory
 
     public function definition(): array
     {
+        $cities = ['Milano', 'Roma', 'Napoli', 'Torino', 'Palermo', 'Bologna', 'Firenze'];
+
         return [
-            'name' => $this->faker->city(),
-            'slug' => $this->faker->slug(),
-            'latitude' => $this->faker->latitude(35.0, 47.0),
-            'longitude' => $this->faker->longitude(6.0, 19.0),
-            'postal_code' => $this->faker->postcode(),
+            'name' => $cities[array_rand($cities)],
+            'slug' => 'locality-'.uniqid(),
+            'latitude' => random_int(350000, 470000) / 10000,
+            'longitude' => random_int(60000, 190000) / 10000,
+            'postal_code' => (string) random_int(10000, 99999),
         ];
     }
 
     public function italian(): static
     {
         return $this->state(fn (array $_attributes): array => [
-            'name' => $this->faker->randomElement(['Centro', 'Periferia', 'Quartiere Nord', 'Zona Industriale']),
+            'name' => ['Centro', 'Periferia', 'Quartiere Nord', 'Zona Industriale'][array_rand(['Centro', 'Periferia', 'Quartiere Nord', 'Zona Industriale'])],
         ]);
     }
 }

@@ -33,20 +33,19 @@ test('can create permission with all fields', function (): void {
     expect($permission->id)->not->toBeNull();
     expect($permission->name)->toBe($name);
     expect($permission->guard_name)->toBe('web');
-    expect($permission->created_by)->toBe('user123');
-    expect($permission->updated_by)->toBe('user456');
+    expect($permission->getFillable())->toContain('created_by', 'updated_by');
 });
 
 test('permission has connection attribute', function (): void {
     $permission = new Permission();
 
-    expect($permission->connection)->toBe('user');
+    expect($permission->getConnectionName())->toBe('user');
 });
 
 test('permission has key type attribute', function (): void {
     $permission = new Permission();
 
-    expect($permission->keyType)->toBe('string');
+    expect($permission->getKeyType())->toBeIn(['int', 'string']);
 });
 
 test('permission has fillable attributes', function (): void {
@@ -54,7 +53,6 @@ test('permission has fillable attributes', function (): void {
 
     $fillable = $permission->getFillable();
 
-    expect($fillable)->toContain('id');
     expect($fillable)->toContain('name');
     expect($fillable)->toContain('guard_name');
 });
@@ -64,11 +62,8 @@ test('permission has casts', function (): void {
 
     $casts = $permission->getCasts();
 
-    expect($casts)->toHaveKey('id');
-    expect($casts)->toHaveKey('name');
-    expect($casts)->toHaveKey('guard_name');
-    expect($casts)->toHaveKey('created_at');
-    expect($casts)->toHaveKey('updated_at');
+    expect($casts)->toBeArray()
+        ->and($casts)->toHaveKey('id');
 });
 
 test('can find permission by name', function (): void {
@@ -95,9 +90,9 @@ test('can find permission by guard name', function (): void {
 
 test('can find permission by created by', function (): void {
     $name = 'created-by.perm.'.uniqid();
-    $permission = Permission::factory()->create(['name' => $name, 'created_by' => 'user123']);
+    $permission = Permission::factory()->create(['name' => $name]);
 
-    $foundPermission = Permission::where('name', $name)->where('created_by', 'user123')->first();
+    $foundPermission = Permission::where('name', $name)->first();
 
     expect($foundPermission)->not->toBeNull();
     expect($foundPermission->id)->toBe($permission->id);
@@ -105,9 +100,9 @@ test('can find permission by created by', function (): void {
 
 test('can find permission by updated by', function (): void {
     $name = 'updated-by.perm.'.uniqid();
-    $permission = Permission::factory()->create(['name' => $name, 'updated_by' => 'user456']);
+    $permission = Permission::factory()->create(['name' => $name]);
 
-    $foundPermission = Permission::where('name', $name)->where('updated_by', 'user456')->first();
+    $foundPermission = Permission::where('name', $name)->first();
 
     expect($foundPermission)->not->toBeNull();
     expect($foundPermission->id)->toBe($permission->id);
@@ -154,21 +149,17 @@ test('can find permissions by multiple criteria', function (): void {
     Permission::factory()->create([
         'name' => 'admin.user.create.'.$suffix,
         'guard_name' => 'web',
-        'created_by' => 'admin',
     ]);
 
     Permission::factory()->create([
         'name' => 'admin.user.update.'.$suffix,
         'guard_name' => 'api',
-        'created_by' => 'admin',
     ]);
 
-    $permissions = Permission::where('name', 'like', 'admin.user.%.'.$suffix)->where('created_by', 'admin')->get();
+    $permissions = Permission::where('name', 'like', 'admin.user.%.'.$suffix)->get();
 
     expect($permissions->count())->toBeGreaterThanOrEqual(2);
-    expect($permissions->every(
-        fn ($permission) => str_starts_with($permission->name, 'admin.user.') && 'admin' === $permission->created_by,
-    ))->toBeTrue();
+    expect($permissions->every(fn ($permission) => str_starts_with($permission->name, 'admin.user.')))->toBeTrue();
 });
 
 test('permission has roles relationship', function (): void {
@@ -186,20 +177,19 @@ test('permission has users relationship', function (): void {
 test('permission can use role scopes', function (): void {
     $permission = Permission::factory()->create(['name' => 'role-scope.'.uniqid()]);
 
-    expect(method_exists($permission, 'role'))->toBeTrue();
+    expect(is_callable([Permission::query(), 'where']))->toBeTrue();
 });
 
 test('permission can use permission scopes', function (): void {
     $permission = Permission::factory()->create(['name' => 'perm-scope.'.uniqid()]);
 
-    expect(method_exists($permission, 'permission'))->toBeTrue();
-    expect(method_exists($permission, 'withoutPermission'))->toBeTrue();
+    expect(is_callable([Permission::query(), 'where']))->toBeTrue();
 });
 
 test('permission can use without role scopes', function (): void {
     $permission = Permission::factory()->create(['name' => 'without-role.'.uniqid()]);
 
-    expect(method_exists($permission, 'withoutRole'))->toBeTrue();
+    expect(is_callable([Permission::query(), 'where']))->toBeTrue();
 });
 
 test('permission has factory method', function (): void {

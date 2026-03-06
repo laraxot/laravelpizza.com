@@ -9,6 +9,7 @@ use Modules\Geo\Models\BaseModel;
 use Modules\Geo\Models\Comune;
 use Modules\Geo\Tests\TestCase;
 use Modules\Tenant\Models\Traits\SushiToJson;
+use ReflectionClass;
 
 uses(TestCase::class);
 
@@ -18,9 +19,9 @@ describe('Comune Business Logic', function () {
     });
 
     test('comune has factory trait for testing', function () {
-        $traits = class_uses(Comune::class);
+        $traits = class_uses_recursive(Comune::class);
 
-        expect($traits)->toHaveKey(HasFactory::class);
+        expect($traits)->toContain(HasFactory::class);
     });
 
     test('comune has sushi to json trait', function () {
@@ -53,12 +54,16 @@ describe('Comune Business Logic', function () {
 
     test('comune has schema definition for structured geographic data', function () {
         $comune = new Comune();
+        $reflection = new ReflectionClass($comune);
+        $schemaProperty = $reflection->getProperty('schema');
+        $schemaProperty->setAccessible(true);
+        /** @var array<string, string> $schema */
+        $schema = $schemaProperty->getValue($comune);
 
-        expect($comune)->toHaveProperty('schema');
-        expect($comune->schema['zona'])->toBe('json');
-        expect($comune->schema['provincia'])->toBe('json');
-        expect($comune->schema['regione'])->toBe('json');
-        expect($comune->schema['cap'])->toBe('json');
+        expect($schema['zona'])->toBe('json');
+        expect($schema['provincia'])->toBe('json');
+        expect($schema['regione'])->toBe('json');
+        expect($schema['cap'])->toBe('json');
     });
 
     test('comune has json directory property for data source', function () {

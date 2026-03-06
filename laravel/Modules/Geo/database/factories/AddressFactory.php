@@ -18,42 +18,45 @@ class AddressFactory extends Factory
 
     public function definition(): array
     {
+        $routes = ['Via Roma', 'Corso Italia', 'Piazza Duomo', 'Via Milano', 'Viale Europa'];
+        $cities = ['Milano', 'Roma', 'Napoli', 'Torino', 'Palermo'];
+        $regions = [
+            'Lombardia',
+            'Lazio',
+            'Campania',
+            'Sicilia',
+            'Veneto',
+            'Piemonte',
+            'Toscana',
+            'Emilia-Romagna',
+            'Puglia',
+            'Calabria',
+        ];
+
+        $route = $routes[array_rand($routes)];
+        $streetNumber = (string) random_int(1, 300);
+        $locality = $cities[array_rand($cities)];
+
         return [
-            'route' => $this->faker->address(),
-            'street_number' => $this->faker->buildingNumber(),
-            'postal_code' => $this->faker->postcode(),
-            'locality' => $this->faker->city(),
-            // Use explicit Italian regions to avoid calling unavailable faker->state()
-            'administrative_area_level_1' => $this->faker->randomElement([
-                'Lombardia',
-                'Lazio',
-                'Campania',
-                'Sicilia',
-                'Veneto',
-                'Piemonte',
-                'Toscana',
-                'Emilia-Romagna',
-                'Puglia',
-                'Calabria',
-            ]),
+            'route' => $route,
+            'street_number' => $streetNumber,
+            'postal_code' => (string) random_int(10000, 99999),
+            'locality' => $locality,
+            'administrative_area_level_1' => $regions[array_rand($regions)],
             'country' => 'IT',
-            'latitude' => $this->faker->latitude(35.0, 47.0), // Italy bounds
-            'longitude' => $this->faker->longitude(6.0, 19.0),
-            'formatted_address' => $this->faker->address(),
+            'latitude' => random_int(350000, 470000) / 10000, // Italy bounds
+            'longitude' => random_int(60000, 190000) / 10000,
+            'formatted_address' => $route.' '.$streetNumber.', '.$locality.', Italia',
         ];
     }
 
     public function italian(): static
     {
+        $regions = ['Lombardia', 'Lazio', 'Campania', 'Sicilia', 'Veneto'];
+
         return $this->state(fn (array $_attributes): array => [
             'country' => 'IT',
-            'administrative_area_level_1' => $this->faker->randomElement([
-                'Lombardia',
-                'Lazio',
-                'Campania',
-                'Sicilia',
-                'Veneto',
-            ]),
+            'administrative_area_level_1' => $regions[array_rand($regions)],
         ]);
     }
 }

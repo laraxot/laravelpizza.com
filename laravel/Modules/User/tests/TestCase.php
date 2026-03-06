@@ -77,6 +77,25 @@ abstract class TestCase extends XotBaseTestCase
             });
         }
 
+        if (! $schema->hasTable('oauth_refresh_tokens')) {
+            $schema->create('oauth_refresh_tokens', function (Blueprint $table): void {
+                $table->string('id', 100)->primary();
+                $table->string('access_token_id', 100)->index();
+                $table->boolean('revoked')->default(false);
+                $table->dateTime('expires_at')->nullable();
+            });
+        }
+
+        if (! $schema->hasTable('device_user')) {
+            $schema->create('device_user', function (Blueprint $table): void {
+                $table->bigIncrements('id');
+                $table->string('device_id', 36)->nullable();
+                $table->string('user_id', 36)->index();
+                $table->dateTime('logout_at')->nullable();
+                $table->timestamps();
+            });
+        }
+
         if (! $schema->hasTable('roles')) {
             $schema->create('roles', function (Blueprint $table): void {
                 $table->bigIncrements('id');

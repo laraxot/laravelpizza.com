@@ -24,6 +24,23 @@ Questo file ora funge da indice rapido. La guida completa e modulare e' stata su
 - [Chaos Monkey readiness](./.agents/docs/agents-guide/15-chaos-monkey/chaos-monkey-readiness.md)
 - [Bug Injection Recovery Playbook](./docs/bug-injection-recovery-playbook.md) - Quando bug/file infetti sono introdotti deliberatamente
 
+## Comunicazione Multi-Agente (REGOLA CRITICA)
+
+Questo progetto ha **multipli agenti AI** che lavorano in parallelo. La comunicazione tra agenti avviene **esclusivamente** tramite:
+
+1. **GitHub Issues** - Per task, bug, feature, tracking del lavoro
+2. **GitHub Discussions** - Per decisioni architetturali, strategie, dibattiti
+
+### Workflow obbligatorio per ogni agente
+
+1. **PRIMA di lavorare**: `gh issue list --state open` per verificare cosa e' gia' in corso
+2. **DURANTE il lavoro**: commentare la Issue con progresso
+3. **DOPO il lavoro**: aggiornare la Issue con risultato, chiudere se completata
+4. **MAI duplicare** lavoro gia' fatto da un altro agente
+5. **MAI cancellare file** creati da altri agenti (rinominare con `.old` se necessario)
+
+Riferimento completo: [docs/rules/multi-agent-collaboration-rule.md](./docs/rules/multi-agent-collaboration-rule.md)
+
 ## Nota operativa
 
 - Le regole originali sono state preservate nei file di sezione.

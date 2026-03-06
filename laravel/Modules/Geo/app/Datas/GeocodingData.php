@@ -22,6 +22,7 @@ class GeocodingData extends Data
         public readonly ?string $country,
         public readonly ?string $postal_code,
         public readonly ?string $error = null,
+        public readonly ?string $status = null,
     ) {
     }
 
@@ -41,6 +42,7 @@ class GeocodingData extends Data
             country: null,
             postal_code: null,
             error: $error,
+            status: $error,
         );
     }
 
@@ -81,7 +83,13 @@ class GeocodingData extends Data
             administrative_area: $components['administrative_area_level_1'] ?? null,
             country: $components['country'] ?? null,
             postal_code: $components['postal_code'] ?? null,
+            status: 'OK',
         );
+    }
+
+    public function isError(): bool
+    {
+        return null !== $this->error || (null !== $this->status && 'OK' !== $this->status);
     }
 
     /**

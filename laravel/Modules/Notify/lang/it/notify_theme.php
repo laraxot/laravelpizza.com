@@ -118,6 +118,93 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'lang' => [
+            'label' => 'lang',
+            'placeholder' => 'lang',
+            'helper_text' => 'lang',
+            'description' => 'lang',
+        ],
+        'type' => [
+            'label' => 'type',
+            'placeholder' => 'type',
+            'helper_text' => 'type',
+            'description' => 'type',
+        ],
+        'post_type' => [
+            'label' => 'post_type',
+            'placeholder' => 'post_type',
+            'helper_text' => 'post_type',
+            'description' => 'post_type',
+        ],
+        'post_id' => [
+            'label' => 'post_id',
+            'placeholder' => 'post_id',
+            'helper_text' => 'post_id',
+            'description' => 'post_id',
+        ],
+        'subject' => [
+            'label' => 'subject',
+            'placeholder' => 'subject',
+            'helper_text' => 'subject',
+            'description' => 'subject',
+        ],
+        'from' => [
+            'label' => 'from',
+            'placeholder' => 'from',
+            'helper_text' => 'from',
+            'description' => 'from',
+        ],
+        'from_email' => [
+            'label' => 'from_email',
+            'placeholder' => 'from_email',
+            'helper_text' => 'from_email',
+            'description' => 'from_email',
+        ],
+        'logo_src' => [
+            'label' => 'logo_src',
+            'placeholder' => 'logo_src',
+            'helper_text' => 'logo_src',
+            'description' => 'logo_src',
+        ],
+        'logo_width' => [
+            'label' => 'logo_width',
+            'placeholder' => 'logo_width',
+            'helper_text' => 'logo_width',
+            'description' => 'logo_width',
+        ],
+        'logo_height' => [
+            'label' => 'logo_height',
+            'placeholder' => 'logo_height',
+            'helper_text' => 'logo_height',
+            'description' => 'logo_height',
+        ],
+        'theme' => [
+            'label' => 'theme',
+            'placeholder' => 'theme',
+            'helper_text' => 'theme',
+            'description' => 'theme',
+        ],
+        'body' => [
+            'label' => 'body',
+            'placeholder' => 'body',
+            'helper_text' => 'body',
+            'description' => 'body',
+        ],
+        'body_html' => [
+            'label' => 'body_html',
+            'placeholder' => 'body_html',
+            'helper_text' => 'body_html',
+            'description' => 'body_html',
+        ],
+        'id' => [
+            'label' => 'id',
+        ],
+        'created_at' => [
+            'label' => 'created_at',
+        ],
+        'updated_at' => [
+            'label' => 'updated_at',
+        ],
     ],
     'actions' => [
         'preview' => [

@@ -26,8 +26,21 @@ Usare questa skill quando il target esplicito e `pest --coverage --min=100` sul 
 - Evitare test fragili basati su conteggi globali se il DB non e isolato.
 - Preferire assertion su comportamento osservabile e invarianti.
 - Non lasciare skip nei test attivi: o fix, o `.old`.
+- Non cancellare file in questo workflow: quando serve escludere, rinominare in `.old`.
 - Non accettare baseline con `No tests found` o coverage `0.0%` infrastrutturale: prima stabilizzare discovery e driver.
 - Se PCOV e attivo, impostare `pcov.directory` alla root del progetto Laravel per coprire `Modules/*`.
+- In contesto multi-agent:
+  - verificare sempre `git status --short` prima e dopo ogni micro-batch;
+  - verificare sempre la Issue/Discussion GitHub condivisa prima di prendere in carico un blocco;
+  - considerare SEMPRE possibile che altri agenti abbiano gia' risolto parte dei fail;
+  - evitare duplicazioni: se il lavoro risulta gia' completato, cambiare batch immediatamente;
+  - scegliere batch non contigui nel piano condiviso per ridurre collisioni;
+  - aggiornare `docs/coverage-plan.md` immediatamente dopo il batch completato.
+  - se un file target risulta gia' modificato da altri agenti, cambiare subito batch senza forzare merge manuali.
+  - pubblicare su GitHub:
+    - commento di presa in carico ("claim") con file target;
+    - commento di chiusura batch con risultati test e delta del piano.
+  - questa regola e' permanente: applicarla ad ogni turno senza eccezioni.
 
 ## Fonti canoniche
 

@@ -7,7 +7,7 @@ namespace Modules\Meetup\Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Meetup\Models\Event;
 use Modules\Meetup\Models\EventSponsor;
-use Modules\User\Models\User;
+use Modules\Meetup\Models\Sponsor;
 
 /**
  * @extends Factory<\Modules\Meetup\Models\EventSponsor>
@@ -30,7 +30,8 @@ class EventSponsorFactory extends Factory
     {
         return [
             'event_id' => Event::factory(),
-            'user_id' => User::factory(),
+            'sponsor_id' => Sponsor::factory(),
+            'sponsorship_details' => $this->faker->optional()->sentence(),
         ];
     }
 }

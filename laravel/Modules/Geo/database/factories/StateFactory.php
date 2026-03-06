@@ -31,7 +31,8 @@ class StateFactory extends Factory
             'Calabria' => 'CAL',
         ];
 
-        $state = $this->faker->randomElement(array_keys($italianRegions));
+        $states = array_keys($italianRegions);
+        $state = $states[array_rand($states)];
 
         return [
             'state' => $state,

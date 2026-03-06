@@ -24,5 +24,5 @@ class EventSponsor extends XotBasePivot
     protected $table = 'event_sponsor';
 
     /** @var list<string> */
-    protected $fillable = ['event_id', 'user_id'];
+    protected $fillable = ['event_id', 'sponsor_id', 'sponsorship_details'];
 }

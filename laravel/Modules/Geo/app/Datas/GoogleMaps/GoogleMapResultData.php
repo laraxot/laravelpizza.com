@@ -21,8 +21,8 @@ class GoogleMapResultData extends Data
     public function __construct(
         public readonly DataCollection $address_components,
         public readonly GoogleMapGeometryData $geometry,
-        public readonly string $formatted_address,
-        public readonly array $types,
+        public readonly string $formatted_address = '',
+        public readonly array $types = [],
     ) {
     }
 }

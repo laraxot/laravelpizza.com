@@ -1,4 +1,4 @@
-# Coverage Plan - Updated 2026-03-05 21:12 UTC
+# Coverage Plan - Updated 2026-03-06 09:10 UTC
 
 **MULTI-AGENT STATUS**: 531 test files created across all 14 modules. Foundation laid; now focus on gap-filling and model configuration fixes.
 
@@ -42,6 +42,26 @@
 - ✅ Hardened Geo factories against unavailable faker formatters in this environment.
 - ✅ Updated tests to reduce flakiness from shared DB state and legacy helper usage.
 - ⏳ Next: new full-run Pest to refresh global fail count and backlog priorities.
+
+### Full-Run Snapshot (latest)
+- Full-run observed in this cycle:
+  - `3061 passed`, `23 failed`, `73 skipped`, `10 risky`, `1 deprecated`
+  - duration: `926.15s`
+- Hotfix batch applied immediately after snapshot:
+  - `Modules/Geo/tests/Unit/Actions/UpdateCoordinatesActionTest.php`
+  - `Modules/Geo/tests/Unit/Models/AdditionalModelsTest.php`
+  - `Modules/Geo/tests/Unit/Models/AddressBusinessLogicTest.php`
+  - `Modules/Meetup/tests/Unit/Models/EventTest.php`
+- Verification after hotfix:
+  - `./vendor/bin/pest Modules/Geo/tests/Unit/Actions/UpdateCoordinatesActionTest.php Modules/Geo/tests/Unit/Models/AdditionalModelsTest.php Modules/Geo/tests/Unit/Models/AddressBusinessLogicTest.php --compact` -> `25 passed`
+  - `./vendor/bin/pest Modules/Meetup/tests/Unit/Models/EventTest.php --compact` -> `49 passed`
+
+### Missing Tests Batch (2026-03-06)
+- Added new middleware test coverage:
+  - `Modules/Cms/tests/Unit/Http/Middleware/SetFolioLocaleMiddlewareTest.php`
+- Verification:
+  - `./vendor/bin/pest Modules/Cms/tests/Unit/Http/Middleware/SetFolioLocaleMiddlewareTest.php --compact` -> `3 passed`
+  - regression subset (`Geo + Meetup`) -> `74 passed`
 
 ### Next Execution Batch (ready-to-run)
 1. Full reconciliation run:
@@ -670,6 +690,19 @@ After fixing Phase 1, run full test suite and identify:
   - `./vendor/bin/pest Modules/UI/tests/Feature/UIBusinessLogicTest.php Modules/Cms/tests/Unit/Actions/ResolvePageActionTest.php Modules/Geo/tests/Unit/Actions/UpdateCoordinatesActionTest.php Modules/Geo/tests/Unit/Models/AdditionalModelsTest.php Modules/Geo/tests/Unit/Models/AddressBusinessLogicTest.php Modules/Meetup/tests/Unit/Filament/Actions/ImportEventsActionTest.php Modules/Tenant/tests/Unit/Actions/Models/ResolveTenantModelClassActionTest.php --compact`
   - risultato: `57 passed`
 
+### 2026-03-05 (Geo schema stabilization - FINAL)
+- Aggiunto file `Modules/Geo/tests/Support/EnsuresGeoDatabaseSchema.php`:
+  - Crea automaticamente le tabelle necessarie per i test Geo
+  - Supporta aggiunta colonne se le tabelle esistono già
+  - Include: `states`, `counties`, `localities`, `place_types`, `places`, `addresses`, `geonames_caps`
+- Aggiornato `Modules/Geo/tests/TestCase.php` per usare il nuovo trait
+- Verifica locale:
+  - `Modules/Geo/tests/Unit/Models/AdditionalModelsTest.php` -> `6 passed`
+  - `Modules/Geo/tests/Unit/Models/AddressBusinessLogicTest.php` -> `14 passed`
+  - `Modules/Geo/tests/Unit/Actions/UpdateCoordinatesActionTest.php` -> `5 passed`
+  - `Modules/Geo/tests` full -> `414 passed`
+- Risultato: **TUTTI I TEST GEO ORA PASSANO**
+
 ## Backlog
 
 ### App (5)
@@ -745,7 +778,7 @@ After fixing Phase 1, run full test suite and identify:
 - [x] `laravel/Modules/Cms/app/Http/Controllers/Admin/XotPanelController.php` (tested, 2026-03-05)
 - [ ] `laravel/Modules/Cms/app/Http/Livewire/Page/Show.php` (0/46, 0.0%)
 - [ ] `laravel/Modules/Cms/app/Http/Middleware/PageSlugMiddleware.php` (0/52, 0.0%)
-- [ ] `laravel/Modules/Cms/app/Http/Middleware/SetFolioLocale.php` (0/15, 0.0%)
+- [x] `laravel/Modules/Cms/app/Http/Middleware/SetFolioLocale.php` (tested, 2026-03-06)
 - [ ] `laravel/Modules/Cms/app/Http/View/Composers/XotComposer.php` (0/15, 0.0%)
 - [x] `laravel/Modules/Cms/app/Http/Volt/CounterComponent.php` (tested, 2026-03-05)
 - [x] `laravel/Modules/Cms/app/Http/Volt/LoginComponent.php` (tested, 2026-03-05)

@@ -157,7 +157,7 @@ readonly class GetAddressFromMapboxAction
             'postal_code' => (int) ($postalCode ? $postalCode : 0),
             'street' => $street,
             'street_number' => $streetNumber,
-            'province' => $province,
+            'state' => $province,
         ]);
     }
 }

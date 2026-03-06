@@ -3,13 +3,21 @@
 declare(strict_types=1);
 
 use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 use Modules\User\Actions\Socialite\GetDomainAllowListAction;
 use Modules\User\Actions\Socialite\GetGuardAction;
 use Modules\User\Actions\Socialite\GetLoginRedirectRouteAction;
+use Modules\User\Actions\Socialite\GetProviderButtonsAction;
 use Modules\User\Actions\Socialite\GetProviderScopesAction;
+use Modules\User\Actions\Socialite\IsProviderConfiguredAction;
 use Modules\User\Actions\Socialite\IsRegistrationEnabledAction;
+use Modules\User\Actions\Socialite\LogoutUserAction;
+use Modules\User\Actions\Socialite\RedirectToLoginAction;
 use Modules\User\Actions\Socialite\ValidateProviderAction;
 use Modules\User\Exceptions\ProviderNotConfigured;
+use Modules\Xot\Contracts\UserContract;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
@@ -81,5 +89,70 @@ describe('Socialite utility actions', function (): void {
         $route = app(GetLoginRedirectRouteAction::class)->execute();
 
         expect($route)->toBe('filament.admin.pages.dashboard');
+    });
+
+    it('returns empty provider buttons array', function (): void {
+        $result = app(GetProviderButtonsAction::class)->execute();
+
+        expect($result)->toBe([]);
+    });
+
+    it('checks if provider is configured', function (): void {
+        config(['services.github' => ['client_id' => 'id']]);
+
+        expect(app(IsProviderConfiguredAction::class)->execute('github'))->toBeTrue()
+            ->and(app(IsProviderConfiguredAction::class)->execute('gitlab'))->toBeFalse();
+    });
+
+    it('logs out user token and device sessions', function (): void {
+        $accessToken = new class {
+            public bool $deleted = false;
+
+            public function getKey(): string
+            {
+                return 'tok-1';
+            }
+
+            public function delete(): void
+            {
+                $this->deleted = true;
+            }
+        };
+
+        DB::connection('user')->table('oauth_refresh_tokens')->insert([
+            'id' => 'rtok-1',
+            'access_token_id' => 'tok-1',
+            'revoked' => false,
+            'expires_at' => now()->addHour(),
+        ]);
+
+        DB::connection('user')->table('device_user')->insert([
+            'device_id' => 'dev-1',
+            'user_id' => 'user-1',
+            'logout_at' => null,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        $user = \Mockery::mock(UserContract::class);
+        $user->shouldReceive('token')->once()->andReturn($accessToken);
+        $user->shouldReceive('getKey')->once()->andReturn('user-1');
+
+        app(LogoutUserAction::class)->execute($user);
+
+        expect($accessToken->deleted)->toBeTrue()
+            ->and(DB::connection('user')->table('oauth_refresh_tokens')->where('access_token_id', 'tok-1')->count())->toBe(0)
+            ->and(DB::connection('user')->table('device_user')->where('user_id', 'user-1')->whereNotNull('logout_at')->count())->toBe(1);
+    });
+
+    it('redirects to login route with error', function (): void {
+        if (! Route::has('login')) {
+            Route::get('/login', static fn () => 'login')->name('login');
+        }
+
+        $response = app(RedirectToLoginAction::class)->execute('messages.not_allowed');
+
+        expect($response)->toBeInstanceOf(RedirectResponse::class)
+            ->and($response->getTargetUrl())->toContain('/login');
     });
 });

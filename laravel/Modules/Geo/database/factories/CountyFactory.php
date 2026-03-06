@@ -34,23 +34,30 @@ class CountyFactory extends Factory
         ];
 
         return [
-            'state_id' => $this->faker->numberBetween(1, 20),
-            'county' => $this->faker->randomElement($italianCounties),
-            'state_index' => $this->faker->numberBetween(1, 110),
+            'state_id' => random_int(1, 20),
+            'county' => $italianCounties[array_rand($italianCounties)],
+            'state_index' => random_int(1, 110),
         ];
     }
 
     public function lombardia(): static
     {
         return $this->state(fn (array $_attributes): array => [
-            'county' => $this->faker->randomElement([
+            'county' => [
                 'Provincia di Milano',
                 'Provincia di Brescia',
                 'Provincia di Bergamo',
                 'Provincia di Como',
                 'Provincia di Varese',
                 'Provincia di Pavia',
-            ]),
+            ][array_rand([
+                'Provincia di Milano',
+                'Provincia di Brescia',
+                'Provincia di Bergamo',
+                'Provincia di Como',
+                'Provincia di Varese',
+                'Provincia di Pavia',
+            ])],
         ]);
     }
 }

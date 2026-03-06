@@ -545,6 +545,9 @@ return [
             'helper_text' => 'appointment_date',
             'description' => 'appointment_date',
         ],
+        'contact' => [
+            'label' => 'contact',
+        ],
     ],
     'actions' => [
         'authenticate' => [
@@ -616,6 +619,11 @@ return [
             'label' => 'delete',
             'icon' => 'delete',
             'tooltip' => 'delete',
+        ],
+        'SendRecordsNotificationBulkAction' => [
+            'label' => 'SendRecordsNotificationBulkAction',
+            'icon' => 'SendRecordsNotificationBulkAction',
+            'tooltip' => 'SendRecordsNotificationBulkAction',
         ],
     ],
     'sections' => [

@@ -7,113 +7,69 @@ namespace Modules\Meetup\Tests\Unit\Models;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Meetup\Models\Profile;
 use Modules\Meetup\Tests\TestCase;
-use Modules\User\Models\User;
+use Illuminate\Support\Str;
 
 uses(TestCase::class, DatabaseTransactions::class);
 
-test('profile model can be instantiated', function () {
-    $profile = Profile::factory()->create();
-    expect($profile)->toBeInstanceOf(Profile::class)
-        ->and($profile->id)->not->toBeNull();
-});
-
-test('profile has correct fillable fields', function () {
-    $profile = new Profile();
-    $fillable = ['user_id', 'first_name', 'last_name', 'fiscal_code', 'phone', 'email', 'notes'];
-    
-    foreach ($fillable as $field) {
-        expect(in_array($field, $profile->getFillable()))->toBeTrue();
-    }
-});
-
-test('profile can be created with attributes', function () {
-    $profile = Profile::factory()->create([
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john.doe.'.uniqid().'@example.com',
-        'phone' => '+39123456789',
-    ]);
-
-    expect($profile->first_name)->toBe('John')
-        ->and($profile->last_name)->toBe('Doe')
-        ->and($profile->email)->toContain('@example.com')
-        ->and($profile->phone)->toBe('+39123456789');
-});
-
-test('profile id is auto-generated as uuid string', function () {
-    $profile = Profile::factory()->create();
-    
-    expect($profile->id)->not->toBeNull()
-        ->and(is_string($profile->id) || is_int($profile->id))->toBeTrue();
-});
-
-test('profile belongs to user', function () {
-    $user = User::factory()->create();
-    $profile = Profile::factory()->create(['user_id' => $user->id]);
-    
-    expect($profile->user)->toBeInstanceOf(User::class)
-        ->and($profile->user->id)->toBe($user->id);
-});
-
-test('profile has incremented as false', function () {
-    $profile = new Profile();
-    expect($profile->incrementing)->toBeFalse();
-});
-
-test('profile has key type as string', function () {
-    $profile = new Profile();
-    expect($profile->getKeyType())->toBe('string');
-});
-
-test('profile can be created without uuid attribute in database', function () {
-    $profile = Profile::factory()->create([
-        'first_name' => 'Jane',
-        'last_name' => 'Smith',
-    ]);
-
-    expect($profile)->toBeInstanceOf(Profile::class)
-        ->and($profile->first_name)->toBe('Jane')
-        ->and($profile->last_name)->toBe('Smith');
-});
-
-test('profile has correct casts from base profile', function () {
-    $profile = Profile::factory()->create();
-    
-    expect($profile->created_at)->toBeInstanceOf(\Illuminate\Support\Carbon::class)
-        ->and($profile->updated_at)->toBeInstanceOf(\Illuminate\Support\Carbon::class);
-});
-
-test('profile user relationship works', function () {
-    $user = User::factory()->create();
-    $profile = Profile::factory()->create(['user_id' => $user->id]);
-    
-    expect($profile->user)->toBeInstanceOf(User::class)
-        ->and($profile->user->id)->toBe($user->id);
-});
-
-test('profile connection is meetup', function () {
+test('profile model uses meetup connection', function () {
     $profile = new Profile();
     expect($profile->getConnectionName())->toBe('meetup');
 });
 
-test('profile extends base profile', function () {
+test('profile model has correct key configuration', function () {
     $profile = new Profile();
-    expect($profile)->toBeInstanceOf(\Modules\User\Models\BaseProfile::class);
+    expect($profile->getIncrementing())->toBeFalse()
+        ->and($profile->getKeyType())->toBe('string');
 });
 
-test('profile can have null optional fields', function () {
-    $profile = Profile::factory()->create([
-        'notes' => null,
-    ]);
-
-    expect($profile)->toBeInstanceOf(Profile::class)
-        ->and($profile->notes)->toBeNull();
-});
-
-test('profile table uses meetup connection', function () {
-    $profile = Profile::factory()->create();
-    $query = Profile::query();
+test('profile has expected fillable fields', function () {
+    $profile = new Profile();
+    $expected = [
+        'user_id',
+        'first_name',
+        'last_name',
+        'fiscal_code',
+        'phone',
+        'email',
+        'notes',
+    ];
     
-    expect($query->getConnection()->getName())->toBe('meetup');
+    foreach ($expected as $field) {
+        expect(in_array($field, $profile->getFillable()))->toBeTrue();
+    }
 });
 
+test('profile casts attributes correctly', function () {
+    $profile = Profile::factory()->create();
+    
+    expect($profile->id)->toBeString()
+        ->and($profile->user_id)->toBeString()
+        ->and($profile->created_at)->toBeInstanceOf(\Illuminate\Support\Carbon::class)
+        ->and($profile->updated_at)->toBeInstanceOf(\Illuminate\Support\Carbon::class);
+});
+
+test('profile unsets uuid attribute during saving and creating', function () {
+    // We pass 'uuid' to the factory but it should be unset by the booted logic
+    $profile = Profile::factory()->make(['uuid' => 'some-uuid']);
+    
+    // Simulating the save which triggers saving and creating
+    $profile->save();
+    
+    // Check that it's not in the attributes (though it might be in the raw array if not careful)
+    // The boot logic specifically calls offsetUnset('uuid')
+    expect(isset($profile->uuid))->toBeFalse();
+});
+
+test('profile auto-generates uuid id if missing on creation', function () {
+    $profile = Profile::factory()->create(['id' => null]);
+    
+    expect($profile->id)->not->toBeNull()
+        ->and(Str::isUuid($profile->id))->toBeTrue();
+});
+
+test('profile preserves existing id if provided on creation', function () {
+    $customId = (string) Str::uuid();
+    $profile = Profile::factory()->create(['id' => $customId]);
+    
+    expect($profile->id)->toBe($customId);
+});

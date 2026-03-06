@@ -24,5 +24,5 @@ class EventPerformer extends XotBasePivot
     protected $table = 'event_performer';
 
     /** @var list<string> */
-    protected $fillable = ['event_id', 'user_id'];
+    protected $fillable = ['event_id', 'performer_id', 'role', 'order'];
 }

@@ -19,9 +19,9 @@ class FetchIPLocationAction
 
     private Client $client;
 
-    public function __construct()
+    public function __construct(?Client $client = null)
     {
-        $this->client = new Client();
+        $this->client = $client ?? new Client();
     }
 
     /**

@@ -41,7 +41,8 @@ class PlaceTypeFactory extends Factory
             'Casa di Cura' => 'Casa di cura privata',
         ];
 
-        $name = $this->faker->randomElement(array_keys($placeTypes));
+        $keys = array_keys($placeTypes);
+        $name = $keys[array_rand($keys)];
 
         return [
             'name' => $name,
