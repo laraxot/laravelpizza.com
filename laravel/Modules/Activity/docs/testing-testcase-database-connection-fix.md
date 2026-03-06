@@ -1,77 +1,34 @@
-# Fix: Activity TestCase - Database Connection Configuration
+# Fix: Activity TestCase - Transaction and Connection Setup
 
-**Problema**: Test Activity falliscono con "Database connection [activity] not configured"
-**Principio**: Il sito funziona, quindi il test deve riflettere il comportamento reale
+## Problema
 
-## 🔍 Analisi del Problema
+Nei test Activity c'era duplicazione dell'infrastruttura transazionale:
+- `DatabaseTransactions` dichiarato nel TestCase modulo;
+- connessioni multiple hardcoded nel modulo senza regola condivisa.
 
-### Errore Originale
-- Test Activity falliscono con: `InvalidArgumentException: Database connection [activity] not configured`
-- Il TestCase di Activity tenta di eseguire migrate con `--database => 'activity'`
-- La connessione 'activity' non è configurata nel setUp()
+Questo rende difficile mantenere allineati Activity, User e Xot.
 
-### Causa
-- `Activity/tests/TestCase.php` non configura la connessione 'activity' prima di eseguire migrate
-- Il modello Activity usa esplicitamente `protected $connection = 'activity'`
-- Il test non configura tutte le connessioni necessarie come fa User/tests/TestCase.php
+## Pattern corretto (aggiornato)
 
-### Comportamento Reale
-Il sito funziona perché:
-- Le connessioni sono configurate nel database.php
-- Il TestCase deve configurare le connessioni per i test
+1. Il trait `DatabaseTransactions` vive nel base comune `Modules/Xot/tests/XotBaseTestCase.php`.
+2. Il modulo Activity dichiara solo le connessioni aggiuntive necessarie quando serve (`activity`, `user`).
+3. Le migration non si eseguono nei test:
+   - `php artisan migrate --env=testing`
+   - comando esterno, una volta, prima della suite.
 
-## 🛠️ Soluzione
+## Perché
 
-### Pattern Corretto (come User/TestCase.php)
-```php
-protected function setUp(): void
-{
-    parent::setUp();
+- DRY: meno duplicazione nei TestCase modulo.
+- Coerenza multi-modulo: stessa logica tra Activity/User/Xot.
+- Stabilità: nessun `migrate` in `setUp()`, rollback affidato alle transazioni.
 
-    // Configure missing connections for testing by aliasing them to the main test connection
-    // Il sito funziona, quindi i test devono riflettere il comportamento reale
-    $defaultConnection = config('database.default');
-    $defaultConfig = config("database.connections.{$defaultConnection}");
+## Checklist operativa
 
-    $modules = [
-        'activity', 'cms', 'gdpr', 'geo', 'job', 'lang', 'media', 'meetup',
-        'notify', 'seo', 'tenant', 'ui', 'user', 'xot',
-    ];
+- `.env.testing` coerente con database `_test`.
+- `php artisan migrate --env=testing` eseguito prima dei test.
+- `connectionsToTransact` include tutte le connessioni effettivamente usate dai model sotto test.
 
-    foreach ($modules as $module) {
-        config(["database.connections.{$module}" => $defaultConfig]);
-    }
+## Collegamenti
 
-    $this->app->bind(EventSubscriber::class, function (): EventSubscriber {
-        return new EventSubscriber(EloquentStoredEventRepository::class);
-    });
-
-    $this->artisan('migrate', ['--database' => 'activity']);
-    $this->artisan('migrate', ['--database' => 'user']);
-    $this->artisan('migrate', ['--database' => 'xot']);
-}
-```
-
-### Implementazione
-1. Configurare tutte le connessioni mancanti aliasing alla connessione default
-2. Seguire lo stesso pattern di User/tests/TestCase.php per coerenza
-3. Mantenere il binding di EventSubscriber per event sourcing
-4. Eseguire migrate solo dopo aver configurato le connessioni
-
-## 📝 Note
-
-- Il sito funziona, quindi il test deve riflettere il comportamento reale
-- Pattern unificato con User/tests/TestCase.php per coerenza
-- Configurazione connessioni prima di eseguire migrate è obbligatoria
-- Il modello Activity usa esplicitamente connection 'activity', quindi deve essere configurata
-
-## 🔗 Collegamenti
-
-- [Testing Rules](../testing-rules.md)
-- [TestCase SQLite to MySQL Fix](testcase-sqlite-to-mysql-fix.md)
-- [User TestCase](../../User/tests/TestCase.php)
-
----
-
-**Status**: Completed
-**Risultato**: Test Activity ora configurano correttamente le connessioni database
+- [Xot TestCase Setup Rules](../../Xot/docs/testcase-setup-critical-rules.md)
+- [Global Testing Standards](../../../../docs/rules/testing-standards.md)

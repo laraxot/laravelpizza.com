@@ -5,12 +5,11 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit;
 
 use Modules\Activity\Listeners\LoginListener;
-use Modules\Activity\Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 class LoginListenerTest extends TestCase
 {
-    use \Illuminate\Foundation\Testing\DatabaseTransactions;
 
     #[Test]
     public function listener_class_exists(): void

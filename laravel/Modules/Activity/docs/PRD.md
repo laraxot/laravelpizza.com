@@ -41,13 +41,14 @@ The Activity module is responsible for tracking and logging all system actions, 
 - **Isolation**: Use `DatabaseTransactions` with `protected array $connectionsToTransact = ['mysql', 'activity', 'user'];`.
 - **Database**: Must use `.env.testing` pointing to `_test` suffixed databases.
 - **No Refresh**: `RefreshDatabase` and `migrate:fresh` are strictly forbidden.
-- **Migrations**: Run `php artisan migrate --env=testing` once before the test suite.
+- **Migrations**: Automated once per suite by `XotBaseTestCase` using standard `migrate`.
 
 ## Testing & Coverage
 
-Il modulo $(basename $(dirname $(dirname "$prd"))) segue la **Metodologia "Super Mucca" (Laraxot Zen)**:
+Il modulo Activity segue la **Metodologia "Super Mucca" (Laraxot Zen)**:
 - **XotBaseTestCase**: Tutti i test estendono `Modules\Xot\Tests\XotBaseTestCase`.
 - **MySQL Only**: Test eseguiti contro MySQL (.env.testing).
 - **No RefreshDatabase**: Utilizzo di `DatabaseTransactions`.
+- **Automated Migrations**: `XotBaseTestCase` esegue `artisan migrate` automaticamente **una sola volta** per sessione di test.
 - **Obiettivo**: 100% di coverage. Se un test fallisce, va sistemato o eliminato se il sito è funzionale.
 

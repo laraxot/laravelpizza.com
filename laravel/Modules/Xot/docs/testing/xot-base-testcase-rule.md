@@ -27,9 +27,29 @@ Estendere `XotBaseTestCase` significa abbracciare un setup unificato che:
 // 🚫 ERESIA ASSOLUTA - distrugge il DB per tutti
 $this->artisan('migrate:fresh', ['--force' => true]);
 
-// ✅ CORRETTO - solo una volta esternamente, prima di eseguire la suite
-// php artisan migrate --env=testing --force
+// ✅ CORRETTO - XotBaseTestCase gestisce automaticamente:
+//    1. Creazione database se non esiste (ensureTestDatabasesExist)
+//    2. Migrazioni automatiche (module:migrate --env=testing)
+//    Una sola volta per processo di test
 ```
+
+## 🔄 Sistema Automatico di Database e Migrazioni
+
+XotBaseTestCase ora gestisce automaticamente:
+
+1. **Creazione Database di Test**:
+   - Legge le variabili env (DB_DATABASE, DB_DATABASE_USER, DB_DATABASE_ACTIVITY)
+   - Crea i database automaticamente se non esistono
+   - Eseguita PRIMA di migrate per evitare errori "Unknown database"
+
+2. **Migrazioni Automatiche**:
+   - Esegue `module:migrate` per i moduli: Xot, User, Activity
+   - Usa `--env=testing` per usare .env.testing
+   - Eseguita UNA SOLA VOLTA per processo di test
+
+3. **Isolamento Test**:
+   - Usa `DatabaseTransactions` per rollback automatico dopo ogni test
+   - Ogni test è indipendente e idempotente
 
 Se un test chiama `migrate:fresh`, marcalo immediatamente con:
 ```php

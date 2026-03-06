@@ -252,7 +252,7 @@ abstract class XotBaseMigration extends LaravelMigration
         $userClass = $xot->getUserClass();
 
         $table->timestamps();
-        $table->foreignIdFor($userClass, 'user_id')->nullable();
+        //$table->foreignIdFor($userClass, 'user_id')->nullable();
         $table->foreignIdFor($userClass, 'updated_by')->nullable();
         $table->foreignIdFor($userClass, 'created_by')->nullable();
 

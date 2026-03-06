@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Modules\Geo\Tests\Support\EnsuresGeoDatabaseSchema;
 use Modules\Xot\Tests\XotBaseTestCase;
 
 /**
@@ -15,21 +13,12 @@ use Modules\Xot\Tests\XotBaseTestCase;
  */
 abstract class TestCase extends XotBaseTestCase
 {
-    use DatabaseTransactions;
-    use EnsuresGeoDatabaseSchema;
-
     /** @var array<int, string> */
-    protected array $connectionsToTransact = [
-        'mysql',
-        'user',
-        'geo',
-    ];
+    protected $connectionsToTransact = ['mysql', 'activity', 'user', 'geo'];
 
     protected function setUp(): void
     {
         parent::setUp();
-
-        $this->ensureGeoSchema();
     }
 
     /**

@@ -11,6 +11,7 @@
 2. ❌ **NO CamelCase**: ~~`MyDocumentName.md`~~
 3. ❌ **NO snake_case**: ~~`my_document_name.md`~~
 4. ❌ **NO UPPERCASE**: ~~`MY-DOCUMENT.md`~~
+5. ❌ **NO date nel filename**: ~~`my-document-2026-03-06.md`~~
 
 ### Exceptions (ONLY)
 

@@ -15,8 +15,7 @@ return new class extends XotBaseMigration
      */
     public function up(): void
     {
-        if (! $this->tableExists()) {
-            $this->tableCreate(function (Blueprint $table): void {
+        $this->tableCreate(function (Blueprint $table): void {
                 $table->id();
                 $table->string('name')->index();
                 $table->string('address')->nullable();
@@ -30,9 +29,9 @@ return new class extends XotBaseMigration
                 $table->text('description')->nullable();
                 $table->json('meta_data')->nullable();
                 $this->timestamps($table);
-            });
-        } else {
-            $this->tableUpdate(function (Blueprint $table): void {
+        });
+
+        $this->tableUpdate(function (Blueprint $table): void {
                 if (! $this->hasColumn('name')) {
                     $table->string('name')->index()->after('id');
                 }
@@ -66,7 +65,6 @@ return new class extends XotBaseMigration
                 if (! $this->hasColumn('meta_data')) {
                     $table->json('meta_data')->nullable()->after('description');
                 }
-            });
-        }
+        });
     }
 };

@@ -15,17 +15,16 @@ return new class extends XotBaseMigration
      */
     public function up(): void
     {
-        if (! $this->tableExists()) {
-            $this->tableCreate(function (Blueprint $table): void {
+        $this->tableCreate(function (Blueprint $table): void {
                 $table->id();
                 $table->unsignedBigInteger('event_id')->index();
                 $table->unsignedBigInteger('sponsor_id')->index();
                 $table->json('sponsorship_details')->nullable();
                 $table->unique(['event_id', 'sponsor_id']);
                 $this->timestamps($table);
-            });
-        } else {
-            $this->tableUpdate(function (Blueprint $table): void {
+        });
+
+        $this->tableUpdate(function (Blueprint $table): void {
                 if (! $this->hasColumn('event_id')) {
                     $table->unsignedBigInteger('event_id')->index()->after('id');
                 }
@@ -35,7 +34,6 @@ return new class extends XotBaseMigration
                 if (! $this->hasColumn('sponsorship_details')) {
                     $table->json('sponsorship_details')->nullable()->after('sponsor_id');
                 }
-            });
-        }
+        });
     }
 };

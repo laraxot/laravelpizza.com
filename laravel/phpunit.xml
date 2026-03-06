@@ -9,23 +9,28 @@
             <directory suffix="Test.php">./Modules/*/tests/Feature</directory>
             <directory suffix="Test.php">./Modules/*/tests/Unit</directory>
         </testsuite>
+        <testsuite name="Activity">
+            <directory suffix="Test.php">./Modules/Activity/tests/Feature</directory>
+            <directory suffix="Test.php">./Modules/Activity/tests/Unit</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>
-            <directory suffix=".php">./Modules/*/app/Actions</directory>
-            <directory suffix=".php">./Modules/*/app/Models</directory>
-            <directory suffix=".php">./Modules/*/app/Services</directory>
-            <directory suffix=".php">./Modules/*/app/Traits</directory>
-            <directory suffix=".php">./Modules/*/app/Providers</directory>
-            <directory suffix=".php">./Modules/*/app/Contracts</directory>
-            <directory suffix=".php">./Modules/*/app/Exceptions</directory>
-            <directory suffix=".php">./Modules/*/app/Enums</directory>
-            <directory suffix=".php">./Modules/*/app/Transformers</directory>
-            <directory suffix=".php">./Modules/*/app/Datas</directory>
-            <directory suffix=".php">./Modules/*/app/DataTransferObjects</directory>
-            <directory suffix=".php">./app</directory>
+            <directory suffix=".php">./Modules/UI/app</directory>
         </include>
         <exclude>
+            <directory>./Modules/*/config</directory>
+            <directory>./Modules/*/database</directory>
+            <directory>./Modules/*/lang</directory>
+            <directory>./Modules/*/routes</directory>
+            <directory>./Modules/*/resources</directory>
+            <directory>./Modules/*/tests</directory>
+            <directory>./Modules/*/workbench</directory>
+            <file>./Modules/*/rector.php</file>
+            <file>./Modules/*/phpinsights.php</file>
+            <file>./Modules/*/phpstan_constants.php</file>
+            <file>./Modules/*/.php-cs-fixer.dist.php</file>
+            <file>./Modules/*/.php-cs-fixer.php</file>
             <file>./Modules/*/app/Actions/.php-cs-fixer.dist.php</file>
             <file>./Modules/*/app/Actions/.gitkeep</file>
         </exclude>
@@ -42,7 +47,7 @@
              Without these, TenantServiceProvider uses laravelpizza_data (prod) for activity/user connections. -->
         <env name="DB_DATABASE" value="laravelpizza_data_test"/>
         <env name="DB_DATABASE_USER" value="laravelpizza_user_test"/>
-        <env name="DB_DATABASE_ACTIVITY" value="laravelpizza_data_test"/>
+
         <env name="MAIL_MAILER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>

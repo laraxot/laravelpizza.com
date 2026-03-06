@@ -51,6 +51,9 @@
             "@php artisan config:clear --ansi",
             "@php artisan test"
         ],
+        "test:prepare:testing-db": [
+            "@php artisan migrate --env=testing"
+        ],
         "test:no-refreshdatabase": [
             "bash bashscripts/testing/assert-no-refreshdatabase.sh"
         ],

@@ -26,3 +26,9 @@ Prima di editare codice devono esistere:
 
 1. almeno un aggiornamento docs nel modulo/tema toccato (o motivazione esplicita di non necessita);
 2. almeno un riferimento a regole/memory/skills globali se la modifica cambia il workflow operativo.
+
+## Naming vincolante per Markdown
+
+- I file `.md` NON devono contenere date nel filename.
+- Esempio vietato: `analysis-2026-03-06.md`.
+- Esempio corretto: `analysis.md` oppure `analysis-testing-migrate.md`.

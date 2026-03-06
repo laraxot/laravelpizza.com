@@ -29,6 +29,12 @@ Usare questa skill quando il target esplicito e `pest --coverage --min=100` sul 
 - Non cancellare file in questo workflow: quando serve escludere, rinominare in `.old`.
 - Non accettare baseline con `No tests found` o coverage `0.0%` infrastrutturale: prima stabilizzare discovery e driver.
 - Se PCOV e attivo, impostare `pcov.directory` alla root del progetto Laravel per coprire `Modules/*`.
+- Se il target e un singolo modulo (`--testsuite=Activity`, ecc.), verificare e correggere prima il filtro coverage (`source`/`coverage-filter`) per evitare report inquinati da moduli non target.
+- Se il report modulo mostra file di altri moduli e totale `0.0%`, considerarlo un problema di scope/configurazione coverage e non di assenza test: continuare con test batch + aggiornamento coverage-plan, poi correggere lo scope.
+- Prima di qualunque run coverage su suite che usa DB, eseguire e documentare:
+  1) `php artisan migrate --env=testing`;
+  2) eventuale probe sqlite per validare path normalization;
+  3) analisi migration conflicts (duplicate columns/indexes) se la migrazione avanza.
 - In contesto multi-agent:
   - verificare sempre `git status --short` prima e dopo ogni micro-batch;
   - verificare sempre la Issue/Discussion GitHub condivisa prima di prendere in carico un blocco;
@@ -41,6 +47,7 @@ Usare questa skill quando il target esplicito e `pest --coverage --min=100` sul 
     - commento di presa in carico ("claim") con file target;
     - commento di chiusura batch con risultati test e delta del piano.
   - questa regola e' permanente: applicarla ad ogni turno senza eccezioni.
+  - per task modulo-specifici, usare sempre `Modules/<Module>/docs/coverage-plan.md` come registro condiviso di claim/batch/release.
 
 ## Fonti canoniche
 

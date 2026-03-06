@@ -11,10 +11,8 @@ use Modules\Xot\Tests\XotBaseTestCase;
  */
 abstract class TestCase extends XotBaseTestCase
 {
-    protected $connectionsToTransact = [
-        'mysql',
-        'seo',
-    ];
+    /** @var array<int, string> */
+    protected $connectionsToTransact = ['mysql', 'activity', 'user', 'seo'];
 
     protected function setUp(): void
     {

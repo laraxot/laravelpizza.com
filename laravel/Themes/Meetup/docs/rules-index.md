@@ -93,6 +93,9 @@
 17. **[Package Dependency Chaos Map](./package-dependency-chaos-map.md)**
    - Pacchetti critici lato tema
    - Failure mode e verifiche operative
+18. **[Markdown File Naming Rules](./markdown-file-naming-rules.md)**
+   - Naming markdown uniforme
+   - Divieto date nei nomi file `.md`
 
 ## 🔄 Aggiornamenti Recenti
 
@@ -106,7 +109,7 @@
 - Aggiunto Chaos Monkey Theme Recovery Playbook
 - Aggiunto Package Dependency Chaos Map
 
-18. **[Composer Packages Study Rules](../../../../docs/rules/composer-packages-study-rules.md)**
+19. **[Composer Packages Study Rules](../../../../docs/rules/composer-packages-study-rules.md)**
    - Regole di governance pacchetti e prevenzione regressioni da dipendenze
 
 ## Pre-Edit Rule Link

@@ -15,23 +15,18 @@ return new class extends XotBaseMigration
      */
     public function up(): void
     {
-        if (! $this->tableExists()) {
-            $this->tableCreate(function (Blueprint $table): void {
+        $this->tableCreate(function (Blueprint $table): void {
                 $table->id();
                 $table->unsignedBigInteger('event_id')->index();
-                $table->string('user_id', 36)->index();
                 $table->string('status')->default('attending')->index();
                 $table->timestamp('registered_at')->nullable();
                 $table->unique(['event_id', 'user_id']);
-                $this->timestamps($table);
-            });
-        } else {
-            $this->tableUpdate(function (Blueprint $table): void {
+                $this->updateTimestamps(table: $table);
+        });
+
+        $this->tableUpdate(function (Blueprint $table): void {
                 if (! $this->hasColumn('event_id')) {
                     $table->unsignedBigInteger('event_id')->index()->after('id');
-                }
-                if (! $this->hasColumn('user_id')) {
-                    $table->string('user_id', 36)->index()->after('event_id');
                 }
                 if (! $this->hasColumn('status')) {
                     $table->string('status')->default('attending')->index()->after('user_id');
@@ -39,7 +34,8 @@ return new class extends XotBaseMigration
                 if (! $this->hasColumn('registered_at')) {
                     $table->timestamp('registered_at')->nullable()->after('status');
                 }
-            });
-        }
+
+                $this->updateTimestamps(table: $table);
+        });
     }
 };

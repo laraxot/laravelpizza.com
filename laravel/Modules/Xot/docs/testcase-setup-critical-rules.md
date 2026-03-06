@@ -2,7 +2,7 @@
 
 ## REGOLE FONDAMENTALI
 
-### 1. MAI Eseguire migrate in setUp()
+### 1. MAI Eseguire migrate nei TestCase di modulo
 
 **❌ SBAGLIATO - NESSUNO MAI FARE QUESTO:**
 
@@ -27,22 +27,19 @@ protected function setUp(): void
 4. Crea dipendenza tra i test (violazione isolamento)
 5. `module:migrate` è ridondante se eseguito più volte
 
-**✅ CORRETTO:**
+**✅ CORRETTO (regola corrente progetto):**
 
 ```php
 protected function setUp(): void
 {
     parent::setUp();
 
-    // ... config setup ...
-
-    // NOTE: Migrations are NOT run in setUp()
-    // They must be run ONCE externally: php artisan migrate --env=testing
-    // DatabaseTransactions trait handles rollback automatically between tests
+    // Le migration sono gestite centralmente in Modules/Xot/tests/XotBaseTestCase.php
+    // con artisan migrate --env=testing una sola volta per processo.
 }
 ```
 
-### 2. MAI Usare migrate:fresh
+### 2. MAI Usare migrate:fresh o --force
 
 **❌ SBAGLIATO:**
 
@@ -61,33 +58,96 @@ $this->artisan('module:migrate', ['--force' => true]); // SBAGLIATO!
 **✅ CORRETTO:**
 
 ```bash
-# Esegui una volta sola esternamente
-php artisan migrate --env=testing
-
-# Non in setUp()!
+# Eseguito centralmente da XotBaseTestCase in createApplication():
+# artisan migrate --env=testing
+# una sola volta per processo (guard statico)
 ```
 
-### 3. MAI Mantenere Stato Statico tra i Test
+### 3. MAI Mantenere Stato Statico tra i Test (CON ECCEZIONE)
 
-**❌ SBAGLIATO:**
+**❌ SBAGLIATO (in setUp()):**
 
 ```php
-protected static bool $migrated = false;  // SBAGLIATO - stato condiviso!
+protected function setUp(): void
+{
+    parent::setUp();
 
-if (! self::$migrated) {
-    $this->artisan('module:migrate');
-    self::$migrated = true;  // SBAGLIATO - anti-pattern!
+    if (! self::$migrated) {
+        $this->artisan('module:migrate');  // SBAGLIATO in setUp()!
+        self::$migrated = true;
+    }
 }
 ```
 
-**Perché è SBAGLIATO:**
-1. I test devono essere INDEPENDENTI
-2. Lo stato statico crea dipendenze invisibili
-3. Non prevede il fallimento parziale dei test
-4. Rende difficile il debug
-5. Violazione del principio "test isolation"
+**✅ ECCEZIONE CONSENTITA (in createApplication()):**
+
+Per le migrazioni, è necessario usare stato statico in `createApplication()` perché:
+1. Le migrazioni sono costose (dei secondi)
+2. Devono essere eseguite UNA SOLA VOLTA per processo di test
+3. Eseguirle per ogni test sarebbe inutilmente lento
+
+```php
+public function createApplication(): Application
+{
+    $app = $this->createBaseApplication();
+
+    if (! static::$migrated) {
+        // Crea database di test se non esiste
+        $this->ensureTestDatabasesExist();
+
+        // Esegue migrazioni Laravel standard in env testing
+        $kernel = $app->make(Kernel::class);
+        $kernel->call('migrate', [
+            '--env' => 'testing',
+            '--path' => 'Modules/Xot/database/migrations',
+        ]);
+        $kernel->call('migrate', [
+            '--env' => 'testing',
+            '--path' => 'Modules/User/database/migrations',
+        ]);
+        $kernel->call('migrate', [
+            '--env' => 'testing',
+            '--path' => 'Modules/Activity/database/migrations',
+        ]);
+
+        static::$migrated = true;
+    }
+
+    return $app;
+}
+```
+
+**Perché questa ECCEZIONE è accettabile:**
+1. `createApplication()` è chiamato UNA VOLTA per processo di test
+2. Le migrazioni devono essere atomiche (tutte o nessuna)
+3. DatabaseTransactions gestisce l'isolamento dei SINGOLI test
+4. Lo stato statico è contenuto e ben documentato
 
 ## Il Sistema CORRETTO
+
+### Base TestCase Centralizzato
+
+`DatabaseTransactions` deve vivere in `Modules/Xot/tests/XotBaseTestCase.php`.
+I TestCase di modulo devono estendere il base e personalizzare solo le connessioni extra quando necessario.
+
+```php
+abstract class XotBaseTestCase extends BaseTestCase
+{
+    use CreatesApplication;
+    use DatabaseTransactions;
+
+    /** @var array<int, string> */
+    protected $connectionsToTransact = ['mysql', 'activity', 'user'];
+}
+```
+
+```php
+abstract class ActivityTestCase extends XotBaseTestCase
+{
+    // Nessun trait duplicato qui.
+    // Override connessioni solo se il modulo ne richiede di aggiuntive.
+}
+```
 
 ### DatabaseTransactions Trait
 
@@ -113,11 +173,62 @@ abstract class TestCase extends BaseTestCase
         'user',            // Se i test usano Model User
     ];
 
-    // NO setUp() con migrate - NON NECESSARIO
-    // Esegui: php artisan migrate --env=testing
-    // PRIMA di lanciare i test
+    // Le migrazioni sono eseguite AUTOMATICAMENTE da XotBaseTestCase
+    // in createApplication() - NON serve farlo manualmente
 }
 ```
+
+### Sistema Automatico di Database e Migrazioni
+
+XotBaseTestCase ora gestisce automaticamente:
+
+1. **Creazione Database di Test** (`ensureTestDatabasesExist()`):
+   - Legge le variabili env (DB_DATABASE, DB_DATABASE_USER, DB_DATABASE_ACTIVITY)
+   - Crea i database automaticamente se non esistono
+   - Eseguita PRIMA di migrate per evitare errori "Unknown database"
+
+2. **Migrazioni Automatiche** (`createApplication()`):
+   - Esegue `migrate` standard Laravel solo sui path modulo necessari alla suite
+   - Usa `--env=testing` per usare .env.testing
+   - Eseguita UNA SOLA VOLTA per processo di test (static $migrated flag)
+
+```php
+// In XotBaseTestCase.php
+public function createApplication(): Application
+{
+    $app = $this->createBaseApplication();
+
+    if (! static::$migrated) {
+        // 1. Crea database se non esiste
+        $this->ensureTestDatabasesExist();
+
+        // 2. Esegue migrazioni standard
+        $kernel = $app->make(Kernel::class);
+        $kernel->call('migrate', [
+            '--env' => 'testing',
+            '--path' => 'Modules/Xot/database/migrations',
+        ]);
+        $kernel->call('migrate', [
+            '--env' => 'testing',
+            '--path' => 'Modules/User/database/migrations',
+        ]);
+        $kernel->call('migrate', [
+            '--env' => 'testing',
+            '--path' => 'Modules/Activity/database/migrations',
+        ]);
+
+        static::$migrated = true;
+    }
+
+    return $app;
+}
+```
+
+**Vantaggi:**
+- Zero configurazione manuale richiesta
+- I test funzionano "out of the box"
+- Database creato automaticamente
+- Migrazioni eseguite automaticamente
 
 ### Come Funziona DatabaseTransactions
 
@@ -132,7 +243,7 @@ abstract class TestCase extends BaseTestCase
 - Nessun stato condiviso
 - Idempotente
 
-### Workflow di Testing Corretto
+### Workflow di Testing (AUTOMATICO)
 
 ```bash
 # 1. Configura .env.testing (copia carbone di .env con _test)
@@ -140,13 +251,17 @@ cd laravel
 cp .env .env.testing
 # Modifica: DB_DATABASE → DB_DATABASE_test
 
-# 2. Esegui migration UNA VOLTA
-php artisan migrate --env=testing
+# 2. Esegui test - IL RESTO E' AUTOMATICO!
+# XotBaseTestCase:
+#   - Crea automaticamente i database di test se non esistono
+#   - Esegue automaticamente le migrazioni UNA SOLA VOLTA
+#   - Ogni test e' isolato con DatabaseTransactions
 
-# 3. Esegui test (non eseguono migrate!)
 php artisan test --env=testing
+# OPPURE
+./vendor/bin/pest --testsuite=Activity
 
-# 4. Per reset completo (quando necessario)
+# 3. Per reset completo (quando necessario)
 php artisan migrate:fresh --env=testing
 ```
 
@@ -271,9 +386,9 @@ Rimuovi le chiamate `artisan('migrate')` da setUp()
 
 ## Regole d'Oro per TestCase
 
-1. **Niente migrate in setUp()** - Esegui esternamente una volta
+1. **Niente migrate nei TestCase modulo** - Migrazione centralizzata solo in XotBaseTestCase
 2. **Niente migrate:fresh** - Distruttivo e lento
-3. **Niente flag --force** - Solo per produzione
+3. **Niente flag --force** - Vietato in testing
 4. **Niente stato statico** - I test devono essere indipendenti
 5. **Usa DatabaseTransactions** - Per rollback automatico
 

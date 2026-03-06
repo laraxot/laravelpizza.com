@@ -154,9 +154,10 @@ Building modular Laravel applications requires a consistent foundation. Without 
 
 ## Testing & Coverage
 
-Il modulo $(basename $(dirname $(dirname "$prd"))) segue la **Metodologia "Super Mucca" (Laraxot Zen)**:
+Il modulo Xot segue la **Metodologia "Super Mucca" (Laraxot Zen)**:
 - **XotBaseTestCase**: Tutti i test estendono `Modules\Xot\Tests\XotBaseTestCase`.
 - **MySQL Only**: Test eseguiti contro MySQL (.env.testing).
 - **No RefreshDatabase**: Utilizzo di `DatabaseTransactions`.
+- **Automated Migrations**: `XotBaseTestCase` esegue `artisan migrate` automaticamente **una sola volta** per sessione di test.
 - **Obiettivo**: 100% di coverage. Se un test fallisce, va sistemato o eliminato se il sito è funzionale.
 

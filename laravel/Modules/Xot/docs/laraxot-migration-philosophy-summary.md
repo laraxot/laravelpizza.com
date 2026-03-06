@@ -49,6 +49,60 @@ $this->tableCreate(...);
 $this->tableUpdate(...);
 ```
 
+## Critical: tableCreate() Is Self-Guarded
+
+`tableCreate()` **already contains** `if (! $this->tableExists())` internally.
+
+### WRONG - Redundant outer check:
+```php
+if (! $this->tableExists()) {      // REDUNDANT! tableCreate() already checks this
+    $this->tableCreate(function (Blueprint $table) {
+        // ...
+    });
+}
+```
+
+### CORRECT - Direct call:
+```php
+$this->tableCreate(function (Blueprint $table) {
+    // ...
+});
+```
+
+### CORRECT - With legacy update path:
+```php
+// Capture BEFORE tableCreate() changes the state
+$tableAlreadyExisted = $this->tableExists();
+
+$this->tableCreate(function (Blueprint $table) {
+    // full schema
+});
+
+if ($tableAlreadyExisted) {
+    $this->tableUpdate(function (Blueprint $table) {
+        // add missing columns with hasColumn() guards
+    });
+}
+```
+
+## Critical: Pivot Tables and timestamps()
+
+`XotBaseMigration::timestamps()` adds **five columns**: `created_at`, `updated_at`, `user_id`, `updated_by`, `created_by`.
+
+**DANGER**: If a pivot table also defines `user_id` as its FK column, calling `$this->timestamps($table)` causes:
+```
+SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'user_id'
+```
+
+### Fix for pivot tables with user_id FK:
+```php
+// WRONG - for pivot tables with user_id:
+$this->timestamps($table);  // adds ANOTHER user_id → duplicate!
+
+// CORRECT - use plain Laravel timestamps:
+$table->timestamps();       // only created_at + updated_at, no user_id
+```
+
 ## Correct vs Incorrect Patterns
 
 ### ✅ CORRECT

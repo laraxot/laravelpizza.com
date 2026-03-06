@@ -19,18 +19,16 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        if (! $this->tableExists()) {
-            $this->getConn()->create($this->getTable(), function (Blueprint $table): void {
-                $table->increments('id');
-                $table->string('name')->nullable();
-                $table->string('mailable')->nullable();
-                $table->string('slug')->unique()->nullable();
-                $table->json('subject')->nullable();
-                $table->json('html_template')->nullable();
-                $table->json('text_template')->nullable();
-                $table->string('version')->default('1.0.0');
-            });
-        }
+        $this->tableCreate(function (Blueprint $table): void {
+            $table->increments('id');
+            $table->string('name')->nullable();
+            $table->string('mailable')->nullable();
+            $table->string('slug')->unique()->nullable();
+            $table->json('subject')->nullable();
+            $table->json('html_template')->nullable();
+            $table->json('text_template')->nullable();
+            $table->string('version')->default('1.0.0');
+        });
 
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {

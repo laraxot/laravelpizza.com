@@ -41,15 +41,18 @@
 7. **[Package Dependency Chaos Map](./package-dependency-chaos-map.md)**
    - Pacchetti a impatto runtime
    - Rischi e check rapidi
+8. **[Documentation Naming Rules](./documentation-naming-rules.md)**
+   - Regole filename markdown
+   - Divieto date nei nomi file `.md`
 
 ### Riferimenti Cross-Module
 
-8. **[Regole Xot](../../Xot/docs/critical-rules-consolidated.md)**
+9. **[Regole Xot](../../Xot/docs/critical-rules-consolidated.md)**
    - Regole generali Laraxot
    - Filosofia Migrazioni
    - Estensioni Filament
 
-9. **[Regole Tema Meetup](../../../Themes/Meetup/docs/critical-rules-consolidated.md)**
+10. **[Regole Tema Meetup](../../../Themes/Meetup/docs/critical-rules-consolidated.md)**
    - Frontend Asset Management
    - Vite Configuration
    - Metatags Component

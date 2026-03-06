@@ -11,18 +11,11 @@ use Modules\Xot\Tests\XotBaseTestCase;
  * Base test case for Gdpr module.
  *
  * Extends XotBaseTestCase (DRY + KISS + Laraxot).
- * Migrations: php artisan migrate --env=testing (una volta).
  */
 abstract class TestCase extends XotBaseTestCase
 {
-    use DatabaseTransactions;
-
     /** @var array<int, string> */
-    protected array $connectionsToTransact = [
-        'mysql',
-        'user',
-        'gdpr',
-    ];
+    protected $connectionsToTransact = ['mysql', 'activity', 'user', 'gdpr'];
 
     /**
      * @return array<int, class-string<"Illuminate\Support\ServiceProvider>>
