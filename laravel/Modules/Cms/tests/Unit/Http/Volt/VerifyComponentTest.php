@@ -8,7 +8,7 @@ use Livewire\Volt\Component as VoltComponent;
 use Modules\Cms\Http\Volt\VerifyComponent;
 use ReflectionClass;
 
-uses(\Modules\Cms\Tests\TestCase::class, \Illuminate\Foundation\Testing\DatabaseTransactions::class);
+uses(\Modules\Cms\Tests\TestCase::class);
 
 describe('VerifyComponent', function (): void {
     test('verify component extends volt component', function (): void {

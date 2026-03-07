@@ -3,10 +3,6 @@
 declare(strict_types=1);
 
 use Modules\UI\Models\Component;
-use Modules\UI\Models\Theme;
-use Modules\UI\Tests\TestCase;
-
-uses(TestCase::class);
 
 describe('Component Model', function (): void {
     it('can be instantiated', function (): void {
@@ -40,7 +36,7 @@ describe('Component Model', function (): void {
             ->and($casts['data_schema'])->toBe('array')
             ->and($casts['responsive_breakpoints'])->toBe('array')
             ->and($casts['supports_lazy_loading'])->toBe('boolean')
-            ->and(in_array($casts['lazy_loading_threshold'], ['integer', 'float']))->toBeTrue()
+            ->and($casts['lazy_loading_threshold'])->toBe('integer')
             ->and($casts['cache_duration'])->toBe('integer');
     });
 
@@ -56,7 +52,7 @@ describe('Component Model', function (): void {
 
     it('extends BaseModel', function (): void {
         $reflection = new ReflectionClass(Component::class);
-        expect($reflection->isSubclassOf(\Modules\UI\Models\BaseModel::class))->toBeTrue();
+        expect($reflection->isSubclassOf(Modules\UI\Models\BaseModel::class))->toBeTrue();
     });
 
     it('uses strict types', function (): void {

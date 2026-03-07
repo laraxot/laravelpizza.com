@@ -8,7 +8,7 @@ use Livewire\Volt\Component as VoltComponent;
 use Modules\Cms\Http\Volt\RegisterComponent;
 use ReflectionClass;
 
-uses(\Modules\Cms\Tests\TestCase::class, \Illuminate\Foundation\Testing\DatabaseTransactions::class);
+uses(\Modules\Cms\Tests\TestCase::class);
 
 describe('RegisterComponent', function (): void {
     test('register component extends volt component', function (): void {

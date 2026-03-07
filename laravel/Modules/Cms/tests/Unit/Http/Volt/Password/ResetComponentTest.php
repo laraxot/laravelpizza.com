@@ -8,7 +8,7 @@ use Livewire\Volt\Component as VoltComponent;
 use Modules\Cms\Http\Volt\Password\ResetComponent;
 use ReflectionClass;
 
-uses(\Modules\Cms\Tests\TestCase::class, \Illuminate\Foundation\Testing\DatabaseTransactions::class);
+uses(\Modules\Cms\Tests\TestCase::class);
 
 describe('Password ResetComponent', function (): void {
     test('reset component extends volt component', function (): void {

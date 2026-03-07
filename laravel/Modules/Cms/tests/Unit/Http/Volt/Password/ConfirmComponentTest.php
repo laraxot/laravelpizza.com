@@ -8,7 +8,7 @@ use Modules\Cms\Http\Volt\Password\ConfirmComponent;
 use ReflectionClass;
 use Livewire\Volt\Component as VoltComponent;
 
-uses(\Modules\Cms\Tests\TestCase::class, \Illuminate\Foundation\Testing\DatabaseTransactions::class);
+uses(\Modules\Cms\Tests\TestCase::class);
 
 describe('Password ConfirmComponent', function (): void {
     test('confirm component extends volt component', function (): void {
