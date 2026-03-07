@@ -55,7 +55,7 @@ final class CanPaginateHarness
 }
 
 test('can paginate trait manages session, defaults and page helpers', function (): void {
-    $harness = new CanPaginateHarness();
+    $harness = new CanPaginateHarness;
     $harness->recordsPerPage = 25;
 
     $harness->updatedRecordsPerPage();
@@ -69,7 +69,7 @@ test('can paginate trait manages session, defaults and page helpers', function (
 });
 
 test('can paginate default option fallback behaves correctly', function (): void {
-    $harness = new CanPaginateHarness();
+    $harness = new CanPaginateHarness;
     $harness->setDefaultPerPage(25);
 
     expect($harness->getDefaultRecordsPerPageSelectOption())->toBe(25)
@@ -90,21 +90,21 @@ test('can paginate trait covers default, simple and cursor modes', function (): 
 
     $query = Activity::query()->orderBy('id');
 
-    $defaultHarness = new CanPaginateHarness();
+    $defaultHarness = new CanPaginateHarness;
     $defaultHarness->recordsPerPage = 10;
     $defaultHarness->setMode(PaginationMode::Default);
     $defaultPaginator = $defaultHarness->exposePaginateQuery(clone $query);
 
     expect($defaultPaginator)->toBeInstanceOf(\Illuminate\Pagination\LengthAwarePaginator::class);
 
-    $simpleHarness = new CanPaginateHarness();
+    $simpleHarness = new CanPaginateHarness;
     $simpleHarness->recordsPerPage = 10;
     $simpleHarness->setMode(PaginationMode::Simple);
     $simplePaginator = $simpleHarness->exposePaginateQuery(clone $query);
 
     expect($simplePaginator)->toBeInstanceOf(\Illuminate\Contracts\Pagination\Paginator::class);
 
-    $cursorHarness = new CanPaginateHarness();
+    $cursorHarness = new CanPaginateHarness;
     $cursorHarness->recordsPerPage = 10;
     $cursorHarness->setMode(PaginationMode::Cursor);
     $cursorPaginator = $cursorHarness->exposePaginateQuery(clone $query);

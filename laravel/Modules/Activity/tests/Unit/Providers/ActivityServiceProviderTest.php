@@ -38,4 +38,3 @@ test('activity service provider registerConfig publishes and merges config', fun
     expect(config('activity'))->toBeArray()
         ->and(config('activity.name'))->toBe('Activity');
 });
-

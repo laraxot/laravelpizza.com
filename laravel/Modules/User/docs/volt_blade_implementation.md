@@ -23,11 +23,7 @@ Per i form complessi , l'approccio raccomandato è utilizzare i widget Filament 
 ## Struttura delle Directory
 
 ```
-<<<<<<< HEAD
-/var/www/html/ptvx/laravel/
-=======
-/var/www/html/healthcare_app/laravel/
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+/var/www/html/ptvx/laravel/ (docs: replace project-specific references with generic placeholders across documentation)
 ├── Modules/
 │   └── User/
 │       └── app/

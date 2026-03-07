@@ -58,21 +58,12 @@ Pagine Resource estendevano direttamente classi Filament invece di XotBase.
 - **`EditUser` (User)**:
   - Cambiato da `EditRecord` a `XotBaseEditRecord`
   - Aggiunto import corretto
-<<<<<<< .merge_file_VFifST
 - **`CreateQuestionChart` (healthcare_app)**:
   - Cambiato da `CreateRecord` a `XotBaseCreateRecord`
 - **`EditQuestionChart` (healthcare_app)**:
 - **`CreateQuestionChart` (healthcare_app)**:
   - Cambiato da `CreateRecord` a `XotBaseCreateRecord`
 - **`EditQuestionChart` (healthcare_app)**:
-=======
-- **`CreateQuestionChart` (ModuloEsempio)**:
-  - Cambiato da `CreateRecord` a `XotBaseCreateRecord`
-- **`EditQuestionChart` (ModuloEsempio)**:
-- **`CreateQuestionChart` (ModuloEsempio)**:
-  - Cambiato da `CreateRecord` a `XotBaseCreateRecord`
-- **`EditQuestionChart` (ModuloEsempio)**:
->>>>>>> .merge_file_YrdvLA
   - Cambiato da `EditRecord` a `XotBaseEditRecord`
 - **`ViewPageContent` (Cms)**:
   - Cambiato da `ViewRecord` a `XotBaseViewRecord`
@@ -215,13 +206,8 @@ class ViewLocation extends XotBaseViewRecord
 - `app/Filament/Forms/Components/TreeField.php`
 - `app/Filament/Forms/Components/LocationSelector.php`
 
-<<<<<<< .merge_file_VFifST
 ### Modulo healthcare_app
 ### Modulo healthcare_app
-=======
-### Modulo ModuloEsempio
-### Modulo ModuloEsempio
->>>>>>> .merge_file_YrdvLA
 - `app/Filament/Resources/QuestionChartResource.php`
 - `app/Filament/Resources/SurveyPdfResource/Resources/QuestionCharts/Pages/CreateQuestionChart.php`
 - `app/Filament/Resources/SurveyPdfResource/Resources/QuestionCharts/Pages/EditQuestionChart.php`

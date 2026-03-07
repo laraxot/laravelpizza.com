@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Modules\Tenant\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -12,11 +10,6 @@ use Modules\Tenant\Models\Tenant;
  */
 class TenantFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     *
-     * @var class-string<Tenant>
-     */
     protected $model = Tenant::class;
 
     /**
@@ -27,17 +20,11 @@ class TenantFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => ['Test Studio', 'Sample Company', 'Demo Business', 'Example Enterprise', 'Sample Organization'][array_rand(['Test Studio', 'Sample Company', 'Demo Business', 'Example Enterprise', 'Sample Organization'])],
-            'domain' => ['example.com', 'test.com', 'demo.org', 'sample.net', 'example.it'][array_rand(['example.com', 'test.com', 'demo.org', 'sample.net', 'example.it'])],
-            'database' => 'tenant_'.strtolower(str_replace([' ', '_'], '-', ['main', 'primary', 'default', 'production', 'staging'][array_rand(['main', 'primary', 'default', 'production', 'staging'])])),
-            'is_active' => (bool) random_int(0, 1),
-            'settings' => [
-                'timezone' => ['Europe/Rome', 'Europe/London', 'America/New_York'][array_rand(['Europe/Rome', 'Europe/London', 'America/New_York'])],
-                'locale' => ['it', 'en', 'de'][array_rand(['it', 'en', 'de'])],
-                'currency' => ['EUR', 'USD', 'GBP'][array_rand(['EUR', 'USD', 'GBP'])],
-            ],
-            'created_at' => \Carbon\Carbon::now()->subDays(random_int(1, 365)),
-            'updated_at' => \Carbon\Carbon::now()->subDays(random_int(0, 30)),
+            'name' => $this->faker->company(),
+            'domain' => $this->faker->unique()->domainName(),
+            'database' => 'tenant_' . $this->faker->word(),
+            'is_active' => $this->faker->boolean(),
+            'settings' => json_encode(['timezone' => 'UTC']),
         ];
     }
 
@@ -46,7 +33,7 @@ class TenantFactory extends Factory
      */
     public function active(): static
     {
-        return $this->state(fn (array $_attributes) => [
+        return $this->state(fn (array $attributes) => [
             'is_active' => true,
         ]);
     }
@@ -56,8 +43,43 @@ class TenantFactory extends Factory
      */
     public function inactive(): static
     {
-        return $this->state(fn (array $_attributes) => [
+        return $this->state(fn (array $attributes) => [
             'is_active' => false,
         ]);
+    }
+
+    /**
+     * Configure the factory to create a tenant with database configuration.
+     */
+    public function withDatabaseConfig(): static
+    {
+        return $this->afterCreating(function (Tenant $tenant) {
+            $tenant->database_config()->create([
+                'host' => 'localhost',
+                'port' => 3306,
+                'database' => $tenant->database,
+                'username' => 'tenant_user',
+                'charset' => 'utf8mb4',
+                'collation' => 'utf8mb4_unicode_ci',
+            ]);
+        });
+    }
+
+    /**
+     * Configure the factory to create a tenant with domains.
+     */
+    public function withDomains(): static
+    {
+        return $this->afterCreating(function (Tenant $tenant) {
+            $tenant->domains()->create([
+                'domain' => $tenant->domain,
+                'is_primary' => true,
+            ]);
+
+            $tenant->domains()->create([
+                'domain' => 'www.' . $tenant->domain,
+                'is_primary' => false,
+            ]);
+        });
     }
 }

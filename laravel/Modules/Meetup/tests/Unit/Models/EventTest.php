@@ -432,8 +432,8 @@ test('event can have multiple performers', function () {
     $performer1 = \Modules\Meetup\Models\Performer::factory()->create();
     $performer2 = \Modules\Meetup\Models\Performer::factory()->create();
 
-    $event->performers()->attach($performer1, ['role' => 'Speaker', 'order' => 1]);
-    $event->performers()->attach($performer2, ['role' => 'Host', 'order' => 2]);
+    $event->performers()->attach($performer1, ['name' => $performer1->name, 'role' => 'Speaker', 'order' => 1]);
+    $event->performers()->attach($performer2, ['name' => $performer2->name, 'role' => 'Host', 'order' => 2]);
 
     $reloadedEvent = $event->fresh(['performers']);
 
@@ -446,8 +446,8 @@ test('event can have multiple sponsors', function () {
     $sponsor1 = \Modules\Meetup\Models\Sponsor::factory()->create();
     $sponsor2 = \Modules\Meetup\Models\Sponsor::factory()->create();
 
-    $event->sponsors()->attach($sponsor1);
-    $event->sponsors()->attach($sponsor2);
+    $event->sponsors()->attach($sponsor1, ['name' => $sponsor1->name]);
+    $event->sponsors()->attach($sponsor2, ['name' => $sponsor2->name]);
 
     expect($event->sponsors)->toHaveCount(2);
 });

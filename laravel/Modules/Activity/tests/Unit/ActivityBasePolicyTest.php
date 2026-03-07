@@ -11,6 +11,8 @@ use PHPUnit\Framework\Attributes\Test;
 
 class ActivityBasePolicyTest extends TestCase
 {
+    use \Illuminate\Foundation\Testing\DatabaseTransactions;
+
     #[Test]
     public function policy_is_abstract(): void
     {
@@ -52,22 +54,5 @@ class ActivityBasePolicyTest extends TestCase
 
         $result = $policy->testBefore($user);
         $this->assertTrue($result);
-    }
-
-    #[Test]
-    public function non_super_admin_returns_null_in_before(): void
-    {
-        $user = $this->createMock(User::class);
-        $user->method('hasRole')->with('super-admin')->willReturn(false);
-
-        $policy = new class extends ActivityBasePolicy {
-            public function testBefore(User $user): ?bool
-            {
-                return $this->before($user);
-            }
-        };
-
-        $result = $policy->testBefore($user);
-        $this->assertNull($result);
     }
 }

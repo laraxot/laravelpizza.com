@@ -10,6 +10,8 @@ use PHPUnit\Framework\Attributes\Test;
 
 class LogoutListenerTest extends TestCase
 {
+    use \Illuminate\Foundation\Testing\DatabaseTransactions;
+
     #[Test]
     public function listener_class_exists(): void
     {

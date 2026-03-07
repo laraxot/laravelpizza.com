@@ -211,11 +211,7 @@ Per verificare se le traduzioni sono applicate correttamente:
 
 ## Riferimenti
 
-<<<<<<< HEAD
-- [Laraxot Translation System](../../../../.cursor/rules/translations.rule)
-=======
-- [healthcare_app Translation System](../../../../.cursor/rules/translations.rule)
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+- [Laraxot Translation System](../../../../.cursor/rules/translations.rule) (docs: replace project-specific references with generic placeholders across documentation)
 - [Filament Translations](../../../../.cursor/rules/filament-translations.rule)
 - [Laravel Localization](https://laravel.com/docs/10.x/localization)
 

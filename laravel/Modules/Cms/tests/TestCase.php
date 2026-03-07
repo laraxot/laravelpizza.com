@@ -12,6 +12,7 @@ use Modules\Xot\Tests\XotBaseTestCase;
  * Base test case for Cms module.
  *
  * Extends XotBaseTestCase (DRY + KISS + Laraxot).
+ * NOTE: DatabaseTransactions is already in XotBaseTestCase — do NOT add it again.
  */
 abstract class TestCase extends XotBaseTestCase
 {

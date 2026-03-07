@@ -2,8 +2,7 @@
 
 ## Descrizione del Problema
 
-Durante il processo di sviluppo e merge dei branch, si sono verificati conflitti Git in diversi file del tema Sixteen. Questi conflitti si manifestavano con marcatori `=======`, `<<<<<<<`, e `>>>>>>>` che impedivano il corretto funzionamento del tema.
-
+Durante il processo di sviluppo e merge dei branch, si sono verificati conflitti Git in diversi file del tema Sixteen. Questi conflitti si manifestavano con marcatori `=======`, `
 ## File Interessati
 
 Sono stati identificati e risolti conflitti nei seguenti file:

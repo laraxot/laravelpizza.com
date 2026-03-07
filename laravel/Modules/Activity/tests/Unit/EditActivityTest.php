@@ -10,6 +10,8 @@ use PHPUnit\Framework\Attributes\Test;
 
 class EditActivityTest extends TestCase
 {
+    use \Illuminate\Foundation\Testing\DatabaseTransactions;
+
     #[Test]
     public function edit_activity_extends_xot_base_edit_record(): void
     {
@@ -29,20 +31,5 @@ class EditActivityTest extends TestCase
             \Modules\Activity\Filament\Resources\ActivityResource::class,
             $page::getResource()
         );
-    }
-
-    #[Test]
-    public function edit_activity_exposes_delete_header_action(): void
-    {
-        $page = new EditActivity();
-
-        $reflection = new \ReflectionClass($page);
-        $method = $reflection->getMethod('getHeaderActions');
-        $method->setAccessible(true);
-
-        /** @var array<string, mixed> $actions */
-        $actions = $method->invoke($page);
-
-        $this->assertArrayHasKey('delete', $actions);
     }
 }

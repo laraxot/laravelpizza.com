@@ -183,11 +183,7 @@ Prima di implementare nuovi componenti di autenticazione o modificare quelli esi
 
 1. Che tutte le chiavi di traduzione siano definite in tutti i file di lingua supportati
 2. Che i componenti funzionino correttamente con la localizzazione delle URL
-<<<<<<< HEAD
-3. Che i componenti rispettino le best practices di Laraxot per le chiavi di traduzione
-=======
-3. Che i componenti rispettino le best practices di healthcare_app per le chiavi di traduzione
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+3. Che i componenti rispettino le best practices di Laraxot per le chiavi di traduzione (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Riferimenti
 

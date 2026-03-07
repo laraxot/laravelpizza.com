@@ -2,11 +2,7 @@
 
 ## 🎯 Integration Achievement
 
-<<<<<<< HEAD
-L'integrazione tra il **modulo User** e l'**ecosistema factory Laraxot** è stata completata con successo, creando un sistema di generazione dati **enterprise-grade** per applicazioni sanitarie multi-modulo.
-=======
-L'integrazione tra il **modulo User** e l'**ecosistema factory healthcare_app** è stata completata con successo, creando un sistema di generazione dati **enterprise-grade** per applicazioni sanitarie multi-modulo.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+L'integrazione tra il **modulo User** e l'**ecosistema factory Laraxot** è stata completata con successo, creando un sistema di generazione dati **enterprise-grade** per applicazioni sanitarie multi-modulo. (docs: replace project-specific references with generic placeholders across documentation)
 
 ## 🏗️ Architectural Foundation
 
@@ -17,11 +13,7 @@ BaseUser (Modules\User\Models\BaseUser)
 ├── Trait Integration: HasTeams, HasRoles, HasAuthenticationLog
 └── Foundation for STI in specialized modules
 
-<<<<<<< HEAD
-Laraxot Factory Ecosystem
-=======
-healthcare_app Factory Ecosystem
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Laraxot Factory Ecosystem (docs: replace project-specific references with generic placeholders across documentation)
 ├── UserFactory (extends BaseUserFactory) - STI Foundation
 ├── PatientFactory (extends UserFactory) - Healthcare Consumer  
 ├── DoctorFactory (extends UserFactory) - Healthcare Provider
@@ -33,20 +25,12 @@ healthcare_app Factory Ecosystem
 // BaseUser (User Module) - Foundation
 protected $connection = 'user'; // Default Laravel connection
 
-<<<<<<< HEAD
-// Laraxot User Models - Specialized
-=======
-// healthcare_app User Models - Specialized
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+// Laraxot User Models - Specialized (docs: replace project-specific references with generic placeholders across documentation)
 protected $connection = 'salute_ora'; // Healthcare domain connection
 
 // Factory Resolution
 class UserFactory {
-<<<<<<< HEAD
-    protected $model = User::class; // Resolves to Laraxot\Models\User
-=======
-    protected $model = User::class; // Resolves to healthcare_app\Models\User
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+    protected $model = User::class; // Resolves to Laraxot\Models\User (docs: replace project-specific references with generic placeholders across documentation)
     
     // Inherits all BaseUser functionality
     // Adds healthcare-specific business logic
@@ -63,11 +47,7 @@ BaseUser::class
 ├── HasRoles trait (permission management)
 └── HasAuthenticationLog trait (security audit)
 
-<<<<<<< HEAD
-// Laraxot Specialized Implementation  
-=======
-// healthcare_app Specialized Implementation  
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+// Laraxot Specialized Implementation   (docs: replace project-specific references with generic placeholders across documentation)
 User::class (extends BaseUser)
 ├── STI Parent for Patient/Doctor/Admin
 ├── Healthcare domain connection
@@ -85,11 +65,7 @@ Admin::class (HasParent trait)
 // Base Factory (User Module)
 // Provides authentication, roles, teams foundation
 
-<<<<<<< HEAD
-// Laraxot UserFactory  
-=======
-// healthcare_app UserFactory  
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+// Laraxot UserFactory   (docs: replace project-specific references with generic placeholders across documentation)
 // Adds: codice_fiscale, healthcare addresses, Italian localization
 public function definition(): array {
     return array_merge(parent::definition(), [
@@ -107,11 +83,7 @@ AdminFactory::definition()   // Administrative privileges
 
 ## 📊 Integration Benefits Matrix
 
-<<<<<<< HEAD
-| Component | User Module Provides | Laraxot Adds | Combined Result |
-=======
-| Component | User Module Provides | healthcare_app Adds | Combined Result |
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+| Component | User Module Provides | Laraxot Adds | Combined Result | (docs: replace project-specific references with generic placeholders across documentation)
 |-----------|---------------------|----------------|-----------------|
 | **Authentication** | Laravel standard | Healthcare workflows | Medical-grade security |
 | **Authorization** | Roles & Permissions | Medical specializations | Granular clinical access |
@@ -132,11 +104,7 @@ AdminFactory::definition()   // Administrative privileges
     ],
     'salute_ora' => [ // Healthcare specialized
         'driver' => 'mysql', 
-<<<<<<< HEAD
-        'database' => env('DB_MODULO_DATABASE', 'ptvx_healthcare'),
-=======
-        'database' => env('DB_healthcare_app_DATABASE', 'healthcare_app_healthcare'),
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+        'database' => env('DB_MODULO_DATABASE', 'ptvx_healthcare'), (docs: replace project-specific references with generic placeholders across documentation)
     ]
 ];
 
@@ -158,11 +126,7 @@ use Modules\User\Models\Traits\HasTeams;
 use Modules\User\Models\Traits\HasRoles;  
 use Modules\User\Models\Traits\HasAuthenticationLogTrait;
 
-<<<<<<< HEAD
-// Laraxot models inherit ALL User module capabilities
-=======
-// healthcare_app models inherit ALL User module capabilities
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+// Laraxot models inherit ALL User module capabilities (docs: replace project-specific references with generic placeholders across documentation)
 class Doctor extends User {
     use HasTeams;    // Multi-studio assignment
     use HasRoles;    // Clinical privileges
@@ -185,11 +149,7 @@ class MasterSeeder extends Seeder {
         $teams = Team::factory()->count(5)->create(); // Studios
         $roles = Role::factory()->count(10)->create(); // Permissions
         
-<<<<<<< HEAD
-        // 2. Create healthcare ecosystem (Laraxot module)
-=======
-        // 2. Create healthcare ecosystem (healthcare_app module)
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+        // 2. Create healthcare ecosystem (Laraxot module) (docs: replace project-specific references with generic placeholders across documentation)
         $systemAdmin = Admin::factory()
             ->systemAdmin()
             ->hasRole('super_admin')
@@ -216,22 +176,14 @@ class MasterSeeder extends Seeder {
 
 ### Cross-Module Testing
 ```php
-<<<<<<< HEAD
-// Test User module integration with Laraxot
-=======
-// Test User module integration with healthcare_app
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+// Test User module integration with Laraxot (docs: replace project-specific references with generic placeholders across documentation)
 public function test_doctor_team_assignment_and_permissions()
 {
     // Create using User module infrastructure
     $studio = Team::factory()->create(['name' => 'Studio Dentistico Roma']);
     $doctorRole = Role::factory()->create(['name' => 'specialist_doctor']);
     
-<<<<<<< HEAD
-    // Create using Laraxot specialized factory
-=======
-    // Create using healthcare_app specialized factory
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+    // Create using Laraxot specialized factory (docs: replace project-specific references with generic placeholders across documentation)
     $doctor = Doctor::factory()
         ->specialist()
         ->create();
@@ -255,11 +207,7 @@ public function test_healthcare_user_authentication_audit()
     // User module provides authentication logging
     $patient->logAuthentication(request());
     
-<<<<<<< HEAD
-    // Laraxot provides healthcare context
-=======
-    // healthcare_app provides healthcare context
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+    // Laraxot provides healthcare context (docs: replace project-specific references with generic placeholders across documentation)
     $this->assertDatabaseHas('authentication_logs', [
         'authenticatable_id' => $patient->id,
         'authenticatable_type' => Patient::class
@@ -279,11 +227,7 @@ class HealthcareSystemInitializer {
             // Phase 1: User module foundation
             $this->createTeamsAndRoles();
             
-<<<<<<< HEAD
-            // Phase 2: Laraxot healthcare specialization  
-=======
-            // Phase 2: healthcare_app healthcare specialization  
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+            // Phase 2: Laraxot healthcare specialization   (docs: replace project-specific references with generic placeholders across documentation)
             $this->createHealthcareUsers();
             
             // Phase 3: Cross-module relationships
@@ -321,25 +265,15 @@ class HealthcareSystemInitializer {
 // Multi-module factory performance
 Benchmark::run([
     'User module only' => fn() => User::factory()->count(1000)->create(),
-<<<<<<< HEAD
     'Laraxot Patient' => fn() => Patient::factory()->count(1000)->create(),
-    'Laraxot Doctor' => fn() => Doctor::factory()->count(1000)->create(),
-=======
-    'healthcare_app Patient' => fn() => Patient::factory()->count(1000)->create(),
-    'healthcare_app Doctor' => fn() => Doctor::factory()->count(1000)->create(),
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+    'Laraxot Doctor' => fn() => Doctor::factory()->count(1000)->create(), (docs: replace project-specific references with generic placeholders across documentation)
     'Cross-module relations' => fn() => $this->createWithRelations(1000),
 ]);
 
 Results:
 - User module only: 2.1s (baseline)
-<<<<<<< HEAD
 - Laraxot Patient: 2.8s (+33% for healthcare data)
-- Laraxot Doctor: 3.2s (+52% for professional data)  
-=======
-- healthcare_app Patient: 2.8s (+33% for healthcare data)
-- healthcare_app Doctor: 3.2s (+52% for professional data)  
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+- Laraxot Doctor: 3.2s (+52% for professional data)   (docs: replace project-specific references with generic placeholders across documentation)
 - Cross-module relations: 4.1s (+95% for complete ecosystem)
 ```
 
@@ -355,11 +289,7 @@ public function test_complete_ecosystem_data_integrity()
     $this->assertAllUsersHaveValidTeams();
     $this->assertAllUsersHaveAppropriateRoles();
     
-<<<<<<< HEAD
-    // Verify Laraxot constraints  
-=======
-    // Verify healthcare_app constraints  
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+    // Verify Laraxot constraints   (docs: replace project-specific references with generic placeholders across documentation)
     $this->assertAllHealthcareUsersHaveValidTypes();
     $this->assertAllCodiciFiscaliAreValid();
     
@@ -381,11 +311,7 @@ tests/
 │   │   ├── AuthenticationTest.php
 │   │   ├── RoleManagementTest.php
 │   │   └── TeamManagementTest.php
-<<<<<<< HEAD
-│   └── LaraxotIntegration/
-=======
-│   └── healthcare_appIntegration/
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+│   └── LaraxotIntegration/ (docs: replace project-specific references with generic placeholders across documentation)
 │       ├── PatientWorkflowTest.php
 │       ├── DoctorCredentialsTest.php
 │       └── AdminPermissionsTest.php
@@ -402,13 +328,8 @@ tests/
 DB_USER_CONNECTION=sqlite
 DB_USER_DATABASE=:memory:
 
-<<<<<<< HEAD
 DB_MODULO_CONNECTION=sqlite  
-DB_MODULO_DATABASE=:memory:
-=======
-DB_healthcare_app_CONNECTION=sqlite  
-DB_healthcare_app_DATABASE=:memory:
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+DB_MODULO_DATABASE=:memory: (docs: replace project-specific references with generic placeholders across documentation)
 
 # Enable cross-module testing
 MULTI_MODULE_TESTING=true
@@ -423,11 +344,7 @@ class MultiModuleSeeder extends Seeder {
         // Order matters for referential integrity
         $this->call([
             UserModuleSeeder::class,     // Foundation
-<<<<<<< HEAD
-            LaraxotSeeder::class,      // Healthcare specialization
-=======
-            healthcare_appSeeder::class,      // Healthcare specialization
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+            LaraxotSeeder::class,      // Healthcare specialization (docs: replace project-specific references with generic placeholders across documentation)
             RelationshipSeeder::class,   // Cross-module relationships
             PermissionSeeder::class,     // Access control
         ]);
@@ -467,11 +384,7 @@ class MultiModuleSeeder extends Seeder {
 
 ## 🏆 Integration Success Recognition
 
-<<<<<<< HEAD
-**The User-Laraxot factory integration represents a landmark achievement in:**
-=======
-**The User-healthcare_app factory integration represents a landmark achievement in:**
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+**The User-Laraxot factory integration represents a landmark achievement in:** (docs: replace project-specific references with generic placeholders across documentation)
 
 ✅ **Multi-Module Architecture**: Seamless cross-module functionality  
 ✅ **Domain Specialization**: Healthcare expertise while maintaining flexibility  

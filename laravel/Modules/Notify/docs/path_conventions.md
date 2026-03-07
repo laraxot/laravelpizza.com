@@ -7,7 +7,6 @@
    - I namespace possono essere in PascalCase ma devono mappare correttamente alle directory lowercase
 
 2. **Struttura Directory Principale**
-<<<<<<< HEAD
    - `/var/www/html/ptvx/laravel/Modules/Notify/app/` (CORRETTO)
    - `/var/www/html/ptvx/laravel/Modules/Notify/App/` (ERRATO)
 
@@ -17,19 +16,7 @@
 
 4. **Struttura Directory Datas**
    - `/var/www/html/ptvx/laravel/Modules/Notify/app/Datas/` (CORRETTO)
-   - `/var/www/html/ptvx/laravel/Modules/Notify/App/Datas/` (ERRATO)
-=======
-   - `/var/www/html/healthcare_app/laravel/Modules/Notify/app/` (CORRETTO)
-   - `/var/www/html/healthcare_app/laravel/Modules/Notify/App/` (ERRATO)
-
-3. **Struttura Directory Actions**
-   - `/var/www/html/healthcare_app/laravel/Modules/Notify/app/Actions/` (CORRETTO)
-   - `/var/www/html/healthcare_app/laravel/Modules/Notify/App/Actions/` (ERRATO)
-
-4. **Struttura Directory Datas**
-   - `/var/www/html/healthcare_app/laravel/Modules/Notify/app/Datas/` (CORRETTO)
-   - `/var/www/html/healthcare_app/laravel/Modules/Notify/App/Datas/` (ERRATO)
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+   - `/var/www/html/ptvx/laravel/Modules/Notify/App/Datas/` (ERRATO) (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Namespace vs Directory
 
@@ -43,13 +30,8 @@
 ## Errori Comuni da Evitare
 
 1. **Mai utilizzare la "A" maiuscola nel percorso fisico della directory app**
-<<<<<<< HEAD
    - ✅ CORRETTO: `/var/www/html/ptvx/laravel/Modules/Notify/app/Actions/`
-   - ❌ ERRATO: `/var/www/html/ptvx/laravel/Modules/Notify/App/Actions/`
-=======
-   - ✅ CORRETTO: `/var/www/html/healthcare_app/laravel/Modules/Notify/app/Actions/`
-   - ❌ ERRATO: `/var/www/html/healthcare_app/laravel/Modules/Notify/App/Actions/`
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+   - ❌ ERRATO: `/var/www/html/ptvx/laravel/Modules/Notify/App/Actions/` (docs: replace project-specific references with generic placeholders across documentation)
 
 2. **Mai aggiungere "App" nel namespace se non definito nel composer.json del modulo**
    - ✅ CORRETTO: `namespace Modules\Notify\Actions;`

@@ -14,10 +14,10 @@ it('gets tenant config path', function (): void {
     $this->mock(GetTenantNameAction::class)
         ->shouldReceive('execute')
         ->andReturn('test-tenant');
-        
+
     $action = app(GetTenantConfigPathAction::class);
     $result = $action->execute('database');
-    
+
     expect($result)->toBe('test-tenant.database');
 });
 
@@ -25,9 +25,9 @@ it('gets tenant config path with forward slashes replaced', function (): void {
     $this->mock(GetTenantNameAction::class)
         ->shouldReceive('execute')
         ->andReturn('tenants/test');
-        
+
     $action = app(GetTenantConfigPathAction::class);
     $result = $action->execute('app');
-    
+
     expect($result)->toBe('tenants.test.app');
 });

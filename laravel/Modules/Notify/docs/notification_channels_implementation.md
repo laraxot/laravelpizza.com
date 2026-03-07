@@ -1,10 +1,6 @@
 # Implementazione dei Canali di Notifica 
 
-<<<<<<< HEAD
-Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto Laraxot, con particolare attenzione al pattern Factory utilizzato.
-=======
-Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto healthcare_app, con particolare attenzione al pattern Factory utilizzato.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto Laraxot, con particolare attenzione al pattern Factory utilizzato. (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Architettura Generale
 

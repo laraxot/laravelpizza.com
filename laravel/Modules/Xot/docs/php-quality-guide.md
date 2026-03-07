@@ -326,13 +326,8 @@ protected function getStats(): array
 {
     if ($this->record === null) {
         return [
-<<<<<<< .merge_file_kLUnrn
             Stat::make(__('healthcare_app::question_chart_stats_overview.stats.total_responses.label'), '0')
                 ->description(__('healthcare_app::question_chart_stats_overview.messages.no_data_available'))
-=======
-            Stat::make(__('ptvx::question_chart_stats_overview.stats.total_responses.label'), '0')
-                ->description(__('ptvx::question_chart_stats_overview.messages.no_data_available'))
->>>>>>> .merge_file_FLNod6
                 ->color('gray'),
         ];
     }
@@ -709,17 +704,10 @@ public function getTableRecordKey(\Illuminate\Database\Eloquent\Model|array $rec
 private function createTotalResponsesStat(int $count): Stat
 {
     return Stat::make(
-<<<<<<< .merge_file_kLUnrn
         __('healthcare_app::question_chart_stats_overview.stats.total_responses.label'),
         number_format((float) $count)
     )
         ->description(__('healthcare_app::question_chart_stats_overview.stats.total_responses.description'))
-=======
-        __('ptvx::question_chart_stats_overview.stats.total_responses.label'),
-        number_format((float) $count)
-    )
-        ->description(__('ptvx::question_chart_stats_overview.stats.total_responses.description'))
->>>>>>> .merge_file_FLNod6
         ->color($count > 0 ? 'success' : 'gray')
         ->icon('heroicon-o-document-text');
 }
@@ -727,17 +715,10 @@ private function createTotalResponsesStat(int $count): Stat
 private function createCompletionRateStat(float $rate): Stat
 {
     return Stat::make(
-<<<<<<< .merge_file_kLUnrn
         __('healthcare_app::question_chart_stats_overview.stats.completion_rate.label'),
         $rate.'%'
     )
         ->description(__('healthcare_app::question_chart_stats_overview.stats.completion_rate.description'))
-=======
-        __('ptvx::question_chart_stats_overview.stats.completion_rate.label'),
-        $rate.'%'
-    )
-        ->description(__('ptvx::question_chart_stats_overview.stats.completion_rate.description'))
->>>>>>> .merge_file_FLNod6
         ->color($rate >= 75 ? 'success' : ($rate >= 50 ? 'warning' : 'danger'))
         ->icon('heroicon-o-chart-bar');
 }

@@ -22,11 +22,7 @@
 , è fondamentale rispettare la struttura corretta delle directory per gli asset pubblici:
 
 ```
-<<<<<<< HEAD
-/var/www/html/ptvx/
-=======
-/var/www/html/healthcare_app/
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+/var/www/html/ptvx/ (docs: replace project-specific references with generic placeholders across documentation)
 ├── laravel/                 # Applicazione Laravel (codice sorgente)
 │   ├── Modules/             # Moduli dell'applicazione
 │   ├── resources/           # Risorse non compilate
@@ -44,17 +40,10 @@
 
 | Tipo di Asset | ✅ Percorso Corretto | ❌ Percorso Errato |
 |---------------|---------------------|-------------------|
-<<<<<<< HEAD
 | Immagini | `/var/www/html/ptvx/public_html/images/` | `/var/www/html/ptvx/laravel/public/images/` |
 | CSS | `/var/www/html/ptvx/public_html/css/` | `/var/www/html/ptvx/laravel/public/css/` |
 | JavaScript | `/var/www/html/ptvx/public_html/js/` | `/var/www/html/ptvx/laravel/public/js/` |
-| SVG | `/var/www/html/ptvx/public_html/images/` | `/var/www/html/ptvx/laravel/public/images/` |
-=======
-| Immagini | `/var/www/html/healthcare_app/public_html/images/` | `/var/www/html/healthcare_app/laravel/public/images/` |
-| CSS | `/var/www/html/healthcare_app/public_html/css/` | `/var/www/html/healthcare_app/laravel/public/css/` |
-| JavaScript | `/var/www/html/healthcare_app/public_html/js/` | `/var/www/html/healthcare_app/laravel/public/js/` |
-| SVG | `/var/www/html/healthcare_app/public_html/images/` | `/var/www/html/healthcare_app/laravel/public/images/` |
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+| SVG | `/var/www/html/ptvx/public_html/images/` | `/var/www/html/ptvx/laravel/public/images/` | (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Utilizzo degli Asset nei Componenti Blade
 
@@ -85,11 +74,7 @@ Per garantire una buona esperienza utente, implementare sempre un fallback per l
 Gli SVG utilizzati come icone o componenti UI dovrebbero essere implementati come componenti Blade in:
 
 ```
-<<<<<<< HEAD
-/var/www/html/ptvx/laravel/Themes/One/resources/views/components/ui/
-=======
-/var/www/html/healthcare_app/laravel/Themes/One/resources/views/components/ui/
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+/var/www/html/ptvx/laravel/Themes/One/resources/views/components/ui/ (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ### SVG come Asset Pubblici
@@ -97,11 +82,7 @@ Gli SVG utilizzati come icone o componenti UI dovrebbero essere implementati com
 Gli SVG utilizzati come immagini (avatar, loghi, ecc.) dovrebbero essere posizionati in:
 
 ```
-<<<<<<< HEAD
-/var/www/html/ptvx/public_html/images/
-=======
-/var/www/html/healthcare_app/public_html/images/
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+/var/www/html/ptvx/public_html/images/ (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ## Gestione dei Componenti UI
@@ -111,21 +92,13 @@ Gli SVG utilizzati come immagini (avatar, loghi, ecc.) dovrebbero essere posizio
 Il componente avatar è implementato in:
 
 ```
-<<<<<<< HEAD
-/var/www/html/ptvx/laravel/Themes/One/resources/views/components/ui/avatar.blade.php
-=======
-/var/www/html/healthcare_app/laravel/Themes/One/resources/views/components/ui/avatar.blade.php
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+/var/www/html/ptvx/laravel/Themes/One/resources/views/components/ui/avatar.blade.php (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 E utilizza gli avatar SVG dalla directory pubblica:
 
 ```
-<<<<<<< HEAD
-/var/www/html/ptvx/public_html/images/avatars/
-=======
-/var/www/html/healthcare_app/public_html/images/avatars/
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+/var/www/html/ptvx/public_html/images/avatars/ (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ### Componente Icon
@@ -133,11 +106,7 @@ E utilizza gli avatar SVG dalla directory pubblica:
 Il componente icon è implementato in:
 
 ```
-<<<<<<< HEAD
-/var/www/html/ptvx/laravel/Themes/One/resources/views/components/ui/icon.blade.php
-=======
-/var/www/html/healthcare_app/laravel/Themes/One/resources/views/components/ui/icon.blade.php
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+/var/www/html/ptvx/laravel/Themes/One/resources/views/components/ui/icon.blade.php (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 E include le definizioni SVG direttamente nel componente.
@@ -178,11 +147,7 @@ E include le definizioni SVG direttamente nel componente.
 
 ## Errori Comuni
 
-<<<<<<< HEAD
-1. **Utilizzo del percorso Laravel public**: Utilizzare `/var/www/html/ptvx/laravel/public/` invece di `/var/www/html/ptvx/public_html/`
-=======
-1. **Utilizzo del percorso Laravel public**: Utilizzare `/var/www/html/healthcare_app/laravel/public/` invece di `/var/www/html/healthcare_app/public_html/`
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+1. **Utilizzo del percorso Laravel public**: Utilizzare `/var/www/html/ptvx/laravel/public/` invece di `/var/www/html/ptvx/public_html/` (docs: replace project-specific references with generic placeholders across documentation)
 2. **Riferimenti diretti ai file**: Utilizzare percorsi assoluti invece dell'helper `asset()`
 3. **Mancanza di fallback**: Non fornire alternative quando un'immagine non è disponibile
 4. **Inconsistenza nei nomi dei file**: Utilizzare convenzioni di naming diverse per file simili

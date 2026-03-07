@@ -1,10 +1,6 @@
 # Guida Completa ai Provider di Notifiche 
 
-<<<<<<< HEAD
-Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di Laraxot.
-=======
-Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di healthcare_app.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di Laraxot. (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Principi Architetturali per Tutti i Provider
 

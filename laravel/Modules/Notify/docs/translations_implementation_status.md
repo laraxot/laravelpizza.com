@@ -2,11 +2,7 @@
 
 ## Panoramica
 
-<<<<<<< HEAD
-Questo documento fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni nel modulo Notify, identificando le convenzioni in uso, le discrepanze con le convenzioni generali di Laraxot e le azioni necessarie per garantire la coerenza.
-=======
-Questo documento fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni nel modulo Notify, identificando le convenzioni in uso, le discrepanze con le convenzioni generali di healthcare_app e le azioni necessarie per garantire la coerenza.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Questo documento fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni nel modulo Notify, identificando le convenzioni in uso, le discrepanze con le convenzioni generali di Laraxot e le azioni necessarie per garantire la coerenza. (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Convenzioni Attuali nel Modulo Notify
 
@@ -47,11 +43,7 @@ return [
 
 ## Discrepanza con le Convenzioni Generali
 
-<<<<<<< HEAD
-Esiste una discrepanza tra le convenzioni utilizzate nel modulo Notify e le convenzioni generali di Laraxot:
-=======
-Esiste una discrepanza tra le convenzioni utilizzate nel modulo Notify e le convenzioni generali di healthcare_app:
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Esiste una discrepanza tra le convenzioni utilizzate nel modulo Notify e le convenzioni generali di Laraxot: (docs: replace project-specific references with generic placeholders across documentation)
 
 1. **Convenzioni Generali (Modules/Lang/docs/TRANSLATION_KEYS_RULES.md)**:
    - Struttura gerarchica espansa senza chiavi come `.navigation`

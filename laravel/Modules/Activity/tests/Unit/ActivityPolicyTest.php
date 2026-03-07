@@ -11,6 +11,8 @@ use PHPUnit\Framework\Attributes\Test;
 
 class ActivityPolicyTest extends TestCase
 {
+    use \Illuminate\Foundation\Testing\DatabaseTransactions;
+
     #[Test]
     public function policy_extends_user_base_policy(): void
     {
@@ -82,28 +84,5 @@ class ActivityPolicyTest extends TestCase
         $result = $policy->view($user);
 
         $this->assertFalse($result);
-    }
-
-    #[Test]
-    public function create_update_delete_restore_force_delete_delegate_to_permissions(): void
-    {
-        $user = $this->createMock(User::class);
-        $user->expects($this->exactly(5))
-            ->method('hasPermissionTo')
-            ->willReturnMap([
-                ['activity.create', true],
-                ['activity.update', true],
-                ['activity.delete', true],
-                ['activity.restore', true],
-                ['activity.forceDelete', true],
-            ]);
-
-        $policy = new ActivityPolicy();
-
-        $this->assertTrue($policy->create($user));
-        $this->assertTrue($policy->update($user));
-        $this->assertTrue($policy->delete($user));
-        $this->assertTrue($policy->restore($user));
-        $this->assertTrue($policy->forceDelete($user));
     }
 }

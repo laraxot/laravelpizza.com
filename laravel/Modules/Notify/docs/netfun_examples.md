@@ -34,11 +34,7 @@ class OtpSmsNotification extends NetfunSmsNotification
 
         parent::__construct(
             message: "Il tuo codice OTP è: {$otp}. Valido fino alle {$this->expiresAt->format('H:i')}.",
-<<<<<<< HEAD
-            sender: 'APP_NAME'
-=======
-            sender: 'healthcare_app'
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+            sender: 'APP_NAME' (docs: replace project-specific references with generic placeholders across documentation)
         );
     }
 
@@ -204,11 +200,7 @@ class AppointmentReminderNotification extends NetfunSmsNotification
 
         parent::__construct(
             message: $message,
-<<<<<<< HEAD
-            sender: 'APP_NAME'
-=======
-            sender: 'healthcare_app'
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+            sender: 'APP_NAME' (docs: replace project-specific references with generic placeholders across documentation)
         );
     }
 
@@ -449,11 +441,7 @@ public function sendBulkSms(Request $request)
         $results = SendBulkSmsAction::make(
             users: $users,
             message: $request->message,
-<<<<<<< HEAD
-            sender: 'APP_NAME',
-=======
-            sender: 'healthcare_app',
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+            sender: 'APP_NAME', (docs: replace project-specific references with generic placeholders across documentation)
             batchSize: 100,
             delayBetweenBatches: 1
         )->onQueue('bulk-sms')->execute();

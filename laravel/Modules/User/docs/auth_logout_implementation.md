@@ -63,11 +63,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 $this->redirect(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('home')));
 ```
 
-<<<<<<< HEAD
-Questo garantisce che l'utente venga reindirizzato alla versione localizzata della home page dopo il logout, rispettando le convenzioni di Laraxot per la gestione della localizzazione.
-=======
-Questo garantisce che l'utente venga reindirizzato alla versione localizzata della home page dopo il logout, rispettando le convenzioni di healthcare_app per la gestione della localizzazione.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Questo garantisce che l'utente venga reindirizzato alla versione localizzata della home page dopo il logout, rispettando le convenzioni di Laraxot per la gestione della localizzazione. (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Componenti Filament
 
@@ -95,11 +91,7 @@ Il template Blade per il logout deve utilizzare i componenti Filament per garant
 
 ## Chiavi di Traduzione
 
-<<<<<<< HEAD
-Le chiavi di traduzione per il logout devono seguire la struttura gerarchica definita nelle best practices di Laraxot:
-=======
-Le chiavi di traduzione per il logout devono seguire la struttura gerarchica definita nelle best practices di healthcare_app:
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Le chiavi di traduzione per il logout devono seguire la struttura gerarchica definita nelle best practices di Laraxot: (docs: replace project-specific references with generic placeholders across documentation)
 
 ```php
 'logout' => [

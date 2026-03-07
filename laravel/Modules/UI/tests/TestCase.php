@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\UI\Tests;
 
 use Modules\UI\Providers\UIServiceProvider;
-use Modules\UI\Tests\Support\EnsuresUiDatabaseSchema;
 use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Tests\XotBaseTestCase;
 
@@ -16,15 +15,6 @@ use Modules\Xot\Tests\XotBaseTestCase;
  */
 abstract class TestCase extends XotBaseTestCase
 {
-    use EnsuresUiDatabaseSchema;
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->ensureUiSchema();
-    }
-
     /**
      * @return array<int, class-string<\Illuminate\Support\ServiceProvider>>
      */

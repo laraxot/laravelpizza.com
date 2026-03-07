@@ -68,11 +68,7 @@ I componenti di navigazione devono utilizzare sempre le funzioni di localizzazio
 
 ### Traduzioni Necessarie
 
-<<<<<<< HEAD
-Assicurarsi che le seguenti chiavi di traduzione siano definite in `/var/www/html/ptvx/laravel/lang/{locale}/auth.php`:
-=======
-Assicurarsi che le seguenti chiavi di traduzione siano definite in `/var/www/html/healthcare_app/laravel/lang/{locale}/auth.php`:
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Assicurarsi che le seguenti chiavi di traduzione siano definite in `/var/www/html/ptvx/laravel/lang/{locale}/auth.php`: (docs: replace project-specific references with generic placeholders across documentation)
 
 ```php
 return [

@@ -22,15 +22,7 @@
     - Class Complexity in Data objects (`MetatagData`, `XotData`).
     - *These are noted for future refactoring.*
 
-<<<<<<< .merge_file_ihLKhv
 ### 4. Multi-Module Optimization (Chart, Notify, DbForge, healthcare_app, User)
-=======
-<<<<<<< HEAD
-### 4. Multi-Module Optimization (Chart, Notify, DbForge, ExternalProject, User)
-=======
-### 4. Multi-Module Optimization (Chart, Notify, DbForge, ModuloEsempio, User)
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_ufdRfK
 - **Chart**: ✅ **VERIFIED**
     - Fixed `base64_decode` type errors using `Webmozart\Assert::string` pattern.
     - Verified strict types compliance.
@@ -42,15 +34,7 @@
 - **User**: ⚠️ **IN PROGRESS**
     - Fixed `Filament\Schemas\Components\Grid` -> `Filament\Forms\Components\Grid` import.
     - **Issue**: `XotBaseSection` (from Module Xot) causes `class.notFound` errors in PHPStan analysis for `OauthClientResource`. Requires investigation into `Modules\Xot` vs `Modules\User` dependency loading or Filament version compatibility.
-<<<<<<< .merge_file_ihLKhv
 - **healthcare_app**: 🔄 **VERIFYING**
-=======
-<<<<<<< HEAD
-- **ExternalProject**: 🔄 **VERIFYING**
-=======
-- **ModuloEsempio**: 🔄 **VERIFYING**
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_ufdRfK
     - **SurveyController**:
         - Fixed `buildSuccessResponse` docblock types (`Contact` model).
         - Fixed property access `$user->customers` -> `$user->tenants` (referencing `UserContract`).
@@ -60,27 +44,11 @@
     - **Verification**: Running final PHPStan sweep to confirm fixes.
 
 ### 5. Global Verification (All Modules)
-<<<<<<< .merge_file_ihLKhv
 - **Scope**: `Tenant`, `Lang`, `Media`, `UI`, `Activity`, `CloudStorage`, `Cms`, `Gdpr`, `Geo`, `Job`, `Limesurvey`, `User`, `healthcare_app`
 - **Status**: ✅ **VERIFIED** (PHPStan Level 10 - 4204 files)
 - **Resolved Issues**:
     - **User**: Fixed syntax errors in `AuthenticationLogResource` (conflict resolution) and `ViewPasswordReset`.
     - **healthcare_app**: Fixed `DashboardV2` widget imports.
-=======
-<<<<<<< HEAD
-- **Scope**: `Tenant`, `Lang`, `Media`, `UI`, `Activity`, `CloudStorage`, `Cms`, `Gdpr`, `Geo`, `Job`, `Limesurvey`, `User`, `ExternalProject`
-- **Status**: ✅ **VERIFIED** (PHPStan Level 10 - 4204 files)
-- **Resolved Issues**:
-    - **User**: Fixed syntax errors in `AuthenticationLogResource` (conflict resolution) and `ViewPasswordReset`.
-    - **ExternalProject**: Fixed `DashboardV2` widget imports.
-=======
-- **Scope**: `Tenant`, `Lang`, `Media`, `UI`, `Activity`, `CloudStorage`, `Cms`, `Gdpr`, `Geo`, `Job`, `Limesurvey`, `User`, `ModuloEsempio`
-- **Status**: ✅ **VERIFIED** (PHPStan Level 10 - 4204 files)
-- **Resolved Issues**:
-    - **User**: Fixed syntax errors in `AuthenticationLogResource` (conflict resolution) and `ViewPasswordReset`.
-    - **ModuloEsempio**: Fixed `DashboardV2` widget imports.
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_ufdRfK
     - **UI**: Fixed `RadioBadge` PHPDoc syntax.
     - **Global**: 0 Errors found across entire codebase.
 

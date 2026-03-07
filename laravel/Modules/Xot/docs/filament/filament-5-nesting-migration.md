@@ -80,11 +80,7 @@ class ListContacts extends XotBaseListRecords
 ### Comando Artisan
 
 ```bash
-<<<<<<< .merge_file_n4rLqL
 php artisan make:filament-resource Contact --nested --module=healthcare_app
-=======
-php artisan make:filament-resource Contact --nested --module=ModuloEsempio
->>>>>>> .merge_file_dnlVwX
 ```
 
 Questo comando crea automaticamente:
@@ -257,15 +253,9 @@ protected static ?string $relatedResource = ContactResource::class;
 
 ## Opportunità di Nesting per Moduli
 
-<<<<<<< .merge_file_n4rLqL
 ### Modulo healthcare_app
 
 Vedi: [Modules/healthcare_app/docs/filament-nesting-opportunities.md](../../healthcare_app/docs/filament-nesting-opportunities.md)
-=======
-### Moduli con nested resources
-
-Vedi: [Filament Nesting Best Practices](../filament-nesting-best-practices.md)
->>>>>>> .merge_file_dnlVwX
 
 **Opportunità**:
 - Contact → Nested di SurveyPdf
@@ -373,11 +363,7 @@ Filament 5.x gestisce automaticamente i breadcrumbs per nested resources. Non se
 ## Collegamenti
 
 - [Filament 5.x Nesting Documentation](https://filamentphp.com/docs/5.x/resources/nesting)
-<<<<<<< .merge_file_n4rLqL
 - [healthcare_app Nesting Opportunities](../../healthcare_app/docs/filament-nesting-opportunities.md)
-=======
-- [Filament Nesting Best Practices](../filament-nesting-best-practices.md)
->>>>>>> .merge_file_dnlVwX
 - [Limesurvey Nesting Opportunities](../../limesurvey/docs/filament-nesting-opportunities.md)
 - [Cms Nesting Opportunities](../../cms/docs/filament-nesting-opportunities.md)
 - [User Nesting Opportunities](../../user/docs/filament-nesting-opportunities.md)

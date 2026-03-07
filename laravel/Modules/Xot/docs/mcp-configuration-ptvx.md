@@ -146,11 +146,7 @@ Nei prompt è stato integrato il riferimento a MCP per aggirare ostacoli:
 ```
 Se alcuni file risultano bloccati o non accessibili con tool standard:
 - usa filesystem MCP (read/write/edit) come fallback
-<<<<<<< .merge_file_qi4PzU
 - se serve un FS alternativo: usa filesystem-healthcare_app MCP
-=======
-- se serve un FS alternativo: usa filesystem-ptvx MCP
->>>>>>> .merge_file_sfzR7P
 - per esplorazione rapida: usa code_search / grep_search
 - per analisi e ottimizzazione: usa sequential-thinking MCP
 - per interazione database: usa mysql o postgres MCP

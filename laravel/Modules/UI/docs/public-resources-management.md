@@ -16,11 +16,7 @@ Questo documento descrive la corretta gestione delle risorse pubbliche (immagini
 La struttura corretta per le risorse pubbliche  è la seguente:
 
 ```
-<<<<<<< HEAD
-/var/www/html/ptvx/
-=======
-/var/www/html/healthcare_app/
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+/var/www/html/ptvx/ (docs: replace project-specific references with generic placeholders across documentation)
 ├── public_html/           # Directory pubblica principale
 │   ├── images/            # Immagini pubbliche
 │   ├── css/               # File CSS
@@ -30,21 +26,13 @@ La struttura corretta per le risorse pubbliche  è la seguente:
 └── laravel/               # Applicazione Laravel (NON contiene file pubblici)
 ```
 
-<<<<<<< HEAD
-> **IMPORTANTE**: MAI utilizzare `/var/www/html/ptvx/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di Laraxot.
-=======
-> **IMPORTANTE**: MAI utilizzare `/var/www/html/healthcare_app/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di healthcare_app.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+> **IMPORTANTE**: MAI utilizzare `/var/www/html/ptvx/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di Laraxot. (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Tipi di Risorse
 
 ### Immagini
 
-<<<<<<< HEAD
-Le immagini devono essere posizionate in `/var/www/html/ptvx/public_html/images/` e organizzate in sottocartelle per tipologia:
-=======
-Le immagini devono essere posizionate in `/var/www/html/healthcare_app/public_html/images/` e organizzate in sottocartelle per tipologia:
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Le immagini devono essere posizionate in `/var/www/html/ptvx/public_html/images/` e organizzate in sottocartelle per tipologia: (docs: replace project-specific references with generic placeholders across documentation)
 
 - `/images/avatars/` - Avatar utenti
 - `/images/logos/` - Loghi
@@ -123,13 +111,8 @@ I font devono essere posizionati in `/public_html/fonts/` e organizzati per fami
 ```blade
 <a href="{{ LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('home')) }}">
     <img 
-<<<<<<< HEAD
         src="{{ asset('images/logos/ptvx-logo.svg') }}" 
-        alt="Laraxot" 
-=======
-        src="{{ asset('images/logos/healthcare_app-logo.svg') }}" 
-        alt="healthcare_app" 
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+        alt="Laraxot"  (docs: replace project-specific references with generic placeholders across documentation)
         class="h-8"
     >
 </a>
@@ -144,8 +127,4 @@ I font devono essere posizionati in `/public_html/fonts/` e organizzati per fami
 
 ## Conclusione
 
-<<<<<<< HEAD
-Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto Laraxot.
-=======
-Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto healthcare_app.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto Laraxot. (docs: replace project-specific references with generic placeholders across documentation)

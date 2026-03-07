@@ -67,13 +67,8 @@ Non seguire queste convenzioni può portare a:
 Per verificare che tutti i template seguano queste convenzioni:
 
 ```bash
-<<<<<<< HEAD
 grep -L "name=\"description\"" /var/www/html/ptvx/laravel/Modules/*/resources/views/filament/pages/*.blade.php
-grep -L "name=\"footer\"" /var/www/html/ptvx/laravel/Modules/*/resources/views/filament/pages/*.blade.php
-=======
-grep -L "name=\"description\"" /var/www/html/healthcare_app/laravel/Modules/*/resources/views/filament/pages/*.blade.php
-grep -L "name=\"footer\"" /var/www/html/healthcare_app/laravel/Modules/*/resources/views/filament/pages/*.blade.php
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+grep -L "name=\"footer\"" /var/www/html/ptvx/laravel/Modules/*/resources/views/filament/pages/*.blade.php (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ## Riferimenti

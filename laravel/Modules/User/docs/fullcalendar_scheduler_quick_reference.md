@@ -181,11 +181,7 @@ if (app()->environment('local') && empty($licenseKey)) {
 - [ ] Banner rosso rimosso
 - [ ] Funzionalità premium attive
 
-<<<<<<< HEAD
-## 🚀 Laraxot Specifico
-=======
-## 🚀 healthcare_app Specifico
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+## 🚀 Laraxot Specifico (docs: replace project-specific references with generic placeholders across documentation)
 
 ### Business Hours Sanitarie
 ```javascript

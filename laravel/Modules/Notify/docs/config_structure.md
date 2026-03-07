@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Struttura di Configurazione nei Moduli Laraxot
-=======
-# Struttura di Configurazione nei Moduli healthcare_app
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+# Struttura di Configurazione nei Moduli Laraxot (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Principi di Configurazione
 

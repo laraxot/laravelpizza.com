@@ -13,20 +13,22 @@ uses(TestCase::class);
 it('gets domains array by scanning config directory', function (): void {
     // This test is a bit tricky because recurse() instantiates Filesystem internally
     // and uses config_path().
-    
-    $action = new class extends GetDomainsArrayAction {
-        public function recurse(string $path): array {
+
+    $action = new class extends GetDomainsArrayAction
+    {
+        public function recurse(string $path): array
+        {
             return [
                 'tenant1' => [],
                 'group1' => [
-                    'tenant2' => []
-                ]
+                    'tenant2' => [],
+                ],
             ];
         }
     };
-    
+
     $result = $action->execute();
-    
+
     expect($result)->toBeArray()
         ->toHaveCount(2)
         ->and($result)->toContain(['id' => 'tenant1', 'name' => 'tenant1'])
@@ -38,15 +40,15 @@ it('collapses nested directory structure into dot notation', function (): void {
     $data = [
         'a' => [
             'b' => [
-                'c' => []
+                'c' => [],
             ],
-            'd' => []
+            'd' => [],
         ],
-        'e' => []
+        'e' => [],
     ];
-    
+
     $result = $action->collapse($data);
-    
+
     expect($result)->toBeArray()
         ->toHaveCount(3)
         ->and($result)->toContain('c.b.a')

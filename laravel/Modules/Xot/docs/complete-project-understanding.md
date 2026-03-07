@@ -1,23 +1,12 @@
-<<<<<<< .merge_file_Rd1E67
 # healthcare_app Fila4 Mono - Filosofia Completa del Progetto
-=======
-# ModuloEsempio Fila4 Mono - Filosofia Completa del Progetto
->>>>>>> .merge_file_pvn0TA
 
 ## Logica (Logic)
 
 ### Architettura del Sistema
-<<<<<<< .merge_file_Rd1E67
 healthcare_app è un sistema completo di gestione survey basato su Laravel 12 + Filament 4 con il framework Laraxot. L'architettura è modulare e segue il pattern:
 
 ```
 Xot (Motore) → Moduli Specifici (User, healthcare_app, etc.) → Funzionalità
-=======
-ModuloEsempio è un sistema completo di gestione survey basato su Laravel 12 + Filament 4 con il framework Laraxot. L'architettura è modulare e segue il pattern:
-
-```
-Xot (Motore) → Moduli Specifici (User, ModuloEsempio, etc.) → Funzionalità
->>>>>>> .merge_file_pvn0TA
 ```
 
 ### Domain Model Principale
@@ -88,11 +77,7 @@ Xot (Motore) → Moduli Specifici (User, ModuloEsempio, etc.) → Funzionalità
 
 ## Business Logic
 
-<<<<<<< .merge_file_Rd1E67
 ### Modulo healthcare_app
-=======
-### Modulo ModuloEsempio
->>>>>>> .merge_file_pvn0TA
 - **Customer Management**: Gestione clienti e organizzazioni
 - **Survey Management**: Creazione e gestione survey tramite LimeSurvey
 - **Contact Management**: Gestione contatti e inviti
@@ -136,10 +121,6 @@ Il sistema è configurato con Model Context Protocol (MCP) per potenziare IDE AI
 
 ## Conclusione
 
-<<<<<<< .merge_file_Rd1E67
 healthcare_app rappresenta un sistema che riflette principi profondi di semplicità, chiarezza e armonia. Ogni riga di codice è una manifestazione dei principi DRY, KISS, SOLID e robustezza. Il sistema è progettato per essere mantenibile, scalabile e affidabile, seguendo un'architettura rigorosamente modulare dove ogni componente ha un ruolo preciso e prevedibile.
-=======
-ModuloEsempio rappresenta un sistema che riflette principi profondi di semplicità, chiarezza e armonia. Ogni riga di codice è una manifestazione dei principi DRY, KISS, SOLID e robustezza. Il sistema è progettato per essere mantenibile, scalabile e affidabile, seguendo un'architettura rigorosamente modulare dove ogni componente ha un ruolo preciso e prevedibile.
->>>>>>> .merge_file_pvn0TA
 
 La "Super Mucca" approccio richiede di analizzare a fondo il codice e le cartelle docs per capire la logica, la filosofia, la religione, la politica e lo zen del progetto prima di implementare qualsiasi cambiamento. La cartella docs è la memoria del sistema e deve essere costantemente aggiornata, studiata e migliorata.

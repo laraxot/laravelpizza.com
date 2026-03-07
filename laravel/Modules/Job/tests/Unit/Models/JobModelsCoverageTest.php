@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-use Modules\Job\Models\Task;
-use Modules\Job\Models\Frequency;
-use Modules\Job\Models\Result;
-use Modules\Job\Models\Schedule;
-use Modules\Job\Models\Import;
 use Modules\Job\Models\Export;
+use Modules\Job\Models\FailedJob;
+use Modules\Job\Models\Frequency;
+use Modules\Job\Models\Import;
 use Modules\Job\Models\JobBatch;
 use Modules\Job\Models\JobManager;
-use Modules\Job\Models\FailedJob;
+use Modules\Job\Models\Result;
+use Modules\Job\Models\Schedule;
+use Modules\Job\Models\Task;
 
 describe('Job Models Coverage', function () {
     describe('Task Model', function () {
         it('can be instantiated', function () {
-            $task = new Task();
+            $task = new Task;
             expect($task)->toBeInstanceOf(Task::class);
         });
 
@@ -32,41 +32,41 @@ describe('Job Models Coverage', function () {
         });
 
         it('has fillable fields defined', function () {
-            $task = new Task();
+            $task = new Task;
             expect($task->getFillable())->toContain('command');
             expect($task->getFillable())->toContain('description');
             expect($task->getFillable())->toContain('expression');
         });
 
         it('has appends defined', function () {
-            $task = new Task();
+            $task = new Task;
             expect($task->getAppends())->toContain('activated');
             expect($task->getAppends())->toContain('upcoming');
             expect($task->getAppends())->toContain('average_runtime');
         });
 
         it('has frequencies relationship', function () {
-            $task = new Task();
+            $task = new Task;
             expect(method_exists($task, 'frequencies'))->toBeTrue();
         });
 
         it('has results relationship', function () {
-            $task = new Task();
+            $task = new Task;
             expect(method_exists($task, 'results'))->toBeTrue();
         });
 
         it('has compileParameters method', function () {
-            $task = new Task();
+            $task = new Task;
             expect(method_exists($task, 'compileParameters'))->toBeTrue();
         });
 
         it('has autoCleanup method', function () {
-            $task = new Task();
+            $task = new Task;
             expect(method_exists($task, 'autoCleanup'))->toBeTrue();
         });
 
         it('has notification routing methods', function () {
-            $task = new Task();
+            $task = new Task;
             expect(method_exists($task, 'routeNotificationForMail'))->toBeTrue();
             expect(method_exists($task, 'routeNotificationForNexmo'))->toBeTrue();
             expect(method_exists($task, 'routeNotificationForSlack'))->toBeTrue();
@@ -81,7 +81,7 @@ describe('Job Models Coverage', function () {
 
     describe('Frequency Model', function () {
         it('can be instantiated', function () {
-            $model = new Frequency();
+            $model = new Frequency;
             expect($model)->toBeInstanceOf(Frequency::class);
         });
 
@@ -99,7 +99,7 @@ describe('Job Models Coverage', function () {
 
     describe('Result Model', function () {
         it('can be instantiated', function () {
-            $model = new Result();
+            $model = new Result;
             expect($model)->toBeInstanceOf(Result::class);
         });
 
@@ -117,7 +117,7 @@ describe('Job Models Coverage', function () {
 
     describe('Schedule Model', function () {
         it('can be instantiated', function () {
-            $model = new Schedule();
+            $model = new Schedule;
             expect($model)->toBeInstanceOf(Schedule::class);
         });
 
@@ -135,7 +135,7 @@ describe('Job Models Coverage', function () {
 
     describe('Import Model', function () {
         it('can be instantiated', function () {
-            $model = new Import();
+            $model = new Import;
             expect($model)->toBeInstanceOf(Import::class);
         });
 
@@ -153,7 +153,7 @@ describe('Job Models Coverage', function () {
 
     describe('Export Model', function () {
         it('can be instantiated', function () {
-            $model = new Export();
+            $model = new Export;
             expect($model)->toBeInstanceOf(Export::class);
         });
 
@@ -171,7 +171,7 @@ describe('Job Models Coverage', function () {
 
     describe('JobBatch Model', function () {
         it('can be instantiated', function () {
-            $model = new JobBatch();
+            $model = new JobBatch;
             expect($model)->toBeInstanceOf(JobBatch::class);
         });
 
@@ -189,7 +189,7 @@ describe('Job Models Coverage', function () {
 
     describe('JobManager Model', function () {
         it('can be instantiated', function () {
-            $model = new JobManager();
+            $model = new JobManager;
             expect($model)->toBeInstanceOf(JobManager::class);
         });
 
@@ -207,7 +207,7 @@ describe('Job Models Coverage', function () {
 
     describe('FailedJob Model', function () {
         it('can be instantiated', function () {
-            $model = new FailedJob();
+            $model = new FailedJob;
             expect($model)->toBeInstanceOf(FailedJob::class);
         });
 

@@ -11,15 +11,11 @@ use Modules\Xot\Tests\XotBaseTestCase;
  *
  * Uses MySQL from .env.testing (carbon copy of .env with _test DB names).
  * All module connections are mapped dynamically by TenantServiceProvider.
- * Migrations must be run ONCE externally: php artisan migrate --env=testing
- * DB lifecycle is managed by dedicated integration tests/configuration.
  * Migrations are run ONCE automatically via XotBaseTestCase.
- *
- * NOTE: DatabaseTransactions trait is already included in XotBaseTestCase.
- * Do NOT add it again - it would be redundant.
  */
 abstract class TestCase extends XotBaseTestCase
 {
+
     /**
      * The database connections that should have transactions rolled back.
      *

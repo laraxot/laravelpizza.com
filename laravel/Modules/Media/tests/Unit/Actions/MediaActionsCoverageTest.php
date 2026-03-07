@@ -2,35 +2,35 @@
 
 declare(strict_types=1);
 
+use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 use Modules\Media\Actions\Image\Merge as ImageMerge;
 use Modules\Media\Actions\Image\SvgExistsAction;
+use Modules\Media\Actions\S3\BaseS3Action;
+use Modules\Media\Actions\S3\CheckFileExistsAction;
+use Modules\Media\Actions\S3\DeleteFileAction;
+use Modules\Media\Actions\S3\GetFileInfoAction;
+use Modules\Media\Actions\S3\UploadFileAction;
 use Modules\Media\Actions\Video\ConvertVideoAction;
 use Modules\Media\Actions\Video\ConvertVideoByConvertDataAction;
 use Modules\Media\Actions\Video\ConvertVideoByMediaConvertAction;
-use Modules\Media\Actions\Video\GetVideoScreenshotAction;
-use Modules\Media\Actions\Video\GetVideoFrameContentAction;
 use Modules\Media\Actions\Video\GetVideoDurationAction;
-use Modules\Media\Actions\S3\UploadFileAction;
-use Modules\Media\Actions\S3\DeleteFileAction;
-use Modules\Media\Actions\S3\GetFileInfoAction;
-use Modules\Media\Actions\S3\CheckFileExistsAction;
-use Modules\Media\Actions\S3\BaseS3Action;
-use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
+use Modules\Media\Actions\Video\GetVideoFrameContentAction;
+use Modules\Media\Actions\Video\GetVideoScreenshotAction;
 
 describe('Media Actions Coverage', function () {
     describe('Image Merge Action', function () {
         it('can be instantiated', function () {
-            $action = new ImageMerge();
+            $action = new ImageMerge;
             expect($action)->toBeInstanceOf(ImageMerge::class);
         });
 
         it('has handle method', function () {
-            $action = new ImageMerge();
+            $action = new ImageMerge;
             expect(method_exists($action, 'handle'))->toBeTrue();
         });
 
         it('has execute method', function () {
-            $action = new ImageMerge();
+            $action = new ImageMerge;
             expect(method_exists($action, 'execute'))->toBeTrue();
         });
 
@@ -47,7 +47,7 @@ describe('Media Actions Coverage', function () {
 
     describe('SvgExistsAction', function () {
         it('can be instantiated', function () {
-            $action = new SvgExistsAction();
+            $action = new SvgExistsAction;
             expect($action)->toBeInstanceOf(SvgExistsAction::class);
         });
 
@@ -57,7 +57,7 @@ describe('Media Actions Coverage', function () {
         });
 
         it('has execute method', function () {
-            $action = new SvgExistsAction();
+            $action = new SvgExistsAction;
             expect(method_exists($action, 'execute'))->toBeTrue();
         });
 
@@ -70,7 +70,7 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoAction', function () {
         it('can be instantiated', function () {
-            $action = new ConvertVideoAction();
+            $action = new ConvertVideoAction;
             expect($action)->toBeInstanceOf(ConvertVideoAction::class);
         });
 
@@ -80,7 +80,7 @@ describe('Media Actions Coverage', function () {
         });
 
         it('has execute method', function () {
-            $action = new ConvertVideoAction();
+            $action = new ConvertVideoAction;
             expect(method_exists($action, 'execute'))->toBeTrue();
         });
 
@@ -97,12 +97,12 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoByConvertDataAction', function () {
         it('can be instantiated', function () {
-            $action = new ConvertVideoByConvertDataAction();
+            $action = new ConvertVideoByConvertDataAction;
             expect($action)->toBeInstanceOf(ConvertVideoByConvertDataAction::class);
         });
 
         it('has execute method', function () {
-            $action = new ConvertVideoByConvertDataAction();
+            $action = new ConvertVideoByConvertDataAction;
             expect(method_exists($action, 'execute'))->toBeTrue();
         });
 
@@ -119,12 +119,12 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoByMediaConvertAction', function () {
         it('can be instantiated', function () {
-            $action = new ConvertVideoByMediaConvertAction();
+            $action = new ConvertVideoByMediaConvertAction;
             expect($action)->toBeInstanceOf(ConvertVideoByMediaConvertAction::class);
         });
 
         it('has execute method', function () {
-            $action = new ConvertVideoByMediaConvertAction();
+            $action = new ConvertVideoByMediaConvertAction;
             expect(method_exists($action, 'execute'))->toBeTrue();
         });
 
@@ -141,12 +141,12 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoScreenshotAction', function () {
         it('can be instantiated', function () {
-            $action = new GetVideoScreenshotAction();
+            $action = new GetVideoScreenshotAction;
             expect($action)->toBeInstanceOf(GetVideoScreenshotAction::class);
         });
 
         it('has backoff property', function () {
-            $action = new GetVideoScreenshotAction();
+            $action = new GetVideoScreenshotAction;
             expect(property_exists($action, 'backoff'))->toBeTrue();
         });
 
@@ -163,12 +163,12 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoFrameContentAction', function () {
         it('can be instantiated', function () {
-            $action = new GetVideoFrameContentAction();
+            $action = new GetVideoFrameContentAction;
             expect($action)->toBeInstanceOf(GetVideoFrameContentAction::class);
         });
 
         it('has execute method', function () {
-            $action = new GetVideoFrameContentAction();
+            $action = new GetVideoFrameContentAction;
             expect(method_exists($action, 'execute'))->toBeTrue();
         });
 
@@ -185,12 +185,12 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoDurationAction', function () {
         it('can be instantiated', function () {
-            $action = new GetVideoDurationAction();
+            $action = new GetVideoDurationAction;
             expect($action)->toBeInstanceOf(GetVideoDurationAction::class);
         });
 
         it('has execute method', function () {
-            $action = new GetVideoDurationAction();
+            $action = new GetVideoDurationAction;
             expect(method_exists($action, 'execute'))->toBeTrue();
         });
 
@@ -311,12 +311,12 @@ describe('Media Actions Coverage', function () {
 
     describe('GetCloudFrontSignedUrlAction', function () {
         it('can be instantiated', function () {
-            $action = new GetCloudFrontSignedUrlAction();
+            $action = new GetCloudFrontSignedUrlAction;
             expect($action)->toBeInstanceOf(GetCloudFrontSignedUrlAction::class);
         });
 
         it('has execute method', function () {
-            $action = new GetCloudFrontSignedUrlAction();
+            $action = new GetCloudFrontSignedUrlAction;
             expect(method_exists($action, 'execute'))->toBeTrue();
         });
 

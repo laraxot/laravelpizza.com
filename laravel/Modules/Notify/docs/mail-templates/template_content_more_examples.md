@@ -138,11 +138,7 @@ Questo documento contiene esempi aggiuntivi di contenuto HTML per template email
             </svg>
             <div>
                 <p style="margin: 0 0 2px; font-weight: 600; color: #4338ca;">{{ __('notify.appointment.fields.location.label') }}</p>
-<<<<<<< HEAD
-                <p style="margin: 0; font-size: 16px; color: #334155;">{{ $location ?? 'Laraxot Centro Medico, Via Roma 123, 00100 Roma' }}</p>
-=======
-                <p style="margin: 0; font-size: 16px; color: #334155;">{{ $location ?? 'healthcare_app Centro Medico, Via Roma 123, 00100 Roma' }}</p>
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+                <p style="margin: 0; font-size: 16px; color: #334155;">{{ $location ?? 'Laraxot Centro Medico, Via Roma 123, 00100 Roma' }}</p> (docs: replace project-specific references with generic placeholders across documentation)
             </div>
         </div>
         
@@ -176,11 +172,7 @@ Questo documento contiene esempi aggiuntivi di contenuto HTML per template email
     
     <div style="text-align: center; margin: 30px 0;">
         <img style="max-width: 100%; height: auto; border-radius: 8px;" src="{{ $map_image ?? asset('modules/notify/images/map.png') }}" alt="Mappa della posizione">
-<<<<<<< HEAD
-        <p style="margin: 10px 0 0; font-size: 14px; color: #64748b;">{{ $map_caption ?? 'Laraxot Centro Medico, Via Roma 123, 00100 Roma' }}</p>
-=======
-        <p style="margin: 10px 0 0; font-size: 14px; color: #64748b;">{{ $map_caption ?? 'healthcare_app Centro Medico, Via Roma 123, 00100 Roma' }}</p>
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+        <p style="margin: 10px 0 0; font-size: 14px; color: #64748b;">{{ $map_caption ?? 'Laraxot Centro Medico, Via Roma 123, 00100 Roma' }}</p> (docs: replace project-specific references with generic placeholders across documentation)
     </div>
     
     <div style="border-top: 1px solid #e2e8f0; margin: 30px 0; padding-top: 30px;">

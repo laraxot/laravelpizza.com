@@ -2,11 +2,7 @@
 
 ## Regola Fondamentale
 
-<<<<<<< HEAD
-Nel sistema Laraxot, tutte le interfacce (interfaces) devono seguire queste convenzioni di naming:
-=======
-Nel sistema healthcare_app, tutte le interfacce (interfaces) devono seguire queste convenzioni di naming:
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Nel sistema Laraxot, tutte le interfacce (interfaces) devono seguire queste convenzioni di naming: (docs: replace project-specific references with generic placeholders across documentation)
 
 1. **Suffisso `Contract` e non `Interface`**:
    - ✅ CORRETTO: `SmsProviderContract`

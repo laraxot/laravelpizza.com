@@ -2,11 +2,7 @@
 
 ## Introduzione
 
-<<<<<<< HEAD
-Questa guida fornisce una panoramica completa sulla creazione e l'utilizzo di template email HTML responsive nel contesto di Laraxot, con focus su compatibilità, engagement e best practices di settore. 
-=======
-Questa guida fornisce una panoramica completa sulla creazione e l'utilizzo di template email HTML responsive nel contesto di healthcare_app, con focus su compatibilità, engagement e best practices di settore. 
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Questa guida fornisce una panoramica completa sulla creazione e l'utilizzo di template email HTML responsive nel contesto di Laraxot, con focus su compatibilità, engagement e best practices di settore.  (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Principi Fondamentali
 
@@ -78,11 +74,7 @@ Migliore esperienza su client moderni:
 </div>
 ```
 
-<<<<<<< HEAD
-Per Laraxot, si raccomanda un **approccio ibrido**:
-=======
-Per healthcare_app, si raccomanda un **approccio ibrido**:
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Per Laraxot, si raccomanda un **approccio ibrido**: (docs: replace project-specific references with generic placeholders across documentation)
 - Struttura base con tabelle per massima compatibilità
 - CSS moderno con fallback per funzionalità avanzate
 

@@ -10,7 +10,7 @@ use Modules\User\Models\User;
 uses(TestCase::class);
 
 test('record notification data returns mail route', function (): void {
-    $user = new User();
+    $user = new User;
     $user->setAttribute('email', 'recipient@example.test');
 
     $data = RecordNotificationData::from([
@@ -31,7 +31,7 @@ test('record notification data returns normalized sms route', function (): void 
         }
     });
 
-    $user = new User();
+    $user = new User;
     $user->setAttribute('phone', '3331234567');
 
     $data = RecordNotificationData::from([
@@ -43,7 +43,7 @@ test('record notification data returns normalized sms route', function (): void 
 });
 
 test('record notification data throws for unsupported channel', function (): void {
-    $user = new User();
+    $user = new User;
     $user->setAttribute('email', 'recipient@example.test');
 
     $data = RecordNotificationData::from([
@@ -53,4 +53,3 @@ test('record notification data throws for unsupported channel', function (): voi
 
     $data->getRoute();
 })->throws(Exception::class);
-

@@ -1,10 +1,6 @@
 # Pattern di Risoluzione Dinamica delle Classi vs Pattern Match
 
-<<<<<<< HEAD
-Questo documento analizza i vantaggi e gli svantaggi dell'utilizzo di una formula di calcolo dinamico per la risoluzione delle classi rispetto all'approccio attuale con match nel factory pattern di Laraxot.
-=======
-Questo documento analizza i vantaggi e gli svantaggi dell'utilizzo di una formula di calcolo dinamico per la risoluzione delle classi rispetto all'approccio attuale con match nel factory pattern di healthcare_app.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Questo documento analizza i vantaggi e gli svantaggi dell'utilizzo di una formula di calcolo dinamico per la risoluzione delle classi rispetto all'approccio attuale con match nel factory pattern di Laraxot. (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Implementazione Attuale con Match
 

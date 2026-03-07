@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models;
 
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Relations\Pivot as EloquentPivot;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Models\Traits\HasXotFactory;
@@ -27,6 +28,7 @@ use function Safe\preg_match;
  */
 abstract class XotBasePivot extends EloquentPivot
 {
+    use HasUuids;
     use HasXotFactory;
     use Updater;
 
@@ -40,7 +42,7 @@ abstract class XotBasePivot extends EloquentPivot
     public static $snakeAttributes = true;
 
     /** @var bool */
-    public $incrementing = true;
+    public $incrementing = false;
 
     /** @var int */
     protected $perPage = 30;

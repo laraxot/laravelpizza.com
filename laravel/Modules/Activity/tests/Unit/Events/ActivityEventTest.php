@@ -40,7 +40,7 @@ class ActivityEventTest extends TestCase
     #[Test]
     public function event_can_be_instantiated(): void
     {
-        $event = new ActivityEvent();
+        $event = new ActivityEvent;
         $this->assertInstanceOf(ActivityEvent::class, $event);
     }
 }

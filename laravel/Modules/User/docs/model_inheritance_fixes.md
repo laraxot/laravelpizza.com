@@ -165,26 +165,7 @@ Illuminate\Database\Eloquent\Relations\MorphPivot
 Per verificare che non ci siano più modelli che estendono direttamente `Model`:
 
 ```bash
-<<<<<<< .merge_file_UeiGzi
-<<<<<<< HEAD
-cd /var/www/_bases/base_healthcare_app_fila5_mono/laravel/Modules/User
-=======
-<<<<<<< HEAD
-cd /var/www/_bases/base_app_fila5_mono/laravel/Modules/User
-=======
-cd /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/User
-||||||| parent of da38c10 (.)
-cd /var/www/_bases/base_<nome progetto>_fila5_mono/laravel/Modules/User
-=======
-cd /var/www/_bases/base_healthcare_app_fila5_mono/laravel/Modules/User
-=======
-<<<<<<< HEAD
-cd /var/www/_bases/base_app_fila5_mono/laravel/Modules/User
-=======
-cd /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/User
->>>>>>> da38c10 (.)
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_0lPW2z
+cd /var/www/_bases/base_healthcare_app_fila5_mono/laravel/Modules/User (.)
 grep -r "extends Model" app/Models/ --include="*.php" | grep -v "BaseModel\|BasePivot\|BaseMorphPivot"
 ```
 
@@ -193,26 +174,7 @@ grep -r "extends Model" app/Models/ --include="*.php" | grep -v "BaseModel\|Base
 Dopo le modifiche, eseguire:
 
 ```bash
-<<<<<<< .merge_file_UeiGzi
-<<<<<<< HEAD
-cd /var/www/_bases/base_healthcare_app_fila5_mono/laravel/Modules/User
-=======
-<<<<<<< HEAD
-cd /var/www/_bases/base_app_fila5_mono/laravel/Modules/User
-=======
-cd /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/User
-||||||| parent of da38c10 (.)
-cd /var/www/_bases/base_<nome progetto>_fila5_mono/laravel/Modules/User
-=======
-cd /var/www/_bases/base_healthcare_app_fila5_mono/laravel/Modules/User
-=======
-<<<<<<< HEAD
-cd /var/www/_bases/base_app_fila5_mono/laravel/Modules/User
-=======
-cd /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/User
->>>>>>> da38c10 (.)
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_0lPW2z
+cd /var/www/_bases/base_healthcare_app_fila5_mono/laravel/Modules/User (.)
 ./vendor/bin/phpstan analyse --memory-limit=2G
 ```
 

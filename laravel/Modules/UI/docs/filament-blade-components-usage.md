@@ -39,11 +39,7 @@ Filament fornisce una serie di componenti Blade pronti all'uso che dovrebbero es
 
 ⚠️ **ATTENZIONE**: I seguenti layout **NON esistono** in Filament e non devono essere utilizzati:
 
-<<<<<<< HEAD
-- ❌ `<x-filament::layouts.app>` - Non esiste, utilizzare invece `<x-layouts.app>` di Laraxot
-=======
-- ❌ `<x-filament::layouts.app>` - Non esiste, utilizzare invece `<x-layouts.app>` di healthcare_app
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+- ❌ `<x-filament::layouts.app>` - Non esiste, utilizzare invece `<x-layouts.app>` di Laraxot (docs: replace project-specific references with generic placeholders across documentation)
 - ❌ `<x-filament::layouts.card>` - Non esiste, utilizzare invece una combinazione di `<x-filament::card>` e altri componenti
 - ❌ `<x-filament::layouts.base>` - Non esiste
 
@@ -195,11 +191,7 @@ I dropdown di Filament hanno una struttura specifica che deve essere rispettata.
    - Folio gestisce automaticamente le rotte del frontend
 
 2. **Per le pagine frontend**:
-<<<<<<< HEAD
-   - Creare file Blade in `/var/www/html/ptvx/laravel/Themes/One/resources/views/pages/`
-=======
-   - Creare file Blade in `/var/www/html/healthcare_app/laravel/Themes/One/resources/views/pages/`
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+   - Creare file Blade in `/var/www/html/ptvx/laravel/Themes/One/resources/views/pages/` (docs: replace project-specific references with generic placeholders across documentation)
    - Utilizzare Folio per il routing automatico
    - Esempio: `/profile/index.blade.php` sarà accessibile come `/it/profile`
 

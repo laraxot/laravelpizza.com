@@ -59,15 +59,7 @@ The Lang module provides comprehensive localization and translation management:
 ## Integration with Other Modules
 - **User**: User language preferences
 - **Cms**: Multi-language content
-<<<<<<< .merge_file_bAumXk
 - **healthcare_app**: Survey translation
-=======
-<<<<<<< HEAD
-- **ExternalProject**: Survey translation
-=======
-- **ModuloEsempio**: Survey translation
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_DP20W3
 - **Limesurvey**: Question translation
 - **Xot**: Base localization infrastructure
 - **Filament**: Translation management interface

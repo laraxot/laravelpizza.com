@@ -2,11 +2,7 @@
 
 ## Introduzione
 
-<<<<<<< HEAD
-Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di Laraxot. Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di Laraxot.
-=======
-Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di healthcare_app. Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di healthcare_app.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di Laraxot. Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di Laraxot. (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Struttura dei File di Traduzione
 
@@ -144,11 +140,7 @@ return [
 
 ## Eccezione alle Convenzioni Generali
 
-<<<<<<< HEAD
-È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di Laraxot. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/TRANSLATION_KEYS_RULES.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
-=======
-È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di healthcare_app. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/TRANSLATION_KEYS_RULES.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di Laraxot. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/TRANSLATION_KEYS_RULES.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica. (docs: replace project-specific references with generic placeholders across documentation)
 
 ### Motivazione dell'Eccezione
 

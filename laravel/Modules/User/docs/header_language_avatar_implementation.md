@@ -8,25 +8,15 @@
 
 ## Panoramica
 
-<<<<<<< HEAD
-Questo documento descrive come implementare nell'header di progetto:
-=======
-Questo documento descrive come implementare nell'header di healthcare_app:
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Questo documento descrive come implementare nell'header di progetto: (docs: replace project-specific references with generic placeholders across documentation)
 1. Un selettore di lingua
 2. Un dropdown con l'avatar dell'utente contenente il link di logout
 
 ## Struttura Attuale dell'Header
 
-<<<<<<< HEAD
 L'header di progetto è gestito tramite:
 - **Componente Blade**: `/Themes/One/resources/views/components/sections/header.blade.php`
-- **Configurazione JSON**: `/config/local/ptvx/database/content/sections/1.json`
-=======
-L'header di healthcare_app è gestito tramite:
-- **Componente Blade**: `/Themes/One/resources/views/components/sections/header.blade.php`
-- **Configurazione JSON**: `/config/local/healthcare_app/database/content/sections/1.json`
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+- **Configurazione JSON**: `/config/local/ptvx/database/content/sections/1.json` (docs: replace project-specific references with generic placeholders across documentation)
 
 Il componente header legge i blocchi dal file JSON e li renderizza in base alla lingua corrente. Attualmente l'header contiene:
 - Un logo
@@ -216,11 +206,7 @@ Ecco come dovrebbe apparire il file JSON completo dell'header dopo le modifiche:
                 "data": {
                     "view": "pub_theme::components.blocks.logo",
                     "src": "patient::images/logo.svg",
-<<<<<<< HEAD
-                    "alt": "Logo progetto",
-=======
-                    "alt": "Logo healthcare_app",
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+                    "alt": "Logo progetto", (docs: replace project-specific references with generic placeholders across documentation)
                     "width": 150,
                     "height": 32
                 }
@@ -294,11 +280,7 @@ Ecco come dovrebbe apparire il file JSON completo dell'header dopo le modifiche:
                 "data": {
                     "view": "pub_theme::components.blocks.logo",
                     "src": "patient::images/logo.svg",
-<<<<<<< HEAD
-                    "alt": "progetto Logo",
-=======
-                    "alt": "healthcare_app Logo",
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+                    "alt": "progetto Logo", (docs: replace project-specific references with generic placeholders across documentation)
                     "width": 150,
                     "height": 32
                 }

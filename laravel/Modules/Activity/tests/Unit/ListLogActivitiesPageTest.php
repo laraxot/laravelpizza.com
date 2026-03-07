@@ -62,7 +62,8 @@ class ListLogActivitiesPageTest extends TestCase
 
     public function test_get_pagination_mode_returns_default(): void
     {
-        $page = new class extends ListLogActivities {
+        $page = new class extends ListLogActivities
+        {
             public static function getResource(): string
             {
                 return ActivityResource::class;
@@ -78,7 +79,8 @@ class ListLogActivitiesPageTest extends TestCase
         $property = $reflection->getProperty('view');
         $property->setAccessible(true);
 
-        $page = new class extends ListLogActivities {
+        $page = new class extends ListLogActivities
+        {
             public static function getResource(): string
             {
                 return ActivityResource::class;

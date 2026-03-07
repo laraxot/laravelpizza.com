@@ -18,8 +18,4 @@ Per installazione Composer e utilizzo dei namespace:
 | Installazione | Dalla root Laravel: `cd laravel && composer require amenadiel/jpgraph` oppure `composer update` |
 | Autoload | Fornito dal pacchetto; non aggiungere mapping in `composer.json` |
 
-<<<<<<< .merge_file_G1ff7N
 Il modulo Xot non dichiara JpGraph; i moduli che generano grafici (healthcare_app, Limesurvey, ecc.) usano le Actions del modulo Chart.
-=======
-Il modulo Xot non dichiara JpGraph; i moduli che generano grafici usano le Actions del modulo Chart (se presente).
->>>>>>> .merge_file_whSfEF

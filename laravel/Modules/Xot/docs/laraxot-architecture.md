@@ -150,28 +150,12 @@ class MyAction
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_VdoVRh
-namespace Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
-=======
-<<<<<<< HEAD
-namespace Modules\ExternalProject\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
-=======
-namespace Modules\ModuloEsempio\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_P23loR
+namespace Modules\Quaeris\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
 
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
-<<<<<<< .merge_file_VdoVRh
-use Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
-=======
-<<<<<<< HEAD
-use Modules\ExternalProject\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
-=======
-use Modules\ModuloEsempio\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_P23loR
+use Modules\Quaeris\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
 
 class ViewQuestionChart extends XotBaseViewRecord
 {
@@ -213,15 +197,7 @@ class ViewQuestionChart extends XotBaseViewRecord
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_VdoVRh
-namespace Modules\healthcare_app\Filament\Widgets;
-=======
-<<<<<<< HEAD
-namespace Modules\ExternalProject\Filament\Widgets;
-=======
-namespace Modules\ModuloEsempio\Filament\Widgets;
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_P23loR
+namespace Modules\Quaeris\Filament\Widgets;
 
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
@@ -277,24 +253,10 @@ class QuestionChartFilterWidget extends XotBaseWidget
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_VdoVRh
-namespace Modules\healthcare_app\Filament\Resources;
+namespace Modules\Quaeris\Filament\Resources;
 
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Modules\healthcare_app\Models\QuestionChart;
-=======
-<<<<<<< HEAD
-namespace Modules\ExternalProject\Filament\Resources;
-
-use Modules\Xot\Filament\Resources\XotBaseResource;
-use Modules\ExternalProject\Models\QuestionChart;
-=======
-namespace Modules\ModuloEsempio\Filament\Resources;
-
-use Modules\Xot\Filament\Resources\XotBaseResource;
-use Modules\ModuloEsempio\Models\QuestionChart;
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_P23loR
+use Modules\Quaeris\Models\QuestionChart;
 
 class QuestionChartResource extends XotBaseResource
 {
@@ -349,7 +311,7 @@ class QuestionChartResource extends XotBaseResource
 ```php
 // ❌ MAI FARE
 class MyPage extends ViewRecord
-class MyWidget extends Widget
+class MyPage extends Widget
 class MyResource extends Resource
 ```
 
@@ -392,10 +354,10 @@ BadgeColumn::make('status')
 
 ## 📚 Riferimenti
 
-- [XotBasePage Implementation](./xotbasepage_implementation.md)
-- [XotBaseWidget Implementation](./xotbasewidget_implementation.md)
-- [XotBaseResource Implementation](./xotbaseresource_implementation.md)
-- [Translation System](./translation_system.md)
+- [XotBasePage Implementation](./xotbasepage-implementation.md)
+- [XotBaseWidget Implementation](./xotbasewidget-implementation.md)
+- [XotBaseResource Implementation](./xotbaseresource-implementation.md)
+- [Translation System](./translation-system.md)
 - [Spatie Queueable Actions](https://github.com/spatie/laravel-queueable-action)
 
 Queste regole garantiscono coerenza con l'architettura Laraxot e compatibilità con Filament 4.

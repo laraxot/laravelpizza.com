@@ -11,34 +11,30 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
 
 uses(TestCase::class);
 
-test('snapshot getConnectionName returns a valid string', function (): void {
-    $snapshot = new Snapshot();
-    $connection = $snapshot->getConnectionName();
+test('snapshot getConnectionName resolves default connection in testing', function (): void {
+    $snapshot = new Snapshot;
+    $default = config('database.default');
 
-    expect($connection)->toBeString()->not->toBeEmpty();
-    // In testing env the model redirects to default; otherwise uses 'activity'
-    expect($connection)->toBeIn(['mysql', 'activity', config('database.default')]);
+    expect($snapshot->getConnectionName())->toBe(is_string($default) ? $default : 'mysql');
 });
 
 test('snapshot has expected table and fillable fields', function (): void {
-    $snapshot = new Snapshot();
+    $snapshot = new Snapshot;
 
     expect($snapshot->getTable())->toBe('snapshots')
         ->and($snapshot->getFillable())->toContain('aggregate_uuid')
         ->and($snapshot->getFillable())->toContain('state');
 });
 
-test('stored event getConnectionName returns a valid string', function (): void {
-    $storedEvent = new StoredEvent();
-    $connection = $storedEvent->getConnectionName();
+test('stored event constructor aligns connection in testing', function (): void {
+    $storedEvent = new StoredEvent;
+    $default = config('database.default');
 
-    expect($connection)->toBeString()->not->toBeEmpty();
-    // In testing env the model redirects to default; otherwise uses 'activity'
-    expect($connection)->toBeIn(['mysql', 'activity', config('database.default')]);
+    expect($storedEvent->getConnectionName())->toBe(is_string($default) ? $default : 'mysql');
 });
 
 test('stored event has expected casts and metadata behavior', function (): void {
-    $storedEvent = new StoredEvent();
+    $storedEvent = new StoredEvent;
     $casts = $storedEvent->getCasts();
 
     expect($storedEvent->getTable())->toBe('stored_events')
@@ -47,4 +43,3 @@ test('stored event has expected casts and metadata behavior', function (): void 
         ->and($casts)->toHaveKey('meta_data')
         ->and($casts['meta_data'])->toBe(SchemalessAttributes::class);
 });
-

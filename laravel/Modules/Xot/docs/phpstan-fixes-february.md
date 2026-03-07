@@ -23,8 +23,7 @@ cd /var/www/_bases/base_<nome progetto>/laravel
 
 ### 1. Conflitti Git Non Risolti (CRITICO)
 
-**Problema**: 107 file nel modulo Tenant contenevano marker di conflitto git (`<<<<<<< HEAD`, `=======`, `>>>>>>>`) che impedivano a PHPStan di eseguire il parsing.
-
+**Problema**: 107 file nel modulo Tenant contenevano marker di conflitto git (`
 **Errore PHPStan**:
 ```
 Application bootstrap failed
@@ -146,18 +145,6 @@ public function __construct(array $data = [])
 }
 
 /**
-<<<<<<< HEAD
-=======
- * Handle dynamic method calls.
- */
-public function __call(string $method, array $parameters) // PRIMA DUPLICAZIONE
-{
-    // ...
-}
-
-/**
->>>>>>> 013c0d2 (.)
- * Get the title.
  */
 public function getTitle(): string
 {
@@ -208,8 +195,7 @@ public function __call(string $method, array $parameters)
 
 **Motivazione**: PHP non permette la ridichiarazione di metodi. Il conflitto git aveva lasciato il metodo duplicato.
 
-**Pattern riutilizzabile**: Prima di eseguire PHPStan, verificare sempre che non ci siano conflitti git irrisolti con `git status` o `grep -r "<<<<<<< HEAD"`.
-
+**Pattern riutilizzabile**: Prima di eseguire PHPStan, verificare sempre che non ci siano conflitti git irrisolti con `git status` o `grep -r "
 ---
 
 ### 5. TenantServiceProvider.php - Syntax Error nei Commenti
@@ -291,8 +277,7 @@ EloquentStoredEventCollection<StoredEvent>
 ```bash
 # Verifica conflitti
 git status
-grep -r "<<<<<<< HEAD" .
-
+grep -r "
 # Risolvi conflitti
 git checkout --theirs path/to/file
 # oppure
@@ -320,8 +305,7 @@ $var = "string with {$interpolation}";
 Prima di eseguire PHPStan su un progetto:
 
 - [ ] Verificare assenza conflitti git: `git status`
-- [ ] Cercare marker di conflitto: `grep -r "<<<<<<< HEAD" .`
-- [ ] Verificare sintassi PHP: `php -l file.php`
+- [ ] Cercare marker di conflitto: `grep -r "- [ ] Verificare sintassi PHP: `php -l file.php`
 - [ ] Eseguire IDE Helper: `php artisan ide-helper:models --write`
 - [ ] Verificare FQCN nei PHPDoc generati
 - [ ] Controllare generics per collection personalizzate

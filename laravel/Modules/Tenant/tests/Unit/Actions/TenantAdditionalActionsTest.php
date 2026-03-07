@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Tests\Unit\Actions;
 
+use Modules\Tenant\Actions\Models\ResolveTenantModelInstanceAction;
 use Modules\Tenant\Actions\Modules\GetTenantModulesAction;
 use Modules\Tenant\Actions\Translations\TranslateTenantKeyAction;
-use Modules\Tenant\Actions\Models\ResolveTenantModelInstanceAction;
 use Modules\Tenant\Tests\TestCase;
 
 uses(TestCase::class);

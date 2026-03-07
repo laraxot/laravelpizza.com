@@ -23,7 +23,8 @@ class ListLogActivitiesPageCoverageTest extends TestCase
         parent::setUp();
 
         // Concrete anonymous implementation with ActivityResource
-        $this->page = new class extends ListLogActivities {
+        $this->page = new class extends ListLogActivities
+        {
             public static function getResource(): string
             {
                 return ActivityResource::class;
@@ -55,7 +56,8 @@ class ListLogActivitiesPageCoverageTest extends TestCase
     public function get_breadcrumb_uses_static_breadcrumb_when_set(): void
     {
         // Create a class with explicit $breadcrumb set
-        $page = new class extends ListLogActivities {
+        $page = new class extends ListLogActivities
+        {
             protected static ?string $breadcrumb = 'Custom Breadcrumb';
 
             public static function getResource(): string
@@ -71,7 +73,8 @@ class ListLogActivitiesPageCoverageTest extends TestCase
     public function can_restore_activity_returns_false_when_resource_class_does_not_exist(): void
     {
         // Use a non-existent class → class_exists() returns false → method returns false immediately
-        $page = new class extends ListLogActivities {
+        $page = new class extends ListLogActivities
+        {
             public static function getResource(): string
             {
                 return 'NonExistentClass\That\Does\Not\Exist';
@@ -85,7 +88,8 @@ class ListLogActivitiesPageCoverageTest extends TestCase
     public function can_restore_activity_returns_false_when_resource_lacks_can_restore_method(): void
     {
         // stdClass exists but has no canRestore() method → returns false
-        $page = new class extends ListLogActivities {
+        $page = new class extends ListLogActivities
+        {
             public static function getResource(): string
             {
                 return \stdClass::class;
@@ -152,7 +156,8 @@ class ListLogActivitiesPageCoverageTest extends TestCase
         // Test the path where resource HAS canRestore() and a record is set.
         // ActivityResource inherits canRestore() from Filament's HasAuthorization.
         // Result is false (not authorized) but the code path is exercised.
-        $page = new class extends ListLogActivities {
+        $page = new class extends ListLogActivities
+        {
             public static function getResource(): string
             {
                 return ActivityResource::class;
@@ -160,7 +165,7 @@ class ListLogActivitiesPageCoverageTest extends TestCase
         };
 
         // Set a record via reflection so canRestoreActivity() can call canRestore($record)
-        $activity = new \Modules\Activity\Models\Activity();
+        $activity = new \Modules\Activity\Models\Activity;
         $reflection = new \ReflectionClass($page);
         $property = $reflection->getProperty('record');
         $property->setAccessible(true);

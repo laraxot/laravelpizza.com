@@ -55,9 +55,7 @@ class ViewNotificationTestProxy extends ViewNotification
     }
 }
 
-class PreviewNotificationTemplateTestProxy extends PreviewNotificationTemplate
-{
-}
+class PreviewNotificationTemplateTestProxy extends PreviewNotificationTemplate {}
 
 test('contact resource form schema exposes expected fields', function (): void {
     $schema = ContactResource::getFormSchema();
@@ -69,7 +67,7 @@ test('contact resource form schema exposes expected fields', function (): void {
 });
 
 test('edit contact page exposes delete header action', function (): void {
-    $page = new EditContactTestProxy();
+    $page = new EditContactTestProxy;
     $actions = $page->exposedHeaderActions();
 
     expect($actions)->toBeArray()
@@ -78,7 +76,7 @@ test('edit contact page exposes delete header action', function (): void {
 });
 
 test('list contacts page exposes expected table columns and filters', function (): void {
-    $page = new ListContacts();
+    $page = new ListContacts;
 
     $columns = $page->getTableColumns();
     $filters = $page->getTableFilters();
@@ -96,7 +94,7 @@ test('list contacts page exposes expected table columns and filters', function (
 });
 
 test('list mail templates page exposes expected table columns', function (): void {
-    $page = new ListMailTemplates();
+    $page = new ListMailTemplates;
     $columns = $page->getTableColumns();
 
     expect($columns)->toBeArray()
@@ -109,7 +107,7 @@ test('list mail templates page exposes expected table columns', function (): voi
 });
 
 test('preview mail template page title and header actions are configured', function (): void {
-    $page = new PreviewMailTemplateTestProxy();
+    $page = new PreviewMailTemplateTestProxy;
     $actions = $page->exposedHeaderActions();
 
     expect($page->getTitle())->toBeString()
@@ -119,7 +117,7 @@ test('preview mail template page title and header actions are configured', funct
 });
 
 test('list notifications page exposes expected columns and filters', function (): void {
-    $page = new ListNotifications();
+    $page = new ListNotifications;
 
     $columns = $page->getTableColumns();
     $filters = $page->getTableFilters();
@@ -139,7 +137,7 @@ test('list notifications page exposes expected columns and filters', function ()
 });
 
 test('view notification page infolist schema contains section with text entries', function (): void {
-    $page = new ViewNotificationTestProxy();
+    $page = new ViewNotificationTestProxy;
     $schema = $page->exposedInfolistSchema();
 
     expect($schema)->toBeArray()
@@ -207,7 +205,7 @@ test('notification template resource form schema and pages are configured', func
 });
 
 test('preview notification template page exposes title and subheading', function (): void {
-    $page = new PreviewNotificationTemplateTestProxy();
+    $page = new PreviewNotificationTemplateTestProxy;
 
     expect($page->getTitle())->toBeString()
         ->and($page->getSubheading())->toBeString();

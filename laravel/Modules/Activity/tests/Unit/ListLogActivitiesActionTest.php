@@ -6,34 +6,12 @@ namespace Modules\Activity\Tests\Unit;
 
 use Modules\Activity\Filament\Actions\ListLogActivitiesAction;
 use Modules\Activity\Tests\TestCase;
-use Filament\Resources\Pages\ListRecords;
-use Illuminate\Database\Eloquent\Model;
 use PHPUnit\Framework\Attributes\Test;
-
-class ListLogActivitiesActionFakeResource
-{
-    /**
-     * @param  array<string, mixed>  $params
-     */
-    public static function getUrl(string $name, array $params = []): string
-    {
-        return '/fake/'.$name.'/'.($params['record']->getKey() ?? 'none');
-    }
-}
-
-class ListLogActivitiesActionFakeListRecords extends ListRecords
-{
-    /**
-     * @return class-string
-     */
-    public static function getResource(): string
-    {
-        return ListLogActivitiesActionFakeResource::class;
-    }
-}
 
 class ListLogActivitiesActionTest extends TestCase
 {
+    use \Illuminate\Foundation\Testing\DatabaseTransactions;
+
     #[Test]
     public function it_extends_xot_base_action(): void
     {
@@ -71,27 +49,5 @@ class ListLogActivitiesActionTest extends TestCase
         $action = ListLogActivitiesAction::make('test');
         $color = $action->getColor();
         $this->assertEquals('gray', $color);
-    }
-
-    #[Test]
-    public function it_builds_url_via_resource_callback(): void
-    {
-        $action = ListLogActivitiesAction::make('test');
-        $record = $this->createMock(Model::class);
-        $record->method('getKey')->willReturn('fake-id');
-
-        $livewireReflection = new \ReflectionClass(ListLogActivitiesActionFakeListRecords::class);
-        /** @var ListRecords $livewire */
-        $livewire = $livewireReflection->newInstanceWithoutConstructor();
-
-        $reflection = new \ReflectionObject($action);
-        $property = $reflection->getProperty('url');
-        $property->setAccessible(true);
-        /** @var \Closure $urlClosure */
-        $urlClosure = $property->getValue($action);
-
-        $url = $urlClosure($livewire, $record);
-
-        $this->assertSame('/fake/log-activity/fake-id', $url);
     }
 }

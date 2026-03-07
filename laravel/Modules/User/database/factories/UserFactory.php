@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 use Modules\User\Models\User;
 
 /**
@@ -13,11 +13,6 @@ use Modules\User\Models\User;
  */
 class UserFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     *
-     * @var class-string<User>
-     */
     protected $model = User::class;
 
     /**
@@ -28,28 +23,77 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'id' => (string) Str::uuid(),
-            'first_name' => fake()->firstName(),
-            'last_name' => fake()->lastName(),
-            'email' => 'user-'.(string) Str::ulid().'@example.test',
+            'name' => $this->faker->name(),
+            'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'remember_token' => Str::random(10),
-            'is_active' => true,
-            'is_otp' => false,
-            'lang' => 'it',
-            'type' => 'customer_user',
-            'state' => 'active',
+            'password' => Hash::make('password123'),
+            'remember_token' => \Illuminate\Support\Str::random(10),
+            'is_active' => $this->faker->boolean(),
         ];
     }
 
     /**
-     * Indicate that the model's email address should be unverified.
+     * Indicate that the user is active.
+     */
+    public function active(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'is_active' => true,
+        ]);
+    }
+
+    /**
+     * Indicate that the user is inactive.
+     */
+    public function inactive(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'is_active' => false,
+        ]);
+    }
+
+    /**
+     * Indicate that the email is verified.
+     */
+    public function verified(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'email_verified_at' => now(),
+        ]);
+    }
+
+    /**
+     * Indicate that the email is not verified.
      */
     public function unverified(): static
     {
-        return $this->state(fn (array $attributes): array => [
+        return $this->state(fn (array $attributes) => [
             'email_verified_at' => null,
         ]);
+    }
+
+    /**
+     * Configure the factory to create a user with a profile.
+     */
+    public function withProfile(): static
+    {
+        return $this->afterCreating(function (User $user) {
+            $user->profile()->create([
+                'bio' => $this->faker->text(),
+                'avatar' => '/avatars/'.$this->faker->word().'.jpg',
+                'phone' => $this->faker->phoneNumber(),
+            ]);
+        });
+    }
+
+    /**
+     * Configure the factory to create a user for a specific tenant.
+     */
+    public function forTenant($tenant): static
+    {
+        return $this->afterCreating(function (User $user) use ($tenant) {
+            $user->tenant_id = $tenant->id;
+            $user->save();
+        });
     }
 }

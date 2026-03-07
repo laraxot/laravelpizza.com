@@ -30,11 +30,7 @@
 
 | Module | Errors | Files | % of Total |
 |--------|--------|-------|------------|
-<<<<<<< .merge_file_Hakd8k
 | **healthcare_app** | 441 | 68 | 100% of remaining |
-=======
-| **ModuloEsempio** | 441 | 68 | 100% of remaining |
->>>>>>> .merge_file_B1hwEx
 
 ## Detailed Fixes - Xot Module (12 errors → 0)
 
@@ -109,11 +105,7 @@ The User module errors were automatically resolved by:
 
 The module already had proper structure but needed formatting alignment.
 
-<<<<<<< .merge_file_Hakd8k
 ## healthcare_app Module Analysis (441 errors remaining)
-=======
-## ModuloEsempio Module Analysis (441 errors remaining)
->>>>>>> .merge_file_B1hwEx
 
 ### Error Distribution by Type
 
@@ -150,15 +142,9 @@ The module already had proper structure but needed formatting alignment.
 | 10 | app/Filament/Widgets/QuestionChartAnswersWidget.php |
 | 9 | app/Filament/Pages/DashboardV2.php |
 
-<<<<<<< .merge_file_Hakd8k
 **Total**: 267 errors in top 15 files (60.5% of all healthcare_app errors)
 
 ### Common healthcare_app Patterns
-=======
-**Total**: 267 errors in top 15 files (60.5% of all ModuloEsempio errors)
-
-### Common ModuloEsempio Patterns
->>>>>>> .merge_file_B1hwEx
 
 #### 1. Dynamic Property Access
 ```php
@@ -237,11 +223,7 @@ public function getTenants(): Collection {
 }
 ```
 
-<<<<<<< .merge_file_Hakd8k
 ## Recommended healthcare_app Fix Strategy
-=======
-## Recommended ModuloEsempio Fix Strategy
->>>>>>> .merge_file_B1hwEx
 
 ### Phase 1: Fix Base Classes (High Impact)
 Focus on base classes that many widgets/pages extend:
@@ -284,11 +266,7 @@ Fix page-level issues:
 - **Phase 3**: 1 hour (actions)
 - **Phase 4**: 1 hour (pages)
 
-<<<<<<< .merge_file_Hakd8k
 **Total**: 5-7 hours for complete healthcare_app cleanup
-=======
-**Total**: 5-7 hours for complete ModuloEsempio cleanup
->>>>>>> .merge_file_B1hwEx
 
 ## Key Learnings
 
@@ -317,17 +295,10 @@ Fix page-level issues:
 ./vendor/bin/phpstan analyse Modules --memory-limit=-1
 
 # Analyze specific module
-<<<<<<< .merge_file_Hakd8k
 ./vendor/bin/phpstan analyse Modules/healthcare_app --level=10
 
 # Analyze specific file
 ./vendor/bin/phpstan analyse Modules/healthcare_app/app/Filament/Widgets/BaseTableWidget.php --level=10
-=======
-./vendor/bin/phpstan analyse Modules/ModuloEsempio --level=10
-
-# Analyze specific file
-./vendor/bin/phpstan analyse Modules/ModuloEsempio/app/Filament/Widgets/BaseTableWidget.php --level=10
->>>>>>> .merge_file_B1hwEx
 
 # Format code
 ./vendor/bin/pint --dirty
@@ -352,11 +323,7 @@ for m in sorted(by_module.keys(), key=lambda x: by_module[x], reverse=True):
 ./vendor/bin/phpstan analyse Modules --memory-limit=-1 2>&1 | tail -5
 
 # Detailed JSON analysis
-<<<<<<< .merge_file_Hakd8k
 ./vendor/bin/phpstan analyse Modules/healthcare_app --error-format=json > healthcare_app_errors.json
-=======
-./vendor/bin/phpstan analyse Modules/ModuloEsempio --error-format=json > ptvx_errors.json
->>>>>>> .merge_file_B1hwEx
 ```
 
 ## Success Metrics
@@ -376,11 +343,7 @@ for m in sorted(by_module.keys(), key=lambda x: by_module[x], reverse=True):
 - [ ] Add PHPDoc to LimeQuestion model for dynamic properties
 - [ ] Fix Contact.php model (24 errors)
 - [ ] Apply widget pattern fixes across similar files
-<<<<<<< .merge_file_Hakd8k
 - [ ] Document healthcare_app-specific patterns discovered
-=======
-- [ ] Document ModuloEsempio-specific patterns discovered
->>>>>>> .merge_file_B1hwEx
 - [ ] Final verification: 0 errors across all modules
 - [ ] Run Pint formatting on all changed files
 - [ ] Update progress report
@@ -394,11 +357,7 @@ All session work documented in:
 
 ## Conclusion
 
-<<<<<<< .merge_file_Hakd8k
 **Significant Progress**: 4 of 5 modules (80%) are now PHPStan Level 10 compliant with zero errors. The remaining 441 errors are concentrated in a single module (healthcare_app) across 68 files, with 60% of errors in just 15 files.
-=======
-**Significant Progress**: 4 of 5 modules (80%) are now PHPStan Level 10 compliant with zero errors. The remaining 441 errors are concentrated in a single module (ModuloEsempio) across 68 files, with 60% of errors in just 15 files.
->>>>>>> .merge_file_B1hwEx
 
 **High Confidence**: The remaining work is systematic and follows repeatable patterns. BaseTableWidget fix will likely cascade to reduce many widget-related errors.
 
@@ -407,8 +366,4 @@ All session work documented in:
 ---
 
 **Session Completed**: 2025-10-22
-<<<<<<< .merge_file_Hakd8k
 **Ready for Session 3**: Fix healthcare_app module (estimated 5-7 hours)
-=======
-**Ready for Session 3**: Fix ModuloEsempio module (estimated 5-7 hours)
->>>>>>> .merge_file_B1hwEx

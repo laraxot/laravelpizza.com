@@ -17,15 +17,15 @@ it('saves tenant config by merging with existing data', function (): void {
         ->shouldReceive('execute')
         ->with('database.php')
         ->andReturn('/path/to/tenant/database.php');
-        
+
     File::shouldReceive('exists')
         ->with('/path/to/tenant/database.php')
         ->andReturn(true);
-        
+
     File::shouldReceive('getRequire')
         ->with('/path/to/tenant/database.php')
         ->andReturn(['connections' => ['mysql' => ['host' => 'localhost']]]);
-        
+
     $this->mock(SaveArrayAction::class)
         ->shouldReceive('execute')
         ->withArgs(function ($data, $filename) {
@@ -34,7 +34,7 @@ it('saves tenant config by merging with existing data', function (): void {
                    $data['connections']['mysql']['database'] === 'test_db';
         })
         ->once();
-        
+
     $action = app(SaveTenantConfigAction::class);
     $action->execute('database', ['connections' => ['mysql' => ['database' => 'test_db']]]);
 });
@@ -44,16 +44,16 @@ it('saves tenant config when file does not exist', function (): void {
         ->shouldReceive('execute')
         ->with('app.php')
         ->andReturn('/path/to/tenant/app.php');
-        
+
     File::shouldReceive('exists')
         ->with('/path/to/tenant/app.php')
         ->andReturn(false);
-        
+
     $this->mock(SaveArrayAction::class)
         ->shouldReceive('execute')
         ->with(['name' => 'Test App'], '/path/to/tenant/app.php')
         ->once();
-        
+
     $action = app(SaveTenantConfigAction::class);
     $action->execute('app', ['name' => 'Test App']);
 });

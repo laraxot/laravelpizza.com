@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 use Modules\Job\Providers\EventServiceProvider;
+use Modules\Job\Providers\Filament\AdminPanelProvider;
 use Modules\Job\Providers\JobServiceProvider;
 use Modules\Job\Providers\RouteServiceProvider;
-use Modules\Job\Providers\Filament\AdminPanelProvider;
 
 describe('Job Providers Coverage', function () {
     describe('JobServiceProvider', function () {

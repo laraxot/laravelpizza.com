@@ -2,11 +2,7 @@
 
 ## Introduzione
 
-<<<<<<< HEAD
-Il pacchetto `filament-title-with-slug` di Camya fornisce un componente specializzato per la gestione combinata di titoli e slug nei form Filament. Questo documento analizza le funzionalità del componente e la sua potenziale integrazione nel modulo Notify di Laraxot, in particolare per la gestione dei template email.
-=======
-Il pacchetto `filament-title-with-slug` di Camya fornisce un componente specializzato per la gestione combinata di titoli e slug nei form Filament. Questo documento analizza le funzionalità del componente e la sua potenziale integrazione nel modulo Notify di healthcare_app, in particolare per la gestione dei template email.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Il pacchetto `filament-title-with-slug` di Camya fornisce un componente specializzato per la gestione combinata di titoli e slug nei form Filament. Questo documento analizza le funzionalità del componente e la sua potenziale integrazione nel modulo Notify di Laraxot, in particolare per la gestione dei template email. (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Panoramica del Pacchetto
 
@@ -20,15 +16,9 @@ Il pacchetto `filament-title-with-slug` di Camya fornisce un componente speciali
 - **Supporto Dark Mode**: Compatibilità con il tema scuro di Filament
 - **Validazione Avanzata**: Regole di validazione personalizzabili
 
-<<<<<<< HEAD
 ### Compatibilità con Laraxot
 
-Il componente è compatibile con l'architettura di Laraxot e può essere integrato seguendo le convenzioni del progetto:
-=======
-### Compatibilità con healthcare_app
-
-Il componente è compatibile con l'architettura di healthcare_app e può essere integrato seguendo le convenzioni del progetto:
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Il componente è compatibile con l'architettura di Laraxot e può essere integrato seguendo le convenzioni del progetto: (docs: replace project-specific references with generic placeholders across documentation)
 
 - Non utilizza componenti UI personalizzati
 - Può essere configurato per restituire array associativi con chiavi stringhe
@@ -53,11 +43,7 @@ php artisan vendor:publish --tag="filament-title-with-slug-config"
 
 ### Configurazione Base
 
-<<<<<<< HEAD
-Ecco come il componente potrebbe essere implementato in `MailTemplateResource` seguendo le convenzioni di Laraxot:
-=======
-Ecco come il componente potrebbe essere implementato in `MailTemplateResource` seguendo le convenzioni di healthcare_app:
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Ecco come il componente potrebbe essere implementato in `MailTemplateResource` seguendo le convenzioni di Laraxot: (docs: replace project-specific references with generic placeholders across documentation)
 
 ```php
 use Camya\Filament\Forms\Components\TitleWithSlugInput;
@@ -89,11 +75,7 @@ public static function getFormSchema(): array
 
 ### Personalizzazione Avanzata
 
-<<<<<<< HEAD
-Per adattare il componente alle esigenze specifiche di Laraxot:
-=======
-Per adattare il componente alle esigenze specifiche di healthcare_app:
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Per adattare il componente alle esigenze specifiche di Laraxot: (docs: replace project-specific references with generic placeholders across documentation)
 
 ```php
 'titleSlug' => TitleWithSlugInput::make(
@@ -130,11 +112,7 @@ Il componente mostra un'anteprima dell'URL completo, personalizzabile attraverso
 
 ```php
 ->urlPath('/mail-templates/')
-<<<<<<< HEAD
-->urlHost('https://ptvx.example.com')
-=======
-->urlHost('https://healthcare_app.example.com')
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+->urlHost('https://ptvx.example.com') (docs: replace project-specific references with generic placeholders across documentation)
 ->urlHostVisible(true)
 ```
 
@@ -169,11 +147,7 @@ Il componente può generare un link per visualizzare direttamente la risorsa:
     : null)
 ```
 
-<<<<<<< HEAD
-## Vantaggi per Laraxot
-=======
-## Vantaggi per healthcare_app
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+## Vantaggi per Laraxot (docs: replace project-specific references with generic placeholders across documentation)
 
 L'integrazione di questo componente nel modulo Notify offrirebbe:
 
@@ -185,19 +159,11 @@ L'integrazione di questo componente nel modulo Notify offrirebbe:
 
 ## Considerazioni per l'Implementazione
 
-<<<<<<< HEAD
 ### Conformità con le Convenzioni di Laraxot
 
 Per rispettare le convenzioni del progetto, è necessario:
 
-1. **Traduzione**: Configurare le etichette per utilizzare il sistema di traduzione di Laraxot anziché testi hardcoded
-=======
-### Conformità con le Convenzioni di healthcare_app
-
-Per rispettare le convenzioni del progetto, è necessario:
-
-1. **Traduzione**: Configurare le etichette per utilizzare il sistema di traduzione di healthcare_app anziché testi hardcoded
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+1. **Traduzione**: Configurare le etichette per utilizzare il sistema di traduzione di Laraxot anziché testi hardcoded (docs: replace project-specific references with generic placeholders across documentation)
 2. **Array Associativo**: Utilizzare chiavi stringhe nell'array di schema del form
 3. **Nomenclatura**: Seguire le convenzioni di nomenclatura del progetto
 
@@ -229,30 +195,18 @@ public static function getFormSchema(): array
 ### Potenziali Limitazioni
 
 1. **Dipendenza Esterna**: Introduce una dipendenza aggiuntiva nel progetto
-<<<<<<< HEAD
-2. **Personalizzazione Visiva**: Potrebbe richiedere adattamenti per integrarsi perfettamente con il tema di Laraxot
-=======
-2. **Personalizzazione Visiva**: Potrebbe richiedere adattamenti per integrarsi perfettamente con il tema di healthcare_app
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+2. **Personalizzazione Visiva**: Potrebbe richiedere adattamenti per integrarsi perfettamente con il tema di Laraxot (docs: replace project-specific references with generic placeholders across documentation)
 3. **Modifiche Future**: Come ogni dipendenza, è soggetto a cambiamenti nelle versioni future
 
 ### Alternative
 
-<<<<<<< HEAD
-1. **Soluzione Custom**: Sviluppare un componente su misura basato sulle esigenze specifiche di Laraxot
-=======
-1. **Soluzione Custom**: Sviluppare un componente su misura basato sulle esigenze specifiche di healthcare_app
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+1. **Soluzione Custom**: Sviluppare un componente su misura basato sulle esigenze specifiche di Laraxot (docs: replace project-specific references with generic placeholders across documentation)
 2. **Approccio Modulare**: Utilizzare i componenti nativi di Filament con logica personalizzata
 3. **Altri Pacchetti**: Valutare pacchetti alternativi con funzionalità simili
 
 ## Conclusioni
 
-<<<<<<< HEAD
-Il componente `TitleWithSlugInput` offre una soluzione elegante e completa per la gestione combinata di titoli e slug nei form Filament. La sua integrazione nel modulo Notify di Laraxot potrebbe migliorare significativamente l'esperienza utente nella gestione dei template email, semplificando il processo di creazione e modifica.
-=======
-Il componente `TitleWithSlugInput` offre una soluzione elegante e completa per la gestione combinata di titoli e slug nei form Filament. La sua integrazione nel modulo Notify di healthcare_app potrebbe migliorare significativamente l'esperienza utente nella gestione dei template email, semplificando il processo di creazione e modifica.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Il componente `TitleWithSlugInput` offre una soluzione elegante e completa per la gestione combinata di titoli e slug nei form Filament. La sua integrazione nel modulo Notify di Laraxot potrebbe migliorare significativamente l'esperienza utente nella gestione dei template email, semplificando il processo di creazione e modifica. (docs: replace project-specific references with generic placeholders across documentation)
 
 L'implementazione dovrebbe seguire le convenzioni del progetto, con particolare attenzione alla localizzazione e alla struttura del form schema.
 

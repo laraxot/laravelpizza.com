@@ -7,22 +7,23 @@ use Modules\Activity\Tests\TestCase;
 
 uses(TestCase::class);
 
-test('snapshot getConnectionName returns string', function (): void {
-    $model = new Snapshot();
-    $connection = $model->getConnectionName();
+test('snapshot uses default db connection while testing', function (): void {
+    $model = new Snapshot;
 
-    expect($connection)->toBeString()->not->toBeEmpty();
+    expect($model->getConnectionName())->toBe((string) config('database.default'));
 });
 
-test('snapshot connection is activity in non-testing environment', function (): void {
-    $model = new Snapshot();
+test('snapshot returns activity connection outside testing env', function (): void {
+    $model = new Snapshot;
 
-    // When app env is NOT 'testing', model uses its declared connection
-    if (! app()->environment('testing')) {
+    $app = app();
+    $originalEnv = $app['env'];
+
+    try {
+        $app->instance('env', 'local');
+
         expect($model->getConnectionName())->toBe('activity');
-    } else {
-        // In testing env, model uses config('database.default')
-        $default = config('database.default');
-        expect($model->getConnectionName())->toBe(is_string($default) ? $default : 'mysql');
+    } finally {
+        $app->instance('env', $originalEnv);
     }
 });

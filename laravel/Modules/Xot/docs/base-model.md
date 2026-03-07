@@ -70,26 +70,14 @@ abstract class XotBaseModel extends Model
 Each module has its own BaseModel that extends XotBaseModel:
 
 ```php
-<<<<<<< .merge_file_HVxwtm
 // Example from healthcare_app module
-=======
-<<<<<<< HEAD
-// Example from ExternalProject module
-=======
-// Example from ModuloEsempio module
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_MDxGG7
 abstract class BaseModel extends XotBaseModel implements HasMedia, ModelContract
 {
     use Cachable;
     use HasExtraTrait;
     use InteractsWithMedia;
 
-<<<<<<< .merge_file_HVxwtm
     protected $connection = 'healthcare_app'; // Module-specific connection
-=======
-    protected $connection = 'ptvx'; // Module-specific connection
->>>>>>> .merge_file_MDxGG7
 
     protected $with = [
         'extra', // Always load extra fields
@@ -117,15 +105,7 @@ class SurveyPdf extends XotBaseModel // Never do this!
 
 ✅ **CORRECT:**
 ```php
-<<<<<<< .merge_file_HVxwtm
 // In healthcare_app module
-=======
-<<<<<<< HEAD
-// In ExternalProject module
-=======
-// In ModuloEsempio module
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_MDxGG7
 class SurveyPdf extends BaseModel // Extends module's BaseModel
 ```
 

@@ -1,4 +1,4 @@
-# Modulo Xot - Framework Base
+# Xot Module - Framework Base
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
 [![Filament 5.x](https://img.shields.io/badge/Filament-5.x-blue.svg)](https://filamentphp.com/)

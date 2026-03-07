@@ -6,8 +6,8 @@ use Filament\Actions\DeleteAction;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ViewColumn;
 use Filament\Tables\Filters\SelectFilter;
@@ -30,7 +30,7 @@ class EditNotifyThemeTestProxy extends EditNotifyTheme
 }
 
 test('list notification templates page returns empty table columns array', function (): void {
-    $page = new ListNotificationTemplates();
+    $page = new ListNotificationTemplates;
 
     expect($page->getTableColumns())->toBeArray()
         ->and($page->getTableColumns())->toBe([]);
@@ -68,7 +68,7 @@ test('notify theme resource form schema exposes expected components', function (
 });
 
 test('edit notify theme page exposes delete header action', function (): void {
-    $page = new EditNotifyThemeTestProxy();
+    $page = new EditNotifyThemeTestProxy;
     $actions = $page->exposedHeaderActions();
 
     expect($actions)->toBeArray()
@@ -78,7 +78,7 @@ test('edit notify theme page exposes delete header action', function (): void {
 
 test('list notify themes columns and filters are configured', function (): void {
     $columns = ListNotifyThemes::getNotifyThemeTableColumns();
-    $page = new ListNotifyThemes();
+    $page = new ListNotifyThemes;
     $filters = $page->getTableFilters();
 
     expect($columns)->toBeArray()
@@ -97,7 +97,7 @@ test('list notify themes columns and filters are configured', function (): void 
 });
 
 test('linkable relation manager exposes text input form schema', function (): void {
-    $manager = new LinkableRelationManager();
+    $manager = new LinkableRelationManager;
     $schema = $manager->getFormSchema();
 
     expect($schema)->toBeArray()
@@ -110,4 +110,3 @@ test('contact column is a view column with expected name', function (): void {
     expect($column)->toBeInstanceOf(ViewColumn::class)
         ->and($column->getName())->toBe('contact');
 });
-

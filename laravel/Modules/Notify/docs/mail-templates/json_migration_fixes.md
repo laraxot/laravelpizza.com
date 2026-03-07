@@ -119,15 +119,9 @@ if(!$this->hasColumn('subject')) {
 }
 ```
 
-<<<<<<< HEAD
 ## Applicazione a Laraxot
 
-Nel contesto di Laraxot, tutte le migrazioni che coinvolgono la conversione di campi esistenti a JSON devono seguire queste linee guida, in particolare:
-=======
-## Applicazione a healthcare_app
-
-Nel contesto di healthcare_app, tutte le migrazioni che coinvolgono la conversione di campi esistenti a JSON devono seguire queste linee guida, in particolare:
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Nel contesto di Laraxot, tutte le migrazioni che coinvolgono la conversione di campi esistenti a JSON devono seguire queste linee guida, in particolare: (docs: replace project-specific references with generic placeholders across documentation)
 
 1. Le migrazioni per `mail_templates` e tabelle simili
 2. Campi multilingua che utilizzano il trait `HasTranslations`
@@ -138,11 +132,7 @@ Nel contesto di healthcare_app, tutte le migrazioni che coinvolgono la conversio
 È necessario esaminare tutte le migrazioni esistenti per identificare pattern simili di conversione diretta a JSON:
 
 ```bash
-<<<<<<< HEAD
-grep -r "json.*change" /var/www/html/ptvx/laravel/Modules/*/database/migrations/
-=======
-grep -r "json.*change" /var/www/html/healthcare_app/laravel/Modules/*/database/migrations/
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+grep -r "json.*change" /var/www/html/ptvx/laravel/Modules/*/database/migrations/ (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 I problemi più comuni si verificano in migrazioni che coinvolgono campi con traduzioni multilingua o configurazioni serializzate.

@@ -17,7 +17,8 @@ class BaseModelCoverageTest extends TestCase
     #[Test]
     public function casts_returns_array_with_required_keys(): void
     {
-        $concrete = new class extends BaseModel {
+        $concrete = new class extends BaseModel
+        {
             protected $table = 'test_base_coverage';
         };
 
@@ -38,7 +39,8 @@ class BaseModelCoverageTest extends TestCase
     #[Test]
     public function casts_merges_with_parent_casts(): void
     {
-        $concrete = new class extends BaseModel {
+        $concrete = new class extends BaseModel
+        {
             protected $table = 'test_base_coverage_merge';
         };
 

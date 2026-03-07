@@ -26,8 +26,8 @@ use Override;
  */
 abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 {
-    use HasXotTable;
     use HasXotForm;
+    use HasXotTable;
 
     // protected static string $resource;
 

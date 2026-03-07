@@ -17,7 +17,6 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 use Nwidart\Modules\Facades\Module;
 use Nwidart\Modules\Laravel\Module as LaravelModule;
 use Override;
-use PDO;
 
 class TenantServiceProvider extends XotBaseServiceProvider
 {
@@ -122,7 +121,6 @@ class TenantServiceProvider extends XotBaseServiceProvider
             }
         }
 
-       
         $data = Arr::set($data, 'connections', $connections);
         Config::set('database', $data);
 

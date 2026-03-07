@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Database\Eloquent\Model;
-use Modules\Notify\Actions\SendRecordsNotificationAction;
 use Modules\Notify\Actions\SendRecordNotificationAction;
+use Modules\Notify\Actions\SendRecordsNotificationAction;
 use Modules\Notify\Tests\TestCase;
 use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
 
@@ -120,4 +120,3 @@ test('send records notification action falls back to record key when name is mis
     expect($result->errorCount)->toBe(1)
         ->and($result->errors->first()['record'])->toBe('99');
 });
-

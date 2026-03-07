@@ -28,7 +28,7 @@ class StoredEventPolicyTest extends TestCase
         $user = $this->createMock(User::class);
         $user->method('hasPermissionTo')->with('stored_event.view')->willReturn(true);
 
-        $policy = new StoredEventPolicy();
+        $policy = new StoredEventPolicy;
         $this->assertTrue($policy->view($user));
     }
 
@@ -38,7 +38,7 @@ class StoredEventPolicyTest extends TestCase
         $user = $this->createMock(User::class);
         $user->method('hasPermissionTo')->with('stored_event.view')->willReturn(false);
 
-        $policy = new StoredEventPolicy();
+        $policy = new StoredEventPolicy;
         $this->assertFalse($policy->view($user));
     }
 
@@ -58,7 +58,7 @@ class StoredEventPolicyTest extends TestCase
             static fn (string $permission): bool => in_array($permission, $permissions, true)
         );
 
-        $policy = new StoredEventPolicy();
+        $policy = new StoredEventPolicy;
 
         $this->assertTrue($policy->create($user));
         $this->assertTrue($policy->update($user));
@@ -67,4 +67,3 @@ class StoredEventPolicyTest extends TestCase
         $this->assertTrue($policy->forceDelete($user));
     }
 }
-

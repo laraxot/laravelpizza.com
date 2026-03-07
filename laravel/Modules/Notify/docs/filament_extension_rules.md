@@ -57,11 +57,7 @@ class SendSMSPage extends XotBasePage
 Per verificare che tutte le classi seguano questa regola:
 
 ```bash
-<<<<<<< HEAD
-find /var/www/html/ptvx/laravel/Modules -path "*/Filament/*/*.php" -type f -exec grep -l "extends.*Filament" {} \;
-=======
-find /var/www/html/healthcare_app/laravel/Modules -path "*/Filament/*/*.php" -type f -exec grep -l "extends.*Filament" {} \;
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+find /var/www/html/ptvx/laravel/Modules -path "*/Filament/*/*.php" -type f -exec grep -l "extends.*Filament" {} \; (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 Le pagine che violano questa regola devono essere immediatamente corrette per mantenere l'integrità dell'architettura.

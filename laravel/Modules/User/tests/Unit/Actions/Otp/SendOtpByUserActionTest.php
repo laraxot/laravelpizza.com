@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Unit\Actions\Otp;
 
-use Filament\Notifications\Notification as FilamentNotification;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
@@ -21,7 +20,7 @@ describe('SendOtpByUserAction', function () {
     it('generates and sends an OTP to the user', function () {
         // Arrange
         Notification::fake();
-        
+
         $user = User::factory()->create([
             'email' => self::generateUniqueEmail(),
         ]);
@@ -61,9 +60,9 @@ describe('SendOtpByUserAction', function () {
         Notification::assertSentOnDemand(
             Otp::class,
             function ($notification, $channels, $notifiable) use ($user) {
-                return $notifiable->routes['mail'] === $user->email && 
-                       $notification->user->id === $user->id && 
-                       $notification->otp === 'random-otp-12';
+                return $notifiable->routes['mail'] === $user->email
+                       && $notification->user->id === $user->id
+                       && 'random-otp-12' === $notification->code;
             }
         );
 

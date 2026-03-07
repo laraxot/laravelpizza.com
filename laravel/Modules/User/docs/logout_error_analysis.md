@@ -2,11 +2,7 @@
 
 ## Problema Identificato
 
-<<<<<<< HEAD
-Il file `/var/www/html/ptvx/laravel/Themes/One/resources/views/pages/auth/logout.blade.php` presenta un errore fondamentale nella sua implementazione:
-=======
-Il file `/var/www/html/healthcare_app/laravel/Themes/One/resources/views/pages/auth/logout.blade.php` presenta un errore fondamentale nella sua implementazione:
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Il file `/var/www/html/ptvx/laravel/Themes/One/resources/views/pages/auth/logout.blade.php` presenta un errore fondamentale nella sua implementazione: (docs: replace project-specific references with generic placeholders across documentation)
 
 1. **Errore di Sintassi**:
    - Uso errato della direttiva `@volt` quando il file dovrebbe essere una semplice blade template

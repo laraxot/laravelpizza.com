@@ -15,15 +15,7 @@ Il modulo **Notify** è il motore di comunicazione dell'applicazione, fornendo:
 - Code asincrone per invio massivo
 - Sistema template modulare e riutilizzabile
 
-<<<<<<< .merge_file_jkW029
 **Architettura**: Modulo infrastrutturale per comunicazioni; utilizzato da healthcare_app per distribuzione survey.
-=======
-<<<<<<< HEAD
-**Architettura**: Modulo infrastrutturale per comunicazioni; utilizzato da ExternalProject per distribuzione survey.
-=======
-**Architettura**: Modulo infrastrutturale per comunicazioni; utilizzato da ModuloEsempio per distribuzione survey.
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_6hJYMp
 
 ## Stato Attuale Implementazione
 
@@ -236,15 +228,7 @@ Nessuna funzionalità critica mancante - il modulo Notify è ben implementato
 
 ## Collegamenti
 
-<<<<<<< .merge_file_jkW029
 - [Modulo healthcare_app](../healthcare_app/docs/readme.md)
-=======
-<<<<<<< HEAD
-- [Modulo ExternalProject](../<nome progetto>/docs/readme.md)
-=======
-- [Modulo ModuloEsempio](../ptvx/docs/readme.md)
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_6hJYMp
 - [Modulo Limesurvey](../limesurvey/docs/readme.md)
 - [Notify README](./readme.md)
 

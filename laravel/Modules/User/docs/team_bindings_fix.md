@@ -165,11 +165,7 @@ $this->assertTrue($user->belongsToTeam($team));
 - [TeamUser Model](../app/Models/TeamUser.php)
 - [TeamInvitation Model](../app/Models/TeamInvitation.php)
 - [UserServiceProvider](../app/Providers/UserServiceProvider.php)
-<<<<<<< HEAD
-- [Critical Errors Documentation](../../modulo/docs/critical-errors-resolved.md)
-=======
-- [Critical Errors Documentation](../../healthcare_app/docs/critical-errors-resolved.md)
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+- [Critical Errors Documentation](../../modulo/docs/critical-errors-resolved.md) (docs: replace project-specific references with generic placeholders across documentation)
 
 ---
 

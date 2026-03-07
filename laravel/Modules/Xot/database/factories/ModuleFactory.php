@@ -8,44 +8,44 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Xot\Models\Module;
 
 /**
- * Module Factory.
- *
  * @extends Factory<Module>
  */
 class ModuleFactory extends Factory
 {
     protected $model = Module::class;
 
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
     public function definition(): array
     {
         return [
-            'name' => fake()->word(),
-            'slug' => fake()->slug(),
-            'version' => fake()->semver(),
-            'description' => fake()->sentence(),
-            'is_active' => fake()->boolean(80),
-            'priority' => fake()->numberBetween(1, 100),
+            'name' => $this->faker->word(),
+            'enabled' => $this->faker->boolean(),
+            'priority' => $this->faker->randomDigit(),
+            'config' => json_encode(['test' => true]),
         ];
     }
 
-    public function active(): static
+    /**
+     * Indicate that the module is enabled.
+     */
+    public function enabled(): static
     {
-        return $this->state(fn (array $_attributes): array => [
-            'is_active' => true,
+        return $this->state(fn (array $attributes) => [
+            'enabled' => true,
         ]);
     }
 
-    public function inactive(): static
+    /**
+     * Indicate that the module is disabled.
+     */
+    public function disabled(): static
     {
-        return $this->state(fn (array $_attributes): array => [
-            'is_active' => false,
-        ]);
-    }
-
-    public function highPriority(): static
-    {
-        return $this->state(fn (array $_attributes): array => [
-            'priority' => $this->faker->numberBetween(80, 100),
+        return $this->state(fn (array $attributes) => [
+            'enabled' => false,
         ]);
     }
 }
