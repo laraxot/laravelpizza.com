@@ -55,3 +55,7 @@
 ## Dependency Intelligence
 
 - [Dependency intelligence](dependency-intelligence.md)
+
+## Docs Governance
+
+- [Docs Health](./docs-health.md) - Stato qualità docs, checklist di confidenza e prossime azioni di manutenzione.

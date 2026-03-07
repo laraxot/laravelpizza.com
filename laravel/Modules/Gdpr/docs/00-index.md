@@ -36,3 +36,7 @@
 - Riferimento globale: [Pre-Edit Docs-First Rule](../../../../docs/rules/pre-edit-docs-first-rule.md)
 - Memory: [Pre-Edit Docs-First Memory](../../../../docs/memory/pre-edit-docs-first-memory.md)
 - Skill: [Pre-Edit Docs-First Skill](../../../../docs/skills/pre-edit-docs-first-skill.md)
+
+## Docs Governance
+
+- [Docs Health](./docs-health.md) - Stato qualità docs, checklist di confidenza e prossime azioni di manutenzione.

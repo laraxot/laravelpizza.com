@@ -69,3 +69,7 @@
 - Memory: [Coverage 100% Full-Project Memory](../../../../docs/memory/coverage-100-full-project-memory.md)
 - Skill: [Coverage 100% Full-Project Skill](../../../../docs/skills/coverage-100-full-project-skill.md)
 - Reference: [Pest coverage/type coverage + Laravel Modules tests](../../../../docs/testing/pest-coverage-type-coverage-laravel-modules-reference-2026-03-04.md)
+
+## Docs Governance
+
+- [Docs Health](./docs-health.md) - Stato qualità docs, checklist di confidenza e prossime azioni di manutenzione.

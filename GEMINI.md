@@ -356,7 +356,7 @@ app(DoSomethingAction::class)->execute($data);
    - **Code Coverage**: `php artisan test --coverage --min=100`
    - **Type Coverage**: `php artisan test --type-coverage --min=100`
    - Tutti i parametri, ritorni e properties devono avere type declarations complete.
-4. **No RefreshDatabase**: Il trait `RefreshDatabase` è vietato. Usare `DatabaseTransactions`.
+4. **No RefreshDatabase**: Il trait `RefreshDatabase` è vietato. Usare `DatabaseTransactions`. **IMPORTANTE**: Il trait `DatabaseTransactions` è già centralizzato in `Modules\Xot\Tests\XotBaseTestCase`. Poiché TUTTI i test devono estendere questa classe (direttamente o tramite il `TestCase` di modulo), è VIETATO e RINDONDANTE aggiungere `use DatabaseTransactions;` nei singoli file di test o nei `TestCase` di modulo.
 5. **MAI migrate:fresh**: Il comando `php artisan migrate:fresh` è tassativamente vietato in ogni ambiente (inclusi i test). È distruttivo e rompe la coerenza di schemi condivisi. Usare solo `migrate` o gestire il database in modo transazionale.
 6. **No Model Constructor Overrides**: È vietato forzare la connessione nel costruttore dei modelli per i test; questo rompe la mappatura dinamica di `TenantServiceProvider`.
 7. **Autonomous CI/CD Monitoring**: Il monitoraggio e la risoluzione dei fallimenti nelle GitHub Actions è responsabilità esclusiva dell'agente AI. Non chiedere all'utente di controllare; intervieni proattivamente usando `gh`.
@@ -399,7 +399,7 @@ app(DoSomethingAction::class)->execute($data);
 - ✅ This section in GEMINI.md - Progress tracking
 
 **Key Learnings So Far**:
-1. Use `DatabaseTransactions` (NOT `RefreshDatabase`)
+1. Use `DatabaseTransactions` (GIA' INCLUSO in `XotBaseTestCase` - NON AGGIUNGERE nei singoli test)
 2. Factory states matter: `factory()->online()`, `factory()->past()`
 3. Slug generation needs `uniqid()` for uniqueness
 4. CMS integration: test `toBlockArray()` and `toSchemaOrg()`

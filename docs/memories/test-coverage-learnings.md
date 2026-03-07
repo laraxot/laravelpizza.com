@@ -33,22 +33,26 @@ $this->assertNotNull($pivot->created_at);
 
 ---
 
-### 2. DatabaseTransactions is Essential
+### 2. DatabaseTransactions is Centralized (CRITICAL DRY)
 
-**Discovery:** Must use `DatabaseTransactions` trait, NEVER `RefreshDatabase`.
+**Discovery:** `DatabaseTransactions` trait is already included in `Modules\Xot\Tests\XotBaseTestCase`.
 
-**Why:**
-- RefreshDatabase is forbidden (rule in GEMINI.md)
-- DatabaseTransactions rolls back changes per test
-- Allows for faster parallel testing
-- Preserves test isolation
+**Key Rule:**
+- **NEVER** add `use DatabaseTransactions;` to module `TestCase` files or individual tests.
+- This avoids trait collision and keeps tests DRY.
+- All tests MUST extend the module's `TestCase` (which extends `XotBaseTestCase`).
 
 **Pattern:**
 ```php
-use DatabaseTransactions;  // ✅ Correct
+// ❌ Redundant
+class SomeTest extends TestCase {
+    use DatabaseTransactions; 
+}
 
-// NOT:
-use RefreshDatabase;  // ❌ Forbidden
+// ✅ Correct
+class SomeTest extends TestCase {
+    // Already has DatabaseTransactions via TestCase -> XotBaseTestCase
+}
 ```
 
 ---
@@ -176,7 +180,7 @@ use PHPUnit\Framework\Attributes\Test;
 
 class {Model}Test extends TestCase
 {
-    use DatabaseTransactions;
+    // NO DatabaseTransactions trait here! Already in XotBaseTestCase
 
     #[Test]
     public function model_can_be_instantiated(): void
@@ -214,7 +218,7 @@ use PHPUnit\Framework\Attributes\Test;
 
 class {Action}Test extends TestCase
 {
-    use DatabaseTransactions;
+    // NO DatabaseTransactions trait here! Already in XotBaseTestCase
 
     #[Test]
     public function action_executes_with_valid_data(): void
