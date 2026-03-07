@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Unit\Models;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Meetup\Models\Event;
 use Modules\Meetup\Models\Venue;
 use Modules\Meetup\Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('Venue Model', function (): void {
     test('it can create a venue with valid data', function (): void {

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit\Actions;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Activity\Actions\LogModelCreatedAction;
 use Modules\Activity\Actions\LogModelUpdatedAction;
 use Modules\Activity\Actions\LogModelDeletedAction;
@@ -13,7 +12,7 @@ use Modules\Activity\Models\Activity;
 use Modules\User\Models\User;
 use Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('Activity Lifecycle Actions', function () {
     

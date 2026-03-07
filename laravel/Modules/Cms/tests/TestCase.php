@@ -15,15 +15,12 @@ use Modules\Xot\Tests\XotBaseTestCase;
  */
 abstract class TestCase extends XotBaseTestCase
 {
-<<<<<<< HEAD
     /** @var array<int, string> */
-    protected $connectionsToTransact = [
+    protected array $connectionsToTransact = [
         'mysql',
         'user',
     ];
 
-=======
->>>>>>> e1ecbe9 (.)
     /**
      * @return array<int, class-string<\Illuminate\Support\ServiceProvider>>
      */

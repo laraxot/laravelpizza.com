@@ -3,6 +3,14 @@
 **Defined:** 2026-03-05
 **Core Value:** Providing a robust, accessible, and community-driven platform for Italian Laravel developers to discover, register for, and manage meetup events.
 
+## Program Alignment (Dual-Track)
+
+This file is the **Track A (Product Delivery)** source of truth.
+
+- Track A (this file): user-facing capabilities and business requirements.
+- Track B (quality): coverage/type-coverage roadmap in `.planning/ROADMAP.md`.
+- Shared governance model and capacity split are defined in `.planning/PROJECT.md`.
+
 ## v1 Requirements
 
 Requirements for initial release. Each maps to roadmap phases.

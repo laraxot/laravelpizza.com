@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Unit\Models;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Meetup\Models\Event;
 use Modules\Meetup\Models\EventPerformer;
 use Modules\Meetup\Models\EventSponsor;
@@ -12,7 +11,7 @@ use Modules\Meetup\Models\EventUser;
 use Modules\Meetup\Tests\TestCase;
 use Modules\User\Models\User;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 test('event user model works', function () {
     $user = User::factory()->create();

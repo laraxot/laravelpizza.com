@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\User\Tests;
 
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Schema;
 use Modules\Xot\Tests\XotBaseTestCase;
 
@@ -16,11 +15,12 @@ use Modules\Xot\Tests\XotBaseTestCase;
  * All module connections are mapped by TenantServiceProvider.
  * Migrations must be run ONCE externally: php artisan migrate --env=testing
  * DatabaseTransactions handles rollback between tests.
+ *
+ * NOTE: DatabaseTransactions trait is already included in XotBaseTestCase.
+ * Do NOT add it again - it would be redundant.
  */
 abstract class TestCase extends XotBaseTestCase
 {
-    use DatabaseTransactions;
-
     protected static bool $userSchemaBootstrapped = false;
 
     /**

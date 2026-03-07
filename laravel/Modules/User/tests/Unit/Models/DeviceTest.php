@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Unit\Models;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\User\Models\Device;
 use Modules\User\Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 beforeEach(function (): void {
     // Skip all Device tests if factory columns don't match the table schema

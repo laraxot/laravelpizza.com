@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Meetup\Actions\Event\CreateEventAction;
 use Modules\Meetup\Actions\Event\DeleteEventAction;
 use Modules\Meetup\Actions\Event\UpdateEventAction;
@@ -12,7 +11,7 @@ use Modules\Meetup\Models\Event;
 use Modules\Meetup\Tests\TestCase;
 use Modules\User\Models\User;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 // ---------------------------------------------------------------------------
 // Helpers

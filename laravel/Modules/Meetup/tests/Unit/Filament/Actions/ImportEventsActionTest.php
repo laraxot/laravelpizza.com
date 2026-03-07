@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Unit\Filament\Actions;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Meetup\Actions\Event\ImportEventsFromJsonAction;
 use Modules\Meetup\Filament\Actions\ImportEventsAction;
 use Modules\Meetup\Models\Event;
 use Modules\Meetup\Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 test('it can instantiate import events action', function () {
     $action = ImportEventsAction::make();

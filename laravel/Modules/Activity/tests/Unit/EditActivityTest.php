@@ -5,21 +5,11 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit;
 
 use Modules\Activity\Filament\Resources\ActivityResource\Pages\EditActivity;
-<<<<<<< HEAD
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 class EditActivityTest extends TestCase
 {
-    use \Illuminate\Foundation\Testing\DatabaseTransactions;
-=======
-use PHPUnit\Framework\Attributes\Test;
-use Modules\Activity\Tests\TestCase;
-
-class EditActivityTest extends TestCase
-{
->>>>>>> a21dc33d (.)
-
     #[Test]
     public function edit_activity_extends_xot_base_edit_record(): void
     {
@@ -40,8 +30,6 @@ class EditActivityTest extends TestCase
             $page::getResource()
         );
     }
-<<<<<<< HEAD
-=======
 
     #[Test]
     public function edit_activity_exposes_delete_header_action(): void
@@ -57,5 +45,4 @@ class EditActivityTest extends TestCase
 
         $this->assertArrayHasKey('delete', $actions);
     }
->>>>>>> a21dc33d (.)
 }

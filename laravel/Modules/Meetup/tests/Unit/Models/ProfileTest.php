@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Unit\Models;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Meetup\Models\Profile;
 use Modules\Meetup\Tests\TestCase;
 use Illuminate\Support\Str;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 test('profile model uses meetup connection', function () {
     $profile = new Profile();

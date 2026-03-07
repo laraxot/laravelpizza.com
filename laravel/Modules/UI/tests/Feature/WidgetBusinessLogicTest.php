@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Livewire\Livewire;
 use Modules\UI\Filament\Widgets\GroupWidget;
 use Modules\UI\Filament\Widgets\HeroWidget;
@@ -14,7 +13,7 @@ use Modules\UI\Filament\Widgets\StatWithIconWidget;
 use Modules\UI\Filament\Widgets\TestChartWidget;
 use Modules\UI\Filament\Widgets\UserCalendarWidget;
 
-uses(Tests\TestCase::class, DatabaseTransactions::class);
+uses(Tests\TestCase::class);
 
 it('row widget can render correctly', function (): void {
     // Arrange

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Feature;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Activity\Actions\ActivityLogger;
 use Modules\Activity\Actions\LogActivityAction;
 use Modules\Activity\Actions\LogModelCreatedAction;
@@ -17,7 +16,7 @@ use Modules\User\Models\User;
 use Tests\TestCase;
 use Illuminate\Database\Eloquent\Model;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 beforeEach(function (): void {
     $this->user = User::factory()->create(['name' => 'Test User']);

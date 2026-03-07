@@ -2,12 +2,11 @@
 
 declare(strict_types=1);
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Activity\Actions\RestoreActivityAction;
 use Modules\User\Models\User;
 use Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('RestoreActivityAction', function (): void {
     it('restores a record using old properties', function (): void {

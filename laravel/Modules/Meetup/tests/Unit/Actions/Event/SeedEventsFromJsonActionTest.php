@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Unit\Actions\Event;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\File;
 use Modules\Meetup\Actions\Event\SeedEventsFromJsonAction;
 use Modules\Meetup\Models\Event;
 use Modules\Meetup\Tests\TestCase;
 use Mockery;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 test('it can seed events from json file', function () {
     $tempFile = tempnam(sys_get_temp_dir(), 'events_test') . '.json';

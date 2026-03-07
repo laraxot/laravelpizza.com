@@ -88,9 +88,6 @@ class PassportServiceProvider extends ServiceProvider
     /**
      * Configura i modelli personalizzati.
      */
-    /**
-     * Configura i modelli personalizzati.
-     */
     protected function configureModels(): void
     {
         $models = config('user.passport.models', []);
@@ -98,19 +95,27 @@ class PassportServiceProvider extends ServiceProvider
 
         $tokenModel = $models['token'] ?? OauthToken::class;
         Assert::stringNotEmpty($tokenModel);
-        Assert::subclassOf($tokenModel, \Laravel\Passport\Token::class);
+        if (is_string($tokenModel)) {
+            Assert::subclassOf($tokenModel, \Laravel\Passport\Token::class);
+        }
 
         $refreshTokenModel = $models['refresh_token'] ?? OauthRefreshToken::class;
         Assert::stringNotEmpty($refreshTokenModel);
-        Assert::subclassOf($refreshTokenModel, \Laravel\Passport\RefreshToken::class);
+        if (is_string($refreshTokenModel)) {
+            Assert::subclassOf($refreshTokenModel, \Laravel\Passport\RefreshToken::class);
+        }
 
         $authCodeModel = $models['auth_code'] ?? OauthAuthCode::class;
         Assert::stringNotEmpty($authCodeModel);
-        Assert::subclassOf($authCodeModel, \Laravel\Passport\AuthCode::class);
+        if (is_string($authCodeModel)) {
+            Assert::subclassOf($authCodeModel, \Laravel\Passport\AuthCode::class);
+        }
 
         $clientModel = config('user.passport.client_model', OauthClient::class);
         Assert::stringNotEmpty($clientModel);
-        Assert::subclassOf($clientModel, \Laravel\Passport\Client::class);
+        if (is_string($clientModel)) {
+            Assert::subclassOf($clientModel, \Laravel\Passport\Client::class);
+        }
 
         Passport::useTokenModel($tokenModel);
         Passport::useRefreshTokenModel($refreshTokenModel);

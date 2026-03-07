@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Feature\Models;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
 use Modules\User\Models\SocialiteUser;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('User Model', function (): void {
     test('can create user with factory', function (): void {

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Geo\Tests\Support\EnsuresGeoDatabaseSchema;
 use Modules\Xot\Tests\XotBaseTestCase;
 
@@ -12,10 +11,12 @@ use Modules\Xot\Tests\XotBaseTestCase;
  * Base test case for Geo module.
  *
  * Extends XotBaseTestCase (DRY + KISS + Laraxot).
+ *
+ * NOTE: DatabaseTransactions trait is already included in XotBaseTestCase.
+ * Do NOT add it again - it would be redundant.
  */
 abstract class TestCase extends XotBaseTestCase
 {
-    use DatabaseTransactions;
     use EnsuresGeoDatabaseSchema;
 
     /** @var array<int, string> */

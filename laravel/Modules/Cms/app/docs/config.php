@@ -1,16 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-declare(strict_types=1);
-
-=======
->>>>>>> e1ecbe9 (.)
-||||||| parent of 6c6798449 (.)
-=======
-declare(strict_types=1);
-
->>>>>>> 6c6798449 (.)
 use Illuminate\Support\Str;
 
 $moduleName = 'Cms';
@@ -25,38 +14,15 @@ return [
     'collections' => [
         'posts' => [
             'path' => function ($page) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                // return $page->lang.'/posts/'.Str::slug($page->getFilename());
-                // return 'posts/' . ($page->featured ? 'featured/' : '') . Str::slug($page->getFilename());
-=======
                 //return $page->lang.'/posts/'.Str::slug($page->getFilename());
                 //return 'posts/' . ($page->featured ? 'featured/' : '') . Str::slug($page->getFilename());
->>>>>>> e1ecbe9 (.)
-||||||| parent of 6c6798449 (.)
-                //return $page->lang.'/posts/'.Str::slug($page->getFilename());
-                //return 'posts/' . ($page->featured ? 'featured/' : '') . Str::slug($page->getFilename());
-=======
-                // return $page->lang.'/posts/'.Str::slug($page->getFilename());
-                // return 'posts/' . ($page->featured ? 'featured/' : '') . Str::slug($page->getFilename());
->>>>>>> 6c6798449 (.)
 
                 return 'posts/'.Str::slug($page->getFilename());
             },
         ],
         'docs' => [
             'path' => function ($page) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                // return $page->lang.'/docs/'.Str::slug($page->getFilename());
-=======
                 //return $page->lang.'/docs/'.Str::slug($page->getFilename());
->>>>>>> e1ecbe9 (.)
-||||||| parent of 6c6798449 (.)
-                //return $page->lang.'/docs/'.Str::slug($page->getFilename());
-=======
-                // return $page->lang.'/docs/'.Str::slug($page->getFilename());
->>>>>>> 6c6798449 (.)
                 return 'docs/'.Str::slug($page->getFilename());
             },
         ],
@@ -67,17 +33,7 @@ return [
     'docsearchIndexName' => env('DOCSEARCH_INDEX'),
 
     // navigation menu
-<<<<<<< HEAD
-<<<<<<< HEAD
-    'navigation' => require_once ('navigation.php'),
-=======
     'navigation' => require_once('navigation.php'),
->>>>>>> e1ecbe9 (.)
-||||||| parent of 6c6798449 (.)
-    'navigation' => require_once('navigation.php'),
-=======
-    'navigation' => require_once ('navigation.php'),
->>>>>>> 6c6798449 (.)
 
     // helpers
     'isActive' => function ($page, $path) {
@@ -92,17 +48,7 @@ return [
                 return trimPath($page->getPath()) == trimPath($child);
             });
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }, /*
-=======
     },/*
->>>>>>> e1ecbe9 (.)
-||||||| parent of 6c6798449 (.)
-    },/*
-=======
-    }, /*
->>>>>>> 6c6798449 (.)
     'url' => function ($page, $path) {
         return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
     },
@@ -111,33 +57,11 @@ return [
         if (Str::startsWith($path, 'http')) {
             return $path;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        // return url('/'.$page->lang.'/'.trimPath($path));
-=======
          //return url('/'.$page->lang.'/'.trimPath($path));
->>>>>>> e1ecbe9 (.)
-||||||| parent of 6c6798449 (.)
-         //return url('/'.$page->lang.'/'.trimPath($path));
-=======
-
-        // return url('/'.$page->lang.'/'.trimPath($path));
->>>>>>> 6c6798449 (.)
         return url('/'.trimPath($path));
     },
 
     'children' => function ($page, $docs) {
         return $docs->where('parent_id', $page->id);
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
 ];
-=======
-];
->>>>>>> e1ecbe9 (.)
-||||||| parent of 6c6798449 (.)
-];
-=======
-];
->>>>>>> 6c6798449 (.)

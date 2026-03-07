@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\UI\Tests\Unit\Models;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\UI\Models\Collection;
 use Modules\UI\Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('Collection Model', function (): void {
     test('it can create a collection with valid data', function (): void {

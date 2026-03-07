@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Unit\Models;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Carbon;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
@@ -12,7 +11,7 @@ use Modules\Meetup\Models\Event;
 use Modules\Meetup\Tests\TestCase;
 use Modules\User\Models\User;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 test('it can create an event and has correct defaults', function () {
     $event = Event::factory()->create([

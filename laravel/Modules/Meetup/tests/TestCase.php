@@ -20,7 +20,7 @@ abstract class TestCase extends XotBaseTestCase
     protected static bool $meetupSchemaBootstrapped = false;
 
     /** @var array<int, string> */
-    protected $connectionsToTransact = [
+    protected array $connectionsToTransact = [
         'mysql',
         'meetup',
         'user',

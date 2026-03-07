@@ -5,20 +5,11 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit;
 
 use Modules\Activity\Filament\Pages\Concerns\CanPaginate;
-<<<<<<< HEAD
 use Modules\Activity\Tests\TestCase;
-=======
-use PHPUnit\Framework\TestCase;
->>>>>>> a21dc33d (.)
 use PHPUnit\Framework\Attributes\Test;
 
 class CanPaginateTest extends TestCase
 {
-<<<<<<< HEAD
-    use \Illuminate\Foundation\Testing\DatabaseTransactions;
-=======
->>>>>>> a21dc33d (.)
-
     #[Test]
     public function trait_exists(): void
     {

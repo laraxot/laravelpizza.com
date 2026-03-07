@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Modules\User\Actions\Passport\RevokeAllUserTokensAction;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('RevokeAllUserTokensAction', function (): void {
     test('revokes all user tokens', function (): void {

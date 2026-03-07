@@ -5,60 +5,62 @@
 Raggiungere 100% su:
 
 1. `pest --coverage`
-2. `pest --type-coverage` (plugin)
+2. `pest --type-coverage`
 
-## Baseline corrente (2026-03-04)
+## Baseline coordinata (2026-03-06)
 
-- Suite globale eseguita: `1610 passed`.
-- Coverage globale non valida: `Total 0.0%` per perimetro `source` troppo ampio e non filtrato (molti file non target coverage).
-- Type coverage non disponibile: plugin non installato (`pest-plugin-type-coverage` assente).
-- GitHub issue/discussion non aggiornabili da CLI per token `gh` invalido.
+- Issue/Discussion GitHub operative per governance coverage.
+- Programma in modalita dual-track (allineamento #219 / #229).
+- Integrita metrica vincolata a perimetro source runtime completo.
 
-## Baseline coordinamento (2026-03-06)
+## Policy ufficiale di misurazione
 
-- Issue GitHub: operative (epic/program aggiornati).
-- Discussion GitHub: operativa via `gh api graphql`.
-- Project GitHub: bloccato da scope mancante `read:project`.
-- Wiki GitHub: non gestibile da comando dedicato in questa build `gh`.
-- Fallback attivo:
-  - tracking decisionale in `docs/memory/coverage-100-full-project-memory.md`;
-  - tracking tecnico in `laravel/storage/app/private/coverage/coordination-log.md`.
+### 1) Source scope (globale)
 
-## Strategia in 5 fasi
+`laravel/phpunit.xml` deve includere runtime code e basta:
 
-1. **Perimetro coverage corretto**
-- In `phpunit.xml` includere solo codice runtime PHP.
-- Escludere file non target coverage (view blade, stubs/template, config di modulo, docs, test fixture non runtime).
-- Verificare con `./vendor/bin/pest --coverage --exactly=0` che il perimetro sia sensato solo per debug iniziale.
+- `./Modules/*/app`
+- opzionale: `./app`, `./Themes/*/app` se presenti e runtime.
 
-2. **Warning zero**
-- Comando: `./vendor/bin/pest --stop-on-warning`
-- Fix one-by-one fino a `0 warning`.
+Esclusioni obbligatorie: `config`, `database`, `lang`, `routes`, `resources`, `tests`, `workbench`, file tool-only.
 
-3. **Perimetro test coerente**
-- Mantenere testsuite root + moduli con struttura `Modules/*/tests/*` (Unit/Feature/Integration/Performance).
-- Test legacy non recuperabili nel ciclo corrente: rename `.old`.
+### 2) Comandi riproducibili
 
-4. **Copertura rami mancanti**
-- Eseguire `./vendor/bin/pest --coverage --compact`.
-- Scrivere test mirati su branch non coperti (if/else, eccezioni, fallback, policy/provider/traits).
+Eseguire da `laravel/`.
 
-5. **Type coverage**
-- Installare plugin dedicato e poi eseguire:
-- `./vendor/bin/pest --type-coverage --compact`
-- `./vendor/bin/pest --type-coverage --min=100`
+- Global coverage baseline:
+  - `./vendor/bin/pest --coverage --min=0 --compact`
+- Per modulo (esempio User):
+  - `./vendor/bin/pest Modules/User/tests --coverage --min=0 --compact`
+- Global type coverage baseline:
+  - `./vendor/bin/pest --type-coverage --min=0 --compact`
+- Gate finale globale:
+  - `./vendor/bin/pest --coverage --min=100`
+  - `./vendor/bin/pest --type-coverage --min=100`
 
-6. **Gate finale**
-- `./vendor/bin/pest --coverage --min=100`
-- `./vendor/bin/pest --coverage --exactly=100`
-- `./vendor/bin/pest --type-coverage --min=100`
+### 3) Report minimo per aggiornamento modulo
+
+Ogni update su issue modulo deve includere:
+
+- Coverage % corrente
+- Gap a 100%
+- File/classi toccate
+- Prossimo micro-batch
+- Blocker
+
+## Strategia operativa
+
+1. **Integrita perimetro**: prima validare source scope, poi leggere le percentuali.
+2. **Warning zero**: `./vendor/bin/pest --stop-on-warning`.
+3. **Branch uncovered**: test mirati su if/else, eccezioni, fallback, policy/provider/traits.
+4. **Type coverage**: mantenere policy in parallelo alla coverage line.
+5. **Gate finale**: applicare `--min=100` solo dopo baseline stabile.
 
 ## Regole operative
 
 - Nessun nuovo skip nei test attivi.
-- Ogni rename `.old` va motivato nel commit/changelog.
-- Ogni iterazione aggiorna docs/rules/memory/skill coverage.
-- Eseguire coverage con driver attivo (Xdebug/PCOV/phpdbg); con Xdebug usare `XDEBUG_MODE=coverage`.
+- Ogni rename `.old` deve essere motivato in issue/comment release.
+- Ogni iterazione aggiorna issue + discussion correlate (governance multi-agent).
 
 ## Fonti ufficiali
 

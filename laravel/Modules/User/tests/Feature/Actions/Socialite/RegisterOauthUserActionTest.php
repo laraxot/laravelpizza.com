@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\User\Tests\Feature\Actions\Socialite;
 
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Actions\Socialite\RegisterOauthUserAction;
 use Modules\User\Events\Registered;
@@ -13,7 +12,7 @@ use Modules\User\Models\SocialiteUser;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('RegisterOauthUserAction', function (): void {
     $getMockUser = static function (array $attributes = []): SocialiteUserContract {

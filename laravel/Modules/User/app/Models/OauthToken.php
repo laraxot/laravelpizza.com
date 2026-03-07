@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Laravel\Passport\Token as PassportToken;
 use Modules\Xot\Contracts\UserContract;
@@ -57,30 +58,33 @@ class OauthToken extends PassportToken
     /**
      * Get the user associated with this token.
      * Override Passport's user() to handle null provider gracefully.
+     *
+     * @return BelongsTo<\Illuminate\Foundation\Auth\User, $this>
      */
-    public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function user(): BelongsTo
     {
         $provider = $this->getTokenGuardProvider();
 
         if (null === $provider) {
-            return $this->belongsTo(
-                config('auth.guards.api.provider') ?? User::class,
-                'user_id'
-            );
+            $userClass = config('auth.guards.api.provider') ?? User::class;
+        } else {
+            $userClass = config("auth.providers.{$provider}.model", User::class);
         }
 
-        return $this->belongsTo(
-            config("auth.providers.{$provider}.model", User::class),
-            'user_id'
-        );
+        /** @var class-string<\Illuminate\Foundation\Auth\User> $userClass */
+        return $this->belongsTo($userClass, 'user_id');
     }
 
     /**
      * Get the token guard provider.
+     *
+     * @return string|null
      */
     protected function getTokenGuardProvider(): ?string
     {
-        foreach (config('auth.guards', []) as $guard => $config) {
+        /** @var array<string, array{driver?: string, provider?: string}> $guards */
+        $guards = config('auth.guards', []);
+        foreach ($guards as $guard => $config) {
             if (($config['driver'] ?? null) === 'passport') {
                 return $config['provider'] ?? null;
             }

@@ -2,13 +2,12 @@
 
 declare(strict_types=1);
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Enums\RepeatFrequency;
 use Modules\Meetup\Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 // ---------------------------------------------------------------------------
 // EventStatus

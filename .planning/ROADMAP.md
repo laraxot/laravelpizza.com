@@ -4,6 +4,16 @@
 **Granularity:** Fine (8-12 phases)
 **Core Value:** Ship tested, type-safe code with 100% coverage — every line executable and verified, eliminating untested paths as a source of bugs.
 
+## Program Alignment (Dual-Track)
+
+This file is the **Track B (Quality/Coverage)** roadmap.
+
+- Track A (Product Delivery) is governed by `.planning/REQUIREMENTS.md`.
+- Track B (Quality Delivery) is governed by this roadmap.
+- Global program coordination is defined in `.planning/PROJECT.md`.
+
+Default weekly capacity split: **60% Track B / 40% Track A**, unless priority:critical product incidents require temporary override.
+
 ---
 
 ## Phases

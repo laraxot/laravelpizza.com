@@ -28,3 +28,34 @@ Durante il riallineamento dei test del modulo Activity è emersa duplicazione tr
 
 - `Modules/Activity/tests/TestCase.php` può delegare il trait al base.
 - Altri moduli possono mantenere override connessioni senza regressioni.
+
+## Correzione 06-03-2026
+
+**ERRORE CORRETTO**: Diversi file TestCase modulo contenevano ridondanza:
+```php
+// SBAGLIATO - ridondante!
+abstract class TestCase extends XotBaseTestCase
+{
+    use DatabaseTransactions;  // GIA' presente in XotBaseTestCase!
+}
+```
+
+**Moduli corretti:**
+1. Activity/tests/TestCase.php
+2. User/tests/TestCase.php
+3. Geo/tests/TestCase.php
+4. Gdpr/tests/TestCase.php
+
+**CORRETTO**:
+```php
+// CORRETTO - senza ridondanza
+abstract class TestCase extends XotBaseTestCase
+{
+    // DatabaseTransactions gia' incluso in XotBaseTestCase
+}
+```
+
+Questa regola è documentata in `docs/rules/testing-standards.md` (regola #4).
+
+### REGOLA MEMORizzATA
+**MAI aggiungere `use DatabaseTransactions;` nei TestCase dei moduli** - è già centralizzato in `XotBaseTestCase`. Verificare SEMPRE prima di aggiungere qualsiasi trait.

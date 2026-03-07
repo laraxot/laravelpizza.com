@@ -7,9 +7,8 @@ namespace Modules\Meetup\Tests\Unit\Filament\Widgets;
 use Modules\Meetup\Filament\Widgets\CalendarWidget;
 use Modules\Meetup\Models\Event;
 use Modules\Meetup\Tests\TestCase;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 test('it can instantiate calendar widget', function () {
     $widget = new CalendarWidget();

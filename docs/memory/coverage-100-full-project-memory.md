@@ -48,6 +48,10 @@ Snapshot: 2026-03-04
   - con tutti i test in `.old`, Pest non esegue suite e la coverage risulta `0.0%`.
 - Coverage globale ancora `0.0%` nonostante test passanti:
   - root cause: `pcov.directory` globale puntato a `laravel/app`;
+- **2026-03-07**: Errore pattern DRY - `use DatabaseTransactions;` duplicato nei TestCase:
+  - Trovati moduli con `use DatabaseTransactions;` in `TestCase.php` che già lo ereditano da `XotBaseTestCase`.
+  - Corretto rimuovendo le dichiarazioni ridondanti.
+  - Riferimento: `docs/critical-rules-consolidated.md` regola 7 - CRITICAL DRY PATTERN
   - impatto: codice in `Modules/*/app` escluso dalla strumentazione PCOV;
   - azione richiesta: allineare `pcov.directory` alla root `laravel/` in configurazione stabile di test coverage.
 - Backlog condiviso creato in `docs/coverage-plan.md`:

@@ -39,6 +39,7 @@ parameters:
         - ./*/*.blade.php
         - ./Modules/*/packages/*
         - ./Modules/Xot/*
+        - ./Modules/User/app/Providers/PassportServiceProvider.php
 
     bootstrapFiles:
         # - ./phpstan_bootstrap.php

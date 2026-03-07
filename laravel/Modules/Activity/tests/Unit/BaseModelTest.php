@@ -5,20 +5,11 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit;
 
 use Modules\Activity\Models\BaseModel;
-<<<<<<< HEAD
 use Modules\Activity\Tests\TestCase;
-=======
-use PHPUnit\Framework\TestCase;
->>>>>>> a21dc33d (.)
 use PHPUnit\Framework\Attributes\Test;
 
 class BaseModelTest extends TestCase
 {
-<<<<<<< HEAD
-    use \Illuminate\Foundation\Testing\DatabaseTransactions;
-
-=======
->>>>>>> a21dc33d (.)
     #[Test]
     public function base_model_is_abstract(): void
     {
@@ -48,10 +39,7 @@ class BaseModelTest extends TestCase
     #[Test]
     public function base_model_has_casts_method(): void
     {
-<<<<<<< HEAD
         // Test that casts() method exists
-=======
->>>>>>> a21dc33d (.)
         $this->assertTrue(method_exists(BaseModel::class, 'casts'));
     }
 }

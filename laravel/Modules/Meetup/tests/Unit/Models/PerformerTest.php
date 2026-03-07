@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Unit\Models;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Meetup\Models\Performer;
 use Modules\Meetup\Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('Performer Model', function (): void {
     test('it can create a performer with valid data', function (): void {

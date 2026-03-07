@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Tests\Feature\Auth;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Meetup\Tests\TestCase;
 use Modules\User\Models\User;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 it('login page loads successfully', function () {
     $response = $this->get('/it/auth/login');

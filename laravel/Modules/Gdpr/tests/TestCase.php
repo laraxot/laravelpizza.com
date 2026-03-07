@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Xot\Tests\XotBaseTestCase;
 
 /**
@@ -12,11 +11,12 @@ use Modules\Xot\Tests\XotBaseTestCase;
  *
  * Extends XotBaseTestCase (DRY + KISS + Laraxot).
  * Migrations: php artisan migrate --env=testing (una volta).
+ *
+ * NOTE: DatabaseTransactions trait is already included in XotBaseTestCase.
+ * Do NOT add it again - it would be redundant.
  */
 abstract class TestCase extends XotBaseTestCase
 {
-    use DatabaseTransactions;
-
     /** @var array<int, string> */
     protected array $connectionsToTransact = [
         'mysql',

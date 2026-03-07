@@ -6,10 +6,7 @@ namespace Modules\Cms\Tests\Unit\Http\Volt;
 
 use Livewire\Volt\Component as VoltComponent;
 use Modules\Cms\Http\Volt\RegisterComponent;
-<<<<<<< HEAD
-=======
 use ReflectionClass;
->>>>>>> e1ecbe9 (.)
 
 uses(\Modules\Cms\Tests\TestCase::class, \Illuminate\Foundation\Testing\DatabaseTransactions::class);
 
@@ -38,11 +35,7 @@ describe('RegisterComponent', function (): void {
     });
 
     test('register method returns redirect response', function (): void {
-<<<<<<< HEAD
-        $reflection = new \ReflectionClass(RegisterComponent::class);
-=======
         $reflection = new ReflectionClass(RegisterComponent::class);
->>>>>>> e1ecbe9 (.)
         $method = $reflection->getMethod('register');
         $returnType = $method->getReturnType();
 
@@ -50,7 +43,4 @@ describe('RegisterComponent', function (): void {
             ->and((string) $returnType)->toBe('Illuminate\Http\RedirectResponse');
     });
 });
-<<<<<<< HEAD
-=======
 
->>>>>>> e1ecbe9 (.)

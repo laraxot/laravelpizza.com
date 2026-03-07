@@ -16,8 +16,9 @@
     </testsuites>
     <source>
         <include>
-            <directory suffix=".php">./Modules/UI/app</directory>
-            <directory suffix=".php">./Modules/Activity/app</directory>
+            <directory suffix=".php">./app</directory>
+            <directory suffix=".php">./Modules/*/app</directory>
+            <directory suffix=".php">./Themes/*/app</directory>
         </include>
         <exclude>
             <directory>./Modules/*/config</directory>

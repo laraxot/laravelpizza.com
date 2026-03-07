@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 use Carbon\CarbonImmutable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Activity\Actions\ActivityLogger;
 use Modules\Activity\Models\Activity;
 use Modules\User\Models\User;
 use Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('ActivityLogger', function (): void {
     it('logs activity with auth fallback and default description', function (): void {

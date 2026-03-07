@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-uses(Modules\Cms\Tests\TestCase::class, Illuminate\Foundation\Testing\DatabaseTransactions::class);
+uses(Modules\Cms\Tests\TestCase::class);
 
 use Modules\Cms\Filament\Resources\PageResource;
 use Modules\Cms\Models\Page;

@@ -298,8 +298,47 @@ Rimuovere la dichiarazione o spostare la logica in una classe PHP separata (`app
 - [x] Metatags Component (sempre usare)
 - [x] NO strict_types in Blade
 
+### 7. CRITICAL DRY PATTERN - MAI usare trait duplicati nei singoli modelli
+
+**REGOLA**: Se un trait (es. `DatabaseTransactions`) può fornire un metodo (es. `refreshDatabase`) aggiungerlo SOLO nel trait.
+
+**REGOLA**: I modelli che usano il trait ereditano automaticamente il metodo.
+
+**REGOLA**: NON duplicare metodi nei singoli modelli.
+
+**Esempio**:
+
+```php
+// ❌ ERRATO - ridondante
+use DatabaseTransactions; // già incluso in XotBaseTestCase
+
+abstract class TestCase extends XotBaseTestCase
+{
+    // ...
+}
+
+// ✅ CORRETTO - usa solo l'ereditarietà
+abstract class TestCase extends XotBaseTestCase
+{
+    // ...
+}
+```
+
+**Perché**:
+
+- Violare i principi DRY e KISS del progetto
+- Causare confusione e manutenzione difficoltosa
+- Incompatibile con l'architettura Laraxot che centralizza le funzionalità nei trait
+
+**Riferimenti**:
+- `laravel/Modules/Xot/tests/XotBaseTestCase.php` - contiene `use DatabaseTransactions;`
+- `laravel/Modules/*/tests/TestCase.php` - non devono duplicare questo trait
+
+---
+
 ## Aggiornamenti Recenti
 
+- **2026-03-07**: Aggiunta regola CRITICAL DRY Pattern - DatabaseTransactions trait
 - **2026-02-18**: Aggiunta regola NO strict_types in Blade
 - **2026-02-14**: Aggiunta regola Frontend Asset Management
 - **2026-02-14**: Aggiunta regola Componenti Blade Anonimi

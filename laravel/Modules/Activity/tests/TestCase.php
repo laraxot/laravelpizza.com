@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests;
 
-<<<<<<< HEAD
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-=======
->>>>>>> a21dc33d (.)
 use Modules\Xot\Tests\XotBaseTestCase;
 
 /**
@@ -15,14 +11,15 @@ use Modules\Xot\Tests\XotBaseTestCase;
  *
  * Uses MySQL from .env.testing (carbon copy of .env with _test DB names).
  * All module connections are mapped dynamically by TenantServiceProvider.
-<<<<<<< HEAD
  * Migrations must be run ONCE externally: php artisan migrate --env=testing
  * DB lifecycle is managed by dedicated integration tests/configuration.
+ * Migrations are run ONCE automatically via XotBaseTestCase.
+ *
+ * NOTE: DatabaseTransactions trait is already included in XotBaseTestCase.
+ * Do NOT add it again - it would be redundant.
  */
 abstract class TestCase extends XotBaseTestCase
 {
-    use DatabaseTransactions;
-
     /**
      * The database connections that should have transactions rolled back.
      *
@@ -30,12 +27,6 @@ abstract class TestCase extends XotBaseTestCase
      */
     protected array $connectionsToTransact = ['mysql', 'activity', 'user'];
 
-=======
- * Migrations are run ONCE automatically via XotBaseTestCase.
- */
-abstract class TestCase extends XotBaseTestCase
-{
->>>>>>> a21dc33d (.)
     /**
      * @return array<int, class-string>
      */
@@ -53,10 +44,7 @@ abstract class TestCase extends XotBaseTestCase
      */
     protected function defineEnvironment($app): void
     {
-<<<<<<< HEAD
         // Use mysql for Activity to ensure test DB has the table
-=======
->>>>>>> a21dc33d (.)
         $app['config']->set('activitylog.database_connection', 'mysql');
     }
 
@@ -67,11 +55,8 @@ abstract class TestCase extends XotBaseTestCase
     {
         parent::setUp();
 
-<<<<<<< HEAD
         // Reset the model to ensure it uses the correct connection
         // This is needed because Activity has $connection = 'activity' by default
-=======
->>>>>>> a21dc33d (.)
         $this->app->forgetInstance(\Modules\Activity\Models\Activity::class);
     }
 }

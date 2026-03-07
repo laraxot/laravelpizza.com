@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Feature;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 use Modules\Xot\Datas\XotData;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('User Management Business Logic', function () {
     it('can create user with profile', function () {

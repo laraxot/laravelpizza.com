@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit\Actions;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Activity\Actions\LogActivityAction;
 use Modules\Activity\Actions\LogUserLoginAction;
 use Modules\Activity\Models\Activity;
@@ -12,7 +11,7 @@ use Modules\User\Models\User;
 use Modules\Xot\Models\XotBaseModel;
 use Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('Activity Logging Actions', function () {
     

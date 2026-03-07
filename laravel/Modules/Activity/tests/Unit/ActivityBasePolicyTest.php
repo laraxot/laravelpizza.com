@@ -5,21 +5,12 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit;
 
 use Modules\Activity\Models\Policies\ActivityBasePolicy;
-<<<<<<< HEAD
 use Modules\Activity\Tests\TestCase;
-=======
-use PHPUnit\Framework\TestCase;
->>>>>>> a21dc33d (.)
 use Modules\User\Models\User;
 use PHPUnit\Framework\Attributes\Test;
 
 class ActivityBasePolicyTest extends TestCase
 {
-<<<<<<< HEAD
-    use \Illuminate\Foundation\Testing\DatabaseTransactions;
-=======
->>>>>>> a21dc33d (.)
-
     #[Test]
     public function policy_is_abstract(): void
     {
@@ -62,8 +53,6 @@ class ActivityBasePolicyTest extends TestCase
         $result = $policy->testBefore($user);
         $this->assertTrue($result);
     }
-<<<<<<< HEAD
-=======
 
     #[Test]
     public function non_super_admin_returns_null_in_before(): void
@@ -81,5 +70,4 @@ class ActivityBasePolicyTest extends TestCase
         $result = $policy->testBefore($user);
         $this->assertNull($result);
     }
->>>>>>> a21dc33d (.)
 }

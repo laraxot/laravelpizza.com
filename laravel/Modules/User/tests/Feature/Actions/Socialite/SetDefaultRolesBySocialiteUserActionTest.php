@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Feature\Actions\Socialite;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Actions\Socialite\SetDefaultRolesBySocialiteUserAction;
 use Modules\User\Models\Role;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('SetDefaultRolesBySocialiteUserAction', function (): void {
     $getMockUser = static function (string $email = 'user@example.com'): SocialiteUserContract {
