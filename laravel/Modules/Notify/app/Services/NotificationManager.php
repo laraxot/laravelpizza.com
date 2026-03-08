@@ -29,7 +29,7 @@ class NotificationManager
         array $channels = [],
         array $options = [],
     ): array {
-        $template = // @var mixed getTemplate($templateCode;
+        $template = $this->getTemplate($templateCode);
 
         if (! $template) {
             throw new Exception("Template not found: {$templateCode}");
@@ -65,7 +65,7 @@ class NotificationManager
             if (! ($recipient instanceof Model)) {
                 continue;
             }
-            $logs[] = // @var mixed send($recipient, $templateCode, $data, $channels, $options;
+            $logs[] = $this->send($recipient, $templateCode, $data, $channels, $options);
         }
 
         return $logs;

@@ -53,11 +53,16 @@ describe('Comune Business Logic', function () {
 
     test('comune has schema definition for structured geographic data', function () {
         $comune = new Comune();
+<<<<<<< HEAD
+||||||| 6161e129d
+        $comune = new Comune;
+=======
         $reflection = new \ReflectionClass($comune);
         $schemaProperty = $reflection->getProperty('schema');
         $schemaProperty->setAccessible(true);
         /** @var array<string, string> $schema */
         $schema = $schemaProperty->getValue($comune);
+>>>>>>> feature/ralph-loop-implementation
 
         expect($schema['zona'])->toBe('json');
         expect($schema['provincia'])->toBe('json');

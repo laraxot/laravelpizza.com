@@ -33,7 +33,7 @@ class PassportInstallCommand extends Command
 
         // Esegui il comando standard di Passport per installare le chiavi
         $this->call('passport:install', [
-            '--force' => $this->option('force'
+            '--force' => $this->option('force'),
         ]);
 
         $this->info('Passport installed successfully!');

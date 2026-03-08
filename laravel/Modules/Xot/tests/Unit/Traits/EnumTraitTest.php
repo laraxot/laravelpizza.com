@@ -7,10 +7,7 @@ namespace Modules\Xot\Tests\Unit\Traits;
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 use Modules\Xot\Tests\Fixtures\Enums\TestEnum;
-use Modules\Xot\Tests\TestCase;
 use Modules\Xot\Traits\EnumTrait;
-
-uses(TestCase::class);
 
 it('gets label via translation', function (): void {
     // We expect translation keys like 'test_enum.alpha.label'

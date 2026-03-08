@@ -14,7 +14,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        // @var mixed tableCreate(function (Blueprint $table
+        $this->tableCreate(function (Blueprint $table
             $table->uuid('id')->primary();
             $table->string('type');
             $table->morphs('notifiable');
@@ -22,8 +22,8 @@ return new class extends XotBaseMigration
             $table->timestamp('read_at')->nullable();
         });
         // -- UPDATE --
-        // @var mixed tableUpdate(function (Blueprint $table
-            // @var mixed updateTimestamps(
+        $this->tableUpdate(function (Blueprint $table
+            $this->updateTimestamps(
                 table: $table,
                 hasSoftDeletes: true,
             );

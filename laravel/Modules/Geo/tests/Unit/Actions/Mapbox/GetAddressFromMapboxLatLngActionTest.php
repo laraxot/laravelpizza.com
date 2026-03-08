@@ -11,33 +11,33 @@ use Modules\Geo\Datas\AddressData;
 use Modules\Geo\Exceptions\InvalidLocationException;
 
 beforeEach(function () {
-    // @var mixed action = new GetAddressFromMapboxLatLngAction(;
+    $action = new GetAddressFromMapboxLatLngAction();
 });
 
 it('throws exception for invalid latitude below -90', function (): void {
-    expect(fn () => // @var mixed action->execute(-91.0, 9.1900
+    expect(fn () => $action->execute(-91.0, 9.1900
         ->toThrow(InvalidLocationException::class, 'Latitudine non valida');
 });
 
 it('throws exception for invalid latitude above 90', function (): void {
-    expect(fn () => // @var mixed action->execute(91.0, 9.1900
+    expect(fn () => $action->execute(91.0, 9.1900
         ->toThrow(InvalidLocationException::class, 'Latitudine non valida');
 });
 
 it('throws exception for invalid longitude below -180', function (): void {
-    expect(fn () => // @var mixed action->execute(45.0, -181.0
+    expect(fn () => $action->execute(45.0, -181.0
         ->toThrow(InvalidLocationException::class, 'Longitudine non valida');
 });
 
 it('throws exception for invalid longitude above 180', function (): void {
-    expect(fn () => // @var mixed action->execute(45.0, 181.0
+    expect(fn () => $action->execute(45.0, 181.0
         ->toThrow(InvalidLocationException::class, 'Longitudine non valida');
 });
 
 it('throws exception when api key is not configured', function (): void {
     config(['services.mapbox.api_key' => null]);
 
-    expect(fn () => // @var mixed action->execute(45.4642, 9.1900
+    expect(fn () => $action->execute(45.4642, 9.1900
         ->toThrow(InvalidLocationException::class, 'API key di Mapbox non configurata');
 });
 
@@ -48,7 +48,7 @@ it('throws exception when api response is not successful', function (): void {
         '*' => Http::response(['statusCode' => 500], 500),
     ]);
 
-    expect(fn () => // @var mixed action->execute(45.4642, 9.1900
+    expect(fn () => $action->execute(45.4642, 9.1900
         ->toThrow(InvalidLocationException::class, 'Richiesta a Mapbox fallita');
 });
 
@@ -59,7 +59,7 @@ it('throws exception when response is not valid json', function (): void {
         '*' => Http::response('not valid json', 200),
     ]);
 
-    expect(fn () => // @var mixed action->execute(45.4642, 9.1900
+    expect(fn () => $action->execute(45.4642, 9.1900
         ->toThrow(InvalidLocationException::class, 'Risposta di Mapbox non valida');
 });
 
@@ -72,7 +72,7 @@ it('throws exception when no features in response', function (): void {
         ], 200),
     ]);
 
-    expect(fn () => // @var mixed action->execute(45.4642, 9.1900
+    expect(fn () => $action->execute(45.4642, 9.1900
         ->toThrow(InvalidLocationException::class, 'Nessun risultato trovato');
 });
 
@@ -96,7 +96,7 @@ it('returns address data for valid coordinates', function (): void {
         ], 200),
     ]);
 
-    $result = // @var mixed action->execute(45.4642, 9.1900;
+    $result = $action->execute(45.4642, 9.1900);
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)
@@ -129,7 +129,7 @@ it('handles boundary coordinate values', function (): void {
         ], 200),
     ]);
 
-    $result = // @var mixed action->execute(90.0, 180.0;
+    $result = $action->execute(90.0, 180.0);
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)
@@ -149,7 +149,7 @@ it('handles missing context items', function (): void {
         ], 200),
     ]);
 
-    $result = // @var mixed action->execute(45.4642, 9.1900;
+    $result = $action->execute(45.4642, 9.1900);
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)

@@ -42,7 +42,7 @@ class CountyFactory extends Factory
 
     public function lombardia(): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes
             'county' => [
                 'Provincia di Milano',
                 'Provincia di Brescia',

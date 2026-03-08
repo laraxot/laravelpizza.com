@@ -26,7 +26,7 @@ class AssetFactory extends Factory
             'path' => '/assets/'.$faker->word(
             'type' => 'css',
             'version' => '1.0.0',
-            'is_public' => $faker->boolean(
+            'is_public' => $faker->boolean()
         ];
     }
 

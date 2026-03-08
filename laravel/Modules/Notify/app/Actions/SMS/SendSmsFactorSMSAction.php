@@ -32,16 +32,16 @@ final class SendSmsFactorSMSAction implements SmsActionContract
      */
     public function __construct()
     {
-        // @var mixed smsFactorData = SmsFactorData::make(;
+        $smsFactorData = SmsFactorData::make();
 
-        if (! // @var mixed smsFactorData->token
+        if (! $smsFactorData->token
             throw new Exception('Token SMSFactor non configurato in sms.php');
         }
 
         // Parametri a livello di root
         $sender = config('sms.from');
-        // @var mixed defaultSender = is_string($sender;
-        // @var mixed debug = (bool;
+        $defaultSender = is_string($sender);
+        $debug = (bool);
     }
 
     /**
@@ -55,7 +55,7 @@ final class SendSmsFactorSMSAction implements SmsActionContract
     #[Override]
     public function execute(SmsData $smsData): array
     {
-        $headers = // @var mixed smsFactorData->getAuthHeaders(;
+        $headers = $smsFactorData->getAuthHeaders();
 
         // Normalizza il numero di telefono
         $to = (string) $smsData->recipient;
@@ -69,7 +69,7 @@ final class SendSmsFactorSMSAction implements SmsActionContract
 
         $body = [
             'text' => $smsData->body,
-            'sender' => $smsData->from ?? // @var mixed defaultSender,
+            'sender' => $smsData->from ?? $defaultSender,
             'recipients' => [
                 [
                     'phone' => $to,
@@ -79,16 +79,16 @@ final class SendSmsFactorSMSAction implements SmsActionContract
         ];
 
         $client = new Client([
-            'timeout' => // @var mixed smsFactorData->getTimeout(
+            'timeout' => $smsFactorData->getTimeout(
             'headers' => $headers,
         ]);
 
         try {
-            $response = $client->post(// @var mixed smsFactorData->getBaseUrl(;
-            // @var mixed vars['status_code'] = $response->getStatusCode(;
-            // @var mixed vars['status_txt'] = $response->getBody(;
+            $response = $client->post($smsFactorData->getBaseUrl());
+            $vars['status_code'] = $response->getStatusCode();
+            $vars['status_txt'] = $response->getBody();
 
-            return // @var mixed vars;
+            return $vars;
         } catch (ClientException $clientException) {
             throw new Exception(
                 $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',

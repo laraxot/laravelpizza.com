@@ -23,12 +23,12 @@ class DummySendNotificationRecipient extends Model
 
     public function routeNotificationForMail(): string
     {
-        return (string) (// @var mixed getAttribute('email';
+        return (string) ($getAttribute('email'));
     }
 
     public function routeNotificationForSms(): string
     {
-        return (string) (// @var mixed getAttribute('phone';
+        return (string) ($getAttribute('phone'));
     }
 }
 

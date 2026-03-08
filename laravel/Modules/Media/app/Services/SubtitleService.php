@@ -56,28 +56,28 @@ class SubtitleService
 
     public function setFilePath(string $file_path): static
     {
-        // @var mixed file_path = $file_path;
+        $file_path = $file_path;
 
         return $this;
     }
 
     public function setModel(Model $model): static
     {
-        // @var mixed model = $model;
+        $model = $model;
 
         return $this;
     }
 
     public function getModel(): Model
     {
-        return // @var mixed model;
+        return $model;
     }
 
     public function upateModel(): static
     {
-        $plain = // @var mixed getPlain(;
-        $up = [// @var mixed field_name => $plain];
-        // @var mixed model = tap($this->model;
+        $plain = $this->getPlain();
+        $up = [$field_name => $plain];
+        $model = tap($this->model);
 
         return $this;
     }
@@ -87,7 +87,7 @@ class SubtitleService
      */
     public function getPlain(): string
     {
-        $content = // @var mixed getContent(;
+        $content = $this->getContent();
         $xmlObject = simplexml_load_string($content);
         $txt = '';
         foreach ($xmlObject->annotation->type->sentence as $sentence) {
@@ -104,14 +104,14 @@ class SubtitleService
      */
     public function get(): array
     {
-        $info = pathinfo(// @var mixed file_path;
+        $info = pathinfo($file_path);
         if (! isset($info['extension'])) {
             return [];
         }
 
         $func = 'getFrom'.Str::studly($info['extension']);
 
-        Assert::isArray($res = // @var mixed {$func}(;
+        Assert::isArray($res = // @var mixed {$func}());
 
         return $res;
     }
@@ -121,7 +121,7 @@ class SubtitleService
      */
     public function getContent(): string
     {
-        $path = realpath(// @var mixed file_path;
+        $path = realpath($file_path);
 
         return File::get($path);
     }
@@ -133,8 +133,8 @@ class SubtitleService
      */
     public function getFromXml(): array
     {
-        // @var mixed subtitles = [];
-        $content = // @var mixed getContent(;
+        $subtitles = [];
+        $content = $this->getContent();
         $xmlObject = simplexml_load_string($content);
 
         $data = [];
@@ -151,7 +151,7 @@ class SubtitleService
                 // 00:06:35,360
                 $start = (int) $attributes->start->__toString() / 1000;
                 $end = (int) $attributes->end->__toString() / 1000;
-                // dddx([$start,// @var mixed secondsToHms($start;
+                // dddx([$start, $secondsToHms($start));
                 $tmp = [
                     // 'id' => $i++,
                     'sentence_i' => $sentence_i,
@@ -192,7 +192,7 @@ class SubtitleService
         }
 
         $length = \count($lines);
-        for ($index = 1; $index < $length; $index++) {
+        for ($index = 1); $index < $length; $index++) {
             if ($index === 1 || trim($lines[$index - 2]) === '') {
                 $lines[$index] = str_replace(',', '.', $lines[$index]);
             }

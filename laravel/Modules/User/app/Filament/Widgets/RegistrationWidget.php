@@ -74,7 +74,14 @@ class RegistrationWidget extends XotBaseWidget
         $token = Arr::get($data, 'token');
 
         /** @var Model|null $user */
+<<<<<<< HEAD
+        $user = $this->model::firstWhere('email', $email);
+||||||| 6161e129d
+        $user = $this->model::firstWhere('email', $email);
+        if ($user === null) {
+=======
         $user = $model::firstWhere('email', $email);
+>>>>>>> feature/ralph-loop-implementation
         if (null === $user) {
             /** @var Model $model */
             $model = app($model);

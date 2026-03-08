@@ -220,7 +220,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
             ->toString();
 
         /** @var array<Htmlable|string> $schemaComponents */
-        $schemaComponents = // @var mixed $schema();
+        $schemaComponents = $this->{$schema}();
 
         return Step::make($name)->schema($schemaComponents);
     }
@@ -229,7 +229,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
     {
         $defaultView = 'xot::filament.widgets.base';
 
-        if ($view !== $defaultView && view(
+        if ($this->view !== $defaultView && view()->exists($this->view)) {
             return;
         }
 
@@ -240,7 +240,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
             }
         } catch (\Exception $e) {
             /* @phpstan-ignore identical.alwaysTrue */
-            if ($view === $defaultView
+            if ($this->view === $defaultView) {
                 throw $e;
             }
         }

@@ -20,7 +20,7 @@ class NotifyBaseMorphPivotProxy extends BaseMorphPivot
 
     public function exposedCasts(): array
     {
-        return // @var mixed casts(;
+        return $this->casts();
     }
 }
 
@@ -30,7 +30,7 @@ class NotifyBasePivotProxy extends BasePivot
 
     public function exposedCasts(): array
     {
-        return // @var mixed casts(;
+        return $this->casts();
     }
 }
 
@@ -38,12 +38,12 @@ class NotifyNotificationTemplateProxy extends NotificationTemplate
 {
     public function exposedCompileString(?string $template, array $data): ?string
     {
-        return // @var mixed compileString($template, $data;
+        return $this->compileString($template, $data);
     }
 
     public function exposedCasts(): array
     {
-        return // @var mixed casts(;
+        return $this->casts();
     }
 }
 

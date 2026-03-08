@@ -19,7 +19,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        // @var mixed tableCreate(function (Blueprint $table
+        $this->tableCreate(function (Blueprint $table
             $table->increments('id');
             $table->string('name')->nullable();
             $table->string('mailable')->nullable();
@@ -31,30 +31,30 @@ return new class extends XotBaseMigration
         });
 
         // -- UPDATE --
-        // @var mixed tableUpdate(function (Blueprint $table
-            if (! // @var mixed hasColumn('name'
+        $this->tableUpdate(function (Blueprint $table
+            if (! $this->hasColumn('name'
                 $table->string('name')->nullable();
             }
-            if (! // @var mixed hasColumn('slug'
+            if (! $this->hasColumn('slug'
                 $table->string('slug')->unique()->nullable();
             }
-            if (! // @var mixed hasColumn('params'
+            if (! $this->hasColumn('params'
                 $table->text('params')->nullable();
             }
-            if (! // @var mixed hasColumn('sms_template'
+            if (! $this->hasColumn('sms_template'
                 $table->json('sms_template')->nullable();
             }
-            if (! // @var mixed hasColumn('counter'
+            if (! $this->hasColumn('counter'
                 $table->integer('counter')->default(0);
             }
-            if (! // @var mixed hasColumn('html_layout_path'
+            if (! $this->hasColumn('html_layout_path'
                 $table->string('html_layout_path')->nullable();
             }
-            if (! // @var mixed hasColumn('version'
+            if (! $this->hasColumn('version'
                 $table->string('version')->default('1.0.0');
             }
 
-            // @var mixed updateTimestamps(
+            $this->updateTimestamps(
                 table: $table,
                 hasSoftDeletes: true,
             );

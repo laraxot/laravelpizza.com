@@ -39,7 +39,7 @@ class XDebug extends Component
 
         /** @var array<string, string> $view_params */
         $view_params = [
-            'html' => $this->debugStack(
+            'html' => $this->debugStack(),
         ];
 
         return view($view, $view_params);

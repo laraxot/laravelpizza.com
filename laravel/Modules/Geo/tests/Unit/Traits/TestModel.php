@@ -37,14 +37,14 @@ class TestModel extends Model
 
 beforeEach(function () {
     // Crea un modello di test
-    // @var mixed model = TestModel::create([
+    $model = TestModel::create([
         'name' => 'Test Model',
     ]);
 });
 
 it('can have multiple addresses', function () {
     // Aggiungi due indirizzi al modello
-    // @var mixed model
+    $model
         ->addresses()
         ->create([
             'route' => 'Via Roma',
@@ -54,7 +54,7 @@ it('can have multiple addresses', function () {
             'is_primary' => true,
         ]);
 
-    // @var mixed model
+    $model
         ->addresses()
         ->create([
             'route' => 'Via Garibaldi',
@@ -65,12 +65,12 @@ it('can have multiple addresses', function () {
         ]);
 
     // Verifica che il modello abbia due indirizzi
-    expect(// @var mixed model->addresses;
+    expect($model->addresses);
 });
 
 it('can get primary address', function () {
     // Aggiungi un indirizzo principale
-    // @var mixed model
+    $model
         ->addresses()
         ->create([
             'route' => 'Via Roma',
@@ -81,7 +81,7 @@ it('can get primary address', function () {
         ]);
 
     // Aggiungi un indirizzo secondario
-    // @var mixed model
+    $model
         ->addresses()
         ->create([
             'route' => 'Via Garibaldi',
@@ -92,7 +92,7 @@ it('can get primary address', function () {
         ]);
 
     // Verifica che il metodo primaryAddress restituisca l'indirizzo principale
-    $primaryAddress = // @var mixed model->primaryAddress(;
+    $primaryAddress = $model->primaryAddress();
 
     expect($primaryAddress)->not->toBeNull();
     expect($primaryAddress->route)->toBe('Via Roma');
@@ -100,7 +100,7 @@ it('can get primary address', function () {
 
 it('can set primary address', function () {
     // Aggiungi due indirizzi
-    $address1 = // @var mixed model
+    $address1 = $model
         ->addresses()
         ->create([
             'route' => 'Via Roma',
@@ -110,7 +110,7 @@ it('can set primary address', function () {
             'is_primary' => true,
         ]);
 
-    $address2 = // @var mixed model
+    $address2 = $model
         ->addresses()
         ->create([
             'route' => 'Via Garibaldi',
@@ -121,7 +121,7 @@ it('can set primary address', function () {
         ]);
 
     // Imposta il secondo indirizzo come principale
-    // @var mixed model->setAsPrimaryAddress($address2;
+    $model->setAsPrimaryAddress($address2);
 
     // Ricarica gli indirizzi dal database
     $address1->refresh();
@@ -136,7 +136,7 @@ it('can set primary address', function () {
 
 it('can get formatted address', function () {
     // Aggiungi un indirizzo principale
-    // @var mixed model
+    $model
         ->addresses()
         ->create([
             'route' => 'Via Roma',
@@ -147,7 +147,7 @@ it('can get formatted address', function () {
         ]);
 
     // Verifica che il metodo getFullAddress restituisca l'indirizzo formattato
-    $fullAddress = // @var mixed model->getFullAddress(;
+    $fullAddress = $model->getFullAddress();
 
     expect($fullAddress)->not->toBeNull();
     expect($fullAddress)->toContain('Via Roma');

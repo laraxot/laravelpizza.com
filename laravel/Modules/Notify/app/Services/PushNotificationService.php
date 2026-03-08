@@ -31,7 +31,7 @@ class PushNotificationService
 
     public function __construct()
     {
-        // @var mixed config = [
+        $config = [
             'fcm' => [
                 'server_key' => config('notify.fcm.server_key'),
                 'url' => 'https://fcm.googleapis.com/fcm/send',
@@ -56,10 +56,10 @@ class PushNotificationService
     {
         $results = [];
 
-        foreach (// @var mixed platforms as $platform
+        foreach ($platforms as $platform
             Assert::string($platform, 'Platform must be a string');
             try {
-                $result = // @var mixed sendToPlatform($platform, $token, $notification, $data;
+                $result = $this->sendToPlatform($platform, $token, $notification, $data);
                 $results[$platform] = $result;
             } catch (Exception $e) {
                 Log::error("Push notification failed for platform {$platform}", [
@@ -86,13 +86,13 @@ class PushNotificationService
         $results = [];
 
         // Raggruppa token per piattaforma
-        $tokensByPlatform = // @var mixed groupTokensByPlatform($tokens;
+        $tokensByPlatform = $this->groupTokensByPlatform($tokens);
 
         foreach ($tokensByPlatform as $platform => $platformTokens) {
             Assert::string($platform, 'Platform must be a string');
             Assert::isArray($platformTokens, 'Platform tokens must be an array');
             try {
-                $result = // @var mixed sendBatchToPlatform($platform, $platformTokens, $notification, $data;
+                $result = $this->sendBatchToPlatform($platform, $platformTokens, $notification, $data);
                 $results[$platform] = $result;
             } catch (Exception $e) {
                 Log::error("Batch push notification failed for platform {$platform}", [
@@ -119,10 +119,10 @@ class PushNotificationService
     {
         $results = [];
 
-        foreach (// @var mixed platforms as $platform
+        foreach ($platforms as $platform
             Assert::string($platform, 'Platform must be a string');
             try {
-                $result = // @var mixed sendTopicToPlatform($platform, $topic, $notification, $data;
+                $result = $this->sendTopicToPlatform($platform, $topic, $notification, $data);
                 $results[$platform] = $result;
             } catch (Exception $e) {
                 Log::error("Topic push notification failed for platform {$platform}", [
@@ -146,7 +146,7 @@ class PushNotificationService
     public function sendToAll(array $notification, array $data = []): array
     {
         // Ottieni tutti i token attivi
-        $tokens = // @var mixed getAllActiveTokens(;
+        $tokens = $this->getAllActiveTokens();
 
         if (empty($tokens)) {
             return [
@@ -155,7 +155,7 @@ class PushNotificationService
             ];
         }
 
-        return // @var mixed sendToDevices($tokens, $notification, $data;
+        return $this->sendToDevices($tokens, $notification, $data);
     }
 
     /**
@@ -185,16 +185,16 @@ class PushNotificationService
      */
     public function sendWithTemplate(string $templateId, array $tokens, array $variables = []): array
     {
-        $template = // @var mixed getTemplate($templateId;
+        $template = $this->getTemplate($templateId);
 
         if (! $template) {
             throw new Exception("Template {$templateId} not found");
         }
 
-        $notification = // @var mixed processTemplate($template, $variables;
+        $notification = $this->processTemplate($template, $variables);
         $data = isset($template['data']) && is_array($template['data']) ? $template['data'] : [];
 
-        return // @var mixed sendToDevices($tokens, $notification, $data;
+        return $this->sendToDevices($tokens, $notification, $data);
     }
 
     /**
@@ -202,7 +202,7 @@ class PushNotificationService
      */
     public function sendWithTargeting(array $criteria, array $notification, array $data = []): array
     {
-        $tokens = // @var mixed getTokensByCriteria($criteria;
+        $tokens = $this->getTokensByCriteria($criteria);
 
         if (empty($tokens)) {
             return [
@@ -211,7 +211,7 @@ class PushNotificationService
             ];
         }
 
-        return // @var mixed sendToDevices($tokens, $notification, $data;
+        return $this->sendToDevices($tokens, $notification, $data);
     }
 
     /**
@@ -220,9 +220,9 @@ class PushNotificationService
     private function sendToPlatform(string $platform, string $token, array $notification, array $data): array
     {
         return match ($platform) {
-            'fcm' => // @var mixed sendFCMNotification($token, $notification, $data
-            'apns' => // @var mixed sendAPNSNotification($token, $notification, $data
-            'webpush' => // @var mixed sendWebPushNotification($token, $notification, $data
+            'fcm' => $this->sendFCMNotification($token, $notification, $data
+            'apns' => $this->sendAPNSNotification($token, $notification, $data
+            'webpush' => $this->sendWebPushNotification($token, $notification, $data
             default => throw new Exception("Unsupported platform: {$platform}")
         };
     }
@@ -246,7 +246,7 @@ class PushNotificationService
             'ttl' => $notification['ttl'] ?? 3600,
         ];
 
-        $fcmConfig = // @var mixed config['fcm'] ?? [];
+        $fcmConfig = $config['fcm'] ?? [];
         Assert::isArray($fcmConfig, 'FCM config must be an array');
         $serverKey = isset($fcmConfig['server_key']) ? SafeStringCastAction::cast($fcmConfig['server_key']) : '';
         $url = isset($fcmConfig['url']) ? SafeStringCastAction::cast($fcmConfig['url']) : '';
@@ -339,7 +339,7 @@ class PushNotificationService
         foreach ($tokens as $token) {
             Assert::string($token, 'Token must be a string');
             try {
-                $result = // @var mixed sendToPlatform($platform, $token, $notification, $data;
+                $result = $this->sendToPlatform($platform, $token, $notification, $data);
                 if ($result['success']) {
                     $successCount++;
                 } else {
@@ -372,9 +372,9 @@ class PushNotificationService
     {
         // Implementazione specifica per piattaforma
         return match ($platform) {
-            'fcm' => // @var mixed sendFCMTopicNotification($topic, $notification, $data
-            'apns' => // @var mixed sendAPNSTopicNotification($topic, $notification, $data
-            'webpush' => // @var mixed sendWebPushTopicNotification($topic, $notification, $data
+            'fcm' => $this->sendFCMTopicNotification($topic, $notification, $data
+            'apns' => $this->sendAPNSTopicNotification($topic, $notification, $data
+            'webpush' => $this->sendWebPushTopicNotification($topic, $notification, $data
             default => throw new Exception("Unsupported platform: {$platform}")
         };
     }
@@ -394,7 +394,7 @@ class PushNotificationService
             'data' => $data,
         ];
 
-        $fcmConfig = // @var mixed config['fcm'] ?? [];
+        $fcmConfig = $config['fcm'] ?? [];
         Assert::isArray($fcmConfig, 'FCM config must be an array');
         $serverKey = isset($fcmConfig['server_key']) ? SafeStringCastAction::cast($fcmConfig['server_key']) : '';
         $url = isset($fcmConfig['url']) ? SafeStringCastAction::cast($fcmConfig['url']) : '';
@@ -431,7 +431,7 @@ class PushNotificationService
 
         foreach ($tokens as $token) {
             Assert::string($token, 'Token must be a string');
-            $platform = // @var mixed detectPlatform($token;
+            $platform = $this->detectPlatform($token);
             $grouped[$platform][] = $token;
         }
 

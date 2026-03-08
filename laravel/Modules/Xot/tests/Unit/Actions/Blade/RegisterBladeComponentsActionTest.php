@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\Blade;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 use Modules\Xot\Actions\File\GetComponentsAction;
 use Modules\Xot\Datas\ComponentFileData;
-use Modules\Xot\Tests\TestCase;
-
-uses(TestCase::class);
 
 it('registers blade components correctly', function (): void {
     $path = 'some/path';

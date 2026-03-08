@@ -151,7 +151,14 @@ trait HasAuthenticationLogTrait
 
             while ($count > 0) {
                 $date = $date->subDay();
+<<<<<<< HEAD
+                $count = $this->authentications()->whereDate('login_at', $date)->count();
+||||||| 6161e129d
+                $count = $this->authentications()->whereDate('login_at', $date)->count();
+                $days++;
+=======
                 $count = $this->authentications();
+>>>>>>> feature/ralph-loop-implementation
                 ++$days;
             }
 

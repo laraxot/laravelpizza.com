@@ -22,7 +22,7 @@ trait HasAddresses
      */
     public function addresses(): MorphMany
     {
-        return // @var mixed morphMany(Address::class, 'model';
+        return $this->morphMany(Address::class, 'model');
     }
 
     /**
@@ -30,7 +30,7 @@ trait HasAddresses
      */
     public function primaryAddress(): MorphOne
     {
-        return // @var mixed morphOne(Address::class, 'model';
+        return $this->morphOne(Address::class, 'model');
     }
 
     /**
@@ -38,7 +38,7 @@ trait HasAddresses
      */
     public function homeAddress(): MorphOne
     {
-        return // @var mixed morphOne(Address::class, 'model';
+        return $this->morphOne(Address::class, 'model');
     }
 
     /**
@@ -46,7 +46,7 @@ trait HasAddresses
      */
     public function workAddress(): MorphOne
     {
-        return // @var mixed morphOne(Address::class, 'model';
+        return $this->morphOne(Address::class, 'model');
     }
 
     /**
@@ -54,7 +54,7 @@ trait HasAddresses
      */
     public function billingAddress(): MorphOne
     {
-        return // @var mixed morphOne(Address::class, 'model';
+        return $this->morphOne(Address::class, 'model');
     }
 
     /**
@@ -62,7 +62,7 @@ trait HasAddresses
      */
     public function shippingAddress(): MorphOne
     {
-        return // @var mixed morphOne(Address::class, 'model';
+        return $this->morphOne(Address::class, 'model');
     }
 
     /**
@@ -71,12 +71,12 @@ trait HasAddresses
     public function setPrimaryAddress(Address $address): void
     {
         // Assicurati che l'indirizzo appartenga a questo modello
-        if ($address->model_id !== // @var mixed id || $address->model_type !== static::class
+        if ($address->model_id !== $id || $address->model_type !== static::class
             throw new \InvalidArgumentException('L\'indirizzo non appartiene a questo modello.');
         }
 
         // Rimuovi lo stato primario da tutti gli altri indirizzi
-        // @var mixed addresses(;
+        $this->addresses();
 
         // Imposta questo indirizzo come primario
         $address->is_primary = true;
@@ -92,13 +92,13 @@ trait HasAddresses
     {
         // Se l'indirizzo deve essere primario, rimuovi lo stato primario dagli altri
         if ($isPrimary) {
-            // @var mixed addresses(;
+            $this->addresses();
         }
 
         // Crea il nuovo indirizzo
         $data['is_primary'] = $isPrimary;
 
-        return // @var mixed addresses(;
+        return $this->addresses();
     }
 
     /**
@@ -108,6 +108,6 @@ trait HasAddresses
     {
         $typeValue = $type instanceof AddressTypeEnum ? $type->value : $type;
 
-        return // @var mixed addresses(;
+        return $this->addresses();
     }
 }

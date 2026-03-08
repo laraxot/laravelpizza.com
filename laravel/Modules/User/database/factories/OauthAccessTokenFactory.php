@@ -44,10 +44,10 @@ class OauthAccessTokenFactory extends Factory
                     'admin',
                     'user',
                 ],
-                $faker->numberBetween(1, 3
+                $faker->numberBetween(1, 3)
             ),
             'revoked' => $faker->boolean(10
-            'expires_at' => $faker->dateTimeBetween('now', '+1 year'
+            'expires_at' => $faker->dateTimeBetween('now', '+1 year')
         ];
     }
 
@@ -68,7 +68,7 @@ class OauthAccessTokenFactory extends Factory
     {
         return $this->state(fn (array $_attributes
             'revoked' => false,
-            'expires_at' => $faker->dateTimeBetween('+1 day', '+1 year'
+            'expires_at' => $faker->dateTimeBetween('+1 day', '+1 year')
         ]);
     }
 

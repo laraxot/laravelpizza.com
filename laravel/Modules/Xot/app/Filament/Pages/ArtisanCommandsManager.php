@@ -177,7 +177,7 @@ class ArtisanCommandsManager extends XotBasePage
                 ->size('lg')
                 ->iconPosition(IconPosition::Before)
                 ->disabled(fn () => $isRunning
-                ->action(fn () => $this->executeCommand('queue:restart'
+                ->action(fn () => $this->executeCommand('queue:restart'))
         ];
     }
 }

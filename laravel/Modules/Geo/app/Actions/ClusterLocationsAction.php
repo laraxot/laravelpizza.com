@@ -37,12 +37,12 @@ readonly class ClusterLocationsAction
             $assigned = false;
 
             foreach ($clusters as &$cluster) {
-                $distance = // @var mixed distanceCalculator->execute($cluster['center'], $location;
+                $distance = $distanceCalculator->execute($cluster['center'], $location);
                 $distanceKm = ((float) $distance['distance']['value']) / 1000;
 
                 if ($distanceKm <= $maxDistance) {
                     $cluster['points'][] = $location;
-                    // @var mixed updateClusterCenter($cluster;
+                    $this->updateClusterCenter($cluster);
                     $assigned = true;
                     break;
                 }

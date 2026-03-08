@@ -154,7 +154,7 @@ class PasswordExpired extends XotBasePage
     protected function getFormActions(): array
     {
         return [
-            $this->getResetPasswordFormAction(
+            $this->getResetPasswordFormAction()
         ];
     }
 }

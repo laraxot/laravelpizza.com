@@ -28,7 +28,7 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => Hash::make('password123'),
             'remember_token' => \Illuminate\Support\Str::random(10),
-            'is_active' => $faker->boolean(
+            'is_active' => $faker->boolean()
         ];
     }
 
@@ -81,7 +81,7 @@ class UserFactory extends Factory
             $user->profile()->create([
                 'bio' => $faker->text(
                 'avatar' => '/avatars/'.$faker->word(
-                'phone' => $faker->phoneNumber(
+                'phone' => $faker->phoneNumber()
             ]);
         });
     }

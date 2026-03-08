@@ -53,23 +53,23 @@ class SmtpData extends Data
     public function toArray(): array
     {
         return [
-            'transport' => // @var mixed transport,
-            'host' => // @var mixed host,
-            'port' => // @var mixed port,
-            'encryption' => // @var mixed encryption,
-            'username' => // @var mixed username,
-            'password' => // @var mixed password,
-            'timeout' => // @var mixed timeout,
-            'local_domain' => // @var mixed local_domain,
+            'transport' => $transport,
+            'host' => $host,
+            'port' => $port,
+            'encryption' => $encryption,
+            'username' => $username,
+            'password' => $password,
+            'timeout' => $timeout,
+            'local_domain' => $local_domain,
         ];
     }
 
     public function getTransport(): EsmtpTransport
     {
-        $transport = new EsmtpTransport(// @var mixed host, $this->port, $this->tls;
-        if (// @var mixed username !== null && $this->password !== null
-            $transport->setUsername(// @var mixed username;
-            $transport->setPassword(// @var mixed password;
+        $transport = new EsmtpTransport($host, $this->port, $this->tls);
+        if ($username !== null && $this->password !== null
+            $transport->setUsername($username);
+            $transport->setPassword($password);
         }
 
         return $transport;
@@ -77,7 +77,7 @@ class SmtpData extends Data
 
     public function getMailer(): Mailer
     {
-        $transport = // @var mixed getTransport(;
+        $transport = $this->getTransport();
         try {
             $transport->start();
         } catch (Exception $e) {
@@ -89,7 +89,7 @@ class SmtpData extends Data
 
     public function send(EmailData $emailData): void
     {
-        $mailer = // @var mixed getMailer(;
+        $mailer = $this->getMailer();
         $mimeEmail = $emailData->getMimeEmail();
         try {
             $mailer->send($mimeEmail);

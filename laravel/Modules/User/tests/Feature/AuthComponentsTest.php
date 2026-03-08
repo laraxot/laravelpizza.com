@@ -3,9 +3,15 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\View;
+use Modules\User\Tests\TestCase;
 use Modules\User\Models\User;
+<<<<<<< HEAD
+||||||| 6161e129d
+
+=======
 use Modules\User\Tests\TestCase;
 
+>>>>>>> feature/ralph-loop-implementation
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\get;
 
@@ -94,6 +100,13 @@ describe('Authentication Flow with Reorganized Components', function (): void {
 describe('User Profile Components Tests', function (): void {
     test('profile pages use reorganized components correctly', function (): void {
         $user = User::factory()->create();
+<<<<<<< HEAD
+||||||| 6161e129d
+        /** @var User */
+        $user = User/* @phpstan-ignore-line */ ::factory()->create();
+
+        $response = actingAs($user)->get('/it/profile/edit');
+=======
 
         if (class_exists(Modules\User\Models\Profile::class)) {
             // Skip if profiles table doesn't have uuid column
@@ -114,7 +127,28 @@ describe('User Profile Components Tests', function (): void {
                 // Profile creation may fail in test env; continue with user only
             }
         }
+>>>>>>> feature/ralph-loop-implementation
 
+<<<<<<< HEAD
+        if (class_exists(\Modules\User\Models\Profile::class)) {
+            \Modules\User\Models\Profile::create([
+                'id' => $user->id,
+                'user_id' => $user->id,
+                'email' => $user->email,
+                'first_name' => $user->first_name,
+                'last_name' => $user->last_name,
+            ]);
+        }
+        
+        
+        $response = actingAs($user, 'web')->get('/it/profile/edit');
+        
+        /* @phpstan-ignore-next-line method.nonObject */
+        $response->assertStatus(200);
+||||||| 6161e129d
+        /* @phpstan-ignore-next-line method.nonObject */
+        $response->assertStatus(200);
+=======
         /* @var Illuminate\Contracts\Auth\Authenticatable $user */
         try {
             $response = actingAs($user, 'web')->get('/it/profile/edit');
@@ -122,5 +156,6 @@ describe('User Profile Components Tests', function (): void {
         } catch (Throwable $e) {
             expect($e->getMessage())->not->toBe('');
         }
+>>>>>>> feature/ralph-loop-implementation
     });
 });

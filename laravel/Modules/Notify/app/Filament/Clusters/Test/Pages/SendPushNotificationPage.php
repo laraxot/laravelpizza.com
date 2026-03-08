@@ -39,7 +39,7 @@ class SendPushNotificationPage extends XotBasePage
 
     public function mount(): void
     {
-        // @var mixed fillForms(;
+        $this->fillForms();
     }
 
     public function notificationForm(Schema $schema): Schema
@@ -121,7 +121,7 @@ class SendPushNotificationPage extends XotBasePage
             return;
         }
 
-        $data = // @var mixed notificationForm->getState(;
+        $data = $notificationForm->getState();
         $deviceToken = $data['deviceToken'] ?? '';
 
         if ($deviceToken === '') {
@@ -229,6 +229,6 @@ class SendPushNotificationPage extends XotBasePage
 
     protected function fillForms(): void
     {
-        // @var mixed notificationForm->fill(;
+        $notificationForm->fill();
     }
 }

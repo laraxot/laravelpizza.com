@@ -14,9 +14,9 @@ declare(strict_types=1);
         </x-slot>
 
         <form wire:submit="sendEmail">
-            {{ // @var mixed emailForm }}
+            {{ $emailForm }}
             {{ $error_message ?? '--' }}
-            <x-filament::actions :actions="// @var mixed getEmailFormActions(
+            <x-filament::actions :actions="$this->getEmailFormActions(
 
             <x-filament::loading-indicator class="h-5 w-5" wire:loading wire:target="sendEmail" />
         </form>

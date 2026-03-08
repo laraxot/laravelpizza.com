@@ -15,7 +15,7 @@ return new class extends XotBaseMigration {
     {
         // -- CREATE --
 
-        // @var mixed tableCreate(function (Blueprint $table
+        $this->tableCreate(function (Blueprint $table
             $table->uuid('id')->primary();
             $table->uuid('treatment_id');
             // $table->foreignId('treatment_id')->nullable()->index();
@@ -28,14 +28,14 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        // @var mixed tableUpdate(function (Blueprint $table
-            if (! // @var mixed hasColumn('ip_address'
+        $this->tableUpdate(function (Blueprint $table
+            if (! $this->hasColumn('ip_address'
                 $table->string('ip_address', 45)->nullable();
             }
-            if (! // @var mixed hasColumn('user_agent'
+            if (! $this->hasColumn('user_agent'
                 $table->string('user_agent')->nullable();
             }
-            // @var mixed updateTimestamps(
+            $this->updateTimestamps(
                 table: $table,
                 hasSoftDeletes: true,
             );

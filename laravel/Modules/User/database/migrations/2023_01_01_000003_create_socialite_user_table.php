@@ -39,7 +39,13 @@ return new class extends XotBaseMigration {
             // if (! $this->hasColumn('email'
             //    $table->string('email')->nullable();
             // }
+<<<<<<< HEAD
+            if ('varchar' === $this->getColumnType('token')) {
+||||||| 6161e129d
+            if ($this->getColumnType('token') === 'varchar') {
+=======
             if ('varchar' === $this->getColumnType('token'
+>>>>>>> feature/ralph-loop-implementation
                 $table->text('token')->nullable()->change();
             }
             $this->updateTimestamps($table);

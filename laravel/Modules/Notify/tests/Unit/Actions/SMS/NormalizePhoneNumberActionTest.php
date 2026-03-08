@@ -6,15 +6,15 @@ use Modules\Notify\Actions\SMS\NormalizePhoneNumberAction;
 
 describe('SMS\NormalizePhoneNumberAction', function () {
     beforeEach(function () {
-        // @var mixed action = new NormalizePhoneNumberAction;
+        $action = new NormalizePhoneNumberAction;
     });
 
     it('can be instantiated', function () {
-        expect(// @var mixed action;
+        expect($action);
     });
 
     it('has execute method with correct signature', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+        $reflection = new ReflectionClass($action);
         $method = $reflection->getMethod('execute');
 
         expect($method->isPublic())->toBeTrue();
@@ -22,7 +22,7 @@ describe('SMS\NormalizePhoneNumberAction', function () {
     });
 
     it('execute accepts string parameter', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+        $reflection = new ReflectionClass($action);
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
@@ -30,7 +30,7 @@ describe('SMS\NormalizePhoneNumberAction', function () {
     });
 
     it('execute returns string', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+        $reflection = new ReflectionClass($action);
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
@@ -38,30 +38,30 @@ describe('SMS\NormalizePhoneNumberAction', function () {
     });
 
     it('uses strict types', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+        $reflection = new ReflectionClass($action);
         $filename = $reflection->getFileName();
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1);');
+        expect($content)->toContain('declare(strict_types=1));');
     });
 
     it('has correct namespace', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+        $reflection = new ReflectionClass($action);
 
         expect($reflection->getNamespaceName())->toBe('Modules\Notify\Actions\SMS');
     });
 
     it('has required imports', function () {
-        $filename = (new ReflectionClass(// @var mixed action;
+        $filename = (new ReflectionClass($action));
         $content = file_get_contents($filename);
 
-        expect($content)->toContain('use Webmozart\Assert\Assert;');
-        expect($content)->toContain('use function Safe\preg_replace;');
+        expect($content)->toContain('use Webmozart\Assert\Assert);');
+        expect($content)->toContain('use function Safe\preg_replace);');
     });
 
     it('is not using QueueableAction trait', function () {
-        $traits = class_uses(// @var mixed action;
+        $traits = class_uses($action);
 
         expect($traits)->not->toContain('Spatie\QueueableAction\QueueableAction');
     });

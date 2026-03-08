@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 use Modules\Notify\Datas\RecordNotificationData;
 use Modules\Xot\States\Transitions\XotBaseTransition;
-use Tests\TestCase;
 
-uses(TestCase::class);
 
 describe('XotBaseTransition', function () {
     beforeEach(function () {
@@ -26,7 +24,7 @@ describe('XotBaseTransition', function () {
             public function getNotificationRecipients(): array
             {
                 return [
-                    'test_user' => RecordNotificationData::from(['record' => $record, 'channel' => 'mail']
+                    'test_user' => RecordNotificationData::from(['record' => $record, 'channel' => 'mail'])
                 ];
             }
 

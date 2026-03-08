@@ -26,40 +26,40 @@ uses(TestCase::class);
 // ---------------------------------------------------------------------------
 
 it('returns 200 for English registration page', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertStatus(200);
 });
 
 it('returns 200 for Italian registration page', function (): void {
-    $response = // @var mixed get('/it/auth/register';
+    $response = $this->get('/it/auth/register');
     $response->assertStatus(200);
 });
 
 it('returns 200 for Spanish registration page', function (): void {
-    $response = // @var mixed get('/es/auth/register';
+    $response = $this->get('/es/auth/register');
     $response->assertStatus(200);
 });
 
 it('returns 200 for German registration page', function (): void {
-    $response = // @var mixed get('/de/auth/register';
+    $response = $this->get('/de/auth/register');
     $response->assertStatus(200);
 });
 
 it('returns 200 for French registration page', function (): void {
-    $response = // @var mixed get('/fr/auth/register';
+    $response = $this->get('/fr/auth/register');
     $response->assertStatus(200);
 });
 
 it('returns 200 for Russian registration page', function (): void {
-    $response = // @var mixed get('/ru/auth/register';
+    $response = $this->get('/ru/auth/register');
     $response->assertStatus(200);
 });
 
 it('redirects authenticated users away from registration', function (): void {
     $user = User::factory()->create(['type' => 'customer_user']);
 
-    // @var mixed actingAs($user;
-    $response = // @var mixed get('/en/auth/register';
+    $this->actingAs($user);
+    $response = $this->get('/en/auth/register');
 
     // Should redirect or return 302
     expect($response->status())->toBeIn([302, 403]);
@@ -70,34 +70,34 @@ it('redirects authenticated users away from registration', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays correct English title on registration page', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('Start Your Pizza Journey', false);
 });
 
 it('displays English CTA title', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('Create Your FREE Account', false);
 });
 
 it('displays English form trust notice', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('No credit card required', false);
 });
 
 it('displays English terms notice', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('Terms and Privacy Policy', false);
 });
 
 it('displays English benefits section', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('Developer Community', false);
     $response->assertSee('Tutorials', false);
     $response->assertSee('Networking', false);
 });
 
 it('displays English social proof', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('Join', false);
     $response->assertSee('developers', false);
 });
@@ -107,27 +107,27 @@ it('displays English social proof', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays correct Italian title on registration page', function (): void {
-    $response = // @var mixed get('/it/auth/register';
+    $response = $this->get('/it/auth/register');
     $response->assertSee('Pizza Revolution', false);
 });
 
 it('displays Italian CTA title', function (): void {
-    $response = // @var mixed get('/it/auth/register';
+    $response = $this->get('/it/auth/register');
     $response->assertSee('account gratuito', false);
 });
 
 it('displays Italian form trust notice', function (): void {
-    $response = // @var mixed get('/it/auth/register';
+    $response = $this->get('/it/auth/register');
     $response->assertSee('Nessuna carta', false);
 });
 
 it('displays Italian terms notice', function (): void {
-    $response = // @var mixed get('/it/auth/register';
+    $response = $this->get('/it/auth/register');
     $response->assertSee('Termini', false);
 });
 
 it('displays Italian benefits section', function (): void {
-    $response = // @var mixed get('/it/auth/register';
+    $response = $this->get('/it/auth/register');
     $response->assertSee('Community', false);
 });
 
@@ -136,27 +136,27 @@ it('displays Italian benefits section', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays first name input field', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('first_name', false);
 });
 
 it('displays last name input field', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('last_name', false);
 });
 
 it('displays email input field', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('email', false);
 });
 
 it('displays password input field', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('password', false);
 });
 
 it('displays password confirmation input field', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('password_confirmation', false);
 });
 
@@ -165,24 +165,24 @@ it('displays password confirmation input field', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays privacy policy checkbox', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('privacy_accepted', false);
     $response->assertSee('Privacy', false);
 });
 
 it('displays terms checkbox', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('terms_accepted', false);
     $response->assertSee('Terms', false);
 });
 
 it('displays marketing consent checkbox', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('marketing_consent', false);
 });
 
 it('displays GDPR sections', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('Personal Information', false);
     $response->assertSee('Required Consent', false);
 });
@@ -192,12 +192,12 @@ it('displays GDPR sections', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays submit button', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('submit', false);
 });
 
 it('has registration form', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('<form', false);
 });
 
@@ -206,12 +206,12 @@ it('has registration form', function (): void {
 // ---------------------------------------------------------------------------
 
 it('displays login link', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('auth/login', false);
 });
 
 it('displays Italian login link', function (): void {
-    $response = // @var mixed get('/it/auth/register';
+    $response = $this->get('/it/auth/register');
     $response->assertSee('auth/login', false);
 });
 
@@ -220,12 +220,12 @@ it('displays Italian login link', function (): void {
 // ---------------------------------------------------------------------------
 
 it('includes proper title tag', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('<title>', false);
 });
 
 it('includes livewire or csrf token', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertStatus(200);
     expect(str_contains($response->getContent(), 'wire:') || str_contains($response->getContent(), '_token') || str_contains($response->getContent(), 'csrf'))->toBeTrue();
 });
@@ -235,17 +235,17 @@ it('includes livewire or csrf token', function (): void {
 // ---------------------------------------------------------------------------
 
 it('has proper language attribute', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('lang="en"', false);
 });
 
 it('has Italian language attribute', function (): void {
-    $response = // @var mixed get('/it/auth/register';
+    $response = $this->get('/it/auth/register');
     $response->assertSee('lang="it"', false);
 });
 
 it('has form labels for accessibility', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('label', false);
 });
 
@@ -331,7 +331,7 @@ it('has all required Italian translation keys', function (): void {
 it('widget is not visible to authenticated users', function (): void {
     $user = User::factory()->create(['type' => 'customer_user']);
 
-    // @var mixed actingAs($user;
+    $this->actingAs($user);
 
     $widget = new Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget();
     expect($widget->canView())->toBeFalse();

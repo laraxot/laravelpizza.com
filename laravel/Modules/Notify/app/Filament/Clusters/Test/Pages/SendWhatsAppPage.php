@@ -48,7 +48,7 @@ class SendWhatsAppPage extends XotBasePage
 
     public function mount(): void
     {
-        // @var mixed fillForms(;
+        $this->fillForms();
     }
 
     protected function getForms(): array
@@ -60,12 +60,12 @@ class SendWhatsAppPage extends XotBasePage
 
     protected function fillForms(): void
     {
-        // @var mixed whatsappForm->fill(;
+        $whatsappForm->fill();
     }
 
     public function whatsappForm(Schema $schema): Schema
     {
-        return $schema->components(// @var mixed getWhatsAppFormSchema(;
+        return $schema->components($getWhatsAppFormSchema());
     }
 
     /**
@@ -104,8 +104,8 @@ class SendWhatsAppPage extends XotBasePage
     public function sendWhatsApp(): void
     {
         try {
-            $data = // @var mixed whatsappForm->getState(;
-            $user = // @var mixed getUser(;
+            $data = $whatsappForm->getState();
+            $user = $this->getUser();
 
             $message = is_string($data['message']) ? $data['message'] : '';
 

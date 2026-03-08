@@ -34,10 +34,10 @@ readonly class GetAddressFromPhotonAction
      */
     public function execute(string $address): ?AddressData
     {
-        // @var mixed validateInput($address;
+        $this->validateInput($address);
 
         try {
-            $response = // @var mixed makeApiRequest($address;
+            $response = $this->makeApiRequest($address);
             /** @var array{features: array<array{properties: array<string, mixed>, geometry: array{coordinates: array<float>}}>} $data */
             $data = json_decode($response, true);
 
@@ -85,7 +85,7 @@ readonly class GetAddressFromPhotonAction
      */
     private function makeApiRequest(string $address): string
     {
-        $response = // @var mixed client->get(self::API_URL, [
+        $response = $client->get(self::API_URL, [
             'query' => [
                 'q' => $address,
                 'limit' => 1,

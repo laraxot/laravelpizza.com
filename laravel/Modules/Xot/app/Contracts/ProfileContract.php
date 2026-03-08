@@ -6,85 +6,54 @@ namespace Modules\Xot\Contracts;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Modules\User\Models\Role;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Exceptions\PermissionDoesNotExist;
+use Spatie\Permission\Contracts\Role;
 
 /**
- * Modules\Xot\Contracts\ProfileContract.
+ * Interface Modules\Xot\Contracts\ProfileContract.
  *
- * @property string                $id
- * @property string                $email
- * @property string                $slug
- * @property string                $user_id
- * @property int|null              $matr
- * @property Collection<int, Role> $roles
- * @property int|null              $roles_count
- * @property UserContract          $user
+ * @property int               $id
+ * @property string|null       $user_id
+ * @property string|null       $first_name
+ * @property string|null       $last_name
+ * @property string|null       $full_name
+ * @property UserContract|null $user
  *
- * @phpstan-require-extends Model
- *
- * @mixin \Eloquent
+ * @method        bool            isSuperAdmin()
+ * @method static ProfileContract make()
  */
-interface ProfileContract extends HasMedia
+interface ProfileContract
 {
     /**
-     * Grant the given permission(s) to a role.
-     *
-     * @return $this
+     * Get the user associated with the profile.
      */
-    public function givePermissionTo(string|int|array|Permission|\Illuminate\Support\Collection $permissions = []);
+    public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo;
+
+    /**
+     * Get the profile full name.
+     */
+    public function getFullNameAttribute(): string;
+
+    /**
+     * Toggles the super-admin role for the associated user.
+     */
+    public function toggleSuperAdmin(): void;
 
     /**
      * Assign the given role to the model.
      *
      * @return $this
      */
-    public function assignRole(array|string|int|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles = [
-    ]);
+    public function assignRole(array|string|int|Role|Collection $roles = []);
 
     /**
      * Determine if the model has (one of) the given role(s).
      */
-    public function hasRole(
-        string|int|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles,
-        ?string $guard = null,
-    ): bool;
+    public function hasRole(string|int|array|Role|Collection $roles, ?string $guard = null): bool;
 
     /**
-     * Determine if the model has any of the given role(s).
+     * Revoke the given role from the model.
      *
-     * Alias to hasRole() but without Guard controls
+     * @return $this
      */
-    public function hasAnyRole(string|int|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles = [
-    ]): bool;
-
-    /**
-     * Determine if the model may perform the given permission.
-     *
-     * @throws PermissionDoesNotExist
-     */
-    public function hasPermissionTo(string|int|Permission $permission, ?string $guardName = null): bool;
-
-    /**
-     * Undocumented function.
-     */
-    public function toggleSuperAdmin(): void;
-
-    /**
-     * ---return BelongsTo<UserContract, self>.
-     */
-    public function user(): BelongsTo;
-
-    /**
-     * --.
-     */
-    public function isSuperAdmin(): bool;
-
-    /**
-     * Get the URL of the user's avatar.
-     */
-    public function getAvatarUrl(): ?string;
+    public function removeRole(string|int|array|Role|Collection $role);
 }

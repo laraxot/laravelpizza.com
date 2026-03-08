@@ -54,12 +54,12 @@ class VideoStream
         if ($mime === false) {
             throw new Exception('Unable to determine MIME type.');
         }
-        // @var mixed stream = $filesystem->readStream($path;
-        // @var mixed mime = $mime;
-        // @var mixed fileModifiedTime = $filesystem->lastModified($path;
-        // @var mixed size = $filesystem->size($path;
+        $stream = $filesystem->readStream($path);
+        $mime = $mime;
+        $fileModifiedTime = $filesystem->lastModified($path);
+        $size = $filesystem->size($path);
 
-        if (! is_string(// @var mixed mime
+        if (! is_string($mime
             throw new Exception('Unable to determine MIME type.');
         }
     }
@@ -69,9 +69,9 @@ class VideoStream
      */
     public function start(): void
     {
-        // @var mixed setHeaders(;
-        // @var mixed streamContent(;
-        // @var mixed closeStream(;
+        $this->setHeaders();
+        $this->streamContent();
+        $this->closeStream();
     }
 
     /**
@@ -80,19 +80,19 @@ class VideoStream
     private function setHeaders(): void
     {
         ob_end_clean(); // Clean any previous output
-        header('Content-Type: '.// @var mixed mime;
+        header('Content-Type: '.$mime);
         header('Cache-Control: max-age=2592000, public'); // 30 days cache
         header('Expires: '.gmdate('D, d M Y H:i:s', time() + 2592000).' GMT'); // 30 days in the future
-        header('Last-Modified: '.gmdate('D, d M Y H:i:s', // @var mixed fileModifiedTime;
+        header('Last-Modified: '.gmdate('D, d M Y H:i:s', $fileModifiedTime));
 
-        // @var mixed end = $this->size - 1;
+        $end = $this->size - 1;
         header('Accept-Ranges: bytes');
 
         Assert::nullOrString($rangeHeader = $_SERVER['HTTP_RANGE'] ?? null);
         if ($rangeHeader !== null) {
-            // @var mixed processRangeHeader($rangeHeader;
+            $this->processRangeHeader($rangeHeader);
         } else {
-            header('Content-Length: '.// @var mixed size;
+            header('Content-Length: '.$size);
         }
     }
 
@@ -105,27 +105,27 @@ class VideoStream
 
         if ($unit !== 'bytes') {
             header('HTTP/1.1 416 Requested Range Not Satisfiable');
-            header(sprintf('Content-Range: bytes %d-%d/%d', // @var mixed start, $this->end, $this->size;
+            header(sprintf('Content-Range: bytes %d-%d/%d', $start, $this->end, $this->size));
             exit;
         }
 
         $rangeParts = explode('-', $range);
         $start = (int) $rangeParts[0];
-        $end = isset($rangeParts[1]) ? ((int) $rangeParts[1]) : // @var mixed end;
+        $end = isset($rangeParts[1]) ? ((int) $rangeParts[1]) : $end;
 
-        if ($start > $end || $start >= // @var mixed size || $end >= $this->size
+        if ($start > $end || $start >= $size || $end >= $this->size
             header('HTTP/1.1 416 Requested Range Not Satisfiable');
-            header(sprintf('Content-Range: bytes %d-%d/%d', // @var mixed start, $this->end, $this->size;
+            header(sprintf('Content-Range: bytes %d-%d/%d', $start, $this->end, $this->size));
             exit;
         }
 
-        // @var mixed start = $start;
-        // @var mixed end = $end;
+        $start = $start;
+        $end = $end;
 
-        $length = // @var mixed end - $this->start + 1;
+        $length = $end - $this->start + 1;
         header('HTTP/1.1 206 Partial Content');
         header('Content-Length: '.$length);
-        header(sprintf('Content-Range: bytes %d-%d/%d', // @var mixed start, $this->end, $this->size;
+        header(sprintf('Content-Range: bytes %d-%d/%d', $start, $this->end, $this->size));
     }
 
     /**
@@ -135,18 +135,18 @@ class VideoStream
     {
         set_time_limit(0); // Disable time limit for streaming
 
-        if (! is_resource(// @var mixed stream
+        if (! is_resource($stream
             throw new Exception('Stream resource is not valid.');
         }
 
-        fseek(// @var mixed stream, $this->start;
-        while (! feof(// @var mixed stream
-            $bytesToRead = min(// @var mixed bufferSize, $this->end - $this->start + 1;
+        fseek($stream, $this->start);
+        while (! feof($stream
+            $bytesToRead = min($bufferSize, $this->end - $this->start + 1);
             if ($bytesToRead > 0) {
-                $data = fread(// @var mixed stream, $bytesToRead;
+                $data = fread($stream, $bytesToRead);
                 echo $data;
                 flush();
-                // @var mixed start += $bytesToRead;
+                $start += $bytesToRead;
             } else {
                 break; // Evita loop infiniti se $bytesToRead <= 0
             }
@@ -158,8 +158,8 @@ class VideoStream
      */
     private function closeStream(): void
     {
-        if (is_resource(// @var mixed stream
-            fclose(// @var mixed stream;
+        if (is_resource($stream
+            fclose($stream);
         }
 
         exit;

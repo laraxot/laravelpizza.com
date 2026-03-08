@@ -63,7 +63,7 @@ class MailTemplateTest extends TestCase
             'counter',
         ];
 
-        // @var mixed assertEquals($expectedFillable, $template->getFillable(;
+        $this->assertEquals($expectedFillable, $template->getFillable());
     }
 
     /** @test */
@@ -77,7 +77,7 @@ class MailTemplateTest extends TestCase
             'deleted_at' => 'datetime',
         ];
 
-        // @var mixed assertEquals($expectedCasts, $template->casts(;
+        $this->assertEquals($expectedCasts, $template->casts());
     }
 
     /** @test */
@@ -92,7 +92,7 @@ class MailTemplateTest extends TestCase
             'sms_template',
         ];
 
-        // @var mixed assertEquals($expectedTranslatable, $template->translatable;
+        $this->assertEquals($expectedTranslatable, $template->translatable);
     }
 
     /** @test */
@@ -100,7 +100,7 @@ class MailTemplateTest extends TestCase
     {
         $template = new MailTemplate;
 
-        // @var mixed assertEquals('notify', $template->getConnectionName(;
+        $this->assertEquals('notify', $template->getConnectionName());
     }
 
     /** @test */
@@ -115,8 +115,8 @@ class MailTemplateTest extends TestCase
             'counter' => 0,
         ]);
 
-        // @var mixed assertEquals('test-email-template', $template->slug;
-        // @var mixed assertDatabaseHas('mail_templates', [
+        $this->assertEquals('test-email-template', $template->slug);
+        $this->assertDatabaseHas('mail_templates', [
             'id' => $template->id,
             'slug' => 'test-email-template',
         ]);
@@ -136,17 +136,17 @@ class MailTemplateTest extends TestCase
             'counter' => 0,
         ]);
 
-        // @var mixed assertDatabaseHas('mail_templates', [
+        $this->assertDatabaseHas('mail_templates', [
             'id' => $template->id,
             'params' => json_encode($params),
         ]);
 
-        // @var mixed assertIsArray($template->params;
-        // @var mixed assertCount(4, $template->params;
-        // @var mixed assertContains('name', $template->params;
-        // @var mixed assertContains('email', $template->params;
-        // @var mixed assertContains('company', $template->params;
-        // @var mixed assertContains('role', $template->params;
+        $this->assertIsArray($template->params);
+        $this->assertCount(4, $template->params);
+        $this->assertContains('name', $template->params);
+        $this->assertContains('email', $template->params);
+        $this->assertContains('company', $template->params);
+        $this->assertContains('role', $template->params);
     }
 
     /** @test */
@@ -169,16 +169,16 @@ class MailTemplateTest extends TestCase
             'counter' => 0,
         ]);
 
-        // @var mixed assertDatabaseHas('mail_templates', [
+        $this->assertDatabaseHas('mail_templates', [
             'id' => $template->id,
             'sms_template' => json_encode($smsTemplate),
         ]);
 
-        // @var mixed assertIsArray($template->sms_template;
-        // @var mixed assertEquals('Benvenuto {{name}}! La tua email è {{email}}', $template->sms_template['message'];
-        // @var mixed assertEquals(['name', 'email'], $template->sms_template['variables'];
-        // @var mixed assertEquals(160, $template->sms_template['max_length'];
-        // @var mixed assertEquals('GSM7', $template->sms_template['encoding'];
+        $this->assertIsArray($template->sms_template);
+        $this->assertEquals('Benvenuto {{name}}! La tua email è {{email}}', $template->sms_template['message']);
+        $this->assertEquals(['name', 'email'], $template->sms_template['variables']);
+        $this->assertEquals(160, $template->sms_template['max_length']);
+        $this->assertEquals('GSM7', $template->sms_template['encoding']);
     }
 
     /** @test */
@@ -193,13 +193,13 @@ class MailTemplateTest extends TestCase
             'counter' => 0,
         ]);
 
-        // @var mixed assertEquals(0, $template->counter;
+        $this->assertEquals(0, $template->counter);
 
         $template->increment('counter');
-        // @var mixed assertEquals(1, $template->fresh(;
+        $this->assertEquals(1, $template->fresh());
 
         $template->increment('counter', 5);
-        // @var mixed assertEquals(6, $template->fresh(;
+        $this->assertEquals(6, $template->fresh());
     }
 
     /** @test */
@@ -221,7 +221,7 @@ class MailTemplateTest extends TestCase
             'params' => ['updated'],
         ]);
 
-        // @var mixed assertDatabaseHas('mail_templates', [
+        $this->assertDatabaseHas('mail_templates', [
             'id' => $template->id,
             'name' => 'Updated Name',
             'subject' => 'Updated Subject',
@@ -229,7 +229,7 @@ class MailTemplateTest extends TestCase
             'params' => json_encode(['updated']),
         ]);
 
-        // @var mixed assertEquals('updated-name', $template->fresh(;
+        $this->assertEquals('updated-name', $template->fresh());
     }
 
     /** @test */
@@ -248,10 +248,10 @@ class MailTemplateTest extends TestCase
             ->where('slug', 'find-test-template')
             ->first();
 
-        // @var mixed assertNotNull($foundTemplate;
-        // @var mixed assertEquals($template->id, $foundTemplate->id;
-        // @var mixed assertEquals('App\Mail\FindMail', $foundTemplate->mailable;
-        // @var mixed assertEquals('find-test-template', $foundTemplate->slug;
+        $this->assertNotNull($foundTemplate);
+        $this->assertEquals($template->id, $foundTemplate->id);
+        $this->assertEquals('App\Mail\FindMail', $foundTemplate->mailable);
+        $this->assertEquals('find-test-template', $foundTemplate->slug);
     }
 
     /** @test */
@@ -268,9 +268,9 @@ class MailTemplateTest extends TestCase
 
         $foundTemplate = MailTemplate::where('name', 'Name Search Template')->first();
 
-        // @var mixed assertNotNull($foundTemplate;
-        // @var mixed assertEquals($template->id, $foundTemplate->id;
-        // @var mixed assertEquals('Name Search Template', $foundTemplate->name;
+        $this->assertNotNull($foundTemplate);
+        $this->assertEquals($template->id, $foundTemplate->id);
+        $this->assertEquals('Name Search Template', $foundTemplate->name);
     }
 
     /** @test */
@@ -287,8 +287,8 @@ class MailTemplateTest extends TestCase
 
         $foundTemplates = MailTemplate::where('subject', 'like', '%Welcome%')->get();
 
-        // @var mixed assertCount(1, $foundTemplates;
-        // @var mixed assertEquals('Welcome to our platform', $foundTemplates[0]->subject;
+        $this->assertCount(1, $foundTemplates);
+        $this->assertEquals('Welcome to our platform', $foundTemplates[0]->subject);
     }
 
     /** @test */
@@ -305,9 +305,9 @@ class MailTemplateTest extends TestCase
 
         $foundTemplates = MailTemplate::whereJsonContains('params', 'name')->get();
 
-        // @var mixed assertCount(1, $foundTemplates;
-        // @var mixed assertEquals($template->id, $foundTemplates[0]->id;
-        // @var mixed assertContains('name', $foundTemplates[0]->params;
+        $this->assertCount(1, $foundTemplates);
+        $this->assertEquals($template->id, $foundTemplates[0]->id);
+        $this->assertContains('name', $foundTemplates[0]->params);
     }
 
     /** @test */
@@ -334,10 +334,10 @@ class MailTemplateTest extends TestCase
         $lowCounterTemplates = MailTemplate::where('counter', '<=', 10)->get();
         $highCounterTemplates = MailTemplate::where('counter', '>=', 25)->get();
 
-        // @var mixed assertCount(1, $lowCounterTemplates;
-        // @var mixed assertCount(1, $highCounterTemplates;
-        // @var mixed assertEquals(5, $lowCounterTemplates[0]->counter;
-        // @var mixed assertEquals(50, $highCounterTemplates[0]->counter;
+        $this->assertCount(1, $lowCounterTemplates);
+        $this->assertCount(1, $highCounterTemplates);
+        $this->assertEquals(5, $lowCounterTemplates[0]->counter);
+        $this->assertEquals(50, $highCounterTemplates[0]->counter);
     }
 
     /** @test */
@@ -352,8 +352,8 @@ class MailTemplateTest extends TestCase
             'counter' => 0,
         ]);
 
-        // @var mixed assertIsArray($template->params;
-        // @var mixed assertEmpty($template->params;
+        $this->assertIsArray($template->params);
+        $this->assertEmpty($template->params);
     }
 
     /** @test */
@@ -369,8 +369,8 @@ class MailTemplateTest extends TestCase
             'counter' => 0,
         ]);
 
-        // @var mixed assertIsArray($template->sms_template;
-        // @var mixed assertEmpty($template->sms_template;
+        $this->assertIsArray($template->sms_template);
+        $this->assertEmpty($template->sms_template);
     }
 
     /** @test */
@@ -403,16 +403,16 @@ class MailTemplateTest extends TestCase
             'counter' => 0,
         ]);
 
-        // @var mixed assertDatabaseHas('mail_templates', [
+        $this->assertDatabaseHas('mail_templates', [
             'id' => $template->id,
             'sms_template' => json_encode($complexSmsTemplate),
         ]);
 
-        // @var mixed assertEquals('Benvenuto {{name}}!', $template->sms_template['message'];
-        // @var mixed assertEquals(['name', 'email'], $template->sms_template['variables'];
-        // @var mixed assertEquals(160, $template->sms_template['max_length'];
-        // @var mixed assertTrue($template->sms_template['fallback']['enabled'];
-        // @var mixed assertEquals('high', $template->sms_template['delivery_options']['priority'];
+        $this->assertEquals('Benvenuto {{name}}!', $template->sms_template['message']);
+        $this->assertEquals(['name', 'email'], $template->sms_template['variables']);
+        $this->assertEquals(160, $template->sms_template['max_length']);
+        $this->assertTrue($template->sms_template['fallback']['enabled']);
+        $this->assertEquals('high', $template->sms_template['delivery_options']['priority']);
     }
 
     /** @test */
@@ -441,9 +441,9 @@ class MailTemplateTest extends TestCase
             ->where('counter', '>=', 15)
             ->get();
 
-        // @var mixed assertCount(1, $foundTemplates;
-        // @var mixed assertEquals('Another Multi Criteria Template', $foundTemplates[0]->name;
-        // @var mixed assertEquals(20, $foundTemplates[0]->counter;
+        $this->assertCount(1, $foundTemplates);
+        $this->assertEquals('Another Multi Criteria Template', $foundTemplates[0]->name);
+        $this->assertEquals(20, $foundTemplates[0]->counter);
     }
 
     /** @test */
@@ -460,10 +460,10 @@ class MailTemplateTest extends TestCase
             'counter' => 0,
         ]);
 
-        // @var mixed assertNull($template->subject;
-        // @var mixed assertNull($template->text_template;
-        // @var mixed assertNull($template->sms_template;
-        // @var mixed assertNull($template->params;
+        $this->assertNull($template->subject);
+        $this->assertNull($template->text_template);
+        $this->assertNull($template->sms_template);
+        $this->assertNull($template->params);
     }
 
     /** @test */
@@ -489,8 +489,8 @@ class MailTemplateTest extends TestCase
 
         $templates = MailTemplate::where('name', 'Test Template')->get();
 
-        // @var mixed assertCount(2, $templates;
-        // @var mixed assertEquals('test-template', $templates[0]->slug;
-        // @var mixed assertEquals('test-template-1', $templates[1]->slug;
+        $this->assertCount(2, $templates);
+        $this->assertEquals('test-template', $templates[0]->slug);
+        $this->assertEquals('test-template-1', $templates[1]->slug);
     }
 }

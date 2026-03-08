@@ -28,12 +28,12 @@ final class OpeningHoursField extends XotBaseField
 
         $form = [];
         foreach ($days as $dayKey => $dayLabel) {
-            $form = array_merge($form, // @var mixed getDaySchema($dayKey, $dayLabel;
+            $form = array_merge($form, $getDaySchema($dayKey, $dayLabel));
         }
 
-        // @var mixed schema($form;
+        $this->schema($form);
 
-        // @var mixed rules([
+        $this->rules([
             new OpeningHoursRule(),
         ]);
     }
@@ -49,12 +49,10 @@ final class OpeningHoursField extends XotBaseField
                 ->extraAttributes([
                     'class' => 'font-medium text-gray-900 dark:text-gray-100 text-center py-2',
                 ])
-                ->columnSpan(1),
-
-            // @var mixed getTimePickerComponent("{$dayKey}.morning_from"
-            // @var mixed getTimePickerComponent("{$dayKey}.morning_to"
-            // @var mixed getTimePickerComponent("{$dayKey}.afternoon_from"
-            // @var mixed getTimePickerComponent("{$dayKey}.afternoon_to"
+                ->columnSpan(1), $getTimePickerComponent("{$dayKey}.morning_from"
+            $this->getTimePickerComponent("{$dayKey}.morning_to"
+            $this->getTimePickerComponent("{$dayKey}.afternoon_from"
+            $this->getTimePickerComponent("{$dayKey}.afternoon_to")
         ];
     }
 

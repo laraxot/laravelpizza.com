@@ -26,13 +26,13 @@ final class GetAddressFromGoogleMapsAction
      */
     public function execute(string $address): AddressData
     {
-        $apiKey = // @var mixed getApiKey(;
-        $response = // @var mixed makeApiRequest($address, $apiKey;
+        $apiKey = $this->getApiKey();
+        $response = $this->makeApiRequest($address, $apiKey);
 
-        $responseData = // @var mixed validateResponse($response;
-        $firstResult = // @var mixed getFirstResult($responseData;
+        $responseData = $this->validateResponse($response);
+        $firstResult = $this->getFirstResult($responseData);
 
-        return // @var mixed mapResponseToAddressData($firstResult;
+        return $this->mapResponseToAddressData($firstResult);
     }
 
     private function getApiKey(): string
@@ -97,16 +97,16 @@ final class GetAddressFromGoogleMapsAction
         return AddressData::from([
             'latitude' => $result->geometry->location->lat,
             'longitude' => $result->geometry->location->lng,
-            'country' => // @var mixed getComponent($result->address_components, ['country']
-            'city' => // @var mixed getComponent($result->address_components, ['administrative_area_level_3']
-            'country_code' => // @var mixed getComponent($result->address_components, ['country'], true
-            'postal_code' => (int) // @var mixed getComponent($result->address_components, ['postal_code']
-            'locality' => // @var mixed getComponent($result->address_components, ['locality']
-            'county' => // @var mixed getComponent($result->address_components, ['administrative_area_level_2']
-            'street' => // @var mixed getComponent($result->address_components, ['route']
-            'street_number' => // @var mixed getComponent($result->address_components, ['street_number']
-            'district' => // @var mixed getComponent($result->address_components, ['sublocality_level_1']
-            'state' => // @var mixed getComponent($result->address_components, ['administrative_area_level_1']
+            'country' => $this->getComponent($result->address_components, ['country']
+            'city' => $this->getComponent($result->address_components, ['administrative_area_level_3']
+            'country_code' => $this->getComponent($result->address_components, ['country'], true
+            'postal_code' => (int) $this->getComponent($result->address_components, ['postal_code']
+            'locality' => $this->getComponent($result->address_components, ['locality']
+            'county' => $this->getComponent($result->address_components, ['administrative_area_level_2']
+            'street' => $this->getComponent($result->address_components, ['route']
+            'street_number' => $this->getComponent($result->address_components, ['street_number']
+            'district' => $this->getComponent($result->address_components, ['sublocality_level_1']
+            'state' => $this->getComponent($result->address_components, ['administrative_area_level_1']
         ]);
     }
 

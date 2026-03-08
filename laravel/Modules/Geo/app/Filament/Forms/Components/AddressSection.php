@@ -20,8 +20,8 @@ class AddressSection extends XotBaseSection
     {
         parent::setUp();
         // Passiamo una Closure a schema() per rispettare la firma di Filament\Schemas
-        // @var mixed schema(fn (;
-        // @var mixed columns(3;
+        $this->schema(fn ());
+        $this->columns(3);
     }
 
     /**
@@ -43,9 +43,9 @@ class AddressSection extends XotBaseSection
     public function saveRelationships(): void
     {
 
-        $state = // @var mixed getState(;
-        $record = // @var mixed getRecord(;
-        $relationship = $record->{// @var mixed getRelationship(;
+        $state = $this->getState();
+        $record = $this->getRecord();
+        $relationship = $record->{$this->getRelationship();
 
         if (null === $relationship) {
             return;

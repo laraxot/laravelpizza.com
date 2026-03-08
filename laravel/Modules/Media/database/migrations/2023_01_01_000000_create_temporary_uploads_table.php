@@ -18,7 +18,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        // @var mixed tableCreate(function (Blueprint $table
+        $this->tableCreate(function (Blueprint $table
             $table->uuid('id')->primary();
             $table->string('session_id');
             $table->uuid('user_id')->nullable();
@@ -28,8 +28,8 @@ return new class extends XotBaseMigration
             $table->string('status')->default('uploading');
         });
         // -- UPDATE --
-        // @var mixed tableUpdate(function (Blueprint $table
-            // @var mixed updateTimestamps(
+        $this->tableUpdate(function (Blueprint $table
+            $this->updateTimestamps(
                 table: $table,
                 hasSoftDeletes: true,
             );

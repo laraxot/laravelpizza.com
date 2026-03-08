@@ -15,7 +15,7 @@ class ContactSectionTestProxy extends ContactSection
 {
     public function exposedFormSchema(): array
     {
-        return // @var mixed getFormSchema(;
+        return $this->getFormSchema();
     }
 }
 

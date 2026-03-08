@@ -29,8 +29,8 @@ class RecordNotification extends Notification implements ShouldQueue
 
     public function __construct(Model $record, string $slug)
     {
-        // @var mixed record = $record;
-        // @var mixed slug = Str::slug($slug;
+        $record = $record;
+        $slug = Str::slug($slug);
     }
 
     /**
@@ -70,14 +70,14 @@ class RecordNotification extends Notification implements ShouldQueue
      */
     public function toMail(object $notifiable): SpatieEmail
     {
-        $email = new SpatieEmail(// @var mixed record, $this->slug;
-        $email = $email->mergeData(// @var mixed data;
+        $email = new SpatieEmail($record, $this->slug);
+        $email = $email->mergeData($data);
 
-        $email = $email->addAttachments(// @var mixed attachments;
+        $email = $email->addAttachments($attachments);
 
         // Set recipient for envelope() method in SpatieEmail
         // Note: Laravel's Notification system handles recipient routing via Notification::route(),
-        // but we set it here for SpatieEmail's envelope() method which uses // @var mixed recipient
+        // but we set it here for SpatieEmail's envelope() method which uses $recipient
         if (method_exists($notifiable, 'routeNotificationFor')) {
             $to = $notifiable->routeNotificationFor('mail');
             if (is_string($to) && $to !== '') {
@@ -93,9 +93,9 @@ class RecordNotification extends Notification implements ShouldQueue
      */
     public function toSms(object $notifiable): ?SmsData
     {
-        $email = new SpatieEmail(// @var mixed record, $this->slug;
+        $email = new SpatieEmail($record, $this->slug);
 
-        $email = $email->mergeData(// @var mixed data;
+        $email = $email->mergeData($data);
 
         // If the notifiable entity has a routeNotificationForSms method,
         // we'll use that to get the destination phone number
@@ -134,7 +134,7 @@ class RecordNotification extends Notification implements ShouldQueue
      */
     public function mergeData(array $data): self
     {
-        // @var mixed data = array_merge($this->data, $data;
+        $data = array_merge($this->data, $data);
 
         return $this;
     }
@@ -147,7 +147,7 @@ class RecordNotification extends Notification implements ShouldQueue
      */
     public function addAttachments(array $attachments): self
     {
-        // @var mixed attachments = array_merge($this->attachments, $attachments;
+        $attachments = array_merge($this->attachments, $attachments);
 
         return $this;
     }

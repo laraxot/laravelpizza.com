@@ -13,23 +13,23 @@ use Modules\Geo\Actions\Mapbox\GetAddressFromMapboxAction;
 use Modules\Geo\Datas\AddressData;
 
 beforeEach(function () {
-    // @var mixed mockHandler = new MockHandler(;
-    $handlerStack = HandlerStack::create(// @var mixed mockHandler;
-    // @var mixed client = new Client(['handler' => $handlerStack];
-    // @var mixed action = new GetAddressFromMapboxAction($this->client;
+    $mockHandler = new MockHandler();
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetAddressFromMapboxAction($this->client);
 });
 
 it('throws exception when api key is not configured', function (): void {
     config(['services.mapbox.access_token' => null]);
 
-    expect(fn () => // @var mixed action->execute('Milano, Italia'
+    expect(fn () => $action->execute('Milano, Italia'
         ->toThrow(RuntimeException::class, 'Mapbox access token not configured');
 });
 
 it('throws exception for empty address', function (): void {
     config(['services.mapbox.access_token' => 'test_key']);
 
-    expect(fn () => // @var mixed action->execute(''
+    expect(fn () => $action->execute(''
         ->toThrow(RuntimeException::class, 'Address cannot be empty');
 });
 
@@ -38,16 +38,16 @@ it('throws exception for too long address', function (): void {
 
     $longAddress = str_repeat('a', 1001);
 
-    expect(fn () => // @var mixed action->execute($longAddress
+    expect(fn () => $action->execute($longAddress
         ->toThrow(RuntimeException::class, 'Address is too long');
 });
 
 it('throws exception for guzzle exception', function (): void {
     config(['services.mapbox.access_token' => 'test_key']);
 
-    // @var mixed mockHandler->append(new GuzzleHttp\Exception\RequestException('Error', new GuzzleHttp\Psr7\Request('GET', 'http://test';
+    $mockHandler->append(new GuzzleHttp\Exception\RequestException('Error', new GuzzleHttp\Psr7\Request('GET', 'http://test')));
 
-    $result = // @var mixed action->execute('Milano, Italia';
+    $result = $action->execute('Milano, Italia');
 
     expect($result)->toBeNull();
 });
@@ -55,11 +55,11 @@ it('throws exception for guzzle exception', function (): void {
 it('returns null when no features in response', function (): void {
     config(['services.mapbox.access_token' => 'test_key']);
 
-    // @var mixed mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'features' => [],
     ])));
 
-    $result = // @var mixed action->execute('NonExistentPlace';
+    $result = $action->execute('NonExistentPlace');
 
     expect($result)->toBeNull();
 });
@@ -67,7 +67,7 @@ it('returns null when no features in response', function (): void {
 it('returns address data for valid response', function (): void {
     config(['services.mapbox.access_token' => 'test_key']);
 
-    // @var mixed mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'features' => [[
             'center' => [9.1900, 45.4642],
             'context' => [
@@ -81,7 +81,7 @@ it('returns address data for valid response', function (): void {
         ]],
     ])));
 
-    $result = // @var mixed action->execute('Via Roma 1, Milano, Italia';
+    $result = $action->execute('Via Roma 1, Milano, Italia');
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)
@@ -98,7 +98,7 @@ it('returns address data for valid response', function (): void {
 it('handles address without house number', function (): void {
     config(['services.mapbox.access_token' => 'test_key']);
 
-    // @var mixed mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'features' => [[
             'center' => [9.1900, 45.4642],
             'context' => [
@@ -109,7 +109,7 @@ it('handles address without house number', function (): void {
         ]],
     ])));
 
-    $result = // @var mixed action->execute('Via Roma, Milano';
+    $result = $action->execute('Via Roma, Milano');
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)

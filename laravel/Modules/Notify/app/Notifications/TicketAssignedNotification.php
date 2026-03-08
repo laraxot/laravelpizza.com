@@ -30,7 +30,7 @@ class TicketAssignedNotification extends Notification
     {
         return (new MailMessage)
             ->subject('New Ticket Assigned')
-            ->line("A new ticket has been assigned to you by {// @var mixed assignedBy->name}"
+            ->line("A new ticket has been assigned to you by {$assignedBy->name}"
             ->action('View Ticket', url('/'));
     }
 
@@ -40,7 +40,7 @@ class TicketAssignedNotification extends Notification
     public function toArray(mixed $notifiable): array
     {
         return [
-            'assigned_by' => // @var mixed assignedBy->id,
+            'assigned_by' => $assignedBy->id,
         ];
     }
 }

@@ -7,9 +7,6 @@ namespace Modules\Xot\Tests\Unit\Actions\Config;
 use Illuminate\Support\Facades\File;
 use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Modules\Xot\Actions\Config\GetTenantConfigArrayAction;
-use Modules\Xot\Tests\TestCase;
-
-uses(TestCase::class);
 
 it('gets tenant config array correctly', function (): void {
     $configName = 'test_config';

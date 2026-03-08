@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Modules\Geo\Actions\FilterCoordinatesAction;
 
 beforeEach(function () {
-    // @var mixed action = new FilterCoordinatesAction(;
+    $action = new FilterCoordinatesAction();
 });
 
 it('filters coordinates within radius correctly', function (): void {
@@ -16,7 +16,7 @@ it('filters coordinates within radius correctly', function (): void {
     ];
 
     // Filter within 10km radius from Milano center
-    $filtered = // @var mixed action->execute($coordinates, 45.4642, 9.1900, 10.0;
+    $filtered = $action->execute($coordinates, 45.4642, 9.1900, 10.0);
 
     // Should return 2 coordinates (the center and the close one)
     expect($filtered)->toHaveCount(2);
@@ -39,7 +39,7 @@ it('returns empty array when no coordinates are within radius', function (): voi
     ];
 
     // Filter within 1km radius from Milano center
-    $filtered = // @var mixed action->execute($coordinates, 45.4642, 9.1900, 1.0;
+    $filtered = $action->execute($coordinates, 45.4642, 9.1900, 1.0);
 
     expect($filtered)->toBeArray()->toHaveCount(0);
 });
@@ -49,7 +49,7 @@ it('handles single coordinate within radius', function (): void {
         ['latitude' => 45.4642, 'longitude' => 9.1900],
     ];
 
-    $filtered = // @var mixed action->execute($coordinates, 45.4642, 9.1900, 5.0;
+    $filtered = $action->execute($coordinates, 45.4642, 9.1900, 5.0);
 
     expect($filtered)->toHaveCount(1);
     expect($filtered[0]['latitude'])->toBe(45.4642);
@@ -63,7 +63,7 @@ it('handles coordinates with string values', function (): void {
         ['latitude' => '45.4700', 'longitude' => '9.2000'],
     ];
 
-    $filtered = // @var mixed action->execute($coordinates, 45.4642, 9.1900, 10.0;
+    $filtered = $action->execute($coordinates, 45.4642, 9.1900, 10.0);
 
     expect($filtered)->toHaveCount(2);
     expect($filtered[0]['latitude'])->toBeFloat();
@@ -75,10 +75,10 @@ it('throws exception for invalid center latitude', function (): void {
         ['latitude' => 45.4642, 'longitude' => 9.1900],
     ];
 
-    expect(fn () => // @var mixed action->execute($coordinates, 91, 9.1900, 10.0
+    expect(fn () => $action->execute($coordinates, 91, 9.1900, 10.0
         ->toThrow(InvalidArgumentException::class, 'Latitudine centrale non valida');
 
-    expect(fn () => // @var mixed action->execute($coordinates, -91, 9.1900, 10.0
+    expect(fn () => $action->execute($coordinates, -91, 9.1900, 10.0
         ->toThrow(InvalidArgumentException::class, 'Latitudine centrale non valida');
 });
 
@@ -87,10 +87,10 @@ it('throws exception for invalid center longitude', function (): void {
         ['latitude' => 45.4642, 'longitude' => 9.1900],
     ];
 
-    expect(fn () => // @var mixed action->execute($coordinates, 45.4642, 181, 10.0
+    expect(fn () => $action->execute($coordinates, 45.4642, 181, 10.0
         ->toThrow(InvalidArgumentException::class, 'Longitudine centrale non valida');
 
-    expect(fn () => // @var mixed action->execute($coordinates, 45.4642, -181, 10.0
+    expect(fn () => $action->execute($coordinates, 45.4642, -181, 10.0
         ->toThrow(InvalidArgumentException::class, 'Longitudine centrale non valida');
 });
 
@@ -99,10 +99,10 @@ it('throws exception for invalid radius', function (): void {
         ['latitude' => 45.4642, 'longitude' => 9.1900],
     ];
 
-    expect(fn () => // @var mixed action->execute($coordinates, 45.4642, 9.1900, 0
+    expect(fn () => $action->execute($coordinates, 45.4642, 9.1900, 0
         ->toThrow(InvalidArgumentException::class, 'Il raggio deve essere maggiore di 0');
 
-    expect(fn () => // @var mixed action->execute($coordinates, 45.4642, 9.1900, 30000
+    expect(fn () => $action->execute($coordinates, 45.4642, 9.1900, 30000
         ->toThrow(InvalidArgumentException::class, 'Il raggio non può essere maggiore della circonferenza terrestre');
 });
 
@@ -111,7 +111,7 @@ it('throws exception for invalid coordinate latitude', function (): void {
         ['latitude' => 91, 'longitude' => 9.1900], // Invalid latitude
     ];
 
-    expect(fn () => // @var mixed action->execute($coordinates, 45.4642, 9.1900, 10.0
+    expect(fn () => $action->execute($coordinates, 45.4642, 9.1900, 10.0
         ->toThrow(InvalidArgumentException::class, 'Latitudine non valida');
 });
 
@@ -120,7 +120,7 @@ it('throws exception for invalid coordinate longitude', function (): void {
         ['latitude' => 45.4642, 'longitude' => 181], // Invalid longitude
     ];
 
-    expect(fn () => // @var mixed action->execute($coordinates, 45.4642, 9.1900, 10.0
+    expect(fn () => $action->execute($coordinates, 45.4642, 9.1900, 10.0
         ->toThrow(InvalidArgumentException::class, 'Longitudine non valida');
 });
 
@@ -131,7 +131,7 @@ it('sorts results by distance', function (): void {
         ['latitude' => 45.4642, 'longitude' => 9.1900], // Closest (center)
     ];
 
-    $filtered = // @var mixed action->execute($coordinates, 45.4642, 9.1900, 20.0;
+    $filtered = $action->execute($coordinates, 45.4642, 9.1900, 20.0);
 
     // Should be sorted by distance (closest first)
     expect($filtered)->toHaveCount(3);

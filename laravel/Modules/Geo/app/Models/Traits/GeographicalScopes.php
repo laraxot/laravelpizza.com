@@ -14,7 +14,7 @@ trait GeographicalScopes
      */
     public function scopeWithDistance(Builder $query, float $latitude, float $longitude): Builder
     {
-        return $query->select('*', // @var mixed getDistanceExpression($latitude, $longitude, 'distance';
+        return $query->select('*', $getDistanceExpression($latitude, $longitude, 'distance'));
     }
 
     /**
@@ -22,7 +22,7 @@ trait GeographicalScopes
      */
     public function scopeOrderByDistance(Builder $query, float $latitude, float $longitude): Builder
     {
-        return $query->orderBy(// @var mixed getDistanceExpression($latitude, $longitude;
+        return $query->orderBy($getDistanceExpression($latitude, $longitude));
     }
 
     public function getDistanceExpression(

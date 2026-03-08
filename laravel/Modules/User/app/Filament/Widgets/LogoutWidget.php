@@ -133,7 +133,7 @@ class LogoutWidget extends XotBaseWidget
     {
         return [
             'logout' => $this->getLogoutAction(
-            'cancel' => $this->getCancelAction(
+            'cancel' => $this->getCancelAction()
         ];
     }
 

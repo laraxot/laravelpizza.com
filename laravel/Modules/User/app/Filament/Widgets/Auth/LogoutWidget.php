@@ -67,7 +67,7 @@ class LogoutWidget extends XotBaseWidget
     public function getFormActions(): array
     {
         return [
-            $this->getLogoutAction($getCancelAction(
+            $this->getLogoutAction($getCancelAction()),
         ];
     }
 

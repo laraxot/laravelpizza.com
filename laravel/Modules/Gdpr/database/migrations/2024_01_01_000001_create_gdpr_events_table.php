@@ -16,7 +16,7 @@ return new class extends XotBaseMigration {
     {
         // -- CREATE --
 
-        // @var mixed tableCreate(function (Blueprint $table
+        $this->tableCreate(function (Blueprint $table
             $table->uuid('id')->primary();
             $table->uuid('treatment_id')->nullable();
             $table->uuid('consent_id')->nullable();
@@ -43,11 +43,11 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        // @var mixed tableUpdate(function (Blueprint $table
-            // if (! // @var mixed hasColumn('email'
+        $this->tableUpdate(function (Blueprint $table
+            // if (! $this->hasColumn('email'
             //    $table->string('email')->nullable();
             // }
-            // @var mixed updateTimestamps(
+            $this->updateTimestamps(
                 table: $table,
                 hasSoftDeletes: true,
             );

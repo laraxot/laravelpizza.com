@@ -179,37 +179,37 @@ it('has all required keys in Russian locale', function (): void {
 // ---------------------------------------------------------------------------
 
 it('detects Italian locale from URL', function (): void {
-    $response = // @var mixed get('/it/auth/register';
+    $response = $this->get('/it/auth/register');
     $response->assertSee('lang="it"', false);
     $response->assertStatus(200);
 });
 
 it('detects English locale from URL', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
     $response->assertSee('lang="en"', false);
     $response->assertStatus(200);
 });
 
 it('detects Spanish locale from URL', function (): void {
-    $response = // @var mixed get('/es/auth/register';
+    $response = $this->get('/es/auth/register');
     $response->assertSee('lang="es"', false);
     $response->assertStatus(200);
 });
 
 it('detects German locale from URL', function (): void {
-    $response = // @var mixed get('/de/auth/register';
+    $response = $this->get('/de/auth/register');
     $response->assertSee('lang="de"', false);
     $response->assertStatus(200);
 });
 
 it('detects French locale from URL', function (): void {
-    $response = // @var mixed get('/fr/auth/register';
+    $response = $this->get('/fr/auth/register');
     $response->assertSee('lang="fr"', false);
     $response->assertStatus(200);
 });
 
 it('detects Russian locale from URL', function (): void {
-    $response = // @var mixed get('/ru/auth/register';
+    $response = $this->get('/ru/auth/register');
     $response->assertSee('lang="ru"', false);
     $response->assertStatus(200);
 });

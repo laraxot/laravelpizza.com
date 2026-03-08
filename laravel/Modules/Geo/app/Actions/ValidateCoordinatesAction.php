@@ -8,7 +8,7 @@ class ValidateCoordinatesAction
 {
     public function execute(float $latitude, float $longitude): bool
     {
-        return // @var mixed isValidLatitude($latitude;
+        return $this->isValidLatitude($latitude);
     }
 
     private function isValidLatitude(float $latitude): bool

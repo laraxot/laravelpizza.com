@@ -10,13 +10,13 @@ use Modules\Geo\Actions\Here\GetAddressFromHereMapsAction;
 use Modules\Geo\Datas\AddressData;
 
 beforeEach(function () {
-    // @var mixed action = new GetAddressFromHereMapsAction(;
+    $action = new GetAddressFromHereMapsAction();
 });
 
 it('throws exception when api key is not configured', function (): void {
     config(['services.here.key' => null]);
 
-    expect(fn () => // @var mixed action->execute('Milano, Italia'
+    expect(fn () => $action->execute('Milano, Italia'
         ->toThrow(Exception::class, 'Here Maps API key not configured');
 });
 
@@ -27,7 +27,7 @@ it('returns null when api response is not successful', function (): void {
         '*' => Http::response(['statusCode' => 500], 500),
     ]);
 
-    $result = // @var mixed action->execute('Milano, Italia';
+    $result = $action->execute('Milano, Italia');
 
     expect($result)->toBeNull();
 });
@@ -46,7 +46,7 @@ it('returns null when no position in response', function (): void {
         ], 200),
     ]);
 
-    $result = // @var mixed action->execute('Milano, Italia';
+    $result = $action->execute('Milano, Italia');
 
     expect($result)->toBeNull();
 });
@@ -65,7 +65,7 @@ it('returns null when no address in response', function (): void {
         ], 200),
     ]);
 
-    $result = // @var mixed action->execute('Milano, Italia';
+    $result = $action->execute('Milano, Italia');
 
     expect($result)->toBeNull();
 });
@@ -91,7 +91,7 @@ it('returns address data for valid response', function (): void {
         ], 200),
     ]);
 
-    $result = // @var mixed action->execute('Via Roma 1, Milano, Italia';
+    $result = $action->execute('Via Roma 1, Milano, Italia');
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)
@@ -121,7 +121,7 @@ it('uses default country when missing', function (): void {
         ], 200),
     ]);
 
-    $result = // @var mixed action->execute('Milano';
+    $result = $action->execute('Milano');
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)

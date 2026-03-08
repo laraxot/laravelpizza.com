@@ -41,20 +41,20 @@ class NotificationData extends Data
     public function routeNotificationFor(string $driver, Notification $notification): string|NotificationModel
     {
         // dddx(['driver'=>$driver,'a'=>$a]);
-        // return // @var mixed routes[$driver] ?? null;
+        // return $routes[$driver] ?? null;
         if ($driver === 'database') {
             return app(NotificationModel::class);
         }
 
-        return // @var mixed recipient;
+        return $recipient;
     }
 
     public function getSmsData(): SmsData
     {
         return SmsData::from([
-            'from' => // @var mixed from,
-            'recipient' => // @var mixed recipient,
-            'body' => // @var mixed body,
+            'from' => $from,
+            'recipient' => $recipient,
+            'body' => $body,
         ]);
     }
 }

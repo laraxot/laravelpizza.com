@@ -33,7 +33,7 @@ class HasManyAction
 
         match (true) {
             $this->isDirectUpdate($relationDTO->data
-            default => $this->handleBatchUpdate($relationDTO, $updateData
+            default => $this->handleBatchUpdate($relationDTO, $updateData)
         };
     }
 

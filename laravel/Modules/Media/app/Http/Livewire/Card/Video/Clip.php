@@ -33,7 +33,7 @@ class Clip extends Component
      */
     public function mount(Model $model): void
     {
-        // @var mixed model = $model;
+        $model = $model;
     }
 
     /**
@@ -44,7 +44,7 @@ class Clip extends Component
         /**
          * @phpstan-var view-string
          */
-        $view = app(GetViewAction::class)->execute(// @var mixed tpl;
+        $view = app(GetViewAction::class)->execute($tpl);
         $view_params = [
             'view' => $view,
         ];
@@ -57,8 +57,8 @@ class Clip extends Component
      */
     public function editClip(): void
     {
-        $data = // @var mixed model->toArray(;
-        // @var mixed dispatch('showModal', ['editClip', $data];
+        $data = $model->toArray();
+        $this->dispatch('showModal', ['editClip', $data]);
     }
 
     /**
@@ -70,15 +70,15 @@ class Clip extends Component
             return;
         }
 
-        if ($data['id'] !== // @var mixed model->getKey(
+        if ($data['id'] !== $model->getKey(
             return;
         }
 
-        // dddx(['data'=>$data,'model'=>// @var mixed model];
+        // dddx(['data'=>$data,'model'=>$model]);
         /** @var array<string, string> */
         $up = collect($data)->only(['title', 'subtitle'])->all();
 
-        // @var mixed model->update($up;
-        // @var mixed model->refresh(;
+        $model->update($up);
+        $model->refresh();
     }
 }

@@ -9,6 +9,15 @@ use Modules\User\Tests\TestCase;
 
 class TenantTest extends TestCase
 {
+<<<<<<< HEAD
+    // DatabaseTransactions is already used in the module TestCase
+
+||||||| 6161e129d
+    // DatabaseTransactions is already used in the module TestCase
+
+    public function test_can_create_tenant_with_minimal_data(): void
+=======
+>>>>>>> feature/ralph-loop-implementation
     public function testCanCreateTenantWithMinimalData(): void
     {
         $tenant = Tenant::factory()->create([

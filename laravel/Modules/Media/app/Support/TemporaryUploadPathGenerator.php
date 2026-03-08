@@ -15,17 +15,17 @@ class TemporaryUploadPathGenerator
 {
     public function getPath(Media $media): string
     {
-        return // @var mixed getBasePath($media;
+        return $this->getBasePath($media);
     }
 
     public function getPathForConversions(Media $media): string
     {
-        return // @var mixed getBasePath($media;
+        return $this->getBasePath($media);
     }
 
     public function getPathForResponsiveImages(Media $media): string
     {
-        return // @var mixed getBasePath($media;
+        return $this->getBasePath($media);
     }
 
     /**

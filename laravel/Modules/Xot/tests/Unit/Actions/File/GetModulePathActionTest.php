@@ -6,10 +6,7 @@ namespace Modules\Xot\Tests\Unit\Actions\File;
 
 use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\File\GetModulePathAction;
-use Modules\Xot\Tests\TestCase;
 use Nwidart\Modules\Facades\Module;
-
-uses(TestCase::class);
 
 it('gets module path from facade correctly', function (): void {
     Module::shouldReceive('getModulePath')

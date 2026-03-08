@@ -21,7 +21,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        // @var mixed tableCreate(function (Blueprint $table
+        $this->tableCreate(function (Blueprint $table
             $table->id();
             // $table->bigIncrements('id');
             // $table->uuidMorphs('model');
@@ -41,12 +41,12 @@ return new class extends XotBaseMigration
             $table->unsignedInteger('order_column')->nullable()->index();
         });
         // -- UPDATE --
-        // @var mixed tableUpdate(function (Blueprint $table
+        $this->tableUpdate(function (Blueprint $table
             // -- Change
-            if (// @var mixed hasColumn('model_id'
+            if ($hasColumn('model_id'
                 $table->string('model_id', 36)->nullable()->change();
             }
-            // @var mixed updateTimestamps($table, true;
+            $this->updateTimestamps($table, true);
         });
     }
 };

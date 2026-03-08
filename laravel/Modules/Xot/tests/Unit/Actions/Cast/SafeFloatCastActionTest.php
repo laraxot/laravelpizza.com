@@ -5,9 +5,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit\Actions\Cast;
 
 use Modules\Xot\Actions\Cast\SafeFloatCastAction;
-use Modules\Xot\Tests\TestCase;
-
-uses(TestCase::class);
 
 it('casts various values to float correctly', function (): void {
     $action = app(SafeFloatCastAction::class);

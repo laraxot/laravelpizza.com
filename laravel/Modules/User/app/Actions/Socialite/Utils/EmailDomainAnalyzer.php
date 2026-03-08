@@ -81,7 +81,14 @@ final class EmailDomainAnalyzer
 
     private function firstPartyDomain(): ?string
     {
+<<<<<<< HEAD
+        $res = config(sprintf('services.%s.email_domains.first_party.tld', $this->ssoProvider));
+||||||| 6161e129d
+        $res = config(sprintf('services.%s.email_domains.first_party.tld', $this->ssoProvider));
+        if (! is_string($res) && $res !== null) {
+=======
         $res = config(sprintf('services.%s.email_domains.first_party.tld', $ssoProvider));
+>>>>>>> feature/ralph-loop-implementation
         if (! is_string($res) && null !== $res) {
             return null;
         }
@@ -91,7 +98,14 @@ final class EmailDomainAnalyzer
 
     private function clientDomain(): ?string
     {
+<<<<<<< HEAD
+        $domain = config(sprintf('services.%s.email_domains.client.tld', $this->ssoProvider));
+||||||| 6161e129d
+        $domain = config(sprintf('services.%s.email_domains.client.tld', $this->ssoProvider));
+        if (! is_string($domain) && $domain !== null) {
+=======
         $domain = config(sprintf('services.%s.email_domains.client.tld', $ssoProvider));
+>>>>>>> feature/ralph-loop-implementation
         if (! is_string($domain) && null !== $domain) {
             return null;
         }

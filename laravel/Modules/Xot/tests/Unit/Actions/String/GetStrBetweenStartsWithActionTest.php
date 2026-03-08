@@ -5,9 +5,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit\Actions\String;
 
 use Modules\Xot\Actions\String\GetStrBetweenStartsWithAction;
-use Modules\Xot\Tests\TestCase;
-
-uses(TestCase::class);
 
 it('extracts string between markers correctly', function (): void {
     $action = app(GetStrBetweenStartsWithAction::class);

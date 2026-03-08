@@ -11,20 +11,20 @@ use Modules\Geo\Datas\AddressData;
 use Modules\Geo\Exceptions\GoogleMaps\GoogleMapsApiException;
 
 beforeEach(function () {
-    // @var mixed action = new GetAddressFromGoogleMapsAction(;
+    $action = new GetAddressFromGoogleMapsAction();
 });
 
 it('throws exception when api key is not configured', function (): void {
     config(['services.google.maps_api_key' => null]);
 
-    expect(fn () => // @var mixed action->execute('Milano, Italia'
+    expect(fn () => $action->execute('Milano, Italia'
         ->toThrow(GoogleMapsApiException::class, 'API key non configurata');
 });
 
 it('throws exception when api key is empty', function (): void {
     config(['services.google.maps_api_key' => '']);
 
-    expect(fn () => // @var mixed action->execute('Milano, Italia'
+    expect(fn () => $action->execute('Milano, Italia'
         ->toThrow(GoogleMapsApiException::class);
 });
 
@@ -35,7 +35,7 @@ it('throws exception when api response is not successful', function (): void {
         '*' => Http::response(['statusCode' => 500], 500),
     ]);
 
-    expect(fn () => // @var mixed action->execute('Milano, Italia'
+    expect(fn () => $action->execute('Milano, Italia'
         ->toThrow(GoogleMapsApiException::class, 'Richiesta fallita');
 });
 
@@ -48,7 +48,7 @@ it('throws exception when no results found', function (): void {
         ], 200),
     ]);
 
-    expect(fn () => // @var mixed action->execute('NonExistentPlace123'
+    expect(fn () => $action->execute('NonExistentPlace123'
         ->toThrow(GoogleMapsApiException::class, 'Nessun risultato');
 });
 
@@ -79,7 +79,7 @@ it('returns address data for valid address', function (): void {
         ], 200),
     ]);
 
-    $result = // @var mixed action->execute('Via Roma 1, Milano, Italia';
+    $result = $action->execute('Via Roma 1, Milano, Italia');
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)
@@ -115,7 +115,7 @@ it('handles missing optional address components', function (): void {
         ], 200),
     ]);
 
-    $result = // @var mixed action->execute('Italia';
+    $result = $action->execute('Italia');
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)

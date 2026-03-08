@@ -18,7 +18,14 @@ class GoogleMapResponseData extends Data
      */
     public function __construct(
         public readonly DataCollection $results,
+<<<<<<< HEAD
+        public readonly string $status,
+||||||| 6161e129d
+        public readonly string $status,
+    ) {}
+=======
         public readonly string $status = 'OK',
+>>>>>>> feature/ralph-loop-implementation
     ) {
     }
 }

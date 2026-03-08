@@ -28,10 +28,10 @@ abstract class BaseGeoService
     protected function getApiKey(): string
     {
         /** @var string|null $apiKey */
-        $apiKey = config("geo.api_keys.{// @var mixed getServiceName(;
+        $apiKey = config("geo.api_keys.{$this->getServiceName());
 
         if (empty($apiKey)) {
-            throw new \RuntimeException("API key non configurata per {// @var mixed getServiceName(;
+            throw new \RuntimeException("API key non configurata per {$this->getServiceName());
         }
 
         return $apiKey;
@@ -51,7 +51,7 @@ abstract class BaseGeoService
      */
     protected function makeRequest(string $method, string $url, array $params = [], bool $useCache = true): array
     {
-        $cacheKey = // @var mixed getCacheKey($method, $url, $params;
+        $cacheKey = $this->getCacheKey($method, $url, $params);
 
         if ($useCache && config('geo.cache.enabled')) {
             /** @var array<string, mixed>|null $cached */
@@ -63,18 +63,18 @@ abstract class BaseGeoService
 
         // Rate limiting
         /** @var int $maxAttempts */
-        $maxAttempts = config("geo.rate_limits.{// @var mixed getServiceName(;
-        RateLimiter::attempt(// @var mixed getServiceName(;
+        $maxAttempts = config("geo.rate_limits.{$this->getServiceName());
+        RateLimiter::attempt($getServiceName());
 
         try {
-            $client = // @var mixed buildHttpClient(;
+            $client = $this->buildHttpClient();
             $methodLower = strtolower($method);
 
             /** @var Response $response */
             $response = $client->{$methodLower}($url, $params);
 
             if (! $response->successful()) {
-                throw new \RuntimeException("Richiesta fallita a {// @var mixed getServiceName(;
+                throw new \RuntimeException("Richiesta fallita a {$this->getServiceName());
             }
 
             $data = $response->json();
@@ -96,7 +96,7 @@ abstract class BaseGeoService
 
             return $validatedData;
         } catch (\Throwable $e) {
-            throw new \RuntimeException("Errore durante la richiesta a {// @var mixed getServiceName(;
+            throw new \RuntimeException("Errore durante la richiesta a {$this->getServiceName());
         }
     }
 
@@ -138,6 +138,6 @@ abstract class BaseGeoService
         $prefix = config('geo.cache.prefix', 'geo_');
         $hash = md5($method.$url.serialize($params));
 
-        return "{$prefix}{// @var mixed getServiceName(;
+        return "{$prefix}{$this->getServiceName();
     }
 }

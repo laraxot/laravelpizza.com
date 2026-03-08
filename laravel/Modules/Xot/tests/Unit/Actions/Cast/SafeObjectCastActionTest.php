@@ -5,9 +5,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit\Actions\Cast;
 
 use Modules\Xot\Actions\Cast\SafeObjectCastAction;
-use Modules\Xot\Tests\TestCase;
-
-uses(TestCase::class);
 
 it('manages object properties safely', function (): void {
     $obj = new \stdClass();

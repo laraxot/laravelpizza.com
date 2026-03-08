@@ -10,18 +10,18 @@ use Modules\Geo\Actions\Nominatim\LookupPlaceAction;
 use Modules\Geo\Datas\LocationData;
 
 beforeEach(function (): void {
-    // @var mixed mockClient = Mockery::mock(Client::class;
-    // @var mixed action = new LookupPlaceAction(;
+    $mockClient = Mockery::mock(Client::class);
+    $action = new LookupPlaceAction();
 
     // Replace the client instance with our mock
     /** @phpstan-ignore-next-line property.notFound */
-    $reflection = new ReflectionClass(// @var mixed action;
+    $reflection = new ReflectionClass($action);
     /** @phpstan-ignore-next-line method.nonObject */
     $property = $reflection->getProperty('client');
     /* @phpstan-ignore-next-line method.nonObject */
     $property->setAccessible(true);
     /* @phpstan-ignore-next-line property.notFound, method.nonObject */
-    $property->setValue(// @var mixed action, $this->mockClient;
+    $property->setValue($action, $this->mockClient);
 });
 
 test('lookup place action returns location data for valid osm id', function (): void {
@@ -34,7 +34,7 @@ test('lookup place action returns location data for valid osm id', function (): 
     ]));
 
     /* @phpstan-ignore-next-line property.notFound */
-    // @var mixed mockClient
+    $mockClient
         ->shouldReceive('get')
         ->once()
         ->with('https://nominatim.openstreetmap.org/lookup', [
@@ -49,7 +49,7 @@ test('lookup place action returns location data for valid osm id', function (): 
         ->andReturn($mockResponse);
 
     /** @phpstan-ignore-next-line property.notFound */
-    $result = // @var mixed action->execute('R123456';
+    $result = $action->execute('R123456');
 
     expect($result)->toBeInstanceOf(LocationData::class)
         ->and($result->latitude)->toBe(41.9028)
@@ -61,25 +61,25 @@ test('lookup place action throws exception for empty results', function (): void
     $mockResponse = new Response(200, [], json_encode([]));
 
     /* @phpstan-ignore-next-line property.notFound */
-    // @var mixed mockClient
+    $mockClient
         ->shouldReceive('get')
         ->once()
         ->andReturn($mockResponse);
 
     /* @phpstan-ignore-next-line property.notFound */
-    expect(fn () => // @var mixed action->execute('R999999'
+    expect(fn () => $action->execute('R999999'
         ->toThrow(RuntimeException::class, 'No results found for OSM ID: R999999');
 });
 
 test('lookup place action handles guzzle exceptions', function (): void {
     /* @phpstan-ignore-next-line property.notFound */
-    // @var mixed mockClient
+    $mockClient
         ->shouldReceive('get')
         ->once()
         ->andThrow(new ConnectException('API unavailable', new Request('GET', 'https://nominatim.openstreetmap.org/lookup')));
 
     /* @phpstan-ignore-next-line property.notFound */
-    expect(fn () => // @var mixed action->execute('R123456'
+    expect(fn () => $action->execute('R123456'
         ->toThrow(ConnectException::class);
 });
 
@@ -89,7 +89,7 @@ test('lookup place action uses correct user agent header', function (): void {
     ]));
 
     /* @phpstan-ignore-next-line property.notFound */
-    // @var mixed mockClient
+    $mockClient
         ->shouldReceive('get')
         ->once()
         ->withArgs(function ($url, $options) {
@@ -101,7 +101,7 @@ test('lookup place action uses correct user agent header', function (): void {
         ->andReturn($mockResponse);
 
     /** @phpstan-ignore-next-line property.notFound */
-    $result = // @var mixed action->execute('R123456';
+    $result = $action->execute('R123456');
 
     expect($result)->toBeInstanceOf(LocationData::class);
 });

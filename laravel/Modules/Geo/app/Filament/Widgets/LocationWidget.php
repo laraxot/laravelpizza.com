@@ -58,7 +58,7 @@ class LocationWidget extends XotBaseWidget
      */
     public function __construct()
     {
-        // @var mixed locationForm = new LocationForm(;
+        $locationForm = new LocationForm();
     }
 
     /**
@@ -66,7 +66,7 @@ class LocationWidget extends XotBaseWidget
      */
     public function mount(): void
     {
-        // @var mixed form->fill(;
+        $form->fill();
     }
 
     /**
@@ -77,7 +77,7 @@ class LocationWidget extends XotBaseWidget
     #[\Override]
     public function getFormSchema(): array
     {
-        return // @var mixed locationForm->getSchema(;
+        return $locationForm->getSchema();
     }
 
     /**
@@ -85,12 +85,12 @@ class LocationWidget extends XotBaseWidget
      */
     public function submit(): void
     {
-        $data = // @var mixed form->getState(;
+        $data = $form->getState();
 
-        // @var mixed dispatch('location-selected', $data;
+        $this->dispatch('location-selected', $data);
 
         // Utilizzo metodo Livewire per notifiche
-        // @var mixed dispatch('notify', [
+        $this->dispatch('notify', [
             'type' => 'success',
             'message' => __('geo::widgets.location.messages.success'),
         ]);

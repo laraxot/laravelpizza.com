@@ -25,7 +25,7 @@ class EditNotifyThemeTestProxy extends EditNotifyTheme
 {
     public function exposedHeaderActions(): array
     {
-        return // @var mixed getHeaderActions(;
+        return $this->getHeaderActions();
     }
 }
 

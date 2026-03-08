@@ -58,8 +58,17 @@ class Change extends Component
             abort(403);
         }
         if (null !== $team) {
+<<<<<<< HEAD
+            // TeamSwitched::dispatch($team->fresh(), $this->user);
+            TeamSwitched::dispatch($team, $this->user);
+||||||| 6161e129d
+        if ($team !== null) {
+            // TeamSwitched::dispatch($team->fresh(), $this->user);
+            TeamSwitched::dispatch($team, $this->user);
+=======
             // TeamSwitched::dispatch($team->fresh(), $user);
             TeamSwitched::dispatch($team, $user);
+>>>>>>> feature/ralph-loop-implementation
         }
         Notification::make()
             ->title(__('Team switched'))
@@ -79,7 +88,13 @@ class Change extends Component
         $view_params = [
             'view' => $view,
         ];
+<<<<<<< HEAD
+        if ([] === $this->teams) {
+||||||| 6161e129d
+        if ($this->teams === []) {
+=======
         if ([] === $teams
+>>>>>>> feature/ralph-loop-implementation
             $view = 'ui::livewire.empty';
         }
 

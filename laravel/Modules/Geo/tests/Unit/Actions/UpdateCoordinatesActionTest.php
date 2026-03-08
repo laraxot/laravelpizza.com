@@ -10,6 +10,60 @@ use Modules\Geo\Tests\TestCase;
 
 uses(TestCase::class);
 
+<<<<<<< HEAD
+beforeEach(function () {
+    // Set up Google Maps API key for tests
+    Config::set('services.google.maps.key', 'test-api-key');
+
+    // Mock HTTP responses
+    Http::fake([
+        'maps.googleapis.com/*' => Http::response([
+            'status' => 'OK',
+            'results' => [
+                [
+                    'geometry' => [
+                        'location' => [
+                            'lat' => 45.4642,
+                            'lng' => 9.1900,
+                        ],
+                    ],
+                ],
+            ],
+        ], 200),
+    ]);
+
+    $this->getCoordinatesAction = new GetCoordinatesAction();
+    $this->action = new UpdateCoordinatesAction($this->getCoordinatesAction);
+});
+
+||||||| 6161e129d
+beforeEach(function () {
+    // Set up Google Maps API key for tests
+    Config::set('services.google.maps.key', 'test-api-key');
+
+    // Mock HTTP responses
+    Http::fake([
+        'maps.googleapis.com/*' => Http::response([
+            'status' => 'OK',
+            'results' => [
+                [
+                    'geometry' => [
+                        'location' => [
+                            'lat' => 45.4642,
+                            'lng' => 9.1900,
+                        ],
+                    ],
+                ],
+            ],
+        ], 200),
+    ]);
+
+    $this->getCoordinatesAction = new GetCoordinatesAction;
+    $this->action = new UpdateCoordinatesAction($this->getCoordinatesAction);
+});
+
+=======
+>>>>>>> feature/ralph-loop-implementation
 it('updates coordinates for a place with valid address', function (): void {
     $address = (object) ['formatted_address' => 'Via Roma 123, Milano, Italia'];
 

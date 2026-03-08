@@ -11,7 +11,7 @@ use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Datas\RouteData;
 
 beforeEach(function () {
-    // @var mixed action = new OptimizeRouteAction(;
+    $action = new OptimizeRouteAction();
 });
 
 it('throws exception when api key is not configured', function (): void {
@@ -23,7 +23,7 @@ it('throws exception when api key is not configured', function (): void {
     $origin = new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano');
     $destination = new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma');
 
-    expect(fn () => // @var mixed action->execute($locations, $origin, $destination
+    expect(fn () => $action->execute($locations, $origin, $destination
         ->toThrow(RuntimeException::class, 'API key not found');
 });
 
@@ -33,7 +33,7 @@ it('returns empty array for empty locations', function (): void {
     $origin = new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano');
     $destination = new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma');
 
-    $result = // @var mixed action->execute([], $origin, $destination;
+    $result = $action->execute([], $origin, $destination);
 
     expect($result)->toBeArray()->toBeEmpty();
 });
@@ -51,7 +51,7 @@ it('returns empty array when api returns no routes', function (): void {
     $origin = new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano');
     $destination = new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma');
 
-    $result = // @var mixed action->execute($locations, $origin, $destination;
+    $result = $action->execute($locations, $origin, $destination);
 
     expect($result)->toBeArray()->toBeEmpty();
 });
@@ -101,7 +101,7 @@ it('returns route data for valid request', function (): void {
     $origin = new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano');
     $destination = new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma');
 
-    $result = // @var mixed action->execute($locations, $origin, $destination;
+    $result = $action->execute($locations, $origin, $destination);
 
     expect($result)
         ->toBeArray()
@@ -124,6 +124,6 @@ it('throws exception when api request fails', function (): void {
     $origin = new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano');
     $destination = new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma');
 
-    expect(fn () => // @var mixed action->execute($locations, $origin, $destination
+    expect(fn () => $action->execute($locations, $origin, $destination
         ->toThrow(RuntimeException::class, 'Failed to get directions');
 });

@@ -23,7 +23,7 @@ class SendRecordsNotificationBulkAction extends XotBaseBulkAction
     {
         parent::setUp();
 
-        // @var mixed label(__('notify::actions.send_notification_bulk.label'
+        $this->label(__('notify::actions.send_notification_bulk.label'
             ->icon('heroicon-o-envelope')
             ->color('primary')
             ->action(function (Collection $records, array $data): void {

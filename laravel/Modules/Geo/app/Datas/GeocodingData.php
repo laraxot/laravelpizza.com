@@ -22,7 +22,12 @@ class GeocodingData extends Data
         public readonly ?string $country,
         public readonly ?string $postal_code,
         public readonly ?string $error = null,
+<<<<<<< HEAD
+||||||| 6161e129d
+    ) {}
+=======
         public readonly ?string $status = null,
+>>>>>>> feature/ralph-loop-implementation
     ) {
     }
 
@@ -89,7 +94,7 @@ class GeocodingData extends Data
 
     public function isError(): bool
     {
-        return null !== // @var mixed error || (null !== $this->status && 'OK' !== $this->status;
+        return null !== $error || (null !== $this->status && 'OK' !== $this->status);
     }
 
     /**

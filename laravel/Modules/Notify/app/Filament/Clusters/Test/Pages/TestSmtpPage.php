@@ -40,7 +40,7 @@ class TestSmtpPage extends XotBasePage
 
     public function mount(): void
     {
-        // @var mixed fillForms(;
+        $this->fillForms();
     }
 
     public function emailForm(Schema $schema): Schema
@@ -48,7 +48,7 @@ class TestSmtpPage extends XotBasePage
         Assert::isArray($mail_config = config('mail'));
         $smtpConfig = Arr::get($mail_config, 'mailers.smtp');
 
-        // @var mixed emailData['subject'] = 'test';
+        $emailData['subject'] = 'test';
         $defaultEmail = XotData::make()->super_admin;
 
         return $schema->components([
@@ -90,7 +90,7 @@ class TestSmtpPage extends XotBasePage
 
     public function sendEmail(): void
     {
-        $data = // @var mixed emailForm->getState(;
+        $data = $emailForm->getState();
         $smtp = SmtpData::from($data);
         $emailData = EmailData::from($data);
         // dddx([
@@ -144,6 +144,6 @@ class TestSmtpPage extends XotBasePage
             }
         }
 
-        // @var mixed emailForm->fill($typedConfig;
+        $emailForm->fill($typedConfig);
     }
 }

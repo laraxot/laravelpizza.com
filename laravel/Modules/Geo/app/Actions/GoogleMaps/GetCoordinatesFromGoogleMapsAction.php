@@ -35,12 +35,12 @@ readonly class GetCoordinatesFromGoogleMapsAction
      */
     public function execute(string $address): LocationData
     {
-        // @var mixed validateInput($address;
+        $this->validateInput($address);
 
         try {
-            $response = // @var mixed makeApiRequest($address;
+            $response = $this->makeApiRequest($address);
 
-            return // @var mixed parseResponse($response, $address;
+            return $this->parseResponse($response, $address);
         } catch (GuzzleException $e) {
             Log::error('Google Maps Geocoding API request failed', [
                 'error' => $e->getMessage(),
@@ -73,7 +73,7 @@ readonly class GetCoordinatesFromGoogleMapsAction
      */
     private function makeApiRequest(string $address): string
     {
-        $response = // @var mixed client->get(self::API_URL, [
+        $response = $client->get(self::API_URL, [
             'query' => [
                 'address' => $address,
                 'key' => config('services.google.maps_api_key'),

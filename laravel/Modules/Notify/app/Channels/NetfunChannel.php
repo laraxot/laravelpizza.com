@@ -15,7 +15,7 @@ class NetfunChannel
 
     public function __construct(SendNetfunSMSAction $sendSMSAction)
     {
-        // @var mixed sendSMSAction = $sendSMSAction;
+        $sendSMSAction = $sendSMSAction;
     }
 
     /**
@@ -54,6 +54,6 @@ class NetfunChannel
 
         // Esegui l'invio tramite la Queueable Action
         // L'esecuzione avverrà in modo asincrono (in background)
-        return // @var mixed sendSMSAction->onQueue('sms'; // Esegui sulla coda 'sms'
+        return $sendSMSAction->onQueue('sms'); // Esegui sulla coda 'sms'
     }
 }

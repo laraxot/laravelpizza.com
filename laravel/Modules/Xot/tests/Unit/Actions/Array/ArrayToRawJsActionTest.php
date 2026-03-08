@@ -6,9 +6,6 @@ namespace Modules\Xot\Tests\Unit\Actions\Array;
 
 use Filament\Support\RawJs;
 use Modules\Xot\Actions\Array\ArrayToRawJsAction;
-use Modules\Xot\Tests\TestCase;
-
-uses(TestCase::class);
 
 it('converts array to raw js string correctly', function (): void {
     $action = app(ArrayToRawJsAction::class);

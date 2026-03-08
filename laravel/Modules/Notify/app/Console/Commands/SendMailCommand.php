@@ -33,12 +33,12 @@ class SendMailCommand extends Command
         Assert::string($from = config('mail.from.name', 'Default Sender'));
         Assert::string($from_email = config('mail.from.address', 'default@example.com'));
         $data = [];
-        $data['recipient'] = // @var mixed ask('Enter the recipient\'s email address';
-        $data['subject'] = // @var mixed ask('Enter the subject of the email';
-        $data['from'] = // @var mixed ask('Enter the sender\'s name', $from;
-        $data['from_email'] = // @var mixed ask('Enter the sender\'s email address', $from_email;
-        $data['body_html'] = // @var mixed ask('Enter the HTML body of the email', '<p>This is a default HTML body</p>';
-        // $data['body'] = // @var mixed ask('Enter the plain text body of the email (leave blank to use stripped HTML body;
+        $data['recipient'] = $this->ask('Enter the recipient\'s email address');
+        $data['subject'] = $this->ask('Enter the subject of the email');
+        $data['from'] = $this->ask('Enter the sender\'s name', $from);
+        $data['from_email'] = $this->ask('Enter the sender\'s email address', $from_email);
+        $data['body_html'] = $this->ask('Enter the HTML body of the email', '<p>This is a default HTML body</p>');
+        // $data['body'] = $this->ask('Enter the plain text body of the email (leave blank to use stripped HTML body));
 
         $emailData = EmailData::from($data);
 
@@ -50,7 +50,7 @@ class SendMailCommand extends Command
          */
         // Mail::to($emailData->recipient)->send(new EmailDataEmail($emailData));
 
-        // @var mixed info('Email sent successfully to '.$emailData->recipient;
+        $this->info('Email sent successfully to '.$emailData->recipient);
 
         return Command::SUCCESS;
     }

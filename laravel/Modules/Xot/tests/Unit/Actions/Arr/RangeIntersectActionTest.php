@@ -5,9 +5,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit\Actions\Arr;
 
 use Modules\Xot\Actions\Arr\RangeIntersectAction;
-use Modules\Xot\Tests\TestCase;
-
-uses(TestCase::class);
 
 it('calculates range intersection correctly', function (): void {
     $action = app(RangeIntersectAction::class);

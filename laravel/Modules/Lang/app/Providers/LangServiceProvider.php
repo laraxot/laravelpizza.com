@@ -40,10 +40,10 @@ class LangServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
-        // BladeService::registerComponents(// @var mixed module_dir.'/../View/Components', 'Modules\\Lang';
-        // // @var mixed registerTranslator(;
-        // @var mixed translatableComponents(;
-        // @var mixed registerFilamentLabel(;
+        // BladeService::registerComponents($module_dir.'/../View/Components', 'Modules\\Lang');
+        // $this->registerTranslator();
+        $this->translatableComponents();
+        $this->registerFilamentLabel();
     }
 
     public function registerFilamentLabel(): void

@@ -28,7 +28,7 @@ class XotBaseModelFactory extends Factory
     {
         return [
             'created_at' => $faker->dateTimeBetween('-1 year', 'now'
-            'updated_at' => $faker->dateTimeBetween('-1 month', 'now'
+            'updated_at' => $faker->dateTimeBetween('-1 month', 'now')
         ];
     }
 }

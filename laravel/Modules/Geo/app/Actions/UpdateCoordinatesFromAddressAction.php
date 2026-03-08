@@ -43,7 +43,7 @@ class UpdateCoordinatesFromAddressAction
     public function __construct(
         private readonly GetAddressDataFromFullAddressAction $getAddressDataAction,
     ) {
-        // @var mixed errors = collect(;
+        $errors = collect();
     }
 
     /**
@@ -56,34 +56,34 @@ class UpdateCoordinatesFromAddressAction
     public function execute(Model $model): bool
     {
         // Reset errori per questa esecuzione
-        // @var mixed errors = collect(;
+        $errors = collect();
 
         // Ottieni l'indirizzo completo dal modello
-        $fullAddress = // @var mixed getFullAddressFromModel($model;
+        $fullAddress = $this->getFullAddressFromModel($model);
 
         if (empty($fullAddress)) {
-            // @var mixed errors->push(__('geo::actions.update_coordinates.errors.empty_address';
+            $errors->push(__('geo::actions.update_coordinates.errors.empty_address'));
 
             return false;
         }
 
         // Esegui geocoding per ottenere i dati dell'indirizzo
-        $addressData = // @var mixed getAddressDataAction->execute($fullAddress;
+        $addressData = $getAddressDataAction->execute($fullAddress);
 
         if (null === $addressData) {
             // Raccogli errori dal servizio di geocoding
-            $geocodingErrors = // @var mixed getAddressDataAction->getErrors(;
+            $geocodingErrors = $getAddressDataAction->getErrors();
             if ($geocodingErrors->isNotEmpty()) {
-                // @var mixed errors->merge($geocodingErrors;
+                $errors->merge($geocodingErrors);
             } else {
-                // @var mixed errors->push(__('geo::actions.update_coordinates.errors.geocoding_failed';
+                $errors->push(__('geo::actions.update_coordinates.errors.geocoding_failed'));
             }
 
             return false;
         }
 
         // Aggiorna il modello con le coordinate ottenute
-        return // @var mixed updateModelCoordinates($model, $addressData;
+        return $this->updateModelCoordinates($model, $addressData);
     }
 
     /**
@@ -93,7 +93,7 @@ class UpdateCoordinatesFromAddressAction
      */
     public function getErrors(): Collection
     {
-        return // @var mixed errors;
+        return $errors;
     }
 
     /**
@@ -144,7 +144,7 @@ class UpdateCoordinatesFromAddressAction
                 'error' => $e->getMessage(),
             ]);
 
-            // @var mixed errors->push($e->getMessage(;
+            $errors->push($e->getMessage());
 
             return false;
         }

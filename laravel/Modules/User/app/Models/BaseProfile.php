@@ -200,6 +200,23 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         return $userLang;
     }
 
+    /**
+     * Toggles the super-admin role for the associated user.
+     */
+    public function toggleSuperAdmin(): void
+    {
+        $user = $this->user;
+        if (null === $user) {
+            return;
+        }
+
+        if ($user->hasRole('super-admin')) {
+            $user->removeRole('super-admin');
+        } else {
+            $user->assignRole('super-admin');
+        }
+    }
+
     /** @return array<string, string> */
     #[\Override]
     protected function casts(): array

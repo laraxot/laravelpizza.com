@@ -64,7 +64,7 @@ class StateOverviewWidget extends XotBaseWidget
     {
         return [
             'states' => $this->getStates(
-            // 'title' => $this->getWidgetTitle(
+            // 'title' => $this->getWidgetTitle()
         ];
     }
 
@@ -128,7 +128,7 @@ class StateOverviewWidget extends XotBaseWidget
                 'label' => $state->label(),
                 'icon' => $this->cleanIconName($state->icon(
                 'color' => $state->bgColor(),
-                'count' => $this->getCountForState($stateName
+                'count' => $this->getCountForState($stateName)
             ];
         }
 

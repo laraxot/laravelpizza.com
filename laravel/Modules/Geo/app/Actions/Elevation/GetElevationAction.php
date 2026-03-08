@@ -39,11 +39,11 @@ readonly class GetElevationAction
      */
     public function execute(LocationData $location): float
     {
-        // @var mixed validateCoordinates($location;
+        $this->validateCoordinates($location);
 
         try {
             /** @var array<string, mixed> $response */
-            $response = // @var mixed googleMapsService->getElevation($location->latitude, $location->longitude;
+            $response = $googleMapsService->getElevation($location->latitude, $location->longitude);
 
             if (! isset($response['results']) || ! is_array($response['results']) || empty($response['results'])) {
                 throw ElevationException::invalidResponse();

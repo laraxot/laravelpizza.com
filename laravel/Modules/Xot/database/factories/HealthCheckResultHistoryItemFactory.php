@@ -32,9 +32,9 @@ class HealthCheckResultHistoryItemFactory extends Factory
             'short_summary' => $faker->words(5, true
             'meta' => [
                 'execution_time' => $faker->randomFloat(2, 0.1, 5.0
-                'memory_usage' => $faker->numberBetween(1024, 1048576
+                'memory_usage' => $faker->numberBetween(1024, 1048576)
             ],
-            'ended_at' => $faker->dateTimeBetween('-1 week', 'now'
+            'ended_at' => $faker->dateTimeBetween('-1 week', 'now')
         ];
     }
 
@@ -50,7 +50,7 @@ class HealthCheckResultHistoryItemFactory extends Factory
     {
         return $this->state(fn (array $_attributes
             'status' => 'failed',
-            'notification_message' => $faker->sentence(
+            'notification_message' => $faker->sentence()
         ]);
     }
 }

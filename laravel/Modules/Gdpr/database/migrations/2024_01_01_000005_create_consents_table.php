@@ -16,7 +16,7 @@ return new class extends XotBaseMigration {
     {
         // -- CREATE --
 
-        // @var mixed tableCreate(
+        $this->tableCreate(
             function (Blueprint $table): void {
                 $table->uuid('id')->primary();
                 $table->uuid('treatment_id');
@@ -30,32 +30,32 @@ return new class extends XotBaseMigration {
         );
 
         // -- UPDATE --
-        // @var mixed tableUpdate(
+        $this->tableUpdate(
             function (Blueprint $table): void {
-                if (! // @var mixed hasColumn('user_id'
+                if (! $this->hasColumn('user_id'
                     $table->morphs('user');
                 }
-                if (! // @var mixed hasColumn('type'
+                if (! $this->hasColumn('type'
                     $table->string('type')->nullable();
                 }
 
-                if (! // @var mixed hasColumn('accepted_at'
+                if (! $this->hasColumn('accepted_at'
                     $table->timestamp('accepted_at')->nullable();
                 }
-                if (! // @var mixed hasColumn('ip_address'
+                if (! $this->hasColumn('ip_address'
                     $table->string('ip_address', 45)->nullable();
                 }
-                if (! // @var mixed hasColumn('user_agent'
+                if (! $this->hasColumn('user_agent'
                     $table->string('user_agent')->nullable();
                 }
                 // -- Change --
-                if (// @var mixed hasColumn('user_id'
+                if ($hasColumn('user_id'
                     $table->string('user_id')->nullable()->change();
                 }
                 $table->uuid('treatment_id')->nullable()->change();
                 $table->string('subject_id')->nullable()->change();
 
-                // @var mixed updateTimestamps(table: $table, hasSoftDeletes: true;
+                $this->updateTimestamps(table: $table, hasSoftDeletes: true);
             }
         );
     }

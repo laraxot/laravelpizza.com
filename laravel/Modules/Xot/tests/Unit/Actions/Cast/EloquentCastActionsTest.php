@@ -7,9 +7,6 @@ namespace Modules\Xot\Tests\Unit\Actions\Cast;
 use Modules\Xot\Actions\Cast\SafeArrayByModelCastAction;
 use Modules\Xot\Actions\Cast\SafeAttributeCastAction;
 use Modules\Xot\Models\XotBaseModel;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 test('safe array by model cast action works', function () {
     $model = new class extends XotBaseModel {

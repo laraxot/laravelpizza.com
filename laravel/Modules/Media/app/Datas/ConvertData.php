@@ -47,13 +47,13 @@ class ConvertData extends Data implements Wireable
 
     public function exists(): bool
     {
-        return Storage::disk(// @var mixed disk;
+        return Storage::disk($disk);
     }
 
     public function getFFMpegFormat(): DefaultVideo
     {
-        $format = new WebM(// @var mixed codec_audio, $this->codec_video;
-        $format = $format->setKiloBitrate((int) // @var mixed bitrate;
+        $format = new WebM($codec_audio, $this->codec_video);
+        $format = $format->setKiloBitrate((int) $bitrate);
         Assert::isInstanceOf($format, DefaultVideo::class);
 
         return $format;
@@ -61,9 +61,9 @@ class ConvertData extends Data implements Wireable
 
     public function getConvertedFilename(): string
     {
-        $format = // @var mixed getFFMpegFormat(;
+        $format = $this->getFFMpegFormat();
         $extension = mb_strtolower(class_basename($format));
 
-        return Str::of(// @var mixed file;
+        return Str::of($file);
     }
 }

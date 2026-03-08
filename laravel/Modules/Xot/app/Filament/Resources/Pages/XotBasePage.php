@@ -50,8 +50,8 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      */
     public function getView(): string
     {
-        if (isset($view
-            return $view;
+        if (isset($this->view)) {
+            return $this->view;
         }
 
         $view = Str::of(static::class)
@@ -119,7 +119,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      */
     public function schema(Schema $schema): Schema
     {
-        return $schema->components($getFormSchema(
+        return $schema->components($this->getFormSchema())
             ->statePath('data')
             ->columns(2);
     }
@@ -132,10 +132,8 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     final public function form(Schema $schema): Schema
     {
         return $schema
-            ->components($getFormSchema(
-            ->model($getFormModel(
-            ->statePath($getFormStatePath(
-            ->operation($getFormContext(
+            ->components($this->getFormSchema())
+            ->statePath($this->getFormStatePath())
             ->columns(2);
     }
 

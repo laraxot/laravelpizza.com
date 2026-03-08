@@ -28,18 +28,18 @@ class EmailDataEmail extends Mailable
      */
     public function envelope(): Envelope
     {
-        if (// @var mixed email_data->from === null
+        if ($email_data->from === null
             Assert::string($from = config('mail.from.name', 'Default Sender'));
-            // @var mixed email_data->from = $from;
+            $email_data->from = $from;
         }
-        if (// @var mixed email_data->from_email === null
+        if ($email_data->from_email === null
             Assert::string($from_email = config('mail.from.address', 'default@example.com'));
-            // @var mixed email_data->from_email = $from_email;
+            $email_data->from_email = $from_email;
         }
 
         return new Envelope(
-            from: new Address(// @var mixed email_data->from_email, $this->email_data->from
-            subject: // @var mixed email_data->subject,
+            from: new Address($email_data->from_email, $this->email_data->from
+            subject: $email_data->subject,
         );
     }
 
@@ -52,7 +52,7 @@ class EmailDataEmail extends Mailable
             html: 'notify::emails.html',
             text: 'notify::emails.text',
             with: [
-                'email_data' => // @var mixed email_data,
+                'email_data' => $email_data,
             ],
         );
     }

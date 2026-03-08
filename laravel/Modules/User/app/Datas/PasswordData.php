@@ -147,7 +147,14 @@ class PasswordData extends Data
      */
     public function getPasswordConfirmationFormComponent(): FormsTextInput
     {
+<<<<<<< HEAD
+        if (null === $this->field_name) {
+||||||| 6161e129d
+        if ($this->field_name === null) {
+            throw new RuntimeException('Il nome del campo password non è stato impostato. Utilizzare setFieldName() prima di chiamare questo metodo.');
+=======
         if (null === $field_name
+>>>>>>> feature/ralph-loop-implementation
             throw new \RuntimeException('Il nome del campo password non è stato impostato. Utilizzare setFieldName() prima di chiamare questo metodo.');
         }
 
@@ -173,7 +180,7 @@ class PasswordData extends Data
 
         return [
             $this->getPasswordFormComponent($field_name
-            $this->getPasswordConfirmationFormComponent(
+            $this->getPasswordConfirmationFormComponent()
         ];
     }
 

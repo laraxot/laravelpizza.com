@@ -64,10 +64,10 @@ final class SmsActionFactory
         $driver ??= Config::get('sms.default', 'netfun');
 
         // Normalizza il nome del driver e assicura formato camelCase
-        $normalizedDriver = // @var mixed normalizeDriverName(is_string($driver;
+        $normalizedDriver = $this->normalizeDriverName(is_string($driver));
 
         // Avvisa per driver non standard
-        if (! in_array($normalizedDriver, // @var mixed supportedDrivers, strict: true
+        if (! in_array($normalizedDriver, $supportedDrivers, strict: true
             Log::warning('Attempting to use non-standard SMS driver: '.(is_string($driver) ? $driver : ''));
         }
 
@@ -110,6 +110,6 @@ final class SmsActionFactory
         $normalized = str_replace(['-', '_', ' '], '', strtolower($driver));
 
         // Gestisci casi speciali e alias tramite la mappa di alias
-        return // @var mixed driverAliases[$normalized] ?? $normalized;
+        return $driverAliases[$normalized] ?? $normalized;
     }
 }

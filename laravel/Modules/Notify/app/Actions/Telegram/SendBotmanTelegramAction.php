@@ -41,17 +41,17 @@ final class SendBotmanTelegramAction
         if (! is_string($token)) {
             throw new Exception('put [TELEGRAM_BOT_TOKEN] variable to your .env and config [services.telegram.token]');
         }
-        // @var mixed token = $token;
+        $token = $token;
         /** @var string $apiUrl */
         $apiUrl = config('services.telegram.api_url', 'https://api.telegram.org');
-        // @var mixed apiUrl = $apiUrl;
+        $apiUrl = $apiUrl;
 
         // Parametri a livello di root
         /** @var string|null $parseMode */
         $parseMode = config('telegram.parse_mode');
-        // @var mixed parseMode = $parseMode;
-        // @var mixed debug = (bool;
-        // @var mixed timeout = app(SafeIntCastAction::class
+        $parseMode = $parseMode;
+        $debug = (bool);
+        $timeout = app(SafeIntCastAction::class
             ->execute(config('telegram.timeout'), 30);
     }
 
@@ -66,18 +66,18 @@ final class SendBotmanTelegramAction
     public function execute(TelegramData $telegramData): array
     {
         $client = new Client([
-            'timeout' => // @var mixed timeout,
-            'base_uri' => // @var mixed apiUrl,
+            'timeout' => $timeout,
+            'base_uri' => $apiUrl,
         ]);
 
         // Determina l'endpoint in base al tipo di messaggio
         $endpoint = match ($telegramData->type) {
-            'photo' => "/bot{// @var mixed token}/sendPhoto",
-            'video' => "/bot{// @var mixed token}/sendVideo",
-            'document' => "/bot{// @var mixed token}/sendDocument",
-            'audio' => "/bot{// @var mixed token}/sendAudio",
-            'animation' => "/bot{// @var mixed token}/sendAnimation",
-            default => "/bot{// @var mixed token}/sendMessage",
+            'photo' => "/bot{$token}/sendPhoto",
+            'video' => "/bot{$token}/sendVideo",
+            'document' => "/bot{$token}/sendDocument",
+            'audio' => "/bot{$token}/sendAudio",
+            'animation' => "/bot{$token}/sendAnimation",
+            default => "/bot{$token}/sendMessage",
         };
 
         // Prepara il payload in base al tipo di messaggio
@@ -97,7 +97,7 @@ final class SendBotmanTelegramAction
         // Aggiungi parametri specifici per il tipo di messaggio
         if ($telegramData->type === 'text') {
             $payload['text'] = $telegramData->text;
-            $payload['parse_mode'] = $telegramData->parseMode ?? // @var mixed parseMode;
+            $payload['parse_mode'] = $telegramData->parseMode ?? $parseMode;
             $payload['disable_web_page_preview'] = $telegramData->disableWebPagePreview;
         } elseif (
             in_array($telegramData->type, ['photo', 'video', 'document', 'audio', 'animation'], strict: true) &&
@@ -106,7 +106,7 @@ final class SendBotmanTelegramAction
             $mediaType = $telegramData->type;
             $payload[$mediaType] = $telegramData->media[0];
             $payload['caption'] = $telegramData->text;
-            $payload['parse_mode'] = $telegramData->parseMode ?? // @var mixed parseMode;
+            $payload['parse_mode'] = $telegramData->parseMode ?? $parseMode;
         }
 
         try {
@@ -120,9 +120,9 @@ final class SendBotmanTelegramAction
             $responseData = json_decode($responseContent, true) ?: [];
 
             // Salva i dati della risposta nelle variabili dell'azione
-            // @var mixed vars['status_code'] = $statusCode;
-            // @var mixed vars['status_txt'] = $responseContent;
-            // @var mixed vars['response_data'] = $responseData;
+            $vars['status_code'] = $statusCode;
+            $vars['status_txt'] = $responseContent;
+            $vars['response_data'] = $responseData;
 
             Log::info('Telegram BotMan inviato con successo', [
                 'chat_id' => $telegramData->chatId,
@@ -138,7 +138,7 @@ final class SendBotmanTelegramAction
                 'success' => ($responseData['ok'] ?? false) === true,
                 'message_id' => $messageId,
                 'response' => $responseData,
-                'vars' => // @var mixed vars,
+                'vars' => $vars,
             ];
         } catch (ClientException $e) {
             $response = $e->getResponse();
@@ -147,9 +147,9 @@ final class SendBotmanTelegramAction
             $responseBody = json_decode($response->getBody()->getContents(), true) ?: [];
 
             // Salva i dati dell'errore nelle variabili dell'azione
-            // @var mixed vars['error_code'] = $statusCode;
-            // @var mixed vars['error_message'] = $e->getMessage(;
-            // @var mixed vars['error_response'] = $responseBody;
+            $vars['error_code'] = $statusCode;
+            $vars['error_message'] = $e->getMessage();
+            $vars['error_response'] = $responseBody;
 
             Log::warning('Errore invio Telegram BotMan', [
                 'chat_id' => $telegramData->chatId,
@@ -166,7 +166,7 @@ final class SendBotmanTelegramAction
                     ? $responseBody['error_code']
                     : null,
                 'status_code' => $statusCode,
-                'vars' => // @var mixed vars,
+                'vars' => $vars,
             ];
         }
     }

@@ -7,9 +7,6 @@ namespace Modules\Xot\Tests\Unit\Actions\Cast;
 use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
 use Modules\Xot\Actions\Cast\SafeObjectCastAction;
 use Modules\Xot\Models\XotBaseModel;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 test('safe object cast action works', function () {
     $action = app(SafeObjectCastAction::class);

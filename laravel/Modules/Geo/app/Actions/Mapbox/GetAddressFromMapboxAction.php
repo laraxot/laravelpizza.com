@@ -34,12 +34,12 @@ readonly class GetAddressFromMapboxAction
      */
     public function execute(string $address): ?AddressData
     {
-        // @var mixed validateInput($address;
+        $this->validateInput($address);
 
         try {
-            $response = // @var mixed makeApiRequest($address;
+            $response = $this->makeApiRequest($address);
 
-            return // @var mixed parseResponse($response;
+            return $this->parseResponse($response);
         } catch (GuzzleException $e) {
             Log::error('Mapbox Geocoding API request failed', [
                 'error' => $e->getMessage(),
@@ -79,7 +79,7 @@ readonly class GetAddressFromMapboxAction
         $encodedAddress = urlencode($address);
         $url = sprintf('%s/%s.json', self::API_URL, $encodedAddress);
 
-        $response = // @var mixed client->get($url, [
+        $response = $client->get($url, [
             'query' => [
                 'access_token' => config('services.mapbox.access_token'),
                 'limit' => 1,

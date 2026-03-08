@@ -17,7 +17,7 @@ class CreateLocation extends XotBaseCreateRecord
 
     protected function getRedirectUrl(): string
     {
-        Assert::string($url = // @var mixed getResource(;
+        Assert::string($url = $this->getResource());
 
         return $url;
     }

@@ -33,16 +33,16 @@ class GammuData extends Data
 
     public function getPath(): string
     {
-        return // @var mixed path ?? '/usr/bin/gammu';
+        return $path ?? '/usr/bin/gammu';
     }
 
     public function getConfig(): string
     {
-        return // @var mixed config ?? '/etc/gammurc';
+        return $config ?? '/etc/gammurc';
     }
 
     public function getTimeout(): int
     {
-        return // @var mixed timeout;
+        return $timeout;
     }
 }

@@ -6,6 +6,16 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\User\Models\Profile;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
+<<<<<<< HEAD
+use function Safe\file_put_contents;
+
+||||||| 6161e129d
+use function Safe\file_put_contents;
+
+return new class extends XotBaseMigration
+{
+=======
+>>>>>>> feature/ralph-loop-implementation
 return new class extends XotBaseMigration {
     protected ?string $model_class = Profile::class;
 

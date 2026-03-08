@@ -6,9 +6,6 @@ namespace Modules\Xot\Tests\Unit\Actions\Arr;
 
 use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\Arr\SaveArrayAction;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 test('save array action saves as php by default', function () {
     $data = ['foo' => 'bar'];

@@ -5,9 +5,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit\Actions\Arr;
 
 use Modules\Xot\Actions\Arr\DiffAssocRecursiveAction;
-use Modules\Xot\Tests\TestCase;
-
-uses(TestCase::class);
 
 it('calculates recursive diff correctly', function (): void {
     $arr1 = [

@@ -41,9 +41,9 @@ readonly class LocationDTO
     public function toLocationData(): LocationData
     {
         return new LocationData(
-            latitude: // @var mixed latitude,
-            longitude: // @var mixed longitude,
-            name: // @var mixed name,
+            latitude: $latitude,
+            longitude: $longitude,
+            name: $name,
         );
     }
 }

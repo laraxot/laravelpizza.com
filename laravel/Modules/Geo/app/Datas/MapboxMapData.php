@@ -52,6 +52,6 @@ class MapboxMapData extends Data
      */
     public function toArray(): array
     {
-        return // @var mixed data;
+        return $data;
     }
 }

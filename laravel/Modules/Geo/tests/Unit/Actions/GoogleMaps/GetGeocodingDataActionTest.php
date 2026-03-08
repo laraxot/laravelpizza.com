@@ -13,23 +13,23 @@ use Modules\Geo\Actions\GoogleMaps\GetGeocodingDataAction;
 use Modules\Geo\Datas\GeocodingData;
 
 beforeEach(function () {
-    // @var mixed mockHandler = new MockHandler(;
-    $handlerStack = HandlerStack::create(// @var mixed mockHandler;
-    // @var mixed client = new Client(['handler' => $handlerStack];
-    // @var mixed action = new GetGeocodingDataAction($this->client;
+    $mockHandler = new MockHandler();
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetGeocodingDataAction($this->client);
 });
 
 it('throws exception when api key is not configured', function (): void {
     config(['services.google.maps_api_key' => null]);
 
-    expect(fn () => // @var mixed action->execute('Milano, Italia'
+    expect(fn () => $action->execute('Milano, Italia'
         ->toThrow(RuntimeException::class, 'Chiave API Google Maps non configurata');
 });
 
 it('throws exception for empty address', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    expect(fn () => // @var mixed action->execute(''
+    expect(fn () => $action->execute(''
         ->toThrow(RuntimeException::class, 'Indirizzo non può essere vuoto');
 });
 
@@ -38,16 +38,16 @@ it('throws exception for too long address', function (): void {
 
     $longAddress = str_repeat('a', 1001);
 
-    expect(fn () => // @var mixed action->execute($longAddress
+    expect(fn () => $action->execute($longAddress
         ->toThrow(RuntimeException::class, 'Indirizzo troppo lungo');
 });
 
 it('returns error geocoding data for guzzle exception', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    // @var mixed mockHandler->append(new GuzzleHttp\Exception\RequestException('Error', new GuzzleHttp\Psr7\Request('GET', 'http://test';
+    $mockHandler->append(new GuzzleHttp\Exception\RequestException('Error', new GuzzleHttp\Psr7\Request('GET', 'http://test')));
 
-    $result = // @var mixed action->execute('Milano, Italia';
+    $result = $action->execute('Milano, Italia');
 
     expect($result)
         ->toBeInstanceOf(GeocodingData::class)
@@ -58,12 +58,12 @@ it('returns error geocoding data for guzzle exception', function (): void {
 it('returns error geocoding data for invalid status', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    // @var mixed mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'status' => 'ZERO_RESULTS',
         'results' => [],
     ])));
 
-    $result = // @var mixed action->execute('NonExistentPlace';
+    $result = $action->execute('NonExistentPlace');
 
     expect($result)
         ->toBeInstanceOf(GeocodingData::class)
@@ -73,7 +73,7 @@ it('returns error geocoding data for invalid status', function (): void {
 it('returns geocoding data for valid address', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    // @var mixed mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'status' => 'OK',
         'results' => [[
             'geometry' => [
@@ -90,7 +90,7 @@ it('returns geocoding data for valid address', function (): void {
         ]],
     ])));
 
-    $result = // @var mixed action->execute('Via Roma, Milano, Italia';
+    $result = $action->execute('Via Roma, Milano, Italia');
 
     expect($result)
         ->toBeInstanceOf(GeocodingData::class)

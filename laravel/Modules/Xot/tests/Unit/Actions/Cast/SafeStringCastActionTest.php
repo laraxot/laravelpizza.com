@@ -5,9 +5,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit\Actions\Cast;
 
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
-use Modules\Xot\Tests\TestCase;
-
-uses(TestCase::class);
 
 it('casts various values to string correctly', function (): void {
     $action = app(SafeStringCastAction::class);

@@ -48,7 +48,7 @@ class SendAwsEmailPage extends XotBasePage
 
     public function mount(): void
     {
-        // @var mixed fillForms(;
+        $this->fillForms();
     }
 
     protected function getForms(): array
@@ -60,12 +60,12 @@ class SendAwsEmailPage extends XotBasePage
 
     protected function fillForms(): void
     {
-        // @var mixed emailForm->fill(;
+        $emailForm->fill();
     }
 
     public function emailForm(Schema $schema): Schema
     {
-        return $schema->components(// @var mixed getEmailFormSchema(;
+        return $schema->components($getEmailFormSchema());
     }
 
     /**
@@ -109,7 +109,7 @@ class SendAwsEmailPage extends XotBasePage
 
     public function sendEmail(): void
     {
-        $data = // @var mixed emailForm->getState(;
+        $data = $emailForm->getState();
 
         try {
             $recipient = is_string($data['recipient']) ? $data['recipient'] : '';

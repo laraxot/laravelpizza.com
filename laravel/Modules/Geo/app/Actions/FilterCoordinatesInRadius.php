@@ -23,7 +23,7 @@ class FilterCoordinatesInRadius
                 continue; // Skip if coordinates are not strings
             }
 
-            $distanza = // @var mixed calcolaDistanzaGeografica($latPartenza, $lonPartenza, $lat, $lon;
+            $distanza = $this->calcolaDistanzaGeografica($latPartenza, $lonPartenza, $lat, $lon);
 
             if ($distanza >= $raggio) {
                 $coordinateInRaggio[] = $coordinate;

@@ -35,12 +35,12 @@ readonly class GetAddressByLatLngFromGoogleMapsAction
      */
     public function execute(float $latitude, float $longitude): LocationData
     {
-        // @var mixed validateInput($latitude, $longitude;
+        $this->validateInput($latitude, $longitude);
 
         try {
-            $response = // @var mixed makeApiRequest($latitude, $longitude;
+            $response = $this->makeApiRequest($latitude, $longitude);
 
-            return // @var mixed parseResponse($response, $latitude, $longitude;
+            return $this->parseResponse($response, $latitude, $longitude);
         } catch (GuzzleException $e) {
             Log::error('Google Maps Reverse Geocoding API request failed', [
                 'error' => $e->getMessage(),
@@ -73,7 +73,7 @@ readonly class GetAddressByLatLngFromGoogleMapsAction
      */
     private function makeApiRequest(float $latitude, float $longitude): string
     {
-        $response = // @var mixed client->get(self::API_URL, [
+        $response = $client->get(self::API_URL, [
             'query' => [
                 'latlng' => sprintf('%F,%F', $latitude, $longitude),
                 'key' => config('services.google.maps_api_key'),

@@ -17,17 +17,28 @@ class SaveGdprConsentsAction
     /**
      * Save all GDPR consents for a user.
      *
-     * @param array<string, bool> $consents Associative array of [treatment_name => bool]
+     * @param array<string, bool> $consents Associative array of consent properties (privacy_accepted, terms_accepted, etc.)
      */
     public function execute(User $user, array $consents, ?string $ipAddress = null, ?string $userAgent = null): void
     {
         $ipAddress ??= request()->ip();
         $userAgent ??= request()->userAgent();
 
-        $allActiveTreatments = Treatment::where('active', 1)->get()->keyBy('name');
+        $treatments = Treatment::whereIn('name', [
+            'privacy_policy',
+            'terms_conditions',
+            'marketing_consent',
+        ])->get()->keyBy('name');
 
-        foreach ($consents as $treatmentName => $isAccepted) {
-            $treatment = $allActiveTreatments->get($treatmentName);
+        $consentMapping = [
+            'privacy_accepted' => 'privacy_policy',
+            'terms_accepted' => 'terms_conditions',
+            'marketing_consent' => 'marketing_consent',
+        ];
+
+        foreach ($consentMapping as $property => $treatmentName) {
+            $isAccepted = $consents[$property] ?? false;
+            $treatment = $treatments->get($treatmentName);
 
             if ($treatment) {
                 Consent::create([
@@ -37,18 +48,18 @@ class SaveGdprConsentsAction
                     'type' => $treatmentName,
                     'accepted_at' => $isAccepted ? now() : null,
                     'subject_id' => $user->id,
-                    'created_by' => 'gdpr_save_action',
-                    'updated_by' => 'gdpr_save_action',
+                    'created_by' => 'gdpr_register_widget',
+                    'updated_by' => 'gdpr_register_widget',
                     'ip_address' => $ipAddress,
                     'user_agent' => $userAgent,
                 ]);
             }
         }
 
-        Log::info('GDPR consents saved', [
+        Log::info('GDPR consents saved via action', [
             'user_id' => $user->id,
             'ip' => $ipAddress,
-            'consents_count' => count($consents),
+            'consents' => $consents,
         ]);
     }
 }

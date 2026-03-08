@@ -59,7 +59,7 @@ return [
                     'no_deactivated' => 'Nessun utente disattivato',
                     'no_deleted' => 'Nessun utente eliminato',
                     'roles' => 'Ruoli',
-                    'total' => 'utente(i] totali',
+                    'total' => 'utente(i] totali',)
                 ],
                 'tabs' => [
                     'titles' => [

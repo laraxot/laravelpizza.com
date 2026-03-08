@@ -186,7 +186,7 @@ class PasswordExpiredWidget extends XotBaseWidget
     protected function getFormActions(): array
     {
         return [
-            $this->getResetPasswordFormAction(
+            $this->getResetPasswordFormAction()
         ];
     }
 }

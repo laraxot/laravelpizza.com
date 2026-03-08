@@ -30,9 +30,9 @@ readonly class FetchOpenElevationAction
     public function execute(float $latitude, float $longitude): ElevationData
     {
         try {
-            $response = // @var mixed makeApiRequest($latitude, $longitude;
+            $response = $this->makeApiRequest($latitude, $longitude);
 
-            return // @var mixed parseResponse($response;
+            return $this->parseResponse($response);
         } catch (GuzzleException $e) {
             throw new \RuntimeException('Failed to get elevation data: '.$e->getMessage());
         }
@@ -43,7 +43,7 @@ readonly class FetchOpenElevationAction
      */
     private function makeApiRequest(float $latitude, float $longitude): string
     {
-        $response = // @var mixed client->post(self::API_URL, [
+        $response = $client->post(self::API_URL, [
             'json' => [
                 'locations' => [
                     [

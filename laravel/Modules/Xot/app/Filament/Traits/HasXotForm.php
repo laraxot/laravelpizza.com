@@ -6,19 +6,11 @@ namespace Modules\Xot\Filament\Traits;
 
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Schemas\Schema;
-use Filament\Tables\Table;
-use Modules\UI\Enums\TableLayoutEnum;
 
 /**
- * Trait HasXotTable.
+ * Trait HasXotForm.
  *
- * Provides enhanced table functionality with translations and optimized structure.
- *
- * @property TableLayoutEnum $layoutView
- *
- * @SuppressWarnings("PHPMD.StaticAccess")
- * @SuppressWarnings("PHPMD.CyclomaticComplexity")
- * @SuppressWarnings("PHPMD.NPathComplexity")
+ * Provides enhanced form functionality for Filament components.
  */
 trait HasXotForm
 {
@@ -27,12 +19,18 @@ trait HasXotForm
     /** @var array<string, mixed> */
     public array $data = [];
 
+    /**
+     * Get the form schema.
+     */
     abstract public function getFormSchema(): array;
 
+    /**
+     * Define the form.
+     */
     final public function form(Schema $schema): Schema
     {
         return $schema
-            ->components($getFormSchema(
+            ->components($this->getFormSchema())
             ->columns(2)
             ->statePath('data');
     }

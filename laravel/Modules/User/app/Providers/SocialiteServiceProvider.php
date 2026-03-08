@@ -10,6 +10,10 @@ use SocialiteProviders\Manager\SocialiteWasCalled;
 
 class SocialiteServiceProvider extends BaseSocialiteServiceProvider
 {
+<<<<<<< HEAD
+||||||| 6161e129d
+class SocialiteServiceProvider extends BaseSocialiteServiceProvider {}
+=======
     /**
      * Bootstrap the provider services.
      */
@@ -24,4 +28,5 @@ class SocialiteServiceProvider extends BaseSocialiteServiceProvider
             }
         });
     }
+>>>>>>> feature/ralph-loop-implementation
 }

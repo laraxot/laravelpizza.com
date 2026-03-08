@@ -103,19 +103,19 @@ class NotificationTemplate extends BaseModel implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        // @var mixed addMediaCollection('attachments';
+        $this->addMediaCollection('attachments');
     }
 
     /*
      * public function versions(): HasMany
      * {
-     * return // @var mixed hasMany(NotificationTemplateVersion::class, 'template_id'
+     * return $this->hasMany(NotificationTemplateVersion::class, 'template_id'
      * ->orderByDesc('version');
      * }
      *
      * public function logs(): HasMany
      * {
-     * return // @var mixed hasMany(NotificationLog::class, 'template_id';
+     * return $this->hasMany(NotificationLog::class, 'template_id');
      * }
      */
     /*
@@ -127,19 +127,19 @@ class NotificationTemplate extends BaseModel implements HasMedia
      *
      * public function createNewVersion(string $createdBy, ?string $notes = null): self
      * {
-     * // @var mixed versions(
-     * 'subject' => // @var mixed subject,
-     * 'body_html' => // @var mixed body_html,
-     * 'body_text' => // @var mixed body_text,
-     * 'channels' => // @var mixed channels,
-     * 'variables' => // @var mixed variables,
-     * 'conditions' => // @var mixed conditions,
-     * 'version' => // @var mixed version,
+     * $this->versions(
+     * 'subject' => $subject,
+     * 'body_html' => $body_html,
+     * 'body_text' => $body_text,
+     * 'channels' => $channels,
+     * 'variables' => $variables,
+     * 'conditions' => $conditions,
+     * 'version' => $version,
      * 'created_by' => $createdBy,
      * 'change_notes' => $notes,
      * ]);
      *
-     * // @var mixed increment('version';
+     * $this->increment('version');
      * return $this;
      * }
      */
@@ -151,9 +151,9 @@ class NotificationTemplate extends BaseModel implements HasMedia
      */
     public function compile(array $data = []): array
     {
-        $subject = // @var mixed compileString($this->getPreviewSubject(;
-        $bodyHtml = // @var mixed compileString($this->getPreviewBodyHtml(;
-        $bodyText = // @var mixed compileString($this->getPreviewBodyText(;
+        $subject = $this->compileString($this->getPreviewSubject());
+        $bodyHtml = $this->compileString($this->getPreviewBodyHtml());
+        $bodyText = $this->compileString($this->getPreviewBodyText());
 
         return [
             'subject' => $subject ?? '',
@@ -170,7 +170,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
     public function shouldSend(array $data = []): bool
     {
         /** @var array<string, mixed>|null $conditions */
-        $conditions = // @var mixed conditions;
+        $conditions = $conditions;
         if (! $conditions) {
             return true;
         }
@@ -194,11 +194,11 @@ class NotificationTemplate extends BaseModel implements HasMedia
     public function preview(array $data = []): array
     {
         /** @var array<string, mixed> $previewData */
-        $previewData = // @var mixed preview_data ?? [];
+        $previewData = $preview_data ?? [];
         /** @var array<string, mixed> $mergedData */
         $mergedData = array_merge($previewData, $data);
 
-        return // @var mixed compile($mergedData;
+        return $this->compile($mergedData);
     }
 
     /**
@@ -240,7 +240,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
     public function getChannelsLabelAttribute(): string
     {
         /** @var array<int, string> $channels */
-        $channels = // @var mixed channels;
+        $channels = $channels;
 
         return collect($channels)
             ->map(fn (string $channel): string => (string) __('notify::template.fields.channel.options.'.$channel.'.label'))
@@ -255,7 +255,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
     public function getGrapesJSData(): array
     {
         /** @var array<string, mixed>|null $grapesData */
-        $grapesData = // @var mixed grapesjs_data;
+        $grapesData = $grapesjs_data;
         $data = is_array($grapesData) ? $grapesData : [];
 
         $result = [];
@@ -274,7 +274,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
      */
     public function setGrapesJSData(array $data): self
     {
-        // @var mixed grapesjs_data = $data;
+        $grapesjs_data = $data;
 
         return $this;
     }
@@ -282,28 +282,28 @@ class NotificationTemplate extends BaseModel implements HasMedia
     public function getPreviewData(): array
     {
         /** @var array<string, mixed>|null $previewData */
-        $previewData = // @var mixed preview_data;
+        $previewData = $preview_data;
 
         return $previewData ?? [];
     }
 
     public function getPreviewSubject(): string
     {
-        $result = // @var mixed getTranslation('subject', app(;
+        $result = $this->getTranslation('subject', app());
 
         return is_string($result) ? $result : '';
     }
 
     public function getPreviewBodyText(): string
     {
-        $result = // @var mixed getTranslation('body_text', app(;
+        $result = $this->getTranslation('body_text', app());
 
         return is_string($result) ? $result : '';
     }
 
     public function getPreviewBodyHtml(): string
     {
-        $result = // @var mixed getTranslation('body_html', app(;
+        $result = $this->getTranslation('body_html', app());
 
         return is_string($result) ? $result : '';
     }

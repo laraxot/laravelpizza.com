@@ -32,20 +32,20 @@ final class SendNexmoSMSAction implements SmsActionContract
      */
     public function __construct()
     {
-        // @var mixed nexmoData = NexmoData::make(;
+        $nexmoData = NexmoData::make();
 
-        if (! // @var mixed nexmoData->key
+        if (! $nexmoData->key
             throw new Exception('Key Nexmo non configurata in sms.php');
         }
 
-        if (! // @var mixed nexmoData->secret
+        if (! $nexmoData->secret
             throw new Exception('Secret Nexmo non configurato in sms.php');
         }
 
         // Parametri a livello di root
         $sender = config('sms.from');
-        // @var mixed defaultSender = is_string($sender;
-        // @var mixed debug = (bool;
+        $defaultSender = is_string($sender);
+        $debug = (bool);
     }
 
     /**
@@ -73,18 +73,18 @@ final class SendNexmoSMSAction implements SmsActionContract
             $to = '+39'.$to;
         }
 
-        $from = $smsData->from ?? // @var mixed defaultSender;
+        $from = $smsData->from ?? $defaultSender;
 
         $client = new Client([
-            'timeout' => // @var mixed nexmoData->getTimeout(
+            'timeout' => $nexmoData->getTimeout(
             'headers' => $headers,
         ]);
 
         try {
-            $response = $client->post(// @var mixed nexmoData->getBaseUrl(
+            $response = $client->post($nexmoData->getBaseUrl(
                 'form_params' => [
-                    'api_key' => // @var mixed nexmoData->key,
-                    'api_secret' => // @var mixed nexmoData->secret,
+                    'api_key' => $nexmoData->key,
+                    'api_secret' => $nexmoData->secret,
                     'to' => $to,
                     'from' => $from,
                     'text' => $smsData->body,
@@ -92,10 +92,10 @@ final class SendNexmoSMSAction implements SmsActionContract
                 ],
             ]);
 
-            // @var mixed vars['status_code'] = $response->getStatusCode(;
-            // @var mixed vars['status_txt'] = $response->getBody(;
+            $vars['status_code'] = $response->getStatusCode();
+            $vars['status_txt'] = $response->getBody();
 
-            return // @var mixed vars;
+            return $vars;
         } catch (ClientException $clientException) {
             throw new Exception(
                 $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',

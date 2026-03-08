@@ -37,8 +37,8 @@ class AddressesField extends Repeater
     {
         parent::setUp();
 
-        // @var mixed schema($this->getAddressFormSchema(;
-        // @var mixed columnSpanFull(
+        $this->schema($this->getAddressFormSchema());
+        $this->columnSpanFull(
             ->defaultItems(1)
             ->live()
             ->addActionLabel('Aggiungi Indirizzo');

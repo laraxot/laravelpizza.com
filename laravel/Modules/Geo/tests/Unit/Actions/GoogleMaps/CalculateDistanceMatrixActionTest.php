@@ -11,7 +11,7 @@ use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Exceptions\GoogleMaps\GoogleMapsApiException;
 
 beforeEach(function () {
-    // @var mixed action = new CalculateDistanceMatrixAction(;
+    $action = new CalculateDistanceMatrixAction();
 });
 
 it('throws exception when google maps api key is not configured', function (): void {
@@ -25,7 +25,7 @@ it('throws exception when google maps api key is not configured', function (): v
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
     ]);
 
-    expect(fn () => // @var mixed action->execute($origins, $destinations
+    expect(fn () => $action->execute($origins, $destinations
         ->toThrow(GoogleMapsApiException::class, 'API key non configurata');
 });
 
@@ -40,7 +40,7 @@ it('throws exception when api key is empty string', function (): void {
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
     ]);
 
-    expect(fn () => // @var mixed action->execute($origins, $destinations
+    expect(fn () => $action->execute($origins, $destinations
         ->toThrow(GoogleMapsApiException::class);
 });
 
@@ -59,7 +59,7 @@ it('throws exception when api response is not successful', function (): void {
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
     ]);
 
-    expect(fn () => // @var mixed action->execute($origins, $destinations
+    expect(fn () => $action->execute($origins, $destinations
         ->toThrow(GoogleMapsApiException::class, 'Richiesta fallita');
 });
 
@@ -78,7 +78,7 @@ it('throws exception when response status is not OK', function (): void {
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
     ]);
 
-    expect(fn () => // @var mixed action->execute($origins, $destinations
+    expect(fn () => $action->execute($origins, $destinations
         ->toThrow(GoogleMapsApiException::class, 'Stato della risposta non valido');
 });
 
@@ -97,7 +97,7 @@ it('throws exception when response has no rows', function (): void {
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
     ]);
 
-    expect(fn () => // @var mixed action->execute($origins, $destinations
+    expect(fn () => $action->execute($origins, $destinations
         ->toThrow(GoogleMapsApiException::class, 'Nessun risultato');
 });
 
@@ -125,7 +125,7 @@ it('returns distance matrix for valid locations', function (): void {
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
     ]);
 
-    $result = // @var mixed action->execute($origins, $destinations;
+    $result = $action->execute($origins, $destinations);
 
     expect($result)
         ->toBeArray()
@@ -169,7 +169,7 @@ it('handles multiple origins and destinations', function (): void {
         new LocationData(latitude: 40.8518, longitude: 14.2681, address: 'Napoli'),
     ]);
 
-    $result = // @var mixed action->execute($origins, $destinations;
+    $result = $action->execute($origins, $destinations);
 
     expect($result)
         ->toBeArray()
@@ -204,7 +204,7 @@ it('handles zero results status', function (): void {
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
     ]);
 
-    $result = // @var mixed action->execute($origins, $destinations;
+    $result = $action->execute($origins, $destinations);
 
     expect($result[0][0]['status'])->toBe('ZERO_RESULTS');
 });

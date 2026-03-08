@@ -97,7 +97,7 @@ class GeoDataValidator
      */
     public function checkIntegrity(array $data): bool
     {
-        if (! // @var mixed validate($data
+        if (! $this->validate($data
             return false;
         }
 

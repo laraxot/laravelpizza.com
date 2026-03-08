@@ -13,6 +13,6 @@ class MediaDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // // @var mixed call([];
+        // $this->call([]);
     }
 }

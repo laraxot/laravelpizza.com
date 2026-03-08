@@ -38,10 +38,10 @@ class LocationData extends Data
     public function toArray(): array
     {
         return [
-            'latitude' => // @var mixed latitude,
-            'longitude' => // @var mixed longitude,
-            'name' => // @var mixed name,
-            'address' => // @var mixed address,
+            'latitude' => $latitude,
+            'longitude' => $longitude,
+            'name' => $name,
+            'address' => $address,
         ];
     }
 

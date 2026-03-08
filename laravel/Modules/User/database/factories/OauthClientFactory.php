@@ -48,7 +48,7 @@ class OauthClientFactory extends Factory
                     'password',
                     'refresh_token',
                 ],
-                $faker->numberBetween(1, 3
+                $faker->numberBetween(1, 3)
             ),
             'scopes' => $faker->optional(
                 [
@@ -57,7 +57,7 @@ class OauthClientFactory extends Factory
                     'admin',
                     'user',
                 ],
-                $faker->numberBetween(1, 3
+                $faker->numberBetween(1, 3)
             ),
         ];
     }

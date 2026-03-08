@@ -31,7 +31,7 @@ class LocalityFactory extends Factory
 
     public function italian(): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes
             'name' => ['Centro', 'Periferia', 'Quartiere Nord', 'Zona Industriale'][array_rand(['Centro', 'Periferia', 'Quartiere Nord', 'Zona Industriale'])],
         ]);
     }

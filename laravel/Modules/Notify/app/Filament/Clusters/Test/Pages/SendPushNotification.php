@@ -40,7 +40,7 @@ class SendPushNotification extends XotBasePage
 
     public function mount(): void
     {
-        // @var mixed fillForms(;
+        $this->fillForms();
     }
 
     public function notificationForm(Schema $schema): Schema
@@ -113,7 +113,7 @@ class SendPushNotification extends XotBasePage
                     TextInput::make('value')->required(),
                 ]),
             ])
-            // ->model(// @var mixed getUser(
+            // ->model($getUser(
             ->statePath('notificationData');
     }
 
@@ -132,7 +132,7 @@ class SendPushNotification extends XotBasePage
             return;
         }
 
-        $data = // @var mixed notificationForm->getState(;
+        $data = $notificationForm->getState();
         $deviceToken = $data['deviceToken'] ?? '';
 
         // Verifichiamo che deviceToken sia una stringa non vuota
@@ -256,9 +256,9 @@ class SendPushNotification extends XotBasePage
 
     protected function fillForms(): void
     {
-        // $data = // @var mixed getUser(;
+        // $data = $this->getUser();
 
-        // // @var mixed editProfileForm->fill($data;
-        // @var mixed notificationForm->fill(;
+        // $editProfileForm->fill($data);
+        $notificationForm->fill();
     }
 }

@@ -34,27 +34,27 @@ class AddressData extends Data
     {
         $parts = [];
 
-        if (// @var mixed street
-            $parts[] = // @var mixed street;
-            if (// @var mixed street_number
-                $parts[count($parts) - 1] .= ', '.// @var mixed street_number;
+        if ($street
+            $parts[] = $street;
+            if ($street_number
+                $parts[count($parts) - 1] .= ', '.$street_number;
             }
         }
 
-        if (// @var mixed city
-            $parts[] = // @var mixed city;
+        if ($city
+            $parts[] = $city;
         }
 
-        if (// @var mixed state
-            $parts[] = // @var mixed state;
+        if ($state
+            $parts[] = $state;
         }
 
-        if (// @var mixed country
-            $parts[] = // @var mixed country;
+        if ($country
+            $parts[] = $country;
         }
 
-        if (// @var mixed postal_code
-            $parts[] = (string) // @var mixed postal_code;
+        if ($postal_code
+            $parts[] = (string) $postal_code;
         }
 
         return implode(', ', $parts);

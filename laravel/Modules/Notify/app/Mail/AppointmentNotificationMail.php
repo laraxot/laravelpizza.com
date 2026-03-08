@@ -32,7 +32,7 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
      */
     public function __construct(array $notificationData)
     {
-        // @var mixed notificationData = $notificationData;
+        $notificationData = $notificationData;
     }
 
     /**
@@ -40,8 +40,8 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
      */
     public function envelope(): Envelope
     {
-        $appointment = // @var mixed notificationData['appointment'];
-        $type = // @var mixed notificationData['type'];
+        $appointment = $notificationData['appointment'];
+        $type = $notificationData['type'];
 
         $subject = match ($type) {
             'confirmed' => 'Conferma Appuntamento',
@@ -71,7 +71,7 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
      */
     public function content(): Content
     {
-        $type = // @var mixed notificationData['type'];
+        $type = $notificationData['type'];
 
         // Determina il template da utilizzare in base al tipo di notifica
         $view = match ($type) {
@@ -85,10 +85,10 @@ class AppointmentNotificationMail extends Mailable implements ShouldQueue
         return new Content(
             view: $view,
             with: [
-                'appointment' => // @var mixed notificationData['appointment'],
-                'patient' => // @var mixed notificationData['patient'],
+                'appointment' => $notificationData['appointment'],
+                'patient' => $notificationData['patient'],
                 'type' => $type,
-                'additionalData' => // @var mixed notificationData['additionalData'] ?? [],
+                'additionalData' => $notificationData['additionalData'] ?? [],
             ],
         );
     }

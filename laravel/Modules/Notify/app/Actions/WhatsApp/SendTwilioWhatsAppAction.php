@@ -44,7 +44,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
                 'put [TWILIO_ACCOUNT_SID] variable to your .env and config [services.twilio.account_sid]',
             );
         }
-        // @var mixed accountSid = $accountSid;
+        $accountSid = $accountSid;
 
         $authToken = config('services.twilio.auth_token');
         if (! is_string($authToken)) {
@@ -52,13 +52,13 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
                 'put [TWILIO_AUTH_TOKEN] variable to your .env and config [services.twilio.auth_token]',
             );
         }
-        // @var mixed authToken = $authToken;
+        $authToken = $authToken;
 
         // Parametri a livello di root
         $sender = config('whatsapp.from');
-        // @var mixed defaultSender = is_string($sender;
-        // @var mixed debug = (bool;
-        // @var mixed timeout = is_numeric(config('whatsapp.timeout', 30;
+        $defaultSender = is_string($sender);
+        $debug = (bool);
+        $timeout = is_numeric(config('whatsapp.timeout', 30));
     }
 
     /**
@@ -71,15 +71,15 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
      */
     public function execute(WhatsAppData $whatsAppData): array
     {
-        $from = 'whatsapp:'.($whatsAppData->from ?? // @var mixed defaultSender;
+        $from = 'whatsapp:'.($whatsAppData->from ?? $defaultSender);
         $to = 'whatsapp:'.$whatsAppData->recipient;
 
         $client = new Client([
-            'timeout' => // @var mixed timeout,
-            'auth' => [// @var mixed accountSid, $this->authToken],
+            'timeout' => $timeout,
+            'auth' => [$accountSid, $this->authToken],
         ]);
 
-        $endpoint = // @var mixed baseUrl.'/Accounts/'.$this->accountSid.'/Messages.json';
+        $endpoint = $baseUrl.'/Accounts/'.$this->accountSid.'/Messages.json';
 
         $payload = [
             'To' => $to,
@@ -103,9 +103,9 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
             $responseData = json_decode($responseContent, true) ?: [];
 
             // Salva i dati della risposta nelle variabili dell'azione
-            // @var mixed vars['status_code'] = $statusCode;
-            // @var mixed vars['status_txt'] = $responseContent;
-            // @var mixed vars['response_data'] = $responseData;
+            $vars['status_code'] = $statusCode;
+            $vars['status_txt'] = $responseContent;
+            $vars['response_data'] = $responseData;
 
             Log::info('WhatsApp Twilio inviato con successo', [
                 'to' => $whatsAppData->recipient,
@@ -118,7 +118,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
                     ? $responseData['sid']
                     : null,
                 'response' => $responseData,
-                'vars' => // @var mixed vars,
+                'vars' => $vars,
             ];
         } catch (ClientException $e) {
             $response = $e->getResponse();
@@ -127,9 +127,9 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
             $responseBody = json_decode($response->getBody()->getContents(), true) ?: [];
 
             // Salva i dati dell'errore nelle variabili dell'azione
-            // @var mixed vars['error_code'] = $statusCode;
-            // @var mixed vars['error_message'] = $e->getMessage(;
-            // @var mixed vars['error_response'] = $responseBody;
+            $vars['error_code'] = $statusCode;
+            $vars['error_message'] = $e->getMessage();
+            $vars['error_response'] = $responseBody;
 
             Log::warning('Errore invio WhatsApp Twilio', [
                 'to' => $whatsAppData->recipient,
@@ -143,7 +143,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
                     ? $responseBody['message']
                     : 'Errore sconosciuto',
                 'status_code' => $statusCode,
-                'vars' => // @var mixed vars,
+                'vars' => $vars,
             ];
         }
     }

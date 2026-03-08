@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\Module\GetModuleConfigAction;
 use Modules\Xot\Actions\Module\GetModuleNameByClassAction;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 test('get module name by class action works', function () {
     $action = app(GetModuleNameByClassAction::class);

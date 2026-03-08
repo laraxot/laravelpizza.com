@@ -31,7 +31,7 @@ class ProfileFactory extends Factory
             'twitter' => $faker->userName(
             'facebook' => $faker->userName(
             'linkedin' => $faker->userName(
-            'github' => $faker->userName(
+            'github' => $faker->userName()
         ];
     }
 }

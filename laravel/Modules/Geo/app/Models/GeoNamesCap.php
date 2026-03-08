@@ -38,7 +38,7 @@ class GeoNamesCap extends BaseModel
      */
     /*
      * function __construct(){
-     * // @var mixed setConnection('user';
+     * $this->setConnection('user');
      * parent::__construct();
      * }//end construct
      */

@@ -40,12 +40,12 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
     {
         parent::setUp();
 
-        // @var mixed label(__('geo::actions.update_coordinates.bulk.label'
+        $this->label(__('geo::actions.update_coordinates.bulk.label'
             ->icon('heroicon-o-map-pin')
             ->deselectRecordsAfterCompletion()
             ->action(function (Collection $records): void {
                 /* @var Collection<int, Place> $records */
-                // @var mixed processRecords($records;
+                $this->processRecords($records);
             });
     }
 
@@ -70,8 +70,8 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
         \Illuminate\Support\Collection $errorMessages,
         int $totalCount,
     ): void {
-        // @var mixed notifySuccess($successCount, $totalCount;
-        // @var mixed notifyErrors($errorMessages;
+        $this->notifySuccess($successCount, $totalCount);
+        $this->notifyErrors($errorMessages);
     }
 
     /**
@@ -136,7 +136,7 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
             }
         }
 
-        // @var mixed sendNotifications(
+        $this->sendNotifications(
             $successCount,
             $errors,
             $records->count()

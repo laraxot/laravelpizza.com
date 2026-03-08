@@ -13,23 +13,23 @@ use Modules\Geo\Actions\GoogleMaps\GetCoordinatesFromGoogleMapsAction;
 use Modules\Geo\Datas\LocationData;
 
 beforeEach(function () {
-    // @var mixed mockHandler = new MockHandler(;
-    $handlerStack = HandlerStack::create(// @var mixed mockHandler;
-    // @var mixed client = new Client(['handler' => $handlerStack];
-    // @var mixed action = new GetCoordinatesFromGoogleMapsAction($this->client;
+    $mockHandler = new MockHandler();
+    $handlerStack = HandlerStack::create($mockHandler);
+    $client = new Client(['handler' => $handlerStack]);
+    $action = new GetCoordinatesFromGoogleMapsAction($this->client);
 });
 
 it('throws exception when api key is not configured', function (): void {
     config(['services.google.maps_api_key' => null]);
 
-    expect(fn () => // @var mixed action->execute('Milano, Italia'
+    expect(fn () => $action->execute('Milano, Italia'
         ->toThrow(RuntimeException::class, 'Google Maps API key not configured');
 });
 
 it('throws exception for empty address', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    expect(fn () => // @var mixed action->execute(''
+    expect(fn () => $action->execute(''
         ->toThrow(InvalidArgumentException::class, 'Address cannot be empty');
 });
 
@@ -38,46 +38,46 @@ it('throws exception for too long address', function (): void {
 
     $longAddress = str_repeat('a', 1001);
 
-    expect(fn () => // @var mixed action->execute($longAddress
+    expect(fn () => $action->execute($longAddress
         ->toThrow(InvalidArgumentException::class, 'Address is too long');
 });
 
 it('throws exception for guzzle exception', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    // @var mixed mockHandler->append(new GuzzleHttp\Exception\RequestException('Error', new GuzzleHttp\Psr7\Request('GET', 'http://test';
+    $mockHandler->append(new GuzzleHttp\Exception\RequestException('Error', new GuzzleHttp\Psr7\Request('GET', 'http://test')));
 
-    expect(fn () => // @var mixed action->execute('Milano, Italia'
+    expect(fn () => $action->execute('Milano, Italia'
         ->toThrow(RuntimeException::class, 'Failed to get coordinates');
 });
 
 it('throws exception when no coordinates found', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    // @var mixed mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'status' => 'OK',
         'results' => [],
     ])));
 
-    expect(fn () => // @var mixed action->execute('NonExistentPlace'
+    expect(fn () => $action->execute('NonExistentPlace'
         ->toThrow(RuntimeException::class, 'No coordinates found');
 });
 
 it('throws exception when status is not OK', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    // @var mixed mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'status' => 'ZERO_RESULTS',
     ])));
 
-    expect(fn () => // @var mixed action->execute('NonExistentPlace'
+    expect(fn () => $action->execute('NonExistentPlace'
         ->toThrow(RuntimeException::class, 'No coordinates found');
 });
 
 it('returns location data for valid address', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    // @var mixed mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'status' => 'OK',
         'results' => [[
             'geometry' => [
@@ -89,7 +89,7 @@ it('returns location data for valid address', function (): void {
         ]],
     ])));
 
-    $result = // @var mixed action->execute('Milano, Italia';
+    $result = $action->execute('Milano, Italia');
 
     expect($result)
         ->toBeInstanceOf(LocationData::class)
@@ -101,7 +101,7 @@ it('returns location data for valid address', function (): void {
 it('handles address with special characters', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    // @var mixed mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'status' => 'OK',
         'results' => [[
             'geometry' => [
@@ -113,7 +113,7 @@ it('handles address with special characters', function (): void {
         ]],
     ])));
 
-    $result = // @var mixed action->execute('Piazza del Popolo, Roma, Italia';
+    $result = $action->execute('Piazza del Popolo, Roma, Italia');
 
     expect($result)
         ->toBeInstanceOf(LocationData::class)

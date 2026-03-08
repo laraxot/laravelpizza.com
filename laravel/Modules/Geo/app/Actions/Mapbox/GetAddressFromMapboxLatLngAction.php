@@ -25,12 +25,12 @@ class GetAddressFromMapboxLatLngAction
      */
     public function execute(float $latitude, float $longitude): AddressData
     {
-        // @var mixed validateCoordinates($latitude, $longitude;
-        $apiKey = // @var mixed getApiKey(;
-        $response = // @var mixed makeApiRequest($latitude, $longitude, $apiKey;
-        $data = // @var mixed parseResponse($response;
+        $this->validateCoordinates($latitude, $longitude);
+        $apiKey = $this->getApiKey();
+        $response = $this->makeApiRequest($latitude, $longitude, $apiKey);
+        $data = $this->parseResponse($response);
 
-        return // @var mixed mapResponseToAddressData($data;
+        return $this->mapResponseToAddressData($data);
     }
 
     private function validateCoordinates(float $latitude, float $longitude): void

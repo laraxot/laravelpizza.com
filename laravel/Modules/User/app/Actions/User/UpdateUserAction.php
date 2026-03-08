@@ -4,14 +4,29 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\User;
 
+<<<<<<< HEAD
+||||||| 6161e129d
+use Exception;
 use Illuminate\Contracts\Hashing\Hasher;
 use Illuminate\Database\DatabaseManager;
+=======
+use Illuminate\Contracts\Hashing\Hasher;
+use Illuminate\Database\DatabaseManager;
+>>>>>>> feature/ralph-loop-implementation
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
-use Psr\Log\LoggerInterface;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * UpdateUserAction: Action generica per l'aggiornamento dei dati utente.
+ *
+ * Questa action gestisce l'aggiornamento dei dati di base dell'utente.
+ * Può essere estesa dai moduli specifici per aggiungere logica personalizzata.
+ */
 class UpdateUserAction
 {
     use QueueableAction;
@@ -28,20 +43,14 @@ class UpdateUserAction
      */
     public function execute(Model $user, array $data): Model
     {
-        $dbManager = \app(DatabaseManager::class);
-        $logger = \app(LoggerInterface::class);
-        $hasher = \app(Hasher::class);
-        $safeStringCast = \app(SafeStringCastAction::class);
-        $validationException = \app(ValidationException::class);
-
         try {
-            $dbManager->beginTransaction();
+            DB::beginTransaction();
 
             // Prepara i dati per l'aggiornamento
-            $updateData = $this->prepareUpdateData($data, $hasher, $safeStringCast);
+            $updateData = $this->prepareUpdateData($data);
 
             // Valida i dati specifici per l'aggiornamento
-            $this->validateUpdateData($user, $updateData, $validationException);
+            $this->validateUpdateData($user, $updateData);
 
             // Aggiorna l'utente
             $user->fill($updateData);
@@ -50,9 +59,9 @@ class UpdateUserAction
             // Esegue operazioni post-aggiornamento se necessarie
             $this->afterUpdate($user, $updateData);
 
-            $dbManager->commit();
+            DB::commit();
 
-            $logger->info('Utente aggiornato con successo', [
+            Log::info('Utente aggiornato con successo', [
                 'user_id' => $user->getKey(),
                 'updated_fields' => array_keys($updateData),
             ]);
@@ -64,9 +73,16 @@ class UpdateUserAction
 
             return $updatedUser;
         } catch (\Exception $e) {
+<<<<<<< HEAD
+            DB::rollBack();
+||||||| 6161e129d
+        } catch (Exception $e) {
             $dbManager->rollBack();
+=======
+            $dbManager->rollBack();
+>>>>>>> feature/ralph-loop-implementation
 
-            $logger->error("Errore nell'aggiornamento utente", [
+            Log::error("Errore nell'aggiornamento utente", [
                 'user_id' => $user->getKey(),
                 'error' => $e->getMessage(),
                 'data' => $updateData ?? [],
@@ -83,7 +99,7 @@ class UpdateUserAction
      *
      * @return array<string, mixed>
      */
-    protected function prepareUpdateData(array $data, Hasher $hasher, SafeStringCastAction $safeStringCast): array
+    protected function prepareUpdateData(array $data): array
     {
         // Rimuovi campi che non dovrebbero essere aggiornati direttamente
         $excludeFields = [
@@ -101,16 +117,33 @@ class UpdateUserAction
             if (empty($updateData['password'])) {
                 // Se la password è vuota, rimuovila dai dati di aggiornamento
                 unset($updateData['password']);
+<<<<<<< HEAD
+            } else {
+                // Hash della password se presente
+                $updateData['password'] = Hash::make(SafeStringCastAction::cast($updateData['password']));
+||||||| 6161e129d
+            }
+            // Hash della password se presente, e se non è stata rimossa perché vuota
+            if (isset($updateData['password'])) {
+                $updateData['password'] = $hasher->make($safeStringCast->cast($updateData['password']));
+=======
             }
             // Hash della password se presente, e se non è stata rimossa perché vuota
             if (isset($updateData['password'])) {
                 $updateData['password'] = $hasher->make($safeStringCast->execute($updateData['password']));
+>>>>>>> feature/ralph-loop-implementation
             }
         }
 
         // Gestione dell'email per evitare duplicati
         if (isset($updateData['email'])) {
+<<<<<<< HEAD
+            $email = SafeStringCastAction::cast($updateData['email']);
+||||||| 6161e129d
+            $email = $safeStringCast->cast($updateData['email']);
+=======
             $email = $safeStringCast->execute($updateData['email']);
+>>>>>>> feature/ralph-loop-implementation
             $updateData['email'] = strtolower($email);
         }
 
@@ -124,7 +157,7 @@ class UpdateUserAction
      *
      * @throws ValidationException
      */
-    protected function validateUpdateData(Model $user, array $data, ValidationException $validationException): void
+    protected function validateUpdateData(Model $user, array $data): void
     {
         // Validazione email univoca
         if (isset($data['email'])) {
@@ -135,7 +168,7 @@ class UpdateUserAction
                 ->first();
 
             if ($existingUser) {
-                throw $validationException->withMessages(['email' => __('user::validation.email_already_taken')]);
+                throw ValidationException::withMessages(['email' => __('user::validation.email_already_taken')]);
             }
         }
 
@@ -157,7 +190,5 @@ class UpdateUserAction
         // - Aggiornare cache
         // - Registrare log di audit
         // - Gestire relazioni
-        // Mark parameters as unused to satisfy PHPMD
-        unset($user, $data);
     }
 }

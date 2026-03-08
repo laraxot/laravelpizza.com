@@ -8,20 +8,20 @@ use Spatie\QueueableAction\QueueableAction;
 
 describe('NotifyTheme\Get', function () {
     beforeEach(function () {
-        // @var mixed action = new Get;
+        $action = new Get;
     });
 
     it('can be instantiated', function () {
-        expect(// @var mixed action;
+        expect($action);
     });
 
     it('uses QueueableAction trait', function () {
-        $traits = class_uses(// @var mixed action;
+        $traits = class_uses($action);
         expect($traits)->toContain(QueueableAction::class);
     });
 
     it('has execute method with correct signature', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+        $reflection = new ReflectionClass($action);
         $method = $reflection->getMethod('execute');
 
         expect($method->isPublic())->toBeTrue();
@@ -29,7 +29,7 @@ describe('NotifyTheme\Get', function () {
     });
 
     it('execute accepts string parameters and array', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+        $reflection = new ReflectionClass($action);
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
@@ -39,7 +39,7 @@ describe('NotifyTheme\Get', function () {
     });
 
     it('execute returns NotifyThemeData', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+        $reflection = new ReflectionClass($action);
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
@@ -47,30 +47,30 @@ describe('NotifyTheme\Get', function () {
     });
 
     it('uses strict types', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+        $reflection = new ReflectionClass($action);
         $filename = $reflection->getFileName();
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1);');
+        expect($content)->toContain('declare(strict_types=1));');
     });
 
     it('has correct namespace', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+        $reflection = new ReflectionClass($action);
 
         expect($reflection->getNamespaceName())->toBe('Modules\Notify\Actions\NotifyTheme');
     });
 
     it('has required imports', function () {
-        $filename = (new ReflectionClass(// @var mixed action;
+        $filename = (new ReflectionClass($action));
         $content = file_get_contents($filename);
 
-        expect($content)->toContain('use Modules\Notify\Datas\NotifyThemeData;');
-        expect($content)->toContain('use Modules\Notify\Models\NotifyTheme;');
-        expect($content)->toContain('use Modules\Xot\Datas\XotData;');
+        expect($content)->toContain('use Modules\Notify\Datas\NotifyThemeData);');
+        expect($content)->toContain('use Modules\Notify\Models\NotifyTheme);');
+        expect($content)->toContain('use Modules\Xot\Datas\XotData);');
     });
 
     it('implements queueable functionality', function () {
-        expect(method_exists(// @var mixed action, 'onQueue';
+        expect(method_exists($action, 'onQueue'));
     });
 });

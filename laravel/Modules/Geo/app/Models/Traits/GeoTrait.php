@@ -47,7 +47,7 @@ trait GeoTrait
      * return $item.'_short';
      * }
      * )->all();
-     * $fillable = array_merge(// @var mixed fillable, Place::$address_components, $shorts, ['latitude', 'longitude'];
+     * $fillable = array_merge($fillable, Place::$address_components, $shorts, ['latitude', 'longitude']);
      *
      * return $fillable;
      * }*/
@@ -56,7 +56,7 @@ trait GeoTrait
 
     public function distance(?float $lat = null, ?float $lng = null): ?float
     {
-        return (float) GeoService::distance((float) // @var mixed latitude, (float;
+        return (float) GeoService::distance((float) $latitude, (float));
     }
 
     public function distanceCustomField(
@@ -163,19 +163,19 @@ trait GeoTrait
 
     public function getAddress(): string
     {
-        if ('' === // @var mixed country
-            // @var mixed country = 'Italia';
+        if ('' === $country
+            $country = 'Italia';
         }
 
-        return // @var mixed route.
+        return $route.
             ', '.
-            // @var mixed street_number.
+            $street_number.
             ', '.
-            // @var mixed locality.
+            $locality.
             ', '.
-            // @var mixed administrative_area_level_2.
+            $administrative_area_level_2.
             ', '.
-            // @var mixed country;
+            $country;
     }
 
     /**
@@ -186,7 +186,7 @@ trait GeoTrait
         if (is_float($value) || is_int($value)) {
             return (float) $value;
         }
-        $address = // @var mixed address;
+        $address = $address;
         if (null === $address) {
             return null;
         }
@@ -196,11 +196,11 @@ trait GeoTrait
             $lat = is_float($latlng['lat'] ?? null) || is_int($latlng['lat'] ?? null) ? (float) ($latlng['lat']) : null;
             $lng = is_float($latlng['lng'] ?? null) || is_int($latlng['lng'] ?? null) ? (float) ($latlng['lng']) : null;
             if (null !== $lat && null !== $lng) {
-                // @var mixed update([
+                $this->update([
                     'latitude' => $lat,
                     'longitude' => $lng,
                 ]);
-                // @var mixed save(;
+                $this->save();
             }
 
             return $lat;
@@ -214,11 +214,11 @@ trait GeoTrait
          * if (\is_array($address)) {
          * $lat = $address['latlng']['lat'];
          * $lng = $address['latlng']['lng'];
-         * // @var mixed update([
+         * $this->update([
          * 'latitude' => $lat,
          * 'longitude' => $lng,
          * ]);
-         * // @var mixed save(;
+         * $this->save();
          *
          * return $lat;
          * }
@@ -248,14 +248,14 @@ trait GeoTrait
             $lng = $latlng['lng'];
 
             // unset($json['latlng'], $json['value']);
-            // // @var mixed attributes = array_merge($this->attributes, $json;
-            // @var mixed attributes['latitude'] = $lat;
-            // @var mixed attributes['longitude'] = $lng;
-            if (! isset(// @var mixed attributes['full_address']
-                // @var mixed attributes['full_address'] = ',,';
+            // $attributes = array_merge($this->attributes, $json);
+            $attributes['latitude'] = $lat;
+            $attributes['longitude'] = $lng;
+            if (! isset($attributes['full_address']
+                $attributes['full_address'] = ',,';
             }
 
-            $fullAddress = (string) (// @var mixed attributes['full_address'] ?? '';
+            $fullAddress = (string) ($attributes['full_address'] ?? '');
             if (strlen($fullAddress) < 10) {
                 $tmp = [];
                 $tmp[] = $geo->route ?? '';
@@ -263,14 +263,14 @@ trait GeoTrait
                 $tmp[] = $geo->postal_code ?? '';
                 $tmp[] = $geo->administrative_area_level_3 ?? '';
                 $tmp[] = $geo->administrative_area_level_2_short ?? '';
-                // @var mixed attributes['full_address'] = implode(', ', $tmp;
+                $attributes['full_address'] = implode(', ', $tmp);
             }
         }
 
         if (\is_array($value)) {
             $value = json_encode($value, JSON_THROW_ON_ERROR);
         }
-        // @var mixed attributes['address'] = $value;
+        $attributes['address'] = $value;
 
         // dddx(['isJson'=>\isJson($value),'value'=>$value]);
     }
@@ -286,15 +286,15 @@ trait GeoTrait
      * return json_decode($value);
      * }
      *
-     * if ('' == // @var mixed country
-     * // @var mixed country = 'Italia';
+     * if ('' == $country
+     * $country = 'Italia';
      * }
      * $val1 = (object) [
-     * 'value' => // @var mixed route.', '.$this->street_number.', '.$this->locality.', '.$this->administrative_area_level_2.', '.$this->country,
+     * 'value' => $route.', '.$this->street_number.', '.$this->locality.', '.$this->administrative_area_level_2.', '.$this->country,
      * ];
      * $val1->latlng = (object) [
-     * 'lat' => // @var mixed latitude,
-     * 'lng' => // @var mixed longitude,
+     * 'lat' => $latitude,
+     * 'lng' => $longitude,
      * ];
      * foreach (Place::$address_components as $v) {
      * $val1->$v = // @var mixed $v;
@@ -311,19 +311,19 @@ trait GeoTrait
      */
     public function getFullAddressAttribute(?string $value): ?string
     {
-        if (null === // @var mixed address
+        if (null === $address
             return null;
         }
-        if (is_string(// @var mixed address
+        if (is_string($address
             /*
-             * $addr = json_decode(// @var mixed address;
+             * $addr = json_decode($address);
              * if (\is_object($addr)) {
              * $addr = get_object_vars($addr);
              * }
              *
              * extract($addr);
              */
-            $geo = GeoData::from(json_decode((string) // @var mixed address, true, 512, JSON_THROW_ON_ERROR;
+            $geo = GeoData::from(json_decode((string) $address, true, 512, JSON_THROW_ON_ERROR));
 
             $value = str_ireplace(', Italia', '', $geo->value);
             // Call to function is_array() with string will always evaluate to false.
@@ -347,8 +347,8 @@ trait GeoTrait
         }
         // Call to function is_object() with string|null will always evaluate to false.
         /*
-         * if (\is_object(// @var mixed address
-         * $address = collect(// @var mixed address;
+         * if (\is_object($address
+         * $address = collect($address);
          * $up = false;
          * foreach ($address->all() as $k => $v) {
          * if (// @var mixed $k !== $v
@@ -357,7 +357,7 @@ trait GeoTrait
          * }
          * }
          * if ($up) {
-         * // @var mixed update($address->all(;
+         * $this->update($address->all());
          * }
          *
          * $tmp = [];
@@ -372,11 +372,11 @@ trait GeoTrait
          * }
          */
         $tmp = [];
-        $tmp[] = // @var mixed route;
-        $tmp[] = // @var mixed street_number;
-        $tmp[] = // @var mixed postal_code;
-        $tmp[] = // @var mixed administrative_area_level_3;
-        $tmp[] = // @var mixed administrative_area_level_2_short;
+        $tmp[] = $route;
+        $tmp[] = $street_number;
+        $tmp[] = $postal_code;
+        $tmp[] = $administrative_area_level_3;
+        $tmp[] = $administrative_area_level_2_short;
 
         return implode(', ', $tmp);
     }

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use Modules\User\Datas\PasswordData;
 use Modules\User\Tests\TestCase;
-use Spatie\LaravelData\Data;
 
 uses(TestCase::class);
 

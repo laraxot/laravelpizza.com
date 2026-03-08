@@ -12,35 +12,35 @@ class NotificationTypeEnumTest extends TestCase
     /** @test */
     public function it_has_correct_cases(): void
     {
-        // @var mixed assertCount(3, NotificationTypeEnum::cases(;
+        $this->assertCount(3, NotificationTypeEnum::cases());
 
-        // @var mixed assertEquals('email', NotificationTypeEnum::EMAIL->value;
-        // @var mixed assertEquals('sms', NotificationTypeEnum::SMS->value;
-        // @var mixed assertEquals('push', NotificationTypeEnum::PUSH->value;
+        $this->assertEquals('email', NotificationTypeEnum::EMAIL->value);
+        $this->assertEquals('sms', NotificationTypeEnum::SMS->value);
+        $this->assertEquals('push', NotificationTypeEnum::PUSH->value);
     }
 
     /** @test */
     public function label_returns_localized_string(): void
     {
-        // @var mixed assertIsString(NotificationTypeEnum::EMAIL->label(;
-        // @var mixed assertIsString(NotificationTypeEnum::SMS->label(;
-        // @var mixed assertIsString(NotificationTypeEnum::PUSH->label(;
+        $this->assertIsString(NotificationTypeEnum::EMAIL->label());
+        $this->assertIsString(NotificationTypeEnum::SMS->label());
+        $this->assertIsString(NotificationTypeEnum::PUSH->label());
     }
 
     /** @test */
     public function icon_returns_heroicon_string(): void
     {
-        // @var mixed assertEquals('heroicon-o-envelope', NotificationTypeEnum::EMAIL->icon(;
-        // @var mixed assertEquals('heroicon-o-device-phone-mobile', NotificationTypeEnum::SMS->icon(;
-        // @var mixed assertEquals('heroicon-o-bell', NotificationTypeEnum::PUSH->icon(;
+        $this->assertEquals('heroicon-o-envelope', NotificationTypeEnum::EMAIL->icon());
+        $this->assertEquals('heroicon-o-device-phone-mobile', NotificationTypeEnum::SMS->icon());
+        $this->assertEquals('heroicon-o-bell', NotificationTypeEnum::PUSH->icon());
     }
 
     /** @test */
     public function color_returns_correct_color(): void
     {
-        // @var mixed assertEquals('success', NotificationTypeEnum::EMAIL->color(;
-        // @var mixed assertEquals('warning', NotificationTypeEnum::SMS->color(;
-        // @var mixed assertEquals('info', NotificationTypeEnum::PUSH->color(;
+        $this->assertEquals('success', NotificationTypeEnum::EMAIL->color());
+        $this->assertEquals('warning', NotificationTypeEnum::SMS->color());
+        $this->assertEquals('info', NotificationTypeEnum::PUSH->color());
     }
 
     /** @test */
@@ -49,7 +49,7 @@ class NotificationTypeEnumTest extends TestCase
         $values = array_map(fn ($case) => $case->value, NotificationTypeEnum::cases());
         $uniqueValues = array_unique($values);
 
-        // @var mixed assertCount(count($values;
+        $this->assertCount(count($values));
     }
 
     /** @test */
@@ -57,11 +57,11 @@ class NotificationTypeEnumTest extends TestCase
     {
         $cases = NotificationTypeEnum::cases();
 
-        // @var mixed assertIsArray($cases;
-        // @var mixed assertCount(3, $cases;
+        $this->assertIsArray($cases);
+        $this->assertCount(3, $cases);
 
         foreach ($cases as $case) {
-            // @var mixed assertInstanceOf(NotificationTypeEnum::class, $case;
+            $this->assertInstanceOf(NotificationTypeEnum::class, $case);
         }
     }
 
@@ -69,9 +69,9 @@ class NotificationTypeEnumTest extends TestCase
     public function all_cases_have_required_methods(): void
     {
         foreach (NotificationTypeEnum::cases() as $case) {
-            // @var mixed assertIsString($case->label(;
-            // @var mixed assertIsString($case->icon(;
-            // @var mixed assertIsString($case->color(;
+            $this->assertIsString($case->label());
+            $this->assertIsString($case->icon());
+            $this->assertIsString($case->color());
         }
     }
 }

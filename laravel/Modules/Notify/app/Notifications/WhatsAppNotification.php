@@ -40,20 +40,20 @@ class WhatsAppNotification extends Notification implements ShouldQueue
     public function __construct(string|WhatsAppData $content, array $config = [])
     {
         if ($content instanceof WhatsAppData) {
-            // @var mixed whatsappData = $content;
+            $whatsappData = $content;
         } else {
             $recipient = $config['recipient'] ?? ($config['to'] ?? '');
             $from = $config['from'] ?? null;
 
             /** @phpstan-ignore-next-line */
-            // @var mixed whatsappData = new WhatsAppData(
+            $whatsappData = new WhatsAppData(
                 recipient: SafeStringCastAction::cast($recipient),
                 body: $content,
                 from: $from !== null ? SafeStringCastAction::cast($from) : null,
             );
         }
 
-        // @var mixed config = $config;
+        $config = $config;
     }
 
     /**
@@ -77,10 +77,10 @@ class WhatsAppNotification extends Notification implements ShouldQueue
         // we'll use that to get the destination phone number
         if (is_object($notifiable) && method_exists($notifiable, 'routeNotificationForWhatsApp')) {
             $routeResult = $notifiable->routeNotificationForWhatsApp($this);
-            // @var mixed whatsappData->recipient = app(SafeStringCastAction::class;
+            $whatsappData->recipient = app(SafeStringCastAction::class);
         }
 
-        return // @var mixed whatsappData;
+        return $whatsappData;
     }
 
     /**
@@ -90,7 +90,7 @@ class WhatsAppNotification extends Notification implements ShouldQueue
      */
     public function getConfig(): array
     {
-        return // @var mixed config;
+        return $config;
     }
 
     /**
@@ -98,7 +98,7 @@ class WhatsAppNotification extends Notification implements ShouldQueue
      */
     public function getProvider(): ?string
     {
-        $provider = // @var mixed config['provider'] ?? null;
+        $provider = $config['provider'] ?? null;
 
         return is_string($provider) ? $provider : null;
     }

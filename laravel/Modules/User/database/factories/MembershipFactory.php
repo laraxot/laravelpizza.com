@@ -36,7 +36,7 @@ class MembershipFactory extends Factory
             'team_id' => Team::factory(),
             'user_id' => User::factory(),
             'role' => $faker->randomElement(['admin', 'editor', 'member', 'viewer']
-            'customer_id' => $faker->optional(0.3
+            'customer_id' => $faker->optional(0.3)
         ];
     }
 

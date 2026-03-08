@@ -13,9 +13,9 @@ class IconMediaColumn extends IconColumn
     protected function setUp(): void
     {
         parent::setUp();
-        $attachment = // @var mixed getName(;
+        $attachment = $this->getName();
 
-        // @var mixed default(function ($record
+        $this->default(function ($record
             if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                 return $record->getFirstMedia($attachment);
             }

@@ -6,7 +6,6 @@ use Filament\Models\Contracts\HasAvatar;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
 use Modules\User\Contracts\TenantContract;
-use Modules\User\Models\BaseTenant;
 use Modules\User\Models\Tenant;
 use Modules\User\Tests\TestCase;
 use Spatie\MediaLibrary\HasMedia;
@@ -14,6 +13,25 @@ use Spatie\Sluggable\SlugOptions;
 
 uses(TestCase::class);
 
+<<<<<<< HEAD
+beforeEach(function (): void {
+    // Manually create the tenant to ensure incrementing = false is handled
+    // since we can't easily change the model code.
+    $this->tenant = new Tenant();
+    $this->tenant->incrementing = false;
+    $this->tenant->setKeyType('string');
+
+    $tenantData = [
+||||||| 6161e129d
+beforeEach(function (): void {
+    // Manually create the tenant to ensure incrementing = false is handled
+    // since we can't easily change the model code.
+    $this->tenant = new Tenant;
+    $this->tenant->incrementing = false;
+    $this->tenant->setKeyType('string');
+
+    $tenantData = [
+=======
 /**
  * Helper to create a Tenant directly, bypassing factory empty definition.
  * Tenant uses $incrementing = false with UUID primary key, but the factory
@@ -24,6 +42,7 @@ uses(TestCase::class);
 function makeTenantData(array $overrides = []): array
 {
     return array_merge([
+>>>>>>> feature/ralph-loop-implementation
         'id' => (string) Str::uuid(),
         'name' => 'Test Tenant '.uniqid('', true),
         'email_address' => 'test@tenant.com',

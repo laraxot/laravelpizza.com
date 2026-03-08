@@ -7,9 +7,9 @@ use Modules\Geo\Actions\FilterCoordinatesInRadiusAction;
 use Modules\Geo\Actions\GoogleMaps\CalculateDistanceMatrixAction;
 
 beforeEach(function () {
-    // @var mixed mockDistanceMatrixAction = Mockery::mock(CalculateDistanceMatrixAction::class;
-    // @var mixed mockCalculateDistanceAction = new CalculateDistanceAction($this->mockDistanceMatrixAction;
-    // @var mixed action = new FilterCoordinatesInRadiusAction($this->mockCalculateDistanceAction;
+    $mockDistanceMatrixAction = Mockery::mock(CalculateDistanceMatrixAction::class);
+    $mockCalculateDistanceAction = new CalculateDistanceAction($this->mockDistanceMatrixAction);
+    $action = new FilterCoordinatesInRadiusAction($this->mockCalculateDistanceAction);
 });
 
 afterEach(function () {
@@ -29,7 +29,7 @@ it('filters coordinates within radius', function (): void {
     ];
 
     // The filter calls calculateDistanceAction->execute for each coordinate pair
-    // @var mixed mockDistanceMatrixAction
+    $mockDistanceMatrixAction
         ->shouldReceive('execute')
         ->times(3)
         ->andReturn(
@@ -51,7 +51,7 @@ it('filters coordinates within radius', function (): void {
         );
 
     // Act
-    $result = // @var mixed action->execute($centerLat, $centerLng, $coordinates, $radius;
+    $result = $action->execute($centerLat, $centerLng, $coordinates, $radius);
 
     // Assert - note: result keeps original order
     expect($result)->toHaveCount(2);
@@ -68,7 +68,7 @@ it('returns empty array when no coordinates within radius', function (): void {
         ['latitude' => '45.5100', 'longitude' => '9.2600'], // ~12km away
     ];
 
-    // @var mixed mockDistanceMatrixAction
+    $mockDistanceMatrixAction
         ->shouldReceive('execute')
         ->times(2)
         ->andReturn(
@@ -85,7 +85,7 @@ it('returns empty array when no coordinates within radius', function (): void {
         );
 
     // Act
-    $result = // @var mixed action->execute($centerLat, $centerLng, $coordinates, $radius;
+    $result = $action->execute($centerLat, $centerLng, $coordinates, $radius);
 
     // Assert
     expect($result)->toHaveCount(0);
@@ -103,7 +103,7 @@ it('returns all coordinates when all within radius', function (): void {
         ['latitude' => '45.4800', 'longitude' => '9.2100'],
     ];
 
-    // @var mixed mockDistanceMatrixAction
+    $mockDistanceMatrixAction
         ->shouldReceive('execute')
         ->times(3)
         ->andReturn(
@@ -125,7 +125,7 @@ it('returns all coordinates when all within radius', function (): void {
         );
 
     // Act
-    $result = // @var mixed action->execute($centerLat, $centerLng, $coordinates, $radius;
+    $result = $action->execute($centerLat, $centerLng, $coordinates, $radius);
 
     // Assert
     expect($result)->toHaveCount(3);
@@ -139,7 +139,7 @@ it('handles empty coordinates array', function (): void {
     $coordinates = [];
 
     // Act
-    $result = // @var mixed action->execute($centerLat, $centerLng, $coordinates, $radius;
+    $result = $action->execute($centerLat, $centerLng, $coordinates, $radius);
 
     // Assert
     expect($result)->toHaveCount(0);
@@ -155,7 +155,7 @@ it('filters exactly at boundary', function (): void {
         ['latitude' => '45.4700', 'longitude' => '9.2000'], // exactly 5km
     ];
 
-    // @var mixed mockDistanceMatrixAction
+    $mockDistanceMatrixAction
         ->shouldReceive('execute')
         ->once()
         ->andReturn(
@@ -167,7 +167,7 @@ it('filters exactly at boundary', function (): void {
         ); // exactly at boundary
 
     // Act
-    $result = // @var mixed action->execute($centerLat, $centerLng, $coordinates, $radius;
+    $result = $action->execute($centerLat, $centerLng, $coordinates, $radius);
 
     // Assert - should be included since <=
     expect($result)->toHaveCount(1);

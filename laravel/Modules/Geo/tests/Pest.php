@@ -31,14 +31,14 @@ uses(TestCase::class)->in(__DIR__.'/Feature', __DIR__.'/Unit');
  * |
  */
 
-expect()->extend('toBeCountry', fn () => // @var mixed toBeInstanceOf(Country::class;
+expect()->extend('toBeCountry', fn () => $this->toBeInstanceOf(Country::class));
 
-expect()->extend('toBeRegion', fn () => // @var mixed toBeInstanceOf(Region::class;
+expect()->extend('toBeRegion', fn () => $this->toBeInstanceOf(Region::class));
 
-expect()->extend('toBeCity', fn () => // @var mixed toBeInstanceOf(City::class;
+expect()->extend('toBeCity', fn () => $this->toBeInstanceOf(City::class));
 
 expect()->extend('toBeSubclassOf', function (string $base) {
-    return // @var mixed toBeTrue(is_subclass_of($this->value, $base;
+    return $this->toBeTrue(is_subclass_of($this->value, $base));
 });
 
 /*

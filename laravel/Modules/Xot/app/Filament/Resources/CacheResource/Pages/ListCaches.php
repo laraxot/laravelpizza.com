@@ -53,7 +53,7 @@ class ListCaches extends XotBaseListRecords
     public function getGridTableColumns(): array
     {
         return [
-            Stack::make($getTableColumns(
+            Stack::make($getTableColumns()),
         ];
     }
 

@@ -72,7 +72,13 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 ->required()
                 ->autocomplete('email')
                 ->maxLength(255)
+<<<<<<< HEAD
+                ->disabled('form' !== $this->currentState)
+||||||| 6161e129d
+                ->disabled($this->currentState !== 'form')
+=======
                 ->disabled('form' !== $currentState
+>>>>>>> feature/ralph-loop-implementation
                 ->extraInputAttributes(['class' => 'text-center'])
                 ->suffixIcon('heroicon-o-envelope'),
             'password' => TextInput::make('password')
@@ -80,14 +86,26 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 ->required()
                 ->revealable()
                 ->minLength(8)
+<<<<<<< HEAD
+                ->disabled('form' !== $this->currentState)
+||||||| 6161e129d
+                ->disabled($this->currentState !== 'form')
+=======
                 ->disabled('form' !== $currentState
+>>>>>>> feature/ralph-loop-implementation
                 ->extraInputAttributes(['class' => 'text-center'])
                 ->suffixIcon('heroicon-o-key'),
             'password_confirmation' => TextInput::make('password_confirmation')
                 ->password()
                 ->required()
                 ->same('password')
+<<<<<<< HEAD
+                ->disabled('form' !== $this->currentState)
+||||||| 6161e129d
+                ->disabled($this->currentState !== 'form')
+=======
                 ->disabled('form' !== $currentState
+>>>>>>> feature/ralph-loop-implementation
                 ->extraInputAttributes(['class' => 'text-center'])
                 ->suffixIcon('heroicon-o-key'),
         ];
@@ -98,7 +116,13 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function confirmPasswordReset(): void
     {
+<<<<<<< HEAD
+        if ('form' !== $this->currentState) {
+||||||| 6161e129d
+        if ($this->currentState !== 'form') {
+=======
         if ('form' !== $currentState
+>>>>>>> feature/ralph-loop-implementation
             return;
         }
 
@@ -126,7 +150,14 @@ class PasswordResetConfirmWidget extends XotBaseWidget
             );
 
             if (Password::PASSWORD_RESET === $response) {
+<<<<<<< HEAD
+                $this->currentState = 'success';
+||||||| 6161e129d
+            if ($response === Password::PASSWORD_RESET) {
+                $this->currentState = 'success';
+=======
                 $currentState = 'success';
+>>>>>>> feature/ralph-loop-implementation
 
                 Notification::make()
                     ->title(__('user::auth.password_reset.success.title'))
@@ -193,7 +224,13 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function isLoading(): bool
     {
+<<<<<<< HEAD
+        return 'loading' === $this->currentState;
+||||||| 6161e129d
+        return $this->currentState === 'loading';
+=======
         return 'loading' === $currentState;
+>>>>>>> feature/ralph-loop-implementation
     }
 
     /**
@@ -201,7 +238,13 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function isSuccess(): bool
     {
+<<<<<<< HEAD
+        return 'success' === $this->currentState;
+||||||| 6161e129d
+        return $this->currentState === 'success';
+=======
         return 'success' === $currentState;
+>>>>>>> feature/ralph-loop-implementation
     }
 
     /**
@@ -209,7 +252,13 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function hasError(): bool
     {
+<<<<<<< HEAD
+        return 'error' === $this->currentState;
+||||||| 6161e129d
+        return $this->currentState === 'error';
+=======
         return 'error' === $currentState;
+>>>>>>> feature/ralph-loop-implementation
     }
 
     /**

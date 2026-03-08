@@ -11,7 +11,7 @@ declare(strict_types=1);
                     {{ __('notify::mail.template.preview.subject') }}
                 </h3>
                 <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                    {{ // @var mixed record->subject }}
+                    {{ $record->subject }}
                 </p>
             </div>
 
@@ -95,7 +95,7 @@ declare(strict_types=1);
         <circle cx="18" cy="6" r="1.25" fill="none" />
     </g>
 </svg>
-EOF // @var mixed record->body_html !!}
+EOF $record->body_html !!}
                     </div>
                 </div>
 
@@ -103,17 +103,17 @@ EOF // @var mixed record->body_html !!}
                     <h4 class="text-sm font-medium text-gray-900 dark:text-gray-100">
                         {{ __('notify::mail.template.preview.text_version') }}
                     </h4>
-                    <pre class="mt-2 text-sm text-gray-600 dark:text-gray-300 whitespace-pre-wrap">{{ // @var mixed record->body_text }}</pre>
+                    <pre class="mt-2 text-sm text-gray-600 dark:text-gray-300 whitespace-pre-wrap">{{ $record->body_text }}</pre>
                 </div>
 
-                @if (! empty(// @var mixed record->variables
+                @if (! empty($record->variables
                     <div>
                         <h4 class="text-sm font-medium text-gray-900 dark:text-gray-100">
                             {{ __('notify::mail.template.preview.variables') }}
                         </h4>
 
                         <dl class="mt-2 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-                            @foreach (// @var mixed record->variables as $key => $value
+                            @foreach ($record->variables as $key => $value
                                 <div class="border rounded-lg p-3 bg-gray-50 dark:bg-gray-900/40">
                                     <dt class="text-xs font-medium tracking-wide text-gray-500 dark:text-gray-400">
                                         {{ $key }}

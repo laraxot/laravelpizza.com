@@ -14,25 +14,25 @@ use Modules\Geo\Actions\IPGeolocation\FetchIPLocationAction;
 use Modules\Geo\Datas\IPLocationData;
 
 beforeEach(function () {
-    // @var mixed mockHandler = new MockHandler(;
-    $handlerStack = HandlerStack::create(// @var mixed mockHandler;
+    $mockHandler = new MockHandler();
+    $handlerStack = HandlerStack::create($mockHandler);
     $client = new Client(['handler' => $handlerStack]);
 
-    // @var mixed action = new FetchIPLocationAction($client;
+    $action = new FetchIPLocationAction($client);
 });
 
 it('throws exception when ip-api returns failure status', function (): void {
-    // @var mixed mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'status' => 'fail',
         'message' => 'invalid query',
     ])));
 
-    expect(fn () => // @var mixed action->execute('8.8.8.8'
+    expect(fn () => $action->execute('8.8.8.8'
         ->toThrow(RuntimeException::class, 'Failed to get IP location: invalid query');
 });
 
 it('returns ip location data for valid response', function (): void {
-    // @var mixed mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'status' => 'success',
         'country' => 'United States',
         'countryCode' => 'US',
@@ -45,7 +45,7 @@ it('returns ip location data for valid response', function (): void {
         'isp' => 'Google LLC',
     ])));
 
-    $result = // @var mixed action->execute('8.8.8.8';
+    $result = $action->execute('8.8.8.8');
 
     expect($result)
         ->toBeInstanceOf(IPLocationData::class)
@@ -61,11 +61,11 @@ it('returns ip location data for valid response', function (): void {
 });
 
 it('handles response with null values', function (): void {
-    // @var mixed mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([
         'status' => 'success',
     ])));
 
-    $result = // @var mixed action->execute('127.0.0.1';
+    $result = $action->execute('127.0.0.1');
 
     expect($result)
         ->toBeInstanceOf(IPLocationData::class)

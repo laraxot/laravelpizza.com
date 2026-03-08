@@ -6,9 +6,6 @@ namespace Modules\Xot\Tests\Unit\Actions\View;
 
 use Illuminate\Support\Facades\View;
 use Modules\Xot\Actions\View\GetViewByClassAction;
-use Modules\Xot\Tests\TestCase;
-
-uses(TestCase::class);
 
 it('converts class names to view names correctly', function (): void {
     $action = app(GetViewByClassAction::class);

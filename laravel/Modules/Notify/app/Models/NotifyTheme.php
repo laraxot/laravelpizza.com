@@ -109,10 +109,10 @@ class NotifyTheme extends BaseModel
     public function getLogoAttribute(?array $value): array
     {
         return [
-            // 'path' => asset(strval(// @var mixed logo_src
-            'path' => url(// @var mixed getFirstMediaUrl(
-            'width' => // @var mixed logo_width ?? 50,
-            'height' => // @var mixed logo_height ?? 50,
+            // 'path' => asset(strval($logo_src
+            'path' => url($getFirstMediaUrl(
+            'width' => $logo_width ?? 50,
+            'height' => $logo_height ?? 50,
         ];
     }
 
@@ -121,7 +121,7 @@ class NotifyTheme extends BaseModel
      */
     public function linkable(): MorphTo
     {
-        return // @var mixed morphTo('post';
+        return $this->morphTo('post');
     }
 
     /** @return array<string, string> */

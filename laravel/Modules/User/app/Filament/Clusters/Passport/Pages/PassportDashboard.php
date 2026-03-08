@@ -169,7 +169,7 @@ class PassportDashboard extends XotBasePage
                 ->disabled(fn () => $isRunning
                 ->requiresConfirmation()
                 ->modalDescription(static::trans('actions.hash_secrets.modal_description'))
-                ->action(fn () => $this->executeCommand('passport:hash'
+                ->action(fn () => $this->executeCommand('passport:hash'))
         ];
     }
 }

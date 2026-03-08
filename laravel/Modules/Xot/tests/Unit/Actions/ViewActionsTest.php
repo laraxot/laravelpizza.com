@@ -7,9 +7,6 @@ namespace Modules\Xot\Tests\Unit\Actions;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\Support\Facades\View;
 use Modules\Xot\Actions\GetViewByClassAction;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 test('get view actions work', function () {
     $classAction = app(GetViewByClassAction::class);

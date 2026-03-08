@@ -13,7 +13,7 @@ declare(strict_types=1);
             Utilizza questo form per testare l'invio di messaggi WhatsApp tramite diversi provider.
         </x-slot>
 
-        {{ // @var mixed whatsappForm }}
+        {{ $whatsappForm }}
 
         <x-slot name="footer">
             <div class="flex items-center justify-end gap-x-3">

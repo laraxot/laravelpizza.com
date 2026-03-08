@@ -144,11 +144,11 @@ class ProvinceFactory extends Factory
         ];
 
         /** @var string $provinceName */
-        $provinceName = // @var mixed faker->unique(;
+        $provinceName = $faker->unique();
 
         return [
             'name' => $provinceName,
-            'region_id' => // @var mixed faker->numberBetween(1, 20
+            'region_id' => $faker->numberBetween(1, 20
         ];
     }
 
@@ -157,7 +157,7 @@ class ProvinceFactory extends Factory
      */
     public function northern(): static
     {
-        return // @var mixed state(
+        return $this->state(
             /** @param array<string, mixed> $attributes */
             /** @return array<string, mixed> */
             function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null): array {
@@ -212,7 +212,7 @@ class ProvinceFactory extends Factory
                 ];
 
                 /** @var string $provinceName */
-                $provinceName = // @var mixed faker->randomElement($provinceNord;
+                $provinceName = $faker->randomElement($provinceNord);
 
                 /** @var array<string, mixed> $result */
                 $result = array_merge($attributes, [
@@ -228,7 +228,7 @@ class ProvinceFactory extends Factory
      */
     public function central(): static
     {
-        return // @var mixed state(
+        return $this->state(
             /** @param array<string, mixed> $attributes */
             /** @return array<string, mixed> */
             function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null): array {
@@ -264,7 +264,7 @@ class ProvinceFactory extends Factory
                 ];
 
                 /** @var string $provinceName */
-                $provinceName = // @var mixed faker->randomElement($provinceCentro;
+                $provinceName = $faker->randomElement($provinceCentro);
 
                 /** @var array<string, mixed> $result */
                 $result = array_merge($attributes, [
@@ -280,7 +280,7 @@ class ProvinceFactory extends Factory
      */
     public function southern(): static
     {
-        return // @var mixed state(
+        return $this->state(
             /** @param array<string, mixed> $attributes */
             /** @return array<string, mixed> */
             function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null): array {
@@ -323,7 +323,7 @@ class ProvinceFactory extends Factory
                 ];
 
                 /** @var string $provinceName */
-                $provinceName = // @var mixed faker->randomElement($provinceSud;
+                $provinceName = $faker->randomElement($provinceSud);
 
                 /** @var array<string, mixed> $result */
                 $result = array_merge($attributes, [
@@ -339,7 +339,7 @@ class ProvinceFactory extends Factory
      */
     public function named(string $name): static
     {
-        return // @var mixed state(fn (array $attributes
+        return $this->state(fn (array $attributes
             'name' => $name,
         ]));
     }
@@ -349,7 +349,7 @@ class ProvinceFactory extends Factory
      */
     public function forRegion(Region $region): static
     {
-        return // @var mixed state(fn (array $attributes
+        return $this->state(fn (array $attributes
             'region_id' => $region->id,
         ]));
     }

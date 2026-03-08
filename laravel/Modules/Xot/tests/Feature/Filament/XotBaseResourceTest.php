@@ -9,9 +9,6 @@ use Filament\Schemas\Components\Wizard\Step;
 use Filament\Schemas\Schema;
 use Modules\Xot\Filament\Resources\CacheResource;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 covers(XotBaseResource::class);
 

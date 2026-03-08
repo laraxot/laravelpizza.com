@@ -18,7 +18,7 @@ class HasContactDummyModel extends Model
 
     public function initContactTrait(): void
     {
-        // @var mixed initializeHasContact(;
+        $this->initializeHasContact();
     }
 }
 

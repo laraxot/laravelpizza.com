@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
-use Modules\Xot\Tests\TestCase;
-
 uses(TestCase::class)->in(__DIR__);
 
 it('can create a test user', function () {

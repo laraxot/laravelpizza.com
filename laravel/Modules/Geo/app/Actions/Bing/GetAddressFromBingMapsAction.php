@@ -25,12 +25,12 @@ class GetAddressFromBingMapsAction
      */
     public function execute(float $latitude, float $longitude): AddressData
     {
-        $apiKey = // @var mixed getApiKey(;
+        $apiKey = $this->getApiKey();
         /** @var array<string, mixed> $response */
-        $response = // @var mixed makeApiRequest($latitude, $longitude, $apiKey;
-        $data = // @var mixed parseResponse($response;
+        $response = $this->makeApiRequest($latitude, $longitude, $apiKey);
+        $data = $this->parseResponse($response);
 
-        return // @var mixed mapResponseToAddressData($data;
+        return $this->mapResponseToAddressData($data);
     }
 
     /**
@@ -91,8 +91,8 @@ class GetAddressFromBingMapsAction
     private function parseResponse(array $response): BingMapData
     {
         /** @var array<string, mixed> $location */
-        $location = // @var mixed extractLocationFromResponse($response;
-        $coordinates = // @var mixed extractCoordinatesFromLocation($location;
+        $location = $this->extractLocationFromResponse($response);
+        $coordinates = $this->extractCoordinatesFromLocation($location);
 
         if (! isset($location['address']) || ! \is_array($location['address'])) {
             throw InvalidLocationException::invalidData('Indirizzo mancante nella risposta');
@@ -109,15 +109,15 @@ class GetAddressFromBingMapsAction
                 ],
             ],
             'address' => [
-                'countryRegion' => // @var mixed extractStringField($address, 'countryRegion'
-                'adminDistrict' => // @var mixed extractStringField($address, 'adminDistrict'
-                'adminDistrict2' => // @var mixed extractStringField($address, 'adminDistrict2'
-                'locality' => // @var mixed extractStringField($address, 'locality'
-                'postalCode' => // @var mixed extractStringField($address, 'postalCode'
-                'addressLine' => // @var mixed extractStringField($address, 'addressLine'
-                'countryRegionIso2' => // @var mixed extractStringField($address, 'countryRegionIso2'
-                'neighborhood' => // @var mixed extractStringField($address, 'neighborhood'
-                'houseNumber' => // @var mixed extractStringField($address, 'houseNumber'
+                'countryRegion' => $this->extractStringField($address, 'countryRegion'
+                'adminDistrict' => $this->extractStringField($address, 'adminDistrict'
+                'adminDistrict2' => $this->extractStringField($address, 'adminDistrict2'
+                'locality' => $this->extractStringField($address, 'locality'
+                'postalCode' => $this->extractStringField($address, 'postalCode'
+                'addressLine' => $this->extractStringField($address, 'addressLine'
+                'countryRegionIso2' => $this->extractStringField($address, 'countryRegionIso2'
+                'neighborhood' => $this->extractStringField($address, 'neighborhood'
+                'houseNumber' => $this->extractStringField($address, 'houseNumber'
             ],
         ];
 

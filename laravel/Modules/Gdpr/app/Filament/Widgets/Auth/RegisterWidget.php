@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Widgets\Auth;
 
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Livewire\Attributes\Validate;
+use Modules\Gdpr\Actions\Consent\CollectGdprConsentsAction;
 use Modules\Gdpr\Actions\Registration\HandleSuccessfulRegistrationAction;
 use Modules\Gdpr\Actions\SaveGdprConsentsAction;
+use Modules\Gdpr\Actions\Validation\ValidateGdprConsentAction;
 use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
-use Modules\Gdpr\Models\Treatment;
 use Modules\User\Actions\Activity\LogRegistrationAction;
 use Modules\User\Actions\User\CreateUserAction;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
@@ -20,12 +20,22 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 /**
  * GDPR-Compliant Registration Widget.
+ *
+ * Flat form design following modern signup UX best practices.
+ * GDPR consents are Livewire public properties so the Blade view
+ * can render custom HTML with clickable links to privacy/terms pages.
  */
 class RegisterWidget extends XotBaseWidget
 {
-    /** @var array<string, bool> */
-    public array $consents = [];
+    #[Validate('accepted', message: '')]
+    public bool $privacy_accepted = false;
 
+    #[Validate('accepted', message: '')]
+    public bool $terms_accepted = false;
+
+    public bool $marketing_consent = false;
+
+    // Form fields for custom Blade view
     #[Validate('required|string|min:2|max:255')]
     public string $first_name = '';
 
@@ -35,7 +45,7 @@ class RegisterWidget extends XotBaseWidget
     #[Validate('required|email|max:255|unique:user.users,email')]
     public string $email = '';
 
-    #[Validate('required|string|min:8')]
+    #[Validate('required|string')]
     public string $password = '';
 
     #[Validate('required|string|same:password')]
@@ -48,75 +58,60 @@ class RegisterWidget extends XotBaseWidget
         return ! Auth::check();
     }
 
-    public function mount(): void
-    {
-        $treatments = $this->getTreatments();
-        foreach ($treatments as $treatment) {
-            $this->consents[$treatment->id] = false;
-        }
-    }
-
     protected function getView(): string
     {
         return 'filament.widgets.auth.register';
     }
 
-    /**
-     * @return Collection<string, Treatment>
-     */
-    public function getTreatments(): Collection
+    public function getFormSchema(): array
     {
-        return Treatment::where('active', 1)
-            ->orderBy('weight')
-            ->get();
+        // Not used - custom Blade view handles form rendering
+        return [];
     }
 
     public function submit(): void
     {
+        // Validate form data using Livewire attributes
         $this->validate();
 
-        // Manual validation for required treatments
-        $treatments = $this->getTreatments();
-        foreach ($treatments as $treatment) {
-            if ($treatment->required && ! ($this->consents[$treatment->id] ?? false)) {
-                $this->addError("consents.{$treatment->id}", "You must accept: {$treatment->name}");
+        // Validate GDPR consents
+        app(ValidateGdprConsentAction::class)->execute($privacy_accepted, $terms_accepted
+        );
 
-                return;
-            }
-        }
-
+        // Prepare form data
         $formData = [
-            'first_name' => $this->first_name,
-            'last_name' => $this->last_name,
-            'email' => $this->email,
-            'password' => $this->password,
-            'password_confirmation' => $this->password_confirmation,
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+            'email' => $email,
+            'password' => $password,
+            'password_confirmation' => $password_confirmation,
         ];
 
         $validatedData = app(ValidateUserDataAction::class)->execute($formData);
+        $this->logRegistrationAttempt($formData);
 
         $user = DB::connection('user')->transaction(function () use ($validatedData) {
             $user = app(CreateUserAction::class)->execute($validatedData);
-
-            // Re-map consents for SaveGdprConsentsAction
-            // Since SaveGdprConsentsAction uses treatment names (legacy or specific logic), 
-            // we'll pass the raw array and let the action handle it.
-            // Actually, let's pass an array of [treatment_name => bool]
-            $mappedConsents = [];
-            $activeTreatments = $this->getTreatments();
-            foreach ($activeTreatments as $t) {
-                $mappedConsents[$t->name] = $this->consents[$t->id] ?? false;
-            }
-
-            app(SaveGdprConsentsAction::class)->execute($user, $mappedConsents);
-
+            app(SaveGdprConsentsAction::class)->execute($user, app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent));
             app(LogRegistrationAction::class)->execute($user, [
-                'gdpr_consents' => $mappedConsents,
+                'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent
             ]);
 
             return $user;
         });
 
         app(HandleSuccessfulRegistrationAction::class)->execute($user, $this);
+    }
+
+    protected function logRegistrationAttempt(array $formData): void
+    {
+        $email = app(SafeStringCastAction::class)->execute($formData['email']);
+
+        Log::info('Registration attempt', [
+            'email_hash' => hash('sha256', $email),
+            'ip' => request()->ip(),
+            'user_agent' => request()->userAgent(),
+            'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent
+        ]);
     }
 }

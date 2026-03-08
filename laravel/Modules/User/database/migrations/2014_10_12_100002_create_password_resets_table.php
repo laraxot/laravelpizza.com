@@ -27,7 +27,13 @@ return new class extends XotBaseMigration {
             //    $table->string('email')->nullable();
             // }
             // $this->updateUser($table);
+<<<<<<< HEAD
+            if ('uuid' === $this->getColumnType('id')) {
+||||||| 6161e129d
+            if ($this->getColumnType('id') === 'uuid') {
+=======
             if ('uuid' === $this->getColumnType('id'
+>>>>>>> feature/ralph-loop-implementation
                 $table->dropColumn('id');
             }
             if (! $this->hasColumn('id'

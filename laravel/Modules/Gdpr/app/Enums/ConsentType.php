@@ -45,22 +45,22 @@ enum ConsentType: string implements HasColor, HasIcon, HasLabel
 
     public function getLabel(): string
     {
-        return // @var mixed transClass(self::class, $this->value.'.label';
+        return $this->transClass(self::class, $this->value.'.label');
     }
 
     public function getColor(): string
     {
-        return // @var mixed transClass(self::class, $this->value.'.color';
+        return $this->transClass(self::class, $this->value.'.color');
     }
 
     public function getIcon(): string
     {
-        return // @var mixed transClass(self::class, $this->value.'.icon';
+        return $this->transClass(self::class, $this->value.'.icon');
     }
 
     public function getDescription(): string
     {
-        return // @var mixed transClass(self::class, $this->value.'.description';
+        return $this->transClass(self::class, $this->value.'.description');
     }
 
     /**

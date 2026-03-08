@@ -10,9 +10,6 @@ use Modules\Xot\Actions\File\FixPathAction;
 use Modules\Xot\Actions\File\GetViewNameSpacePathAction;
 use Modules\Xot\Actions\File\ViewPathAction;
 use Nwidart\Modules\Facades\Module;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 test('fix path action works', function () {
     $action = app(FixPathAction::class);

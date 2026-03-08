@@ -7,7 +7,7 @@ use Modules\Gdpr\Tests\TestCase;
 uses(TestCase::class);
 
 it('renders the English register page with hero and form texts', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
 
     $response->assertStatus(200);
     $response->assertSee(__('gdpr::register.title'), false);
@@ -18,7 +18,7 @@ it('renders the English register page with hero and form texts', function (): vo
 });
 
 it('uses the localized login link on the register page', function (): void {
-    $response = // @var mixed get('/en/auth/register';
+    $response = $this->get('/en/auth/register');
 
     $response->assertStatus(200);
     $response->assertSee('/en/auth/login', false);

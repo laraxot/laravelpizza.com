@@ -30,12 +30,12 @@ readonly class GetGeocodingDataAction
      */
     public function execute(string $address): GeocodingData
     {
-        // @var mixed validateInput($address;
+        $this->validateInput($address);
 
         try {
-            $response = // @var mixed makeApiRequest($address;
+            $response = $this->makeApiRequest($address);
 
-            return // @var mixed parseResponse($response;
+            return $this->parseResponse($response);
         } catch (GuzzleException $e) {
             Log::error('Errore nella geocodifica', [
                 'error' => $e->getMessage(),
@@ -71,7 +71,7 @@ readonly class GetGeocodingDataAction
      */
     private function makeApiRequest(string $address): string
     {
-        $response = // @var mixed client->get(self::API_URL, [
+        $response = $client->get(self::API_URL, [
             'query' => [
                 'address' => $address,
                 'key' => config('geo.google_maps.api_key'),

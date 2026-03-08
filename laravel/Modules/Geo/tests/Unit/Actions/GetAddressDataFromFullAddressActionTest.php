@@ -8,15 +8,15 @@ use Modules\Geo\Tests\LightTestCase;
 uses(LightTestCase::class);
 
 beforeEach(function () {
-    // @var mixed action = new GetAddressDataFromFullAddressAction(;
+    $action = new GetAddressDataFromFullAddressAction();
 });
 
 it('returns AddressData when first service succeeds', function (): void {
     // As this action depends on multiple external services which are difficult to mock,
     // we can test that it at least has the correct structure and properties
-    expect(// @var mixed action;
-    expect(// @var mixed action->getErrors(;
-    expect(// @var mixed action->getErrors(;
+    expect($action);
+    expect($action->getErrors());
+    expect($action->getErrors());
 });
 
 it('initializes with empty errors collection', function (): void {

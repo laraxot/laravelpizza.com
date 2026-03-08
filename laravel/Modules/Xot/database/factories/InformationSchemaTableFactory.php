@@ -52,7 +52,7 @@ class InformationSchemaTableFactory extends Factory
             'table_collation' => 'utf8mb4_unicode_ci',
             'checksum' => $faker->optional(
             'create_options' => '',
-            'table_comment' => $faker->optional(
+            'table_comment' => $faker->optional()
         ];
     }
 

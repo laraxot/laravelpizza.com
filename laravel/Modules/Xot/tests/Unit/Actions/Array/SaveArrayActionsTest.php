@@ -7,9 +7,6 @@ namespace Modules\Xot\Tests\Unit\Actions\Array;
 use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\Array\SaveJsonArrayAction;
 use Modules\Xot\Actions\Array\SavePhpArrayAction;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 test('save json array action works', function () {
     $data = ['foo' => 'bar'];

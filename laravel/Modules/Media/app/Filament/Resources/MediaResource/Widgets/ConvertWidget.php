@@ -41,8 +41,8 @@ class ConvertWidget extends XotBaseWidget
 
     public function begin(): void
     {
-        $disk_mp4 = // @var mixed record->disk;
-        $file_mp4 = // @var mixed record->getPath(;
+        $disk_mp4 = $record->disk;
+        $file_mp4 = $record->getPath();
 
         $disk_path = Storage::disk($disk_mp4)->path('/');
         $file_mp4 = Str::after($file_mp4, $disk_path);
@@ -65,9 +65,9 @@ class ConvertWidget extends XotBaseWidget
         // ->resize(640, 480)
 
         $exportedMedia->onProgress(function (float $percentage, float $remaining, float $rate): void {
-            // @var mixed percentage = $percentage;
-            // @var mixed remaining = $remaining;
-            // @var mixed rate = $rate;
+            $percentage = $percentage;
+            $remaining = $remaining;
+            $rate = $rate;
             $msg = "{$percentage}% transcoded";
             $msg .= "{$remaining} seconds left at rate: {$rate}";
             Notification::make()
@@ -94,19 +94,19 @@ class ConvertWidget extends XotBaseWidget
 
         $formattedMedia->save($file_new);
 
-        while (// @var mixed percentage < 100
+        while ($percentage < 100
             // Stream the current count to the browser...
-            // @var mixed stream(
+            $this->stream(
                 to: 'count',
-                content: // @var mixed start,
+                content: $start,
                 replace: true,
             );
 
             // Pause for 1 second between numbers...
             // sleep(1);
 
-            // @var mixed start =
-                "{// @var mixed percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
+            $start =
+                "{$percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
         }
     }
 }

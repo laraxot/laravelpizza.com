@@ -26,7 +26,7 @@ class CommandOutputEvent implements ShouldBroadcast
     public function broadcastOn(): array
     {
         return [
-            new Channel("command.{$processId}"
+            new Channel("command.{$processId}"),
         ];
     }
 

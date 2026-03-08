@@ -28,10 +28,10 @@ class OauthRefreshTokenFactory extends Factory
                 'name' => 'Test Token',
                 'scopes' => [],
                 'revoked' => false,
-                'expires_at' => $faker->dateTimeBetween('+1 month', '+6 months'
+                'expires_at' => $faker->dateTimeBetween('+1 month', '+6 months')
             ])->id,
             'revoked' => $faker->boolean(5
-            'expires_at' => $faker->dateTimeBetween('+1 month', '+6 months'
+            'expires_at' => $faker->dateTimeBetween('+1 month', '+6 months')
         ];
     }
 

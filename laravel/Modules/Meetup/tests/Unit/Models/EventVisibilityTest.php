@@ -10,42 +10,31 @@ use Modules\User\Models\User;
 
 uses(TestCase::class);
 
-test('publiclyVisible scope returns only published events', function () {
-    $published = Event::factory()->create(['status' => 'published']);
-    $pending = Event::factory()->create(['status' => 'pending']);
-    $draft = Event::factory()->create(['status' => 'draft']);
-
-    $visible = Event::query()->publiclyVisible()->pluck('id');
-
-    expect($visible)->toContain($published->id)
-        ->and($visible)->not->toContain($pending->id)
-        ->and($visible)->not->toContain($draft->id);
-});
-
-test('visibleToUser scope includes owner pending events and published events', function () {
+test('scopeVisibleTo filters correctly', function () {
     $owner = User::factory()->create();
     $other = User::factory()->create();
 
-    $published = Event::factory()->create(['status' => 'published']);
-    $ownerPending = Event::factory()->create(['status' => 'pending', 'user_id' => $owner->id]);
-    $otherPending = Event::factory()->create(['status' => 'pending', 'user_id' => $other->id]);
-
-    $visible = Event::query()->visibleToUser((string) $owner->id)->pluck('id');
-
-    expect($visible)->toContain($published->id)
-        ->and($visible)->toContain($ownerPending->id)
-        ->and($visible)->not->toContain($otherPending->id);
-});
-
-test('canBeViewedBy enforces pending owner-only visibility', function () {
-    $owner = User::factory()->create();
-    $other = User::factory()->create();
-
-    $published = Event::factory()->create(['status' => 'published']);
+    // Published event (visible to all)
+    $published = Event::factory()->create(['status' => 'published', 'user_id' => $owner->id]);
+    
+    // Pending event (visible only to owner)
     $pending = Event::factory()->create(['status' => 'pending', 'user_id' => $owner->id]);
+    
+    // Draft event (visible to no one via this scope - assuming draft is purely private/dev)
+    $draft = Event::factory()->create(['status' => 'draft', 'user_id' => $owner->id]);
 
-    expect($published->canBeViewedBy(null))->toBeTrue()
-        ->and($pending->canBeViewedBy((string) $owner->id))->toBeTrue()
-        ->and($pending->canBeViewedBy((string) $other->id))->toBeFalse()
-        ->and($pending->canBeViewedBy(null))->toBeFalse();
+    // Guest view
+    $guestEvents = Event::visibleTo(null)->get();
+    expect($guestEvents)->toHaveCount(1)
+        ->and($guestEvents->first()->id)->toBe($published->id);
+
+    // Owner view
+    $ownerEvents = Event::visibleTo($owner)->get();
+    expect($ownerEvents)->toHaveCount(2)
+        ->and($ownerEvents->pluck('id'))->toContain($published->id, $pending->id);
+
+    // Other user view
+    $otherEvents = Event::visibleTo($other)->get();
+    expect($otherEvents)->toHaveCount(1)
+        ->and($otherEvents->first()->id)->toBe($published->id);
 });

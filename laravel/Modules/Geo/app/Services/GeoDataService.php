@@ -51,7 +51,7 @@ class GeoDataService
      */
     public function __construct()
     {
-        // @var mixed validator = new GeoDataValidator(;
+        $validator = new GeoDataValidator();
     }
 
     /**
@@ -65,7 +65,7 @@ class GeoDataService
         $result = Cache::remember(
             self::CACHE_KEY_REGIONS,
             self::CACHE_TTL,
-            fn (): Collection => // @var mixed loadData(
+            fn (): Collection => $this->loadData(
         );
 
         return $result;
@@ -85,7 +85,7 @@ class GeoDataService
         /** @var Collection<int, array{name: string, code: string}> $result */
         $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($regionCode): Collection {
             /** @var array<string, mixed>|null $region */
-            $region = // @var mixed loadData(;
+            $region = $this->loadData();
 
             if (! $region || ! \is_array($region) || ! isset($region['provinces']) || ! \is_array($region['provinces'])) {
                 /** @var Collection<int, array{name: string, code: string}> $empty */
@@ -133,7 +133,7 @@ class GeoDataService
         /** @var Collection<int, array{name: string, code: string}> $result */
         $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($provinceCode): Collection {
             /** @var array<string, mixed>|null $province */
-            $province = // @var mixed loadData(
+            $province = $this->loadData(
                 ? $region['provinces']
                 : [])->firstWhere('code', $provinceCode);
 
@@ -169,7 +169,7 @@ class GeoDataService
         /** @var string|null $result */
         $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($provinceCode, $cityCode): null|string {
             /** @var array<string, mixed>|null $province */
-            $province = // @var mixed loadData(
+            $province = $this->loadData(
                 ? $region['provinces']
                 : [])->firstWhere('code', $provinceCode);
 
@@ -223,7 +223,7 @@ class GeoDataService
             throw new \RuntimeException('Il file JSON dei comuni non è valido');
         }
 
-        if (! // @var mixed validator->checkIntegrity($data
+        if (! $validator->checkIntegrity($data
             throw new \RuntimeException('Il file JSON dei comuni non è valido');
         }
 

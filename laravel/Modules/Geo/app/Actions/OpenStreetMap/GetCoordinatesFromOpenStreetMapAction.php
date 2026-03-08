@@ -30,6 +30,6 @@ readonly class GetCoordinatesFromOpenStreetMapAction
             return null;
         }
 
-        return // @var mixed fetchCoordinatesAction->execute($address;
+        return $fetchCoordinatesAction->execute($address);
     }
 }

@@ -34,7 +34,7 @@ class CalculateDistanceMatrixAction
      */
     public function execute(Collection $origins, Collection $destinations): array
     {
-        $apiKey = // @var mixed getApiKey(;
+        $apiKey = $this->getApiKey();
 
         $response = Http::get(self::BASE_URL, [
             'origins' => $origins

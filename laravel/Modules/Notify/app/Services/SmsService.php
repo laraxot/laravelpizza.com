@@ -65,7 +65,7 @@ class SmsService
         foreach ($vars as $k => $v) {
             // @var mixed {$k} = $v;
         }
-        // @var mixed vars = array_merge($this->vars, $vars;
+        $vars = array_merge($this->vars, $vars);
 
         return $this;
     }
@@ -77,7 +77,7 @@ class SmsService
      */
     public function mergeVars(array $vars): self
     {
-        // @var mixed vars = array_merge($this->vars, $vars;
+        $vars = array_merge($this->vars, $vars);
 
         return $this;
     }
@@ -87,7 +87,7 @@ class SmsService
      */
     public function send(): self
     {
-        $engineClassName = '\\Modules\\Notify\\Services\\SmsEngines\\'.Str::studly(// @var mixed driver;
+        $engineClassName = '\\Modules\\Notify\\Services\\SmsEngines\\'.Str::studly($driver);
 
         // Verifichiamo che la classe esista
         if (! class_exists($engineClassName)) {
@@ -120,7 +120,7 @@ class SmsService
 
             // Chiamiamo setLocalVars
             $setLocalVarsMethod = $reflectionClass->getMethod('setLocalVars');
-            $setLocalVarsMethod->invoke($instance, // @var mixed vars;
+            $setLocalVarsMethod->invoke($instance, $vars);
 
             // Chiamiamo send
             $sendMethod = $reflectionClass->getMethod('send');
@@ -144,7 +144,7 @@ class SmsService
                 }
             }
 
-            // @var mixed mergeVars($typedResult;
+            $this->mergeVars($typedResult);
         } catch (ReflectionException $e) {
             throw new RuntimeException('Errore durante la chiamata dei metodi: '.$e->getMessage());
         }

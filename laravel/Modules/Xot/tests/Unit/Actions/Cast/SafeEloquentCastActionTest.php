@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 beforeEach(function (): void {
     $action = app(SafeEloquentCastAction::class);

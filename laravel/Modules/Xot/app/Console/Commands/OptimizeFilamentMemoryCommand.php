@@ -112,7 +112,7 @@ class OptimizeFilamentMemoryCommand extends Command
             'heavy_widgets' => $this->findHeavyWidgets(
             'unoptimized_resources' => $this->findUnoptimizedResources(
             'migration_code_in_forms' => $this->findMigrationCodeInForms(
-            'missing_pagination' => $this->findMissingPagination(
+            'missing_pagination' => $this->findMissingPagination()
         ];
 
         if ($verbose) {

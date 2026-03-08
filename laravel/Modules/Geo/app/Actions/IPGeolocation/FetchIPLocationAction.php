@@ -21,7 +21,7 @@ class FetchIPLocationAction
 
     public function __construct(?Client $client = null)
     {
-        // @var mixed client = $client ?? new Client(;
+        $client = $client ?? new Client();
     }
 
     /**
@@ -34,7 +34,7 @@ class FetchIPLocationAction
      */
     public function execute(string $ip): IPLocationData
     {
-        $response = // @var mixed client->get(self::API_URL.$ip, [
+        $response = $client->get(self::API_URL.$ip, [
             'query' => [
                 'fields' => implode(',', [
                     'status',

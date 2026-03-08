@@ -34,7 +34,7 @@ class FilterCoordinatesInRadius implements Rule
         $_attribute = (string) $_attribute;
 
         if (! \is_array($value)) {
-            // @var mixed message = 'Il valore deve essere un array di coordinate';
+            $message = 'Il valore deve essere un array di coordinate';
 
             return false;
         }
@@ -54,11 +54,8 @@ class FilterCoordinatesInRadius implements Rule
             ];
         }, $value);
 
-        $filteredCoordinates = // @var mixed filterAction->execute(
-            // @var mixed centerLatitude,
-            // @var mixed centerLongitude,
-            $coordinates,
-            // @var mixed radius,
+        $filteredCoordinates = $filterAction->execute($centerLatitude, $centerLongitude,
+            $coordinates, $radius,
         );
 
         return \count($filteredCoordinates) > 0;
@@ -69,6 +66,6 @@ class FilterCoordinatesInRadius implements Rule
      */
     public function message(): string
     {
-        return // @var mixed message ?: 'Nessuna coordinata trovata nel raggio specificato';
+        return $message ?: 'Nessuna coordinata trovata nel raggio specificato';
     }
 }

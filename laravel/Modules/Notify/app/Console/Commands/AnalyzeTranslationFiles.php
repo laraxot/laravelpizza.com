@@ -30,7 +30,7 @@ class AnalyzeTranslationFiles extends Command
      */
     public function handle(): int
     {
-        // @var mixed info('Analyzing translation files in the Notify module...';
+        $this->info('Analyzing translation files in the Notify module...');
 
         $langPath = module_path('Notify', 'lang');
         $languages = File::directories($langPath);
@@ -57,15 +57,15 @@ class AnalyzeTranslationFiles extends Command
                 $translations = require $filePath;
 
                 if (! is_array($translations)) {
-                    // @var mixed warn("File {$lang}/{$filename} does not return an array.";
+                    $this->warn("File {$lang}/{$filename} does not return an array.");
 
                     continue;
                 }
 
-                $allFiles["{$lang}/{$filename}"] = // @var mixed flattenArray($translations;
+                $allFiles["{$lang}/{$filename}"] = $this->flattenArray($translations);
 
                 // Collect all unique keys
-                foreach (array_keys(// @var mixed flattenArray($translations
+                foreach (array_keys($flattenArray($translations
                     $allKeys[$key] = true;
                 }
             }
@@ -76,13 +76,13 @@ class AnalyzeTranslationFiles extends Command
         $allKeys = array_keys($allKeys);
 
         // Analyze structure patterns
-        // @var mixed analyzeStructurePatterns($allFiles;
+        $this->analyzeStructurePatterns($allFiles);
 
         // Generate consistency report
-        // @var mixed generateConsistencyReport($allFiles, $allKeys;
+        $this->generateConsistencyReport($allFiles, $allKeys);
 
         // Generate recommendations
-        // @var mixed generateRecommendations($allFiles;
+        $this->generateRecommendations($allFiles);
 
         return Command::SUCCESS;
     }
@@ -98,7 +98,7 @@ class AnalyzeTranslationFiles extends Command
             $newKey = $prefix ? "{$prefix}.{$key}" : $key;
 
             if (is_array($value)) {
-                $result = array_merge($result, // @var mixed flattenArray($value, $newKey;
+                $result = array_merge($result, $flattenArray($value, $newKey));
             } else {
                 $result[$newKey] = $value;
             }
@@ -112,7 +112,7 @@ class AnalyzeTranslationFiles extends Command
      */
     private function analyzeStructurePatterns(array $allFiles): void
     {
-        // @var mixed info('Analyzing structure patterns...';
+        $this->info('Analyzing structure patterns...');
 
         $patterns = [];
 
@@ -131,9 +131,9 @@ class AnalyzeTranslationFiles extends Command
             $patterns[$pattern][] = $file;
         }
 
-        // @var mixed info('Found '.count($patterns;
+        $this->info('Found '.count($patterns));
 
-        $table = new Table(// @var mixed output;
+        $table = new Table($output);
         $table->setHeaders(['Pattern', 'Files']);
 
         foreach ($patterns as $pattern => $files) {
@@ -151,9 +151,9 @@ class AnalyzeTranslationFiles extends Command
      */
     private function generateConsistencyReport(array $allFiles, array $allKeys): void
     {
-        // @var mixed info('Generating consistency report...';
+        $this->info('Generating consistency report...');
 
-        $table = new Table(// @var mixed output;
+        $table = new Table($output);
         $headers = ['Key'];
 
         foreach (array_keys($allFiles) as $file) {
@@ -183,7 +183,7 @@ class AnalyzeTranslationFiles extends Command
      */
     private function generateRecommendations(array $allFiles): void
     {
-        // @var mixed info('Generating recommendations...';
+        $this->info('Generating recommendations...');
 
         // Identify files with 'send_' prefix
         $sendFiles = [];
@@ -197,26 +197,26 @@ class AnalyzeTranslationFiles extends Command
             }
         }
 
-        // @var mixed info('Files with send_ prefix ('.count($sendFiles;
+        $this->info('Files with send_ prefix ('.count($sendFiles)));
         foreach ($sendFiles as $file) {
-            // @var mixed line(" - {$file}";
+            $this->line(" - {$file}");
         }
 
-        // @var mixed info('Resource files ('.count($resourceFiles;
+        $this->info('Resource files ('.count($resourceFiles)));
         foreach ($resourceFiles as $file) {
-            // @var mixed line(" - {$file}";
+            $this->line(" - {$file}");
         }
 
         // Analyze navigation structure
-        // @var mixed analyzeNavigationStructure($allFiles;
+        $this->analyzeNavigationStructure($allFiles);
 
         // Generate standardization recommendations
-        // @var mixed line('';
-        // @var mixed info('Recommendations:';
-        // @var mixed line('1. Standardize the navigation structure across all files';
-        // @var mixed line('2. Ensure all functional files (send_*;
-        // @var mixed line('3. Ensure all resource files have consistent key structure';
-        // @var mixed line('4. Document the standardized structure in NOTIFY_TRANSLATION_GUIDE.md';
+        $this->line('');
+        $this->info('Recommendations:');
+        $this->line('1. Standardize the navigation structure across all files');
+        $this->line('2. Ensure all functional files (send_*));
+        $this->line('3. Ensure all resource files have consistent key structure');
+        $this->line('4. Document the standardized structure in NOTIFY_TRANSLATION_GUIDE.md');
     }
 
     /**
@@ -224,7 +224,7 @@ class AnalyzeTranslationFiles extends Command
      */
     private function analyzeNavigationStructure(array $allFiles): void
     {
-        // @var mixed info('Analyzing navigation structure...';
+        $this->info('Analyzing navigation structure...');
 
         $navigationStructures = [];
 
@@ -247,9 +247,9 @@ class AnalyzeTranslationFiles extends Command
             }
         }
 
-        // @var mixed info('Found '.count($navigationStructures;
+        $this->info('Found '.count($navigationStructures));
 
-        $table = new Table(// @var mixed output;
+        $table = new Table($output);
         $table->setHeaders(['Structure', 'Files']);
 
         foreach ($navigationStructures as $structure => $files) {

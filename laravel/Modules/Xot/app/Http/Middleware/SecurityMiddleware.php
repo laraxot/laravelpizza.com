@@ -394,7 +394,7 @@ class SecurityMiddleware
         if ($getArrayDepth($value
             Log::warning('Suspicious array depth', [
                 'key' => $key,
-                'depth' => $this->getArrayDepth($value
+                'depth' => $this->getArrayDepth($value)
             ]);
             abort(400, 'Array too deep');
         }

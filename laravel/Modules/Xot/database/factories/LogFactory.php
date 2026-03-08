@@ -28,7 +28,7 @@ class LogFactory extends Factory
         return [
             // 'key' => $faker->word,
             // 'value' => $faker->text,
-            // 'expiration' => $faker->randomNumber(5
+            // 'expiration' => $faker->randomNumber(5)
         ];
     }
 }

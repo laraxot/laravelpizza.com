@@ -35,20 +35,20 @@ final class SendGammuSMSAction implements SmsActionContract
      */
     public function __construct()
     {
-        // @var mixed gammuData = GammuData::make(;
+        $gammuData = GammuData::make();
 
-        if (! // @var mixed gammuData->path
+        if (! $gammuData->path
             throw new Exception('Path Gammu non configurato in sms.php');
         }
 
-        if (! // @var mixed gammuData->config
+        if (! $gammuData->config
             throw new Exception('Config Gammu non configurato in sms.php');
         }
 
         // Parametri a livello di root
         $sender = config('sms.from');
-        // @var mixed defaultSender = is_string($sender;
-        // @var mixed debug = (bool;
+        $defaultSender = is_string($sender);
+        $debug = (bool);
     }
 
     /**
@@ -78,9 +78,9 @@ final class SendGammuSMSAction implements SmsActionContract
 
         // Esegue il comando Gammu per inviare l'SMS
         $process = new Process([
-            // @var mixed gammuData->getPath(
+            $gammuData->getPath(
             '-c',
-            // @var mixed gammuData->getConfig(
+            $gammuData->getConfig(
             'sendsms',
             'TEXT',
             $to,
@@ -88,7 +88,7 @@ final class SendGammuSMSAction implements SmsActionContract
             $tempFile,
         ]);
 
-        $process->setTimeout(// @var mixed gammuData->getTimeout(;
+        $process->setTimeout($gammuData->getTimeout());
 
         try {
             $process->run();
@@ -100,10 +100,10 @@ final class SendGammuSMSAction implements SmsActionContract
                 throw new Exception('Gammu error: '.$process->getErrorOutput());
             }
 
-            // @var mixed vars['status_code'] = $process->getExitCode(;
-            // @var mixed vars['status_txt'] = $process->getOutput(;
+            $vars['status_code'] = $process->getExitCode();
+            $vars['status_txt'] = $process->getOutput();
 
-            return // @var mixed vars;
+            return $vars;
         } catch (Exception $exception) {
             // Rimuove il file temporaneo in caso di errore
             unlink($tempFile);

@@ -21,7 +21,7 @@ class FetchCoordinatesAction
 
     public function __construct()
     {
-        // @var mixed client = new Client(;
+        $client = new Client();
     }
 
     /**
@@ -34,7 +34,7 @@ class FetchCoordinatesAction
      */
     public function execute(string $address): LocationData
     {
-        $response = // @var mixed client->get(self::API_URL, [
+        $response = $client->get(self::API_URL, [
             'query' => [
                 'q' => $address,
                 'format' => 'json',

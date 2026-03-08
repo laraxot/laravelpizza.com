@@ -54,7 +54,7 @@ class FirebaseAndroidNotification extends Notification implements MobilePushNoti
             'priority' => 'high',
         ];
 
-        $dataProperty = // @var mixed data->data ?? null;
+        $dataProperty = $data->data ?? null;
         if (is_array($dataProperty)) {
             $notification = [];
             $allowedKeys = ['title', 'body', 'icon', 'color', 'sound', 'click_action'];
@@ -78,7 +78,7 @@ class FirebaseAndroidNotification extends Notification implements MobilePushNoti
         }
 
         /** @var object $firebaseNotification */
-        $firebaseNotification = $firebaseNotificationClass::create(// @var mixed data->title, $this->data->body;
+        $firebaseNotification = $firebaseNotificationClass::create($data->title, $this->data->body);
         /** @var object $androidConfigObject */
         $androidConfigObject = $androidConfigClass::fromArray($androidConfig);
 
@@ -111,7 +111,7 @@ class FirebaseAndroidNotification extends Notification implements MobilePushNoti
             return (object) [];
         }
 
-        $notificationData = // @var mixed data->data;
+        $notificationData = $data->data;
 
         /** @var array<non-empty-string, string> $data */
         $data = [];

@@ -44,7 +44,7 @@ class AddressColumn extends ViewColumn
         /** @var array<string> $searchableArray */
         $searchableArray = AddressItemEnum::getSearchable();
 
-        // @var mixed view(static::getView(
+        $this->view(static::getView(
             'address_items' => $addressItems,
         ])
             ->searchable($searchableArray)

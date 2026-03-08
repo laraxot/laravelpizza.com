@@ -16,12 +16,12 @@ class DeleteFileAction extends BaseS3Action
     public function execute(string $key): array
     {
         try {
-            $result = // @var mixed s3Client->deleteObject([
-                'Bucket' => // @var mixed bucketName,
+            $result = $s3Client->deleteObject([
+                'Bucket' => $bucketName,
                 'Key' => $key,
             ]);
 
-            // @var mixed logger->info('File deleted successfully from S3', [
+            $logger->info('File deleted successfully from S3', [
                 'key' => $key,
                 'deleteMarker' => $result['DeleteMarker'] ?? false,
             ]);
@@ -33,7 +33,7 @@ class DeleteFileAction extends BaseS3Action
                 'versionId' => $result['VersionId'] ?? null,
             ];
         } catch (S3Exception $exception) {
-            // @var mixed logger->error('Error deleting file from S3', [
+            $logger->error('Error deleting file from S3', [
                 'key' => $key,
                 'error' => $exception->getMessage(),
                 'statusCode' => $exception->getStatusCode(),

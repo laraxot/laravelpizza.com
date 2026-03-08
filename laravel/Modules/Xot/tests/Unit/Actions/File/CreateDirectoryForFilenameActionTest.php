@@ -4,44 +4,44 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\File\CreateDirectoryForFilenameAction;
-use Modules\Xot\Tests\TestCase;
-
-uses(TestCase::class);
 
 beforeEach(function (): void {
-    $action = app(CreateDirectoryForFilenameAction::class);
-    $tempDir = sys_get_temp_dir();
+    $this->action = app(CreateDirectoryForFilenameAction::class);
+    $this->tempDir = sys_get_temp_dir().DIRECTORY_SEPARATOR.'test_create_dir_'.uniqid();
+    if (! File::isDirectory($this->tempDir)) {
+        File::makeDirectory($this->tempDir, 0755, true);
+    }
 });
 
 afterEach(function (): void {
-    if (File::isDirectory($tempDir
-        File::deleteDirectory($tempDir);
+    if (File::isDirectory($this->tempDir)) {
+        File::deleteDirectory($this->tempDir);
     }
 });
 
 it('creates directory for filename', function (): void {
-    $filename = $tempDir.'/nested/deep/file.txt';
+    $filename = $this->tempDir.'/nested/deep/file.txt';
 
-    $action->execute($filename);
+    $this->action->execute($filename);
 
-    expect(File::isDirectory($tempDir.'/nested/deep'));
+    expect(File::isDirectory($this->tempDir.'/nested/deep'))->toBeTrue();
 });
 
 it('does nothing when directory already exists', function (): void {
-    $filename = $tempDir.'/existing/file.txt';
-    File::makeDirectory($tempDir.'/existing', 0755, true);
+    $filename = $this->tempDir.'/existing/file.txt';
+    File::makeDirectory($this->tempDir.'/existing', 0755, true);
 
     // Should not throw
-    $action->execute($filename);
+    $this->action->execute($filename);
 
-    expect(File::isDirectory($tempDir.'/existing'));
+    expect(File::isDirectory($this->tempDir.'/existing'))->toBeTrue();
 });
 
 it('handles root level file', function (): void {
-    $filename = $tempDir.'/rootfile.txt';
-    File::makeDirectory($tempDir, 0755, true);
+    $filename = $this->tempDir.'/rootfile.txt';
+    File::makeDirectory($this->tempDir, 0755, true);
 
-    $action->execute($filename);
+    $this->action->execute($filename);
 
-    expect(File::isDirectory($tempDir));
+    expect(File::isDirectory($this->tempDir))->toBeTrue();
 });

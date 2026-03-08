@@ -33,12 +33,12 @@ readonly class GetAddressFromBingMapsAction
      */
     public function execute(string $address): ?AddressData
     {
-        // @var mixed validateInput($address;
+        $this->validateInput($address);
 
         try {
-            $response = // @var mixed makeApiRequest($address;
+            $response = $this->makeApiRequest($address);
 
-            return // @var mixed parseResponse($response;
+            return $this->parseResponse($response);
         } catch (GuzzleException $e) {
             Log::error('Bing Maps Geocoding API request failed', [
                 'error' => $e->getMessage(),
@@ -75,7 +75,7 @@ readonly class GetAddressFromBingMapsAction
      */
     private function makeApiRequest(string $address): string
     {
-        $response = // @var mixed client->get(self::API_URL, [
+        $response = $client->get(self::API_URL, [
             'query' => [
                 'query' => $address,
                 'key' => config('services.bing.maps_api_key'),

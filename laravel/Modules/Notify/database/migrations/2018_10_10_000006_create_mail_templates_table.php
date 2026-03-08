@@ -17,7 +17,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE -- Definizione iniziale della tabella
-        // @var mixed tableCreate(function (Blueprint $table
+        $this->tableCreate(function (Blueprint $table
             $table->id();
             $table->string('name');
             $table->string('mailable');
@@ -29,24 +29,24 @@ return new class extends XotBaseMigration
         });
 
         // -- UPDATE -- Aggiornamento della tabella esistente
-        // @var mixed tableUpdate(function (Blueprint $table
-            if (! // @var mixed hasColumn('name'
+        $this->tableUpdate(function (Blueprint $table
+            if (! $this->hasColumn('name'
                 $table->string('name');
             }
-            if (! // @var mixed hasColumn('slug'
+            if (! $this->hasColumn('slug'
                 $table->string('slug')->unique();
             }
-            if (! // @var mixed hasColumn('params'
+            if (! $this->hasColumn('params'
                 $table->text('params')->nullable();
             }
-            if (! // @var mixed hasColumn('sms_template'
+            if (! $this->hasColumn('sms_template'
                 $table->json('sms_template')->nullable();
             }
-            if (! // @var mixed hasColumn('counter'
+            if (! $this->hasColumn('counter'
                 $table->integer('counter')->default(0);
             }
 
-            // @var mixed updateTimestamps(
+            $this->updateTimestamps(
                 table: $table,
                 hasSoftDeletes: true,
             );

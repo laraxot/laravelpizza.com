@@ -17,29 +17,29 @@ class GeoDataMigrator extends Seeder
      */
     public function run(): void
     {
-        // @var mixed command->info('Starting migration of geographical data from <nome progetto> to Geo module...';
+        $command->info('Starting migration of geographical data from <nome progetto> to Geo module...');
 
         try {
             DB::beginTransaction();
 
             // 1. Migrate regions
-            // @var mixed migrateRegions(;
+            $this->migrateRegions();
 
             // 2. Migrate provinces
-            // @var mixed migrateProvinces(;
+            $this->migrateProvinces();
 
             // 3. Migrate cities
-            // @var mixed migrateCities(;
+            $this->migrateCities();
 
             // 4. Migrate CAPs
-            // @var mixed migrateCaps(;
+            $this->migrateCaps();
 
             DB::commit();
-            // @var mixed command->info('Successfully migrated all geographical data to Geo module.';
+            $command->info('Successfully migrated all geographical data to Geo module.');
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error('Failed to migrate geographical data: '.$e->getMessage());
-            // @var mixed command->error('Failed to migrate geographical data: '.$e->getMessage(;
+            $command->error('Failed to migrate geographical data: '.$e->getMessage());
         }
     }
 
@@ -49,13 +49,13 @@ class GeoDataMigrator extends Seeder
     protected function migrateRegions(): void
     {
         if (! DB::getSchemaBuilder()->hasTable('regions')) {
-            // @var mixed command->warn('Regions table does not exist in <nome progetto> module. Skipping...';
+            $command->warn('Regions table does not exist in <nome progetto> module. Skipping...');
 
             return;
         }
 
         $count = DB::table('regions')->count();
-        // @var mixed command->info("Found {$count} regions to migrate...";
+        $command->info("Found {$count} regions to migrate...");
 
         $regions = DB::table('regions')->get();
 
@@ -71,7 +71,7 @@ class GeoDataMigrator extends Seeder
             );
         }
 
-        // @var mixed command->info("Migrated {$count} regions.";
+        $command->info("Migrated {$count} regions.");
     }
 
     /**
@@ -80,13 +80,13 @@ class GeoDataMigrator extends Seeder
     protected function migrateProvinces(): void
     {
         if (! DB::getSchemaBuilder()->hasTable('provinces')) {
-            // @var mixed command->warn('Provinces table does not exist in <nome progetto> module. Skipping...';
+            $command->warn('Provinces table does not exist in <nome progetto> module. Skipping...');
 
             return;
         }
 
         $count = DB::table('provinces')->count();
-        // @var mixed command->info("Found {$count} provinces to migrate...";
+        $command->info("Found {$count} provinces to migrate...");
 
         $provinces = DB::table('provinces')->get();
 
@@ -103,7 +103,7 @@ class GeoDataMigrator extends Seeder
             );
         }
 
-        // @var mixed command->info("Migrated {$count} provinces.";
+        $command->info("Migrated {$count} provinces.");
     }
 
     /**
@@ -112,13 +112,13 @@ class GeoDataMigrator extends Seeder
     protected function migrateCities(): void
     {
         if (! DB::getSchemaBuilder()->hasTable('cities')) {
-            // @var mixed command->warn('Cities table does not exist in <nome progetto> module. Skipping...';
+            $command->warn('Cities table does not exist in <nome progetto> module. Skipping...');
 
             return;
         }
 
         $count = DB::table('cities')->count();
-        // @var mixed command->info("Found {$count} cities to migrate...";
+        $command->info("Found {$count} cities to migrate...");
 
         $cities = DB::table('cities')->get();
 
@@ -135,7 +135,7 @@ class GeoDataMigrator extends Seeder
             );
         }
 
-        // @var mixed command->info("Migrated {$count} cities.";
+        $command->info("Migrated {$count} cities.");
     }
 
     /**
@@ -144,13 +144,13 @@ class GeoDataMigrator extends Seeder
     protected function migrateCaps(): void
     {
         if (! DB::getSchemaBuilder()->hasTable('caps')) {
-            // @var mixed command->warn('CAPs table does not exist in <nome progetto> module. Skipping...';
+            $command->warn('CAPs table does not exist in <nome progetto> module. Skipping...');
 
             return;
         }
 
         $count = DB::table('caps')->count();
-        // @var mixed command->info("Found {$count} CAPs to migrate...";
+        $command->info("Found {$count} CAPs to migrate...");
 
         $caps = DB::table('caps')->get();
 
@@ -166,6 +166,6 @@ class GeoDataMigrator extends Seeder
             );
         }
 
-        // @var mixed command->info("Migrated {$count} CAPs.";
+        $command->info("Migrated {$count} CAPs.");
     }
 }

@@ -51,13 +51,13 @@ class SendNotificationJob implements ShouldQueue
         protected array $options = [],
     ) {
         $triesConfig = config('notify.queue.tries', 3);
-        // @var mixed tries = is_numeric($triesConfig;
+        $tries = is_numeric($triesConfig);
 
         $timeoutConfig = config('notify.queue.retry_after', 60);
-        // @var mixed timeout = is_numeric($timeoutConfig;
+        $timeout = is_numeric($timeoutConfig);
 
         $queueConfig = config('notify.queue.queue', 'notifications');
-        // @var mixed onQueue(is_string($queueConfig;
+        $this->onQueue(is_string($queueConfig));
     }
 
     /**
@@ -65,7 +65,7 @@ class SendNotificationJob implements ShouldQueue
      */
     public function handle(SendNotificationAction $action): void
     {
-        $action->execute(// @var mixed recipient, $this->templateCode, $this->data, $this->channels, $this->options;
+        $action->execute($recipient, $this->templateCode, $this->data, $this->channels, $this->options);
     }
 
     /**
@@ -75,9 +75,9 @@ class SendNotificationJob implements ShouldQueue
     {
         // Log dell'errore
         logger()->error('Errore nell\'invio della notifica', [
-            'recipient_type' => get_class(// @var mixed recipient
-            'recipient_id' => // @var mixed recipient->getKey(
-            'template_code' => // @var mixed templateCode,
+            'recipient_type' => get_class($recipient
+            'recipient_id' => $recipient->getKey(
+            'template_code' => $templateCode,
             'error' => $exception->getMessage(),
             'trace' => $exception->getTraceAsString(),
         ]);

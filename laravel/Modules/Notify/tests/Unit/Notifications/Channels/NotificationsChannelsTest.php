@@ -43,7 +43,7 @@ class NetfunChannelNotifiableDummy extends Model implements CanThemeNotification
 
     public function increase(string $what, array $data): void
     {
-        // @var mixed increased[$what] = $data;
+        $increased[$what] = $data;
     }
 }
 

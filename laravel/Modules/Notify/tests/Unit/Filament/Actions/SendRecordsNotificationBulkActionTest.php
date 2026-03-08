@@ -49,7 +49,7 @@ test('send records notification bulk action delegates to send records action', f
 
         public function execute(EloquentCollection $records, string $templateSlug, array $channels): void
         {
-            // @var mixed received = [
+            $received = [
                 'count' => $records->count(),
                 'slug' => $templateSlug,
                 'channels' => $channels,

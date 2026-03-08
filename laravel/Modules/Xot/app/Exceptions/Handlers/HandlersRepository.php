@@ -54,7 +54,7 @@ class HandlersRepository
     public function getReportersByException(\Throwable $e): array
     {
         return array_filter($reporters,
-            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e
+            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e)
         );
     }
 
@@ -64,7 +64,7 @@ class HandlersRepository
     public function getRenderersByException(\Throwable $e): array
     {
         return array_filter($renderers,
-            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e
+            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e)
         );
     }
 
@@ -74,7 +74,7 @@ class HandlersRepository
     public function getConsoleRenderersByException(\Throwable $e): array
     {
         return array_filter($consoleRenderers,
-            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e
+            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e)
         );
     }
 

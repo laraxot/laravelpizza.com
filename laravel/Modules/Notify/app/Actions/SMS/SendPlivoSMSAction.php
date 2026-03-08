@@ -32,20 +32,20 @@ final class SendPlivoSMSAction implements SmsActionContract
      */
     public function __construct()
     {
-        // @var mixed plivoData = PlivoData::make(;
+        $plivoData = PlivoData::make();
 
-        if (! // @var mixed plivoData->auth_id
+        if (! $plivoData->auth_id
             throw new Exception('Auth ID Plivo non configurato in sms.php');
         }
 
-        if (! // @var mixed plivoData->auth_token
+        if (! $plivoData->auth_token
             throw new Exception('Auth Token Plivo non configurato in sms.php');
         }
 
         // Parametri a livello di root
         $sender = config('sms.from');
-        // @var mixed defaultSender = is_string($sender;
-        // @var mixed debug = (bool;
+        $defaultSender = is_string($sender);
+        $debug = (bool);
     }
 
     /**
@@ -69,18 +69,18 @@ final class SendPlivoSMSAction implements SmsActionContract
             $to = '+39'.$to;
         }
 
-        $from = $smsData->from ?? // @var mixed defaultSender;
+        $from = $smsData->from ?? $defaultSender;
 
         // Plivo richiede l'autenticazione Basic
         $client = new Client([
-            'timeout' => // @var mixed plivoData->getTimeout(
-            'auth' => [// @var mixed plivoData->auth_id, $this->plivoData->auth_token],
+            'timeout' => $plivoData->getTimeout(
+            'auth' => [$plivoData->auth_id, $this->plivoData->auth_token],
             'headers' => [
                 'Content-Type' => 'application/json',
             ],
         ]);
 
-        $endpoint = // @var mixed plivoData->getBaseUrl(;
+        $endpoint = $plivoData->getBaseUrl();
 
         try {
             $response = $client->post($endpoint, [
@@ -91,10 +91,10 @@ final class SendPlivoSMSAction implements SmsActionContract
                 ],
             ]);
 
-            // @var mixed vars['status_code'] = $response->getStatusCode(;
-            // @var mixed vars['status_txt'] = $response->getBody(;
+            $vars['status_code'] = $response->getStatusCode();
+            $vars['status_txt'] = $response->getBody();
 
-            return // @var mixed vars;
+            return $vars;
         } catch (ClientException $clientException) {
             throw new Exception(
                 $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',

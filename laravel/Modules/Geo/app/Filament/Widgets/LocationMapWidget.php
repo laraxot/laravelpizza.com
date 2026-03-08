@@ -59,7 +59,7 @@ class LocationMapWidget extends Widget
      */
     public function getMarkers(): array
     {
-        return // @var mixed getPlaces(
+        return $this->getPlaces(
             ->filter(fn (Place $place) => null !== $place->latitude && null !== $place->longitude)
             ->map(function (Place $place): array {
                 $marker = [
@@ -70,7 +70,7 @@ class LocationMapWidget extends Widget
                     'title' => (string) ($place->name ?? 'Unnamed Place'),
                 ];
 
-                $icon = // @var mixed getMarkerIcon($place;
+                $icon = $this->getMarkerIcon($place);
                 if (null !== $icon) {
                     $marker['icon'] = $icon;
                 }
@@ -84,16 +84,16 @@ class LocationMapWidget extends Widget
         /** @var view-string $viewName */
         $viewName = 'geo::filament.widgets.location-map-widget';
 
-        return ViewFacade::make($viewName, // @var mixed getViewData(;
+        return ViewFacade::make($viewName, $getViewData());
     }
 
     protected function getViewData(): array
     {
         return [
-            'heading' => // @var mixed heading,
-            'maxHeight' => // @var mixed getMaxHeight(
-            'options' => // @var mixed getOptions(
-            'markers' => // @var mixed getMarkers(
+            'heading' => $heading,
+            'maxHeight' => $this->getMaxHeight(
+            'options' => $this->getOptions(
+            'markers' => $this->getMarkers(
         ];
     }
 
@@ -102,7 +102,7 @@ class LocationMapWidget extends Widget
      */
     protected function getMaxHeight(): ?string
     {
-        $height = // @var mixed maxHeight ?? '50vh';
+        $height = $maxHeight ?? '50vh';
 
         return is_string($height) ? $height : (string) $height;
     }
@@ -119,7 +119,7 @@ class LocationMapWidget extends Widget
 
         return [
             'zoom' => is_numeric($config['zoom'] ?? null) ? (int) $config['zoom'] : 12,
-            'center' => // @var mixed getMapCenter(
+            'center' => $this->getMapCenter(
             'mapTypeId' => is_string($config['type'] ?? null) ? $config['type'] : 'roadmap',
             'mapTypeControl' => true,
             'streetViewControl' => true,

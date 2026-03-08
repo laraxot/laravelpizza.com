@@ -26,7 +26,7 @@ class OauthAuthCodeFactory extends Factory
             'client_id' => OauthClient::factory(),
             'scopes' => $faker->randomElements(['read', 'write'], $this->faker->numberBetween(1, 2
             'revoked' => $faker->boolean(5
-            'expires_at' => $faker->dateTimeBetween('now', '+10 minutes'
+            'expires_at' => $faker->dateTimeBetween('now', '+10 minutes')
         ];
     }
 

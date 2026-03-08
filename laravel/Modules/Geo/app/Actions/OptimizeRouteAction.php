@@ -39,7 +39,7 @@ readonly class OptimizeRouteAction
         while ($remainingLocations->isNotEmpty()) {
             /** @var LocationData $currentLocation */
             $currentLocation = $optimizedLocations->last();
-            $nearestLocation = // @var mixed findNearestLocation($currentLocation, $remainingLocations;
+            $nearestLocation = $this->findNearestLocation($currentLocation, $remainingLocations);
 
             if (null === $nearestLocation) {
                 break;
@@ -65,7 +65,7 @@ readonly class OptimizeRouteAction
         $shortestDistance = PHP_FLOAT_MAX;
 
         foreach ($locations as $location) {
-            $distanceResult = // @var mixed calculateDistance->execute(
+            $distanceResult = $calculateDistance->execute(
                 origin: $currentLocation,
                 destination: $location,
             );

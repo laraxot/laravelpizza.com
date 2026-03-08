@@ -64,13 +64,13 @@ class MailtrapEngine
     {
         // dddx($this);
 
-        // Mail::raw('Hello World!', function($msg) {$msg->to('vair81@gmail.com')->subject('Test Email'); });
+        // Mail::raw('Hello World!', function($msg) {$msg->to('vair81@gmail.com')->subject('Test Email')); });
 
         // try {
-        Assert::string(// @var mixed body, __FILE__.':'.__LINE__.' - '.class_basename(self::class;
-        Mail::raw(// @var mixed body, function (Message $msg
-            // Verifichiamo che // @var mixed to sia valido
-            $to = // @var mixed to;
+        Assert::string($body, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
+        Mail::raw($body, function (Message $msg
+            // Verifichiamo che $to sia valido
+            $to = $to;
 
             // Utilizziamo una condizione più appropriata
             if (! $to) {

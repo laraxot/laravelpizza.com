@@ -49,12 +49,12 @@ class ThemeNotifiableDummy extends Model implements CanThemeNotificationContract
 
     public function sendEmailCallback(): void
     {
-        // @var mixed emailCallbackCalled = true;
+        $emailCallbackCalled = true;
     }
 
     public function sendSmsCallback(): void
     {
-        // @var mixed smsCallbackCalled = true;
+        $smsCallbackCalled = true;
     }
 
     public function increase(string $what, array $data): void {}

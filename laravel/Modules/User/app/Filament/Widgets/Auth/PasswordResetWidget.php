@@ -69,7 +69,7 @@ class PasswordResetWidget extends XotBaseWidget
     public function sendResetPasswordLink(): void
     {
         // try {
-        $data = // @var mixed form->getState(;
+        $data = $form->getState();
         $password_broker = Password::broker();
 
         $response = $password_broker->sendResetLink([
@@ -77,7 +77,14 @@ class PasswordResetWidget extends XotBaseWidget
         ]);
 
         if (Password::RESET_LINK_SENT === $response) {
-            // @var mixed emailSent = true;
+<<<<<<< HEAD
+            $this->emailSent = true;
+||||||| 6161e129d
+        if ($response === Password::RESET_LINK_SENT) {
+            $this->emailSent = true;
+=======
+            $emailSent = true;
+>>>>>>> feature/ralph-loop-implementation
 
             Notification::make()
                 ->title(__('user::auth.password_reset.email_sent.title'))
@@ -86,8 +93,8 @@ class PasswordResetWidget extends XotBaseWidget
                 ->duration(10000)
                 ->send();
 
-        // Clear the form
-        // @var mixed form->fill(;
+            // Clear the form
+            $form->fill();
         } else {
             Session::flash('error', trans('user::errors.'.$response.'.label'));
             Notification::make()
@@ -112,8 +119,8 @@ class PasswordResetWidget extends XotBaseWidget
      */
     public function resetForm(): void
     {
-        // @var mixed emailSent = false;
-        // @var mixed form->fill(;
+        $emailSent = false;
+        $form->fill();
     }
 
     /**
@@ -121,8 +128,8 @@ class PasswordResetWidget extends XotBaseWidget
      */
     public function sendAnotherLink(): void
     {
-        // @var mixed emailSent = false;
-        // @var mixed form->fill(['email' => ''];
+        $emailSent = false;
+        $form->fill(['email' => '']);
     }
 
     /**
@@ -131,6 +138,6 @@ class PasswordResetWidget extends XotBaseWidget
     public function checkEmailStatus(): void
     {
         // This method is kept for compatibility but redirects to login
-        // @var mixed redirect(route('login';
+        $this->redirect(route('login'));
     }
 }

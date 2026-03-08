@@ -32,7 +32,7 @@ class ChristmasGreetingMailable extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address((string) env('MAIL_FROM_ADDRESS', 'hello@example.com'), // @var mixed senderName
+            from: new Address((string) env('MAIL_FROM_ADDRESS', 'hello@example.com'), $senderName
             subject: 'Auguri di Buone Feste e Informazioni Importanti!',
         );
     }
@@ -48,8 +48,8 @@ class ChristmasGreetingMailable extends Mailable
         return new Content(
             view: $seasonalContentViewPath, // Use the determined content view
             with: [
-                'recipientName' => // @var mixed recipientName,
-                'senderName' => // @var mixed senderName,
+                'recipientName' => $recipientName,
+                'senderName' => $senderName,
             ],
         );
     }
