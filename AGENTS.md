@@ -53,10 +53,32 @@ Prima di modificare qualunque file di codice:
 
 1. Ragionare sul problema e sul perimetro della modifica.
 2. Studiare la documentazione del modulo/tema coinvolto (`laravel/Modules/*/docs`, `laravel/Themes/*/docs`).
-3. Aggiornare o creare la documentazione necessaria (regole, memory, skill operative) dentro:
+3. **VERIFICARE SE LA FUNZIONALITA' ESISTE GIA'** - NON creare nuovi moduli!
+4. Aggiornare o creare la documentazione necessaria (regole, memory, skill operative) dentro:
    - `docs/rules`
    - `docs/memory`
    - `docs/skills`
-4. Solo dopo procedere con le modifiche al codice.
+5. Solo dopo procedere con le modifiche al codice.
 
 Riferimento: `docs/rules/pre-edit-docs-first-rule.md`
+
+## REGOLA CRITICA: NON Creare Nuovi Moduli
+
+**Usare SEMPRE i moduli esistenti!**
+
+### Esempio Sbagliato
+```
+❌ Creare Modules/EventRegistration/  # SBAGLIATO!
+❌ Creare Modules/EventFeedback/     # SBAGLIATO!
+```
+
+### Esempio Corretto
+```
+✅ Usare Modules/Meetup/Models/Event
+✅ Usare Modules/Meetup/Models/EventUser (pivot)
+✅ Usare Modules/Meetup/Actions/Event/RegisterAttendeeToEventAction
+```
+
+Tutta la logica Meetup esiste gia' in `Modules/Meetup/`. Verificare sempre prima di creare qualcosa di nuovo!
+
+Riferimento: `docs/memory/no-new-modules-use-existing-memory.md`

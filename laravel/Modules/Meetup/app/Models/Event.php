@@ -217,6 +217,33 @@ class Event extends BaseModel
     }
 
     /**
+     * Get registered attendees for this event.
+     *
+     * @return BelongsToMany<User>
+     */
+    public function attendees(): BelongsToMany
+    {
+        return $this->belongsToManyX(User::class, 'event_user', 'event_id', 'user_id')
+            ->withTimestamps();
+    }
+
+    /**
+     * Determine if event has reached attendee capacity.
+     */
+    public function isFull(): bool
+    {
+        return $this->attendees_count >= $this->max_attendees;
+    }
+
+    /**
+     * Determine if a user is already registered for this event.
+     */
+    public function isUserRegistered(string $userId): bool
+    {
+        return $this->attendees()->where('user_id', $userId)->exists();
+    }
+
+    /**
      * Get the venue where this event is held.
      */
     public function venue(): BelongsTo

@@ -1,0 +1,22 @@
+{
+    "name": "laravelpizza/event-organizer",
+    "description": "Event Organizer Module",
+    "authors": [
+        {
+            "name": "LaravelPizza Team",
+            "email": "team@laravelpizza.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\EventOrganizer\\Providers\\EventOrganizerServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\EventOrganizer\\": ""
+        }
+    }
+}

@@ -8,6 +8,8 @@
 
 use Livewire\Volt\Component;
 use Modules\Meetup\Models\Event;
+use Modules\Meetup\Actions\Event\RegisterAttendeeToEventAction;
+use Modules\Meetup\Actions\Event\UnregisterAttendeeFromEventAction;
 use Illuminate\Support\Carbon;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -24,6 +26,7 @@ new class extends Component {
     public string $bookingName = '';
     public string $bookingEmail = '';
     public string $shareUrl = '';
+    public bool $isRegistered = false;
     
     public function mount(): void
     {
@@ -36,6 +39,9 @@ new class extends Component {
         
         if ($this->event) {
             $this->shareUrl = LaravelLocalization::localizeUrl('/events/' . $this->event->slug);
+            $this->isRegistered = auth()->check() 
+                ? $this->event->isUserRegistered((string) auth()->id())
+                : false;
         }
     }
     
@@ -76,9 +82,46 @@ new class extends Component {
     
     public function book(): void
     {
-        // In a real scenario, this would create a booking record
-        $this->dispatch('notify', ['type' => 'success', 'message' => 'Booking confirmed!']);
-        $this->closeBookingModal();
+        if (!$this->event) {
+            $this->dispatch('notify', ['type' => 'error', 'message' => __('pub_theme::event.messages.registration_failed.label')]);
+            return;
+        }
+
+        try {
+            $userId = auth()->id() ?? $this->bookingEmail;
+            
+            app(RegisterAttendeeToEventAction::class)->execute($this->event, (string) $userId);
+            
+            $this->event->refresh();
+            $this->dispatch('notify', ['type' => 'success', 'message' => __('pub_theme::event.messages.registration_success.label')]);
+            $this->closeBookingModal();
+        } catch (\DomainException $e) {
+            $this->dispatch('notify', ['type' => 'error', 'message' => $e->getMessage()]);
+        } catch (\Throwable $e) {
+            report($e);
+            $this->dispatch('notify', ['type' => 'error', 'message' => __('pub_theme::event.messages.registration_failed.label')]);
+        }
+    }
+    
+    public function unregister(): void
+    {
+        if (!$this->event) {
+            return;
+        }
+
+        try {
+            $userId = auth()->id() ?? $this->bookingEmail;
+            
+            app(UnregisterAttendeeFromEventAction::class)->execute($this->event, (string) $userId);
+            
+            $this->event->refresh();
+            $this->dispatch('notify', ['type' => 'success', 'message' => __('pub_theme::event.messages.unregistration_success.label')]);
+        } catch (\DomainException $e) {
+            $this->dispatch('notify', ['type' => 'error', 'message' => $e->getMessage()]);
+        } catch (\Throwable $e) {
+            report($e);
+            $this->dispatch('notify', ['type' => 'error', 'message' => __('pub_theme::event.messages.unregistration_failed.label')]);
+        }
     }
     
     public function openShareModal(): void { $this->showShareModal = true; }
@@ -222,6 +265,7 @@ new class extends Component {
                 <div class="sticky top-8 space-y-6">
                     @if($this->isUpcoming())
                     <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 border border-slate-200 dark:border-slate-700">
+                        @if(!$this->isRegistered)
                         <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
                             {{ __('pub_theme::event.actions.rsvp_now.label') }}
                         </h3>
@@ -242,6 +286,23 @@ new class extends Component {
                         <p class="text-xs text-slate-500 dark:text-slate-400 mt-4 text-center">
                             {{ __('pub_theme::event.messages.spots_filling_fast.label') }}
                         </p>
+                        @else
+                        <h3 class="text-xl font-bold text-green-600 dark:text-green-400 mb-2">
+                            {{ __('pub_theme::event.messages.you_are_registered.label') }}
+                        </h3>
+
+                        <div class="mb-6">
+                            <div class="flex items-center justify-center w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full mx-auto mb-4">
+                                <svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <button wire:click="unregister" type="button" class="w-full bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-bold py-3 px-4 rounded-lg transition-colors">
+                            {{ __('pub_theme::event.actions.cancel_registration.label') }}
+                        </button>
+                        @endif
                     </div>
                     @endif
 
