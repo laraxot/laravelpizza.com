@@ -35,32 +35,32 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 
     public function getLabel(): string
     {
-        return // @var mixed transClass(self::class, $this->value.'.label';
+        return $this->transClass(self::class, $this->value.'.label');
     }
 
     public function getColor(): string
     {
-        return // @var mixed transClass(self::class, $this->value.'.color';
+        return $this->transClass(self::class, $this->value.'.color');
     }
 
     public function getIcon(): string
     {
-        return // @var mixed transClass(self::class, $this->value.'.icon';
+        return $this->transClass(self::class, $this->value.'.icon');
     }
 
     public function getDescription(): string
     {
-        return // @var mixed transClass(self::class, $this->value.'.description';
+        return $this->transClass(self::class, $this->value.'.description');
     }
 
     public function getTooltip(): string
     {
-        return // @var mixed transClass(self::class, $this->value.'.tooltip';
+        return $this->transClass(self::class, $this->value.'.tooltip');
     }
 
     public function getHelperText(): string
     {
-        return // @var mixed transClass(self::class, $this->value.'.helper_text';
+        return $this->transClass(self::class, $this->value.'.helper_text');
     }
 
     public function toggle(): self
@@ -91,7 +91,7 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
      */
     public function getTableContentGrid(): ?array
     {
-        return // @var mixed isGridLayout(
+        return $this->isGridLayout(
             ? [
                 'sm' => 1,
                 'md' => 2,
@@ -117,7 +117,7 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
      */
     public function getTableColumns(array $listColumns, array $gridColumns): array
     {
-        return // @var mixed isGridLayout(;
+        return $this->isGridLayout();
     }
 
     public static function getOptions(): array

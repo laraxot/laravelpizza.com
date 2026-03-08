@@ -6,7 +6,6 @@ namespace Modules\Xot\Tests\Unit\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
 use Modules\Xot\Models\XotBaseModel;
-use Modules\Xot\Tests\TestCase;
 use Modules\Xot\Traits\HasSchemalessAttributes;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
 
@@ -28,7 +27,6 @@ if (! class_exists(TestModel::class)) {
     }
 }
 
-uses(TestCase::class);
 
 it('handles extra attributes scope', function (): void {
     $builder = \Mockery::mock(Builder::class);

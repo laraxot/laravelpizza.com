@@ -25,7 +25,7 @@ final class DarkModeSwitcher extends Component
      */
     public function __construct()
     {
-        // @var mixed widget = new DarkModeSwitcherWidget(;
+        $widget = new DarkModeSwitcherWidget();
     }
 
     /**
@@ -39,7 +39,7 @@ final class DarkModeSwitcher extends Component
         }
 
         // Ottiene i dati dal widget
-        $viewData = ['darkMode' => // @var mixed widget->darkMode];
+        $viewData = ['darkMode' => $widget->darkMode];
 
         return view('ui::filament.widgets.dark-mode-switcher', $viewData);
     }

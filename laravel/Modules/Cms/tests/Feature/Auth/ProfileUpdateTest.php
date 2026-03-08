@@ -16,13 +16,13 @@ describe('Profile Update', function () {
 });
 
 test('email verification status is not reset if email does not change', function () {
-    // @var mixed assertTrue(true;
+    $this->assertTrue(true);
 });
 
 test('user account can be deleted', function () {
-    // @var mixed assertTrue(true;
+    $this->assertTrue(true);
 });
 
 test('user account deletion fails with wrong password', function () {
-    // @var mixed assertTrue(true;
+    $this->assertTrue(true);
 });

@@ -19,7 +19,7 @@ it('gets localized markdown path if it exists', function (): void {
     $tempFile = $tempDir.'/test.md';
     file_put_contents($tempFile, 'test');
 
-    // @var mixed mock(GetTenantFilePathAction::class
+    $this->mock(GetTenantFilePathAction::class
         ->shouldReceive('execute')
         ->with('lang/it/test.md')
         ->andReturn($tempFile)
@@ -43,7 +43,7 @@ it('gets fallback markdown path if localized does not exist', function (): void 
     $tempFile = $tempDir.'/fallback.md';
     file_put_contents($tempFile, 'test');
 
-    // @var mixed mock(GetTenantFilePathAction::class
+    $this->mock(GetTenantFilePathAction::class
         ->shouldReceive('execute')
         ->with('lang/it/fallback.md')
         ->andReturn('/non/existent/path.md')
@@ -60,7 +60,7 @@ it('gets fallback markdown path if localized does not exist', function (): void 
 });
 
 it('returns hash if no path exists', function (): void {
-    // @var mixed mock(GetTenantFilePathAction::class
+    $this->mock(GetTenantFilePathAction::class
         ->shouldReceive('execute')
         ->andReturn('/non/existent/path.md');
 

@@ -12,7 +12,7 @@ use function Pest\Laravel\get;
 uses(TestCase::class);
 
 // NOTE: Helper functions moved to Modules\Xot\Tests\TestCase for DRY pattern
-// Use // @var mixed createTestUser(
+// Use $this->createTestUser(
 
 describe('Register Page', function () {
     test('register page renders for guest', function () {
@@ -22,7 +22,7 @@ describe('Register Page', function () {
     });
 
     test('authenticated user is redirected away from register page', function () {
-        $user = // @var mixed createTestUser(;
+        $user = $this->createTestUser();
         actingAs($user);
         $locale = app()->getLocale();
         $response = get('/'.$locale.'/auth/register');

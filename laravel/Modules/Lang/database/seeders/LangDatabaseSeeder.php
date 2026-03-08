@@ -16,6 +16,6 @@ class LangDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // // @var mixed call("OthersTableSeeder";
+        // $this->call("OthersTableSeeder");
     }
 }

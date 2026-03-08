@@ -19,18 +19,18 @@ final class DarkModeSwitcherWidget extends XotBaseWidget
 
     public function mount(): void
     {
-        // @var mixed darkMode = filter_var(request(;
+        $darkMode = filter_var(request());
     }
 
     public function toggleDarkMode(): void
     {
-        // @var mixed darkMode = ! $this->darkMode;
+        $darkMode = ! $this->darkMode;
 
         // Set cookie for persistence
-        Cookie::queue('dark_mode', // @var mixed darkMode ? 'true' : 'false', 60 * 24 * 30;
+        Cookie::queue('dark_mode', $darkMode ? 'true' : 'false', 60 * 24 * 30);
 
         // Dispatch event for frontend to handle theme switching
-        // @var mixed dispatch('darkModeUpdated', ['darkMode' => $this->darkMode];
+        $this->dispatch('darkModeUpdated', ['darkMode' => $this->darkMode]);
     }
 
     /**
@@ -46,8 +46,8 @@ final class DarkModeSwitcherWidget extends XotBaseWidget
 
     public function render(): View
     {
-        return view(// @var mixed view, [
-            'darkMode' => // @var mixed darkMode,
+        return view($view, [
+            'darkMode' => $darkMode,
         ]);
     }
 }

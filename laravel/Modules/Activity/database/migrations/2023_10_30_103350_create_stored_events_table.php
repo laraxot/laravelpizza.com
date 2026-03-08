@@ -9,7 +9,7 @@ return new class extends XotBaseMigration
 {
     public function up(): void
     {
-        // @var mixed tableCreate(
+        $this->tableCreate(
             function (Blueprint $table) {
                 $table->id();
                 $table->uuid('aggregate_uuid')->nullable();
@@ -25,9 +25,9 @@ return new class extends XotBaseMigration
             },
         );
 
-        // @var mixed tableUpdate(
+        $this->tableUpdate(
             function (Blueprint $table) {
-                // @var mixed updateTimestamps($table, false;
+                $this->updateTimestamps($table, false);
             },
         );
     }

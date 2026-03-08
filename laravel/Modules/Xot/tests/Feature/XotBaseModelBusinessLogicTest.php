@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Models\BaseModel;
 use Modules\Xot\Models\Module;
 use Modules\Xot\Models\XotBaseModel;
-use Tests\TestCase;
 
 class XotBaseModelBusinessLogicTest extends TestCase
 {

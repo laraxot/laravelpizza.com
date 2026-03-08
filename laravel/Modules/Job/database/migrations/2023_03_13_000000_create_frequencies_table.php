@@ -13,7 +13,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        // @var mixed tableCreate(static function (Blueprint $table
+        $this->tableCreate(static function (Blueprint $table
             $table->increments('id');
             $table->unsignedInteger('task_id');
             $table->string('label');
@@ -25,8 +25,8 @@ return new class extends XotBaseMigration
             //     ->on(TOTEM_TABLE_PREFIX.'tasks');
         });
         // -- UPDATE --
-        // @var mixed tableUpdate(function (Blueprint $table
-            // @var mixed updateTimestamps($table;
+        $this->tableUpdate(function (Blueprint $table
+            $this->updateTimestamps($table);
         });
     }
 };

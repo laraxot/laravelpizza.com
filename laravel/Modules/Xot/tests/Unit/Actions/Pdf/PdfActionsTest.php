@@ -7,9 +7,7 @@ namespace Modules\Xot\Tests\Unit\Actions\Pdf;
 use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\Pdf\PdfByHtmlAction;
 use Modules\Xot\Actions\Pdf\PdfEngineEnum;
-use Modules\Xot\Tests\TestCase;
 
-uses(TestCase::class);
 
 it('executes pdf by html action correctly', function (): void {
     // PDF Engines often require external binaries or heavy libraries

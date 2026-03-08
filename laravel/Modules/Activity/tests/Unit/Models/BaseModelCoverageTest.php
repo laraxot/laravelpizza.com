@@ -29,11 +29,11 @@ class BaseModelCoverageTest extends TestCase
         /** @var array<string, string> $casts */
         $casts = $method->invoke($concrete);
 
-        // @var mixed assertIsArray($casts;
+        $this->assertIsArray($casts);
         // Inherits from XotBaseModel::casts()
-        // @var mixed assertArrayHasKey('id', $casts;
-        // @var mixed assertArrayHasKey('created_at', $casts;
-        // @var mixed assertArrayHasKey('updated_at', $casts;
+        $this->assertArrayHasKey('id', $casts);
+        $this->assertArrayHasKey('created_at', $casts);
+        $this->assertArrayHasKey('updated_at', $casts);
     }
 
     #[Test]
@@ -52,6 +52,6 @@ class BaseModelCoverageTest extends TestCase
         $casts = $method->invoke($concrete);
 
         // BaseModel adds no extra casts but inherits parent's
-        // @var mixed assertNotEmpty($casts;
+        $this->assertNotEmpty($casts);
     }
 }

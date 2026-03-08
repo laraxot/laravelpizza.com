@@ -8,9 +8,7 @@ use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\Arr\SaveArrayAction;
 use Modules\Xot\Actions\Arr\SaveJsonArrayAction;
 use Modules\Xot\Actions\Arr\SavePhpArrayAction;
-use Modules\Xot\Tests\TestCase;
 
-uses(TestCase::class);
 
 it('saves array as php file', function (): void {
     $data = ['foo' => 'bar', 'baz' => 123];

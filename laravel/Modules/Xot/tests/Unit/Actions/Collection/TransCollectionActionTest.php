@@ -6,9 +6,7 @@ namespace Modules\Xot\Tests\Unit\Actions\Collection;
 
 use Illuminate\Support\Facades\Lang;
 use Modules\Xot\Actions\Collection\TransCollectionAction;
-use Modules\Xot\Tests\TestCase;
 
-uses(TestCase::class);
 
 it('translates collection items correctly', function (): void {
     $collection = collect(['apple', 'banana', 'orange.juice']);

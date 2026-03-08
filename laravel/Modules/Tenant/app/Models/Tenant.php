@@ -96,7 +96,7 @@ class Tenant extends BaseModel
      */
     public function users(): HasMany
     {
-        return // @var mixed hasMany(User::class;
+        return $this->hasMany(User::class);
     }
 
     // Commented out - Patient and Dental modules not available
@@ -105,7 +105,7 @@ class Tenant extends BaseModel
     //  */
     // public function patients(): HasMany
     // {
-    //     return // @var mixed hasMany(Patient::class;
+    //     return $this->hasMany(Patient::class);
     // }
 
     // /**
@@ -113,7 +113,7 @@ class Tenant extends BaseModel
     //  */
     // public function appointments(): HasMany
     // {
-    //     return // @var mixed hasMany(Appointment::class;
+    //     return $this->hasMany(Appointment::class);
     // }
 
     /**
@@ -121,7 +121,7 @@ class Tenant extends BaseModel
      */
     public function isActive(): bool
     {
-        $isActive = // @var mixed attributes['is_active'] ?? false;
+        $isActive = $attributes['is_active'] ?? false;
 
         return (bool) $isActive;
     }
@@ -131,10 +131,10 @@ class Tenant extends BaseModel
      */
     public function setNameAttribute(string $value): void
     {
-        // @var mixed attributes['name'] = $value;
+        $attributes['name'] = $value;
 
-        if (empty(// @var mixed attributes['slug']
-            // @var mixed attributes['slug'] = Str::slug($value;
+        if (empty($attributes['slug']
+            $attributes['slug'] = Str::slug($value);
         }
     }
 
@@ -143,7 +143,7 @@ class Tenant extends BaseModel
      */
     public function getUrlAttribute(): string
     {
-        $url = // @var mixed domain ?? config('app.url';
+        $url = $domain ?? config('app.url');
 
         return is_string($url) ? $url : 'http://localhost';
     }

@@ -65,7 +65,7 @@ class ScheduleRequest extends FormRequest
             'run_in_background' => false,
         ];
         foreach ($fields as $field => $defaultValue) {
-            // @var mixed merge([$field => $this->input($field;
+            $this->merge([$field => $this->input($field));
         }
     }
 }

@@ -14,14 +14,14 @@ final class DarkModeSwitcher extends Component
     public function mount(): void
     {
         // Check localStorage on the client side to set the dark mode
-        // @var mixed darkMode = filter_var(request(;
+        $darkMode = filter_var(request());
     }
 
     public function toggleDarkMode(): void
     {
-        // @var mixed darkMode = ! $this->darkMode;
+        $darkMode = ! $this->darkMode;
         // Use localStorage for dark mode persistence on the client side
-        // @var mixed dispatch('darkModeUpdated', ['darkMode' => $this->darkMode];
+        $this->dispatch('darkModeUpdated', ['darkMode' => $this->darkMode]);
     }
 
     public function render(): View

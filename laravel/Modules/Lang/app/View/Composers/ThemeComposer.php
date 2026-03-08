@@ -61,7 +61,7 @@ class ThemeComposer
 
             $url = '#'; // Placeholder URL for frontend.
             if (inAdmin()) {
-                $url = // @var mixed buildAdminLanguageUrl($locale;
+                $url = $this->buildAdminLanguageUrl($locale);
             }
 
             // Verifichiamo che name sia una stringa o lo convertiamo in modo sicuro
@@ -73,7 +73,7 @@ class ThemeComposer
             return [
                 'id' => $locale,
                 'name' => $name,
-                'flag' => // @var mixed buildFlagHtml($regionalCode
+                'flag' => $this->buildFlagHtml($regionalCode
                 'url' => $url,
             ];
         });
@@ -93,7 +93,7 @@ class ThemeComposer
     {
         $currentLocale = app()->getLocale();
 
-        return // @var mixed languages(
+        return $this->languages(
             // Ensure the item is an instance of LangData
             if (! $item instanceof LangData) {
                 throw new \Exception(sprintf('Expected instance of LangData, got %s', is_object($item) ? $item::class : gettype($item)));
@@ -113,7 +113,7 @@ class ThemeComposer
         $currentLocale = app()->getLocale();
 
         // Convert DataCollection to a Laravel Collection to use firstWhere()
-        $lang = // @var mixed languages(;
+        $lang = $this->languages();
 
         if (! $lang instanceof LangData) {
             throw new \Exception(sprintf('Current language not found on line %d in %s', __LINE__, class_basename($this)));

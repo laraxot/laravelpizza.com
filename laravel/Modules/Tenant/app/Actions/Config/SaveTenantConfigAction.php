@@ -34,7 +34,7 @@ class SaveTenantConfigAction
         /** @var array<string, mixed> $dataToMerge */
         $dataToMerge = $data;
 
-        $configData = // @var mixed arrayMergeRecursiveDistinct($configData, $dataToMerge;
+        $configData = $this->arrayMergeRecursiveDistinct($configData, $dataToMerge);
         $configData = Arr::sortRecursive($configData);
 
         app(SaveArrayAction::class)->execute(
@@ -59,7 +59,7 @@ class SaveTenantConfigAction
                 /** @var array<string, mixed> $right */
                 $right = $value;
 
-                $merged[$key] = // @var mixed arrayMergeRecursiveDistinct($left, $right;
+                $merged[$key] = $this->arrayMergeRecursiveDistinct($left, $right);
 
                 continue;
             }

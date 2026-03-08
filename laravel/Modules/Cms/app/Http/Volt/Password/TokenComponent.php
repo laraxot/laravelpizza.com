@@ -37,19 +37,19 @@ class TokenComponent extends Component
     public function mount(string $token): void
     {
         Assert::string($email = request()->query('email', ''));
-        // @var mixed email = $email;
-        // @var mixed token = $token;
+        $email = $email;
+        $token = $token;
     }
 
     public function resetPassword(): Redirector|RedirectResponse
     {
-        // @var mixed validate(;
+        $this->validate();
 
         $response = Password::broker()->reset(
             [
-                'token' => // @var mixed token,
-                'email' => // @var mixed email,
-                'password' => // @var mixed password,
+                'token' => $token,
+                'email' => $email,
+                'password' => $password,
             ],
             static function (UserContract $user, string $password): void {
                 if (! isset($user->password)) {
@@ -73,7 +73,7 @@ class TokenComponent extends Component
             return redirect('/');
         }
 
-        // @var mixed addError('email', $trans;
+        $this->addError('email', $trans);
 
         return redirect('/');
     }

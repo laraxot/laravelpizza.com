@@ -26,7 +26,7 @@ class ModuleFactory extends Factory
     public function definition(): array
     {
         return [
-            // 'id' => // @var mixed faker->randomNumber(5, false
+            // 'id' => $faker->randomNumber(5, false
             'name' => fake()->name,
         ];
     }

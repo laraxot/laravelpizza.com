@@ -15,13 +15,13 @@ final class TableLayoutToggleTableAction extends Action implements HasTableLayou
     {
         parent::setUp();
 
-        $current = // @var mixed getCurrentLayout(;
+        $current = $this->getCurrentLayout();
 
-        // @var mixed label(__('ui::table_layout.actions.toggle.label'
+        $this->label(__('ui::table_layout.actions.toggle.label'
             ->tooltip($current->getLabel())
             ->color($current->getColor())
             ->icon($current->getIcon())
-            ->action(// @var mixed toggleLayout(...;
+            ->action($toggleLayout(...));
     }
 
     public static function getDefaultName(): string
@@ -31,10 +31,10 @@ final class TableLayoutToggleTableAction extends Action implements HasTableLayou
 
     protected function toggleLayout(?ListRecords $livewire): void
     {
-        $currentLayout = // @var mixed getCurrentLayout(;
+        $currentLayout = $this->getCurrentLayout();
         $newLayout = $currentLayout->toggle();
 
-        // @var mixed setTableLayout($newLayout;
+        $this->setTableLayout($newLayout);
 
         if ($livewire instanceof ListRecords) {
             $livewire->dispatch('$refresh');

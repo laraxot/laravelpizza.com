@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 use Modules\Notify\Datas\RecordNotificationData;
 use Modules\Xot\States\Transitions\XotBaseTransition;
-use Tests\TestCase;
 
-uses(TestCase::class);
 
 describe('XotBaseTransition', function () {
     beforeEach(function () {

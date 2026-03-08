@@ -6,9 +6,7 @@ namespace Modules\Xot\Tests\Unit\Actions\File;
 
 use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\File\GetClassNameByPathAction;
-use Modules\Xot\Tests\TestCase;
 
-uses(TestCase::class);
 
 it('gets class name from path correctly', function (): void {
     $tempPath = tempnam(sys_get_temp_dir(), 'test_class_').'.php';

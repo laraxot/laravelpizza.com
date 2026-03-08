@@ -9,7 +9,7 @@ declare(strict_types=1);
             {{ $title }}
         </x-slot>
         <div wire:ignore>
-            {{ // @var mixed table }}
+            {{ $table }}
         </div>
     </x-filament::section>
 </x-filament::widget>

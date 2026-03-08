@@ -19,6 +19,6 @@ final class SliderData extends Data
         public ?string $description,
         public ?string $action_text,
     ) {
-        // @var mixed short_description = $this->description;
+        $short_description = $this->description;
     }
 }

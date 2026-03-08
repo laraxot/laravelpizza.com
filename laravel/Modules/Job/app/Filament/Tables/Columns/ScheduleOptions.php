@@ -13,19 +13,19 @@ class ScheduleOptions extends TextColumn
 
     public function withValue(bool $withValue = true): static
     {
-        // @var mixed withValue = $withValue;
+        $withValue = $withValue;
 
         return $this;
     }
 
     public function getTags(): array
     {
-        if (// @var mixed record === null
+        if ($record === null
             return [];
         }
 
-        if (// @var mixed withValue && \is_object($this->record
-            $options = // @var mixed record->getOptions(;
+        if ($withValue && \is_object($this->record
+            $options = $record->getOptions();
             Assert::isArray($options);
 
             /** @var array<int|string, string> $options */

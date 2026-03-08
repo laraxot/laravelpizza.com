@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 use Modules\Xot\Services\ModuleService;
 use Nwidart\Modules\Module;
-use Tests\TestCase;
 
-uses(TestCase::class);
 
 describe('ModuleService', function () {
     beforeEach(function () {

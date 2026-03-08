@@ -47,6 +47,61 @@ Riferimento completo: [docs/rules/multi-agent-collaboration-rule.md](./docs/rule
 - Le regole originali sono state preservate nei file di sezione.
 - Per modifiche future, aggiorna prima il file di sezione pertinente e poi l'indice `00-index.md`.
 
+## 🤖 Ralph Loop - Autonomous AI Agent Loop
+
+### **Cosa è Ralph Loop?**
+Ralph Loop è un **autonomous AI agent loop** che esegue iterazioni ripetute di sviluppo software fino al completamento di tutti gli item PRD (Product Requirements Document). Ogni iterazione è un'istanza pulita con contesto fresco.
+
+### **Principi Fondamentali**
+- **Loop Infinito**: `while :; do cat PROMPT.md | agent ; done`
+- **Context Management**: Progresso non persiste nel contesto LLM, ma nei file e git history
+- **Rotazione Contesto**: Ogni iterazione inizia con contesto pulito
+- **Apprendimento Continuo**: Agent aggiorna AGENTS.md con pattern e gotchas
+
+### **Installazione Ralph Loop**
+```bash
+# Creare directory per Ralph
+mkdir -p scripts/ralph
+
+# Scaricare script Ralph
+curl -fsSL https://raw.githubusercontent.com/snarktank/ralph/main/ralph.sh -o scripts/ralph/ralph.sh
+curl -fsSL https://raw.githubusercontent.com/snarktank/ralph/main/prompt.md -o scripts/ralph/prompt.md
+curl -fsSL https://raw.githubusercontent.com/snarktank/ralph/main/CLAUDE.md -o scripts/ralph/CLAUDE.md
+chmod +x scripts/ralph/ralph.sh
+
+# Scaricare esempio PRD
+curl -fsSL https://raw.githubusercontent.com/snarktank/ralph/main/prd.json.example -o prd.json.example
+
+# Creare directory skills
+mkdir -p skills/prd skills/ralph
+```
+
+### **Configurazione**
+Aggiungi a `~/.config/amp/settings.json`:
+```json
+{
+  "amp.experimental.autoHandoff": { "context": 90 }
+}
+```
+
+### **Workflows con Ralph**
+1. **Crea PRD**: Usa skill `/prd` per generare Product Requirements Document
+2. **Converti in JSON**: Usa skill `/ralph` per convertire PRD in `prd.json`
+3. **Esegui Ralph Loop**: `./scripts/ralph/ralph.sh [max_iterations]`
+4. **Verifica Progresso**: `cat prd.json | jq '.userStories[] | {id, title, passes}'`
+
+### **File Chiave**
+- `scripts/ralph/ralph.sh` - Loop autonomo AI
+- `scripts/ralph/prompt.md` - Template prompt per Amp
+- `scripts/ralph/CLAUDE.md` - Template prompt per Claude Code
+- `prd.json` - User stories con stato `passes`
+- `progress.txt` - Apprendimenti e contesto
+- `skills/prd/` - Skill per generazione PRD
+- `skills/ralph/` - Skill per conversione PRD
+
+### **PROMEMORIA PER SEMPRE:**
+> 'Usa Ralph Loop per sviluppo autonomo. Crea PRD, esegui loop, verifica progresso!'
+
 ## Priorita operativa obbligatoria (sempre)
 
 Prima di modificare qualunque file di codice:

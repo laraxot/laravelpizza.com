@@ -19,7 +19,7 @@ class ScheduleObserver
      */
     public function created(): void
     {
-        // @var mixed clearCache(;
+        $this->clearCache();
     }
 
     /**
@@ -27,7 +27,7 @@ class ScheduleObserver
      */
     public function updated(Schedule $_schedule): void
     {
-        // @var mixed clearCache(;
+        $this->clearCache();
     }
 
     /**
@@ -37,7 +37,7 @@ class ScheduleObserver
     {
         $schedule->status = Status::Trashed;
         $schedule->saveQuietly();
-        // @var mixed clearCache(;
+        $this->clearCache();
     }
 
     /**
@@ -54,7 +54,7 @@ class ScheduleObserver
      */
     public function saved(Schedule $_schedule): void
     {
-        // @var mixed clearCache(;
+        $this->clearCache();
     }
 
     /**

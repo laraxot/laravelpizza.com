@@ -19,7 +19,7 @@ class ScheduleService
 
         $model = app($modelClass);
         Assert::isInstanceOf($model, Schedule::class, '['.__LINE__.']['.class_basename($this).']');
-        // @var mixed model = $model;
+        $model = $model;
     }
 
     /**
@@ -28,10 +28,10 @@ class ScheduleService
     public function getActives(): Collection
     {
         if (config('job::cache.enabled')) {
-            return // @var mixed getFromCache(;
+            return $this->getFromCache();
         }
 
-        return // @var mixed model->active(;
+        return $model->active();
     }
 
     public function clearCache(): void
@@ -50,7 +50,7 @@ class ScheduleService
         Assert::string($store = config('job::cache.store'), '['.__LINE__.']['.class_basename($this).']');
         Assert::string($key = config('job::cache.key'), '['.__LINE__.']['.class_basename($this).']');
 
-        $result = Cache::store($store)->rememberForever($key, fn (): Collection => // @var mixed model->active(;
+        $result = Cache::store($store)->rememberForever($key, fn (): Collection => $model->active());
         Assert::isInstanceOf($result, Collection::class);
 
         /** @var Collection<int, Schedule> $result */

@@ -20,10 +20,10 @@ class TenantFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => // @var mixed faker->company(
-            'domain' => // @var mixed faker->unique(
-            'database' => 'tenant_' . // @var mixed faker->word(
-            'is_active' => // @var mixed faker->boolean(
+            'name' => $faker->company(
+            'domain' => $faker->unique(
+            'database' => 'tenant_' . $faker->word(
+            'is_active' => $faker->boolean(
             'settings' => json_encode(['timezone' => 'UTC']),
         ];
     }
@@ -33,7 +33,7 @@ class TenantFactory extends Factory
      */
     public function active(): static
     {
-        return // @var mixed state(fn (array $attributes
+        return $this->state(fn (array $attributes
             'is_active' => true,
         ]);
     }
@@ -43,7 +43,7 @@ class TenantFactory extends Factory
      */
     public function inactive(): static
     {
-        return // @var mixed state(fn (array $attributes
+        return $this->state(fn (array $attributes
             'is_active' => false,
         ]);
     }
@@ -53,7 +53,7 @@ class TenantFactory extends Factory
      */
     public function withDatabaseConfig(): static
     {
-        return // @var mixed afterCreating(function (Tenant $tenant
+        return $this->afterCreating(function (Tenant $tenant
             $tenant->database_config()->create([
                 'host' => 'localhost',
                 'port' => 3306,
@@ -70,7 +70,7 @@ class TenantFactory extends Factory
      */
     public function withDomains(): static
     {
-        return // @var mixed afterCreating(function (Tenant $tenant
+        return $this->afterCreating(function (Tenant $tenant
             $tenant->domains()->create([
                 'domain' => $tenant->domain,
                 'is_primary' => true,

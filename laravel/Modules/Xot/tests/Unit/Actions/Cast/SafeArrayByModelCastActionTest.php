@@ -6,9 +6,7 @@ namespace Modules\Xot\Tests\Unit\Actions\Cast;
 
 use Modules\Activity\Models\Activity;
 use Modules\Xot\Actions\Cast\SafeArrayByModelCastAction;
-use Modules\Xot\Tests\TestCase;
 
-uses(TestCase::class);
 
 it('converts model attributes to array correctly', function (): void {
     $model = new Activity();

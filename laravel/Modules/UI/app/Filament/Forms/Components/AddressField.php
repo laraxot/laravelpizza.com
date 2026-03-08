@@ -27,7 +27,7 @@ class AddressField extends Field
     {
         parent::setUp();
 
-        // @var mixed afterStateHydrated(function (AddressField $_component, mixed $record
+        $this->afterStateHydrated(function (AddressField $_component, mixed $record
             $data = [
                 'country' => null,
                 'street' => null,
@@ -40,7 +40,7 @@ class AddressField extends Field
                 return;
             }
 
-            $relationship = // @var mixed getRelationship(;
+            $relationship = $this->getRelationship();
             if ($relationship && $record->relationLoaded($relationship)) {
                 $address = $record->getRelationValue($relationship);
                 if (null !== $address && is_object($address) && method_exists($address, 'toArray')) {
@@ -51,19 +51,19 @@ class AddressField extends Field
             // }
         });
 
-        // @var mixed dehydrated(false;
+        $this->dehydrated(false);
     }
 
     public function relationship(string|callable $relationship): static
     {
-        // @var mixed relationship = $relationship;
+        $relationship = $relationship;
 
         return $this;
     }
 
     public function saveRelationships(): void
     {
-        $rawState = // @var mixed getState(;
+        $rawState = $this->getState();
         if (! is_array($rawState)) {
             return;
         }
@@ -71,12 +71,12 @@ class AddressField extends Field
         /** @var array<string, mixed> $state */
         $state = $rawState;
 
-        $record = // @var mixed getRecord(;
+        $record = $this->getRecord();
         if (! $record instanceof Model) {
             return;
         }
 
-        $relationshipMethod = // @var mixed getRelationship(;
+        $relationshipMethod = $this->getRelationship();
         if (! method_exists($record, $relationshipMethod)) {
             return;
         }
@@ -118,7 +118,7 @@ class AddressField extends Field
 
     public function getRelationship(): string
     {
-        Assert::string($res = // @var mixed evaluate($this->relationship;
+        Assert::string($res = $this->evaluate($this->relationship));
 
         return $res;
     }

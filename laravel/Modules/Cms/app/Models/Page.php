@@ -242,7 +242,7 @@ class Page extends BaseModelLang implements SushiToJsonContract
 
     public function getRows(): array
     {
-        return // @var mixed getSushiRows(;
+        return $this->getSushiRows();
     }
 
     public static function getMiddlewareBySlug(string $slug): array

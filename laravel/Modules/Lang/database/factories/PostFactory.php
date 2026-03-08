@@ -19,27 +19,27 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => // @var mixed faker->sentence(6
-            'slug' => // @var mixed faker->slug(
-            'content' => // @var mixed faker->paragraphs(3, true
-            'excerpt' => // @var mixed faker->text(200
-            'status' => // @var mixed faker->randomElement(['draft', 'published', 'archived']
-            'published_at' => // @var mixed faker->optional(0.7
-            'locale' => // @var mixed faker->randomElement(['it', 'en', 'de']
+            'title' => $faker->sentence(6
+            'slug' => $faker->slug(
+            'content' => $faker->paragraphs(3, true
+            'excerpt' => $faker->text(200
+            'status' => $faker->randomElement(['draft', 'published', 'archived']
+            'published_at' => $faker->optional(0.7
+            'locale' => $faker->randomElement(['it', 'en', 'de']
         ];
     }
 
     public function published(): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes
             'status' => 'published',
-            'published_at' => // @var mixed faker->dateTimeBetween('-1 year', 'now'
+            'published_at' => $faker->dateTimeBetween('-1 year', 'now'
         ]);
     }
 
     public function draft(): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes
             'status' => 'draft',
             'published_at' => null,
         ]);
@@ -47,7 +47,7 @@ class PostFactory extends Factory
 
     public function italian(): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes
             'locale' => 'it',
         ]);
     }

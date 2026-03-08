@@ -8,9 +8,7 @@ use Modules\Xot\Actions\Cast\SafeArrayCastAction;
 use Modules\Xot\Actions\Cast\SafeBooleanCastAction;
 use Modules\Xot\Actions\Cast\SafeIntCastAction;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
-use Tests\TestCase;
 
-uses(TestCase::class);
 
 test('safe array cast action works', function () {
     $action = app(SafeArrayCastAction::class);

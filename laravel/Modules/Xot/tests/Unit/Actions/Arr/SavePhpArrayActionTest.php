@@ -3,9 +3,7 @@
 declare(strict_types=1);
 
 use Modules\Xot\Actions\Arr\SavePhpArrayAction;
-use Tests\TestCase;
 
-uses(TestCase::class);
 
 beforeEach(function (): void {
     $action = app(SavePhpArrayAction::class);
@@ -14,7 +12,7 @@ beforeEach(function (): void {
 });
 
 afterEach(function (): void {
-    if (isset($tempDir
+    if (isset($tempDir)) {
         array_map('unlink', glob($tempDir.'/*'));
         rmdir($tempDir);
     }

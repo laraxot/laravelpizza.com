@@ -6,10 +6,8 @@ namespace Modules\Xot\Tests\Unit\Actions\File;
 
 use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\File\GetComponentsAction;
-use Modules\Xot\Tests\TestCase;
 use Spatie\LaravelData\DataCollection;
 
-uses(TestCase::class);
 
 it('gets and caches components correctly', function (): void {
     $tempDir = sys_get_temp_dir().'/test_comps_'.uniqid();

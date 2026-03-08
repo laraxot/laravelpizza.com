@@ -15,12 +15,12 @@ class DownloadAttachmentPlaceHolder extends XotBasePlaceholder
     protected function setUp(): void
     {
         parent::setUp();
-        // @var mixed label('';
+        $this->label('');
     }
 
     protected function generateContent(): HtmlString
     {
-        $name = // @var mixed getName(;
+        $name = $this->getName();
         $attachment = Attachment::firstWhere('slug', $name);
         Assert::isInstanceOf($attachment, Attachment::class);
 

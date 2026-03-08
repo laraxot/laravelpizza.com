@@ -8,9 +8,7 @@ use Modules\Xot\Actions\ModelClass\CountAction;
 use Modules\Xot\Actions\ModelClass\UpdateCountAction;
 use Modules\Xot\Models\InformationSchemaTable;
 use Modules\Xot\Models\XotBaseModel;
-use Tests\TestCase;
 
-uses(TestCase::class);
 
 test('count actions work', function () {
     // InformationSchemaTable::getModelCount is called via static method

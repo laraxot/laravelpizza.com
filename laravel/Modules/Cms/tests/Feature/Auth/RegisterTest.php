@@ -9,7 +9,7 @@ use Modules\Xot\Tests\TestCase;
 uses(TestCase::class);
 
 // NOTE: Helper functions moved to Modules\Xot\Tests\TestCase for DRY pattern
-// Use // @var mixed createTestUser(
+// Use $this->createTestUser(
 
 describe('Register Page', function () {
     test('register page placeholder', function () {

@@ -38,8 +38,8 @@ class BlockData extends Data implements Wireable
 
     public function __construct(string $type, array $data, ?string $slug = null)
     {
-        // @var mixed type = $type;
-        // @var mixed slug = $slug;
+        $type = $type;
+        $slug = $slug;
 
         // Dynamic Query Resolution
         /** @var array<string, mixed> $query */
@@ -49,7 +49,7 @@ class BlockData extends Data implements Wireable
             $data = array_merge($data, $dynamicData);
         }
 
-        // @var mixed data = $data;
+        $data = $data;
         Assert::string($view = Arr::get($data, 'view', 'ui::empty'), '['.__LINE__.']['.__FILE__.']');
 
         // Verifica che la view esista, con gestione più robusta per i namespace
@@ -66,7 +66,7 @@ class BlockData extends Data implements Wireable
                     $viewFactory = view();
                     if (method_exists($viewFactory, 'addNamespace')) {
                         // Se il metodo esiste, possiamo procedere con logica alternativa
-                        // @var mixed view = $view; // Accetta la view temporaneamente
+                        $view = $view; // Accetta la view temporaneamente
 
                         return;
                     }
@@ -78,10 +78,10 @@ class BlockData extends Data implements Wireable
             throw new \Exception('view not found: '.$view);
         }
 
-        // @var mixed view = $view;
-        // @var mixed livewire = $this->detectLivewire($view;
-        if (// @var mixed livewire
-            // @var mixed livewireComponentName = $this->normalizeComponentName($view;
+        $view = $view;
+        $livewire = $this->detectLivewire($view);
+        if ($livewire
+            $livewireComponentName = $this->normalizeComponentName($view);
         }
     }
 
@@ -109,7 +109,7 @@ class BlockData extends Data implements Wireable
         return str_contains($header, 'new class extends Component')
                || str_contains($header, 'Livewire\Volt\Component')
                || str_contains($header, 'volt(')
-               || str_contains($header, 'state(');
+               || str_contains($header, 'state('));
     }
 
     private function normalizeComponentName(string $view): string

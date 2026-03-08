@@ -20,11 +20,11 @@ class DatabaseConfigFactory extends Factory
     public function definition(): array
     {
         return [
-            'host' => // @var mixed faker->word(
+            'host' => $faker->word(
             'port' => 3306,
-            'database' => 'tenant_' . // @var mixed faker->word(
+            'database' => 'tenant_' . $faker->word(
             'username' => 'tenant_user',
-            'password' => // @var mixed faker->password(
+            'password' => $faker->password(
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',

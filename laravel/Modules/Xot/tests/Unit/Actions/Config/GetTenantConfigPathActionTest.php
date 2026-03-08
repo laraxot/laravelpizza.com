@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Modules\Xot\Actions\Config\GetTenantConfigPathAction;
-use Tests\TestCase;
 
-uses(TestCase::class);
 
 it('delegates to tenant file path action with php filename', function (): void {
     $tenantPathAction = Mockery::mock(GetTenantFilePathAction::class);

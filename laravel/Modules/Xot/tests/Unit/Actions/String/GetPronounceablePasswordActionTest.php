@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit\Actions\String;
 
 use Modules\Xot\Actions\String\GetPronounceablePasswordAction;
-use Modules\Xot\Tests\TestCase;
 
-uses(TestCase::class);
 
 it('generates pronounceable password correctly', function (): void {
     $action = app(GetPronounceablePasswordAction::class);

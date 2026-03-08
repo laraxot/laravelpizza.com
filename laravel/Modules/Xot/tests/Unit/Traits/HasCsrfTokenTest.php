@@ -6,10 +6,8 @@ namespace Modules\Xot\Tests\Unit\Traits;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
-use Modules\Xot\Tests\TestCase;
 use Modules\Xot\Traits\HasCsrfToken;
 
-uses(TestCase::class);
 
 it('sets csrf token on mount', function (): void {
     $token = 'test-token-123';

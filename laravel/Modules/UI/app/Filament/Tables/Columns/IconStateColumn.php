@@ -23,27 +23,27 @@ class IconStateColumn extends IconColumn
     protected function setUp(): void
     {
         parent::setUp();
-        // // @var mixed getStateUsing(fn(; // the column requires a state to be passed to it
+        // $this->getStateUsing(fn()); // the column requires a state to be passed to it
 
-        // @var mixed icon(function (XotStateContract $state
+        $this->icon(function (XotStateContract $state
             return $state->icon();
         });
 
-        // @var mixed color(function (XotStateContract $state
+        $this->color(function (XotStateContract $state
             return $state->color();
         });
 
-        // @var mixed tooltip(function (XotStateContract $state
+        $this->tooltip(function (XotStateContract $state
             return $state->label();
         });
-        // // @var mixed label('aaa';
+        // $this->label('aaa');
 
-        // @var mixed action(
+        $this->action(
             Action::make('change-state')
                 ->schema([
                     Select::make('state')
                         ->options(function (Model&HasStatesContract $record, string $_state): array {
-                            $name = // @var mixed getName(;
+                            $name = $this->getName();
                             $state = $record->getAttribute($name);
                             if (null === $state) {
                                 $defaultStates = Arr::wrap($record->getDefaultStateFor($name));
@@ -88,7 +88,7 @@ class IconStateColumn extends IconColumn
                         ->reactive(),
                     Textarea::make('message')->required(function (Get $get, Model $record): bool {
                         $newState = $get('state');
-                        $name = // @var mixed getName(;
+                        $name = $this->getName();
                         $state = $record->getAttribute($name);
                         if (! $state instanceof State) {
                             return false;
@@ -114,7 +114,7 @@ class IconStateColumn extends IconColumn
                 ])
                 ->fillForm(function (Model $record): array {
                     /** @var Model&HasStatesContract $record */
-                    $name = // @var mixed getName(;
+                    $name = $this->getName();
                     $state = $record->getAttribute($name);
                     if (! $state instanceof State) {
                         return [];
@@ -144,7 +144,7 @@ class IconStateColumn extends IconColumn
                     $label = __('pub_theme::'.$model.'_states.'.$state.'.label');
 
                     /** @var Model&HasStatesContract $record */
-                    $currentState = $record->getAttribute(// @var mixed getName(;
+                    $currentState = $record->getAttribute($getName());
                     if (! $currentState instanceof State) {
                         throw new \Exception('Current state is not a valid State instance');
                     }

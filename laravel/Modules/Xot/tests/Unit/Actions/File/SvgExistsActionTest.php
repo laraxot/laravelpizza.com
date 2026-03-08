@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit\Actions\File;
 
 use Modules\Xot\Actions\File\SvgExistsAction;
-use Modules\Xot\Tests\TestCase;
 
-uses(TestCase::class);
 
 it('verifies svg existence', function (): void {
     // Factory is final, we check with a real instance if possible or just test logic flow

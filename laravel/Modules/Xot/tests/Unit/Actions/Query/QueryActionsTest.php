@@ -6,9 +6,7 @@ namespace Modules\Xot\Tests\Unit\Actions\Query;
 
 use Illuminate\Support\Facades\DB;
 use Modules\Xot\Actions\Query\StartQueryLogAction;
-use Tests\TestCase;
 
-uses(TestCase::class);
 
 test('start query log action works', function () {
     $action = app(StartQueryLogAction::class);

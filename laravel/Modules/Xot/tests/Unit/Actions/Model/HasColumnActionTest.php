@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 use Modules\Xot\Actions\Model\HasColumnAction;
 use Modules\Xot\Models\BaseModel;
-use Modules\Xot\Tests\TestCase;
 
-uses(TestCase::class);
 
 beforeEach(function (): void {
     $action = app(HasColumnAction::class);

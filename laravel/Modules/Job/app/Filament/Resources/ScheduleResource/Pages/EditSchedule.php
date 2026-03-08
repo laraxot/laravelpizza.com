@@ -24,7 +24,7 @@ class EditSchedule extends XotBaseEditRecord
     #[Override]
     protected function getFormSchema(): array
     {
-        $schema = // @var mixed getResource(;
+        $schema = $this->getResource();
         Assert::isArray($schema);
 
         $components = array_values($schema);
@@ -43,6 +43,6 @@ class EditSchedule extends XotBaseEditRecord
 
     // protected function getRedirectUrl(): string
     // {
-    //    return // @var mixed getResource(;
+    //    return $this->getResource();
     // }
 }

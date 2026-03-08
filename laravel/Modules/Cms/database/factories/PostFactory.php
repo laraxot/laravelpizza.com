@@ -22,15 +22,15 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => // @var mixed faker->sentence(
-            'slug' => // @var mixed faker->slug(
-            'excerpt' => // @var mixed faker->sentence(
-            'content' => // @var mixed faker->paragraphs(5, true
+            'title' => $faker->sentence(
+            'slug' => $faker->slug(
+            'excerpt' => $faker->sentence(
+            'content' => $faker->paragraphs(5, true
             'status' => 'published',
             'view_count' => 0,
-            'meta_title' => // @var mixed faker->sentence(
-            'meta_description' => // @var mixed faker->sentence(
-            'meta_keywords' => // @var mixed faker->words(3, true
+            'meta_title' => $faker->sentence(
+            'meta_description' => $faker->sentence(
+            'meta_keywords' => $faker->words(3, true
         ];
     }
 
@@ -39,7 +39,7 @@ class PostFactory extends Factory
      */
     public function published(): static
     {
-        return // @var mixed state(fn (array $attributes
+        return $this->state(fn (array $attributes
             'status' => 'published',
         ]);
     }
@@ -49,7 +49,7 @@ class PostFactory extends Factory
      */
     public function draft(): static
     {
-        return // @var mixed state(fn (array $attributes
+        return $this->state(fn (array $attributes
             'status' => 'draft',
         ]);
     }
@@ -59,12 +59,12 @@ class PostFactory extends Factory
      */
     public function withFeaturedImage(): static
     {
-        return // @var mixed afterCreating(function (Post $post
+        return $this->afterCreating(function (Post $post
             $post->featuredImage()->create([
                 'name' => $post->title.' Image',
-                'path' => '/images/'.// @var mixed faker->word(
+                'path' => '/images/'.$faker->word(
                 'alt' => $post->title,
-                'caption' => // @var mixed faker->sentence(
+                'caption' => $faker->sentence(
             ]);
         });
     }
@@ -74,10 +74,10 @@ class PostFactory extends Factory
      */
     public function withCategories(): static
     {
-        return // @var mixed afterCreating(function (Post $post
+        return $this->afterCreating(function (Post $post
             $post->categories()->create([
-                'name' => // @var mixed faker->word(
-                'slug' => // @var mixed faker->slug(
+                'name' => $faker->word(
+                'slug' => $faker->slug(
             ]);
         });
     }
@@ -87,10 +87,10 @@ class PostFactory extends Factory
      */
     public function withTags(): static
     {
-        return // @var mixed afterCreating(function (Post $post
+        return $this->afterCreating(function (Post $post
             $post->tags()->create([
-                'name' => // @var mixed faker->word(
-                'slug' => // @var mixed faker->slug(
+                'name' => $faker->word(
+                'slug' => $faker->slug(
             ]);
         });
     }

@@ -6,9 +6,7 @@ namespace Modules\Xot\Tests\Unit\Actions\File;
 
 use Modules\Xot\Actions\File\GetViewNameSpacePathAction;
 use Modules\Xot\Datas\XotData;
-use Modules\Xot\Tests\TestCase;
 
-uses(TestCase::class);
 
 it('gets view namespace path from theme fallback correctly', function (): void {
     $ns = 'pub_theme';

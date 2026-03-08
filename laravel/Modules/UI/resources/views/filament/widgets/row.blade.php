@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 ?>
 @php
-    $columns = // @var mixed getColumns(;
+    $columns = $this->getColumns();
 @endphp
 
 <x-filament-widgets::widget class="fi-wi-stats-overview">
     <div
     {{--
-        @if ($pollingInterval = // @var mixed getPollingInterval(
+        @if ($pollingInterval = $this->getPollingInterval(
             wire:poll.{{ $pollingInterval }}
         @endif
     --}}
@@ -22,7 +22,7 @@ declare(strict_types=1);
             'md:grid-cols-2 xl:grid-cols-4' => $columns === 4,
         ])
     >
-        @foreach (// @var mixed widgets as $k=>$v
+        @foreach ($widgets as $k=>$v
             @livewire($v['class'], $v['properties'])
         @endforeach
     </div>

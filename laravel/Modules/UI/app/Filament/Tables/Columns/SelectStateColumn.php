@@ -15,9 +15,9 @@ class SelectStateColumn extends SelectColumn
     protected function setUp(): void
     {
         parent::setUp();
-        //  // @var mixed selectablePlaceholder(false;
-        // @var mixed options(function (Model&HasStatesContract $record, mixed $state
-            $name = // @var mixed getName(;
+        //  $this->selectablePlaceholder(false);
+        $this->options(function (Model&HasStatesContract $record, mixed $state
+            $name = $this->getName();
             if (null === $state) {
                 // Record implements HasStatesContract which provides getDefaultStateFor()
                 $defaultStates = $record->getDefaultStateFor($name);
@@ -94,7 +94,7 @@ class SelectStateColumn extends SelectColumn
             return $combined ? $combined : [];
         });
 
-        // @var mixed beforeStateUpdated(function (Model&HasStatesContract $record, mixed $stateRaw
+        $this->beforeStateUpdated(function (Model&HasStatesContract $record, mixed $stateRaw
             // Type narrowing per $state: deve essere State|string
             if (! is_string($stateRaw) && ! ($stateRaw instanceof State)) {
                 return;

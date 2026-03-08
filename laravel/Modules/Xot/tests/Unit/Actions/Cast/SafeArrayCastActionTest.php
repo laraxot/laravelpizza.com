@@ -6,9 +6,7 @@ namespace Modules\Xot\Tests\Unit\Actions\Cast;
 
 use Illuminate\Support\Collection;
 use Modules\Xot\Actions\Cast\SafeArrayCastAction;
-use Modules\Xot\Tests\TestCase;
 
-uses(TestCase::class);
 
 it('casts various values to array correctly', function (): void {
     $action = app(SafeArrayCastAction::class);

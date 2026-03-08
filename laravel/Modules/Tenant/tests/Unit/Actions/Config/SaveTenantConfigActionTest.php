@@ -13,7 +13,7 @@ use Modules\Xot\Actions\Arr\SaveArrayAction;
 uses(TestCase::class);
 
 it('saves tenant config by merging with existing data', function (): void {
-    // @var mixed mock(GetTenantFilePathAction::class
+    $this->mock(GetTenantFilePathAction::class
         ->shouldReceive('execute')
         ->with('database.php')
         ->andReturn('/path/to/tenant/database.php');
@@ -26,7 +26,7 @@ it('saves tenant config by merging with existing data', function (): void {
         ->with('/path/to/tenant/database.php')
         ->andReturn(['connections' => ['mysql' => ['host' => 'localhost']]]);
 
-    // @var mixed mock(SaveArrayAction::class
+    $this->mock(SaveArrayAction::class
         ->shouldReceive('execute')
         ->withArgs(function ($data, $filename) {
             return $filename === '/path/to/tenant/database.php' &&
@@ -40,7 +40,7 @@ it('saves tenant config by merging with existing data', function (): void {
 });
 
 it('saves tenant config when file does not exist', function (): void {
-    // @var mixed mock(GetTenantFilePathAction::class
+    $this->mock(GetTenantFilePathAction::class
         ->shouldReceive('execute')
         ->with('app.php')
         ->andReturn('/path/to/tenant/app.php');
@@ -49,7 +49,7 @@ it('saves tenant config when file does not exist', function (): void {
         ->with('/path/to/tenant/app.php')
         ->andReturn(false);
 
-    // @var mixed mock(SaveArrayAction::class
+    $this->mock(SaveArrayAction::class
         ->shouldReceive('execute')
         ->with(['name' => 'Test App'], '/path/to/tenant/app.php')
         ->once();

@@ -10,9 +10,7 @@ use Modules\Media\Actions\GetAttachmentsSchemaAction;
 use Modules\Xot\Actions\GetTransKeyAction;
 use Modules\Xot\Actions\ModelClass\CountAction;
 use Modules\Xot\Tests\Fixtures\Filament\Resources\ProbeResource;
-use Tests\TestCase;
 
-uses(TestCase::class);
 
 it('covers model resolution and model cache', function (): void {
     ProbeResource::resetModelCache();

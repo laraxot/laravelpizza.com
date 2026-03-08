@@ -11,8 +11,8 @@ beforeEach(function (): void {
 });
 
 afterEach(function (): void {
-    if (isset($tempDir
-        foreach (glob($tempDir.'/*'
+    if (isset($tempDir)) {
+        foreach (glob($tempDir.'/*') as $f) {
             unlink($f);
         }
         rmdir($tempDir);

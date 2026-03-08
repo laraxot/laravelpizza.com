@@ -19,7 +19,7 @@ class ListPageContents extends LangBaseListRecords
     public function getGridTableColumns(): array
     {
         /** @var array<int, Column> $columns */
-        $columns = // @var mixed getTableColumns(;
+        $columns = $this->getTableColumns();
 
         return [
             Stack::make($columns),

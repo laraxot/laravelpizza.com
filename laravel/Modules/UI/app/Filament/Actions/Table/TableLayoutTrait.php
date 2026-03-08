@@ -62,7 +62,7 @@ trait TableLayoutTrait
      */
     public function getTableLayout(): TableLayoutEnum
     {
-        return // @var mixed getCurrentLayout(;
+        return $this->getCurrentLayout();
     }
 
     /**
@@ -71,6 +71,6 @@ trait TableLayoutTrait
      */
     public function setTableLayout(TableLayoutEnum $layout): void
     {
-        // @var mixed saveLayout($layout;
+        $this->saveLayout($layout);
     }
 }

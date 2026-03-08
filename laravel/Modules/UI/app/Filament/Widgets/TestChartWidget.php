@@ -30,12 +30,12 @@ final class TestChartWidget extends ChartWidget
 
     protected function getData(): array
     {
-        // @var mixed maxHeight = $this->max_height;
+        $maxHeight = $this->max_height;
 
         return [
             'datasets' => [
                 [
-                    'label' => 'Blog posts created '.// @var mixed qid,
+                    'label' => 'Blog posts created '.$qid,
                     'data' => [0, 10, 5, 2, 21, 32, 45, 74, 65, 45, 77, 89],
                     'backgroundColor' => '#36A2EB',
                     'borderColor' => '#9BD0F5',
@@ -47,7 +47,7 @@ final class TestChartWidget extends ChartWidget
 
     protected function getType(): string
     {
-        return // @var mixed type;
+        return $type;
     }
 
     protected function getOptions(): RawJs

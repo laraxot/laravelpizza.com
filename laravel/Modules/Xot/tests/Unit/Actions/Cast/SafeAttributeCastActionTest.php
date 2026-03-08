@@ -6,9 +6,7 @@ namespace Modules\Xot\Tests\Unit\Actions\Cast;
 
 use Modules\Activity\Models\Activity;
 use Modules\Xot\Actions\Cast\SafeAttributeCastAction;
-use Modules\Xot\Tests\TestCase;
 
-uses(TestCase::class);
 
 it('manages eloquent attributes safely', function (): void {
     $model = \Mockery::mock(Activity::class);

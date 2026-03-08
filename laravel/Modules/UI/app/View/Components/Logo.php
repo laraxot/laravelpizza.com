@@ -28,7 +28,7 @@ final class Logo extends Component
         /**
          * @phpstan-var view-string
          */
-        $view = app(GetViewAction::class)->execute(// @var mixed tpl;
+        $view = app(GetViewAction::class)->execute($tpl);
 
         return view($view);
     }

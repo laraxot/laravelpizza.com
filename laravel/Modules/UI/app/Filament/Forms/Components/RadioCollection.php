@@ -26,7 +26,7 @@ final class RadioCollection extends Field
      */
     public function options(\Closure|Collection|null $options): static
     {
-        // @var mixed options = $options;
+        $options = $options;
 
         return $this;
     }
@@ -36,7 +36,7 @@ final class RadioCollection extends Field
      */
     public function itemView(string $view): static
     {
-        // @var mixed itemView = $view;
+        $itemView = $view;
 
         return $this;
     }
@@ -46,7 +46,7 @@ final class RadioCollection extends Field
      */
     public function valueKey(string $key): static
     {
-        // @var mixed valueKey = $key;
+        $valueKey = $key;
 
         return $this;
     }
@@ -58,7 +58,7 @@ final class RadioCollection extends Field
      */
     public function getOptions(): Collection
     {
-        $optionsRaw = // @var mixed evaluate($this->options;
+        $optionsRaw = $this->evaluate($this->options);
 
         if ($optionsRaw instanceof Collection) {
             return $optionsRaw;
@@ -72,7 +72,7 @@ final class RadioCollection extends Field
      */
     public function getItemView(): string
     {
-        return // @var mixed itemView ?? 'ui::filament.forms.components.radio-collection-item';
+        return $itemView ?? 'ui::filament.forms.components.radio-collection-item';
     }
 
     /**
@@ -80,7 +80,7 @@ final class RadioCollection extends Field
      */
     public function getValueKey(): string
     {
-        return // @var mixed valueKey;
+        return $valueKey;
     }
 
     /**
@@ -88,11 +88,11 @@ final class RadioCollection extends Field
      */
     public function isOptionSelected(mixed $option): bool
     {
-        $state = SafeStringCastAction::cast(// @var mixed getState(;
+        $state = SafeStringCastAction::cast($getState());
         $currentValue = (string) $state;
 
         // PHPStan L10: data_get restituisce mixed, SafeStringCastAction accetta mixed
-        $optionData = data_get($option, // @var mixed getValueKey(;
+        $optionData = data_get($option, $getValueKey());
         $optionValue = SafeStringCastAction::cast($optionData);
 
         return $currentValue === $optionValue;

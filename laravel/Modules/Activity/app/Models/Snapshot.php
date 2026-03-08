@@ -58,7 +58,7 @@ class Snapshot extends SpatieSnapshot
             return is_string($default) ? $default : 'mysql';
         }
 
-        return // @var mixed connection;
+        return $connection;
     }
 
     /** @var list<string> */

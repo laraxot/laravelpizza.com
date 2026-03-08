@@ -6,7 +6,6 @@ namespace Modules\Cms\Tests\Unit\Http\Volt\Password;
 
 use Livewire\Volt\Component as VoltComponent;
 use Modules\Cms\Http\Volt\Password\ResetComponent;
-use ReflectionClass;
 
 uses(\Modules\Cms\Tests\TestCase::class);
 
@@ -31,7 +30,7 @@ describe('Password ResetComponent', function (): void {
     });
 
     test('send reset password link method returns void', function (): void {
-        $reflection = new ReflectionClass(ResetComponent::class);
+        $reflection = new \ReflectionClass(ResetComponent::class);
         $method = $reflection->getMethod('sendResetPasswordLink');
         $returnType = $method->getReturnType();
 

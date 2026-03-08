@@ -29,25 +29,25 @@ class QueueListenWidget extends Widget
 
     public function begin(): void
     {
-        // @var mixed beginProcess(;
+        $this->beginProcess();
     }
 
     public function beginProcess(): void
     {
-        // @var mixed time = '';
+        $time = '';
         $process = Process::path(base_path())->start('php artisan queue:listen');
         while ($process->running()) {
             // ...
-            // @var mixed stream(
+            $this->stream(
                 to: 'count',
-                content: // @var mixed time,
+                content: $time,
                 replace: true,
             );
             // Pause for 1 second between numbers...
             sleep(3);
             // se no troppe richieste
 
-            // @var mixed time .= $process->latestOutput(;
+            $time .= $process->latestOutput();
         }
 
         $process->wait();
@@ -55,7 +55,7 @@ class QueueListenWidget extends Widget
 
     public function beginStream(): void
     {
-        // @var mixed run = ! $this->run;
+        $run = ! $this->run;
         // $output = new BufferedOutput();
         /*
          * $output = new class() extends StreamOutput {
@@ -93,11 +93,11 @@ class QueueListenWidget extends Widget
         // dddx($output);
         // dddx($output->fetch());
         /*
-         * while (// @var mixed run
+         * while ($run
          * // Stream the current count to the browser...
-         * // @var mixed stream(
+         * $this->stream(
          * to: 'count',
-         * content: // @var mixed time,
+         * content: $time,
          * replace: true,
          * );
          *
@@ -105,8 +105,8 @@ class QueueListenWidget extends Widget
          * sleep(1);
          *
          * // Decrement the counter...
-         * // // @var mixed time = (string;
-         * // @var mixed time = $output->fetch(;
+         * // $time = (string);
+         * $time = $output->fetch();
          * }
          */
     }

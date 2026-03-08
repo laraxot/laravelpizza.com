@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
-use Modules\Xot\Tests\TestCase;
 
-uses(TestCase::class);
 
 beforeEach(function () {
     $testSchemaPath = storage_path('tests/schema.json');

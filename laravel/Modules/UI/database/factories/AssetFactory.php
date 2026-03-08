@@ -15,9 +15,9 @@ class AssetFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => // @var mixed faker->word(
+            'name' => $faker->word(
             'type' => 'js',
-            'path' => '/assets/js/'.// @var mixed faker->word(
+            'path' => '/assets/js/'.$faker->word(
             'theme_id' => Theme::factory(),
             'is_minified' => false,
             'is_compressed' => false,

@@ -10,9 +10,7 @@ use Modules\Xot\Actions\File\FixPathAction;
 use Modules\Xot\Actions\File\GetViewNameSpacePathAction;
 use Modules\Xot\Actions\File\ViewPathAction;
 use Nwidart\Modules\Facades\Module;
-use Tests\TestCase;
 
-uses(TestCase::class);
 
 test('fix path action works', function () {
     $action = app(FixPathAction::class);
@@ -23,7 +21,7 @@ test('fix path action works', function () {
 });
 
 test('view path action works', function () {
-    $this->mock(GetViewNameSpacePathAction::class
+    $this->mock(GetViewNameSpacePathAction::class)
         ->shouldReceive('execute')
         ->with('test_ns')
         ->andReturn('/view/path');

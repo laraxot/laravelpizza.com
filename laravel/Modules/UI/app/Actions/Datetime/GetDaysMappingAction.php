@@ -18,11 +18,11 @@ final class GetDaysMappingAction
      */
     public function execute(): array
     {
-        $weekdays = // @var mixed getWeekdays(;
+        $weekdays = $this->getWeekdays();
         $result = [];
 
         foreach ($weekdays as $day) {
-            $mapping = // @var mixed mapDayToLabel($day;
+            $mapping = $this->mapDayToLabel($day);
             $result = array_merge($result, $mapping);
         }
 
@@ -53,7 +53,7 @@ final class GetDaysMappingAction
      */
     private function mapDayToLabel(int $day): array
     {
-        $carbon = // @var mixed createCarbonInstance(;
+        $carbon = $this->createCarbonInstance();
         $dayDate = $carbon->startOfWeek()->addDays($day - 1);
 
         $dayKey = strtolower($dayDate->format('l'));

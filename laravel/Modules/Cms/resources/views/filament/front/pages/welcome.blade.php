@@ -5,7 +5,7 @@ declare(strict_types=1);
 ?>
 <div>
     {{-- <h1>Welcome!</h1> --}}
-    {{-- // @var mixed articlesTable --}}
+    {{-- $articlesTable --}}
 
-    {{ // @var mixed table }}
+    {{ $table }}
 </div>

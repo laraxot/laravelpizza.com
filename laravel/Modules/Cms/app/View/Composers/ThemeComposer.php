@@ -145,7 +145,7 @@ class ThemeComposer
 
     public function getUrlPage(string $slug): string
     {
-        $page = // @var mixed getPageModel($slug;
+        $page = $this->getPageModel($slug);
         if ($page instanceof Page) {
             return '/'.app()->getLocale().'/'.$slug;
         }

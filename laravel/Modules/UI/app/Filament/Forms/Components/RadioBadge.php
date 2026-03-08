@@ -23,14 +23,14 @@ class RadioBadge extends Radio
      */
     public function getEnumValue(string $value): ?\BackedEnum
     {
-        if (! \is_string(// @var mixed options
+        if (! \is_string($options
             return null;
         }
-        if (! enum_exists(// @var mixed options
+        if (! enum_exists($options
             return null;
         }
         /** @var class-string<\UnitEnum> $enumClass */
-        $enumClass = // @var mixed options;
+        $enumClass = $options;
 
         // Verifica che sia un BackedEnum
         if (! is_subclass_of($enumClass, \BackedEnum::class)) {
@@ -48,17 +48,17 @@ class RadioBadge extends Radio
 
     public function getColorForOption(string $value): string
     {
-        $enum = // @var mixed getEnumValue($value;
+        $enum = $this->getEnumValue($value);
         if ($enum instanceof HasColor) {
             $color = $enum->getColor();
             if (null === $color) {
-                return // @var mixed selectedColor;
+                return $selectedColor;
             }
 
             if (is_array($color)) {
                 $first = reset($color);
 
-                return is_string($first) && '' !== $first ? $first : // @var mixed selectedColor;
+                return is_string($first) && '' !== $first ? $first : $selectedColor;
             }
 
             // PHPStan L10: $color è già verificato come non-array e non-null, quindi è string
@@ -66,15 +66,15 @@ class RadioBadge extends Radio
                 return $color;
             }
 
-            return // @var mixed selectedColor;
+            return $selectedColor;
         }
 
-        return // @var mixed selectedColor;
+        return $selectedColor;
     }
 
     public function getIconForOption(string $value): ?string
     {
-        $enum = // @var mixed getEnumValue($value;
+        $enum = $this->getEnumValue($value);
         if (! $enum instanceof HasIcon) {
             return null;
         }
@@ -100,14 +100,14 @@ class RadioBadge extends Radio
 
     public function defaultColor(string $color): static
     {
-        // @var mixed defaultColor = $color;
+        $defaultColor = $color;
 
         return $this;
     }
 
     public function selectedColor(string $color): static
     {
-        // @var mixed selectedColor = $color;
+        $selectedColor = $color;
 
         return $this;
     }

@@ -35,16 +35,16 @@ class Home extends XotBasePage
 
     public function mount(): void
     {
-        [// @var mixed containers, $this->items] = params2ContainerItem(;
-        // @var mixed initView(;
+        [$containers, $this->items] = params2ContainerItem();
+        $this->initView();
     }
 
     public function getViewData(): array
     {
         $data = [];
-        if ([] !== // @var mixed containers
-            Assert::string($container_last = last(// @var mixed containers;
-            $item_last = last(// @var mixed items;
+        if ([] !== $containers
+            Assert::string($container_last = last($containers));
+            $item_last = last($items);
 
             $container_last_singular = Str::singular($container_last);
             $container_last_model = Relation::getMorphedModel($container_last_singular);
@@ -83,7 +83,7 @@ class Home extends XotBasePage
      * ) {
      * $containers = [];
      * $items = [];
-     * for ($i = 0; $i < 4; ++$i) {
+     * for ($i = 0); $i < 4; ++$i) {
      * if ($container_curr = ${'container'.$i}) {
      * $containers[$i] = $container_curr;
      * }
@@ -95,8 +95,8 @@ class Home extends XotBasePage
      */
     public function initView(): void
     {
-        $containers = // @var mixed containers;
-        $items = // @var mixed items;
+        $containers = $containers;
+        $items = $items;
         $view = '';
         if (\count($containers) === \count($items)) {
             $view = 'show';
@@ -108,7 +108,7 @@ class Home extends XotBasePage
             $view = 'home';
         }
 
-        // @var mixed view_type = $view;
+        $view_type = $view;
 
         $views = [];
 
@@ -133,7 +133,7 @@ class Home extends XotBasePage
         $view_work = Arr::first($views, view()->exists(...));
         Assert::string($view_work, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
-        // @var mixed view = $view_work;
+        $view = $view_work;
     }
 
     public function url(string $name, array $parameters = []): string

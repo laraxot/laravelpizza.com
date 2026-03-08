@@ -38,7 +38,7 @@ class RadioCardSelector extends XotBaseField
      */
     public function cards(array|\Closure $cards): static
     {
-        // @var mixed cards = $cards;
+        $cards = $cards;
 
         return $this;
     }
@@ -48,7 +48,7 @@ class RadioCardSelector extends XotBaseField
      */
     public function sectionTitle(?string $title): static
     {
-        // @var mixed sectionTitle = $title;
+        $sectionTitle = $title;
 
         return $this;
     }
@@ -58,7 +58,7 @@ class RadioCardSelector extends XotBaseField
      */
     public function sectionSubtitle(?string $subtitle): static
     {
-        // @var mixed sectionSubtitle = $subtitle;
+        $sectionSubtitle = $subtitle;
 
         return $this;
     }
@@ -68,7 +68,7 @@ class RadioCardSelector extends XotBaseField
      */
     public function populatesField(string $fieldName): static
     {
-        // @var mixed targetFieldName = $fieldName;
+        $targetFieldName = $fieldName;
 
         return $this;
     }
@@ -78,7 +78,7 @@ class RadioCardSelector extends XotBaseField
      */
     public function emptyStateTitle(?string $title): static
     {
-        // @var mixed emptyStateTitle = $title;
+        $emptyStateTitle = $title;
 
         return $this;
     }
@@ -88,7 +88,7 @@ class RadioCardSelector extends XotBaseField
      */
     public function emptyStateDescription(?string $description): static
     {
-        // @var mixed emptyStateDesc = $description;
+        $emptyStateDesc = $description;
 
         return $this;
     }
@@ -98,7 +98,7 @@ class RadioCardSelector extends XotBaseField
      */
     public function getCards(): array
     {
-        $result = // @var mixed evaluate($this->cards;
+        $result = $this->evaluate($this->cards);
 
         return \is_array($result) ? $result : [];
     }
@@ -108,7 +108,7 @@ class RadioCardSelector extends XotBaseField
      */
     public function getSectionTitle(): ?string
     {
-        return // @var mixed sectionTitle;
+        return $sectionTitle;
     }
 
     /**
@@ -116,7 +116,7 @@ class RadioCardSelector extends XotBaseField
      */
     public function getSectionSubtitle(): ?string
     {
-        return // @var mixed sectionSubtitle;
+        return $sectionSubtitle;
     }
 
     /**
@@ -124,7 +124,7 @@ class RadioCardSelector extends XotBaseField
      */
     public function getTargetFieldName(): ?string
     {
-        return // @var mixed targetFieldName;
+        return $targetFieldName;
     }
 
     /**
@@ -132,7 +132,7 @@ class RadioCardSelector extends XotBaseField
      */
     public function getEmptyStateTitle(): ?string
     {
-        return // @var mixed emptyStateTitle;
+        return $emptyStateTitle;
     }
 
     /**
@@ -140,6 +140,6 @@ class RadioCardSelector extends XotBaseField
      */
     public function getEmptyStateDescription(): ?string
     {
-        return // @var mixed emptyStateDesc;
+        return $emptyStateDesc;
     }
 }

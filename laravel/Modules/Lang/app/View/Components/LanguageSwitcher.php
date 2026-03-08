@@ -25,7 +25,7 @@ class LanguageSwitcher extends Component
      */
     public function __construct()
     {
-        // @var mixed widget = new LanguageSwitcherWidget(;
+        $widget = new LanguageSwitcherWidget();
     }
 
     /**
@@ -43,7 +43,7 @@ class LanguageSwitcher extends Component
         // Ottiene i dati pubblici dal widget
         $viewData = [
             'current_locale' => app()->getLocale(),
-            'available_locales' => // @var mixed widget->getAvailableLocales(
+            'available_locales' => $widget->getAvailableLocales(
             'widget_id' => 'language-switcher-'.uniqid(),
         ];
 

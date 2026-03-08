@@ -16,7 +16,7 @@ test('domain model can be instantiated', function (): void {
 
 test('get rows method works correctly', function (): void {
     // Mock della Action GetDomainsArrayAction
-    // @var mixed mock(GetDomainsArrayAction::class, function ($mock
+    $this->mock(GetDomainsArrayAction::class, function ($mock
         $mock
             ->shouldReceive('execute')
             ->once()

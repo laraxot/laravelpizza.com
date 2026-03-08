@@ -15,9 +15,9 @@ class CollectionFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => // @var mixed faker->words(3, true
-            'description' => // @var mixed faker->sentence(
-            'type' => // @var mixed faker->randomElement(['block', 'section', 'layout']
+            'name' => $faker->words(3, true
+            'description' => $faker->sentence(
+            'type' => $faker->randomElement(['block', 'section', 'layout']
             'theme_ID' => Theme::factory(),
             'is_active' => true,
             'order' => 0,

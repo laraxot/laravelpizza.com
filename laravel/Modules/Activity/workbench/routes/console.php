@@ -14,5 +14,5 @@ declare(strict_types=1);
 */
 
 // Artisan::command('inspire', function () {
-//     // @var mixed comment(Inspiring::quote(;
+//     $this->comment(Inspiring::quote());
 // })->purpose('Display an inspiring quote');

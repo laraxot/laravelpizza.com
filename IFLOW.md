@@ -328,6 +328,26 @@ Ogni contributo che:
 - **PRIMA** del codice: aggiornare docs
 - **DOPO** il codice: verificare e migliorare docs
 
+### 🤖 Ralph Loop - Autonomous AI Agent Loop
+Ralph Loop è un **autonomous AI agent loop** che esegue iterazioni ripetute di sviluppo software fino al completamento di tutti gli item PRD (Product Requirements Document). Ogni iterazione è un'istanza pulita con contesto fresco.
+
+**Workflows con Ralph:**
+1. **Crea PRD**: Usa skill `/prd` per generare Product Requirements Document
+2. **Converti in JSON**: Usa skill `/ralph` per convertire PRD in `prd.json`
+3. **Esegui Ralph Loop**: `./scripts/ralph/ralph.sh [max_iterations]`
+4. **Verifica Progresso**: `cat prd.json | jq '.userStories[] | {id, title, passes}'`
+
+**File Chiave:**
+- `scripts/ralph/ralph.sh` - Loop autonomo AI
+- `scripts/ralph/prompt.md` - Template prompt per Amp
+- `scripts/ralph/CLAUDE.md` - Template prompt per Claude Code
+- `prd.json` - User stories con stato `passes`
+- `skills/prd/` - Skill per generazione PRD
+- `skills/ralph/` - Skill per conversione PRD
+
+**PROMEMORIA PER SEMPRE:**
+> 'Usa Ralph Loop per sviluppo autonomo. Crea PRD, esegui loop, verifica progresso!'
+
 ---
 
 ## 🍕 Perché il nome "LaravelPizza"?

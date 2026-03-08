@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
-use Modules\Xot\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
 

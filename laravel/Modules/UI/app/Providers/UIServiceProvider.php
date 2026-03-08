@@ -30,24 +30,10 @@ class UIServiceProvider extends XotBaseServiceProvider
     protected string $module_ns = __NAMESPACE__;
 
     /**
-     * Boot del service provider.
-     *
-     * Configura i componenti Blade e altre funzionalità del modulo UI.
-     *
-     * @return void
-     */
-
-    /**
-     * Registra i servizi del provider.
-     *
-     * @return void
-     */
-
-    /**
      * Restituisce il percorso delle viste dei componenti UI.
      */
     public function getComponentViewPath(): string
     {
-        return app(GetModulePathByGeneratorAction::class)->execute(); // @var mixed name, 'component-view';
+        return app(GetModulePathByGeneratorAction::class)->execute($this->name, 'resources/views');
     }
 }

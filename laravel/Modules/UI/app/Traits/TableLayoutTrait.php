@@ -31,13 +31,13 @@ trait TableLayoutTrait
 
     public function refreshTable(): void
     {
-        // @var mixed dispatch('$refresh';
-        // @var mixed resetTable(;
+        $this->dispatch('$refresh');
+        $this->resetTable();
     }
 
     public function resetTable(): void
     {
         // Implementazione predefinita - le classi che usano questo trait dovrebbero sovrascrivere questo metodo
-        // @var mixed dispatch('reset-table';
+        $this->dispatch('reset-table');
     }
 }

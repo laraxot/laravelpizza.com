@@ -29,8 +29,8 @@ class SectionFactory extends Factory
     public function definition(): array
     {
         $name = [
-            'it' => // @var mixed faker->words(2, true
-            'en' => // @var mixed faker->words(2, true
+            'it' => $faker->words(2, true
+            'en' => $faker->words(2, true
         ];
         Assert::string($name_en = $name['en'], __FILE__.':'.__LINE__.' - '.class_basename(self::class));
         $slug = Str::slug($name_en);

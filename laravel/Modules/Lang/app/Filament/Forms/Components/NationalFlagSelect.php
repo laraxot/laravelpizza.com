@@ -23,12 +23,12 @@ class NationalFlagSelect extends Select
     {
         parent::setUp();
 
-        // @var mixed searchable(
+        $this->searchable(
             ->allowHtml()
             ->optionsLimit(300)
             ->native(false)
-            ->options(// @var mixed getCountryOptions(...
-            ->getSearchResultsUsing(// @var mixed getFilteredCountryOptions(...;
+            ->options($getCountryOptions(...
+            ->getSearchResultsUsing($getFilteredCountryOptions(...));
     }
 
     /**
@@ -82,7 +82,7 @@ class NationalFlagSelect extends Select
     protected function getFilteredCountryOptions(string $search): array
     {
         if (empty(trim($search))) {
-            return // @var mixed getCountryOptions(;
+            return $this->getCountryOptions();
         }
 
         $countries = countries();

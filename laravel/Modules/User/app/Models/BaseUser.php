@@ -10,8 +10,6 @@ use Filament\Panel;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -19,47 +17,45 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 use Laravel\Passport\HasApiTokens;
 use Modules\User\Database\Factories\UserFactory;
-use Modules\User\Models\Traits\HasRoles as UserHasRoles;
+use Modules\User\Models\Traits\HasModules;
 use Modules\User\Models\Traits\HasSocialite;
 use Modules\User\Models\Traits\HasTeams;
 use Modules\User\Models\Traits\HasTenants;
-use Modules\User\Models\Traits\HasModules;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
-use Spatie\Permission\Traits\HasRoles;
-use Webmozart\Assert\Assert;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\Permission\Traits\HasRoles;
 
 /**
  * Modules\User\Models\BaseUser.
  *
- * @property int                                                        $id
- * @property string|null                                               $handle
- * @property string|null                                               $first_name
- * @property string|null                                               $last_name
- * @property string|null                                               $email
- * @property \DateTime|null                                            $email_verified_at
- * @property string|null                                               $password
- * @property string|null                                               $remember_token
- * @property \Illuminate\Support\Carbon|null                            $created_at
- * @property \Illuminate\Support\Carbon|null                            $updated_at
- * @property string|null                                               $created_by
- * @property string|null                                               $updated_by
- * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
- * @property-read int|null                                              $notifications_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\User\Models\Role[] $roles
- * @property-read int|null                                              $roles_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\User\Models\Permission[] $permissions
- * @property-read int|null                                              $permissions_count
+ * @property int                                                                                                       $id
+ * @property string|null                                                                                               $handle
+ * @property string|null                                                                                               $first_name
+ * @property string|null                                                                                               $last_name
+ * @property string|null                                                                                               $email
+ * @property \DateTime|null                                                                                            $email_verified_at
+ * @property string|null                                                                                               $password
+ * @property string|null                                                                                               $remember_token
+ * @property \Illuminate\Support\Carbon|null                                                                           $created_at
+ * @property \Illuminate\Support\Carbon|null                                                                           $updated_at
+ * @property string|null                                                                                               $created_by
+ * @property string|null                                                                                               $updated_by
+ * @property \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
+ * @property int|null                                                                                                  $notifications_count
+ * @property \Illuminate\Database\Eloquent\Collection|Role[]                                                           $roles
+ * @property int|null                                                                                                  $roles_count
+ * @property \Illuminate\Database\Eloquent\Collection|Permission[]                                                     $permissions
+ * @property int|null                                                                                                  $permissions_count
  *
  * @method static \Modules\User\Database\Factories\UserFactory factory($count = null, $state = [])
- * @method static Builder|BaseUser newModelQuery()
- * @method static Builder|BaseUser newQuery()
- * @method static Builder|BaseUser query()
- * @method static Builder|BaseUser role($roles, $guard = null)
- * @method static Builder|BaseUser permission($permissions)
+ * @method static Builder|BaseUser                             newModelQuery()
+ * @method static Builder|BaseUser                             newQuery()
+ * @method static Builder|BaseUser                             query()
+ * @method static Builder|BaseUser                             role($roles, $guard = null)
+ * @method static Builder|BaseUser                             permission($permissions)
  *
  * @mixin \Eloquent
  */
@@ -121,7 +117,7 @@ class BaseUser extends Authenticatable implements FilamentUser, HasName, UserCon
 
     public function getProviderName(): string
     {
-        return (string) ($this->getAttribute('provider'));
+        return (string) $this->getAttribute('provider');
     }
 
     public function canAccessFilament(?Panel $panel = null): bool
@@ -139,8 +135,8 @@ class BaseUser extends Authenticatable implements FilamentUser, HasName, UserCon
      */
     public function getFilamentName(): string
     {
-        $name = (string) ($this->getAttribute('name'));
-        $email = (string) ($this->getAttribute('email'));
+        $name = (string) $this->getAttribute('name');
+        $email = (string) $this->getAttribute('email');
 
         if (! empty($name)) {
             return $name;

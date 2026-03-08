@@ -62,7 +62,7 @@ class Themes extends XotBasePage
                 ];
             }
         }
-        // @var mixed themes = $data;
+        $themes = $data;
 
         return ['data' => $data];
     }

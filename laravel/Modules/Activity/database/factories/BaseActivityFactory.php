@@ -27,19 +27,19 @@ class BaseActivityFactory extends Factory
     public function definition(): array
     {
         return [
-            'log_name' => // @var mixed faker->randomElement(['default', 'auth', 'user', 'system']
-            'description' => // @var mixed faker->sentence(
-            'subject_type' => // @var mixed faker->randomElement(['Modules\User\Models\User', 'Modules\<nome progetto>\Models\Appointment']
-            'subject_id' => // @var mixed faker->numberBetween(1, 1000
-            'causer_type' => // @var mixed faker->randomElement(['Modules\User\Models\User', null]
-            'causer_id' => // @var mixed faker->optional(0.8
+            'log_name' => $faker->randomElement(['default', 'auth', 'user', 'system']
+            'description' => $faker->sentence(
+            'subject_type' => $faker->randomElement(['Modules\User\Models\User', 'Modules\<nome progetto>\Models\Appointment']
+            'subject_id' => $faker->numberBetween(1, 1000
+            'causer_type' => $faker->randomElement(['Modules\User\Models\User', null]
+            'causer_id' => $faker->optional(0.8
             'properties' => [
-                'ip_address' => // @var mixed faker->ipv4(
-                'user_agent' => // @var mixed faker->userAgent(
-                'action' => // @var mixed faker->randomElement(['created', 'updated', 'deleted', 'viewed']
+                'ip_address' => $faker->ipv4(
+                'user_agent' => $faker->userAgent(
+                'action' => $faker->randomElement(['created', 'updated', 'deleted', 'viewed']
             ],
-            'created_at' => // @var mixed faker->dateTimeBetween('-1 month', 'now'
-            'updated_at' => // @var mixed faker->dateTimeBetween('-1 month', 'now'
+            'created_at' => $faker->dateTimeBetween('-1 month', 'now'
+            'updated_at' => $faker->dateTimeBetween('-1 month', 'now'
         ];
     }
 
@@ -48,9 +48,9 @@ class BaseActivityFactory extends Factory
      */
     public function auth(): static
     {
-        return // @var mixed state(fn (array $attributes
+        return $this->state(fn (array $attributes
             'log_name' => 'auth',
-            'description' => // @var mixed faker->randomElement([
+            'description' => $faker->randomElement([
                 'User logged in',
                 'User logged out',
                 'Password changed',
@@ -64,9 +64,9 @@ class BaseActivityFactory extends Factory
      */
     public function user(): static
     {
-        return // @var mixed state(fn (array $attributes
+        return $this->state(fn (array $attributes
             'log_name' => 'user',
-            'description' => // @var mixed faker->randomElement([
+            'description' => $faker->randomElement([
                 'User created',
                 'User updated',
                 'User deleted',

@@ -41,7 +41,7 @@ class DomainFactory extends Factory
      */
     public function primary(): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes
             'is_primary' => true,
         ]);
     }
@@ -51,7 +51,7 @@ class DomainFactory extends Factory
      */
     public function active(): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes
             'is_active' => true,
         ]);
     }
@@ -61,7 +61,7 @@ class DomainFactory extends Factory
      */
     public function sslEnabled(): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes
             'is_ssl_enabled' => true,
         ]);
     }

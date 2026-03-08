@@ -25,21 +25,21 @@ class ResetComponent extends Component
 
     public function sendResetPasswordLink(): void
     {
-        // @var mixed validate(;
+        $this->validate();
 
-        $response = Password::broker()->sendResetLink(['email' => // @var mixed email];
+        $response = Password::broker()->sendResetLink(['email' => $email]);
 
         if (Password::RESET_LINK_SENT === $response) {
             $message = trans($response);
             if (is_array($message)) {
-                // @var mixed emailSentMessage = implode(' ', $message;
+                $emailSentMessage = implode(' ', $message);
             } else {
-                // @var mixed emailSentMessage = is_string($message;
+                $emailSentMessage = is_string($message);
             }
 
             return;
         }
 
-        // @var mixed addError('email', trans($response;
+        $this->addError('email', trans($response));
     }
 }

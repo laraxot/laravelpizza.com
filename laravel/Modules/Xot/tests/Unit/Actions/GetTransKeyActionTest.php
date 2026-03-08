@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit\Actions;
 
 use Modules\Xot\Actions\GetTransKeyAction;
-use Modules\Xot\Tests\TestCase;
 
-uses(TestCase::class);
 
 it('generates translation keys correctly', function (): void {
     $action = app(GetTransKeyAction::class);

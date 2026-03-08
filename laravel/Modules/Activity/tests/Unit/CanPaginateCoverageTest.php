@@ -20,12 +20,12 @@ final class CanPaginateHarness
 
     public function setMode(PaginationMode $mode): void
     {
-        // @var mixed mode = $mode;
+        $mode = $mode;
     }
 
     public function getPaginationMode(): PaginationMode
     {
-        return // @var mixed mode;
+        return $mode;
     }
 
     public function getPage(string $pageName): int
@@ -35,22 +35,22 @@ final class CanPaginateHarness
 
     public function resetLivewirePage(): void
     {
-        // @var mixed pageResetCount++;
+        $pageResetCount++;
     }
 
     public function exposePaginateQuery(Builder $query)
     {
-        return // @var mixed paginateQuery($query;
+        return $this->paginateQuery($query);
     }
 
     public function exposeOptions(): ?array
     {
-        return // @var mixed getRecordsPerPageSelectOptions(;
+        return $this->getRecordsPerPageSelectOptions();
     }
 
     public function setDefaultPerPage(int|string|null $value): void
     {
-        // @var mixed defaultRecordsPerPageSelectOption = $value;
+        $defaultRecordsPerPageSelectOption = $value;
     }
 }
 

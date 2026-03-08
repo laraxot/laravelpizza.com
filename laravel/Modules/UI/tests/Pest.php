@@ -31,11 +31,11 @@ uses(TestCase::class)->in('Feature', 'Unit');
  * |
  */
 
-expect()->extend('toBeComponent', fn () => // @var mixed toBeInstanceOf(Component::class;
+expect()->extend('toBeComponent', fn () => $this->toBeInstanceOf(Component::class));
 
-expect()->extend('toBeTheme', fn () => // @var mixed toBeInstanceOf(Theme::class;
+expect()->extend('toBeTheme', fn () => $this->toBeInstanceOf(Theme::class));
 
-expect()->extend('toBeAsset', fn () => // @var mixed toBeInstanceOf(Asset::class;
+expect()->extend('toBeAsset', fn () => $this->toBeInstanceOf(Asset::class));
 
 /*
  * |--------------------------------------------------------------------------

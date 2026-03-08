@@ -20,7 +20,7 @@ class UserCalendarWidget extends XotBaseWidget
     public function getActionName(string $function): string
     {
         $action_suffix = Str::of($function)->studly()->append('Action')->toString();
-        $resource = XotData::make()->getUserResourceClassByType(// @var mixed type;
+        $resource = XotData::make()->getUserResourceClassByType($type);
         $model = $resource::getModel();
         $modelString = \is_string($model) ? $model : (string) $model;
 
@@ -37,7 +37,7 @@ class UserCalendarWidget extends XotBaseWidget
      */
     public function fetchEvents(array $fetchInfo): array
     {
-        $action = // @var mixed getActionName(__FUNCTION__;
+        $action = $this->getActionName(__FUNCTION__);
 
         if (! class_exists($action)) {
             return [];
@@ -65,7 +65,7 @@ class UserCalendarWidget extends XotBaseWidget
      */
     public function getFormSchema(): array
     {
-        $action = // @var mixed getActionName(__FUNCTION__;
+        $action = $this->getActionName(__FUNCTION__);
 
         if (class_exists($action)) {
             $actionInstance = app($action);

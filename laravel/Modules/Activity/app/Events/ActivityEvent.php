@@ -21,6 +21,6 @@ class ActivityEvent
      */
     public function __construct()
     {
-        // // @var mixed data = ['aaa' => 'bbb'];
+        // $data = ['aaa' => 'bbb'];
     }
 }

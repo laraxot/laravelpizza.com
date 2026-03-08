@@ -31,14 +31,14 @@ class SnapshotFactory extends Factory
     public function definition(): array
     {
         return [
-            'aggregate_uuid' => // @var mixed faker->uuid(
-            'aggregate_version' => // @var mixed faker->numberBetween(1, 100
+            'aggregate_uuid' => $faker->uuid(
+            'aggregate_version' => $faker->numberBetween(1, 100
             'state' => [
-                'data' => // @var mixed faker->words(5, true
-                'status' => // @var mixed faker->randomElement(['active', 'inactive', 'pending']
+                'data' => $faker->words(5, true
+                'status' => $faker->randomElement(['active', 'inactive', 'pending']
                 'metadata' => [
-                    'user_id' => // @var mixed faker->numberBetween(1, 100
-                    'timestamp' => // @var mixed faker->dateTime(
+                    'user_id' => $faker->numberBetween(1, 100
+                    'timestamp' => $faker->dateTime(
                 ],
             ],
         ];
@@ -49,7 +49,7 @@ class SnapshotFactory extends Factory
      */
     public function withUuid(string $uuid): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes
             'aggregate_uuid' => $uuid,
         ]);
     }
@@ -59,7 +59,7 @@ class SnapshotFactory extends Factory
      */
     public function withVersion(int $version): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes
             'aggregate_version' => $version,
         ]);
     }
@@ -71,7 +71,7 @@ class SnapshotFactory extends Factory
      */
     public function withState(array $state): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes
             'state' => $state,
         ]);
     }

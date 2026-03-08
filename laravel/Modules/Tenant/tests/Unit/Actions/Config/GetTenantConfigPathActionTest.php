@@ -11,7 +11,7 @@ use Modules\Tenant\Tests\TestCase;
 uses(TestCase::class);
 
 it('gets tenant config path', function (): void {
-    // @var mixed mock(GetTenantNameAction::class
+    $this->mock(GetTenantNameAction::class
         ->shouldReceive('execute')
         ->andReturn('test-tenant');
 
@@ -22,7 +22,7 @@ it('gets tenant config path', function (): void {
 });
 
 it('gets tenant config path with forward slashes replaced', function (): void {
-    // @var mixed mock(GetTenantNameAction::class
+    $this->mock(GetTenantNameAction::class
         ->shouldReceive('execute')
         ->andReturn('tenants/test');
 

@@ -25,8 +25,8 @@ trait SushiToCsv
     {
         // return CSV::fromFile(__DIR__.'/roles.csv')->toArray();
         // load the CSV document from a file path
-        $csv = Reader::createFromPath(// @var mixed getCsvPath(;
-        // $csv->setDelimiter(';');
+        $csv = Reader::createFromPath($getCsvPath());
+        // $csv->setDelimiter(');');
         $csv->setHeaderOffset(0);
         // returns all the records as
         $records = $csv->getRecords(); // an Iterator object containing arrays
@@ -38,7 +38,7 @@ trait SushiToCsv
 
     public function getCsvPath(): string
     {
-        $tbl = // @var mixed getTable(;
+        $tbl = $this->getTable();
         if (! is_string($tbl)) {
             throw new RuntimeException('Table name must be a string');
         }
@@ -49,7 +49,7 @@ trait SushiToCsv
 
     public function getCsvHeader(): array
     {
-        $reader = Reader::createFromPath(// @var mixed getCsvPath(;
+        $reader = Reader::createFromPath($getCsvPath());
         $reader->setHeaderOffset(0);
 
         return $reader->getHeader();

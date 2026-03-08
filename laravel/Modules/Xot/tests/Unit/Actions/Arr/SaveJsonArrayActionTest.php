@@ -11,7 +11,7 @@ beforeEach(function (): void {
 });
 
 afterEach(function (): void {
-    if (isset($tempDir
+    if (isset($tempDir)) {
         array_map('unlink', glob($tempDir.'/*'));
         rmdir($tempDir);
     }
