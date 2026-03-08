@@ -397,13 +397,14 @@ class Event extends BaseModel
     {
         $startDate = $this->start_date ?? Carbon::now();
         $endDate = $this->end_date ?? $startDate;
-        $status = $startDate->isFuture() ? 'upcoming' : 'past';
+        $timingStatus = $startDate->isFuture() ? 'upcoming' : 'past';
 
         return [
             'id' => $this->id,
             'slug' => $this->slug,
-            'status' => $status,
-            'status_label' => ucfirst($status),
+            'timing_status' => $timingStatus,
+            'status' => $this->status, // draft, pending, published
+            'status_label' => ucfirst($this->status),
             'title' => $this->title,
             'description' => $this->description,
             'date' => $startDate->format('F j, Y'),

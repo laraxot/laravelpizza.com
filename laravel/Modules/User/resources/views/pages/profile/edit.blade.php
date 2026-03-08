@@ -46,19 +46,13 @@ $component = new class extends Component {
     public string $user_id = '';
 
     /** @var string */
-    #[Validate('required|current_password')]
     public string $current_password = '';
 
     /** @var string */
-    #[Validate('required|min:8|confirmed')]
     public string $password = '';
 
     /** @var string */
     public string $password_confirmation = '';
-
-    /** @var string */
-    #[Validate('required|current_password')]
-    public string $delete_password = '';
 
     public function mount(): void
     {
@@ -68,14 +62,14 @@ $component = new class extends Component {
             Assert::notNull($user, 'User must be authenticated');
             Assert::isInstanceOf($user, User::class);
 
-            $first_name = (string);
-            $last_name = (string);
-            $email = (string);
-            $user_id = (string);
+            $this->first_name = (string) $user->first_name;
+            $this->last_name = (string) $user->last_name;
+            $this->email = (string) $user->email;
+            $this->user_id = (string) $user->id;
 
         } catch (\Exception $e) {
             Log::error('Profile mount failed', ['error' => $e->getMessage()]);
-            redirect()->route('dashboard');
+            $this->redirectRoute('dashboard');
         }
     }
 
@@ -84,14 +78,14 @@ $component = new class extends Component {
         $validated = $this->validate([
             'first_name' => ['required', 'string', 'max:100'],
             'last_name' => ['required', 'string', 'max:100'],
-            'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user_id
+            'email' => ['required', 'email', 'max:255', Rule::unique('user.users', 'email')->ignore($this->user_id)],
         ]);
 
         /** @var User $user */
         $user = Auth::user();
         $user->update($validated);
 
-        session()->flash('status', 'Profile updated successfully.');
+        session()->flash('status', 'profile-updated');
     }
 
     public function updatePassword(): void
@@ -103,25 +97,10 @@ $component = new class extends Component {
 
         /** @var User $user */
         $user = Auth::user();
-        $user->update(['password' => Hash::make($password));
+        $user->update(['password' => Hash::make($this->password)]);
 
         $this->reset(['current_password', 'password', 'password_confirmation']);
-        session()->flash('status', 'Password updated successfully.');
-    }
-
-    public function deleteAccount(): \Illuminate\Http\RedirectResponse
-    {
-        $this->validate(['delete_password' => ['required', 'current_password']]);
-
-        /** @var User $user */
-        $user = Auth::user();
-        Auth::logout();
-        $user->delete();
-
-        request()->session()->invalidate();
-        request()->session()->regenerateToken();
-
-        return Redirect::to('/');
+        session()->flash('status', 'password-updated');
     }
 };
 
@@ -158,7 +137,7 @@ $component = new class extends Component {
                             <div class="flex items-center gap-4">
                                 <x-filament::button type="submit">{{ __('Save') }}</x-filament::button>
                                 @if (session('status') === 'profile-updated')
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">{{ __('Saved.') }}</p>
+                                    <p class="text-sm text-green-600 dark:text-green-400">{{ __('Saved.') }}</p>
                                 @endif
                             </div>
                         </form>
@@ -193,6 +172,9 @@ $component = new class extends Component {
                             </div>
                             <div class="flex items-center gap-4">
                                 <x-filament::button type="submit">{{ __('Save') }}</x-filament::button>
+                                @if (session('status') === 'password-updated')
+                                    <p class="text-sm text-green-600 dark:text-green-400">{{ __('Updated.') }}</p>
+                                @endif
                             </div>
                         </form>
                     </section>

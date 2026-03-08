@@ -20,22 +20,17 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 /**
  * GDPR-Compliant Registration Widget.
- *
- * Flat form design following modern signup UX best practices.
- * GDPR consents are Livewire public properties so the Blade view
- * can render custom HTML with clickable links to privacy/terms pages.
  */
 class RegisterWidget extends XotBaseWidget
 {
-    #[Validate('accepted', message: '')]
+    #[Validate('accepted', message: 'You must accept the privacy policy')]
     public bool $privacy_accepted = false;
 
-    #[Validate('accepted', message: '')]
+    #[Validate('accepted', message: 'You must accept the terms and conditions')]
     public bool $terms_accepted = false;
 
     public bool $marketing_consent = false;
 
-    // Form fields for custom Blade view
     #[Validate('required|string|min:2|max:255')]
     public string $first_name = '';
 
@@ -45,7 +40,7 @@ class RegisterWidget extends XotBaseWidget
     #[Validate('required|email|max:255|unique:user.users,email')]
     public string $email = '';
 
-    #[Validate('required|string')]
+    #[Validate('required|string|min:8')]
     public string $password = '';
 
     #[Validate('required|string|same:password')]
@@ -65,38 +60,42 @@ class RegisterWidget extends XotBaseWidget
 
     public function getFormSchema(): array
     {
-        // Not used - custom Blade view handles form rendering
         return [];
     }
 
     public function submit(): void
     {
-        // Validate form data using Livewire attributes
-        // @var mixed validate(;
+        $this->validate();
 
-        // Validate GDPR consents
         app(ValidateGdprConsentAction::class)->execute(
-            // @var mixed privacy_accepted,
-            // @var mixed terms_accepted
+            $this->privacy_accepted,
+            $this->terms_accepted
         );
 
-        // Prepare form data
         $formData = [
-            'first_name' => // @var mixed first_name,
-            'last_name' => // @var mixed last_name,
-            'email' => // @var mixed email,
-            'password' => // @var mixed password,
-            'password_confirmation' => // @var mixed password_confirmation,
+            'first_name' => $this->first_name,
+            'last_name' => $this->last_name,
+            'email' => $this->email,
+            'password' => $this->password,
+            'password_confirmation' => $this->password_confirmation,
         ];
 
         $validatedData = app(ValidateUserDataAction::class)->execute($formData);
-        // @var mixed logRegistrationAttempt($formData;
+        $this->logRegistrationAttempt($formData);
 
         $user = DB::connection('user')->transaction(function () use ($validatedData) {
             $user = app(CreateUserAction::class)->execute($validatedData);
-            app(SaveGdprConsentsAction::class)->execute($user, app(CollectGdprConsentsAction::class)->execute(// @var mixed privacy_accepted, $this->terms_accepted, $this->marketing_consent;
+            
+            $consents = app(CollectGdprConsentsAction::class)->execute(
+                $this->privacy_accepted, 
+                $this->terms_accepted, 
+                $this->marketing_consent
+            );
+
+            app(SaveGdprConsentsAction::class)->execute($user, $consents);
+            
             app(LogRegistrationAction::class)->execute($user, [
-                'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute(// @var mixed privacy_accepted, $this->terms_accepted, $this->marketing_consent
+                'gdpr_consents' => $consents,
             ]);
 
             return $user;
@@ -113,7 +112,11 @@ class RegisterWidget extends XotBaseWidget
             'email_hash' => hash('sha256', $email),
             'ip' => request()->ip(),
             'user_agent' => request()->userAgent(),
-            'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute(// @var mixed privacy_accepted, $this->terms_accepted, $this->marketing_consent
+            'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute(
+                $this->privacy_accepted, 
+                $this->terms_accepted, 
+                $this->marketing_consent
+            ),
         ]);
     }
 }

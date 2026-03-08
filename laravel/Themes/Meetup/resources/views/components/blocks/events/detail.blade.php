@@ -164,9 +164,15 @@ new class extends Component {
                     {{ __('pub_theme::event.actions.back_to_events.label') }}
                 </a>
 
-                <span class="inline-block {{ $this->isUpcoming() ? 'bg-green-600' : 'bg-slate-500' }} text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
-                    {{ $this->isUpcoming() ? __('pub_theme::event.status.upcoming.label') : __('pub_theme::event.status.past.label') }}
-                </span>
+                @if($this->event->status === 'pending')
+                    <span class="inline-block bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-bold mb-4 shadow-sm">
+                        Pending Approval
+                    </span>
+                @else
+                    <span class="inline-block {{ $this->isUpcoming() ? 'bg-green-600' : 'bg-slate-500' }} text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
+                        {{ $this->isUpcoming() ? __('pub_theme::event.status.upcoming.label') : __('pub_theme::event.status.past.label') }}
+                    </span>
+                @endif
 
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
                     {{ $this->event->title }}

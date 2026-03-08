@@ -52,7 +52,7 @@
 @endphp
 
 <section class="py-12 md:py-16 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white transition-colors" 
-         x-data="{ filter: 'all', events: {{ $eventsJson }}, get filteredEvents() { if (this.filter === 'all') return this.events; return this.events.filter(event => event.status === this.filter); } }">
+         x-data="{ filter: 'all', events: {{ $eventsJson }}, get filteredEvents() { if (this.filter === 'all') return this.events; return this.events.filter(event => event.timing_status === this.filter); } }">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {{-- Header --}}
         @if($title)
@@ -101,10 +101,13 @@
                                 </svg>
                             </div>
                         </div>
-                        <template x-if="event.status === 'upcoming'">
+                        <template x-if="event.status === 'pending'">
+                            <span class="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-bold shadow-sm">Pending Approval</span>
+                        </template>
+                        <template x-if="event.timing_status === 'upcoming'">
                             <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Upcoming</span>
                         </template>
-                        <template x-if="event.status !== 'upcoming'">
+                        <template x-if="event.timing_status !== 'upcoming'">
                             <span class="absolute top-4 right-4 bg-slate-500 text-white px-3 py-1 rounded-full text-xs font-semibold">Past</span>
                         </template>
                     </div>
