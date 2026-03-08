@@ -14,7 +14,6 @@ use Modules\Xot\Tests\XotBaseTestCase;
  */
 abstract class TestCase extends XotBaseTestCase
 {
-
     /** @var array<int, string> */
     protected array $connectionsToTransact = [
         'mysql',

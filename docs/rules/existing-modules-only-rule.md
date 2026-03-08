@@ -3,6 +3,7 @@
 ## Regola critica
 
 Non creare nuovi moduli in `laravel/Modules/*` senza approvazione esplicita del maintainer.
+Questo include esplicitamente tentativi tipo `Event*` (`Event`, `EventCategory`, `EventFeedback`, `EventLocation`, `EventRegistration`, `EventSchedule`, `EventSpeaker`, `EventSponsor`, `EventTag`, `EventTicket`, `EventAttendee`, `EventOrganizer`).
 
 ## Obbligo operativo
 

@@ -60,3 +60,4 @@
 
 - [Docs Health](./docs-health.md) - Stato qualità docs, checklist di confidenza e prossime azioni di manutenzione.
 - [Attendee Registration Domain Rules](attendee-registration-domain-rules.md) - Guardie dominio per REGS-01 (capacity/duplicate/atomicità).
+- [Meetup Lifecycle + GDPR + Profile Gap Analysis](meetup-lifecycle-gdpr-profile-gap-analysis.md) - Matrice requisiti, gap e piano test Pest E2E.

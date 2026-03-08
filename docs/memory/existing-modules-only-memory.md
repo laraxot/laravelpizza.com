@@ -2,7 +2,7 @@
 
 ## Contesto
 
-In una sessione precedente sono stati scaffoldati moduli `Event*` non richiesti.
+In piu' sessioni sono comparsi scaffold non richiesti di moduli `Event*`, inclusi `EventAttendee` e `EventOrganizer`.
 
 ## Lezione appresa
 
@@ -15,4 +15,5 @@ Prima di qualsiasi implementazione:
 
 1. controllare i moduli esistenti;
 2. preferire estensione di model/action/test/docs nei moduli attivi;
-3. aprire discussione+issue prima di proporre nuovi moduli.
+3. aprire discussione+issue prima di proporre nuovi moduli;
+4. se compare un modulo non autorizzato, rimuoverlo subito e registrare il fix su issue/discussion.

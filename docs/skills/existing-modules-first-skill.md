@@ -15,3 +15,4 @@ Applicare la regola "usa moduli esistenti" in ogni task.
 ## Anti-pattern vietato
 
 - Scaffolding di nuovi moduli per accelerare il lavoro senza approvazione architetturale.
+- Creazione di famiglie `Event*` separate quando il dominio e' gia' coperto da `Modules/Meetup`.

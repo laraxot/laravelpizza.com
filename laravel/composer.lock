@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de679df1d797ea663c6266eeffb8e7e1",
+    "content-hash": "fed146b6d79085cdf265e128b7c8d000",
     "packages": [
         {
             "name": "aaronfrancis/fast-paginate",
@@ -22754,12 +22754,83 @@
                 }
             ],
             "time": "2025-12-05T16:38:02+00:00"
+        },
+        {
+            "name": "woda/laravel-ralph",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wwwoda/laravel-ralph.git",
+                "reference": "4b30870f5209598c20de65dc8a16fa4f8e23b907"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wwwoda/laravel-ralph/zipball/4b30870f5209598c20de65dc8a16fa4f8e23b907",
+                "reference": "4b30870f5209598c20de65dc8a16fa4f8e23b907",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^11.0 || ^12.0",
+                "illuminate/process": "^11.0 || ^12.0",
+                "illuminate/support": "^11.0 || ^12.0",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "driftingly/rector-laravel": "^2.1",
+                "larastan/larastan": "^3.0",
+                "laravel/pint": "^1.0",
+                "orchestra/testbench": "^9.0 || ^10.0",
+                "pestphp/pest": "^3.0 || ^4.0",
+                "pestphp/pest-plugin-laravel": "^3.0 || ^4.0",
+                "phpstan/phpstan": "^2.0",
+                "rector/rector": "^2.0",
+                "systemsdk/phpcpd": "^8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Woda\\Ralph\\RalphServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Woda\\Ralph\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Mondok",
+                    "email": "david@woda.at",
+                    "homepage": "https://www.woda.at"
+                }
+            ],
+            "description": "Claude Code agent loop runner for Laravel",
+            "homepage": "https://github.com/wwwoda/laravel-ralph",
+            "keywords": [
+                "Agent",
+                "claude",
+                "laravel",
+                "loop"
+            ],
+            "support": {
+                "issues": "https://github.com/wwwoda/laravel-ralph/issues",
+                "source": "https://github.com/wwwoda/laravel-ralph/tree/master"
+            },
+            "time": "2026-03-04T21:19:08+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "saade/filament-fullcalendar": 10
+        "saade/filament-fullcalendar": 10,
+        "woda/laravel-ralph": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -22767,5 +22838,5 @@
         "php": "^8.2"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.6.0"
 }

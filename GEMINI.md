@@ -479,3 +479,7 @@ gh issue close <number>
 **Last Updated**: 2026-03-05 14:40 UTC
 **Version**: 4.2
 **Philosophy**: DRY + KISS + SOLID + ROBUST + Laraxot Zen + Test Coverage First + Parallel Execution
+- **Module Consolidation Rule**: DO NOT create granular modules for sub-features of an existing domain. 
+  - **Events/Meetups**: EVERYTHING related to events (Tickets, Feedback, Speakers, Sponsors, Locations) MUST go into `Modules/Meetup`. 
+  - **Forbidden Modules**: `Event`, `EventCategory`, `EventFeedback`, `EventLocation`, `EventRegistration`, `EventSchedule`, `EventSpeaker`, `EventSponsor`, `EventTag`, `EventTicket`.
+  - **Reasoning**: Laraxot uses a "Modular Monolith" approach where a Module represents a bounded context (e.g., `Meetup`), not individual database tables.

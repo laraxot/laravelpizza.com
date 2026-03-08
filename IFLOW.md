@@ -14,6 +14,37 @@ Non stiamo solo replicando - stiamo **ELEVANDO** il sito originale per renderlo:
 
 ---
 
+## 🔄 **CRITICAL CORRECTION - 2026-03-07**
+
+### **Problema Risolto**
+- **Errore**: Creazione di nuovi moduli invece di estendere quelli esistenti
+- **Soluzione**: Utilizzo moduli esistenti per l'implementazione
+
+### **Nuove Regole di Implementazione**
+1. **MAI** creare nuovi moduli - **SEMPRE** estendere quelli esistenti
+2. **Utilizzare pattern** Laraxot con BaseModel esistenti
+3. **Seguire struttura esistente** per ogni modulo
+4. **Preservare modularità** esistente
+
+### **Moduli Esistenti da Estendere**
+- **laravel/Modules/Activity/** - Sistema di attività e log
+- **laravel/Modules/Cms/** - Content Management System
+- **laravel/Modules/Gdpr/** - Conformità GDPR
+- **laravel/Modules/Geo/** - Geolocalizzazione e mappe
+- **laravel/Modules/Job/** - Gestione job e code
+- **laravel/Modules/Lang/** - Gestione multilingua
+- **laravel/Modules/Media/** - Gestione file e media
+- **laravel/Modules/Meetup/** - Logica principale meetup
+- **laravel/Modules/Notify/** - Sistema notifiche
+- **laravel/Modules/Seo/** - Ottimizzazione SEO
+- **laravel/Modules/Tenant/** - Multi-tenancy
+- **laravel/Modules/UI/** - Componenti UI condivisi
+- **laravel/Modules/User/** - Gestione utenti e autenticazione
+- **laravel/Modules/Xot/** - Infrastruttura di base
+- **laravel/Modules/Setting/** - Configurazione applicazione
+
+---
+
 Benvenuto nella base ufficiale di **LaravelPizza.com**: qui costruiamo un ecosistema completo di **meetup**, **community**,
 **tema frontend super curato (Meetup Theme)** e **architettura Laraxot** spinta al massimo.
 
