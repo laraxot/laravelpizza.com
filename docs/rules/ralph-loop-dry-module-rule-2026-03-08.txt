@@ -1,0 +1,21 @@
+CRITICAL DRY PRINCIPLE RULE UPDATE:
+
+## Problema
+Ho creato 13 moduli Event* e Forum* invece di estendere quelli esistenti.
+
+## Soluzione
+✅ Rimossi tutti i moduli Event* e Forum* creati erroneamente
+✅ Estendi i moduli esistenti invece di crearne di nuovi
+✅ Segui principio DRY: Don't Repeat Yourself
+
+## Moduli corretti
+- Event* -> estendere Meetup module
+- ForumAnnouncement, ForumSubscriber, ForumTemplate -> estendere Cms module
+
+## Principio DRY
+Non ripetere il codice - estendi i moduli esistenti invece di crearne di nuovi.
+
+## Commit
+Fix: Rimossi moduli Event* e Forum* creati erroneamente, segui principio DRY di estendere moduli esistenti
+Hash: 61f78b80b
+Branch: dev

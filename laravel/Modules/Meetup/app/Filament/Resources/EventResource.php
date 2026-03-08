@@ -56,6 +56,7 @@ class EventResource extends XotBaseResource
                     'status' => Select::make('status')
                         ->options([
                             'draft' => 'Draft',
+                            'pending' => 'Pending Approval',
                             'published' => 'Published',
                             'cancelled' => 'Cancelled',
                         ])
@@ -93,6 +94,7 @@ class EventResource extends XotBaseResource
                     ->badge()
                     ->color(fn (string $state): string => match ($state) {
                         'published' => 'success',
+                        'pending' => 'primary',
                         'draft' => 'warning',
                         'cancelled' => 'danger',
                         default => 'gray',
@@ -121,6 +123,12 @@ class EventResource extends XotBaseResource
                     ]),
             ])
             ->actions([
+                'approve' => Tables\Actions\Action::make('approve')
+                    ->label('Approve')
+                    ->icon('heroicon-o-check-circle')
+                    ->color('success')
+                    ->visible(fn (Event $record): bool => $record->status === 'pending')
+                    ->action(fn (Event $record) => $record->update(['status' => 'published'])),
                 'edit' => EditAction::make(),
                 'delete' => DeleteAction::make(),
             ])
