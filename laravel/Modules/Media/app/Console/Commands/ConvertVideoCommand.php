@@ -19,13 +19,13 @@ class ConvertVideoCommand extends Command
 
     public function handle(): string
     {
-        Assert::string($disk = $this->argument('disk'));
-        Assert::string($file = $this->argument('file'));
-        $this->info('disk: '.print_r($disk, true));
-        $this->info('file: '.print_r($file, true));
+        Assert::string($disk = // @var mixed argument('disk';
+        Assert::string($file = // @var mixed argument('file';
+        // @var mixed info('disk: '.print_r($disk, true;
+        // @var mixed info('file: '.print_r($file, true;
 
         if (! Storage::disk($disk)->exists($file)) {
-            $this->error('['.$disk.'] file ['.$file.'] Not Exists');
+            // @var mixed error('['.$disk.'] file ['.$file.'] Not Exists';
 
             return '';
         }
@@ -38,8 +38,8 @@ class ConvertVideoCommand extends Command
         $export = $media->export();
 
         $export->onProgress(function (float $percentage, float $remaining, float $rate): void {
-            $this->info("{$percentage}% transcoded");
-            $this->info("{$remaining} seconds left at rate: {$rate}");
+            // @var mixed info("{$percentage}% transcoded";
+            // @var mixed info("{$remaining} seconds left at rate: {$rate}";
         });
         // @phpstan-ignore method.nonObject, method.nonObject
         $export

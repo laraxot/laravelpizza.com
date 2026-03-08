@@ -33,8 +33,8 @@ class TelegramNotification extends Notification implements ShouldQueue
      */
     public function __construct(string $message, array $options = [])
     {
-        $this->message = $message;
-        $this->options = $options;
+        // @var mixed message = $message;
+        // @var mixed options = $options;
     }
 
     /**
@@ -56,7 +56,7 @@ class TelegramNotification extends Notification implements ShouldQueue
      */
     public function toArray(?object $notifiable): array
     {
-        // return $this->data->toArray();
+        // return // @var mixed data->toArray(;
         return [];
     }
 
@@ -67,6 +67,6 @@ class TelegramNotification extends Notification implements ShouldQueue
      */
     public function toTelegram($notifiable): string
     {
-        return $this->message;
+        return // @var mixed message;
     }
 }

@@ -27,6 +27,6 @@ readonly class PhoneValueObject
 
     public function toString(): string
     {
-        return $this->phone;
+        return $phone;
     }
 }

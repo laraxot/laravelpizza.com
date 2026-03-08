@@ -67,7 +67,7 @@ class SendNotificationAction
                 continue;
             }
             try {
-                $this->sendViaChannel($recipient, $channel, $compiled, $options);
+                // @var mixed sendViaChannel($recipient, $channel, $compiled, $options;
             } catch (Exception $e) {
                 // Log dell'errore ma continua con altri canali
                 Log::error("Errore invio notifica via {$channel}: ".$e->getMessage());
@@ -89,13 +89,13 @@ class SendNotificationAction
     {
         switch ($channel) {
             case 'mail':
-                $this->sendMail($recipient, $compiled, $options);
+                // @var mixed sendMail($recipient, $compiled, $options;
                 break;
             case 'database':
-                $this->sendDatabase($recipient, $compiled, $options);
+                // @var mixed sendDatabase($recipient, $compiled, $options;
                 break;
             case 'sms':
-                $this->sendSms($recipient, $compiled, $options);
+                // @var mixed sendSms($recipient, $compiled, $options;
                 break;
             default:
                 throw new Exception("Canale {$channel} non supportato");

@@ -15,7 +15,7 @@ declare(strict_types=1);
     
     <x-filament::dropdown.list>
         @foreach ($teams as $team)
-        <x-filament::dropdown.list.item wire:click="switchTeam({{ $team['id'] }})" :icon="$this->user->current_team_id==$team['id'] ? 'heroicon-o-check-circle' : ''">
+        <x-filament::dropdown.list.item wire:click="switchTeam({{ $team['id'] }})" :icon="$user->current_team_id==$team['id'] ? 'heroicon-o-check-circle' : ''">
             {{ $team['name'] }}
         </x-filament::dropdown.list.item>
         @endforeach

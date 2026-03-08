@@ -20,10 +20,10 @@ class NotificationTemplateFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->word() . ' Template',
+            'name' => // @var mixed faker->word(
             'type' => 'email',
-            'subject' => $this->faker->sentence(),
-            'body' => $this->faker->paragraph(),
+            'subject' => // @var mixed faker->sentence(
+            'body' => // @var mixed faker->paragraph(
             'variables' => json_encode(['user_name' => 'User Name']),
             'is_active' => true,
         ];
@@ -34,7 +34,7 @@ class NotificationTemplateFactory extends Factory
      */
     public function active(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return // @var mixed state(fn (array $attributes
             'is_active' => true,
         ]);
     }
@@ -44,7 +44,7 @@ class NotificationTemplateFactory extends Factory
      */
     public function inactive(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return // @var mixed state(fn (array $attributes
             'is_active' => false,
         ]);
     }
@@ -54,7 +54,7 @@ class NotificationTemplateFactory extends Factory
      */
     public function email(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return // @var mixed state(fn (array $attributes
             'type' => 'email',
         ]);
     }
@@ -64,7 +64,7 @@ class NotificationTemplateFactory extends Factory
      */
     public function sms(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return // @var mixed state(fn (array $attributes
             'type' => 'sms',
         ]);
     }

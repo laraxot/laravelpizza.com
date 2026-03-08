@@ -6,7 +6,7 @@ declare(strict_types=1);
 <x-filament-widgets::widget>
     <x-filament::section>
         <form wire:submit="submit">
-            {{ $this->form }}
+            {{ // @var mixed form }}
 
             <div class="mt-4">
                 <x-filament::button

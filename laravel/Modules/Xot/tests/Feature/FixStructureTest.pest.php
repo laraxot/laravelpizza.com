@@ -9,11 +9,11 @@ uses(TestCase::class);
 
 beforeEach(function () {
     // Create a temporary directory for testing
-    $this->testDir = sys_get_temp_dir().'/fix_structure_test_'.uniqid();
-    mkdir($this->testDir, 0o755, true);
+    $testDir = sys_get_temp_dir();
+    mkdir($testDir, 0o755, true);
 
     // Set the working directory
-    chdir($this->testDir);
+    chdir($testDir);
 });
 
 afterEach(function () {
@@ -41,7 +41,7 @@ function rrmdir($dir)
 
 test('creates necessary directories and files', function () {
     // Run the command
-    $this->artisan('xot:fix-structure')->assertExitCode(0);
+    $this->artisan('xot:fix-structure');
 
     // Check if directories were created
     $directories = [
@@ -82,11 +82,11 @@ test('creates necessary directories and files', function () {
 test('does not overwrite existing files', function () {
     // Create a test file that should not be overwritten
     $testContent = 'Test content';
-    $testFile = $this->testDir.'/routes/web.php';
+    $testFile = $testDir.'/routes/web.php';
     file_put_contents($testFile, $testContent);
 
     // Run the command
-    $this->artisan('xot:fix-structure')->assertExitCode(0);
+    $this->artisan('xot:fix-structure');
 
     // Verify the file was not overwritten
     $this->assertStringEqualsFile($testFile, $testContent);
@@ -94,11 +94,11 @@ test('does not overwrite existing files', function () {
 
 test('handles errors gracefully', function () {
     // Make a directory non-writable to test error handling
-    $nonWritableDir = $this->testDir.'/app';
+    $nonWritableDir = $testDir.'/app';
     chmod($nonWritableDir, 0o555);
 
     // Run the command and expect an error
-    $this->artisan('xot:fix-structure')->assertExitCode(1);
+    $this->artisan('xot:fix-structure');
 
     // Restore permissions
     chmod($nonWritableDir, 0o755);

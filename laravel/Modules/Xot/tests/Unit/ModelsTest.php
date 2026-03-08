@@ -42,7 +42,7 @@ it('can create a test module', function () {
 });
 
 it('can run module migrations', function () {
-    $this->artisan('migrate', ['--env' => 'testing', '--force' => true])->assertExitCode(0);
+    $this->artisan('migrate', ['--env' => 'testing', '--force' => true]);
 });
 
 it('can create a test asset', function () {

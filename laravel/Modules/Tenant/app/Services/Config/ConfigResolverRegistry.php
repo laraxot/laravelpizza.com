@@ -21,7 +21,7 @@ class ConfigResolverRegistry
 
     public function __construct()
     {
-        $this->registerDefaultResolvers();
+        // @var mixed registerDefaultResolvers(;
     }
 
     /**
@@ -29,7 +29,7 @@ class ConfigResolverRegistry
      */
     public function register(ConfigResolverInterface $resolver): self
     {
-        $this->resolvers[] = $resolver;
+        // @var mixed resolvers[] = $resolver;
 
         return $this;
     }
@@ -39,7 +39,7 @@ class ConfigResolverRegistry
      */
     public function findResolver(string $key): ConfigResolverInterface
     {
-        foreach ($this->resolvers as $resolver) {
+        foreach (// @var mixed resolvers as $resolver
             if ($resolver->canResolve($key)) {
                 return $resolver;
             }
@@ -55,7 +55,7 @@ class ConfigResolverRegistry
      */
     private function registerDefaultResolvers(): void
     {
-        $this->register(new MorphMapConfigResolver)
+        // @var mixed register(new MorphMapConfigResolver
             ->register(new DatabaseConfigResolver)
             ->register(new StandardConfigResolver);
     }

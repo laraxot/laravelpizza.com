@@ -36,22 +36,22 @@ class EnvWidget extends Widget implements HasActions, HasForms
     {
         /** @var array<string, mixed> */
         $data = EnvData::make()->toArray();
-        $this->data = $data;
+        $data = $data;
 
-        $this->form->fill($this->data);
+        $form->fill($this->data);
     }
 
     public function schema(Schema $schema): Schema
     {
-        return $schema->components($this->getFormSchema())->columns(1)->statePath('data');
+        return $schema->components($getFormSchema());
     }
 
     public function submit(): void
     {
-        if (! is_array($this->data)) {
+        if (! is_array($data
             return;
         }
-        EnvData::make()->update($this->data);
+        EnvData::make()->update($data);
         Notification::make()
             ->title('Saved successfully')
             ->success()
@@ -59,8 +59,8 @@ class EnvWidget extends Widget implements HasActions, HasForms
 
         /*
          * dddx([
-         * 'data' => $this->data,
-         * // 'data1' => $this->form->getState(),
+         * 'data' => $data,
+         * // 'data1' => $form->getState(
          * ]);
          */
     }
@@ -89,6 +89,6 @@ class EnvWidget extends Widget implements HasActions, HasForms
         /*
          * @var array<Component>
          */
-        return Arr::only($all, $this->only);
+        return Arr::only($all, $only);
     }
 }

@@ -185,14 +185,14 @@ class Menu extends BaseModel implements HasRecursiveRelationshipsContract, Sushi
 
     public function getRows(): array
     {
-        return $this->getSushiRows();
+        return // @var mixed getSushiRows(;
     }
 
     #[\Override]
     public function getLabel(): string
     {
         // PHPStan Level 10: Ensure string return
-        return $this->title ?? '';
+        return // @var mixed title ?? '';
     }
 
     /** @return array<string, string> */

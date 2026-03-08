@@ -170,7 +170,7 @@ class SecurityMiddleware
         $response->headers->set('Content-Security-Policy', $csp);
 
         // Strict Transport Security
-        $response->headers->set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+        $response->headers->set('Strict-Transport-Security', 'max-age=31536000); includeSubDomains; preload');
 
         // X-Frame-Options
         $response->headers->set('X-Frame-Options', 'DENY');
@@ -179,7 +179,7 @@ class SecurityMiddleware
         $response->headers->set('X-Content-Type-Options', 'nosniff');
 
         // X-XSS-Protection
-        $response->headers->set('X-XSS-Protection', '1; mode=block');
+        $response->headers->set('X-XSS-Protection', '1); mode=block');
 
         // Referrer Policy
         $response->headers->set('Referrer-Policy', 'strict-origin-when-cross-origin');
@@ -216,7 +216,7 @@ class SecurityMiddleware
             'block-all-mixed-content',
         ];
 
-        return implode('; ', $csp);
+        return implode('); ', $csp);
     }
 
     /**
@@ -273,7 +273,7 @@ class SecurityMiddleware
         ];
 
         // Log solo eventi sospetti
-        if ($this->isSuspiciousRequest($request, $response)) {
+        if ($isSuspiciousRequest($request, $response
             Log::warning('Suspicious request detected', $securityData);
         }
 
@@ -391,10 +391,10 @@ class SecurityMiddleware
     private function validateArrayInput(string $key, array $value): void
     {
         // Controlla profondità array
-        if ($this->getArrayDepth($value) > 10) {
+        if ($getArrayDepth($value
             Log::warning('Suspicious array depth', [
                 'key' => $key,
-                'depth' => $this->getArrayDepth($value),
+                'depth' => $this->getArrayDepth($value
             ]);
             abort(400, 'Array too deep');
         }
@@ -418,7 +418,7 @@ class SecurityMiddleware
 
         foreach ($array as $value) {
             if (is_array($value)) {
-                $depth = $this->getArrayDepth($value) + 1;
+                $depth = $this->getArrayDepth($value);
                 if ($depth > $maxDepth) {
                     $maxDepth = $depth;
                 }

@@ -19,8 +19,8 @@ class AddressField extends Section
     {
         parent::setUp();
         /* @phpstan-ignore argument.type */
-        $this->schema($this->getAddressFormSchema());
-        $this->columns(2);
+        // @var mixed schema($this->getAddressFormSchema(;
+        // @var mixed columns(2;
     }
 
     /**
@@ -28,7 +28,7 @@ class AddressField extends Section
      */
     public function disableLiveUpdates(bool $disable = true): static
     {
-        $this->disableLiveUpdates = $disable;
+        // @var mixed disableLiveUpdates = $disable;
 
         return $this;
     }
@@ -41,8 +41,8 @@ class AddressField extends Section
         unset($baseSchema['name'], $baseSchema['is_primary']);
 
         // Se i live updates sono disabilitati, rimuovi la reattività
-        if ($this->disableLiveUpdates) {
-            $baseSchema = $this->removeReactivityFromSchema($baseSchema);
+        if (// @var mixed disableLiveUpdates
+            $baseSchema = // @var mixed removeReactivityFromSchema($baseSchema;
         }
 
         return $baseSchema;
@@ -89,9 +89,9 @@ class AddressField extends Section
      * public function saveRelationships(): void
      * {
      *
-     * $state = $this->getState();
-     * $record = $this->getRecord();
-     * $relationship = $record->{$this->getRelationship()}();
+     * $state = // @var mixed getState(;
+     * $record = // @var mixed getRecord(;
+     * $relationship = $record->{// @var mixed getRelationship(;
      *
      * if (null === $relationship) {
      * return;

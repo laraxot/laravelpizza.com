@@ -5,10 +5,10 @@ declare(strict_types=1);
 ?>
 <x-filament-panels::page>
     <x-filament-schemas::form wire:submit="save">
-        {{ $this->form }}
+        {{ $form }}
 
         <x-filament::actions
-            :actions="$this->getFormActions()"
+            :actions="$this->getFormActions(
         />
 
     </x-filament-schemas::form>

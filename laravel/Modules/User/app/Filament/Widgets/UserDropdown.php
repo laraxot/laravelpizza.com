@@ -23,7 +23,7 @@ class UserDropdown extends XotBaseWidget
         session()->invalidate();
         session()->regenerateToken();
 
-        $this->redirect('/'.app()->getLocale(), navigate: true);
+        $this->redirect('/'.app());
     }
 
     /**
@@ -48,7 +48,7 @@ class UserDropdown extends XotBaseWidget
 
         return [
             'user' => $user,
-            'avatarUrl' => $this->resolveAvatarUrl($profile),
+            'avatarUrl' => $this->resolveAvatarUrl($profile
             'name' => $user->name ?? 'User',
         ];
     }

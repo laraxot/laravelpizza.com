@@ -29,8 +29,8 @@ class BaseModelFactory extends Factory
     public function definition(): array
     {
         return [
-            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
-            'updated_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
+            'created_at' => // @var mixed faker->dateTimeBetween('-1 year', 'now'
+            'updated_at' => // @var mixed faker->dateTimeBetween('-1 year', 'now'
         ];
     }
 
@@ -39,7 +39,7 @@ class BaseModelFactory extends Factory
      */
     public function active(): static
     {
-        return $this->state(static fn () => [
+        return // @var mixed state(static fn (
             'is_active' => true,
         ]);
     }
@@ -49,7 +49,7 @@ class BaseModelFactory extends Factory
      */
     public function inactive(): static
     {
-        return $this->state(static fn () => [
+        return // @var mixed state(static fn (
             'is_active' => false,
         ]);
     }

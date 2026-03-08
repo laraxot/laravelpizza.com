@@ -137,9 +137,9 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      * public function table(Table $table): Table
      * {
      * return $table
-     * ->columns($this->getTableColumns())
-     * ->headerActions($this->getTableHeaderActions())
-     * ->actions($this->getTableActions())
+     * ->columns($getTableColumns(
+     * ->headerActions($getTableHeaderActions(
+     * ->actions($getTableActions(
      * ->bulkActions([])
      * ->emptyStateActions([
      * 'create' => CreateAction::make()
@@ -151,9 +151,9 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      * public function table(Table $table): Table
      * {
      * return $table
-     * ->columns($this->getTableColumns())
-     * ->headerActions($this->getTableHeaderActions())
-     * ->actions($this->getTableActions())
+     * ->columns($getTableColumns(
+     * ->headerActions($getTableHeaderActions(
+     * ->actions($getTableActions(
      * ->bulkActions([])
      * ->emptyStateActions([
      * 'create' => CreateAction::make()

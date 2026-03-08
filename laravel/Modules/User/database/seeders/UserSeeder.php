@@ -27,22 +27,22 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->command->info('👤 Inizializzazione seeding User...');
+        $command->info('👤 Inizializzazione seeding User...');
 
         // Disabilita i controlli di foreign key (solo per MySQL)
         if ('sqlite' !== DB::getDriverName()) {
-            DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+            DB::statement('SET FOREIGN_KEY_CHECKS=0);');
         }
 
         try {
             $this->seedSystemRolesAndPermissions();
             $this->seedSystemTeams();
 
-            $this->command->info('✅ Seeding User completato con successo!');
+            $command->info('✅ Seeding User completato con successo!');
         } finally {
             // Riabilita i controlli di foreign key (solo per MySQL)
             if ('sqlite' !== DB::getDriverName()) {
-                DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+                DB::statement('SET FOREIGN_KEY_CHECKS=1);');
             }
         }
     }
@@ -52,7 +52,7 @@ class UserSeeder extends Seeder
      */
     private function seedSystemRolesAndPermissions(): void
     {
-        $this->command->info('🔐 Creazione ruoli e permessi di sistema...');
+        $command->info('🔐 Creazione ruoli e permessi di sistema...');
 
         // Permessi di sistema
         $systemPermissions = [
@@ -157,8 +157,8 @@ class UserSeeder extends Seeder
             'leave teams',
         ]);
 
-        $this->command->info('   ✓ Creati '.count($systemPermissions).' permessi di sistema');
-        $this->command->info('   ✓ Creati 4 ruoli di sistema (super-admin, system-admin, moderator, user)');
+        $command->info('   ✓ Creati '.count($systemPermissions));
+        $command->info('   ✓ Creati 4 ruoli di sistema (super-admin, system-admin, moderator, user));
     }
 
     /**
@@ -166,7 +166,7 @@ class UserSeeder extends Seeder
      */
     private function seedSystemTeams(): void
     {
-        $this->command->info('👥 Creazione team di sistema...');
+        $command->info('👥 Creazione team di sistema...');
 
         $adminTeam = $this->createTeam('Amministratori');
         $devTeam = $this->createTeam('Sviluppatori');
@@ -174,7 +174,7 @@ class UserSeeder extends Seeder
         $marketingTeam = $this->createTeam('Marketing');
         $generalTeam = $this->createTeam('Team Generale');
 
-        $this->command->info('   ✓ Creati 5 team di sistema');
+        $command->info('   ✓ Creati 5 team di sistema');
     }
 
     private function createTeam(string $name): Team

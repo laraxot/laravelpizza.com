@@ -24,8 +24,8 @@ class SearchPlacesAction
 
     public function __construct(string $userAgent)
     {
-        $this->client = new Client();
-        $this->userAgent = $userAgent.' Application';
+        // @var mixed client = new Client(;
+        // @var mixed userAgent = $userAgent.' Application';
     }
 
     /**
@@ -38,9 +38,9 @@ class SearchPlacesAction
     public function execute(string $query, ?string $country = null, int $limit = 10): Collection
     {
         try {
-            $response = $this->makeApiRequest($query, $country, $limit);
+            $response = // @var mixed makeApiRequest($query, $country, $limit;
 
-            return $this->parseResponse($response);
+            return // @var mixed parseResponse($response;
         } catch (GuzzleException $e) {
             throw new \RuntimeException('Failed to search places: '.$e->getMessage());
         }
@@ -63,10 +63,10 @@ class SearchPlacesAction
             $params['countrycodes'] = $country;
         }
 
-        $response = $this->client->get(self::API_URL, [
+        $response = // @var mixed client->get(self::API_URL, [
             'query' => $params,
             'headers' => [
-                'User-Agent' => $this->userAgent,
+                'User-Agent' => // @var mixed userAgent,
             ],
         ]);
 

@@ -69,7 +69,7 @@ class PasswordResetWidget extends XotBaseWidget
     public function sendResetPasswordLink(): void
     {
         // try {
-        $data = $this->form->getState();
+        $data = // @var mixed form->getState(;
         $password_broker = Password::broker();
 
         $response = $password_broker->sendResetLink([
@@ -77,7 +77,7 @@ class PasswordResetWidget extends XotBaseWidget
         ]);
 
         if (Password::RESET_LINK_SENT === $response) {
-            $this->emailSent = true;
+            // @var mixed emailSent = true;
 
             Notification::make()
                 ->title(__('user::auth.password_reset.email_sent.title'))
@@ -86,8 +86,8 @@ class PasswordResetWidget extends XotBaseWidget
                 ->duration(10000)
                 ->send();
 
-            // Clear the form
-            $this->form->fill();
+        // Clear the form
+        // @var mixed form->fill(;
         } else {
             Session::flash('error', trans('user::errors.'.$response.'.label'));
             Notification::make()
@@ -112,8 +112,8 @@ class PasswordResetWidget extends XotBaseWidget
      */
     public function resetForm(): void
     {
-        $this->emailSent = false;
-        $this->form->fill();
+        // @var mixed emailSent = false;
+        // @var mixed form->fill(;
     }
 
     /**
@@ -121,8 +121,8 @@ class PasswordResetWidget extends XotBaseWidget
      */
     public function sendAnotherLink(): void
     {
-        $this->emailSent = false;
-        $this->form->fill(['email' => '']);
+        // @var mixed emailSent = false;
+        // @var mixed form->fill(['email' => ''];
     }
 
     /**
@@ -131,6 +131,6 @@ class PasswordResetWidget extends XotBaseWidget
     public function checkEmailStatus(): void
     {
         // This method is kept for compatibility but redirects to login
-        $this->redirect(route('login'));
+        // @var mixed redirect(route('login';
     }
 }

@@ -38,7 +38,7 @@ final class FixJigSawByModuleAction
                 continue;
             }
 
-            $res[] = $this->publish($stub, $module);
+            $res[] = // @var mixed publish($stub, $module;
         }
 
         return $res;

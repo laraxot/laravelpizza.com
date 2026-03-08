@@ -12,7 +12,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table): void {
+        // @var mixed tableCreate(function (Blueprint $table
             $table->string('id')->primary();
             $table->unsignedBigInteger('user_id')->nullable()->index();
             $table->unsignedBigInteger('post_id')->nullable()->index();
@@ -45,8 +45,8 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
-            $this->updateTimestamps($table, false);
+        // @var mixed tableUpdate(function (Blueprint $table
+            // @var mixed updateTimestamps($table, false;
         });
     }
 };

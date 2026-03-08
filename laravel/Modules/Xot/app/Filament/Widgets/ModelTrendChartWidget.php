@@ -23,14 +23,14 @@ class ModelTrendChartWidget extends XotBaseChartWidget
     #[\Override]
     public function getHeading(): ?string
     {
-        return static::transClass($this->model, 'widgets.model_trend_chart.heading');
+        return static::transClass($model, 'widgets.model_trend_chart.heading');
     }
 
     #[\Override]
     protected function getData(): array
     {
         try {
-            $data = Trend::model($this->model)
+            $data = Trend::model($model
                 ->between(
                     start: now()->subDays(30),
                     end: now(),

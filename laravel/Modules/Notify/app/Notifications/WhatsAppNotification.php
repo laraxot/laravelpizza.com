@@ -40,20 +40,20 @@ class WhatsAppNotification extends Notification implements ShouldQueue
     public function __construct(string|WhatsAppData $content, array $config = [])
     {
         if ($content instanceof WhatsAppData) {
-            $this->whatsappData = $content;
+            // @var mixed whatsappData = $content;
         } else {
             $recipient = $config['recipient'] ?? ($config['to'] ?? '');
             $from = $config['from'] ?? null;
 
             /** @phpstan-ignore-next-line */
-            $this->whatsappData = new WhatsAppData(
+            // @var mixed whatsappData = new WhatsAppData(
                 recipient: SafeStringCastAction::cast($recipient),
                 body: $content,
                 from: $from !== null ? SafeStringCastAction::cast($from) : null,
             );
         }
 
-        $this->config = $config;
+        // @var mixed config = $config;
     }
 
     /**
@@ -77,10 +77,10 @@ class WhatsAppNotification extends Notification implements ShouldQueue
         // we'll use that to get the destination phone number
         if (is_object($notifiable) && method_exists($notifiable, 'routeNotificationForWhatsApp')) {
             $routeResult = $notifiable->routeNotificationForWhatsApp($this);
-            $this->whatsappData->recipient = app(SafeStringCastAction::class)->execute($routeResult);
+            // @var mixed whatsappData->recipient = app(SafeStringCastAction::class;
         }
 
-        return $this->whatsappData;
+        return // @var mixed whatsappData;
     }
 
     /**
@@ -90,7 +90,7 @@ class WhatsAppNotification extends Notification implements ShouldQueue
      */
     public function getConfig(): array
     {
-        return $this->config;
+        return // @var mixed config;
     }
 
     /**
@@ -98,7 +98,7 @@ class WhatsAppNotification extends Notification implements ShouldQueue
      */
     public function getProvider(): ?string
     {
-        $provider = $this->config['provider'] ?? null;
+        $provider = // @var mixed config['provider'] ?? null;
 
         return is_string($provider) ? $provider : null;
     }

@@ -63,7 +63,7 @@ class SendRecordsNotificationAction
             } catch (Exception $e) {
                 // If exception is thrown, count all channels as failed for this record
                 $errorCount += \count($channels);
-                $recordName = $this->getRecordName($record);
+                $recordName = // @var mixed getRecordName($record;
                 foreach ($channels as $channelItem) {
                     $errors->push([
                         'record' => $recordName,

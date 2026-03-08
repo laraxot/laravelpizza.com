@@ -63,9 +63,9 @@ class SmsService
     public function setLocalVars(array $vars): self
     {
         foreach ($vars as $k => $v) {
-            $this->{$k} = $v;
+            // @var mixed {$k} = $v;
         }
-        $this->vars = array_merge($this->vars, $vars);
+        // @var mixed vars = array_merge($this->vars, $vars;
 
         return $this;
     }
@@ -77,7 +77,7 @@ class SmsService
      */
     public function mergeVars(array $vars): self
     {
-        $this->vars = array_merge($this->vars, $vars);
+        // @var mixed vars = array_merge($this->vars, $vars;
 
         return $this;
     }
@@ -87,7 +87,7 @@ class SmsService
      */
     public function send(): self
     {
-        $engineClassName = '\\Modules\\Notify\\Services\\SmsEngines\\'.Str::studly($this->driver).'Engine';
+        $engineClassName = '\\Modules\\Notify\\Services\\SmsEngines\\'.Str::studly(// @var mixed driver;
 
         // Verifichiamo che la classe esista
         if (! class_exists($engineClassName)) {
@@ -120,7 +120,7 @@ class SmsService
 
             // Chiamiamo setLocalVars
             $setLocalVarsMethod = $reflectionClass->getMethod('setLocalVars');
-            $setLocalVarsMethod->invoke($instance, $this->vars);
+            $setLocalVarsMethod->invoke($instance, // @var mixed vars;
 
             // Chiamiamo send
             $sendMethod = $reflectionClass->getMethod('send');
@@ -144,7 +144,7 @@ class SmsService
                 }
             }
 
-            $this->mergeVars($typedResult);
+            // @var mixed mergeVars($typedResult;
         } catch (ReflectionException $e) {
             throw new RuntimeException('Errore durante la chiamata dei metodi: '.$e->getMessage());
         }

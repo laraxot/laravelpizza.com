@@ -35,8 +35,8 @@ class MembershipFactory extends Factory
         return [
             'team_id' => Team::factory(),
             'user_id' => User::factory(),
-            'role' => $this->faker->randomElement(['admin', 'editor', 'member', 'viewer']),
-            'customer_id' => $this->faker->optional(0.3)->uuid(),
+            'role' => $faker->randomElement(['admin', 'editor', 'member', 'viewer']
+            'customer_id' => $faker->optional(0.3
         ];
     }
 
@@ -45,7 +45,7 @@ class MembershipFactory extends Factory
      */
     public function forTeam(Team $team): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (array $_attributes
             'team_id' => $team->id,
         ]);
     }
@@ -55,7 +55,7 @@ class MembershipFactory extends Factory
      */
     public function forUser(User $user): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (array $_attributes
             'user_id' => $user->id,
         ]);
     }
@@ -65,7 +65,7 @@ class MembershipFactory extends Factory
      */
     public function admin(): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (array $_attributes
             'role' => 'admin',
         ]);
     }
@@ -75,7 +75,7 @@ class MembershipFactory extends Factory
      */
     public function editor(): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (array $_attributes
             'role' => 'editor',
         ]);
     }
@@ -85,7 +85,7 @@ class MembershipFactory extends Factory
      */
     public function member(): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (array $_attributes
             'role' => 'member',
         ]);
     }
@@ -95,7 +95,7 @@ class MembershipFactory extends Factory
      */
     public function viewer(): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (array $_attributes
             'role' => 'viewer',
         ]);
     }

@@ -28,6 +28,6 @@ trait HasContact
     {
         // Automatically create a random token
         $fields = Arr::map(ContactTypeEnum::cases(), fn ($item) => $item->value);
-        $this->mergeFillable($fields);
+        // @var mixed mergeFillable($fields;
     }
 }

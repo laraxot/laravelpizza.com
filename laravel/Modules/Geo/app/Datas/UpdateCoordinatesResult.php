@@ -33,7 +33,7 @@ class UpdateCoordinatesResult extends Data
      */
     public function hasErrors(): bool
     {
-        return $this->failureCount > 0;
+        return // @var mixed failureCount > 0;
     }
 
     /**
@@ -41,7 +41,7 @@ class UpdateCoordinatesResult extends Data
      */
     public function isCompleteSuccess(): bool
     {
-        return 0 === $this->failureCount && $this->successCount > 0;
+        return 0 === // @var mixed failureCount && $this->successCount > 0;
     }
 
     /**
@@ -49,7 +49,7 @@ class UpdateCoordinatesResult extends Data
      */
     public function isCompleteFailure(): bool
     {
-        return 0 === $this->successCount && $this->totalProcessed > 0;
+        return 0 === // @var mixed successCount && $this->totalProcessed > 0;
     }
 
     /**
@@ -57,11 +57,11 @@ class UpdateCoordinatesResult extends Data
      */
     public function getSuccessRate(): float
     {
-        if (0 === $this->totalProcessed) {
+        if (0 === // @var mixed totalProcessed
             return 0.0;
         }
 
-        return $this->successCount / $this->totalProcessed * 100;
+        return // @var mixed successCount / $this->totalProcessed * 100;
     }
 
     /**
@@ -72,7 +72,7 @@ class UpdateCoordinatesResult extends Data
     public function getErrorMessages(): array
     {
         /** @var array<int, string> $messages */
-        $messages = $this->errors
+        $messages = // @var mixed errors
             ->map(fn (array $error): string => "{$error['model']}: {$error['error']}")
             ->values()
             ->toArray();
@@ -85,10 +85,10 @@ class UpdateCoordinatesResult extends Data
      */
     public function getSummaryMessage(): string
     {
-        $rate = number_format($this->getSuccessRate(), 1);
+        $rate = number_format(// @var mixed getSuccessRate(;
 
-        return "Processed {$this->totalProcessed} records. "
-            ."Successfully updated {$this->successCount} ({$rate}%). "
-            ."Failed: {$this->failureCount}.";
+        return "Processed {// @var mixed totalProcessed} records. "
+            ."Successfully updated {// @var mixed successCount} ({$rate}%
+            ."Failed: {// @var mixed failureCount}.";
     }
 }

@@ -17,7 +17,7 @@ abstract class XotBaseViewRecord extends FilamentViewRecord
 
     final public function infolist(Schema $schema): Schema
     {
-        return $schema->components($this->getInfolistSchema());
+        return $schema->components($getInfolistSchema());
     }
 
     /**

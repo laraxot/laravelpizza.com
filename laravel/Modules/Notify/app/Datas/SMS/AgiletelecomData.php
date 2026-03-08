@@ -47,23 +47,23 @@ class AgiletelecomData extends Data
 
     public function getAuthHeaders(): array
     {
-        switch ($this->auth_type) {
+        switch (// @var mixed auth_type
             case 'api_key':
                 return [
-                    'Authorization' => 'Api-Key '.$this->api_key,
+                    'Authorization' => 'Api-Key '.// @var mixed api_key,
                     'Content-Type' => 'application/json',
                 ];
 
             case 'oauth':
                 return [
-                    'Authorization' => 'OAuth '.$this->oauth_token,
+                    'Authorization' => 'OAuth '.// @var mixed oauth_token,
                     'Content-Type' => 'application/json',
                 ];
 
             case 'basic':
             default:
                 return [
-                    'Authorization' => 'Basic '.base64_encode($this->username.':'.$this->password),
+                    'Authorization' => 'Basic '.base64_encode(// @var mixed username.':'.$this->password
                     'Content-Type' => 'application/json',
                 ];
         }

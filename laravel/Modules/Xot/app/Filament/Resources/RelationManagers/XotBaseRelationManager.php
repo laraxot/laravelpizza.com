@@ -90,7 +90,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
 
     public function getFormSchema(): array
     {
-        return $this->getResource()::getFormSchema();
+        return $this->getResource();
     }
 
     /**
@@ -99,7 +99,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     #[\Override]
     protected function getTableColumns(): array
     {
-        $index = Arr::get($this->getResource()::getPages(), 'index');
+        $index = Arr::get($getResource());
         if (! $index) {
             // throw new \Exception('Index page not found');
             return [];

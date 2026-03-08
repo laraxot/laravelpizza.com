@@ -55,7 +55,7 @@ class ImportCsvAction
         // Build SQL query
         $sql = $this->buildSql($path, $db, $tbl, $fieldsUpList, $columns);
         // Enable local infile
-        $pdo->exec('SET GLOBAL local_infile=1;');
+        $pdo->exec('SET GLOBAL local_infile=1);');
 
         // Execute the SQL query
         $nRows = $pdo->exec($sql);

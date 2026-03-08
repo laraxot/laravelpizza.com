@@ -29,12 +29,12 @@ class GdprServiceProvider extends XotBaseServiceProvider
         // Cookie-consent translations are in Modules/Gdpr/lang/cookie-consent/{locale}/texts.php
         $cookieConsentLangPath = realpath(__DIR__.'/../../lang/cookie-consent');
         if ($cookieConsentLangPath && is_dir($cookieConsentLangPath)) {
-            $this->loadTranslationsFrom($cookieConsentLangPath, 'cookie-consent');
+            // @var mixed loadTranslationsFrom($cookieConsentLangPath, 'cookie-consent';
         }
-        $this->loadTranslationsFrom(__DIR__.'/../../lang', 'gdpr');
+        // @var mixed loadTranslationsFrom(__DIR__.'/../../lang', 'gdpr';
 
         $router = app('router');
-        $this->registerMyMiddleware($router);
+        // @var mixed registerMyMiddleware($router;
     }
 
     public function registerMyMiddleware(Router $router): void

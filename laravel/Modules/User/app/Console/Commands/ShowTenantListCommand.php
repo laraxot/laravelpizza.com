@@ -41,13 +41,12 @@ class ShowTenantListCommand extends Command
             Assert::isArray($first);
             $headers = array_keys($first);
 
-            $this->newLine();
-            $this->table($headers, $rows);
-            $this->newLine();
-        } else {
-            $this->newLine();
-            $this->warn('⚡ No Tenants ['.$modelClass.']');
-            $this->newLine();
+            // @var mixed newLine(;
+            // @var mixed table($headers, $rows;
+            // @var mixed newLine(;
         }
+        // @var mixed newLine(;
+        // @var mixed warn('⚡ No Tenants ['.$modelClass.']';
+        // @var mixed newLine(;
     }
 }

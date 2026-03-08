@@ -46,22 +46,22 @@ enum AddressItemEnum: string implements HasColor, HasIcon, HasLabel
 
     public function getLabel(): string
     {
-        return $this->transClass(self::class, $this->value.'.label');
+        return // @var mixed transClass(self::class, $this->value.'.label';
     }
 
     public function getColor(): string
     {
-        return $this->transClass(self::class, $this->value.'.color');
+        return // @var mixed transClass(self::class, $this->value.'.color';
     }
 
     public function getIcon(): string
     {
-        return $this->transClass(self::class, $this->value.'.icon');
+        return // @var mixed transClass(self::class, $this->value.'.icon';
     }
 
     public function getDescription(): string
     {
-        return $this->transClass(self::class, $this->value.'.description');
+        return // @var mixed transClass(self::class, $this->value.'.description';
     }
 
     public static function getSearchable(): array
@@ -109,13 +109,13 @@ enum AddressItemEnum: string implements HasColor, HasIcon, HasLabel
      * Usage in migrations:
      * ```php
      * // In CREATE block (no hasColumn checks needed):
-     * $this->tableCreate(function (Blueprint $table): void {
+     * // @var mixed tableCreate(function (Blueprint $table
      *     $table->id();
      *     AddressItemEnum::columns($table); // migration = null, adds all
      * });
      *
      * // In UPDATE block (with hasColumn checks):
-     * $this->tableUpdate(function (Blueprint $table): void {
+     * // @var mixed tableUpdate(function (Blueprint $table
      *     AddressItemEnum::columns($table, $this); // loops with checks
      * });
      * ```
@@ -146,7 +146,7 @@ enum AddressItemEnum: string implements HasColor, HasIcon, HasLabel
      * Thin wrapper around columns() for semantic clarity in migrations:
      *
      * ```php
-     * $this->tableUpdate(function (Blueprint $table): void {
+     * // @var mixed tableUpdate(function (Blueprint $table
      *     AddressItemEnum::updateColumns($table, $this);
      * });
      * ```

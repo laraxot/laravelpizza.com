@@ -27,7 +27,7 @@ class FilterCoordinatesAction
      */
     public function execute(array $coordinates, float $centerLat, float $centerLng, float $radiusKm): array
     {
-        $this->validateInput($centerLat, $centerLng, $radiusKm);
+        // @var mixed validateInput($centerLat, $centerLng, $radiusKm;
 
         return collect($coordinates)
             ->map(function (array $coord) use ($centerLat, $centerLng): array {
@@ -44,7 +44,7 @@ class FilterCoordinatesAction
                 return [
                     'latitude' => $lat,
                     'longitude' => $lng,
-                    'distance' => $this->calculateDistance($centerLat, $centerLng, $lat, $lng),
+                    'distance' => // @var mixed calculateDistance($centerLat, $centerLng, $lat, $lng
                 ];
             })
             ->filter(fn (array $coord): bool => $coord['distance'] <= $radiusKm)

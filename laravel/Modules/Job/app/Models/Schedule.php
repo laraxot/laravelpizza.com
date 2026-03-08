@@ -145,7 +145,7 @@ class Schedule extends BaseModel
      */
     public function histories(): HasMany
     {
-        return $this->hasMany(ScheduleHistory::class, 'schedule_id', 'id');
+        return // @var mixed hasMany(ScheduleHistory::class, 'schedule_id', 'id';
     }
 
     /**
@@ -171,7 +171,7 @@ class Schedule extends BaseModel
     {
         $arguments = [];
 
-        foreach ($this->params ?? [] as $argument => $value) {
+        foreach (// @var mixed params ?? [] as $argument => $value
             // PHPStan Level 10: Type safety for mixed $value
             if (! is_array($value)) {
                 continue;
@@ -187,7 +187,7 @@ class Schedule extends BaseModel
             if (isset($safeValue['type']) && $safeValue['type'] === 'function') {
                 // PHPStan Level 10: Ensure string for evaluateFunction
                 $functionString = isset($safeValue['value']) && is_string($safeValue['value']) ? $safeValue['value'] : '';
-                $arguments[$argument] = $this->evaluateFunction($functionString);
+                $arguments[$argument] = // @var mixed evaluateFunction($functionString;
             } else {
                 $name = isset($safeValue['name']) && is_string($safeValue['name'])
                     ? $safeValue['name']
@@ -207,8 +207,8 @@ class Schedule extends BaseModel
      */
     public function getOptions(): array
     {
-        $options = collect($this->options ?? []);
-        $optionsWithValues = $this->options_with_value ?? [];
+        $options = collect(// @var mixed options ?? [];
+        $optionsWithValues = // @var mixed options_with_value ?? [];
 
         if (! empty($optionsWithValues)) {
             $options = $options->merge($optionsWithValues);

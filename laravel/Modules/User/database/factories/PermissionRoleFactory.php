@@ -49,7 +49,7 @@ class PermissionRoleFactory extends Factory
      */
     public function forPermission(Permission $permission): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (array $_attributes
             'permission_id' => $permission->id,
         ]);
     }
@@ -59,7 +59,7 @@ class PermissionRoleFactory extends Factory
      */
     public function forRole(Role $role): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (array $_attributes
             'role_id' => $role->id,
         ]);
     }

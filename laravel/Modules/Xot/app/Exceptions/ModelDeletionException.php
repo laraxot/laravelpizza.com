@@ -19,7 +19,7 @@ class ModelDeletionException extends ApplicationException
         private readonly int $id,
         string $model,
     ) {
-        $this->model = Str::afterLast($model, '\\');
+        $model = Str::afterLast($model, '\\');
     }
 
     #[\Override]
@@ -43,8 +43,8 @@ class ModelDeletionException extends ApplicationException
     public function error(): string
     {
         $res = trans('exception.model_not_deleted.error', [
-            'id' => $this->id,
-            'model' => $this->model,
+            'id' => $id,
+            'model' => $model,
         ]);
         if (! \is_string($res)) {
             throw new \Exception('['.__LINE__.']['.class_basename($this).']');

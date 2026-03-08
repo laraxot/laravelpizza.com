@@ -17,7 +17,7 @@ use function Pest\Laravel\assertGuest;
 uses(TestCase::class);
 
 // NOTE: Helper functions moved to Modules\Xot\Tests\TestCase for DRY pattern
-// Use $this->$this->generateUniqueEmail(), $this->getUserClass(), $this->$this->createTestUser()
+// Use // @var mixed $this->generateUniqueEmail(
 
 describe('Volt Component Rendering', function (): void {
     test('volt login component can be rendered', function (): void {
@@ -45,8 +45,8 @@ describe('Volt Component Rendering', function (): void {
 
 describe('Volt Component Authentication', function (): void {
     test('user can authenticate via volt component', function (): void {
-        $email = $this->generateUniqueEmail();
-        $user = $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        $user = // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);
@@ -63,8 +63,8 @@ describe('Volt Component Authentication', function (): void {
     });
 
     test('authentication fails with wrong credentials', function (): void {
-        $email = $this->generateUniqueEmail();
-        $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);
@@ -81,7 +81,7 @@ describe('Volt Component Authentication', function (): void {
     });
 
     test('authentication fails with non-existent user', function (): void {
-        $email = $this->generateUniqueEmail();
+        $email = // @var mixed generateUniqueEmail(;
 
         assertGuest();
 
@@ -112,7 +112,7 @@ describe('Volt Component Validation', function (): void {
     });
 
     test('password minimum length validation', function (): void {
-        $email = $this->generateUniqueEmail();
+        $email = // @var mixed generateUniqueEmail(;
 
         $response = LivewireVolt::test('auth.login')
             ->set('email', $email)
@@ -126,8 +126,8 @@ describe('Volt Component Validation', function (): void {
 
 describe('Volt Component Session Management', function (): void {
     test('remember me functionality works', function (): void {
-        $email = $this->generateUniqueEmail();
-        $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);
@@ -145,8 +145,8 @@ describe('Volt Component Session Management', function (): void {
     });
 
     test('session regeneration on login', function (): void {
-        $email = $this->generateUniqueEmail();
-        $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);
@@ -166,8 +166,8 @@ describe('Volt Component Session Management', function (): void {
     });
 
     test('session data is preserved on authentication', function (): void {
-        $email = $this->generateUniqueEmail();
-        $user = $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        $user = // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);
@@ -189,8 +189,8 @@ describe('Volt Component Session Management', function (): void {
 
 describe('Volt Component Security', function (): void {
     test('login attempts are rate limited', function (): void {
-        $email = $this->generateUniqueEmail();
-        $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);
@@ -215,8 +215,8 @@ describe('Volt Component Security', function (): void {
 
     test('csrf protection is active', function (): void {
         // Volt components should automatically handle CSRF protection
-        $email = $this->generateUniqueEmail();
-        $user = $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        $user = // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);
@@ -231,7 +231,7 @@ describe('Volt Component Security', function (): void {
     });
 
     test('input sanitization works', function (): void {
-        $email = $this->generateUniqueEmail();
+        $email = // @var mixed generateUniqueEmail(;
 
         $response = LivewireVolt::test('auth.login')
             ->set('email', '<script>alert("xss")</script>'.$email)
@@ -245,7 +245,7 @@ describe('Volt Component Security', function (): void {
 
 describe('Volt Component State Management', function (): void {
     test('component state updates correctly', function (): void {
-        $email = $this->generateUniqueEmail();
+        $email = // @var mixed generateUniqueEmail(;
 
         $component = LivewireVolt::test('auth.login');
 
@@ -259,7 +259,7 @@ describe('Volt Component State Management', function (): void {
     });
 
     test('component resets after failed authentication', function (): void {
-        $email = $this->generateUniqueEmail();
+        $email = // @var mixed generateUniqueEmail(;
 
         $component = LivewireVolt::test('auth.login')
             ->set('email', $email)
@@ -271,8 +271,8 @@ describe('Volt Component State Management', function (): void {
     });
 
     test('loading state is managed correctly', function (): void {
-        $email = $this->generateUniqueEmail();
-        $user = $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        $user = // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);
@@ -293,8 +293,8 @@ describe('Volt Component State Management', function (): void {
 describe('Volt Component User Types Integration', function (): void {
     test('any user type can login via volt component', function (): void {
         // Using XotData pattern ensures compatibility with any user type
-        $email = $this->generateUniqueEmail();
-        $user = $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        $user = // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);
@@ -317,8 +317,8 @@ describe('Volt Component User Types Integration', function (): void {
 
     test('component handles different user configurations', function (): void {
         // Test with various user attributes
-        $email = $this->generateUniqueEmail();
-        $user = $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        $user = // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
             'name' => 'Test User',
@@ -339,8 +339,8 @@ describe('Volt Component User Types Integration', function (): void {
 
 describe('Volt Component Redirects', function (): void {
     test('component redirects after successful authentication', function (): void {
-        $email = $this->generateUniqueEmail();
-        $user = $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        $user = // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);
@@ -358,8 +358,8 @@ describe('Volt Component Redirects', function (): void {
     });
 
     test('component handles intended redirect', function (): void {
-        $email = $this->generateUniqueEmail();
-        $user = $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        $user = // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);

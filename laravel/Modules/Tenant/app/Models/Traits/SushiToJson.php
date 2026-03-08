@@ -48,7 +48,7 @@ trait SushiToJson
      */
     public function getJsonFile(): string
     {
-        $tbl = $this->getTable();
+        $tbl = // @var mixed getTable(;
         if (! is_string($tbl)) {
             throw new InvalidArgumentException(__FILE__.':'.__LINE__.' - '.class_basename(self::class).': Table name must be string');
         }
@@ -64,7 +64,7 @@ trait SushiToJson
      */
     public function getRows(): array
     {
-        return $this->getSushiRows();
+        return // @var mixed getSushiRows(;
     }
 
     /**
@@ -77,8 +77,8 @@ trait SushiToJson
      */
     public function getSushiRows(): array
     {
-        $path = $this->getJsonFile();
-        $form = $this->getSchema();
+        $path = // @var mixed getJsonFile(;
+        $form = // @var mixed getSchema(;
         if (! File::exists($path)) {
             return [];
         }
@@ -141,7 +141,7 @@ trait SushiToJson
      */
     public function loadExistingData(): array
     {
-        $path = $this->getJsonFile();
+        $path = // @var mixed getJsonFile(;
 
         if (! File::exists($path)) {
             return [];
@@ -181,7 +181,7 @@ trait SushiToJson
     public function saveToJson(array $data): bool
     {
         try {
-            $file = $this->getJsonFile();
+            $file = // @var mixed getJsonFile(;
             $directory = dirname($file);
 
             if (! File::exists($directory)) {
@@ -219,7 +219,7 @@ trait SushiToJson
      */
     protected function getNextId(): int
     {
-        $existingData = $this->loadExistingData();
+        $existingData = // @var mixed loadExistingData(;
 
         if (empty($existingData)) {
             return 1;

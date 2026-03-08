@@ -88,7 +88,7 @@ class Section extends BaseModelLang implements SushiToJsonsContract
      */
     public function getRows(): array
     {
-        return $this->getSushiRows();
+        return // @var mixed getSushiRows(;
 
         /* @var array<int, array<string, mixed>> $typedRows */
     }

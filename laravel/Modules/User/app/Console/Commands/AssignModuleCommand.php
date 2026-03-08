@@ -57,7 +57,7 @@ class AssignModuleCommand extends Command
 
         // Get all available modules
         /** @var array<string, mixed> $allModules */
-        $allModules = $this->moduleRepository->all();
+        $allModules = $moduleRepository->all();
 
         // Ensure $allModules is an array for PHPStan
         if (! is_array($allModules)) {
@@ -96,7 +96,7 @@ class AssignModuleCommand extends Command
             $roleName = $moduleLower.'::admin';
 
             // Create or get the role with the web guard
-            $role = $this->roleModel->firstOrCreate(['name' => $roleName], []);
+            $role = $roleModel->firstOrCreate(['name' => $roleName], []);
 
             // Assign the role to the user
             $user->assignRole($role);

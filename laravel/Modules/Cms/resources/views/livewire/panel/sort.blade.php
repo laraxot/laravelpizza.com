@@ -11,12 +11,12 @@ declare(strict_types=1);
             </div>
         @endif
     </div>
-    <a href="{{ $this->panel->url('index') }}" class="btn btn-info">&laquo; Back</a>
+    <a href="{{ // @var mixed panel->url('index'; Back</a>
     <ul wire:sortable="updateTaskOrder">
-        {{-- dddx($this->panel->rows($data)->get()) --}}
-        @foreach ($this->rows->sortBy('pos') as $row)
+        {{-- dddx(// @var mixed panel->rows($data
+        @foreach (// @var mixed rows->sortBy('pos'
             <li wire:sortable.item="{{ $row->id }}" wire:key="task-{{ $row->id }}">
-                <h4 wire:sortable.handle>[{{ $row->pos }}] {!! $this->panel->optionLabel($row) !!}</h4>
+                <h4 wire:sortable.handle>[{{ $row->pos }}] {!! // @var mixed panel->optionLabel($row
                 <button wire:click="removeTask({{ $row->id }})">Remove</button>
             </li>
         @endforeach

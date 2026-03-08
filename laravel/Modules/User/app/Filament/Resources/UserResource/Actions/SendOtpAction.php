@@ -17,7 +17,7 @@ class SendOtpAction extends Action
     {
         parent::setUp();
 
-        $this->tooltip(trans('user::otp.actions.send_otp'))
+        $this->tooltip(trans('user::otp.actions.send_otp'
             ->icon('heroicon-o-key')
             ->action(function (User $record): void {
                 // User already implements UserContract, no need for assertion

@@ -19,7 +19,7 @@ class FieldRefreshAction extends Action
         parent::setUp();
 
         $this->translateLabel();
-        $this->icon('heroicon-o-arrow-path')
+        $this->icon('heroicon-o-arrow-path'
             ->tooltip('Ricalcola valore')
             ->action(function ($record, Set $set): void {
                 $name = $this->getName();

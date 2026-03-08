@@ -34,7 +34,7 @@ class ChangePasswordCommand extends Command
                 $user->exists(),
                 __FILE__.':'.__LINE__.' - '.class_basename(self::class).' - User model should exist in database before password change'
             );
-            $this->error('User not found or not persisted. Please create the user first (name, email, type, etc.).');
+            $this->error('User not found or not persisted. Please create the user first (name, email, type, etc.));
 
             return;
         }

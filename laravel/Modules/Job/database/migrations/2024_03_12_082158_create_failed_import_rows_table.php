@@ -13,7 +13,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table): void {
+        // @var mixed tableCreate(static function (Blueprint $table
             $table->id();
             $table->json('data');
             $table->foreignId('import_id')->constrained()->cascadeOnDelete();
@@ -21,8 +21,8 @@ return new class extends XotBaseMigration
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
-            $this->updateTimestamps($table, false);
+        // @var mixed tableUpdate(function (Blueprint $table
+            // @var mixed updateTimestamps($table, false;
         });
     }
 };

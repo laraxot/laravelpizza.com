@@ -23,7 +23,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table): void {
+        $this->tableCreate(static function (Blueprint $table
             $table->id();
             $table->foreignId('team_id')->constrained('teams')->cascadeOnDelete();
             $table->uuid('user_id')->nullable()->index();
@@ -38,35 +38,35 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
+        $this->tableUpdate(function (Blueprint $table
             // Se la tabella esiste già con id UUID, convertiamo a autoincrement
-            if ($this->hasColumn('id') && in_array($this->getColumnType('id'), ['string', 'guid'], true)) {
+            if ($hasColumn('id'
                 // Rimuoviamo la PRIMARY KEY esistente
                 $this->dropPrimaryKey();
 
                 // Se non esiste già, rinominiamo id a uuid per preservare i dati
-                if (! $this->hasColumn('uuid')) {
+                if (! $this->hasColumn('uuid'
                     $this->renameColumn('id', 'uuid');
                 }
 
                 // Aggiungiamo la nuova colonna id come bigint autoincrement
-                if (! $this->hasColumn('id')) {
+                if (! $this->hasColumn('id'
                     $table->id()->first();
                 }
 
                 // Impostiamo la nuova PRIMARY KEY su id
-                $this->query('ALTER TABLE `'.$this->table_name.'` ADD PRIMARY KEY (`id`)');
+                $this->query('ALTER TABLE `'.$this->table_name.'` ADD PRIMARY KEY (`id`));
             }
 
-            if (! $this->hasColumn('role')) {
+            if (! $this->hasColumn('role'
                 $table->string('role')->nullable();
             }
 
-            if (! $this->hasColumn('permissions')) {
+            if (! $this->hasColumn('permissions'
                 $table->json('permissions')->nullable();
             }
 
-            if (! $this->hasColumn('joined_at')) {
+            if (! $this->hasColumn('joined_at'
                 $table->timestamp('joined_at')->nullable();
             }
 
@@ -78,7 +78,7 @@ return new class extends XotBaseMigration {
             /*
             // Aggiungiamo l'indice univoco se non esiste già
             // Verifichiamo tramite query SQL se l'indice esiste
-            $connection = $this->getConn()->getConnection();
+            $connection = $this->getConn();
             $database = $connection->getDatabaseName();
             //@var array{count: int}|object{count: int}|null $indexExists
             $indexExists = $connection->selectOne(
@@ -87,7 +87,7 @@ return new class extends XotBaseMigration {
                  WHERE table_schema = ?
                  AND table_name = ?
                  AND index_name = 'team_user_team_id_user_id_unique'",
-                [$database, $this->table_name]
+                [$database, $table_name]
             );
 
             $count = 0;

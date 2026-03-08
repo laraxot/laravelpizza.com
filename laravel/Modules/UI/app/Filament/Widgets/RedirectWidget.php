@@ -88,11 +88,11 @@ final class RedirectWidget extends XotBaseWidget
     protected function getViewData(): array
     {
         return [
-            'to' => $this->to ?? $this->url,
-            'label' => $this->label ?: 'Vai',
-            'icon' => $this->icon,
-            'class' => $this->class,
-            'external' => $this->external,
+            'to' => // @var mixed to ?? $this->url,
+            'label' => // @var mixed label ?: 'Vai',
+            'icon' => // @var mixed icon,
+            'class' => // @var mixed class,
+            'external' => // @var mixed external,
         ];
     }
 }

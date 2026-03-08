@@ -9,12 +9,12 @@ use Modules\Geo\Actions\GetCoordinatesByAddressAction;
 uses(Modules\Geo\Tests\LightTestCase::class);
 
 beforeEach(function () {
-    $this->action = new GetCoordinatesByAddressAction();
+    // @var mixed action = new GetCoordinatesByAddressAction(;
 });
 
 it('returns null for empty address', function (): void {
     // Without API keys configured, should return null
-    $result = $this->action->execute('');
+    $result = // @var mixed action->execute('';
 
     expect($result)->toBeNull();
 });
@@ -24,7 +24,7 @@ it('returns null when google api key not configured', function (): void {
     Config::set('services.bing.maps_api_key', null);
     Config::set('services.opencage.api_key', null);
 
-    $result = $this->action->execute('Fake Address XYZ');
+    $result = // @var mixed action->execute('Fake Address XYZ';
 
     expect($result)->toBeNull();
 });
@@ -42,7 +42,7 @@ it('returns null for non-existent address with mock', function (): void {
         ], 200),
     ]);
 
-    $result = $this->action->execute('asdfghjklqwertyuizxcvbnm123456789');
+    $result = // @var mixed action->execute('asdfghjklqwertyuizxcvbnm123456789';
 
     expect($result)->toBeNull();
 });

@@ -41,8 +41,7 @@ class PasswordExpired extends XotBasePage
      */
     public function getFormSchema(): array
     {
-        return array_values(array_merge(
-            $this->getCurrentPasswordFormComponent(),
+        return array_values(array_merge($getCurrentPasswordFormComponent(
             PasswordData::make()->getPasswordFormComponents('password'),
         ));
     }
@@ -60,7 +59,7 @@ class PasswordExpired extends XotBasePage
     public function resetPassword(): ?PasswordResetResponse
     {
         $pwd = PasswordData::make();
-        $data = $this->form->getState();
+        $data = $form->getState();
         Assert::string($currentPassword = Arr::get($data, 'current_password'));
         Assert::string($password = Arr::get($data, 'password'));
         $user = Auth::user();
@@ -155,7 +154,7 @@ class PasswordExpired extends XotBasePage
     protected function getFormActions(): array
     {
         return [
-            $this->getResetPasswordFormAction(),
+            $this->getResetPasswordFormAction(
         ];
     }
 }

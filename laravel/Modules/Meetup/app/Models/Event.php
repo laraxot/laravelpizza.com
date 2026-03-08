@@ -244,6 +244,38 @@ class Event extends BaseModel
     }
 
     /**
+     * Determine if event is pending approval.
+     */
+    public function isPending(): bool
+    {
+        return $this->status === 'pending';
+    }
+
+    /**
+     * Determine if event is publicly visible.
+     */
+    public function isPublished(): bool
+    {
+        return $this->status === 'published';
+    }
+
+    /**
+     * Determine if the given user can view this event.
+     */
+    public function canBeViewedBy(?string $userId): bool
+    {
+        if ($this->isPublished()) {
+            return true;
+        }
+
+        if (! $this->isPending() || $userId === null) {
+            return false;
+        }
+
+        return (string) $this->user_id === $userId;
+    }
+
+    /**
      * Get the venue where this event is held.
      */
     public function venue(): BelongsTo
@@ -313,6 +345,38 @@ class Event extends BaseModel
     public function scopeDateRange(Builder $query, Carbon $startDate, Carbon $endDate): Builder
     {
         return $query->whereBetween('start_date', [$startDate, $endDate]);
+    }
+
+    /**
+     * Scope: only events publicly visible.
+     *
+     * @param  Builder<Event>  $query
+     * @return Builder<Event>
+     */
+    public function scopePubliclyVisible(Builder $query): Builder
+    {
+        return $query->where('status', 'published');
+    }
+
+    /**
+     * Scope: events visible to a specific user.
+     * Published events are public; pending events are owner-only.
+     *
+     * @param  Builder<Event>  $query
+     * @return Builder<Event>
+     */
+    public function scopeVisibleToUser(Builder $query, ?string $userId): Builder
+    {
+        return $query->where(static function (Builder $inner) use ($userId): void {
+            $inner->where('status', 'published');
+
+            if ($userId !== null) {
+                $inner->orWhere(static function (Builder $pending) use ($userId): void {
+                    $pending->where('status', 'pending')
+                        ->where('user_id', (int) $userId);
+                });
+            }
+        });
     }
 
     /**

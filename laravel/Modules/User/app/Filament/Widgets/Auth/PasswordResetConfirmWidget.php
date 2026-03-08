@@ -49,12 +49,12 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function mount(?string $token = null, ?string $email = null): void
     {
-        $this->token = $token;
-        $this->email = $email;
+        $token = $token;
+        $email = $email;
 
         // Pre-fill the form if email is provided
-        if ($this->email) {
-            $this->form->fill(['email' => $this->email]);
+        if ($email
+            $form->fill(['email' => $this->email]);
         }
     }
 
@@ -72,7 +72,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 ->required()
                 ->autocomplete('email')
                 ->maxLength(255)
-                ->disabled('form' !== $this->currentState)
+                ->disabled('form' !== $currentState
                 ->extraInputAttributes(['class' => 'text-center'])
                 ->suffixIcon('heroicon-o-envelope'),
             'password' => TextInput::make('password')
@@ -80,14 +80,14 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 ->required()
                 ->revealable()
                 ->minLength(8)
-                ->disabled('form' !== $this->currentState)
+                ->disabled('form' !== $currentState
                 ->extraInputAttributes(['class' => 'text-center'])
                 ->suffixIcon('heroicon-o-key'),
             'password_confirmation' => TextInput::make('password_confirmation')
                 ->password()
                 ->required()
                 ->same('password')
-                ->disabled('form' !== $this->currentState)
+                ->disabled('form' !== $currentState
                 ->extraInputAttributes(['class' => 'text-center'])
                 ->suffixIcon('heroicon-o-key'),
         ];
@@ -98,18 +98,18 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function confirmPasswordReset(): void
     {
-        if ('form' !== $this->currentState) {
+        if ('form' !== $currentState
             return;
         }
 
-        $this->currentState = 'loading';
+        $currentState = 'loading';
 
         try {
-            $data = $this->form->getState();
+            $data = $form->getState();
 
             $response = Password::broker()->reset(
                 [
-                    'token' => $this->token,
+                    'token' => $token,
                     'email' => $data['email'],
                     'password' => $data['password'],
                 ],
@@ -126,7 +126,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
             );
 
             if (Password::PASSWORD_RESET === $response) {
-                $this->currentState = 'success';
+                $currentState = 'success';
 
                 Notification::make()
                     ->title(__('user::auth.password_reset.success.title'))
@@ -144,7 +144,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 Auth::guard()->login($user);
 
                 // Redirect after a short delay to show success message
-                $this->js('setTimeout(() => { window.location.href = "'.route('login').'"; }, 3000);');
+                $this->js('setTimeout(())); }, 3000);');
             } else {
                 /* @phpstan-ignore argument.type */
                 $this->handleResetError($response);
@@ -159,9 +159,9 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function resetForm(): void
     {
-        $this->currentState = 'form';
-        $this->errorMessage = null;
-        $this->form->fill(['email' => $this->email ?? '']);
+        $currentState = 'form';
+        $errorMessage = null;
+        $form->fill(['email' => $this->email ?? '']);
     }
 
     /**
@@ -169,7 +169,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function getCurrentState(): string
     {
-        return $this->currentState;
+        return $currentState;
     }
 
     /**
@@ -177,7 +177,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function getErrorMessage(): ?string
     {
-        return $this->errorMessage;
+        return $errorMessage;
     }
 
     /**
@@ -185,7 +185,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function shouldShowForm(): bool
     {
-        return \in_array($this->currentState, ['form', 'loading'], strict: true);
+        return \in_array($currentState, ['form', 'loading'], strict: true);
     }
 
     /**
@@ -193,7 +193,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function isLoading(): bool
     {
-        return 'loading' === $this->currentState;
+        return 'loading' === $currentState;
     }
 
     /**
@@ -201,7 +201,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function isSuccess(): bool
     {
-        return 'success' === $this->currentState;
+        return 'success' === $currentState;
     }
 
     /**
@@ -209,7 +209,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function hasError(): bool
     {
-        return 'error' === $this->currentState;
+        return 'error' === $currentState;
     }
 
     /**
@@ -217,7 +217,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     protected function handleResetError(string $response): void
     {
-        $this->currentState = 'error';
+        $currentState = 'error';
 
         // Map Laravel password reset responses to user-friendly messages
         $errorMessages = [
@@ -226,11 +226,11 @@ class PasswordResetConfirmWidget extends XotBaseWidget
             'passwords.generic_error' => __('user::auth.password_reset.errors.generic'),
         ];
 
-        $this->errorMessage = $errorMessages[$response] ?? trans($response);
+        $errorMessage = $errorMessages[$response] ?? trans($response);
 
         Notification::make()
             ->title(__('user::auth.password_reset.errors.title'))
-            ->body($this->errorMessage)
+            ->body($errorMessage
             ->danger()
             ->duration(10000)
             ->send();

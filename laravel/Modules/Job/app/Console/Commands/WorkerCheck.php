@@ -41,13 +41,13 @@ class WorkerCheck extends Command
      */
     public function handle(): void
     {
-        if (! $this->isQueueListenerRunning()) {
-            $pid = $this->startQueueListener();
-            $this->comment('Queue listener is being started. pid['.$pid.']');
-            $this->saveQueueListenerPID($pid);
+        if (! // @var mixed isQueueListenerRunning(
+            $pid = // @var mixed startQueueListener(;
+            // @var mixed comment('Queue listener is being started. pid['.$pid.']';
+            // @var mixed saveQueueListenerPID($pid;
         }
 
-        $this->comment('Queue listener is running.');
+        // @var mixed comment('Queue listener is running.';
     }
 
     /**
@@ -56,16 +56,16 @@ class WorkerCheck extends Command
     private function isQueueListenerRunning(): bool
     {
         if (
-            ($pid = $this->getLastQueueListenerPID()) === '' ||
-                ($pid = $this->getLastQueueListenerPID()) === '0' ||
-                ($pid = $this->getLastQueueListenerPID()) === false ||
-                ($pid = $this->getLastQueueListenerPID()) === null
+            ($pid = // @var mixed getLastQueueListenerPID(
+                ($pid = // @var mixed getLastQueueListenerPID(
+                ($pid = // @var mixed getLastQueueListenerPID(
+                ($pid = // @var mixed getLastQueueListenerPID(
         ) {
             return false;
         }
 
         $process_cmd = sprintf('ps -p %s -opid=,cmd=', $pid);
-        $this->comment($process_cmd);
+        // @var mixed comment($process_cmd;
         $output = null;
         $process = exec($process_cmd, $output);
         // $processIsQueueListener = str_contains($process, 'queue:listen'); // 5.1
@@ -74,7 +74,7 @@ class WorkerCheck extends Command
         // throw new Exception('['.__LINE__.']['.class_basename($this).']');
         // }
 
-        $this->comment($process);
+        // @var mixed comment($process;
 
         // $processIsQueueListener = ! empty($process); // 5.6 - see comments
         return str_contains($process, mb_substr(base_path(), 0, 30));
@@ -85,11 +85,11 @@ class WorkerCheck extends Command
      */
     private function getLastQueueListenerPID(): string|bool|null
     {
-        if (! Storage::disk('cache')->exists($this->filename)) {
+        if (! Storage::disk('cache')->exists(// @var mixed filename
             return false;
         }
 
-        return Storage::disk('cache')->get($this->filename);
+        return Storage::disk('cache')->get(// @var mixed filename;
     }
 
     /**
@@ -97,10 +97,10 @@ class WorkerCheck extends Command
      */
     private function saveQueueListenerPID(string $pid): void
     {
-        Storage::disk('cache')->put($this->filename, $pid);
-        $path = Storage::disk('cache')->path($this->filename);
-        $size = Storage::disk('cache')->size($this->filename);
-        $this->comment('saved on ['.$path.'] size ['.$size.']');
+        Storage::disk('cache')->put(// @var mixed filename, $pid;
+        $path = Storage::disk('cache')->path(// @var mixed filename;
+        $size = Storage::disk('cache')->size(// @var mixed filename;
+        // @var mixed comment('saved on ['.$path.'] size ['.$size.']';
     }
 
     /*
@@ -114,10 +114,10 @@ class WorkerCheck extends Command
      * // $command = 'php-cli '.base_path().'/artisan queue:work --timeout=60 --sleep=5 --tries=3 > /dev/null & echo //$!'; // 5.6 - see comments
      *
      * $command = ' /usr/local/bin/php '.base_path().'/artisan queue:restart --timeout=60 --sleep=5 --tries=3 > /dev/null & echo $!';
-     * // $this->comment($command);
+     * // // @var mixed comment($command;
      *
      * $pid = exec($command);
-     * $this->comment($pid);
+     * // @var mixed comment($pid;
      *
      * return is_string($pid) ? $pid : (string) $pid;
      * }
@@ -134,14 +134,14 @@ class WorkerCheck extends Command
             ' /usr/local/bin/php '.
             base_path().
             '/artisan queue:work --timeout=60 --sleep=5 --tries=3 > /dev/null & echo $!';
-        // $this->comment($command);
+        // // @var mixed comment($command;
 
         $pid = exec($command);
         // if ($pid === false) {
         //    throw new Exception('['.__LINE__.']['.class_basename($this).']');
         // }
 
-        $this->comment($pid);
+        // @var mixed comment($pid;
 
         return $pid;
     }

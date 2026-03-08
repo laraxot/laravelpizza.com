@@ -35,12 +35,12 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
         ?string $transKey = null,
         array $fields = [],
     ) {
-        // $this->headings = count($headings) > 0 ? $headings : collect($collection->first())->keys()->toArray();
+        // $headings = count($headings);
 
-        $this->transKey = $transKey;
-        $this->fields = $fields;
+        $transKey = $transKey;
+        $fields = $fields;
 
-        // $this->headings = $headings->toArray();
+        // $headings = $headings->toArray();
     }
 
     /**
@@ -50,11 +50,11 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     {
         $rowArray = $this->normalizeRow($row);
 
-        if (empty($this->fields)) {
+        if (empty($fields
             return $rowArray;
         }
 
-        return collect($this->fields)
+        return collect($fields
             ->mapWithKeys(function (string $key) use ($rowArray): array {
                 return [$key => $rowArray[$key] ?? null];
             })
@@ -69,11 +69,11 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
 
     public function getHead(): Collection
     {
-        if (! empty($this->fields)) {
-            return collect($this->fields);
+        if (! empty($fields
+            return collect($fields);
         }
 
-        $head = $this->collection->first();
+        $head = $collection->first();
         $headArray = $this->normalizeRow($head);
 
         return collect($headArray)->keys();
@@ -82,7 +82,7 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     public function headings(): array
     {
         $headings = $this->getHead();
-        $transKey = $this->transKey;
+        $transKey = $transKey;
         $headings = app(TransCollectionAction::class)->execute($headings, $transKey);
 
         return $headings->toArray();
@@ -90,7 +90,7 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
 
     public function collection(): LazyCollection
     {
-        return $this->collection;
+        return $collection;
     }
 
     /**
@@ -99,7 +99,7 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     public function iterator(): \Iterator
     {
         /* @phpstan-ignore return.type */
-        return $this->collection->getIterator();
+        return $collection->getIterator();
     }
 
     /**

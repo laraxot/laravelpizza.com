@@ -48,7 +48,7 @@ class SendNetfunSmsPage extends XotBasePage
 
     public function mount(): void
     {
-        $this->fillForms();
+        // @var mixed fillForms(;
     }
 
     protected function getForms(): array
@@ -60,12 +60,12 @@ class SendNetfunSmsPage extends XotBasePage
 
     protected function fillForms(): void
     {
-        $this->smsForm->fill();
+        // @var mixed smsForm->fill(;
     }
 
     public function smsForm(Schema $schema): Schema
     {
-        return $schema->components($this->getSmsFormSchema())->model($this->getUser())->statePath('smsData');
+        return $schema->components(// @var mixed getSmsFormSchema(;
     }
 
     /**
@@ -109,7 +109,7 @@ class SendNetfunSmsPage extends XotBasePage
 
     public function sendSms(): void
     {
-        $data = $this->smsForm->getState();
+        $data = // @var mixed smsForm->getState(;
 
         $smsData = SmsData::from($data);
         $provider = $data['provider'] ?? 'netfun';

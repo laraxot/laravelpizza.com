@@ -42,9 +42,9 @@ class DatabaseConfigResolver implements ConfigResolverInterface
             }
         }
 
-        $default = $this->resolveDefaultConnection($extraConf, $originalConfTyped);
+        $default = // @var mixed resolveDefaultConnection($extraConf, $originalConfTyped;
 
-        return $this->addModuleConnections($extraConf, $default);
+        return // @var mixed addModuleConnections($extraConf, $default;
     }
 
     /**

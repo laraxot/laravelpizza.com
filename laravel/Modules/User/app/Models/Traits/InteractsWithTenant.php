@@ -47,7 +47,7 @@ trait InteractsWithTenant
      */
     protected function getTenant(): ?Model
     {
-        return $this->currentTenant;
+        return $currentTenant;
     }
 
     /**
@@ -56,10 +56,10 @@ trait InteractsWithTenant
     protected function loadTenantFromSession(): void
     {
         try {
-            $this->currentTenant = Filament::getTenant();
+            $currentTenant = Filament::getTenant();
         } catch (\Throwable $e) {
             // Se Filament non è disponibile, lascia il tenant come null
-            $this->currentTenant = null;
+            $currentTenant = null;
         }
     }
 
@@ -97,7 +97,7 @@ trait InteractsWithTenant
         }
 
         if (null !== $value) {
-            $this->attributes['tenant_id'] = $value;
+            $attributes['tenant_id'] = $value;
         }
     }
 

@@ -11,8 +11,6 @@ use PHPUnit\Framework\Attributes\Test;
 
 class ActivityBasePolicyTest extends TestCase
 {
-    use \Illuminate\Foundation\Testing\DatabaseTransactions;
-
     #[Test]
     public function policy_is_abstract(): void
     {

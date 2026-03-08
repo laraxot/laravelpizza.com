@@ -29,12 +29,12 @@ declare(strict_types=1);
         <form wire:submit="test01" class="space-y-6">
             {{-- Form principale --}}
             <div class="space-y-4">
-                {{ $this->form->render() }}
+                {{ // @var mixed form->render(
             </div>
 
             {{-- Azioni del form --}}
             <div class="flex justify-end gap-4 pt-6 border-t border-gray-200 dark:border-gray-700">
-                @foreach ($this->getFormActions() as $action)
+                @foreach (// @var mixed getFormActions(
                     {{ $action }}
                 @endforeach
             </div>

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Activity\Providers;
 
 use Modules\Xot\Providers\XotBaseServiceProvider;
-use Override;
 
 /**
  * Service Provider per il modulo Activity.
@@ -36,7 +35,6 @@ class ActivityServiceProvider extends XotBaseServiceProvider
      *
      * Configura il modulo Activity e registra le configurazioni specifiche.
      */
-    #[Override]
     public function boot(): void
     {
         parent::boot();
@@ -49,13 +47,8 @@ class ActivityServiceProvider extends XotBaseServiceProvider
     }
 
     /**
-     * Registra i servizi del provider.
-     */
-
-    /**
      * Registra le configurazioni del modulo.
      */
-    #[Override]
     protected function registerConfig(): void
     {
         $this->publishes([

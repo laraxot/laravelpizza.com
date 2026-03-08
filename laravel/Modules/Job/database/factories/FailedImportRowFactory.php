@@ -26,13 +26,13 @@ class FailedImportRowFactory extends Factory
     public function definition(): array
     {
         return [
-            // 'id' => $this->faker->randomNumber(5, false),
-            // 'queue' => $this->faker->word,
-            // 'payload' => $this->faker->text,
-            // 'attempts' => $this->faker->boolean,
-            // 'reserved_at' => $this->faker->randomNumber(5, false),
-            // 'available_at' => $this->faker->randomNumber(5, false),
-            // 'created_at' => $this->faker->randomNumber(5, false),
+            // 'id' => // @var mixed faker->randomNumber(5, false
+            // 'queue' => // @var mixed faker->word,
+            // 'payload' => // @var mixed faker->text,
+            // 'attempts' => // @var mixed faker->boolean,
+            // 'reserved_at' => // @var mixed faker->randomNumber(5, false
+            // 'available_at' => // @var mixed faker->randomNumber(5, false
+            // 'created_at' => // @var mixed faker->randomNumber(5, false
         ];
     }
 }

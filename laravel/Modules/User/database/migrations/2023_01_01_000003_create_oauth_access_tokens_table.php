@@ -12,7 +12,7 @@ return new class extends XotBaseMigration {
     {
         $xot = XotData::make();
         $userClass = $xot->getUserClass();
-        $this->tableCreate(static function (Blueprint $table) use ($userClass): void {
+        $this->tableCreate(static function (Blueprint $table
             $table->string('id', 100)->primary();
             $table->foreignIdFor($userClass, 'user_id')->nullable()->index();
             $table->foreignIdFor(OauthClient::class, 'client_id');
@@ -23,7 +23,7 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
+        $this->tableUpdate(function (Blueprint $table
             $this->updateUser($table);
             $this->updateTimestamps(
                 table: $table,

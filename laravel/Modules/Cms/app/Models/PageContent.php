@@ -88,7 +88,7 @@ class PageContent extends BaseModel implements SushiToJsonsContract
      */
     public function getRows(): array
     {
-        return $this->getSushiRows();
+        return // @var mixed getSushiRows(;
     }
 
     /**

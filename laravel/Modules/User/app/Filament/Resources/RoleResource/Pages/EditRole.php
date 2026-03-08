@@ -29,15 +29,15 @@ class EditRole extends XotBaseEditRecord
     public function afterSave(): void
     {
         $permissionModels = collect();
-        Assert::isArray($data = $this->data);
-        $this->permissions->each(static function ($permission) use ($permissionModels, $data): void {
+        Assert::isArray($data = $data);
+        $permissions->each(static function ($permission
             $permissionModels->push(Utils::getPermissionModel()::firstOrCreate([
                 'name' => $permission,
                 'guard_name' => $data['guard_name'] ?? 'web',
             ]));
         });
-        Assert::isInstanceOf($this->record, Role::class, '['.__LINE__.']['.class_basename($this).']');
-        $this->record->syncPermissions($permissionModels);
+        Assert::isInstanceOf($record, Role::class, '['.__LINE__.']['.class_basename($this));
+        $record->syncPermissions($permissionModels);
     }
 
     protected function getHeaderActions(): array
@@ -50,7 +50,7 @@ class EditRole extends XotBaseEditRecord
 
     protected function mutateFormDataBeforeSave(array $data): array
     {
-        $this->permissions = collect($data)
+        $permissions = collect($data
             ->filter(
                 static fn ($_permission, $key): bool => ! \in_array($key, ['name', 'guard_name', 'select_all'], false) && Str::contains($key, '_'),
             )

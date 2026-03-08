@@ -19,7 +19,7 @@ class ExportXlsTableAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel()
+        $this->translateLabel(
             ->tooltip(__('xot::actions.export_xls'))
             // ->icon('fas-file-excel')
             ->icon('heroicon-o-arrow-down-tray')

@@ -26,9 +26,9 @@ class CacheFactory extends Factory
     public function definition(): array
     {
         return [
-            'key' => $this->faker->word,
-            'value' => $this->faker->text,
-            'expiration' => $this->faker->randomNumber(5),
+            'key' => $faker->word,
+            'value' => $faker->text,
+            'expiration' => $faker->randomNumber(5
         ];
     }
 }

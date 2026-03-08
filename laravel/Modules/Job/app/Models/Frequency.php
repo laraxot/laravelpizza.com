@@ -61,12 +61,12 @@ class Frequency extends BaseModel
 
     public function task(): BelongsTo
     {
-        return $this->belongsTo(Task::class);
+        return // @var mixed belongsTo(Task::class;
     }
 
     public function parameters(): HasMany
     {
-        return $this->hasMany(Parameter::class);
+        return // @var mixed hasMany(Parameter::class;
     }
 
     /**

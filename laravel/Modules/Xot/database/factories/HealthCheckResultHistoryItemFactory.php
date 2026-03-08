@@ -19,28 +19,28 @@ class HealthCheckResultHistoryItemFactory extends Factory
     public function definition(): array
     {
         return [
-            'check_name' => $this->faker->randomElement([
+            'check_name' => $faker->randomElement([
                 'DatabaseCheck',
                 'CacheCheck',
                 'QueueCheck',
                 'StorageCheck',
                 'MemoryCheck',
             ]),
-            'check_label' => $this->faker->words(3, true),
-            'status' => $this->faker->randomElement(['ok', 'warning', 'failed']),
-            'notification_message' => $this->faker->optional()->sentence(),
-            'short_summary' => $this->faker->words(5, true),
+            'check_label' => $faker->words(3, true
+            'status' => $faker->randomElement(['ok', 'warning', 'failed']
+            'notification_message' => $faker->optional(
+            'short_summary' => $faker->words(5, true
             'meta' => [
-                'execution_time' => $this->faker->randomFloat(2, 0.1, 5.0),
-                'memory_usage' => $this->faker->numberBetween(1024, 1048576),
+                'execution_time' => $faker->randomFloat(2, 0.1, 5.0
+                'memory_usage' => $faker->numberBetween(1024, 1048576
             ],
-            'ended_at' => $this->faker->dateTimeBetween('-1 week', 'now'),
+            'ended_at' => $faker->dateTimeBetween('-1 week', 'now'
         ];
     }
 
     public function ok(): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (array $_attributes
             'status' => 'ok',
             'notification_message' => null,
         ]);
@@ -48,9 +48,9 @@ class HealthCheckResultHistoryItemFactory extends Factory
 
     public function failed(): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (array $_attributes
             'status' => 'failed',
-            'notification_message' => $this->faker->sentence(),
+            'notification_message' => $faker->sentence(
         ]);
     }
 }

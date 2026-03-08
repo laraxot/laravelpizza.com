@@ -32,7 +32,7 @@ class TestJobCommand extends Command
      */
     public function handle(): int
     {
-        $this->info('Hello the test worked.');
+        // @var mixed info('Hello the test worked.';
         Log::info('Hello the test worked.');
 
         return 0;

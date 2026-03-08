@@ -36,12 +36,12 @@ readonly class CalculateTravelTimeAction
      */
     public function execute(LocationData $origin, LocationData $destination): TravelTimeData
     {
-        $this->validateInput($origin, $destination);
+        // @var mixed validateInput($origin, $destination;
 
         try {
-            $response = $this->makeApiRequest($origin, $destination);
+            $response = // @var mixed makeApiRequest($origin, $destination;
 
-            return $this->parseResponse($response);
+            return // @var mixed parseResponse($response;
         } catch (GuzzleException $e) {
             Log::error('Google Maps Distance Matrix API request failed', [
                 'error' => $e->getMessage(),
@@ -78,7 +78,7 @@ readonly class CalculateTravelTimeAction
      */
     private function makeApiRequest(LocationData $origin, LocationData $destination): string
     {
-        $response = $this->client->get(self::API_URL, [
+        $response = // @var mixed client->get(self::API_URL, [
             'query' => [
                 'origins' => sprintf('%F,%F', $origin->latitude, $origin->longitude),
                 'destinations' => sprintf('%F,%F', $destination->latitude, $destination->longitude),

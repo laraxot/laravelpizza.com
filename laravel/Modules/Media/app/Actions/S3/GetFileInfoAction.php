@@ -16,8 +16,8 @@ class GetFileInfoAction extends BaseS3Action
     public function execute(string $key): array
     {
         try {
-            $result = $this->s3Client->headObject([
-                'Bucket' => $this->bucketName,
+            $result = // @var mixed s3Client->headObject([
+                'Bucket' => // @var mixed bucketName,
                 'Key' => $key,
             ]);
 
@@ -37,14 +37,14 @@ class GetFileInfoAction extends BaseS3Action
                 'metadata' => $result['Metadata'] ?? [],
             ];
 
-            $this->logger->info('File info retrieved successfully', [
+            // @var mixed logger->info('File info retrieved successfully', [
                 'key' => $key,
                 'size' => $fileInfo['contentLength'],
             ]);
 
             return $fileInfo;
         } catch (S3Exception $exception) {
-            $this->logger->error('Error getting file info from S3', [
+            // @var mixed logger->error('Error getting file info from S3', [
                 'key' => $key,
                 'error' => $exception->getMessage(),
                 'statusCode' => $exception->getStatusCode(),

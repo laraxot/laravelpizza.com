@@ -10,7 +10,7 @@ use Filament\Schemas\Components\Grid;
 use Modules\UI\Filament\Widgets\UserCalendarWidget;
 
 beforeEach(function () {
-    $this->widget = new class extends UserCalendarWidget {
+    // @var mixed widget = new class extends UserCalendarWidget {
         public function getActionName(string $function): string
         {
             unset($function);
@@ -19,12 +19,12 @@ beforeEach(function () {
         }
     };
 
-    $this->widget->type = 'test';
+    // @var mixed widget->type = 'test';
 });
 
 describe('UserCalendarWidget Basics', function () {
     it('is a UserCalendarWidget', function () {
-        expect($this->widget)->toBeInstanceOf(UserCalendarWidget::class);
+        expect(// @var mixed widget;
     });
 });
 
@@ -35,7 +35,7 @@ describe('UserCalendarWidget Event Management', function () {
             'end' => '2025-01-31T23:59:59',
         ];
 
-        $events = $this->widget->fetchEvents($fetchInfo);
+        $events = // @var mixed widget->fetchEvents($fetchInfo;
 
         expect($events)->toBeArray();
         expect($events)->toHaveCount(0);
@@ -44,7 +44,7 @@ describe('UserCalendarWidget Event Management', function () {
 
 describe('UserCalendarWidget Form Schema', function () {
     it('falls back to a minimal schema if action does not exist', function () {
-        $formSchema = $this->widget->getFormSchema();
+        $formSchema = // @var mixed widget->getFormSchema(;
 
         expect($formSchema)->toBeArray();
         expect($formSchema)->toHaveCount(2);
@@ -56,7 +56,7 @@ describe('UserCalendarWidget Form Schema', function () {
     });
 
     it('fallback schema contains datetime pickers', function () {
-        $formSchema = $this->widget->getFormSchema();
+        $formSchema = // @var mixed widget->getFormSchema(;
 
         $grid = $formSchema[1];
         expect($grid)->toBeInstanceOf(Grid::class);

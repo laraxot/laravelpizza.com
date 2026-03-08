@@ -8,20 +8,20 @@ use Spatie\QueueableAction\QueueableAction;
 
 describe('NotifyTheme\Get', function () {
     beforeEach(function () {
-        $this->action = new Get;
+        // @var mixed action = new Get;
     });
 
     it('can be instantiated', function () {
-        expect($this->action)->toBeInstanceOf(Get::class);
+        expect(// @var mixed action;
     });
 
     it('uses QueueableAction trait', function () {
-        $traits = class_uses($this->action);
+        $traits = class_uses(// @var mixed action;
         expect($traits)->toContain(QueueableAction::class);
     });
 
     it('has execute method with correct signature', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $method = $reflection->getMethod('execute');
 
         expect($method->isPublic())->toBeTrue();
@@ -29,7 +29,7 @@ describe('NotifyTheme\Get', function () {
     });
 
     it('execute accepts string parameters and array', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
@@ -39,7 +39,7 @@ describe('NotifyTheme\Get', function () {
     });
 
     it('execute returns NotifyThemeData', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
@@ -47,7 +47,7 @@ describe('NotifyTheme\Get', function () {
     });
 
     it('uses strict types', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $filename = $reflection->getFileName();
 
         expect($filename)->not->toBeNull();
@@ -56,13 +56,13 @@ describe('NotifyTheme\Get', function () {
     });
 
     it('has correct namespace', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
 
         expect($reflection->getNamespaceName())->toBe('Modules\Notify\Actions\NotifyTheme');
     });
 
     it('has required imports', function () {
-        $filename = (new ReflectionClass($this->action))->getFileName();
+        $filename = (new ReflectionClass(// @var mixed action;
         $content = file_get_contents($filename);
 
         expect($content)->toContain('use Modules\Notify\Datas\NotifyThemeData;');
@@ -71,6 +71,6 @@ describe('NotifyTheme\Get', function () {
     });
 
     it('implements queueable functionality', function () {
-        expect(method_exists($this->action, 'onQueue'))->toBeTrue();
+        expect(method_exists(// @var mixed action, 'onQueue';
     });
 });

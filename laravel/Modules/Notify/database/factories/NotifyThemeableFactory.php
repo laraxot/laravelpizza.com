@@ -21,25 +21,25 @@ class NotifyThemeableFactory extends Factory
     {
         return [
             'notify_theme_id' => NotifyTheme::factory(),
-            'themeable_type' => $this->faker->randomElement([
+            'themeable_type' => // @var mixed faker->randomElement([
                 'Modules\\User\\Models\\User',
                 'Modules\\User\\Models\\User', // Generic fallback instead of project-specific
                 'Modules\\User\\Models\\User', // Generic fallback instead of project-specific
             ]),
-            'themeable_id' => $this->faker->randomNumber(),
+            'themeable_id' => // @var mixed faker->randomNumber(
         ];
     }
 
     public function forUser(): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return // @var mixed state(fn (array $_attributes
             'themeable_type' => 'Modules\\User\\Models\\User',
         ]);
     }
 
     public function forPatient(): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return // @var mixed state(fn (array $_attributes
             'themeable_type' => 'Modules\\User\\Models\\User', // Generic fallback
         ]);
     }

@@ -3,7 +3,7 @@
 @endphp
 <x-filament-panels::page>
     <div class="space-y-6">
-        @foreach($this->getActivities() as $activityItem)
+        @foreach(// @var mixed getActivities(
 
             @php
                 /* @var \Spatie\Activitylog\Models\Activity $activityItem */
@@ -32,7 +32,7 @@
                             </div>
                         </div>
                         <div class="flex flex-col text-xs text-gray-500 justify-end">
-                            @if ($this->canRestoreActivity() && $changes->isNotEmpty())
+                            @if (// @var mixed canRestoreActivity(
                                 <x-filament::button
                                     tag="button"
                                     icon="heroicon-o-arrow-path-rounded-square"
@@ -120,7 +120,7 @@
                                 ])
                             >
                                 <td class="fi-ta-cell px-4 py-2 align-top sm:first-of-type:ps-6 sm:last-of-type:pe-6" width="20%">
-                                    {{ $this->getFieldLabel($field) }}
+                                    {{ // @var mixed getFieldLabel($field
                                 </td>
                                 <td width="40%" class="fi-ta-cell px-4 py-3 align-top break-all whitespace-normal">
                                     @if($oldValue === '' || $oldValue === null)
@@ -159,8 +159,8 @@
 
         <x-filament::pagination
             currentPageOptionProperty="recordsPerPage"
-            :page-options="$this->getRecordsPerPageSelectOptions()"
-            :paginator="$this->getActivities()"
+            :page-options="// @var mixed getRecordsPerPageSelectOptions(
+            :paginator="// @var mixed getActivities(
         />
     </div>
 </x-filament-panels::page>

@@ -8,19 +8,19 @@ use Modules\Notify\Datas\SmsData;
 
 describe('SendAgiletelecomSMSv1Action', function () {
     beforeEach(function () {
-        $this->action = new SendAgiletelecomSMSv1Action;
+        // @var mixed action = new SendAgiletelecomSMSv1Action;
     });
 
     it('can be instantiated', function () {
-        expect($this->action)->toBeInstanceOf(SendAgiletelecomSMSv1Action::class);
+        expect(// @var mixed action;
     });
 
     it('implements SmsActionContract', function () {
-        expect($this->action)->toBeInstanceOf(SmsActionContract::class);
+        expect(// @var mixed action;
     });
 
     it('has execute method with correct signature', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $method = $reflection->getMethod('execute');
 
         expect($method->isPublic())->toBeTrue();
@@ -28,7 +28,7 @@ describe('SendAgiletelecomSMSv1Action', function () {
     });
 
     it('execute accepts SmsData parameter', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
@@ -36,7 +36,7 @@ describe('SendAgiletelecomSMSv1Action', function () {
     });
 
     it('execute returns array', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
@@ -44,7 +44,7 @@ describe('SendAgiletelecomSMSv1Action', function () {
     });
 
     it('uses strict types', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $filename = $reflection->getFileName();
 
         expect($filename)->not->toBeNull();
@@ -53,13 +53,13 @@ describe('SendAgiletelecomSMSv1Action', function () {
     });
 
     it('has correct namespace', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
 
         expect($reflection->getNamespaceName())->toBe('Modules\Notify\Actions\SMS');
     });
 
     it('has required imports', function () {
-        $filename = (new ReflectionClass($this->action))->getFileName();
+        $filename = (new ReflectionClass(// @var mixed action;
         $content = file_get_contents($filename);
 
         expect($content)->toContain('use GuzzleHttp\Client;');
@@ -68,7 +68,7 @@ describe('SendAgiletelecomSMSv1Action', function () {
     });
 
     it('does not use QueueableAction trait', function () {
-        $traits = class_uses($this->action);
+        $traits = class_uses(// @var mixed action;
 
         expect($traits)->not->toContain('Spatie\QueueableAction\QueueableAction');
     });

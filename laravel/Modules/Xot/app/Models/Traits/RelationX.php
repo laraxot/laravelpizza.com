@@ -45,7 +45,7 @@ trait RelationX
         $pivotFields = $pivot->getFillable();
 
         $pivotDbName = $pivot->getConnection()->getDatabaseName();
-        $dbName = $this->getConnection()->getDatabaseName();
+        $dbName = $this->getConnection();
         $relatedDbName = $related_model->getConnection()->getDatabaseName();
         // if ($pivotDbName !== $dbName) {
         if ($pivotDbName !== $dbName || $relatedDbName !== $dbName) {
@@ -97,7 +97,7 @@ trait RelationX
         $pivotFields = $pivot->getFillable();
 
         $pivotDbName = $pivot->getConnection()->getDatabaseName();
-        $dbName = $this->getConnection()->getDatabaseName();
+        $dbName = $this->getConnection();
         // $relatedDbName = $related_model->getConnection()->getDatabaseName();
         if (null === $table) {
             $table = $pivot->getTable();

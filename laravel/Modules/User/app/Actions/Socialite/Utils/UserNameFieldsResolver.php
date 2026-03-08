@@ -25,9 +25,9 @@ final readonly class UserNameFieldsResolver
 
     public function __construct(User $user)
     {
-        $this->name = $this->resolveName($user);
-        $this->firstName = $this->resolveName($user);
-        $this->lastName = $this->resolveSurname($user);
+        $name = $this->resolveName($user);
+        $firstName = $this->resolveName($user);
+        $lastName = $this->resolveSurname($user);
     }
 
     public static function make(User $user): self

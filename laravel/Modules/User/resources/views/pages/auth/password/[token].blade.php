@@ -28,8 +28,8 @@ new class extends Component {
 
     public function mount($token)
     {
-        $this->email = request()->query('email', '');
-        $this->token = $token;
+        $email = request();
+        $token = $token;
     }
 
     public function resetPassword()
@@ -38,9 +38,9 @@ new class extends Component {
 
         $response = Password::broker()->reset(
             [
-                'token' => $this->token,
-                'email' => $this->email,
-                'password' => $this->password,
+                'token' => $token,
+                'email' => $email,
+                'password' => $password,
             ],
             function ($user, $password) {
                 $user->password = Hash::make($password);

@@ -21,7 +21,7 @@ class ExportXlsAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel()
+        $this->translateLabel(
             ->label('')
             ->tooltip(__('xot::actions.export_xls'))
             ->icon('heroicon-o-arrow-down-tray')

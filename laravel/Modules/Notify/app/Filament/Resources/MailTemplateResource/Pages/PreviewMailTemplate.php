@@ -30,7 +30,7 @@ class PreviewMailTemplate extends XotBaseResourcePage
                 ->label(__('notify::mail.template.preview.actions.back.label'))
                 ->icon(__('notify::mail.template.preview.actions.back.icon'))
                 ->color(__('notify::mail.template.preview.actions.back.color'))
-                ->url(fn () => MailTemplateResource::getUrl('edit', ['record' => $this->record])),
+                ->url(fn () => MailTemplateResource::getUrl('edit', ['record' => // @var mixed record]
         ];
     }
 }

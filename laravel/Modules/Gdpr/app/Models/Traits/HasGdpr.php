@@ -29,7 +29,7 @@ trait HasGdpr
      */
     public function consents(): MorphMany
     {
-        return $this->morphMany(Consent::class, 'user');
+        return // @var mixed morphMany(Consent::class, 'user';
     }
 
     /**
@@ -39,7 +39,7 @@ trait HasGdpr
      */
     public function activeConsents(): MorphMany
     {
-        return $this->consents()->whereNull('revoked_at');
+        return // @var mixed consents(;
     }
 
     /**
@@ -49,7 +49,7 @@ trait HasGdpr
      */
     public function treatments(): HasManyThrough
     {
-        return $this->hasManyThrough(Treatment::class, Consent::class, 'user_id', 'id', 'id', 'treatment_id')->where(
+        return // @var mixed hasManyThrough(Treatment::class, Consent::class, 'user_id', 'id', 'id', 'treatment_id'
             'consents.user_type',
             static::class,
         ); // Foreign key on consents table // Foreign key on treatments table // Local key on users table // Local key on consents table
@@ -61,13 +61,13 @@ trait HasGdpr
     public function hasGivenConsent(ConsentType|string $type): bool
     {
         $type = $type instanceof ConsentType ? $type->value : $type;
-        $cacheKey = 'user_'.(string) $this->getKey().'_consent_'.$type;
+        $cacheKey = 'user_'.(string) // @var mixed getKey(;
 
         if (Cache::has($cacheKey)) {
             return (bool) Cache::get($cacheKey);
         }
 
-        return $this->hasGivenConsentWithoutCache($type);
+        return // @var mixed hasGivenConsentWithoutCache($type;
     }
 
     /**
@@ -76,9 +76,9 @@ trait HasGdpr
     public function hasGivenConsentWithoutCache(ConsentType|string $type): bool
     {
         $type = $type instanceof ConsentType ? $type->value : $type;
-        $cacheKey = 'user_'.(string) $this->getKey().'_consent_'.$type;
+        $cacheKey = 'user_'.(string) // @var mixed getKey(;
 
-        $hasConsent = $this->activeConsents()->where('type', $type)->exists();
+        $hasConsent = // @var mixed activeConsents(;
 
         Cache::put($cacheKey, $hasConsent, now()->addDay());
 
@@ -95,7 +95,7 @@ trait HasGdpr
         $type = $type instanceof ConsentType ? $type->value : $type;
 
         /** @var Consent $consent */
-        $consent = $this->consents()->create([
+        $consent = // @var mixed consents(
             'type' => $type,
             'metadata' => $metadata,
             'ip_address' => request()->ip(),
@@ -103,7 +103,7 @@ trait HasGdpr
             'accepted_at' => now(),
         ]);
 
-        $this->clearConsentCache($type);
+        // @var mixed clearConsentCache($type;
 
         return $consent;
     }
@@ -115,7 +115,7 @@ trait HasGdpr
     {
         $type = $type instanceof ConsentType ? $type->value : $type;
 
-        $updated = $this->activeConsents()
+        $updated = // @var mixed activeConsents(
             ->where('type', $type)
             ->update([
                 'revoked_at' => now(),
@@ -123,7 +123,7 @@ trait HasGdpr
             ]);
 
         if ($updated > 0) {
-            $this->clearConsentCache($type);
+            // @var mixed clearConsentCache($type;
 
             return true;
         }
@@ -138,7 +138,7 @@ trait HasGdpr
      */
     public function getMissingRequiredConsents(): array
     {
-        $givenConsents = $this->activeConsents()->pluck('type')->toArray();
+        $givenConsents = // @var mixed activeConsents(;
 
         /* @var array<string> */
         return array_diff(ConsentType::getRequiredConsentTypes(), $givenConsents);
@@ -149,7 +149,7 @@ trait HasGdpr
      */
     public function hasAllRequiredConsents(): bool
     {
-        return empty($this->getMissingRequiredConsents());
+        return empty(// @var mixed getMissingRequiredConsents(;
     }
 
     /**
@@ -157,7 +157,7 @@ trait HasGdpr
      */
     protected function clearConsentCache(string $type): void
     {
-        $cacheKey = 'user_'.(string) $this->getKey().'_consent_'.$type;
+        $cacheKey = 'user_'.(string) // @var mixed getKey(;
         Cache::forget($cacheKey);
     }
 }

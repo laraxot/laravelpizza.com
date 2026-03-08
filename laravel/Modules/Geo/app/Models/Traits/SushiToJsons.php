@@ -17,7 +17,7 @@ trait SushiToJsons
      */
     public function getSushiRows(): array
     {
-        return Cache::remember($this->getCacheKey(), $this->getCacheDuration(), $this->loadFromJson(...));
+        return Cache::remember(// @var mixed getCacheKey(;
     }
 
     /**
@@ -33,11 +33,11 @@ trait SushiToJsons
      */
     public function saveToJson(array $data): bool
     {
-        $path = $this->getJsonFile();
+        $path = // @var mixed getJsonFile(;
 
         try {
             File::put($path, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-            Cache::forget($this->getCacheKey());
+            Cache::forget(// @var mixed getCacheKey(;
 
             return true;
         } catch (\Exception $e) {
@@ -52,15 +52,15 @@ trait SushiToJsons
      */
     public function create(array $attributes = []): static
     {
-        $data = $this->loadFromJson();
-        $attributes['id'] = $this->generateId();
+        $data = // @var mixed loadFromJson(;
+        $attributes['id'] = // @var mixed generateId(;
         $attributes['created_at'] = now();
         $attributes['updated_at'] = now();
 
         $data[] = $attributes;
 
-        if ($this->saveToJson($data)) {
-            return $this->newInstance($attributes);
+        if (// @var mixed saveToJson($data
+            return // @var mixed newInstance($attributes;
         }
 
         throw new \RuntimeException('Impossibile salvare il record');
@@ -71,8 +71,8 @@ trait SushiToJsons
      */
     public function update(array $attributes = []): bool
     {
-        $data = $this->loadFromJson();
-        $index = $this->findIndex($this->getKey());
+        $data = // @var mixed loadFromJson(;
+        $index = // @var mixed findIndex($this->getKey(;
 
         if (null === $index) {
             return false;
@@ -81,7 +81,7 @@ trait SushiToJsons
         $attributes['updated_at'] = now();
         $data[$index] = array_merge($data[$index], $attributes);
 
-        return $this->saveToJson($data);
+        return // @var mixed saveToJson($data;
     }
 
     /**
@@ -89,8 +89,8 @@ trait SushiToJsons
      */
     public function delete(): bool
     {
-        $data = $this->loadFromJson();
-        $index = $this->findIndex($this->getKey());
+        $data = // @var mixed loadFromJson(;
+        $index = // @var mixed findIndex($this->getKey(;
 
         if (null === $index) {
             return false;
@@ -98,7 +98,7 @@ trait SushiToJsons
 
         array_splice($data, $index, 1);
 
-        return $this->saveToJson($data);
+        return // @var mixed saveToJson($data;
     }
 
     /**
@@ -106,7 +106,7 @@ trait SushiToJsons
      */
     protected function loadFromJson(): array
     {
-        $path = $this->getJsonFile();
+        $path = // @var mixed getJsonFile(;
 
         if (! File::exists($path)) {
             return [];
@@ -142,7 +142,7 @@ trait SushiToJsons
      */
     protected function findIndex($id): ?int
     {
-        $data = $this->loadFromJson();
+        $data = // @var mixed loadFromJson(;
 
         foreach ($data as $index => $item) {
             if ($item['id'] === $id) {

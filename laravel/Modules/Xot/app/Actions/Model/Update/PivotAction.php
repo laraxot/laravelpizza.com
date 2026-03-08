@@ -23,10 +23,10 @@ class PivotAction
 
         /*
          *
-         * $parent_panel = $this->panel->getParent();
+         * $parent_panel = $panel->getParent();
          * if (null !== $parent_panel) {
          * $parent_row = $parent_panel->getRow();
-         * $panel_name = $this->panel->getName();
+         * $panel_name = $panel->getName();
          * $parent_row->{$panel_name}()->updateExistingPivot($model->getKey(), $data);
          * }
          *

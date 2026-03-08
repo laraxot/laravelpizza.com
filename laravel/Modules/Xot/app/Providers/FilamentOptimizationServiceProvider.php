@@ -92,7 +92,7 @@ class FilamentOptimizationServiceProvider extends ServiceProvider
     private function configureQueryLogging(): void
     {
         // Abilita query logging solo per richieste Filament admin
-        if ($this->isFilamentAdminRequest()) {
+        if ($isFilamentAdminRequest(
             DB::enableQueryLog();
 
             // Log delle query alla fine della richiesta

@@ -28,13 +28,13 @@ class Switcher extends Component
 
     public function mount(): void
     {
-        $this->lang = app()->getLocale();
+        // @var mixed lang = app(;
         $langs = LaravelLocalization::getSupportedLocales();
-        unset($langs[$this->lang]);
-        $this->url = Request::getRequestUri();
+        unset($langs[// @var mixed lang];
+        // @var mixed url = Request::getRequestUri(;
         $langs = Arr::map($langs, function (array $item, string $key) {
             // @phpstan-ignore staticMethod.notFound
-            $url = LaravelLocalization::getLocalizedURL($key, $this->url, [], true);
+            $url = LaravelLocalization::getLocalizedURL($key, // @var mixed url, [], true;
             if (false !== $url) {
                 // Verifichiamo che $url sia una stringa o lo convertiamo in modo sicuro
                 if (! is_string($url)) {
@@ -48,12 +48,12 @@ class Switcher extends Component
 
             return $item;
         });
-        $this->langs = $langs;
+        // @var mixed langs = $langs;
     }
 
     // public function switchLang(string $lang): Application|RedirectResponse|Redirector
     // {
-    //    $url = LaravelLocalization::getLocalizedURL($lang, $this->url);
+    //    $url = LaravelLocalization::getLocalizedURL($lang, // @var mixed url;
 
     //   return redirect($url, 303);
     // }
@@ -64,7 +64,7 @@ class Switcher extends Component
         $viewParams = [
             'view' => $view,
         ];
-        // if ([] === $this->teams) {
+        // if ([] === // @var mixed teams
         //    $view = 'ui::livewire.empty';
         // }
 

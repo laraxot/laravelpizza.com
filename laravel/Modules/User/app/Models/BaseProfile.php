@@ -160,7 +160,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         }
 
         // Corretto il controllo errato su $this
-        $email = trim((string) $this->email);
+        $email = trim((string) $email);
         // 'MyEmailAddress@example.com'
         $email = mb_strtolower($email);
         // 'myemailaddress@example.com'
@@ -191,7 +191,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
             $locale = $defaultLocale;
         }
 
-        $userLang = $this->lang;
+        $userLang = $lang;
 
         if (null === $userLang || ! is_string($userLang)) {
             return $locale;

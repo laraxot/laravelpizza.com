@@ -26,12 +26,12 @@ function makeTestSushiModelForPath(string $jsonPath): TestSushiModel
 
         public function setJsonPath(string $jsonPath): void
         {
-            $this->jsonPath = $jsonPath;
+            // @var mixed jsonPath = $jsonPath;
         }
 
         public function getJsonFile(): string
         {
-            return $this->jsonPath;
+            return // @var mixed jsonPath;
         }
     };
 

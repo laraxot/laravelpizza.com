@@ -21,8 +21,8 @@ abstract class ApplicationException extends \Exception
 
     public function render(Request $_request): Response
     {
-        $applicationError = new ApplicationError($this->help(), $this->error());
+        $applicationError = new ApplicationError($help());
 
-        return response($applicationError->toArray(), $this->status());
+        return response($applicationError->toArray(), $status());
     }
 }

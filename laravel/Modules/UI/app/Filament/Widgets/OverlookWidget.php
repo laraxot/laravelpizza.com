@@ -41,12 +41,12 @@ final class OverlookWidget extends XotBaseWidget
     /*
      * public function mount(array $filter): void
      * {
-     * $this->filter = $filter;
+     * // @var mixed filter = $filter;
      *
-     * $this->data = $this->getData();
-     * // dddx($this->data);
-     * if (empty($this->grid)) {
-     * $this->grid = [
+     * // @var mixed data = $this->getData(;
+     * // dddx(// @var mixed data;
+     * if (empty(// @var mixed grid
+     * // @var mixed grid = [
      * 'default' => 2,
      * 'sm' => 2,
      * 'md' => 3,

@@ -31,7 +31,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 
     public function getRecordTitle(): string
     {
-        $value = $this->getRecord()->getAttribute(static::$recordTitleAttribute);
+        $value = $this->getRecord();
 
         return is_string($value) ? $value : (string) ($value ?? '');
     }

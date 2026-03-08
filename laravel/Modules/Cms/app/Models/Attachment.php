@@ -125,12 +125,12 @@ class Attachment extends BaseModelLang implements HasMedia, SushiToJsonsContract
 
     public function getRows(): array
     {
-        return $this->getSushiRows();
+        return // @var mixed getSushiRows(;
     }
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('attachments')->acceptsMimeTypes([
+        // @var mixed addMediaCollection('attachments'
             'application/pdf',
             'application/msword',
             'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
@@ -147,7 +147,7 @@ class Attachment extends BaseModelLang implements HasMedia, SushiToJsonsContract
     public function getAttachmentForLocale(?string $locale = null): ?string
     {
         $locale ??= app()->getLocale();
-        $media = $this->getFirstMedia('attachments');
+        $media = // @var mixed getFirstMedia('attachments';
 
         if ($media && $media->getCustomProperty('locale') === $locale) {
             return $media->getUrl();
@@ -159,11 +159,11 @@ class Attachment extends BaseModelLang implements HasMedia, SushiToJsonsContract
     public function asset(): string
     {
         // PHPStan L10: Check attachment is array before array_values
-        if (! is_array($this->attachment)) {
+        if (! is_array(// @var mixed attachment
             return '';
         }
 
-        $values = array_values($this->attachment);
+        $values = array_values(// @var mixed attachment;
         if (empty($values)) {
             return '';
         }
@@ -178,7 +178,7 @@ class Attachment extends BaseModelLang implements HasMedia, SushiToJsonsContract
             return '';
         }
 
-        $storage = Storage::disk($this->disk);
+        $storage = Storage::disk(// @var mixed disk;
         if (! method_exists($storage, 'url')) {
             return '';
         }

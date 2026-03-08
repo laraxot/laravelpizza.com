@@ -26,7 +26,7 @@ declare(strict_types=1);
                 </h3>
             </div>
             
-            {{ $this->form->getComponent('personal_info') }}
+            {{ $form->getComponent('personal_info'
         </div>
 
         <!-- Preferences Section -->
@@ -43,11 +43,11 @@ declare(strict_types=1);
                 </h3>
             </div>
             
-            {{ $this->form->getComponent('preferences') }}
+            {{ $form->getComponent('preferences'
         </div>
 
         <!-- Security Section (if visible) -->
-        @if($this->canEditSecurity())
+        @if($canEditSecurity(
         <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
             <div class="flex items-center gap-3 mb-4">
                 <div class="p-2 bg-yellow-100 dark:bg-yellow-900 rounded-lg">
@@ -60,12 +60,12 @@ declare(strict_types=1);
                 </h3>
             </div>
             
-            {{ $this->form->getComponent('security') }}
+            {{ $form->getComponent('security'
         </div>
         @endif
 
         <!-- Admin Settings Section (if visible) -->
-        @if($this->canEditAdminSettings())
+        @if($canEditAdminSettings(
         <div class="bg-white dark:bg-gray-800 rounded-lg border border-red-200 dark:border-red-700 p-6">
             <div class="flex items-center gap-3 mb-4">
                 <div class="p-2 bg-red-100 dark:bg-red-900 rounded-lg">
@@ -78,14 +78,14 @@ declare(strict_types=1);
                 </h3>
             </div>
             
-            {{ $this->form->getComponent('admin_settings') }}
+            {{ $form->getComponent('admin_settings'
         </div>
         @endif
     </div>
 
     <x-slot name="footerActions">
         <div class="flex gap-3 justify-end">
-            {{ $this->getFormActions() }}
+            {{ $this->getFormActions(
         </div>
     </x-slot>
 </x-filament::section>

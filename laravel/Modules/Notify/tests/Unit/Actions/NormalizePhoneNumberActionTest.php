@@ -7,20 +7,20 @@ use Spatie\QueueableAction\QueueableAction;
 
 describe('NormalizePhoneNumberAction', function () {
     beforeEach(function () {
-        $this->action = new NormalizePhoneNumberAction;
+        // @var mixed action = new NormalizePhoneNumberAction;
     });
 
     it('can be instantiated', function () {
-        expect($this->action)->toBeInstanceOf(NormalizePhoneNumberAction::class);
+        expect(// @var mixed action;
     });
 
     it('uses QueueableAction trait', function () {
-        $traits = class_uses($this->action);
+        $traits = class_uses(// @var mixed action;
         expect($traits)->toContain(QueueableAction::class);
     });
 
     it('has execute method with correct signature', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $method = $reflection->getMethod('execute');
 
         expect($method->isPublic())->toBeTrue();
@@ -28,7 +28,7 @@ describe('NormalizePhoneNumberAction', function () {
     });
 
     it('execute accepts nullable string parameter', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
@@ -36,7 +36,7 @@ describe('NormalizePhoneNumberAction', function () {
     });
 
     it('execute returns string', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
@@ -44,7 +44,7 @@ describe('NormalizePhoneNumberAction', function () {
     });
 
     it('uses strict types', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $filename = $reflection->getFileName();
 
         expect($filename)->not->toBeNull();
@@ -53,13 +53,13 @@ describe('NormalizePhoneNumberAction', function () {
     });
 
     it('has correct namespace', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
 
         expect($reflection->getNamespaceName())->toBe('Modules\Notify\Actions');
     });
 
     it('has required imports', function () {
-        $filename = (new ReflectionClass($this->action))->getFileName();
+        $filename = (new ReflectionClass(// @var mixed action;
         $content = file_get_contents($filename);
 
         expect($content)->toContain('use Modules\Xot\Actions\Cast\SafeStringCastAction;');
@@ -67,6 +67,6 @@ describe('NormalizePhoneNumberAction', function () {
     });
 
     it('implements queueable functionality', function () {
-        expect(method_exists($this->action, 'onQueue'))->toBeTrue();
+        expect(method_exists(// @var mixed action, 'onQueue';
     });
 });

@@ -13,7 +13,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table): void {
+        // @var mixed tableCreate(function (Blueprint $table
             $table->bigIncrements('id');
             $table->string('log_name')->nullable();
             $table->text('description');
@@ -25,21 +25,21 @@ return new class extends XotBaseMigration
             $table->string('event')->nullable();
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
+        // @var mixed tableUpdate(function (Blueprint $table
             // Convert subject/causer to string(36) for UUID support (User model uses UUID)
-            if ($this->hasColumn('subject_id')) {
+            if (// @var mixed hasColumn('subject_id'
                 $table->string('subject_id', 36)->nullable()->change()->index();
             }
-            if ($this->hasColumn('subject_type')) {
+            if (// @var mixed hasColumn('subject_type'
                 $table->string('subject_type')->nullable()->change();
             }
-            if ($this->hasColumn('causer_id')) {
+            if (// @var mixed hasColumn('causer_id'
                 $table->string('causer_id', 36)->nullable()->change()->index();
             }
-            if ($this->hasColumn('causer_type')) {
+            if (// @var mixed hasColumn('causer_type'
                 $table->string('causer_type')->nullable()->change();
             }
-            $this->updateTimestamps($table, true);
+            // @var mixed updateTimestamps($table, true;
         });
     }
 };

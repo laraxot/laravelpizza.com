@@ -40,12 +40,12 @@ class SendTelegramPage extends XotBasePage
 
     public function mount(): void
     {
-        $this->fillForms();
+        // @var mixed fillForms(;
     }
 
     public function telegramForm(Schema $schema): Schema
     {
-        return $schema->components($this->getTelegramFormSchema())->model($this->getUser())->statePath('telegramData');
+        return $schema->components(// @var mixed getTelegramFormSchema(;
     }
 
     /**
@@ -94,8 +94,8 @@ class SendTelegramPage extends XotBasePage
     public function sendTelegram(): void
     {
         try {
-            $data = $this->telegramForm->getState();
-            $user = $this->getUser();
+            $data = // @var mixed telegramForm->getState(;
+            $user = // @var mixed getUser(;
 
             $message = is_string($data['text']) ? $data['text'] : '';
 
@@ -143,9 +143,9 @@ class SendTelegramPage extends XotBasePage
 
     protected function fillForms(): void
     {
-        // $data = $this->getUser()->attributesToArray();
+        // $data = // @var mixed getUser(;
 
-        // $this->editProfileForm->fill($data);
-        $this->telegramForm->fill();
+        // // @var mixed editProfileForm->fill($data;
+        // @var mixed telegramForm->fill(;
     }
 }

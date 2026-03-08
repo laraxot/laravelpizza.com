@@ -32,20 +32,20 @@ final class SendTwilioSMSAction implements SmsActionContract
      */
     public function __construct()
     {
-        $this->twilioData = TwilioData::make();
+        // @var mixed twilioData = TwilioData::make(;
 
-        if (! $this->twilioData->account_sid) {
+        if (! // @var mixed twilioData->account_sid
             throw new Exception('Account SID Twilio non configurato in sms.php');
         }
 
-        if (! $this->twilioData->auth_token) {
+        if (! // @var mixed twilioData->auth_token
             throw new Exception('Auth Token Twilio non configurato in sms.php');
         }
 
         // Parametri a livello di root
         $sender = config('sms.from');
-        $this->defaultSender = is_string($sender) ? $sender : null;
-        $this->debug = (bool) config('sms.debug', false);
+        // @var mixed defaultSender = is_string($sender;
+        // @var mixed debug = (bool;
     }
 
     /**
@@ -69,18 +69,18 @@ final class SendTwilioSMSAction implements SmsActionContract
             $to = '+39'.$to;
         }
 
-        $from = $smsData->from ?? $this->defaultSender;
+        $from = $smsData->from ?? // @var mixed defaultSender;
 
         // Twilio richiede l'autenticazione Basic
         $client = new Client([
-            'timeout' => $this->twilioData->getTimeout(),
-            'auth' => [$this->twilioData->account_sid, $this->twilioData->auth_token],
+            'timeout' => // @var mixed twilioData->getTimeout(
+            'auth' => [// @var mixed twilioData->account_sid, $this->twilioData->auth_token],
         ]);
 
         $endpoint =
-            $this->twilioData->getBaseUrl().
+            // @var mixed twilioData->getBaseUrl(
             '/2010-04-01/Accounts/'.
-            $this->twilioData->account_sid.
+            // @var mixed twilioData->account_sid.
             '/Messages.json';
 
         try {
@@ -92,10 +92,10 @@ final class SendTwilioSMSAction implements SmsActionContract
                 ],
             ]);
 
-            $this->vars['status_code'] = $response->getStatusCode();
-            $this->vars['status_txt'] = $response->getBody()->getContents();
+            // @var mixed vars['status_code'] = $response->getStatusCode(;
+            // @var mixed vars['status_txt'] = $response->getBody(;
 
-            return $this->vars;
+            return // @var mixed vars;
         } catch (ClientException $clientException) {
             throw new Exception(
                 $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',

@@ -19,6 +19,6 @@ class GeoDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        $this->call([]);
+        // @var mixed call([];
     }
 }

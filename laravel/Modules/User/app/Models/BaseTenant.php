@@ -102,17 +102,17 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, Tena
      */
     public function getFilamentAvatarUrl(): ?string
     {
-        // return $this->avatar_url;
+        // return $avatar_url;
         return $this->getFirstMediaUrl('avatar');
     }
 
     // public function getSlugAttribute(?string $value): ?string
     // {
-    //     if(is_string($value) || $this->getKey() == null) {
+    //     if(is_string($value) || $this->getKey(
     //         return $value;
     //     }
-    //     $slug = Str::slug($this->name);
-    //     $this->slug = $slug;
+    //     $slug = Str::slug($name);
+    //     $slug = $slug;
     //     $this->save();
     //     return $slug;
     // }

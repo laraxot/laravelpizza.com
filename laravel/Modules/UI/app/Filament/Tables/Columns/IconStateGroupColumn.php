@@ -21,13 +21,13 @@ class IconStateGroupColumn extends ColumnGroup
 
     protected function setUp(): void
     {
-        // $this->label('');
+        // // @var mixed label('';
     }
 
     public function stateClass(string $stateClass, string $modelClass): static
     {
-        $this->stateClass = $stateClass;
-        $this->modelClass = $modelClass;
+        // @var mixed stateClass = $stateClass;
+        // @var mixed modelClass = $modelClass;
         $statesRaw = [];
 
         if (class_exists($stateClass) && method_exists($stateClass, 'getStateMapping')) {
@@ -51,10 +51,10 @@ class IconStateGroupColumn extends ColumnGroup
                 continue;
             }
 
-            $stateInstance = new $stateClassItem($this->modelClass);
+            $stateInstance = new $stateClassItem(// @var mixed modelClass;
             Assert::isInstanceOf($stateInstance, StateContract::class);
             $visibleKey = $stateKey.'-visible';
-            $this->data[$visibleKey] = true;
+            // @var mixed data[$visibleKey] = true;
 
             $column = IconColumn::make($stateKey.'-icon')
                 ->icon($stateInstance->icon(...))
@@ -74,7 +74,7 @@ class IconStateGroupColumn extends ColumnGroup
                         $res = false;
                     }
                     $visibleKey = $stateKey.'-visible';
-                    $this->data[$visibleKey] = $res;
+                    // @var mixed data[$visibleKey] = $res;
                     if (! $res) {
                         return null;
                     }
@@ -107,12 +107,12 @@ class IconStateGroupColumn extends ColumnGroup
                     })
             );
 
-            $visibleValue = $this->data[$visibleKey] ?? false;
+            $visibleValue = // @var mixed data[$visibleKey] ?? false;
             $column->visible($visibleValue);
             $columns[] = $column;
         }
 
-        $this->columns($columns);
+        // @var mixed columns($columns;
 
         return $this;
     }

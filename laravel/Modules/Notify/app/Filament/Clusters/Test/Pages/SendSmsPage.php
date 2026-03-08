@@ -50,7 +50,7 @@ class SendSmsPage extends XotBasePage
 
     public function mount(): void
     {
-        $this->fillForms();
+        // @var mixed fillForms(;
     }
 
     protected function getForms(): array
@@ -62,12 +62,12 @@ class SendSmsPage extends XotBasePage
 
     protected function fillForms(): void
     {
-        $this->smsForm->fill();
+        // @var mixed smsForm->fill(;
     }
 
     public function smsForm(Schema $schema): Schema
     {
-        return $schema->components($this->getSmsFormSchema())->model($this->getUser())->statePath('smsData');
+        return $schema->components(// @var mixed getSmsFormSchema(;
     }
 
     /**
@@ -98,8 +98,8 @@ class SendSmsPage extends XotBasePage
     public function sendSMS(): void
     {
         try {
-            $data = $this->smsForm->getState();
-            $user = $this->getUser();
+            $data = // @var mixed smsForm->getState(;
+            $user = // @var mixed getUser(;
             /*
              * Notification::route('sms', $data['to'])
              * ->notify(new SmsNotification($data['message'], [

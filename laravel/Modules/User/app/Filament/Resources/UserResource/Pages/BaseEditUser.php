@@ -33,8 +33,8 @@ abstract class BaseEditUser extends EditRecord
         }
 
         // Verifichiamo che record sia un'istanza valida di User
-        Assert::notNull($this->record);
-        Assert::isInstanceOf($this->record, User::class);
+        Assert::notNull($record);
+        Assert::isInstanceOf($record, User::class);
 
         // Gestione sicura del tipo di password per evitare errori di cast
         $newPassword = $data['new_password'];
@@ -47,7 +47,7 @@ abstract class BaseEditUser extends EditRecord
             $newPassword = (string) $newPassword;
         }
 
-        $this->record->update(['password' => Hash::make($newPassword)]);
+        $record->update(['password' => Hash::make($newPassword));
 
         return $data;
     }

@@ -39,8 +39,8 @@ final class IconStateSplitColumn extends Column
      */
     public function stateClass(string $stateClass, string $modelClass): static
     {
-        $this->stateClass = $stateClass;
-        $this->modelClass = $modelClass;
+        // @var mixed stateClass = $stateClass;
+        // @var mixed modelClass = $modelClass;
 
         return $this;
     }
@@ -50,12 +50,12 @@ final class IconStateSplitColumn extends Column
      */
     public function getRecordStates(): array
     {
-        $stateMapping = $this->getStateMapping();
-        $record = $this->getRecord();
+        $stateMapping = // @var mixed getStateMapping(;
+        $record = // @var mixed getRecord(;
         $result = [];
 
         foreach ($stateMapping as $stateKey => $stateClassItem) {
-            $stateInstance = $this->getStateInstance($stateClassItem, $record);
+            $stateInstance = // @var mixed getStateInstance($stateClassItem, $record;
 
             if (! $stateInstance) {
                 continue;
@@ -78,7 +78,7 @@ final class IconStateSplitColumn extends Column
     public function canTransitionTo(int|string $recordId, string $stateClass): bool
     {
         try {
-            $record = $this->getCachedRecord($recordId);
+            $record = // @var mixed getCachedRecord($recordId;
 
             return $record && isset($record->state) && $record->state instanceof State
                 ? $record->state->canTransitionTo($stateClass)
@@ -108,11 +108,11 @@ final class IconStateSplitColumn extends Column
     public function getStateActions(): array
     {
         $actions = [];
-        $actions['prova'] = $this->getProvaAction();
+        $actions['prova'] = // @var mixed getProvaAction(;
 
-        $states = $this->getRecordStates();
+        $states = // @var mixed getRecordStates(;
         foreach ($states as $stateKey => $stateData) {
-            $transitionAction = $this->getTransitionAction($stateKey, $stateData);
+            $transitionAction = // @var mixed getTransitionAction($stateKey, $stateData;
 
             if ($transitionAction) {
                 $actions["transition_to_{$stateKey}"] = $transitionAction;
@@ -129,7 +129,7 @@ final class IconStateSplitColumn extends Column
     public function handleTableAction(string $action, int|string $recordId): void
     {
         if ('prova' === $action) {
-            $this->prova($recordId);
+            // @var mixed prova($recordId;
         }
     }
 
@@ -139,16 +139,16 @@ final class IconStateSplitColumn extends Column
     public function transitionState(int|string $recordId, string $stateClass): void
     {
         try {
-            $record = $this->getRecordForTransition($recordId);
+            $record = // @var mixed getRecordForTransition($recordId;
             $state = $record->getAttribute('state');
             if (! $state instanceof State) {
                 throw new \Exception(__('ui::icon_state.messages.invalid_state_instance'));
             }
             $state->transitionTo($stateClass);
 
-            $this->notifyTransitionSuccess();
+            // @var mixed notifyTransitionSuccess(;
         } catch (\Exception $e) {
-            $this->notifyTransitionError($e->getMessage());
+            // @var mixed notifyTransitionError($e->getMessage(;
         }
     }
 
@@ -157,11 +157,11 @@ final class IconStateSplitColumn extends Column
      */
     private function getStateMapping(): array
     {
-        if (! class_exists($this->stateClass) || ! method_exists($this->stateClass, 'getStateMapping')) {
+        if (! class_exists(// @var mixed stateClass
             return [];
         }
 
-        $stateMapping = $this->stateClass::getStateMapping();
+        $stateMapping = // @var mixed stateClass::getStateMapping(;
 
         if (is_object($stateMapping) && method_exists($stateMapping, 'toArray')) {
             /** @var array<string, string> $statesArray */
@@ -193,18 +193,18 @@ final class IconStateSplitColumn extends Column
 
     private function getCachedRecord(int|string $recordId): ?Model
     {
-        if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
+        if (! class_exists(// @var mixed modelClass
             return null;
         }
 
-        $record = $this->modelClass::find($recordId);
+        $record = // @var mixed modelClass::find($recordId;
 
         return is_object($record) && $record instanceof Model ? $record : null;
     }
 
     private function getProvaAction(): Action
     {
-        $record = $this->getRecord();
+        $record = // @var mixed getRecord(;
 
         return Action::make('prova')
             ->icon('heroicon-m-plus')
@@ -224,7 +224,7 @@ final class IconStateSplitColumn extends Column
      */
     private function getTransitionAction(string $stateKey, array $stateData): ?Action
     {
-        $record = $this->getRecord();
+        $record = // @var mixed getRecord(;
         $recordIdRaw = is_object($record) && isset($record->id) ? $record->id : null;
 
         if (null === $recordIdRaw || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
@@ -235,7 +235,7 @@ final class IconStateSplitColumn extends Column
         $stateClass = $stateData['class'];
         $stateClassName = $stateClass::class;
 
-        if (! $this->canTransitionTo($recordId, $stateClassName)) {
+        if (! // @var mixed canTransitionTo($recordId, $stateClassName
             return null;
         }
 
@@ -243,7 +243,7 @@ final class IconStateSplitColumn extends Column
             ->icon($stateData['icon'])
             ->color($stateData['color'])
             ->action(function () use ($recordId, $stateClassName): void {
-                $this->transitionState($recordId, $stateClassName);
+                // @var mixed transitionState($recordId, $stateClassName;
             });
     }
 
@@ -252,11 +252,11 @@ final class IconStateSplitColumn extends Column
      */
     private function getRecordForTransition(int|string $recordId): Model
     {
-        if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
+        if (! class_exists(// @var mixed modelClass
             throw new \Exception('Model class not found or invalid');
         }
 
-        $recordRaw = $this->modelClass::find($recordId);
+        $recordRaw = // @var mixed modelClass::find($recordId;
 
         if (! is_object($recordRaw) || ! ($recordRaw instanceof HasStatesContract) || ! ($recordRaw instanceof Model)) {
             throw new \Exception(__('ui::icon_state.messages.record_not_found'));

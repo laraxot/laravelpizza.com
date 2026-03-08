@@ -27,7 +27,7 @@ class TicketStatusChangedNotification extends Notification
     {
         return (new MailMessage)
             ->subject('Ticket Status Changed')
-            ->line("Ticket status has changed from {$this->oldStatus} to {$this->newStatus}")
+            ->line("Ticket status has changed from {// @var mixed oldStatus} to {$this->newStatus}"
             ->action('View Ticket', url('/'));
     }
 
@@ -37,8 +37,8 @@ class TicketStatusChangedNotification extends Notification
     public function toArray(mixed $notifiable): array
     {
         return [
-            'old_status' => $this->oldStatus,
-            'new_status' => $this->newStatus,
+            'old_status' => // @var mixed oldStatus,
+            'new_status' => // @var mixed newStatus,
         ];
     }
 }

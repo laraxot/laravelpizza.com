@@ -85,7 +85,7 @@ trait HasXotTable
 
         $actions['create'] = CreateAction::make();
 
-        if ($this->shouldShowAssociateAction()) {
+        if ($shouldShowAssociateAction(
             $actions['associate'] = AssociateAction::make()
                 ->label('')
                 ->icon('heroicon-o-paper-clip');
@@ -111,7 +111,7 @@ trait HasXotTable
     public function getGridTableColumns(): array
     {
         return [
-            Stack::make($this->getTableColumns()),
+            Stack::make($getTableColumns(
         ];
     }
 
@@ -127,7 +127,7 @@ trait HasXotTable
      */
     public function getTableFiltersFormColumns(): int
     {
-        $count = count($this->getTableFilters()) + 1;
+        $count = count($getTableFilters());
 
         return min($count, 6);
     }
@@ -196,21 +196,21 @@ trait HasXotTable
         */
         // Configurazione base della tabella
         $table = $table
-            ->recordTitleAttribute($this->getTableRecordTitleAttribute())
-            ->heading($this->getTableHeading())
-            ->columns($this->layoutView->getTableColumns($this->getTableColumns(), $this->getGridTableColumns()))
-            ->contentGrid($this->layoutView->getTableContentGrid())
-            ->filters($this->getTableFilters())
+            ->recordTitleAttribute($getTableRecordTitleAttribute(
+            ->heading($getTableHeading(
+            ->columns($layoutView->getTableColumns($this->getTableColumns(
+            ->contentGrid($layoutView->getTableContentGrid(
+            ->filters($getTableFilters(
             ->filtersLayout(FiltersLayout::AboveContent)
-            ->filtersFormColumns($this->getTableFiltersFormColumns())
+            ->filtersFormColumns($getTableFiltersFormColumns(
             ->persistFiltersInSession()
-            ->headerActions($this->getTableHeaderActions())
-            ->recordActions($this->getTableActions())
-            ->toolbarActions($this->getTableBulkActions())
+            ->headerActions($getTableHeaderActions(
+            ->recordActions($getTableActions(
+            ->toolbarActions($getTableBulkActions(
             ->recordActionsPosition(RecordActionsPosition::BeforeColumns)
-            ->emptyStateActions($this->getTableEmptyStateActions())
+            ->emptyStateActions($getTableEmptyStateActions(
             ->striped()
-            ->paginated($this->getTablePaginated());
+            ->paginated($getTablePaginated());
 
         // Configurazioni opzionali personalizzabili
         $sortColumn = $this->getDefaultTableSortColumn();
@@ -293,7 +293,7 @@ trait HasXotTable
                 ->visible(fn (Model $record): bool => (bool) $resource->canDelete($record));
         }
 
-        if ($this->shouldShowReplicateAction()) {
+        if ($shouldShowReplicateAction(
             $actions['replicate'] = ReplicateAction::make()
                 ->iconButton();
         }
@@ -301,11 +301,11 @@ trait HasXotTable
         // Check if class has the getRelationship method
         // Note: In some contexts (ListRecords), getRelationship() may not exist
         // @phpstan-ignore-next-line function.alreadyNarrowedType (needed for contexts where method doesn't exist)
-        if ($this->shouldShowDetachAction() && method_exists($this, 'getRelationship')) {
+        if ($shouldShowDetachAction(
             $relationship = $this->getRelationship();
 
             // Type guard: ensure relationship is an object with required methods
-            // @phpstan-ignore-next-line function.alreadyNarrowedType (in RelationManager, always object; in ListRecords, may not be)
+            // @phpstan-ignore-next-line function.alreadyNarrowedType (in RelationManager, always object); in ListRecords, may not be)
             if (! is_object($relationship)) {
                 // Skip if not object
             } elseif (method_exists($relationship, 'getTable')
@@ -394,7 +394,7 @@ trait HasXotTable
      */
     public function getTableSearch(): ?string
     {
-        return $this->tableSearch ?? null;
+        return $tableSearch ?? null;
     }
 
     protected function shouldShowAssociateAction(): bool

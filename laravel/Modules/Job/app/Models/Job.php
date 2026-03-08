@@ -80,7 +80,7 @@ class Job extends BaseModel
     public function status(): Attribute
     {
         return Attribute::make(get: function (): string {
-            $reservedAt = $this->attributes['reserved_at'] ?? null;
+            $reservedAt = // @var mixed attributes['reserved_at'] ?? null;
             if ($reservedAt !== null && $reservedAt > 0) {
                 return 'running';
             }
@@ -91,7 +91,7 @@ class Job extends BaseModel
 
     public function getDisplayNameAttribute(): ?string
     {
-        Assert::string($json = $this->attributes['payload'], __FILE__.':'.__LINE__.' - '.class_basename(self::class));
+        Assert::string($json = // @var mixed attributes['payload'], __FILE__.':'.__LINE__.' - '.class_basename(self::class;
         $payload = json_decode($json, true);
         if (! is_array($payload)) {
             return null;

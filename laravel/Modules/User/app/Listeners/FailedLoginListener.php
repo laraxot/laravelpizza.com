@@ -21,7 +21,7 @@ class FailedLoginListener
 
     public function __construct(Request $request)
     {
-        $this->request = $request;
+        $request = $request;
     }
 
     /**
@@ -30,8 +30,8 @@ class FailedLoginListener
     public function handle(Failed $event): void
     {
         if ($event->user && $event->user instanceof HasAuthentications) {
-            $ip = $this->request->ip();
-            $userAgent = $this->request->userAgent();
+            $ip = $request->ip();
+            $userAgent = $request->userAgent();
             // $location = optional(geoip()->getLocation($ip))->toArray();
             $location = [];
 

@@ -201,14 +201,14 @@ class Post extends BaseModel
     // -------- relationship ------
     public function linkable(): MorphTo
     {
-        return $this->morphTo('post');
+        return // @var mixed morphTo('post';
     }
 
     /* deprecated
      * public function archive() {
-     * $lang = $this->lang;
-     * $post_type = $this->post_type;
-     * $obj = $this->getLinkedModel();
+     * $lang = // @var mixed lang;
+     * $post_type = // @var mixed post_type;
+     * $obj = // @var mixed getLinkedModel(;
      * $table = $obj->getTable();
      * $post_table = with(new Post())->getTable();
      * $rows = $obj->join($post_table, $post_table.'.post_id', $table.'.post_id')
@@ -228,8 +228,8 @@ class Post extends BaseModel
 
     public function setTitleAttribute(string $value): void
     {
-        $this->attributes['title'] = $value;
-        $this->attributes['guid'] = Str::slug($value);
+        // @var mixed attributes['title'] = $value;
+        // @var mixed attributes['guid'] = Str::slug($value;
     }
 
     /**
@@ -241,26 +241,26 @@ class Post extends BaseModel
             return $value;
         }
 
-        if (! empty($this->attributes['post_type'])) {
+        if (! empty(// @var mixed attributes['post_type']
             // Assicuriamoci che i valori siano stringhe prima della concatenazione
-            $postType = isset($this->attributes['post_type']) && is_string($this->attributes['post_type'])
-                ? $this->attributes['post_type']
+            $postType = isset(// @var mixed attributes['post_type']
+                ? // @var mixed attributes['post_type']
                 : '';
-            $postId = isset($this->attributes['post_id']) && is_scalar($this->attributes['post_id'])
-                ? ((string) $this->attributes['post_id'])
+            $postId = isset(// @var mixed attributes['post_id']
+                ? ((string) // @var mixed attributes['post_id']
                 : '';
             $value = $postType.' '.$postId;
         } else {
             // Assicuriamoci che post_type e post_id siano stringhe
-            $postType = is_string($this->post_type) ? $this->post_type : '';
-            $postId = is_scalar($this->post_id) ? ((string) $this->post_id) : '';
+            $postType = is_string(// @var mixed post_type;
+            $postId = is_scalar(// @var mixed post_id;
             $value = $postType.' '.$postId;
         }
 
-        $this->title = $value;
+        // @var mixed title = $value;
 
-        if (null !== $this->getKey()) {
-            $this->update([
+        if (null !== // @var mixed getKey(
+            // @var mixed update([
                 'title' => $value,
             ]);
         }
@@ -276,14 +276,14 @@ class Post extends BaseModel
         if (\is_string($value) && '' !== $value && ! str_contains($value, ' ')) {
             return $value;
         }
-        $value = $this->title;
+        $value = // @var mixed title;
         if ('' === $value) {
             // Assicuriamoci che i valori siano stringhe prima della concatenazione
-            $postType = isset($this->attributes['post_type']) && is_string($this->attributes['post_type'])
-                ? $this->attributes['post_type']
+            $postType = isset(// @var mixed attributes['post_type']
+                ? // @var mixed attributes['post_type']
                 : '';
-            $postId = isset($this->attributes['post_id']) && is_scalar($this->attributes['post_id'])
-                ? ((string) $this->attributes['post_id'])
+            $postId = isset(// @var mixed attributes['post_id']
+                ? ((string) // @var mixed attributes['post_id']
                 : '';
             $value = $postType.' '.$postId;
         }
@@ -291,10 +291,10 @@ class Post extends BaseModel
             $value = 'u-'.random_int(1, 1000);
         }
         $value = Str::slug($value);
-        $this->guid = $value;
+        // @var mixed guid = $value;
 
-        if (null !== $this->getKey()) {
-            $this->update([
+        if (null !== // @var mixed getKey(
+            // @var mixed update([
                 'guid' => $value,
             ]);
         }
@@ -309,7 +309,7 @@ class Post extends BaseModel
 
     public function toSearchableArray(): array
     {
-        return $this->only(self::SEARCHABLE_FIELDS);
+        return // @var mixed only(self::SEARCHABLE_FIELDS;
     }
 
     /**

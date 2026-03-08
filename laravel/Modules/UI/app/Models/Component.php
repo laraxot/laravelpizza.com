@@ -81,6 +81,6 @@ class Component extends BaseModel
      */
     public function theme(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(Theme::class);
+        return // @var mixed belongsTo(Theme::class;
     }
 }

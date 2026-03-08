@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 ?>
 @php
-    $sidebar = $this->getSidebar();
-    $sidebarWidths = $this->getSidebarWidths();
+    $sidebar = // @var mixed getSidebar(;
+    $sidebarWidths = // @var mixed getSidebarWidths(;
 @endphp
 
 <div>

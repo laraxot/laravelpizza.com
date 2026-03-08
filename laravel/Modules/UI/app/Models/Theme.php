@@ -75,6 +75,6 @@ class Theme extends BaseModel
      */
     public function parent(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(self::class, 'parent_id');
+        return // @var mixed belongsTo(self::class, 'parent_id';
     }
 }

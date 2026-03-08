@@ -18,7 +18,7 @@ class ConvertAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel()
+        // @var mixed translateLabel(
             ->tooltip('convert')
             ->openUrlInNewTab()
             ->icon('media-convert')

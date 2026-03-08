@@ -23,23 +23,23 @@ class Block extends Component
         public ?Model $model = null,
         public string $tpl = '',
     ) {
-        $view = Arr::get($this->block, 'data.view', null);
+        $view = Arr::get(// @var mixed block, 'data.view', null;
         if (null === $view) {
             $view = 'ui::empty';
         }
         Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
-        $this->view = $view;
+        // @var mixed view = $view;
     }
 
     public function render(): ViewFactory|View
     {
-        if (! isset($this->block['type'])) {
+        if (! isset(// @var mixed block['type']
             return view('ui::empty');
         }
 
-        $view = $this->view;
+        $view = // @var mixed view;
         if (! view()->exists(is_string($view) ? $view : ((string) $view))) {
-            $message = 'view not exists ['.$view.'] ! <pre>'.print_r($this->block, true).'</pre>';
+            $message = 'view not exists ['.$view.'] ! <pre>'.print_r(// @var mixed block, true;
             $view_params = [
                 'title' => 'deprecated',
                 'message' => $message,
@@ -47,7 +47,7 @@ class Block extends Component
 
             return view('ui::alert', $view_params);
         }
-        $view_params_raw = $this->block['data'] ?? [];
+        $view_params_raw = // @var mixed block['data'] ?? [];
         $view_params = is_array($view_params_raw) ? $view_params_raw : [];
         /** @var array<string, mixed> $view_params */
         $view_params = (array) $view_params;

@@ -16,31 +16,31 @@ class ActivityEventTest extends TestCase
     #[Test]
     public function event_class_exists(): void
     {
-        $this->assertTrue(class_exists(ActivityEvent::class));
+        // @var mixed assertTrue(class_exists(ActivityEvent::class;
     }
 
     #[Test]
     public function event_uses_dispatchable_trait(): void
     {
-        $this->assertContains(Dispatchable::class, class_uses_recursive(ActivityEvent::class));
+        // @var mixed assertContains(Dispatchable::class, class_uses_recursive(ActivityEvent::class;
     }
 
     #[Test]
     public function event_uses_interacts_with_sockets_trait(): void
     {
-        $this->assertContains(InteractsWithSockets::class, class_uses_recursive(ActivityEvent::class));
+        // @var mixed assertContains(InteractsWithSockets::class, class_uses_recursive(ActivityEvent::class;
     }
 
     #[Test]
     public function event_uses_serializes_models_trait(): void
     {
-        $this->assertContains(SerializesModels::class, class_uses_recursive(ActivityEvent::class));
+        // @var mixed assertContains(SerializesModels::class, class_uses_recursive(ActivityEvent::class;
     }
 
     #[Test]
     public function event_can_be_instantiated(): void
     {
         $event = new ActivityEvent;
-        $this->assertInstanceOf(ActivityEvent::class, $event);
+        // @var mixed assertInstanceOf(ActivityEvent::class, $event;
     }
 }

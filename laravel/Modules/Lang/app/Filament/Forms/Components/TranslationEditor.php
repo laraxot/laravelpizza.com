@@ -18,7 +18,7 @@ class TranslationEditor extends Field
     {
         parent::setUp();
 
-        $this->afterStateHydrated(function (TranslationEditor $component, $state): void {
+        // @var mixed afterStateHydrated(function (TranslationEditor $component, $state
             $component->state($state ?? []);
         });
     }
@@ -26,7 +26,7 @@ class TranslationEditor extends Field
     public function getDefaultChildComponents(?string $key = null): array
     {
         $components = [];
-        $state = $this->getState() ?? [];
+        $state = // @var mixed getState(;
         if (! is_iterable($state)) {
             return $components;
         }

@@ -42,7 +42,7 @@ class SendSpatieEmailPage extends XotBasePage
 
     public function mount(): void
     {
-        $this->fillForms();
+        // @var mixed fillForms(;
     }
 
     protected function getForms(): array
@@ -54,15 +54,15 @@ class SendSpatieEmailPage extends XotBasePage
 
     protected function fillForms(): void
     {
-        // $data = $this->getUser()->attributesToArray();
+        // $data = // @var mixed getUser(;
 
-        // $this->editProfileForm->fill($data);
-        $this->emailForm->fill();
+        // // @var mixed editProfileForm->fill($data;
+        // @var mixed emailForm->fill(;
     }
 
     public function emailForm(Schema $schema): Schema
     {
-        return $schema->components($this->getEmailFormSchema())->model($this->getUser())->statePath('emailData');
+        return $schema->components(// @var mixed getEmailFormSchema(;
     }
 
     /**
@@ -85,7 +85,7 @@ class SendSpatieEmailPage extends XotBasePage
 
     public function sendEmail(): void
     {
-        $data = $this->emailForm->getState();
+        $data = // @var mixed emailForm->getState(;
         /*
          * $email_data = EmailData::from($data);
          *
@@ -95,7 +95,7 @@ class SendSpatieEmailPage extends XotBasePage
          *
          *
          */
-        $user = $this->getUser();
+        $user = // @var mixed getUser(;
         $attachments = [
             [
                 'path' => public_path('images/avatars/default-3.svg'),

@@ -45,52 +45,52 @@ class RegistrationWidget extends XotBaseWidget
 
     public function mount(string $type, Request $_request): void
     {
-        $this->type = $type;
-        $this->resource = XotData::make()->getUserResourceClassByType($type);
+        $type = $type;
+        $resource = XotData::make();
 
-        $modelClass = $this->resource::getModel();
-        $this->model = \is_string($modelClass) ? $modelClass : '';
+        $modelClass = $resource::getModel();
+        $model = \is_string($modelClass);
 
-        $this->action = Str::of($this->model)
+        $action = Str::of($this->model
             ->replace('\\Models\\', '\\Actions\\')
             ->append('\\RegisterAction')
             ->toString();
         $record = $this->getFormModel();
         $data = $this->getFormFill();
 
-        $this->data = $data;
-        $this->form->fill($this->data);
-        $this->form->model($record);
-        $this->record = $record;
+        $data = $data;
+        $form->fill($this->data);
+        $form->model($record);
+        $record = $record;
     }
 
     public function getFormModel(): Model
     {
         /** @var class-string<Model> $modelClass */
-        $modelClass = $this->model;
+        $modelClass = $model;
 
         $data = request()->all();
         $email = Arr::get($data, 'email');
         $token = Arr::get($data, 'token');
 
         /** @var Model|null $user */
-        $user = $this->model::firstWhere('email', $email);
+        $user = $model::firstWhere('email', $email);
         if (null === $user) {
             /** @var Model $model */
-            $model = app($this->model);
+            $model = app($model);
 
             return $model;
         }
 
-        $remember_token = $user->getAttribute('remember_token');
+        $remember_token = $user->$this->getAttribute('remember_token');
         if ($token) {
             $user->setAttribute('remember_token', $token);
             $user->save();
-            $remember_token = $user->getAttribute('remember_token');
+            $remember_token = $user->$this->getAttribute('remember_token');
         }
 
         if ($remember_token === $token) {
-            $this->record = $user;
+            $record = $user;
 
             return $user;
         }
@@ -109,7 +109,7 @@ class RegistrationWidget extends XotBaseWidget
     {
         /** @var array<string, mixed> $data */
         $data = SafeArrayCastAction::cast(parent::getFormFill());
-        $data['type'] = $this->type;
+        $data['type'] = $type;
 
         return $data;
     }
@@ -121,7 +121,7 @@ class RegistrationWidget extends XotBaseWidget
     public function getFormSchema(): array
     {
         /** @var array<int|string, Component> $schema */
-        $schema = $this->resource::getFormSchemaWidget();
+        $schema = $resource::getFormSchemaWidget();
         Assert::isArray($schema);
 
         return $schema;
@@ -134,23 +134,23 @@ class RegistrationWidget extends XotBaseWidget
     {
         $lang = app()->getLocale();
 
-        $data = $this->form->getState();
+        $data = $form->getState();
         /** @var array<string, mixed> $initialData */
-        $initialData = $this->data ?? [];
+        $initialData = $data ?? [];
         $data = array_merge($initialData, $data);
-        $record = $this->record;
+        $record = $record;
 
         /** @var object{execute: callable} $actionInstance */
-        $actionInstance = app($this->action);
+        $actionInstance = app($action);
 
         /** @phpstan-ignore method.notFound */
         $user = $actionInstance->execute($record, $data);
 
         $lang = app()->getLocale();
-        $route = route('pages.view', ['slug' => $this->type.'_register_complete']);
+        $route = route('pages.view', ['slug' => $type.'_register_complete']);
         $route = LaravelLocalization::localizeUrl($route, $lang);
 
-        // return redirect()->route('pages.view', ['slug' => $this->type . '_register_complete','lang'=>$lang]);
+        // return redirect()->route('pages.view', ['slug' => $type . '_register_complete','lang'=>$lang]);
         return redirect($route);
     }
 }

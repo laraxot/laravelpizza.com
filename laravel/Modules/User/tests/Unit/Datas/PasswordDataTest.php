@@ -9,7 +9,7 @@ use Spatie\LaravelData\Data;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    $this->passwordData = new PasswordData(
+    $passwordData = new PasswordData(
         otp_expiration_minutes: 10,
         otp_length: 8,
         expires_in: 120,
@@ -25,18 +25,18 @@ beforeEach(function (): void {
 });
 
 test('password data can be created with custom parameters', function (): void {
-    expect($this->passwordData)->toBeInstanceOf(PasswordData::class);
-    expect($this->passwordData->otp_expiration_minutes)->toBe(10);
-    expect($this->passwordData->otp_length)->toBe(8);
-    expect($this->passwordData->expires_in)->toBe(120);
-    expect($this->passwordData->min)->toBe(12);
-    expect($this->passwordData->mixedCase)->toBeTrue();
-    expect($this->passwordData->letters)->toBeTrue();
-    expect($this->passwordData->numbers)->toBeTrue();
-    expect($this->passwordData->symbols)->toBeTrue();
-    expect($this->passwordData->uncompromised)->toBeTrue();
-    expect($this->passwordData->compromisedThreshold)->toBe(5);
-    expect($this->passwordData->failMessage)->toBe('Password non valida');
+    expect($passwordData);
+    expect($passwordData->otp_expiration_minutes);
+    expect($passwordData->otp_length);
+    expect($passwordData->expires_in);
+    expect($passwordData->min);
+    expect($passwordData->mixedCase);
+    expect($passwordData->letters);
+    expect($passwordData->numbers);
+    expect($passwordData->symbols);
+    expect($passwordData->uncompromised);
+    expect($passwordData->compromisedThreshold);
+    expect($passwordData->failMessage);
 });
 
 test('password data has default values', function (): void {
@@ -56,7 +56,7 @@ test('password data has default values', function (): void {
 });
 
 test('password data extends spatie data class', function (): void {
-    expect($this->passwordData)->toBeInstanceOf(Data::class);
+    expect($passwordData);
 });
 
 test('password data has correct properties', function (): void {

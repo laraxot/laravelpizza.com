@@ -13,15 +13,15 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table): void {
+        // @var mixed tableCreate(static function (Blueprint $table
             $table->increments('id');
             $table->unsignedInteger('frequency_id');
             $table->string('name');
             $table->string('value');
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
-            $this->updateTimestamps($table);
+        // @var mixed tableUpdate(function (Blueprint $table
+            // @var mixed updateTimestamps($table;
         });
     }
 };

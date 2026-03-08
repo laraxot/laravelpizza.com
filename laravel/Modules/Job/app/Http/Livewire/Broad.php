@@ -36,6 +36,6 @@ class Broad extends Component
         session()->flash('message', 'notifyEvent ['.now().']');
         dd('fine');
 
-        // $this->showNewOrderNotification = true;
+        // // @var mixed showNewOrderNotification = true;
     }
 }

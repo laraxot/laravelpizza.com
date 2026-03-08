@@ -15,11 +15,11 @@ class SelectState extends XotBaseSelect
     {
         parent::setUp();
 
-        //  $this->selectablePlaceholder(false);
-        $this->options(function ((Model&HasStatesContract)|null $record): array {
-            $name = $this->getName();
+        //  // @var mixed selectablePlaceholder(false;
+        // @var mixed options(function ((Model&HasStatesContract
+            $name = // @var mixed getName(;
             if (null === $record) {
-                $model = $this->getModel();
+                $model = // @var mixed getModel(;
                 if (\is_string($model) && class_exists($model)) {
                     $instance = app($model);
                     if (\is_object($instance)) {
@@ -67,6 +67,6 @@ class SelectState extends XotBaseSelect
 
             return $combinedTyped;
         });
-        $this->required();
+        // @var mixed required(;
     }
 }

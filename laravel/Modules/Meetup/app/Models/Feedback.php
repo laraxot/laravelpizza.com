@@ -18,8 +18,6 @@ use Modules\User\Models\User;
  */
 class Feedback extends BaseModel
 {
-    protected $table = 'feedbacks';
-
     protected $fillable = [
         'user_id',
         'event_id',

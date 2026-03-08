@@ -49,10 +49,10 @@ class OptimizeRouteAction
             throw new \RuntimeException('Google Maps API key not found');
         }
 
-        $waypoints = $this->formatWaypoints($locations);
+        $waypoints = // @var mixed formatWaypoints($locations;
         $response = Http::get(self::BASE_URL, [
-            'origin' => $this->formatLocation($origin),
-            'destination' => $this->formatLocation($destination),
+            'origin' => // @var mixed formatLocation($origin
+            'destination' => // @var mixed formatLocation($destination
             'waypoints' => 'optimize:true|'.implode('|', $waypoints),
             'mode' => $mode,
             'optimize' => $optimize,
@@ -75,7 +75,7 @@ class OptimizeRouteAction
             return [];
         }
 
-        return $this->parseRoutes($data['routes'], collect($locations));
+        return // @var mixed parseRoutes($data['routes'], collect($locations;
     }
 
     /**
@@ -87,7 +87,7 @@ class OptimizeRouteAction
      */
     private function formatWaypoints(array $locations): array
     {
-        return collect($locations)->map($this->formatLocation(...))->all();
+        return collect($locations)->map(// @var mixed formatLocation(...;
     }
 
     /**

@@ -7,15 +7,15 @@ use Symfony\Component\Console\Command\Command;
 
 describe('GetCommandArgumentsActions', function () {
     beforeEach(function () {
-        $this->action = new GetCommandArgumentsActions;
+        // @var mixed action = new GetCommandArgumentsActions;
     });
 
     it('can be instantiated', function () {
-        expect($this->action)->toBeInstanceOf(GetCommandArgumentsActions::class);
+        expect(// @var mixed action;
     });
 
     it('has correct method signature', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $method = $reflection->getMethod('execute');
 
         expect($method->isPublic())
@@ -26,13 +26,13 @@ describe('GetCommandArgumentsActions', function () {
 
     it('returns array of arguments', function () {
         $command = new Command('test');
-        $result = $this->action->execute($command);
+        $result = // @var mixed action->execute($command;
 
         expect($result)->toBeArray();
     });
 
     it('uses strict types', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $filename = $reflection->getFileName();
 
         expect($filename)->not->toBeNull();
@@ -41,19 +41,19 @@ describe('GetCommandArgumentsActions', function () {
     });
 
     it('has correct namespace', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
 
         expect($reflection->getNamespaceName())->toBe('Modules\Job\Actions\Command');
     });
 
     it('uses QueueableAction trait', function () {
-        $traits = class_uses($this->action);
+        $traits = class_uses(// @var mixed action;
 
         expect($traits)->toContain('Spatie\QueueableAction\QueueableAction');
     });
 
     it('has proper class structure', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
 
         expect($reflection->isInstantiable())
             ->toBeTrue()
@@ -64,11 +64,11 @@ describe('GetCommandArgumentsActions', function () {
     });
 
     it('implements queueable functionality', function () {
-        expect(method_exists($this->action, 'onQueue'))->toBeTrue();
+        expect(method_exists(// @var mixed action, 'onQueue';
     });
 
     it('has required imports', function () {
-        $filename = (new ReflectionClass($this->action))->getFileName();
+        $filename = (new ReflectionClass(// @var mixed action;
         $content = file_get_contents($filename);
 
         expect($content)->toContain('use Spatie\QueueableAction\QueueableAction;')

@@ -33,7 +33,7 @@ class ThemeNotification extends Notification implements ShouldQueue
      */
     public function via(CanThemeNotificationContract $notifiable): array
     {
-        $notificationData = $notifiable->getNotificationData($this->name, $this->view_params);
+        $notificationData = $notifiable->getNotificationData(// @var mixed name, $this->view_params;
 
         return $notificationData->channels;
     }
@@ -43,10 +43,10 @@ class ThemeNotification extends Notification implements ShouldQueue
      */
     public function toMail(CanThemeNotificationContract $notifiable): MailMessage
     {
-        $attachments = $notifiable->getNotificationData($this->name, $this->view_params)->attachments;
+        $attachments = $notifiable->getNotificationData(// @var mixed name, $this->view_params;
 
         $mail_message = app(BuildMailMessageAction::class)
-            ->execute($this->name, $notifiable->getModel(), $this->view_params, $attachments);
+            ->execute(// @var mixed name, $notifiable->getModel(;
 
         $notifiable->sendEmailCallback();
 
@@ -62,7 +62,7 @@ class ThemeNotification extends Notification implements ShouldQueue
      */
     public function toSms(CanThemeNotificationContract $notifiable): SmsData
     {
-        $smsData = $notifiable->getNotificationData($this->name, $this->view_params)->getSmsData();
+        $smsData = $notifiable->getNotificationData(// @var mixed name, $this->view_params;
         $notifiable->sendSmsCallback();
 
         return $smsData;
@@ -73,8 +73,8 @@ class ThemeNotification extends Notification implements ShouldQueue
      */
     public function toArray(CanThemeNotificationContract $notifiable): array
     {
-        $res = $this->view_params;
-        $res['_name'] = $this->name;
+        $res = // @var mixed view_params;
+        $res['_name'] = // @var mixed name;
 
         return $res;
     }

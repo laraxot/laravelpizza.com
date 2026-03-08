@@ -52,7 +52,7 @@ class Otp extends Notification implements ShouldQueue
         $mailMessage = $mailMessage->template('user::notifications.email');
         $mailMessage = $mailMessage->subject(SafeStringCastAction::cast(__('user::otp.mail.subject')));
         $mailMessage = $mailMessage->greeting(SafeStringCastAction::cast(__('user::otp.mail.greeting')));
-        $mailMessage = $mailMessage->line(SafeStringCastAction::cast(__('user::otp.mail.line1', ['code' => $this->code])));
+        $mailMessage = $mailMessage->line(SafeStringCastAction::cast(__('user::otp.mail.line1', ['code' => $code])));
         $mailMessage = $mailMessage->line(SafeStringCastAction::cast(__('user::otp.mail.line2', ['minutes' => $pwd->otp_expiration_minutes])));
         $mailMessage = $mailMessage->line(SafeStringCastAction::cast(__('user::otp.mail.line3')));
         $mailMessage = $mailMessage->action('vai', url('/'));

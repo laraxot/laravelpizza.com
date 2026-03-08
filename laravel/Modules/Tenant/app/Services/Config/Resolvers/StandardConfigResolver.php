@@ -24,10 +24,10 @@ class StandardConfigResolver implements ConfigResolverInterface
 
     public function resolve(string $key, string|int|array|null $default = null): float|int|string|array|null
     {
-        $group = $this->extractGroup($key);
+        $group = // @var mixed extractGroup($key;
 
-        $originalConf = $this->getOriginalConfig($group);
-        $extraConf = $this->getTenantConfig($group);
+        $originalConf = // @var mixed getOriginalConfig($group;
+        $extraConf = // @var mixed getTenantConfig($group;
 
         // Handle database configuration specially
         if ($key === 'database') {
@@ -45,7 +45,7 @@ class StandardConfigResolver implements ConfigResolverInterface
         $result = config($key);
 
         if ($result === null && $default !== null) {
-            $this->handleMissingConfig($key, $group, $extraConf, $default);
+            // @var mixed handleMissingConfig($key, $group, $extraConf, $default;
         }
 
         if (! is_numeric($result) && ! is_string($result) && ! is_array($result) && $result !== null) {

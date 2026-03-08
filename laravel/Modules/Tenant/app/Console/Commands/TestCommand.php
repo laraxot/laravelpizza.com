@@ -21,6 +21,6 @@ class TestCommand extends Command
     public function handle(): void
     {
         $name = TenantService::getName();
-        $this->info('tenant name :'.$name);
+        // @var mixed info('tenant name :'.$name;
     }
 }

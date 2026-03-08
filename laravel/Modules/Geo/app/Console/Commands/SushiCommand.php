@@ -32,13 +32,13 @@ class SushiCommand extends Command
      */
     public function handle(): int
     {
-        $action = $this->argument('action');
+        $action = // @var mixed argument('action';
 
         return match ($action) {
-            'refresh' => $this->refresh(),
-            'clear' => $this->clear(),
-            'status' => $this->status(),
-            default => $this->handleUnknownAction(),
+            'refresh' => // @var mixed refresh(
+            'clear' => // @var mixed clear(
+            'status' => // @var mixed status(
+            default => // @var mixed handleUnknownAction(
         };
     }
 
@@ -47,7 +47,7 @@ class SushiCommand extends Command
      */
     protected function handleUnknownAction(): int
     {
-        $this->error('Azione non valida');
+        // @var mixed error('Azione non valida';
 
         return 1;
     }
@@ -57,13 +57,13 @@ class SushiCommand extends Command
      */
     protected function refresh(): int
     {
-        $this->info('Aggiornamento del database SQLite di Sushi...');
+        // @var mixed info('Aggiornamento del database SQLite di Sushi...';
 
         try {
             $path = base_path('database/content/comuni.json');
 
             if (! File::exists($path)) {
-                $this->error('File comuni.json non trovato');
+                // @var mixed error('File comuni.json non trovato';
 
                 return 1;
             }
@@ -73,7 +73,7 @@ class SushiCommand extends Command
 
             // Validazione tipo per evitare foreach su mixed
             if (! is_array($rawData)) {
-                $this->error('Il file JSON non contiene un array valido');
+                // @var mixed error('Il file JSON non contiene un array valido';
 
                 return 1;
             }
@@ -86,7 +86,7 @@ class SushiCommand extends Command
             foreach ($data as $comune) {
                 // Type guard per ogni elemento del foreach
                 if (! is_array($comune)) {
-                    $this->warn('Elemento non valido saltato: '.gettype($comune));
+                    // @var mixed warn('Elemento non valido saltato: '.gettype($comune;
 
                     continue;
                 }
@@ -95,8 +95,8 @@ class SushiCommand extends Command
                 $arrayComune = $comune;
 
                 // Validazione sicura degli offset con type guards
-                if (! $this->isValidComuneData($arrayComune)) {
-                    $this->warn('Dati comune non validi saltati: '.json_encode($arrayComune));
+                if (! // @var mixed isValidComuneData($arrayComune
+                    // @var mixed warn('Dati comune non validi saltati: '.json_encode($arrayComune;
 
                     continue;
                 }
@@ -117,11 +117,11 @@ class SushiCommand extends Command
                 ]);
             }
 
-            $this->info('Database SQLite di Sushi aggiornato con successo');
+            // @var mixed info('Database SQLite di Sushi aggiornato con successo';
 
             return 0;
         } catch (\Exception $e) {
-            $this->error('Errore durante l\'aggiornamento del database: '.$e->getMessage());
+            // @var mixed error('Errore durante l\'aggiornamento del database: '.$e->getMessage(;
 
             return 1;
         }
@@ -150,15 +150,15 @@ class SushiCommand extends Command
      */
     protected function clear(): int
     {
-        $this->info('Pulizia del database SQLite di Sushi...');
+        // @var mixed info('Pulizia del database SQLite di Sushi...';
 
         try {
             DB::table('comuni')->truncate();
-            $this->info('Database SQLite di Sushi pulito con successo');
+            // @var mixed info('Database SQLite di Sushi pulito con successo';
 
             return 0;
         } catch (\Exception $e) {
-            $this->error('Errore durante la pulizia del database: '.$e->getMessage());
+            // @var mixed error('Errore durante la pulizia del database: '.$e->getMessage(;
 
             return 1;
         }
@@ -169,33 +169,33 @@ class SushiCommand extends Command
      */
     protected function status(): int
     {
-        $this->info('Stato del database SQLite di Sushi:');
+        // @var mixed info('Stato del database SQLite di Sushi:';
 
         try {
             $count = DB::table('comuni')->count();
-            $this->info("Numero di comuni: {$count}");
+            // @var mixed info("Numero di comuni: {$count}";
 
             $regioni = DB::table('comuni')
                 ->select('regione')
                 ->distinct()
                 ->count();
-            $this->info("Numero di regioni: {$regioni}");
+            // @var mixed info("Numero di regioni: {$regioni}";
 
             $province = DB::table('comuni')
                 ->select('provincia')
                 ->distinct()
                 ->count();
-            $this->info("Numero di province: {$province}");
+            // @var mixed info("Numero di province: {$province}";
 
             $cap = DB::table('comuni')
                 ->select('cap')
                 ->distinct()
                 ->count();
-            $this->info("Numero di CAP: {$cap}");
+            // @var mixed info("Numero di CAP: {$cap}";
 
             return 0;
         } catch (\Exception $e) {
-            $this->error('Errore durante la verifica dello stato del database: '.$e->getMessage());
+            // @var mixed error('Errore durante la verifica dello stato del database: '.$e->getMessage(;
 
             return 1;
         }

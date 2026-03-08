@@ -33,20 +33,20 @@ class Status extends Component
     public function mount(): void
     {
         Artisan::call('queue:monitor', ['queues' => 'default,queue01,emails']);
-        $this->out .= Artisan::output();
+        // @var mixed out .= Artisan::output(;
         Artisan::call('worker:check');
-        $this->out .= Artisan::output();
+        // @var mixed out .= Artisan::output(;
 
-        $this->out .= '<br/>['.JobModel::count().'] Jobs';
-        $this->out .= '<br/>['.FailedJobModel::count().'] Failed Jobs';
-        $this->out .= '<br/>['.JobBatchModel::count().'] Job Batch';
+        // @var mixed out .= '<br/>['.JobModel::count(;
+        // @var mixed out .= '<br/>['.FailedJobModel::count(;
+        // @var mixed out .= '<br/>['.JobBatchModel::count(;
         $queue_conn = getenv('QUEUE_CONNECTION');
         if ($queue_conn === false) {
             throw new Exception('['.__LINE__.']['.class_basename($this).']');
         }
 
-        $this->old_value = $queue_conn;
-        $this->form_data['conn'] = $queue_conn;
+        // @var mixed old_value = $queue_conn;
+        // @var mixed form_data['conn'] = $queue_conn;
 
         // $env_file=base_path('.env');
         // dddx(getenv(base_path('')));
@@ -143,10 +143,10 @@ class Status extends Component
 
     public function updatedFormData(string $value, string $key): void
     {
-        // dddx([$value,$key,$this->form_data]);
+        // dddx([$value,$key,// @var mixed form_data];
         if ($key === 'conn') {
             // putenv ("QUEUE_CONNECTION=".$value);
-            $this->saveEnv();
+            // @var mixed saveEnv(;
         }
     }
 
@@ -155,26 +155,26 @@ class Status extends Component
         $env_file = base_path('.env');
         $env_content = File::get($env_file);
 
-        $conn = $this->form_data['conn'] ?? null;
+        $conn = // @var mixed form_data['conn'] ?? null;
         Assert::string($conn, '['.__LINE__.']['.class_basename($this).']');
 
         $new_content = Str::replace(
-            'QUEUE_CONNECTION='.$this->old_value,
+            'QUEUE_CONNECTION='.// @var mixed old_value,
             'QUEUE_CONNECTION='.$conn,
             $env_content,
         );
         putenv('QUEUE_CONNECTION='.$conn);
         Assert::string($new_content, '['.__LINE__.']['.class_basename($this).']');
         File::put($env_file, $new_content);
-        $this->old_value = $conn;
+        // @var mixed old_value = $conn;
     }
 
     public function artisan(string $cmd): void
     {
-        $this->out .= '<hr/>';
+        // @var mixed out .= '<hr/>';
         Artisan::call('queue:'.$cmd);
-        $this->out .= Artisan::output();
-        $this->out .= '<hr/>';
+        // @var mixed out .= Artisan::output(;
+        // @var mixed out .= '<hr/>';
     }
 
     public function dummyAction(): void

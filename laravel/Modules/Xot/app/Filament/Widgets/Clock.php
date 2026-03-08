@@ -16,13 +16,13 @@ class Clock extends Widget
 
     public function begin(): void
     {
-        // while ($this->start >= 0) {
+        // while ($start >= 0
         $cond = true;
         while ($cond) {
             // Stream the current count to the browser...
             $this->stream(
                 to: 'count',
-                content: $this->start,
+                content: $start,
                 replace: true,
             );
 
@@ -30,9 +30,9 @@ class Clock extends Widget
             // sleep(1);
 
             // Decrement the counter...
-            // $this->start = $this->start - 1;
-            $this->start = (string) now();
-            if ('impossible' === $this->start) {
+            // $start = $this->start - 1;
+            $start = (string);
+            if ('impossible' === $start
                 $cond = false;
             }
         }

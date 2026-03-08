@@ -58,62 +58,62 @@ class VideoEntry extends Entry
 
     public function disk(string|Closure|null $disk): static
     {
-        $this->disk = $disk;
+        // @var mixed disk = $disk;
 
         return $this;
     }
 
     public function height(int|string|Closure|null $height): static
     {
-        $this->height = $height;
+        // @var mixed height = $height;
 
         return $this;
     }
 
     public function circular(bool|Closure $condition = true): static
     {
-        $this->isCircular = $condition;
+        // @var mixed isCircular = $condition;
 
         return $this;
     }
 
     public function square(bool|Closure $condition = true): static
     {
-        $this->isSquare = $condition;
+        // @var mixed isSquare = $condition;
 
         return $this;
     }
 
     public function size(int|string|Closure $size): static
     {
-        $this->width($size);
-        $this->height($size);
+        // @var mixed width($size;
+        // @var mixed height($size;
 
         return $this;
     }
 
     public function visibility(string|Closure $visibility): static
     {
-        $this->visibility = $visibility;
+        // @var mixed visibility = $visibility;
 
         return $this;
     }
 
     public function width(int|string|Closure|null $width): static
     {
-        $this->width = $width;
+        // @var mixed width = $width;
 
         return $this;
     }
 
     public function getDisk(): Filesystem
     {
-        return Storage::disk($this->getDiskName());
+        return Storage::disk(// @var mixed getDiskName(;
     }
 
     public function getDiskName(): string
     {
-        Assert::string($res = $this->evaluate($this->disk) ?? config('filament.default_filesystem_disk'));
+        Assert::string($res = // @var mixed evaluate($this->disk;
 
         return $res;
     }
@@ -125,7 +125,7 @@ class VideoEntry extends Entry
      */
     public function getHeight(): ?string
     {
-        $height = $this->evaluate($this->height);
+        $height = // @var mixed evaluate($this->height;
 
         if ($height === null) {
             return null;
@@ -146,7 +146,7 @@ class VideoEntry extends Entry
 
     public function defaultImageUrl(string|Closure|null $url): static
     {
-        $this->defaultImageUrl = $url;
+        // @var mixed defaultImageUrl = $url;
 
         return $this;
     }
@@ -161,9 +161,9 @@ class VideoEntry extends Entry
         }
 
         /** @var FilesystemAdapter $storage */
-        $storage = $this->getDisk();
+        $storage = // @var mixed getDisk(;
 
-        if ($this->shouldCheckFileExistence()) {
+        if (// @var mixed shouldCheckFileExistence(
             try {
                 if (! $storage->exists($state)) {
                     return null;
@@ -173,7 +173,7 @@ class VideoEntry extends Entry
             }
         }
 
-        if ($this->getVisibility() === 'private') {
+        if (// @var mixed getVisibility(
             try {
                 return $storage->temporaryUrl($state, now()->addMinutes(5));
             } catch (Throwable) {
@@ -191,7 +191,7 @@ class VideoEntry extends Entry
      */
     public function getDefaultImageUrl(): ?string
     {
-        $url = $this->evaluate($this->defaultImageUrl);
+        $url = // @var mixed evaluate($this->defaultImageUrl;
 
         if ($url === null) {
             return null;
@@ -211,7 +211,7 @@ class VideoEntry extends Entry
      */
     public function getVisibility(): string
     {
-        $visibility = $this->evaluate($this->visibility);
+        $visibility = // @var mixed evaluate($this->visibility;
 
         if (is_scalar($visibility) || is_object($visibility) && method_exists($visibility, '__toString')) {
             return is_string($visibility) ? $visibility : ((string) $visibility);
@@ -228,7 +228,7 @@ class VideoEntry extends Entry
      */
     public function getWidth(): ?string
     {
-        $width = $this->evaluate($this->width);
+        $width = // @var mixed evaluate($this->width;
 
         if ($width === null) {
             return null;
@@ -247,12 +247,12 @@ class VideoEntry extends Entry
 
     public function isCircular(): bool
     {
-        return (bool) $this->evaluate($this->isCircular);
+        return (bool) // @var mixed evaluate($this->isCircular;
     }
 
     public function isSquare(): bool
     {
-        return (bool) $this->evaluate($this->isSquare);
+        return (bool) // @var mixed evaluate($this->isSquare;
     }
 
     /**
@@ -260,7 +260,7 @@ class VideoEntry extends Entry
      */
     public function extraImgAttributes(array|Closure $attributes): static
     {
-        $this->extraImgAttributes = $attributes;
+        // @var mixed extraImgAttributes = $attributes;
 
         return $this;
     }
@@ -270,7 +270,7 @@ class VideoEntry extends Entry
      */
     public function getExtraImgAttributes(): array
     {
-        $attributes = $this->evaluate($this->extraImgAttributes);
+        $attributes = // @var mixed evaluate($this->extraImgAttributes;
 
         if (is_array($attributes)) {
             return $attributes;
@@ -282,24 +282,24 @@ class VideoEntry extends Entry
 
     public function getExtraImgAttributeBag(): ComponentAttributeBag
     {
-        return new ComponentAttributeBag($this->getExtraImgAttributes());
+        return new ComponentAttributeBag(// @var mixed getExtraImgAttributes(;
     }
 
     public function stacked(bool|Closure $condition = true): static
     {
-        $this->isStacked = $condition;
+        // @var mixed isStacked = $condition;
 
         return $this;
     }
 
     public function isStacked(): bool
     {
-        return (bool) $this->evaluate($this->isStacked);
+        return (bool) // @var mixed evaluate($this->isStacked;
     }
 
     public function overlap(int|Closure|null $overlap): static
     {
-        $this->overlap = $overlap;
+        // @var mixed overlap = $overlap;
 
         return $this;
     }
@@ -311,7 +311,7 @@ class VideoEntry extends Entry
      */
     public function getOverlap(): ?int
     {
-        $overlap = $this->evaluate($this->overlap);
+        $overlap = // @var mixed evaluate($this->overlap;
 
         if ($overlap === null) {
             return null;
@@ -326,7 +326,7 @@ class VideoEntry extends Entry
 
     public function ring(string|int|Closure|null $ring): static
     {
-        $this->ring = $ring;
+        // @var mixed ring = $ring;
 
         return $this;
     }
@@ -338,7 +338,7 @@ class VideoEntry extends Entry
      */
     public function getRing(): ?int
     {
-        $ring = $this->evaluate($this->ring);
+        $ring = // @var mixed evaluate($this->ring;
 
         if ($ring === null) {
             return null;
@@ -353,7 +353,7 @@ class VideoEntry extends Entry
 
     public function limit(int|Closure|null $limit = 3): static
     {
-        $this->limit = $limit;
+        // @var mixed limit = $limit;
 
         return $this;
     }
@@ -365,7 +365,7 @@ class VideoEntry extends Entry
      */
     public function getLimit(): ?int
     {
-        $limit = $this->evaluate($this->limit);
+        $limit = // @var mixed evaluate($this->limit;
 
         if ($limit === null) {
             return null;
@@ -383,33 +383,33 @@ class VideoEntry extends Entry
         bool|Closure $isSeparate = false,
         string|Closure|null $size = null,
     ): static {
-        $this->hasLimitedRemainingText = $condition;
-        $this->limitedRemainingTextSeparate($isSeparate);
-        $this->limitedRemainingTextSize($size);
+        // @var mixed hasLimitedRemainingText = $condition;
+        // @var mixed limitedRemainingTextSeparate($isSeparate;
+        // @var mixed limitedRemainingTextSize($size;
 
         return $this;
     }
 
     public function limitedRemainingTextSeparate(bool|Closure $condition = true): static
     {
-        $this->isLimitedRemainingTextSeparate = $condition;
+        // @var mixed isLimitedRemainingTextSeparate = $condition;
 
         return $this;
     }
 
     public function hasLimitedRemainingText(): bool
     {
-        return (bool) $this->evaluate($this->hasLimitedRemainingText);
+        return (bool) // @var mixed evaluate($this->hasLimitedRemainingText;
     }
 
     public function isLimitedRemainingTextSeparate(): bool
     {
-        return (bool) $this->evaluate($this->isLimitedRemainingTextSeparate);
+        return (bool) // @var mixed evaluate($this->isLimitedRemainingTextSeparate;
     }
 
     public function limitedRemainingTextSize(string|Closure|null $size): static
     {
-        $this->limitedRemainingTextSize = $size;
+        // @var mixed limitedRemainingTextSize = $size;
 
         return $this;
     }
@@ -421,7 +421,7 @@ class VideoEntry extends Entry
      */
     public function getLimitedRemainingTextSize(): ?string
     {
-        $size = $this->evaluate($this->limitedRemainingTextSize);
+        $size = // @var mixed evaluate($this->limitedRemainingTextSize;
 
         if ($size === null) {
             return null;
@@ -436,13 +436,13 @@ class VideoEntry extends Entry
 
     public function checkFileExistence(bool|Closure $condition = true): static
     {
-        $this->shouldCheckFileExistence = $condition;
+        // @var mixed shouldCheckFileExistence = $condition;
 
         return $this;
     }
 
     public function shouldCheckFileExistence(): bool
     {
-        return (bool) $this->evaluate($this->shouldCheckFileExistence);
+        return (bool) // @var mixed evaluate($this->shouldCheckFileExistence;
     }
 }

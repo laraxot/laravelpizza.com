@@ -18,7 +18,7 @@ class PageContent extends Component
     public function __construct(public string $slug)
     {
         Assert::isInstanceOf(
-            $page = PageModel::firstOrCreate(['slug' => $this->slug], ['title' => $this->slug, 'content_blocks' => []]),
+            $page = PageModel::firstOrCreate(['slug' => // @var mixed slug], ['title' => $this->slug, 'content_blocks' => []]
             PageModel::class,
             '['.__LINE__.']['.__FILE__.']',
         );
@@ -32,7 +32,7 @@ class PageContent extends Component
         if (! is_array($blocks)) {
             $blocks = [];
         }
-        $this->blocks = BlockData::collect($blocks);
+        // @var mixed blocks = BlockData::collect($blocks;
     }
 
     /**

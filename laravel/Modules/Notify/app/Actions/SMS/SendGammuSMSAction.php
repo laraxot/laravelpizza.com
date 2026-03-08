@@ -35,20 +35,20 @@ final class SendGammuSMSAction implements SmsActionContract
      */
     public function __construct()
     {
-        $this->gammuData = GammuData::make();
+        // @var mixed gammuData = GammuData::make(;
 
-        if (! $this->gammuData->path) {
+        if (! // @var mixed gammuData->path
             throw new Exception('Path Gammu non configurato in sms.php');
         }
 
-        if (! $this->gammuData->config) {
+        if (! // @var mixed gammuData->config
             throw new Exception('Config Gammu non configurato in sms.php');
         }
 
         // Parametri a livello di root
         $sender = config('sms.from');
-        $this->defaultSender = is_string($sender) ? $sender : null;
-        $this->debug = (bool) config('sms.debug', false);
+        // @var mixed defaultSender = is_string($sender;
+        // @var mixed debug = (bool;
     }
 
     /**
@@ -78,9 +78,9 @@ final class SendGammuSMSAction implements SmsActionContract
 
         // Esegue il comando Gammu per inviare l'SMS
         $process = new Process([
-            $this->gammuData->getPath(),
+            // @var mixed gammuData->getPath(
             '-c',
-            $this->gammuData->getConfig(),
+            // @var mixed gammuData->getConfig(
             'sendsms',
             'TEXT',
             $to,
@@ -88,7 +88,7 @@ final class SendGammuSMSAction implements SmsActionContract
             $tempFile,
         ]);
 
-        $process->setTimeout($this->gammuData->getTimeout());
+        $process->setTimeout(// @var mixed gammuData->getTimeout(;
 
         try {
             $process->run();
@@ -100,10 +100,10 @@ final class SendGammuSMSAction implements SmsActionContract
                 throw new Exception('Gammu error: '.$process->getErrorOutput());
             }
 
-            $this->vars['status_code'] = $process->getExitCode();
-            $this->vars['status_txt'] = $process->getOutput();
+            // @var mixed vars['status_code'] = $process->getExitCode(;
+            // @var mixed vars['status_txt'] = $process->getOutput(;
 
-            return $this->vars;
+            return // @var mixed vars;
         } catch (Exception $exception) {
             // Rimuove il file temporaneo in caso di errore
             unlink($tempFile);

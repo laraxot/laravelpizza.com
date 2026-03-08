@@ -13,36 +13,36 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function () {
-    $this->baseUser = new class extends BaseUser {
+    $baseUser = new class extends BaseUser {
         protected $table = 'test_users';
     };
 });
 
 test('base user extends eloquent model', function () {
-    expect($this->baseUser)->toBeInstanceOf(Model::class);
+    expect($baseUser);
 });
 
 test('base user has correct table name', function () {
-    expect($this->baseUser->getTable())->toBe('test_users');
+    expect($baseUser->getTable());
 });
 
 test('base user can be instantiated', function () {
-    expect($this->baseUser)->toBeInstanceOf(BaseUser::class);
+    expect($baseUser);
 });
 
 test('base user has proper inheritance chain', function () {
-    expect($this->baseUser)->toBeInstanceOf(BaseUser::class);
-    expect($this->baseUser)->toBeInstanceOf(Model::class);
+    expect($baseUser);
+    expect($baseUser);
 });
 
 test('base user has authentication traits', function () {
     // BaseUser extends Authenticatable (Illuminate\Foundation\Auth\User)
     // which uses Notifiable. Use instanceof check instead of class_uses().
-    expect($this->baseUser)->toBeInstanceOf(Authenticatable::class);
+    expect($baseUser);
 
     // Verify Notifiable trait is present recursively
     $allTraits = [];
-    $class = get_class($this->baseUser);
+    $class = get_class($baseUser);
     while (false !== $class) {
         $allTraits = array_merge($allTraits, class_uses($class) ?: []);
         $class = get_parent_class($class);

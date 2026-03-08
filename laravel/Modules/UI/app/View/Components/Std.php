@@ -28,7 +28,7 @@ final class Std extends Component
         /**
          * @phpstan-var view-string
          */
-        $view = app(GetViewAction::class)->execute($this->tpl);
+        $view = app(GetViewAction::class)->execute(// @var mixed tpl;
 
         $view_params = [];
 

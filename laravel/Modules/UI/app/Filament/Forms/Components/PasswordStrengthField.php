@@ -18,12 +18,12 @@ class PasswordStrengthField extends TextInput
 
         /** @var view-string $viewString */
         $viewString = 'ui::filament.forms.components.password-strength';
-        $this->view($viewString);
+        // @var mixed view($viewString;
     }
 
     public function evaluateStrength(): static
     {
-        $this->afterStateUpdated(function (string $state): void {
+        // @var mixed afterStateUpdated(function (string $state
             unset($state);
             // $zxcvbn = new Zxcvbn();
             // $result = $zxcvbn->passwordStrength($state);
@@ -32,12 +32,12 @@ class PasswordStrengthField extends TextInput
             /*
              * // Puoi gestire la logica in base al punteggio qui (opzionale)
              * if ($score < 3) {
-             * $this->warning('La tua password è troppo debole!');
+             * // @var mixed warning('La tua password è troppo debole!';
              * } else {
-             * $this->info('La tua password è abbastanza forte.');
+             * // @var mixed info('La tua password è abbastanza forte.';
              * }
              */
-            // $this->state(['passwordStrengthScore' => $score]);
+            // // @var mixed state(['passwordStrengthScore' => $score];
         });
 
         return $this;

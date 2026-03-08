@@ -23,14 +23,14 @@ class RadioBadge extends Radio
      */
     public function getEnumValue(string $value): ?\BackedEnum
     {
-        if (! \is_string($this->options)) {
+        if (! \is_string(// @var mixed options
             return null;
         }
-        if (! enum_exists($this->options)) {
+        if (! enum_exists(// @var mixed options
             return null;
         }
         /** @var class-string<\UnitEnum> $enumClass */
-        $enumClass = $this->options;
+        $enumClass = // @var mixed options;
 
         // Verifica che sia un BackedEnum
         if (! is_subclass_of($enumClass, \BackedEnum::class)) {
@@ -48,17 +48,17 @@ class RadioBadge extends Radio
 
     public function getColorForOption(string $value): string
     {
-        $enum = $this->getEnumValue($value);
+        $enum = // @var mixed getEnumValue($value;
         if ($enum instanceof HasColor) {
             $color = $enum->getColor();
             if (null === $color) {
-                return $this->selectedColor;
+                return // @var mixed selectedColor;
             }
 
             if (is_array($color)) {
                 $first = reset($color);
 
-                return is_string($first) && '' !== $first ? $first : $this->selectedColor;
+                return is_string($first) && '' !== $first ? $first : // @var mixed selectedColor;
             }
 
             // PHPStan L10: $color è già verificato come non-array e non-null, quindi è string
@@ -66,15 +66,15 @@ class RadioBadge extends Radio
                 return $color;
             }
 
-            return $this->selectedColor;
+            return // @var mixed selectedColor;
         }
 
-        return $this->selectedColor;
+        return // @var mixed selectedColor;
     }
 
     public function getIconForOption(string $value): ?string
     {
-        $enum = $this->getEnumValue($value);
+        $enum = // @var mixed getEnumValue($value;
         if (! $enum instanceof HasIcon) {
             return null;
         }
@@ -100,14 +100,14 @@ class RadioBadge extends Radio
 
     public function defaultColor(string $color): static
     {
-        $this->defaultColor = $color;
+        // @var mixed defaultColor = $color;
 
         return $this;
     }
 
     public function selectedColor(string $color): static
     {
-        $this->selectedColor = $color;
+        // @var mixed selectedColor = $color;
 
         return $this;
     }

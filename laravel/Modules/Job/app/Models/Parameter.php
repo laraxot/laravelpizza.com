@@ -54,7 +54,7 @@ class Parameter extends BaseModel
 
     public function task(): BelongsTo
     {
-        return $this->belongsTo(Frequency::class);
+        return // @var mixed belongsTo(Frequency::class;
     }
 
     /**

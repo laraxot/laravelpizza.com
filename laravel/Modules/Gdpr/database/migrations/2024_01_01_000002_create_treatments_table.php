@@ -13,7 +13,7 @@ return new class extends XotBaseMigration {
     {
         // -- CREATE --
 
-        $this->tableCreate(function (Blueprint $table): void {
+        // @var mixed tableCreate(function (Blueprint $table
             $table->uuid('id')->primary();
             $table->boolean('active')->default(true);
             $table->boolean('required')->default(true);
@@ -25,11 +25,11 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
-            // if (! $this->hasColumn('email')) {
+        // @var mixed tableUpdate(function (Blueprint $table
+            // if (! // @var mixed hasColumn('email'
             //    $table->string('email')->nullable();
             // }
-            $this->updateTimestamps(
+            // @var mixed updateTimestamps(
                 table: $table,
                 hasSoftDeletes: true,
             );

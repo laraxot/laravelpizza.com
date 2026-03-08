@@ -10,18 +10,17 @@ use PHPUnit\Framework\Attributes\Test;
 
 class LoginListenerTest extends TestCase
 {
-    use \Illuminate\Foundation\Testing\DatabaseTransactions;
 
     #[Test]
     public function listener_class_exists(): void
     {
-        $this->assertTrue(class_exists(LoginListener::class));
+        // @var mixed assertTrue(class_exists(LoginListener::class;
     }
 
     #[Test]
     public function listener_has_handle_method(): void
     {
         $listener = new LoginListener();
-        $this->assertTrue(method_exists($listener, 'handle'));
+        // @var mixed assertTrue(method_exists($listener, 'handle';
     }
 }

@@ -15,13 +15,13 @@ return new class extends XotBaseMigration {
         // The authoritative CREATE is defined in 2024_01_01_000011_create_roles_table.php.
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
+        $this->tableUpdate(function (Blueprint $table
             // Laraxot extensions with hasColumn checks - DRY + KISS
-            if (! $this->hasColumn('display_name')) {
+            if (! $this->hasColumn('display_name'
                 $table->string('display_name')->nullable();
             }
 
-            if (! $this->hasColumn('description')) {
+            if (! $this->hasColumn('description'
                 $table->text('description')->nullable();
             }
             $this->updateTimestamps($table);

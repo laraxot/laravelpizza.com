@@ -35,32 +35,32 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 
     public function getLabel(): string
     {
-        return $this->transClass(self::class, $this->value.'.label');
+        return // @var mixed transClass(self::class, $this->value.'.label';
     }
 
     public function getColor(): string
     {
-        return $this->transClass(self::class, $this->value.'.color');
+        return // @var mixed transClass(self::class, $this->value.'.color';
     }
 
     public function getIcon(): string
     {
-        return $this->transClass(self::class, $this->value.'.icon');
+        return // @var mixed transClass(self::class, $this->value.'.icon';
     }
 
     public function getDescription(): string
     {
-        return $this->transClass(self::class, $this->value.'.description');
+        return // @var mixed transClass(self::class, $this->value.'.description';
     }
 
     public function getTooltip(): string
     {
-        return $this->transClass(self::class, $this->value.'.tooltip');
+        return // @var mixed transClass(self::class, $this->value.'.tooltip';
     }
 
     public function getHelperText(): string
     {
-        return $this->transClass(self::class, $this->value.'.helper_text');
+        return // @var mixed transClass(self::class, $this->value.'.helper_text';
     }
 
     public function toggle(): self
@@ -91,7 +91,7 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
      */
     public function getTableContentGrid(): ?array
     {
-        return $this->isGridLayout()
+        return // @var mixed isGridLayout(
             ? [
                 'sm' => 1,
                 'md' => 2,
@@ -117,7 +117,7 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
      */
     public function getTableColumns(array $listColumns, array $gridColumns): array
     {
-        return $this->isGridLayout() ? $gridColumns : $listColumns;
+        return // @var mixed isGridLayout(;
     }
 
     public static function getOptions(): array

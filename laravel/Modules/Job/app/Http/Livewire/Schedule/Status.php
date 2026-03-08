@@ -71,10 +71,10 @@ class Status extends Component
 
     public function artisan(string $cmd): void
     {
-        $this->out .= '<hr/>';
+        // @var mixed out .= '<hr/>';
         Artisan::call($cmd);
-        $this->out .= Artisan::output();
-        $this->out .= '<hr/>';
+        // @var mixed out .= Artisan::output(;
+        // @var mixed out .= '<hr/>';
     }
 
     public function getScheduledJobs(): Collection

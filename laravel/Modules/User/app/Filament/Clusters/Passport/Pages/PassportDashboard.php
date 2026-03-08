@@ -42,8 +42,8 @@ class PassportDashboard extends XotBasePage
     public function executeCommand(string $command): void
     {
         $this->reset(['output', 'status']);
-        $this->currentCommand = $command;
-        $this->isRunning = true;
+        $currentCommand = $command;
+        $isRunning = true;
 
         try {
             app(ExecuteArtisanCommandAction::class)->execute($command);
@@ -54,20 +54,20 @@ class PassportDashboard extends XotBasePage
                 ->danger()
                 ->send();
 
-            $this->isRunning = false;
+            $isRunning = false;
         }
     }
 
     #[On('artisan-command.started')]
     public function handleCommandStarted(string $command): void
     {
-        $this->isRunning = true;
+        $isRunning = true;
     }
 
     #[On('artisan-command.output')]
     public function handleCommandOutput(string $command, string $output): void
     {
-        $this->output[] = $output;
+        $output[] = $output;
         $this->dispatch('terminal-update');
     }
 
@@ -78,16 +78,16 @@ class PassportDashboard extends XotBasePage
 
     public function checkKeys(): void
     {
-        $this->hasPublicKey = file_exists(storage_path('oauth-public.key'));
-        $this->hasPrivateKey = file_exists(storage_path('oauth-private.key'));
+        $hasPublicKey = file_exists(storage_path('oauth-public.key'));
+        $hasPrivateKey = file_exists(storage_path('oauth-private.key'));
     }
 
     #[On('artisan-command.completed')]
     public function onCommandCompleted(string $command): void
     {
-        if ($this->currentCommand === $command) {
-            $this->isRunning = false;
-            $this->status = 'completed';
+        if ($currentCommand === $command
+            $isRunning = false;
+            $status = 'completed';
             $this->checkKeys();
         }
 
@@ -100,9 +100,9 @@ class PassportDashboard extends XotBasePage
     #[On('artisan-command.failed')]
     public function handleCommandFailed(string $command, string $error): void
     {
-        $this->status = 'failed';
-        $this->isRunning = false;
-        $this->output[] = "[ERROR] {$error}";
+        $status = 'failed';
+        $isRunning = false;
+        $output[] = "[ERROR] {$error}";
 
         Notification::make()
             ->title('Command failed')
@@ -114,9 +114,9 @@ class PassportDashboard extends XotBasePage
     #[On('artisan-command.error')]
     public function handleCommandError(string $command, string $error): void
     {
-        $this->status = 'failed';
-        $this->isRunning = false;
-        $this->output[] = "[ERROR] {$error}";
+        $status = 'failed';
+        $isRunning = false;
+        $output[] = "[ERROR] {$error}";
 
         Notification::make()
             ->title('Command error')
@@ -128,8 +128,8 @@ class PassportDashboard extends XotBasePage
     protected function getViewData(): array
     {
         return [
-            'hasPublicKey' => $this->hasPublicKey,
-            'hasPrivateKey' => $this->hasPrivateKey,
+            'hasPublicKey' => $hasPublicKey,
+            'hasPrivateKey' => $hasPrivateKey,
             'publicKeyLabel' => static::trans('status.public_key'),
             'privateKeyLabel' => static::trans('status.private_key'),
             'presentLabel' => static::trans('status.present'),
@@ -143,33 +143,33 @@ class PassportDashboard extends XotBasePage
             Action::make('passport_install')
                 ->icon('heroicon-o-arrow-down-tray')
                 ->color('success')
-                ->disabled(fn () => $this->isRunning)
+                ->disabled(fn () => $isRunning
                 ->requiresConfirmation()
                 ->modalDescription(static::trans('actions.install.modal_description'))
-                ->action(fn () => $this->executeCommand('passport:install --uuids')),
+                ->action(fn () => $this->executeCommand('passport:install --uuids'
 
             Action::make('passport_keys')
                 ->icon('heroicon-o-key')
                 ->color('primary')
-                ->disabled(fn () => $this->isRunning)
+                ->disabled(fn () => $isRunning
                 ->requiresConfirmation()
-                ->action(fn () => $this->executeCommand('passport:keys')),
+                ->action(fn () => $this->executeCommand('passport:keys'
 
             Action::make('passport_purge')
                 ->icon('heroicon-o-trash')
                 ->color('warning')
-                ->disabled(fn () => $this->isRunning)
+                ->disabled(fn () => $isRunning
                 ->requiresConfirmation()
                 ->modalDescription(static::trans('actions.purge_tokens.modal_description'))
-                ->action(fn () => $this->executeCommand('passport:purge')),
+                ->action(fn () => $this->executeCommand('passport:purge'
 
             Action::make('passport_hash')
                 ->icon('heroicon-o-lock-closed')
                 ->color('danger')
-                ->disabled(fn () => $this->isRunning)
+                ->disabled(fn () => $isRunning
                 ->requiresConfirmation()
                 ->modalDescription(static::trans('actions.hash_secrets.modal_description'))
-                ->action(fn () => $this->executeCommand('passport:hash')),
+                ->action(fn () => $this->executeCommand('passport:hash'
         ];
     }
 }

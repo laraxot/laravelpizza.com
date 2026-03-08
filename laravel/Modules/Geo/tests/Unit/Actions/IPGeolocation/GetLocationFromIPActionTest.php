@@ -11,12 +11,12 @@ use Modules\Geo\Actions\IPGeolocation\GetLocationFromIPAction;
 use Modules\Geo\Datas\IPLocationData;
 
 beforeEach(function () {
-    $this->fetchAction = Mockery::mock(FetchIPLocationAction::class);
-    $this->action = new GetLocationFromIPAction($this->fetchAction);
+    // @var mixed fetchAction = Mockery::mock(FetchIPLocationAction::class;
+    // @var mixed action = new GetLocationFromIPAction($this->fetchAction;
 });
 
 it('delegates to fetch action and returns result', function (): void {
-    $this->fetchAction
+    // @var mixed fetchAction
         ->shouldReceive('execute')
         ->once()
         ->with('8.8.8.8')
@@ -32,7 +32,7 @@ it('delegates to fetch action and returns result', function (): void {
             isp: null,
         ));
 
-    $result = $this->action->execute('8.8.8.8');
+    $result = // @var mixed action->execute('8.8.8.8';
 
     expect($result)
         ->toBeInstanceOf(IPLocationData::class)
@@ -41,12 +41,12 @@ it('delegates to fetch action and returns result', function (): void {
 });
 
 it('returns null when fetch action returns null', function (): void {
-    $this->fetchAction
+    // @var mixed fetchAction
         ->shouldReceive('execute')
         ->once()
         ->with('192.168.1.1')
         ->andThrow(new RuntimeException('not found'));
 
-    expect(fn () => $this->action->execute('192.168.1.1'))
+    expect(fn () => // @var mixed action->execute('192.168.1.1'
         ->toThrow(RuntimeException::class);
 });

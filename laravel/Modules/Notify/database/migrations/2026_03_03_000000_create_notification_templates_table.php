@@ -13,7 +13,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(
+        // @var mixed tableCreate(
             function (Blueprint $table): void {
                 $table->uuid('id')->primary();
                 $table->string('name');

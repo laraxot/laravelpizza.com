@@ -19,6 +19,11 @@
         if ($modelClass && class_exists($modelClass)) {
             $model = $modelClass::query();
 
+            // Public listing must hide pending/private proposals.
+            if (is_a($modelClass, \Modules\Meetup\Models\Event::class, true)) {
+                $model->publiclyVisible();
+            }
+
             $scope = $queryConfig['scope'] ?? null;
             if ($scope && is_string($scope)) {
                 try {

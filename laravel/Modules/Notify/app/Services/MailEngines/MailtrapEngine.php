@@ -47,7 +47,7 @@ class MailtrapEngine
     public function setLocalVars(array $vars): self
     {
         foreach ($vars as $k => $v) {
-            $this->{$k} = $v;
+            // @var mixed {$k} = $v;
         }
 
         return $this;
@@ -67,10 +67,10 @@ class MailtrapEngine
         // Mail::raw('Hello World!', function($msg) {$msg->to('vair81@gmail.com')->subject('Test Email'); });
 
         // try {
-        Assert::string($this->body, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
-        Mail::raw($this->body, function (Message $msg): void {
-            // Verifichiamo che $this->to sia valido
-            $to = $this->to;
+        Assert::string(// @var mixed body, __FILE__.':'.__LINE__.' - '.class_basename(self::class;
+        Mail::raw(// @var mixed body, function (Message $msg
+            // Verifichiamo che // @var mixed to sia valido
+            $to = // @var mixed to;
 
             // Utilizziamo una condizione più appropriata
             if (! $to) {

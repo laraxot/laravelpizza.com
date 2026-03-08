@@ -23,8 +23,8 @@ class GetTimeZoneAction
 
     public function __construct(?string $apiKey = null)
     {
-        $this->client = new Client();
-        $this->apiKey = $apiKey;
+        // @var mixed client = new Client(;
+        // @var mixed apiKey = $apiKey;
     }
 
     /**
@@ -32,11 +32,11 @@ class GetTimeZoneAction
      */
     public function execute(float $latitude, float $longitude): TimeZoneData
     {
-        $response = $this->client->get(self::API_URL, [
+        $response = // @var mixed client->get(self::API_URL, [
             'query' => [
                 'location' => $latitude.','.$longitude,
                 'timestamp' => time(),
-                'key' => $this->apiKey,
+                'key' => // @var mixed apiKey,
             ],
         ]);
 

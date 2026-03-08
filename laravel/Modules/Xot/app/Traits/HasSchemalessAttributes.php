@@ -22,8 +22,8 @@ trait HasSchemalessAttributes
      */
     public function scopeWithExtraAttributes(Builder $query): Builder
     {
-        if (isset($this->extra_attributes) && is_object($this->extra_attributes)) {
-            return $this->extra_attributes->modelScope();
+        if (isset($extra_attributes
+            return $extra_attributes->modelScope();
         }
 
         return $query;
@@ -42,12 +42,12 @@ trait HasSchemalessAttributes
      */
     public function getExtraAttribute(string $key, mixed $default = null): mixed
     {
-        if ($this->extra_attributes instanceof SchemalessAttributes) {
-            return $this->extra_attributes->get($key, $default);
+        if ($extra_attributes instanceof SchemalessAttributes
+            return $extra_attributes->get($key, $default);
         }
 
-        if (is_array($this->extra_attributes)) {
-            return $this->extra_attributes[$key] ?? $default;
+        if (is_array($extra_attributes
+            return $extra_attributes[$key] ?? $default;
         }
 
         return $default;
@@ -58,11 +58,11 @@ trait HasSchemalessAttributes
      */
     public function setExtraAttribute(string $key, mixed $value): void
     {
-        if (! $this->extra_attributes instanceof SchemalessAttributes) {
-            $this->extra_attributes = SchemalessAttributes::createForModel($this, 'extra_attributes');
+        if (! $extra_attributes instanceof SchemalessAttributes
+            $extra_attributes = SchemalessAttributes::createForModel($this, 'extra_attributes');
         }
 
-        $this->extra_attributes->set($key, $value);
+        $extra_attributes->set($key, $value);
     }
 
     /**
@@ -72,12 +72,12 @@ trait HasSchemalessAttributes
      */
     public function getExtraAttributes(): array
     {
-        if ($this->extra_attributes instanceof SchemalessAttributes) {
-            return $this->extra_attributes->all();
+        if ($extra_attributes instanceof SchemalessAttributes
+            return $extra_attributes->all();
         }
 
-        if (is_array($this->extra_attributes)) {
-            return $this->extra_attributes;
+        if (is_array($extra_attributes
+            return $extra_attributes;
         }
 
         return [];
@@ -88,12 +88,12 @@ trait HasSchemalessAttributes
      */
     public function hasExtraAttribute(string $key): bool
     {
-        if ($this->extra_attributes instanceof SchemalessAttributes) {
-            return $this->extra_attributes->has($key);
+        if ($extra_attributes instanceof SchemalessAttributes
+            return $extra_attributes->has($key);
         }
 
-        if (is_array($this->extra_attributes)) {
-            return array_key_exists($key, $this->extra_attributes);
+        if (is_array($extra_attributes
+            return array_key_exists($key, $extra_attributes);
         }
 
         return false;
@@ -104,16 +104,16 @@ trait HasSchemalessAttributes
      */
     public function removeExtraAttribute(string $key): void
     {
-        if ($this->extra_attributes instanceof SchemalessAttributes) {
-            $this->extra_attributes->forget($key);
+        if ($extra_attributes instanceof SchemalessAttributes
+            $extra_attributes->forget($key);
 
             return;
         }
 
-        if (is_array($this->extra_attributes)) {
-            $attributes = $this->extra_attributes;
+        if (is_array($extra_attributes
+            $attributes = $extra_attributes;
             unset($attributes[$key]);
-            $this->extra_attributes = $attributes;
+            $extra_attributes = $attributes;
         }
     }
 
@@ -132,7 +132,7 @@ trait HasSchemalessAttributes
      */
     protected function schemalessFillable(): array
     {
-        return array_merge($this->fillable, [
+        return array_merge($fillable, [
             'extra_attributes',
         ]);
     }
@@ -144,7 +144,7 @@ trait HasSchemalessAttributes
      */
     protected function schemalessCasts(): array
     {
-        return array_merge($this->casts ?? [], [
+        return array_merge($casts ?? [], [
             'extra_attributes' => SchemalessAttributes::class,
         ]);
     }

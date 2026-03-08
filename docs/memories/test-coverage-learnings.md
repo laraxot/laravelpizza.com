@@ -44,16 +44,11 @@ $this->assertNotNull($pivot->created_at);
 
 **Pattern:**
 ```php
-// ❌ Redundant
-class SomeTest extends TestCase {
-    use DatabaseTransactions; 
-}
-
-// ✅ Correct
-class SomeTest extends TestCase {
-    // Already has DatabaseTransactions via TestCase -> XotBaseTestCase
-}
+// use DatabaseTransactions;  // ❌ Redundant (Already in XotBaseTestCase)
 ```
+
+> [!IMPORTANT]
+> Since every test case in Laraxot should extend `XotBaseTestCase` (directly or indirectly), and `XotBaseTestCase` already includes `DatabaseTransactions`, adding it again is redundant and violates DRY principles.
 
 ---
 

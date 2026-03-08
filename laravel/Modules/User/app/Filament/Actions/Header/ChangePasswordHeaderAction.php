@@ -22,7 +22,7 @@ final class ChangePasswordHeaderAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel()
+        $this->translateLabel(
             ->icon('heroicon-o-key')
             ->action(function (array $data): void {
                 $record = Auth::user();

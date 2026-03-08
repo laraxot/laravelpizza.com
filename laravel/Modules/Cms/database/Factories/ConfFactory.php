@@ -19,24 +19,24 @@ class ConfFactory extends Factory
     public function definition(): array
     {
         return [
-            'key' => $this->faker->unique()->slug(),
-            'value' => $this->faker->sentence(),
-            'type' => $this->faker->randomElement(['string', 'integer', 'boolean', 'json']),
-            'group' => $this->faker->randomElement(['general', 'email', 'social', 'seo']),
-            'description' => $this->faker->optional()->sentence(),
+            'key' => // @var mixed faker->unique(
+            'value' => // @var mixed faker->sentence(
+            'type' => // @var mixed faker->randomElement(['string', 'integer', 'boolean', 'json']
+            'group' => // @var mixed faker->randomElement(['general', 'email', 'social', 'seo']
+            'description' => // @var mixed faker->optional(
         ];
     }
 
     public function string(): static
     {
-        return $this->state(['type' => 'string']);
+        return // @var mixed state(['type' => 'string'];
     }
 
     public function boolean(): static
     {
-        return $this->state([
+        return // @var mixed state([
             'type' => 'boolean',
-            'value' => $this->faker->boolean(),
+            'value' => // @var mixed faker->boolean(
         ]);
     }
 }

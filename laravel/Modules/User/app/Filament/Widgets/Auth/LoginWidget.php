@@ -52,7 +52,7 @@ class LoginWidget extends XotBaseWidget
     {
         // try {
         /** @var array<string, mixed> $data */
-        $data = $this->form->getState();
+        $data = $form->getState();
 
         $credentials = [
             'email' => is_string($data['email'] ?? null) ? $data['email'] : '',

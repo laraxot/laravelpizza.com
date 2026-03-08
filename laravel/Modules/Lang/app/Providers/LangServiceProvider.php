@@ -40,10 +40,10 @@ class LangServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
-        // BladeService::registerComponents($this->module_dir.'/../View/Components', 'Modules\\Lang');
-        // $this->registerTranslator();
-        $this->translatableComponents();
-        $this->registerFilamentLabel();
+        // BladeService::registerComponents(// @var mixed module_dir.'/../View/Components', 'Modules\\Lang';
+        // // @var mixed registerTranslator(;
+        // @var mixed translatableComponents(;
+        // @var mixed registerFilamentLabel(;
     }
 
     public function registerFilamentLabel(): void
@@ -143,7 +143,7 @@ class LangServiceProvider extends XotBaseServiceProvider
 
     public function registerTranslator(): void
     {
-        $this->app->singleton('translator', function (Container $app): TranslatorService {
+        // @var mixed app->singleton('translator', function (Container $app
             $loader = $app['translation.loader'];
 
             // When registering the translator component, we'll need to set the default

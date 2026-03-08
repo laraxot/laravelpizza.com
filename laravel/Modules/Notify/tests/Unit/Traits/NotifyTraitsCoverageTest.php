@@ -16,27 +16,27 @@ class NotifyRateLimitDummy
 
     public function shouldSend(string $key): bool
     {
-        return $this->shouldSendNotification($key);
+        return // @var mixed shouldSendNotification($key;
     }
 
     public function retryAfter(string $key): int
     {
-        return $this->getNotificationRateLimitRetryAfter($key);
+        return // @var mixed getNotificationRateLimitRetryAfter($key;
     }
 
     public function remaining(string $key): int
     {
-        return $this->getNotificationRateLimitRemainingAttempts($key);
+        return // @var mixed getNotificationRateLimitRemainingAttempts($key;
     }
 
     public function reset(string $key): void
     {
-        $this->resetNotificationRateLimit($key);
+        // @var mixed resetNotificationRateLimit($key;
     }
 
     public function key(string $type, mixed $identifier): string
     {
-        return $this->getNotificationRateLimitKey($type, $identifier);
+        return // @var mixed getNotificationRateLimitKey($type, $identifier;
     }
 }
 
@@ -46,17 +46,17 @@ class NotifyTrackingDummy
 
     public function addTrackingPublic(string $html, string $id): string
     {
-        return $this->addTracking($html, $id);
+        return // @var mixed addTracking($html, $id;
     }
 
     public function trackingId(): string
     {
-        return $this->generateTrackingId();
+        return // @var mixed generateTrackingId(;
     }
 
     public function trackingEnabled(): bool
     {
-        return $this->isTrackingEnabled();
+        return // @var mixed isTrackingEnabled(;
     }
 }
 

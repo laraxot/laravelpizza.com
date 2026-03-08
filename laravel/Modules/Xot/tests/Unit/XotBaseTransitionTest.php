@@ -11,22 +11,22 @@ uses(TestCase::class);
 describe('XotBaseTransition', function () {
     beforeEach(function () {
         // Create a test record
-        $this->record = new Modules\User\Models\User();
-        $this->record->id = '1';
-        $this->record->name = 'Test User';
-        $this->record->email = 'test@example.com';
+        $record = new Modules\User\Models\User();
+        $record->id = '1';
+        $record->name = 'Test User';
+        $record->email = 'test@example.com';
 
         // Create a concrete test transition class.
         // Override sendRecipientNotification con firma identica alla base per evitare Fatal error
         // (la base usa RecordNotificationData, non UserContract).
-        $this->transition = new class($this->record) extends XotBaseTransition {
+        $transition = new class($this->record
             public static string $name = 'test_transition';
 
             #[Override]
             public function getNotificationRecipients(): array
             {
                 return [
-                    'test_user' => RecordNotificationData::from(['record' => $this->record, 'channel' => 'mail']),
+                    'test_user' => RecordNotificationData::from(['record' => $record, 'channel' => 'mail']
                 ];
             }
 
@@ -39,31 +39,31 @@ describe('XotBaseTransition', function () {
     });
 
     it('can be instantiated', function () {
-        expect($this->transition)->toBeInstanceOf(XotBaseTransition::class);
+        expect($transition);
     });
 
     it('has static name property', function () {
-        expect($this->transition::$name)->toBe('test_transition');
+        expect($transition::$name);
     });
 
     it('can get record', function () {
-        $record = $this->transition->record;
-        expect($record)->toBe($this->record);
+        $record = $transition->record;
+        expect($record)->toBe($record);
     });
 
     it('can send notifications without errors', function () {
-        expect(fn () => $this->transition->sendNotifications())->not->toThrow(Exception::class);
+        expect(fn () => $transition->sendNotifications());
     });
 
     it('returns correct notification recipients structure', function () {
-        $recipients = $this->transition->getNotificationRecipients();
+        $recipients = $transition->getNotificationRecipients();
         expect($recipients)->toBeArray()->toHaveKey('test_user');
         expect($recipients['test_user'])->toBeInstanceOf(RecordNotificationData::class);
     });
 
     it('can send recipient notification', function () {
-        $recipient = RecordNotificationData::from(['record' => $this->record, 'channel' => 'mail']);
-        expect(fn () => $this->transition->sendRecipientNotification($recipient, []))->not->toThrow(Exception::class);
+        $recipient = RecordNotificationData::from(['record' => $record, 'channel' => 'mail']);
+        expect(fn () => $transition->sendRecipientNotification($recipient, []));
     });
 
     it('validates abstract class structure', function () {

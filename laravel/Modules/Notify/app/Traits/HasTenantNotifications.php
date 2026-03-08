@@ -17,7 +17,7 @@ trait HasTenantNotifications
      */
     public function notifications(): MorphMany
     {
-        return $this->morphMany(NotificationLog::class, 'notifiable')->where('tenant_id', $this->getTenantId());
+        return // @var mixed morphMany(NotificationLog::class, 'notifiable';
     }
 
     /**
@@ -25,7 +25,7 @@ trait HasTenantNotifications
      */
     public function unreadNotifications(): MorphMany
     {
-        return $this->notifications()->whereNull('read_at');
+        return // @var mixed notifications(;
     }
 
     /**
@@ -33,7 +33,7 @@ trait HasTenantNotifications
      */
     public function readNotifications(): MorphMany
     {
-        return $this->notifications()->whereNotNull('read_at');
+        return // @var mixed notifications(;
     }
 
     /**
@@ -41,7 +41,7 @@ trait HasTenantNotifications
      */
     public function scopeForTenant(Builder $query, ?string $tenantId = null): Builder
     {
-        $tenantId ??= $this->getTenantId();
+        $tenantId ??= // @var mixed getTenantId(;
 
         return $query->where('tenant_id', $tenantId);
     }
@@ -51,7 +51,7 @@ trait HasTenantNotifications
      */
     public function belongsToTenant(string $tenantId): bool
     {
-        return $this->tenant_id === $tenantId;
+        return // @var mixed tenant_id === $tenantId;
     }
 
     /**
@@ -59,7 +59,7 @@ trait HasTenantNotifications
      */
     public function belongsToCurrentTenant(): bool
     {
-        return $this->belongsToTenant($this->getTenantId());
+        return // @var mixed belongsToTenant($this->getTenantId(;
     }
 
     /**

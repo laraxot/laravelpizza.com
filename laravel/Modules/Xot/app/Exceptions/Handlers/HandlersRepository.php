@@ -29,7 +29,7 @@ class HandlersRepository
      */
     public function addReporter(callable $reporter): int
     {
-        return array_unshift($this->reporters, $reporter);
+        return array_unshift($reporters, $reporter);
     }
 
     /**
@@ -37,7 +37,7 @@ class HandlersRepository
      */
     public function addRenderer(callable $renderer): int
     {
-        return array_unshift($this->renderers, $renderer);
+        return array_unshift($renderers, $renderer);
     }
 
     /**
@@ -45,7 +45,7 @@ class HandlersRepository
      */
     public function addConsoleRenderer(callable $renderer): int
     {
-        return array_unshift($this->consoleRenderers, $renderer);
+        return array_unshift($consoleRenderers, $renderer);
     }
 
     /**
@@ -53,9 +53,8 @@ class HandlersRepository
      */
     public function getReportersByException(\Throwable $e): array
     {
-        return array_filter(
-            $this->reporters,
-            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e),
+        return array_filter($reporters,
+            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e
         );
     }
 
@@ -64,9 +63,8 @@ class HandlersRepository
      */
     public function getRenderersByException(\Throwable $e): array
     {
-        return array_filter(
-            $this->renderers,
-            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e),
+        return array_filter($renderers,
+            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e
         );
     }
 
@@ -75,9 +73,8 @@ class HandlersRepository
      */
     public function getConsoleRenderersByException(\Throwable $e): array
     {
-        return array_filter(
-            $this->consoleRenderers,
-            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e),
+        return array_filter($consoleRenderers,
+            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e
         );
     }
 

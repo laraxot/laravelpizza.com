@@ -54,9 +54,19 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->nameLower = Str::lower($this->name);
-        $this->module_ns = collect(explode('\\', $this->module_ns))->slice(0, -1)->implode('\\');
-        $this->app->register($this->module_ns.'\Providers\RouteServiceProvider');
-        $this->app->register($this->module_ns.'\Providers\EventServiceProvider');
+        $this->module_ns = collect(explode('\\', $this->module_ns))->implode('\\');
+
+        // Only register if classes exist
+        $routeProvider = $this->module_ns.'\Providers\RouteServiceProvider';
+        $eventProvider = $this->module_ns.'\Providers\EventServiceProvider';
+
+        if (class_exists($routeProvider)) {
+            $this->app->register($routeProvider);
+        }
+        if (class_exists($eventProvider)) {
+            $this->app->register($eventProvider);
+        }
+
         $this->registerBladeIcons();
     }
 
@@ -66,7 +76,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             throw new \Exception('name is empty on ['.static::class.']');
         }
 
-        $this->callAfterResolving(BladeIconsFactory::class, function (BladeIconsFactory $factory): void {
+        $this->callAfterResolving(BladeIconsFactory::class, function (BladeIconsFactory $factory) {
             try {
                 $assetsPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'assets');
                 $svgPath = $assetsPath.'/../svg';
@@ -77,31 +87,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
                 // Ignore - assets opzionali, modulo può funzionare senza
             }
         });
-
-        // $svgPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'svg');
-        /*
-         * Assert::string($relativePath = config('modules.paths.generator.assets.path'));
-         *
-         * try {
-         * $svgPath = module_path($this->name, $relativePath.'/../svg');
-         * if (! is_string($svgPath)) {
-         * throw new \Exception('Invalid SVG path');
-         * }
-         * $resolvedPath = $svgPath;
-         * $svgPath = $resolvedPath;
-         * } catch (\Error $e) {
-         * $svgPath = base_path('Modules/'.$this->name.'/'.$relativePath.'/../svg');
-         * if (! is_string($svgPath)) {
-         * throw new \Exception('Invalid fallback SVG path');
-         * }
-         * }
-         *
-         * $basePath = base_path(DIRECTORY_SEPARATOR);
-         * $svgPath = str_replace($basePath, '', $svgPath);
-         *
-         * Config::set('blade-icons.sets.'.$this->nameLower.'.path', $svgPath);
-         * Config::set('blade-icons.sets.'.$this->nameLower.'.prefix', $this->nameLower);
-         */
     }
 
     /**
@@ -114,9 +99,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         }
 
         $viewPath = module_path($this->name, 'resources/views');
-        // if (! is_string($viewPath)) {
-        //    throw new \Exception('Invalid view path');
-        // }
 
         $this->loadViewsFrom($viewPath, $this->nameLower);
     }
@@ -154,11 +136,6 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             Blade::anonymousComponentPath($componentViewPath);
         } catch (\Exception $e) {
             // Ignore missing component view path
-            dddx([
-                'name' => $this->name,
-                'componentViewPath' => $componentViewPath,
-                'e' => $e->getMessage(),
-            ]);
         }
 
         $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
@@ -176,7 +153,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     {
         $prefix = '';
         app(RegisterLivewireComponentsAction::class)
-            ->execute($this->module_dir.'/../Http/Livewire', Str::before($this->module_ns, '\Providers'), $prefix);
+            ->execute($this->module_dir.'/../Http/Livewire', Str::before($this->module_ns, '\Providers'));
     }
 
     public function registerCommands(): void

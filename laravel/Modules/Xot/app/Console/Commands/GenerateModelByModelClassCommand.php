@@ -38,7 +38,7 @@ class GenerateModelByModelClassCommand extends Command
     public function handle(): void
     {
         Assert::classExists(
-            $model_class = $this->argument('model_class'),
+            $model_class = $this->argument('model_class'
             '['.__LINE__.']['.class_basename($this).']',
         );
 

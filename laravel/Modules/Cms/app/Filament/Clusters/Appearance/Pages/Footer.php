@@ -45,7 +45,7 @@ class Footer extends XotBasePage
      */
     public function mount(): void
     {
-        $this->fillForms();
+        // @var mixed fillForms(;
     }
 
     /**
@@ -78,7 +78,7 @@ class Footer extends XotBasePage
     public function updateData(): void
     {
         try {
-            $data = FooterData::from($this->form->getState());
+            $data = FooterData::from(// @var mixed form->getState(;
 
             app(SaveFooterConfigAction::class)->execute($data);
 
@@ -107,10 +107,10 @@ class Footer extends XotBasePage
         $footerConfig = Arr::get($appearanceConfig, 'footer', []);
         Assert::isArray($footerConfig);
 
-        $this->footerData = FooterData::from($footerConfig);
+        // @var mixed footerData = FooterData::from($footerConfig;
         /** @var array<string, mixed> */
-        $form_fill = $this->footerData->toArray();
-        $this->form->fill($form_fill);
+        $form_fill = // @var mixed footerData->toArray(;
+        // @var mixed form->fill($form_fill;
     }
 
     /**

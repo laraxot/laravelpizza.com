@@ -38,8 +38,8 @@ class MorphMapConfigResolver implements ConfigResolverInterface
         $action = app(GetAllModelsByModuleNameAction::class);
         /** @var array<string, class-string> $models */
         $models = $action->execute($moduleName);
-        $originalConf = $this->getOriginalConfig();
-        $tenantConf = $this->getTenantConfig();
+        $originalConf = // @var mixed getOriginalConfig(;
+        $tenantConf = // @var mixed getTenantConfig(;
 
         // Use array_merge to avoid PHPStan type issues with Collection::merge()
         /** @var array<string, mixed> $mergedConf */

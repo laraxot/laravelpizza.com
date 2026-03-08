@@ -33,14 +33,14 @@ return new class extends XotBaseMigration {
         }
 
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table): void {
+        $this->tableCreate(static function (Blueprint $table
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('guard_name');
             $table->unique(['name', 'guard_name']);
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
+        $this->tableUpdate(function (Blueprint $table
             // Usa Schema::hasColumn direttamente per verificare esistenza
             $tableName = 'permissions';
             if (! Illuminate\Support\Facades\Schema::connection('user')->hasColumn($tableName, 'created_at')

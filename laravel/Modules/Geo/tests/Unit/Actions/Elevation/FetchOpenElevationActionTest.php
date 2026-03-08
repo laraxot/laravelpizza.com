@@ -8,8 +8,8 @@ use Modules\Geo\Actions\Elevation\FetchOpenElevationAction;
 use Modules\Geo\Datas\ElevationData;
 
 beforeEach(function () {
-    $this->mockClient = Mockery::mock(Client::class);
-    $this->action = new FetchOpenElevationAction($this->mockClient);
+    // @var mixed mockClient = Mockery::mock(Client::class;
+    // @var mixed action = new FetchOpenElevationAction($this->mockClient;
 });
 
 afterEach(function () {
@@ -32,7 +32,7 @@ it('fetches elevation successfully', function (): void {
         ])
     );
 
-    $this->mockClient
+    // @var mixed mockClient
         ->shouldReceive('post')
         ->once()
         ->with(
@@ -42,7 +42,7 @@ it('fetches elevation successfully', function (): void {
         ->andReturn($mockResponse);
 
     // Act
-    $result = $this->action->execute(45.4642, 9.1900);
+    $result = // @var mixed action->execute(45.4642, 9.1900;
 
     // Assert
     expect($result)->toBeInstanceOf(ElevationData::class)
@@ -54,13 +54,13 @@ it('fetches elevation successfully', function (): void {
 it('throws exception for failed API request', function (): void {
     // Arrange
     $request = new GuzzleHttp\Psr7\Request('POST', 'https://api.open-elevation.com/api/v1/lookup');
-    $this->mockClient
+    // @var mixed mockClient
         ->shouldReceive('post')
         ->once()
         ->andThrow(GuzzleHttp\Exception\RequestException::create($request, null, new Exception('Connection failed')));
 
     // Act & Assert
-    expect(fn () => $this->action->execute(45.4642, 9.1900))
+    expect(fn () => // @var mixed action->execute(45.4642, 9.1900
         ->toThrow(RuntimeException::class, 'Failed to get elevation data');
 });
 
@@ -72,13 +72,13 @@ it('throws exception for invalid response', function (): void {
         json_encode(['results' => []]) // Empty results
     );
 
-    $this->mockClient
+    // @var mixed mockClient
         ->shouldReceive('post')
         ->once()
         ->andReturn($mockResponse);
 
     // Act & Assert
-    expect(fn () => $this->action->execute(45.4642, 9.1900))
+    expect(fn () => // @var mixed action->execute(45.4642, 9.1900
         ->toThrow(RuntimeException::class, 'Invalid elevation data response');
 });
 
@@ -98,13 +98,13 @@ it('handles negative elevation', function (): void {
         ])
     );
 
-    $this->mockClient
+    // @var mixed mockClient
         ->shouldReceive('post')
         ->once()
         ->andReturn($mockResponse);
 
     // Act
-    $result = $this->action->execute(31.5, 35.5);
+    $result = // @var mixed action->execute(31.5, 35.5;
 
     // Assert
     expect($result->elevation)->toBe(-430.0);
@@ -126,13 +126,13 @@ it('handles high elevation', function (): void {
         ])
     );
 
-    $this->mockClient
+    // @var mixed mockClient
         ->shouldReceive('post')
         ->once()
         ->andReturn($mockResponse);
 
     // Act
-    $result = $this->action->execute(27.9881, 86.9250);
+    $result = // @var mixed action->execute(27.9881, 86.9250;
 
     // Assert
     expect($result->elevation)->toBe(8848.0);
@@ -154,13 +154,13 @@ it('handles zero elevation', function (): void {
         ])
     );
 
-    $this->mockClient
+    // @var mixed mockClient
         ->shouldReceive('post')
         ->once()
         ->andReturn($mockResponse);
 
     // Act
-    $result = $this->action->execute(0.0, 0.0);
+    $result = // @var mixed action->execute(0.0, 0.0;
 
     // Assert
     expect($result->elevation)->toBe(0.0);
@@ -180,7 +180,7 @@ it('sends correct API payload', function (): void {
 
     $capturedOptions = [];
 
-    $this->mockClient
+    // @var mixed mockClient
         ->shouldReceive('post')
         ->once()
         ->with(
@@ -194,7 +194,7 @@ it('sends correct API payload', function (): void {
         ->andReturn($mockResponse);
 
     // Act
-    $this->action->execute(45.4642, 9.1900);
+    // @var mixed action->execute(45.4642, 9.1900;
 
     // Assert
     expect($capturedOptions['json']['locations'][0]['latitude'])->toBe(45.4642)

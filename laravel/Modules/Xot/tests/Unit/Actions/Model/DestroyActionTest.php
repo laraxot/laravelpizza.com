@@ -10,7 +10,7 @@ use Modules\Xot\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    $this->action = app(DestroyAction::class);
+    $action = app(DestroyAction::class);
 });
 
 it('deletes model and returns it', function (): void {
@@ -20,13 +20,13 @@ it('deletes model and returns it', function (): void {
 
         public function delete(): bool
         {
-            $this->deleted = true;
+            $deleted = true;
 
             return true;
         }
     };
 
-    $result = $this->action->execute($mockModel, [], []);
+    $result = $action->execute($mockModel, [], []);
 
     expect($result)->toBe($mockModel)
         ->and($mockModel->deleted)->toBeTrue();
@@ -40,7 +40,7 @@ it('flashes status message on successful delete', function (): void {
         }
     };
 
-    $this->action->execute($mockModel, [], []);
+    $action->execute($mockModel, [], []);
 
     expect(Session::get('status'))->toBe('eliminato');
 });
@@ -53,7 +53,7 @@ it('flashes failure message when delete returns false', function (): void {
         }
     };
 
-    $this->action->execute($mockModel, [], []);
+    $action->execute($mockModel, [], []);
 
     expect(Session::get('status'))->toBe('NON eliminato');
 });

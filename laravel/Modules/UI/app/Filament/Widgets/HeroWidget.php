@@ -24,7 +24,7 @@ class HeroWidget extends BaseWidget
     protected function getStats(): array
     {
         return [
-            Stat::make('', $this->title ?? '')->icon($this->icon ?? ''),
+            Stat::make('', // @var mixed title ?? ''
         ];
     }
 }

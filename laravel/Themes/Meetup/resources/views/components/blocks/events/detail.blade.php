@@ -30,11 +30,20 @@ new class extends Component {
     
     public function mount(): void
     {
+        $viewerId = auth()->id() !== null ? (string) auth()->id() : null;
+
         // Support both 'event' (specific) and 'item' (generic) props, or load from slug0
         if ($this->event === null && $this->item === null && !empty($this->slug0)) {
-            $this->event = Event::where('slug', $this->slug0)->first();
+            $this->event = Event::query()
+                ->visibleToUser($viewerId)
+                ->where('slug', $this->slug0)
+                ->first();
         } elseif ($this->event === null && $this->item !== null) {
             $this->event = $this->item instanceof Event ? $this->item : null;
+        }
+
+        if ($this->event !== null && ! $this->event->canBeViewedBy($viewerId)) {
+            $this->event = null;
         }
         
         if ($this->event) {

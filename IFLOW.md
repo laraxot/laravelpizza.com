@@ -14,17 +14,11 @@ Non stiamo solo replicando - stiamo **ELEVANDO** il sito originale per renderlo:
 
 ---
 
-## 🔄 **CRITICAL CORRECTION - 2026-03-07**
+## 🚨 **CRITICAL RULE - 2026-03-07**
 
-### **Problema Risolto**
-- **Errore**: Creazione di nuovi moduli invece di estendere quelli esistenti
-- **Soluzione**: Utilizzo moduli esistenti per l'implementazione
+### **Regola Fondamentale da Ricordare SEMPRE**
 
-### **Nuove Regole di Implementazione**
-1. **MAI** creare nuovi moduli - **SEMPRE** estendere quelli esistenti
-2. **Utilizzare pattern** Laraxot con BaseModel esistenti
-3. **Seguire struttura esistente** per ogni modulo
-4. **Preservare modularità** esistente
+**MAI** creare nuovi moduli - **SEMPRE** estendere quelli esistenti!
 
 ### **Moduli Esistenti da Estendere**
 - **laravel/Modules/Activity/** - Sistema di attività e log
@@ -42,6 +36,15 @@ Non stiamo solo replicando - stiamo **ELEVANDO** il sito originale per renderlo:
 - **laravel/Modules/User/** - Gestione utenti e autenticazione
 - **laravel/Modules/Xot/** - Infrastruttura di base
 - **laravel/Modules/Setting/** - Configurazione applicazione
+
+### **Workflows Corretti**
+1. **Cercare** nei moduli esistenti (`Modules/*/`)
+2. **Verificare** se il modello/azione esiste già
+3. **Estendere** invece di creare
+4. **Solo se non esiste**, creare nel modulo appropriato
+
+### **PROMEMORIA PER SEMPRE:**
+> "MAI creare nuovi moduli. SEMPRE estendere quelli esistenti!"
 
 ---
 

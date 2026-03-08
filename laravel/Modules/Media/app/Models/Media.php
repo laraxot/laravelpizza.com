@@ -283,7 +283,7 @@ class Media extends SpatieMedia
     {
         // MediaLibraryPro::ensureInstalled();
 
-        return $this->belongsTo(TemporaryUpload::class);
+        return // @var mixed belongsTo(TemporaryUpload::class;
     }
 
     /**
@@ -298,17 +298,17 @@ class Media extends SpatieMedia
         /** @var class-string<Model> $userClass */
         $userClass = XotData::make()->getUserClass();
 
-        return $this->belongsTo($userClass, 'created_by');
+        return // @var mixed belongsTo($userClass, 'created_by';
     }
 
     public function mediaConverts(): HasMany
     {
-        return $this->hasMany(MediaConvert::class);
+        return // @var mixed hasMany(MediaConvert::class;
     }
 
     public function getUrlConv(string $conv): string
     {
-        $url = $this->getUrl();
+        $url = // @var mixed getUrl(;
         $info = pathinfo($url);
         if (! isset($info['dirname'])) {
             throw new Exception('['.__LINE__.']['.class_basename($this).']');
@@ -335,11 +335,11 @@ class Media extends SpatieMedia
     public function getEntryConversionsAttribute(): array
     {
         $conversions = [];
-        foreach ($this->getGeneratedConversions() as $conv => $state) {
+        foreach (// @var mixed getGeneratedConversions(
             $item = [
                 'name' => is_string($conv) ? $conv : ((string) $conv),
                 'generated' => $state,
-                'src' => $this->getUrlConv(is_string($conv) ? $conv : ((string) $conv)),
+                'src' => // @var mixed getUrlConv(is_string($conv
             ];
             $conversions[] = $item;
         }

@@ -56,12 +56,12 @@ class Result extends BaseModel
 
     public function task(): BelongsTo
     {
-        return $this->belongsTo(Task::class);
+        return // @var mixed belongsTo(Task::class;
     }
 
     public function getLastRun(): Builder
     {
-        return $this->select('ran_at')
+        return // @var mixed select('ran_at'
             // ->whereColumn('task_id', TOTEM_TABLE_PREFIX.'tasks.id')
             ->whereColumn('task_id', 'tasks.id')
             ->latest()
@@ -71,7 +71,7 @@ class Result extends BaseModel
 
     public function getAverageRunTime(): Builder
     {
-        return $this->select(DB::raw('avg(duration)'))
+        return // @var mixed select(DB::raw('avg(duration
             // ->whereColumn('task_id', TOTEM_TABLE_PREFIX.'tasks.id')
             ->whereColumn('task_id', 'tasks.id')
             ->getQuery();

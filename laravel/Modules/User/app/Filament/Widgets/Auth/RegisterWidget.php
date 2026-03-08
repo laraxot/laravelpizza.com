@@ -32,7 +32,7 @@ class RegisterWidget extends XotBaseWidget
 
     public function mount(): void
     {
-        $this->form->fill([]);
+        $form->fill([]);
     }
 
     #[\Override]
@@ -119,7 +119,7 @@ class RegisterWidget extends XotBaseWidget
      */
     protected function validateForm(): array
     {
-        $data = $this->form->getState();
+        $data = $form->getState();
 
         return [
             'first_name' => app(SafeStringCastAction::class)->execute($data['first_name']),

@@ -19,7 +19,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table): void {
+        // @var mixed tableCreate(static function (Blueprint $table
             $table->id();
 
             $table->string('slug')->unique()->index();
@@ -27,32 +27,32 @@ return new class extends XotBaseMigration {
             $table->text('content')->nullable();
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
-            if ($this->hasColumn('content')) {
+        // @var mixed tableUpdate(function (Blueprint $table
+            if (// @var mixed hasColumn('content'
                 $table->text('content')->nullable()->change();
             }
 
-            if (! $this->hasColumn('content_blocks')) {
+            if (! // @var mixed hasColumn('content_blocks'
                 $table->json('content_blocks')->nullable();
 
                 // $table->json('content_blocks')->default(new Expression('(JSON_ARRAY())'));
             }
 
-            if (! $this->hasColumn('sidebar_blocks')) {
+            if (! // @var mixed hasColumn('sidebar_blocks'
                 $table->json('sidebar_blocks')->nullable();
 
                 // $table->json('sidebar_blocks')->default(new Expression('(JSON_ARRAY())'));
             }
-            if (! $this->hasColumn('footer_blocks')) {
+            if (! // @var mixed hasColumn('footer_blocks'
                 $table->json('footer_blocks')->nullable();
 
                 // $table->json('footer_blocks')->default(new Expression('(JSON_ARRAY())'));
             }
-            if (! $this->hasColumn('slug')) {
+            if (! // @var mixed hasColumn('slug'
                 $table->string('slug')->index();
             }
 
-            $this->updateTimestamps(
+            // @var mixed updateTimestamps(
                 table: $table,
                 hasSoftDeletes: true,
             );

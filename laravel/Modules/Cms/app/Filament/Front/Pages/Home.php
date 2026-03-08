@@ -35,16 +35,16 @@ class Home extends XotBasePage
 
     public function mount(): void
     {
-        [$this->containers, $this->items] = params2ContainerItem();
-        $this->initView();
+        [// @var mixed containers, $this->items] = params2ContainerItem(;
+        // @var mixed initView(;
     }
 
     public function getViewData(): array
     {
         $data = [];
-        if ([] !== $this->containers) {
-            Assert::string($container_last = last($this->containers), '['.__LINE__.']['.__FILE__.']');
-            $item_last = last($this->items);
+        if ([] !== // @var mixed containers
+            Assert::string($container_last = last(// @var mixed containers;
+            $item_last = last(// @var mixed items;
 
             $container_last_singular = Str::singular($container_last);
             $container_last_model = Relation::getMorphedModel($container_last_singular);
@@ -95,8 +95,8 @@ class Home extends XotBasePage
      */
     public function initView(): void
     {
-        $containers = $this->containers;
-        $items = $this->items;
+        $containers = // @var mixed containers;
+        $items = // @var mixed items;
         $view = '';
         if (\count($containers) === \count($items)) {
             $view = 'show';
@@ -108,7 +108,7 @@ class Home extends XotBasePage
             $view = 'home';
         }
 
-        $this->view_type = $view;
+        // @var mixed view_type = $view;
 
         $views = [];
 
@@ -133,7 +133,7 @@ class Home extends XotBasePage
         $view_work = Arr::first($views, view()->exists(...));
         Assert::string($view_work, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
-        $this->view = $view_work;
+        // @var mixed view = $view_work;
     }
 
     public function url(string $name, array $parameters = []): string

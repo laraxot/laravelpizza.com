@@ -38,8 +38,8 @@ class RolesSeeder extends Seeder
      */
     private function displayResults(array $roles): void
     {
-        $this->command->info('Roles seeded successfully:');
-        $this->command->table(
+        $command->info('Roles seeded successfully:');
+        $command->table(
             self::$OUTPUT_TABLE_HEADERS,
             collect($roles)
                 ->map(fn (Role $role, int $index) => [

@@ -211,11 +211,11 @@ class SafeObjectCastAction
         Assert::inArray($type, ['string', 'int', 'float', 'bool', 'array']);
 
         return match ($type) {
-            'string' => $this->getStringProperty($object, $property, is_string($default) ? $default : null),
-            'int' => $this->getIntProperty($object, $property, is_int($default) ? $default : null),
-            'float' => $this->getFloatProperty($object, $property, is_float($default) ? $default : null),
-            'bool' => $this->getBooleanProperty($object, $property, is_bool($default) ? $default : null),
-            'array' => $this->getArrayProperty($object, $property, is_array($default) ? $default : null),
+            'string' => $this->getStringProperty($object, $property, is_string($default
+            'int' => $this->getIntProperty($object, $property, is_int($default
+            'float' => $this->getFloatProperty($object, $property, is_float($default
+            'bool' => $this->getBooleanProperty($object, $property, is_bool($default
+            'array' => $this->getArrayProperty($object, $property, is_array($default
             default => throw new \InvalidArgumentException("Tipo non supportato: {$type}"),
         };
     }

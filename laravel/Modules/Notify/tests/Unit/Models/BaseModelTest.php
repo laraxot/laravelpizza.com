@@ -27,7 +27,7 @@ test('base model default casts include audit and datetime fields', function () {
 
         public function exposeCasts(): array
         {
-            return $this->casts();
+            return // @var mixed casts(;
         }
     };
 

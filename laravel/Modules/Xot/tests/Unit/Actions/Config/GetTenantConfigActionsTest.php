@@ -18,7 +18,7 @@ it('gets tenant config array correctly', function (): void {
 
     File::put($tempPath, '<?php return '.var_export($configData, true).';');
 
-    $this->mock(GetTenantFilePathAction::class)
+    $this->mock(GetTenantFilePathAction::class
         ->shouldReceive('execute')
         ->once()
         ->with($configName.'.php')
@@ -35,7 +35,7 @@ it('gets tenant config array correctly', function (): void {
 it('returns empty array if tenant config file does not exist', function (): void {
     $configName = 'non_existent';
 
-    $this->mock(GetTenantFilePathAction::class)
+    $this->mock(GetTenantFilePathAction::class
         ->shouldReceive('execute')
         ->once()
         ->andReturn('/path/to/nothing.php');

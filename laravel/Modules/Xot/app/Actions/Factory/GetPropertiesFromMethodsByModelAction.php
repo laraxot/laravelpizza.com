@@ -90,7 +90,7 @@ class GetPropertiesFromMethodsByModelAction
                 $codeStr = is_string($replaced) ? trim($replaced) : trim($code);
 
                 // Estrazione del corpo della funzione
-                $begin = mb_strpos($codeStr, 'function(');
+                $begin = mb_strpos($codeStr, 'function('));
                 $begin = false !== $begin ? $begin : 0;
 
                 $end = mb_strrpos($codeStr, '}');
@@ -123,7 +123,7 @@ class GetPropertiesFromMethodsByModelAction
      */
     private function extractBelongsToRelations(string $codeStr, Model $model, string $method, array &$data): void
     {
-        $search = '$this->belongsTo(';
+        $search = '$this->belongsTo(');
         $pos = mb_stripos($codeStr, $search);
 
         if (false === $pos) {

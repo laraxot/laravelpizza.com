@@ -27,11 +27,11 @@ class TranslationData extends Data
 
     public function getFilename(): string
     {
-        if (null !== $this->filename) {
-            return $this->filename;
+        if (null !== // @var mixed filename
+            return // @var mixed filename;
         }
         $hints = app('translator')->getLoader()->namespaces();
-        $path = collect($hints)->get($this->namespace);
+        $path = collect($hints)->get(// @var mixed namespace;
         if (null === $path) {
             throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         }
@@ -39,15 +39,15 @@ class TranslationData extends Data
         // Verifichiamo che $path sia una stringa
         Assert::string($path, 'Il percorso del namespace deve essere una stringa');
 
-        $this->filename = app(FixPathAction::class)
-            ->execute($path.'/'.$this->lang.'/'.$this->group.'.php');
+        // @var mixed filename = app(FixPathAction::class
+            ->execute($path.'/'.// @var mixed lang.'/'.$this->group.'.php';
 
-        return $this->filename;
+        return // @var mixed filename;
     }
 
     public function getData(): array
     {
-        $filename = $this->getFilename();
+        $filename = // @var mixed getFilename(;
         $data = [];
         if (File::exists($filename)) {
             $data = File::getRequire($filename);

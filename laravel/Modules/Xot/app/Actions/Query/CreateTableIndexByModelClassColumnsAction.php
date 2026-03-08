@@ -51,7 +51,7 @@ class CreateTableIndexByModelClassColumnsAction
         $indexName = $this->generateIndexName($tableName, $columns);
 
         // Check if the index already exists
-        if ($this->indexExists($connectionName, $tableName, $indexName)) {
+        if ($indexExists($connectionName, $tableName, $indexName
             return false; // Skip creation as the index already exists
         }
 

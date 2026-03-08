@@ -27,7 +27,7 @@ class AddressField extends Field
     {
         parent::setUp();
 
-        $this->afterStateHydrated(function (AddressField $_component, mixed $record) {
+        // @var mixed afterStateHydrated(function (AddressField $_component, mixed $record
             $data = [
                 'country' => null,
                 'street' => null,
@@ -40,7 +40,7 @@ class AddressField extends Field
                 return;
             }
 
-            $relationship = $this->getRelationship();
+            $relationship = // @var mixed getRelationship(;
             if ($relationship && $record->relationLoaded($relationship)) {
                 $address = $record->getRelationValue($relationship);
                 if (null !== $address && is_object($address) && method_exists($address, 'toArray')) {
@@ -51,19 +51,19 @@ class AddressField extends Field
             // }
         });
 
-        $this->dehydrated(false);
+        // @var mixed dehydrated(false;
     }
 
     public function relationship(string|callable $relationship): static
     {
-        $this->relationship = $relationship;
+        // @var mixed relationship = $relationship;
 
         return $this;
     }
 
     public function saveRelationships(): void
     {
-        $rawState = $this->getState();
+        $rawState = // @var mixed getState(;
         if (! is_array($rawState)) {
             return;
         }
@@ -71,12 +71,12 @@ class AddressField extends Field
         /** @var array<string, mixed> $state */
         $state = $rawState;
 
-        $record = $this->getRecord();
+        $record = // @var mixed getRecord(;
         if (! $record instanceof Model) {
             return;
         }
 
-        $relationshipMethod = $this->getRelationship();
+        $relationshipMethod = // @var mixed getRelationship(;
         if (! method_exists($record, $relationshipMethod)) {
             return;
         }
@@ -118,7 +118,7 @@ class AddressField extends Field
 
     public function getRelationship(): string
     {
-        Assert::string($res = $this->evaluate($this->relationship) ?? $this->getName());
+        Assert::string($res = // @var mixed evaluate($this->relationship;
 
         return $res;
     }

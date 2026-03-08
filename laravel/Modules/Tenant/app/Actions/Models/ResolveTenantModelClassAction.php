@@ -25,7 +25,7 @@ class ResolveTenantModelClassAction
         $class = app(ResolveTenantConfigValueAction::class)->execute('morph_map.'.$name);
 
         if ($class === null) {
-            $models = $this->getAllModulesModels();
+            $models = // @var mixed getAllModulesModels(;
             if (! array_key_exists($name, $models)) {
                 throw new Exception('model unknown ['.$name.']['.__LINE__.']['.basename(__FILE__).']');
             }

@@ -46,7 +46,7 @@ declare(strict_types=1);
 
             <form wire:submit.prevent="authenticate" class="space-y-6">
                 <div>
-                    {{ $this->form }}
+                    {{ $form }}
                 </div>
 
                 <div class="flex items-center justify-between">

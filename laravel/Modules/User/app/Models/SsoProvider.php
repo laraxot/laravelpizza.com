@@ -108,7 +108,7 @@ class SsoProvider extends BaseModel
      */
     public function isAllowedDomain(string $email): bool
     {
-        if (empty($this->domain_whitelist)) {
+        if (empty($domain_whitelist
             return true;
         }
 
@@ -119,7 +119,7 @@ class SsoProvider extends BaseModel
 
         $domain = substr($atPos, 1);
 
-        return in_array($domain, $this->domain_whitelist, true);
+        return in_array($domain, $domain_whitelist, true);
     }
 
     /**
@@ -131,7 +131,7 @@ class SsoProvider extends BaseModel
      */
     public function mapRoles(array $samlRoles): array
     {
-        $mapping = $this->role_mapping ?? [];
+        $mapping = $role_mapping ?? [];
         $roles = [];
 
         foreach ($samlRoles as $samlRole) {

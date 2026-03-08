@@ -42,9 +42,9 @@ final class Blocks extends Component
         if ('' === $resolvedView) {
             throw new \InvalidArgumentException('Blocks component requires view or tpl parameter');
         }
-        $this->view = $resolvedView;
-        $this->blocks = $blocks;
-        $this->model = $model;
+        // @var mixed view = $resolvedView;
+        // @var mixed blocks = $blocks;
+        // @var mixed model = $model;
     }
 
     public function render(): View
@@ -52,11 +52,11 @@ final class Blocks extends Component
         /**
          * @phpstan-var view-string
          */
-        $view = app(GetViewAction::class)->execute($this->view);
+        $view = app(GetViewAction::class)->execute(// @var mixed view;
         $view_params = [
             'view' => $view,
-            'blocks' => $this->blocks,
-            'model' => $this->model,
+            'blocks' => // @var mixed blocks,
+            'model' => // @var mixed model,
         ];
 
         return view($view, $view_params);

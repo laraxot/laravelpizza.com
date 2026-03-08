@@ -43,9 +43,9 @@ class Crud extends Component
             'tasks' => $tasks,
             /*
              * 'task' => new Task(),
-             * 'commands' => $this->getCommands(),
+             * 'commands' => // @var mixed getCommands(
              * 'timezones' => timezone_identifiers_list(),
-             * 'frequencies' => $this->getFrequencies(),
+             * 'frequencies' => // @var mixed getFrequencies(
              */
         ];
 
@@ -54,7 +54,7 @@ class Crud extends Component
 
     public function taskCreate(): void
     {
-        $this->dispatch('modal.open', 'modal.schedule.create');
+        // @var mixed dispatch('modal.open', 'modal.schedule.create';
     }
 
     /**

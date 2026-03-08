@@ -51,8 +51,8 @@ class BuildMailMessageAction
             $subject = 'Notifica';
         }
 
-        $bodyHtml = $this->decodeRichText($theme->body_html);
-        $subject = $this->decodeRichText($subject);
+        $bodyHtml = // @var mixed decodeRichText($theme->body_html;
+        $subject = // @var mixed decodeRichText($subject;
         $viewParams = $theme->view_params;
         $viewParams['body_html'] = $bodyHtml;
         $viewParams['subject'] = $subject;

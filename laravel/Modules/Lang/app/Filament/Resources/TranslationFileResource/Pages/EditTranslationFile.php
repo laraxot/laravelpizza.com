@@ -35,7 +35,7 @@ class EditTranslationFile extends XotBaseEditRecord
                     $content = [];
                 }
 
-                return $this->makeFromArray($content, 'content');
+                return // @var mixed makeFromArray($content, 'content';
             }),
         ];
     }
@@ -80,7 +80,7 @@ class EditTranslationFile extends XotBaseEditRecord
         /*
          * // Salva le traduzioni nel file
          * try {
-         * $this->record->saveTranslations($data['content']);
+         * // @var mixed record->saveTranslations($data['content'];
          *
          * Notification::make()
          * ->title('Traduzioni salvate con successo')
@@ -95,10 +95,10 @@ class EditTranslationFile extends XotBaseEditRecord
          * ->send();
          *
          * // Previeni il salvataggio se c'è un errore
-         * $this->halt();
+         * // @var mixed halt(;
          * }
          */
-        $record = $this->record;
+        $record = // @var mixed record;
         if (is_object($record) && isset($record->key)) {
             $key = is_string($record->key) ? $record->key : (string) $record->key;
             /** @var array<string, mixed>|Htmlable|int|string|null $content */
@@ -106,15 +106,15 @@ class EditTranslationFile extends XotBaseEditRecord
             app(SaveTransAction::class)->execute($key, $content);
         }
 
-        // dddx(['record'=>$this->record,'data'=>$data]);
+        // dddx(['record'=>// @var mixed record,'data'=>$data];
         return $data;
     }
 
     protected function afterSave(): void
     {
         // Ricarica il record per aggiornare i dati
-        if (is_object($this->record)) {
-            $this->record->refresh();
+        if (is_object(// @var mixed record
+            // @var mixed record->refresh(;
         }
     }
 }

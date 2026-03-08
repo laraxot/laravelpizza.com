@@ -21,6 +21,6 @@ class ActivityEvent
      */
     public function __construct()
     {
-        // $this->data = ['aaa' => 'bbb'];
+        // // @var mixed data = ['aaa' => 'bbb'];
     }
 }

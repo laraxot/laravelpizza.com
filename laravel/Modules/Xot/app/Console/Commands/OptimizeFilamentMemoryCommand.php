@@ -108,11 +108,11 @@ class OptimizeFilamentMemoryCommand extends Command
         $this->info('🔍 Analisi problemi di memoria...');
 
         $issues = [
-            'models_with_eager_loading' => $this->findModelsWithEagerLoading(),
-            'heavy_widgets' => $this->findHeavyWidgets(),
-            'unoptimized_resources' => $this->findUnoptimizedResources(),
-            'migration_code_in_forms' => $this->findMigrationCodeInForms(),
-            'missing_pagination' => $this->findMissingPagination(),
+            'models_with_eager_loading' => $this->findModelsWithEagerLoading(
+            'heavy_widgets' => $this->findHeavyWidgets(
+            'unoptimized_resources' => $this->findUnoptimizedResources(
+            'migration_code_in_forms' => $this->findMigrationCodeInForms(
+            'missing_pagination' => $this->findMissingPagination(
         ];
 
         if ($verbose) {
@@ -307,7 +307,7 @@ class OptimizeFilamentMemoryCommand extends Command
                 $this->warn("Dettagli {$type}:");
                 foreach ($items as $item) {
                     $itemString = is_string($item) ? $item : (string) $item;
-                    $this->line('  - '.str_replace(base_path(), '', (string) $itemString));
+                    $this->line('  - '.str_replace(base_path()));
                 }
             }
         }

@@ -32,13 +32,13 @@ class TenantServiceProvider extends XotBaseServiceProvider
         parent::boot();
 
         // Skip complex configuration during testing
-        // if (! $this->app->environment('testing')) {
-        $this->mergeConfigs();
+        // if (! // @var mixed app->environment('testing'
+        // @var mixed mergeConfigs(;
         // }
 
-        $this->registerDB();
-        $this->registerMorphMap();
-        $this->publishConfig();
+        // @var mixed registerDB(;
+        // @var mixed registerMorphMap(;
+        // @var mixed publishConfig(;
     }
 
     public function publishConfig(): void
@@ -125,7 +125,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
         Config::set('database', $data);
 
         // Skip purge/reconnect during testing to preserve test DB mappings
-        if (! $this->app->environment('testing')) {
+        if (!app()->environment('testing')) {
             // Call to a member function prepare() on null
             // Database connection [mysql] not configured.
             DB::purge('mysql');
@@ -137,7 +137,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
     public function register(): void
     {
         parent::register();
-        // $this->app->register(AdminPanelProvider::class);
+        // // @var mixed app->register(AdminPanelProvider::class;
     }
 
     public function mergeConfigs(): void

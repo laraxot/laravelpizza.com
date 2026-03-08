@@ -9,8 +9,6 @@ use Modules\User\Tests\TestCase;
 
 class TenantTest extends TestCase
 {
-    // DatabaseTransactions is already used in the module TestCase
-
     public function testCanCreateTenantWithMinimalData(): void
     {
         $tenant = Tenant::factory()->create([

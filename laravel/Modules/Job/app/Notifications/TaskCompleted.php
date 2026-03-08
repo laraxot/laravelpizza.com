@@ -26,7 +26,7 @@ class TaskCompleted extends Notification implements ShouldQueue
      */
     public function __construct(string $output)
     {
-        $this->output = $output;
+        // @var mixed output = $output;
     }
 
     /**
@@ -60,7 +60,7 @@ class TaskCompleted extends Notification implements ShouldQueue
             ->subject($task->description)
             ->greeting('Hi,')
             ->line(sprintf('%s just finished running.', $task->description))
-            ->line($this->output);
+            ->line(// @var mixed output;
     }
 
     /*

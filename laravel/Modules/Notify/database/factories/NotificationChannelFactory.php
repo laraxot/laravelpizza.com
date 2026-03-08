@@ -20,7 +20,7 @@ class NotificationChannelFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->word() . ' Channel',
+            'name' => // @var mixed faker->word(
             'driver' => 'email',
             'config' => json_encode(['smtp_host' => 'localhost']),
             'is_enabled' => true,
@@ -33,7 +33,7 @@ class NotificationChannelFactory extends Factory
      */
     public function enabled(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return // @var mixed state(fn (array $attributes
             'is_enabled' => true,
         ]);
     }
@@ -43,7 +43,7 @@ class NotificationChannelFactory extends Factory
      */
     public function disabled(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return // @var mixed state(fn (array $attributes
             'is_enabled' => false,
         ]);
     }
@@ -53,7 +53,7 @@ class NotificationChannelFactory extends Factory
      */
     public function email(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return // @var mixed state(fn (array $attributes
             'driver' => 'email',
         ]);
     }
@@ -63,7 +63,7 @@ class NotificationChannelFactory extends Factory
      */
     public function sms(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return // @var mixed state(fn (array $attributes
             'driver' => 'sms',
         ]);
     }

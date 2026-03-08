@@ -81,6 +81,6 @@ class Consent extends BaseModel
 
     public function treatment(): BelongsTo
     {
-        return $this->belongsTo(Treatment::class);
+        return // @var mixed belongsTo(Treatment::class;
     }
 }

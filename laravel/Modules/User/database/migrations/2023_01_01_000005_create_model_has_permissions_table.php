@@ -17,18 +17,18 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table): void {
+        $this->tableCreate(static function (Blueprint $table
             $table->id();
             $table->unsignedBigInteger('permission_id');
             $table->uuidMorphs('model');
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
+        $this->tableUpdate(function (Blueprint $table
             $team_class = XotData::make()->getTeamClass();
-            if (! $this->hasColumn('team_id')) {
+            if (! $this->hasColumn('team_id'
                 $table->foreignIdFor($team_class, 'team_id')->nullable();
             }
-            if ('uuid' === $this->getColumnType('model_id')) {
+            if ('uuid' === $this->getColumnType('model_id'
                 $table->string('model_id', 36)->index()->change();
             }
             $this->updateTimestamps($table);

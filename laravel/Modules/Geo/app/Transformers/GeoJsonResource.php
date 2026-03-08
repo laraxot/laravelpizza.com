@@ -40,7 +40,7 @@ class GeoJsonResource extends ResCollection
         return [
             'type' => 'Feature',
             'properties' => [
-                'id' => $this->post_type.'-'.$this->post_id,
+                'id' => // @var mixed post_type.'-'.$this->post_id,
                 // "index"=> 0,
                 'isActive' => true,
                 // "logo"=> "http://placehold.it/32x32",
@@ -48,24 +48,24 @@ class GeoJsonResource extends ResCollection
                 // expects Illuminate\Database\Eloquent\Model,
                 // $this(Modules\Geo\Transformers\GeoJsonResource) given.
                 // 'image' => Panel::make()->get($this)->imgSrc(['width' => 200, 'height' => 200]),
-                'link' => $this->url,
+                'link' => // @var mixed url,
                 'url' => '#',
-                'name' => $this->title,
-                'category' => $this->post_type,
-                'email' => $this->email,
-                'stars' => $this->ratings_avg,
-                'phone' => $this->phone,
-                'address' => $this->full_address,
-                'about' => $this->subtitle."\r\n",
+                'name' => // @var mixed title,
+                'category' => // @var mixed post_type,
+                'email' => // @var mixed email,
+                'stars' => // @var mixed ratings_avg,
+                'phone' => // @var mixed phone,
+                'address' => // @var mixed full_address,
+                'about' => // @var mixed subtitle."\r\n",
                 'tags' => [
-                    $this->post_type,
+                    // @var mixed post_type,
                     // "Restaurant",
                     // "Contemporary"
                 ],
             ],
             'geometry' => [
                 'type' => 'Point',
-                'coordinates' => [round($this->longitude, 7), round($this->latitude, 7)],
+                'coordinates' => [round(// @var mixed longitude, 7
             ],
         ];
     }

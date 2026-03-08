@@ -16,6 +16,6 @@ class JobDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call("OthersTableSeeder");
+        // // @var mixed call("OthersTableSeeder";
     }
 }

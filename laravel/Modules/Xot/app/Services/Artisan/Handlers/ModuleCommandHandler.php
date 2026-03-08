@@ -26,7 +26,7 @@ class ModuleCommandHandler implements CommandHandlerInterface
         if (isset(self::MODULE_COMMANDS[$command])) {
             $method = self::MODULE_COMMANDS[$command];
 
-            return $this->$method($moduleName);
+            return // @var mixed $method($moduleName);
         }
 
         return '';

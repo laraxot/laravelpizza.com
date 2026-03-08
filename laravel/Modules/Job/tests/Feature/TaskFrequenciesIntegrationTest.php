@@ -8,7 +8,7 @@ use Modules\Job\Actions\GetTaskFrequenciesAction;
 
 describe('TaskFrequencies Integration', function () {
     beforeEach(function () {
-        $this->action = new GetTaskFrequenciesAction;
+        // @var mixed action = new GetTaskFrequenciesAction;
     });
 
     it('integrates with Laravel config system', function () {
@@ -31,7 +31,7 @@ describe('TaskFrequencies Integration', function () {
             'yearly' => 'Yearly',
         ]]);
 
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)
             ->toBeArray()
@@ -68,7 +68,7 @@ describe('TaskFrequencies Integration', function () {
             'monthly' => 'Monthly',
         ]]);
 
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)
             ->toBeArray()
@@ -89,17 +89,17 @@ describe('TaskFrequencies Integration', function () {
         config(['totem.frequencies' => ['test' => 'Test Frequency']]);
 
         // Test that it can be dispatched (basic queue test)
-        expect(method_exists($this->action, 'onQueue'))->toBeTrue();
+        expect(method_exists(// @var mixed action, 'onQueue';
     });
 
     it('handles configuration changes dynamically', function () {
         // Test with initial config
         config(['totem.frequencies' => ['initial' => 'Initial Value']]);
-        $result1 = $this->action->execute();
+        $result1 = // @var mixed action->execute(;
 
         // Change config
         config(['totem.frequencies' => ['changed' => 'Changed Value']]);
-        $result2 = $this->action->execute();
+        $result2 = // @var mixed action->execute(;
 
         expect($result1)
             ->toHaveKey('initial')
@@ -124,7 +124,7 @@ describe('TaskFrequencies Integration', function () {
             ],
         ]]);
 
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)
             ->toBeArray()
@@ -139,7 +139,7 @@ describe('TaskFrequencies Integration', function () {
     it('handles empty configuration gracefully', function () {
         config(['totem.frequencies' => []]);
 
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)->toBeArray()->and($result)->toBeEmpty();
     });
@@ -152,7 +152,7 @@ describe('TaskFrequencies Integration', function () {
             'mixed_123' => 'Mixed Key Value',
         ]]);
 
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)
             ->toBeArray()
@@ -177,9 +177,9 @@ describe('TaskFrequencies Integration', function () {
         config(['totem.frequencies' => ['concurrent' => 'Concurrent Value']]);
 
         // Simulate multiple calls
-        $result1 = $this->action->execute();
-        $result2 = $this->action->execute();
-        $result3 = $this->action->execute();
+        $result1 = // @var mixed action->execute(;
+        $result2 = // @var mixed action->execute(;
+        $result3 = // @var mixed action->execute(;
 
         expect($result1)
             ->toBe($result2)
@@ -203,7 +203,7 @@ describe('TaskFrequencies Integration', function () {
         foreach ($invalidConfigs as $invalidConfig) {
             config(['totem.frequencies' => $invalidConfig]);
 
-            expect($this->action->execute(...))->toThrow(Exception::class);
+            expect(// @var mixed action->execute(...;
         }
     });
 
@@ -215,7 +215,7 @@ describe('TaskFrequencies Integration', function () {
 
         $results = [];
         for ($i = 0; $i < 5; $i++) {
-            $results[] = $this->action->execute();
+            $results[] = // @var mixed action->execute(;
         }
 
         // All results should be identical
@@ -255,7 +255,7 @@ describe('TaskFrequencies Integration', function () {
             'yearlyOn' => 'Yearly On',
         ]]);
 
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)
             ->toBeArray()

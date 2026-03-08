@@ -85,7 +85,7 @@ class GetAllIconsAction
                         continue;
                     }
 
-                    // $iconName = $this->getIconName($file, parentPath: $path, prefix: $prefix);
+                    // $iconName = // @var mixed getIconName($file, parentPath: $path, prefix: $prefix;
                     $iconName = str($pathname)
                         ->after($path.DIRECTORY_SEPARATOR)
                         ->replace(DIRECTORY_SEPARATOR, '.')

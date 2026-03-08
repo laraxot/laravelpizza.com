@@ -11,8 +11,6 @@ use PHPUnit\Framework\Attributes\Test;
 
 class ActivityPolicyTest extends TestCase
 {
-    use \Illuminate\Foundation\Testing\DatabaseTransactions;
-
     #[Test]
     public function policy_extends_user_base_policy(): void
     {

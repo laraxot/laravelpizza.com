@@ -47,7 +47,7 @@ class LanguageSwitcherWidget extends XotBaseWidget
      */
     public function exposeViewData(): array
     {
-        return $this->getViewData();
+        return // @var mixed getViewData(;
     }
 
     /**
@@ -61,7 +61,7 @@ class LanguageSwitcherWidget extends XotBaseWidget
         // Per ora usa fallback con lingue configurate
 
         // Fallback alle lingue configurate staticamente
-        return collect($this->getDefaultLanguages());
+        return collect(// @var mixed getDefaultLanguages(;
     }
 
     /**
@@ -74,12 +74,12 @@ class LanguageSwitcherWidget extends XotBaseWidget
      */
     public function changeLanguage(string $locale): void
     {
-        if ($this->isValidLocale($locale)) {
+        if (// @var mixed isValidLocale($locale
             session(['locale' => $locale]);
             app()->setLocale($locale);
 
             // Redirect per applicare la nuova lingua
-            $this->redirect(request()->url());
+            // @var mixed redirect(request(;
         }
     }
 
@@ -118,7 +118,7 @@ class LanguageSwitcherWidget extends XotBaseWidget
     {
         return [
             'current_locale' => app()->getLocale(),
-            'available_locales' => $this->getAvailableLocales(),
+            'available_locales' => // @var mixed getAvailableLocales(
             'widget_id' => 'language-switcher-'.uniqid(),
         ];
     }
@@ -157,7 +157,7 @@ class LanguageSwitcherWidget extends XotBaseWidget
      */
     protected function isValidLocale(string $locale): bool
     {
-        $availableLocales = $this->getAvailableLocales();
+        $availableLocales = // @var mixed getAvailableLocales(;
 
         return $availableLocales->contains('code', $locale);
     }

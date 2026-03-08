@@ -27,7 +27,7 @@ class SmsChannel
      */
     public function __construct(SmsActionFactory $factory)
     {
-        $this->factory = $factory;
+        // @var mixed factory = $factory;
     }
 
     /**
@@ -51,7 +51,7 @@ class SmsChannel
             throw new Exception('toSms method must return an instance of SmsData');
         }
 
-        $action = $this->factory->create();
+        $action = // @var mixed factory->create(;
 
         return $action->execute($smsData);
     }

@@ -73,7 +73,7 @@ class PdfData extends Data
 
     public function getPath(): string
     {
-        return Storage::disk($this->disk)->path($this->filename);
+        return Storage::disk($disk);
     }
 
     public function download(): BinaryFileResponse
@@ -82,38 +82,38 @@ class PdfData extends Data
             'Content-Type' => 'application/pdf',
         ];
 
-        return response()->download($this->getPath(), $this->filename, $headers);
+        return response()->download($getPath());
     }
 
     public function fromHtml(string $html): self
     {
-        switch ($this->engine) {
+        switch ($engine
             case PdfEngineEnum::SPIPU:
                 try {
-                    $html2pdf = new Html2Pdf($this->orientation, $this->format, $this->lang);
+                    $html2pdf = new Html2Pdf($orientation, $this->format, $this->lang);
                     $html2pdf->writeHTML($html);
-                    $html2pdf->output($this->getPath(), $this->dest);
+                    $html2pdf->output($getPath());
                 } catch (HtmlParsingException $e) {
-                    File::put($this->getPath().'.html', $html);
+                    File::put($getPath());
                 }
                 break;
 
                 /*
                  * case PdfEngineEnum::SPATIE:
-                 * Pdf::html($this->html)
+                 * Pdf::html($html
                  * ->orientation(Orientation::Portrait)
                  * ->format(Format::A4)
                  * ->margins(10, 10, 20, 0, Unit::Pixel)
                  * // ->name(str_slug($project->nome).'-REPORT.pdf')
-                 * ->save($this->getPath());
+                 * ->save($getPath());
                  * ;
                  *
                  * break;
                  */
         }
 
-        $this->html = $html;
-        // $this->engine->build($this);
+        $html = $html;
+        // $engine->build($this);
 
         return $this;
     }
@@ -140,7 +140,7 @@ class PdfData extends Data
     public function getContent(): string
     {
         Assert::notNull(
-            $res = Storage::disk($this->disk)->get($this->filename),
+            $res = Storage::disk($disk
             '['.__LINE__.']['.class_basename($this).']',
         );
 
@@ -156,14 +156,14 @@ class PdfData extends Data
             throw new \Exception('View '.$view.' not found');
         }
         $out = view($view, $params);
-        $this->html = $out->render();
+        $html = $out->render();
 
         return $this->fromHtml($this->html);
     }
 
     public function setEngine(PdfEngineEnum $engine): self
     {
-        $this->engine = $engine;
+        $engine = $engine;
 
         return $this;
     }

@@ -44,14 +44,14 @@ final class SendNetfunSMSAction implements SmsActionContract
         if (! is_string($token)) {
             throw new Exception('put [NETFUN_TOKEN] variable to your .env and config [sms.drivers.netfun.token]');
         }
-        $this->token = $token;
+        // @var mixed token = $token;
         $endpoint = config('sms.drivers.netfun.api_url', 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json');
-        $this->endpoint = is_string($endpoint) ? $endpoint : 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json';
+        // @var mixed endpoint = is_string($endpoint;
         // Parametri a livello di root
         $sender = config('sms.from');
-        $this->defaultSender = is_string($sender) ? $sender : null;
-        $this->debug = (bool) config('sms.debug', false);
-        $this->timeout = is_numeric(config('sms.timeout', 30)) ? (int) config('sms.timeout', 30) : 30;
+        // @var mixed defaultSender = is_string($sender;
+        // @var mixed debug = (bool;
+        // @var mixed timeout = is_numeric(config('sms.timeout', 30;
     }
 
     /**
@@ -77,8 +77,8 @@ final class SendNetfunSMSAction implements SmsActionContract
         $textTemplate = mb_convert_encoding($plainText, 'UTF-8', 'UTF-8');
 
         $body = [
-            'api_token' => $this->token,
-            'sender' => $smsData->from ?? $this->defaultSender,
+            'api_token' => // @var mixed token,
+            'sender' => $smsData->from ?? // @var mixed defaultSender,
             'text_template' => $textTemplate,
             'async' => true,
             'utf8_enabled' => true,
@@ -91,7 +91,7 @@ final class SendNetfunSMSAction implements SmsActionContract
 
         $client = new Client($headers);
         try {
-            $response = $client->post($this->endpoint, ['json' => $body]);
+            $response = $client->post(// @var mixed endpoint, ['json' => $body];
         } catch (ClientException $clientException) {
             throw new Exception(
                 $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',
@@ -100,15 +100,15 @@ final class SendNetfunSMSAction implements SmsActionContract
             );
         }
 
-        $this->vars['status_code'] = $response->getStatusCode();
-        $this->vars['status_txt'] = $response->getBody()->getContents();
+        // @var mixed vars['status_code'] = $response->getStatusCode(;
+        // @var mixed vars['status_txt'] = $response->getBody(;
 
         Log::channel('daily')->error('Netfun SMS response', [
             'request' => $body,
-            'status_code' => $this->vars['status_code'],
-            'status_txt' => $this->vars['status_txt'],
+            'status_code' => // @var mixed vars['status_code'],
+            'status_txt' => // @var mixed vars['status_txt'],
         ]);
 
-        return $this->vars;
+        return // @var mixed vars;
     }
 }

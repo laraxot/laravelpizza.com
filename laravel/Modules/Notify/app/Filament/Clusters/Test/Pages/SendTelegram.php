@@ -45,7 +45,7 @@ class SendTelegram extends XotBasePage
 
     public function mount(): void
     {
-        $this->fillForms();
+        // @var mixed fillForms(;
     }
 
     public function emailForm(Schema $schema): Schema
@@ -66,13 +66,13 @@ class SendTelegram extends XotBasePage
                         RichEditor::make('body')->required(),
                     ]),
             ])
-            ->model($this->getUser())
+            ->model(// @var mixed getUser(
             ->statePath('emailData');
     }
 
     public function sendEmail(): void
     {
-        $data = $this->emailForm->getState();
+        $data = // @var mixed emailForm->getState(;
         Assert::string($token = config('services.telegram-bot-api.token'));
         $url = 'https://api.telegram.org/bot'.$token.'/getMe';
         Http::get($url);
@@ -133,9 +133,9 @@ class SendTelegram extends XotBasePage
 
     protected function fillForms(): void
     {
-        // $data = $this->getUser()->attributesToArray();
+        // $data = // @var mixed getUser(;
 
-        // $this->editProfileForm->fill($data);
-        $this->emailForm->fill();
+        // // @var mixed editProfileForm->fill($data;
+        // @var mixed emailForm->fill(;
     }
 }

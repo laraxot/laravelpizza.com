@@ -53,23 +53,23 @@ class SmtpData extends Data
     public function toArray(): array
     {
         return [
-            'transport' => $this->transport,
-            'host' => $this->host,
-            'port' => $this->port,
-            'encryption' => $this->encryption,
-            'username' => $this->username,
-            'password' => $this->password,
-            'timeout' => $this->timeout,
-            'local_domain' => $this->local_domain,
+            'transport' => // @var mixed transport,
+            'host' => // @var mixed host,
+            'port' => // @var mixed port,
+            'encryption' => // @var mixed encryption,
+            'username' => // @var mixed username,
+            'password' => // @var mixed password,
+            'timeout' => // @var mixed timeout,
+            'local_domain' => // @var mixed local_domain,
         ];
     }
 
     public function getTransport(): EsmtpTransport
     {
-        $transport = new EsmtpTransport($this->host, $this->port, $this->tls);
-        if ($this->username !== null && $this->password !== null) {
-            $transport->setUsername($this->username);
-            $transport->setPassword($this->password);
+        $transport = new EsmtpTransport(// @var mixed host, $this->port, $this->tls;
+        if (// @var mixed username !== null && $this->password !== null
+            $transport->setUsername(// @var mixed username;
+            $transport->setPassword(// @var mixed password;
         }
 
         return $transport;
@@ -77,7 +77,7 @@ class SmtpData extends Data
 
     public function getMailer(): Mailer
     {
-        $transport = $this->getTransport();
+        $transport = // @var mixed getTransport(;
         try {
             $transport->start();
         } catch (Exception $e) {
@@ -89,7 +89,7 @@ class SmtpData extends Data
 
     public function send(EmailData $emailData): void
     {
-        $mailer = $this->getMailer();
+        $mailer = // @var mixed getMailer(;
         $mimeEmail = $emailData->getMimeEmail();
         try {
             $mailer->send($mimeEmail);

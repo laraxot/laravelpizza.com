@@ -20,7 +20,7 @@ class DetermineSeasonalContentViewPathAction
      */
     public function execute(string $defaultViewName = 'base-content'): string
     {
-        $viewFileName = $this->determineViewFileName($defaultViewName);
+        $viewFileName = // @var mixed determineViewFileName($defaultViewName;
 
         // Convert file name to Blade view path
         // e.g., 'christmas-content' -> 'sixteen::emails.christmas-content'
@@ -44,7 +44,7 @@ class DetermineSeasonalContentViewPathAction
         }
 
         // Easter period: Good Friday to Easter Monday
-        $easter = $this->getEasterDate($today->year);
+        $easter = // @var mixed getEasterDate($today->year;
         $easterStart = $easter->copy()->subDays(2);
         $easterEnd = $easter->copy()->addDays(1);
 

@@ -30,7 +30,7 @@ class EsendexSendAction
      */
     public function execute(SmsData $smsData): array
     {
-        $auth = $this->login();
+        $auth = // @var mixed login(;
 
         if (! is_array($auth)) {
             throw new Exception('['.__LINE__.']['.class_basename($this).']');
@@ -46,7 +46,7 @@ class EsendexSendAction
 
         $curlHandle = curl_init();
         curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($curlHandle, CURLOPT_URL, $this->base_endpoint.'sms');
+        curl_setopt($curlHandle, CURLOPT_URL, // @var mixed base_endpoint.'sms';
 
         // Verifichiamo che i valori dell'array di autenticazione siano stringhe
         if (! is_string($auth[0])) {
@@ -96,7 +96,7 @@ class EsendexSendAction
         Assert::string($username = config('esendex.username'));
         Assert::string($password = config('esendex.password'));
 
-        $login_string = $this->base_endpoint.'login?username='.$username.'&password='.$password;
+        $login_string = // @var mixed base_endpoint.'login?username='.$username.'&password='.$password;
 
         curl_setopt($curlHandle, CURLOPT_URL, $login_string);
 

@@ -17,7 +17,7 @@ class ResultFactory extends Factory
     public function definition(): array
     {
         return [
-            //            'task_id'     => $this->faker->randomDigit,
+            //            'task_id'     => // @var mixed faker->randomDigit,
             'ran_at' => fake()->dateTimeBetween('-1 hour'),
             'duration' => (string) fake()->randomFloat(11, 0, 8_000_000),
             'result' => fake()->sentence,

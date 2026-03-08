@@ -58,7 +58,7 @@ class S3Test extends XotBasePage
 
     public function mount(): void
     {
-        $this->fillForms();
+        // @var mixed fillForms(;
     }
 
     /**
@@ -117,7 +117,7 @@ class S3Test extends XotBasePage
                     ->columnSpan(1),
                 Textarea::make('debug_output')
                     ->rows(self::DEBUG_OUTPUT_ROWS)
-                    ->default($this->getDebugOutput())
+                    ->default(// @var mixed getDebugOutput(
                     ->disabled()
                     ->columnSpan(1),
             ]),
@@ -130,8 +130,8 @@ class S3Test extends XotBasePage
     protected function fillForms(): void
     {
         /** @phpstan-ignore-next-line */
-        $this->form->fill([
-            'debug_output' => $this->getDebugOutput(),
+        // @var mixed form->fill([
+            'debug_output' => // @var mixed getDebugOutput(
         ]);
     }
 
@@ -140,8 +140,8 @@ class S3Test extends XotBasePage
      */
     public function test_s3_connection(): void
     {
-        $this->debugResults['s3_connection'] = $this->test_s3_connection_details();
-        $this->updateDebugOutput();
+        // @var mixed debugResults['s3_connection'] = $this->test_s3_connection_details(;
+        // @var mixed updateDebugOutput(;
     }
 
     /**
@@ -149,8 +149,8 @@ class S3Test extends XotBasePage
      */
     public function test_permissions(): void
     {
-        $this->debugResults['permissions'] = $this->test_s3_permissions();
-        $this->updateDebugOutput();
+        // @var mixed debugResults['permissions'] = $this->test_s3_permissions(;
+        // @var mixed updateDebugOutput(;
     }
 
     /**
@@ -158,8 +158,8 @@ class S3Test extends XotBasePage
      */
     public function test_cloud_front(): void
     {
-        $this->debugResults['cloudfront'] = $this->test_cloud_front_connection();
-        $this->updateDebugOutput();
+        // @var mixed debugResults['cloudfront'] = $this->test_cloud_front_connection(;
+        // @var mixed updateDebugOutput(;
     }
 
     /**
@@ -167,8 +167,8 @@ class S3Test extends XotBasePage
      */
     public function test_credentials(): void
     {
-        $this->debugResults['credentials'] = $this->performCredentialsTest();
-        $this->updateDebugOutput();
+        // @var mixed debugResults['credentials'] = $this->performCredentialsTest(;
+        // @var mixed updateDebugOutput(;
 
         Notification::make()
             ->title(__('media::s3test.notifications.credentials_tested'))
@@ -181,8 +181,8 @@ class S3Test extends XotBasePage
      */
     public function test_bucket_policy(): void
     {
-        $this->debugResults['bucket_policy'] = $this->checkBucketPolicy();
-        $this->updateDebugOutput();
+        // @var mixed debugResults['bucket_policy'] = $this->checkBucketPolicy(;
+        // @var mixed updateDebugOutput(;
 
         Notification::make()
             ->title(__('media::s3test.notifications.bucket_policy_tested'))
@@ -195,8 +195,8 @@ class S3Test extends XotBasePage
      */
     public function test_file_operations(): void
     {
-        $this->debugResults['file_operations'] = $this->test_file_upload_download();
-        $this->updateDebugOutput();
+        // @var mixed debugResults['file_operations'] = $this->test_file_upload_download(;
+        // @var mixed updateDebugOutput(;
 
         Notification::make()
             ->title(__('media::s3test.notifications.file_operations_tested'))
@@ -209,8 +209,8 @@ class S3Test extends XotBasePage
      */
     public function debugConfig(): void
     {
-        $this->debugResults['config'] = $this->buildConfigDebugData();
-        $this->updateDebugOutput();
+        // @var mixed debugResults['config'] = $this->buildConfigDebugData(;
+        // @var mixed updateDebugOutput(;
 
         Notification::make()
             ->title(__('media::s3test.notifications.config_debugged'))
@@ -223,8 +223,8 @@ class S3Test extends XotBasePage
      */
     public function clearResults(): void
     {
-        $this->debugResults = [];
-        $this->updateDebugOutput();
+        // @var mixed debugResults = [];
+        // @var mixed updateDebugOutput(;
 
         Notification::make()
             ->title(__('media::s3test.notifications.results_cleared'))
@@ -235,7 +235,7 @@ class S3Test extends XotBasePage
     public function test01(): void
     {
         /** @phpstan-ignore-next-line */
-        $formState = $this->form->getState();
+        $formState = // @var mixed form->getState(;
         Assert::isArray($formState, 'Form state must be array');
         $data = $formState;
         $filePath = $data['attachment'] ?? null;
@@ -258,8 +258,8 @@ class S3Test extends XotBasePage
             'url2' => Storage::disk('s3')->url((string) $filePath),
             'url3' => Storage::disk('s3')->temporaryUrl((string) $filePath, now()->addMinutes(5)),
         ]);
-        $this->debugResults = [];
-        $this->updateDebugOutput();
+        // @var mixed debugResults = [];
+        // @var mixed updateDebugOutput(;
     }
 
     /**
@@ -375,7 +375,7 @@ class S3Test extends XotBasePage
                     'Bucket Accessible' => '❌ No',
                     'Error Code' => $e->getAwsErrorCode() ?? 'UnknownError',
                     'Message' => $e->getMessage(),
-                    'Solution' => $this->getSolutionForError($e->getAwsErrorCode() ?? null),
+                    'Solution' => // @var mixed getSolutionForError($e->getAwsErrorCode(
                 ],
             ];
         }
@@ -592,12 +592,12 @@ class S3Test extends XotBasePage
      */
     private function getDebugOutput(): string
     {
-        if (empty($this->debugResults)) {
+        if (empty(// @var mixed debugResults
             return __('media::s3test.debug.run_tests_message');
         }
 
         $output = [];
-        foreach ($this->debugResults as $category => $result) {
+        foreach (// @var mixed debugResults as $category => $result
             if (! is_array($result) || ! isset($result['title'], $result['status'], $result['data'])) {
                 continue;
             }
@@ -637,7 +637,7 @@ class S3Test extends XotBasePage
     {
         try {
             /** @phpstan-ignore-next-line */
-            $formState = $this->form->getState();
+            $formState = // @var mixed form->getState(;
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
@@ -762,8 +762,8 @@ class S3Test extends XotBasePage
     private function updateDebugOutput(): void
     {
         /** @phpstan-ignore-next-line */
-        $this->form->fill([
-            'debug_output' => $this->getDebugOutput(),
+        // @var mixed form->fill([
+            'debug_output' => // @var mixed getDebugOutput(
         ]);
     }
 
@@ -786,7 +786,7 @@ class S3Test extends XotBasePage
             $temporaryUrl = $s3Disk->temporaryUrl($filename, now()->addMinutes(5));
 
             /** @phpstan-ignore-next-line */
-            $formState = $this->form->getState();
+            $formState = // @var mixed form->getState(;
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;

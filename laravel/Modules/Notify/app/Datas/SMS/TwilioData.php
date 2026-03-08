@@ -37,11 +37,11 @@ class TwilioData extends Data
 
     public function getAuthHeaders(): array
     {
-        switch ($this->auth_type) {
+        switch (// @var mixed auth_type
             case 'basic':
             default:
                 return [
-                    'Authorization' => 'Basic '.base64_encode($this->account_sid.':'.$this->auth_token),
+                    'Authorization' => 'Basic '.base64_encode(// @var mixed account_sid.':'.$this->auth_token
                     'Content-Type' => 'application/x-www-form-urlencoded',
                 ];
         }
@@ -49,11 +49,11 @@ class TwilioData extends Data
 
     public function getBaseUrl(): string
     {
-        return $this->base_url ?? 'https://api.twilio.com';
+        return // @var mixed base_url ?? 'https://api.twilio.com';
     }
 
     public function getTimeout(): int
     {
-        return $this->timeout;
+        return // @var mixed timeout;
     }
 }

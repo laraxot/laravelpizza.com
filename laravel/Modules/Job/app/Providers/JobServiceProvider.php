@@ -28,22 +28,22 @@ class JobServiceProvider extends XotBaseServiceProvider
     {
         parent::boot();
         /*
-         * $this->app->resolving(Schedule::class, function ($schedule) {
+         * // @var mixed app->resolving(Schedule::class, function ($schedule
          * dddx($schedule);
          * //
          * });
          */
-        // $this->app->booted(function () {
-        // $schedule = $this->app->make(Schedule::class);
+        // // @var mixed app->booted(function (
+        // $schedule = // @var mixed app->make(Schedule::class;
         // try {
-        //    $this->registerSchedule($schedule);
+        //    // @var mixed registerSchedule($schedule;
         // } catch (\Illuminate\Database\QueryException $e) {
         //    echo $e->getMessage();
         // }
         // });
         Import::polymorphicUserRelationship();
         Export::polymorphicUserRelationship();
-        $this->registerQueue();
+        // @var mixed registerQueue(;
     }
 
     public function registerQueue(): void

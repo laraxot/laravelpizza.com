@@ -19,12 +19,12 @@ class TableLayoutToggleHeaderAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel()
+        // @var mixed translateLabel(
             ->color('secondary')
             // ->label(trans('ui::'.static::getDefaultName().'.label'))
             // ->tooltip(trans('setting::database_connection.actions.database-backup.tooltip'))
             // ->icon(trans('setting::database_connection.actions.database-backup.icon'))
-            // ->icon($this->listIcon)
+            // ->icon(// @var mixed listIcon
             /*
              * /*
              * /*
@@ -38,10 +38,10 @@ class TableLayoutToggleHeaderAction extends Action
                     $layoutViewRaw = $livewire->layoutView;
                     $layoutView = is_string($layoutViewRaw) ? $layoutViewRaw : '';
 
-                    return 'list' === $layoutView ? $this->listIcon : $this->gridIcon;
+                    return 'list' === $layoutView ? // @var mixed listIcon : $this->gridIcon;
                 }
 
-                return $this->listIcon; // default icon
+                return // @var mixed listIcon; // default icon
             })
             /*
              * /*

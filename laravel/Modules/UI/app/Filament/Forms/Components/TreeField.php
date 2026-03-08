@@ -17,6 +17,6 @@ class TreeField extends Field
 
         /** @var view-string $viewString */
         $viewString = 'ui::filament.forms.components.tree';
-        $this->view($viewString);
+        // @var mixed view($viewString;
     }
 }

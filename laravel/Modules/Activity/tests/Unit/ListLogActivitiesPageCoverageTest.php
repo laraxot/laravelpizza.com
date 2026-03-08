@@ -23,7 +23,7 @@ class ListLogActivitiesPageCoverageTest extends TestCase
         parent::setUp();
 
         // Concrete anonymous implementation with ActivityResource
-        $this->page = new class extends ListLogActivities
+        // @var mixed page = new class extends ListLogActivities
         {
             public static function getResource(): string
             {
@@ -33,12 +33,12 @@ class ListLogActivitiesPageCoverageTest extends TestCase
             // Expose protected methods for testing
             public function exposeRestoreSuccess(): \Filament\Notifications\Notification
             {
-                return $this->sendRestoreSuccessNotification();
+                return // @var mixed sendRestoreSuccessNotification(;
             }
 
             public function exposeRestoreFailure(?string $message = null): \Filament\Notifications\Notification
             {
-                return $this->sendRestoreFailureNotification($message);
+                return // @var mixed sendRestoreFailureNotification($message;
             }
         };
     }
@@ -46,10 +46,10 @@ class ListLogActivitiesPageCoverageTest extends TestCase
     #[Test]
     public function get_breadcrumb_returns_string(): void
     {
-        $result = $this->page->getBreadcrumb();
+        $result = // @var mixed page->getBreadcrumb(;
 
-        $this->assertIsString($result);
-        $this->assertNotEmpty($result);
+        // @var mixed assertIsString($result;
+        // @var mixed assertNotEmpty($result;
     }
 
     #[Test]
@@ -66,7 +66,7 @@ class ListLogActivitiesPageCoverageTest extends TestCase
             }
         };
 
-        $this->assertSame('Custom Breadcrumb', $page->getBreadcrumb());
+        // @var mixed assertSame('Custom Breadcrumb', $page->getBreadcrumb(;
     }
 
     #[Test]
@@ -81,7 +81,7 @@ class ListLogActivitiesPageCoverageTest extends TestCase
             }
         };
 
-        $this->assertFalse($page->canRestoreActivity());
+        // @var mixed assertFalse($page->canRestoreActivity(;
     }
 
     #[Test]
@@ -96,15 +96,15 @@ class ListLogActivitiesPageCoverageTest extends TestCase
             }
         };
 
-        $this->assertFalse($page->canRestoreActivity());
+        // @var mixed assertFalse($page->canRestoreActivity(;
     }
 
     #[Test]
     public function get_pagination_mode_returns_default(): void
     {
-        $mode = $this->page->getPaginationMode();
+        $mode = // @var mixed page->getPaginationMode(;
 
-        $this->assertSame(\Filament\Tables\Enums\PaginationMode::Default, $mode);
+        // @var mixed assertSame(\Filament\Tables\Enums\PaginationMode::Default, $mode;
     }
 
     #[Test]
@@ -115,12 +115,12 @@ class ListLogActivitiesPageCoverageTest extends TestCase
         // but since there's no form schema ready outside Filament, we test what we can safely).
         // At minimum: method must return a string.
         try {
-            $label = $this->page->getFieldLabel('nonexistent_field');
-            $this->assertIsString($label);
+            $label = // @var mixed page->getFieldLabel('nonexistent_field';
+            // @var mixed assertIsString($label;
         } catch (\Throwable $e) {
             // If createFieldLabelMap() fails in test context, mark as acceptable
             // (it requires a full Filament form schema context)
-            $this->markTestSkipped('getFieldLabel() requires full Filament form context: '.$e->getMessage());
+            // @var mixed markTestSkipped('getFieldLabel(;
         }
     }
 
@@ -129,25 +129,25 @@ class ListLogActivitiesPageCoverageTest extends TestCase
     {
         // Notification::fake() is not available in this Filament version.
         // Test that the method executes and returns a Notification object.
-        $notification = $this->page->exposeRestoreSuccess();
+        $notification = // @var mixed page->exposeRestoreSuccess(;
 
-        $this->assertInstanceOf(Notification::class, $notification);
+        // @var mixed assertInstanceOf(Notification::class, $notification;
     }
 
     #[Test]
     public function send_restore_failure_notification_without_message_returns_notification(): void
     {
-        $notification = $this->page->exposeRestoreFailure();
+        $notification = // @var mixed page->exposeRestoreFailure(;
 
-        $this->assertInstanceOf(Notification::class, $notification);
+        // @var mixed assertInstanceOf(Notification::class, $notification;
     }
 
     #[Test]
     public function send_restore_failure_notification_with_message_includes_body(): void
     {
-        $notification = $this->page->exposeRestoreFailure('Something went wrong');
+        $notification = // @var mixed page->exposeRestoreFailure('Something went wrong';
 
-        $this->assertInstanceOf(Notification::class, $notification);
+        // @var mixed assertInstanceOf(Notification::class, $notification;
     }
 
     #[Test]
@@ -173,6 +173,6 @@ class ListLogActivitiesPageCoverageTest extends TestCase
 
         // canRestore() will return false (no permissions in test), but the code path runs
         $result = $page->canRestoreActivity();
-        $this->assertIsBool($result);
+        // @var mixed assertIsBool($result;
     }
 }

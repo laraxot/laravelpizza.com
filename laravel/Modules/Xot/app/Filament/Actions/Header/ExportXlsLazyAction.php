@@ -22,7 +22,7 @@ class ExportXlsLazyAction extends Action
     {
         parent::setUp();
 
-        $this->label((string) __('xot::actions.export_xls.label'))
+        $this->label((string
             ->tooltip((string) __('xot::actions.export_xls.tooltip'))
             ->icon((string) __('xot::actions.export_xls.icon'))
             ->modalHeading((string) __('xot::actions.export_xls.modal.heading'))

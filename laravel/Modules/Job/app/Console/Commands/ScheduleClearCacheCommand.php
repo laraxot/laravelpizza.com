@@ -33,7 +33,7 @@ class ScheduleClearCacheCommand extends Command
     public function handle(): int
     {
         // (new ScheduleService())->clearCache();  //WIP
-        $this->info('Scheduling cache cleared.');
+        // @var mixed info('Scheduling cache cleared.';
 
         return 0;
     }

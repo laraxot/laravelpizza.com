@@ -19,7 +19,7 @@ use function Pest\Laravel\get;
 uses(TestCase::class);
 
 // NOTE: Helper functions moved to Modules\Xot\Tests\TestCase for DRY pattern
-// Use $this->$this->generateUniqueEmail(), $this->$this->getUserClass(), $this->$this->createTestUser()
+// Use // @var mixed $this->generateUniqueEmail(
 
 describe('Frontend Login Page Rendering', function () {
     test('login page can be rendered', function () {
@@ -70,8 +70,8 @@ describe('Frontend Login Page Localization', function () {
 
 describe('Frontend Login Page Authentication', function () {
     test('user can authenticate via frontend login page', function () {
-        $email = $this->generateUniqueEmail();
-        $user = $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        $user = // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);
@@ -97,7 +97,7 @@ describe('Frontend Login Page Authentication', function () {
 
 describe('Frontend Login Page Integration', function () {
     test('authenticated users are redirected from login page', function () {
-        $user = $this->createTestUser();
+        $user = // @var mixed createTestUser(;
 
         actingAs($user);
 
@@ -111,8 +111,8 @@ describe('Frontend Login Page Integration', function () {
 
 describe('Frontend Login Session Management', function () {
     test('remember me functionality works', function () {
-        $email = $this->generateUniqueEmail();
-        $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);
@@ -130,8 +130,8 @@ describe('Frontend Login Session Management', function () {
     });
 
     test('session regeneration on login', function () {
-        $email = $this->generateUniqueEmail();
-        $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);
@@ -153,8 +153,8 @@ describe('Frontend Login Session Management', function () {
 
 describe('Frontend Login Security', function () {
     test('login attempts are rate limited', function () {
-        $email = $this->generateUniqueEmail();
-        $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);
@@ -182,8 +182,8 @@ describe('Frontend Login Security', function () {
 describe('Frontend Login User Types', function () {
     test('any user type can login via frontend', function () {
         // Using XotData pattern ensures compatibility with any user type
-        $email = $this->generateUniqueEmail();
-        $user = $this->createTestUser([
+        $email = // @var mixed generateUniqueEmail(;
+        $user = // @var mixed createTestUser([
             'email' => $email,
             'password' => Hash::make('password123'),
         ]);

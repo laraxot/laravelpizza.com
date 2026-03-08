@@ -174,7 +174,7 @@ class Place extends BaseModel implements HasGeolocation
      */
     public function linked(): MorphTo
     {
-        return $this->morphTo('post');
+        return // @var mixed morphTo('post';
     }
 
     /**
@@ -182,7 +182,7 @@ class Place extends BaseModel implements HasGeolocation
      */
     public function placeType(): BelongsTo
     {
-        return $this->belongsTo(PlaceType::class, 'type_id');
+        return // @var mixed belongsTo(PlaceType::class, 'type_id';
     }
 
     /**
@@ -190,34 +190,34 @@ class Place extends BaseModel implements HasGeolocation
      */
     public function address(): BelongsTo
     {
-        return $this->belongsTo(Address::class);
+        return // @var mixed belongsTo(Address::class;
     }
 
     #[\Override]
     public function getLatitude(): ?float
     {
-        /* @phpstan-ignore-line */ return $this->latitude;
+        /* @phpstan-ignore-line */ return // @var mixed latitude;
     }
 
     #[\Override]
     public function getLongitude(): ?float
     {
-        /* @phpstan-ignore-line */ return $this->longitude;
+        /* @phpstan-ignore-line */ return // @var mixed longitude;
     }
 
     #[\Override]
     public function getFormattedAddress(): string
     {
-        return (string) ($this->formatted_address ?? $this->address->formatted_address ?? '');
+        return (string) (// @var mixed formatted_address ?? $this->address->formatted_address ?? '';
     }
 
     public function getLatitudeAttribute(): ?float
     {
-        if (! isset($this->attributes['latitude'])) {
+        if (! isset(// @var mixed attributes['latitude']
             return null;
         }
 
-        $latitude = $this->attributes['latitude'];
+        $latitude = // @var mixed attributes['latitude'];
         if (! is_numeric($latitude)) {
             return null;
         }
@@ -229,11 +229,11 @@ class Place extends BaseModel implements HasGeolocation
 
     public function getLongitudeAttribute(): ?float
     {
-        if (! isset($this->attributes['longitude'])) {
+        if (! isset(// @var mixed attributes['longitude']
             return null;
         }
 
-        $longitude = $this->attributes['longitude'];
+        $longitude = // @var mixed attributes['longitude'];
         if (! is_numeric($longitude)) {
             return null;
         }
@@ -245,7 +245,7 @@ class Place extends BaseModel implements HasGeolocation
 
     public function getFormattedAddressAttribute(): string
     {
-        $address = $this->attributes['formatted_address'] ?? '';
+        $address = // @var mixed attributes['formatted_address'] ?? '';
 
         return is_string($address) ? $address : '';
     }
@@ -253,18 +253,18 @@ class Place extends BaseModel implements HasGeolocation
     #[\Override]
     public function hasValidCoordinates(): bool
     {
-        return null !== $this->latitude
-            && null !== $this->longitude
-            && $this->latitude >= -90
-            && $this->latitude <= 90
-            && $this->longitude >= -180
-            && $this->longitude <= 180;
+        return null !== // @var mixed latitude
+            && null !== // @var mixed longitude
+            && // @var mixed latitude >= -90
+            && // @var mixed latitude <= 90
+            && // @var mixed longitude >= -180
+            && // @var mixed longitude <= 180;
     }
 
     #[\Override]
     public function getMapIcon(): ?string
     {
-        $slug = $this->placeType->slug ?? null;
+        $slug = // @var mixed placeType->slug ?? null;
         $type = is_string($slug) ? $slug : 'default';
         $markerConfig = config("geo.markers.types.{$type}");
 
@@ -288,7 +288,7 @@ class Place extends BaseModel implements HasGeolocation
     #[\Override]
     public function getLocationType(): ?string
     {
-        $name = $this->placeType->name ?? null;
+        $name = // @var mixed placeType->name ?? null;
 
         return is_string($name) ? $name : null;
     }

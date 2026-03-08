@@ -6,12 +6,9 @@ namespace Modules\Cms\Tests\Unit\Http\Volt;
 
 use Livewire\Volt\Component as VoltComponent;
 use Modules\Cms\Http\Volt\VerifyComponent;
-<<<<<<< HEAD
-=======
 use ReflectionClass;
->>>>>>> e1ecbe9 (.)
 
-uses(\Modules\Cms\Tests\TestCase::class, \Illuminate\Foundation\Testing\DatabaseTransactions::class);
+uses(\Modules\Cms\Tests\TestCase::class);
 
 describe('VerifyComponent', function (): void {
     test('verify component extends volt component', function (): void {
@@ -25,11 +22,7 @@ describe('VerifyComponent', function (): void {
     });
 
     test('resend method returns void', function (): void {
-<<<<<<< HEAD
-        $reflection = new \ReflectionClass(VerifyComponent::class);
-=======
         $reflection = new ReflectionClass(VerifyComponent::class);
->>>>>>> e1ecbe9 (.)
         $method = $reflection->getMethod('resend');
         $returnType = $method->getReturnType();
 
@@ -37,7 +30,3 @@ describe('VerifyComponent', function (): void {
             ->and((string) $returnType)->toBe('void');
     });
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> e1ecbe9 (.)

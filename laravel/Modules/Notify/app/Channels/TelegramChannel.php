@@ -27,7 +27,7 @@ class TelegramChannel
      */
     public function __construct(TelegramActionFactory $factory)
     {
-        $this->factory = $factory;
+        // @var mixed factory = $factory;
     }
 
     /**
@@ -51,7 +51,7 @@ class TelegramChannel
             throw new Exception('toTelegram method must return an instance of TelegramData');
         }
 
-        $action = $this->factory->create();
+        $action = // @var mixed factory->create(;
 
         return $action->execute($telegramData);
     }

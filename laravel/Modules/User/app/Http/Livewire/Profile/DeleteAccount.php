@@ -46,7 +46,7 @@ class DeleteAccount extends Component
             return;
         }
 
-        $result = app(DeleteUserAction::class)->execute($user, $this->delete_confirm_password);
+        $result = app(DeleteUserAction::class)->execute($user, $delete_confirm_password);
 
         if (! $result['success']) {
             $this->dispatch('toast', [

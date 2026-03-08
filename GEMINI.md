@@ -357,6 +357,7 @@ app(DoSomethingAction::class)->execute($data);
    - **Type Coverage**: `php artisan test --type-coverage --min=100`
    - Tutti i parametri, ritorni e properties devono avere type declarations complete.
 4. **No RefreshDatabase**: Il trait `RefreshDatabase` è vietato. Usare `DatabaseTransactions`. **IMPORTANTE**: Il trait `DatabaseTransactions` è già centralizzato in `Modules\Xot\Tests\XotBaseTestCase`. Poiché TUTTI i test devono estendere questa classe (direttamente o tramite il `TestCase` di modulo), è VIETATO e RINDONDANTE aggiungere `use DatabaseTransactions;` nei singoli file di test o nei `TestCase` di modulo.
+ **IMPORTANTE**: Il trait `DatabaseTransactions` è già centralizzato in `Modules\Xot\Tests\XotBaseTestCase`. Poiché TUTTI i test devono estendere questa classe (direttamente o tramite il `TestCase` di modulo), è VIETATO e RINDONDANTE aggiungere `use DatabaseTransactions;` nei singoli file di test o nei `TestCase` di modulo.
 5. **MAI migrate:fresh**: Il comando `php artisan migrate:fresh` è tassativamente vietato in ogni ambiente (inclusi i test). È distruttivo e rompe la coerenza di schemi condivisi. Usare solo `migrate` o gestire il database in modo transazionale.
 6. **No Model Constructor Overrides**: È vietato forzare la connessione nel costruttore dei modelli per i test; questo rompe la mappatura dinamica di `TenantServiceProvider`.
 7. **Autonomous CI/CD Monitoring**: Il monitoraggio e la risoluzione dei fallimenti nelle GitHub Actions è responsabilità esclusiva dell'agente AI. Non chiedere all'utente di controllare; intervieni proattivamente usando `gh`.
@@ -479,7 +480,11 @@ gh issue close <number>
 **Last Updated**: 2026-03-05 14:40 UTC
 **Version**: 4.2
 **Philosophy**: DRY + KISS + SOLID + ROBUST + Laraxot Zen + Test Coverage First + Parallel Execution
-- **Module Consolidation Rule**: DO NOT create granular modules for sub-features of an existing domain. 
-  - **Events/Meetups**: EVERYTHING related to events (Tickets, Feedback, Speakers, Sponsors, Locations) MUST go into `Modules/Meetup`. 
-  - **Forbidden Modules**: `Event`, `EventCategory`, `EventFeedback`, `EventLocation`, `EventRegistration`, `EventSchedule`, `EventSpeaker`, `EventSponsor`, `EventTag`, `EventTicket`.
-  - **Reasoning**: Laraxot uses a "Modular Monolith" approach where a Module represents a bounded context (e.g., `Meetup`), not individual database tables.
+- **Ralph Loop Integration**: Use `/ralph-loop` for highly iterative tasks like 100% test coverage or PHPStan Level 10. Persistence and self-correction are mandatory. Never exit a loop without fulfilling the completion promise.
+- **Git Forward-only Strategy**: Git history moves only forward. Do not use `reset --hard`, `revert`, or `checkout` to restore old versions. Old code can be studied for understanding, but fixes must be applied as new commits.
+- **Module Consolidation Rule (STRICT)**: DO NOT create granular modules. Use existing ones.
+  - **Forbidden Event Modules**: `Event`, `EventCategory`, `EventFeedback`, `EventLocation`, `EventRegistration`, `EventSchedule`, `EventSpeaker`, `EventSponsor`, `EventTag`, `EventTicket`, `EventAttendee`, `EventOrganizer`. Use `Modules/Meetup`.
+  - **Forbidden Forum Modules**: `ForumAnnouncement`, `ForumSubscriber`, `ForumTemplate`. Use `Modules/Meetup` (for community) or `Modules/Cms` (for generic).
+- **Script Location Standard**: ALL scripts (`.sh`, `.php`, `.py`) MUST reside in a subfolder of `./bashscripts/` (e.g., `./bashscripts/automation/`). 
+  - Scripts must be documented in `./bashscripts/docs/`.
+  - NO scripts are allowed in the project root or `laravel/` root.

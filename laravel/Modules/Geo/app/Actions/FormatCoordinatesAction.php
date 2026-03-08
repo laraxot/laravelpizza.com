@@ -9,9 +9,9 @@ class FormatCoordinatesAction
     public function execute(float $latitude, float $longitude, string $format = 'decimal'): string
     {
         return match ($format) {
-            'dms' => $this->toDMS($latitude, $longitude),
-            'decimal' => $this->toDecimal($latitude, $longitude),
-            'google' => $this->toGoogleMapsUrl($latitude, $longitude),
+            'dms' => // @var mixed toDMS($latitude, $longitude
+            'decimal' => // @var mixed toDecimal($latitude, $longitude
+            'google' => // @var mixed toGoogleMapsUrl($latitude, $longitude
             default => throw new \InvalidArgumentException('Formato non supportato'),
         };
     }
@@ -21,8 +21,8 @@ class FormatCoordinatesAction
         $latDir = $latitude >= 0 ? 'N' : 'S';
         $lonDir = $longitude >= 0 ? 'E' : 'W';
 
-        $latDMS = $this->decimalToDMS(abs($latitude));
-        $lonDMS = $this->decimalToDMS(abs($longitude));
+        $latDMS = // @var mixed decimalToDMS(abs($latitude;
+        $lonDMS = // @var mixed decimalToDMS(abs($longitude;
 
         return "{$latDMS}{$latDir} {$lonDMS}{$lonDir}";
     }

@@ -21,7 +21,7 @@ class ReverseGeocodeAction
 
     public function __construct()
     {
-        $this->client = new Client();
+        // @var mixed client = new Client(;
     }
 
     /**
@@ -35,7 +35,7 @@ class ReverseGeocodeAction
      */
     public function execute(float $latitude, float $longitude): LocationData
     {
-        $response = $this->client->get(self::API_URL, [
+        $response = // @var mixed client->get(self::API_URL, [
             'query' => [
                 'lat' => $latitude,
                 'lon' => $longitude,

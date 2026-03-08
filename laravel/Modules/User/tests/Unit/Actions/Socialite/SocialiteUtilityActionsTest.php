@@ -115,7 +115,7 @@ describe('Socialite utility actions', function (): void {
 
             public function delete(): void
             {
-                $this->deleted = true;
+                $deleted = true;
             }
         };
 

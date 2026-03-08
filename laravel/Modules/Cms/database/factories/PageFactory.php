@@ -22,16 +22,16 @@ class PageFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->sentence(),
-            'slug' => $this->faker->slug(),
-            'content' => $this->faker->paragraphs(3, true),
-            'excerpt' => $this->faker->sentence(),
+            'title' => // @var mixed faker->sentence(
+            'slug' => // @var mixed faker->slug(
+            'content' => // @var mixed faker->paragraphs(3, true
+            'excerpt' => // @var mixed faker->sentence(
             'status' => 'published',
             'template' => 'default',
             'view_count' => 0,
-            'meta_title' => $this->faker->sentence(),
-            'meta_description' => $this->faker->sentence(),
-            'meta_keywords' => $this->faker->words(3, true),
+            'meta_title' => // @var mixed faker->sentence(
+            'meta_description' => // @var mixed faker->sentence(
+            'meta_keywords' => // @var mixed faker->words(3, true
         ];
     }
 
@@ -40,7 +40,7 @@ class PageFactory extends Factory
      */
     public function published(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return // @var mixed state(fn (array $attributes
             'status' => 'published',
         ]);
     }
@@ -50,7 +50,7 @@ class PageFactory extends Factory
      */
     public function draft(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return // @var mixed state(fn (array $attributes
             'status' => 'draft',
         ]);
     }
@@ -60,7 +60,7 @@ class PageFactory extends Factory
      */
     public function withSeo(): static
     {
-        return $this->afterCreating(function (Page $page) {
+        return // @var mixed afterCreating(function (Page $page
             $page->seo()->create([
                 'meta_title' => $page->title.' - SEO Title',
                 'meta_description' => $page->meta_description,
@@ -77,10 +77,10 @@ class PageFactory extends Factory
      */
     public function withBlocks(): static
     {
-        return $this->afterCreating(function (Page $page) {
+        return // @var mixed afterCreating(function (Page $page
             $page->blocks()->create([
                 'type' => 'text',
-                'content' => $this->faker->paragraph(),
+                'content' => // @var mixed faker->paragraph(
                 'order' => 1,
             ]);
         });

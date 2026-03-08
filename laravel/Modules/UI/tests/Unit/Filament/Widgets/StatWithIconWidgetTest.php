@@ -12,36 +12,36 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function () {
-    $this->widget = new StatWithIconWidget();
+    // @var mixed widget = new StatWithIconWidget(;
 });
 
 test('stat with icon widget extends filament widget', function () {
-    expect($this->widget)->toBeInstanceOf(Widget::class);
+    expect(// @var mixed widget;
 });
 
 test('stat with icon widget can be instantiated', function () {
-    expect($this->widget)->toBeInstanceOf(StatWithIconWidget::class);
+    expect(// @var mixed widget;
 });
 
 test('stat with icon widget has correct view', function () {
-    $view = $this->widget->render();
+    $view = // @var mixed widget->render(;
 
     expect($view)->toBeInstanceOf(View::class)
         ->and($view->name())->toBe('ui::filament.widgets.statwithicon');
 });
 
 test('stat with icon widget has proper properties', function () {
-    expect($this->widget)->toHaveProperty('heading');
-    expect($this->widget)->toHaveProperty('label');
-    expect($this->widget)->toHaveProperty('value');
+    expect(// @var mixed widget;
+    expect(// @var mixed widget;
+    expect(// @var mixed widget;
 });
 
 test('stat with icon widget can render', function () {
-    $view = $this->widget->render();
+    $view = // @var mixed widget->render(;
 
     expect($view)->toBeInstanceOf(View::class);
 });
 
 test('stat with icon widget has default values', function () {
-    expect($this->widget)->toBeInstanceOf(StatWithIconWidget::class);
+    expect(// @var mixed widget;
 });

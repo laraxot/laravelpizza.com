@@ -107,8 +107,8 @@ class TeamInvitation extends BaseModel
      */
     public function accept(UserContract $user): void
     {
-        if ($this->team) {
-            $this->team->users()->attach($user->getKey(), ['role' => $this->role]);
+        if ($team
+            $team->users();
         }
         $this->delete();
     }

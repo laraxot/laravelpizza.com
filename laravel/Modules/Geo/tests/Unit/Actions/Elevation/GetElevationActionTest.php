@@ -8,8 +8,8 @@ use Modules\Geo\Exceptions\ElevationException;
 use Modules\Geo\Services\GoogleMapsService;
 
 beforeEach(function () {
-    $this->mockGoogleMapsService = Mockery::mock(GoogleMapsService::class);
-    $this->action = new GetElevationAction($this->mockGoogleMapsService);
+    // @var mixed mockGoogleMapsService = Mockery::mock(GoogleMapsService::class;
+    // @var mixed action = new GetElevationAction($this->mockGoogleMapsService;
 });
 
 afterEach(function () {
@@ -30,14 +30,14 @@ it('gets elevation for valid location', function (): void {
         ],
     ];
 
-    $this->mockGoogleMapsService
+    // @var mixed mockGoogleMapsService
         ->shouldReceive('getElevation')
         ->once()
         ->with(45.4642, 9.1900)
         ->andReturn($mockResponse);
 
     // Act
-    $result = $this->action->execute($location);
+    $result = // @var mixed action->execute($location;
 
     // Assert
     expect($result)->toBe(120.5);
@@ -52,7 +52,7 @@ it('throws exception for invalid latitude', function (): void {
     );
 
     // Act & Assert
-    expect(fn () => $this->action->execute($location))
+    expect(fn () => // @var mixed action->execute($location
         ->toThrow(InvalidArgumentException::class, 'Latitudine non valida');
 });
 
@@ -65,7 +65,7 @@ it('throws exception for invalid longitude', function (): void {
     );
 
     // Act & Assert
-    expect(fn () => $this->action->execute($location))
+    expect(fn () => // @var mixed action->execute($location
         ->toThrow(InvalidArgumentException::class, 'Longitudine non valida');
 });
 
@@ -78,7 +78,7 @@ it('throws exception for negative latitude', function (): void {
     );
 
     // Act & Assert
-    expect(fn () => $this->action->execute($location))
+    expect(fn () => // @var mixed action->execute($location
         ->toThrow(InvalidArgumentException::class, 'Latitudine non valida');
 });
 
@@ -91,7 +91,7 @@ it('throws exception for negative longitude', function (): void {
     );
 
     // Act & Assert
-    expect(fn () => $this->action->execute($location))
+    expect(fn () => // @var mixed action->execute($location
         ->toThrow(InvalidArgumentException::class, 'Longitudine non valida');
 });
 
@@ -103,13 +103,13 @@ it('throws exception for empty response', function (): void {
         address: 'Milano, Italia',
     );
 
-    $this->mockGoogleMapsService
+    // @var mixed mockGoogleMapsService
         ->shouldReceive('getElevation')
         ->once()
         ->andReturn(['results' => []]);
 
     // Act & Assert
-    expect(fn () => $this->action->execute($location))->toThrow(ElevationException::class);
+    expect(fn () => // @var mixed action->execute($location;
 });
 
 it('throws exception for invalid response structure', function (): void {
@@ -120,13 +120,13 @@ it('throws exception for invalid response structure', function (): void {
         address: 'Milano, Italia',
     );
 
-    $this->mockGoogleMapsService
+    // @var mixed mockGoogleMapsService
         ->shouldReceive('getElevation')
         ->once()
         ->andReturn(['results' => ['invalid']]);
 
     // Act & Assert
-    expect(fn () => $this->action->execute($location))->toThrow(ElevationException::class);
+    expect(fn () => // @var mixed action->execute($location;
 });
 
 it('throws exception when service throws generic exception', function (): void {
@@ -137,19 +137,19 @@ it('throws exception when service throws generic exception', function (): void {
         address: 'Milano, Italia',
     );
 
-    $this->mockGoogleMapsService
+    // @var mixed mockGoogleMapsService
         ->shouldReceive('getElevation')
         ->once()
         ->andThrow(new Exception('Network error'));
 
     // Act & Assert
-    expect(fn () => $this->action->execute($location))
+    expect(fn () => // @var mixed action->execute($location
         ->toThrow(ElevationException::class, 'Errore nel recupero dell\'elevazione');
 });
 
 it('formats elevation correctly', function (): void {
     // Act
-    $result = $this->action->formatElevation(1234.5);
+    $result = // @var mixed action->formatElevation(1234.5;
 
     // Assert
     expect($result)->toBe('1234.5 m s.l.m.');
@@ -157,7 +157,7 @@ it('formats elevation correctly', function (): void {
 
 it('formats elevation with zero value', function (): void {
     // Act
-    $result = $this->action->formatElevation(0);
+    $result = // @var mixed action->formatElevation(0;
 
     // Assert
     expect($result)->toBe('0.0 m s.l.m.');
@@ -165,7 +165,7 @@ it('formats elevation with zero value', function (): void {
 
 it('formats negative elevation correctly', function (): void {
     // Act (for locations below sea level like Dead Sea)
-    $result = $this->action->formatElevation(-430.0);
+    $result = // @var mixed action->formatElevation(-430.0;
 
     // Assert
     expect($result)->toBe('-430.0 m s.l.m.');
@@ -173,7 +173,7 @@ it('formats negative elevation correctly', function (): void {
 
 it('handles high elevation correctly', function (): void {
     // Act (Mount Everest)
-    $result = $this->action->formatElevation(8848.0);
+    $result = // @var mixed action->formatElevation(8848.0;
 
     // Assert
     expect($result)->toBe('8848.0 m s.l.m.');
@@ -193,13 +193,13 @@ it('handles boundary latitude values', function (): void {
         ],
     ];
 
-    $this->mockGoogleMapsService
+    // @var mixed mockGoogleMapsService
         ->shouldReceive('getElevation')
         ->once()
         ->andReturn($mockResponse);
 
     // Act
-    $result = $this->action->execute($location);
+    $result = // @var mixed action->execute($location;
 
     // Assert
     expect($result)->toBe(0.0);

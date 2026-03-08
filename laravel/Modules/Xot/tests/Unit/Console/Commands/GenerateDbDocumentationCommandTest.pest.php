@@ -9,12 +9,12 @@ use Modules\Xot\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function () {
-    $this->testSchemaPath = storage_path('tests/schema.json');
-    $this->testOutputDir = storage_path('tests/docs');
+    $testSchemaPath = storage_path('tests/schema.json');
+    $testOutputDir = storage_path('tests/docs');
 
     // Create test directory if it doesn't exist
-    if (! File::exists(dirname($this->testSchemaPath))) {
-        File::makeDirectory(dirname($this->testSchemaPath), 0o755, true);
+    if (! File::exists(dirname($testSchemaPath
+        File::makeDirectory(dirname($testSchemaPath));
     }
 
     // Create a test schema file
@@ -52,49 +52,49 @@ beforeEach(function () {
         'relationships' => [],
     ];
 
-    file_put_contents($this->testSchemaPath, json_encode($testSchema, JSON_PRETTY_PRINT));
+    file_put_contents($testSchemaPath, json_encode($testSchema, JSON_PRETTY_PRINT));
 
     // Ensure output directory is clean
-    if (File::exists($this->testOutputDir)) {
-        File::deleteDirectory($this->testOutputDir);
+    if (File::exists($testOutputDir
+        File::deleteDirectory($testOutputDir);
     }
 });
 
 afterEach(function () {
     // Clean up test files
-    if (File::exists($this->testSchemaPath)) {
-        File::delete($this->testSchemaPath);
+    if (File::exists($testSchemaPath
+        File::delete($testSchemaPath);
     }
-    if (File::exists($this->testOutputDir)) {
-        File::deleteDirectory($this->testOutputDir);
+    if (File::exists($testOutputDir
+        File::deleteDirectory($testOutputDir);
     }
 });
 
 test('it generates database documentation', function () {
     // Run the command
     $exitCode = Artisan::call('xot:generate-db-documentation', [
-        '--schema' => $this->testSchemaPath,
-        '--output' => $this->testOutputDir,
+        '--schema' => $testSchemaPath,
+        '--output' => $testOutputDir,
     ]);
 
     // Assert command was successful
     expect($exitCode)->toBe(0);
 
     // Check if output files were created
-    expect(File::exists($this->testOutputDir.'/database-documentation.md'))
+    expect(File::exists($testOutputDir.'/database-documentation.md'
         ->toBeTrue()
-        ->and(File::exists($this->testOutputDir.'/tables/users.md'))
+        ->and(File::exists($testOutputDir.'/tables/users.md'
         ->toBeTrue();
 });
 
 test('it handles missing schema file', function () {
     // Delete the schema file
-    File::delete($this->testSchemaPath);
+    File::delete($testSchemaPath);
 
     // Run the command and expect an error
     $exitCode = Artisan::call('xot:generate-db-documentation', [
-        '--schema' => $this->testSchemaPath,
-        '--output' => $this->testOutputDir,
+        '--schema' => $testSchemaPath,
+        '--output' => $testOutputDir,
     ]);
 
     // Assert command failed
@@ -103,12 +103,12 @@ test('it handles missing schema file', function () {
 
 test('it handles invalid schema file', function () {
     // Write invalid JSON to the schema file
-    file_put_contents($this->testSchemaPath, 'invalid json');
+    file_put_contents($testSchemaPath, 'invalid json');
 
     // Run the command and expect an error
     $exitCode = Artisan::call('xot:generate-db-documentation', [
-        '--schema' => $this->testSchemaPath,
-        '--output' => $this->testOutputDir,
+        '--schema' => $testSchemaPath,
+        '--output' => $testOutputDir,
     ]);
 
     // Assert command failed
@@ -117,16 +117,16 @@ test('it handles invalid schema file', function () {
 
 test('it handles missing output directory', function () {
     // Delete the output directory if it exists
-    if (File::exists($this->testOutputDir)) {
-        File::deleteDirectory($this->testOutputDir);
+    if (File::exists($testOutputDir
+        File::deleteDirectory($testOutputDir);
     }
 
     // Run the command
     $exitCode = Artisan::call('xot:generate-db-documentation', [
-        '--schema' => $this->testSchemaPath,
-        '--output' => $this->testOutputDir,
+        '--schema' => $testSchemaPath,
+        '--output' => $testOutputDir,
     ]);
 
     // Assert command was successful and created the output directory
-    expect($exitCode)->toBe(0)->and(File::isDirectory($this->testOutputDir))->toBeTrue();
+    expect($exitCode)->toBe(0)->and(File::isDirectory($testOutputDir));
 });

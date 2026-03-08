@@ -88,7 +88,7 @@ trait HasPassportConfiguration
      */
     protected function configureRoutes(): void
     {
-        if ($this->app->routesAreCached()) {
+        if ($app->routesAreCached(
             return;
         }
 

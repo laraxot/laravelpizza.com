@@ -64,10 +64,10 @@ declare(strict_types=1);
 
 
     <x-filament-schemas::form wire:submit="updateData">
-        {{ $this->form }}
+        {{ $form }}
 
         <x-filament::actions
-            :actions="$this->getUpdateFormActions()"
+            :actions="$this->getUpdateFormActions(
         />
 
     </x-filament-schemas::form>

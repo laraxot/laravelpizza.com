@@ -77,16 +77,16 @@ class Event extends BaseModel
 
     public function consent(): BelongsTo
     {
-        return $this->belongsTo(Consent::class);
+        return // @var mixed belongsTo(Consent::class;
     }
 
     public function setPayloadAttribute(?string $value): void
     {
-        $this->attributes['payload'] = Crypt::encrypt(json_encode($value, JSON_THROW_ON_ERROR));
+        // @var mixed attributes['payload'] = Crypt::encrypt(json_encode($value, JSON_THROW_ON_ERROR;
     }
 
     public function setIpAttribute(?string $value): void
     {
-        $this->attributes['ip'] = Crypt::encrypt($value);
+        // @var mixed attributes['ip'] = Crypt::encrypt($value;
     }
 }

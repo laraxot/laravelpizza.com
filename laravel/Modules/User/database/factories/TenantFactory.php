@@ -23,7 +23,7 @@ class TenantFactory extends Factory
      */
     public function definition(): array
     {
-        $name = $this->faker->company();
+        $name = $faker->company();
 
         return [
             'id' => (string) Str::ulid(),

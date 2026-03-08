@@ -29,7 +29,7 @@ class DeleteUserAction
      */
     public function execute(User $user, string $confirmPassword): array
     {
-        if (! $this->hasher->check($confirmPassword, $user->password)) {
+        if (! $hasher->check($confirmPassword, $user->password
             return [
                 'success' => false,
                 'message' => 'La password inserita non è corretta',
@@ -37,7 +37,7 @@ class DeleteUserAction
         }
 
         try {
-            $this->authGuard->logout();
+            $authGuard->logout();
             $user->delete();
 
             return [

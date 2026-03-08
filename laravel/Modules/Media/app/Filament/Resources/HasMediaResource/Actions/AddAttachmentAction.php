@@ -19,7 +19,7 @@ class AddAttachmentAction extends XotBaseAction
     protected function setUp(): void
     {
         parent::setUp();
-        $this->icon('heroicon-o-plus')
+        // @var mixed icon('heroicon-o-plus'
             ->color('success')
             ->button()
             ->schema(fn (): array => static::getFormSchema(false))

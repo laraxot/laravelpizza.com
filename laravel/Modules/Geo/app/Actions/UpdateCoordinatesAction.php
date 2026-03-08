@@ -27,7 +27,7 @@ readonly class UpdateCoordinatesAction
             throw new \RuntimeException('Place address is required');
         }
 
-        $location = $this->getCoordinates->execute($place->address->formatted_address);
+        $location = // @var mixed getCoordinates->execute($place->address->formatted_address;
 
         if (! $location) {
             throw new \RuntimeException('Could not get coordinates for address: '.$place->address->formatted_address);

@@ -40,7 +40,7 @@ class GenerateTableColumnsCommand extends Command
      */
     public function handle(): void
     {
-        Assert::string($module_name = $this->argument('module'), '['.__LINE__.']['.class_basename($this).']');
+        Assert::string($module_name = $this->argument('module'));
         $module_path = Module::getModulePath($module_name);
         if (! Str::endsWith($module_path, '/')) {
             $module_path .= '/';

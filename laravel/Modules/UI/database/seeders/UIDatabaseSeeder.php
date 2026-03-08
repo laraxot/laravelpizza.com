@@ -16,6 +16,6 @@ class UIDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call("OthersTableSeeder");
+        // // @var mixed call("OthersTableSeeder";
     }
 }

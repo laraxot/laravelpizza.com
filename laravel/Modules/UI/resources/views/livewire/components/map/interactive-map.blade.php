@@ -185,7 +185,7 @@
     </button>
 
     <!-- Mappa -->
-    <div id="map-{{ $this->id }}" class="map-container" wire:ignore></div>
+    <div id="map-{{ // @var mixed id }}" class="map-container" wire:ignore></div>
 
     <!-- Loading overlay -->
     @if($isLoading)
@@ -256,7 +256,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Inizializza mappa Leaflet
-    const mapId = 'map-{{ $this->id }}';
+    const mapId = 'map-{{ // @var mixed id }}';
     const map = L.map(mapId).setView([{{ $center[0] }}, {{ $center[1] }}], {{ $zoom }});
     
     // Aggiungi layer OSM

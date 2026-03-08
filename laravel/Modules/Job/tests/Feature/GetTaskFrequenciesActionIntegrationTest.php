@@ -8,7 +8,7 @@ use Modules\Job\Actions\GetTaskFrequenciesAction;
 
 describe('GetTaskFrequenciesAction Integration', function () {
     beforeEach(function () {
-        $this->action = new GetTaskFrequenciesAction;
+        // @var mixed action = new GetTaskFrequenciesAction;
     });
 
     it('returns array when config exists', function () {
@@ -22,7 +22,7 @@ describe('GetTaskFrequenciesAction Integration', function () {
             'monthly' => 'Monthly',
         ]]);
 
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)
             ->toBeArray()
@@ -47,27 +47,27 @@ describe('GetTaskFrequenciesAction Integration', function () {
         // Mock config with non-array value
         config(['totem.frequencies' => 'invalid_value']);
 
-        expect($this->action->execute(...))->toThrow(Exception::class);
+        expect(// @var mixed action->execute(...;
     });
 
     it('throws exception when config is null', function () {
         // Mock config with null value
         config(['totem.frequencies' => null]);
 
-        expect($this->action->execute(...))->toThrow(Exception::class);
+        expect(// @var mixed action->execute(...;
     });
 
     it('handles empty array config', function () {
         config(['totem.frequencies' => []]);
 
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)->toBeArray()->and(count($result))->toBe(0);
     });
 
     it('can be queued', function () {
         // Test that the action can be queued (basic trait functionality)
-        expect(method_exists($this->action, 'onQueue'))->toBeTrue();
+        expect(method_exists(// @var mixed action, 'onQueue';
     });
 
     it('integrates with Laravel service container', function () {
@@ -80,11 +80,11 @@ describe('GetTaskFrequenciesAction Integration', function () {
     it('handles configuration changes dynamically', function () {
         // Test with initial config
         config(['totem.frequencies' => ['initial' => 'Initial Value']]);
-        $result1 = $this->action->execute();
+        $result1 = // @var mixed action->execute(;
 
         // Change config
         config(['totem.frequencies' => ['changed' => 'Changed Value']]);
-        $result2 = $this->action->execute();
+        $result2 = // @var mixed action->execute(;
 
         expect($result1)
             ->toHaveKey('initial')
@@ -106,7 +106,7 @@ describe('GetTaskFrequenciesAction Integration', function () {
             'boolean_key' => true,
         ]]);
 
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)
             ->toBeArray()
@@ -127,7 +127,7 @@ describe('GetTaskFrequenciesAction Integration', function () {
             1 => 'value3',
         ]]);
 
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)
             ->toBeArray()
@@ -153,7 +153,7 @@ describe('GetTaskFrequenciesAction Integration', function () {
 
         $results = [];
         for ($i = 0; $i < 3; $i++) {
-            $results[] = $this->action->execute();
+            $results[] = // @var mixed action->execute(;
         }
 
         // All results should be identical
@@ -177,7 +177,7 @@ describe('GetTaskFrequenciesAction Integration', function () {
             'yearly' => 'Yearly',
         ]]);
 
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)
             ->toBeArray()

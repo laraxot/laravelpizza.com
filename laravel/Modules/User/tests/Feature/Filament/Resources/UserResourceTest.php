@@ -16,7 +16,7 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    $this->user = User::factory()->create([
+    $user = User::factory(
         'type' => UserType::MasterAdmin,
         'email' => 'admin-'.uniqid().'@example.com',
         'password' => Hash::make('password123'),

@@ -18,7 +18,7 @@ final class AttachRoleAction extends AttachAction
     {
         $xotData = XotData::make();
         parent::setUp();
-        $this->icon('heroicon-o-link')
+        $this->icon('heroicon-o-link'
             ->iconButton()
             ->schema(static function (AttachAction $action) use ($xotData): array {
                 return [

@@ -8,28 +8,28 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\BaseModel;
 
 beforeEach(function () {
-    $this->baseModel = new class extends BaseModel {
+    // @var mixed baseModel = new class extends BaseModel {
         protected $table = 'test_gdpr_table';
     };
 });
 
 test('base model extends eloquent model', function () {
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
+    expect(// @var mixed baseModel;
 });
 
 test('base model has correct table name', function () {
-    expect($this->baseModel->getTable())->toBe('test_gdpr_table');
+    expect(// @var mixed baseModel->getTable(;
 });
 
 test('base model can be instantiated', function () {
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
+    expect(// @var mixed baseModel;
 });
 
 test('base model has proper inheritance chain', function () {
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
+    expect(// @var mixed baseModel;
+    expect(// @var mixed baseModel;
 });
 
 test('base model has timestamps enabled', function () {
-    expect($this->baseModel)->usesTimestamps()->toBeTrue();
+    expect(// @var mixed baseModel;
 });

@@ -14,17 +14,17 @@ class ListLogActivitiesPageTest extends TestCase
     public function test_class_is_abstract(): void
     {
         $reflection = new \ReflectionClass(ListLogActivities::class);
-        $this->assertTrue($reflection->isAbstract());
+        // @var mixed assertTrue($reflection->isAbstract(;
     }
 
     public function test_extends_xot_base_page(): void
     {
-        $this->assertTrue(is_subclass_of(ListLogActivities::class, XotBasePage::class));
+        // @var mixed assertTrue(is_subclass_of(ListLogActivities::class, XotBasePage::class;
     }
 
     public function test_uses_can_paginate_trait(): void
     {
-        $this->assertContains(
+        // @var mixed assertContains(
             CanPaginate::class,
             class_uses_recursive(ListLogActivities::class)
         );
@@ -32,32 +32,32 @@ class ListLogActivitiesPageTest extends TestCase
 
     public function test_has_get_activities_method(): void
     {
-        $this->assertTrue(method_exists(ListLogActivities::class, 'getActivities'));
+        // @var mixed assertTrue(method_exists(ListLogActivities::class, 'getActivities';
     }
 
     public function test_has_restore_activity_method(): void
     {
-        $this->assertTrue(method_exists(ListLogActivities::class, 'restoreActivity'));
+        // @var mixed assertTrue(method_exists(ListLogActivities::class, 'restoreActivity';
     }
 
     public function test_has_can_restore_activity_method(): void
     {
-        $this->assertTrue(method_exists(ListLogActivities::class, 'canRestoreActivity'));
+        // @var mixed assertTrue(method_exists(ListLogActivities::class, 'canRestoreActivity';
     }
 
     public function test_has_get_breadcrumb_method(): void
     {
-        $this->assertTrue(method_exists(ListLogActivities::class, 'getBreadcrumb'));
+        // @var mixed assertTrue(method_exists(ListLogActivities::class, 'getBreadcrumb';
     }
 
     public function test_has_get_title_method(): void
     {
-        $this->assertTrue(method_exists(ListLogActivities::class, 'getTitle'));
+        // @var mixed assertTrue(method_exists(ListLogActivities::class, 'getTitle';
     }
 
     public function test_has_get_field_label_method(): void
     {
-        $this->assertTrue(method_exists(ListLogActivities::class, 'getFieldLabel'));
+        // @var mixed assertTrue(method_exists(ListLogActivities::class, 'getFieldLabel';
     }
 
     public function test_get_pagination_mode_returns_default(): void
@@ -70,7 +70,7 @@ class ListLogActivitiesPageTest extends TestCase
             }
         };
 
-        $this->assertSame(PaginationMode::Default, $page->getPaginationMode());
+        // @var mixed assertSame(PaginationMode::Default, $page->getPaginationMode(;
     }
 
     public function test_view_is_correct(): void
@@ -88,6 +88,6 @@ class ListLogActivitiesPageTest extends TestCase
         };
 
         $view = $property->getValue($page);
-        $this->assertSame('activity::filament.pages.list-log-activities', $view);
+        // @var mixed assertSame('activity::filament.pages.list-log-activities', $view;
     }
 }

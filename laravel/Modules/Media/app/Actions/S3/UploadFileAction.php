@@ -25,14 +25,14 @@ class UploadFileAction extends BaseS3Action
         // Validation
         if (! file_exists($localFilePath)) {
             $error = "Local file does not exist: {$localFilePath}";
-            $this->logger->error($error);
+            // @var mixed logger->error($error;
 
             return ['success' => false, 'error' => $error];
         }
 
         if (! is_readable($localFilePath)) {
             $error = "Local file is not readable: {$localFilePath}";
-            $this->logger->error($error);
+            // @var mixed logger->error($error;
 
             return ['success' => false, 'error' => $error];
         }
@@ -55,15 +55,15 @@ class UploadFileAction extends BaseS3Action
 
             // Use ObjectUploader with proper type casting
             $uploader = new ObjectUploader(
-                $this->s3Client,
-                $this->bucketName,
+                // @var mixed s3Client,
+                // @var mixed bucketName,
                 $destinationFilePath,
                 $sourceFile,
                 (string) ($uploadOptions['ACL'] ?? 'private'),
                 $uploadOptions,
             );
 
-            $this->logger->info('Uploading file to S3', [
+            // @var mixed logger->info('Uploading file to S3', [
                 'localPath' => $localFilePath,
                 's3Key' => $destinationFilePath,
                 'fileSize' => filesize($localFilePath),
@@ -75,7 +75,7 @@ class UploadFileAction extends BaseS3Action
             // Close the file after successful upload
             fclose($sourceFile);
 
-            $this->logger->info('File uploaded successfully to S3', [
+            // @var mixed logger->info('File uploaded successfully to S3', [
                 'localPath' => $localFilePath,
                 's3Key' => $destinationFilePath,
                 'objectUrl' => $result['ObjectURL'] ?? null,
@@ -86,7 +86,7 @@ class UploadFileAction extends BaseS3Action
                 'objectUrl' => $result['ObjectURL'] ?? null,
                 'etag' => $result['ETag'] ?? null,
                 'key' => $destinationFilePath,
-                'bucket' => $this->bucketName,
+                'bucket' => // @var mixed bucketName,
             ];
         } catch (Exception $exception) {
             // Initialize $sourceFile as null if not already defined
@@ -96,7 +96,7 @@ class UploadFileAction extends BaseS3Action
                 fclose($sourceFile);
             }
 
-            $this->logger->error('Error uploading file to S3', [
+            // @var mixed logger->error('Error uploading file to S3', [
                 'localPath' => $localFilePath,
                 's3Key' => $destinationFilePath,
                 'error' => $exception->getMessage(),

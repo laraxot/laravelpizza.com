@@ -152,7 +152,8 @@ abstract class ListLogActivities extends XotBasePage
             return false;
         }
 
-        $canRestore = $resource::canRestore($this->record);
+        $record = $this->record;
+        $canRestore = $resource::canRestore($record);
 
         return \is_bool($canRestore) ? $canRestore : false;
     }
@@ -166,9 +167,10 @@ abstract class ListLogActivities extends XotBasePage
         try {
             $activity = $this->resolveActivity($key);
             $oldProperties = $this->getOldProperties($activity);
+            $record = $this->record;
 
-            Assert::isInstanceOf($this->record, Model::class);
-            app(RestoreActivityAction::class)->execute($this->record, $oldProperties);
+            Assert::isInstanceOf($record, Model::class);
+            app(RestoreActivityAction::class)->execute($record, $oldProperties);
 
             $this->sendRestoreSuccessNotification();
         } catch (Exception $e) {

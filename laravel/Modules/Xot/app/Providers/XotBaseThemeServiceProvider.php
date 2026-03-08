@@ -28,16 +28,16 @@ abstract class XotBaseThemeServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-        $this->app->register($this->module_ns.'\Providers\RouteServiceProvider');
-        $this->app->register($this->module_ns.'\Providers\EventServiceProvider');
+        $app->register($this->module_ns.'\Providers\RouteServiceProvider');
+        $app->register($this->module_ns.'\Providers\EventServiceProvider');
     }
 
     protected function registerBladeComponents(): void
     {
-        $componentNamespace = $this->module_ns.'\View\Components';
-        Blade::componentNamespace($componentNamespace, $this->nameLower);
+        $componentNamespace = $module_ns.'\View\Components';
+        Blade::componentNamespace($componentNamespace, $nameLower);
 
         app(RegisterBladeComponentsAction::class)
-            ->execute($this->module_dir.'/../View/Components', $this->module_ns);
+            ->execute($module_dir.'/../View/Components', $this->module_ns);
     }
 }

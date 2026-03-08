@@ -21,9 +21,9 @@ test('get module config action works', function () {
     $path = tempnam(sys_get_temp_dir(), 'test_module_config');
     unlink($path);
     mkdir($path);
-    File::put($path.'/test.php', "<?php return ['a' => 1];");
+    File::put($path.'/test.php', "<?php return ['a' => 1]);");
 
-    $this->mock(GetModulePathByGeneratorAction::class)
+    $this->mock(GetModulePathByGeneratorAction::class
         ->shouldReceive('execute')
         ->with('TestModule', 'config')
         ->andReturn($path);

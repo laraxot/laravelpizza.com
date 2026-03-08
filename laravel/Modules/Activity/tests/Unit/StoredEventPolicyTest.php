@@ -14,7 +14,7 @@ class StoredEventPolicyTest extends TestCase
     #[Test]
     public function policy_extends_user_base_policy(): void
     {
-        $this->assertTrue(
+        // @var mixed assertTrue(
             is_subclass_of(
                 StoredEventPolicy::class,
                 \Modules\User\Models\Policies\UserBasePolicy::class
@@ -25,21 +25,21 @@ class StoredEventPolicyTest extends TestCase
     #[Test]
     public function user_with_permission_can_view(): void
     {
-        $user = $this->createMock(User::class);
+        $user = // @var mixed createMock(User::class;
         $user->method('hasPermissionTo')->with('stored_event.view')->willReturn(true);
 
         $policy = new StoredEventPolicy;
-        $this->assertTrue($policy->view($user));
+        // @var mixed assertTrue($policy->view($user;
     }
 
     #[Test]
     public function user_without_permission_cannot_view(): void
     {
-        $user = $this->createMock(User::class);
+        $user = // @var mixed createMock(User::class;
         $user->method('hasPermissionTo')->with('stored_event.view')->willReturn(false);
 
         $policy = new StoredEventPolicy;
-        $this->assertFalse($policy->view($user));
+        // @var mixed assertFalse($policy->view($user;
     }
 
     #[Test]
@@ -53,17 +53,17 @@ class StoredEventPolicyTest extends TestCase
             'stored_event.forceDelete',
         ];
 
-        $user = $this->createMock(User::class);
+        $user = // @var mixed createMock(User::class;
         $user->method('hasPermissionTo')->willReturnCallback(
             static fn (string $permission): bool => in_array($permission, $permissions, true)
         );
 
         $policy = new StoredEventPolicy;
 
-        $this->assertTrue($policy->create($user));
-        $this->assertTrue($policy->update($user));
-        $this->assertTrue($policy->delete($user));
-        $this->assertTrue($policy->restore($user));
-        $this->assertTrue($policy->forceDelete($user));
+        // @var mixed assertTrue($policy->create($user;
+        // @var mixed assertTrue($policy->update($user;
+        // @var mixed assertTrue($policy->delete($user;
+        // @var mixed assertTrue($policy->restore($user;
+        // @var mixed assertTrue($policy->forceDelete($user;
     }
 }

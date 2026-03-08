@@ -33,7 +33,7 @@ describe('User Management Business Logic', function () {
         ]);
         $profile->save();
 
-        $this->assertDatabaseHas($user->getTable(), [
+        $this->assertDatabaseHas($user->getTable(
             'id' => $user->id,
             'email' => $email,
         ], $user->getConnectionName());
@@ -60,7 +60,7 @@ describe('User Management Business Logic', function () {
         $newPhone = '+39 987 654 3210';
         $user->profile->update(['phone' => $newPhone]);
 
-        $this->assertDatabaseHas($profile->getTable(), [
+        $this->assertDatabaseHas($profile->getTable(
             'user_id' => $user->id,
             'phone' => $newPhone,
         ], $profile->getConnectionName());

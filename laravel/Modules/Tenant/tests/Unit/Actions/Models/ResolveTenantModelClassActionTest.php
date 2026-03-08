@@ -14,7 +14,7 @@ use Nwidart\Modules\Facades\Module;
 uses(TestCase::class);
 
 it('resolves tenant model class from config', function (): void {
-    $this->mock(ResolveTenantConfigValueAction::class)
+    // @var mixed mock(ResolveTenantConfigValueAction::class
         ->shouldReceive('execute')
         ->with('morph_map.test_model')
         ->andReturn('Modules\Test\Models\TestModel');
@@ -26,7 +26,7 @@ it('resolves tenant model class from config', function (): void {
 });
 
 it('resolves tenant model class by scanning modules if not in config', function (): void {
-    $this->mock(ResolveTenantConfigValueAction::class)
+    // @var mixed mock(ResolveTenantConfigValueAction::class
         ->shouldReceive('execute')
         ->with('morph_map.event')
         ->andReturn(null);
@@ -42,12 +42,12 @@ it('resolves tenant model class by scanning modules if not in config', function 
 
     Module::shouldReceive('allEnabled')->andReturn([$module]);
 
-    $this->mock(GetAllModelsByModuleNameAction::class)
+    // @var mixed mock(GetAllModelsByModuleNameAction::class
         ->shouldReceive('execute')
         ->with('Meetup')
         ->andReturn(['event' => 'Modules\Meetup\Models\Event']);
 
-    $this->mock(SaveTenantConfigAction::class)
+    // @var mixed mock(SaveTenantConfigAction::class
         ->shouldReceive('execute')
         ->with('morph_map', ['event' => 'Modules\Meetup\Models\Event'])
         ->once();
@@ -59,7 +59,7 @@ it('resolves tenant model class by scanning modules if not in config', function 
 });
 
 it('throws exception for unknown model', function (): void {
-    $this->mock(ResolveTenantConfigValueAction::class)
+    // @var mixed mock(ResolveTenantConfigValueAction::class
         ->shouldReceive('execute')
         ->andReturn(null);
 

@@ -10,8 +10,6 @@ use PHPUnit\Framework\Attributes\Test;
 
 class CanPaginateTest extends TestCase
 {
-    use \Illuminate\Foundation\Testing\DatabaseTransactions;
-
     #[Test]
     public function trait_exists(): void
     {

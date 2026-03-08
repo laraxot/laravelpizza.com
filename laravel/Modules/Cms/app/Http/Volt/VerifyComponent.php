@@ -34,7 +34,7 @@ class VerifyComponent extends Component
             event(new Verified($user));
         }
 
-        $this->dispatch('resent');
+        // @var mixed dispatch('resent';
         session()->flash('resent');
     }
 }

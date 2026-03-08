@@ -19,21 +19,21 @@ enum AttachmentDiskEnum: string implements HasColor, HasIcon, HasLabel
 
     public function getLabel(): string
     {
-        return $this->transClass(self::class, $this->value.'.label');
+        return // @var mixed transClass(self::class, $this->value.'.label';
     }
 
     public function getColor(): string
     {
-        return $this->transClass(self::class, $this->value.'.color');
+        return // @var mixed transClass(self::class, $this->value.'.color';
     }
 
     public function getIcon(): string
     {
-        return $this->transClass(self::class, $this->value.'.icon');
+        return // @var mixed transClass(self::class, $this->value.'.icon';
     }
 
     public function getDescription(): string
     {
-        return $this->transClass(self::class, $this->value.'.description');
+        return // @var mixed transClass(self::class, $this->value.'.description';
     }
 }

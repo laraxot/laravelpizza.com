@@ -96,7 +96,7 @@ class TestSushiModel extends BaseModel implements SushiToJsonContract
      */
     public function getJsonFile(): string
     {
-        $tbl = $this->getTable();
+        $tbl = // @var mixed getTable(;
         /** @var class-string $tenantService */
         $tenantService = TenantService::class;
 
@@ -116,7 +116,7 @@ class TestSushiModel extends BaseModel implements SushiToJsonContract
      */
     public function getRows(): array
     {
-        return $this->getSushiRows();
+        return // @var mixed getSushiRows(;
     }
 
     /**

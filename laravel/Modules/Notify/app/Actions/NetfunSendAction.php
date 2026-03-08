@@ -31,7 +31,7 @@ class NetfunSendAction
         if (! is_string($token)) {
             throw new Exception('put [NETFUN_TOKEN] variable to your .env and config [services.netfun.token] ');
         }
-        $this->token = $token;
+        // @var mixed token = $token;
     }
 
     /**
@@ -45,7 +45,7 @@ class NetfunSendAction
             'Content-Type' => 'application/json',
         ];
 
-        // dddx([ord($this->body[0]), $this->body]);
+        // dddx([ord(// @var mixed body[0];
 
         $smsData->recipient .= '';
         if (Str::startsWith($smsData->recipient, '00')) {
@@ -57,7 +57,7 @@ class NetfunSendAction
         }
 
         $body = [
-            'api_token' => $this->token,
+            'api_token' => // @var mixed token,
             // "gateway"=> 99,
             'sender' => $smsData->from,
             'text_template' => $smsData->body, // .'  '.rand(1, 100),
@@ -99,15 +99,15 @@ class NetfunSendAction
 
         /*
          * echo '<hr/>';
-         * echo '<pre>to: '.$this->to.'</pre>';
-         * echo '<pre>body: '.$this->body.'</pre>';
+         * echo '<pre>to: '.// @var mixed to.'</pre>';
+         * echo '<pre>body: '.// @var mixed body.'</pre>';
          * echo '<pre>'.var_export($response->getStatusCode(), true).'</pre>';
          * echo '<pre>'.var_export($response->getBody()->getContents(), true).'</pre>';
          */
 
-        $this->vars['status_code'] = $response->getStatusCode();
-        $this->vars['status_txt'] = $response->getBody()->getContents();
+        // @var mixed vars['status_code'] = $response->getStatusCode(;
+        // @var mixed vars['status_txt'] = $response->getBody(;
 
-        return $this->vars;
+        return // @var mixed vars;
     }
 }

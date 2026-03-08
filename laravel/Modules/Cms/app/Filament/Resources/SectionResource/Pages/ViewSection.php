@@ -16,7 +16,7 @@ class ViewSection extends LangBaseViewRecord
     #[\Override]
     protected function getInfolistSchema(): array
     {
-        // $view='pub_theme::components.sections.'.$this->record->slug;
+        // $view='pub_theme::components.sections.'.// @var mixed record->slug;
         $view = 'cms::sections.preview';
         // @phpstan-ignore-next-line
         if (! view()->exists($view)) {
@@ -26,7 +26,7 @@ class ViewSection extends LangBaseViewRecord
         return [
             'preview' => Section::make('Anteprima')->schema([
                 'preview' => ViewEntry::make('preview')->view($view, [
-                    'section' => $this->record,
+                    'section' => // @var mixed record,
                 ]),
             ]),
         ];
@@ -42,7 +42,7 @@ class ViewSection extends LangBaseViewRecord
      * ->translateLabel(),
      * Actions\Action::make('preview')
      * ->translateLabel()
-     * ->url(fn () => route('cms.sections.preview', $this->record))
+     * ->url(fn () => route('cms.sections.preview', // @var mixed record
      * ->openUrlInNewTab(),
      * ];
      * }

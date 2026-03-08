@@ -13,7 +13,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table): void {
+        $this->tableCreate(static function (Blueprint $table
             $table->string('id', 100)->primary();
             // $table->string('access_token_id', 100)->index();
             $table->foreignIdFor(OauthAccessToken::class, 'access_token_id')->index();
@@ -22,8 +22,8 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
-            // if (! $this->hasColumn('email')) {
+        $this->tableUpdate(function (Blueprint $table
+            // if (! $this->hasColumn('email'
             //    $table->string('email')->nullable();
             // }
             $this->updateUser($table);

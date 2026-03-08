@@ -211,7 +211,7 @@ class RouteService
 
         /*
          * return '?'.$lang; //da fixare dopo
-         * //$row=$this->row;
+         * //$row= $row;
          * //$row->lang=$lang;
          * //return '/wip'.$this->url();
          * $route_name = \Route::currentRouteName();

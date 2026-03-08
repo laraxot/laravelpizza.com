@@ -32,9 +32,9 @@ pest()->extend(TestCase::class)->in('Feature');
  * |
  */
 
-expect()->extend('toBeNotification', fn () => $this->toBeInstanceOf(Notification::class));
+expect()->extend('toBeNotification', fn () => // @var mixed toBeInstanceOf(Notification::class;
 
-expect()->extend('toBeMailTemplate', fn () => $this->toBeInstanceOf(MailTemplate::class));
+expect()->extend('toBeMailTemplate', fn () => // @var mixed toBeInstanceOf(MailTemplate::class;
 
 /*
  * |--------------------------------------------------------------------------

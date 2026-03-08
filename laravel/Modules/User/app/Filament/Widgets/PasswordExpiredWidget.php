@@ -60,7 +60,7 @@ class PasswordExpiredWidget extends XotBaseWidget
     public function getFormSchema(): array
     {
         $schema = [
-            $this->getCurrentPasswordFormComponent(),
+            $this->getCurrentPasswordFormComponent(
             ...PasswordData::make()->getPasswordFormComponents('password'),
         ];
 
@@ -100,7 +100,7 @@ class PasswordExpiredWidget extends XotBaseWidget
         }
 
         // Cast e verifica esistenza dei dati del form
-        $data = $this->data ?? [];
+        $data = $data ?? [];
         $currentPassword = SafeStringCastAction::cast($data['current_password'] ?? '');
         $newPassword = SafeStringCastAction::cast($data['password'] ?? '');
 
@@ -110,7 +110,7 @@ class PasswordExpiredWidget extends XotBaseWidget
             return null;
         }
 
-        $userPassword = SafeStringCastAction::cast($user->getAttribute('password'));
+        $userPassword = SafeStringCastAction::cast($user->$this->getAttribute('password'));
         // Cast esplicito di mixed a string per PHPStan
         $userPasswordString = $userPassword;
 
@@ -186,7 +186,7 @@ class PasswordExpiredWidget extends XotBaseWidget
     protected function getFormActions(): array
     {
         return [
-            $this->getResetPasswordFormAction(),
+            $this->getResetPasswordFormAction(
         ];
     }
 }

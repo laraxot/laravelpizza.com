@@ -17,7 +17,7 @@ new class extends Component {
 
     public function mount()
     {
-        $this->readme = Http::get('https://raw.githubusercontent.com/thedevdojo/genesis/main/README.md')->body();
+        $readme = Http::get('https://raw.githubusercontent.com/thedevdojo/genesis/main/README.md');
     }
 };
 

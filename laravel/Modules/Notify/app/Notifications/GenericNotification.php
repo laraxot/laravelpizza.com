@@ -49,10 +49,10 @@ class GenericNotification extends Notification implements ShouldQueue
      */
     public function __construct(string $title, string $message, array $channels = ['mail'], array $data = [])
     {
-        $this->title = $title;
-        $this->message = $message;
-        $this->channels = $channels;
-        $this->data = $data;
+        // @var mixed title = $title;
+        // @var mixed message = $message;
+        // @var mixed channels = $channels;
+        // @var mixed data = $data;
     }
 
     /**
@@ -63,7 +63,7 @@ class GenericNotification extends Notification implements ShouldQueue
      */
     public function via(mixed $_notifiable): array
     {
-        return $this->channels;
+        return // @var mixed channels;
     }
 
     /**
@@ -74,19 +74,19 @@ class GenericNotification extends Notification implements ShouldQueue
     public function toMail($notifiable): MailMessage
     {
         $mail = (new MailMessage)
-            ->subject($this->title)
-            ->greeting('Gentile '.$this->getRecipientName($notifiable))
-            ->line($this->message);
+            ->subject(// @var mixed title
+            ->greeting('Gentile '.// @var mixed getRecipientName($notifiable
+            ->line(// @var mixed message;
 
         // Aggiungi eventuali azioni se specificate nei dati
-        if (isset($this->data['action_text'], $this->data['action_url'])) {
+        if (isset(// @var mixed data['action_text'], $this->data['action_url']
             /** @phpstan-ignore-next-line */
-            $mail->action((string) $this->data['action_text'], (string) $this->data['action_url']);
+            $mail->action((string) // @var mixed data['action_text'], (string;
         }
 
         // Aggiungi eventuali linee aggiuntive
-        if (isset($this->data['additional_lines']) && is_array($this->data['additional_lines'])) {
-            foreach ($this->data['additional_lines'] as $line) {
+        if (isset(// @var mixed data['additional_lines']
+            foreach (// @var mixed data['additional_lines'] as $line
                 $mail->line($line);
             }
         }
@@ -102,7 +102,7 @@ class GenericNotification extends Notification implements ShouldQueue
      */
     public function toTwilio($notifiable): array
     {
-        $content = "il progetto: {$this->title}\n{$this->message}";
+        $content = "il progetto: {// @var mixed title}\n{$this->message}";
 
         // Limita la lunghezza del messaggio SMS
         if (mb_strlen($content) > 320) {
@@ -131,9 +131,9 @@ class GenericNotification extends Notification implements ShouldQueue
     public function toDatabase($notifiable): array
     {
         return [
-            'title' => $this->title,
-            'message' => $this->message,
-            'data' => $this->data,
+            'title' => // @var mixed title,
+            'message' => // @var mixed message,
+            'data' => // @var mixed data,
             'created_at' => now()->toIso8601String(),
         ];
     }

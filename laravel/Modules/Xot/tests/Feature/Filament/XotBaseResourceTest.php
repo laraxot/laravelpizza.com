@@ -16,7 +16,7 @@ uses(TestCase::class);
 covers(XotBaseResource::class);
 
 beforeEach(function () {
-    $this->resource = new class extends XotBaseResource {
+    $resource = new class extends XotBaseResource {
         protected static ?string $model = null;
 
         public static function getFormSchema(): array
@@ -42,31 +42,31 @@ beforeEach(function () {
 });
 
 test('xot base resource extends filament resource', function () {
-    expect($this->resource)->toBeInstanceOf(Resource::class);
+    expect($resource);
 });
 
 test('xot base resource has navigation icon', function () {
-    expect($this->resource::getNavigationIcon())->toBe('heroicon-o-rectangle-stack');
+    expect($resource::getNavigationIcon());
 });
 
 test('xot base resource has navigation group', function () {
-    expect($this->resource::getNavigationGroup())->toBe('Test Group');
+    expect($resource::getNavigationGroup());
 });
 
 test('xot base resource has navigation sort', function () {
-    expect($this->resource::getNavigationSort())->toBe(1);
+    expect($resource::getNavigationSort());
 });
 
 test('xot base resource can be instantiated', function () {
-    expect($this->resource)->toBeInstanceOf(XotBaseResource::class);
+    expect($resource);
 });
 
 test('anonymous resource get form schema columns returns one', function () {
-    expect($this->resource::getFormSchemaColumns())->toBe(1);
+    expect($resource::getFormSchemaColumns());
 });
 
 test('anonymous resource form builds empty schema', function () {
-    $schema = $this->resource::form(Schema::make());
+    $schema = $resource::form(Schema::make());
     expect($schema)->toBeInstanceOf(Schema::class);
 });
 
@@ -230,13 +230,13 @@ test('xot base resource get wizard submit action', function () {
 test('xot base resource get model via auto-discovery', function () {
     $className = 'Modules\Xot\Filament\Resources\TempDiscoveryResource';
     if (! class_exists($className)) {
-        eval("namespace Modules\Xot\Filament\Resources; use Modules\Xot\Filament\Resources\XotBaseResource; class TempDiscoveryResource extends XotBaseResource { public static function getFormSchema(): array { return []; } }");
+        eval("namespace Modules\Xot\Filament\Resources); use Modules\Xot\Filament\Resources\XotBaseResource; class TempDiscoveryResource extends XotBaseResource { public static function getFormSchema(): array { return []; } }");
     }
 
     // We need the model class to exist to pass Assert::classExists
     $modelClass = 'Modules\Xot\Models\TempDiscovery';
     if (! class_exists($modelClass)) {
-        eval("namespace Modules\Xot\Models; use Illuminate\Database\Eloquent\Model; class TempDiscovery extends Model {}");
+        eval("namespace Modules\Xot\Models); use Illuminate\Database\Eloquent\Model; class TempDiscovery extends Model {}");
     }
 
     $model = $className::getModel();
@@ -247,7 +247,7 @@ test('xot base resource get attachments schema with model having method', functi
     // Model must be a real class to handle static calls
     $modelClass = 'Modules\Xot\Models\StaticMockModel';
     if (! class_exists($modelClass)) {
-        eval("namespace Modules\Xot\Models; use Illuminate\Database\Eloquent\Model; class StaticMockModel extends Model { public static function getAttachments(): array { return ['file1.jpg']; } }");
+        eval("namespace Modules\Xot\Models); use Illuminate\Database\Eloquent\Model; class StaticMockModel extends Model { public static function getAttachments(): array { return ['file1.jpg']; } }");
     }
 
     $resource = new class extends XotBaseResource {

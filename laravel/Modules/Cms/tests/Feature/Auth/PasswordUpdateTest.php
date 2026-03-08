@@ -9,9 +9,9 @@ use Modules\Xot\Tests\TestCase;
 uses(TestCase::class);
 
 test('password can be updated', function (): void {
-    $this->assertTrue(true);
+    // @var mixed assertTrue(true;
 });
 
 test('current password must be correct', function (): void {
-    $this->assertTrue(true);
+    // @var mixed assertTrue(true;
 });

@@ -33,13 +33,13 @@ class RegisterComponent extends Component
 
     public function register(): RedirectResponse
     {
-        $this->validate();
+        // @var mixed validate(;
 
         /** @var User $user */
         $user = User::create([
-            'email' => $this->email,
-            'name' => $this->name,
-            'password' => Hash::make($this->password),
+            'email' => // @var mixed email,
+            'name' => // @var mixed name,
+            'password' => Hash::make(// @var mixed password
         ]);
 
         event(new Registered($user));

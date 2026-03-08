@@ -49,11 +49,11 @@ final class CalculateDistanceAction implements CalculateDistanceActionContract
      */
     public function execute(LocationData $origin, LocationData $destination): array
     {
-        $this->validateCoordinates($origin);
-        $this->validateCoordinates($destination);
+        // @var mixed validateCoordinates($origin;
+        // @var mixed validateCoordinates($destination;
 
         try {
-            $response = $this->distanceMatrixAction->execute(
+            $response = // @var mixed distanceMatrixAction->execute(
                 new Collection([$origin]),
                 new Collection([$destination])
             );

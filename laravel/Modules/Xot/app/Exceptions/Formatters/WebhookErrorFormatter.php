@@ -22,12 +22,12 @@ class WebhookErrorFormatter
         $email = $user->email ?? 'CLI User';
 
         return [
-            'message' => $this->exception->getMessage(),
-            'file' => $this->exception->getFile(),
-            'line' => $this->exception->getLine(),
-            'trace' => $this->exception->getTraceAsString(),
-            'exception' => sprintf('`%s` (Code `%s`)', get_class($this->exception), $this->exception->getCode()),
-            'thrown_in' => sprintf('`%s`:%d', $this->exception->getFile(), $this->exception->getLine()),
+            'message' => $exception->getMessage(
+            'file' => $exception->getFile(
+            'line' => $exception->getLine(
+            'trace' => $exception->getTraceAsString(
+            'exception' => sprintf('`%s` (Code `%s`)', get_class($exception
+            'thrown_in' => sprintf('`%s`:%d', $exception->getFile(
             'user' => sprintf('%d <%s>', Auth::id() ?? 0, $email),
             'ip' => request()->ip(),
             'thrown_while_calling' => sprintf('[%s] %s', request()->getMethod(), request()->fullUrl()),
@@ -35,8 +35,8 @@ class WebhookErrorFormatter
             /*
              * 'exception_details' => sprintf(
              * "Trace:\n```json \n %s \n ```\n\n Previous: \n `%s`",
-             * json_encode($this->exception->getTrace(), JSON_PRETTY_PRINT),
-             * $this->exception->getPrevious() ? ('`' . get_class($this->exception->getPrevious()) . '`') : 'None'
+             * json_encode($exception->getTrace(
+             * $exception->getPrevious(
              * ),
              */
         ];

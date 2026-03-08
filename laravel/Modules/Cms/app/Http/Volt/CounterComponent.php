@@ -12,11 +12,11 @@ class CounterComponent extends Component
 
     public function increment(): void
     {
-        ++$this->count;
+        ++// @var mixed count;
     }
 
     public function decrement(): void
     {
-        --$this->count;
+        --// @var mixed count;
     }
 }

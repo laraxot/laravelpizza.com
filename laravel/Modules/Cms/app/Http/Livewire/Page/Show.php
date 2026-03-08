@@ -45,7 +45,7 @@ class Show extends Component
      */
     public function mount(): void
     {
-        $this->loadPageContent();
+        // @var mixed loadPageContent(;
     }
 
     /**
@@ -54,8 +54,8 @@ class Show extends Component
     public function render(): View
     {
         return view('cms::livewire.page.show', [
-            'pageContent' => $this->pageContent,
-            'theme' => $this->theme ?? ThemeService::getTheme(),
+            'pageContent' => // @var mixed pageContent,
+            'theme' => // @var mixed theme ?? ThemeService::getTheme(
         ]);
     }
 
@@ -80,15 +80,15 @@ class Show extends Component
     protected function loadPageContent(): void
     {
         // Chiave per la cache
-        $cacheKey = 'page_content_'.$this->slug.'_'.($this->theme ?? ThemeService::getTheme());
+        $cacheKey = 'page_content_'.// @var mixed slug.'_'.($this->theme ?? ThemeService::getTheme(;
 
         // Se la cache è abilitata, tenta di recuperare dalla cache
-        if ($this->cache) {
+        if (// @var mixed cache
             /** @var array<string, mixed> $cached */
-            $cached = Cache::remember($cacheKey, now()->addHours(24), $this->fetchPageContent(...));
-            $this->pageContent = $cached;
+            $cached = Cache::remember($cacheKey, now()->addHours(24), // @var mixed fetchPageContent(...;
+            // @var mixed pageContent = $cached;
         } else {
-            $this->pageContent = $this->fetchPageContent();
+            // @var mixed pageContent = $this->fetchPageContent(;
         }
     }
 
@@ -101,15 +101,15 @@ class Show extends Component
     {
         try {
             // Recupera la pagina dal database
-            $page = Page::where('slug', $this->slug)->where('lang', app()->getLocale())->first();
+            $page = Page::where('slug', // @var mixed slug;
 
             if (! $page) {
-                return ['error' => 'Page not found', 'slug' => $this->slug];
+                return ['error' => 'Page not found', 'slug' => // @var mixed slug];
             }
 
             // Type narrowing: ensure $page is a Page model
             if (! $page instanceof Page) {
-                return ['error' => 'Invalid page type', 'slug' => $this->slug];
+                return ['error' => 'Invalid page type', 'slug' => // @var mixed slug];
             }
 
             // Recupera e processa i contenuti della pagina
@@ -133,7 +133,7 @@ class Show extends Component
                 'layout' => 'default',
             ];
         } catch (\Exception $e) {
-            if ($this->debug) {
+            if (// @var mixed debug
                 return [
                     'error' => $e->getMessage(),
                     'file' => $e->getFile(),

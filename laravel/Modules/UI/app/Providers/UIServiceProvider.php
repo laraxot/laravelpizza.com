@@ -48,6 +48,6 @@ class UIServiceProvider extends XotBaseServiceProvider
      */
     public function getComponentViewPath(): string
     {
-        return app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
+        return app(GetModulePathByGeneratorAction::class)->execute(); // @var mixed name, 'component-view';
     }
 }

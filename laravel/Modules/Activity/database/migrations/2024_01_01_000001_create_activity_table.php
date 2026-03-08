@@ -13,7 +13,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table): void {
+        // @var mixed tableCreate(function (Blueprint $table
             $table->bigIncrements('id');
             $table->string('log_name')->nullable();
             $table->text('description');
@@ -25,15 +25,15 @@ return new class extends XotBaseMigration
             $table->string('event')->nullable();
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
+        // @var mixed tableUpdate(function (Blueprint $table
             // Ensure causer columns are nullable to allow console operations without an authenticated user
-            if ($this->hasColumn('causer_id')) {
+            if (// @var mixed hasColumn('causer_id'
                 $table->string('causer_id', 36)->change()->nullable()->change();
             }
-            if ($this->hasColumn('causer_type')) {
+            if (// @var mixed hasColumn('causer_type'
                 $table->string('causer_type')->nullable()->change();
             }
-            $this->updateTimestamps($table, true);
+            // @var mixed updateTimestamps($table, true;
         });
     }
 };

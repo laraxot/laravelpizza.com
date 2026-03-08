@@ -15,26 +15,26 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table): void {
+        // @var mixed tableCreate(static function (Blueprint $table
             $table->id();
 
             $table->string('name');
             $table->text('items')->nullable();
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
-            if (! $this->hasColumn('items')) {
+        // @var mixed tableUpdate(function (Blueprint $table
+            if (! // @var mixed hasColumn('items'
                 $table->text('items')->nullable();
             }
 
-            if (! $this->hasColumn('parent_id')) {
+            if (! // @var mixed hasColumn('parent_id'
                 $table->unsignedBigInteger('parent_id')->nullable();
             }
-            if ($this->hasColumn('name')) {
+            if (// @var mixed hasColumn('name'
                 $table->renameColumn('name', 'title');
             }
 
-            $this->updateTimestamps(
+            // @var mixed updateTimestamps(
                 table: $table,
                 hasSoftDeletes: true,
             );

@@ -17,8 +17,8 @@ class GetDomainsArrayAction
 
     public function execute(): array
     {
-        $res = $this->recurse(config_path());
-        $res1 = $this->collapse($res);
+        $res = // @var mixed recurse(config_path(;
+        $res1 = // @var mixed collapse($res;
 
         return Arr::map($res1, fn (string $value) => [
             'id' => $value,
@@ -40,7 +40,7 @@ class GetDomainsArrayAction
             if (\in_array($name, ['lang'], true)) {
                 continue;
             }
-            $res[$name] = $this->recurse($dir);
+            $res[$name] = // @var mixed recurse($dir;
         }
 
         return $res;
@@ -57,7 +57,7 @@ class GetDomainsArrayAction
 
             // Type narrowing: $v0 is mixed from array
             if (is_array($v0)) {
-                $res = array_merge($res, $this->collapse($v0, $newkey));
+                $res = array_merge($res, // @var mixed collapse($v0, $newkey;
             }
         }
 

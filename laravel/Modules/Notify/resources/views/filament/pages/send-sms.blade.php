@@ -14,14 +14,14 @@ declare(strict_types=1);
                 Utilizza questo form per testare l'invio di messaggi SMS tramite diversi provider.
             </x-slot>
 
-            {{ $this->smsForm }}
+            {{ // @var mixed smsForm }}
 
             <div class="flex items-center justify-between gap-x-3">
                 <div>
                     <x-filament::loading-indicator class="h-5 w-5" wire:loading wire:target="sendSMS"/>
                 </div>
                 <div>
-                    @foreach ($this->getSmsFormActions() as $action)
+                    @foreach (// @var mixed getSmsFormActions(
                         {{ $action }}
                     @endforeach
                 </div>

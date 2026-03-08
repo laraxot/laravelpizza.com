@@ -14,15 +14,15 @@ class MailTemplateFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->words(3, true),
-            'slug' => $this->faker->slug(),
-            'subject' => $this->faker->sentence(),
-            'html_template' => $this->faker->randomHtml(),
-            'text_template' => $this->faker->text(),
-            'type' => $this->faker->randomElement(['email', 'notification', 'sms']),
-            'is_active' => $this->faker->boolean(80),
-            'created_at' => $this->faker->dateTimeBetween('-1 year'),
-            'updated_at' => $this->faker->dateTimeBetween('-1 year'),
+            'name' => // @var mixed faker->words(3, true
+            'slug' => // @var mixed faker->slug(
+            'subject' => // @var mixed faker->sentence(
+            'html_template' => // @var mixed faker->randomHtml(
+            'text_template' => // @var mixed faker->text(
+            'type' => // @var mixed faker->randomElement(['email', 'notification', 'sms']
+            'is_active' => // @var mixed faker->boolean(80
+            'created_at' => // @var mixed faker->dateTimeBetween('-1 year'
+            'updated_at' => // @var mixed faker->dateTimeBetween('-1 year'
         ];
     }
 }

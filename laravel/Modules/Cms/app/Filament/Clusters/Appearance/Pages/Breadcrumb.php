@@ -40,7 +40,7 @@ class Breadcrumb extends XotBasePage
      */
     public function mount(): void
     {
-        $this->fillForms();
+        // @var mixed fillForms(;
     }
 
     /**
@@ -63,7 +63,7 @@ class Breadcrumb extends XotBasePage
     public function updateData(): void
     {
         try {
-            $data = $this->form->getState();
+            $data = // @var mixed form->getState(;
 
             // Save the data using TenantService
             $up = [
@@ -97,7 +97,7 @@ class Breadcrumb extends XotBasePage
         $breadcrumbData = Arr::get($appearanceConfig, 'breadcrumb', []);
         Assert::isArray($breadcrumbData);
 
-        $this->form->fill($breadcrumbData);
+        // @var mixed form->fill($breadcrumbData;
     }
 
     /**

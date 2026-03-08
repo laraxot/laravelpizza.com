@@ -16,6 +16,6 @@ class EmailAttachmentData extends Data
 
     public function getContent(): string
     {
-        return $this->content;
+        return // @var mixed content;
     }
 }

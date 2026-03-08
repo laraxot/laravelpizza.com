@@ -86,7 +86,7 @@ class InformationSchemaTable extends BaseModel implements SushiToJsonContract
      */
     public function getSchema(): array
     {
-        return $this->schema;
+        return $schema;
     }
 
     /**

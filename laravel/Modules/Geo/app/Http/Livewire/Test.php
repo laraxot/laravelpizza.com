@@ -2,7 +2,7 @@
 
 /**
  * https://forum.laravel-livewire.com/t/wire-ignore-with-google-autocomplete/734/3.
- * $this->dispatch('address:list:refresh');.
+ * // @var mixed dispatch('address:list:refresh';.
  */
 
 declare(strict_types=1);

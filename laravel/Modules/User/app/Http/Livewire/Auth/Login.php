@@ -43,7 +43,7 @@ class Login extends Component implements HasActions, HasForms
      */
     public function mount(): void
     {
-        $this->form->fill();
+        $form->fill();
     }
 
     /**
@@ -52,7 +52,7 @@ class Login extends Component implements HasActions, HasForms
     public function form(Schema $schema): Schema
     {
         return $schema
-            ->components($this->getFormSchema())
+            ->components($getFormSchema(
             ->statePath('data');
     }
 
@@ -65,7 +65,7 @@ class Login extends Component implements HasActions, HasForms
     {
         try {
             /** @var array{email: string, password: string, remember?: bool} $data */
-            $data = $this->form->getState();
+            $data = $form->getState();
 
             // Estrai remember dal data array e assicurati che sia un booleano
             $remember = $data['remember'] ?? false;
@@ -113,7 +113,7 @@ class Login extends Component implements HasActions, HasForms
                 ->suffixIcon('heroicon-m-envelope')
                 ->autofocus()
                 ->live()
-                ->afterStateUpdated(fn ($_state) => $this->validateOnly('email'))
+                ->afterStateUpdated(fn ($_state) => $this->validateOnly('email'
                 ->dehydrated(),
 
             TextInput::make('password')

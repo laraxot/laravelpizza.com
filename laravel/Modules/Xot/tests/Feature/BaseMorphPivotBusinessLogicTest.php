@@ -85,8 +85,8 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
         $pivot->setAttribute('numeric_field', 42);
 
         // Act
-        $customField = $pivot->getAttribute('custom_field');
-        $numericField = $pivot->getAttribute('numeric_field');
+        $customField = $pivot->$this->getAttribute('custom_field');
+        $numericField = $pivot->$this->getAttribute('numeric_field');
 
         // Assert
         $this->assertEquals('custom_value', $customField);

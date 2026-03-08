@@ -29,7 +29,7 @@ trait HasAddress
      */
     public function addresses(): MorphMany
     {
-        return $this->morphMany(Address::class, 'model');
+        return // @var mixed morphMany(Address::class, 'model';
     }
 
     /**
@@ -37,7 +37,7 @@ trait HasAddress
      */
     public function address(): MorphOne
     {
-        return $this->morphOne(Address::class, 'model');
+        return // @var mixed morphOne(Address::class, 'model';
     }
 
     /**
@@ -45,7 +45,7 @@ trait HasAddress
      */
     public function primaryAddress(): ?Address
     {
-        $res = $this->addresses()->where('is_primary', true)->first();
+        $res = // @var mixed addresses(;
         if (null === $res) {
             return $res;
         }
@@ -59,7 +59,7 @@ trait HasAddress
      */
     public function getFullAddress(): ?string
     {
-        $address = $this->primaryAddress();
+        $address = // @var mixed primaryAddress(;
 
         return $address ? $address->getFullAddress() : null;
     }
@@ -71,11 +71,11 @@ trait HasAddress
         }
         $address = sprintf(
             '%s, %s - %s, %s (%s)',
-            $this->route,
-            $this->street_number,
-            $this->postal_code,
-            $this->city,
-            $this->province,
+            // @var mixed route,
+            // @var mixed street_number,
+            // @var mixed postal_code,
+            // @var mixed city,
+            // @var mixed province,
         );
 
         return trim(preg_replace('/[,\s]+/', ' ', $address));
@@ -86,7 +86,7 @@ trait HasAddress
         if ($value) {
             return $value;
         }
-        $address = $this->address()->first();
+        $address = // @var mixed address(;
         if (null === $address) {
             return null;
         }
@@ -121,7 +121,7 @@ trait HasAddress
      */
     public function getCity(): ?string
     {
-        $address = $this->primaryAddress();
+        $address = // @var mixed primaryAddress(;
 
         return $address ? $address->locality : null;
     }
@@ -131,7 +131,7 @@ trait HasAddress
      */
     public function getPostalCode(): ?string
     {
-        $address = $this->primaryAddress();
+        $address = // @var mixed primaryAddress(;
 
         return $address ? $address->postal_code : null;
     }
@@ -141,7 +141,7 @@ trait HasAddress
      */
     public function getProvince(): ?string
     {
-        $address = $this->primaryAddress();
+        $address = // @var mixed primaryAddress(;
 
         return $address ? $address->administrative_area_level_3 : null;
     }
@@ -151,7 +151,7 @@ trait HasAddress
      */
     public function getRegion(): ?string
     {
-        $address = $this->primaryAddress();
+        $address = // @var mixed primaryAddress(;
 
         return $address ? $address->administrative_area_level_2 : null;
     }
@@ -161,7 +161,7 @@ trait HasAddress
      */
     public function getCountry(): ?string
     {
-        $address = $this->primaryAddress();
+        $address = // @var mixed primaryAddress(;
 
         return $address ? $address->country : null;
     }
@@ -172,12 +172,12 @@ trait HasAddress
     public function setAsPrimaryAddress(Address $address): bool
     {
         // Verifica che l'indirizzo appartenga a questo modello
-        if ($address->model_id !== $this->id || $address->model_type !== static::class) {
+        if ($address->model_id !== // @var mixed id || $address->model_type !== static::class
             return false;
         }
 
         // Rimuovi il flag is_primary da tutti gli altri indirizzi
-        $this->addresses()
+        // @var mixed addresses(
             ->where('id', '!=', $address->id)
             ->where('is_primary', true)
             ->update(['is_primary' => false]);
@@ -191,7 +191,7 @@ trait HasAddress
      */
     public function getAddressesByType(string $type): Collection
     {
-        return $this->addresses()->where('type', $type)->get();
+        return // @var mixed addresses(;
     }
 
     /**
@@ -203,17 +203,17 @@ trait HasAddress
     public function addAddress(array $data, bool $setPrimary = false): Address
     {
         // Se è il primo indirizzo o è richiesto esplicitamente, impostalo come principale
-        if ($setPrimary || 0 === $this->addresses()->count()) {
+        if ($setPrimary || 0 === // @var mixed addresses(
             $data['is_primary'] = true;
 
             // Rimuovi il flag is_primary da tutti gli altri indirizzi
-            if ($this->addresses()->count() > 0) {
-                $this->addresses()->update(['is_primary' => false]);
+            if (// @var mixed addresses(
+                // @var mixed addresses(;
             }
         }
 
         /* @phpstan-ignore return.type */
-        return $this->addresses()->create($data);
+        return // @var mixed addresses(;
     }
 
     /**
@@ -223,10 +223,10 @@ trait HasAddress
      */
     public function updatePrimaryAddress(array $data): ?Address
     {
-        $primaryAddress = $this->primaryAddress();
+        $primaryAddress = // @var mixed primaryAddress(;
 
         if (! $primaryAddress) {
-            return $this->addAddress($data, true);
+            return // @var mixed addAddress($data, true;
         }
 
         $primaryAddress->update($data);
@@ -284,6 +284,6 @@ trait HasAddress
         // Automatically create a random token
         /** @var array<int, string> $fields */
         $fields = Arr::map(AddressItemEnum::cases(), fn (AddressItemEnum $item): string => $item->value);
-        $this->mergeFillable($fields);
+        // @var mixed mergeFillable($fields;
     }
 }

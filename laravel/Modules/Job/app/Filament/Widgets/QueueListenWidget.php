@@ -29,25 +29,25 @@ class QueueListenWidget extends Widget
 
     public function begin(): void
     {
-        $this->beginProcess();
+        // @var mixed beginProcess(;
     }
 
     public function beginProcess(): void
     {
-        $this->time = '';
+        // @var mixed time = '';
         $process = Process::path(base_path())->start('php artisan queue:listen');
         while ($process->running()) {
             // ...
-            $this->stream(
+            // @var mixed stream(
                 to: 'count',
-                content: $this->time,
+                content: // @var mixed time,
                 replace: true,
             );
             // Pause for 1 second between numbers...
             sleep(3);
             // se no troppe richieste
 
-            $this->time .= $process->latestOutput();
+            // @var mixed time .= $process->latestOutput(;
         }
 
         $process->wait();
@@ -55,7 +55,7 @@ class QueueListenWidget extends Widget
 
     public function beginStream(): void
     {
-        $this->run = ! $this->run;
+        // @var mixed run = ! $this->run;
         // $output = new BufferedOutput();
         /*
          * $output = new class() extends StreamOutput {
@@ -93,11 +93,11 @@ class QueueListenWidget extends Widget
         // dddx($output);
         // dddx($output->fetch());
         /*
-         * while ($this->run) {
+         * while (// @var mixed run
          * // Stream the current count to the browser...
-         * $this->stream(
+         * // @var mixed stream(
          * to: 'count',
-         * content: $this->time,
+         * content: // @var mixed time,
          * replace: true,
          * );
          *
@@ -105,8 +105,8 @@ class QueueListenWidget extends Widget
          * sleep(1);
          *
          * // Decrement the counter...
-         * // $this->time = (string) Carbon::now()->format('H:i:s');
-         * $this->time = $output->fetch().PHP_EOL;
+         * // // @var mixed time = (string;
+         * // @var mixed time = $output->fetch(;
          * }
          */
     }

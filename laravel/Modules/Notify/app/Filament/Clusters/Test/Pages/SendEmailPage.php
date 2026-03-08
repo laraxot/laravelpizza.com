@@ -40,15 +40,15 @@ class SendEmailPage extends XotBasePage
 
     public function mount(): void
     {
-        $this->fillForms();
+        // @var mixed fillForms(;
     }
 
     public function emailForm(Schema $schema): Schema
     {
         /** @var array<string, Component> $formSchema */
-        $formSchema = $this->getEmailFormSchema();
+        $formSchema = // @var mixed getEmailFormSchema(;
 
-        return $schema->components($formSchema)->model($this->getUser())->statePath('emailData');
+        return $schema->components($formSchema)->model(// @var mixed getUser(;
     }
 
     /**
@@ -72,7 +72,7 @@ class SendEmailPage extends XotBasePage
 
     public function sendEmail(): void
     {
-        $data = $this->emailForm->getState();
+        $data = // @var mixed emailForm->getState(;
         $email_data = EmailData::from($data);
 
         Mail::to($data['recipient'])->send(new EmailDataEmail($email_data));
@@ -116,9 +116,9 @@ class SendEmailPage extends XotBasePage
 
     protected function fillForms(): void
     {
-        // $data = $this->getUser()->attributesToArray();
+        // $data = // @var mixed getUser(;
 
-        // $this->editProfileForm->fill($data);
-        $this->emailForm->fill();
+        // // @var mixed editProfileForm->fill($data;
+        // @var mixed emailForm->fill(;
     }
 }

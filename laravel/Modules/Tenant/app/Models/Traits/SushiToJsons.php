@@ -34,8 +34,8 @@ trait SushiToJsons
 
     public function getJsonFile(): string
     {
-        $tbl = $this->getTable();
-        $id = $this->getKey();
+        $tbl = // @var mixed getTable(;
+        $id = // @var mixed getKey(;
 
         $stringId = is_string($id) || is_numeric($id) ? (string) $id : 'unknown';
         $stringTbl = is_string($tbl) ? $tbl : 'unknown';
@@ -50,7 +50,7 @@ trait SushiToJsons
      */
     public function getSushiRows(): array
     {
-        $tbl = $this->getTable();
+        $tbl = // @var mixed getTable(;
         $path = TenantService::filePath('database/content/'.$tbl);
 
         $files = File::glob($path.'/*.json');
@@ -69,7 +69,7 @@ trait SushiToJsons
             $item = [];
 
             // Ensure schema is an array
-            $schema = $this->schema ?? [];
+            $schema = // @var mixed schema ?? [];
 
             /** @var array<string, mixed> $schema */
             foreach ($schema as $name => $type) {

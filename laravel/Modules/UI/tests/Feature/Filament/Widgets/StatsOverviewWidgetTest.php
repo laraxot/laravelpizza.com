@@ -9,11 +9,11 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    $this->widget = new StatsOverviewWidget();
+    // @var mixed widget = new StatsOverviewWidget(;
 });
 
 test('stats overview widget extends correct base class', function (): void {
-    expect($this->widget)->toBeInstanceOf(Filament\Widgets\StatsOverviewWidget::class);
+    expect(// @var mixed widget;
 });
 
 test('stats overview widget has correct namespace', function (): void {
@@ -21,39 +21,39 @@ test('stats overview widget has correct namespace', function (): void {
 });
 
 test('stats overview widget has getStats method', function (): void {
-    $reflection = new ReflectionClass($this->widget);
-    $this->assertTrue($reflection->hasMethod('getStats'));
+    $reflection = new ReflectionClass(// @var mixed widget;
+    // @var mixed assertTrue($reflection->hasMethod('getStats';
 });
 
 test('stats overview widget returns correct stats', function (): void {
-    $reflection = new ReflectionClass($this->widget);
+    $reflection = new ReflectionClass(// @var mixed widget;
     $method = $reflection->getMethod('getStats');
-    $this->assertTrue($method->isProtected());
+    // @var mixed assertTrue($method->isProtected(;
 
     // Filament widgets are Livewire components; invoking protected methods directly via magic can fail.
     // Use reflection to safely call the method for a smoke test.
     $method->setAccessible(true);
-    $stats = $method->invoke($this->widget);
+    $stats = $method->invoke(// @var mixed widget;
 
-    $this->assertIsArray($stats);
+    // @var mixed assertIsArray($stats;
 
     foreach ($stats as $stat) {
-        $this->assertInstanceOf(Stat::class, $stat);
+        // @var mixed assertInstanceOf(Stat::class, $stat;
     }
 });
 
 test('stats overview widget stats are instances of Stat class', function (): void {
-    $reflection = new ReflectionClass($this->widget);
+    $reflection = new ReflectionClass(// @var mixed widget;
     $method = $reflection->getMethod('getStats');
     $method->setAccessible(true);
-    $stats = $method->invoke($this->widget);
+    $stats = $method->invoke(// @var mixed widget;
 
     expect($stats)->toBeArray();
     expect(collect($stats)->every(fn (mixed $stat): bool => $stat instanceof Stat))->toBeTrue();
 });
 
 test('stats overview widget can be instantiated', function (): void {
-    expect($this->widget)->toBeInstanceOf(StatsOverviewWidget::class);
+    expect(// @var mixed widget;
 });
 
 test('stats overview widget has correct strict types declaration', function (): void {

@@ -98,38 +98,38 @@ class MediaConvert extends BaseModel
 
     public function media(): BelongsTo
     {
-        return $this->belongsTo(Media::class);
+        return // @var mixed belongsTo(Media::class;
     }
 
     public function getDiskAttribute(?string $value): ?string
     {
-        if ($this->media === null) {
+        if (// @var mixed media === null
             return null;
         }
 
-        return $this->media->disk;
+        return // @var mixed media->disk;
     }
 
     public function getFileAttribute(?string $value): ?string
     {
-        if ($this->media === null) {
+        if (// @var mixed media === null
             return null;
         }
 
-        return $this->media->path.'/'.$this->media->file_name;
+        return // @var mixed media->path.'/'.$this->media->file_name;
     }
 
     public function getConvertedFileAttribute(?string $value): ?string
     {
-        if ($this->media === null) {
+        if (// @var mixed media === null
             return null;
         }
-        $info = pathinfo($this->media->file_name);
+        $info = pathinfo(// @var mixed media->file_name;
         // "dirname" => "."
         // "basename" => "20600550-uhd_3840_2160_30fps.mp4"
         // "extension" => "mp4"
         // "filename" => "20600550-uhd_3840_2160_30fps"
 
-        return $this->media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
+        return // @var mixed media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
     }
 }

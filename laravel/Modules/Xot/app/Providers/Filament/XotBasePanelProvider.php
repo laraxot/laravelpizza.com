@@ -18,7 +18,6 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Support\Str;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Modules\Xot\Actions\Panel\ApplyMetatagToPanelAction;
-// Remove if not used elsewhere implicitly
 use Modules\Xot\Datas\XotData;
 use Webmozart\Assert\Assert;
 
@@ -36,31 +35,24 @@ abstract class XotBasePanelProvider extends PanelProvider
     {
         $moduleNamespace = $this->getModuleNamespace();
         $moduleLow = Str::lower($this->module);
-        $mainModuleLow = Str::lower(XotData::make()->main_module); // Renamed to camelCase
+        $mainModuleLow = Str::lower(XotData::make()->main_module);
         $default = $mainModuleLow === $moduleLow;
 
         $panel = $panel
             ->default($default)
-            ->login() // UNCOMMENTED
-            // ->registration()
+            ->login()
             ->passwordReset()
-            // ->emailVerification()
-            // ->profile()
             ->sidebarFullyCollapsibleOnDesktop();
 
         $panel = app(ApplyMetatagToPanelAction::class)->execute(panel: $panel);
-        // ---------------------
+
         $panel->maxContentWidth('full')
             ->topNavigation($this->topNavigation)
             ->globalSearch($this->globalSearch)
             ->readOnlyRelationManagersOnResourceViewPagesByDefault(false)
             ->navigation($this->navigation)
-            // ->tenant($teamClass)
-            // ->tenant($teamClass,ownershipRelationship:'users')
-            // ->tenant($teamClass)
             ->id($moduleLow.'::admin')
             ->path($moduleLow.'/admin')
-            // Configure Filament discovery for module components (unconditional; dirs are expected to exist)
             ->discoverResources(
                 in: base_path('Modules/'.$this->module.'/app/Filament/Resources'),
                 for: sprintf('%s\\Filament\\Resources', $moduleNamespace),

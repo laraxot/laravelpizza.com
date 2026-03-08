@@ -25,7 +25,7 @@ it('registers blade components correctly', function (): void {
 
     $mockComps = ComponentFileData::collection([$comp1]);
 
-    $this->mock(GetComponentsAction::class)
+    $this->mock(GetComponentsAction::class
         ->shouldReceive('execute')
         ->once()
         ->with($path, $namespace.'\\View\\Components', $prefix)
@@ -45,7 +45,7 @@ it('does nothing if no components found', function (): void {
 
     $mockComps = ComponentFileData::collection([]);
 
-    $this->mock(GetComponentsAction::class)
+    $this->mock(GetComponentsAction::class
         ->shouldReceive('execute')
         ->once()
         ->andReturn($mockComps);

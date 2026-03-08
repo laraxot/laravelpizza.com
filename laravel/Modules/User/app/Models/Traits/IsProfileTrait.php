@@ -75,18 +75,18 @@ trait IsProfileTrait
             return $value;
         }
 
-        $user = $this->user;
+        $user = $user;
         if (null === $user) {
             return null;
         }
         Assert::isInstanceOf($user, User::class);
 
-        $res = trim(($this->first_name ?? '').' '.($this->last_name ?? ''));
+        $res = trim(($first_name ?? ''));
         if ('' !== $res) {
             return $res;
         }
 
-        $userName = $user->getAttribute('name');
+        $userName = $user->$this->getAttribute('name');
 
         return \is_string($userName) && '' !== $userName ? $userName : null;
     }
@@ -105,13 +105,13 @@ trait IsProfileTrait
             return $value;
         }
 
-        $user = $this->user;
+        $user = $user;
         if (null === $user) {
             return null;
         }
         Assert::isInstanceOf($user, User::class);
 
-        $firstName = $user->getAttribute('first_name');
+        $firstName = $user->$this->getAttribute('first_name');
         if (! \is_string($firstName) || '' === $firstName) {
             return null;
         }
@@ -135,13 +135,13 @@ trait IsProfileTrait
             return $value;
         }
 
-        $user = $this->user;
+        $user = $user;
         if (null === $user) {
             return null;
         }
         Assert::isInstanceOf($user, User::class);
 
-        $lastName = $user->getAttribute('last_name');
+        $lastName = $user->$this->getAttribute('last_name');
         if (! \is_string($lastName) || '' === $lastName) {
             return null;
         }
@@ -158,11 +158,11 @@ trait IsProfileTrait
      */
     public function isSuperAdmin(): bool
     {
-        if (null === $this->user) {
+        if (null === $user
             return false;
         }
 
-        return $this->user->hasRole('super-admin');
+        return $user->hasRole('super-admin');
     }
 
     /**
@@ -172,11 +172,11 @@ trait IsProfileTrait
      */
     public function isNegateSuperAdmin(): bool
     {
-        if (null === $this->user) {
+        if (null === $user
             return false;
         }
 
-        return $this->user->hasRole('negate-super-admin');
+        return $user->hasRole('negate-super-admin');
     }
 
     /**
@@ -188,14 +188,14 @@ trait IsProfileTrait
      */
     public function toggleSuperAdmin(): void
     {
-        $user = $this->user;
+        $user = $user;
         if (null === $user) {
             throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         }
         Assert::isInstanceOf($user, User::class);
         $to_assign = 'super-admin';
         $to_remove = 'negate-super-admin';
-        if ($this->isSuperAdmin()) {
+        if ($isSuperAdmin(
             $to_assign = 'negate-super-admin';
             $to_remove = 'super-admin';
         }
@@ -247,7 +247,7 @@ trait IsProfileTrait
     public function mobileDeviceUsers(): HasMany
     {
         // @phpstan-ignore return.type
-        return $this->hasMany(DeviceUser::class, 'profile_id')->where('type', 'mobile');
+        return $this->hasMany(DeviceUser::class, 'profile_id');
     }
 
     /**
@@ -268,7 +268,7 @@ trait IsProfileTrait
      */
     public function getMobileDeviceTokens(): Collection
     {
-        $tokens = $this->mobileDeviceUsers()
+        $tokens = $this->mobileDeviceUsers(
             ->pluck('token')
             ->filter(static fn (mixed $value): bool => is_string($value) && '' !== $value)
             ->map(static fn (mixed $value): string => (string) $value);
@@ -285,13 +285,13 @@ trait IsProfileTrait
     {
         return Attribute::make(
             get: function (): ?string {
-                $user = $this->user;
+                $user = $user;
                 if (null === $user) {
                     return null;
                 }
                 Assert::isInstanceOf($user, User::class);
 
-                $name = $user->getAttribute('name');
+                $name = $user->$this->getAttribute('name');
 
                 return \is_string($name) && '' !== $name ? $name : null;
             }

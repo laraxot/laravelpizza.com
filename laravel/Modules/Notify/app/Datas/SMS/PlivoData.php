@@ -37,11 +37,11 @@ class PlivoData extends Data
 
     public function getAuthHeaders(): array
     {
-        switch ($this->auth_type) {
+        switch (// @var mixed auth_type
             case 'basic':
             default:
                 return [
-                    'Authorization' => 'Basic '.base64_encode($this->auth_id.':'.$this->auth_token),
+                    'Authorization' => 'Basic '.base64_encode(// @var mixed auth_id.':'.$this->auth_token
                     'Content-Type' => 'application/json',
                 ];
         }
@@ -49,11 +49,11 @@ class PlivoData extends Data
 
     public function getBaseUrl(): string
     {
-        return $this->base_url ?? 'https://api.plivo.com';
+        return // @var mixed base_url ?? 'https://api.plivo.com';
     }
 
     public function getTimeout(): int
     {
-        return $this->timeout;
+        return // @var mixed timeout;
     }
 }

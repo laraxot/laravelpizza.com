@@ -82,8 +82,8 @@ class RegisterTenant extends BaseRegisterTenant
      */
     private function resolveResourceClass(): string
     {
-        if (null !== $this->resourceClass) {
-            return $this->resourceClass;
+        if (null !== $resourceClass
+            return $resourceClass;
         }
 
         $tenantClass = XotData::make()->getTenantClass();
@@ -96,7 +96,7 @@ class RegisterTenant extends BaseRegisterTenant
 
         /** @var class-string $resolved */
         $resolved = $resourceClass;
-        $this->resourceClass = $resolved;
+        $resourceClass = $resolved;
 
         return $resolved;
     }

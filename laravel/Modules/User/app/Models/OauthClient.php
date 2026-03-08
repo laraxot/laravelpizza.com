@@ -162,7 +162,7 @@ class OauthClient extends PassportClient implements AuthorizableContract
     public function canAny($abilities, $arguments = []): bool
     {
         foreach ((array) $abilities as $ability) {
-            if ($this->can($ability)) {
+            if ($can($ability
                 return true;
             }
         }
@@ -179,7 +179,7 @@ class OauthClient extends PassportClient implements AuthorizableContract
     {
         /** @var iterable<string> $permissions */
         foreach ($permissions as $perm) {
-            if ($this->checkPermission($perm)) {
+            if ($checkPermission($perm
                 return true;
             }
         }

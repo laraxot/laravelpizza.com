@@ -13,7 +13,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table): void {
+        // @var mixed tableCreate(static function (Blueprint $table
             // $table->uuid('id')->primary();
             $table->id();
             $table->string('uuid')->unique();
@@ -24,8 +24,8 @@ return new class extends XotBaseMigration
             $table->timestamp('failed_at')->useCurrent();
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
-            if (! $this->hasColumn('uuid')) {
+        // @var mixed tableUpdate(function (Blueprint $table
+            if (! // @var mixed hasColumn('uuid'
                 $table->string('uuid')->nullable();
             }
         });

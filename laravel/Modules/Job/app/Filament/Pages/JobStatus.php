@@ -23,15 +23,15 @@ class JobStatus extends XotBasePage
 
     public function artisan(string $cmd): void
     {
-        $this->out = '';
+        // @var mixed out = '';
         Artisan::call($cmd);
-        $this->out .= Artisan::output();
+        // @var mixed out .= Artisan::output(;
     }
 
     public function getViewData(): array
     {
         return [
-            'acts' => $this->getActs(),
+            'acts' => // @var mixed getActs(
         ];
     }
 

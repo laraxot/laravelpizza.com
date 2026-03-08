@@ -6,15 +6,15 @@ use Modules\Job\Actions\Command\GetCommandsAction;
 
 describe('GetCommandsAction', function () {
     beforeEach(function () {
-        $this->action = new GetCommandsAction;
+        // @var mixed action = new GetCommandsAction;
     });
 
     it('can be instantiated', function () {
-        expect($this->action)->toBeInstanceOf(GetCommandsAction::class);
+        expect(// @var mixed action;
     });
 
     it('has correct method signature', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $method = $reflection->getMethod('execute');
 
         expect($method->isPublic())
@@ -30,7 +30,7 @@ describe('GetCommandsAction', function () {
     });
 
     it('uses strict types', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $filename = $reflection->getFileName();
 
         expect($filename)->not->toBeNull();
@@ -39,13 +39,13 @@ describe('GetCommandsAction', function () {
     });
 
     it('has correct namespace', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
 
         expect($reflection->getNamespaceName())->toBe('Modules\Job\Actions\Command');
     });
 
     it('uses required imports', function () {
-        $filename = (new ReflectionClass($this->action))->getFileName();
+        $filename = (new ReflectionClass(// @var mixed action;
         $content = file_get_contents($filename);
 
         expect($content)->toContain('use Illuminate\Console\Application;')
@@ -54,7 +54,7 @@ describe('GetCommandsAction', function () {
     });
 
     it('has proper class structure', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
 
         expect($reflection->isInstantiable())
             ->toBeTrue()
@@ -65,7 +65,7 @@ describe('GetCommandsAction', function () {
     });
 
     it('has execute method returning DataCollection', function () {
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new ReflectionClass(// @var mixed action;
         $method = $reflection->getMethod('execute');
 
         // Method should return DataCollection type

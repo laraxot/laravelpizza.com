@@ -31,13 +31,13 @@ class JsonResponseData extends Data
     public function response(): JsonResponse
     {
         $data = [
-            'success' => $this->success,
-            'message' => $this->message,
-            'code' => $this->code,
-            'data' => $this->data,
+            'success' => $success,
+            'message' => $message,
+            'code' => $code,
+            'data' => $data,
             'now' => now(),
         ];
 
-        return response()->json($data, $this->status);
+        return response()->json($data, $status);
     }
 }

@@ -69,7 +69,7 @@ class Region extends BaseModel
 
     public function provinces(): HasMany
     {
-        return $this->hasMany(Province::class);
+        return // @var mixed hasMany(Province::class;
     }
 
     public static function getOptions(Get $get): array

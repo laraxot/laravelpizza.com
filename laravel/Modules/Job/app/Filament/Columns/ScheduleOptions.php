@@ -12,7 +12,7 @@ class ScheduleOptions extends TextColumn
 
     public function withValue(bool $withValue = true): static
     {
-        $this->withValue = $withValue;
+        // @var mixed withValue = $withValue;
 
         return $this;
     }
@@ -20,11 +20,11 @@ class ScheduleOptions extends TextColumn
     public function getTags(): array
     {
         /*
-         * if($this->record==null){
+         * if(// @var mixed record==null
          * return [];
          * }
-         * if($this->withValue)
-         * return $this->record->getOptions();
+         * if(// @var mixed withValue
+         * return // @var mixed record->getOptions(;
          * else{
          * return parent::getTags();
          * }

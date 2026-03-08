@@ -15,7 +15,7 @@ class ComponentFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->slug(),
+            'name' => // @var mixed faker->slug(
             'theme_id' => Theme::factory(),
             'is_active' => true,
             'version' => '1.0.0',

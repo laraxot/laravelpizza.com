@@ -13,7 +13,7 @@ declare(strict_types=1);
             Utilizza questo form per testare l'invio di messaggi Telegram tramite diversi provider.
         </x-slot>
 
-        {{ $this->telegramForm }}
+        {{ // @var mixed telegramForm }}
 
         <x-slot name="footer">
             <div class="flex items-center justify-end gap-x-3">

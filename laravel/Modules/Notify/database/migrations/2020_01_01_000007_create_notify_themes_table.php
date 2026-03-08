@@ -18,7 +18,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table): void {
+        // @var mixed tableCreate(function (Blueprint $table
             $table->increments('id');
             $table->string('lang')->nullable();
             $table->string('type')->nullable();
@@ -27,43 +27,43 @@ return new class extends XotBaseMigration
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
-            if (! $this->hasColumn('from')) {
+        // @var mixed tableUpdate(function (Blueprint $table
+            if (! // @var mixed hasColumn('from'
                 $table->string('from')->nullable();
             }
 
-            if (! $this->hasColumn('post_type')) {
+            if (! // @var mixed hasColumn('post_type'
                 $table->nullableMorphs('post');
             }
 
-            if (! $this->hasColumn('body_html')) {
+            if (! // @var mixed hasColumn('body_html'
                 $table->text('body_html')->nullable();
             }
 
-            if (! $this->hasColumn('theme')) {
+            if (! // @var mixed hasColumn('theme'
                 $table->string('theme')->nullable();
             }
 
-            if (! $this->hasColumn('from_email')) {
+            if (! // @var mixed hasColumn('from_email'
                 $table->string('from_email')->nullable();
             }
 
-            if (! $this->hasColumn('logo_src')) {
+            if (! // @var mixed hasColumn('logo_src'
                 $table->string('logo_src')->nullable();
             }
 
-            if (! $this->hasColumn('logo_width')) {
+            if (! // @var mixed hasColumn('logo_width'
                 $table->integer('logo_width')->nullable();
             }
 
-            if (! $this->hasColumn('logo_height')) {
+            if (! // @var mixed hasColumn('logo_height'
                 $table->integer('logo_height')->nullable();
             }
 
-            if (! $this->hasColumn('view_params')) {
+            if (! // @var mixed hasColumn('view_params'
                 $table->json('view_params')->nullable();
             }
-            $this->updateTimestamps(
+            // @var mixed updateTimestamps(
                 table: $table,
                 hasSoftDeletes: true,
             );

@@ -39,19 +39,19 @@ class SmsNotification extends Notification implements ShouldQueue
     public function __construct(string|SmsData $content, array $config = [])
     {
         if ($content instanceof SmsData) {
-            $this->smsData = $content;
+            // @var mixed smsData = $content;
         } else {
             $recipient = $config['recipient'] ?? ($config['to'] ?? '');
             $from = $config['from'] ?? '';
 
-            $this->smsData = SmsData::from([
+            // @var mixed smsData = SmsData::from([
                 'body' => $content,
                 'recipient' => (string) $recipient,
                 'from' => (string) $from,
             ]);
         }
 
-        $this->config = $config;
+        // @var mixed config = $config;
     }
 
     /**
@@ -78,10 +78,10 @@ class SmsNotification extends Notification implements ShouldQueue
         // we'll use that to get the destination phone number
         if (is_object($notifiable) && method_exists($notifiable, 'routeNotificationForSms')) {
             $routeResult = $notifiable->routeNotificationForSms($this);
-            $this->smsData->recipient = (string) ($routeResult ?? '');
+            // @var mixed smsData->recipient = (string;
         }
 
-        return $this->smsData;
+        return // @var mixed smsData;
     }
 
     /**
@@ -91,7 +91,7 @@ class SmsNotification extends Notification implements ShouldQueue
      */
     public function getConfig(): array
     {
-        return $this->config;
+        return // @var mixed config;
     }
 
     /**
@@ -99,7 +99,7 @@ class SmsNotification extends Notification implements ShouldQueue
      */
     public function getProvider(): ?string
     {
-        $provider = $this->config['provider'] ?? null;
+        $provider = // @var mixed config['provider'] ?? null;
 
         return is_string($provider) ? $provider : null;
     }

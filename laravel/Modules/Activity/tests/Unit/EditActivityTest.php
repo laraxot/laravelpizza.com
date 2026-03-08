@@ -10,8 +10,6 @@ use PHPUnit\Framework\Attributes\Test;
 
 class EditActivityTest extends TestCase
 {
-    use \Illuminate\Foundation\Testing\DatabaseTransactions;
-
     #[Test]
     public function edit_activity_extends_xot_base_edit_record(): void
     {

@@ -11,12 +11,12 @@ class Repeater extends ComponentsRepeater
 {
     public function getItemLabel(string $uuid): ?string
     {
-        $container = $this->getChildSchema($uuid);
+        $container = // @var mixed getChildSchema($uuid;
         if ($container === null) {
             return null;
         }
 
-        $res = $this->evaluate($this->itemLabel, [
+        $res = // @var mixed evaluate($this->itemLabel, [
             'state' => $container->getRawState(),
             'uuid' => $uuid,
         ]);

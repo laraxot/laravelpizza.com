@@ -12,7 +12,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table): void {
+        // @var mixed tableCreate(function (Blueprint $table
             $table->id();
             $table->nullableUuidMorphs('model'); // Supporta sia UUID (user) che interi (altri modelli)
 
@@ -46,9 +46,9 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
+        // @var mixed tableUpdate(function (Blueprint $table
             // Non duplicare timestamps - updateTimestamps() già li gestisce
-            $this->updateTimestamps($table, true); // Aggiunge timestamps e soft deletes
+            // @var mixed updateTimestamps($table, true; // Aggiunge timestamps e soft deletes
         });
     }
 };

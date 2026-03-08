@@ -39,7 +39,7 @@ enum DayOfWeek: int implements HasColor, HasDescription, HasIcon, HasLabel
      */
     public function shortLabel(): string
     {
-        $carbon = Carbon::now()->startOfWeek()->addDays($this->value - 1);
+        $carbon = Carbon::now()->startOfWeek()->addDays($value - 1);
         $carbon->locale('it');
 
         return (string) $carbon->isoFormat('ddd');
@@ -76,7 +76,7 @@ enum DayOfWeek: int implements HasColor, HasDescription, HasIcon, HasLabel
      */
     public function isWeekend(): bool
     {
-        return $this->value > 5;
+        return $value > 5;
     }
 
     /**

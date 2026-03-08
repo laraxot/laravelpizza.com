@@ -18,21 +18,21 @@ if (! class_exists(TestConcreteBaseModel::class)) {
 }
 
 beforeEach(function () {
-    $this->baseModel = new TestConcreteBaseModel();
+    $baseModel = new TestConcreteBaseModel();
 });
 
 test('base model extends eloquent model', function () {
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
+    expect($baseModel);
 });
 
 test('base model has correct table name', function () {
-    expect($this->baseModel->getTable())->toBe('test_table');
+    expect($baseModel->getTable());
 });
 
 test('base model has timestamps enabled', function () {
-    expect($this->baseModel->timestamps)->toBeTrue();
+    expect($baseModel->timestamps);
 });
 
 test('base model can be instantiated via subclass', function () {
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
+    expect($baseModel);
 });

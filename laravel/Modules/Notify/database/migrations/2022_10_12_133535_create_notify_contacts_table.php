@@ -16,7 +16,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table): void {
+        // @var mixed tableCreate(function (Blueprint $table
             $table->increments('id');
             $table->uuidMorphs('model');
             $table->string('contact_type')->nullable();
@@ -24,11 +24,11 @@ return new class extends XotBaseMigration
             $table->integer('user_id')->nullable();
             $table->timestamp('verified_at')->nullable();
         });
-        $this->tableUpdate(function (Blueprint $table): void {
-            if (! $this->hasColumn('token')) {
+        // @var mixed tableUpdate(function (Blueprint $table
+            if (! // @var mixed hasColumn('token'
                 $table->string('token')->nullable();
             }
-            $this->updateTimestamps(
+            // @var mixed updateTimestamps(
                 table: $table,
                 hasSoftDeletes: true,
             );

@@ -27,13 +27,13 @@ new class extends Component {
     {
         $this->validate();
 
-        if (!Auth::attempt(['email' => $this->email, 'password' => $this->password], $this->remember)) {
+        if (!Auth::attempt(['email' => $email, 'password' => $this->password], $this->remember
             $this->addError('email', trans('auth.failed'));
 
             return;
         }
 
-        event(new Login(auth()->guard('web'), User::where('email', $this->email)->first(), $this->remember));
+        event(new Login(auth()->guard('web'), User::where('email', $email)));
 
         return redirect()->intended('/');
     }

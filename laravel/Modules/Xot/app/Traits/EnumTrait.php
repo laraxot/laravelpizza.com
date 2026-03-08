@@ -79,7 +79,7 @@ trait EnumTrait
      * ```php
      * $address_components = Place::$address_components;
      * foreach ($address_components as $el) {
-     *     if (! $this->hasColumn($el)) {
+     *     if (! $this->hasColumn($el
      *         $table->string($el)->nullable();
      *     }
      * }
@@ -88,13 +88,13 @@ trait EnumTrait
      * Usage in migrations:
      * ```php
      * // In CREATE block (no hasColumn checks needed):
-     * $this->tableCreate(function (Blueprint $table): void {
+     * $this->tableCreate(function (Blueprint $table
      *     $table->id();
      *     ContactTypeEnum::columns($table); // migration = null, adds all
      * });
      *
      * // In UPDATE block (with hasColumn checks):
-     * $this->tableUpdate(function (Blueprint $table): void {
+     * $this->tableUpdate(function (Blueprint $table
      *     ContactTypeEnum::columns($table, $this); // loops with checks
      * });
      * ```

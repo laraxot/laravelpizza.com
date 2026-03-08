@@ -6,12 +6,9 @@ namespace Modules\Cms\Tests\Unit\Http\Volt\Password;
 
 use Livewire\Volt\Component as VoltComponent;
 use Modules\Cms\Http\Volt\Password\TokenComponent;
-<<<<<<< HEAD
-=======
 use ReflectionClass;
->>>>>>> e1ecbe9 (.)
 
-uses(\Modules\Cms\Tests\TestCase::class, \Illuminate\Foundation\Testing\DatabaseTransactions::class);
+uses(\Modules\Cms\Tests\TestCase::class);
 
 describe('Password TokenComponent', function (): void {
     test('token component extends volt component', function (): void {
@@ -45,11 +42,7 @@ describe('Password TokenComponent', function (): void {
     });
 
     test('reset password method returns redirector or redirect response', function (): void {
-<<<<<<< HEAD
-        $reflection = new \ReflectionClass(TokenComponent::class);
-=======
         $reflection = new ReflectionClass(TokenComponent::class);
->>>>>>> e1ecbe9 (.)
         $method = $reflection->getMethod('resetPassword');
         $returnType = $method->getReturnType();
 
@@ -57,7 +50,3 @@ describe('Password TokenComponent', function (): void {
             ->and((string) $returnType)->toBe('Illuminate\Routing\Redirector|Illuminate\Http\RedirectResponse');
     });
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> e1ecbe9 (.)

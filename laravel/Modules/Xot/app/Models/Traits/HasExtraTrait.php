@@ -50,7 +50,7 @@ trait HasExtraTrait
 
     public function getExtra(string $name): array|bool|float|int|string|null
     {
-        $extra = $this->extra;
+        $extra = $extra;
         if (! $extra instanceof ExtraContract || ! $extra instanceof Model) {
             return null;
         }
@@ -78,9 +78,9 @@ trait HasExtraTrait
      */
     public function setExtra(string $name, int|float|string|array|bool|null $value): void
     {
-        $extra = $this->extra;
+        $extra = $extra;
         if (! $extra instanceof ExtraContract || ! $extra instanceof Model) {
-            $extra = $this->extra()->firstOrCreate([], ['extra_attributes' => json_encode([])]);
+            $extra = $this->extra();
             if (! $extra instanceof ExtraContract || ! $extra instanceof Model) {
                 return;
             }

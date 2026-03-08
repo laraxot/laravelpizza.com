@@ -23,7 +23,7 @@ class FakeSeederHeaderAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel()
+        $this->translateLabel(
             ->tooltip(__('xot::actions.fake_seeder'))
             ->icon('fas-seedling')
             ->schema([

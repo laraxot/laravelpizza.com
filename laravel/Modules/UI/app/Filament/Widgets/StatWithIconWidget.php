@@ -26,7 +26,7 @@ final class StatWithIconWidget extends XotBaseWidget
     protected function getData(): array
     {
         return [
-            'heading' => $this->heading,
+            'heading' => // @var mixed heading,
         ];
     }
 }

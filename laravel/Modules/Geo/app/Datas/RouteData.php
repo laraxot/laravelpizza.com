@@ -35,11 +35,11 @@ class RouteData extends Data
      */
     public function getFormattedDistance(): string
     {
-        if ($this->totalDistance < 1000) {
-            return sprintf('%d m', $this->totalDistance);
+        if (// @var mixed totalDistance < 1000
+            return sprintf('%d m', // @var mixed totalDistance;
         }
 
-        return sprintf('%.1f km', $this->totalDistance / 1000);
+        return sprintf('%.1f km', // @var mixed totalDistance / 1000;
     }
 
     /**
@@ -47,8 +47,8 @@ class RouteData extends Data
      */
     public function getFormattedDuration(): string
     {
-        $hours = floor($this->totalDuration / 3600);
-        $minutes = floor(($this->totalDuration % 3600) / 60);
+        $hours = floor(// @var mixed totalDuration / 3600;
+        $minutes = floor((// @var mixed totalDuration % 3600;
 
         if ($hours > 0) {
             return sprintf('%d ore %d min', $hours, $minutes);
@@ -62,9 +62,9 @@ class RouteData extends Data
      *
      * public function isOptimized(): bool
      * {
-     * return ! $this->waypoints->isEmpty() && ! $this->originalWaypoints->isEmpty()
-     * && $this->waypoints->count() === $this->originalWaypoints->count()
-     * && ! $this->waypoints->zip($this->originalWaypoints)->every(
+     * return ! // @var mixed waypoints->isEmpty(
+     * && // @var mixed waypoints->count(
+     * && ! // @var mixed waypoints->zip($this->originalWaypoints
      * fn (array $pair): bool => $pair[0]->equals($pair[1])
      * );
      * }
@@ -82,11 +82,11 @@ class RouteData extends Data
     public function getSummary(): array
     {
         return [
-            'distance' => $this->getFormattedDistance(),
-            'duration' => $this->getFormattedDuration(),
-            'steps' => count($this->steps),
-            'waypoints' => $this->waypoints->count(),
-            // 'optimized' => $this->isOptimized(),
+            'distance' => // @var mixed getFormattedDistance(
+            'duration' => // @var mixed getFormattedDuration(
+            'steps' => count(// @var mixed steps
+            'waypoints' => // @var mixed waypoints->count(
+            // 'optimized' => // @var mixed isOptimized(
         ];
     }
 

@@ -35,7 +35,7 @@ class MetatagPage extends XotBasePage
         Assert::isArray($data = config('metatag'));
 
         // @phpstan-ignore argument.type
-        $this->form->fill($data);
+        $form->fill($data);
     }
 
     public function schema(Schema $schema): Schema
@@ -74,7 +74,7 @@ class MetatagPage extends XotBasePage
 
     public function save(): void
     {
-        $data = $this->form->getState();
+        $data = $form->getState();
         TenantService::saveConfig('metatag', $data);
 
         Notification::make()

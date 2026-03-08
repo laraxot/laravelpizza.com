@@ -49,7 +49,7 @@ class AddStrictTypesDeclarationCommand extends Command
 
         foreach ($files as $file) {
             Assert::isInstanceOf($file, \SplFileInfo::class);
-            if ($this->shouldProcessFile($file)) {
+            if ($shouldProcessFile($file
                 if ($dryRun) {
                     $fileName = $file->getRealPath();
                     if (false === $fileName) {
@@ -106,7 +106,7 @@ class AddStrictTypesDeclarationCommand extends Command
         }
 
         // Verifica se il file è in un percorso escluso
-        foreach ($this->excludedPaths as $excludedPath) {
+        foreach ($excludedPaths as $excludedPath
             if (str_contains($path, "/{$excludedPath}/")) {
                 return false;
             }

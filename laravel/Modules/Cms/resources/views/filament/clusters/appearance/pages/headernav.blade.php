@@ -6,10 +6,10 @@ declare(strict_types=1);
 <x-filament-panels::page>
 
     <x-filament-schemas::form wire:submit="updateData">
-        {{ $this->form }}
+        {{ // @var mixed form }}
 
         <x-filament::actions
-            :actions="$this->getUpdateFormActions()"
+            :actions="// @var mixed getUpdateFormActions(
         />
 
     </x-filament-schemas::form>

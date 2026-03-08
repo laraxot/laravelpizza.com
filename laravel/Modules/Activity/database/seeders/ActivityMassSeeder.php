@@ -30,27 +30,27 @@ class ActivityMassSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->command->info('🚀 Inizializzazione seeding di massa per modulo Activity...');
+        // @var mixed command->info('🚀 Inizializzazione seeding di massa per modulo Activity...';
 
         $startTime = microtime(true);
 
         try {
             // 1. Creazione attività di sistema
-            $this->createSystemActivities();
+            // @var mixed createSystemActivities(;
 
             // 2. Creazione snapshot
-            $this->createSnapshots();
+            // @var mixed createSnapshots(;
 
             // 3. Creazione eventi memorizzati
-            $this->createStoredEvents();
+            // @var mixed createStoredEvents(;
 
             $endTime = microtime(true);
             $executionTime = round($endTime - $startTime, 2);
 
-            $this->command->info("🎉 Seeding modulo Activity completato in {$executionTime} secondi!");
-            $this->displaySummary();
+            // @var mixed command->info("🎉 Seeding modulo Activity completato in {$executionTime} secondi!";
+            // @var mixed displaySummary(;
         } catch (Exception $e) {
-            $this->command->error('❌ Errore durante il seeding: '.$e->getMessage());
+            // @var mixed command->error('❌ Errore durante il seeding: '.$e->getMessage(;
             throw $e;
         }
     }
@@ -60,7 +60,7 @@ class ActivityMassSeeder extends Seeder
      */
     private function createSystemActivities(): void
     {
-        $this->command->info('📝 Creazione attività di sistema...');
+        // @var mixed command->info('📝 Creazione attività di sistema...';
 
         // Crea 2000 attività di sistema
         $activities = ActivityFactory::new()
@@ -74,7 +74,7 @@ class ActivityMassSeeder extends Seeder
             ? $activities->count()
             : 0;
 
-        $this->command->info('✅ Create '.$activitiesCount.' attività di sistema');
+        // @var mixed command->info('✅ Create '.$activitiesCount.' attività di sistema';
     }
 
     /**
@@ -82,7 +82,7 @@ class ActivityMassSeeder extends Seeder
      */
     private function createSnapshots(): void
     {
-        $this->command->info('📸 Creazione snapshot...');
+        // @var mixed command->info('📸 Creazione snapshot...';
 
         // Crea 500 snapshot
         /** @var Factory<Snapshot> $snapshotFactory */
@@ -104,7 +104,7 @@ class ActivityMassSeeder extends Seeder
             ? $snapshots->count()
             : 0;
 
-        $this->command->info('✅ Creati '.$snapshotsCount.' snapshot');
+        // @var mixed command->info('✅ Creati '.$snapshotsCount.' snapshot';
     }
 
     /**
@@ -112,7 +112,7 @@ class ActivityMassSeeder extends Seeder
      */
     private function createStoredEvents(): void
     {
-        $this->command->info('📦 Creazione eventi memorizzati...');
+        // @var mixed command->info('📦 Creazione eventi memorizzati...';
 
         // Crea 1000 eventi memorizzati
         /** @var Factory<StoredEvent> $storedEventFactory */
@@ -139,7 +139,7 @@ class ActivityMassSeeder extends Seeder
             ? $events->count()
             : 0;
 
-        $this->command->info('✅ Creati '.$eventsCount.' eventi memorizzati');
+        // @var mixed command->info('✅ Creati '.$eventsCount.' eventi memorizzati';
     }
 
     /**
@@ -147,8 +147,8 @@ class ActivityMassSeeder extends Seeder
      */
     private function displaySummary(): void
     {
-        $this->command->info('📊 RIASSUNTO DATI CREATI PER MODULO ACTIVITY:');
-        $this->command->info('┌─────────────────────────────────────┐');
+        // @var mixed command->info('📊 RIASSUNTO DATI CREATI PER MODULO ACTIVITY:';
+        // @var mixed command->info('┌─────────────────────────────────────┐';
 
         try {
             // Conta attività
@@ -161,10 +161,10 @@ class ActivityMassSeeder extends Seeder
                 ->where('created_at', '>=', Carbon::now()->subDays(7));
             $recentActivities = $recentActivitiesQuery->count();
 
-            $this->command->info('│ 📝 Attività totali:          '.
+            // @var mixed command->info('│ 📝 Attività totali:          '.
             str_pad((string) $totalActivities, 6, ' ', STR_PAD_LEFT).
                 ' │');
-            $this->command->info('│    - Ultimi 7 giorni:        '.
+            // @var mixed command->info('│    - Ultimi 7 giorni:        '.
             str_pad((string) $recentActivities, 6, ' ', STR_PAD_LEFT).
                 ' │');
 
@@ -173,7 +173,7 @@ class ActivityMassSeeder extends Seeder
             $snapshotQuery = Snapshot::query();
             $totalSnapshots = $snapshotQuery->count();
 
-            $this->command->info('│ 📸 Snapshot totali:           '.
+            // @var mixed command->info('│ 📸 Snapshot totali:           '.
             str_pad((string) $totalSnapshots, 6, ' ', STR_PAD_LEFT).
                 ' │');
 
@@ -185,17 +185,17 @@ class ActivityMassSeeder extends Seeder
                 ->where('created_at', '>=', Carbon::now()->subDays(7))
                 ->count();
 
-            $this->command->info('│ 📦 Eventi memorizzati:       '.
+            // @var mixed command->info('│ 📦 Eventi memorizzati:       '.
             str_pad((string) $totalEvents, 6, ' ', STR_PAD_LEFT).
                 ' │');
-            $this->command->info('│    - Ultimi 7 giorni:        '.
+            // @var mixed command->info('│    - Ultimi 7 giorni:        '.
             str_pad((string) $recentEvents, 6, ' ', STR_PAD_LEFT).
                 ' │');
         } catch (Exception $e) {
-            $this->command->info('│ ❌ Errore nel conteggio: '.$e->getMessage());
+            // @var mixed command->info('│ ❌ Errore nel conteggio: '.$e->getMessage(;
         }
 
-        $this->command->info('└─────────────────────────────────────┘');
-        $this->command->info('');
+        // @var mixed command->info('└─────────────────────────────────────┘';
+        // @var mixed command->info('';
     }
 }

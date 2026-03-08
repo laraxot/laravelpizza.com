@@ -30,14 +30,14 @@ class WriteTranslationFileAction
     public function execute(string $filePath, array $translations): bool
     {
         // Crea backup del file esistente
-        $this->createBackup($filePath);
+        // @var mixed createBackup($filePath;
 
         // Converte le traduzioni in formato PHP
         $readAction = app(ReadTranslationFileAction::class);
         $phpContent = $readAction->toPhp($translations);
 
         // Verifica la sintassi PHP prima di scrivere
-        $this->validatePhpSyntax($phpContent);
+        // @var mixed validatePhpSyntax($phpContent;
 
         // Scrivi il file
         $result = File::put($filePath, $phpContent);
@@ -47,7 +47,7 @@ class WriteTranslationFileAction
         }
 
         // Pulisci la cache delle traduzioni
-        $this->clearTranslationCache();
+        // @var mixed clearTranslationCache(;
 
         return true;
     }

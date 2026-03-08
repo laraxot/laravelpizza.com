@@ -21,16 +21,16 @@ class StatesChartWidget extends XotBaseChartWidget
     #[\Override]
     public function getHeading(): ?string
     {
-        return static::transClass($this->model, 'widgets.states_chart.heading');
+        return static::transClass($model, 'widgets.states_chart.heading');
     }
 
     #[\Override]
     protected function getData(): array
     {
-        $label = static::transClass($this->model, 'widgets.states_chart.label');
+        $label = static::transClass($model, 'widgets.states_chart.label');
         try {
             /** @var class-string<Model> $modelClass */
-            $modelClass = $this->model;
+            $modelClass = $model;
 
             $queryResult = $modelClass::selectRaw('state, COUNT(*) as count')
                 ->groupBy('state')
@@ -67,7 +67,7 @@ class StatesChartWidget extends XotBaseChartWidget
                 ],
                 'labels' => $states
                     ->keys()
-                    ->map(fn ($state) => static::transClass($this->model, 'states.'.((string) $state).'.label'))
+                    ->map(fn ($state) => static::transClass($model, 'states.'.((string
                     ->toArray(),
             ];
         } catch (\Exception $e) {

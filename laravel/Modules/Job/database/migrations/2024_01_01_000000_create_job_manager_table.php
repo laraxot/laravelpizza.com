@@ -13,7 +13,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table): void {
+        // @var mixed tableCreate(static function (Blueprint $table
             $table->id();
             $table->string('job_id')->index();
             $table->string('name')->nullable();
@@ -26,8 +26,8 @@ return new class extends XotBaseMigration
             $table->text('exception_message')->nullable();
         });
         // -- UPDATE --
-        $this->tableUpdate(static function (Blueprint $_table): void {
-            // if (! $this->hasColumn('uuid')) {
+        // @var mixed tableUpdate(static function (Blueprint $_table
+            // if (! // @var mixed hasColumn('uuid'
             //    $table->string('uuid')->nullable();
             // }
         });

@@ -68,10 +68,10 @@ $component = new class extends Component {
             Assert::notNull($user, 'User must be authenticated');
             Assert::isInstanceOf($user, User::class);
 
-            $this->first_name = (string) ($user->first_name ?? '');
-            $this->last_name = (string) ($user->last_name ?? '');
-            $this->email = (string) ($user->email ?? '');
-            $this->user_id = (string) ($user->id ?? '');
+            $first_name = (string);
+            $last_name = (string);
+            $email = (string);
+            $user_id = (string);
 
         } catch (\Exception $e) {
             Log::error('Profile mount failed', ['error' => $e->getMessage()]);
@@ -84,7 +84,7 @@ $component = new class extends Component {
         $validated = $this->validate([
             'first_name' => ['required', 'string', 'max:100'],
             'last_name' => ['required', 'string', 'max:100'],
-            'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($this->user_id)],
+            'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user_id
         ]);
 
         /** @var User $user */
@@ -103,7 +103,7 @@ $component = new class extends Component {
 
         /** @var User $user */
         $user = Auth::user();
-        $user->update(['password' => Hash::make($this->password)]);
+        $user->update(['password' => Hash::make($password));
 
         $this->reset(['current_password', 'password', 'password_confirmation']);
         session()->flash('status', 'Password updated successfully.');

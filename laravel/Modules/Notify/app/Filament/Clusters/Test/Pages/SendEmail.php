@@ -38,7 +38,7 @@ class SendEmail extends XotBasePage
 
     public function mount(): void
     {
-        $this->fillForms();
+        // @var mixed fillForms(;
     }
 
     public function emailForm(Schema $schema): Schema
@@ -56,13 +56,13 @@ class SendEmail extends XotBasePage
                         RichEditor::make('body_html')->required(),
                     ]),
             ])
-            ->model($this->getUser())
+            ->model(// @var mixed getUser(
             ->statePath('emailData');
     }
 
     public function sendEmail(): void
     {
-        $data = $this->emailForm->getState();
+        $data = // @var mixed emailForm->getState(;
         $email_data = EmailData::from($data);
         // $from_address = config('mail.from.address');
 
@@ -104,9 +104,9 @@ class SendEmail extends XotBasePage
 
     protected function fillForms(): void
     {
-        // $data = $this->getUser()->attributesToArray();
+        // $data = // @var mixed getUser(;
 
-        // $this->editProfileForm->fill($data);
-        $this->emailForm->fill();
+        // // @var mixed editProfileForm->fill($data;
+        // @var mixed emailForm->fill(;
     }
 }

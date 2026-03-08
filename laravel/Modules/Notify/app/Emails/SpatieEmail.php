@@ -46,23 +46,23 @@ class SpatieEmail extends TemplateMailable
 
     public function __construct(Model $record, string $slug)
     {
-        $this->slug = Str::slug($slug);
+        // @var mixed slug = Str::slug($slug;
 
         $tpl = MailTemplate::firstOrCreate(
             [
                 'mailable' => self::class,
-                'slug' => $this->slug,
+                'slug' => // @var mixed slug,
             ],
             [
                 'subject' => 'Benvenuto, {{ first_name }}',
                 'html_template' => '<p>Gentile {{ first_name }} {{ last_name }},</p><p>La tua registrazione  è in attesa di approvazione. Ti contatteremo presto.</p>['.
-                        $this->slug.
+                        // @var mixed slug.
                         ']',
                 'text_template' => 'Gentile {{ first_name }} {{ last_name }}, la tua registrazione  è in attesa di approvazione. Ti contatteremo presto.['.
-                        $this->slug.
+                        // @var mixed slug.
                         ']',
                 'sms_template' => 'Gentile {{ first_name }} {{ last_name }}, la tua registrazione  è in attesa di approvazione. Ti contatteremo presto.['.
-                        $this->slug.
+                        // @var mixed slug.
                         ']',
             ],
         );
@@ -72,19 +72,19 @@ class SpatieEmail extends TemplateMailable
         }
         $lang = app()->getLocale();
         $data = app(SafeArrayByModelCastAction::class)->execute($record);
-        $this->data['lang'] = $lang;
-        $this->data['login_url'] = route('login');
-        $this->data['site_url'] = url('/'.$lang);
+        // @var mixed data['lang'] = $lang;
+        // @var mixed data['login_url'] = route('login';
+        // @var mixed data['site_url'] = url('/'.$lang;
 
-        $this->data['logo_header'] = MetatagData::make()->getBrandLogo();
-        $this->data['logo_header_base64'] = MetatagData::make()->getBrandLogoBase64();
-        $this->data['logo_svg'] = MetatagData::make()->getBrandLogoSvg();
+        // @var mixed data['logo_header'] = MetatagData::make(;
+        // @var mixed data['logo_header_base64'] = MetatagData::make(;
+        // @var mixed data['logo_svg'] = MetatagData::make(;
 
-        $this->data = array_merge($this->data, $data);
-        $this->setAdditionalData($this->data);
+        // @var mixed data = array_merge($this->data, $data;
+        // @var mixed setAdditionalData($this->data;
 
         $logoPath = MetatagData::make()->getBrandLogoPath();
-        $this->embedLogo($logoPath, 'logo_header');
+        // @var mixed embedLogo($logoPath, 'logo_header';
     }
 
     public function embedLogo(string $path, string $cid = 'logo_header'): self
@@ -101,17 +101,17 @@ class SpatieEmail extends TemplateMailable
 
         $attachment = Attachment::fromPath($path)->as($filename)->withMime($mime);
 
-        $this->customAttachments[] = $attachment;
+        // @var mixed customAttachments[] = $attachment;
 
         return $this;
     }
 
     public function mergeData(array $data): self
     {
-        $this->data = array_merge($this->data, $data);
-        $this->setAdditionalData($this->data);
-        $params = implode(',', array_keys($this->data));
-        MailTemplate::where(['slug' => $this->slug, 'mailable' => self::class])->update(['params' => $params]);
+        // @var mixed data = array_merge($this->data, $data;
+        // @var mixed setAdditionalData($this->data;
+        $params = implode(',', array_keys(// @var mixed data;
+        MailTemplate::where(['slug' => // @var mixed slug, 'mailable' => self::class];
 
         return $this;
     }
@@ -121,7 +121,7 @@ class SpatieEmail extends TemplateMailable
      */
     public function setRecipient(string $email): self
     {
-        $this->recipient = $email;
+        // @var mixed recipient = $email;
 
         return $this;
     }
@@ -134,8 +134,8 @@ class SpatieEmail extends TemplateMailable
         $envelope = new Envelope;
 
         // Set the recipient if available
-        if ($this->recipient) {
-            $envelope->to($this->recipient);
+        if (// @var mixed recipient
+            $envelope->to(// @var mixed recipient;
         }
 
         return $envelope;
@@ -144,7 +144,7 @@ class SpatieEmail extends TemplateMailable
     public function getHtmlLayout(): string
     {
         /** @var MailTemplate $mailTemplate */
-        $mailTemplate = $this->getMailTemplate();
+        $mailTemplate = // @var mixed getMailTemplate(;
 
         // Assicurarsi che html_layout_path sia una stringa prima di passarlo a base_path
         Assert::string($mailTemplate->html_layout_path);
@@ -155,7 +155,7 @@ class SpatieEmail extends TemplateMailable
 
     public function getSlug(): string
     {
-        return $this->slug;
+        return // @var mixed slug;
     }
 
     /**
@@ -217,11 +217,11 @@ class SpatieEmail extends TemplateMailable
         foreach ($attachments as $item) {
             $attachment = null;
             if (isset($item['path']) && file_exists($item['path'])) {
-                $attachment = $this->getAttachmentFromPath($item);
+                $attachment = // @var mixed getAttachmentFromPath($item;
             }
 
             if ($attachment === null && isset($item['data'])) {
-                $attachment = $this->getAttachmentFromData($item);
+                $attachment = // @var mixed getAttachmentFromData($item;
             }
 
             if ($attachment) {
@@ -229,7 +229,7 @@ class SpatieEmail extends TemplateMailable
             }
         }
 
-        $this->customAttachments = $attachmentObjects;
+        // @var mixed customAttachments = $attachmentObjects;
 
         return $this;
     }
@@ -241,19 +241,19 @@ class SpatieEmail extends TemplateMailable
      */
     public function attachments(): array
     {
-        return $this->customAttachments;
+        return // @var mixed customAttachments;
     }
 
     public function buildSms(): string
     {
         /* @phpstan-ignore method.notFound */
         /** @var MailTemplate $mailTemplate */
-        $mailTemplate = $this->getMailTemplate();
+        $mailTemplate = // @var mixed getMailTemplate(;
         $sms_template = $mailTemplate->sms_template;
         /** @var string $smsTemplateString */
         $smsTemplateString = app(SafeStringCastAction::class)->execute($sms_template);
         $mustache = app(Mustache_Engine::class);
 
-        return $mustache->render($smsTemplateString, $this->data);
+        return $mustache->render($smsTemplateString, // @var mixed data;
     }
 }

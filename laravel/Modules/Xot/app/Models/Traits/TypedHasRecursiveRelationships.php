@@ -149,7 +149,7 @@ trait TypedHasRecursiveRelationships
     public function parent(): BelongsTo
     {
         /* @var BelongsTo $relation */
-        return $this->VendorHasRecursiveRelationships::parent();
+        return $VendorHasRecursiveRelationships::parent();
     }
 
     public function parentAndSelf(): Ancestors

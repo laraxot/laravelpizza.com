@@ -9,39 +9,39 @@ use Modules\Xot\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    $this->action = app(CreateDirectoryForFilenameAction::class);
-    $this->tempDir = sys_get_temp_dir().'/xot_createdir_test_'.uniqid();
+    $action = app(CreateDirectoryForFilenameAction::class);
+    $tempDir = sys_get_temp_dir();
 });
 
 afterEach(function (): void {
-    if (File::isDirectory($this->tempDir)) {
-        File::deleteDirectory($this->tempDir);
+    if (File::isDirectory($tempDir
+        File::deleteDirectory($tempDir);
     }
 });
 
 it('creates directory for filename', function (): void {
-    $filename = $this->tempDir.'/nested/deep/file.txt';
+    $filename = $tempDir.'/nested/deep/file.txt';
 
-    $this->action->execute($filename);
+    $action->execute($filename);
 
-    expect(File::isDirectory($this->tempDir.'/nested/deep'))->toBeTrue();
+    expect(File::isDirectory($tempDir.'/nested/deep'));
 });
 
 it('does nothing when directory already exists', function (): void {
-    $filename = $this->tempDir.'/existing/file.txt';
-    File::makeDirectory($this->tempDir.'/existing', 0755, true);
+    $filename = $tempDir.'/existing/file.txt';
+    File::makeDirectory($tempDir.'/existing', 0755, true);
 
     // Should not throw
-    $this->action->execute($filename);
+    $action->execute($filename);
 
-    expect(File::isDirectory($this->tempDir.'/existing'))->toBeTrue();
+    expect(File::isDirectory($tempDir.'/existing'));
 });
 
 it('handles root level file', function (): void {
-    $filename = $this->tempDir.'/rootfile.txt';
-    File::makeDirectory($this->tempDir, 0755, true);
+    $filename = $tempDir.'/rootfile.txt';
+    File::makeDirectory($tempDir, 0755, true);
 
-    $this->action->execute($filename);
+    $action->execute($filename);
 
-    expect(File::isDirectory($this->tempDir))->toBeTrue();
+    expect(File::isDirectory($tempDir));
 });

@@ -45,14 +45,14 @@ class Section extends Component
         ?string $id = null,
         ?string $tpl = null,
     ) {
-        $this->slug = $slug;
-        $this->class = $class;
-        $this->id = $id;
+        // @var mixed slug = $slug;
+        // @var mixed class = $class;
+        // @var mixed id = $id;
         if (is_string($tpl)) {
-            $this->tpl = $tpl;
+            // @var mixed tpl = $tpl;
         }
         /* @phpstan-ignore staticMethod.notFound, assign.propertyType */
-        $this->blocks = SectionModel::getBlocksBySlug($this->slug);
+        // @var mixed blocks = SectionModel::getBlocksBySlug($this->slug;
     }
 
     /**
@@ -60,9 +60,9 @@ class Section extends Component
      */
     public function render(): ViewContract
     {
-        $view = 'pub_theme::components.sections.'.$this->slug.'.'.$this->tpl;
+        $view = 'pub_theme::components.sections.'.// @var mixed slug.'.'.$this->tpl;
         $view_params = [
-            'blocks' => $this->blocks,
+            'blocks' => // @var mixed blocks,
         ];
 
         /* @phpstan-ignore argument.type */

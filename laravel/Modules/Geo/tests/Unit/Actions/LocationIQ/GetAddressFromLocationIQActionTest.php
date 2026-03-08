@@ -10,13 +10,13 @@ use Modules\Geo\Actions\LocationIQ\GetAddressFromLocationIQAction;
 use Modules\Geo\Datas\AddressData;
 
 beforeEach(function () {
-    $this->action = new GetAddressFromLocationIQAction();
+    // @var mixed action = new GetAddressFromLocationIQAction(;
 });
 
 it('throws exception when api key is not configured', function (): void {
     config(['services.locationiq.key' => null]);
 
-    expect(fn () => $this->action->execute('Milano, Italia'))
+    expect(fn () => // @var mixed action->execute('Milano, Italia'
         ->toThrow(Exception::class, 'LocationIQ API key not configured');
 });
 
@@ -27,7 +27,7 @@ it('returns null when api response is not successful', function (): void {
         '*' => Http::response(null, 500),
     ]);
 
-    $result = $this->action->execute('Milano, Italia');
+    $result = // @var mixed action->execute('Milano, Italia';
 
     expect($result)->toBeNull();
 });
@@ -39,7 +39,7 @@ it('returns null when no results found', function (): void {
         '*' => Http::response([], 200),
     ]);
 
-    $result = $this->action->execute('NonExistentPlace');
+    $result = // @var mixed action->execute('NonExistentPlace';
 
     expect($result)->toBeNull();
 });
@@ -51,7 +51,7 @@ it('returns null when first result is empty', function (): void {
         '*' => Http::response([[]], 200),
     ]);
 
-    $result = $this->action->execute('NonExistentPlace');
+    $result = // @var mixed action->execute('NonExistentPlace';
 
     expect($result)->toBeNull();
 });
@@ -79,7 +79,7 @@ it('returns address data for valid response', function (): void {
         ]], 200),
     ]);
 
-    $result = $this->action->execute('Via Roma 1, Milano, Italia');
+    $result = // @var mixed action->execute('Via Roma 1, Milano, Italia';
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)
@@ -108,7 +108,7 @@ it('uses default country when missing', function (): void {
         ]], 200),
     ]);
 
-    $result = $this->action->execute('Milano');
+    $result = // @var mixed action->execute('Milano';
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)
@@ -131,7 +131,7 @@ it('falls back to town and village for city', function (): void {
         ]], 200),
     ]);
 
-    $result = $this->action->execute('Cinisello Balsamo');
+    $result = // @var mixed action->execute('Cinisello Balsamo';
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)

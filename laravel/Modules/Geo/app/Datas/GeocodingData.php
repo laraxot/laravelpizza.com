@@ -89,7 +89,7 @@ class GeocodingData extends Data
 
     public function isError(): bool
     {
-        return null !== $this->error || (null !== $this->status && 'OK' !== $this->status);
+        return null !== // @var mixed error || (null !== $this->status && 'OK' !== $this->status;
     }
 
     /**

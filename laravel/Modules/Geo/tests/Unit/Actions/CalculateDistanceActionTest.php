@@ -9,8 +9,8 @@ use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Exceptions\DistanceCalculationException;
 
 beforeEach(function () {
-    $this->mockDistanceMatrixAction = Mockery::mock(CalculateDistanceMatrixAction::class);
-    $this->action = new CalculateDistanceAction($this->mockDistanceMatrixAction);
+    // @var mixed mockDistanceMatrixAction = Mockery::mock(CalculateDistanceMatrixAction::class;
+    // @var mixed action = new CalculateDistanceAction($this->mockDistanceMatrixAction;
 });
 
 afterEach(function () {
@@ -41,14 +41,14 @@ it('calculates distance between two valid locations', function (): void {
         ],
     ];
 
-    $this->mockDistanceMatrixAction
+    // @var mixed mockDistanceMatrixAction
         ->shouldReceive('execute')
         ->once()
         ->with(Mockery::type(Collection::class), Mockery::type(Collection::class))
         ->andReturn($expectedResponse);
 
     // Act
-    $result = $this->action->execute($origin, $destination);
+    $result = // @var mixed action->execute($origin, $destination;
 
     // Assert
     expect($result)
@@ -80,7 +80,7 @@ it('throws exception for invalid latitude', function (): void {
     );
 
     // Act & Assert
-    expect(fn () => $this->action->execute($origin, $destination))
+    expect(fn () => // @var mixed action->execute($origin, $destination
         ->toThrow(InvalidArgumentException::class, 'Latitudine non valida: 100.000000');
 });
 
@@ -99,7 +99,7 @@ it('throws exception for invalid longitude', function (): void {
     );
 
     // Act & Assert
-    expect(fn () => $this->action->execute($origin, $destination))
+    expect(fn () => // @var mixed action->execute($origin, $destination
         ->toThrow(InvalidArgumentException::class, 'Longitudine non valida: 200.000000');
 });
 
@@ -118,7 +118,7 @@ it('throws exception for negative latitude', function (): void {
     );
 
     // Act & Assert
-    expect(fn () => $this->action->execute($origin, $destination))
+    expect(fn () => // @var mixed action->execute($origin, $destination
         ->toThrow(InvalidArgumentException::class, 'Latitudine non valida: -100.000000');
 });
 
@@ -137,7 +137,7 @@ it('throws exception for negative longitude', function (): void {
     );
 
     // Act & Assert
-    expect(fn () => $this->action->execute($origin, $destination))
+    expect(fn () => // @var mixed action->execute($origin, $destination
         ->toThrow(InvalidArgumentException::class, 'Longitudine non valida: -200.000000');
 });
 
@@ -155,13 +155,13 @@ it('throws exception for empty response', function (): void {
         address: 'Roma, Italia',
     );
 
-    $this->mockDistanceMatrixAction
+    // @var mixed mockDistanceMatrixAction
         ->shouldReceive('execute')
         ->once()
         ->andReturn([]);
 
     // Act & Assert
-    expect(fn () => $this->action->execute($origin, $destination))->toThrow(DistanceCalculationException::class);
+    expect(fn () => // @var mixed action->execute($origin, $destination;
 });
 
 it('throws exception for malformed response', function (): void {
@@ -180,13 +180,13 @@ it('throws exception for malformed response', function (): void {
 
     $malformedResponse = [['invalid_structure']];
 
-    $this->mockDistanceMatrixAction
+    // @var mixed mockDistanceMatrixAction
         ->shouldReceive('execute')
         ->once()
         ->andReturn($malformedResponse);
 
     // Act & Assert
-    expect(fn () => $this->action->execute($origin, $destination))->toThrow(DistanceCalculationException::class);
+    expect(fn () => // @var mixed action->execute($origin, $destination;
 });
 
 it('throws exception when distance matrix fails', function (): void {
@@ -203,13 +203,13 @@ it('throws exception when distance matrix fails', function (): void {
         address: 'Roma, Italia',
     );
 
-    $this->mockDistanceMatrixAction
+    // @var mixed mockDistanceMatrixAction
         ->shouldReceive('execute')
         ->once()
         ->andThrow(new Exception('API Error'));
 
     // Act & Assert
-    expect(fn () => $this->action->execute($origin, $destination))
+    expect(fn () => // @var mixed action->execute($origin, $destination
         ->toThrow(DistanceCalculationException::class, 'Errore nel calcolo della distanza: API Error');
 });
 
@@ -218,7 +218,7 @@ it('formats distance in meters correctly', function (): void {
     $meters = 500;
 
     // Act
-    $result = $this->action->formatDistance($meters);
+    $result = // @var mixed action->formatDistance($meters;
 
     // Assert
     expect($result)->toBe('500 m');
@@ -229,7 +229,7 @@ it('formats distance in kilometers correctly', function (): void {
     $meters = 1500;
 
     // Act
-    $result = $this->action->formatDistance($meters);
+    $result = // @var mixed action->formatDistance($meters;
 
     // Assert
     expect($result)->toBe('1.5 km');
@@ -240,7 +240,7 @@ it('formats distance with decimal kilometers', function (): void {
     $meters = 2500;
 
     // Act
-    $result = $this->action->formatDistance($meters);
+    $result = // @var mixed action->formatDistance($meters;
 
     // Assert
     expect($result)->toBe('2.5 km');
@@ -251,7 +251,7 @@ it('formats exact kilometer distance', function (): void {
     $meters = 1000;
 
     // Act
-    $result = $this->action->formatDistance($meters);
+    $result = // @var mixed action->formatDistance($meters;
 
     // Assert
     expect($result)->toBe('1.0 km');
@@ -262,7 +262,7 @@ it('throws exception for negative distance', function (): void {
     $negativeMeters = -100;
 
     // Act & Assert
-    expect(fn () => $this->action->formatDistance($negativeMeters))
+    expect(fn () => // @var mixed action->formatDistance($negativeMeters
         ->toThrow(InvalidArgumentException::class, 'La distanza non può essere negativa');
 });
 
@@ -271,7 +271,7 @@ it('handles zero distance', function (): void {
     $zeroMeters = 0;
 
     // Act
-    $result = $this->action->formatDistance($zeroMeters);
+    $result = // @var mixed action->formatDistance($zeroMeters;
 
     // Assert
     expect($result)->toBe('0 m');
@@ -282,7 +282,7 @@ it('handles very small distances', function (): void {
     $smallMeters = 1;
 
     // Act
-    $result = $this->action->formatDistance($smallMeters);
+    $result = // @var mixed action->formatDistance($smallMeters;
 
     // Assert
     expect($result)->toBe('1 m');
@@ -293,7 +293,7 @@ it('handles very large distances', function (): void {
     $largeMeters = 999999;
 
     // Act
-    $result = $this->action->formatDistance($largeMeters);
+    $result = // @var mixed action->formatDistance($largeMeters;
 
     // Assert
     expect($result)->toBe('1000.0 km');
@@ -323,13 +323,13 @@ it('handles boundary latitude values', function (): void {
         ],
     ];
 
-    $this->mockDistanceMatrixAction
+    // @var mixed mockDistanceMatrixAction
         ->shouldReceive('execute')
         ->once()
         ->andReturn($expectedResponse);
 
     // Act
-    $result = $this->action->execute($origin, $destination);
+    $result = // @var mixed action->execute($origin, $destination;
 
     // Assert
     expect($result)->toBeArray()->and($result['status'])->toBe('OK');
@@ -359,13 +359,13 @@ it('handles boundary longitude values', function (): void {
         ],
     ];
 
-    $this->mockDistanceMatrixAction
+    // @var mixed mockDistanceMatrixAction
         ->shouldReceive('execute')
         ->once()
         ->andReturn($expectedResponse);
 
     // Act
-    $result = $this->action->execute($origin, $destination);
+    $result = // @var mixed action->execute($origin, $destination;
 
     // Assert
     expect($result)->toBeArray()->and($result['status'])->toBe('OK');
@@ -389,13 +389,13 @@ it('handles same origin and destination', function (): void {
         ],
     ];
 
-    $this->mockDistanceMatrixAction
+    // @var mixed mockDistanceMatrixAction
         ->shouldReceive('execute')
         ->once()
         ->andReturn($expectedResponse);
 
     // Act
-    $result = $this->action->execute($sameLocation, $sameLocation);
+    $result = // @var mixed action->execute($sameLocation, $sameLocation;
 
     // Assert
     expect($result)

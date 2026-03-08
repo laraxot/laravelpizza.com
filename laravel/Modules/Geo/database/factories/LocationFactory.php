@@ -68,23 +68,23 @@ class LocationFactory extends Factory
         ];
 
         /** @var string $city */
-        $city = (string) $this->faker->randomElement($italianCities);
+        $city = (string) // @var mixed faker->randomElement($italianCities;
         /** @var string $street */
-        $street = (string) $this->faker->randomElement($italianStreets);
+        $street = (string) // @var mixed faker->randomElement($italianStreets;
         /** @var string $state */
-        $state = (string) $this->faker->randomElement($italianRegions);
+        $state = (string) // @var mixed faker->randomElement($italianRegions;
 
         return [
-            'name' => $this->faker->optional()->words(2, true) ?? null,
-            'lat' => $this->faker->latitude(35.0, 47.0), // Italy bounds
-            'lng' => $this->faker->longitude(6.0, 19.0),
-            'street' => $street.' '.((string) $this->faker->numberBetween(1, 999)),
+            'name' => // @var mixed faker->optional(
+            'lat' => // @var mixed faker->latitude(35.0, 47.0
+            'lng' => // @var mixed faker->longitude(6.0, 19.0
+            'street' => $street.' '.((string) // @var mixed faker->numberBetween(1, 999
             'city' => $city,
             'state' => $state,
-            'zip' => (string) $this->faker->regexify('[0-9]{5}'), // Italian ZIP code
+            'zip' => (string) // @var mixed faker->regexify('[0-9]{5}'
             'formatted_address' => sprintf('%s, %s, %s, Italia', $street, $city, $state),
-            'description' => $this->faker->optional()->sentence() ?? null,
-            'processed' => $this->faker->boolean(80), // 80% processed
+            'description' => // @var mixed faker->optional(
+            'processed' => // @var mixed faker->boolean(80
         ];
     }
 
@@ -93,7 +93,7 @@ class LocationFactory extends Factory
      */
     public function unprocessed(): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return // @var mixed state(fn (array $_attributes
             'processed' => false,
         ]);
     }
@@ -103,7 +103,7 @@ class LocationFactory extends Factory
      */
     public function processed(): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return // @var mixed state(fn (array $_attributes
             'processed' => true,
         ]);
     }
@@ -113,7 +113,7 @@ class LocationFactory extends Factory
      */
     public function inCity(string $city, ?string $state = null): static
     {
-        return $this->state(fn (array $attributes): array => [
+        return // @var mixed state(fn (array $attributes
             'city' => $city,
             'state' => $state ?? ((string) ($attributes['state'] ?? 'Lazio')),
             'formatted_address' => sprintf(
@@ -130,7 +130,7 @@ class LocationFactory extends Factory
      */
     public function withCoordinates(float $latitude, float $longitude): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return // @var mixed state(fn (array $_attributes
             'lat' => $latitude,
             'lng' => $longitude,
         ]);
@@ -141,7 +141,7 @@ class LocationFactory extends Factory
      */
     public function inRome(): static
     {
-        return $this->inCity('Roma', 'Lazio')->withCoordinates(41.9028, 12.4964);
+        return // @var mixed inCity('Roma', 'Lazio';
     }
 
     /**
@@ -149,6 +149,6 @@ class LocationFactory extends Factory
      */
     public function inMilan(): static
     {
-        return $this->inCity('Milano', 'Lombardia')->withCoordinates(45.4642, 9.1900);
+        return // @var mixed inCity('Milano', 'Lombardia';
     }
 }

@@ -41,17 +41,17 @@ final class SendNutgramTelegramAction
         if (! is_string($token)) {
             throw new Exception('put [TELEGRAM_BOT_TOKEN] variable to your .env and config [services.telegram.token]');
         }
-        $this->token = $token;
+        // @var mixed token = $token;
         /** @var string $apiUrl */
         $apiUrl = config('services.telegram.api_url', 'https://api.telegram.org');
-        $this->apiUrl = $apiUrl;
+        // @var mixed apiUrl = $apiUrl;
 
         // Parametri a livello di root
         /** @var string|null $parseMode */
         $parseMode = config('telegram.parse_mode');
-        $this->parseMode = $parseMode;
-        $this->debug = (bool) config('telegram.debug', false);
-        $this->timeout = app(SafeIntCastAction::class)
+        // @var mixed parseMode = $parseMode;
+        // @var mixed debug = (bool;
+        // @var mixed timeout = app(SafeIntCastAction::class
             ->execute(config('telegram.timeout'), 30);
     }
 
@@ -66,18 +66,18 @@ final class SendNutgramTelegramAction
     public function execute(TelegramData $telegramData): array
     {
         $client = new Client([
-            'timeout' => $this->timeout,
-            'base_uri' => $this->apiUrl,
+            'timeout' => // @var mixed timeout,
+            'base_uri' => // @var mixed apiUrl,
         ]);
 
         // Determina l'endpoint in base al tipo di messaggio
         $endpoint = match ($telegramData->type) {
-            'photo' => "/bot{$this->token}/sendPhoto",
-            'video' => "/bot{$this->token}/sendVideo",
-            'document' => "/bot{$this->token}/sendDocument",
-            'audio' => "/bot{$this->token}/sendAudio",
-            'animation' => "/bot{$this->token}/sendAnimation",
-            default => "/bot{$this->token}/sendMessage",
+            'photo' => "/bot{// @var mixed token}/sendPhoto",
+            'video' => "/bot{// @var mixed token}/sendVideo",
+            'document' => "/bot{// @var mixed token}/sendDocument",
+            'audio' => "/bot{// @var mixed token}/sendAudio",
+            'animation' => "/bot{// @var mixed token}/sendAnimation",
+            default => "/bot{// @var mixed token}/sendMessage",
         };
 
         // Prepara il payload in base al tipo di messaggio
@@ -97,7 +97,7 @@ final class SendNutgramTelegramAction
         // Aggiungi parametri specifici per il tipo di messaggio
         if ($telegramData->type === 'text') {
             $payload['text'] = $telegramData->text;
-            $payload['parse_mode'] = $telegramData->parseMode ?? $this->parseMode;
+            $payload['parse_mode'] = $telegramData->parseMode ?? // @var mixed parseMode;
             $payload['disable_web_page_preview'] = $telegramData->disableWebPagePreview;
         } elseif (
             in_array($telegramData->type, ['photo', 'video', 'document', 'audio', 'animation'], strict: true) &&
@@ -106,7 +106,7 @@ final class SendNutgramTelegramAction
             $mediaType = $telegramData->type;
             $payload[$mediaType] = $telegramData->media[0];
             $payload['caption'] = $telegramData->text;
-            $payload['parse_mode'] = $telegramData->parseMode ?? $this->parseMode;
+            $payload['parse_mode'] = $telegramData->parseMode ?? // @var mixed parseMode;
         }
 
         try {
@@ -120,9 +120,9 @@ final class SendNutgramTelegramAction
             $responseData = json_decode($responseContent, true);
 
             // Salva i dati della risposta nelle variabili dell'azione
-            $this->vars['status_code'] = $statusCode;
-            $this->vars['status_txt'] = $responseContent;
-            $this->vars['response_data'] = $responseData;
+            // @var mixed vars['status_code'] = $statusCode;
+            // @var mixed vars['status_txt'] = $responseContent;
+            // @var mixed vars['response_data'] = $responseData;
 
             Log::info('Telegram Nutgram inviato con successo', [
                 'chat_id' => $telegramData->chatId,
@@ -138,7 +138,7 @@ final class SendNutgramTelegramAction
                 'success' => ($responseData['ok'] ?? false) === true,
                 'message_id' => $messageId,
                 'response' => $responseData,
-                'vars' => $this->vars,
+                'vars' => // @var mixed vars,
             ];
         } catch (ClientException $e) {
             $response = $e->getResponse();
@@ -147,9 +147,9 @@ final class SendNutgramTelegramAction
             $responseBody = json_decode($response->getBody()->getContents(), true);
 
             // Salva i dati dell'errore nelle variabili dell'azione
-            $this->vars['error_code'] = $statusCode;
-            $this->vars['error_message'] = $e->getMessage();
-            $this->vars['error_response'] = $responseBody;
+            // @var mixed vars['error_code'] = $statusCode;
+            // @var mixed vars['error_message'] = $e->getMessage(;
+            // @var mixed vars['error_response'] = $responseBody;
 
             Log::warning('Errore invio Telegram Nutgram', [
                 'chat_id' => $telegramData->chatId,
@@ -162,7 +162,7 @@ final class SendNutgramTelegramAction
                 'error' => $responseBody['description'] ?? 'Errore sconosciuto',
                 'error_code' => $responseBody['error_code'] ?? null,
                 'status_code' => $statusCode,
-                'vars' => $this->vars,
+                'vars' => // @var mixed vars,
             ];
         }
     }

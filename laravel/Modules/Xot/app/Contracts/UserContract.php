@@ -11,7 +11,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Laravel\Passport\Contracts\OAuthenticatable;
 use Laravel\Passport\PersonalAccessTokenResult;
 use Laravel\Passport\Token;
@@ -55,7 +55,7 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
      * public function areas();
      * public function avatar();
      */
-    public function profile(): HasOne;
+    public function profile(): MorphOne;
 
     /**
      * Get the access token currently associated with the user.

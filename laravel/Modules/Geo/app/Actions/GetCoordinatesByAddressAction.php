@@ -14,11 +14,11 @@ class GetCoordinatesByAddressAction
     public function execute(string $address): ?CoordinatesData
     {
         // Prova con Google Maps
-        $coordinates = $this->getFromGoogle($address)
-            ?? $this->getFromBing($address)
-            ?? $this->getFromOpenCage($address)
-            ?? $this->getFromNominatim($address)
-            ?? $this->getFromOpenApi($address);
+        $coordinates = // @var mixed getFromGoogle($address
+            ?? // @var mixed getFromBing($address
+            ?? // @var mixed getFromOpenCage($address
+            ?? // @var mixed getFromNominatim($address
+            ?? // @var mixed getFromOpenApi($address;
 
         if (! $coordinates) {
             Notification::make()
@@ -39,7 +39,7 @@ class GetCoordinatesByAddressAction
      */
     private function getGoogleResponse(string $address): array
     {
-        $response = $this->makeHttpRequest('https://maps.googleapis.com/maps/api/geocode/json', [
+        $response = // @var mixed makeHttpRequest('https://maps.googleapis.com/maps/api/geocode/json', [
             'address' => $address,
             'key' => config('services.google.maps_api_key'),
         ]);
@@ -60,7 +60,7 @@ class GetCoordinatesByAddressAction
 
     private function getFromGoogle(string $address): ?CoordinatesData
     {
-        $data = $this->getGoogleResponse($address);
+        $data = // @var mixed getGoogleResponse($address;
 
         if (empty($data['results'])) {
             return null;
@@ -88,7 +88,7 @@ class GetCoordinatesByAddressAction
      */
     private function getBingResponse(string $address, string $apiKey): array
     {
-        $response = $this->makeHttpRequest('http://dev.virtualearth.net/REST/v1/Locations', [
+        $response = // @var mixed makeHttpRequest('http://dev.virtualearth.net/REST/v1/Locations', [
             'q' => $address,
             'key' => $apiKey,
         ]);
@@ -124,9 +124,9 @@ class GetCoordinatesByAddressAction
             return null;
         }
 
-        $data = $this->getBingResponse($address, $apiKey);
+        $data = // @var mixed getBingResponse($address, $apiKey;
 
-        $coordinates = $this->extractBingCoordinates($data);
+        $coordinates = // @var mixed extractBingCoordinates($data;
         if (null === $coordinates) {
             return null;
         }
@@ -177,7 +177,7 @@ class GetCoordinatesByAddressAction
      */
     private function getOpenCageResponse(string $address, string $apiKey): array
     {
-        $response = $this->makeHttpRequest('https://api.opencagedata.com/geocode/v1/json', [
+        $response = // @var mixed makeHttpRequest('https://api.opencagedata.com/geocode/v1/json', [
             'q' => $address,
             'key' => $apiKey,
         ]);
@@ -203,7 +203,7 @@ class GetCoordinatesByAddressAction
             return null;
         }
 
-        $data = $this->getOpenCageResponse($address, $apiKey);
+        $data = // @var mixed getOpenCageResponse($address, $apiKey;
 
         if (empty($data['results'])) {
             return null;
@@ -228,7 +228,7 @@ class GetCoordinatesByAddressAction
      */
     private function getNominatimResponse(string $address): array
     {
-        $response = $this->makeHttpRequest('https://nominatim.openstreetmap.org/search', [
+        $response = // @var mixed makeHttpRequest('https://nominatim.openstreetmap.org/search', [
             'q' => $address,
             'format' => 'json',
             'limit' => 1,
@@ -246,7 +246,7 @@ class GetCoordinatesByAddressAction
 
     private function getFromNominatim(string $address): ?CoordinatesData
     {
-        $data = $this->getNominatimResponse($address);
+        $data = // @var mixed getNominatimResponse($address;
 
         if (empty($data[0])) {
             return null;
@@ -271,7 +271,7 @@ class GetCoordinatesByAddressAction
      */
     private function getOpenApiResponse(string $address): array
     {
-        $response = $this->makeHttpRequest('https://api.open-meteo.com/v1/geocoding', [
+        $response = // @var mixed makeHttpRequest('https://api.open-meteo.com/v1/geocoding', [
             'name' => $address,
             'count' => 1,
         ]);
@@ -292,7 +292,7 @@ class GetCoordinatesByAddressAction
 
     private function getFromOpenApi(string $address): ?CoordinatesData
     {
-        $data = $this->getOpenApiResponse($address);
+        $data = // @var mixed getOpenApiResponse($address;
 
         if (empty($data['results'])) {
             return null;

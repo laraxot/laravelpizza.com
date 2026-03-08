@@ -63,7 +63,7 @@ class XotServiceProvider extends XotBaseServiceProvider
 
     public function registerProviders(): void
     {
-        // $this->app->register(Filament\ModulesServiceProvider::class);
+        // $app->register(Filament\ModulesServiceProvider::class);
     }
 
     public function registerTimezone(): void
@@ -96,7 +96,7 @@ class XotServiceProvider extends XotBaseServiceProvider
         // TODO: Re-implement when compatible with current Filament version
         /*
         TextInput::macro('generateSlug', function () {
-            $this->live(onBlur: true)->afterStateUpdated(function (string $operation, string $state, Set $set): void {
+            $this->live(onBlur: true
                 if ($operation === 'create') {
                     return;
                 }
@@ -112,7 +112,7 @@ class XotServiceProvider extends XotBaseServiceProvider
      * --  guardare come fa sentry
      * public function registerExceptionHandler(): void
      * {
-     * $exceptionHandler = $this->app->make(ExceptionHandler::class);
+     * $exceptionHandler = $app->make(ExceptionHandler::class);
      * if ($exceptionHandler instanceof HandlerDecorator) {
      * $exceptionHandler->reporter(
      * static function (\Throwable $e): void {
@@ -185,7 +185,7 @@ class XotServiceProvider extends XotBaseServiceProvider
      * -- guardare come fa sentry
      * private function registerExceptionHandlersRepository(): void
      * {
-     * $this->app->singleton(HandlersRepository::class, HandlersRepository::class);
+     * $app->singleton(HandlersRepository::class, HandlersRepository::class);
      * }
      */
     /*
@@ -195,7 +195,7 @@ class XotServiceProvider extends XotBaseServiceProvider
      * -- guardare come fa sentry
      * private function extendExceptionHandler(): void
      * {
-     * $this->app->extend(
+     * $app->extend(
      * ExceptionHandler::class,
      * static function (ExceptionHandler $handler, $app) {
      * return new HandlerDecorator($handler, $app[HandlersRepository::class]);

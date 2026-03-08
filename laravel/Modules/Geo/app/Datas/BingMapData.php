@@ -54,6 +54,6 @@ class BingMapData extends Data
      */
     public function toArray(): array
     {
-        return $this->data;
+        return // @var mixed data;
     }
 }

@@ -136,13 +136,13 @@ class Location extends BaseModel
     {
         return Attribute::make(
             get: fn (): array => [
-                'lat' => (float) $this->lat,
-                'lng' => (float) $this->lng,
+                'lat' => (float) // @var mixed lat,
+                'lng' => (float) // @var mixed lng,
             ],
             set: function (?array $value): void {
                 if (is_array($value)) {
-                    $this->attributes['lat'] = $value['lat'] ?? null;
-                    $this->attributes['lng'] = $value['lng'] ?? null;
+                    // @var mixed attributes['lat'] = $value['lat'] ?? null;
+                    // @var mixed attributes['lng'] = $value['lng'] ?? null;
                 }
             },
         );

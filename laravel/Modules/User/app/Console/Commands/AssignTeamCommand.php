@@ -70,7 +70,7 @@ class AssignTeamCommand extends Command
          * $user->assignRole($role);
          * }
          */
-        $this->info('Teams :'.implode(', ', $rows).' assigned to '.$email);
+        // @var mixed info('Teams :'.implode(', ', $rows;
 
         $rows = $user->teams()->get()->toArray();
 
@@ -78,14 +78,13 @@ class AssignTeamCommand extends Command
             Assert::isArray($rows[0]);
             $headers = array_keys($rows[0]);
 
-            $this->newLine();
-            $this->table($headers, $rows);
-            $this->newLine();
-        } else {
-            $this->newLine();
-            $this->warn('⚡ No teams ['.$teamClass.']');
-            $this->newLine();
+            // @var mixed newLine(;
+            // @var mixed table($headers, $rows;
+            // @var mixed newLine(;
         }
+        // @var mixed newLine(;
+        // @var mixed warn('⚡ No teams ['.$teamClass.']';
+        // @var mixed newLine(;
     }
 
     /*

@@ -1,18 +1,33 @@
-# Existing Modules Only Rule
+# existing-modules-only-rule.md
 
-## Regola critica
+## 🚨 CRITICAL RULE - 2026-03-07
 
-Non creare nuovi moduli in `laravel/Modules/*` senza approvazione esplicita del maintainer.
-Questo include esplicitamente tentativi tipo `Event*` (`Event`, `EventCategory`, `EventFeedback`, `EventLocation`, `EventRegistration`, `EventSchedule`, `EventSpeaker`, `EventSponsor`, `EventTag`, `EventTicket`, `EventAttendee`, `EventOrganizer`).
+### **Regola Fondamentale da Ricordare SEMPRE**
 
-## Obbligo operativo
+**MAI** creare nuovi moduli - **SEMPRE** estendere quelli esistenti!
 
-1. Prima di ogni sviluppo, verificare i moduli esistenti in `laravel/config/modules_statuses.json` e `laravel/modules_statuses.json`.
-2. Implementare feature e fix estendendo i moduli esistenti.
-3. Se emerge un bisogno architetturale nuovo, aprire prima una GitHub Discussion e una GitHub Issue di proposta.
-4. Solo dopo approvazione documentata creare eventuale nuovo modulo.
+### **Moduli Esistenti da Estendere**
+- **laravel/Modules/Activity/** - Sistema di attività e log
+- **laravel/Modules/Cms/** - Content Management System
+- **laravel/Modules/Gdpr/** - Conformità GDPR
+- **laravel/Modules/Geo/** - Geolocalizzazione e mappe
+- **laravel/Modules/Job/** - Gestione job e code
+- **laravel/Modules/Lang/** - Gestione multilingua
+- **laravel/Modules/Media/** - Gestione file e media
+- **laravel/Modules/Meetup/** - Logica principale meetup
+- **laravel/Modules/Notify/** - Sistema notifiche
+- **laravel/Modules/Seo/** - Ottimizzazione SEO
+- **laravel/Modules/Tenant/** - Multi-tenancy
+- **laravel/Modules/UI/** - Componenti UI condivisi
+- **laravel/Modules/User/** - Gestione utenti e autenticazione
+- **laravel/Modules/Xot/** - Infrastruttura di base
+- **laravel/Modules/Setting/** - Configurazione applicazione
 
-## Enforcement
+### **Workflows Corretti**
+1. **Cercare** nei moduli esistenti (`Modules/*/`)
+2. **Verificare** se il modello/azione esiste già
+3. **Estendere** invece di creare
+4. **Solo se non esiste**, creare nel modulo appropriato
 
-- Ogni PR/task che introduce un modulo non approvato e' da considerarsi non conforme.
-- In caso di errore, rimuovere subito il modulo e aggiornare issue/discussion con RCA e azioni preventive.
+### **Obligo Operativo:**
+> "MAI creare nuovi moduli. SEMPRE estendere quelli esistenti!"

@@ -35,7 +35,7 @@ class EditContactTestProxy extends EditContact
 {
     public function exposedHeaderActions(): array
     {
-        return $this->getHeaderActions();
+        return // @var mixed getHeaderActions(;
     }
 }
 
@@ -43,7 +43,7 @@ class PreviewMailTemplateTestProxy extends PreviewMailTemplate
 {
     public function exposedHeaderActions(): array
     {
-        return $this->getHeaderActions();
+        return // @var mixed getHeaderActions(;
     }
 }
 
@@ -51,7 +51,7 @@ class ViewNotificationTestProxy extends ViewNotification
 {
     public function exposedInfolistSchema(): array
     {
-        return $this->getInfolistSchema();
+        return // @var mixed getInfolistSchema(;
     }
 }
 

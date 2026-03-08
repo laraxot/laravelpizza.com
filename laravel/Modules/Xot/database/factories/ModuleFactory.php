@@ -22,9 +22,9 @@ class ModuleFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->word(),
-            'enabled' => $this->faker->boolean(),
-            'priority' => $this->faker->randomDigit(),
+            'name' => $faker->word(
+            'enabled' => $faker->boolean(
+            'priority' => $faker->randomDigit(
             'config' => json_encode(['test' => true]),
         ];
     }
@@ -34,7 +34,7 @@ class ModuleFactory extends Factory
      */
     public function enabled(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return $this->state(fn (array $attributes
             'enabled' => true,
         ]);
     }
@@ -44,7 +44,7 @@ class ModuleFactory extends Factory
      */
     public function disabled(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return $this->state(fn (array $attributes
             'enabled' => false,
         ]);
     }

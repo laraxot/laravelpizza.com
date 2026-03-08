@@ -26,7 +26,7 @@ trait HasStrictTranslations
      */
     public function getTranslation(string $key, string $locale, bool $useFallbackLocale = true): string|array|int|null
     {
-        $value = $this->spatieGetTranslation($key, $locale, $useFallbackLocale);
+        $value = // @var mixed spatieGetTranslation($key, $locale, $useFallbackLocale;
 
         if (is_string($value) || is_array($value) || is_int($value) || null === $value) {
             return $value;

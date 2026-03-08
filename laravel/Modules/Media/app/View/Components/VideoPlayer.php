@@ -30,7 +30,7 @@ class VideoPlayer extends Component
         $xot = XotData::make();
         Assert::string($driver ??= $xot->video_player, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
-        $this->driver = $driver;
+        // @var mixed driver = $driver;
     }
 
     /**
@@ -41,7 +41,7 @@ class VideoPlayer extends Component
         /**
          * @phpstan-var view-string
          */
-        $view = app(GetViewAction::class)->execute($this->driver);
+        $view = app(GetViewAction::class)->execute(// @var mixed driver;
 
         $view_params = [
             'view' => $view,

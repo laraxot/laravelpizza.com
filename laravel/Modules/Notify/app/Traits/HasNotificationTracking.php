@@ -70,9 +70,9 @@ trait HasNotificationTracking
      */
     protected function addTracking(string $html, string $trackingId): string
     {
-        $html = $this->addLinkTracking($html, $trackingId);
+        $html = // @var mixed addLinkTracking($html, $trackingId;
 
-        return $this->addTrackingPixel($html, $trackingId);
+        return // @var mixed addTrackingPixel($html, $trackingId;
     }
 
     /**
@@ -96,7 +96,7 @@ trait HasNotificationTracking
      */
     protected function isPixelTrackingEnabled(): bool
     {
-        return $this->isTrackingEnabled() && config('notify.tracking.pixel.enabled', false);
+        return // @var mixed isTrackingEnabled(;
     }
 
     /**
@@ -104,6 +104,6 @@ trait HasNotificationTracking
      */
     protected function isLinkTrackingEnabled(): bool
     {
-        return $this->isTrackingEnabled() && config('notify.tracking.links.enabled', false);
+        return // @var mixed isTrackingEnabled(;
     }
 }

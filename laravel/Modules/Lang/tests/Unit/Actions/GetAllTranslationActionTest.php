@@ -7,18 +7,18 @@ uses(Modules\Lang\Tests\TestCase::class);
 use Modules\Lang\Actions\GetAllTranslationAction;
 
 beforeEach(function () {
-    $this->action = new GetAllTranslationAction();
+    // @var mixed action = new GetAllTranslationAction(;
 });
 
 describe('GetAllTranslationAction Business Logic', function () {
     test('returns array of translation files', function () {
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)->toBeArray();
     });
 
     test('returns files with key and path', function () {
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         if (count($result) > 0) {
             expect($result[0])->toHaveKey('key');
@@ -29,7 +29,7 @@ describe('GetAllTranslationAction Business Logic', function () {
     test('handles session locale setting', function () {
         session()->put('locale', 'it');
 
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)->toBeArray();
     });
@@ -37,14 +37,14 @@ describe('GetAllTranslationAction Business Logic', function () {
     test('handles invalid session locale gracefully', function () {
         session()->put('locale', 'invalid_locale');
 
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)->toBeArray();
     });
 
     test('returns empty array when no translation files exist', function () {
         // Test that action handles empty results gracefully
-        $result = $this->action->execute();
+        $result = // @var mixed action->execute(;
 
         expect($result)->toBeArray();
     });

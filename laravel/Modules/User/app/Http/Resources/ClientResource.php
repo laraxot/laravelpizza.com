@@ -24,11 +24,11 @@ final class ClientResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id' => $this->id,
-            'name' => $this->name,
+            'id' => $id,
+            'name' => $name,
             'owner' => $this->when(
-                isset($this->owner),
-                fn (): OwnerResource => new OwnerResource($this->owner)
+                isset($owner
+                fn (): OwnerResource => new OwnerResource($owner
             ),
         ];
     }

@@ -42,10 +42,10 @@ class PageSlugMiddleware
 
             return $response;
         }
-        $this->kernel = app(Kernel::class);
+        // @var mixed kernel = app(Kernel::class;
 
         // Execute middlewares manually in a chain
-        return $this->executeMiddlewareChain($request, $middlewares, $next);
+        return // @var mixed executeMiddlewareChain($request, $middlewares, $next;
     }
 
     /**
@@ -93,16 +93,16 @@ class PageSlugMiddleware
             return $response;
         }
 
-        [$middlewareClass, $parameters] = $this->parseMiddleware($middleware);
+        [$middlewareClass, $parameters] = // @var mixed parseMiddleware($middleware;
 
         // Resolve middleware class name if it's an alias
-        $middlewareClass = $this->resolveMiddlewareClass($middlewareClass);
+        $middlewareClass = // @var mixed resolveMiddlewareClass($middlewareClass;
         // Create middleware instance
         /** @var object $middlewareInstance */
         $middlewareInstance = app($middlewareClass);
 
         // Create next closure for remaining middlewares
-        $next = fn (Request $req): Response => $this->executeMiddlewareChain($req, $middlewares, $finalNext);
+        $next = fn (Request $req): Response => // @var mixed executeMiddlewareChain($req, $middlewares, $finalNext;
 
         // Execute current middleware
         if (\is_object($middlewareInstance) && method_exists($middlewareInstance, 'handle')) {
@@ -138,7 +138,7 @@ class PageSlugMiddleware
         // Try to get from route middleware (custom middleware)
         // method_exists will always be true for Http\Kernel, so we can remove the check
         /** @var array<string, class-string> $routeMiddleware */
-        $routeMiddleware = $this->kernel->getRouteMiddleware();
+        $routeMiddleware = // @var mixed kernel->getRouteMiddleware(;
         if (isset($routeMiddleware[$middleware])) {
             /* @var class-string */
             return $routeMiddleware[$middleware];

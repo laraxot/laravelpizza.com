@@ -38,9 +38,9 @@ enum ChannelEnum: string implements HasColor, HasIcon, HasLabel
     public function getRecipient(Model $record): ?string
     {
         return match ($this) {
-            self::Mail => $this->getRecordEmail($record),
-            self::Sms => $this->getRecordPhone($record),
-            self::WhatsApp => $this->getRecordWhatsApp($record),
+            self::Mail => // @var mixed getRecordEmail($record
+            self::Sms => // @var mixed getRecordPhone($record
+            self::WhatsApp => // @var mixed getRecordWhatsApp($record
         };
     }
 
@@ -104,7 +104,7 @@ enum ChannelEnum: string implements HasColor, HasIcon, HasLabel
 
         // Fallback to phone if whatsapp not available
         if ($whatsappNumber === null) {
-            $whatsappNumber = $this->getRecordPhone($record);
+            $whatsappNumber = // @var mixed getRecordPhone($record;
         }
 
         // Try routeNotificationForWhatsApp method if model implements Notifiable trait and whatsapp not found

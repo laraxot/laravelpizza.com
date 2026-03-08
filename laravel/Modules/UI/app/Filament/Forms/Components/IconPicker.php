@@ -29,7 +29,7 @@ class IconPicker extends TextInput
         $packs = $packsCombined ? $packsCombined : [];
         // dddx($icons->toCollection()->get('heroicons')->toArray());
 
-        $this->suffixAction(
+        // @var mixed suffixAction(
             Action::make('icon')
                 ->icon(fn (?string $state) => $state)
                 // ->modalContent(fn ($record) => view('ui::filament.forms.components.icon-picker', ['record' => $record]))

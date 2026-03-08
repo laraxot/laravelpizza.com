@@ -160,7 +160,7 @@ abstract class BaseTreeModel extends BaseModel implements HasRecursiveRelationsh
     #[\Override]
     public function getLabel(): string
     {
-        return $this->title;
+        return // @var mixed title;
     }
 
     /** @return array<string, string> */

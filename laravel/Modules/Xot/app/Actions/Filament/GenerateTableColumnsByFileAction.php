@@ -73,14 +73,14 @@ class GenerateTableColumnsByFileAction
         // ------------------- TABLE -------------------
         // *
         $body = app(GetMethodBodyAction::class)->execute($class_name, 'table');
-        $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->columns(', '(', ')');
+        $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->columns(', '(', ')'));
         $body_new = '->columns(['.chr(13).'// TODO: Generate table columns'.chr(13).'])';
         $body_up = Str::of($body)->replace($body1, $body_new)->toString();
         $content_new = Str::of($file->getContents())->replace($body, $body_up)->toString();
         LaravelFile::put($filename, $content_new);
         // -------------------- FORM ------------------------------
         $body = app(GetMethodBodyAction::class)->execute($class_name, 'form');
-        $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->schema(', '(', ')');
+        $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->schema(', '(', ')'));
         $body_new = '->schema(['.chr(13).'// TODO: Generate form schema'.chr(13).'])';
         $body_up = Str::of($body)->replace($body1, $body_new)->toString();
         $content_new = Str::of($file->getContents())->replace($body, $body_up)->toString();
@@ -94,7 +94,7 @@ class GenerateTableColumnsByFileAction
             // Verifichiamo che $fillable sia un array e contenga 'anno'
             if (is_array($fillable) && in_array('anno', $fillable, strict: true)) {
                 $body = app(GetMethodBodyAction::class)->execute($class_name, 'table');
-                $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->filters(', '(', ')');
+                $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->filters(', '(', ')'));
                 $body_new = "->filters([
                         app(\Modules\Xot\Actions\Filament\Filter\GetYearFilter::class)->execute('anno',intval(date('Y')) - 3,intval(date('Y'))),
                     ],layout: \Filament\Tables\Enums\FiltersLayout::AboveContent)

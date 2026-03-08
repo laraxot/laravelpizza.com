@@ -28,7 +28,7 @@ class AssetAction
      */
     public function execute(string $path): string
     {
-        $this->xot = XotData::make();
+        $xot = XotData::make();
 
         if (Str::startsWith($path, ['https://', 'http://'])) {
             return $path;
@@ -75,7 +75,7 @@ class AssetAction
      */
     private function resolveThemeAsset(string $ns, string $ns_after): string
     {
-        $theme = $this->xot->{$ns};
+        $theme = $xot->{$ns};
         Assert::string($theme, 'Il tema deve essere una stringa');
 
         $themeResourcePath = 'Themes/'.$theme.'/resources/'.$ns_after;

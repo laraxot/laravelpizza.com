@@ -43,7 +43,7 @@ abstract class XotBaseTableWidget extends FilamentTableWidget
         /* @var Builder|null $query */
         return $table
             ->query($query)
-            ->columns($this->getTableColumns())
+            ->columns($getTableColumns(
             ->defaultSort('submitdate', 'desc')
             ->paginated([10, 25, 50, 100])
             ->poll('30s');
@@ -67,7 +67,7 @@ abstract class XotBaseTableWidget extends FilamentTableWidget
 
     public function getTableSearch(): ?string
     {
-        $search = $this->tableSearch ?? null;
+        $search = $tableSearch ?? null;
 
         if (! \is_string($search)) {
             return null;

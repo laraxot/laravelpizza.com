@@ -13,7 +13,7 @@ use Webmozart\Assert\Assert;
  *
  * Questa action centralizza la logica di accesso sicuro agli attributi per evitare:
  * - Uso di property_exists() con modelli Eloquent (anti-pattern)
- * - Errori di tipo con getAttribute() che restituisce mixed
+ * - Errori di tipo con $this->getAttribute() che restituisce mixed
  * - Duplicazione di logica di verifica attributi
  *
  * Principi applicati:
@@ -39,7 +39,7 @@ class SafeAttributeCastAction
     {
         Assert::stringNotEmpty($attribute);
 
-        return null !== $model->getAttribute($attribute);
+        return null !== $model->$this->getAttribute($attribute);
     }
 
     /**
@@ -54,7 +54,7 @@ class SafeAttributeCastAction
     {
         Assert::stringNotEmpty($attribute);
 
-        $value = $model->getAttribute($attribute);
+        $value = $model->$this->getAttribute($attribute);
 
         return null !== $value && '' !== $value;
     }
@@ -72,7 +72,7 @@ class SafeAttributeCastAction
     {
         Assert::stringNotEmpty($attribute);
 
-        $value = $model->getAttribute($attribute);
+        $value = $model->$this->getAttribute($attribute);
 
         if (null === $value) {
             return $default ?? '';
@@ -94,7 +94,7 @@ class SafeAttributeCastAction
     {
         Assert::stringNotEmpty($attribute);
 
-        $value = $model->getAttribute($attribute);
+        $value = $model->$this->getAttribute($attribute);
 
         if (null === $value) {
             return $default ?? 0;
@@ -116,7 +116,7 @@ class SafeAttributeCastAction
     {
         Assert::stringNotEmpty($attribute);
 
-        $value = $model->getAttribute($attribute);
+        $value = $model->$this->getAttribute($attribute);
 
         if (null === $value) {
             return $default ?? 0.0;
@@ -138,7 +138,7 @@ class SafeAttributeCastAction
     {
         Assert::stringNotEmpty($attribute);
 
-        $value = $model->getAttribute($attribute);
+        $value = $model->$this->getAttribute($attribute);
 
         if (null === $value) {
             return $default ?? false;
@@ -160,7 +160,7 @@ class SafeAttributeCastAction
     {
         Assert::stringNotEmpty($attribute);
 
-        $value = $model->getAttribute($attribute);
+        $value = $model->$this->getAttribute($attribute);
 
         if (null === $value) {
             return $default ?? [];
@@ -185,11 +185,11 @@ class SafeAttributeCastAction
         Assert::inArray($type, ['string', 'int', 'float', 'bool', 'array']);
 
         return match ($type) {
-            'string' => $this->getStringAttribute($model, $attribute, is_string($default) ? $default : null),
-            'int' => $this->getIntAttribute($model, $attribute, is_int($default) ? $default : null),
-            'float' => $this->getFloatAttribute($model, $attribute, is_float($default) ? $default : null),
-            'bool' => $this->getBooleanAttribute($model, $attribute, is_bool($default) ? $default : null),
-            'array' => $this->getArrayAttribute($model, $attribute, is_array($default) ? $default : null),
+            'string' => $this->getStringAttribute($model, $attribute, is_string($default
+            'int' => $this->getIntAttribute($model, $attribute, is_int($default
+            'float' => $this->getFloatAttribute($model, $attribute, is_float($default
+            'bool' => $this->getBooleanAttribute($model, $attribute, is_bool($default
+            'array' => $this->getArrayAttribute($model, $attribute, is_array($default
             default => throw new \InvalidArgumentException("Tipo non supportato: {$type}"),
         };
     }
@@ -207,7 +207,7 @@ class SafeAttributeCastAction
     {
         Assert::stringNotEmpty($attribute);
 
-        $actualValue = $model->getAttribute($attribute);
+        $actualValue = $model->$this->getAttribute($attribute);
 
         return $actualValue === $expectedValue;
     }

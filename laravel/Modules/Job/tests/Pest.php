@@ -30,9 +30,9 @@ pest()->extend(TestCase::class)->in('Feature', 'Unit');
  * |
  */
 
-expect()->extend('toBeJob', fn () => $this->toBeInstanceOf(Job::class));
+expect()->extend('toBeJob', fn () => // @var mixed toBeInstanceOf(Job::class;
 
-expect()->extend('toBeJobBatch', fn () => $this->toBeInstanceOf(JobBatch::class));
+expect()->extend('toBeJobBatch', fn () => // @var mixed toBeInstanceOf(JobBatch::class;
 
 /*
  * |--------------------------------------------------------------------------

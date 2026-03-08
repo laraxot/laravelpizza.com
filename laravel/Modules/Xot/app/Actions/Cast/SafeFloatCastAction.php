@@ -72,12 +72,12 @@ class SafeFloatCastAction
 
         // Se è un array e ha un solo elemento numerico
         if (is_array($value) && 1 === count($value)) {
-            return $this->execute(reset($value), $default);
+            return $this->execute(reset($value));
         }
 
         // Se è un oggetto con metodo __toString, prova a convertirlo
         if (is_object($value) && method_exists($value, '__toString')) {
-            return $this->parseStringToFloat((string) $value, $default);
+            return $this->parseStringToFloat((string));
         }
 
         // Per tutti gli altri tipi, restituisci il default
