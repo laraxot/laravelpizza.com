@@ -45,7 +45,7 @@ class CommandRegistry
      */
     public function findHandler(string $command): ?CommandHandlerInterface
     {
-        foreach ($handlers as $handler
+        foreach ($handlers as $handler)
             if ($handler->supports($command)) {
                 return $handler;
             }
@@ -59,7 +59,7 @@ class CommandRegistry
      */
     private function registerDefaultHandlers(): void
     {
-        $this->register(new MigrationCommandHandler(
+        $this->register(new MigrationCommandHandler())
             ->register(new CacheCommandHandler())
             ->register(new RouteCommandHandler())
             ->register(new ViewCommandHandler())

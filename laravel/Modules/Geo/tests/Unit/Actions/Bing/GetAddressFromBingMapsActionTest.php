@@ -18,7 +18,7 @@ beforeEach(function () {
 it('throws exception when api key is not configured', function (): void {
     config(['services.bing.maps_api_key' => null]);
 
-    expect(fn () => $action->execute(45.4642, 9.1900
+    expect(fn () => $action->execute(45.4642, 9.1900))
         ->toThrow(InvalidLocationException::class, 'API key di Bing Maps non configurata');
 });
 

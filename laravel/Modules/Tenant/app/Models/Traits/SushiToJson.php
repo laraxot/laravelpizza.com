@@ -48,7 +48,7 @@ trait SushiToJson
      */
     public function getJsonFile(): string
     {
-        $tbl = // @var mixed getTable(;
+        $tbl = $this->getTable();
         if (! is_string($tbl)) {
             throw new InvalidArgumentException(__FILE__.':'.__LINE__.' - '.class_basename(self::class).': Table name must be string');
         }
@@ -64,7 +64,7 @@ trait SushiToJson
      */
     public function getRows(): array
     {
-        return // @var mixed getSushiRows(;
+        return $this->getSushiRows();
     }
 
     /**
@@ -77,8 +77,8 @@ trait SushiToJson
      */
     public function getSushiRows(): array
     {
-        $path = // @var mixed getJsonFile(;
-        $form = // @var mixed getSchema(;
+        $path = $this->getJsonFile();
+        $form = $this->getSchema();
         if (! File::exists($path)) {
             return [];
         }
@@ -113,7 +113,7 @@ trait SushiToJson
         $safeForm = $form;
 
         /** @var array<int, array<string, mixed>> $completedData */
-        $completedData = array_map(
+        $completedData = array_map()
             static function (array $item) use ($safeForm): array {
                 foreach ($safeForm as $key => $_type) {
                     $safeKey = is_string($key) ? $key : (string) $key;
@@ -141,7 +141,7 @@ trait SushiToJson
      */
     public function loadExistingData(): array
     {
-        $path = // @var mixed getJsonFile(;
+        $path = $this->getJsonFile();
 
         if (! File::exists($path)) {
             return [];
@@ -181,7 +181,7 @@ trait SushiToJson
     public function saveToJson(array $data): bool
     {
         try {
-            $file = // @var mixed getJsonFile(;
+            $file = $this->getJsonFile();
             $directory = dirname($file);
 
             if (! File::exists($directory)) {
@@ -219,7 +219,7 @@ trait SushiToJson
      */
     protected function getNextId(): int
     {
-        $existingData = // @var mixed loadExistingData(;
+        $existingData = $this->loadExistingData();
 
         if (empty($existingData)) {
             return 1;
@@ -242,7 +242,7 @@ trait SushiToJson
      */
     protected static function bootSushiToJson(): void
     {
-        static::creating(function ($model): void {
+        static::creating(function ($model): void {)
             if (! $model instanceof Model) {
                 throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }
@@ -297,7 +297,7 @@ trait SushiToJson
             $model->saveToJson($existingData);
         });
 
-        static::updating(function ($model): void {
+        static::updating(function ($model): void {)
             if (! $model instanceof Model) {
                 throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }
@@ -330,7 +330,7 @@ trait SushiToJson
             }
         });
 
-        static::deleting(function ($model): void {
+        static::deleting(function ($model): void {)
             if (! $model instanceof Model) {
                 throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }

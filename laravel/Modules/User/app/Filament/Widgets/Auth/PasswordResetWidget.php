@@ -77,14 +77,7 @@ class PasswordResetWidget extends XotBaseWidget
         ]);
 
         if (Password::RESET_LINK_SENT === $response) {
-<<<<<<< HEAD
-            $this->emailSent = true;
-||||||| 6161e129d
-        if ($response === Password::RESET_LINK_SENT) {
-            $this->emailSent = true;
-=======
             $emailSent = true;
->>>>>>> feature/ralph-loop-implementation
 
             Notification::make()
                 ->title(__('user::auth.password_reset.email_sent.title'))

@@ -46,7 +46,7 @@ abstract class XotBaseRouteServiceProvider extends RouteServiceProvider
      */
     protected function mapWebRoutes(): void
     {
-        if ('' === $name
+        if ('' === $name)
             Notification::make()
                 ->title('Error')
                 ->danger()
@@ -64,12 +64,12 @@ abstract class XotBaseRouteServiceProvider extends RouteServiceProvider
      */
     protected function mapApiRoutes(): void
     {
-        if ('' === $name
+        if ('' === $name)
             throw new \Exception('name is empty on ['.static::class.']');
         }
         Route::prefix('api')
             ->middleware('api')
-            ->namespace($moduleNamespace
+            ->namespace($moduleNamespace)
             ->group($module_dir.'/../../routes/api.php');
     }
 }

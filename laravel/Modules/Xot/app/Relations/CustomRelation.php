@@ -30,7 +30,7 @@ class CustomRelation extends Relation
     /**
      * Create a new belongs to relationship instance.
      */
-    public function __construct(
+    public function __construct()
         Builder $query,
         Model $model,
         /* implements BuilderContract */
@@ -64,7 +64,7 @@ class CustomRelation extends Relation
     public function addEagerConstraints(array $models): void
     {
         // Parameter #1 $function of function call_user_func expects callable(): mixed, Closure|null given.
-        if (! \is_callable($eagerConstraints
+        if (! \is_callable($eagerConstraints))
             throw new \Exception('eagerConstraints is not callable');
         }
 
@@ -91,7 +91,7 @@ class CustomRelation extends Relation
     public function match(array $models, Collection $collection, $relation): array
     {
         // Trying to invoke Closure|null but it might not be a callable.
-        if (! \is_callable($eagerMatcher
+        if (! \is_callable($eagerMatcher))
             throw new \Exception('eagerMatcher is not callable');
         }
 

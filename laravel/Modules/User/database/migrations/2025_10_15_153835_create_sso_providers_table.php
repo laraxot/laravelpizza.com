@@ -12,7 +12,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table
+        $this->tableCreate(static function (Blueprint $table))
             $table->id();
             $table->string('name')->unique();
             $table->string('display_name');
@@ -30,32 +30,32 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table
-            if (! $this->hasColumn('type'
+        $this->tableUpdate(function (Blueprint $table))
+            if (! $this->hasColumn('type'))
                 $table->string('type')->default('oauth')->after('display_name');
             }
 
-            if (! $this->hasColumn('entity_id'
+            if (! $this->hasColumn('entity_id'))
                 $table->string('entity_id')->nullable()->unique()->after('type');
             }
 
-            if (! $this->hasColumn('metadata_url'
+            if (! $this->hasColumn('metadata_url'))
                 $table->text('metadata_url')->nullable()->after('redirect_url');
             }
 
-            if (! $this->hasColumn('settings'
+            if (! $this->hasColumn('settings'))
                 $table->json('settings')->nullable()->after('scopes');
             }
 
-            if (! $this->hasColumn('domain_whitelist'
+            if (! $this->hasColumn('domain_whitelist'))
                 $table->json('domain_whitelist')->nullable()->after('settings');
             }
 
-            if (! $this->hasColumn('role_mapping'
+            if (! $this->hasColumn('role_mapping'))
                 $table->json('role_mapping')->nullable()->after('domain_whitelist');
             }
 
-            if ($hasColumn('is_active'
+            if ($hasColumn('is_active'))
                 $table->boolean('is_active')->default(true)->change();
             }
 

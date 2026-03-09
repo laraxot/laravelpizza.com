@@ -7,9 +7,9 @@ use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
-test('can create permission with minimal data', function (): void {
+test('can create permission with minimal data', function (): void {)
     $name = 'test.permission.'.uniqid();
-    $permission = Permission::factory()->create([
+    $permission = Permission::factory()->create([)
         'name' => $name,
         'guard_name' => 'web',
     ]);
@@ -19,7 +19,7 @@ test('can create permission with minimal data', function (): void {
     expect($permission->guard_name)->toBe('web');
 });
 
-test('can create permission with all fields', function (): void {
+test('can create permission with all fields', function (): void {)
     $name = 'full.permission.'.uniqid();
     $permissionData = [
         'name' => $name,
@@ -36,19 +36,19 @@ test('can create permission with all fields', function (): void {
     expect($permission->getFillable())->toContain('created_by', 'updated_by');
 });
 
-test('permission has connection attribute', function (): void {
+test('permission has connection attribute', function (): void {)
     $permission = new Permission();
 
     expect($permission->getConnectionName())->toBe('user');
 });
 
-test('permission has key type attribute', function (): void {
+test('permission has key type attribute', function (): void {)
     $permission = new Permission();
 
     expect($permission->getKeyType())->toBeIn(['int', 'string']);
 });
 
-test('permission has fillable attributes', function (): void {
+test('permission has fillable attributes', function (): void {)
     $permission = new Permission();
 
     $fillable = $permission->getFillable();
@@ -57,7 +57,7 @@ test('permission has fillable attributes', function (): void {
     expect($fillable)->toContain('guard_name');
 });
 
-test('permission has casts', function (): void {
+test('permission has casts', function (): void {)
     $permission = new Permission();
 
     $casts = $permission->getCasts();
@@ -66,7 +66,7 @@ test('permission has casts', function (): void {
         ->and($casts)->toHaveKey('id');
 });
 
-test('can find permission by name', function (): void {
+test('can find permission by name', function (): void {)
     $name = 'unique.permission.'.uniqid();
     $permission = Permission::factory()->create(['name' => $name]);
 
@@ -76,7 +76,7 @@ test('can find permission by name', function (): void {
     expect($foundPermission->id)->toBe($permission->id);
 });
 
-test('can find permission by guard name', function (): void {
+test('can find permission by guard name', function (): void {)
     $suffix = uniqid();
     Permission::factory()->create(['name' => 'guard.perm1.'.$suffix, 'guard_name' => 'web']);
     Permission::factory()->create(['name' => 'guard.perm2.'.$suffix, 'guard_name' => 'api']);
@@ -88,7 +88,7 @@ test('can find permission by guard name', function (): void {
     expect($webPermissions->every(fn ($permission) => 'web' === $permission->guard_name))->toBeTrue();
 });
 
-test('can find permission by created by', function (): void {
+test('can find permission by created by', function (): void {)
     $name = 'created-by.perm.'.uniqid();
     $permission = Permission::factory()->create(['name' => $name]);
 
@@ -98,7 +98,7 @@ test('can find permission by created by', function (): void {
     expect($foundPermission->id)->toBe($permission->id);
 });
 
-test('can find permission by updated by', function (): void {
+test('can find permission by updated by', function (): void {)
     $name = 'updated-by.perm.'.uniqid();
     $permission = Permission::factory()->create(['name' => $name]);
 
@@ -108,7 +108,7 @@ test('can find permission by updated by', function (): void {
     expect($foundPermission->id)->toBe($permission->id);
 });
 
-test('can find permissions by name pattern', function (): void {
+test('can find permissions by name pattern', function (): void {)
     $suffix = uniqid();
     Permission::factory()->create(['name' => 'user.create.'.$suffix]);
     Permission::factory()->create(['name' => 'user.update.'.$suffix]);
@@ -121,7 +121,7 @@ test('can find permissions by name pattern', function (): void {
     expect($userPermissions->every(fn ($permission) => str_starts_with($permission->name, 'user.')))->toBeTrue();
 });
 
-test('can update permission', function (): void {
+test('can update permission', function (): void {)
     $oldName = 'old.permission.'.uniqid();
     $newName = 'new.permission.'.uniqid();
     $permission = Permission::factory()->create(['name' => $oldName]);
@@ -131,9 +131,9 @@ test('can update permission', function (): void {
     expect($permission->fresh()->name)->toBe($newName);
 });
 
-test('can handle null values', function (): void {
+test('can handle null values', function (): void {)
     $name = 'null-test.perm.'.uniqid();
-    $permission = Permission::factory()->create([
+    $permission = Permission::factory()->create([)
         'name' => $name,
         'guard_name' => 'web',
         'created_by' => null,
@@ -144,14 +144,14 @@ test('can handle null values', function (): void {
     expect($permission->updated_by)->toBeNull();
 });
 
-test('can find permissions by multiple criteria', function (): void {
+test('can find permissions by multiple criteria', function (): void {)
     $suffix = uniqid();
-    Permission::factory()->create([
+    Permission::factory()->create([)
         'name' => 'admin.user.create.'.$suffix,
         'guard_name' => 'web',
     ]);
 
-    Permission::factory()->create([
+    Permission::factory()->create([)
         'name' => 'admin.user.update.'.$suffix,
         'guard_name' => 'api',
     ]);
@@ -160,11 +160,11 @@ test('can find permissions by multiple criteria', function (): void {
 
     expect($permissions->count())->toBeGreaterThanOrEqual(2);
 <<<<<<< HEAD
-    expect($permissions->every(
+    expect($permissions->every())
         fn ($permission) => str_starts_with($permission->name, 'admin.user.') && 'admin' === $permission->created_by,
     ))->toBeTrue();
 ||||||| 6161e129d
-    expect($permissions->every(
+    expect($permissions->every())
         fn ($permission) => str_starts_with($permission->name, 'admin.user.') && $permission->created_by === 'admin',
     ))->toBeTrue();
 =======
@@ -172,43 +172,43 @@ test('can find permissions by multiple criteria', function (): void {
 >>>>>>> feature/ralph-loop-implementation
 });
 
-test('permission has roles relationship', function (): void {
+test('permission has roles relationship', function (): void {)
     $permission = Permission::factory()->create(['name' => 'roles-rel.'.uniqid()]);
 
     expect(method_exists($permission, 'roles'))->toBeTrue();
 });
 
-test('permission has users relationship', function (): void {
+test('permission has users relationship', function (): void {)
     $permission = Permission::factory()->create(['name' => 'users-rel.'.uniqid()]);
 
     expect(method_exists($permission, 'users'))->toBeTrue();
 });
 
-test('permission can use role scopes', function (): void {
+test('permission can use role scopes', function (): void {)
     $permission = Permission::factory()->create(['name' => 'role-scope.'.uniqid()]);
 
     expect(is_callable([Permission::query(), 'where']))->toBeTrue();
 });
 
-test('permission can use permission scopes', function (): void {
+test('permission can use permission scopes', function (): void {)
     $permission = Permission::factory()->create(['name' => 'perm-scope.'.uniqid()]);
 
     expect(is_callable([Permission::query(), 'where']))->toBeTrue();
 });
 
-test('permission can use without role scopes', function (): void {
+test('permission can use without role scopes', function (): void {)
     $permission = Permission::factory()->create(['name' => 'without-role.'.uniqid()]);
 
     expect(is_callable([Permission::query(), 'where']))->toBeTrue();
 });
 
-test('permission has factory method', function (): void {
+test('permission has factory method', function (): void {)
     $permission = new Permission();
 
     expect(method_exists($permission, 'newFactory'))->toBeTrue();
 });
 
-test('permission has get table method', function (): void {
+test('permission has get table method', function (): void {)
     $permission = new Permission();
 
     expect(method_exists($permission, 'getTable'))->toBeTrue();

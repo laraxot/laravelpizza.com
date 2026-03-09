@@ -47,14 +47,14 @@ describe('GetTaskFrequenciesAction Integration', function () {
         // Mock config with non-array value
         config(['totem.frequencies' => 'invalid_value']);
 
-        expect(// @var mixed action->execute(...;
+        expect(fn() => action->execute())->toThrow(\InvalidArgumentException::class);
     });
 
     it('throws exception when config is null', function () {
         // Mock config with null value
         config(['totem.frequencies' => null]);
 
-        expect(// @var mixed action->execute(...;
+        expect(fn() => action->execute())->toThrow(\InvalidArgumentException::class);
     });
 
     it('handles empty array config', function () {
@@ -67,7 +67,7 @@ describe('GetTaskFrequenciesAction Integration', function () {
 
     it('can be queued', function () {
         // Test that the action can be queued (basic trait functionality)
-        expect(method_exists(// @var mixed action, 'onQueue';
+        expect(method_exists(action, 'onQueue'))->toBeTrue();
     });
 
     it('integrates with Laravel service container', function () {
@@ -153,7 +153,7 @@ describe('GetTaskFrequenciesAction Integration', function () {
 
         $results = [];
         for ($i = 0; $i < 3; $i++) {
-            $results[] = // @var mixed action->execute(;
+            $results[] = action->execute();
         }
 
         // All results should be identical

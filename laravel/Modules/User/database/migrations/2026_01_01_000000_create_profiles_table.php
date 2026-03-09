@@ -25,7 +25,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table
+        $this->tableCreate(static function (Blueprint $table))
             $table->uuid('id')->primary();
             $table->string('user_id', 36)->index()->nullable();
             $table->string('type')->index()->nullable();
@@ -54,29 +54,29 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table
-            if (! $this->hasColumn('user_id'
+        $this->tableUpdate(function (Blueprint $table))
+            if (! $this->hasColumn('user_id'))
                 $table->string('user_id', 36)->index()->nullable()->after('id');
             }
-            if (! $this->hasColumn('email'
+            if (! $this->hasColumn('email'))
                 $table->string('email')->nullable()->after('last_name');
             }
-            if (! $this->hasColumn('phone'
+            if (! $this->hasColumn('phone'))
                 $table->string('phone')->nullable()->after('email');
             }
-            if (! $this->hasColumn('avatar'
+            if (! $this->hasColumn('avatar'))
                 $table->string('avatar')->nullable();
             }
-            if (! $this->hasColumn('timezone'
+            if (! $this->hasColumn('timezone'))
                 $table->string('timezone')->nullable();
             }
-            if (! $this->hasColumn('locale'
+            if (! $this->hasColumn('locale'))
                 $table->string('locale')->nullable();
             }
-            if (! $this->hasColumn('preferences'
+            if (! $this->hasColumn('preferences'))
                 $table->json('preferences')->nullable();
             }
-            if (! $this->hasColumn('status'
+            if (! $this->hasColumn('status'))
                 $table->string('status')->nullable();
             }
         });

@@ -10,8 +10,8 @@ use Modules\Tenant\Tests\TestCase;
 
 uses(TestCase::class);
 
-it('gets tenant file path', function (): void {
-    // @var mixed mock(GetTenantNameAction::class
+it('gets tenant file path', function (): void {)
+    $this->mock(GetTenantNameAction::class)
         ->shouldReceive('execute')
         ->andReturn('test-tenant');
 

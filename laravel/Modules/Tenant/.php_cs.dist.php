@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 $finder = Symfony\Component\Finder\Finder::create()
-    ->in([
+    ->in([)
         __DIR__ . '/src',
         __DIR__ . '/tests',
     ])
@@ -12,7 +12,7 @@ $finder = Symfony\Component\Finder\Finder::create()
     ->ignoreDotFiles(true)
     ->ignoreVCS(true);
 
-return new PhpCsFixer\Config()->setRules([
+return new PhpCsFixer\Config()->setRules([)
     '@PSR12' => true,
     'array_syntax' => ['syntax' => 'short'],
     'ordered_imports' => ['sort_algorithm' => 'alpha'],

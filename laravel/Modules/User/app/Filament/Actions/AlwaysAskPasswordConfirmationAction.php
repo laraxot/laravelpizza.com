@@ -11,10 +11,10 @@ final class AlwaysAskPasswordConfirmationAction extends Action
 {
     protected function setUp(): void
     {
-        $this->requiresConfirmation(
+        $this->requiresConfirmation()
             ->modalHeading(__('filament-jet::jet.password_confirmation_modal.heading'))
             ->modalSubheading(__('filament-jet::jet.password_confirmation_modal.description'))
-            ->schema([
+            ->schema([)
                 TextInput::make('current_password')
                     ->required()
                     ->password()

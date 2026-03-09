@@ -15,26 +15,26 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 uses(TestCase::class);
 
-beforeEach(function (): void {
-    $user = User::factory(
+beforeEach(function (): void {)
+    $user = User::factory()
         'type' => UserType::MasterAdmin,
         'email' => 'admin-'.uniqid().'@example.com',
         'password' => Hash::make('password123'),
     ]);
 });
 
-test('user resource has correct navigation icon', function (): void {
+test('user resource has correct navigation icon', function (): void {)
     expect(UserResource::getNavigationIcon())->toBe('ui-user-main');
 });
 
-test('user resource has correct widgets', function (): void {
+test('user resource has correct widgets', function (): void {)
     $widgets = UserResource::getWidgets();
 
     expect($widgets)->toHaveCount(1);
     expect($widgets)->toContain(UserOverview::class);
 });
 
-test('user resource has correct form schema', function (): void {
+test('user resource has correct form schema', function (): void {)
     $form = UserResource::getFormSchema();
 
     expect($form)->toHaveKey('section01');
@@ -96,19 +96,19 @@ test('user resource has correct form schema', function (): void {
     expect($createdAtField)->toBeInstanceOf(Placeholder::class);
 });
 
-test('user resource has combined relation manager tabs', function (): void {
+test('user resource has combined relation manager tabs', function (): void {)
     $resource = new UserResource();
 
     expect($resource->hasCombinedRelationManagerTabsWithContent())->toBeTrue();
 });
 
-test('user resource extends correct base class', function (): void {
+test('user resource extends correct base class', function (): void {)
     $resource = new UserResource();
 
     expect($resource)->toBeInstanceOf(XotBaseResource::class);
 });
 
-test('user resource form schema has correct column spans', function (): void {
+test('user resource form schema has correct column spans', function (): void {)
     $form = UserResource::getFormSchema();
 
     $section01 = $form['section01'];
@@ -119,7 +119,7 @@ test('user resource form schema has correct column spans', function (): void {
     expect($section02)->toBeInstanceOf(Section::class);
 });
 
-test('user resource name field is required', function (): void {
+test('user resource name field is required', function (): void {)
     $form = UserResource::getFormSchema();
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
@@ -133,7 +133,7 @@ test('user resource name field is required', function (): void {
     expect($nameField)->toBeInstanceOf(TextInput::class);
 });
 
-test('user resource email field is required', function (): void {
+test('user resource email field is required', function (): void {)
     $form = UserResource::getFormSchema();
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
@@ -147,7 +147,7 @@ test('user resource email field is required', function (): void {
     expect($emailField)->toBeInstanceOf(TextInput::class);
 });
 
-test('user resource password field is required only on create', function (): void {
+test('user resource password field is required only on create', function (): void {)
     $form = UserResource::getFormSchema();
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
@@ -171,7 +171,7 @@ test('user resource password field is required only on create', function (): voi
 >>>>>>> feature/ralph-loop-implementation
 });
 
-test('user resource password field has correct type', function (): void {
+test('user resource password field has correct type', function (): void {)
     $form = UserResource::getFormSchema();
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
@@ -181,7 +181,7 @@ test('user resource password field has correct type', function (): void {
     expect($passwordField->getType())->toBe('password');
 });
 
-test('user resource email field has unique validation', function (): void {
+test('user resource email field has unique validation', function (): void {)
     $form = UserResource::getFormSchema();
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
@@ -195,7 +195,7 @@ test('user resource email field has unique validation', function (): void {
     expect($emailField)->toBeInstanceOf(TextInput::class);
 });
 
-test('user resource created_at field shows diff for humans', function (): void {
+test('user resource created_at field shows diff for humans', function (): void {)
     $form = UserResource::getFormSchema();
     $section02 = $form['section02'];
     $section02Schema = $section02->getDefaultChildComponents();
@@ -209,13 +209,13 @@ test('user resource created_at field shows diff for humans', function (): void {
     expect($createdAtField)->toBeInstanceOf(Placeholder::class);
 });
 
-test('user resource can be instantiated', function (): void {
+test('user resource can be instantiated', function (): void {)
     $resource = new UserResource();
 
     expect($resource)->toBeInstanceOf(UserResource::class);
 });
 
-test('user resource has correct model', function (): void {
+test('user resource has correct model', function (): void {)
     // Since the model is commented out, we'll test the default behavior
     $resource = new UserResource();
 

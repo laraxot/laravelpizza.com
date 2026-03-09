@@ -107,7 +107,7 @@ class TeamInvitation extends BaseModel
      */
     public function accept(UserContract $user): void
     {
-        if ($team
+        if ($team)
             $team->users();
         }
         $this->delete();

@@ -51,12 +51,12 @@ class CreateTableIndexByModelClassColumnsAction
         $indexName = $this->generateIndexName($tableName, $columns);
 
         // Check if the index already exists
-        if ($indexExists($connectionName, $tableName, $indexName
+        if ($indexExists($connectionName, $tableName, $indexName))
             return false; // Skip creation as the index already exists
         }
 
         // Add the index to the table
-        Schema::connection($connectionName)->table($tableName, function (Blueprint $table) use ($indexName, $columns): void {
+        Schema::connection($connectionName)->table($tableName, function (Blueprint $table) use ($indexName, $columns): void {)
             $table->index($columns, $indexName);
         });
 

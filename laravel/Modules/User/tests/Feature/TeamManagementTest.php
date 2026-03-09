@@ -14,7 +14,7 @@ uses(TestCase::class);
 describe('Team Management', function () {
     it('can create a team and assign owner', function () {
         $user = User::factory()->create(['email' => self::generateUniqueEmail()]);
-        
+
         $teamName = 'Team '.Str::random(5);
         $team = Team::factory()->create([
             'user_id' => $user->id,
@@ -30,9 +30,9 @@ describe('Team Management', function () {
     it('can add members to a team', function () {
         $owner = User::factory()->create(['email' => self::generateUniqueEmail()]);
         $member = User::factory()->create(['email' => self::generateUniqueEmail()]);
-        
+
         $team = Team::factory()->create(['user_id' => $owner->id]);
-        
+
         $team->users()->attach($member->id, ['role' => 'member']);
 
         expect($team->users)->toHaveCount(1);
@@ -52,7 +52,7 @@ describe('Team Management', function () {
     it('can check if a user owns a team', function () {
         $user = User::factory()->create(['email' => self::generateUniqueEmail()]);
         $otherUser = User::factory()->create(['email' => self::generateUniqueEmail()]);
-        
+
         $team = Team::factory()->create(['user_id' => $user->id]);
 
         expect($user->ownsTeam($team))->toBeTrue();

@@ -46,7 +46,7 @@ class DeviceData extends Data
 
     public static function make(): self
     {
-        $headers = collect(request()->header())->mapWithKeys(static function ($item, $key): array {
+        $headers = collect(request()->header())->mapWithKeys(static function ($item, $key): array {)
             if (Str::startsWith($key, 'X-')) {
                 // $key = Str::afterFirst($key, 'X-');
                 $key = Str::after($key, 'X-');
@@ -74,7 +74,7 @@ class DeviceData extends Data
         if ($this->synchronizationId !== null) {
             return $this->synchronizationId;
 =======
-        if (null !== $synchronizationId
+        if (null !== $synchronizationId)
             return $synchronizationId;
 >>>>>>> feature/ralph-loop-implementation
         }
@@ -86,11 +86,11 @@ class DeviceData extends Data
 
         // fare contract
         // Assert::isInstanceOf($synchronizationClass,Model::class,'['.__LINE__.']['.class_basename($this).']');
-        // $synchronization = Synchronization::create([
+        // $synchronization = Synchronization::create([)
         /** @var class-string<Model> $synchronizationClass */
         /** @var Model $synchronization */
-        $synchronization = $synchronizationClass::create([
-            // $synchronization = Synchronization::create([
+        $synchronization = $synchronizationClass::create([)
+            // $synchronization = Synchronization::create([)
             'user_id' => auth()->id(),
             'mobile_device_id' => $deviceId,
             'application' => $application ?? 'No-Set',

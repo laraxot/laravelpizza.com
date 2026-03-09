@@ -27,10 +27,10 @@ class GetCurrentDeviceActionTest extends TestCase
         $agent->shouldReceive('robot')->andReturn(null);
 
 <<<<<<< HEAD
-beforeEach(function () {
+beforeEach(function () {)
     $this->action = new GetCurrentDeviceAction();
 ||||||| 6161e129d
-beforeEach(function () {
+beforeEach(function () {)
     $this->action = new GetCurrentDeviceAction;
 =======
         $deviceModel = new Device();

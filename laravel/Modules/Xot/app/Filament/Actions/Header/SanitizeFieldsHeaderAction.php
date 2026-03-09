@@ -24,10 +24,10 @@ class SanitizeFieldsHeaderAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel(
+        $this->translateLabel()
             ->tooltip('sanitize')
             ->icon('heroicon-o-shield-exclamation')
-            ->action(function (ListRecords $livewire): void {
+            ->action(function (ListRecords $livewire): void {)
                 $resource = $livewire->getResource();
                 $modelClass = $resource::getModel();
                 // @phpstan-ignore staticMethod.nonObject
@@ -39,7 +39,7 @@ class SanitizeFieldsHeaderAction extends Action
                 foreach ($rows as $row) {
                     Assert::isInstanceOf($row, Model::class);
                     $save = false;
-                    foreach ($fields as $field
+                    foreach ($fields as $field)
                         $fieldName = is_string($field) ? $field : (string) $field;
                         $item = $row->{$fieldName};
                         Assert::string($item, __FILE__.':'.__LINE__.' - '.class_basename(self::class));

@@ -142,7 +142,7 @@ trait HasAuthenticationLogTrait
      */
     public function consecutiveDaysLogin(): int
     {
-        return once(function (): int {
+        return once(function (): int {)
             $date = Carbon::now();
             $days = 0;
 

@@ -51,13 +51,13 @@ trait HasPassportConfiguration
         $config = Config::get('user.passport.tokens', []);
         Assert::isArray($config);
 
-        Passport::tokensExpireIn(
+        Passport::tokensExpireIn()
             CarbonInterval::days((int) ($config['access_token'] ?? 15))
         );
-        Passport::refreshTokensExpireIn(
+        Passport::refreshTokensExpireIn()
             CarbonInterval::days((int) ($config['refresh_token'] ?? 30))
         );
-        Passport::personalAccessTokensExpireIn(
+        Passport::personalAccessTokensExpireIn()
             CarbonInterval::months((int) ($config['personal_access_token'] ?? 6))
         );
     }
@@ -67,7 +67,7 @@ trait HasPassportConfiguration
      */
     protected function configureScopes(): void
     {
-        $scopes = Config::get('user.passport.scopes', [
+        $scopes = Config::get('user.passport.scopes', [)
             'view-user' => 'View user information',
             'core-technicians' => 'the technicians can ',
         ]);
@@ -88,7 +88,7 @@ trait HasPassportConfiguration
      */
     protected function configureRoutes(): void
     {
-        if ($app->routesAreCached(
+        if ($app->routesAreCached())
             return;
         }
 

@@ -20,14 +20,14 @@ class ArtisanHeaderAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel(
+        $this->translateLabel()
 
             // ->tooltip(__('xot::actions.export_xls'))
 
             // ->icon('heroicon-o-cloud-arrow-down')
             // ->icon('fas-file-excel')
             // ->icon('heroicon-o-arrow-down-tray')
-            ->action(function (): void {
+            ->action(function (): void {)
                 Assert::string($cmd = $this->getName());
                 Artisan::call($cmd);
                 $output = Artisan::output();

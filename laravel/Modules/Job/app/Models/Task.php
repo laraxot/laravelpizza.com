@@ -137,11 +137,11 @@ class Task extends BaseModel
      */
     public function compileParameters(bool $forScheduler = false): array
     {
-        if (// @var mixed parameters === null
+        if ($this->parameters === null) {
             return [];
         }
 
-        $parameters = json_decode(// @var mixed parameters, true;
+        $parameters = json_decode($this->parameters, true);
         Assert::isArray($parameters);
 
         if ($forScheduler) {
@@ -162,7 +162,7 @@ class Task extends BaseModel
      */
     public function getActivatedAttribute(): bool
     {
-        return (bool) // @var mixed is_active;
+        return (bool) $this->is_active;
     }
 
     /**
@@ -181,7 +181,7 @@ class Task extends BaseModel
      */
     public function frequencies(): HasMany
     {
-        return // @var mixed hasMany(Frequency::class, 'task_id', 'id';
+        return $this->hasMany(Frequency::class, 'task_id', 'id');
     }
 
     /**
@@ -189,7 +189,7 @@ class Task extends BaseModel
      */
     public function results(): HasMany
     {
-        return // @var mixed hasMany(Result::class, 'task_id', 'id';
+        return $this->hasMany(Result::class, 'task_id', 'id');
     }
 
     /**
@@ -197,7 +197,7 @@ class Task extends BaseModel
      */
     public function getLastResultAttribute(): ?Result
     {
-        $res = // @var mixed results(;
+        $res = $this->results()->latest('ran_at')->first();
         if ($res === null) {
             return null;
         }
@@ -211,7 +211,7 @@ class Task extends BaseModel
         /**
          * @var float $avg_duration
          */
-        $avg_duration = // @var mixed results(;
+        $avg_duration = $this->results()->avg('duration');
 
         return (float) $avg_duration;
     }
@@ -221,7 +221,7 @@ class Task extends BaseModel
      */
     public function routeNotificationForMail(): ?string
     {
-        return // @var mixed notification_email_address;
+        return $this->notification_email_address;
     }
 
     /**
@@ -229,7 +229,7 @@ class Task extends BaseModel
      */
     public function routeNotificationForNexmo(): ?string
     {
-        return // @var mixed notification_phone_number;
+        return $this->notification_phone_number;
     }
 
     /**
@@ -237,7 +237,7 @@ class Task extends BaseModel
      */
     public function routeNotificationForSlack(): ?string
     {
-        return // @var mixed notification_slack_webhook;
+        return $this->notification_slack_webhook;
     }
 
     /**
@@ -245,15 +245,15 @@ class Task extends BaseModel
      */
     public function autoCleanup(): void
     {
-        if (// @var mixed auto_cleanup_num > 0
-            if (// @var mixed auto_cleanup_type === 'results'
-                $oldest_id = // @var mixed results(
+        if ($this->auto_cleanup_num > 0) {
+            if ($this->auto_cleanup_type === 'results') {
+                $oldest_id = $this->results()
                     ->orderBy('ran_at', 'desc')
-                    ->limit(// @var mixed auto_cleanup_num
+                    ->limit($this->auto_cleanup_num)
                     ->get()
                     ->min('id');
                 do {
-                    $rowsToDelete = // @var mixed results(
+                    $rowsToDelete = $this->results()
                         ->where('id', '<', $oldest_id)
                         ->limit(50)
                         ->getQuery()
@@ -264,8 +264,8 @@ class Task extends BaseModel
                 } while ($rowsToDelete->count() > 0);
             } else {
                 do {
-                    $rowsToDelete = // @var mixed results(
-                        ->where('ran_at', '<', Carbon::now()->subDays(// @var mixed auto_cleanup_num - 1
+                    $rowsToDelete = $this->results()
+                        ->where('ran_at', '<', Carbon::now()->subDays($this->auto_cleanup_num - 1))
                         ->limit(50)
                         ->getQuery()
                         ->select('id')

@@ -34,7 +34,7 @@ class GenerateModelByModelClass
 
         $content_old = File::get($filename);
         $content = $content_old;
-        foreach ($replaces as $k => $v
+        foreach ($replaces as $k => $v)
             if (method_exists($this, 'replace'.$k)) {
                 $content = // @var mixed {'replace'.$k}($v, $content);
             }
@@ -55,7 +55,7 @@ class GenerateModelByModelClass
     public function replaceDummyTable(string $value, string $content): string
     {
         $table_start = mb_strpos($content, 'protected $table');
-        Assert::integer(
+        Assert::integer()
             $fillable_start = mb_strpos($content, 'protected $fillable'),
             '['.__LINE__.']['.class_basename($this).']',
         );
@@ -85,7 +85,7 @@ class GenerateModelByModelClass
         /*
          * $output=Artisan::output();
          *
-         * dddx(
+         * dddx()
          * [
          * 'res'=>$res,
          * 'output'=>$output,

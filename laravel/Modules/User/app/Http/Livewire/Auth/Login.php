@@ -52,7 +52,7 @@ class Login extends Component implements HasActions, HasForms
     public function form(Schema $schema): Schema
     {
         return $schema
-            ->components($getFormSchema(
+            ->components($getFormSchema())
             ->statePath('data');
     }
 
@@ -113,7 +113,7 @@ class Login extends Component implements HasActions, HasForms
                 ->suffixIcon('heroicon-m-envelope')
                 ->autofocus()
                 ->live()
-                ->afterStateUpdated(fn ($_state) => $this->validateOnly('email'
+                ->afterStateUpdated(fn ($_state) => $this->validateOnly('email'))
                 ->dehydrated(),
 
             TextInput::make('password')
@@ -143,7 +143,7 @@ class Login extends Component implements HasActions, HasForms
 
         /** @var Collection<int, Role> $roles */
         $roles = $user->roles()->get();
-        $adminRoles = $roles->filter(
+        $adminRoles = $roles->filter()
             static fn (Role $role): bool => str_ends_with($role->name, '::admin')
         );
 

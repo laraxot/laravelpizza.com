@@ -20,17 +20,17 @@ class OauthRefreshTokenFactory extends Factory
     public function definition(): array
     {
         return [
-            'id' => $faker->sha256(
-            'access_token_id' => fn () => OauthAccessToken::create([
-                'id' => $faker->sha256(
+            'id' => $faker->sha256()
+            'access_token_id' => fn () => OauthAccessToken::create([)
+                'id' => $faker->sha256()
                 'user_id' => null,
-                'client_id' => $faker->sha256(
+                'client_id' => $faker->sha256()
                 'name' => 'Test Token',
                 'scopes' => [],
                 'revoked' => false,
                 'expires_at' => $faker->dateTimeBetween('+1 month', '+6 months')
             ])->id,
-            'revoked' => $faker->boolean(5
+            'revoked' => $faker->boolean(5)
             'expires_at' => $faker->dateTimeBetween('+1 month', '+6 months')
         ];
     }

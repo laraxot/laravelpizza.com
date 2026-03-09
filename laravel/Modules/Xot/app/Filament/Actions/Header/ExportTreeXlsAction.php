@@ -29,12 +29,12 @@ class ExportTreeXlsAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel(
+        $this->translateLabel()
             ->tooltip(__('xot::actions.export_xls'))
             // ->icon('heroicon-o-cloud-arrow-down')
             // ->icon('fas-file-excel')
             ->icon('heroicon-o-arrow-down-tray')
-            ->action(static function (Page $livewire, Model $record, $_data) {
+            ->action(static function (Page $livewire, Model $record, $_data) {)
                 $tableFilters = [
                     'id' => $record->getKey(),
                 ];
@@ -50,7 +50,7 @@ class ExportTreeXlsAction extends Action
                 $fields = [];
                 if (method_exists($resource, 'getXlsFields')) {
                     $rawFields = $resource::getXlsFields($tableFilters);
-                    $fields = array_values(array_map(
+                    $fields = array_values(array_map())
                         static fn (mixed $field): string => is_string($field) ? $field : (string) $field,
                         (array) $rawFields
                     ));

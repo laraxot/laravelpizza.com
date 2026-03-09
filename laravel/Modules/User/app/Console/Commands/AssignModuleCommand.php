@@ -5,14 +5,6 @@ declare(strict_types=1);
 namespace Modules\User\Console\Commands;
 
 use Illuminate\Console\Command;
-<<<<<<< HEAD
-use Illuminate\Support\Str;
-||||||| 6161e129d
-use Modules\User\Models\Role;
-use Modules\Xot\Contracts\UserContract;
-use Modules\Xot\Datas\XotData;
-use Nwidart\Modules\Contracts\RepositoryInterface;
-=======
 
 use function Laravel\Prompts\multiselect;
 use function Laravel\Prompts\text;
@@ -21,24 +13,7 @@ use Modules\User\Models\Role;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Nwidart\Modules\Contracts\RepositoryInterface;
->>>>>>> feature/ralph-loop-implementation
 
-<<<<<<< HEAD
-use function Laravel\Prompts\multiselect;
-use function Laravel\Prompts\text;
-
-use Modules\User\Models\Role;
-use Modules\Xot\Contracts\UserContract;
-use Modules\Xot\Datas\XotData;
-use Nwidart\Modules\Facades\Module;
-use Symfony\Component\Console\Input\InputOption;
-
-||||||| 6161e129d
-use function Laravel\Prompts\multiselect;
-use function Laravel\Prompts\text;
-
-=======
->>>>>>> feature/ralph-loop-implementation
 class AssignModuleCommand extends Command
 {
     /**
@@ -55,9 +30,12 @@ class AssignModuleCommand extends Command
      */
     protected $description = 'Assign or revoke modules to/from user';
 
-    /**
-     * Create a new command instance.
-     */
+    public function __construct(
+        private readonly RepositoryInterface $moduleRepository,
+        private readonly Role $roleModel,
+    ) {
+        parent::__construct();
+    }
 
     /**
      * Execute the console command.
@@ -78,24 +56,6 @@ class AssignModuleCommand extends Command
         }
 
         // Get all available modules
-<<<<<<< HEAD
-        $modules_opts = array_keys(Module::all());
-        $modules_opts = array_combine($modules_opts, $modules_opts);
-||||||| 6161e129d
-        /** @var array<string, mixed> $allModules */
-        $allModules = $this->moduleRepository->all();
-
-        // Ensure $allModules is an array for PHPStan
-        if (! is_array($allModules)) {
-            $this->error('Unable to retrieve modules.');
-
-            return;
-        }
-
-        $moduleKeys = array_map('strval', array_keys($allModules));
-        /** @var array<int|string, string> $modulesOpts */
-        $modulesOpts = array_combine($moduleKeys, $moduleKeys);
-=======
         /** @var array<string, mixed> $allModules */
         $allModules = $moduleRepository->all();
 
@@ -109,25 +69,18 @@ class AssignModuleCommand extends Command
         $moduleKeys = array_map('strval', array_keys($allModules));
         /** @var array<int|string, string> $moduleOptions */
         $moduleOptions = array_combine($moduleKeys, $moduleKeys);
->>>>>>> feature/ralph-loop-implementation
 
         // Get user's current module roles
         // $userModuleRoles = $this->getUserModuleRoles($user);
         $userModuleRoles = $user->getModules();
-        $currentModules = array_keys($userModuleRoles);
+        $currentModules = is_array($userModuleRoles) ? array_keys($userModuleRoles) : [];
 
         // Show current modules as default selected
-        $this->info("Current modules for {$email}: ".implode(', ', $currentModules));
+        $this->info('Current modules for '.$email.': '.implode(', ', $currentModules));
 
         $selectedModules = multiselect(
             label: 'Select modules (checked = assigned, unchecked = will be revoked)',
-<<<<<<< HEAD
-            options: $modules_opts,
-||||||| 6161e129d
-            options: $modulesOpts,
-=======
             options: $moduleOptions,
->>>>>>> feature/ralph-loop-implementation
             default: $currentModules, // Show current modules as checked
             required: false, // Allow empty selection
             scroll: 10,
@@ -139,25 +92,11 @@ class AssignModuleCommand extends Command
 
         // Assign new modules
         foreach ($modulesToAssign as $module) {
-<<<<<<< HEAD
-            $module_low = Str::lower(is_string($module) ? $module : ((string) $module));
-            $role_name = $module_low.'::admin';
-||||||| 6161e129d
-            $module_low = strtolower(is_string($module) ? $module : ((string) $module));
-            $role_name = $module_low.'::admin';
-=======
             $moduleLower = strtolower(is_string($module) ? $module : ((string) $module));
             $roleName = $moduleLower.'::admin';
->>>>>>> feature/ralph-loop-implementation
 
             // Create or get the role with the web guard
-<<<<<<< HEAD
-            $role = Role::firstOrCreate(['name' => $role_name], []);
-||||||| 6161e129d
-            $role = $this->roleModel->firstOrCreate(['name' => $role_name], []);
-=======
             $role = $roleModel->firstOrCreate(['name' => $roleName], []);
->>>>>>> feature/ralph-loop-implementation
 
             // Assign the role to the user
             $user->assignRole($role);
@@ -167,16 +106,8 @@ class AssignModuleCommand extends Command
 
         // Revoke unchecked modules
         foreach ($modulesToRevoke as $module) {
-<<<<<<< HEAD
-            $module_low = Str::lower(is_string($module) ? $module : ((string) $module));
-            $role_name = $module_low.'::admin';
-||||||| 6161e129d
-            $module_low = strtolower(is_string($module) ? $module : ((string) $module));
-            $role_name = $module_low.'::admin';
-=======
             $moduleLower = strtolower(is_string($module) ? $module : ((string) $module));
             $roleName = $moduleLower.'::admin';
->>>>>>> feature/ralph-loop-implementation
 
             // Revoke the role from the user
             $user->removeRole($roleName);
@@ -192,72 +123,4 @@ class AssignModuleCommand extends Command
         }
         $this->info("Module assignment updated for {$email}");
     }
-<<<<<<< HEAD
-
-    /*
-     * Get the console command options.
-     */
-    // protected function getOptions(): array
-    // {
-    //    return [
-    //        ['example', null, InputOption::VALUE_OPTIONAL, 'An example option.', null],
-    //    ];
-    // }
-
-    /*
-     * Get user's current module roles.
-     *
-     * @return array<string, string>
-
-    private function getUserModuleRoles(UserContract $user): array
-    {
-        $moduleRoles = [];
-
-        //@var Collection<int, Role> $roles
-        $roles = $user->roles()->get();
-        foreach ($roles as $role) {
-            if (Str::endsWith($role->name, '::admin')) {
-                $moduleName = Str::before($role->name, '::admin');
-                $moduleRoles[$moduleName] = $role->name;
-            }
-        }
-
-        return $moduleRoles;
-    }
-        */
-||||||| 6161e129d
-
-    /*
-     * Get the console command options.
-     */
-    // protected function getOptions(): array
-    // {
-    //    return [
-    //        ['example', null, InputOption::VALUE_OPTIONAL, 'An example option.', null],
-    //    ];
-    // }
-
-    /*
-     * Get user's current module roles.
-     *
-     * @return array<string, string>
-
-    private function getUserModuleRoles(UserContract $user): array
-    {
-        $moduleRoles = [];
-
-        //@var Collection<int, Role> $roles
-        $roles = $user->roles()->get();
-        foreach ($roles as $role) {
-            if (strtolower(is_string($role->name) ? $role->name : ((string) $role->name)) === strtolower(is_string($moduleName) ? $moduleName : ((string) $moduleName)).'::admin') { // Corrected Str::endsWith and Str::before
-                $moduleName = str_before($role->name, '::admin');
-                $moduleRoles[$moduleName] = $role->name;
-            }
-        }
-
-        return $moduleRoles;
-    }
-        */
-=======
->>>>>>> feature/ralph-loop-implementation
 }

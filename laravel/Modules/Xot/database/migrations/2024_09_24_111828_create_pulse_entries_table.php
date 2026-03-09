@@ -12,7 +12,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table
+        $this->tableCreate(function (Blueprint $table))
             $table->id();
             $table->unsignedInteger('timestamp');
             $table->string('type');

@@ -25,7 +25,7 @@ trait SushiToCsv
     {
         // return CSV::fromFile(__DIR__.'/roles.csv')->toArray();
         // load the CSV document from a file path
-        $csv = Reader::createFromPath(// @var mixed getCsvPath(;
+        $csv = Reader::createFromPath($getCsvPath());
         // $csv->setDelimiter(';');
         $csv->setHeaderOffset(0);
         // returns all the records as
@@ -38,7 +38,7 @@ trait SushiToCsv
 
     public function getCsvPath(): string
     {
-        $tbl = // @var mixed getTable(;
+        $tbl = $this->getTable();
         if (! is_string($tbl)) {
             throw new RuntimeException('Table name must be a string');
         }
@@ -49,7 +49,7 @@ trait SushiToCsv
 
     public function getCsvHeader(): array
     {
-        $reader = Reader::createFromPath(// @var mixed getCsvPath(;
+        $reader = Reader::createFromPath($getCsvPath());
         $reader->setHeaderOffset(0);
 
         return $reader->getHeader();
@@ -64,7 +64,7 @@ trait SushiToCsv
          * During a model create Eloquent will also update the updated_at field so
          * need to have the updated_by field here as well.
          */
-        static::creating(
+        static::creating()
             /**
              * @param  self  $model
              */
@@ -102,7 +102,7 @@ trait SushiToCsv
         /*
          * updating.
          */
-        static::updating(
+        static::updating()
             /**
              * @param  self  $model
              */
@@ -155,7 +155,7 @@ trait SushiToCsv
          * For deletes we need to save the model first with the deleted_by field
          */
 
-        static::deleting(
+        static::deleting()
             /**
              * @param  self  $model
              */

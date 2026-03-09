@@ -108,7 +108,7 @@ class SsoProvider extends BaseModel
      */
     public function isAllowedDomain(string $email): bool
     {
-        if (empty($domain_whitelist
+        if (empty($domain_whitelist))
             return true;
         }
 

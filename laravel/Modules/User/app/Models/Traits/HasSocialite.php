@@ -21,15 +21,7 @@ trait HasSocialite
 
     public function getProviderField(string $provider, string $field): string
     {
-<<<<<<< HEAD
-        $socialiteUser = $this->socialiteUsers()->firstWhere(['provider' => $provider]);
-||||||| 6161e129d
-        $socialiteUser = $this->socialiteUsers()->firstWhere(['provider' => $provider]);
-        if ($socialiteUser === null) {
-            throw new Exception('SocialiteUser not found');
-=======
         $socialiteUser = $this->socialiteUsers();
->>>>>>> feature/ralph-loop-implementation
         if (null === $socialiteUser) {
             throw new \Exception('SocialiteUser not found');
         }

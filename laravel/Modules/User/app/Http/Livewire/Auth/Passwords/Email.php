@@ -22,7 +22,7 @@ class Email extends Component
      */
     public function sendResetPasswordLink(): void
     {
-        $this->validate([
+        $this->validate([)
             'email' => ['required', 'email'],
         ]);
 
@@ -65,7 +65,7 @@ class Email extends Component
          */
         $view = 'pub_theme::livewire.auth.passwords.email';
 
-        return view($view, [
+        return view($view, [)
             'layout' => 'pub_theme::layouts.auth',
         ]);
     }

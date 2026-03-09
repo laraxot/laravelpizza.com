@@ -54,7 +54,7 @@ class ExecuteArtisanCommandAction
     {
         Assert::stringNotEmpty($command, 'Il comando non può essere vuoto');
 
-        if (! $this->isCommandAllowed($command
+        if (! $this->isCommandAllowed($command))
             throw new \RuntimeException("Comando non consentito: {$command}");
         }
 

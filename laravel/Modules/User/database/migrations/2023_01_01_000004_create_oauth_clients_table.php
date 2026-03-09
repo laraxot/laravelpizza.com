@@ -9,7 +9,7 @@ use Modules\Xot\Datas\XotData;
 return new class extends XotBaseMigration {
     public function up(): void
     {
-        $this->tableCreate(static function (Blueprint $table
+        $this->tableCreate(static function (Blueprint $table))
             // $table->bigIncrements('id');
             $table->uuid('id')->primary();
             // $table->unsignedBigInteger('user_id')->nullable()->index();
@@ -25,14 +25,14 @@ return new class extends XotBaseMigration {
 
         // -- UPDATE --
 <<<<<<< HEAD
-        $this->tableUpdate(function (Blueprint $table): void {
+        $this->tableUpdate(function (Blueprint $table): void {)
             if ('string' !== $this->getColumnType('id')) {
 ||||||| 6161e129d
-        $this->tableUpdate(function (Blueprint $table): void {
+        $this->tableUpdate(function (Blueprint $table): void {)
             if ($this->getColumnType('id') !== 'string') {
 =======
-        $this->tableUpdate(function (Blueprint $table
-            if ('string' !== $this->getColumnType('id'
+        $this->tableUpdate(function (Blueprint $table))
+            if ('string' !== $this->getColumnType('id'))
 >>>>>>> feature/ralph-loop-implementation
                 $table->uuid('id')->change(); // is  just primary
             }

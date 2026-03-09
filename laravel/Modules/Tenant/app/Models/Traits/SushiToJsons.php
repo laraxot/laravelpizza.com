@@ -34,8 +34,8 @@ trait SushiToJsons
 
     public function getJsonFile(): string
     {
-        $tbl = // @var mixed getTable(;
-        $id = // @var mixed getKey(;
+        $tbl = $this->getTable();
+        $id = $this->getKey();
 
         $stringId = is_string($id) || is_numeric($id) ? (string) $id : 'unknown';
         $stringTbl = is_string($tbl) ? $tbl : 'unknown';
@@ -50,7 +50,7 @@ trait SushiToJsons
      */
     public function getSushiRows(): array
     {
-        $tbl = // @var mixed getTable(;
+        $tbl = $this->getTable();
         $path = TenantService::filePath('database/content/'.$tbl);
 
         $files = File::glob($path.'/*.json');
@@ -69,7 +69,7 @@ trait SushiToJsons
             $item = [];
 
             // Ensure schema is an array
-            $schema = // @var mixed schema ?? [];
+            $schema = $schema ?? [];
 
             /** @var array<string, mixed> $schema */
             foreach ($schema as $name => $type) {
@@ -102,7 +102,7 @@ trait SushiToJsons
          * During a model create Eloquent will also update the updated_at field so
          * need to have the updated_by field here as well.
          */
-        static::creating(function ($model): void {
+        static::creating(function ($model): void {)
             if (! $model instanceof Model) {
                 throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }
@@ -151,7 +151,7 @@ trait SushiToJsons
         /*
          * updating.
          */
-        static::updating(function ($model): void {
+        static::updating(function ($model): void {)
             if (! $model instanceof Model) {
                 throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }
@@ -173,7 +173,7 @@ trait SushiToJsons
          * For deletes we need to save the model first with the deleted_by field
          */
 
-        static::deleting(function ($model): void {
+        static::deleting(function ($model): void {)
             if (! $model instanceof Model) {
                 throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }

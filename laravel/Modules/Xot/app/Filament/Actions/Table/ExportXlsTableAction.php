@@ -19,11 +19,11 @@ class ExportXlsTableAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel(
+        $this->translateLabel()
             ->tooltip(__('xot::actions.export_xls'))
             // ->icon('fas-file-excel')
             ->icon('heroicon-o-arrow-down-tray')
-            ->action(static function (RelationManager $livewire) {
+            ->action(static function (RelationManager $livewire) {)
                 $livewire_class = $livewire::class;
                 $filename =
                     class_basename($livewire).

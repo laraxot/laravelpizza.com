@@ -26,12 +26,12 @@ function makeTestSushiModelForPath(string $jsonPath): TestSushiModel
 
         public function setJsonPath(string $jsonPath): void
         {
-            // @var mixed jsonPath = $jsonPath;
+            $jsonPath = $jsonPath;
         }
 
         public function getJsonFile(): string
         {
-            return // @var mixed jsonPath;
+            return $jsonPath;
         }
     };
 
@@ -40,28 +40,28 @@ function makeTestSushiModelForPath(string $jsonPath): TestSushiModel
     return $model;
 }
 
-beforeEach(function (): void {
+beforeEach(function (): void {)
     $root = storage_path('tests/sushi-json');
     if (File::exists($root)) {
         File::deleteDirectory($root);
     }
 });
 
-afterEach(function (): void {
+afterEach(function (): void {)
     $root = storage_path('tests/sushi-json');
     if (File::exists($root)) {
         File::deleteDirectory($root);
     }
 });
 
-test('creates json file with tenant isolation', function (): void {
+test('creates json file with tenant isolation', function (): void {)
     $tenant1Path = tenantJsonPath('tenant1');
     $tenant2Path = tenantJsonPath('tenant2');
 
     $model1 = makeTestSushiModelForPath($tenant1Path);
     $model2 = makeTestSushiModelForPath($tenant2Path);
 
-    $model1->saveToJson([
+    $model1->saveToJson([)
         '1' => [
             'id' => 1,
             'name' => 'Tenant 1 Item',
@@ -73,7 +73,7 @@ test('creates json file with tenant isolation', function (): void {
     expect(File::exists($tenant1Path))->toBeTrue();
     expect(File::exists($tenant2Path))->toBeFalse();
 
-    $model2->saveToJson([
+    $model2->saveToJson([)
         '1' => [
             'id' => 1,
             'name' => 'Tenant 2 Item',
@@ -96,18 +96,18 @@ test('creates json file with tenant isolation', function (): void {
     expect($tenant2ById[1]['name'])->toBe('Tenant 2 Item');
 });
 
-test('loads data with tenant isolation', function (): void {
+test('loads data with tenant isolation', function (): void {)
     $tenant1Path = tenantJsonPath('tenant1');
     $tenant2Path = tenantJsonPath('tenant2');
 
     $model1 = makeTestSushiModelForPath($tenant1Path);
     $model2 = makeTestSushiModelForPath($tenant2Path);
 
-    $model1->saveToJson([
+    $model1->saveToJson([)
         '1' => ['id' => 1, 'name' => 'Tenant 1 Item 1', 'status' => 'active'],
         '2' => ['id' => 2, 'name' => 'Tenant 1 Item 2', 'status' => 'active'],
     ]);
-    $model2->saveToJson([
+    $model2->saveToJson([)
         '1' => ['id' => 1, 'name' => 'Tenant 2 Item 1', 'status' => 'active'],
         '2' => ['id' => 2, 'name' => 'Tenant 2 Item 2', 'status' => 'active'],
     ]);
@@ -124,7 +124,7 @@ test('loads data with tenant isolation', function (): void {
     expect($rows1ById)->not->toBe($rows2ById);
 });
 
-test('handles complex data structures', function (): void {
+test('handles complex data structures', function (): void {)
     $tenant1Path = tenantJsonPath('tenant1');
     $model = makeTestSushiModelForPath($tenant1Path);
 
@@ -168,15 +168,15 @@ test('handles complex data structures', function (): void {
     expect($metadata['nested']['level1']['level2']['level3'])->toBe('deep_value');
 });
 
-test('handles concurrent access safely', function (): void {
+test('handles concurrent access safely', function (): void {)
     $tenant1Path = tenantJsonPath('tenant1');
     $model = makeTestSushiModelForPath($tenant1Path);
 
-    $model->saveToJson([
+    $model->saveToJson([)
         '1' => ['id' => 1, 'name' => 'Initial Item', 'status' => 'active'],
     ]);
 
-    expect($model->saveToJson([
+    expect($model->saveToJson([))
         '1' => ['id' => 1, 'name' => 'Concurrent Update', 'status' => 'updated'],
         '2' => ['id' => 2, 'name' => 'New Item', 'status' => 'active'],
     ]))->toBeTrue();
@@ -189,7 +189,7 @@ test('handles concurrent access safely', function (): void {
     expect($rowsById[2]['name'])->toBe('New Item');
 });
 
-test('handles large datasets efficiently', function (): void {
+test('handles large datasets efficiently', function (): void {)
     $tenant1Path = tenantJsonPath('tenant1');
     $model = makeTestSushiModelForPath($tenant1Path);
 
@@ -214,11 +214,11 @@ test('handles large datasets efficiently', function (): void {
     expect($model->getSushiRows())->toHaveCount(500);
 });
 
-test('handles unicode and special characters', function (): void {
+test('handles unicode and special characters', function (): void {)
     $tenant1Path = tenantJsonPath('tenant1');
     $model = makeTestSushiModelForPath($tenant1Path);
 
-    expect($model->saveToJson([
+    expect($model->saveToJson([))
         '1' => [
             'id' => 1,
             'name' => 'Café & Résumé 🚀',
@@ -241,11 +241,11 @@ test('handles unicode and special characters', function (): void {
     expect($rowsById[1]['description'])->toBe('Test con caratteri speciali: é, è, ñ, 中文, 🎉');
 });
 
-test('handles empty and null values', function (): void {
+test('handles empty and null values', function (): void {)
     $tenant1Path = tenantJsonPath('tenant1');
     $model = makeTestSushiModelForPath($tenant1Path);
 
-    expect($model->saveToJson([
+    expect($model->saveToJson([))
         '1' => [
             'id' => 1,
             'name' => '',
@@ -274,7 +274,7 @@ test('handles empty and null values', function (): void {
     expect($rowsById[1]['description'])->toBeNull();
 });
 
-test('works with different tenant configurations', function (): void {
+test('works with different tenant configurations', function (): void {)
     $customDir = storage_path('tests/sushi-json/custom-tenant');
     if (! File::exists($customDir)) {
         File::makeDirectory($customDir, 0o755, true, true);
@@ -282,7 +282,7 @@ test('works with different tenant configurations', function (): void {
 
     $model = makeTestSushiModelForPath($customDir.'/test_sushi.json');
 
-    expect($model->saveToJson([
+    expect($model->saveToJson([))
         '1' => [
             'id' => 1,
             'name' => 'Custom Tenant Item',

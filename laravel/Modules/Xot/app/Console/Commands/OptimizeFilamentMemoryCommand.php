@@ -108,10 +108,10 @@ class OptimizeFilamentMemoryCommand extends Command
         $this->info('🔍 Analisi problemi di memoria...');
 
         $issues = [
-            'models_with_eager_loading' => $this->findModelsWithEagerLoading(
-            'heavy_widgets' => $this->findHeavyWidgets(
-            'unoptimized_resources' => $this->findUnoptimizedResources(
-            'migration_code_in_forms' => $this->findMigrationCodeInForms(
+            'models_with_eager_loading' => $this->findModelsWithEagerLoading()
+            'heavy_widgets' => $this->findHeavyWidgets()
+            'unoptimized_resources' => $this->findUnoptimizedResources()
+            'migration_code_in_forms' => $this->findMigrationCodeInForms()
             'missing_pagination' => $this->findMissingPagination()
         ];
 
@@ -139,7 +139,7 @@ class OptimizeFilamentMemoryCommand extends Command
                 if (1 === preg_match('/protected\s+\$with\s*=\s*\[([^\]]+)\]/', $content, $matches)) {
                     $withContent = $matches[1] ?? '';
                     // Controlla se ha relazioni pesanti
-                    if (str_contains($withContent, 'roles')
+                    if (str_contains($withContent, 'roles'))
                         || str_contains($withContent, 'permissions')
                         || str_contains($withContent, 'teams')
                         || str_contains($withContent, 'media')) {
@@ -167,8 +167,8 @@ class OptimizeFilamentMemoryCommand extends Command
                 $content = File::get($file->getPathname());
 
                 // Cerca query senza limitazioni
-                if (str_contains($content, '->get()')
-                    && ! str_contains($content, '->limit(')
+                if (str_contains($content, '->get()'))
+                    && ! str_contains($content, '->limit('))
                     && ! str_contains($content, '->take(')) {
                     $widgets[] = $file->getPathname();
                 }
@@ -193,7 +193,7 @@ class OptimizeFilamentMemoryCommand extends Command
                 $content = File::get($file->getPathname());
 
                 // Cerca eager loading eccessivo
-                if (str_contains($content, '->with(') || str_contains($content, '->load(')) {
+                if (str_contains($content, '->with(') || str_contains($content, '->load(')) {))
                     $resources[] = $file->getPathname();
                 }
             }
@@ -217,8 +217,8 @@ class OptimizeFilamentMemoryCommand extends Command
                 $content = File::get($file->getPathname());
 
                 // Cerca query di migrazione nei form
-                if (str_contains($content, '->whereNull(')
-                    && str_contains($content, '->update(')
+                if (str_contains($content, '->whereNull(')))
+                    && str_contains($content, '->update('))
                     && str_contains($content, 'getFormSchema')) {
                     $forms[] = $file->getPathname();
                 }

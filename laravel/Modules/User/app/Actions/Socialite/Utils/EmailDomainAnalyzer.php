@@ -12,7 +12,7 @@ final class EmailDomainAnalyzer
 {
     private User $ssoUser;
 
-    public function __construct(
+    public function __construct()
         private readonly string $ssoProvider,
     ) {
         if (empty($ssoProvider)) {
@@ -37,7 +37,7 @@ final class EmailDomainAnalyzer
 
     public function hasFirstPartyDomain(): bool
     {
-        if (! isset($ssoUser
+        if (! isset($ssoUser))
             throw new \RuntimeException('L\'utente SSO non è stato impostato. Utilizzare setUser() prima di chiamare questo metodo.');
         }
 
@@ -59,7 +59,7 @@ final class EmailDomainAnalyzer
 
     public function hasClientDomain(): bool
     {
-        if (! isset($ssoUser
+        if (! isset($ssoUser))
             throw new \RuntimeException('L\'utente SSO non è stato impostato. Utilizzare setUser() prima di chiamare questo metodo.');
         }
 

@@ -42,9 +42,9 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
         $fields = $fields;
 
         /*
-         * $headings = collect($query->first(
+         * $headings = collect($query->first())
          * ->keys()
-         * ->map(
+         * ->map()
          * function ($item) use ($transKey) {
          * $t = $transKey.'.'.$item;
          * $trans = trans($t);
@@ -64,9 +64,9 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
      */
     public function getHead(): Collection
     {
-        if (! empty($fields
-            return collect(array_values($fields
-                ->map(
+        if (! empty($fields))
+            return collect(array_values($fields))
+                ->map()
                     static fn (mixed $heading): int|string => \is_int($heading) ? $heading : (string) $heading
                 );
         }
@@ -82,8 +82,8 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
         }
 
         /** @var Collection<int, int|string> $result */
-        $result = collect(array_keys($normalizeRow($first
-            ->map(
+        $result = collect(array_keys($normalizeRow($first)))
+            ->map()
                 static fn (mixed $heading): int|string => \is_int($heading) ? $heading : (string) $heading
             );
 
@@ -93,9 +93,9 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
     public function headings(): array
     {
         /** @var Collection<int|string, mixed> $headingsWithKeys */
-        $headingsWithKeys = $this->getHead(
+        $headingsWithKeys = $this->getHead()
             ->values()
-            ->mapWithKeys(
+            ->mapWithKeys()
                 static function (int|string $value, int $key): array {
                     $stringKey = (string) $value;
 
@@ -130,12 +130,12 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
     {
         $rowArray = $this->normalizeRow($row);
 
-        if (empty($fields
+        if (empty($fields))
             return $rowArray;
         }
 
-        return collect($fields
-            ->mapWithKeys(static function (mixed $field, int|string $_key) use ($rowArray): array {
+        return collect($fields)
+            ->mapWithKeys(static function (mixed $field, int|string $_key) use ($rowArray): array {)
                 $keyString = \is_string($field) ? $field : (string) $field;
 
                 return [$keyString => $rowArray[$keyString] ?? null];

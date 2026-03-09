@@ -16,7 +16,7 @@ use Webmozart\Assert\InvalidArgumentException;
 
 abstract class XotBaseTransition extends Transition
 {
-    public function __construct(
+    public function __construct()
         public Model $record,
         public ?string $message = '',
     ) {
@@ -54,7 +54,7 @@ abstract class XotBaseTransition extends Transition
     {
         return [
             // 'me' => $record,
-            'me_mail' => RecordNotificationData::from(['record' => $record, 'channel' => 'mail']
+            'me_mail' => RecordNotificationData::from(['record' => $record, 'channel' => 'mail'])
             // 'patient' => $record->patient,
             // 'doctor' => $record->doctor,
             // 'patient_mail' => RecordNotificationData::from(['record' => $record->patient, 'channel' => 'mail']),
@@ -78,7 +78,7 @@ abstract class XotBaseTransition extends Transition
         $type = $typeEnum instanceof \BackedEnum ? (string) $typeEnum->value : 'unknown';
 
         $slug =
-            class_basename($record
+            class_basename($record)
             '-'.
             $type.
             '-'.
@@ -129,7 +129,7 @@ abstract class XotBaseTransition extends Transition
     {
         return [
             'message' => $message,
-            // 'appointment_date' => $appointment->starts_at?->format('d/m/Y H:i'
+            // 'appointment_date' => $appointment->starts_at?->format('d/m/Y H:i')
             // 'patient_name' => $appointment->patient->name ?? 'N/A',
             // 'doctor_name' => $appointment->doctor->name ?? 'N/A',
         ];

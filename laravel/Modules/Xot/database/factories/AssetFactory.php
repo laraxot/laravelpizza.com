@@ -22,8 +22,8 @@ class AssetFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $faker->word(
-            'path' => '/assets/'.$faker->word(
+            'name' => $faker->word()
+            'path' => '/assets/'.$faker->word()
             'type' => 'css',
             'version' => '1.0.0',
             'is_public' => $faker->boolean()
@@ -35,7 +35,7 @@ class AssetFactory extends Factory
      */
     public function public(): static
     {
-        return $this->state(fn (array $attributes
+        return $this->state(fn (array $attributes))
             'is_public' => true,
         ]);
     }
@@ -45,7 +45,7 @@ class AssetFactory extends Factory
      */
     public function private(): static
     {
-        return $this->state(fn (array $attributes
+        return $this->state(fn (array $attributes))
             'is_public' => false,
         ]);
     }

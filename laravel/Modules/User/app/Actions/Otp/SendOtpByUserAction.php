@@ -22,7 +22,7 @@ class SendOtpByUserAction
 {
     use QueueableAction;
 
-    public function __construct(
+    public function __construct()
         private readonly PasswordData $passwordData,
         private readonly Str $stringHelper,
         private readonly Hasher $hasher,
@@ -73,8 +73,8 @@ class SendOtpByUserAction
      */
     private function updateUserWithOtp(UserContract $user, string $temporaryPassword, Carbon $expirationTime): void
     {
-        $user->update([
-            'password' => $hasher->make($temporaryPassword
+        $user->update([)
+            'password' => $hasher->make($temporaryPassword)
             'is_otp' => true,
             'password_expires_at' => $expirationTime,
         ]);

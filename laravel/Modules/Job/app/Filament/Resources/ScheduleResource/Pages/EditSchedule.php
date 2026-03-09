@@ -24,7 +24,7 @@ class EditSchedule extends XotBaseEditRecord
     #[Override]
     protected function getFormSchema(): array
     {
-        $schema = // @var mixed getResource(;
+        $schema = $this->getResource()::form(new \Filament\Forms\Form($this))->getComponents();
         Assert::isArray($schema);
 
         $components = array_values($schema);

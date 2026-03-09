@@ -36,7 +36,7 @@ describe('ActivityLogger', function (): void {
         $logger = new ActivityLogger();
         $model = User::factory()->create();
         
-        $activity = $logger->created($model, // @var mixed user;
+        $activity = $logger->created($model, $this->user);
 
         expect($activity)->toBeInstanceOf(Activity::class);
         expect($activity->event)->toBe('created');
@@ -47,7 +47,7 @@ describe('ActivityLogger', function (): void {
         $logger = new ActivityLogger();
         $model = User::factory()->create();
         
-        $activity = $logger->updated($model, // @var mixed user;
+        $activity = $logger->updated($model, $this->user);
 
         expect($activity)->toBeInstanceOf(Activity::class);
         expect($activity->event)->toBe('updated');
@@ -58,7 +58,7 @@ describe('ActivityLogger', function (): void {
         $logger = new ActivityLogger();
         $model = User::factory()->create();
         
-        $activity = $logger->deleted($model, // @var mixed user;
+        $activity = $logger->deleted($model, $this->user);
 
         expect($activity)->toBeInstanceOf(Activity::class);
         expect($activity->event)->toBe('deleted');
@@ -67,7 +67,7 @@ describe('ActivityLogger', function (): void {
 
     it('logs login event', function (): void {
         $logger = new ActivityLogger();
-        $activity = $logger->login(// @var mixed user;
+        $activity = $logger->login($this->user);
 
         expect($activity)->toBeInstanceOf(Activity::class);
         expect($activity->event)->toBe('login');
@@ -76,7 +76,7 @@ describe('ActivityLogger', function (): void {
 
     it('logs logout event', function (): void {
         $logger = new ActivityLogger();
-        $activity = $logger->logout(// @var mixed user;
+        $activity = $logger->logout($this->user);
 
         expect($activity)->toBeInstanceOf(Activity::class);
         expect($activity->event)->toBe('logout');
@@ -89,12 +89,12 @@ describe('LogActivityAction', function (): void {
         $action = app(LogActivityAction::class);
         $activity = $action->execute(
             type: 'test_type',
-            user: // @var mixed user,
+            user: $this->user,
             description: 'Test description'
         );
 
         expect($activity->log_name)->toBe('test_type');
-        expect($activity->causer_id)->toBe(// @var mixed user->id;
+        expect($activity->causer_id)->toBe($this->user->id);
     });
 });
 

@@ -54,7 +54,7 @@ class EnvData extends Data implements Wireable
         $env_content = File::get($env_path);
 
         foreach ($data as $k => $v) {
-            if (// @var mixed $k !== $v && (is_bool($v
+            if (// @var mixed $k !== $v && (is_bool($v)))
                 $env_content = $this->updateVar($k, $v, $env_content);
             }
         }

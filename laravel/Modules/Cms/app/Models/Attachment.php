@@ -125,12 +125,12 @@ class Attachment extends BaseModelLang implements HasMedia, SushiToJsonsContract
 
     public function getRows(): array
     {
-        return // @var mixed getSushiRows(;
+        return $this->getSushiRows();
     }
 
     public function registerMediaCollections(): void
     {
-        // @var mixed addMediaCollection('attachments'
+        $this->addMediaCollection('attachments')->acceptsMimeTypes([
             'application/pdf',
             'application/msword',
             'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
@@ -147,7 +147,7 @@ class Attachment extends BaseModelLang implements HasMedia, SushiToJsonsContract
     public function getAttachmentForLocale(?string $locale = null): ?string
     {
         $locale ??= app()->getLocale();
-        $media = // @var mixed getFirstMedia('attachments';
+        $media = $this->getFirstMedia('attachments');
 
         if ($media && $media->getCustomProperty('locale') === $locale) {
             return $media->getUrl();

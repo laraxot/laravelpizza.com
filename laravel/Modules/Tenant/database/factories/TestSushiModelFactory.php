@@ -47,7 +47,7 @@ class TestSushiModelFactory extends Factory
      */
     public function active(): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'status' => 'active',
         ]);
     }
@@ -57,7 +57,7 @@ class TestSushiModelFactory extends Factory
      */
     public function inactive(): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'status' => 'inactive',
         ]);
     }
@@ -67,7 +67,7 @@ class TestSushiModelFactory extends Factory
      */
     public function pending(): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'status' => 'pending',
         ]);
     }
@@ -77,7 +77,7 @@ class TestSushiModelFactory extends Factory
      */
     public function highPriority(): static
     {
-        return // @var mixed state(function (array $attributes
+        return $this->state(function (array $attributes))
             /** @var array<string, mixed> $metadata */
             $metadata = is_array($attributes['metadata'] ?? null) ? $attributes['metadata'] : [];
             $metadata['priority'] = 'high';

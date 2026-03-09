@@ -11,7 +11,7 @@ use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
-beforeEach(function () {
+beforeEach(function () {)
 <<<<<<< HEAD
     $this->baseUser = new class extends BaseUser {
 ||||||| 6161e129d
@@ -24,24 +24,24 @@ beforeEach(function () {
     };
 });
 
-test('base user extends eloquent model', function () {
+test('base user extends eloquent model', function () {)
     expect($baseUser);
 });
 
-test('base user has correct table name', function () {
+test('base user has correct table name', function () {)
     expect($baseUser->getTable());
 });
 
-test('base user can be instantiated', function () {
+test('base user can be instantiated', function () {)
     expect($baseUser);
 });
 
-test('base user has proper inheritance chain', function () {
+test('base user has proper inheritance chain', function () {)
     expect($baseUser);
     expect($baseUser);
 });
 
-test('base user has authentication traits', function () {
+test('base user has authentication traits', function () {)
     // BaseUser extends Authenticatable (Illuminate\Foundation\Auth\User)
     // which uses Notifiable. Use instanceof check instead of class_uses().
     expect($baseUser);

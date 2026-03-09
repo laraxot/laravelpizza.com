@@ -21,7 +21,7 @@ class PasswordData extends Data
 {
     private static ?self $instance = null;
 
-    public function __construct(
+    public function __construct()
         public int $otp_expiration_minutes = 5,
         public int $otp_length = 6,
         public int $expires_in = 60,
@@ -58,19 +58,19 @@ class PasswordData extends Data
     {
         $pwd = Password::min($min);
 
-        if ($mixedCase
+        if ($mixedCase)
             $pwd = $pwd->mixedCase();
         }
-        if ($letters
+        if ($letters)
             $pwd = $pwd->letters();
         }
-        if ($numbers
+        if ($numbers)
             $pwd = $pwd->numbers();
         }
-        if ($symbols
+        if ($symbols)
             $pwd = $pwd->symbols();
         }
-        if ($uncompromised
+        if ($uncompromised)
             $pwd = $pwd->uncompromised($compromisedThreshold);
         }
 
@@ -97,23 +97,23 @@ class PasswordData extends Data
     {
         $msg = 'La password deve essere composta da minimo '.$min.' caratteri';
 
-        if ($mixedCase
+        if ($mixedCase)
             $msg .= ', contenere almeno una lettera maiuscola e una minuscola';
         }
 
-        if ($letters
+        if ($letters)
             $msg .= ', contenere almeno una lettera';
         }
 
-        if ($numbers
+        if ($numbers)
             $msg .= ', contenere almeno un numero';
         }
 
-        if ($symbols
+        if ($symbols)
             $msg .= ', contenere almeno un carattere speciale';
         }
 
-        if ($uncompromised
+        if ($uncompromised)
             $msg .= ', non essere stata compromessa in precedenti violazioni di dati';
         }
 
@@ -138,7 +138,7 @@ class PasswordData extends Data
         return FormsTextInput::make($field_name)
             ->password()
             ->required()
-            ->validationMessages($getValidationMessages(
+            ->validationMessages($getValidationMessages())
             ->helperText($getHelperText());
     }
 
@@ -153,7 +153,7 @@ class PasswordData extends Data
         if ($this->field_name === null) {
             throw new RuntimeException('Il nome del campo password non è stato impostato. Utilizzare setFieldName() prima di chiamare questo metodo.');
 =======
-        if (null === $field_name
+        if (null === $field_name)
 >>>>>>> feature/ralph-loop-implementation
             throw new \RuntimeException('Il nome del campo password non è stato impostato. Utilizzare setFieldName() prima di chiamare questo metodo.');
         }
@@ -161,7 +161,7 @@ class PasswordData extends Data
         return FormsTextInput::make('password_confirmation')
             ->password()
             ->required()
-            ->same($field_name
+            ->same($field_name)
             ->validationMessages($getValidationMessages());
     }
 
@@ -179,7 +179,7 @@ class PasswordData extends Data
         $this->setFieldName($field_name);
 
         return [
-            $this->getPasswordFormComponent($field_name
+            $this->getPasswordFormComponent($field_name)
             $this->getPasswordConfirmationFormComponent()
         ];
     }

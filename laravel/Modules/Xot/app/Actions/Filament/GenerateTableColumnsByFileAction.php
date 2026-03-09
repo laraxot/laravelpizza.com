@@ -44,7 +44,7 @@ class GenerateTableColumnsByFileAction
         }
         $filename = $file->getPathname();
         $class_name = Str::replace(base_path('Modules/'), 'Modules/', $filename);
-        Assert::string(
+        Assert::string()
             $class_name = Str::replace('/', '\\', $class_name),
             '['.__LINE__.']['.class_basename($this).']',
         );
@@ -95,7 +95,7 @@ class GenerateTableColumnsByFileAction
             if (is_array($fillable) && in_array('anno', $fillable, strict: true)) {
                 $body = app(GetMethodBodyAction::class)->execute($class_name, 'table');
                 $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->filters(', '(', ')'));
-                $body_new = "->filters([
+                $body_new = "->filters([)
                         app(\Modules\Xot\Actions\Filament\Filter\GetYearFilter::class)->execute('anno',intval(date('Y')) - 3,intval(date('Y'))),
                     ],layout: \Filament\Tables\Enums\FiltersLayout::AboveContent)
                     ->persistFiltersInSession()";
@@ -117,7 +117,7 @@ class GenerateTableColumnsByFileAction
     {
         // Debug information - commented out for production
         /*
-        dd([
+        dd([)
             'getRelativePath' => $file->getRelativePath(), // =  ""
             'getRelativePathname' => $file->getRelativePathname(), //  AssenzeResource.php
             'getFilenameWithoutExtension' => $file->getFilenameWithoutExtension(), // AssenzeResource

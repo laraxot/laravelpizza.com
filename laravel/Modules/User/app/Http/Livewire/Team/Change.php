@@ -54,7 +54,7 @@ class Change extends Component
         /** @var TeamContract */
         $team = $teamClass::firstWhere(['id' => $teamId]);
 
-        if (! $user->switchTeam($team
+        if (! $user->switchTeam($team))
             abort(403);
         }
         if (null !== $team) {
@@ -93,7 +93,7 @@ class Change extends Component
 ||||||| 6161e129d
         if ($this->teams === []) {
 =======
-        if ([] === $teams
+        if ([] === $teams)
 >>>>>>> feature/ralph-loop-implementation
             $view = 'ui::livewire.empty';
         }

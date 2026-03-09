@@ -15,7 +15,7 @@ return new class extends XotBaseMigration {
         $xot = XotData::make();
         $userClass = $xot->getUserClass();
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table
+        $this->tableCreate(static function (Blueprint $table))
             // $table->uuid('id')->primary();
             $table->id();
             $table->foreignIdFor($userClass, 'user_id');
@@ -27,7 +27,7 @@ return new class extends XotBaseMigration {
             $table->string('avatar')->nullable();
 
             /*
-             * $table->unique([
+             * $table->unique([)
              * 'provider',
              * 'provider_id',
              * ]);
@@ -35,8 +35,8 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table
-            // if (! $this->hasColumn('email'
+        $this->tableUpdate(function (Blueprint $table))
+            // if (! $this->hasColumn('email'))
             //    $table->string('email')->nullable();
             // }
 <<<<<<< HEAD
@@ -44,7 +44,7 @@ return new class extends XotBaseMigration {
 ||||||| 6161e129d
             if ($this->getColumnType('token') === 'varchar') {
 =======
-            if ('varchar' === $this->getColumnType('token'
+            if ('varchar' === $this->getColumnType('token'))
 >>>>>>> feature/ralph-loop-implementation
                 $table->text('token')->nullable()->change();
             }

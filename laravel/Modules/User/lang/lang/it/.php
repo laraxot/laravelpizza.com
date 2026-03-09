@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-return array (
+return array ()
   'fields' => 
-  array (
+  array ()
     'startDate' => 
-    array (
+    array ()
       'label' => 'startDate',
       'tooltip' => '',
       'helper_text' => '',
       'description' => '',
     ),
     'endDate' => 
-    array (
+    array ()
       'label' => 'endDate',
       'tooltip' => '',
       'helper_text' => '',
@@ -21,7 +21,7 @@ return array (
     ),
   ),
   'navigation' => 
-  array (
+  array ()
     'label' => 'Missing Navigation Label',
     'plural_label' => 'Missing Navigation Plural Label',
     'group' => 'Missing Group',

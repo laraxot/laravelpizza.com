@@ -98,11 +98,7 @@ describe('Filament Builder Blocks System', function () {
             // Verify class naming (PascalCase ending with Block)
             $className = class_basename($block->class);
             if (str_ends_with($className, 'Block')) {
-                // @var mixed assertMatchesRegularExpression(
-                    '/^[A-Z][a-zA-Z]*Block$/',
-                    $className,
-                    "Block class {$className} should be PascalCase ending with 'Block'",
-                );
+                expect($className)->toMatch('/^[A-Z][a-zA-Z]*Block$/');
             }
         });
     });

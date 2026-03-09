@@ -6,7 +6,6 @@ namespace Modules\User\Filament\Clusters\Passport\Pages;
 
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
-use Livewire\Attributes\On;
 use Modules\User\Filament\Clusters\Passport;
 use Modules\Xot\Actions\ExecuteArtisanCommandAction;
 use Modules\Xot\Filament\Pages\XotBasePage;
@@ -14,62 +13,14 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 class PassportDashboard extends XotBasePage
 {
     protected static ?string $cluster = Passport::class;
-
     protected string $view = 'user::filament.pages.passport-dashboard';
 
     public bool $hasPublicKey = false;
-
     public bool $hasPrivateKey = false;
-
     public array $output = [];
-
     public string $currentCommand = '';
-
     public string $status = '';
-
     public bool $isRunning = false;
-
-    /** @var array<string, string> */
-    protected $listeners = [
-        'refresh-component' => '$refresh',
-        'artisan-command.started' => 'handleCommandStarted',
-        'artisan-command.output' => 'handleCommandOutput',
-        'artisan-command.completed' => 'handleCommandCompleted',
-        'artisan-command.failed' => 'handleCommandFailed',
-        'artisan-command.error' => 'handleCommandError',
-    ];
-
-    public function executeCommand(string $command): void
-    {
-        $this->reset(['output', 'status']);
-        $currentCommand = $command;
-        $isRunning = true;
-
-        try {
-            app(ExecuteArtisanCommandAction::class)->execute($command);
-        } catch (\Exception $e) {
-            Notification::make()
-                ->title('Error executing command')
-                ->body($e->getMessage())
-                ->danger()
-                ->send();
-
-            $isRunning = false;
-        }
-    }
-
-    #[On('artisan-command.started')]
-    public function handleCommandStarted(string $command): void
-    {
-        $isRunning = true;
-    }
-
-    #[On('artisan-command.output')]
-    public function handleCommandOutput(string $command, string $output): void
-    {
-        $output[] = $output;
-        $this->dispatch('terminal-update');
-    }
 
     public function mount(): void
     {
@@ -78,98 +29,29 @@ class PassportDashboard extends XotBasePage
 
     public function checkKeys(): void
     {
-        $hasPublicKey = file_exists(storage_path('oauth-public.key'));
-        $hasPrivateKey = file_exists(storage_path('oauth-private.key'));
+        $this->hasPublicKey = file_exists(storage_path('oauth-public.key'));
+        $this->hasPrivateKey = file_exists(storage_path('oauth-private.key'));
     }
 
-    #[On('artisan-command.completed')]
-    public function onCommandCompleted(string $command): void
+    public function executeCommand(string $command): void
     {
-        if ($currentCommand === $command
-            $isRunning = false;
-            $status = 'completed';
-            $this->checkKeys();
+        $this->currentCommand = $command;
+        $this->isRunning = true;
+        try {
+            app(ExecuteArtisanCommandAction::class)->execute($command);
+            Notification::make()->title('Command success')->success()->send();
+        } catch (\Exception $e) {
+            Notification::make()->title('Error')->body($e->getMessage())->danger()->send();
         }
-
-        Notification::make()
-            ->title('Command completed successfully')
-            ->success()
-            ->send();
-    }
-
-    #[On('artisan-command.failed')]
-    public function handleCommandFailed(string $command, string $error): void
-    {
-        $status = 'failed';
-        $isRunning = false;
-        $output[] = "[ERROR] {$error}";
-
-        Notification::make()
-            ->title('Command failed')
-            ->body($error)
-            ->danger()
-            ->send();
-    }
-
-    #[On('artisan-command.error')]
-    public function handleCommandError(string $command, string $error): void
-    {
-        $status = 'failed';
-        $isRunning = false;
-        $output[] = "[ERROR] {$error}";
-
-        Notification::make()
-            ->title('Command error')
-            ->body($error)
-            ->danger()
-            ->send();
-    }
-
-    protected function getViewData(): array
-    {
-        return [
-            'hasPublicKey' => $hasPublicKey,
-            'hasPrivateKey' => $hasPrivateKey,
-            'publicKeyLabel' => static::trans('status.public_key'),
-            'privateKeyLabel' => static::trans('status.private_key'),
-            'presentLabel' => static::trans('status.present'),
-            'missingLabel' => static::trans('status.missing'),
-        ];
+        $this->isRunning = false;
+        $this->checkKeys();
     }
 
     protected function getHeaderActions(): array
     {
         return [
-            Action::make('passport_install')
-                ->icon('heroicon-o-arrow-down-tray')
-                ->color('success')
-                ->disabled(fn () => $isRunning
-                ->requiresConfirmation()
-                ->modalDescription(static::trans('actions.install.modal_description'))
-                ->action(fn () => $this->executeCommand('passport:install --uuids'
-
-            Action::make('passport_keys')
-                ->icon('heroicon-o-key')
-                ->color('primary')
-                ->disabled(fn () => $isRunning
-                ->requiresConfirmation()
-                ->action(fn () => $this->executeCommand('passport:keys'
-
-            Action::make('passport_purge')
-                ->icon('heroicon-o-trash')
-                ->color('warning')
-                ->disabled(fn () => $isRunning
-                ->requiresConfirmation()
-                ->modalDescription(static::trans('actions.purge_tokens.modal_description'))
-                ->action(fn () => $this->executeCommand('passport:purge'
-
-            Action::make('passport_hash')
-                ->icon('heroicon-o-lock-closed')
-                ->color('danger')
-                ->disabled(fn () => $isRunning
-                ->requiresConfirmation()
-                ->modalDescription(static::trans('actions.hash_secrets.modal_description'))
-                ->action(fn () => $this->executeCommand('passport:hash'))
+            Action::make('passport_install')->action(fn () => $this->executeCommand('passport:install')),
+            Action::make('passport_keys')->action(fn () => $this->executeCommand('passport:keys')),
         ];
     }
 }

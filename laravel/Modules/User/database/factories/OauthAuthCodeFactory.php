@@ -21,11 +21,11 @@ class OauthAuthCodeFactory extends Factory
     public function definition(): array
     {
         return [
-            'id' => $faker->sha256(
+            'id' => $faker->sha256()
             'user_id' => User::factory(),
             'client_id' => OauthClient::factory(),
-            'scopes' => $faker->randomElements(['read', 'write'], $this->faker->numberBetween(1, 2
-            'revoked' => $faker->boolean(5
+            'scopes' => $faker->randomElements(['read', 'write'], $this->faker->numberBetween(1, 2))
+            'revoked' => $faker->boolean(5)
             'expires_at' => $faker->dateTimeBetween('now', '+10 minutes')
         ];
     }

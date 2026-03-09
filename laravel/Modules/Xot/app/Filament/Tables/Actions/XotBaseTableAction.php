@@ -16,7 +16,7 @@ abstract class XotBaseTableAction extends Action
 {
     public function getRecord(bool $withDefault = true): ?Model
     {
-        if ($record instanceof \Closure
+        if ($record instanceof \Closure)
             return null;
         }
 

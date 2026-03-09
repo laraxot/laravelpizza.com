@@ -87,7 +87,7 @@ class PdfData extends Data
 
     public function fromHtml(string $html): self
     {
-        switch ($engine
+        switch ($engine)
             case PdfEngineEnum::SPIPU:
                 try {
                     $html2pdf = new Html2Pdf($orientation, $this->format, $this->lang);
@@ -100,7 +100,7 @@ class PdfData extends Data
 
                 /*
                  * case PdfEngineEnum::SPATIE:
-                 * Pdf::html($html
+                 * Pdf::html($html)
                  * ->orientation(Orientation::Portrait)
                  * ->format(Format::A4)
                  * ->margins(10, 10, 20, 0, Unit::Pixel)
@@ -139,8 +139,8 @@ class PdfData extends Data
 
     public function getContent(): string
     {
-        Assert::notNull(
-            $res = Storage::disk($disk
+        Assert::notNull()
+            $res = Storage::disk($disk)
             '['.__LINE__.']['.class_basename($this).']',
         );
 

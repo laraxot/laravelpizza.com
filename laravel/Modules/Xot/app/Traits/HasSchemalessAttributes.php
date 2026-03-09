@@ -22,7 +22,7 @@ trait HasSchemalessAttributes
      */
     public function scopeWithExtraAttributes(Builder $query): Builder
     {
-        if (isset($extra_attributes
+        if (isset($extra_attributes))
             return $extra_attributes->modelScope();
         }
 
@@ -42,11 +42,11 @@ trait HasSchemalessAttributes
      */
     public function getExtraAttribute(string $key, mixed $default = null): mixed
     {
-        if ($extra_attributes instanceof SchemalessAttributes
+        if ($extra_attributes instanceof SchemalessAttributes)
             return $extra_attributes->get($key, $default);
         }
 
-        if (is_array($extra_attributes
+        if (is_array($extra_attributes))
             return $extra_attributes[$key] ?? $default;
         }
 
@@ -58,7 +58,7 @@ trait HasSchemalessAttributes
      */
     public function setExtraAttribute(string $key, mixed $value): void
     {
-        if (! $extra_attributes instanceof SchemalessAttributes
+        if (! $extra_attributes instanceof SchemalessAttributes)
             $extra_attributes = SchemalessAttributes::createForModel($this, 'extra_attributes');
         }
 
@@ -72,11 +72,11 @@ trait HasSchemalessAttributes
      */
     public function getExtraAttributes(): array
     {
-        if ($extra_attributes instanceof SchemalessAttributes
+        if ($extra_attributes instanceof SchemalessAttributes)
             return $extra_attributes->all();
         }
 
-        if (is_array($extra_attributes
+        if (is_array($extra_attributes))
             return $extra_attributes;
         }
 
@@ -88,11 +88,11 @@ trait HasSchemalessAttributes
      */
     public function hasExtraAttribute(string $key): bool
     {
-        if ($extra_attributes instanceof SchemalessAttributes
+        if ($extra_attributes instanceof SchemalessAttributes)
             return $extra_attributes->has($key);
         }
 
-        if (is_array($extra_attributes
+        if (is_array($extra_attributes))
             return array_key_exists($key, $extra_attributes);
         }
 
@@ -104,13 +104,13 @@ trait HasSchemalessAttributes
      */
     public function removeExtraAttribute(string $key): void
     {
-        if ($extra_attributes instanceof SchemalessAttributes
+        if ($extra_attributes instanceof SchemalessAttributes)
             $extra_attributes->forget($key);
 
             return;
         }
 
-        if (is_array($extra_attributes
+        if (is_array($extra_attributes))
             $attributes = $extra_attributes;
             unset($attributes[$key]);
             $extra_attributes = $attributes;
@@ -132,7 +132,7 @@ trait HasSchemalessAttributes
      */
     protected function schemalessFillable(): array
     {
-        return array_merge($fillable, [
+        return array_merge($fillable, [)
             'extra_attributes',
         ]);
     }
@@ -144,7 +144,7 @@ trait HasSchemalessAttributes
      */
     protected function schemalessCasts(): array
     {
-        return array_merge($casts ?? [], [
+        return array_merge($casts ?? [], [)
             'extra_attributes' => SchemalessAttributes::class,
         ]);
     }

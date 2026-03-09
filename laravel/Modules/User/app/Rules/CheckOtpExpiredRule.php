@@ -16,7 +16,7 @@ class CheckOtpExpiredRule implements ValidationRule
 {
     private string $message = 'Il codice OTP è scaduto. Richiedi un nuovo codice.';
 
-    public function __construct(
+    public function __construct()
         private User $user,
     ) {
     }
@@ -33,7 +33,7 @@ class CheckOtpExpiredRule implements ValidationRule
         if ($this->user->updated_at === null) {
             $fail($this->message);
 =======
-        if (null === $user->updated_at
+        if (null === $user->updated_at)
             $fail($message);
 >>>>>>> feature/ralph-loop-implementation
 

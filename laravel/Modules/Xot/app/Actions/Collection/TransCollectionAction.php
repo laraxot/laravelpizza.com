@@ -51,7 +51,7 @@ class TransCollectionAction
             $item = SafeStringCastAction::cast($item);
         }
 
-        if (empty($item) || null === $transKey
+        if (empty($item) || null === $transKey)
             return $item;
         }
 

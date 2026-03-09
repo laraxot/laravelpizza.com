@@ -27,7 +27,7 @@ class GetUserModelAttributesFromSocialiteAction
 
     public readonly string $email;
 
-    public function __construct(
+    public function __construct()
         private readonly string $provider,
         private readonly SocialiteUserContract $oauthUser,
     ) {

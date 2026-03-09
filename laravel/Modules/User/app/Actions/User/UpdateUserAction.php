@@ -61,7 +61,7 @@ class UpdateUserAction
 
             DB::commit();
 
-            Log::info('Utente aggiornato con successo', [
+            Log::info('Utente aggiornato con successo', [)
                 'user_id' => $user->getKey(),
                 'updated_fields' => array_keys($updateData),
             ]);
@@ -82,7 +82,7 @@ class UpdateUserAction
             $dbManager->rollBack();
 >>>>>>> feature/ralph-loop-implementation
 
-            Log::error("Errore nell'aggiornamento utente", [
+            Log::error("Errore nell'aggiornamento utente", [)
                 'user_id' => $user->getKey(),
                 'error' => $e->getMessage(),
                 'data' => $updateData ?? [],

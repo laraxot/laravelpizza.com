@@ -26,10 +26,10 @@ final class ChangeProfilePasswordAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel(
+        $this->translateLabel()
             ->tooltip(__('user::user.actions.change_password'))
             ->icon('heroicon-o-key')
-            ->action(static function (ProfileContract $record, array $data): void {
+            ->action(static function (ProfileContract $record, array $data): void {)
                 $user = $record->user;
                 $profile_data = Arr::except($record->toArray(), ['id']);
                 if (null === $user) {
@@ -48,12 +48,12 @@ final class ChangeProfilePasswordAction extends Action
                 /*
                  * @var ProfileContract $record
                  */
-                $record->update([
+                $record->update([)
                     'password' => Hash::make($newPassword),
                 ]);
                 Notification::make()->success()->title('Password changed successfully.')->send();
             })
-            ->schema(function (): array {
+            ->schema(function (): array {)
                 return [
                     /*
                      * TextInput::make('new_password')
@@ -64,7 +64,7 @@ final class ChangeProfilePasswordAction extends Action
                     PasswordData::make()->getPasswordFormComponent('new_password'),
                     TextInput::make('new_password_confirmation')
                         ->password()
-                        ->rule(
+                        ->rule()
                             'required',
                             /**
                              * @param callable(string): mixed $get
@@ -84,13 +84,13 @@ final class ChangeProfilePasswordAction extends Action
 
 /*
  * Action::make('changePassword')
- * ->action(function (UserContract $user, array $data): void {
- * $user->update([
+ * ->action(function (UserContract $user, array $data): void {)
+ * $user->update([)
  * 'password' => Hash::make($data['new_password']),
  * ]);
  * Notification::make()->success()->title('Password changed successfully.');
  * })
- * ->form([
+ * ->form([)
  * TextInput::make('new_password')
  * ->password()
  * ->required()

@@ -42,10 +42,27 @@ abstract class TestCase extends XotBaseTestCase
     {
         parent::setUp();
 
+        $this->ensureMeetupConnection();
+
         if (! self::$meetupSchemaBootstrapped) {
             $this->bootstrapMeetupTestingSchema();
             self::$meetupSchemaBootstrapped = true;
         }
+    }
+
+    private function ensureMeetupConnection(): void
+    {
+        if (config('database.connections.meetup') !== null) {
+            return;
+        }
+
+        /** @var array<string, mixed>|null $mysqlConfig */
+        $mysqlConfig = config('database.connections.mysql');
+        if (! is_array($mysqlConfig)) {
+            return;
+        }
+
+        config(['database.connections.meetup' => $mysqlConfig]);
     }
 
     private function bootstrapMeetupTestingSchema(): void

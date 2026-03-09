@@ -42,7 +42,7 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
 
     public function getHead(): array
     {
-        if (\is_array($fields
+        if (\is_array($fields))
             return $fields;
         }
 
@@ -67,11 +67,11 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
 
     public function map(mixed $row): array
     {
-        if (null === $fields || empty($this->fields
+        if (null === $fields || empty($this->fields))
             Assert::isInstanceOf($row, Model::class);
             $res = app(SafeArrayByModelCastAction::class)->execute($row);
 
-            return Arr::map($res, function ($value, $_key) {
+            return Arr::map($res, function ($value, $_key) {)
                 if ($value instanceof \BackedEnum) {
                     if (method_exists($value, 'getLabel')) {
                         return $value->getLabel();
@@ -87,7 +87,7 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
         // return collect($row)->only($fields);
         $data = [];
 
-        foreach ($fields as $field
+        foreach ($fields as $field)
             $value = data_get($row, $field);
             if (\is_object($value)) {
                 if (enum_exists($value::class) && method_exists($value, 'getLabel')) {

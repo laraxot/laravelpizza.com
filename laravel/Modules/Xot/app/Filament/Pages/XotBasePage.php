@@ -165,7 +165,7 @@ abstract class XotBasePage extends Page implements HasForms
      */
     public function schema(Schema $schema): Schema
     {
-        $schema = $schema->components($getFormSchema());
+        $schema = $schema->components($this->getFormSchema());
 
         $schema->statePath('data');
 
@@ -185,9 +185,9 @@ abstract class XotBasePage extends Page implements HasForms
     public function getView(): string
     {
         if ('' === $this->view) {
-            $view = app(GetViewByClassAction::class)->execute(static::class);
-            if (view()->exists($view)) {
-                return (string) $view;
+            $this->view = app(GetViewByClassAction::class)->execute(static::class);
+            if (view()->exists($this->view)) {
+                return (string) $this->view;
             }
 
             // Se non troviamo una vista, lanciamo un'eccezione

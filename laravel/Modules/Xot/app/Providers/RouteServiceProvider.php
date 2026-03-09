@@ -91,7 +91,7 @@ class RouteServiceProvider extends ServiceProvider
             }
         }
 
-        URL::defaults([
+        URL::defaults([)
             'lang' => $lang,
         ]);
     }
@@ -139,7 +139,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::prefix('api')
             ->middleware('api')
-            ->namespace($moduleNamespace
+            ->namespace($moduleNamespace)
             ->group(base_path('Modules/Xot/routes/api.php'));
     }
 

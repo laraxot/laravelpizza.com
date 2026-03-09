@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 use Modules\Xot\Actions\Arr\SavePhpArrayAction;
 
-beforeEach(function (): void {
+beforeEach(function (): void {)
     $action = app(SavePhpArrayAction::class);
     $tempDir = sys_get_temp_dir();
     mkdir($tempDir, 0755, true);
 });
 
-afterEach(function (): void {
-    if (isset($tempDir
+afterEach(function (): void {)
+    if (isset($tempDir))
         array_map('unlink', glob($tempDir.'/*'));
         rmdir($tempDir);
     }
 });
 
-it('saves array to php file', function (): void {
+it('saves array to php file', function (): void {)
     $data = ['a' => 1, 'b' => 'test'];
     $path = $tempDir.'/data.php';
 
@@ -28,7 +28,7 @@ it('saves array to php file', function (): void {
     expect($loaded)->toBe($data);
 });
 
-it('saved file has strict types', function (): void {
+it('saved file has strict types', function (): void {)
     $path = $tempDir.'/strict.php';
     $action->execute(['x' => 1], $path);
 

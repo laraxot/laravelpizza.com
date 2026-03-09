@@ -89,7 +89,7 @@ describe('TaskFrequencies Integration', function () {
         config(['totem.frequencies' => ['test' => 'Test Frequency']]);
 
         // Test that it can be dispatched (basic queue test)
-        expect(method_exists(// @var mixed action, 'onQueue';
+        expect(method_exists(action, 'onQueue'))->toBeTrue();
     });
 
     it('handles configuration changes dynamically', function () {
@@ -203,7 +203,7 @@ describe('TaskFrequencies Integration', function () {
         foreach ($invalidConfigs as $invalidConfig) {
             config(['totem.frequencies' => $invalidConfig]);
 
-            expect(// @var mixed action->execute(...;
+            expect(fn() => action->execute())->toThrow(\InvalidArgumentException::class);
         }
     });
 
@@ -215,7 +215,7 @@ describe('TaskFrequencies Integration', function () {
 
         $results = [];
         for ($i = 0; $i < 5; $i++) {
-            $results[] = // @var mixed action->execute(;
+            $results[] = action->execute();
         }
 
         // All results should be identical

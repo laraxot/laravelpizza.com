@@ -28,13 +28,6 @@ use Modules\Xot\Datas\XotData;
  * @property Collection<int, TeamContract> $teams
  * @property Collection<int, TeamContract> $ownedTeams
  * @property Collection<int, TeamUser>     $teamUsers
-<<<<<<< HEAD
- * @property XotUserContract|null          $owner
-||||||| 6161e129d
- * @property Collection<int, TeamUser> $teamUsers
- * @property XotUserContract|null $owner
-=======
->>>>>>> feature/ralph-loop-implementation
  */
 trait HasTeams
 {
@@ -165,19 +158,7 @@ trait HasTeams
     {
         /** @var Collection<int, User> $users */
         $users = $this->teamUsers->map(static function ($membership) {
-<<<<<<< HEAD
-            // Membership always extends Model, check only if user attribute exists
-            $user = $membership->getAttribute('user');
-
-            return null !== $user ? $user : null;
-||||||| 6161e129d
-            // Membership always extends Model, check only if user attribute exists
-            $user = $membership->getAttribute('user');
-
-            return $user !== null ? $user : null;
-=======
             return $membership->user;
->>>>>>> feature/ralph-loop-implementation
         })->filter();
 
         $owner = $this->owner;
@@ -205,61 +186,9 @@ trait HasTeams
      */
     public function hasTeamMember(XotUserContract $user): bool
     {
-<<<<<<< HEAD
-        // Check if user is in teamUsers (checking by key since Membership != UserContract)
-        $userFound = $this->teamUsers->first(static function ($membership) use ($user) {
-            // Membership always extends Model
-            $memberUser = $membership->getAttribute('user');
-            if ($memberUser instanceof Model) {
-                $memberUserKey = $memberUser->getKey();
-
-                return null !== $memberUserKey && $memberUserKey === $user->getKey();
-            }
-
-            return false;
-||||||| 6161e129d
-        // Check if user is in teamUsers (checking by key since Membership != UserContract)
-        $userFound = $this->teamUsers->first(static function ($membership) use ($user) {
-            // Membership always extends Model
-            $memberUser = $membership->getAttribute('user');
-            if ($memberUser instanceof Model) {
-                $memberUserKey = $memberUser->getKey();
-
-                return $memberUserKey !== null && $memberUserKey === $user->getKey();
-            }
-
-            return false;
-=======
         return $this->teamUsers->contains(function ($membership) use ($user) {
             return $membership->user_id === $user->getKey();
->>>>>>> feature/ralph-loop-implementation
         });
-<<<<<<< HEAD
-
-        if (null !== $userFound) {
-            return true;
-        }
-
-        // Check if user can own this team (UserContract sempre ha il metodo ownsTeam)
-        if ($this instanceof TeamContract) {
-            return $user->ownsTeam($this);
-        }
-
-        return false;
-||||||| 6161e129d
-
-        if ($userFound !== null) {
-            return true;
-        }
-
-        // Check if user can own this team (UserContract sempre ha il metodo ownsTeam)
-        if ($this instanceof TeamContract) {
-            return $user->ownsTeam($this);
-        }
-
-        return false;
-=======
->>>>>>> feature/ralph-loop-implementation
     }
 
     /**
@@ -371,81 +300,10 @@ trait HasTeams
 
         $role = $this->teamRole($team);
         if (null !== $role && $role->permissions) {
-<<<<<<< HEAD
-            /** @var \Illuminate\Database\Eloquent\Collection<int, \Spatie\Permission\Models\Permission> $permissionsCollection */
-            $permissionsCollection = $role->permissions;
-            /** @var array<string> $rolePermissionNames */
-            $rolePermissionNames = $permissionsCollection->pluck('name')->toArray();
-
-            $permissions = array_values(array_filter(
-                $rolePermissionNames,
-                static fn (string $value): bool => '' !== $value
-            ));
-||||||| 6161e129d
-        if ($role !== null && $role->permissions) {
-            /** @var \Illuminate\Database\Eloquent\Collection<int, \Spatie\Permission\Models\Permission> $permissionsCollection */
-            $permissionsCollection = $role->permissions;
-            /** @var array<string> $rolePermissionNames */
-            $rolePermissionNames = $permissionsCollection->pluck('name')->toArray();
-
-            $permissions = array_values(array_filter(
-                $rolePermissionNames,
-                static fn (string $value): bool => $value !== ''
-            ));
-=======
             $permissions = $role->permissions->pluck('name')->toArray();
->>>>>>> feature/ralph-loop-implementation
         }
 
-<<<<<<< HEAD
-        // Permissions from Pivot
-        /** @var Model|Pivot|null $teamUser */
-        $teamUser = $this->teamUsers()->where('team_id', (string) $team->id)->first();
-        if (null !== $teamUser) {
-            $pivotPermissions = $teamUser->getAttribute('permissions');
-            if (is_array($pivotPermissions)) {
-                $pivotPermissionNames = array_keys(array_filter($pivotPermissions));
-
-                $permissions = array_merge(
-                    $permissions,
-                    array_values(array_filter(
-                        $pivotPermissionNames,
-                        static fn (string $value): bool => '' !== $value
-                    ))
-                );
-            }
-        }
-
-        /** @var array<int, string> $result */
-        $result = array_values(array_unique($permissions));
-
-        return $result;
-||||||| 6161e129d
-        // Permissions from Pivot
-        /** @var Model|Pivot|null $teamUser */
-        $teamUser = $this->teamUsers()->where('team_id', (string) $team->id)->first();
-        if ($teamUser !== null) {
-            $pivotPermissions = $teamUser->getAttribute('permissions');
-            if (is_array($pivotPermissions)) {
-                $pivotPermissionNames = array_keys(array_filter($pivotPermissions));
-
-                $permissions = array_merge(
-                    $permissions,
-                    array_values(array_filter(
-                        $pivotPermissionNames,
-                        static fn (string $value): bool => $value !== ''
-                    ))
-                );
-            }
-        }
-
-        /** @var array<int, string> $result */
-        $result = array_values(array_unique($permissions));
-
-        return $result;
-=======
         return array_values(array_unique($permissions));
->>>>>>> feature/ralph-loop-implementation
     }
 
     /**
@@ -477,20 +335,7 @@ trait HasTeams
 
         $team = $this->personalTeam();
         if (null === $team) {
-<<<<<<< HEAD
-            $teamCandidate = $this->allTeams()->first();
-            if ($teamCandidate instanceof TeamContract) {
-                $team = $teamCandidate;
-            }
-||||||| 6161e129d
-        if ($team === null) {
-            $teamCandidate = $this->allTeams()->first();
-            if ($teamCandidate instanceof TeamContract) {
-                $team = $teamCandidate;
-            }
-=======
             $team = $this->allTeams()->first();
->>>>>>> feature/ralph-loop-implementation
         }
 
         if (null !== $team) {
@@ -519,21 +364,7 @@ trait HasTeams
      */
     public function isCurrentTeam(TeamContract $team): bool
     {
-<<<<<<< HEAD
-        if (null === $this->currentTeam) {
-            return false;
-        }
-
-        return $team->getKey() === $this->currentTeam->getKey();
-||||||| 6161e129d
-        if ($this->currentTeam === null) {
-            return false;
-        }
-
-        return $team->getKey() === $this->currentTeam->getKey();
-=======
         return $this->current_team_id === $team->getKey();
->>>>>>> feature/ralph-loop-implementation
     }
 
     /**

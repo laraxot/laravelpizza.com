@@ -12,7 +12,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table
+        $this->tableCreate(function (Blueprint $table))
             $table->id();
             $table->string('uuid', 36)->nullable()->index();
             $table->string('email')->index();
@@ -22,8 +22,8 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table
-            // if (! $this->hasColumn('email'
+        $this->tableUpdate(function (Blueprint $table))
+            // if (! $this->hasColumn('email'))
             //    $table->string('email')->nullable();
             // }
             // $this->updateUser($table);
@@ -32,11 +32,11 @@ return new class extends XotBaseMigration {
 ||||||| 6161e129d
             if ($this->getColumnType('id') === 'uuid') {
 =======
-            if ('uuid' === $this->getColumnType('id'
+            if ('uuid' === $this->getColumnType('id'))
 >>>>>>> feature/ralph-loop-implementation
                 $table->dropColumn('id');
             }
-            if (! $this->hasColumn('id'
+            if (! $this->hasColumn('id'))
                 $table->id();
             }
         });

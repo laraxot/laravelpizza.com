@@ -27,7 +27,7 @@ new class extends Component {
     {
         $this->validate();
 
-        if (!Auth::attempt(['email' => $email, 'password' => $this->password], $this->remember
+        if (!Auth::attempt(['email' => $email, 'password' => $this->password], $this->remember))
             $this->addError('email', trans('auth.failed'));
 
             return;

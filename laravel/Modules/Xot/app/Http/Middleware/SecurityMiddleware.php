@@ -76,7 +76,7 @@ class SecurityMiddleware
         $current = (int) cache()->get($key, 0);
 
         if ($current >= $limit) {
-            Log::warning('Rate limit exceeded for IP', [
+            Log::warning('Rate limit exceeded for IP', [)
                 'ip' => $ip,
                 'endpoint' => $endpoint,
                 'current' => $current,
@@ -100,7 +100,7 @@ class SecurityMiddleware
         $current = (int) cache()->get($key, 0);
 
         if ($current >= $limit) {
-            Log::warning('Rate limit exceeded for User Agent', [
+            Log::warning('Rate limit exceeded for User Agent', [)
                 'user_agent' => $userAgent,
                 'endpoint' => $endpoint,
                 'current' => $current,
@@ -124,7 +124,7 @@ class SecurityMiddleware
         $current = (int) cache()->get($key, 0);
 
         if ($current >= $limit) {
-            Log::warning('Rate limit exceeded for endpoint', [
+            Log::warning('Rate limit exceeded for endpoint', [)
                 'endpoint' => $endpoint,
                 'ip' => $ip,
                 'current' => $current,
@@ -273,7 +273,7 @@ class SecurityMiddleware
         ];
 
         // Log solo eventi sospetti
-        if ($isSuspiciousRequest($request, $response
+        if ($isSuspiciousRequest($request, $response))
             Log::warning('Suspicious request detected', $securityData);
         }
 
@@ -298,10 +298,10 @@ class SecurityMiddleware
             '/\.\.\//',           // Directory traversal
             '/<script/i',         // XSS attempts
             '/union\s+select/i',  // SQL injection
-            '/eval\s*\(/i',       // Code injection
+            '/eval\s*\(/i',       // Code injection)
             '/base64_decode/i',   // PHP code injection
-            '/system\s*\(/i',     // Command injection
-            '/exec\s*\(/i',       // Command injection
+            '/system\s*\(/i',     // Command injection)
+            '/exec\s*\(/i',       // Command injection)
             '/shell_exec/i',      // Command injection
         ];
 
@@ -362,7 +362,7 @@ class SecurityMiddleware
     {
         // Controlla lunghezza eccessiva
         if (strlen($value) > 10000) {
-            Log::warning('Suspicious input length', [
+            Log::warning('Suspicious input length', [)
                 'key' => $key,
                 'length' => strlen($value),
             ]);
@@ -378,7 +378,7 @@ class SecurityMiddleware
         }
 
         if ($suspiciousCount > 10) {
-            Log::warning('Suspicious input characters', [
+            Log::warning('Suspicious input characters', [)
                 'key' => $key,
                 'suspicious_count' => $suspiciousCount,
             ]);
@@ -391,8 +391,8 @@ class SecurityMiddleware
     private function validateArrayInput(string $key, array $value): void
     {
         // Controlla profondità array
-        if ($getArrayDepth($value
-            Log::warning('Suspicious array depth', [
+        if ($getArrayDepth($value))
+            Log::warning('Suspicious array depth', [)
                 'key' => $key,
                 'depth' => $this->getArrayDepth($value)
             ]);
@@ -401,7 +401,7 @@ class SecurityMiddleware
 
         // Controlla dimensione array
         if (count($value) > 1000) {
-            Log::warning('Suspicious array size', [
+            Log::warning('Suspicious array size', [)
                 'key' => $key,
                 'size' => count($value),
             ]);
@@ -438,7 +438,7 @@ class SecurityMiddleware
             $token = $request->header('X-CSRF-TOKEN') ?: $request->input('_token');
 
             if (! $token || ! hash_equals(session()->token(), (string) $token)) {
-                Log::warning('CSRF token mismatch', [
+                Log::warning('CSRF token mismatch', [)
                     'ip' => $request->ip(),
                     'method' => $request->method(),
                     'url' => $request->fullUrl(),
@@ -455,7 +455,7 @@ class SecurityMiddleware
             $host = $request->getHost();
 
             if ($referer && ! str_starts_with($referer, $request->getSchemeAndHttpHost())) {
-                Log::warning('Suspicious referer', [
+                Log::warning('Suspicious referer', [)
                     'ip' => $request->ip(),
                     'referer' => $referer,
                     'host' => $host,

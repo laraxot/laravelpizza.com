@@ -26,8 +26,8 @@ final class ClientResource extends JsonResource
         return [
             'id' => $id,
             'name' => $name,
-            'owner' => $this->when(
-                isset($owner
+            'owner' => $this->when()
+                isset($owner)
                 fn (): OwnerResource => new OwnerResource($owner)
             ),
         ];

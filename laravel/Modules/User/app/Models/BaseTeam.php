@@ -100,7 +100,7 @@ abstract class BaseTeam extends BaseModel implements TeamContract
     #[\Override]
     public function allUsers(): Collection
     {
-        if (! $owner instanceof User
+        if (! $owner instanceof User)
             return $users;
         }
 
@@ -117,7 +117,7 @@ abstract class BaseTeam extends BaseModel implements TeamContract
         /** @var class-string<Model> */
         $userClass = $xotData->getUserClass();
 
-        return $this->belongsToManyX($userClass
+        return $this->belongsToManyX($userClass)
             ->using(TeamUser::class)
             ->withPivot(['role', 'permissions']);
     }
@@ -153,7 +153,7 @@ abstract class BaseTeam extends BaseModel implements TeamContract
     {
         // Corretto l'errore di tipo per il metodo contains
         // Verifico se l'ID dell'utente è presente nella collection degli utenti del team
-        if ($users->contains('id', $user->getKey(
+        if ($users->contains('id', $user->getKey()))
             return true;
         }
 
@@ -170,7 +170,7 @@ abstract class BaseTeam extends BaseModel implements TeamContract
     #[\Override]
     public function hasUserWithEmail(string $email): bool
     {
-        return $this->allUsers(
+        return $this->allUsers()
             // PHPStan Level 10: $user è sempre Model Eloquent da allUsers()
             // Uso isset() invece di property_exists() per magic properties
             if (! is_object($user) || ! isset($user->email)) {
@@ -216,8 +216,8 @@ abstract class BaseTeam extends BaseModel implements TeamContract
     #[\Override]
     public function removeUser(UserContract $userContract): void
     {
-        if ($userContract->current_team_id === $id
-            $userContract->forceFill([
+        if ($userContract->current_team_id === $id)
+            $userContract->forceFill([)
                 'current_team_id' => null,
             ])->save();
         }

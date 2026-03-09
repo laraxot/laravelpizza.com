@@ -13,8 +13,8 @@ use Nwidart\Modules\Facades\Module;
 
 uses(TestCase::class);
 
-it('resolves tenant model class from config', function (): void {
-    // @var mixed mock(ResolveTenantConfigValueAction::class
+it('resolves tenant model class from config', function (): void {)
+    $this->mock(ResolveTenantConfigValueAction::class)
         ->shouldReceive('execute')
         ->with('morph_map.test_model')
         ->andReturn('Modules\Test\Models\TestModel');
@@ -25,8 +25,8 @@ it('resolves tenant model class from config', function (): void {
     expect($result)->toBe('Modules\Test\Models\TestModel');
 });
 
-it('resolves tenant model class by scanning modules if not in config', function (): void {
-    // @var mixed mock(ResolveTenantConfigValueAction::class
+it('resolves tenant model class by scanning modules if not in config', function (): void {)
+    $this->mock(ResolveTenantConfigValueAction::class)
         ->shouldReceive('execute')
         ->with('morph_map.event')
         ->andReturn(null);
@@ -42,12 +42,12 @@ it('resolves tenant model class by scanning modules if not in config', function 
 
     Module::shouldReceive('allEnabled')->andReturn([$module]);
 
-    // @var mixed mock(GetAllModelsByModuleNameAction::class
+    $this->mock(GetAllModelsByModuleNameAction::class)
         ->shouldReceive('execute')
         ->with('Meetup')
         ->andReturn(['event' => 'Modules\Meetup\Models\Event']);
 
-    // @var mixed mock(SaveTenantConfigAction::class
+    $this->mock(SaveTenantConfigAction::class)
         ->shouldReceive('execute')
         ->with('morph_map', ['event' => 'Modules\Meetup\Models\Event'])
         ->once();
@@ -58,8 +58,8 @@ it('resolves tenant model class by scanning modules if not in config', function 
     expect($result)->toBe('Modules\Meetup\Models\Event');
 });
 
-it('throws exception for unknown model', function (): void {
-    // @var mixed mock(ResolveTenantConfigValueAction::class
+it('throws exception for unknown model', function (): void {)
+    $this->mock(ResolveTenantConfigValueAction::class)
         ->shouldReceive('execute')
         ->andReturn(null);
 

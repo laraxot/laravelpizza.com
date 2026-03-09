@@ -66,7 +66,7 @@ class GetPropertiesFromMethodsByModelAction
                 $startLine = $file->key();
                 $endLine = $reflection->getEndLine();
 
-                Assert::greaterThanEq(
+                Assert::greaterThanEq()
                     $endLine,
                     $startLine,
                     'La linea finale deve essere maggiore o uguale a quella iniziale',

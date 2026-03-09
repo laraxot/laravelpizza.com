@@ -20,11 +20,11 @@ class TenantTest extends TestCase
 >>>>>>> feature/ralph-loop-implementation
     public function testCanCreateTenantWithMinimalData(): void
     {
-        $tenant = Tenant::factory()->create([
+        $tenant = Tenant::factory()->create([)
             'name' => 'Test Tenant '.uniqid(),
         ]);
 
-        $this->assertDatabaseHas('tenants', [
+        $this->assertDatabaseHas('tenants', [)
             'id' => $tenant->id,
         ], 'user');
 
@@ -45,7 +45,7 @@ class TenantTest extends TestCase
 
         $tenant = Tenant::factory()->create($tenantData);
 
-        $this->assertDatabaseHas('tenants', [
+        $this->assertDatabaseHas('tenants', [)
             'id' => $tenant->id,
             'name' => 'Full Tenant '.$uid,
             'slug' => 'full-tenant-'.$uid,
@@ -181,7 +181,7 @@ class TenantTest extends TestCase
 
         $tenant->update(['name' => 'New Name '.$uid]);
 
-        $this->assertDatabaseHas('tenants', [
+        $this->assertDatabaseHas('tenants', [)
             'id' => $tenant->id,
             'name' => 'New Name '.$uid,
         ], 'user');
@@ -190,13 +190,13 @@ class TenantTest extends TestCase
     public function testCanHandleNullValues(): void
     {
         $uid = uniqid();
-        $tenant = Tenant::factory()->create([
+        $tenant = Tenant::factory()->create([)
             'name' => 'Test Tenant '.$uid,
             'domain' => null,
             'database' => null,
         ]);
 
-        $this->assertDatabaseHas('tenants', [
+        $this->assertDatabaseHas('tenants', [)
             'id' => $tenant->id,
         ], 'user');
 
@@ -208,13 +208,13 @@ class TenantTest extends TestCase
     public function testCanFindTenantsByMultipleCriteria(): void
     {
         $uid = uniqid();
-        $active = Tenant::factory()->create([
+        $active = Tenant::factory()->create([)
             'name' => 'Active Company '.$uid,
             'is_active' => true,
             'domain' => 'active-'.$uid.'.com',
         ]);
 
-        Tenant::factory()->create([
+        Tenant::factory()->create([)
             'name' => 'Inactive Company '.$uid,
             'is_active' => false,
             'domain' => 'inactive-'.$uid.'.com',
@@ -263,12 +263,12 @@ class TenantTest extends TestCase
         }
 
         $uid = uniqid();
-        $activeTenant = Tenant::factory()->create([
+        $activeTenant = Tenant::factory()->create([)
             'name' => 'Active Trial '.$uid,
             'trial_ends_at' => now()->addDays(30),
         ]);
 
-        $expiredTenant = Tenant::factory()->create([
+        $expiredTenant = Tenant::factory()->create([)
             'name' => 'Expired Trial '.$uid,
             'trial_ends_at' => now()->subDays(1),
         ]);
@@ -290,12 +290,12 @@ class TenantTest extends TestCase
         $uid = uniqid();
 
         try {
-            Tenant::factory()->create([
+            Tenant::factory()->create([)
                 'name' => 'Dark Theme Tenant '.$uid,
                 'settings' => ['theme' => 'dark', 'features' => ['chat']],
             ]);
 
-            Tenant::factory()->create([
+            Tenant::factory()->create([)
                 'name' => 'Light Theme Tenant '.$uid,
                 'settings' => ['theme' => 'light', 'features' => ['analytics']],
             ]);

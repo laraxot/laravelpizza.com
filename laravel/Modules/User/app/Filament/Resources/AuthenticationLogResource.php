@@ -41,13 +41,6 @@ class AuthenticationLogResource extends XotBaseResource
                     ->sortable(),
 
                 TextColumn::make('authenticatable_type')
-<<<<<<< HEAD
-                    ->label('Authenticatable Type')
-||||||| 6161e129d
-                    ->label('Authenticatable Type')
-                    ->formatStateUsing(fn (?string $state): string => $state !== null ? Str::afterLast($state, '\\') : '')
-=======
->>>>>>> feature/ralph-loop-implementation
                     ->formatStateUsing(fn (?string $state): string => null !== $state ? Str::afterLast($state, '\\') : '')
                     ->searchable()
                     ->sortable(),
@@ -57,13 +50,7 @@ class AuthenticationLogResource extends XotBaseResource
                     ->sortable()
                     ->url(function (AuthenticationLog $record): ?string {
                         $authenticatable = $record->authenticatable;
-<<<<<<< HEAD
-                        if (null !== $authenticatable && $authenticatable->exists) {
-||||||| 6161e129d
-                        if ($authenticatable !== null && $authenticatable->exists) {
-=======
                         if ($authenticatable instanceof Model) {
->>>>>>> feature/ralph-loop-implementation
                             return UserResource::getUrl('view', ['record' => $authenticatable]);
                         }
 
@@ -138,13 +125,7 @@ class AuthenticationLogResource extends XotBaseResource
                     ->icon('heroicon-o-user')
                     ->url(function (AuthenticationLog $record): ?string {
                         $authenticatable = $record->authenticatable;
-<<<<<<< HEAD
-                        if (null !== $authenticatable && $authenticatable->exists) {
-||||||| 6161e129d
-                        if ($authenticatable !== null && $authenticatable->exists) {
-=======
                         if ($authenticatable instanceof Model) {
->>>>>>> feature/ralph-loop-implementation
                             return UserResource::getUrl('view', ['record' => $authenticatable]);
                         }
 
@@ -153,13 +134,7 @@ class AuthenticationLogResource extends XotBaseResource
                     ->visible(function (AuthenticationLog $record): bool {
                         $authenticatable = $record->authenticatable;
 
-<<<<<<< HEAD
-                        return null !== $authenticatable && $authenticatable->exists;
-||||||| 6161e129d
-                        return $authenticatable !== null && $authenticatable->exists;
-=======
                         return $authenticatable instanceof Model;
->>>>>>> feature/ralph-loop-implementation
                     }),
                 DeleteAction::make(),
             ])

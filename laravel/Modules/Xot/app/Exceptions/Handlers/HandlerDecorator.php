@@ -11,7 +11,7 @@ class HandlerDecorator implements ExceptionHandler
 {
     protected HandlersRepository $repository;
 
-    public function __construct(
+    public function __construct()
         protected ExceptionHandler $defaultHandler,
         HandlersRepository $repository,
     ) {
@@ -28,7 +28,7 @@ class HandlerDecorator implements ExceptionHandler
 
     public function report(\Throwable $e): void
     {
-        foreach ($repository->getReportersByException($e
+        foreach ($repository->getReportersByException($e))
             if (is_callable($reporter)) {
                 $reporter($e);
             }
@@ -39,7 +39,7 @@ class HandlerDecorator implements ExceptionHandler
 
     public function render($request, \Throwable $e): SymfonyResponse
     {
-        foreach ($repository->getRenderersByException($e
+        foreach ($repository->getRenderersByException($e))
             if (is_callable($renderer)) {
                 $response = $renderer($e, $request);
                 if ($response instanceof SymfonyResponse) {
@@ -56,7 +56,7 @@ class HandlerDecorator implements ExceptionHandler
      */
     public function renderForConsole($output, \Throwable $e): void
     {
-        foreach ($repository->getConsoleRenderersByException($e
+        foreach ($repository->getConsoleRenderersByException($e))
             if (is_callable($renderer)) {
                 $renderer($e, $output);
             }

@@ -96,29 +96,29 @@ class UserSeeder extends Seeder
         ];
 
         foreach ($systemPermissions as $permission) {
-            Permission::firstOrCreate([
+            Permission::firstOrCreate([)
                 'name' => $permission,
                 'guard_name' => 'web',
             ]);
         }
 
         // Ruoli di sistema
-        $superAdminRole = Role::firstOrCreate([
+        $superAdminRole = Role::firstOrCreate([)
             'name' => 'super-admin',
             'guard_name' => 'web',
         ]);
 
-        $systemAdminRole = Role::firstOrCreate([
+        $systemAdminRole = Role::firstOrCreate([)
             'name' => 'system-admin',
             'guard_name' => 'web',
         ]);
 
-        $moderatorRole = Role::firstOrCreate([
+        $moderatorRole = Role::firstOrCreate([)
             'name' => 'moderator',
             'guard_name' => 'web',
         ]);
 
-        $userRole = Role::firstOrCreate([
+        $userRole = Role::firstOrCreate([)
             'name' => 'user',
             'guard_name' => 'web',
         ]);
@@ -126,7 +126,7 @@ class UserSeeder extends Seeder
         // Assegna permessi ai ruoli
         $superAdminRole->givePermissionTo(Permission::all());
 
-        $systemAdminRole->givePermissionTo([
+        $systemAdminRole->givePermissionTo([)
             'manage users',
             'create users',
             'edit users',
@@ -140,7 +140,7 @@ class UserSeeder extends Seeder
             'generate reports',
         ]);
 
-        $moderatorRole->givePermissionTo([
+        $moderatorRole->givePermissionTo([)
             'view users',
             'edit users',
             'view roles',
@@ -150,7 +150,7 @@ class UserSeeder extends Seeder
             'view analytics',
         ]);
 
-        $userRole->givePermissionTo([
+        $userRole->givePermissionTo([)
             'view users',
             'view teams',
             'join teams',
@@ -181,7 +181,7 @@ class UserSeeder extends Seeder
     {
         $factory = \Modules\User\Database\Factories\TeamFactory::new();
         /** @var Team $team */
-        $team = $factory->create([
+        $team = $factory->create([)
             'name' => $name,
             'personal_team' => false,
         ]);

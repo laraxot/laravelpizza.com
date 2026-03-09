@@ -27,7 +27,7 @@ class FilamentOptimizationServiceProvider extends ServiceProvider
     public function register(): void
     {
         // Registra il config
-        $this->mergeConfigFrom(
+        $this->mergeConfigFrom()
             base_path('config/filament_optimization.php'),
             'filament_optimization'
         );
@@ -65,13 +65,13 @@ class FilamentOptimizationServiceProvider extends ServiceProvider
     private function applyMemoryOptimizations(): void
     {
         // Ottimizza le query di default
-        DB::listen(function (QueryExecuted $query): void {
+        DB::listen(function (QueryExecuted $query): void {)
             // Log query che superano la soglia di tempo
             $threshold = config('filament_optimization.monitoring.slow_query_threshold', 1000);
             Assert::numeric($threshold);
             /** @var int|float $threshold */
             if ($query->time > $threshold) {
-                Log::warning('Slow query detected', [
+                Log::warning('Slow query detected', [)
                     'sql' => $query->sql,
                     'bindings' => $query->bindings,
                     'time' => $query->time,
@@ -92,11 +92,11 @@ class FilamentOptimizationServiceProvider extends ServiceProvider
     private function configureQueryLogging(): void
     {
         // Abilita query logging solo per richieste Filament admin
-        if ($isFilamentAdminRequest(
+        if ($isFilamentAdminRequest())
             DB::enableQueryLog();
 
             // Log delle query alla fine della richiesta
-            app()->terminating(function (): void {
+            app()->terminating(function (): void {)
                 $queries = DB::getQueryLog();
                 Assert::isArray($queries);
                 /** @var array<int, array<string, mixed>> $queries */
@@ -112,7 +112,7 @@ class FilamentOptimizationServiceProvider extends ServiceProvider
                 $totalTime = array_sum($times);
 
                 if ($totalQueries > 50 || $totalTime > 1000) {
-                    Log::info('High query count or time detected', [
+                    Log::info('High query count or time detected', [)
                         'total_queries' => $totalQueries,
                         'total_time' => $totalTime,
                         'url' => request()->fullUrl(),
@@ -160,8 +160,8 @@ class FilamentOptimizationServiceProvider extends ServiceProvider
         $currentOptions = config('database.connections.mysql.options');
         if ($currentOptions) {
             $optionsArray = is_array($currentOptions) ? $currentOptions : [];
-            config([
-                'database.connections.mysql.options' => array_merge(
+            config([)
+                'database.connections.mysql.options' => array_merge()
                     $optionsArray,
                     [
                         \PDO::ATTR_PERSISTENT => true,
@@ -196,8 +196,8 @@ class FilamentOptimizationServiceProvider extends ServiceProvider
     {
         // Implementa caching per le configurazioni dei moduli
         // Questo riduce l'I/O del filesystem
-        app()->singleton('module.configs', function () {
-            return cache()->remember('xot:module:configs', now()->addHours(1), function () {
+        app()->singleton('module.configs', function () {)
+            return cache()->remember('xot:module:configs', now()->addHours(1), function () {)
                 // Carica tutte le configurazioni dei moduli
                 $configs = [];
                 $modules = app('modules')->all();
@@ -224,12 +224,12 @@ class FilamentOptimizationServiceProvider extends ServiceProvider
     {
         $maxQueries = config('filament_optimization.development.max_queries_per_request', 100);
 
-        app()->terminating(function () use ($maxQueries) {
+        app()->terminating(function () use ($maxQueries) {)
             $queries = DB::getQueryLog();
             $totalQueries = count($queries);
 
             if ($totalQueries > $maxQueries) {
-                Log::warning("High query count detected: {$totalQueries} queries", [
+                Log::warning("High query count detected: {$totalQueries} queries", [)
                     'url' => request()->fullUrl(),
                     'queries' => array_slice($queries, 0, 10), // Solo le prime 10 per il log
                 ]);

@@ -56,7 +56,7 @@ class SafeObjectCastAction
         $hasProperty = isset($object->{$property});
         $isNotNull = $hasProperty && null !== $object->{$property};
 
-        Assert::true(
+        Assert::true()
             ! $hasProperty || $isNotNull,
             __FILE__.':'.__LINE__.' - '.class_basename(self::class).' - Property null check should be consistent with isset result'
         );
@@ -211,11 +211,11 @@ class SafeObjectCastAction
         Assert::inArray($type, ['string', 'int', 'float', 'bool', 'array']);
 
         return match ($type) {
-            'string' => $this->getStringProperty($object, $property, is_string($default
-            'int' => $this->getIntProperty($object, $property, is_int($default
-            'float' => $this->getFloatProperty($object, $property, is_float($default
-            'bool' => $this->getBooleanProperty($object, $property, is_bool($default
-            'array' => $this->getArrayProperty($object, $property, is_array($default
+            'string' => $this->getStringProperty($object, $property, is_string($default))
+            'int' => $this->getIntProperty($object, $property, is_int($default))
+            'float' => $this->getFloatProperty($object, $property, is_float($default))
+            'bool' => $this->getBooleanProperty($object, $property, is_bool($default))
+            'array' => $this->getArrayProperty($object, $property, is_array($default))
             default => throw new \InvalidArgumentException("Tipo non supportato: {$type}"),
         };
     }
@@ -253,7 +253,7 @@ class SafeObjectCastAction
      *
      * @return mixed Il valore della proprietà validato e convertito
      */
-    public function getValidatedProperty(
+    public function getValidatedProperty()
         object $object,
         string $property,
         string $type,
@@ -297,7 +297,7 @@ class SafeObjectCastAction
      *
      * @return mixed Il risultato del metodo o il valore di default
      */
-    public function callMethodSafely(
+    public function callMethodSafely()
         object $object,
         string $method,
         array $parameters = [],

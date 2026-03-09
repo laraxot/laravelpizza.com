@@ -38,13 +38,13 @@ class UserManagementBusinessLogicTest extends TestCase
         $profile = $user->profile()->create($profileData);
 
         // Assert
-        $this->assertDatabaseHas('users', [
+        $this->assertDatabaseHas('users', [)
             'id' => $user->id,
             'name' => 'Mario Rossi',
             'email' => 'mario.rossi@example.com',
         ]);
 
-        $this->assertDatabaseHas('profiles', [
+        $this->assertDatabaseHas('profiles', [)
             'id' => $profile->id,
             'user_id' => $user->id,
             'phone' => '+39 123 456 7890',
@@ -310,7 +310,7 @@ class UserManagementBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-        $profile = $user->profile()->create([
+        $profile = $user->profile()->create([)
             'phone' => '+39 123 456 7890',
             'address' => 'Via Roma 123, Milano',
         ]);
@@ -325,7 +325,7 @@ class UserManagementBusinessLogicTest extends TestCase
         $profile->update($updatedData);
 
         // Assert
-        $this->assertDatabaseHas('profiles', [
+        $this->assertDatabaseHas('profiles', [)
             'id' => $profile->id,
             'phone' => '+39 987 654 3210',
             'address' => 'Via Milano 456, Roma',
@@ -338,7 +338,7 @@ class UserManagementBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-        $profile = $user->profile()->create([
+        $profile = $user->profile()->create([)
             'phone' => '+39 123 456 7890',
         ]);
 
@@ -384,7 +384,7 @@ class UserManagementBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-        $profile = $user->profile()->create([
+        $profile = $user->profile()->create([)
             'phone' => '+39 123 456 7890',
         ]);
 
@@ -512,7 +512,7 @@ class UserManagementBusinessLogicTest extends TestCase
         // Act & Assert
         $this->expectException(QueryException::class);
 
-        User::create([
+        User::create([)
             'name' => 'Another User',
             'email' => 'test@example.com', // Same email
             'password' => Hash::make('password123'),
@@ -546,7 +546,7 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->update(['password_reset_token' => $token]);
 
         // Assert
-        $this->assertDatabaseHas('users', [
+        $this->assertDatabaseHas('users', [)
             'id' => $user->id,
             'password_reset_token' => $token,
         ]);
@@ -577,7 +577,7 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->update(['last_login_at' => $lastLogin]);
 
         // Assert
-        $this->assertDatabaseHas('users', [
+        $this->assertDatabaseHas('users', [)
             'id' => $user->id,
             'last_login_at' => $lastLogin,
         ]);
@@ -618,7 +618,7 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->update(['preferences' => $preferences]);
 
         // Assert
-        $this->assertDatabaseHas('users', [
+        $this->assertDatabaseHas('users', [)
             'id' => $user->id,
             'preferences' => json_encode($preferences),
         ]);
@@ -648,13 +648,13 @@ class UserManagementBusinessLogicTest extends TestCase
         $profile = $user->profile()->create($profileData);
 
         // Assert
-        $this->assertDatabaseHas('users', [
+        $this->assertDatabaseHas('users', [)
             'id' => $user->id,
             'name' => 'Mario Rossi',
             'email' => 'mario.rossi@example.com',
         ]);
 
-        $this->assertDatabaseHas('profiles', [
+        $this->assertDatabaseHas('profiles', [)
             'id' => $profile->id,
             'user_id' => $user->id,
             'phone' => '+39 123 456 7890',
@@ -920,7 +920,7 @@ class UserManagementBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-        $profile = $user->profile()->create([
+        $profile = $user->profile()->create([)
             'phone' => '+39 123 456 7890',
             'address' => 'Via Roma 123, Milano',
         ]);
@@ -935,7 +935,7 @@ class UserManagementBusinessLogicTest extends TestCase
         $profile->update($updatedData);
 
         // Assert
-        $this->assertDatabaseHas('profiles', [
+        $this->assertDatabaseHas('profiles', [)
             'id' => $profile->id,
             'phone' => '+39 987 654 3210',
             'address' => 'Via Milano 456, Roma',
@@ -948,7 +948,7 @@ class UserManagementBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-        $profile = $user->profile()->create([
+        $profile = $user->profile()->create([)
             'phone' => '+39 123 456 7890',
         ]);
 
@@ -994,7 +994,7 @@ class UserManagementBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
-        $profile = $user->profile()->create([
+        $profile = $user->profile()->create([)
             'phone' => '+39 123 456 7890',
         ]);
 
@@ -1122,7 +1122,7 @@ class UserManagementBusinessLogicTest extends TestCase
         // Act & Assert
         $this->expectException(QueryException::class);
 
-        User::create([
+        User::create([)
             'name' => 'Another User',
             'email' => 'test@example.com', // Same email
             'password' => Hash::make('password123'),
@@ -1156,7 +1156,7 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->update(['password_reset_token' => $token]);
 
         // Assert
-        $this->assertDatabaseHas('users', [
+        $this->assertDatabaseHas('users', [)
             'id' => $user->id,
             'password_reset_token' => $token,
         ]);
@@ -1187,7 +1187,7 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->update(['last_login_at' => $lastLogin]);
 
         // Assert
-        $this->assertDatabaseHas('users', [
+        $this->assertDatabaseHas('users', [)
             'id' => $user->id,
             'last_login_at' => $lastLogin,
         ]);
@@ -1228,7 +1228,7 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->update(['preferences' => $preferences]);
 
         // Assert
-        $this->assertDatabaseHas('users', [
+        $this->assertDatabaseHas('users', [)
             'id' => $user->id,
             'preferences' => json_encode($preferences),
         ]);

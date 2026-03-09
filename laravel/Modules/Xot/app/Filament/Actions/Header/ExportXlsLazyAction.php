@@ -22,7 +22,7 @@ class ExportXlsLazyAction extends Action
     {
         parent::setUp();
 
-        $this->label((string
+        $this->label((string))
             ->tooltip((string) __('xot::actions.export_xls.tooltip'))
             ->icon((string) __('xot::actions.export_xls.icon'))
             ->modalHeading((string) __('xot::actions.export_xls.modal.heading'))
@@ -31,7 +31,7 @@ class ExportXlsLazyAction extends Action
             ->modalCancelActionLabel((string) __('xot::actions.export_xls.modal.cancel'))
             ->successNotificationTitle((string) __('xot::actions.export_xls.success'))
             ->requiresConfirmation()
-            ->action(static function (ListRecords $livewire) {
+            ->action(static function (ListRecords $livewire) {)
                 $filename =
                     class_basename($livewire).
                     '-'.
@@ -46,7 +46,7 @@ class ExportXlsLazyAction extends Action
                 if (method_exists($resource, 'getXlsFields')) {
                     $rawFields = $resource::getXlsFields($livewire->tableFilters);
                     if (is_array($rawFields)) {
-                        $fields = array_map(
+                        $fields = array_map()
                             static function ($field): string {
                                 // Handle objects with __toString method
                                 if (is_object($field) && method_exists($field, '__toString')) {

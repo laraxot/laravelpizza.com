@@ -37,7 +37,7 @@ abstract class XotBaseMigration extends LaravelMigration
      */
     public function getModelClass(): string
     {
-        if (null !== $model_class
+        if (null !== $model_class)
             return $model_class;
         }
 
@@ -60,7 +60,7 @@ abstract class XotBaseMigration extends LaravelMigration
         // Controllo che $filename sia valido prima di passarlo a Str::of()
         $mod_name = false !== $filename ? Str::of($filename)->after($mod_path)->explode(\DIRECTORY_SEPARATOR)[1] : ''; // Fallback nel caso in cui $filename non sia valido.
 
-        $model_class = Str::of('\Modules\\'.$mod_name.'\Models\\'.$name
+        $model_class = Str::of('\Modules\\'.$mod_name.'\Models\\'.$name)
             ->replace('/', \DIRECTORY_SEPARATOR)
             ->toString();
 
@@ -220,14 +220,14 @@ abstract class XotBaseMigration extends LaravelMigration
 
     public function renameTable(string $from, string $to): void
     {
-        if ($tableExists($from
+        if ($tableExists($from))
             $this->getConn();
         }
     }
 
     public function renameColumn(string $from, string $to): void
     {
-        $this->getConn(
+        $this->getConn()
             $table->renameColumn($from, $to);
         });
     }
@@ -235,7 +235,7 @@ abstract class XotBaseMigration extends LaravelMigration
     public function tableCreate(\Closure $next, ?string $table = null): void
     {
         $tableName = $table ?? $this->getTable();
-        if (! $this->tableExists($tableName
+        if (! $this->tableExists($tableName))
             $this->getConn();
         }
     }
@@ -267,34 +267,34 @@ abstract class XotBaseMigration extends LaravelMigration
         $userClass = $xot->getUserClass();
 
         // Check and add each timestamp column only if it doesn't exist
-        if (! $this->hasColumn('created_at'
+        if (! $this->hasColumn('created_at'))
             $table->timestamp('created_at')->nullable();
         }
 
-        if (! $this->hasColumn('updated_at'
+        if (! $this->hasColumn('updated_at'))
             $table->timestamp('updated_at')->nullable();
         }
 
         // Check and add foreign key columns only if they don't exist
-        if (! $this->hasColumn('updated_by'
+        if (! $this->hasColumn('updated_by'))
             $table->foreignIdFor($userClass, 'updated_by')->nullable();
         }
 
-        if (! $this->hasColumn('created_by'
+        if (! $this->hasColumn('created_by'))
             $table->foreignIdFor($userClass, 'created_by')->nullable();
         }
 
         // Handle soft deletes
         if ($hasSoftDeletes) {
-            if (! $this->hasColumn('deleted_at'
+            if (! $this->hasColumn('deleted_at'))
                 $table->softDeletes();
             }
-            if (! $this->hasColumn('deleted_by'
+            if (! $this->hasColumn('deleted_by'))
                 $table->foreignIdFor($userClass, 'deleted_by')->nullable();
             }
         } else {
             // If soft deletes are not requested but deleted_at exists, add deleted_by
-            if ($hasColumn('deleted_at'
+            if ($hasColumn('deleted_at'))
                 $table->foreignIdFor($userClass, 'deleted_by')->nullable();
             }
         }
@@ -305,37 +305,37 @@ abstract class XotBaseMigration extends LaravelMigration
         $methodName = 'updateUserKey'.Str::studly($model->getKeyType());
         // @var mixed {$methodName}($table);
 
-        if ($hasColumn('model_id'
+        if ($hasColumn('model_id'))
             $table->string('model_id', 36)->index()->change();
         }
 
-        if ($hasColumn('team_id'
+        if ($hasColumn('team_id'))
             $table->uuid('team_id')->nullable()->change();
         }
     }
 
     public function updateUserKeyString(Blueprint $table): void
     {
-        if (! $this->hasColumn('id'
+        if (! $this->hasColumn('id'))
             $table->uuid('id')->primary()->first();
         }
 
-        if ($hasColumn('id'
+        if ($hasColumn('id'))
             $table->uuid('id')->change();
         }
 
-        if ($hasColumn('user_id'
+        if ($hasColumn('user_id'))
             $table->uuid('user_id')->change();
         }
     }
 
     public function updateUserKeyInt(Blueprint $table): void
     {
-        if (! $this->hasColumn('id'
+        if (! $this->hasColumn('id'))
             $table->id('id')->first();
         }
 
-        if ($hasColumn('id'
+        if ($hasColumn('id'))
             $table->renameColumn('id', 'uuid');
         }
     }
@@ -385,19 +385,19 @@ abstract class XotBaseMigration extends LaravelMigration
      * @param list<string>                                                                 $dataColumns          Column names to copy (excluding id, uuid)
      * @param array{pivot_table?: string, pivot_fk?: string, pivot_post_update?: \Closure} $options              Optional pivot table config
      */
-    protected function convertIdFromUuidToBigintIfNeeded(
+    protected function convertIdFromUuidToBigintIfNeeded()
         \Closure $createNewTableSchema,
         array $dataColumns,
         array $options = [],
     ): void {
         $table = $this->getTable();
 
-        if (! $this->tableExists(
+        if (! $this->tableExists())
             return;
         }
 
         $idType = $this->getColumnType('id');
-        if (! $this->isUuidColumnType($idType
+        if (! $this->isUuidColumnType($idType))
             $this->backfillUuidColumnIfNeeded();
 
             return;
@@ -413,14 +413,14 @@ abstract class XotBaseMigration extends LaravelMigration
 
     protected function backfillUuidColumnIfNeeded(): void
     {
-        if (! $this->hasColumn('uuid'
+        if (! $this->hasColumn('uuid'))
             return;
         }
 
         $table = $this->getTable();
         $conn = DB::connection($model->getConnectionName());
 
-        $conn->table($table)->orderBy('id')->chunk(100, function ($rows) use ($table, $conn): void {
+        $conn->table($table)->orderBy('id')->chunk(100, function ($rows) use ($table, $conn): void {)
             foreach ($rows as $row) {
                 $row = (object) $row;
                 if (! empty($row->uuid)) {
@@ -439,7 +439,7 @@ abstract class XotBaseMigration extends LaravelMigration
      * @param list<string>                                                                 $dataColumns
      * @param array{pivot_table?: string, pivot_fk?: string, pivot_post_update?: \Closure} $options
      */
-    protected function performUuidToBigintConversion(
+    protected function performUuidToBigintConversion()
         string $table,
         \Closure $createNewTableSchema,
         array $dataColumns,
@@ -447,8 +447,8 @@ abstract class XotBaseMigration extends LaravelMigration
     ): void {
         $conn = DB::connection($model->getConnectionName());
 
-        if (! $this->hasColumn('uuid'
-            $this->tableUpdate(function (Blueprint $blueprint
+        if (! $this->hasColumn('uuid'))
+            $this->tableUpdate(function (Blueprint $blueprint))
                 $blueprint->uuid('uuid')->nullable()->after('id');
             }, $table);
             $conn->table($table)->update(['uuid' => DB::raw('id')]);
@@ -463,7 +463,7 @@ abstract class XotBaseMigration extends LaravelMigration
 
         $pivotTable = $options['pivot_table'] ?? null;
         $pivotFk = $options['pivot_fk'] ?? null;
-        if (null !== $pivotTable && null !== $pivotFk && $this->hasTable($pivotTable
+        if (null !== $pivotTable && null !== $pivotFk && $this->hasTable($pivotTable))
             $this->updatePivotTableFkFromUuidToBigint($table, $pivotTable, $pivotFk);
             $postUpdate = $options['pivot_post_update'] ?? null;
             if ($postUpdate instanceof \Closure) {
@@ -516,7 +516,7 @@ abstract class XotBaseMigration extends LaravelMigration
 
         if ('mysql' === $conn->getDriverName()) {
             $db = $conn->getDatabaseName();
-            $constraint = $conn->selectOne(
+            $constraint = $conn->selectOne()
                 "SELECT CONSTRAINT_NAME FROM information_schema.TABLE_CONSTRAINTS 
                  WHERE TABLE_SCHEMA = ? AND TABLE_NAME = ? 
                  AND CONSTRAINT_TYPE = 'UNIQUE' AND CONSTRAINT_NAME LIKE ? LIMIT 1",

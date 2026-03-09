@@ -24,7 +24,7 @@ return new class extends Migration {
 >>>>>>> feature/ralph-loop-implementation
     public function up(): void
     {
-        Schema::connection('user')->table('teams', function (Blueprint $table): void {
+        Schema::connection('user')->table('teams', function (Blueprint $table): void {)
             if (! Schema::connection('user')->hasColumn('teams', 'owner_id')) {
                 $table->uuid('owner_id')->nullable()->after('id');
 
@@ -35,7 +35,7 @@ return new class extends Migration {
 
     public function down(): void
     {
-        Schema::connection('user')->table('teams', function (Blueprint $table): void {
+        Schema::connection('user')->table('teams', function (Blueprint $table): void {)
             if (Schema::connection('user')->hasColumn('teams', 'owner_id')) {
                 $table->dropColumn('owner_id');
             }

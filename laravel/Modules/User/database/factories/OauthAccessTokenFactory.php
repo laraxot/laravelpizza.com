@@ -33,11 +33,11 @@ class OauthAccessTokenFactory extends Factory
     public function definition(): array
     {
         return [
-            'id' => $faker->uuid(
+            'id' => $faker->uuid()
             'user_id' => User::factory(),
             'client_id' => OauthClient::factory(),
-            'name' => $faker->optional(
-            'scopes' => $faker->optional(
+            'name' => $faker->optional()
+            'scopes' => $faker->optional()
                 [
                     'read',
                     'write',
@@ -46,7 +46,7 @@ class OauthAccessTokenFactory extends Factory
                 ],
                 $faker->numberBetween(1, 3)
             ),
-            'revoked' => $faker->boolean(10
+            'revoked' => $faker->boolean(10)
             'expires_at' => $faker->dateTimeBetween('now', '+1 year')
         ];
     }
@@ -56,7 +56,7 @@ class OauthAccessTokenFactory extends Factory
      */
     public function revoked(): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'revoked' => true,
         ]);
     }
@@ -66,7 +66,7 @@ class OauthAccessTokenFactory extends Factory
      */
     public function active(): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'revoked' => false,
             'expires_at' => $faker->dateTimeBetween('+1 day', '+1 year')
         ]);
@@ -77,7 +77,7 @@ class OauthAccessTokenFactory extends Factory
      */
     public function forUser(User $user): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'user_id' => $user->id,
         ]);
     }
@@ -87,7 +87,7 @@ class OauthAccessTokenFactory extends Factory
      */
     public function forClient(OauthClient $client): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'client_id' => $client->id,
         ]);
     }
@@ -99,7 +99,7 @@ class OauthAccessTokenFactory extends Factory
      */
     public function withScopes(array $scopes): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'scopes' => $scopes,
         ]);
     }

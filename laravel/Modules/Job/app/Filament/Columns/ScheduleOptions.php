@@ -12,7 +12,7 @@ class ScheduleOptions extends TextColumn
 
     public function withValue(bool $withValue = true): static
     {
-        // @var mixed withValue = $withValue;
+        $this->withValue = $withValue;
 
         return $this;
     }

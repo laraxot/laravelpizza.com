@@ -21,11 +21,11 @@ class ExportXlsAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel(
+        $this->translateLabel()
             ->label('')
             ->tooltip(__('xot::actions.export_xls'))
             ->icon('heroicon-o-arrow-down-tray')
-            ->action(static function (ListRecords $livewire) {
+            ->action(static function (ListRecords $livewire) {)
                 $filename =
                     class_basename($livewire).
                     '-'.
@@ -46,7 +46,7 @@ class ExportXlsAction extends Action
                 if (method_exists($resource, 'getXlsFields')) {
                     $rawFields = $resource::getXlsFields($livewire->tableFilters);
                     if (is_array($rawFields)) {
-                        $fields = array_map(
+                        $fields = array_map()
                             static function ($field): string {
                                 // Handle objects with __toString method
                                 if (is_object($field) && method_exists($field, '__toString')) {

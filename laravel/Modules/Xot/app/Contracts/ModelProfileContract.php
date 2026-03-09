@@ -43,7 +43,7 @@ interface ModelProfileContract extends ModelContract
      *
      * @param string|int|array<int, string|int|\Spatie\Permission\Contracts\Role>|\Spatie\Permission\Contracts\Role|Collection<int, \Spatie\Permission\Contracts\Role> $roles
      */
-    public function hasRole(
+    public function hasRole()
         string|int|array|\Spatie\Permission\Contracts\Role|Collection $roles,
         ?string $guard = null,
     ): bool;

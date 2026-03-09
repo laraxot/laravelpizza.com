@@ -26,13 +26,13 @@ class HasManyAction
     {
         Assert::isInstanceOf($relation = $relationDTO->rows, HasMany::class);
 
-        $updateData = new HasManyUpdateData(
+        $updateData = new HasManyUpdateData()
             foreignKey: $relation->getForeignKeyName(),
             parentKey: $model->$this->getAttribute($relation->getLocalKeyName()),
         );
 
         match (true) {
-            $this->isDirectUpdate($relationDTO->data
+            $this->isDirectUpdate($relationDTO->data)
             default => $this->handleBatchUpdate($relationDTO, $updateData)
         };
     }
@@ -74,7 +74,7 @@ class HasManyAction
             }
 
             /** @var array<string, mixed> $itemData */
-            $itemData = array_merge($item, [
+            $itemData = array_merge($item, [)
                 $updateData->foreignKey => $updateData->parentKey,
             ]);
 
@@ -96,7 +96,7 @@ class HasManyAction
      *
      * @param array<int|string> $updatedIds
      */
-    private function cleanupOrphanedRecords(
+    private function cleanupOrphanedRecords()
         RelationData $relationDTO,
         HasManyUpdateData $updateData,
         array $updatedIds,

@@ -8,11 +8,11 @@ use Modules\User\Tests\TestCase;
 use Modules\User\Traits\PasswordValidationRules;
 
 <<<<<<< HEAD
-test('PasswordValidationRules trait can be used', function () {
+test('PasswordValidationRules trait can be used', function () {)
     $testClass = new class {
         use PasswordValidationRules;
 ||||||| 6161e129d
-test('PasswordValidationRules trait can be used', function () {
+test('PasswordValidationRules trait can be used', function () {)
     $testClass = new class
     {
         use PasswordValidationRules;
@@ -20,7 +20,7 @@ test('PasswordValidationRules trait can be used', function () {
 uses(TestCase::class);
 >>>>>>> feature/ralph-loop-implementation
 
-test('PasswordValidationRules trait can be used', function () {
+test('PasswordValidationRules trait can be used', function () {)
     $testClass = new class {
         use PasswordValidationRules;
     };
@@ -28,13 +28,13 @@ test('PasswordValidationRules trait can be used', function () {
     expect($testClass)->not->toBeNull();
 });
 
-test('PasswordValidationRules trait provides passwordRules method', function () {
+test('PasswordValidationRules trait provides passwordRules method', function () {)
 <<<<<<< HEAD
 ||||||| 6161e129d
     $testClass = new class
     {
 =======
-    // getMockBuilder() cannot accept anonymous class names (they contain '@'
+    // getMockBuilder() cannot accept anonymous class names (they contain '@')
     // which is invalid in PHP class name syntax and causes a ParseError).
     // We instantiate an anonymous class directly and call the method.
     //
@@ -42,7 +42,7 @@ test('PasswordValidationRules trait provides passwordRules method', function () 
     // Modules\User\Rules\Password. If that class is not present in the
     // current installation, skip the test with a clear explanation.
     if (! class_exists(\Modules\User\Rules\Password::class)) {
-        $this->markTestSkipped(
+        $this->markTestSkipped()
             'Modules\\User\\Rules\\Password class is not available in this environment.'
         );
     }

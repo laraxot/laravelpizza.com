@@ -185,11 +185,11 @@ class SafeAttributeCastAction
         Assert::inArray($type, ['string', 'int', 'float', 'bool', 'array']);
 
         return match ($type) {
-            'string' => $this->getStringAttribute($model, $attribute, is_string($default
-            'int' => $this->getIntAttribute($model, $attribute, is_int($default
-            'float' => $this->getFloatAttribute($model, $attribute, is_float($default
-            'bool' => $this->getBooleanAttribute($model, $attribute, is_bool($default
-            'array' => $this->getArrayAttribute($model, $attribute, is_array($default
+            'string' => $this->getStringAttribute($model, $attribute, is_string($default))
+            'int' => $this->getIntAttribute($model, $attribute, is_int($default))
+            'float' => $this->getFloatAttribute($model, $attribute, is_float($default))
+            'bool' => $this->getBooleanAttribute($model, $attribute, is_bool($default))
+            'array' => $this->getArrayAttribute($model, $attribute, is_array($default))
             default => throw new \InvalidArgumentException("Tipo non supportato: {$type}"),
         };
     }
@@ -223,7 +223,7 @@ class SafeAttributeCastAction
      *
      * @return mixed Il valore dell'attributo validato e convertito
      */
-    public function getValidatedAttribute(
+    public function getValidatedAttribute()
         Model $model,
         string $attribute,
         string $type,

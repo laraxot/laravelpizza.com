@@ -18,7 +18,7 @@ trait HasRoles
      */
     public function roles(): BelongsToMany
     {
-        return $this->belongsToMany(Role::class, 'model_has_roles', 'model_id', 'role_id'
+        return $this->belongsToMany(Role::class, 'model_has_roles', 'model_id', 'role_id')
             'model_type',
             self::class,
         );
@@ -39,7 +39,7 @@ trait HasRoles
 
         if (is_array($roles)) {
             foreach ($roles as $role) {
-                if ($hasRole($role
+                if ($hasRole($role))
                     return true;
                 }
             }

@@ -26,7 +26,7 @@ return new class extends Migration {
 >>>>>>> feature/ralph-loop-implementation
     public function up(): void
     {
-        Schema::create('authentications', function (Blueprint $table) {
+        Schema::create('authentications', function (Blueprint $table) {)
             $table->id();
             $table->string('type');
             $table->string('ip_address')->nullable();

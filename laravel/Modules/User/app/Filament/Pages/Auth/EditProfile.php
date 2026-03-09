@@ -11,14 +11,11 @@ class EditProfile extends XotBaseEditProfile
 {
     public static ?string $title = 'Profilo Utente';
 
-    /**
-     * Costruisce il form schema per la pagina di modifica profilo.
-     */
     public function getFormSchema(): array
     {
-        return [
-            $this->getNameFormComponent($getEmailFormComponent(
-            ...PasswordData::make()->getPasswordFormComponents('new_password'),
-        ];
+        return array_merge(
+            [$this->getNameFormComponent(), $this->getEmailFormComponent()],
+            PasswordData::make()->getPasswordFormComponents('new_password')
+        );
     }
 }

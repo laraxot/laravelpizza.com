@@ -17,15 +17,15 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table
+        $this->tableCreate(static function (Blueprint $table))
             $table->id();
             $table->unsignedBigInteger('permission_id');
             $table->uuidMorphs('model');
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table
+        $this->tableUpdate(function (Blueprint $table))
             $team_class = XotData::make()->getTeamClass();
-            if (! $this->hasColumn('team_id'
+            if (! $this->hasColumn('team_id'))
                 $table->foreignIdFor($team_class, 'team_id')->nullable();
             }
 <<<<<<< HEAD
@@ -33,7 +33,7 @@ return new class extends XotBaseMigration {
 ||||||| 6161e129d
             if ($this->getColumnType('model_id') === 'uuid') {
 =======
-            if ('uuid' === $this->getColumnType('model_id'
+            if ('uuid' === $this->getColumnType('model_id'))
 >>>>>>> feature/ralph-loop-implementation
                 $table->string('model_id', 36)->index()->change();
             }
