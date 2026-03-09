@@ -12,28 +12,28 @@ use function Pest\Laravel\get;
 
 uses(TestCase::class);
 
-describe('Auth Components Tests', function (): void {)
-    test('auth components exist and work correctly', function (): void {)
+describe('Auth Components Tests', function (): void {
+    test('auth components exist and work correctly', function (): void {
         // Test existing auth components
         expect(View::exists('components.auth-session-status'))->toBeTrue();
         expect(View::exists('components.auth-header'))->toBeTrue();
         expect(View::exists('user::components.auth-session-status'))->toBeTrue();
     });
 
-    test('auth layout components exist and work correctly', function (): void {)
+    test('auth layout components exist and work correctly', function (): void {
         // Test auth layout components that actually exist
         expect(View::exists('components.layouts.auth'))->toBeTrue();
         expect(View::exists('user::layouts.auth'))->toBeTrue();
     });
 
-    test('login page loads correctly', function (): void {)
+    test('login page loads correctly', function (): void {
         // Test that login page loads correctly
         $response = get('/it/auth/login');
         /* @phpstan-ignore-next-line method.nonObject */
         $response->assertStatus(200);
     });
 
-    test('register page loads correctly', function (): void {)
+    test('register page loads correctly', function (): void {
         // Test that register page loads correctly
         $response = get('/it/auth/register');
         /* @phpstan-ignore-next-line method.nonObject */

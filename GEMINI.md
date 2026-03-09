@@ -480,7 +480,8 @@ gh issue close <number>
 **Last Updated**: 2026-03-05 14:40 UTC
 **Version**: 4.2
 **Philosophy**: DRY + KISS + SOLID + ROBUST + Laraxot Zen + Test Coverage First + Parallel Execution
-- **Ralph Loop Integration**: Use `/ralph-loop` for highly iterative tasks like 100% test coverage or PHPStan Level 10. Persistence and self-correction are mandatory. Never exit a loop without fulfilling the completion promise.
+- **Validation is Mandatory**: NEVER claim a task is finished without executing automated tests (`pest`) and static analysis (`phpstan`). A task is only complete when the behavioral correctness is verified and the code is syntactically perfect.
+- **Ralph Loop Integration**: Use `/ralph-loop` for highly iterative tasks. Persistence and self-correction are mandatory.
 - **Git Forward-only Strategy**: Git history moves only forward. Do not use `reset --hard`, `revert`, or `checkout` to restore old versions. Old code can be studied for understanding, but fixes must be applied as new commits.
 - **Module Consolidation Rule (STRICT)**: DO NOT create granular modules. Use existing ones.
   - **Forbidden Event Modules**: `Event`, `EventCategory`, `EventFeedback`, `EventLocation`, `EventRegistration`, `EventSchedule`, `EventSpeaker`, `EventSponsor`, `EventTag`, `EventTicket`, `EventAttendee`, `EventOrganizer`. Use `Modules/Meetup`.

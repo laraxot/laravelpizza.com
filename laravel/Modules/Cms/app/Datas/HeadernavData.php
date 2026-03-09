@@ -39,7 +39,6 @@ class HeadernavData extends Data implements Wireable
     public static function make(): self
     {
         if (! self::$instance instanceof HeadernavData) {
-            // if (! self::$instance) {
             $data = TenantService::getConfig('appearance');
             $data = Arr::get($data, 'headernav', []);
             self::$instance = self::from($data);
@@ -48,12 +47,14 @@ class HeadernavData extends Data implements Wireable
         return self::$instance;
     }
 
-    public function view(): Renderable
+    public function render(): Renderable
     {
-        if (! view()->exists($view))
+        $view = $this->view;
+        if (! view()->exists($view)) {
             $message = 'The view ['.$view.'] does not exist';
             throw new \Exception($message);
         }
+        
         /** @var array<string, mixed> $view_params */
         $view_params = $this->toArray();
 

@@ -59,7 +59,7 @@ class GetAddressFromBingMapsAction
      */
     private function makeApiRequest(float $latitude, float $longitude, string $apiKey): array
     {
-        $response = Http::get(self::BASE_URL, [)
+        $response = Http::get(self::BASE_URL, [
             'point' => "{$latitude},{$longitude}",
             'key' => $apiKey,
             'includeEntityTypes' => 'Address',
