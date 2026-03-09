@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Unit\Actions\Socialite;
+
 use Illuminate\Contracts\Events\Dispatcher;
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Laravel\Socialite\Facades\Socialite;

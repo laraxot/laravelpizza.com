@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Xot\Contracts\UserContract;

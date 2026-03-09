@@ -19,6 +19,8 @@
 13. **Docs Filename Rule**: markdown documentation files must not include dates in their filename. Use semantic names only (no `YYYY-MM-DD` suffix/prefix).
 14. **Coverage Plan as Handoff**: for module-coverage work in multi-agent mode, `Modules/<Module>/docs/coverage-plan.md` must be updated after each batch and treated as shared state with Issue/Discussion claim/release comments.
 15. **Coverage Scope Integrity**: if a module coverage command reports files from unrelated modules, mark the report as scope-polluted and do not use that percentage as completion KPI until source scope is fixed.
+16. **PHP Post-Edit Test Obligation**: when a PHP file changes and the behavior is testable, the nearest Pest test must be reviewed, updated, or created before the task is declared complete.
+17. **Quality Gates Before Done**: after editing PHP code, run `phpstan`, `phpmd`, and `phpinsights` on the narrowest reliable scope, then run the relevant Pest test.
 
 ## Spatie Actions Testing
 - Test the `execute()` method directly.

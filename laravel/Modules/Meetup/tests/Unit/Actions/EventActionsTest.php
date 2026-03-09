@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Meetup\Tests\Unit\Actions;
+
 use Modules\Meetup\Actions\Event\CreateEventAction;
 use Modules\Meetup\Actions\Event\DeleteEventAction;
 use Modules\Meetup\Actions\Event\UpdateEventAction;

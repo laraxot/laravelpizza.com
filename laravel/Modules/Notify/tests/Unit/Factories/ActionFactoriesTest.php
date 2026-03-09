@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Factories;
+
 use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Contracts\WhatsAppProviderActionInterface;
 use Modules\Notify\Factories\SmsActionFactory;

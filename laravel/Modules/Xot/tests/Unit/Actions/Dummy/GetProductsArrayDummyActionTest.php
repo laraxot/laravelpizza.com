@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit\Actions\Dummy;
+
 use Illuminate\Support\Facades\Http;
 use Modules\Xot\Actions\Dummy\GetProductsArrayDummyAction;
 

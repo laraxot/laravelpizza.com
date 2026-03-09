@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Activity\Tests\Unit\Models\Policies;
+
 uses(\Modules\Activity\Tests\TestCase::class);
 
 use Modules\Activity\Models\Policies\ActivityBasePolicy;

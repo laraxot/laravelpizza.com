@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Feature;
+
 use Illuminate\Support\Facades\File;
 use Modules\Notify\Tests\TestCase;
 

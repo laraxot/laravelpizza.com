@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Feature\Filament\Clusters;
+
 use Modules\User\Filament\Clusters\Appearance;
 use Modules\User\Filament\Clusters\Appearance\Pages\Alignment;
 use Modules\User\Filament\Clusters\Appearance\Pages\Background;

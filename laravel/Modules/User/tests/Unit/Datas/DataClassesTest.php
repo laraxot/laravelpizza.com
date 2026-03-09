@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Unit\Datas;
+
 uses(Modules\User\Tests\TestCase::class);
 
 use Modules\User\Datas\DeviceData;

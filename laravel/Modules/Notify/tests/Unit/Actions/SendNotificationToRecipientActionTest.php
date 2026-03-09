@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Actions;
+
 use Illuminate\Notifications\AnonymousNotifiable;
 use Illuminate\Notifications\Notification as IlluminateNotification;
 use Illuminate\Support\Facades\Notification;

@@ -20,6 +20,9 @@
 2. **Verifica output**: Controlla che non ci siano errori
 3. **Check manuale**: Se possibile, verifica il risultato manualmente
 4. **PHPStan**: Esegui l'analisi statica
+5. **PHPMD**: Esegui il controllo code smell sul file/perimetro toccato
+6. **PHPInsights**: Esegui la quality analysis sul file/perimetro toccato
+7. **Test Pest associato**: se hai modificato un file PHP testabile, devi verificare/creare/aggiornare anche il test associato
 
 ### Esempio Sbagliato
 ```
@@ -47,6 +50,12 @@ cd laravel && ./vendor/bin/pest Modules/[Modulo]/tests
 # PHPStan
 cd laravel && ./vendor/bin/phpstan analyse
 
+# PHPMD
+cd laravel && ./vendor/bin/phpmd path/to/File.php text phpmd.xml
+
+# PHPInsights
+cd laravel && ./vendor/bin/phpinsights analyse path/to/File.php --no-interaction
+
 # Syntax check
 php -l [file.php]
 ```
@@ -57,6 +66,9 @@ php -l [file.php]
 - Non verificare l'output dei test
 - Assumere che il codice funzioni senza test
 - Non eseguire PHPStan
+- Non eseguire PHPMD dopo aver toccato un file PHP
+- Non eseguire PHPInsights dopo aver toccato un file PHP
+- Non valutare il test Pest associato al comportamento cambiato
 
 ## Note
 

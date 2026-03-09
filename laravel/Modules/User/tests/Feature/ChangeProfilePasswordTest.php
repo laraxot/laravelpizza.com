@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Feature;
+
 use Filament\Facades\Filament;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Livewire;

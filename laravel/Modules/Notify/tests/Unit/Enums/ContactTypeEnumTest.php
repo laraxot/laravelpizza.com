@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Enums;
+
 uses(\Modules\Notify\Tests\TestCase::class);
 
 use Filament\Forms\Components\TextInput;

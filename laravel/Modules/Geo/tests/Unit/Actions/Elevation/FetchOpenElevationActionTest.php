@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Geo\Tests\Unit\Actions\Elevation;
+
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use Modules\Geo\Actions\Elevation\FetchOpenElevationAction;

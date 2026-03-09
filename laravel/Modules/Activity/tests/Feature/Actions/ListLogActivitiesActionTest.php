@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Activity\Tests\Feature\Actions;
+
 use Filament\Resources\Pages\ListRecords;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Activity\Filament\Actions\ListLogActivitiesAction;

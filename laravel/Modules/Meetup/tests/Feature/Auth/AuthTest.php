@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Meetup\Tests\Feature\Auth;
+
 use Modules\Meetup\Tests\TestCase;
 use Modules\User\Models\User;
 

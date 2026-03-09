@@ -13,7 +13,7 @@ it('gets tenant config array correctly', function (): void {)
     $tempPath = tempnam(sys_get_temp_dir(), 'test_config_').'.php';
     $configData = ['key' => 'value'];
 
-    File::put($tempPath, '<?php return '.var_export($configData, true).';');
+    File::put($tempPath, 'return '.var_export($configData, true).';');
 
     $this->mock(GetTenantFilePathAction::class)
         ->shouldReceive('execute')

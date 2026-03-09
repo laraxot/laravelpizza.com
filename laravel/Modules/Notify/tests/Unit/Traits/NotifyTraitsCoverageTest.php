@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Traits;
+
 use Modules\Notify\Tests\TestCase;
 use Modules\Notify\Traits\HasNotificationRateLimiting;
 use Modules\Notify\Traits\HasNotificationTracking;

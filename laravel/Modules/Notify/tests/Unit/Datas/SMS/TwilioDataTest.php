@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Datas\SMS;
+
 use Modules\Notify\Datas\SMS\TwilioData;
 
 describe('TwilioData', function () {

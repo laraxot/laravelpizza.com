@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Gdpr\Tests\Unit\Models;
+
 uses(Modules\Gdpr\Tests\TestCase::class);
 
 use Modules\Gdpr\Models\Profile;

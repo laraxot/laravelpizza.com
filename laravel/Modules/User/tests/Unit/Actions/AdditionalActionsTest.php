@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Unit\Actions;
+
 uses(Modules\User\Tests\TestCase::class);
 
 use Modules\User\Actions\Otp\SendOtpByUserAction;

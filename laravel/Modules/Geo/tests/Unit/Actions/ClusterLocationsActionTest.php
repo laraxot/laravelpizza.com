@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Geo\Tests\Unit\Actions;
+
 use Modules\Geo\Actions\ClusterLocationsAction;
 use Modules\Geo\Contracts\CalculateDistanceActionContract;
 use Modules\Geo\Datas\LocationData;

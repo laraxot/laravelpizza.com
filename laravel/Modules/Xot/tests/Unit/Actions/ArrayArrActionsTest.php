@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit\Actions;
+
 use Filament\Support\RawJs;
 use Modules\Xot\Actions\Arr\DiffAssocRecursiveAction as ArrDiffAssocRecursiveAction;
 use Modules\Xot\Actions\Arr\RangeIntersectAction as ArrRangeIntersectAction;

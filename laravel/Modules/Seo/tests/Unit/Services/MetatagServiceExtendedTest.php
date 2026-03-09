@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Seo\Tests\Unit\Services;
+
 use Modules\Seo\Services\MetatagService;
 use Tests\TestCase;
 

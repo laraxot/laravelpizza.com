@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Geo\Tests\Unit\Services;
+
 use Modules\Geo\Services\HereService;
 use Modules\Geo\Tests\TestCase;
 

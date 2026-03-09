@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Unit\Datas;
+
 use Modules\User\Datas\FilamentShieldData;
 use Modules\User\Datas\PermissionData;
 use Modules\User\Datas\SocialiteUserAttributesData;

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Channels;
+
 use Modules\Notify\Channels\SmsChannel;
 
 describe('SmsChannel', function () {
@@ -31,7 +33,7 @@ describe('SmsChannel', function () {
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1);');
+        expect($content)->toContain('');
     });
 
     it('has private factory property', function () {

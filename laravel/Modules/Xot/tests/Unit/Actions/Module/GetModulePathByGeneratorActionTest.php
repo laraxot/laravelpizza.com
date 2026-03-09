@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit\Actions\Module;
+
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 
 it('returns path using module_path helper in happy path', function (): void {

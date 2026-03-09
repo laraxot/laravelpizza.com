@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Meetup\Tests\Feature\Auth;
+
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 

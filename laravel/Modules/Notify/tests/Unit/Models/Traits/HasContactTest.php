@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Models\Traits;
+
 use Illuminate\Database\Eloquent\Model;
 use Modules\Notify\Models\Traits\HasContact;
 use Modules\Notify\Tests\TestCase;

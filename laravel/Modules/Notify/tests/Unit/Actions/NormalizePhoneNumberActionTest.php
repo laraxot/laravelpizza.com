@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Actions;
+
 use Modules\Notify\Actions\NormalizePhoneNumberAction;
 use Spatie\QueueableAction\QueueableAction;
 

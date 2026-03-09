@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Meetup\Tests\Unit\Enums;
+
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Enums\RepeatFrequency;

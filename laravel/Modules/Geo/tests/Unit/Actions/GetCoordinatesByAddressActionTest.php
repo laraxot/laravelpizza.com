@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Geo\Tests\Unit\Actions;
+
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
 use Modules\Geo\Actions\GetCoordinatesByAddressAction;

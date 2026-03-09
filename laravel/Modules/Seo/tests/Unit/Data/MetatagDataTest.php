@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Seo\Tests\Unit\Data;
+
 use Modules\Seo\Data\MetatagData;
 use Tests\TestCase;
 

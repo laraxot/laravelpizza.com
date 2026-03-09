@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Cms\Tests\Feature\Frontoffice;
+
 use Modules\Xot\Tests\TestCase;
 
 // Use the project's base TestCase

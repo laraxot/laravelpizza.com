@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Gdpr\Tests\Unit\Actions;
+
 uses(Modules\Gdpr\Tests\TestCase::class);
 
 use Illuminate\Validation\ValidationException;

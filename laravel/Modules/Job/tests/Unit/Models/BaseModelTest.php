@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Job\Tests\Unit\Models;
+
 uses(\Modules\Job\Tests\TestCase::class);
 
 use Illuminate\Database\Eloquent\Model;

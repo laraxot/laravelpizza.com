@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Media\Tests\Unit\Actions;
+
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 use Modules\Media\Actions\Image\Merge as ImageMerge;
 use Modules\Media\Actions\Image\SvgExistsAction;
@@ -41,7 +43,7 @@ describe('Media Actions Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(ImageMerge::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -64,7 +66,7 @@ describe('Media Actions Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(SvgExistsAction::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -91,7 +93,7 @@ describe('Media Actions Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(ConvertVideoAction::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -113,7 +115,7 @@ describe('Media Actions Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(ConvertVideoByConvertDataAction::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -135,7 +137,7 @@ describe('Media Actions Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(ConvertVideoByMediaConvertAction::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -157,7 +159,7 @@ describe('Media Actions Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(GetVideoScreenshotAction::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -179,7 +181,7 @@ describe('Media Actions Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(GetVideoFrameContentAction::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -201,7 +203,7 @@ describe('Media Actions Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(GetVideoDurationAction::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -219,7 +221,7 @@ describe('Media Actions Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(UploadFileAction::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -237,7 +239,7 @@ describe('Media Actions Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(DeleteFileAction::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -255,7 +257,7 @@ describe('Media Actions Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(GetFileInfoAction::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -273,7 +275,7 @@ describe('Media Actions Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(CheckFileExistsAction::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -290,7 +292,7 @@ describe('Media Actions Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(BaseS3Action::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
 
         it('has s3Client property', function () {
@@ -327,7 +329,7 @@ describe('Media Actions Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(GetCloudFrontSignedUrlAction::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 });

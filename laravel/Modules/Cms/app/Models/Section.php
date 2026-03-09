@@ -25,6 +25,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null         $creator
  * @property mixed                        $translations
  * @property ProfileContract|null         $updater
+ *
  * @method static Builder<static>|Section newModelQuery()
  * @method static Builder<static>|Section newQuery()
  * @method static Builder<static>|Section query()
@@ -42,8 +43,11 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Section whereUpdatedBy($value)
  * @method static int                     count()
  * @method static Builder<static>|Section where($column, $operator = null, $value = null, $boolean = 'and')
+ *
  * @property ProfileContract|null $deleter
+ *
  * @method static SectionFactory factory($count = null, $state = [])
+ *
  * @mixin \Eloquent
  */
 class Section extends BaseModelLang

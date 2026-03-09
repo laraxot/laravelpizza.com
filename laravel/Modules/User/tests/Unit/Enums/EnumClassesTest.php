@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Unit\Enums;
+
 uses(Modules\User\Tests\TestCase::class);
 
 use Modules\User\Enums\SocialProviderEnum;

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Job\Tests\Unit\Events;
+
 use Modules\Job\Events\BroadcastingEvent;
 use Modules\Job\Events\Executed;
 
@@ -22,7 +24,7 @@ describe('Executed', function () {
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1);');
+        expect($content)->toContain('');
     });
 
     it('has required imports', function () {

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Datas;
+
 use Illuminate\Support\Collection;
 use Modules\Notify\Datas\FirebaseNotificationData;
 use Modules\Notify\Datas\NetfunSmsData;

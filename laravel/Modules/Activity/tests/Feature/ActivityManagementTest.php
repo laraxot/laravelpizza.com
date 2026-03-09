@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Activity\Tests\Feature;
+
 use Modules\Activity\Models\Activity;
 use Modules\User\Models\User;
 

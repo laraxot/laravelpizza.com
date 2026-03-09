@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit\Actions\Model;
+
 use Modules\Xot\Actions\Model\HasColumnAction;
 use Modules\Xot\Models\BaseModel;
 

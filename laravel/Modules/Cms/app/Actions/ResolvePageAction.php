@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Actions;
 
+use Illuminate\Database\Eloquent\Model;
 use Modules\Cms\Datas\ResolvePageData;
 use Modules\Cms\Models\Page as PageModel;
 use Spatie\QueueableAction\QueueableAction;
@@ -17,7 +18,7 @@ use Spatie\QueueableAction\QueueableAction;
  * 2. Verifica se esiste una pagina CMS con slug esatto (container.slug).
  * 3. Fallback a una pagina CMS generica (container.view).
  */
-class ResolvePageAction
+final class ResolvePageAction
 {
     use QueueableAction;
 
@@ -26,7 +27,7 @@ class ResolvePageAction
         // 1. Tenta il caricamento di un modello dinamico
         $item = $this->loadDynamicModel($container0, $slug0);
 
-        if (null !== $item) {
+        if ($item !== null) {
             return new ResolvePageData(
                 renderMode: 'model',
                 item: $item,
@@ -93,7 +94,7 @@ class ResolvePageAction
 
         foreach ($possibleModels as $modelClass) {
             $item = $this->queryModel($modelClass, $slug0);
-            if (null !== $item) {
+            if ($item !== null) {
                 return $item;
             }
         }
@@ -103,11 +104,11 @@ class ResolvePageAction
 
     private function queryModel(string $modelClass, string $slug): ?object
     {
-        if (class_exists($modelClass) && method_exists($modelClass, 'where')) {
-            /** @var \Illuminate\Database\Eloquent\Builder $query */
-            $query = $modelClass::where('slug', $slug);
+        if (class_exists($modelClass) && is_subclass_of($modelClass, Model::class)) {
+            /** @var Model $model */
+            $model = app($modelClass);
 
-            return $query->first();
+            return $model->newQuery()->where('slug', $slug)->first();
         }
 
         return null;

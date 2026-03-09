@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Seo\Tests\Feature;
+
 use Modules\Seo\Services\MetatagService;
 
 it('can set title', function () {

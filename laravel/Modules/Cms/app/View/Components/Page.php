@@ -27,12 +27,30 @@ class Page extends Component
 
     public function __construct(string $side, string $slug, ?string $type = null, array $data = [], string $container0 = '', string $slug0 = '')
     {
-        $this->data = $data;
         $this->side = $side;
         if (null !== $type) {
             $slug = $type.'-'.$slug;
         }
         $this->slug = $slug;
+
+        // Estrai container0 e slug0 dai dati se non forniti direttamente
+        // Questo garantisce che siano disponibili sia come props che nell'array data
+        if ('' === $container0 && isset($data['container0']) && is_string($data['container0'])) {
+            $container0 = $data['container0'];
+        }
+        if ('' === $slug0 && isset($data['slug0']) && is_string($data['slug0'])) {
+            $slug0 = $data['slug0'];
+        }
+
+        // Assicuriamoci che siano presenti anche nell'array data per il passaggio ai blocchi
+        if ('' !== $container0 && ! isset($data['container0'])) {
+            $data['container0'] = $container0;
+        }
+        if ('' !== $slug0 && ! isset($data['slug0'])) {
+            $data['slug0'] = $slug0;
+        }
+
+        $this->data = $data;
         $this->container0 = $container0;
         $this->slug0 = $slug0;
         $this->blocks = PageModel::getBlocksBySlug($slug, $side);

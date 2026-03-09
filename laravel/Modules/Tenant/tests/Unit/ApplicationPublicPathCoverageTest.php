@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Tenant\Tests\Unit;
+
 use App\Application;
 
 it('returns real path when requested public path exists', function (): void {

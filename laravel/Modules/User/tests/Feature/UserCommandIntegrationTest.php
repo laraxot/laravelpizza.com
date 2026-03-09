@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Feature;
+
 use Illuminate\Console\Application;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;

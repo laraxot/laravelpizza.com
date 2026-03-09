@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Gdpr\Tests\Unit\Filament\Resources;
+
 uses(Modules\Gdpr\Tests\TestCase::class);
 
 use Modules\Gdpr\Filament\Resources\TreatmentResource;

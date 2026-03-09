@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Activity\Tests\Unit\Events;
+
 use Modules\Activity\Events\ActivityEvent;
 use Modules\Activity\Tests\TestCase;
 

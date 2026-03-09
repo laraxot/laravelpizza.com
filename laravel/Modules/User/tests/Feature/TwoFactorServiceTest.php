@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Feature;
+
 use Illuminate\Support\Carbon;
 use Modules\User\Models\User;
 use Modules\User\Services\TwoFactorService;

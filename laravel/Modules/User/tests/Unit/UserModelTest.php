@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Unit;
+
 use Modules\User\Models\AuthenticationLog;
 use Modules\User\Models\Team;
 use Modules\User\Tests\TestCase;

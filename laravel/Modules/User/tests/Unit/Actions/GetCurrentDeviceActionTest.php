@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Unit\Actions;
+
 use Jenssegers\Agent\Agent;
 use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\Device;

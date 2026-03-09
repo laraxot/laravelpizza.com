@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Geo\Tests\Unit\Actions\GoogleMaps;
+
 use GuzzleHttp\Client;
 use Modules\Geo\Tests\LightTestCase;
 

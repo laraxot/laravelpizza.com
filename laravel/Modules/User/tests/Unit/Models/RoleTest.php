@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Unit\Models;
+
 use Modules\User\Models\Role;
 use Modules\User\Models\Team;
 use Modules\User\Tests\TestCase;

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Geo\Tests\Unit\Actions;
+
 use Illuminate\Support\Collection;
 use Modules\Geo\Actions\OptimizeRouteAction;
 use Modules\Geo\Contracts\CalculateDistanceActionContract;

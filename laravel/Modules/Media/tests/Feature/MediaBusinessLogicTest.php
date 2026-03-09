@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Media\Tests\Feature;
+
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;

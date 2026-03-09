@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Actions\NotifyTheme\Attachment;
+
 use Modules\Notify\Actions\NotifyTheme\Attachment\Pdf;
 use Modules\Notify\Datas\AttachmentData;
 use Spatie\QueueableAction\QueueableAction;

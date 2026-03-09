@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Activity\Tests\Feature;
+
 use Illuminate\Support\Collection;
 use Modules\Activity\Models\Activity;
 use Modules\Activity\Tests\TestCase;

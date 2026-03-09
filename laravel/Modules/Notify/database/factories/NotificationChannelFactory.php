@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Notify\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -10,6 +12,7 @@ use Modules\Notify\Models\NotificationChannel;
  */
 class NotificationChannelFactory extends Factory
 {
+    /** @var class-string<NotificationChannel> */
     protected $model = NotificationChannel::class;
 
     /**
@@ -20,7 +23,7 @@ class NotificationChannelFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $faker->word()
+            'name' => $this->faker->word(),
             'driver' => 'email',
             'config' => json_encode(['smtp_host' => 'localhost']),
             'is_enabled' => true,
@@ -33,7 +36,7 @@ class NotificationChannelFactory extends Factory
      */
     public function enabled(): static
     {
-        return $this->state(fn (array $attributes))
+        return $this->state(fn (array $attributes) => [
             'is_enabled' => true,
         ]);
     }
@@ -43,7 +46,7 @@ class NotificationChannelFactory extends Factory
      */
     public function disabled(): static
     {
-        return $this->state(fn (array $attributes))
+        return $this->state(fn (array $attributes) => [
             'is_enabled' => false,
         ]);
     }
@@ -53,7 +56,7 @@ class NotificationChannelFactory extends Factory
      */
     public function email(): static
     {
-        return $this->state(fn (array $attributes))
+        return $this->state(fn (array $attributes) => [
             'driver' => 'email',
         ]);
     }
@@ -63,7 +66,7 @@ class NotificationChannelFactory extends Factory
      */
     public function sms(): static
     {
-        return $this->state(fn (array $attributes))
+        return $this->state(fn (array $attributes) => [
             'driver' => 'sms',
         ]);
     }

@@ -8,6 +8,14 @@
 
 ### **MAI analizzare tutti i moduli assieme finché ci sono errori individuali**
 
+### **Dopo ogni edit PHP partire sempre dal file o dal perimetro minimo**
+
+```bash
+./vendor/bin/phpstan analyse Modules/Xot/app/Datas/XotData.php --level=10 --memory-limit=-1
+```
+
+Solo dopo un esito pulito sul perimetro stretto ha senso allargare il controllo al modulo.
+
 ## 📋 Workflow Corretto
 
 ### **FASE 1: Analisi Modulo per Modulo**

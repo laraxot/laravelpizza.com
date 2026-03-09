@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Models;
+
 use Modules\Notify\Models\Notification;
 use Modules\Xot\Models\BaseModel;
 

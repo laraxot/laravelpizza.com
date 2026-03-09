@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Models;
+
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Modules\Notify\Models\BaseMorphPivot;
 use Modules\Notify\Models\BasePivot;

@@ -13,9 +13,7 @@ it('gets and caches components correctly', function (): void {
     File::makeDirectory($tempDir);
 
     $compPath = $tempDir.'/TestComp.php';
-    $compContent = "<?php
-
-namespace My\Test\Comps;
+    $compContent = "namespace My\Test\Comps;
 
 class TestComp {}";
     File::put($compPath, $compContent);
@@ -48,9 +46,7 @@ it('skips abstract classes', function (): void {
     File::makeDirectory($tempDir);
 
     $compPath = $tempDir.'/AbstractComp.php';
-    File::put($compPath, "<?php
-
-namespace My\Test\Comps; abstract class AbstractComp {}");
+    File::put($compPath, "namespace My\Test\Comps; abstract class AbstractComp {}");
 
     if (! class_exists('My\Test\Comps\AbstractComp')) {
         eval("namespace My\Test\Comps; abstract class AbstractComp {}");

@@ -10,7 +10,7 @@ use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * ProfileTeam Model.
- * 
+ *
  * Represents the relationship between a profile and a team, including the user's role.
  *
  * @property ProfileContract|null $creator
@@ -25,6 +25,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null          $created_by
  * @property Carbon|null          $deleted_at
  * @property string|null          $deleted_by
+ *
  * @method static Builder<static>|ProfileTeam newModelQuery()
  * @method static Builder<static>|ProfileTeam newQuery()
  * @method static Builder<static>|ProfileTeam query()
@@ -38,17 +39,21 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|ProfileTeam whereUpdatedAt($value)
  * @method static Builder<static>|ProfileTeam whereUpdatedBy($value)
  * @method static Builder<static>|ProfileTeam whereUserId($value)
+ *
  * @mixin IdeHelperProfileTeam
- * @property ProfileContract|null $deleter
- * @property Team|null            $team
- * @property User|null            $user
- * @property string|null $profile_id
+ *
+ * @property ProfileContract|null         $deleter
+ * @property Team|null                    $team
+ * @property User|null                    $user
+ * @property string|null                  $profile_id
  * @property array<array-key, mixed>|null $permissions
- * @method static Builder<static>|ProfileTeam childrenWith(array $relations)
- * @method static Builder<static>|ProfileTeam childrenWithCount(array $relations)
+ *
+ * @method static Builder<static>|ProfileTeam                         childrenWith(array $relations)
+ * @method static Builder<static>|ProfileTeam                         childrenWithCount(array $relations)
  * @method static \Modules\User\Database\Factories\ProfileTeamFactory factory($count = null, $state = [])
- * @method static Builder<static>|ProfileTeam wherePermissions($value)
- * @method static Builder<static>|ProfileTeam whereProfileId($value)
+ * @method static Builder<static>|ProfileTeam                         wherePermissions($value)
+ * @method static Builder<static>|ProfileTeam                         whereProfileId($value)
+ *
  * @mixin \Eloquent
  */
 class ProfileTeam extends TeamUser

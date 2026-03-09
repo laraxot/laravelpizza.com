@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Tenant\Tests\Unit\Actions;
+
 use Modules\Tenant\Actions\GetTenantNameAction;
 use Tests\TestCase;
 

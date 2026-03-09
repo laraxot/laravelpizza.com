@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Unit\Models;
+
 use Modules\User\Models\Permission;
 use Modules\User\Tests\TestCase;
 

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Activity\Tests\Unit;
+
 use Modules\Activity\Models\Snapshot;
 use Modules\Activity\Tests\TestCase;
 

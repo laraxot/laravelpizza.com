@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Seo\Tests\Unit\Filament\Widgets;
+
 use Modules\Seo\Filament\Widgets\SocialShareWidget;
 use Tests\TestCase;
 

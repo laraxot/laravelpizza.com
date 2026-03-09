@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Lang\Tests\Unit\Models;
+
 uses(Modules\Lang\Tests\TestCase::class);
 
 use Modules\Lang\Models\TranslationFile;

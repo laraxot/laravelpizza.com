@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Activity\Tests\Unit\Providers;
+
 uses(\Modules\Activity\Tests\TestCase::class);
 
 use Modules\Activity\Providers\ActivityServiceProvider;

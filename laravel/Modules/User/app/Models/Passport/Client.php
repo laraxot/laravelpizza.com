@@ -9,21 +9,23 @@ use Laravel\Passport\Client as PassportClient;
 /**
  * Custom Passport Client model to fix compatibility issues with Laravel 12.
  *
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\OauthAuthCode> $authCodes
- * @property-read int|null $auth_codes_count
- * @property-read array $grant_types
- * @property-read \Illuminate\Foundation\Auth\User $owner
- * @property-read string|null $plain_secret
- * @property-read array $redirect_uris
- * @property-write string|null $secret
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\OauthToken> $tokens
- * @property-read int|null $tokens_count
- * @property-read \Modules\User\Models\User|null $user
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\OauthAuthCode> $authCodes
+ * @property int|null                                                                          $auth_codes_count
+ * @property array                                                                             $grant_types
+ * @property \Illuminate\Foundation\Auth\User                                                  $owner
+ * @property string|null                                                                       $plain_secret
+ * @property array                                                                             $redirect_uris
+ * @property string|null                                                                       $secret
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\OauthToken>    $tokens
+ * @property int|null                                                                          $tokens_count
+ * @property \Modules\User\Models\User|null                                                    $user
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Client existsIn(array $haystack)
- * @method static \Laravel\Passport\Database\Factories\ClientFactory factory($count = null, $state = [])
+ * @method static \Laravel\Passport\Database\Factories\ClientFactory   factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Client newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Client newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Client query()
+ *
  * @mixin \Eloquent
  */
 class Client extends PassportClient

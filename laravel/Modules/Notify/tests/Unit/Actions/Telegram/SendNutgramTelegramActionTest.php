@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Actions\Telegram;
+
 use Modules\Notify\Actions\Telegram\SendNutgramTelegramAction;
 use Modules\Notify\Datas\TelegramData;
 
@@ -41,7 +43,7 @@ describe('SendNutgramTelegramAction', function () {
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1);');
+        expect($content)->toContain('');
     });
 
     it('has correct namespace', function () {

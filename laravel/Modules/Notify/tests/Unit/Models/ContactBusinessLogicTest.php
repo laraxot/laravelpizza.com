@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Models;
+
 uses(\Modules\Notify\Tests\TestCase::class);
 
 use Modules\Notify\Models\BaseModel;

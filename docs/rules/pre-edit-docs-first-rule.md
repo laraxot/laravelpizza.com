@@ -16,6 +16,11 @@ Prima di qualsiasi modifica al codice, la prima azione deve essere:
 7. Registrare l'avanzamento su GitHub quando utile al coordinamento:
    - valutare aggiornamento/creazione Issue;
    - valutare aggiornamento/creazione Discussion.
+8. Dopo ogni edit su file PHP, applicare il quality gate post-edit:
+   - `phpstan`
+   - `phpmd`
+   - `phpinsights`
+   - test Pest associato se il file e' testabile
 
 ## Scope
 
@@ -38,6 +43,8 @@ Prima di editare codice devono esistere:
 - La priorita' e sempre: studiare, aggiornare e migliorare prima le cartelle `docs` dentro i moduli e dentro i temi.
 - Questa priorita' vale anche per bugfix urgenti: prima consolidare il contesto documentale, poi toccare il codice.
 - Questa priorita' va ricordata sempre: se manca un passaggio docs locale su modulo e tema, il task non e' pronto per l'editing del codice.
+- Quando un tema usa block CMS renderizzati via `@include`, la documentazione locale deve chiarire il contratto runtime reale: vista Blade inclusa, non anonymous component e non componente Livewire.
+- In questi casi sono vietati `@props(...)`, `$this->...` e `wire:*` nel block, salvo esplicito mount come componente.
 
 ## Naming vincolante per Markdown
 

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Actions;
+
 use Illuminate\Support\Facades\Log;
 use Modules\Notify\Actions\SendAppointmentNotificationAction;
 use Modules\Notify\Tests\TestCase;

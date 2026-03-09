@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Actions;
+
 use Carbon\Carbon;
 use Modules\Notify\Actions\DetermineSeasonalContentViewPathAction;
 use Spatie\QueueableAction\QueueableAction;

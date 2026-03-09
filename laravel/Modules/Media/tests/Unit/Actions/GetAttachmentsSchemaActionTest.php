@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Media\Tests\Unit\Actions;
+
 uses(\Modules\Media\Tests\TestCase::class);
 
 use Filament\Forms\Components\FileUpload;

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Media\Tests\Unit\Models;
+
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 

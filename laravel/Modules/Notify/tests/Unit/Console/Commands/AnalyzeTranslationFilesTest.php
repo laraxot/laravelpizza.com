@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Console\Commands;
+
 use Modules\Notify\Console\Commands\AnalyzeTranslationFiles;
 
 describe('AnalyzeTranslationFiles', function () {

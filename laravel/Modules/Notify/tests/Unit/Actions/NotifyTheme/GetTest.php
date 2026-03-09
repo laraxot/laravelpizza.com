@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Actions\NotifyTheme;
+
 use Modules\Notify\Actions\NotifyTheme\Get;
 use Modules\Notify\Datas\NotifyThemeData;
 use Spatie\QueueableAction\QueueableAction;

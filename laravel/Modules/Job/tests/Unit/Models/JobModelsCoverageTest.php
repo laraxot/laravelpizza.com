@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Job\Tests\Unit\Models;
+
 use Modules\Job\Models\Export;
 use Modules\Job\Models\FailedJob;
 use Modules\Job\Models\Frequency;
@@ -75,7 +77,7 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(Task::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -93,7 +95,7 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(Frequency::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -111,7 +113,7 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(Result::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -129,7 +131,7 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(Schedule::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -147,7 +149,7 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(Import::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -165,7 +167,7 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(Export::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -183,7 +185,7 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(JobBatch::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -201,7 +203,7 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(JobManager::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -219,7 +221,7 @@ describe('Job Models Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(FailedJob::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 });

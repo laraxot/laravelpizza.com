@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Datas;
+
 use Modules\Notify\Datas\SmsData;
 
 describe('SmsData', function () {

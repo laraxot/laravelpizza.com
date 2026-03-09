@@ -12,7 +12,7 @@ use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * Modello per i comuni italiani con Sushi.
- * 
+ *
  * Implementa il pattern Facade per fornire un'interfaccia unificata a tutti i dati geografici:
  * regioni, province, città, CAP, codici ISTAT, ecc.
  * Tutti i dati sono estratti da file JSON e gestiti tramite Sushi.
@@ -36,6 +36,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null                  $updated_by
  * @property ProfileContract|null         $creator
  * @property ProfileContract|null         $updater
+ *
  * @method static Builder<static>|Comune newModelQuery()
  * @method static Builder<static>|Comune newQuery()
  * @method static Builder<static>|Comune query()
@@ -56,21 +57,26 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Comune whereUpdatedAt($value)
  * @method static Builder<static>|Comune whereUpdatedBy($value)
  * @method static Builder<static>|Comune whereZona($value)
+ *
  * @property ProfileContract|null $deleter
+ *
  * @method static ComuneFactory factory($count = null, $state = [])
- * @property int|null $altitudine
+ *
+ * @property int|null    $altitudine
  * @property string|null $codice_catastale
- * @property float|null $lat
- * @property float|null $lng
+ * @property float|null  $lat
+ * @property float|null  $lng
  * @property string|null $sigla_provincia
- * @property float|null $superficie
+ * @property float|null  $superficie
  * @property string|null $zona_altimetrica
+ *
  * @method static Builder<static>|Comune whereAltitudine($value)
  * @method static Builder<static>|Comune whereLat($value)
  * @method static Builder<static>|Comune whereLng($value)
  * @method static Builder<static>|Comune whereSiglaProvincia($value)
  * @method static Builder<static>|Comune whereSuperficie($value)
  * @method static Builder<static>|Comune whereZonaAltimetrica($value)
+ *
  * @mixin \Eloquent
  */
 class Comune extends BaseModel

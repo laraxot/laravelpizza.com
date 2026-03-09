@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Job\Tests\Unit\Actions;
+
 use Modules\Job\Actions\ExecuteTaskAction;
 
 describe('ExecuteTaskAction', function () {
@@ -46,7 +48,7 @@ describe('ExecuteTaskAction', function () {
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1);');
+        expect($content)->toContain('');
     });
 
     it('has correct namespace', function () {

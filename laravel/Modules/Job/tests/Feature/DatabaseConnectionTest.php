@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Job\Tests\Feature;
+
 uses(\Modules\Job\Tests\TestCase::class);
 
 test('default database connection is configured', function () {

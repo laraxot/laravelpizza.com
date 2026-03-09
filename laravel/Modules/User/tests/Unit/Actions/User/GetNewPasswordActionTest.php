@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Unit\Actions\User;
+
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Actions\User\GetNewPasswordAction;
 use Modules\User\Models\User;

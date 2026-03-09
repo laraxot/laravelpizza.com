@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Cms\Tests\Unit;
+
 use function Pest\Laravel\get;
 
 use Tests\TestCase;

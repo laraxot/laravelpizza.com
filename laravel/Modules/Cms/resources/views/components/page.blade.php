@@ -8,14 +8,17 @@ declare(strict_types=1);
     'blocks' => [],
     'side' => 'content',
     'slug' => '',
-    'page' => null
+    'page' => null,
+    'data' => [],
+    'container0' => '',
+    'slug0' => '',
 ])
 
 @if(!empty($blocks))
     <div class="page-{{ $side }}-content" data-slug="{{ $slug }}" data-side="{{ $side }}">
         @foreach($blocks as $block)
             {{-- BlockData ha già gestito tutto: vista, dati, fallback --}}
-            @include($block->view, $block->data)
+            @include($block->view, array_merge($data, $block->data))
         @endforeach
     </div>
 @endif

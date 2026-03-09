@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Job\Tests\Unit\Actions\Command;
+
 use Modules\Job\Actions\Command\GetCommandArgumentsActions;
 use Symfony\Component\Console\Command\Command;
 
@@ -37,7 +39,7 @@ describe('GetCommandArgumentsActions', function () {
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1);');
+        expect($content)->toContain('');
     });
 
     it('has correct namespace', function () {

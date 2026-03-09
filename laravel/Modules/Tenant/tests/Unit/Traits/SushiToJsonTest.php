@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Tenant\Tests\Unit\Traits;
+
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;

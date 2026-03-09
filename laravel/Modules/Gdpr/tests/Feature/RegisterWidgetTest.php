@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Gdpr\Tests\Feature;
+
 use Illuminate\Support\Facades\Hash;
 use Modules\Gdpr\Actions\Consent\CollectGdprConsentsAction;
 use Modules\Gdpr\Actions\SaveGdprConsentsAction;

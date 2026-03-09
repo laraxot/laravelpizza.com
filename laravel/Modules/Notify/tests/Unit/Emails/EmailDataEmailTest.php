@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Emails;
+
 use Illuminate\Mail\Mailables\Address;
 use Modules\Notify\Datas\EmailData;
 use Modules\Notify\Emails\EmailDataEmail;

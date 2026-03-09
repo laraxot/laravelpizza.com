@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Unit\Models;
+
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Models\BaseUser;
 use Modules\User\Models\User;

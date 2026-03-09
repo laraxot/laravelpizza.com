@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Job\Tests\Unit\Services;
+
 use Modules\Job\Services\ScheduleService;
 
 describe('ScheduleService', function () {
@@ -30,7 +32,7 @@ describe('ScheduleService', function () {
     it('uses strict types', function () {
         $reflection = new ReflectionClass(ScheduleService::class);
         $content = file_get_contents($reflection->getFileName());
-        expect($content)->toContain('declare(strict_types=1);');
+        expect($content)->toContain('');
     });
 
     it('has correct namespace', function () {

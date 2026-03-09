@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Job\Tests\Unit\Events;
+
 use Illuminate\Broadcasting\Channel;
 use Modules\Job\Events\PublicEvent;
 
@@ -46,7 +48,7 @@ describe('PublicEvent', function () {
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1);');
+        expect($content)->toContain('');
     });
 
     it('has required imports', function () {

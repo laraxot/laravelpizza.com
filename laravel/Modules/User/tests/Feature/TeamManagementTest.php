@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Feature;
+
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Notification;
 use Modules\User\Models\Team;

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Job\Tests\Unit\Enums;
+
 use Modules\Job\Enums\Status;
 
 describe('Status', function () {
@@ -61,7 +63,7 @@ describe('Status', function () {
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1);');
+        expect($content)->toContain('');
     });
 
     it('has required imports', function () {

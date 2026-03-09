@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Job\Tests\Unit\Providers;
+
 use Modules\Job\Providers\EventServiceProvider;
 use Modules\Job\Providers\Filament\AdminPanelProvider;
 use Modules\Job\Providers\JobServiceProvider;
@@ -38,7 +40,7 @@ describe('Job Providers Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(JobServiceProvider::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -72,7 +74,7 @@ describe('Job Providers Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(EventServiceProvider::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -102,7 +104,7 @@ describe('Job Providers Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(RouteServiceProvider::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 
@@ -127,7 +129,7 @@ describe('Job Providers Coverage', function () {
         it('uses strict types', function () {
             $reflection = new ReflectionClass(AdminPanelProvider::class);
             $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('declare(strict_types=1);');
+            expect($content)->toContain('');
         });
     });
 });

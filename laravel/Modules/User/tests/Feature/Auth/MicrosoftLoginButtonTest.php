@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Feature\Auth;
+
 use Modules\User\Filament\Widgets\Auth\SocialLoginWidget;
 use Modules\Xot\Tests\TestCase;
 

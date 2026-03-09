@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Unit\Filament\Widgets;
+
 use Modules\User\Filament\Widgets\EditUserWidget;
 use Modules\User\Tests\TestCase;
 

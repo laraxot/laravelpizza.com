@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Filament\Pages;
+
 use Modules\Notify\Filament\Pages\SettingPage;
 use Modules\Notify\Tests\TestCase;
 use Filament\Widgets\WidgetConfiguration;

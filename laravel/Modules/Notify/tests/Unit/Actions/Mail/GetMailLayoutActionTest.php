@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Notify\Tests\Unit\Actions\Mail;
+
 use Modules\Notify\Actions\Mail\GetMailLayoutAction;
 use Spatie\QueueableAction\QueueableAction;
 

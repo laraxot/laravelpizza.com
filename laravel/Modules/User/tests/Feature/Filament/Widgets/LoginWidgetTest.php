@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Feature\Filament\Widgets;
+
 use Filament\Schemas\Schema;
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Filament\Widgets\LoginWidget;

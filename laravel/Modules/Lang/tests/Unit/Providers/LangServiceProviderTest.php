@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Lang\Tests\Unit\Providers;
+
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Lang;

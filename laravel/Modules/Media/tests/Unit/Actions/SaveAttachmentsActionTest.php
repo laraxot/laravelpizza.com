@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Media\Tests\Unit\Actions;
+
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\SaveAttachmentsAction;
 use Modules\Media\Models\Media;

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Gdpr\Tests\Feature;
+
 use Modules\Gdpr\Tests\TestCase;
 
 uses(TestCase::class);

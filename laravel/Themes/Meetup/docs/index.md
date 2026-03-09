@@ -6,6 +6,7 @@ The Meetup theme is a premium, multi-language responsive theme designed for the 
 ## Docs-First Governance
 - Before editing any code that touches the public theme, study and improve this theme documentation and the related module documentation first.
 - After local docs updates, align global `docs/rules`, `docs/memory`, `docs/skills` and evaluate whether the work should be tracked on GitHub Issues/Discussions.
+- After editing PHP files in the theme or in related backend modules, apply the post-edit quality gate: `phpstan`, `phpmd`, `phpinsights`, plus the relevant Pest test when the changed behavior is testable.
 
 ## Key Features
 - **Multi-Language Support**: Italian (primary), English, German, French, Spanish, Russian

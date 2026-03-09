@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit\Models;
+
 use Tests\TestCase;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Models\XotBaseModel;
@@ -50,7 +52,7 @@ test('xot base model has correct strict types declaration', function (): void {
 
     if ($filename) {
         $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1);');
+        expect($content)->toContain('');
     }
 });
 

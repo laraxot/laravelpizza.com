@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 namespace Modules\Xot\Tests\Feature;
 
 use Illuminate\Support\Facades\File;
@@ -61,7 +60,7 @@ class FixStructureTest extends TestCase
     {
         // Creiamo una struttura di directory di test
         mkdir($this->testDir . '/Actions', 0o755, true);
-        file_put_contents($this->testDir . '/Actions/test.php', '<?php echo "test";');
+        file_put_contents($this->testDir . '/Actions/test.php', 'echo "test";');
 
         // Copiamo lo script nella directory di test
         $script = base_path('../bashscripts/fix_structure.sh');
@@ -83,7 +82,7 @@ class FixStructureTest extends TestCase
     {
         // Creiamo una struttura di directory di test
         mkdir($this->testDir . '/Config', 0o755, true);
-        file_put_contents($this->testDir . '/Config/test.php', '<?php echo "test";');
+        file_put_contents($this->testDir . '/Config/test.php', 'echo "test";');
 
         // Copiamo lo script nella directory di test
         $script = base_path('../bashscripts/fix_structure.sh');
@@ -105,10 +104,10 @@ class FixStructureTest extends TestCase
     {
         // Creiamo una struttura di directory di test con entrambe le versioni
         mkdir($this->testDir . '/Config', 0o755, true);
-        file_put_contents($this->testDir . '/Config/main.php', '<?php echo "main";');
+        file_put_contents($this->testDir . '/Config/main.php', 'echo "main";');
 
         mkdir($this->testDir . '/config', 0o755, true);
-        file_put_contents($this->testDir . '/config/secondary.php', '<?php echo "secondary";');
+        file_put_contents($this->testDir . '/config/secondary.php', 'echo "secondary";');
 
         // Copiamo lo script nella directory di test
         $script = base_path('../bashscripts/fix_structure.sh');

@@ -17,6 +17,8 @@ Usare questa skill prima di qualunque modifica al codice in moduli/temi.
 6. Valutare aggiornamento/creazione GitHub Issue e GitHub Discussion per tracciare decisioni e avanzamento.
 7. Solo dopo modificare codice.
 8. Se il problema nasce da un refactor che ha rimosso API usate ancora a runtime, studiare il contratto via `git log`/`git show` e reintrodurre wrapper compatibili minimi nel codice corrente, senza restore di file storici.
+9. Se il file toccato e' un block CMS tema, verificare prima se viene montato come componente o incluso via `@include`; documentare esplicitamente il contratto runtime reale.
+10. Dopo ogni modifica a file PHP, eseguire i quality gate post-edit (`phpstan`, `phpmd`, `phpinsights`) e valutare il test Pest associato.
 
 ## Checklist minima
 
@@ -31,3 +33,6 @@ Usare questa skill prima di qualunque modifica al codice in moduli/temi.
 - [ ] Se tocchi migration che estendono `XotBaseMigration`: verificato che `tableCreate()` non sia avvolto da guard ridondanti su `tableExists()`
 - [ ] Nessun file markdown nuovo/rinominato contiene date nel filename (regola: mai date nei nomi `.md`)
 - [ ] Se hai studiato codice rimosso con git, hai documentato il contratto legacy e hai evitato restore wholesale dei file storici
+- [ ] Se tocchi un block CMS incluso da `x-page`, hai escluso `@props(...)`, `$this->...` e `wire:*` salvo mount esplicito come componente
+- [ ] Se hai toccato un file PHP, hai eseguito `phpstan`, `phpmd`, `phpinsights`
+- [ ] Se il file PHP e' testabile, hai cercato/creato/aggiornato ed eseguito il test Pest associato

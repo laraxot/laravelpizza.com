@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Feature;
+
 use Illuminate\Database\QueryException;
 use Modules\Xot\Models\Module;
 use Modules\Xot\Tests\TestCase;

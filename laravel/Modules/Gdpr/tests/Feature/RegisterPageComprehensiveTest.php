@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Gdpr\Tests\Feature;
+
 /**
  * Comprehensive Registration Page Tests.
  *

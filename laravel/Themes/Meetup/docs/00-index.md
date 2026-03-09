@@ -103,6 +103,7 @@
 - [Root Cause Found](root-cause-found.md) - Root cause analysis
 - [Missing View Fix Plan](missing-view-fix-plan.md) - Missing view fixes
 - [Missing Layout Section Fix Plan](missing-layout-section-fix-plan.md) - Layout fixes
+- [Livewire Property event not found](troubleshooting/livewire-property-event-not-found.md) - Fix per blocchi CMS inclusi via `@include`
 - [Troubleshooting Directory](troubleshooting/) - Detailed troubleshooting guides
 
 ## Dependency Intelligence

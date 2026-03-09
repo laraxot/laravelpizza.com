@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit\Actions\Array;
+
 use Modules\Xot\Actions\Array\SaveJsonArrayAction;
 
 beforeEach(function (): void {)

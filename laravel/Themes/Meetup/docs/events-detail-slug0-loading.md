@@ -2,9 +2,9 @@
 
 ## 🎯 Principio: Caricamento Automatico Modello da Slug
 
-Il componente `events/detail.blade.php` è un **Plain Blade Component** (NON Volt, NON Livewire) che carica automaticamente l'evento dallo slug nell'URL.
+Il componente `events/detail.blade.php` è una **plain Blade view inclusa dal CMS** (NON Volt, NON Livewire, NON anonymous component Blade) e nel path standard `/it/events/{slug}` deve ricevere l'evento gia' risolto dal route layer.
 
-## ✅ Pattern Corretto: Plain Blade
+## ✅ Pattern Corretto: Route Resolver + Include-Safe Plain Blade
 
 ```php
 <?php
@@ -16,20 +16,22 @@ declare(strict_types=1);
  * Carica l'evento dallo slug nell'URL
  */
 
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Request;
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Modules\Cms\Actions\ResolvePageAction;
 use Modules\Meetup\Models\Event;
 
-// Carica l'evento dallo slug
-$slug0 = $slug0 ?? '';
-$slugToUse = $slug0;
-if (empty($slugToUse)) {
-    $slugToUse = Request::segment(3);
-}
-$event = null;
-if (!empty($slugToUse)) {
-    $event = Event::where('slug', $slugToUse)->first();
+$container0 = (string) request()->route('container0', '');
+$slug0 = (string) request()->route('slug0', '');
+
+$resolved = app(ResolvePageAction::class)->execute($container0, $slug0);
+
+$data = [
+    'container0' => $container0,
+    'slug0' => $slug0,
+];
+
+if ($resolved->item instanceof Event) {
+    $data['item'] = $resolved->item;
+    $data['event'] = $resolved->item;
 }
 
 // Variabili per il template
@@ -55,23 +57,25 @@ $currentAttendees = $event?->attendees_count ?? 0;
    a) Cerca JSON con slug esatto: 'events.laravel-beginners-pizza-night' → non trovato
    b) Cerca JSON con slug generico: 'events.view' → trovato ✅
    ↓
-5. Page Component: <x-page side="content" slug="events.view" :data="[container0 => events, slug0 => laravel-beginners-pizza-night]" />
+5. Route Resolver nel Folio page plain Blade: `ResolvePageAction::execute('events', 'laravel-beginners-pizza-night')`
+   - risolve `item` come `Modules\Meetup\Models\Event`
+   - mantiene `pageSlug = events.view`
    ↓
-6. JSON Lookup: Page::firstWhere('slug', 'events.view')
+6. Page Component: `<x-page side="content" slug="events.view" :data="[container0 => events, slug0 => laravel-beginners-pizza-night, item => Event]" />`
    ↓
-7. JSON File: events_view.json
+7. JSON Lookup: Page::firstWhere('slug', 'events.view')
    ↓
-8. Content Blocks: Carica blocchi dal JSON (view: 'pub_theme::components.blocks.events.detail')
+8. JSON File: events_view.json
    ↓
-9. Block Rendering: page-content.blade.php fa array_merge($block->data, $this->data)
+9. Content Blocks: Carica blocchi dal JSON (view: 'pub_theme::components.blocks.events.detail')
    ↓
-10. Component Include: @include('pub_theme::components.blocks.events.detail', merged_data)
+10. Block Rendering: page-content.blade.php fa array_merge($block->data, $this->data)
     ↓
-11. Component Props: $slug0 = 'laravel-beginners-pizza-night' (da $data passato da Page)
+11. Component Include: @include('pub_theme::components.blocks.events.detail', merged_data)
     ↓
-12. Model Loading: Event::where('slug', $slug0)->first() (nel componente events/detail.blade.php)
+12. Variabili PHP semplici: `$event`, `$item`, `$slug0`
     ↓
-13. Rendering: Component renderizza con dati Event caricato
+13. Rendering: il block presenta l'evento senza query DB nel Blade
 ```
 
 ## 📝 Pattern JSON per Event Detail
@@ -95,26 +99,28 @@ Il JSON content block referenzia solo la view, SENZA logica:
 }
 ```
 
-**Il componente `events/detail.blade.php` carica autonomamente l'evento dallo slug** - non serve passare dati aggiuntivi nel JSON.
+**Il componente `events/detail.blade.php` non deve fare query al DB nel percorso standard del dettaglio**: l'evento va risolto una sola volta nel route layer e passato a `x-page`.
 
 ## ✅ Vantaggi
 
-1. **Semplicità**: Il componente è auto-sufficiente
-2. **Agnostico**: Funziona con qualsiasi slug passato dalla route
-3. **DRY**: Nessuna logica duplicata nel JSON
-4. **Manutenibile**: Logica centralizzata nel componente
+1. **KISS**: il block resta presenter puro
+2. **DRY**: la risoluzione del modello resta in `ResolvePageAction`
+3. **Robustezza**: niente query fragile nel Blade
+4. **Manutenibile**: route layer decide il dato, block decide il rendering
 
 ## 🔴 MAI Fare
 
 ❌ Non usare Volt/Livewire nei block components
 ❌ Non usare `wire:` directives nei block components  
+❌ Non usare `@props([...])` in una view renderizzata via `@include`
+❌ Non fare query `Event::query()->where('slug', ...)` nel block di dettaglio standard
 ❌ Non passare dati complessi nel JSON block
 
 ## ✅ Best Practices
 
 1. **Blade Puro** per block components (rendering)
-2. **Filament Widgets** per interattività server-side
-3. **Volt** solo nelle routing pages (`[container0]/[slug0]/index.blade.php`)
+2. **ResolvePageAction** nel route layer per i dettagli dinamici
+3. **Filament Widgets** per interattività server-side
 
 ## 🔗 Riferimenti
 

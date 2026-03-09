@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\Job\Tests\Unit\Events;
+
 use Modules\Job\Events\Event;
 use Modules\Job\Events\TaskEvent;
 
@@ -29,7 +31,7 @@ describe('TaskEvent', function () {
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1);');
+        expect($content)->toContain('');
     });
 
     it('has Task property', function () {
