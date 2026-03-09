@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Feature;
 
-/**
+/*
  * Form Validation Tests for Registration.
  *
  * Tests form validation for registration including:

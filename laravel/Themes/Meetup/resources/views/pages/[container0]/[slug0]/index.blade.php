@@ -20,6 +20,10 @@ new class extends Component
 
     public string $pageSlug = '';
 
+    public ?object $item = null;
+
+    public ?Event $event = null;
+
     public array $data = [];
 
     public function mount(ResolvePageAction $resolvePageAction, string $container0, string $slug0): void
@@ -27,26 +31,22 @@ new class extends Component
         $this->container0 = $container0;
         $this->slug0 = $slug0;
         $this->pageSlug = $this->container0.'.view';
-        $this->data = [
-            'container0' => $this->container0,
-            'slug0' => $this->slug0,
-            'item' => null,
-            'event' => null,
-        ];
 
         $resolved = $resolvePageAction->execute($this->container0, $this->slug0);
 
-        if ($resolved->pageSlug !== '') {
-            $this->pageSlug = $resolved->pageSlug;
+        $this->pageSlug = $resolved->pageSlug;
+        $this->item = $resolved->item;
+
+        if ($this->item instanceof Event) {
+            $this->event = $this->item;
         }
 
-        if ($resolved->item !== null) {
-            $this->data['item'] = $resolved->item;
-
-            if ($resolved->item instanceof Event) {
-                $this->data['event'] = $resolved->item;
-            }
-        }
+        $this->data = [
+            'container0' => $this->container0,
+            'slug0' => $this->slug0,
+            'item' => $this->item,
+            'event' => $this->event,
+        ];
     }
 };
 ?>
@@ -55,8 +55,8 @@ new class extends Component
     @volt('container0.view')
         <x-page
             side="content"
-            :slug="$this->pageSlug"
-            :data="$this->data"
+            :slug="$pageSlug"
+            :data="$data"
         />
     @endvolt
 </x-layouts.app>
