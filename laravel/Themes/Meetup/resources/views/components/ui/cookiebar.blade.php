@@ -25,7 +25,7 @@
     'message' => 'Questo sito utilizza cookie tecnici e di terze parti per migliorare la tua esperienza di navigazione. Continuando la navigazione accetti l\'utilizzo dei cookie.',
     'acceptText' => 'Accetta',
     'declineText' => 'Rifiuta',
-    'policyUrl' => '/privacy-policy',
+    'policyUrl' => '/privacy',
     'policyText' => 'Privacy Policy',
     'showDecline' => true,
     'position' => 'bottom', // 'top', 'bottom'

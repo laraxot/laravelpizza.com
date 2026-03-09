@@ -10,8 +10,6 @@ declare(strict_types=1);
     'slug' => '',
     'page' => null,
     'data' => [],
-    'container0' => '',
-    'slug0' => '',
 ])
 
 @if(!empty($blocks))

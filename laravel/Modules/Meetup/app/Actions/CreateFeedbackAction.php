@@ -11,6 +11,9 @@ class CreateFeedbackAction
 {
     use QueueableAction;
 
+    /**
+     * @param array<string, mixed> $data
+     */
     public function execute(array $data): Feedback
     {
         return Feedback::create($data);

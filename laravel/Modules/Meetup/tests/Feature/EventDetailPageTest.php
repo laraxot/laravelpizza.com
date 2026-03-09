@@ -56,9 +56,11 @@ test(
             ->assertSee('Vedi sulla mappa')
             ->assertSee('Nessun partecipante confermato per ora')
             ->assertSee('Iscrizione online in arrivo')
+            ->assertSee('Ci sono ancora molti posti disponibili')
             ->assertDontSee('Undefined variable $pageSlug')
             ->assertDontSee('Nessun evento trovato')
             ->assertDontSee('Conferma prenotazione')
+            ->assertDontSee('Posti in esaurimento!')
             ->assertDontSee('URL Copied!');
     }
 );

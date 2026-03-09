@@ -4,13 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Cms\View\Components;
 
+use Exception;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\View\Component;
 use Modules\Cms\Datas\BlockData;
 use Modules\Cms\Models\Page as PageModel;
 use Spatie\LaravelData\DataCollection;
 
-class Page extends Component
+/**
+ * @SuppressWarnings("PHPMD.StaticAccess")
+ */
+final class Page extends Component
 {
     public string $side;
 
@@ -19,40 +23,25 @@ class Page extends Component
     /** @var DataCollection<BlockData>|array */
     public DataCollection|array $blocks;
 
+    /** @var array<string, mixed> */
     public array $data = [];
 
-    public string $container0 = '';
-
-    public string $slug0 = '';
-
-    public function __construct(string $side, string $slug, ?string $type = null, array $data = [], string $container0 = '', string $slug0 = '')
-    {
+    /**
+     * @param  array<string, mixed>  $data
+     */
+    public function __construct(
+        string $side,
+        string $slug,
+        ?string $type = null,
+        array $data = []
+    ) {
         $this->side = $side;
-        if (null !== $type) {
+        if ($type !== null) {
             $slug = $type.'-'.$slug;
         }
         $this->slug = $slug;
-
-        // Estrai container0 e slug0 dai dati se non forniti direttamente
-        // Questo garantisce che siano disponibili sia come props che nell'array data
-        if ('' === $container0 && isset($data['container0']) && is_string($data['container0'])) {
-            $container0 = $data['container0'];
-        }
-        if ('' === $slug0 && isset($data['slug0']) && is_string($data['slug0'])) {
-            $slug0 = $data['slug0'];
-        }
-
-        // Assicuriamoci che siano presenti anche nell'array data per il passaggio ai blocchi
-        if ('' !== $container0 && ! isset($data['container0'])) {
-            $data['container0'] = $container0;
-        }
-        if ('' !== $slug0 && ! isset($data['slug0'])) {
-            $data['slug0'] = $slug0;
-        }
-
         $this->data = $data;
-        $this->container0 = $container0;
-        $this->slug0 = $slug0;
+
         $this->blocks = PageModel::getBlocksBySlug($slug, $side);
     }
 
@@ -62,19 +51,18 @@ class Page extends Component
     public function render(): ViewContract
     {
         $view = 'cms::components.page';
-        $view_params = [
+        $viewParams = [
+            ...$this->data,
             'blocks' => $this->blocks,
             'side' => $this->side,
             'slug' => $this->slug,
             'data' => $this->data,
-            'container0' => $this->container0,
-            'slug0' => $this->slug0,
         ];
         // @phpstan-ignore-next-line
         if (! view()->exists($view)) {
-            throw new \Exception('view not found: '.$view);
+            throw new Exception('view not found: '.$view);
         }
 
-        return view($view, $view_params);
+        return view($view, $viewParams);
     }
 }

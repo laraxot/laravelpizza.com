@@ -1,0 +1,168 @@
+{
+    "id": "privacy",
+    "title": {
+        "it": "Privacy Policy - Laravel Pizza",
+        "en": "Privacy Policy - Laravel Pizza"
+    },
+    "slug": "privacy",
+    "middleware": null,
+    "content": null,
+    "content_blocks": {
+        "it": [
+            {
+                "type": "legal",
+                "slug": "privacy-policy-article",
+                "data": {
+                    "view": "pub_theme::components.blocks.legal.article",
+                    "title": "Privacy Policy",
+                    "subtitle": "Come trattiamo i dati personali raccolti tramite il sito, gli eventi e i moduli di contatto di Laravel Pizza.",
+                    "description": "Questa informativa riassume le categorie di dati trattati, le finalita principali, i tempi di conservazione e i riferimenti utili per esercitare i tuoi diritti.",
+                    "last_updated": "Ultimo aggiornamento: 9 marzo 2026",
+                    "sections": [
+                        {
+                            "title": "Titolare del trattamento",
+                            "paragraphs": [
+                                "Laravel Pizza gestisce i dati raccolti tramite il sito web e le interazioni collegate alla community, inclusi contatti, registrazioni agli eventi e comunicazioni operative.",
+                                "Per richieste relative alla privacy puoi usare i contatti indicati in questa pagina."
+                            ]
+                        },
+                        {
+                            "title": "Dati che possiamo raccogliere",
+                            "items": [
+                                "Dati di contatto come nome, email e informazioni inserite nei form.",
+                                "Dati tecnici necessari al funzionamento del sito, come log applicativi e informazioni di sessione.",
+                                "Dati legati alla partecipazione agli eventi, come iscrizioni, preferenze organizzative o richieste inviate allo staff."
+                            ]
+                        },
+                        {
+                            "title": "Finalita del trattamento",
+                            "items": [
+                                "Rispondere ai messaggi inviati tramite i form del sito.",
+                                "Gestire registrazioni, comunicazioni e aggiornamenti sugli eventi.",
+                                "Mantenere sicurezza, integrita e continuita operativa del servizio.",
+                                "Adempiere a obblighi di legge o richieste dell'autorita competente."
+                            ]
+                        },
+                        {
+                            "title": "Base giuridica",
+                            "paragraphs": [
+                                "Il trattamento puo basarsi sull'esecuzione di misure precontrattuali o contrattuali, sull'adempimento di obblighi legali, sul legittimo interesse organizzativo e, dove richiesto, sul consenso espresso dall'utente."
+                            ]
+                        },
+                        {
+                            "title": "Conservazione dei dati",
+                            "paragraphs": [
+                                "Conserviamo i dati per il tempo necessario a fornire il servizio richiesto, gestire gli eventi, risolvere eventuali contestazioni e adempiere agli obblighi normativi applicabili."
+                            ]
+                        },
+                        {
+                            "title": "Diritti dell'interessato",
+                            "items": [
+                                "Richiedere accesso, rettifica o aggiornamento dei dati.",
+                                "Chiedere cancellazione o limitazione del trattamento nei casi previsti dalla legge.",
+                                "Opporsi al trattamento quando applicabile.",
+                                "Richiedere chiarimenti sui dati condivisi con terze parti o fornitori tecnici."
+                            ]
+                        }
+                    ],
+                    "contacts": [
+                        {
+                            "label": "Email generale",
+                            "value": "info@laravelpizza.com",
+                            "url": "mailto:info@laravelpizza.com"
+                        },
+                        {
+                            "label": "Privacy",
+                            "value": "privacy@laravelpizza.com",
+                            "url": "mailto:privacy@laravelpizza.com"
+                        }
+                    ]
+                }
+            }
+        ],
+        "en": [
+            {
+                "type": "legal",
+                "slug": "privacy-policy-article",
+                "data": {
+                    "view": "pub_theme::components.blocks.legal.article",
+                    "title": "Privacy Policy",
+                    "subtitle": "How Laravel Pizza handles personal data collected through the website, events and contact forms.",
+                    "description": "This page summarizes the main data categories, purposes, retention windows and contact details for privacy requests.",
+                    "last_updated": "Last updated: March 9, 2026",
+                    "sections": [
+                        {
+                            "title": "Data controller",
+                            "paragraphs": [
+                                "Laravel Pizza handles the data collected through the website and related community interactions, including contact requests, event registrations and operational communications.",
+                                "For privacy-related requests, use the contact details listed on this page."
+                            ]
+                        },
+                        {
+                            "title": "Data we may collect",
+                            "items": [
+                                "Contact details such as name, email and information submitted through forms.",
+                                "Technical data required for website operation, including application logs and session information.",
+                                "Event-related data such as registrations, organizational preferences or requests sent to the team."
+                            ]
+                        },
+                        {
+                            "title": "Purposes of processing",
+                            "items": [
+                                "Reply to messages sent through the website forms.",
+                                "Manage registrations, communications and event updates.",
+                                "Maintain security, integrity and service continuity.",
+                                "Comply with legal obligations or lawful authority requests."
+                            ]
+                        },
+                        {
+                            "title": "Legal basis",
+                            "paragraphs": [
+                                "Processing may rely on pre-contractual or contractual measures, legal obligations, legitimate operational interest and, where required, the user's consent."
+                            ]
+                        },
+                        {
+                            "title": "Data retention",
+                            "paragraphs": [
+                                "We retain data for the time needed to provide the requested service, manage events, handle disputes and comply with applicable legal obligations."
+                            ]
+                        },
+                        {
+                            "title": "Your rights",
+                            "items": [
+                                "Request access, correction or update of your data.",
+                                "Request deletion or restriction where allowed by law.",
+                                "Object to processing when applicable.",
+                                "Ask for clarifications about data shared with third-party service providers."
+                            ]
+                        }
+                    ],
+                    "contacts": [
+                        {
+                            "label": "General email",
+                            "value": "info@laravelpizza.com",
+                            "url": "mailto:info@laravelpizza.com"
+                        },
+                        {
+                            "label": "Privacy",
+                            "value": "privacy@laravelpizza.com",
+                            "url": "mailto:privacy@laravelpizza.com"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "sidebar_blocks": {
+        "it": [],
+        "en": []
+    },
+    "footer_blocks": {
+        "it": [],
+        "en": []
+    },
+    "created_at": "2026-03-09T16:10:00.000000Z",
+    "updated_at": "2026-03-09T16:10:00.000000Z",
+    "created_by": null,
+    "updated_by": null
+}

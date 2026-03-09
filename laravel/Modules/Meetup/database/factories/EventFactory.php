@@ -199,5 +199,38 @@ class EventFactory extends Factory
             'event_status' => EventStatus::CANCELLED,
         ]);
     }
+
+    /**
+     * State: nearly full event.
+     */
+    public function nearlyFull(): static
+    {
+        return $this->state(fn (array $attributes): array => [
+            'attendees_count' => 95,
+            'max_attendees' => 100,
+        ]);
+    }
+
+    /**
+     * State: fully booked event.
+     */
+    public function fullyBooked(): static
+    {
+        return $this->state(fn (array $attributes): array => [
+            'attendees_count' => 100,
+            'max_attendees' => 100,
+        ]);
+    }
+
+    /**
+     * State: with venue.
+     */
+    public function withVenue(\Modules\Meetup\Models\Venue $venue): static
+    {
+        return $this->state(fn (array $attributes): array => [
+            'location' => $venue->name,
+            'location_id' => $venue->id,
+        ]);
+    }
 }
 

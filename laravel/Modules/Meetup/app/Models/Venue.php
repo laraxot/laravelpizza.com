@@ -72,4 +72,54 @@ class Venue extends BaseModel
     {
         return $this->hasMany(Event::class, 'location_id', 'id');
     }
+
+    /**
+     * Generate Schema.org Place JSON-LD structured data.
+     *
+     * @see https://schema.org/Place
+     *
+     * @return array<string, mixed>
+     */
+    public function toSchemaOrg(): array
+    {
+        $data = [
+            '@type' => 'Place',
+            'name' => $this->name,
+        ];
+
+        if ($this->address !== null || $this->city !== null || $this->country !== null) {
+            $data['address'] = array_filter([
+                '@type' => 'PostalAddress',
+                'streetAddress' => $this->address,
+                'addressLocality' => $this->city,
+                'addressCountry' => $this->country,
+            ]);
+        }
+
+        if ($this->latitude !== null && $this->longitude !== null) {
+            $data['geo'] = [
+                '@type' => 'GeoCoordinates',
+                'latitude' => $this->latitude,
+                'longitude' => $this->longitude,
+            ];
+        }
+
+        if ($this->capacity !== null) {
+            $data['maximumAttendeeCapacity'] = $this->capacity;
+        }
+
+        if ($this->phone !== null) {
+            $data['telephone'] = $this->phone;
+        }
+
+        if ($this->website !== null) {
+            $data['url'] = $this->website;
+        }
+
+        if ($this->description !== null) {
+            $data['description'] = $this->description;
+        }
+
+        return $data;
+    }
 }

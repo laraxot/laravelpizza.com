@@ -28,6 +28,7 @@
     $attendeesCount = (int) ($eventModel->attendees_count ?? 0);
     $maxAttendees = (int) ($eventModel->max_attendees ?? 100);
     $availableSpots = max(0, $maxAttendees - $attendeesCount);
+    $lowSpotsThreshold = max(5, (int) ceil($maxAttendees * 0.15));
 
     $socialShareData = ($eventModel && method_exists($eventModel, 'getSocialShareData'))
         ? $eventModel->getSocialShareData()
@@ -323,7 +324,15 @@
                                     </div>
                                 @endif
 
-                                <p class="mt-4 text-center text-xs text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.messages.spots_filling_fast.label') }}</p>
+                                <p class="mt-4 text-center text-xs text-slate-500 dark:text-slate-400">
+                                    @if($availableSpots === 0)
+                                        {{ __('pub_theme::event.messages.sold_out.label') }}
+                                    @elseif($availableSpots <= $lowSpotsThreshold)
+                                        {{ __('pub_theme::event.messages.spots_filling_fast.label') }}
+                                    @else
+                                        {{ __('pub_theme::event.messages.spots_available_regular.label') }}
+                                    @endif
+                                </p>
                             </div>
                         @endif
 

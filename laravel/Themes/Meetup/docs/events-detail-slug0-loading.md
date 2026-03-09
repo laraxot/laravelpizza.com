@@ -78,6 +78,14 @@ $currentAttendees = $event?->attendees_count ?? 0;
 13. Rendering: il block presenta l'evento senza query DB nel Blade
 ```
 
+## Regola su `x-page`
+
+`x-page` non deve avere props dedicate per `container0` o `slug0`.
+
+Questi valori fanno parte del contesto route e devono vivere in `data`, insieme a eventuali livelli successivi (`container1`, `slug1`, ...).
+
+Questo mantiene il componente CMS generico e riusabile anche se il routing futuro aggiunge piu' segmenti dinamici.
+
 ## 📝 Pattern JSON per Event Detail
 
 Il JSON content block referenzia solo la view, SENZA logica:

@@ -31,6 +31,27 @@ This JSON-driven page creation strategy is integral to the project's architectur
 2.  **Ensure Generic Folio Page Exists:** Verify that `Themes/Meetup/resources/views/pages/[slug].blade.php` is configured to render dynamic pages.
 3.  **Create Block Components:** Ensure all `data.view` paths referenced in `about.json` correspond to existing (or newly created) Blade component files (e.g., `pub_theme::components.blocks.text.basic` would map to `Themes/Meetup/resources/views/components/blocks/text/basic.blade.php`).
 
+## Legal pages are mandatory JSON pages
+
+For Laravel Pizza, at minimum these slugs must exist in:
+
+`/var/www/_bases/base_laravelpizza/laravel/config/local/laravelpizza/database/content/pages/`
+
+- `privacy.json` with slug `privacy`
+- `terms.json` with slug `terms`
+
+These are not optional placeholders:
+
+- footer links and auth/GDPR flows depend on them;
+- `/it/privacy` and `/it/terms` must resolve through the generic Folio slug page;
+- missing JSON files for legal pages are a production content defect.
+
+## Runtime-safe block choice
+
+When a page is rendered through CMS JSON blocks, prefer include-safe Blade views already compatible with `@include(...)`.
+
+Avoid relying on anonymous-component-only semantics unless the block is confirmed runtime-safe for the CMS page renderer.
+
 ## Affected Files (Context)
 
 *   `Themes/Meetup/resources/views/pages/[slug].blade.php` (generic renderer)

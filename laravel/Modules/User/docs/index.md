@@ -51,6 +51,7 @@ This document serves as the central index for the User module, providing guidanc
 - [Profile Management](./profile_management.md)
 - [Routing Best Practices](./routing_best_practices.md)
 - [Session Management](./session_management.md)
+- [Passport OAuth Wrapper Conformance](./passport-oauth-wrapper-conformance.md)
 
 ## Sottocartelle
 

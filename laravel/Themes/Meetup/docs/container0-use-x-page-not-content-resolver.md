@@ -125,6 +125,7 @@ Con `content-resolver`:
 2. **NON usare `content-resolver`**: Contiene logica specifica, viola agnosticismo
 3. **JSON definisce tutto**: Il JSON (`events.view.json`) definisce quale componente renderizzare
 4. **Routing solo dispatcher**: Il routing passa solo parametri, non decide cosa fare
+5. **Contesto solo in `$data`**: `container0`, `slug0` e segmenti futuri (`container1`, `slug1`, ...) non vanno passati come props dedicate a `<x-page>`.
 
 ## 🔗 Riferimenti
 

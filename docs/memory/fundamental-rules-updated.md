@@ -9,17 +9,18 @@
 
 ### 🚨 REGOLA #1: RELAZIONI LARAVEL
 
-**MAI VIOLARE**: `belongsToMany()` → **SEMPRE USARE `belongsToManyX()`!**
+**MAI VIOLARE**: nei modelli applicativi `belongsToManyX()` e' la convenzione corretta.
 
 **PERCHÉ?**
-- `belongsToMany()` con default genera **JOIN** quando manca record in pivot
-- `belongsToManyX()` con default **NON genera JOIN** → collection vuota!
+- `belongsToManyX()` riflette la convenzione RelationX del progetto
+- evita di reintrodurre configurazione Laravel standard dove il progetto usa un layer architetturale proprio
+- mantiene coerenza tra moduli, pivot e basi multi-tenant / multi-db
 
-**CONSEGUENZE CRITICHE**:
-- ❌ Crash in produzione se dati non esistono
-- ❌ Performance degradation (query N+1)
-- ❌ Dati inconsistenti e corrotti
-- ❌ Errori invisibili impossibili da debuggare
+**CONSEGUENZE CRITICHE se la ignoro**:
+- ❌ regole di progetto violate
+- ❌ documentazione e codice in conflitto
+- ❌ refactor incoerenti tra moduli
+- ❌ regressioni relazionali difficili da uniformare
 
 ---
 
@@ -138,7 +139,7 @@
 
 Prima di scrivere codice:
 
-- [ ] Sto usando `belongsToMany()` invece di `belongsToManyX()`?
+- [ ] Sto usando `belongsToManyX()` per le many-to-many applicative?
 - [ ] Ci sono SVG hardcoded nelle Blade?
 - [ ] La logica di tema è hardcoded o configurabile?
 - [ ] Ho PHPStan level 10 attivo?

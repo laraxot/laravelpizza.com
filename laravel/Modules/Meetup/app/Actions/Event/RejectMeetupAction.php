@@ -34,7 +34,10 @@ class RejectMeetupAction
 
             $event->save();
 
-            return $event->fresh();
+            $fresh = $event->fresh();
+            \Webmozart\Assert\Assert::isInstanceOf($fresh, Event::class);
+
+            return $fresh;
         });
     }
 }

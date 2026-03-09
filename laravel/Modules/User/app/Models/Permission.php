@@ -44,9 +44,9 @@ use Spatie\Permission\Models\Permission as SpatiePermission;
  * @method static static                     firstOrCreate(array $attributes, array $values = [])
  * @method static static                     updateOrCreate(array $attributes, array $values = [])
  *
- * @property \Modules\Meetup\Models\Profile|null $creator
- * @property \Modules\Meetup\Models\Profile|null $deleter
- * @property \Modules\Meetup\Models\Profile|null $updater
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
  * @method static \Modules\User\Database\Factories\PermissionFactory factory($count = null, $state = [])
  *

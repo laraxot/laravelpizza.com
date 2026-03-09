@@ -30,6 +30,8 @@ new class extends Component
         $this->data = [
             'container0' => $this->container0,
             'slug0' => $this->slug0,
+            'item' => null,
+            'event' => null,
         ];
 
         $resolved = $resolvePageAction->execute($this->container0, $this->slug0);

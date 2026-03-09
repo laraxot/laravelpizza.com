@@ -1,10 +1,12 @@
 # Event Model - Schema.org Implementation
 
+> Stato reale: implementazione baseline presente, ma non sufficiente da sola per dichiarare copertura completa `schema.org/Event`. Vedi anche `schema-org-model-governance.md`.
+
 ## Overview
 
 The Event model in LaravelPizza is designed to be fully compliant with **Schema.org/Event** for SEO optimization. This enables rich snippets in search results and better visibility on Google Events.
 
-## Schema.org Compliance
+## Current Baseline
 
 ### Properties Implemented
 

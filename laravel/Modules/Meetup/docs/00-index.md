@@ -4,6 +4,8 @@
 
 - [Composer Packages Study](../../../../docs/architecture/composer-packages-study.md) - Analisi completa pacchetti e blast radius runtime.
 - [Riferimento pacchetti](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - `saade/filament-fullcalendar` per calendario eventi
+- [belongsToManyX Relationship Rule](belongstomanyx-relationship-rule.md) - Convenzione canonica per relazioni many-to-many del dominio Meetup
+- [Schema.org Page Type Governance](schema-org-page-type-governance.md) - Distinzione tra entita' di dominio e tipo pagina (`WebPage`, `ProfilePage`, `ItemPage`, `CollectionPage`)
 - [Package Dependency Chaos Map](package-dependency-chaos-map.md) - Mappa pacchetti critici e failure modes del modulo.
 - [Critical Rules Consolidated](critical-rules-consolidated.md) - Essential rules for Meetup module
 - [Chaos Monkey Readiness](chaos-monkey-readiness.md) - Diagnosi e recovery rapida su rotture randomizzate del modulo.

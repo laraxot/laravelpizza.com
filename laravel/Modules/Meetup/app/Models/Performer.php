@@ -66,7 +66,7 @@ class Performer extends BaseModel
     /**
      * Get events where this performer is scheduled.
      *
-     * @return BelongsToMany<Event>
+     * @return BelongsToMany<Event, EventPerformer>
      */
     public function events(): BelongsToMany
     {
@@ -84,5 +84,60 @@ class Performer extends BaseModel
     public function scopeByType(Builder $query, string $type): Builder
     {
         return $query->where('type', $type);
+    }
+
+    /**
+     * Generate Schema.org Person JSON-LD structured data.
+     *
+     * @see https://schema.org/Person
+     *
+     * @return array<string, mixed>
+     */
+    public function toSchemaOrg(): array
+    {
+        $data = [
+            '@type' => 'Person',
+            'name' => $this->name,
+        ];
+
+        if ($this->bio !== null) {
+            $data['description'] = $this->bio;
+        }
+
+        if ($this->photo !== null) {
+            $data['image'] = asset($this->photo);
+        }
+
+        if ($this->website !== null) {
+            $data['url'] = $this->website;
+        }
+
+        if ($this->email !== null) {
+            $data['email'] = $this->email;
+        }
+
+        if ($this->company !== null) {
+            $data['affiliation'] = [
+                '@type' => 'Organization',
+                'name' => $this->company,
+            ];
+        }
+
+        if ($this->type !== null) {
+            $data['jobTitle'] = $this->type;
+        }
+
+        // Social links as sameAs
+        $sameAs = array_values(array_filter([
+            $this->twitter,
+            $this->linkedin,
+            $this->github,
+        ]));
+
+        if ($sameAs !== []) {
+            $data['sameAs'] = $sameAs;
+        }
+
+        return $data;
     }
 }

@@ -76,6 +76,16 @@ For `pub_theme::components.blocks.events.detail`:
 - Pest test: `Modules/Meetup/tests/Feature/EventDetailPageTest.php` passes
 - phpinsights on test file: passing (`98.8%` style score)
 
+## Page-specific UX verification (2026-03-09)
+
+Target page: `/it/events/id-id-quidem-quae-eveniet-Jy1p`
+
+- confirmed attendee empty state text is explicit and localized
+- confirmed availability message is coherent for high availability
+- confirmed social share copy feedback is localized (`Link copiato`)
+- confirmed legacy fake booking confirmation text is not shown
+- Pest coverage includes these assertions in `Modules/Meetup/tests/Feature/EventDetailPageTest.php`
+
 ## UX improvement target for real event pages
 
 The real page `/it/events/id-id-quidem-quae-eveniet-Jy1p` should help the user answer:

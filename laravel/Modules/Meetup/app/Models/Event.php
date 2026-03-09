@@ -17,7 +17,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 
 /**
  * Modules\Meetup\Models\Event.
- * 
+ *
  * Schema.org Event implementation with structured data support.
  *
  * @property int $id
@@ -49,6 +49,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @property-read \Modules\Xot\Contracts\UserContract|null $owner
  * @property-read \Modules\Xot\Contracts\UserContract|null $organizer
+ *
  * @method static Builder<Event> newModelQuery()
  * @method static Builder<Event> newQuery()
  * @method static Builder<Event> query()
@@ -56,7 +57,9 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder<Event> past()
  * @method static Builder<Event> bySlug(string $slug)
  * @method static Builder<Event> dateRange(Carbon $startDate, Carbon $endDate)
+ *
  * @see https://schema.org/Event
+ *
  * @property string|null $alternate_name
  * @property string|null $door_time
  * @property int $is_accessible_for_free
@@ -78,6 +81,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property-read int|null $snapshots_count
  * @property-read \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection<\Modules\Activity\Models\StoredEvent> $storedEvents
  * @property-read int|null $stored_events_count
+ *
  * @method static \Modules\Meetup\Database\Factories\EventFactory factory($count = null, $state = [])
  * @method static Builder<static>|Event whereAlternateName($value)
  * @method static Builder<static>|Event whereAttendeesCount($value)
@@ -119,6 +123,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder<static>|Event whereUpdatedBy($value)
  * @method static Builder<static>|Event whereUrl($value)
  * @method static Builder<static>|Event whereUserId($value)
+ *
  * @mixin \Eloquent
  */
 class Event extends BaseModel
@@ -193,6 +198,31 @@ class Event extends BaseModel
     public function organizer(): BelongsTo
     {
         return $this->belongsTo(User::class, 'organizer_id', 'id');
+    }
+
+    public function attendees(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
+        return $this->belongsToManyX(User::class, 'event_user')
+            ->withTimestamps()
+            ->using(EventUser::class);
+    }
+
+    public function isPending(): bool
+    {
+        return $this->status === 'draft';
+    }
+
+    public function isFull(): bool
+    {
+        return $this->attendees_count >= $this->max_attendees;
+    }
+
+    public function isUserRegistered(string|int $userId): bool
+    {
+        return EventUser::query()
+            ->where('event_id', $this->id)
+            ->where('user_id', $userId)
+            ->exists();
     }
 
     /**
@@ -286,7 +316,39 @@ class Event extends BaseModel
     }
 
     /**
+     * Get the venue for this event.
+     *
+     * @return BelongsTo<Venue, $this>
+     */
+    public function venue(): BelongsTo
+    {
+        return $this->belongsTo(Venue::class, 'location_id', 'id');
+    }
+
+    /**
+     * Get performers for this event.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<Performer, $this>
+     */
+    public function performers(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
+        return $this->belongsToManyX(Performer::class);
+    }
+
+    /**
+     * Get sponsors for this event.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<Sponsor, $this>
+     */
+    public function sponsors(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
+        return $this->belongsToManyX(Sponsor::class);
+    }
+
+    /**
      * Generate Schema.org Event JSON-LD structured data.
+     *
+     * @see https://schema.org/Event
      *
      * @return array<string, mixed>
      */
@@ -303,12 +365,20 @@ class Event extends BaseModel
             'endDate' => $endDate->toIso8601String(),
             'eventStatus' => $this->event_status->toSchemaOrgUri(),
             'eventAttendanceMode' => $this->event_attendance_mode->toSchemaOrgUri(),
-            'location' => [
+            'url' => LaravelLocalization::localizeUrl('/events/'.($this->slug ?? '')),
+            'maximumAttendeeCapacity' => $this->max_attendees,
+            'remainingAttendeeCapacity' => $this->max_attendees - $this->attendees_count,
+        ];
+
+        // Location: use Venue model if available, otherwise text
+        if ($this->location_id !== null && $this->venue !== null) {
+            $data['location'] = $this->venue->toSchemaOrg();
+        } else {
+            $data['location'] = [
                 '@type' => 'Place',
                 'name' => $this->location,
-            ],
-            'url' => LaravelLocalization::localizeUrl('/events/'.($this->slug ?? '')),
-        ];
+            ];
+        }
 
         if ($this->description !== null) {
             $data['description'] = $this->description;
@@ -338,10 +408,62 @@ class Event extends BaseModel
             $data['duration'] = $this->duration;
         }
 
-        $data['maximumAttendeeCapacity'] = $this->max_attendees;
+        if ($this->alternate_name !== null) {
+            $data['alternateName'] = $this->alternate_name;
+        }
+
+        if ($this->door_time !== null) {
+            $data['doorTime'] = $this->door_time;
+        }
+
+        $data['isAccessibleForFree'] = (bool) $this->is_accessible_for_free;
+
+        if ($this->keywords !== null) {
+            $data['keywords'] = $this->keywords;
+        }
+
+        if ($this->typical_age_range !== null) {
+            $data['typicalAgeRange'] = $this->typical_age_range;
+        }
+
+        if ($this->audience !== null) {
+            $data['audience'] = [
+                '@type' => 'Audience',
+                'audienceType' => $this->audience,
+            ];
+        }
+
+        if ($this->previous_start_date !== null) {
+            $data['previousStartDate'] = $this->previous_start_date;
+        }
+
+        // Performers
+        if ($this->relationLoaded('performers') && $this->performers->isNotEmpty()) {
+            $data['performer'] = $this->performers
+                ->map(fn (Performer $p): array => $p->toSchemaOrg())
+                ->values()
+                ->all();
+        }
+
+        // Sponsors
+        if ($this->relationLoaded('sponsors') && $this->sponsors->isNotEmpty()) {
+            $data['sponsor'] = $this->sponsors
+                ->map(fn (Sponsor $s): array => $s->toSchemaOrg())
+                ->values()
+                ->all();
+        }
+
+        // SuperEvent (series)
+        if ($this->super_event_id !== null) {
+            $data['superEvent'] = [
+                '@type' => 'Event',
+                '@id' => (string) $this->super_event_id,
+            ];
+        }
 
         return $data;
     }
+
     /**
      * Get social share data for this event.
      */

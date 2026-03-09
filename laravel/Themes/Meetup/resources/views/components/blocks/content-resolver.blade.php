@@ -20,7 +20,7 @@
 
 {{-- Render CMS page content --}}
 @elseif($pageSlug)
-    <x-page side="content" :slug="$pageSlug" :container0="$container0" :slug0="$slug0" />
+    <x-page side="content" :slug="$pageSlug" :data="['container0' => $container0, 'slug0' => $slug0]" />
 
 {{-- Nothing found --}}
 @else

@@ -66,4 +66,45 @@ class Sponsor extends BaseModel
     {
         return $this->belongsToManyX(Event::class, 'event_sponsor')->withTimestamps();
     }
+
+    /**
+     * Generate Schema.org Organization JSON-LD structured data.
+     *
+     * @see https://schema.org/Organization
+     *
+     * @return array<string, mixed>
+     */
+    public function toSchemaOrg(): array
+    {
+        $data = [
+            '@type' => 'Organization',
+            'name' => $this->name,
+        ];
+
+        if ($this->website !== null) {
+            $data['url'] = $this->website;
+        }
+
+        if ($this->logo !== null) {
+            $data['logo'] = asset($this->logo);
+        }
+
+        if ($this->description !== null) {
+            $data['description'] = $this->description;
+        }
+
+        if ($this->email !== null) {
+            $data['email'] = $this->email;
+        }
+
+        if ($this->contact_person !== null) {
+            $data['contactPoint'] = [
+                '@type' => 'ContactPoint',
+                'contactType' => 'sponsor contact',
+                'name' => $this->contact_person,
+            ];
+        }
+
+        return $data;
+    }
 }

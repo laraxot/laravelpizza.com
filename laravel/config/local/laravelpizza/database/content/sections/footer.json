@@ -110,11 +110,11 @@
           "legal_links": [
             {
               "label": "Privacy Policy",
-              "url": "/it/pages/privacy"
+              "url": "/it/privacy"
             },
             {
               "label": "Termini e Condizioni",
-              "url": "/it/pages/terms"
+              "url": "/it/terms"
             }
           ]
         }

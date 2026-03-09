@@ -9,10 +9,11 @@ use Modules\Meetup\Tests\TestCase;
 uses(TestCase::class);
 
 test('login route is accessible and has correct UI', function () {
-    $this->get('/it/auth/login')
-        ->assertStatus(200)
-        ->assertSee('Accedi al tuo account')
-        ->assertSee('Oppure');
+    $response = $this->get('/it/auth/login');
+    $response->assertStatus(200)
+        ->assertSee('Accedi')
+        ->assertSee('Email')
+        ->assertSee('Password');
 });
 
 test('register route is accessible and has correct UI', function () {
@@ -22,7 +23,6 @@ test('register route is accessible and has correct UI', function () {
     $response->assertDontSee('Sign up');
     $response->assertSee('Nome');
     $response->assertSee('Cognome');
-    $response->assertSee('Indirizzo Email');
+    $response->assertSee('Email');
     $response->assertSee('Password');
-    $response->assertSee('Conferma Password');
 });

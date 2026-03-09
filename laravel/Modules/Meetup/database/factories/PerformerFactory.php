@@ -34,9 +34,9 @@ class PerformerFactory extends Factory
             'website' => $this->faker->url(),
             'email' => $this->faker->unique()->safeEmail(),
             'company' => $this->faker->company(),
-            'twitter' => '@'.$this->faker->username(),
-            'linkedin' => $this->faker->username(),
-            'github' => $this->faker->username(),
+            'twitter' => '@'.((string) $this->faker->userName()),
+            'linkedin' => $this->faker->userName(),
+            'github' => $this->faker->userName(),
             'meta_data' => [
                 'verified' => $this->faker->boolean(),
                 'rating' => $this->faker->randomFloat(2, 0, 5),

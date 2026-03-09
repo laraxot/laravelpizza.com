@@ -88,3 +88,4 @@ laravel/Modules/*/docs/archive/
 *.log
 .venv/
 laravel/coverage-xot/
+.pdepend/
