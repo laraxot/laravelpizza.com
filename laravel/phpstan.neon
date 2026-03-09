@@ -39,7 +39,6 @@ parameters:
         - ./*/*.blade.php
         - ./Modules/*/packages/*
         - ./Modules/Xot/*
-        - ./Modules/User/app/Providers/PassportServiceProvider.php
 
     bootstrapFiles:
         # - ./phpstan_bootstrap.php
@@ -48,7 +47,6 @@ parameters:
 
     scanFiles:
         - ./Modules/Xot/Helpers/Helper.php
-        - ./phpstan-stubs/firebase-notify.stub.php
 
     editorUrl: 'vscode://file/%%file%%:%%line%%'
     tmpDir: /tmp/phpstan

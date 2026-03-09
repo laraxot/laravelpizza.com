@@ -50,4 +50,4 @@ Il componente Section è un elemento strutturale che permette di organizzare il 
 ## Collegamenti
 - [Documentazione Componenti](./readme.md)
 - [Documentazione Blocchi](../blocks/readme.md)
-- [Convenzioni Layout](../../../docs/laravel-conventions.md)
+- [Convenzioni Layout](../../../../docs/laravel-conventions.md)

@@ -140,6 +140,6 @@ class ListOauthClients extends XotBaseListRecords
 
 ---
 
-**
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.1
 **Status**: ✅ Pattern implementato, verificato e completato

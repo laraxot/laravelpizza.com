@@ -28,10 +28,10 @@ abstract class BaseGeoService
     protected function getApiKey(): string
     {
         /** @var string|null $apiKey */
-        $apiKey = config("geo.api_keys.{$this->getServiceName());
+        $apiKey = config("geo.api_keys.{$this->getServiceName()}");
 
         if (empty($apiKey)) {
-            throw new \RuntimeException("API key non configurata per {$this->getServiceName());
+            throw new \RuntimeException("API key non configurata per {$this->getServiceName()}");
         }
 
         return $apiKey;
@@ -63,8 +63,8 @@ abstract class BaseGeoService
 
         // Rate limiting
         /** @var int $maxAttempts */
-        $maxAttempts = config("geo.rate_limits.{$this->getServiceName());
-        RateLimiter::attempt($getServiceName());
+        $maxAttempts = config("geo.rate_limits.{$this->getServiceName()}.requests_per_second", 50);
+        RateLimiter::attempt($this->getServiceName(), $maxAttempts, fn () => true);
 
         try {
             $client = $this->buildHttpClient();
@@ -74,7 +74,7 @@ abstract class BaseGeoService
             $response = $client->{$methodLower}($url, $params);
 
             if (! $response->successful()) {
-                throw new \RuntimeException("Richiesta fallita a {$this->getServiceName());
+                throw new \RuntimeException("Richiesta fallita a {$this->getServiceName()}: ".(string) $response->status());
             }
 
             $data = $response->json();
@@ -96,7 +96,7 @@ abstract class BaseGeoService
 
             return $validatedData;
         } catch (\Throwable $e) {
-            throw new \RuntimeException("Errore durante la richiesta a {$this->getServiceName());
+            throw new \RuntimeException("Errore durante la richiesta a {$this->getServiceName()}: ".$e->getMessage(), 0, $e);
         }
     }
 
@@ -114,7 +114,7 @@ abstract class BaseGeoService
         /** @var array<string> $whenTypes */
         $whenTypes = config('geo.http_client.retry.when', []);
 
-        return Http::timeout($timeout)->retry($retryTimes, $retrySleep, function (\Throwable $exception) use ($whenTypes): bool {)
+        return Http::timeout($timeout)->retry($retryTimes, $retrySleep, function (\Throwable $exception) use ($whenTypes): bool {
             foreach ($whenTypes as $type) {
                 if (is_a($exception, "\\GuzzleHttp\\Exception\\{$type}")) {
                     return true;
@@ -138,6 +138,6 @@ abstract class BaseGeoService
         $prefix = config('geo.cache.prefix', 'geo_');
         $hash = md5($method.$url.serialize($params));
 
-        return "{$prefix}{$this->getServiceName();
+        return "{$prefix}{$this->getServiceName()}_{$hash}";
     }
 }

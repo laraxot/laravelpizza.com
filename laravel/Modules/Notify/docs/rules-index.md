@@ -30,9 +30,3 @@ This file documents the rules and standards specific to the Notify module.
 ## Related Documentation
 - [README](./readme.md)
 - [phpstan](./phpstan.md)
-
-## Pre-Edit Rule Link
-
-- [Pre-Edit Docs-First Rule](../../../../docs/rules/pre-edit-docs-first-rule.md)
-- [Pre-Edit Docs-First Memory](../../../../docs/memory/pre-edit-docs-first-memory.md)
-- [Pre-Edit Docs-First Skill](../../../../docs/skills/pre-edit-docs-first-skill.md)

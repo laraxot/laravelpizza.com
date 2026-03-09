@@ -90,7 +90,7 @@ return [
     'subtitle_start' => 'Or',
     'subtitle_link' => 'create a new account',
     'page' => [
-        'title' => 'Welcome to <nome progetto>! 🍕',
+        'title' => 'Welcome to LaravelPizza! 🍕',
         'subtitle' => 'Join the community of developers and pizza lovers',
     ],
     'already_registered' => 'Don\'t have an account yet?',

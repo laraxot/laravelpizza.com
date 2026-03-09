@@ -20,11 +20,9 @@ use Laravel\Passport\DeviceCode as PassportDeviceCode;
  * @property Carbon|null $expires_at
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- *
  * @method static Builder|OauthDeviceCode newModelQuery()
  * @method static Builder|OauthDeviceCode newQuery()
  * @method static Builder|OauthDeviceCode query()
- *
  * @mixin \Eloquent
  */
 class OauthDeviceCode extends PassportDeviceCode

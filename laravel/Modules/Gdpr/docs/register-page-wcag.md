@@ -195,7 +195,7 @@ a:focus-visible {
 #### Page Titles
 ```html
 <!-- Unique and descriptive page titles -->
-<title>{{ __('gdpr::register.meta.title') }} - <nome progetto></title>
+<title>{{ __('gdpr::register.meta.title') }} - LaravelPizza</title>
 ```
 
 ## Understandable

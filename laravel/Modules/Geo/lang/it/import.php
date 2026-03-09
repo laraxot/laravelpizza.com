@@ -131,7 +131,7 @@ return [
     ],
     'delimiters' => [
         'comma' => 'Virgola (,]',
-        'semicolon' => 'Punto e virgola ();]',
+        'semicolon' => 'Punto e virgola (;]',
         'tab' => 'Tab',
         'pipe' => 'Pipe (|]',
         'space' => 'Spazio',

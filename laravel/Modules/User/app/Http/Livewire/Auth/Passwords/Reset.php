@@ -35,8 +35,8 @@ class Reset extends Component
     public function mount(string $token): void
     {
         Assert::string($email = request()->query('email', ''));
-        $email = $email;
-        $token = $token;
+        $this->email = $email;
+        $this->token = $token;
     }
 
     /**
@@ -52,11 +52,11 @@ class Reset extends Component
             'password' => ['required', 'same:passwordConfirmation', PasswordRule::defaults()],
         ], $messages);
 
-        $response = $this->broker(
+        $response = $this->broker()->reset(
             [
-                'token' => $token,
-                'email' => $email,
-                'password' => $password,
+                'token' => $this->token,
+                'email' => $this->email,
+                'password' => $this->password,
             ],
             function (Authenticatable $user, string $password): void {
                 /* @var Model&Authenticatable $user */
@@ -66,7 +66,7 @@ class Reset extends Component
 
                 event(new PasswordReset($user));
 
-                $this->guard();
+                $this->guard()->login($user);
             },
         );
 

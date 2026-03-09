@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-return array ()
+return array (
   'actions' => 
-  array ()
+  array (
     'profile' => 
-    array ()
+    array (
       'label' => 'profile',
       'icon' => 'profile',
       'tooltip' => 'profile',
     ),
   ),
   'navigation' => 
-  array ()
+  array (
     'label' => 'Missing Navigation Label',
     'plural_label' => 'Missing Navigation Plural Label',
     'group' => 'Missing Group',
@@ -23,6 +23,6 @@ return array ()
   'label' => 'Missing Label',
   'plural_label' => 'Missing Plural label',
   'fields' => 
-  array ()
+  array (
   ),
 );

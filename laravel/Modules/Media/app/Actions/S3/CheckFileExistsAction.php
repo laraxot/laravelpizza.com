@@ -14,22 +14,22 @@ class CheckFileExistsAction extends BaseS3Action
     public function execute(string $key): bool
     {
         try {
-            $s3Client->headObject([
-                'Bucket' => $bucketName,
+            $this->s3Client->headObject([
+                'Bucket' => $this->bucketName,
                 'Key' => $key,
             ]);
 
-            $logger->info('File existence check completed', ['key' => $key, 'exists' => true]);
+            $this->logger->info('File existence check completed', ['key' => $key, 'exists' => true]);
 
             return true;
         } catch (S3Exception $exception) {
             if ($exception->getStatusCode() === 404) {
-                $logger->info('File existence check completed', ['key' => $key, 'exists' => false]);
+                $this->logger->info('File existence check completed', ['key' => $key, 'exists' => false]);
 
                 return false;
             }
 
-            $logger->error('Error checking file existence in S3', [
+            $this->logger->error('Error checking file existence in S3', [
                 'key' => $key,
                 'error' => $exception->getMessage(),
                 'trace' => $exception->getTraceAsString(),

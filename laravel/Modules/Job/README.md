@@ -136,7 +136,11 @@ Filament Dashboard (9 Resource + 4 Widget)
 
 // Crea uno schedule
 Schedule::create([
+<<<<<<< .merge_file_vx6JlZ
     'command' => 'healthcare_app:generate-reports',
+=======
+    'command' => 'ptvx:generate-reports',
+>>>>>>> .merge_file_7og5Xt
     'frequency_id' => Frequency::DAILY,
     'parameters' => json_encode(['--tenant' => 'acme']),
     'is_active' => true,
@@ -188,7 +192,11 @@ FailedImportRow::create([
 ## Integrazione con altri moduli
 
 ```
+<<<<<<< .merge_file_vx6JlZ
 Job <── healthcare_app    (generazione PDF, export survey)
+=======
+Job <── ModuloEsempio    (generazione PDF, export survey)
+>>>>>>> .merge_file_7og5Xt
 Job <── Notify     (invio email/SMS massivo)
 Job <── Limesurvey (import/export risposte)
 Job <── Activity   (pulizia log, aggregazione)

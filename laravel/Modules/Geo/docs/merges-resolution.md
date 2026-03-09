@@ -1,7 +1,7 @@
 # Risoluzione Conflitti di Merge - Modulo Geo
 
 ## Panoramica
-
+Data: [DATE]
 Conflitti identificati: 34 file
 Strategia: DRY, KISS, analisi contestuale
 

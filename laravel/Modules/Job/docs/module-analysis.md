@@ -57,7 +57,11 @@ The Job module provides comprehensive queue and background job processing:
 - Advanced queue security features
 
 ## Integration with Other Modules
+<<<<<<< .merge_file_nbtz62
 - **healthcare_app**: Background PDF generation and report processing
+=======
+- **ModuloEsempio**: Background PDF generation and report processing
+>>>>>>> .merge_file_80EQrp
 - **Limesurvey**: Survey data processing jobs
 - **Notify**: Notification queue management
 - **Media**: Media processing jobs

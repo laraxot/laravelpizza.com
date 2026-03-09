@@ -195,4 +195,4 @@ Tutte le migliorie sono **retrocompatibili**:
 
 **Status**: 📝 **ROADMAP CREATA**
 
-**
+**Ultimo aggiornamento**: [DATE]

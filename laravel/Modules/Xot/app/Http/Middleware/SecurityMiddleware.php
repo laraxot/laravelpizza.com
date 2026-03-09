@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Http\Middleware;
 
+use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Symfony\Component\HttpFoundation\Response;
+use Webmozart\Assert\Assert;
 
 use function Safe\json_encode;
 use function Safe\preg_match;
-
-use Symfony\Component\HttpFoundation\Response;
-use Webmozart\Assert\Assert;
 
 /**
  * Middleware di sicurezza avanzato.
@@ -24,7 +24,7 @@ class SecurityMiddleware
     /**
      * Handle an incoming request.
      */
-    public function handle(Request $request, \Closure $next): Response
+    public function handle(Request $request, Closure $next): Response
     {
         // 1. Rate Limiting avanzato
         $this->applyAdvancedRateLimiting($request);
@@ -76,7 +76,7 @@ class SecurityMiddleware
         $current = (int) cache()->get($key, 0);
 
         if ($current >= $limit) {
-            Log::warning('Rate limit exceeded for IP', [)
+            Log::warning('Rate limit exceeded for IP', [
                 'ip' => $ip,
                 'endpoint' => $endpoint,
                 'current' => $current,
@@ -100,7 +100,7 @@ class SecurityMiddleware
         $current = (int) cache()->get($key, 0);
 
         if ($current >= $limit) {
-            Log::warning('Rate limit exceeded for User Agent', [)
+            Log::warning('Rate limit exceeded for User Agent', [
                 'user_agent' => $userAgent,
                 'endpoint' => $endpoint,
                 'current' => $current,
@@ -124,7 +124,7 @@ class SecurityMiddleware
         $current = (int) cache()->get($key, 0);
 
         if ($current >= $limit) {
-            Log::warning('Rate limit exceeded for endpoint', [)
+            Log::warning('Rate limit exceeded for endpoint', [
                 'endpoint' => $endpoint,
                 'ip' => $ip,
                 'current' => $current,
@@ -170,7 +170,7 @@ class SecurityMiddleware
         $response->headers->set('Content-Security-Policy', $csp);
 
         // Strict Transport Security
-        $response->headers->set('Strict-Transport-Security', 'max-age=31536000); includeSubDomains; preload');
+        $response->headers->set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
 
         // X-Frame-Options
         $response->headers->set('X-Frame-Options', 'DENY');
@@ -179,7 +179,7 @@ class SecurityMiddleware
         $response->headers->set('X-Content-Type-Options', 'nosniff');
 
         // X-XSS-Protection
-        $response->headers->set('X-XSS-Protection', '1); mode=block');
+        $response->headers->set('X-XSS-Protection', '1; mode=block');
 
         // Referrer Policy
         $response->headers->set('Referrer-Policy', 'strict-origin-when-cross-origin');
@@ -216,7 +216,7 @@ class SecurityMiddleware
             'block-all-mixed-content',
         ];
 
-        return implode('); ', $csp);
+        return implode('; ', $csp);
     }
 
     /**
@@ -273,12 +273,12 @@ class SecurityMiddleware
         ];
 
         // Log solo eventi sospetti
-        if ($isSuspiciousRequest($request, $response))
+        if ($this->isSuspiciousRequest($request, $response)) {
             Log::warning('Suspicious request detected', $securityData);
         }
 
         // Log tentativi di accesso falliti
-        if (401 === $response->getStatusCode() || 403 === $response->getStatusCode()) {
+        if ($response->getStatusCode() === 401 || $response->getStatusCode() === 403) {
             Log::warning('Failed access attempt', $securityData);
         }
 
@@ -298,10 +298,10 @@ class SecurityMiddleware
             '/\.\.\//',           // Directory traversal
             '/<script/i',         // XSS attempts
             '/union\s+select/i',  // SQL injection
-            '/eval\s*\(/i',       // Code injection)
+            '/eval\s*\(/i',       // Code injection
             '/base64_decode/i',   // PHP code injection
-            '/system\s*\(/i',     // Command injection)
-            '/exec\s*\(/i',       // Command injection)
+            '/system\s*\(/i',     // Command injection
+            '/exec\s*\(/i',       // Command injection
             '/shell_exec/i',      // Command injection
         ];
 
@@ -331,7 +331,7 @@ class SecurityMiddleware
         ];
 
         foreach ($suspiciousUserAgents as $suspicious) {
-            if (null !== $userAgent && false !== stripos($userAgent, $suspicious)) {
+            if ($userAgent !== null && stripos($userAgent, $suspicious) !== false) {
                 return true;
             }
         }
@@ -347,7 +347,7 @@ class SecurityMiddleware
         $inputs = $request->all();
 
         foreach ($inputs as $key => $value) {
-            if (null !== $value && is_string($value)) {
+            if ($value !== null && is_string($value)) {
                 $this->validateStringInput($key, $value);
             } elseif (is_array($value)) {
                 $this->validateArrayInput($key, $value);
@@ -362,7 +362,7 @@ class SecurityMiddleware
     {
         // Controlla lunghezza eccessiva
         if (strlen($value) > 10000) {
-            Log::warning('Suspicious input length', [)
+            Log::warning('Suspicious input length', [
                 'key' => $key,
                 'length' => strlen($value),
             ]);
@@ -378,7 +378,7 @@ class SecurityMiddleware
         }
 
         if ($suspiciousCount > 10) {
-            Log::warning('Suspicious input characters', [)
+            Log::warning('Suspicious input characters', [
                 'key' => $key,
                 'suspicious_count' => $suspiciousCount,
             ]);
@@ -391,17 +391,17 @@ class SecurityMiddleware
     private function validateArrayInput(string $key, array $value): void
     {
         // Controlla profondità array
-        if ($getArrayDepth($value))
-            Log::warning('Suspicious array depth', [)
+        if ($this->getArrayDepth($value) > 10) {
+            Log::warning('Suspicious array depth', [
                 'key' => $key,
-                'depth' => $this->getArrayDepth($value)
+                'depth' => $this->getArrayDepth($value),
             ]);
             abort(400, 'Array too deep');
         }
 
         // Controlla dimensione array
         if (count($value) > 1000) {
-            Log::warning('Suspicious array size', [)
+            Log::warning('Suspicious array size', [
                 'key' => $key,
                 'size' => count($value),
             ]);
@@ -418,7 +418,7 @@ class SecurityMiddleware
 
         foreach ($array as $value) {
             if (is_array($value)) {
-                $depth = $this->getArrayDepth($value);
+                $depth = $this->getArrayDepth($value) + 1;
                 if ($depth > $maxDepth) {
                     $maxDepth = $depth;
                 }
@@ -438,7 +438,7 @@ class SecurityMiddleware
             $token = $request->header('X-CSRF-TOKEN') ?: $request->input('_token');
 
             if (! $token || ! hash_equals(session()->token(), (string) $token)) {
-                Log::warning('CSRF token mismatch', [)
+                Log::warning('CSRF token mismatch', [
                     'ip' => $request->ip(),
                     'method' => $request->method(),
                     'url' => $request->fullUrl(),
@@ -455,7 +455,7 @@ class SecurityMiddleware
             $host = $request->getHost();
 
             if ($referer && ! str_starts_with($referer, $request->getSchemeAndHttpHost())) {
-                Log::warning('Suspicious referer', [)
+                Log::warning('Suspicious referer', [
                     'ip' => $request->ip(),
                     'referer' => $referer,
                     'host' => $host,

@@ -21,7 +21,6 @@ use Spatie\EventSourcing\Snapshots\EloquentSnapshot as SpatieSnapshot;
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
- *
  * @method static Builder<static>|Snapshot newModelQuery()
  * @method static Builder<static>|Snapshot newQuery()
  * @method static Builder<static>|Snapshot query()
@@ -35,7 +34,6 @@ use Spatie\EventSourcing\Snapshots\EloquentSnapshot as SpatieSnapshot;
  * @method static Builder<static>|Snapshot whereUpdatedAt($value)
  * @method static Builder<static>|Snapshot whereUpdatedBy($value)
  * @method static SnapshotFactory factory($count = null, $state = [])
- *
  * @mixin \Eloquent
  */
 class Snapshot extends SpatieSnapshot
@@ -44,22 +42,6 @@ class Snapshot extends SpatieSnapshot
 
     /** @var string */
     protected $connection = 'activity';
-
-    protected $table = 'snapshots';
-
-    /**
-     * @return string|null
-     */
-    public function getConnectionName()
-    {
-        if (app()->environment('testing')) {
-            $default = config('database.default');
-
-            return is_string($default) ? $default : 'mysql';
-        }
-
-        return $this->connection;
-    }
 
     /** @var list<string> */
     protected $fillable = ['id', 'aggregate_uuid', 'aggregate_version', 'state', 'created_at', 'updated_at'];

@@ -75,7 +75,7 @@ readonly class GetAddressFromBingMapsAction
      */
     private function makeApiRequest(string $address): string
     {
-        $response = $client->get(self::API_URL, [
+        $response = $this->client->get(self::API_URL, [
             'query' => [
                 'query' => $address,
                 'key' => config('services.bing.maps_api_key'),

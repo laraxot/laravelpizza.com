@@ -25,6 +25,6 @@ readonly class GetLocationFromIPAction
      */
     public function execute(string $ip): ?IPLocationData
     {
-        return $fetchIPLocationAction->execute($ip);
+        return $this->fetchIPLocationAction->execute($ip);
     }
 }

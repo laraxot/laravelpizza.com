@@ -20,7 +20,7 @@ final class AttachRoleAction extends AttachAction
         parent::setUp();
         $this->icon('heroicon-o-link')
             ->iconButton()
-            ->schema(static function (AttachAction $action) use ($xotData): array {)
+            ->schema(static function (AttachAction $action) use ($xotData): array {
                 return [
                     $action->getRecordSelect(),
                     Select::make('team_id')->options($xotData->getTeamClass()::get()->pluck('name', 'id')),

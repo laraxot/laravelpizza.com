@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Modules\Meetup\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Models\Event;
-use Modules\Meetup\Models\Venue;
 use Modules\User\Models\User;
 
 /**
@@ -31,115 +31,173 @@ class EventFactory extends Factory
      */
     public function definition(): array
     {
-        $title = $this->faker->sentence(4);
-        $startDate = $this->faker->dateTimeBetween('now', '+6 months');
-        $endDate = (clone $startDate)->modify('+'.rand(1, 4).' hours');
-        $user = User::factory()->create();
-
+        $title = $this->generateEventTitle();
+        $startDate = Carbon::now()->addDays($this->faker->numberBetween(1, 90));
+        $endDate = (clone $startDate)->addHours($this->faker->numberBetween(2, 4));
+        
         return [
             'title' => $title,
-            'slug' => Str::slug($title).'-'.Str::random(4),
-            'description' => $this->faker->paragraph(3),
-            'in_language' => 'it',
+            'slug' => Str::slug($title).'-'.Str::random(6),
+            'description' => $this->faker->paragraphs(3, true),
+            'in_language' => $this->faker->randomElement(['it', 'en']),
             'start_date' => $startDate,
             'end_date' => $endDate,
-            'location' => $this->faker->address(),
-            'location_id' => null,
-            'status' => 'published',
+            'duration' => 'PT'.$this->faker->numberBetween(2, 4).'H',
+            'location' => $this->generateLocation(),
+            'status' => $this->faker->randomElement(['draft', 'published', 'cancelled']),
             'event_status' => EventStatus::SCHEDULED,
-            'event_attendance_mode' => EventAttendanceMode::OFFLINE,
-            'attendees_count' => 0,
+            'event_attendance_mode' => $this->faker->randomElement([
+                EventAttendanceMode::OFFLINE,
+                EventAttendanceMode::ONLINE,
+                EventAttendanceMode::MIXED,
+            ]),
+            'attendees_count' => $this->faker->numberBetween(0, 50),
             'max_attendees' => $this->faker->numberBetween(50, 200),
-            'user_id' => $user->id,
-            'organizer_id' => User::factory()->create()->id,
-            'created_by' => $user->id,
-            'updated_by' => $user->id,
+            'cover_image' => $this->faker->optional()->imageUrl(1200, 630, 'tech', true),
+            'url' => $this->faker->optional()->url(),
+            'offers' => $this->generateOffers(),
+            'meta_data' => [
+                'difficulty' => $this->faker->randomElement(['beginner', 'intermediate', 'advanced']),
+                'topics' => $this->faker->randomElements(['Laravel', 'PHP', 'Vue.js', 'Livewire', 'Filament'], $this->faker->numberBetween(1, 3)),
+            ],
+            'is_accessible_for_free' => $this->faker->boolean(70),
+            'keywords' => $this->faker->words(5),
+            'typical_age_range' => '18-65',
+            'audience' => $this->faker->randomElement(['developers', 'designers', 'students', 'professionals']),
+            'registration_opens_at' => Carbon::now()->subDays($this->faker->numberBetween(7, 30)),
+            'schedule_timezone' => 'Europe/Rome',
+            'user_id' => User::factory(),
+            'organizer_id' => User::factory(),
         ];
     }
 
     /**
-     * Indicate that the event is past.
+     * Generate realistic event title.
      */
-    public function past(): static
+    protected function generateEventTitle(): string
     {
-        return $this->state(function (array $attributes): array {
-            $startDate = $this->faker->dateTimeBetween('-1 year', '-1 month');
-            $endDate = (clone $startDate)->modify('+'.rand(1, 4).' hours');
+        $topics = [
+            'Laravel Meetup',
+            'PHP Conference',
+            'Vue.js Workshop',
+            'Livewire Deep Dive',
+            'Filament Admin Panel',
+            'Laravel Best Practices',
+            'API Development',
+            'Testing Workshop',
+            'DevOps for Laravel',
+            'Database Optimization',
+        ];
 
-            return [
-                'start_date' => $startDate,
-                'end_date' => $endDate,
-                'event_status' => EventStatus::COMPLETED,
-            ];
-        });
+        $locations = ['Milano', 'Roma', 'Torino', 'Bologna', 'Firenze', 'Napoli'];
+        
+        return (string) $this->faker->randomElement($topics).' - '.(string) $this->faker->randomElement($locations);
     }
 
     /**
-     * Indicate that the event is upcoming.
+     * Generate realistic location.
+     */
+    protected function generateLocation(): string
+    {
+        $venues = [
+            'Impact Hub Milano',
+            'Talent Garden Roma',
+            'Toolbox Coworking Torino',
+            'Kilowatt Bologna',
+            'Impact Hub Firenze',
+            'Stazione Leopolda Firenze',
+        ];
+
+        return (string) $this->faker->randomElement($venues);
+    }
+
+    /**
+     * Generate offers data.
+     *
+     * @return array<int, array<string, mixed>>
+     */
+    protected function generateOffers(): array
+    {
+        if ($this->faker->boolean(30)) {
+            return [];
+        }
+
+        return [
+            [
+                '@type' => 'Offer',
+                'price' => $this->faker->randomElement(['0', '10', '25', '50']),
+                'priceCurrency' => 'EUR',
+                'availability' => 'https://schema.org/InStock',
+                'url' => $this->faker->url(),
+                'validFrom' => Carbon::now()->subDays(30)->toIso8601String(),
+            ],
+        ];
+    }
+
+    /**
+     * State: upcoming event.
      */
     public function upcoming(): static
     {
-        return $this->state(function (array $attributes): array {
-            $startDate = $this->faker->dateTimeBetween('+1 week', '+6 months');
-            $endDate = (clone $startDate)->modify('+'.rand(1, 4).' hours');
-
+        return $this->state(function (array $attributes) {
+            $startDate = Carbon::now()->addDays($this->faker->numberBetween(1, 90));
+            
             return [
                 'start_date' => $startDate,
-                'end_date' => $endDate,
-                'event_status' => EventStatus::SCHEDULED,
+                'end_date' => (clone $startDate)->addHours($this->faker->numberBetween(2, 4)),
+                'status' => 'published',
             ];
         });
     }
 
     /**
-     * Indicate that the event is online.
+     * State: past event.
+     */
+    public function past(): static
+    {
+        return $this->state(function (array $attributes) {
+            $startDate = Carbon::now()->subDays($this->faker->numberBetween(1, 365));
+            
+            return [
+                'start_date' => $startDate,
+                'end_date' => (clone $startDate)->addHours($this->faker->numberBetween(2, 4)),
+                'status' => 'published',
+            ];
+        });
+    }
+
+    /**
+     * State: online event.
      */
     public function online(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return $this->state(fn (array $attributes): array => [
             'event_attendance_mode' => EventAttendanceMode::ONLINE,
+            'location' => 'Online',
             'url' => $this->faker->url(),
         ]);
     }
 
     /**
-     * Assign a specific venue to the event.
+     * State: free event.
      */
-    public function withVenue(Venue $venue): static
+    public function free(): static
     {
-        return $this->state(fn (array $attributes) => [
-            'location_id' => $venue->id,
-            'location' => $venue->name.', '.$venue->address.', '.$venue->city,
+        return $this->state(fn (array $attributes): array => [
+            'is_accessible_for_free' => true,
+            'offers' => [],
         ]);
     }
 
     /**
-     * Indicate a nearly full event (for REGS-03 capacity testing).
+     * State: cancelled event.
      */
-    public function nearlyFull(): static
+    public function cancelled(): static
     {
-        return $this->state(function (array $attributes): array {
-            $max = $this->faker->numberBetween(20, 100);
-
-            return [
-                'max_attendees' => $max,
-                'attendees_count' => (int) ($max * 0.9),
-            ];
-        });
-    }
-
-    /**
-     * Indicate a fully booked event (for REGS-03 capacity testing).
-     */
-    public function fullyBooked(): static
-    {
-        return $this->state(function (array $attributes): array {
-            $max = $this->faker->numberBetween(20, 100);
-
-            return [
-                'max_attendees' => $max,
-                'attendees_count' => $max,
-            ];
-        });
+        return $this->state(fn (array $attributes): array => [
+            'status' => 'cancelled',
+            'event_status' => EventStatus::CANCELLED,
+        ]);
     }
 }
+

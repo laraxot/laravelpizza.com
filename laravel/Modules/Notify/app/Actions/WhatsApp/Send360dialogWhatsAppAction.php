@@ -36,15 +36,15 @@ final class Send360dialogWhatsAppAction
     {
         $apiKey = config('services.360dialog.api_key');
         if (! is_string($apiKey)) {
-            throw new Exception()
+            throw new Exception(
                 'put [360DIALOG_API_KEY] variable to your .env and config [services.360dialog.api_key]',
             );
         }
-        $apiKey = $apiKey;
+        $this->apiKey = $apiKey;
 
         // Parametri a livello di root
-        $debug = (bool);
-        $timeout = app(SafeIntCastAction::class)
+        $this->debug = (bool) config('whatsapp.debug', false);
+        $this->timeout = app(SafeIntCastAction::class)
             ->execute(config('whatsapp.timeout'), 30);
     }
 
@@ -58,15 +58,15 @@ final class Send360dialogWhatsAppAction
      */
     public function execute(WhatsAppData $whatsAppData): array
     {
-        $client = new Client([)
-            'timeout' => $timeout,
+        $client = new Client([
+            'timeout' => $this->timeout,
             'headers' => [
-                'D360-API-KEY' => $apiKey,
+                'D360-API-KEY' => $this->apiKey,
                 'Content-Type' => 'application/json',
             ],
         ]);
 
-        $endpoint = $baseUrl.'/messages';
+        $endpoint = $this->baseUrl.'/messages';
 
         $payload = [
             'to' => $whatsAppData->recipient,
@@ -94,7 +94,7 @@ final class Send360dialogWhatsAppAction
         }
 
         try {
-            $response = $client->post($endpoint, [)
+            $response = $client->post($endpoint, [
                 'json' => $payload,
             ]);
 
@@ -104,11 +104,11 @@ final class Send360dialogWhatsAppAction
             $responseData = json_decode($responseContent, true) ?: [];
 
             // Salva i dati della risposta nelle variabili dell'azione
-            $vars['status_code'] = $statusCode;
-            $vars['status_txt'] = $responseContent;
-            $vars['response_data'] = $responseData;
+            $this->vars['status_code'] = $statusCode;
+            $this->vars['status_txt'] = $responseContent;
+            $this->vars['response_data'] = $responseData;
 
-            Log::info('WhatsApp 360dialog inviato con successo', [)
+            Log::info('WhatsApp 360dialog inviato con successo', [
                 'to' => $whatsAppData->recipient,
                 'response_code' => $statusCode,
             ]);
@@ -126,7 +126,7 @@ final class Send360dialogWhatsAppAction
                 'success' => $statusCode >= 200 && $statusCode < 300,
                 'message_id' => $messageId,
                 'response' => $responseData,
-                'vars' => $vars,
+                'vars' => $this->vars,
             ];
         } catch (ClientException $e) {
             $response = $e->getResponse();
@@ -135,11 +135,11 @@ final class Send360dialogWhatsAppAction
             $responseBody = json_decode($response->getBody()->getContents(), true) ?: [];
 
             // Salva i dati dell'errore nelle variabili dell'azione
-            $vars['error_code'] = $statusCode;
-            $vars['error_message'] = $e->getMessage();
-            $vars['error_response'] = $responseBody;
+            $this->vars['error_code'] = $statusCode;
+            $this->vars['error_message'] = $e->getMessage();
+            $this->vars['error_response'] = $responseBody;
 
-            Log::warning('Errore invio WhatsApp 360dialog', [)
+            Log::warning('Errore invio WhatsApp 360dialog', [
                 'to' => $whatsAppData->recipient,
                 'status' => $statusCode,
                 'response' => $responseBody,
@@ -158,7 +158,7 @@ final class Send360dialogWhatsAppAction
                 'success' => false,
                 'error' => $errorMessage,
                 'status_code' => $statusCode,
-                'vars' => $vars,
+                'vars' => $this->vars,
             ];
         }
     }

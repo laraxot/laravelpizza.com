@@ -229,8 +229,8 @@ $resourceClass = XotData::make()->getUserResourceClassByType($type);
 - [Register Type Test Implementation](./register-type-test-implementation.md)
 
 ### **Documentazione Root**
-- [Testing Organization](../../../../docs/testing-organization.md)
-- [PestPHP Best Practices](../../../../docs/testing/pestphp-best-practices.md)
+- [Testing Organization](../../../../../docs/testing-organization.md)
+- [PestPHP Best Practices](../../../../../docs/testing/pestphp-best-practices.md)
 
 ### **Documentazione Moduli Correlati**
 - [User Module: RegistrationWidget](../../../user/docs/widgets/registration-widget.md)
@@ -250,6 +250,6 @@ L'implementazione del `RegisterTypeWidgetTest` è stata **completata con success
 Il modulo Cms ora ha una **strategia di testing solida** e **replicabile** per altri widget Filament.
 
 ---
-**
+**Ultimo aggiornamento**: Gennaio 2025
 **Status**: ✅ PRODUCTION READY
 **Performance**: 9 test / 4.44s / 100% pass rate

@@ -14,13 +14,13 @@ class EditNotificationTemplate extends XotBaseEditRecord
     /*
      * protected function getRedirectUrl(): string
      * {
-     * return $this->getResource();
+     * return $this->getResource()::getUrl('index');
      * }
      *
      * protected function mutateFormDataBeforeSave(array $data): array
      * {
      * // Crea una nuova versione del template
-     * $record->createNewVersion(
+     * $this->record->createNewVersion(
      * auth()->user()->name,
      * 'Modificato tramite interfaccia amministrativa'
      * );

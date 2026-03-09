@@ -121,6 +121,31 @@ ogni block component riceve `$data` con tutti i parametri definiti nel JSON.
 
 il namespace `pub_theme::` punta al tema pubblico configurato (in questo caso "Meetup").
 
+### regola importante per i tag blade
+
+Per i **view include** il path completo resta:
+
+```blade
+@include('pub_theme::components.blocks.contact.main')
+```
+
+Per i **component tag anonimi Blade**, invece, non usare il prefisso `components.` nel nome del tag.
+
+**corretto:**
+
+```blade
+<x-pub_theme::blocks.contact.info />
+<x-blocks.contact.info />
+```
+
+**errato:**
+
+```blade
+<x-pub_theme::components.blocks.contact.info />
+```
+
+Il compilatore componenti risolve il namespace anonimo registrato da CmsServiceProvider e si aspetta il percorso relativo sotto `resources/views`, non il prefisso `components.` ripetuto nel tag.
+
 **configurazione:** `config/local/laravelpizza/xot.php`
 
 ```php
@@ -487,5 +512,5 @@ npm run dev
 ---
 
 **version:** 1.0
-**
+**last updated:** [DATE]
 **theme:** Meetup

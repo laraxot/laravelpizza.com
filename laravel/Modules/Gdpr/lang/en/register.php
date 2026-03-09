@@ -38,7 +38,7 @@ return [
             'cta' => 'Get hired by top Laravel companies',
         ],
     ],
-    'social_proof' => 'Join the <nome progetto> community',
+    'social_proof' => 'Join the LaravelPizza community',
     'fields' => [
         'first_name' => [
             'label' => 'First Name',
@@ -111,7 +111,7 @@ return [
     'login' => 'Sign in',
     'required_consent_missing' => 'You must accept all required consents to proceed.',
     'success' => 'Registration completed successfully! Your account has been created GDPR compliant.',
-    'success_message' => 'Welcome to <nome progetto> Meetups! Your registration is complete and all your consents have been correctly recorded.',
+    'success_message' => 'Welcome to LaravelPizza Meetups! Your registration is complete and all your consents have been correctly recorded.',
     'error' => 'Registration error',
     'error_message' => 'An error occurred during registration. Please try again later. If the problem persists, contact our support.',
     'clickbait' => [
@@ -127,14 +127,14 @@ return [
         'by_registering' => 'By registering you agree to our Terms and Privacy Policy',
     ],
     'seo' => [
-        'description' => 'Join <nome progetto> community for exclusive meetups, premium tutorials, and networking. Free access to workshops and community events.',
+        'description' => 'Join LaravelPizza community for exclusive meetups, premium tutorials, and networking. Free access to workshops and community events.',
         'laravel_meetup' => 'Laravel meetup',
         'laravel_community' => 'Laravel community',
         'php_developer_community' => 'PHP developer community',
         'laravel_tutorials' => 'Laravel tutorials',
         'laravel_workshops' => 'Laravel workshops',
         'laravel_networking' => 'Laravel networking',
-        '<nome progetto>' => '<nome progetto>',
+        'laravelpizza' => 'LaravelPizza',
     ],
     'navigation' => [
         'label' => 'Missing Navigation Label',

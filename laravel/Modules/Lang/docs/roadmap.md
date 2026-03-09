@@ -1,28 +1,29 @@
-# Roadmap Modulo Lang
+# Roadmap (Module Lang)
 
-## 🎯 Visione
-Trasformare la gestione linguistica in un servizio intelligente e universale, capace non solo di fornire traduzioni statiche ma di generare e gestire contenuti multilingue on-the-fly tramite AI, mantenendo la coerenza del brand.
+## Current roadmap
 
-## 🏗️ Fasi di Sviluppo
+- [Overview](roadmap/00-overview.md)
+- [Now](roadmap/01-now.md)
+- [Next](roadmap/02-next.md)
+- [Later](roadmap/03-later.md)
+- [Risks and dependencies](roadmap/04-risks.md)
 
-### Fase 1: Stabilità e Pulizia (In Corso)
-- [x] PHPStan Level 10 Compliance.
-- [ ] Rimozione sistematica di file obsoleti e ridondanti.
-- [ ] Centralizzazione della gestione dei file di lingua dei moduli.
-- [ ] Automazione completa della pubblicazione delle traduzioni (`lang:publish`).
+## Legacy / existing roadmap docs
 
-### Fase 2: Developer Experience (Pianificato)
-- [ ] CLI interattiva per la gestione rapida delle chiavi di traduzione.
-- [ ] Sistema di warning durante la build per chiavi mancanti.
-- [ ] Integrazione con i Cluster di Filament per la gestione dei permessi lingua.
-
-### Fase 3: Ottimizzazione e AI (Futuro)
-- [ ] **AI-AutoTranslate**: Traduzione basata su contesto tramite LLM preservando le chiavi.
-- [ ] **Translation Memory**: Database condiviso delle traduzioni approvate per uniformità terminologica.
-- [ ] Supporto avanzato per la pluralizzazione in lingue complesse.
-
-## ✅ Checklist Qualità
-- [x] PHPStan Level 10.
-- [ ] Assenza di hardcoded strings nei layout Blade.
-- [ ] Test di risoluzione delle chiavi multilingue per ogni modulo.
-- [ ] Documentazione centralizzata in `docs/`.
+- [phpstan-errors-resolution-roadmap.md](phpstan-errors-resolution-roadmap.md)
+- [phpstan-roadmap.md](phpstan-roadmap.md)
+- [roadmap/00-index.md](roadmap/00-index.md)
+- [roadmap/00-overview.md](roadmap/00-overview.md)
+- [roadmap/01-current-state.md](roadmap/01-current-state.md)
+- [roadmap/01-now.md](roadmap/01-now.md)
+- [roadmap/02-goals.md](roadmap/02-goals.md)
+- [roadmap/02-next.md](roadmap/02-next.md)
+- [roadmap/03-later.md](roadmap/03-later.md)
+- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
+- [roadmap/04-milestones.md](roadmap/04-milestones.md)
+- [roadmap/04-risks.md](roadmap/04-risks.md)
+- [roadmap/05-risks.md](roadmap/05-risks.md)
+- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
+- [roadmap/phases.md](roadmap/phases.md)
+- [roadmap/quality.md](roadmap/quality.md)
+- [roadmap/vision.md](roadmap/vision.md)

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-return array ()
+return array (
   'navigation' => 
-  array ()
+  array (
     'label' => 'Menu Notifiche',
     'group' => 'Sistema',
   ),
   'actions' => 
-  array ()
+  array (
     'logout' => 
-    array ()
+    array (
       'tooltip' => 'logout',
       'icon' => 'logout',
       'label' => 'logout',
@@ -20,6 +20,6 @@ return array ()
   'label' => 'Missing Label',
   'plural_label' => 'Missing Plural label',
   'fields' => 
-  array ()
+  array (
   ),
 );

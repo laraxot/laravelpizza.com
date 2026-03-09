@@ -3,13 +3,13 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\View;
-use Modules\User\Tests\TestCase;
 use Modules\User\Models\User;
+use Modules\User\Tests\TestCase;
 
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\get;
 
-
+uses(TestCase::class);
 
 describe('Auth Components Tests', function (): void {
     test('auth components exist and work correctly', function (): void {
@@ -66,28 +66,19 @@ describe('Authentication Flow with Reorganized Components', function (): void {
         // Visit login page and ensure all reorganized components render
         $response = get('/it/auth/login');
 
-        // Accept either 200 (page loads) or 500 (misconfigured route in test env)
-        // The important thing is the route exists and responds
-        expect($response->status())->toBeLessThanOrEqual(500);
-        if (200 === $response->status()) {
-            /* @phpstan-ignore-next-line method.nonObject */
-            $response->assertSee('Login');
-        } else {
-            expect($response->status())->toBeGreaterThanOrEqual(400);
-        }
+        /* @phpstan-ignore-next-line method.nonObject */
+        $response->assertStatus(200);
+        /* @phpstan-ignore-next-line method.nonObject */
+        $response->assertSee('Login');
     });
 
     test('password confirmation uses reorganized components', function (): void {
         /** @var User */
         $user = User/* @phpstan-ignore-line */ ::factory()->create();
 
-        try {
-            actingAs($user)
-                ->get('/it/auth/password/confirm')
-                ->assertStatus(200);
-        } catch (Throwable $e) {
-            expect($e->getMessage())->not->toBe('');
-        }
+        actingAs($user)
+            ->get('/it/auth/password/confirm')
+            ->assertStatus(200);
     });
 });
 
@@ -96,31 +87,22 @@ describe('User Profile Components Tests', function (): void {
         $user = User::factory()->create();
 
         if (class_exists(Modules\User\Models\Profile::class)) {
-            // Skip if profiles table doesn't have uuid column
-            $hasUuid = Illuminate\Support\Facades\Schema::connection('user')->hasColumn('profiles', 'uuid');
-            $profileData = [
+            Modules\User\Models\Profile::create([
                 'id' => $user->id,
                 'user_id' => $user->id,
                 'email' => $user->email,
-                'first_name' => $user->first_name ?? '',
-                'last_name' => $user->last_name ?? '',
-            ];
-            if ($hasUuid) {
-                $profileData['uuid'] = (string) Illuminate\Support\Str::uuid();
-            }
-            try {
-                Modules\User\Models\Profile::create($profileData);
-            } catch (Throwable) {
-                // Profile creation may fail in test env; continue with user only
-            }
+                'first_name' => $user->first_name,
+                'last_name' => $user->last_name,
+            ]);
         }
 
-        /* @var Illuminate\Contracts\Auth\Authenticatable $user */
-        try {
-            $response = actingAs($user, 'web')->get('/it/profile/edit');
-            $response->assertStatus(200);
-        } catch (Throwable $e) {
-            expect($e->getMessage())->not->toBe('');
-        }
+        Illuminate\Support\Facades\Route::get('/test-auth', function () {
+            return 'Authenticated User: '.(string) auth()->id();
+        });
+
+        /** @var Illuminate\Contracts\Auth\Authenticatable $user */
+        $response = actingAs($user, 'web')->get('/it/profile/edit');
+
+        $response->assertStatus(200);
     });
 });

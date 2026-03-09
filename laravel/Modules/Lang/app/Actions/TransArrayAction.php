@@ -38,9 +38,9 @@ class TransArrayAction
             return [];
         }
 
-        $transKey = $transKey;
+        $this->transKey = $transKey;
 
-        $result = Arr::map($array, $trans(...));
+        $result = Arr::map($array, $this->trans(...));
         if (is_array($result)) {
             $stringResult = [];
             foreach ($result as $key => $value) {
@@ -67,12 +67,12 @@ class TransArrayAction
             $item = SafeStringCastAction::cast($item);
         }
 
-        if (empty($item) || null === $transKey)
+        if (empty($item) || null === $this->transKey) {
             return $item;
         }
 
         // Prima prova la traduzione diretta
-        $key = $transKey.'.'.$item.'.label';
+        $key = $this->transKey.'.'.$item.'.label';
 
         $trans = trans($key);
 
@@ -83,7 +83,7 @@ class TransArrayAction
 
         // Seconda prova: sostituisce i punti con underscore
         $itemWithUnderscore = str_replace('.', '_', $item);
-        $keyWithUnderscore = $transKey.'.'.$itemWithUnderscore;
+        $keyWithUnderscore = $this->transKey.'.'.$itemWithUnderscore;
         $transWithUnderscore = trans($keyWithUnderscore);
 
         // Se la traduzione con underscore esiste ed è una stringa, la restituisce

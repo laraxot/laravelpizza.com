@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 
 use function Laravel\Folio\{middleware, name};
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;

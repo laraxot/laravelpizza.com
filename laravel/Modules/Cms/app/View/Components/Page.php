@@ -8,6 +8,7 @@ use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\View\Component;
 use Modules\Cms\Datas\BlockData;
 use Modules\Cms\Models\Page as PageModel;
+use Spatie\LaravelData\DataCollection;
 
 class Page extends Component
 {
@@ -15,8 +16,8 @@ class Page extends Component
 
     public string $slug;
 
-    /** @var array<string, BlockData> */
-    public array $blocks;
+    /** @var DataCollection<BlockData>|array */
+    public DataCollection|array $blocks;
 
     public array $data = [];
 
@@ -26,16 +27,15 @@ class Page extends Component
 
     public function __construct(string $side, string $slug, ?string $type = null, array $data = [], string $container0 = '', string $slug0 = '')
     {
-        $data = $data;
-        $side = $side;
+        $this->data = $data;
+        $this->side = $side;
         if (null !== $type) {
             $slug = $type.'-'.$slug;
         }
-        $slug = $slug;
-        $container0 = $container0;
-        $slug0 = $slug0;
-        /* @phpstan-ignore staticMethod.notFound, assign.propertyType */
-        $blocks = PageModel::getBlocksBySlug($slug, $side);
+        $this->slug = $slug;
+        $this->container0 = $container0;
+        $this->slug0 = $slug0;
+        $this->blocks = PageModel::getBlocksBySlug($slug, $side);
     }
 
     /**
@@ -45,12 +45,12 @@ class Page extends Component
     {
         $view = 'cms::components.page';
         $view_params = [
-            'blocks' => $blocks,
-            'side' => $side,
-            'slug' => $slug,
-            'data' => $data,
-            'container0' => $container0,
-            'slug0' => $slug0,
+            'blocks' => $this->blocks,
+            'side' => $this->side,
+            'slug' => $this->slug,
+            'data' => $this->data,
+            'container0' => $this->container0,
+            'slug0' => $this->slug0,
         ];
         // @phpstan-ignore-next-line
         if (! view()->exists($view)) {

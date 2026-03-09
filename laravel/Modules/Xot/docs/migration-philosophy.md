@@ -175,7 +175,7 @@ Each module should:
 
 ### Main-Module Dependency Rule
 
-**Modelli strettamente dipendenti dal main_module** (es. Profile): la migrazione deve stare nel modulo main (es. <nome progetto>), NON in moduli generici (User). Profile è dominio del main_module.
+**Modelli strettamente dipendenti dal main_module** (es. Profile): la migrazione deve stare nel modulo main (es. TechPlanner), NON in moduli generici (User). Profile è dominio del main_module.
 
 ### Profile with UUID for Android/Postgres
 

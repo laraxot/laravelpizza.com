@@ -18,7 +18,7 @@ describe('Event Sourcing Business Logic', function () {
     beforeEach(function () {
         /** @var \Modules\Activity\Tests\TestCase $this */
         // In-memory test objects following CLAUDE.md guidelines - no database
-        $activityData = [
+        $this->activityData = [
             'id' => 1001,
             'log_name' => 'user_activity',
             'description' => 'User login attempt',
@@ -38,7 +38,7 @@ describe('Event Sourcing Business Logic', function () {
             'created_at' => Carbon::now()->subMinutes(10),
         ];
 
-        $storedEventData = [
+        $this->storedEventData = [
             'id' => 2001,
             'aggregate_uuid' => 'user-uuid-456',
             'aggregate_version' => 1,
@@ -58,7 +58,7 @@ describe('Event Sourcing Business Logic', function () {
             'created_at' => Carbon::now()->subMinutes(5),
         ];
 
-        $snapshotData = [
+        $this->snapshotData = [
             'id' => 3001,
             'aggregate_uuid' => 'user-uuid-456',
             'aggregate_version' => 10,
@@ -76,7 +76,7 @@ describe('Event Sourcing Business Logic', function () {
     describe('Activity Logging Business Logic', function () {
         it('records activity with proper causer and subject relationship', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
-            $activity = (object) $activityData;
+            $activity = (object) $this->activityData;
 
             // Business Logic: Activity must have both causer and subject
             expect($activity->causer_id)->toBe(123);
@@ -87,7 +87,7 @@ describe('Event Sourcing Business Logic', function () {
 
         it('validates activity properties structure', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
-            $activity = (object) $activityData;
+            $activity = (object) $this->activityData;
             $properties = $activity->properties;
 
             // Business Logic: Properties must contain tracking data
@@ -103,7 +103,7 @@ describe('Event Sourcing Business Logic', function () {
 
         it('handles batch activity grouping', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
-            $activity = (object) $activityData;
+            $activity = (object) $this->activityData;
 
             // Business Logic: Batch activities must have same UUID
             expect($activity->batch_uuid)->toBe('batch-uuid-123');
@@ -113,14 +113,14 @@ describe('Event Sourcing Business Logic', function () {
         it('validates activity event types', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
             $validEvents = ['created', 'updated', 'deleted', 'restored', 'viewed', 'logged_in', 'logged_out'];
-            $activity = (object) $activityData;
+            $activity = (object) $this->activityData;
 
             expect($validEvents)->toContain($activity->event);
         });
 
         it('ensures proper activity description format', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
-            $activity = (object) $activityData;
+            $activity = (object) $this->activityData;
 
             // Business Logic: Description should be human readable
             expect($activity->description)->toBeString();
@@ -132,7 +132,7 @@ describe('Event Sourcing Business Logic', function () {
     describe('Event Sourcing Business Logic', function () {
         it('maintains event ordering with versions', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
-            $event = (object) $storedEventData;
+            $event = (object) $this->storedEventData;
 
             // Business Logic: Event versions must be sequential
             expect($event->aggregate_version)->toBe(1);
@@ -142,7 +142,7 @@ describe('Event Sourcing Business Logic', function () {
 
         it('validates event class structure', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
-            $event = (object) $storedEventData;
+            $event = (object) $this->storedEventData;
 
             // Business Logic: Event class must be valid PHP class name
             expect($event->event_class)->toMatch('/^[A-Z][a-zA-Z0-9\\\\]*$/');
@@ -151,7 +151,7 @@ describe('Event Sourcing Business Logic', function () {
 
         it('ensures event properties contain business data', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
-            $event = (object) $storedEventData;
+            $event = (object) $this->storedEventData;
             $properties = $event->event_properties;
 
             // Business Logic: Event properties must have identifiers
@@ -163,7 +163,7 @@ describe('Event Sourcing Business Logic', function () {
 
         it('validates metadata structure for tracing', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
-            $event = (object) $storedEventData;
+            $event = (object) $this->storedEventData;
             $metadata = $event->meta_data;
 
             // Business Logic: Metadata must support distributed tracing
@@ -177,7 +177,7 @@ describe('Event Sourcing Business Logic', function () {
 
         it('maintains aggregate UUID consistency', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
-            $event = (object) $storedEventData;
+            $event = (object) $this->storedEventData;
 
             // Business Logic: Aggregate UUID must be consistent across events
             expect($event->aggregate_uuid)->toBe('user-uuid-456');
@@ -188,7 +188,7 @@ describe('Event Sourcing Business Logic', function () {
     describe('Snapshot Business Logic', function () {
         it('creates snapshots at version intervals', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
-            $snapshot = (object) $snapshotData;
+            $snapshot = (object) $this->snapshotData;
 
             // Business Logic: Snapshots created every 10 versions
             expect($snapshot->aggregate_version)->toBe(10);
@@ -197,7 +197,7 @@ describe('Event Sourcing Business Logic', function () {
 
         it('preserves complete aggregate state', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
-            $snapshot = (object) $snapshotData;
+            $snapshot = (object) $this->snapshotData;
             $state = $snapshot->state;
 
             // Business Logic: Snapshot must contain complete state
@@ -216,7 +216,7 @@ describe('Event Sourcing Business Logic', function () {
 
         it('validates snapshot performance requirements', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
-            $snapshot = (object) $snapshotData;
+            $snapshot = (object) $this->snapshotData;
 
             // Business Logic: Snapshots must be relatively recent
             $ageInHours = Carbon::now()->diffInHours($snapshot->created_at);
@@ -225,7 +225,7 @@ describe('Event Sourcing Business Logic', function () {
 
         it('ensures snapshot state serialization', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
-            $snapshot = (object) $snapshotData;
+            $snapshot = (object) $this->snapshotData;
 
             // Business Logic: State must be serializable
             $serialized = json_encode($snapshot->state);
@@ -299,7 +299,7 @@ describe('Event Sourcing Business Logic', function () {
         it('validates batch processing efficiency', function () {
             /** @var \Modules\Activity\Tests\TestCase $this */
             $batchSize = 100;
-            $events = array_fill(0, $batchSize, $storedEventData);
+            $events = array_fill(0, $batchSize, $this->storedEventData);
 
             // Business Logic: Batch processing should handle reasonable loads
             expect(count($events))->toBe($batchSize);

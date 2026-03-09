@@ -32,7 +32,7 @@ class EditModule extends XotBaseEditRecord
 
     protected function afterSave(): void
     {
-        $module = $record; // Ottiene il record corrente
+        $module = $this->record; // Ottiene il record corrente
         if (! ($module instanceof Model) || ! isset($module->path)) {
             return;
         }

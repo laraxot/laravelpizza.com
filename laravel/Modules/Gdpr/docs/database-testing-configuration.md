@@ -17,10 +17,10 @@ Vedi [Critical Rules](../xot/docs/database-configuration-critical-rules.md) per 
 
 ```bash
 # WRONG - Do NOT invent new environment variables
-NOTIFY_DB_DATABASE=<nome progetto>_data_test
-GEO_DB_DATABASE=<nome progetto>_data_test
-MEDIA_DB_DATABASE=<nome progetto>_data_test
-GDPR_DB_DATABASE=<nome progetto>_data_test
+NOTIFY_DB_DATABASE=laravelpizza_data_test
+GEO_DB_DATABASE=laravelpizza_data_test
+MEDIA_DB_DATABASE=laravelpizza_data_test
+GDPR_DB_DATABASE=laravelpizza_data_test
 # ... etc
 ```
 
@@ -41,8 +41,8 @@ DB_DATABASE=your_main_db_name
 # Then .env.testing must have:
 DB_DATABASE=your_main_db_name_test
 
-# For example, if your main database is `<nome progetto>_data`:
-DB_DATABASE=<nome progetto>_data_test
+# For example, if your main database is `laravelpizza_data`:
+DB_DATABASE=laravelpizza_data_test
 
 # EVERYTHING ELSE IS IDENTICAL (excluding other DB_ values if they are related to the main DB,
 # e.g., DB_USERNAME=root, DB_PASSWORD=your_password should be the same as in .env)
@@ -96,7 +96,7 @@ config(['database.connections.tenant' => config('database.connections.mysql')]);
 # 1. Ensure .env.testing is correct (copy of .env with _test)
 cd laravel
 cp .env .env.testing
-# Edit .env.testing: change <nome progetto>_data -> <nome progetto>_data_test
+# Edit .env.testing: change laravelpizza_data -> laravelpizza_data_test
 
 # 2. Run migrations (only if needed, use DatabaseTransactions in tests)
 php artisan migrate --env=testing

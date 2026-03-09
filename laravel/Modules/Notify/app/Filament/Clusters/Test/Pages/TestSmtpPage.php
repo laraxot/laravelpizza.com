@@ -48,7 +48,7 @@ class TestSmtpPage extends XotBasePage
         Assert::isArray($mail_config = config('mail'));
         $smtpConfig = Arr::get($mail_config, 'mailers.smtp');
 
-        $emailData['subject'] = 'test';
+        $this->emailData['subject'] = 'test';
         $defaultEmail = XotData::make()->super_admin;
 
         return $schema->components([
@@ -90,7 +90,7 @@ class TestSmtpPage extends XotBasePage
 
     public function sendEmail(): void
     {
-        $data = $emailForm->getState();
+        $data = $this->emailForm->getState();
         $smtp = SmtpData::from($data);
         $emailData = EmailData::from($data);
         // dddx([
@@ -144,6 +144,6 @@ class TestSmtpPage extends XotBasePage
             }
         }
 
-        $emailForm->fill($typedConfig);
+        $this->emailForm->fill($typedConfig);
     }
 }

@@ -170,6 +170,6 @@ $addToCart = function (AddToCartAction $action) {
 - [Laravel Volt](https://livewire.laravel.com/docs/volt)
 
 ---
-**
+**Ultimo aggiornamento**: [DATE]
 **Status**: 🟡 In Progress
 **Priorità**: ALTA

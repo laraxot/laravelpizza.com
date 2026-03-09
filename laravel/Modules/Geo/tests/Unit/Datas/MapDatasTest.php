@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+uses(Modules\Geo\Tests\TestCase::class);
+
 use Modules\Geo\Datas\Map\IconData;
 use Modules\Geo\Datas\Map\MarkerData;
 use Modules\Geo\Datas\Map\PositionData;

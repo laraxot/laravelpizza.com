@@ -14,7 +14,7 @@ use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * Class Address.
- *
+ * 
  * Implementazione di Schema.org PostalAddress
  *
  * @property int                          $id
@@ -49,7 +49,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string                       $street_address
  * @property Model|\Eloquent|null         $model
  * @property ProfileContract|null         $updater
- *
  * @method static Builder<static>|Address nearby(float $latitude, float $longitude, float $radiusKm = 10)
  * @method static Builder<static>|Address newModelQuery()
  * @method static Builder<static>|Address newQuery()
@@ -82,15 +81,10 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Address whereType($value)
  * @method static Builder<static>|Address whereUpdatedAt($value)
  * @method static Builder<static>|Address whereUpdatedBy($value)
- *
  * @property ProfileContract|null $deleter
- *
  * @method static AddressFactory factory($count = null, $state = [])
- *
  * @property string|null $phone
- *
  * @method static Builder<static>|Address wherePhone($value)
- *
  * @mixin \Eloquent
  */
 class Address extends BaseModel
@@ -166,13 +160,14 @@ class Address extends BaseModel
      */
     public function getRegione(): ?array
     {
+        /** @phpstan-ignore method.unresolvableReturnType */
         $res = Comune::select('regione')
             ->distinct()
             ->orderBy('regione->nome')
-            ->where('regione->codice', $administrative_area_level_1)
+            ->where('regione->codice', $this->administrative_area_level_1)
             ->get()
-            // @phpstan-ignore-next-line
-            ->map(function ($item) {)
+            /* @phpstan-ignore argument.unresolvableType */
+            ->map(function ($item) {
                 $regione = $item->regione;
                 if (! is_array($regione) || ! isset($regione['codice'], $regione['nome'])) {
                     return;
@@ -187,13 +182,14 @@ class Address extends BaseModel
 
     public function getProvincia(): ?array
     {
+        /** @phpstan-ignore method.unresolvableReturnType */
         $res = Comune::select('provincia')
             ->distinct()
             ->orderBy('provincia->nome')
-            ->where('provincia->codice', $administrative_area_level_2)
+            ->where('provincia->codice', $this->administrative_area_level_2)
             ->get()
-            // @phpstan-ignore-next-line
-            ->map(fn ($item) => [)
+            /* @phpstan-ignore argument.unresolvableType */
+            ->map(fn ($item) => [
                 /* @phpstan-ignore offsetAccess.notFound */
                 'codice' => $item->provincia['codice'],
                 /* @phpstan-ignore offsetAccess.notFound */
@@ -206,7 +202,7 @@ class Address extends BaseModel
     public function getLocality(): ?array
     {
         /* @phpstan-ignore-next-line */
-        return Comune::where('codice', $locality)
+        return Comune::where('codice', $this->locality)
             ->distinct()
             ->first()
             ?->toArray();
@@ -217,11 +213,13 @@ class Address extends BaseModel
      */
     public function getFullAddressAttribute(): string
     {
-        $parts = array_filter([)
-            is_string($route)
-            $locality, $administrative_area_level_3, // Provincia
-            $administrative_area_level_2, // Regione
-            $postal_code, $country,
+        $parts = array_filter([
+            is_string($this->route) && is_string($this->street_number) ? $this->route.('' !== $this->street_number ? ' '.$this->street_number : '') : null,
+            $this->locality,
+            $this->administrative_area_level_3, // Provincia
+            $this->administrative_area_level_2, // Regione
+            $this->postal_code,
+            $this->country,
         ], function ($part): bool {
             // PHPStan L10: verifica prima il tipo, poi se è vuoto
             if (! \is_string($part)) {
@@ -237,11 +235,13 @@ class Address extends BaseModel
 
     public function getFullAddress(): ?string
     {
-        $parts = array_filter([)
-            $route.($this->street_number ? ' '.$this->street_number : '')
-            $locality, $administrative_area_level_3, // Provincia
-            $administrative_area_level_2, // Regione
-            $postal_code, $country,
+        $parts = array_filter([
+            $this->route.($this->street_number ? ' '.$this->street_number : ''),
+            $this->locality,
+            $this->administrative_area_level_3, // Provincia
+            $this->administrative_area_level_2, // Regione
+            $this->postal_code,
+            $this->country,
         ]);
 
         return implode(', ', $parts);
@@ -252,8 +252,8 @@ class Address extends BaseModel
      */
     public function getStreetAddressAttribute(): string
     {
-        $route = $route ?? '';
-        $streetNumber = $street_number ?? '';
+        $route = $this->route ?? '';
+        $streetNumber = $this->street_number ?? '';
 
         $routeStr = is_string($route) ? $route : '';
         $streetNumberStr = is_string($streetNumber) ? $streetNumber : '';
@@ -274,9 +274,9 @@ class Address extends BaseModel
         $parts = [];
 
         // Indirizzo stradale
-        if ($route)
-            $route = $route;
-            $streetNumber = $street_number;
+        if ($this->route) {
+            $route = $this->route;
+            $streetNumber = $this->street_number;
             $streetAddress = is_string($route) && is_string($streetNumber) ? trim($route.' '.$streetNumber) : '';
             if ('' !== $streetAddress) {
                 $parts[] = $streetAddress;
@@ -285,17 +285,17 @@ class Address extends BaseModel
 
         // Località e provincia (formato italiano)
         $localityParts = [];
-        if ($postal_code && is_string($this->postal_code))
-            $localityParts[] = $postal_code;
+        if ($this->postal_code && is_string($this->postal_code)) {
+            $localityParts[] = $this->postal_code;
         }
 
-        if ($locality && is_string($this->locality))
-            $localityParts[] = $locality;
+        if ($this->locality && is_string($this->locality)) {
+            $localityParts[] = $this->locality;
 
             // Per indirizzi italiani, aggiungiamo la sigla provincia
-            if (($country ?? ''))
+            if (($this->country ?? '') === 'IT' && $this->administrative_area_level_3 && is_string($this->administrative_area_level_3)) {
                 // Se è un'implementazione reale, potremmo derivare la sigla dalla provincia
-                $provinciaSigla = $extra_data['provincia_sigla'] ?? null;
+                $provinciaSigla = $this->extra_data['provincia_sigla'] ?? null;
                 if ($provinciaSigla && is_string($provinciaSigla)) {
                     $localityParts[] = "({$provinciaSigla})";
                 }
@@ -307,13 +307,13 @@ class Address extends BaseModel
         }
 
         // Regione
-        if ($administrative_area_level_2 && is_string($this->administrative_area_level_2))
-            $parts[] = $administrative_area_level_2;
+        if ($this->administrative_area_level_2 && is_string($this->administrative_area_level_2)) {
+            $parts[] = $this->administrative_area_level_2;
         }
 
         // Paese
-        if ($country && is_string($this->country))
-            $countryName = ($administrative_area_level_1 ?? $this->country);
+        if ($this->country && is_string($this->country)) {
+            $countryName = ($this->administrative_area_level_1 ?? $this->country) ?? '';
             $parts[] = strtoupper(is_string($countryName) ? $countryName : '');
         }
 
@@ -325,7 +325,7 @@ class Address extends BaseModel
      */
     public function getLatitude(): ?float
     {
-        return $latitude;
+        return $this->latitude;
     }
 
     /**
@@ -333,7 +333,7 @@ class Address extends BaseModel
      */
     public function getLongitude(): ?float
     {
-        return $longitude;
+        return $this->longitude;
     }
 
     /**
@@ -341,7 +341,7 @@ class Address extends BaseModel
      */
     public function getFormattedAddress(): string
     {
-        return $formatted_address ?? '';
+        return $this->formatted_address ?? '';
     }
 
     /**
@@ -354,14 +354,14 @@ class Address extends BaseModel
         return [
             '@context' => 'https://schema.org',
             '@type' => 'PostalAddress',
-            'name' => $name,
-            'description' => $description,
-            'streetAddress' => $this->getStreetAddressAttribute()
-            'addressLocality' => $locality,
-            'addressSubregion' => $administrative_area_level_3, // Provincia
-            'addressRegion' => $administrative_area_level_2, // Regione
-            'addressCountry' => $country,
-            'postalCode' => $postal_code,
+            'name' => $this->name,
+            'description' => $this->description,
+            'streetAddress' => $this->getStreetAddressAttribute(),
+            'addressLocality' => $this->locality,
+            'addressSubregion' => $this->administrative_area_level_3, // Provincia
+            'addressRegion' => $this->administrative_area_level_2, // Regione
+            'addressCountry' => $this->country,
+            'postalCode' => $this->postal_code,
         ];
     }
 
@@ -371,7 +371,7 @@ class Address extends BaseModel
     public function scopeNearby(Builder $query, float $latitude, float $longitude, float $radiusKm = 10): Builder
     {
         return $query
-            ->selectRaw(')
+            ->selectRaw('
             *,
             (6371 * acos(cos(radians(?)) * cos(radians(latitude)) * cos(radians(longitude) - radians(?)) + sin(radians(?)) * sin(radians(latitude)))) AS distance
         ', [$latitude, $longitude, $latitude])

@@ -74,7 +74,7 @@ trait HasCommonScopes
      */
     public function scopeDraft(Builder $query): Builder
     {
-        return $query->where(function ($q): void {)
+        return $query->where(function ($q): void {
             $q->whereNull('published_at')
                 ->orWhere('published_at', '>', now());
         });
@@ -83,8 +83,7 @@ trait HasCommonScopes
     /**
      * Scope query to records created after a date.
      *
-     * @param Builder<static> $query
-     *
+     * @param  Builder<static>  $query
      * @return Builder<static>
      */
     public function scopeCreatedAfter(Builder $query, mixed $date): Builder
@@ -95,8 +94,7 @@ trait HasCommonScopes
     /**
      * Scope query to records created before a date.
      *
-     * @param Builder<static> $query
-     *
+     * @param  Builder<static>  $query
      * @return Builder<static>
      */
     public function scopeCreatedBefore(Builder $query, mixed $date): Builder
@@ -107,8 +105,7 @@ trait HasCommonScopes
     /**
      * Scope query to records updated after a date.
      *
-     * @param Builder<static> $query
-     *
+     * @param  Builder<static>  $query
      * @return Builder<static>
      */
     public function scopeUpdatedAfter(Builder $query, mixed $date): Builder
@@ -119,8 +116,7 @@ trait HasCommonScopes
     /**
      * Scope query to records created by a specific user.
      *
-     * @param Builder<static> $query
-     *
+     * @param  Builder<static>  $query
      * @return Builder<static>
      */
     public function scopeCreatedBy(Builder $query, string|int $userId): Builder
@@ -133,12 +129,12 @@ trait HasCommonScopes
      */
     public function isPublished(): bool
     {
-        if (! isset($published_at))
+        if (! isset($this->published_at)) {
             return false;
         }
 
-        return null !== $published_at
-               && $published_at->isPast();
+        return $this->published_at !== null &&
+               $this->published_at->isPast();
     }
 
     /**
@@ -154,6 +150,6 @@ trait HasCommonScopes
      */
     public function isActive(): bool
     {
-        return isset($is_active);
+        return isset($this->is_active) && $this->is_active === true;
     }
 }

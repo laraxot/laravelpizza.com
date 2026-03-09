@@ -1,7 +1,11 @@
 # Activity Module - Business Logic Analysis
 
 ## Overview
+<<<<<<< .merge_file_xKOw48
 The Activity module provides comprehensive audit logging and event sourcing capabilities for the healthcare_app platform. It tracks user actions, system events, and data changes across all modules.
+=======
+The Activity module provides comprehensive audit logging and event sourcing capabilities for the ModuloEsempio platform. It tracks user actions, system events, and data changes across all modules.
+>>>>>>> .merge_file_UL5cUo
 
 ## Business Purpose
 - **Audit Trail**: Maintain complete audit trails for compliance and security

@@ -9,6 +9,8 @@ use Modules\Notify\Tests\TestCase;
 
 class MailTemplateLogTest extends TestCase
 {
+    // DatabaseTransactions is already used in the module TestCase
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -200,9 +202,9 @@ class MailTemplateLogTest extends TestCase
             'status_message' => 'Email sent successfully',
         ]);
 
-        $this->assertEquals('sent', $log->fresh());
-        $this->assertNotNull($log->fresh());
-        $this->assertEquals('Email sent successfully', $log->fresh());
+        $this->assertEquals('sent', $log->fresh()->status);
+        $this->assertNotNull($log->fresh()->sent_at);
+        $this->assertEquals('Email sent successfully', $log->fresh()->status_message);
     }
 
     /** @test */
@@ -226,8 +228,8 @@ class MailTemplateLogTest extends TestCase
             'status' => 'delivered',
         ]);
 
-        $this->assertEquals('delivered', $log->fresh());
-        $this->assertNotNull($log->fresh());
+        $this->assertEquals('delivered', $log->fresh()->status);
+        $this->assertNotNull($log->fresh()->delivered_at);
     }
 
     /** @test */
@@ -252,9 +254,9 @@ class MailTemplateLogTest extends TestCase
             'status_message' => 'SMTP connection failed',
         ]);
 
-        $this->assertEquals('failed', $log->fresh());
-        $this->assertNotNull($log->fresh());
-        $this->assertEquals('SMTP connection failed', $log->fresh());
+        $this->assertEquals('failed', $log->fresh()->status);
+        $this->assertNotNull($log->fresh()->failed_at);
+        $this->assertEquals('SMTP connection failed', $log->fresh()->status_message);
     }
 
     /** @test */
@@ -277,7 +279,7 @@ class MailTemplateLogTest extends TestCase
             'opened_at' => $log->fresh()->opened_at,
         ]);
 
-        $this->assertNotNull($log->fresh());
+        $this->assertNotNull($log->fresh()->opened_at);
     }
 
     /** @test */
@@ -301,7 +303,7 @@ class MailTemplateLogTest extends TestCase
             'clicked_at' => $log->fresh()->clicked_at,
         ]);
 
-        $this->assertNotNull($log->fresh());
+        $this->assertNotNull($log->fresh()->clicked_at);
     }
 
     /** @test */

@@ -43,7 +43,7 @@ class SendNotificationJob implements ShouldQueue
      * @param  array<int, string>  $channels  I canali da utilizzare
      * @param  array<string, mixed>  $options  Opzioni aggiuntive per l'invio
      */
-    public function __construct()
+    public function __construct(
         protected Model $recipient,
         protected string $templateCode,
         protected array $data = [],
@@ -51,13 +51,13 @@ class SendNotificationJob implements ShouldQueue
         protected array $options = [],
     ) {
         $triesConfig = config('notify.queue.tries', 3);
-        $tries = is_numeric($triesConfig);
+        $this->tries = is_numeric($triesConfig) ? ((int) $triesConfig) : 3;
 
         $timeoutConfig = config('notify.queue.retry_after', 60);
-        $timeout = is_numeric($timeoutConfig);
+        $this->timeout = is_numeric($timeoutConfig) ? ((int) $timeoutConfig) : 60;
 
         $queueConfig = config('notify.queue.queue', 'notifications');
-        $this->onQueue(is_string($queueConfig));
+        $this->onQueue(is_string($queueConfig) ? $queueConfig : 'notifications');
     }
 
     /**
@@ -65,7 +65,7 @@ class SendNotificationJob implements ShouldQueue
      */
     public function handle(SendNotificationAction $action): void
     {
-        $action->execute($recipient, $this->templateCode, $this->data, $this->channels, $this->options);
+        $action->execute($this->recipient, $this->templateCode, $this->data, $this->channels, $this->options);
     }
 
     /**
@@ -74,10 +74,10 @@ class SendNotificationJob implements ShouldQueue
     public function failed(Throwable $exception): void
     {
         // Log dell'errore
-        logger()->error('Errore nell\'invio della notifica', [)
-            'recipient_type' => get_class($recipient)
-            'recipient_id' => $recipient->getKey()
-            'template_code' => $templateCode,
+        logger()->error('Errore nell\'invio della notifica', [
+            'recipient_type' => get_class($this->recipient),
+            'recipient_id' => $this->recipient->getKey(),
+            'template_code' => $this->templateCode,
             'error' => $exception->getMessage(),
             'trace' => $exception->getTraceAsString(),
         ]);

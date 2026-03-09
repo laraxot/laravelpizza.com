@@ -6,13 +6,13 @@
 - [Blocchi](../blocks.md)
 - [Componenti Blocchi Contenuto](../componenti-blocchi-contenuto.md)
 - [Namespace Componenti Blocchi](../namespace-componenti-blocchi.md)
-- [Documentazione Generale](../../../../../docs/readme.md)
-- [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
+- [Documentazione Generale](../../../../../../docs/readme.md)
+- [Collegamenti Documentazione](../../../../../../docs/collegamenti-documentazione.md)
 
 ## Panoramica
 I blocchi sono componenti riutilizzabili che compongono le sezioni del sito. Ogni blocco ha uno scopo specifico e può essere inserito in diverse sezioni tramite i file JSON di configurazione.
-- [Documentazione Generale <nome progetto>](../../../../../docs/readme.md)
-- [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
+- [Documentazione Generale <nome progetto>](../../../../../../docs/readme.md)
+- [Collegamenti Documentazione](../../../../../../docs/collegamenti-documentazione.md)
 
 ## Panoramica
 I blocchi sono componenti riutilizzabili che compongono le sezioni del sito <nome progetto>. Ogni blocco ha uno scopo specifico e può essere inserito in diverse sezioni tramite i file JSON di configurazione.

@@ -28,7 +28,7 @@ class AddressField extends Section
      */
     public function disableLiveUpdates(bool $disable = true): static
     {
-        $disableLiveUpdates = $disable;
+        $this->disableLiveUpdates = $disable;
 
         return $this;
     }
@@ -41,7 +41,7 @@ class AddressField extends Section
         unset($baseSchema['name'], $baseSchema['is_primary']);
 
         // Se i live updates sono disabilitati, rimuovi la reattività
-        if ($disableLiveUpdates)
+        if ($this->disableLiveUpdates) {
             $baseSchema = $this->removeReactivityFromSchema($baseSchema);
         }
 
@@ -91,7 +91,7 @@ class AddressField extends Section
      *
      * $state = $this->getState();
      * $record = $this->getRecord();
-     * $relationship = $record->{$this->getRelationship();
+     * $relationship = $record->{$this->getRelationship()}();
      *
      * if (null === $relationship) {
      * return;

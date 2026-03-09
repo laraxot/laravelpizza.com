@@ -25,10 +25,10 @@ if (! function_exists('cleanupTranslationFile')) {
 }
 
 beforeEach(function () {
-    $action = new ReadTranslationFileAction();
+    $this->action = new ReadTranslationFileAction();
     // Use sys_get_temp_dir() instead of storage_path() to avoid calling app() before setUp
-    $testFilePath = sys_get_temp_dir();
-    $testTranslations = [
+    $this->testFilePath = sys_get_temp_dir().'/test_translations.php';
+    $this->testTranslations = [
         'auth' => [
             'failed' => 'These credentials do not match our records.',
             'password' => 'The provided password is incorrect.',
@@ -41,14 +41,14 @@ beforeEach(function () {
 });
 
 afterEach(function () {
-    cleanupTranslationFile($testFilePath);
+    cleanupTranslationFile($this->testFilePath);
 });
 
 describe('ReadTranslationFileAction Business Logic', function () {
     test('can read valid translation file', function () {
-        createTranslationFile($testFilePath, $this->testTranslations);
+        createTranslationFile($this->testFilePath, $this->testTranslations);
 
-        $result = $action->execute($this->testFilePath);
+        $result = $this->action->execute($this->testFilePath);
 
         expect($result)->toBeArray();
         expect($result)->toHaveKey('auth');
@@ -59,20 +59,20 @@ describe('ReadTranslationFileAction Business Logic', function () {
     test('throws exception for non-existent file', function () {
         $nonExistentFile = storage_path('non_existent.php');
 
-        $action->execute($nonExistentFile);
+        $this->action->execute($nonExistentFile);
     })->throws(Exception::class, 'File di traduzione non trovato:');
 
     test('throws exception for unreadable file', function () {
-        createTranslationFile($testFilePath, $this->testTranslations);
-        chmod($testFilePath, 0o000);
+        createTranslationFile($this->testFilePath, $this->testTranslations);
+        chmod($this->testFilePath, 0o000);
 
-        $action->execute($this->testFilePath);
+        $this->action->execute($this->testFilePath);
     })->throws(Exception::class, 'File di traduzione non leggibile:');
 
     test('throws exception for invalid file content', function () {
-        file_put_contents($testFilePath, '<?php return "invalid content";');
+        file_put_contents($this->testFilePath, '<?php return "invalid content";');
 
-        $action->execute($this->testFilePath);
+        $this->action->execute($this->testFilePath);
     })->throws(Exception::class, 'File di traduzione non valido:');
 
     test('converts array to php format correctly', function () {
@@ -84,7 +84,7 @@ describe('ReadTranslationFileAction Business Logic', function () {
             ],
         ];
 
-        $phpContent = $action->toPhp($translations);
+        $phpContent = $this->action->toPhp($translations);
 
         expect($phpContent)->toContain("<?php\n\nreturn [");
         expect($phpContent)->toContain("'simple_key' => 'Simple value'");
@@ -100,14 +100,11 @@ describe('ReadTranslationFileAction Business Logic', function () {
             'newlines' => "Text with\nnewlines",
         ];
 
-        $phpContent = $action->toPhp($translations);
+        $phpContent = $this->action->toPhp($translations);
 
         expect($phpContent)->toContain("Text with \\'single\\' and \\\"double\\\" quotes");
         expect($phpContent)->toContain('Text with \\\\ backslashes');
-        expect()
-            str_contains($phpContent, 'Text with\\nnewlines')
-            || str_contains($phpContent, "Text with\nnewlines")
-        )->toBeTrue();
+        expect($phpContent)->toContain('Text with\\nnewlines');
     });
 
     test('handles deeply nested arrays', function () {
@@ -121,7 +118,7 @@ describe('ReadTranslationFileAction Business Logic', function () {
             ],
         ];
 
-        $phpContent = $action->toPhp($translations);
+        $phpContent = $this->action->toPhp($translations);
 
         expect($phpContent)->toContain("'level1' => [");
         expect($phpContent)->toContain("'level2' => [");
@@ -136,7 +133,7 @@ describe('ReadTranslationFileAction Business Logic', function () {
             ],
         ];
 
-        $phpContent = $action->toPhp($translations);
+        $phpContent = $this->action->toPhp($translations);
         $lines = explode("\n", $phpContent);
 
         // Find the parent line and check indentation
@@ -153,7 +150,7 @@ describe('ReadTranslationFileAction Business Logic', function () {
             'normal_key' => 'normal_value',
         ];
 
-        $phpContent = $action->toPhp($translations);
+        $phpContent = $this->action->toPhp($translations);
 
         expect($phpContent)->toContain("'empty_array' => [");
         expect($phpContent)->toContain("'normal_key' => 'normal_value'");
@@ -167,7 +164,7 @@ describe('ReadTranslationFileAction Business Logic', function () {
             'boolean_false' => false,
         ];
 
-        $phpContent = $action->toPhp($translations);
+        $phpContent = $this->action->toPhp($translations);
 
         expect($phpContent)->toContain("'number' => '123'");
         expect($phpContent)->toContain("'float' => '45.67'");
@@ -182,7 +179,7 @@ describe('ReadTranslationFileAction Business Logic', function () {
             'm_middle' => 'Middle value',
         ];
 
-        $phpContent = $action->toPhp($translations);
+        $phpContent = $this->action->toPhp($translations);
         $lines = explode("\n", $phpContent);
 
         $zPos = -1;

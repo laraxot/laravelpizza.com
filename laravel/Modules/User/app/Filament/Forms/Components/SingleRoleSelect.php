@@ -22,12 +22,12 @@ class SingleRoleSelect extends Select
         /** @var array<int|string, string> $options */
         $options = Role::query()->pluck('name', 'id')->toArray();
 
-        $this->options(fn ())
+        $this->options(fn (): array => $options)
             ->placeholder('Select a role');
     }
 
     public function getOptionValueProperty(): string
     {
-        return $optionValueProperty;
+        return $this->optionValueProperty;
     }
 }

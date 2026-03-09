@@ -4,15 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\Seo\Tests;
 
-use Modules\Xot\Tests\XotBaseTestCase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Modules\Xot\Tests\CreatesApplication;
 
 /**
  * Base test case for Seo module.
  */
-abstract class TestCase extends XotBaseTestCase
+abstract class TestCase extends BaseTestCase
 {
-    /** @var array<int, string> */
-    protected array $connectionsToTransact = [
+    use CreatesApplication;
+    use DatabaseTransactions;
+
+    protected $connectionsToTransact = [
         'mysql',
         'seo',
     ];
@@ -20,17 +24,11 @@ abstract class TestCase extends XotBaseTestCase
     protected function setUp(): void
     {
         parent::setUp();
-        config(['xra.main_module' => 'Seo']);
-    }
 
-    /**
-     * @return array<int, class-string<\Illuminate\Support\ServiceProvider>>
-     */
-    protected function getPackageProviders($app): array
-    {
-        return [
-            ...parent::getPackageProviders($app),
-            \Modules\Seo\Providers\SeoServiceProvider::class,
-        ];
+        config(['xra.pub_theme' => 'Meetup']);
+        config(['xra.main_module' => 'Seo']);
+
+        // Ensure Seo config is loaded/set if needed for tests
+        // config(['seo.default_title' => 'Test Site']);
     }
 }

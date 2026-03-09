@@ -47,7 +47,7 @@ app(LogPrivacyEventAction::class)->execute($user, 'data_access', 'Visualizzazion
 
 ---
 
-**🔄 
+**🔄 Ultimo aggiornamento**: 31 Gennaio 2026
 **📦 Versione**: 2.3.0
 **✅ PHPStan level 10**: Compliance nativa garantita
 

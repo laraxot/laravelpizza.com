@@ -13,7 +13,7 @@ trait TranslatorTrait
     public function registerTranslator(): void
     {
         // Override the JSON Translator
-        $app->extend('translator', static function (Translator $translator))
+        $this->app->extend('translator', static function (Translator $translator): TranslatorService {
             $translatorService = new TranslatorService($translator->getLoader(), $translator->getLocale());
             $translatorService->setFallback($translator->getFallback());
 

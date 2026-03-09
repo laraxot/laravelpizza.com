@@ -37,7 +37,7 @@ class SaveTenantConfigAction
         $configData = $this->arrayMergeRecursiveDistinct($configData, $dataToMerge);
         $configData = Arr::sortRecursive($configData);
 
-        app(SaveArrayAction::class)->execute()
+        app(SaveArrayAction::class)->execute(
             data: $configData,
             filename: $path,
         );

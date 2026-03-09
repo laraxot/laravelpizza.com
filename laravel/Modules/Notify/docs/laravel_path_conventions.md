@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 # Convenzioni dei Path in Laravel e Laraxot
 
 ## Regole Fondamentali per i Path di Cartelle
 
-In Laravel e Laraxot, i nomi delle cartelle principali (come definite nella struttura standard di Laravel) **DEVONO** rispettare il caso specifico definito dalle convenzioni di Laravel. (docs: replace project-specific references with generic placeholders across documentation)
+In Laravel e Laraxot, i nomi delle cartelle principali (come definite nella struttura standard di Laravel) **DEVONO** rispettare il caso specifico definito dalle convenzioni di Laravel.
+=======
+# Convenzioni dei Path in Laravel e healthcare_app
+
+## Regole Fondamentali per i Path di Cartelle
+
+In Laravel e healthcare_app, i nomi delle cartelle principali (come definite nella struttura standard di Laravel) **DEVONO** rispettare il caso specifico definito dalle convenzioni di Laravel.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Cartelle Standard di Laravel e loro Casing Corretto
 
@@ -24,13 +32,21 @@ In Laravel e Laraxot, i nomi delle cartelle principali (come definite nella stru
 Le viste in Laravel devono essere collocate nella cartella `resources/views` (lowercase):
 
 ```
-/var/www/html/ptvx/laravel/Modules/Notify/resources/views/ (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/resources/views/
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/resources/views/
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 **NON** in:
 
 ```
-/var/www/html/ptvx/laravel/Modules/Notify/Resources/views/ (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/Resources/views/
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/Resources/views/
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ## Perché è Importante
@@ -49,7 +65,11 @@ Quando si fa riferimento a viste nei file PHP:
 protected static string $view = 'notify::filament.pages.send-sms';
 
 // Il path fisico corrispondente sarà:
-// /var/www/html/ptvx/laravel/Modules/Notify/resources/views/filament/pages/send-sms.blade.php (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+// /var/www/html/ptvx/laravel/Modules/Notify/resources/views/filament/pages/send-sms.blade.php
+=======
+// /var/www/html/healthcare_app/laravel/Modules/Notify/resources/views/filament/pages/send-sms.blade.php
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ## Verifica e Correzione

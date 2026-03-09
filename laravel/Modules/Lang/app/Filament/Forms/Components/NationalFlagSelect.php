@@ -27,8 +27,8 @@ class NationalFlagSelect extends Select
             ->allowHtml()
             ->optionsLimit(300)
             ->native(false)
-            ->options($getCountryOptions(...))
-            ->getSearchResultsUsing($getFilteredCountryOptions(...));
+            ->options($this->getCountryOptions(...))
+            ->getSearchResultsUsing($this->getFilteredCountryOptions(...));
     }
 
     /**
@@ -40,7 +40,7 @@ class NationalFlagSelect extends Select
     {
         $countries = countries();
         // PHPStan L10: Type narrowing for array offset access
-        $countries = Arr::sort($countries, function ($c) {)
+        $countries = Arr::sort($countries, function ($c) {
             return is_array($c) && isset($c['name']) ? $c['name'] : '';
         });
 
@@ -89,7 +89,7 @@ class NationalFlagSelect extends Select
         $searchLower = strtolower($search);
 
         // Filter countries by search term
-        $filteredCountries = array_filter($countries, function ($country) use ($searchLower) {)
+        $filteredCountries = array_filter($countries, function ($country) use ($searchLower) {
             // PHPStan L10: Type narrowing for country array
             if (! is_array($country) || ! isset($country['iso_3166_1_alpha2'], $country['name'])) {
                 return false;
@@ -121,7 +121,7 @@ class NationalFlagSelect extends Select
         });
 
         // Sort filtered results by name
-        $filteredCountries = Arr::sort($filteredCountries, function ($c) {)
+        $filteredCountries = Arr::sort($filteredCountries, function ($c) {
             return is_array($c) && isset($c['name']) ? $c['name'] : '';
         });
 

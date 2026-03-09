@@ -29,10 +29,10 @@ class BaseActivityFactory extends Factory
         return [
             'log_name' => $this->faker->randomElement(['default', 'auth', 'user', 'system']),
             'description' => $this->faker->sentence(),
-            'subject_type' => $this->faker->randomElement(['Modules\User\Models\User', 'Modules\Meetup\Models\Event']),
-            'subject_id' => $this->faker->uuid(),
+            'subject_type' => $this->faker->randomElement(['Modules\User\Models\User', 'Modules\<nome progetto>\Models\Appointment']),
+            'subject_id' => $this->faker->numberBetween(1, 1000),
             'causer_type' => $this->faker->randomElement(['Modules\User\Models\User', null]),
-            'causer_id' => $this->faker->optional(0.8)->uuid(),
+            'causer_id' => $this->faker->optional(0.8)->numberBetween(1, 100),
             'properties' => [
                 'ip_address' => $this->faker->ipv4(),
                 'user_agent' => $this->faker->userAgent(),

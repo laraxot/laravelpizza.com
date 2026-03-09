@@ -1,6 +1,6 @@
 # WarriorFolio - Analisi Architettura Avanzata
 
-## 
+## Data: [DATE]
 
 ## Panoramica
 

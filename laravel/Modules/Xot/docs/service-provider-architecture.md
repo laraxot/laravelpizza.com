@@ -545,6 +545,6 @@ Il sistema `nwidart/laravel-modules` scansiona e registra automaticamente i modu
 
 ---
 
-**
+**Ultimo aggiornamento**: 27 Ottobre 2025
 **Versione Laravel**: 12.35.1
 **Filosofia**: DRY + KISS per registrazione automatica risorse modulari

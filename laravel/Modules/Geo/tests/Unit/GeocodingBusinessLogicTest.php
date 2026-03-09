@@ -4,10 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit;
 
+use Tests\TestCase;
+
+uses(TestCase::class);
+
 describe('Geocoding Business Logic', function () {
     beforeEach(function () {
         // In-memory test data following CLAUDE.md guidelines - no database
-        $italianAddress = [
+        $this->italianAddress = [
             'street' => 'Via Roma 123',
             'city' => 'Milano',
             'province' => 'MI',
@@ -17,7 +21,7 @@ describe('Geocoding Business Logic', function () {
             'country_code' => 'IT',
         ];
 
-        $geocodingResult = [
+        $this->geocodingResult = [
             'latitude' => 45.4642,
             'longitude' => 9.1900,
             'accuracy' => 'street_level',
@@ -31,7 +35,7 @@ describe('Geocoding Business Logic', function () {
             ],
         ];
 
-        $weatherData = [
+        $this->weatherData = [
             'temperature' => 15.5,
             'humidity' => 65,
             'pressure' => 1013.25,
@@ -42,7 +46,7 @@ describe('Geocoding Business Logic', function () {
             'uv_index' => 4,
         ];
 
-        $place = [
+        $this->place = [
             'id' => 'place-milano-001',
             'name' => 'Milano',
             'type' => 'city',
@@ -55,7 +59,7 @@ describe('Geocoding Business Logic', function () {
 
     describe('Italian Address Validation', function () {
         it('validates Italian postal code format', function () {
-            $address = $italianAddress;
+            $address = $this->italianAddress;
 
             // Business Logic: Italian postal codes are 5 digits
             expect($address['postal_code'])->toMatch('/^\d{5}$/');
@@ -64,7 +68,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates Italian province codes', function () {
-            $address = $italianAddress;
+            $address = $this->italianAddress;
 
             // Business Logic: Italian provinces are 2-letter codes
             expect($address['province'])->toMatch('/^[A-Z]{2}$/');
@@ -73,7 +77,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates Italian address structure', function () {
-            $address = $italianAddress;
+            $address = $this->italianAddress;
 
             // Business Logic: Complete Italian address requirements
             expect($address)->toHaveKey('street');
@@ -88,7 +92,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates Italian street address format', function () {
-            $address = $italianAddress;
+            $address = $this->italianAddress;
 
             // Business Logic: Italian street addresses have number after street name
             expect($address['street'])->toContain('Via');
@@ -97,7 +101,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates Italian regional hierarchy', function () {
-            $address = $italianAddress;
+            $address = $this->italianAddress;
 
             // Business Logic: Milano is in Lombardia region with MI province
             if ('Milano' === $address['city']) {
@@ -115,7 +119,7 @@ describe('Geocoding Business Logic', function () {
 
     describe('Geocoding Provider Logic', function () {
         it('validates geocoding coordinate precision', function () {
-            $result = $geocodingResult;
+            $result = $this->geocodingResult;
 
             // Business Logic: Italian coordinates should be within bounds
             expect($result['latitude'])->toBeGreaterThan(35.0); // Southern Italy
@@ -125,7 +129,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('ensures geocoding accuracy levels', function () {
-            $result = $geocodingResult;
+            $result = $this->geocodingResult;
             $validAccuracyLevels = ['country', 'region', 'city', 'district', 'street_level', 'building'];
 
             // Business Logic: Accuracy must be from valid set
@@ -135,7 +139,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates provider response structure', function () {
-            $result = $geocodingResult;
+            $result = $this->geocodingResult;
 
             // Business Logic: All providers must return consistent structure
             expect($result)->toHaveKey('latitude');
@@ -149,7 +153,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates bounding box calculations', function () {
-            $result = $geocodingResult;
+            $result = $this->geocodingResult;
             $bbox = $result['bounding_box'];
 
             // Business Logic: Bounding box must contain the point
@@ -186,7 +190,7 @@ describe('Geocoding Business Logic', function () {
 
     describe('Weather Data Integration', function () {
         it('validates weather data structure', function () {
-            $weather = $weatherData;
+            $weather = $this->weatherData;
 
             // Business Logic: Weather data must have core measurements
             expect($weather)->toHaveKey('temperature');
@@ -200,7 +204,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates humidity and pressure ranges', function () {
-            $weather = $weatherData;
+            $weather = $this->weatherData;
 
             // Business Logic: Humidity percentage
             expect($weather['humidity'])->toBeGreaterThanOrEqual(0);
@@ -212,7 +216,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates wind measurements', function () {
-            $weather = $weatherData;
+            $weather = $this->weatherData;
 
             // Business Logic: Wind speed in m/s or km/h
             expect($weather['wind_speed'])->toBeGreaterThanOrEqual(0);
@@ -224,7 +228,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates weather condition categories', function () {
-            $weather = $weatherData;
+            $weather = $this->weatherData;
             $validConditions = [
                 'clear',
                 'partly_cloudy',
@@ -245,7 +249,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates UV index ranges', function () {
-            $weather = $weatherData;
+            $weather = $this->weatherData;
 
             // Business Logic: UV index scale 0-11+
             expect($weather['uv_index'])->toBeGreaterThanOrEqual(0);
@@ -255,7 +259,7 @@ describe('Geocoding Business Logic', function () {
 
     describe('Place Classification Logic', function () {
         it('validates place hierarchy and types', function () {
-            $place = $place;
+            $place = $this->place;
             $validTypes = [
                 'country',
                 'region',
@@ -275,7 +279,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates population data for cities', function () {
-            $place = $place;
+            $place = $this->place;
 
             // Business Logic: Cities should have population data
             if ('city' === $place['type']) {
@@ -292,7 +296,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates geographic measurements', function () {
-            $place = $place;
+            $place = $this->place;
 
             // Business Logic: Area and elevation must be reasonable
             if (isset($place['area_km2'])) {
@@ -308,7 +312,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates timezone assignments', function () {
-            $place = $place;
+            $place = $this->place;
             $italianTimezones = ['Europe/Rome'];
 
             // Business Logic: Italian places should use correct timezone
@@ -373,7 +377,7 @@ describe('Geocoding Business Logic', function () {
 
     describe('Data Quality and Validation', function () {
         it('ensures coordinate precision limits', function () {
-            $coordinates = ['lat' => 45.464203, 'lng' => 9.189973];
+            $coordinates = ['lat' => 45.4642035, 'lng' => 9.1899738];
             $maxPrecision = 6; // decimal places
 
             // Business Logic: Coordinates shouldn't exceed reasonable precision
@@ -385,7 +389,7 @@ describe('Geocoding Business Logic', function () {
         });
 
         it('validates address completeness scoring', function () {
-            $address = $italianAddress;
+            $address = $this->italianAddress;
             $requiredFields = ['street', 'city', 'postal_code'];
             $optionalFields = ['province', 'region', 'country'];
 
@@ -403,14 +407,13 @@ describe('Geocoding Business Logic', function () {
             }
 
             expect($score)->toBeGreaterThan(80); // High quality address
-            // Normalize score to the business cap
-            expect(min(100.0, $score))->toBeLessThanOrEqual(100);
+            expect($score)->toBeLessThanOrEqual(100);
         });
 
         it('validates geocoding cache invalidation logic', function () {
             $cacheEntry = [
-                'address' => $italianAddress,
-                'result' => $geocodingResult,
+                'address' => $this->italianAddress,
+                'result' => $this->geocodingResult,
                 'cached_at' => time() - 86400, // 1 day ago
                 'expires_at' => time() + (86400 * 30), // 30 days from now
             ];

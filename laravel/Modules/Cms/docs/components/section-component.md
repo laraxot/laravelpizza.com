@@ -119,4 +119,4 @@ Questo permette:
 ## Collegamenti
 - [Documentazione Blocchi](../blocks/readme.md)
 - [Gestione Sezioni](../section-management.md)
-- [Documentazione Root](../../../../docs/components.md)
+- [Documentazione Root](../../../../../docs/components.md)

@@ -323,5 +323,5 @@ Ordinare risorse per frequenza uso:
 
 ---
 
-**
+**Ultimo aggiornamento**: 27 Ottobre 2025
 **Maintainer**: Team PTVX

@@ -27,7 +27,7 @@ class SanitizeFieldsHeaderAction extends Action
         $this->translateLabel()
             ->tooltip('sanitize')
             ->icon('heroicon-o-shield-exclamation')
-            ->action(function (ListRecords $livewire): void {)
+            ->action(function (ListRecords $livewire): void {
                 $resource = $livewire->getResource();
                 $modelClass = $resource::getModel();
                 // @phpstan-ignore staticMethod.nonObject
@@ -39,7 +39,7 @@ class SanitizeFieldsHeaderAction extends Action
                 foreach ($rows as $row) {
                     Assert::isInstanceOf($row, Model::class);
                     $save = false;
-                    foreach ($fields as $field)
+                    foreach ($this->fields as $field) {
                         $fieldName = is_string($field) ? $field : (string) $field;
                         $item = $row->{$fieldName};
                         Assert::string($item, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
@@ -47,7 +47,7 @@ class SanitizeFieldsHeaderAction extends Action
                         if ($string !== $item) {
                             $row->{$fieldName} = $string;
                             $save = true;
-                            ++$c;
+                            $c++;
                         }
                     }
                     if ($save) {
@@ -63,7 +63,7 @@ class SanitizeFieldsHeaderAction extends Action
 
     public function setFields(array $fields): self
     {
-        $fields = $fields;
+        $this->fields = $fields;
 
         return $this;
     }

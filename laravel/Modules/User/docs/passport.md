@@ -1,4 +1,4 @@
-# Laravel Passport Documentation (
+# Laravel Passport Documentation (Version 13.4.x)
 
 ## Overview
 Laravel Passport provides a full OAuth2 server implementation for your Laravel application. It allows you to issue access tokens to your API clients and authenticate requests.  

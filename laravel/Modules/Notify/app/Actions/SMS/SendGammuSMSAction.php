@@ -35,20 +35,20 @@ final class SendGammuSMSAction implements SmsActionContract
      */
     public function __construct()
     {
-        $gammuData = GammuData::make();
+        $this->gammuData = GammuData::make();
 
-        if (! $gammuData->path)
+        if (! $this->gammuData->path) {
             throw new Exception('Path Gammu non configurato in sms.php');
         }
 
-        if (! $gammuData->config)
+        if (! $this->gammuData->config) {
             throw new Exception('Config Gammu non configurato in sms.php');
         }
 
         // Parametri a livello di root
         $sender = config('sms.from');
-        $defaultSender = is_string($sender);
-        $debug = (bool);
+        $this->defaultSender = is_string($sender) ? $sender : null;
+        $this->debug = (bool) config('sms.debug', false);
     }
 
     /**
@@ -77,10 +77,10 @@ final class SendGammuSMSAction implements SmsActionContract
         file_put_contents($tempFile, $smsData->body);
 
         // Esegue il comando Gammu per inviare l'SMS
-        $process = new Process([)
-            $gammuData->getPath()
+        $process = new Process([
+            $this->gammuData->getPath(),
             '-c',
-            $gammuData->getConfig()
+            $this->gammuData->getConfig(),
             'sendsms',
             'TEXT',
             $to,
@@ -88,7 +88,7 @@ final class SendGammuSMSAction implements SmsActionContract
             $tempFile,
         ]);
 
-        $process->setTimeout($gammuData->getTimeout());
+        $process->setTimeout($this->gammuData->getTimeout());
 
         try {
             $process->run();
@@ -100,15 +100,15 @@ final class SendGammuSMSAction implements SmsActionContract
                 throw new Exception('Gammu error: '.$process->getErrorOutput());
             }
 
-            $vars['status_code'] = $process->getExitCode();
-            $vars['status_txt'] = $process->getOutput();
+            $this->vars['status_code'] = $process->getExitCode();
+            $this->vars['status_txt'] = $process->getOutput();
 
-            return $vars;
+            return $this->vars;
         } catch (Exception $exception) {
             // Rimuove il file temporaneo in caso di errore
             unlink($tempFile);
 
-            throw new Exception()
+            throw new Exception(
                 $exception->getMessage().'['.__LINE__.']['.class_basename($this).']',
                 $exception->getCode(),
                 $exception,

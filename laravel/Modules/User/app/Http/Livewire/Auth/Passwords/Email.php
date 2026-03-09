@@ -22,15 +22,15 @@ class Email extends Component
      */
     public function sendResetPasswordLink(): void
     {
-        $this->validate([)
+        $this->validate([
             'email' => ['required', 'email'],
         ]);
 
         $broker = $this->broker();
-        $response = $broker->sendResetLink(['email' => $email]);
+        $response = $broker->sendResetLink(['email' => $this->email]);
 
         if (Password::RESET_LINK_SENT === $response) {
-            $emailSentMessage = trans('user::'.$response);
+            $this->emailSentMessage = trans('user::'.$response);
 
             return;
         }
@@ -58,7 +58,7 @@ class Email extends Component
          */
         $view = 'pub_theme::livewire.auth.passwords.email';
 
-        return view($view, [)
+        return view($view, [
             'layout' => 'pub_theme::layouts.auth',
         ]);
     }

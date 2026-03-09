@@ -36,7 +36,7 @@ class LogoutWidget extends XotBaseWidget
      */
     public function mount(): void
     {
-        $form->fill();
+        $this->form->fill();
     }
 
     /**
@@ -67,7 +67,8 @@ class LogoutWidget extends XotBaseWidget
     public function getFormActions(): array
     {
         return [
-            $this->getLogoutAction($getCancelAction()),
+            $this->getLogoutAction(),
+            $this->getCancelAction(),
         ];
     }
 
@@ -104,7 +105,7 @@ class LogoutWidget extends XotBaseWidget
             ->color('danger')
             ->size('lg')
             ->extraAttributes(['class' => 'w-full justify-center'])
-            ->action($logout(...));
+            ->action($this->logout(...));
     }
 
     /**
@@ -117,7 +118,7 @@ class LogoutWidget extends XotBaseWidget
             ->color('gray')
             ->size('lg')
             ->extraAttributes(['class' => 'w-full justify-center mt-2'])
-            ->url($getLocalizedHomeUrl());
+            ->url($this->getLocalizedHomeUrl());
     }
 
     /**
@@ -170,7 +171,7 @@ class LogoutWidget extends XotBaseWidget
      */
     protected function redirectAfterLogout(): void
     {
-        redirect($getLocalizedHomeUrl());
+        redirect($this->getLocalizedHomeUrl())->with('success', __('user::auth.logout_success'))->send();
         exit;
     }
 

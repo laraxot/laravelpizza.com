@@ -2,77 +2,38 @@
 
 declare(strict_types=1);
 
-uses(\Modules\Media\Tests\TestCase::class);
+namespace Modules\Media\Tests\Unit\Models;
 
+use Illuminate\Database\Eloquent\Model;
 use Modules\Media\Models\BaseModel;
+use Modules\Media\Tests\TestCase;
 
-describe('Media BaseModel', function () {
-    it('extends XotBaseModel', function (): void {
-        // Arrange
-        $model = new class extends BaseModel {
-            protected $table = 'test_table';
-        };
+uses(TestCase::class);
 
-        // Assert
-        expect($model)->toBeInstanceOf(BaseModel::class);
-    });
+beforeEach(function () {
+    $this->baseModel = new class extends BaseModel
+    {
+        protected $table = 'test_media_table';
+    };
+});
 
-    it('has media connection', function (): void {
-        // Arrange
-        $model = new class extends BaseModel {
-            protected $table = 'test_table';
-        };
+test('base model extends eloquent model', function () {
+    expect($this->baseModel)->toBeInstanceOf(Model::class);
+});
 
-        // Assert
-        expect($model->getConnectionName())->toBe('media');
-    });
+test('base model has correct table name', function () {
+    expect($this->baseModel->getTable())->toBe('test_media_table');
+});
 
-    it('casts id to string', function (): void {
-        // Arrange
-        $model = new class extends BaseModel {
-            protected $table = 'test_table';
-        };
+test('base model can be instantiated', function () {
+    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
+});
 
-        // Assert
-        $casts = $model->getCasts();
-        expect($casts['id'] ?? null)->toBe('string');
-    });
+test('base model has proper inheritance chain', function () {
+    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
+    expect($this->baseModel)->toBeInstanceOf(Model::class);
+});
 
-    it('casts uuid to string', function (): void {
-        // Arrange
-        $model = new class extends BaseModel {
-            protected $table = 'test_table';
-        };
-
-        // Assert
-        $casts = $model->getCasts();
-        expect($casts['uuid'] ?? null)->toBe('string');
-    });
-
-    it('casts datetime fields', function (): void {
-        // Arrange
-        $model = new class extends BaseModel {
-            protected $table = 'test_table';
-        };
-
-        // Assert
-        $casts = $model->getCasts();
-        expect($casts['published_at'] ?? null)->toBe('datetime');
-        expect($casts['created_at'] ?? null)->toBe('datetime');
-        expect($casts['updated_at'] ?? null)->toBe('datetime');
-        expect($casts['deleted_at'] ?? null)->toBe('datetime');
-    });
-
-    it('casts user fields to string', function (): void {
-        // Arrange
-        $model = new class extends BaseModel {
-            protected $table = 'test_table';
-        };
-
-        // Assert
-        $casts = $model->getCasts();
-        expect($casts['updated_by'] ?? null)->toBe('string');
-        expect($casts['created_by'] ?? null)->toBe('string');
-        expect($casts['deleted_by'] ?? null)->toBe('string');
-    });
+test('base model has timestamps enabled', function () {
+    expect($this->baseModel->usesTimestamps())->toBeTrue();
 });

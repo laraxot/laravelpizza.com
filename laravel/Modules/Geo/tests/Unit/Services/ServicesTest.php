@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+uses(Modules\Geo\Tests\TestCase::class);
+
 use Modules\Geo\Services\GeoService;
 use Modules\Geo\Services\GoogleMapsService;
 use Modules\Geo\Services\HereService;

@@ -184,5 +184,5 @@ Una sola classe (`SpatieEmail`) per tutte le email stagionali, non una per ogni 
 
 ---
 
-**
+**Ultimo aggiornamento**: 19 Dicembre 2025  
 **Filosofia**: *"Genericity first, simplicity second, DRY always, KISS forever"*

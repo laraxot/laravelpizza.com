@@ -2,13 +2,12 @@
 
 declare(strict_types=1);
 
+uses(Modules\Geo\Tests\TestCase::class);
+
 use Modules\Geo\Filament\Actions\UpdateCoordinatesBulkAction;
 use Modules\Geo\Filament\Forms\Components\AddressField;
 use Modules\Geo\Filament\Widgets\LatLngWidget;
 use Modules\Geo\Filament\Widgets\LocationWidget;
-use Modules\Geo\Tests\LightTestCase;
-
-uses(LightTestCase::class);
 
 test('AddressField can be instantiated', function () {
     $field = AddressField::make('address');

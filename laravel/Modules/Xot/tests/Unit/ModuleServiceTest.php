@@ -2,46 +2,50 @@
 
 declare(strict_types=1);
 
+use Tests\TestCase;
 use Modules\Xot\Services\ModuleService;
+use Nwidart\Modules\Facades\Module as ModuleFacade;
 use Nwidart\Modules\Module;
+
+uses(TestCase::class);
 
 describe('ModuleService', function () {
     beforeEach(function () {
-        $service = (new ModuleService());
+        $this->service = new ModuleService()->setName('TestModule');
     });
 
     it('can be instantiated', function () {
-        expect($service);
+        expect($this->service)->toBeInstanceOf(ModuleService::class);
     });
 
     it('has correct module name property', function () {
-        $reflection = new ReflectionClass($service);
+        $reflection = new ReflectionClass($this->service);
         $nameProperty = $reflection->getProperty('name');
         $nameProperty->setAccessible(true);
 
-        expect($nameProperty->getValue($service));
+        expect($nameProperty->getValue($this->service))->toBe('TestModule');
     });
 
     it('can be instantiated with different module names', function () {
-        $service1 = (new ModuleService())->setName('Chart');
-        $service2 = (new ModuleService())->setName('User');
+        $service1 = new ModuleService()->setName('Chart');
+        $service2 = new ModuleService()->setName('User');
 
         expect($service1)->toBeInstanceOf(ModuleService::class)->and($service2)->toBeInstanceOf(ModuleService::class);
     });
 
     it('has getModels method', function () {
-        expect(method_exists($service, 'getModels'));
+        expect(method_exists($this->service, 'getModels'))->toBeTrue();
     });
 
     it('returns array from getModels method', function () {
         // Mock the Module facade to avoid database dependencies
-        $result = $service->getModels();
+        $result = $this->service->getModels();
 
         expect($result)->toBeArray();
     });
 
     it('getModels returns correct array structure', function () {
-        $result = $service->getModels();
+        $result = $this->service->getModels();
 
         expect($result)->toBeArray();
 
@@ -53,7 +57,7 @@ describe('ModuleService', function () {
 
     it('filters abstract classes correctly', function () {
         // Test the logic that filters out abstract classes
-        $result = $service->getModels();
+        $result = $this->service->getModels();
 
         // The result should not contain BaseModel (which is abstract)
         expect($result)->not->toHaveKey('base_model');
@@ -61,21 +65,21 @@ describe('ModuleService', function () {
 
     it('handles reflection exceptions gracefully', function () {
         // Test that the service handles reflection errors without throwing
-        $result = $service->getModels();
+        $result = $this->service->getModels();
 
         expect($result)->toBeArray();
     });
 
     it('processes model names correctly', function () {
         // Test that model names are converted to snake_case
-        $reflection = new ReflectionClass($service);
+        $reflection = new ReflectionClass($this->service);
         $method = $reflection->getMethod('getModels');
 
         expect($method->isPublic())->toBeTrue();
     });
 
     it('has proper return type annotation', function () {
-        $reflection = new ReflectionClass($service);
+        $reflection = new ReflectionClass($this->service);
         $method = $reflection->getMethod('getModels');
 
         $docComment = $method->getDocComment();
@@ -83,14 +87,14 @@ describe('ModuleService', function () {
     });
 
     it('validates method signature', function () {
-        $reflection = new ReflectionClass($service);
+        $reflection = new ReflectionClass($this->service);
         $method = $reflection->getMethod('getModels');
 
         expect($method->isPublic())->toBeTrue()->and($method->getNumberOfParameters())->toBe(0);
     });
 
     it('handles empty module gracefully', function () {
-        $emptyService = (new ModuleService())->setName('NonExistentModule');
+        $emptyService = new ModuleService()->setName('NonExistentModule');
         $result = $emptyService->getModels();
 
         expect($result)->toBeArray()->and($result)->toBeEmpty();
@@ -98,7 +102,7 @@ describe('ModuleService', function () {
 
     it('uses correct namespace patterns', function () {
         // Test that the service uses correct namespace patterns
-        $reflection = new ReflectionClass($service);
+        $reflection = new ReflectionClass($this->service);
 
         expect($reflection->hasProperty('name'))->toBeTrue();
     });
@@ -106,7 +110,7 @@ describe('ModuleService', function () {
     it('uses setName method for configuration', function () {
         // ModuleService doesn't have a constructor with parameters
         // It uses setName() method for configuration (fluent interface)
-        $reflection = new ReflectionClass($service);
+        $reflection = new ReflectionClass($this->service);
 
         expect($reflection->hasMethod('setName'))
             ->toBeTrue()
@@ -115,7 +119,7 @@ describe('ModuleService', function () {
     });
 
     it('validates class structure', function () {
-        $reflection = new ReflectionClass($service);
+        $reflection = new ReflectionClass($this->service);
 
         expect($reflection->isInstantiable())
             ->toBeTrue()
@@ -126,10 +130,10 @@ describe('ModuleService', function () {
     });
 
     it('has proper method visibility', function () {
-        $reflection = new ReflectionClass($service);
+        $reflection = new ReflectionClass($this->service);
         $methods = $reflection->getMethods();
 
-        $publicMethods = array_filter($methods, fn ($method) => $method->isPublic());
+        $publicMethods = array_filter($methods, fn($method) => $method->isPublic());
 
         expect(count($publicMethods))->toBeGreaterThan(0);
     });
@@ -141,7 +145,7 @@ describe('ModuleService', function () {
 
     it('processes file extensions correctly', function () {
         // Test that the service correctly processes .php files
-        $result = $service->getModels();
+        $result = $this->service->getModels();
 
         expect($result)->toBeArray();
     });
@@ -158,7 +162,7 @@ describe('ModuleService', function () {
 
     it('has proper error handling', function () {
         // Test that exceptions are caught and handled gracefully
-        $result = $service->getModels();
+        $result = $this->service->getModels();
 
         // Should not throw exceptions
         expect($result)->toBeArray();

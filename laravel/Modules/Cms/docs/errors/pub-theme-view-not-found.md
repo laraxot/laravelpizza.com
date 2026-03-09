@@ -78,7 +78,7 @@ Il componente `Section` del modulo CMS:
 
 ## 🔗 Riferimenti
 
-- [Documentazione Completa](../../../../docs/pub_theme-view-not-found-error.md)
+- [Documentazione Completa](../../../../../docs/pub_theme-view-not-found-error.md)
 - [Componente Section](../../app/View/Components/Section.php)
 - [Configurazione Tema](../../../../config/local/techplanner/xra.php)
 - [ServiceProvider Tema Sixteen](../../../../Themes/Sixteen/app/Providers/ThemeServiceProvider.php)
@@ -165,7 +165,7 @@ Il componente `Section` del modulo CMS:
 
 ## 🔗 Riferimenti
 
-- [Documentazione Completa](../../../../docs/pub_theme-view-not-found-error.md)
+- [Documentazione Completa](../../../../../docs/pub_theme-view-not-found-error.md)
 - [Componente Section](../../app/View/Components/Section.php)
 - [Configurazione Tema](../../../../config/local/techplanner/xra.php)
 - [ServiceProvider Tema Sixteen](../../../../Themes/Sixteen/app/Providers/ThemeServiceProvider.php)

@@ -7,17 +7,21 @@ namespace Modules\Meetup\Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Meetup\Models\Event;
 use Modules\Meetup\Models\EventPerformer;
-use Modules\Meetup\Models\Performer;
+use Modules\User\Models\User;
 
 /**
- * @extends Factory<\Modules\Meetup\Models\EventPerformer>
+ * Factory for EventPerformer pivot model.
+ * 
+ * Represents speakers/presenters at an event.
+ * 
+ * @extends Factory<EventPerformer>
  */
 class EventPerformerFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
-     * @var class-string<\Modules\Meetup\Models\EventPerformer>
+     * @var class-string<EventPerformer>
      */
     protected $model = EventPerformer::class;
 
@@ -30,9 +34,27 @@ class EventPerformerFactory extends Factory
     {
         return [
             'event_id' => Event::factory(),
-            'performer_id' => Performer::factory(),
-            'role' => $this->faker->randomElement(['speaker', 'host', 'panelist']),
-            'order' => $this->faker->numberBetween(1, 10),
+            'user_id' => User::factory(),
         ];
+    }
+
+    /**
+     * State: attach to specific event.
+     */
+    public function forEvent(Event|int $event): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'event_id' => $event instanceof Event ? $event->id : $event,
+        ]);
+    }
+
+    /**
+     * State: attach to specific performer/speaker.
+     */
+    public function forPerformer(User|string $user): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'user_id' => $user instanceof User ? $user->id : $user,
+        ]);
     }
 }

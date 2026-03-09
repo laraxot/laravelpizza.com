@@ -27,7 +27,6 @@ use Sushi\Sushi;
  * @property array<array-key, mixed>|null $content
  * @property ProfileContract|null         $creator
  * @property ProfileContract|null         $updater
- *
  * @method static TranslationFileFactory          factory($count = null, $state = [])
  * @method static Builder<static>|TranslationFile newModelQuery()
  * @method static Builder<static>|TranslationFile newQuery()
@@ -37,9 +36,7 @@ use Sushi\Sushi;
  * @method static Builder<static>|TranslationFile whereKey($value)
  * @method static Builder<static>|TranslationFile whereName($value)
  * @method static Builder<static>|TranslationFile wherePath($value)
- *
  * @property ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class TranslationFile extends BaseModel

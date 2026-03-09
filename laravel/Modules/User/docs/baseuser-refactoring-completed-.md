@@ -233,7 +233,7 @@ $user->hasRole('admin', 'api'); // ✅ Ora funziona correttamente
 
 ### Analisi Pre-Refactoring
 - [DRY Violation Analysis](./baseuser-dry-violation-analysis.md) - Analisi completa del problema
-- [Refactoring Plan](../../docs/baseuser-dry-violation-2025-10-15.md) - Piano esecutivo
+- [Refactoring Plan](../../../docs/baseuser-dry-violation-2025-10-15.md) - Piano esecutivo
 
 ### Modulo User
 - [BaseUser Model](./models/baseuser.md)
@@ -241,8 +241,8 @@ $user->hasRole('admin', 'api'); // ✅ Ora funziona correttamente
 - [User Module README](./readme.md)
 
 ### Root Progetto
-- [Code Quality](../../docs/code-quality-analysis.md)
-- [DRY Violations](../../docs/dry-violations-analysis.md)
+- [Code Quality](../../../docs/code-quality-analysis.md)
+- [DRY Violations](../../../docs/dry-violations-analysis.md)
 
 ### Spatie Documentation
 - [Laravel Permission](https://spatie.be/docs/laravel-permission/v6/introduction)

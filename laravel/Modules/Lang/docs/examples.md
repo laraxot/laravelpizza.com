@@ -105,7 +105,7 @@ return [
 
     'updated_at' => [
         'label' => 'Data Aggiornamento',
-        'help' => 'Data e ora dell\'
+        'help' => 'Data e ora dell\'ultimo aggiornamento'
     ]
 ];
 ```
@@ -921,7 +921,7 @@ class UserResourceTest extends TestCase
 
 ---
 
-**
+**Ultimo aggiornamento**: Gennaio 2025
 **Versione**: 2.0.0
 **Autore**: Team Laraxot
 **Mantenuto da**: Community Laraxot

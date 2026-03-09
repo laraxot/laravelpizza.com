@@ -112,8 +112,12 @@ protected function getProjectNamespace(): string
 ```bash
 # Test PHPStan
 cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_ptvx/laravel (docs: replace project-specific references with generic placeholders across documentation)
-cd /var/www/html/_bases/base_<nome progetto>_fila5_mono/laravel
+<<<<<<< HEAD
+cd /var/www/html/_bases/base_ptvx/laravel
+=======
+cd /var/www/html/_bases/base_healthcare_app/laravel
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+cd /var/www/html/_bases/base_techplanner_fila5_mono/laravel
 ./vendor/bin/phpstan analyze Modules/Notify --level=9
 
 # Test funzionalità
@@ -132,5 +136,5 @@ Applicare gli stessi pattern di type safety agli altri moduli:
 - [Reusability Guidelines](reusability_guidelines.md)
 - [PHPStan Best Practices](../../../../docs/phpstan-best-practices.md)
 
-*
+*Ultimo aggiornamento: gennaio 2025*
 

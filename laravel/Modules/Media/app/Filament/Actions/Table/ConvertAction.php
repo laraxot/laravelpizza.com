@@ -22,9 +22,9 @@ class ConvertAction extends Action
             ->tooltip('convert')
             ->openUrlInNewTab()
             ->icon('media-convert')
-            ->schema([)
+            ->schema([
                 Radio::make('format')
-                    ->options([)
+                    ->options([
                         'webm01' => 'webm01',
                         'webm02' => 'webm02',
                     ])

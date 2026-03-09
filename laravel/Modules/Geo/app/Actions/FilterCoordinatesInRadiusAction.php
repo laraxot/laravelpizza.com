@@ -46,7 +46,7 @@ readonly class FilterCoordinatesInRadiusAction
                 address: null,
             );
 
-            $distance = $calculateDistanceAction->execute($centerLocation, $targetLocation);
+            $distance = $this->calculateDistanceAction->execute($centerLocation, $targetLocation)['distance']['value'];
 
             return $distance <= $radius;
         });

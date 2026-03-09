@@ -20,7 +20,7 @@ class GetDomainsArrayAction
         $res = $this->recurse(config_path());
         $res1 = $this->collapse($res);
 
-        return Arr::map($res1, fn (string $value) => [)
+        return Arr::map($res1, fn (string $value) => [
             'id' => $value,
             'name' => $value,
         ]);
@@ -57,7 +57,7 @@ class GetDomainsArrayAction
 
             // Type narrowing: $v0 is mixed from array
             if (is_array($v0)) {
-                $res = array_merge($res, $collapse($v0, $newkey));
+                $res = array_merge($res, $this->collapse($v0, $newkey));
             }
         }
 

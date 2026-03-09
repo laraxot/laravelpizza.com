@@ -9,6 +9,8 @@ use Modules\Notify\Tests\TestCase;
 
 class NotifyThemeableTest extends TestCase
 {
+    // DatabaseTransactions is already used in the module TestCase
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -78,8 +80,8 @@ class NotifyThemeableTest extends TestCase
             'updated_by' => 'user_456',
         ]);
 
-        $this->assertEquals(789, $themeable->fresh());
-        $this->assertEquals('user_456', $themeable->fresh());
+        $this->assertEquals(789, $themeable->fresh()->notify_theme_id);
+        $this->assertEquals('user_456', $themeable->fresh()->updated_by);
     }
 
     /** @test */

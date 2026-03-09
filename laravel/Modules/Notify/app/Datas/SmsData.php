@@ -21,9 +21,9 @@ class SmsData
      */
     public function __construct(array $data = [])
     {
-        $from = SafeStringCastAction::cast($data['from'] ?? '');
-        $recipient = SafeStringCastAction::cast($data['recipient'] ?? '');
-        $body = SafeStringCastAction::cast($data['body'] ?? '');
+        $this->from = SafeStringCastAction::cast($data['from'] ?? '');
+        $this->recipient = SafeStringCastAction::cast($data['recipient'] ?? '');
+        $this->body = SafeStringCastAction::cast($data['body'] ?? '');
     }
 
     /**

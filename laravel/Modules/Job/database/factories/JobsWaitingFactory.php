@@ -25,13 +25,13 @@ class JobsWaitingFactory extends Factory
     public function definition(): array
     {
         return [
-            // 'id' => // Placeholder purged faker->number(1,5
+            // 'id' => $this->faker->number(1,5),
             'queue' => fake()->word,
             'payload' => fake()->text,
             'attempts' => fake()->boolean,
-            // 'reserved_at' => // Placeholder purged faker->randomNumber,
-            // 'available_at' => // Placeholder purged faker->randomNumber,
-            // 'created_at' => // Placeholder purged faker->randomNumber
+            // 'reserved_at' => $this->faker->randomNumber,
+            // 'available_at' => $this->faker->randomNumber,
+            // 'created_at' => $this->faker->randomNumber
         ];
     }
 }

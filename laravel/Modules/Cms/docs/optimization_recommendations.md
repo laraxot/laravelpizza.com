@@ -318,7 +318,7 @@ php artisan cms:seo-audit
 
 ## Collegamenti
 
-- [Analisi Moduli Globale](../../../docs/modules_analysis_and_optimization.md)
+- [Analisi Moduli Globale](../../../../docs/modules_analysis_and_optimization.md)
 - [Content Management Guide](content-management/)
 - [SEO Best Practices](seo/)
 

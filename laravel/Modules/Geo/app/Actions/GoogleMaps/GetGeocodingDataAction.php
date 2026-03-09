@@ -71,7 +71,7 @@ readonly class GetGeocodingDataAction
      */
     private function makeApiRequest(string $address): string
     {
-        $response = $client->get(self::API_URL, [
+        $response = $this->client->get(self::API_URL, [
             'query' => [
                 'address' => $address,
                 'key' => config('geo.google_maps.api_key'),

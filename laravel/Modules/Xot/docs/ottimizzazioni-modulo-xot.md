@@ -345,8 +345,8 @@ docs/
 - [Best Practices](./core/best-practices.md) - Best practices consolidate
 
 ### Documentazione Root
-- [docs/ottimizzazioni-sistema.md](../../../docs/ottimizzazioni-sistema.md) - Ottimizzazioni sistema generale
-- [docs/architettura-moduli.md](../../../docs/architettura-moduli.md) - Architettura moduli
+- [docs/ottimizzazioni-sistema.md](../../../../docs/ottimizzazioni-sistema.md) - Ottimizzazioni sistema generale
+- [docs/architettura-moduli.md](../../../../docs/architettura-moduli.md) - Architettura moduli
 
 ---
 

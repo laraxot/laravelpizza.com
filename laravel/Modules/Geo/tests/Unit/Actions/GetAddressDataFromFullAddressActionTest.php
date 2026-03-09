@@ -3,20 +3,20 @@
 declare(strict_types=1);
 
 use Modules\Geo\Actions\GetAddressDataFromFullAddressAction;
-use Modules\Geo\Tests\LightTestCase;
+use Modules\Geo\Tests\TestCase;
 
-uses(LightTestCase::class);
+uses(TestCase::class);
 
 beforeEach(function () {
-    $action = new GetAddressDataFromFullAddressAction();
+    $this->action = new GetAddressDataFromFullAddressAction();
 });
 
 it('returns AddressData when first service succeeds', function (): void {
     // As this action depends on multiple external services which are difficult to mock,
     // we can test that it at least has the correct structure and properties
-    expect($action);
-    expect($action->getErrors());
-    expect($action->getErrors());
+    expect($this->action)->toBeInstanceOf(GetAddressDataFromFullAddressAction::class);
+    expect($this->action->getErrors())->toBeInstanceOf(Illuminate\Support\Collection::class);
+    expect($this->action->getErrors()->count())->toBe(0);
 });
 
 it('initializes with empty errors collection', function (): void {
@@ -34,11 +34,9 @@ it('executes without throwing error for basic call', function (): void {
     // The execute method should handle missing services gracefully
     $result = $action->execute('Test Address');
 
-    // Depending on configured services it may return null or a valid AddressData.
-    if (null !== $result) {
-        expect($result)->toBeInstanceOf(Modules\Geo\Datas\AddressData::class);
-    }
+    // The method should return null if no services are available
+    expect($result)->toBeNull();
 
-    // Errors collection must always be available.
+    // And should have set error messages
     expect($action->getErrors())->toBeInstanceOf(Illuminate\Support\Collection::class);
 });

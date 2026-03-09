@@ -39,20 +39,20 @@ class Section extends Component
      * @param string|null $class Additional CSS classes
      * @param string|null $id    Custom ID for the section
      */
-    public function __construct()
+    public function __construct(
         string $slug,
         ?string $class = null,
         ?string $id = null,
         ?string $tpl = null,
     ) {
-        $slug = $slug;
-        $class = $class;
-        $id = $id;
+        $this->slug = $slug;
+        $this->class = $class;
+        $this->id = $id;
         if (is_string($tpl)) {
-            $tpl = $tpl;
+            $this->tpl = $tpl;
         }
-        /* @phpstan-ignore staticMethod.notFound, assign.propertyType */
-        $blocks = SectionModel::getBlocksBySlug($this->slug);
+        $blocksResult = SectionModel::getBlocksBySlug($this->slug);
+        $this->blocks = $blocksResult;
     }
 
     /**
@@ -60,9 +60,9 @@ class Section extends Component
      */
     public function render(): ViewContract
     {
-        $view = 'pub_theme::components.sections.'.$slug.'.'.$this->tpl;
+        $view = 'pub_theme::components.sections.'.$this->slug.'.'.$this->tpl;
         $view_params = [
-            'blocks' => $blocks,
+            'blocks' => $this->blocks,
         ];
 
         /* @phpstan-ignore argument.type */

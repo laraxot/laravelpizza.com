@@ -19,42 +19,44 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table))
-            $table->increments('id');
-            $table->string('name')->nullable();
-            $table->string('mailable')->nullable();
-            $table->string('slug')->unique()->nullable();
-            $table->json('subject')->nullable();
-            $table->json('html_template')->nullable();
-            $table->json('text_template')->nullable();
-            $table->string('version')->default('1.0.0');
-        });
+        if (! $this->tableExists()) {
+            $this->getConn()->create($this->getTable(), function (Blueprint $table): void {
+                $table->increments('id');
+                $table->string('name')->nullable();
+                $table->string('mailable')->nullable();
+                $table->string('slug')->unique()->nullable();
+                $table->json('subject')->nullable();
+                $table->json('html_template')->nullable();
+                $table->json('text_template')->nullable();
+                $table->string('version')->default('1.0.0');
+            });
+        }
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table))
-            if (! $this->hasColumn('name'))
+        $this->tableUpdate(function (Blueprint $table): void {
+            if (! $this->hasColumn('name')) {
                 $table->string('name')->nullable();
             }
-            if (! $this->hasColumn('slug'))
+            if (! $this->hasColumn('slug')) {
                 $table->string('slug')->unique()->nullable();
             }
-            if (! $this->hasColumn('params'))
+            if (! $this->hasColumn('params')) {
                 $table->text('params')->nullable();
             }
-            if (! $this->hasColumn('sms_template'))
+            if (! $this->hasColumn('sms_template')) {
                 $table->json('sms_template')->nullable();
             }
-            if (! $this->hasColumn('counter'))
+            if (! $this->hasColumn('counter')) {
                 $table->integer('counter')->default(0);
             }
-            if (! $this->hasColumn('html_layout_path'))
+            if (! $this->hasColumn('html_layout_path')) {
                 $table->string('html_layout_path')->nullable();
             }
-            if (! $this->hasColumn('version'))
+            if (! $this->hasColumn('version')) {
                 $table->string('version')->default('1.0.0');
             }
 
-            $this->updateTimestamps()
+            $this->updateTimestamps(
                 table: $table,
                 hasSoftDeletes: true,
             );

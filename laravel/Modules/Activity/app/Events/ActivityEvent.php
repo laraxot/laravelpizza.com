@@ -14,13 +14,13 @@ class ActivityEvent
     use InteractsWithSockets;
     use SerializesModels;
 
-    public array $data = [];
+    // public array $data = [];
 
     /**
      * Create a new event instance.
      */
-    public function __construct(array $data = [])
+    public function __construct()
     {
-        $this->data = $data;
+        // $this->data = ['aaa' => 'bbb'];
     }
 }

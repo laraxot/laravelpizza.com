@@ -61,13 +61,6 @@ final class FixJigSawByModuleAction
         ];
 
         $file_content = str_replace(array_keys($replace), array_values($replace), $stub->getContents());
-
-        // Create directory if it doesn't exist
-        $dir = dirname($file_path);
-        if (! is_dir($dir)) {
-            File::makeDirectory($dir, 0755, true);
-        }
-
         File::put($file_path, $file_content);
 
         return $file_path;

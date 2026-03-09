@@ -13,20 +13,16 @@
         "laravel/passport": "^13",
         "livewire/livewire": "^4.0",
         "livewire/volt": "*",
-        "nwidart/laravel-modules": "^12.0",
-        "phpoffice/phpspreadsheet": "^1.30",
-        "spatie/laravel-data": "^4.20"
+        "nwidart/laravel-modules": "^12.0"
     },
     "require-dev": {
         "filament/upgrade": "^5.0",
         "nunomaduro/phpinsights": "^2.13",
-        "pestphp/pest-plugin-laravel": "^4.0",
-        "woda/laravel-ralph": "dev-master"
+        "pestphp/pest-plugin-laravel": "^4.0"
     },
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Modules\\UI\\": "Modules/UI/app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
@@ -52,15 +48,6 @@
         "test": [
             "@php artisan config:clear --ansi",
             "@php artisan test"
-        ],
-        "test:prepare:testing-db": [
-            "@php artisan migrate --env=testing"
-        ],
-        "test:no-refreshdatabase": [
-            "bash bashscripts/testing/assert-no-refreshdatabase.sh"
-        ],
-        "test:coverage:modules": [
-            "bash bashscripts/testing/generate-coverage.sh"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
@@ -110,7 +97,15 @@
         "merge-plugin": {
             "include": [
                 "Modules/*/composer.json"
-            ]
+            ],
+            "recurse": true,
+            "replace": false,
+            "ignore-duplicates": false,
+            "merge-dev": true,
+            "merge-extra": false,
+            "merge-extra-deep": false,
+            "merge-replace": true,
+            "merge-scripts": false
         }
     },
     "config": {
@@ -125,5 +120,10 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "require-dev": {
+        "filament/upgrade": "^5.0",
+        "nunomaduro/phpinsights": "^2.13",
+        "pestphp/pest-plugin-laravel": "^4.0"
+    }
 }

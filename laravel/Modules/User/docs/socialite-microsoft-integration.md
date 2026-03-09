@@ -1,6 +1,6 @@
 # 🔐 **Laravel Socialite + Microsoft OAuth Integration Guide**
 
-**
+**Last Update**: 23 Febbraio 2026
 **Status**: ✅ PHPStan Level 10 Compliant
 **Module**: User
 **Dependencies**: Laravel Socialite, Microsoft Azure AD
@@ -126,7 +126,7 @@ protected $listen = [
 1. Vai su [Azure Portal](https://portal.azure.com/)
 2. Naviga ad **Azure Active Directory** → **App registrations** → **New registration**
 3. Configura:
-   - **Name**: <nome progetto> SSO
+   - **Name**: TechPlanner SSO
    - **Supported account types**: 
      - ✅ Accounts in this organizational directory only (single tenant)
      - ✅ Accounts in any organizational directory (multi-tenant)
@@ -157,7 +157,7 @@ Aggiungi le seguenti permissions in **API permissions** → **Add a permission**
 ### **Step 4: Certificates & Secrets**
 
 1. Vai su **Certificates & secrets** → **New client secret**
-2. Aggiungi descrizione: `<nome progetto> Production`
+2. Aggiungi descrizione: `TechPlanner Production`
 3. Scadenza: 24 mesi (o secondo policy aziendale)
 4. **COPY IMMEDIATAMENTE** il valore del secret (non sarà più visibile)
 
@@ -827,6 +827,6 @@ public function refreshMicrosoftToken(): void
 
 **Documentazione conforme agli standard Laraxot** - PHPStan Level 10 ✅ | DRY + KISS + SOLID ✅
 
-*
+*Last Updated: 23 Febbraio 2026*
 *Module: User*
-*
+*Version: 2.6.0*

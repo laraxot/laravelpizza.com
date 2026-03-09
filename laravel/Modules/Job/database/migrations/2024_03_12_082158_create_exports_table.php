@@ -13,7 +13,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table))
+        $this->tableCreate(static function (Blueprint $table): void {
             $table->id();
             $table->timestamp('completed_at')->nullable();
             $table->string('file_disk');
@@ -25,8 +25,8 @@ return new class extends XotBaseMigration
             $table->nullableUuidMorphs('user');
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table))
-            if (! $this->hasColumn('user_type'))
+        $this->tableUpdate(function (Blueprint $table): void {
+            if (! $this->hasColumn('user_type')) {
                 $table->string('user_type', 36)->nullable()->index();
             }
             $this->updateTimestamps($table, true);

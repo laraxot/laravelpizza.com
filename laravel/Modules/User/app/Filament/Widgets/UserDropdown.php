@@ -9,29 +9,67 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 class UserDropdown extends XotBaseWidget
 {
+    /**
+     * The view for this widget.
+     */
     protected string $view = 'user::filament.widgets.user-dropdown';
 
+    /**
+     * Handle user logout.
+     */
     public function logout(): void
     {
         Auth::guard('web')->logout();
         session()->invalidate();
         session()->regenerateToken();
-        $this->redirect('/');
+
+        $this->redirect('/'.app()->getLocale(), navigate: true);
     }
 
+    /**
+     * Get the form schema.
+     * Required by XotBaseWidget but not used for this simple dropdown.
+     */
     public function getFormSchema(): array
     {
         return [];
     }
 
+    /**
+     * Get view data for the widget.
+     * Standardized way to pass data in XotBaseWidget.
+     *
+     * @return array<string, mixed>
+     */
     protected function getViewData(): array
     {
         $user = Auth::user();
+        $profile = $user?->profile;
 
         return [
             'user' => $user,
-            'avatarUrl' => 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y',
-            'name' => $user?->name ?? 'User',
+            'avatarUrl' => $this->resolveAvatarUrl($profile),
+            'name' => $user->name ?? 'User',
         ];
+    }
+
+    private function resolveAvatarUrl(?object $profile): string
+    {
+        $fallback = 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y';
+
+        if (! \is_object($profile)) {
+            return $fallback;
+        }
+
+        if (method_exists($profile, 'getAvatarUrl')) {
+            $url = $profile->getAvatarUrl();
+            if (\is_string($url) && '' !== $url) {
+                return $url;
+            }
+        }
+
+        $avatarUrl = $profile->avatar_url ?? null;
+
+        return \is_string($avatarUrl) && '' !== $avatarUrl ? $avatarUrl : $fallback;
     }
 }

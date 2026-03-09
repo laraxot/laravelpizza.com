@@ -265,8 +265,8 @@ php artisan migrate --env=testing --database=xot --force
 **File:** `laravel/.env.testing`
 
 **Verificare:**
-- ✅ JOB_DB_DATABASE=<nome progetto>_job_test
-- ✅ XOT_DB_DATABASE=<nome progetto>_xot_test
+- ✅ JOB_DB_DATABASE=laravelpizza_job_test
+- ✅ XOT_DB_DATABASE=laravelpizza_xot_test
 - ✅ Connessioni MySQL configurate
 
 ### 4. Aggiornare Documentazione

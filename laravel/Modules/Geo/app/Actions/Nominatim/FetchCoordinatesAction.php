@@ -21,7 +21,7 @@ class FetchCoordinatesAction
 
     public function __construct()
     {
-        $client = new Client();
+        $this->client = new Client();
     }
 
     /**
@@ -34,7 +34,7 @@ class FetchCoordinatesAction
      */
     public function execute(string $address): LocationData
     {
-        $response = $client->get(self::API_URL, [
+        $response = $this->client->get(self::API_URL, [
             'query' => [
                 'q' => $address,
                 'format' => 'json',

@@ -4,16 +4,6 @@
 
 This document provides testing guidelines and examples for the Meetup module in Laraxot.
 
-## Laravel Modules + Pest
-
-Il modulo Meetup segue [Laravel Modules Tests](https://laravelmodules.com/docs/12/advanced/tests). Guida completa: [laravel-modules-pest-guide](../../../../docs/testing/laravel-modules-pest-guide.md).
-
-**Comandi rapidi:**
-```bash
-php artisan test --filter 'Meetup'
-./vendor/bin/pest --filter 'Meetup'
-```
-
 ## Test Structure
 
 ### Directory Structure
@@ -274,9 +264,9 @@ protected function createApplication()
 
 ### Internal Resources
 
-- [Testing Setup Guide](../../../../docs/testing-setup.md)
-- [Testing Best Practices](../../../../docs/testing-best-practices.md)
-- [Troubleshooting Guide](../../../../docs/troubleshooting.md)
+- [Testing Setup Guide](../../../docs/testing-setup.md)
+- [Testing Best Practices](../../../docs/testing-best-practices.md)
+- [Troubleshooting Guide](../../../docs/troubleshooting.md)
 
 ## Testing Examples
 

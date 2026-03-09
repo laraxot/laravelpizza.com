@@ -29,7 +29,7 @@ class UserWidget extends XotBaseWidget
     public function getViewData(): array
     {
         /** @var array<string, mixed>|null $data */
-        $data = $pageFilters;
+        $data = $this->pageFilters;
 
         // PHPStan Level 10: Ensure we always return array
         return $data ?? [];

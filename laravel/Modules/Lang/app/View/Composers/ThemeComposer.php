@@ -35,7 +35,7 @@ class ThemeComposer
             throw new \Exception(sprintf('Invalid config for supportedLocales on line %d in %s', __LINE__, class_basename($this)));
         }
 
-        $languages = collect($langs)->map(function (mixed $item, string $locale): array {)
+        $languages = collect($langs)->map(function (mixed $item, string $locale): array {
             // Ensure $item is an array
             if (! is_array($item)) {
                 throw new \InvalidArgumentException(sprintf('Expected array at locale %s, got %s', $locale, gettype($item)));
@@ -73,7 +73,7 @@ class ThemeComposer
             return [
                 'id' => $locale,
                 'name' => $name,
-                'flag' => $this->buildFlagHtml($regionalCode)
+                'flag' => $this->buildFlagHtml($regionalCode),
                 'url' => $url,
             ];
         });
@@ -93,7 +93,7 @@ class ThemeComposer
     {
         $currentLocale = app()->getLocale();
 
-        return $this->languages()
+        return $this->languages()->filter(function (mixed $item) use ($currentLocale): bool {
             // Ensure the item is an instance of LangData
             if (! $item instanceof LangData) {
                 throw new \Exception(sprintf('Expected instance of LangData, got %s', is_object($item) ? $item::class : gettype($item)));
@@ -113,7 +113,7 @@ class ThemeComposer
         $currentLocale = app()->getLocale();
 
         // Convert DataCollection to a Laravel Collection to use firstWhere()
-        $lang = $this->languages();
+        $lang = $this->languages()->toCollection()->firstWhere('id', $currentLocale);
 
         if (! $lang instanceof LangData) {
             throw new \Exception(sprintf('Current language not found on line %d in %s', __LINE__, class_basename($this)));

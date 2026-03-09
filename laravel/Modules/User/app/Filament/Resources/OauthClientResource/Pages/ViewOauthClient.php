@@ -31,7 +31,7 @@ class ViewOauthClient extends XotBaseViewRecord
         $actions = parent::getHeaderActions();
 
         /** @var OauthClient|null $record */
-        $record = $record;
+        $record = $this->record;
 
         if (null !== $record && ! $record->revoked) {
             $actions['revoke'] = Action::make('revoke')
@@ -44,7 +44,7 @@ class ViewOauthClient extends XotBaseViewRecord
                 ->modalSubmitActionLabel(__('user::actions.oauth.revoke_client.modal.confirm'))
                 ->action(function (): void {
                     /** @var OauthClient $record */
-                    $record = $record;
+                    $record = $this->record;
                     app(RevokeClientAction::class)->execute($record, true);
                     $this->redirect(OauthClientResource::getUrl('index'));
                 })

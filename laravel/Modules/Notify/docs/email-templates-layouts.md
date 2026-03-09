@@ -140,6 +140,6 @@ MailTemplate::create([
 
 ---
 
-**
+**Ultimo aggiornamento**: [DATE]  
 **Versione**: 1.0  
 **Compatibilità**: Laravel 12.x, Filament 3.x, Spatie Mail Templates

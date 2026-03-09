@@ -18,7 +18,7 @@ declare(strict_types=1);
         </div>
     @endif
     <form wire:submit.prevent="save" class="space-y-4">
-        {{ $form }}
+        {{ $this->form }}
         <button type="submit" class="w-full py-3 rounded bg-[#FF5F7E] text-white font-bold">
             {{ __('user::login_widget.ui.login_button') }}
             <x-filament::loading-indicator class="h-5 w-5" wire:loading/>

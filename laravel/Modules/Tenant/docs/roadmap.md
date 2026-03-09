@@ -1,46 +1,40 @@
-# Roadmap Modulo Tenant
+# Roadmap (Module Tenant)
 
-## 🎯 Visione
-Rendere la scalabilità dell'isolamento dei dati un processo immediato e trasparente, permettendo l'onboarding di nuovi tenant in pochi secondi tramite configurazioni dinamiche e automazione delle infrastrutture.
+## Current roadmap
 
-## 🏗️ Fasi di Sviluppo
+- [Overview](roadmap/00-overview.md)
+- [Now](roadmap/01-now.md)
+- [Next](roadmap/02-next.md)
+- [Later](roadmap/03-later.md)
+- [Risks and dependencies](roadmap/04-risks.md)
 
-### Fase 1: Stabilità e Standard (In Corso)
-- [x] PHPStan Level 10 Compliance.
-- [x] Implementazione del pattern DRY per i metodi dei trait (2026-03-02)
-||||||| parent of abc100e (.)
-- [ ] Rimozione di tutti i file `EMPTY` (0-1 byte) nella cartella docs.
-- [ ] Implementazione del **Tenant Cluster** per l'amministrazione centralizzata.
-- [ ] Supporto completo per **Laravel 12 Service Providers** per la risoluzione tenant. (.)
-# Tenant Module Roadmap
+## Legacy / existing roadmap docs
 
-"Espandersi senza confini: la scalabilità dell'isolamento." 1ec9c62 (Refactor TenantServiceProvider to comment out SQLite error handling and update roadmap documentation with current status, milestones, and prioritized tasks for tenant module development.)
-
-## 🎯 Visione
-Rendere la scalabilità dell'isolamento dei dati un processo immediato e trasparente, permettendo l'onboarding di nuovi tenant in pochi secondi tramite configurazioni dinamiche e automazione delle infrastrutture.
-
-## 🏗️ Fasi di Sviluppo
-
-### Fase 1: Stabilità e Standard (In Corso)
-- [x] PHPStan Level 10 Compliance.
-- [ ] Implementazione del **Cluster Tenant** per l'amministrazione centralizzata.
-- [ ] Rimozione sistematica dei file obsoleti e pulizia dei docs vuoti.
-- [ ] Supporto completo per i Service Provider di Laravel 12 nella risoluzione dei tenant.
-
-### Fase 2: Onboarding Dinamico (Pianificato)
-- [ ] Creazione di un Wizard in Filament per la configurazione semplificata dei nuovi Tenant.
-- [ ] Automazione delle migrazioni specifiche e isolamento del database.
-- [ ] Integrazione con Cloud Storage per l'isolamento degli asset multimediali.
-
-### Fase 3: Performance e AI (Futuro)
-- [ ] **AI-Based Resource Allocation**: Ottimizzazione automatica delle risorse database in base all'uso dei Tenant.
-- [ ] **Cross-Tenant Analytics**: Reporting comparativo anonimizzato per amministratori di sistema.
-- [ ] Zero-Downtime Migration: Spostamento trasparente di tenant tra nodi infrastrutturali diversi.
-
-## ✅ Checklist Qualità
-- [x] PHPStan Level 10.
-- [ ] Isolamento dei dati verificato con test di unitari al 100%.
-- [ ] Zero dipendenze circolari tra Tenant e altri moduli core.
-
----
-**
+- [phpstan-errors-roadmap.md](phpstan-errors-roadmap.md)
+- [phpstan-roadmap.md](phpstan-roadmap.md)
+- [roadmap/00-index.md](roadmap/00-index.md)
+- [roadmap/00-overview.md](roadmap/00-overview.md)
+- [roadmap/01-current-state.md](roadmap/01-current-state.md)
+- [roadmap/01-now.md](roadmap/01-now.md)
+- [roadmap/02-goals.md](roadmap/02-goals.md)
+- [roadmap/02-next.md](roadmap/02-next.md)
+- [roadmap/03-later.md](roadmap/03-later.md)
+- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
+- [roadmap/04-milestones.md](roadmap/04-milestones.md)
+- [roadmap/04-risks.md](roadmap/04-risks.md)
+- [roadmap/05-risks.md](roadmap/05-risks.md)
+- [roadmap/2025-q4-roadmap.md](roadmap/2025-q4-roadmap.md)
+- [roadmap/documentation-consolidation.md](roadmap/documentation-consolidation.md)
+- [roadmap/legacy-roadmap-2.md](roadmap/legacy-roadmap-2.md)
+- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
+- [roadmap/legacy/legacy-roadmap-x.md](roadmap/legacy/legacy-roadmap-x.md)
+- [roadmap/legacy/legacy-roadmap.md](roadmap/legacy/legacy-roadmap.md)
+- [roadmap/missing-models.md](roadmap/missing-models.md)
+- [roadmap/performance-optimization.md](roadmap/performance-optimization.md)
+- [roadmap/phases.md](roadmap/phases.md)
+- [roadmap/q4-roadmap.md](roadmap/q4-roadmap.md)
+- [roadmap/quality.md](roadmap/quality.md)
+- [roadmap/roadmap.md](roadmap/roadmap.md)
+- [roadmap/tenant-isolation.md](roadmap/tenant-isolation.md)
+- [roadmap/test-coverage.md](roadmap/test-coverage.md)
+- [roadmap/vision.md](roadmap/vision.md)

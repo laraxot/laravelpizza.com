@@ -1,0 +1,333 @@
+[
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila5_mono\/laravel\/database\/database.sqlite",
+        "table_name": "appointments",
+        "id": 1,
+        "updated_at": "2025-09-10T20:21:20.661544Z",
+        "created_at": "2025-09-10T20:21:20.656283Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila5_mono\/laravel\/database\/database.sqlite",
+        "table_name": "clients",
+        "id": 2,
+        "updated_at": "2025-09-10T20:21:20.680759Z",
+        "created_at": "2025-09-10T20:21:20.675934Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila5_mono\/laravel\/database\/database.sqlite",
+        "table_name": "machines",
+        "id": 3,
+        "updated_at": "2025-09-10T20:21:20.696550Z",
+        "created_at": "2025-09-10T20:21:20.693033Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila5_mono\/laravel\/database\/database.sqlite",
+        "table_name": "legal_offices",
+        "id": 4,
+        "updated_at": "2025-09-10T20:21:20.711630Z",
+        "created_at": "2025-09-10T20:21:20.707813Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila5_mono\/laravel\/database\/database.sqlite",
+        "table_name": "legal_representatives",
+        "id": 5,
+        "updated_at": "2025-09-10T20:21:20.721344Z",
+        "created_at": "2025-09-10T20:21:20.719119Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila5_mono\/laravel\/database\/database.sqlite",
+        "table_name": "medical_directors",
+        "id": 6,
+        "updated_at": "2025-09-10T20:21:20.729843Z",
+        "created_at": "2025-09-10T20:21:20.727862Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila5_mono\/laravel\/database\/database.sqlite",
+        "table_name": "phone_calls",
+        "id": 7,
+        "updated_at": "2025-09-10T20:21:20.739167Z",
+        "created_at": "2025-09-10T20:21:20.736840Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila5_mono\/laravel\/database\/database.sqlite",
+        "table_name": "work_hours",
+        "id": 8,
+        "updated_at": "2025-09-11T06:24:52.156227Z",
+        "created_at": "2025-09-11T06:24:52.152469Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 15
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\AuthenticationLog",
+        "table_name": "authentication_logs",
+        "id": 9,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\Device",
+        "table_name": "devices",
+        "id": 10,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 1
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\Feature",
+        "table_name": "features",
+        "id": 11,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\PasswordReset",
+        "table_name": "password_resets",
+        "id": 12,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\Permission",
+        "table_name": "permissions",
+        "id": 13,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\Profile",
+        "table_name": "profiles",
+        "id": 14,
+        "updated_at": "2026-01-09 11:44:51",
+        "created_at": "2026-01-09 11:44:51",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad"
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\Role",
+        "table_name": "roles",
+        "id": 15,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 15
+    },
+    {
+        "table_schema": ":memory:",
+        "model_class": "Modules\\User\\Models\\SocialProvider",
+        "table_name": "social_providers",
+        "id": 16,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\SocialiteUser",
+        "table_name": "socialite_users",
+        "id": 17,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\SsoProvider",
+        "table_name": "sso_providers",
+        "id": 18,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\TeamInvitation",
+        "table_name": "team_invitations",
+        "id": 19,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\TeamPermission",
+        "table_name": "team_permissions",
+        "id": 20,
+        "updated_at": "2026-01-09 11:44:51",
+        "created_at": "2026-01-09 11:44:51",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad"
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\Team",
+        "table_name": "teams",
+        "id": 21,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\TeamUser",
+        "table_name": "team_user",
+        "id": 22,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\Tenant",
+        "table_name": "tenants",
+        "id": 23,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\TenantUser",
+        "table_name": "tenant_user",
+        "id": 24,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\User",
+        "table_name": "users",
+        "id": 25,
+        "updated_at": "2026-01-09T10:44:51.000000Z",
+        "created_at": "2026-01-09T10:44:51.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 1
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\OauthAccessToken",
+        "table_name": "oauth_access_tokens",
+        "id": 26,
+        "updated_at": "2026-01-09T10:57:13.000000Z",
+        "created_at": "2026-01-09T10:57:13.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\OauthAuthCode",
+        "table_name": "oauth_auth_codes",
+        "id": 27,
+        "updated_at": "2026-01-09T10:57:13.000000Z",
+        "created_at": "2026-01-09T10:57:13.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\OauthClient",
+        "table_name": "oauth_clients",
+        "id": 28,
+        "updated_at": "2026-01-09T10:57:13.000000Z",
+        "created_at": "2026-01-09T10:57:13.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\OauthPersonalAccessClient",
+        "table_name": "oauth_personal_access_clients",
+        "id": 29,
+        "updated_at": "2026-01-09T10:57:13.000000Z",
+        "created_at": "2026-01-09T10:57:13.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_user",
+        "model_class": "Modules\\User\\Models\\OauthRefreshToken",
+        "table_name": "oauth_refresh_tokens",
+        "id": 30,
+        "updated_at": "2026-01-09T10:57:13.000000Z",
+        "created_at": "2026-01-09T10:57:13.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
+    },
+    {
+        "created_at": "2026-01-09T11:34:37.000000Z",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "id": 31,
+        "model_class": "Modules\\Meetup\\Models\\Event",
+        "table_name": "events",
+        "table_rows": 6,
+        "table_schema": "laravelpizza_data",
+        "updated_at": "2026-02-13T16:52:52.000000Z",
+        "updated_by": "a1123aa9-ca87-4972-bd83-a8ce02868464"
+    }
+]

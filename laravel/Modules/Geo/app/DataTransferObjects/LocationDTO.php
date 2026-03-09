@@ -41,9 +41,9 @@ readonly class LocationDTO
     public function toLocationData(): LocationData
     {
         return new LocationData(
-            latitude: $latitude,
-            longitude: $longitude,
-            name: $name,
+            latitude: $this->latitude,
+            longitude: $this->longitude,
+            name: $this->name,
         );
     }
 }

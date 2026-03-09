@@ -2,17 +2,16 @@
 
 declare(strict_types=1);
 
+uses(Modules\Geo\Tests\TestCase::class);
+
+use Illuminate\Database\Eloquent\Builder;
 use Modules\Geo\Enums\AddressTypeEnum;
 use Modules\Geo\Models\Address;
 use Modules\Geo\Models\BaseModel;
-use Modules\Geo\Tests\TestCase;
-
-uses(TestCase::class);
 
 describe('Address Business Logic', function () {
     test('address extends base model', function () {
-        $address = new Address();
-        expect($address)->toBeInstanceOf(BaseModel::class);
+        expect(Address::class)->toBeSubclassOf(BaseModel::class);
     });
 
     test('address has expected fillable fields for postal address', function () {
@@ -120,14 +119,20 @@ describe('Address Business Logic', function () {
     });
 
     test('address scope can query nearby addresses', function () {
-        expect(method_exists(Address::class, 'scopeNearby'))->toBeTrue();
+        $query = Address::nearby(45.4642, 9.1900, 10);
+
+        expect($query)->toBeInstanceOf(Builder::class);
     });
 
     test('address scope can query primary addresses', function () {
-        expect(method_exists(Address::class, 'scopePrimary'))->toBeTrue();
+        $query = Address::primary();
+
+        expect($query)->toBeInstanceOf(Builder::class);
     });
 
     test('address scope can query by type', function () {
-        expect(method_exists(Address::class, 'scopeOfType'))->toBeTrue();
+        $query = Address::ofType(AddressTypeEnum::BILLING);
+
+        expect($query)->toBeInstanceOf(Builder::class);
     });
 });

@@ -29,7 +29,7 @@ protected function convertIdFromUuidToBigintIfNeeded(
   - `pivot_fk`: Nome colonna FK nella pivot verso la tabella principale
   - `pivot_post_update`: Closure opzionale `(ConnectionInterface $conn): void` per operazioni MySQL post-update (es. ADD UNIQUE)
 
-## Esempio: profiles (<nome progetto>)
+## Esempio: profiles (TechPlanner)
 
 ```php
 $this->convertIdFromUuidToBigintIfNeeded(
@@ -51,7 +51,7 @@ $this->convertIdFromUuidToBigintIfNeeded(
 
 ## Regola: Profile nel main_module
 
-Profile è strettamente dipendente dal main_module (es. <nome progetto>). La migrazione `create_profiles_table` deve stare nel modulo main, non in User.
+Profile è strettamente dipendente dal main_module (es. TechPlanner). La migrazione `create_profiles_table` deve stare nel modulo main, non in User.
 
 ## Riferimenti
 

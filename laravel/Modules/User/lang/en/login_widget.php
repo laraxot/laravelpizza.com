@@ -34,16 +34,6 @@ return [
             'label' => 'Login',
             'tooltip' => 'Click to access your account',
         ],
-        'showPassword' => [
-            'label' => 'showPassword',
-            'icon' => 'showPassword',
-            'tooltip' => 'showPassword',
-        ],
-        'hidePassword' => [
-            'label' => 'hidePassword',
-            'icon' => 'hidePassword',
-            'tooltip' => 'hidePassword',
-        ],
     ],
     'messages' => [
         'login_success' => 'Login successful',

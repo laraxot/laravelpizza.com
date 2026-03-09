@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use Exception;
 use Illuminate\Contracts\Mail\Mailable;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Spatie\MailTemplates\Interfaces\MailTemplateInterface;
 use Spatie\MailTemplates\Models\MailTemplate as SpatieMailTemplate;
 use Spatie\Sluggable\HasSlug;
@@ -33,7 +34,6 @@ use Spatie\Translatable\HasTranslations;
  * @property string $slug
  * @property array $variables
  * @property mixed $translations
- *
  * @method static Builder<static>|MailTemplate forMailable(Mailable $mailable)
  * @method static Builder<static>|MailTemplate newModelQuery()
  * @method static Builder<static>|MailTemplate newQuery()
@@ -55,24 +55,17 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|MailTemplate whereTextTemplate($value)
  * @method static Builder<static>|MailTemplate whereUpdatedAt($value)
  * @method static Builder<static>|MailTemplate whereUpdatedBy($value)
- *
  * @property string|null $params
- *
  * @method static Builder<static>|MailTemplate whereParams($value)
- *
  * @property string|null $sms_template
  * @property string|null $whatsapp_template
  * @property int $counter
- *
  * @method static Builder<static>|MailTemplate whereCounter($value)
  * @method static Builder<static>|MailTemplate whereSmsTemplate($value)
  * @method static Builder<static>|MailTemplate whereWhatsappTemplate($value)
- *
  * @mixin IdeHelperMailTemplate
- *
  * @method static Builder<static>|MailTemplate whereHtmlLayoutPath($value)
  * @method static Builder<static>|MailTemplate whereVersion($value)
- *
  * @mixin \Eloquent
  */
 class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
@@ -137,4 +130,6 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
             'deleted_at' => 'datetime',
         ];
     }
+
+    
 }

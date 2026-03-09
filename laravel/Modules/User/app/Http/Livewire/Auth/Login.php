@@ -43,7 +43,7 @@ class Login extends Component implements HasActions, HasForms
      */
     public function mount(): void
     {
-        $form->fill();
+        $this->form->fill();
     }
 
     /**
@@ -52,7 +52,7 @@ class Login extends Component implements HasActions, HasForms
     public function form(Schema $schema): Schema
     {
         return $schema
-            ->components($getFormSchema())
+            ->components($this->getFormSchema())
             ->statePath('data');
     }
 
@@ -65,7 +65,7 @@ class Login extends Component implements HasActions, HasForms
     {
         try {
             /** @var array{email: string, password: string, remember?: bool} $data */
-            $data = $form->getState();
+            $data = $this->form->getState();
 
             // Estrai remember dal data array e assicurati che sia un booleano
             $remember = $data['remember'] ?? false;
@@ -143,7 +143,7 @@ class Login extends Component implements HasActions, HasForms
 
         /** @var Collection<int, Role> $roles */
         $roles = $user->roles()->get();
-        $adminRoles = $roles->filter()
+        $adminRoles = $roles->filter(
             static fn (Role $role): bool => str_ends_with($role->name, '::admin')
         );
 

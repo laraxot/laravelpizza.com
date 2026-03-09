@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 ?>
 <div>
-    @if($emailSent
+    @if($this->emailSent)
         {{-- Success State --}}
         <div class="text-center space-y-6">
             <div class="flex justify-center">
@@ -39,7 +39,7 @@ declare(strict_types=1);
     @else
         {{-- Form State --}}
         <form wire:submit="sendResetPasswordLink" class="space-y-6">
-            {{ $form }}
+            {{ $this->form }}
 
             <x-filament::button 
                 type="submit" 

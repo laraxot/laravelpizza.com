@@ -32,20 +32,20 @@ final class SendPlivoSMSAction implements SmsActionContract
      */
     public function __construct()
     {
-        $plivoData = PlivoData::make();
+        $this->plivoData = PlivoData::make();
 
-        if (! $plivoData->auth_id)
+        if (! $this->plivoData->auth_id) {
             throw new Exception('Auth ID Plivo non configurato in sms.php');
         }
 
-        if (! $plivoData->auth_token)
+        if (! $this->plivoData->auth_token) {
             throw new Exception('Auth Token Plivo non configurato in sms.php');
         }
 
         // Parametri a livello di root
         $sender = config('sms.from');
-        $defaultSender = is_string($sender);
-        $debug = (bool);
+        $this->defaultSender = is_string($sender) ? $sender : null;
+        $this->debug = (bool) config('sms.debug', false);
     }
 
     /**
@@ -69,21 +69,21 @@ final class SendPlivoSMSAction implements SmsActionContract
             $to = '+39'.$to;
         }
 
-        $from = $smsData->from ?? $defaultSender;
+        $from = $smsData->from ?? $this->defaultSender;
 
         // Plivo richiede l'autenticazione Basic
-        $client = new Client([)
-            'timeout' => $plivoData->getTimeout()
-            'auth' => [$plivoData->auth_id, $this->plivoData->auth_token],
+        $client = new Client([
+            'timeout' => $this->plivoData->getTimeout(),
+            'auth' => [$this->plivoData->auth_id, $this->plivoData->auth_token],
             'headers' => [
                 'Content-Type' => 'application/json',
             ],
         ]);
 
-        $endpoint = $plivoData->getBaseUrl();
+        $endpoint = $this->plivoData->getBaseUrl().'/v1/Account/'.$this->plivoData->auth_id.'/Message/';
 
         try {
-            $response = $client->post($endpoint, [)
+            $response = $client->post($endpoint, [
                 'json' => [
                     'src' => $from,
                     'dst' => $to,
@@ -91,12 +91,12 @@ final class SendPlivoSMSAction implements SmsActionContract
                 ],
             ]);
 
-            $vars['status_code'] = $response->getStatusCode();
-            $vars['status_txt'] = $response->getBody();
+            $this->vars['status_code'] = $response->getStatusCode();
+            $this->vars['status_txt'] = $response->getBody()->getContents();
 
-            return $vars;
+            return $this->vars;
         } catch (ClientException $clientException) {
-            throw new Exception()
+            throw new Exception(
                 $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',
                 $clientException->getCode(),
                 $clientException,

@@ -69,17 +69,17 @@ class Alignment extends XotBasePage
                 // ])->columns(2),
             ])
             ->columns(2)
-            // ->model($getUser(
+            // ->model($this->getUser())
             ->statePath('data');
     }
 
     public function updateData(): void
     {
         try {
-            $data = $form->getState();
+            $data = $this->form->getState();
             dddx($data);
 
-            // $this->handleRecordUpdate($this->getUser());
+            // $this->handleRecordUpdate($this->getUser(), $data);
         } catch (Halt $exception) {
             dddx($exception->getMessage());
 
@@ -89,10 +89,10 @@ class Alignment extends XotBasePage
 
     protected function fillForms(): void
     {
-        // $data = $this->getUser();
+        // $data = $this->getUser()->attributesToArray();
         $data = [];
 
-        $form->fill($data);
+        $this->form->fill($data);
     }
 
     protected function getUpdateFormActions(): array

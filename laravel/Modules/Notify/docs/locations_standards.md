@@ -17,7 +17,11 @@ Le interfacce devono sempre essere collocate nella directory `/app/Contracts/`, 
 ### Corretta Organizzazione delle Interfacce
 
 ```
-/var/www/html/ptvx/laravel/Modules/Notify/app/Contracts/ (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/app/Contracts/
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Contracts/
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ├── SmsProviderActionInterface.php   ✅ CORRETTO
 ├── NotificationChannelInterface.php ✅ CORRETTO
 └── ...
@@ -26,7 +30,11 @@ Le interfacce devono sempre essere collocate nella directory `/app/Contracts/`, 
 ### Errori da Evitare
 
 ```
-/var/www/html/ptvx/laravel/Modules/Notify/app/Actions/SMS/ (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/app/Actions/SMS/
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Actions/SMS/
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ├── SmsActionInterface.php           ❌ ERRATO
 └── ...
 ```

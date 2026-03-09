@@ -2,32 +2,32 @@
 
 declare(strict_types=1);
 
-return array ()
+return array (
   'sections' => 
-  array ()
+  array (
     'empty' => 
-    array ()
+    array (
       'label' => 'empty',
       'heading' => 'empty',
     ),
   ),
   'actions' => 
-  array ()
+  array (
     'profile' => 
-    array ()
+    array (
       'label' => 'profile',
       'icon' => 'profile',
       'tooltip' => 'profile',
     ),
     'logout' => 
-    array ()
+    array (
       'label' => 'logout',
       'icon' => 'logout',
       'tooltip' => 'logout',
     ),
   ),
   'navigation' => 
-  array ()
+  array (
     'label' => 'Missing Navigation Label',
     'plural_label' => 'Missing Navigation Plural Label',
     'group' => 'Missing Group',
@@ -37,6 +37,6 @@ return array ()
   'label' => 'Missing Label',
   'plural_label' => 'Missing Plural label',
   'fields' => 
-  array ()
+  array (
   ),
 );

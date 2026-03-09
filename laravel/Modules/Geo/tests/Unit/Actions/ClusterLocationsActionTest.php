@@ -6,6 +6,9 @@ use Modules\Geo\Actions\ClusterLocationsAction;
 use Modules\Geo\Contracts\CalculateDistanceActionContract;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Exceptions\InvalidLocationException;
+use Modules\Geo\Tests\TestCase;
+
+uses(TestCase::class);
 
 it('clusters locations that are close together', function (): void {
     $location1 = new LocationData(latitude: 45.4642, longitude: 9.1900);
@@ -16,25 +19,16 @@ it('clusters locations that are close together', function (): void {
 
     // Create a mock CalculateDistanceAction
     $mockDistanceCalculator = Mockery::mock(CalculateDistanceActionContract::class);
+    $mockDistanceCalculator->shouldReceive('execute')->withAnyArgs()->andReturn(['distance' => ['value' => 150000]]);
     $mockDistanceCalculator->shouldReceive('execute')
-        ->withAnyArgs()
-        ->andReturnUsing(function ($from, $to) use ($location1, $location2) {
-            $isPairClose =
-                (
-                    $from->latitude === $location1->latitude
-                    && $from->longitude === $location1->longitude
-                    && $to->latitude === $location2->latitude
-                    && $to->longitude === $location2->longitude
-                )
-                || (
-                    $from->latitude === $location2->latitude
-                    && $from->longitude === $location2->longitude
-                    && $to->latitude === $location1->latitude
-                    && $to->longitude === $location1->longitude
-                );
-
-            return ['distance' => ['value' => $isPairClose ? 100 : 150000]];
-        });
+        ->with(Mockery::on(function ($arg1) use ($location1, $location2) {
+            return ($arg1->latitude === $location1->latitude && $arg1->longitude === $location1->longitude)
+                || ($arg1->latitude === $location2->latitude && $arg1->longitude === $location2->longitude);
+        }), Mockery::on(function ($arg2) use ($location1, $location2) {
+            return ($arg2->latitude === $location1->latitude && $arg2->longitude === $location1->longitude)
+                || ($arg2->latitude === $location2->latitude && $arg2->longitude === $location2->longitude);
+        }))
+        ->andReturn(['distance' => ['value' => 100]]); // 100 meters (within 1km)
 
     $action = new ClusterLocationsAction($mockDistanceCalculator);
 

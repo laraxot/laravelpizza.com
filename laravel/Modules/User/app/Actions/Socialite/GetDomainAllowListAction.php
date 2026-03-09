@@ -27,7 +27,7 @@ class GetDomainAllowListAction
     {
         $res = config('filament-socialite.domain_allowlist');
         if (\is_string($res)) {
-            return $arrHelper->wrap($res);
+            return $this->arrHelper->wrap($res);
         }
 
         if (\is_array($res)) {

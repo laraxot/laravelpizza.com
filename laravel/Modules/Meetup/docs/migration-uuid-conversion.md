@@ -139,4 +139,4 @@ Anche per modifiche UUID, il nome file deve essere `create_profiles_table.php`, 
 - [Media Migration Patterns](../../Media/docs/migration-patterns.md)
 - [Root Migration Rules](../../../.windsurf/rules/migration-complete-rules.md)
 
-*
+*Ultimo aggiornamento: 2026-02-26*

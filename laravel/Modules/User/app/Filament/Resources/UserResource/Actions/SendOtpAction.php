@@ -8,6 +8,9 @@ use Filament\Actions\Action;
 use Modules\User\Actions\Otp\SendOtpByUserAction;
 use Modules\User\Models\User;
 
+/**
+ * Azione Filament per l'invio di un OTP all'utente.
+ */
 class SendOtpAction extends Action
 {
     protected function setUp(): void
@@ -17,7 +20,13 @@ class SendOtpAction extends Action
         $this->tooltip(trans('user::otp.actions.send_otp'))
             ->icon('heroicon-o-key')
             ->action(function (User $record): void {
-                app(SendOtpByUserAction::class)->execute($record);
+                // User already implements UserContract, no need for assertion
+                $action = app(SendOtpByUserAction::class);
+                if (null === $action) {
+                    throw new \RuntimeException('Impossibile istanziare SendOtpByUserAction');
+                }
+                // PHPStan Level 10: User extends BaseUser which implements UserContract
+                $action->execute($record);
             })
             ->requiresConfirmation()
             ->modalHeading(trans('user::otp.actions.send_otp'))
@@ -25,6 +34,9 @@ class SendOtpAction extends Action
             ->modalButton(trans('user::otp.actions.yes_send_otp'));
     }
 
+    /**
+     * Ottieni il nome predefinito dell'azione.
+     */
     public static function getDefaultName(): ?string
     {
         return 'send_otp';

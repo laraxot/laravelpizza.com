@@ -1,4 +1,4 @@
-# Analisi e Implementazione Colonna Composita "Contatti" - <nome progetto>
+# Analisi e Implementazione Colonna Composita "Contatti" - TechPlanner
 
 ## Richiesta Utente
 
@@ -12,7 +12,7 @@ L'utente ha richiesto di aggiungere una colonna "contatti" nella tabella ListCli
 ## Analisi del Modello Client
 
 ### Campi Disponibili nel Modello
-Dal file `Modules/<nome progetto>/app/Models/Client.php` ho identificato i seguenti campi di contatto:
+Dal file `Modules/TechPlanner/app/Models/Client.php` ho identificato i seguenti campi di contatto:
 
 ```php
 protected $fillable = [
@@ -82,7 +82,7 @@ TextColumn::make('contatti')
 ```php
 ViewColumn::make('contatti')
     ->label('Contatti')
-    ->view('<nome progetto>::filament.columns.contacts')
+    ->view('techplanner::filament.columns.contacts')
     ->searchable(['phone', 'mobile', 'email', 'pec', 'whatsapp'])
 ```
 
@@ -230,11 +230,11 @@ Questa implementazione stabilisce un precedente per:
 
 - [Filament Table Columns Documentation](filament_table_columns.md)
 - [UI Icons System](../../ui/project_docs/icons.md)
-- [<nome progetto> Client Model](../../<nome progetto>/app/Models/Client.php)
+- [TechPlanner Client Model](../../TechPlanner/app/Models/Client.php)
 - [Filament Official Documentation](https://filamentphp.com/project_docs/3.x/tables/columns)
 
 ---
 
 **Stato**: Analisi completata, pronto per implementazione
-**
+**Ultimo aggiornamento**: agosto 2025
 **Autore**: Cascade AI Assistant

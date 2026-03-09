@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Actions\Mail;
 
 use Illuminate\Database\Eloquent\Model;
+use InvalidArgumentException;
 use Modules\Notify\Datas\EmailData;
 use Modules\Notify\Datas\SmtpData;
 use Modules\Xot\Actions\Export\PdfByModelAction;
@@ -18,8 +19,8 @@ class SendMailByRecordAction
     /**
      * Invia una mail utilizzando un record come dati.
      *
-     * @param Model  $record    Il record da utilizzare come dati per la mail
-     * @param string $mailClass La classe Mailable da utilizzare
+     * @param  Model  $record  Il record da utilizzare come dati per la mail
+     * @param  string  $mailClass  La classe Mailable da utilizzare
      */
     public function execute(Model $record, string $mailClass): void
     {
@@ -37,15 +38,15 @@ class SendMailByRecordAction
 
         // Verifica che il model abbia le proprietà/metodi necessari
         if (($record->email ?? null) === null || empty($record->email)) {
-            throw new \InvalidArgumentException('Model must have email property');
+            throw new InvalidArgumentException('Model must have email property');
         }
 
         if (! method_exists($record, 'option')) {
-            throw new \InvalidArgumentException('Model must implement option method');
+            throw new InvalidArgumentException('Model must implement option method');
         }
 
         if (! method_exists($record, 'myLogs')) {
-            throw new \InvalidArgumentException('Model must implement myLogs method');
+            throw new InvalidArgumentException('Model must implement myLogs method');
         }
 
         $to = $record->email;
@@ -53,7 +54,7 @@ class SendMailByRecordAction
         $bodyHtml = $record->option('mail_testo');
 
         if (! is_string($to)) {
-            throw new \InvalidArgumentException('Email must be a string');
+            throw new InvalidArgumentException('Email must be a string');
         }
         if (! is_string($subject)) {
             $subject = '';

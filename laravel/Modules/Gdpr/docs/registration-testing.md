@@ -37,47 +37,4 @@ Upon execution, these tests provide a comprehensive check of the registration fe
 
 ## Location of Tests
 
-- `laravel/Modules/Gdpr/tests/Feature/RegistrationTest.php`
-- `laravel/Modules/Gdpr/tests/Feature/RegisterPageTest.php`
-- `laravel/Modules/Gdpr/tests/Feature/RegisterWidgetTest.php`
-- `laravel/Modules/Gdpr/tests/Feature/RegisterFormValidationTest.php`
-
-## RegisterFormValidationTest: ValidateUserDataAction vs RegisterWidget
-
-`ValidateUserDataAction` valida **solo** l'email duplicata. Le regole required, formato email, password strength, first_name/last_name min/max, password confirmation sono gestite da **RegisterWidget** (Livewire).
-
-I test che richiedono validazioni non presenti nell'action sono **skipped** con messaggio esplicito. I test attivi verificano:
-
-- `accepts valid email format`, `accepts valid strong password`
-- `validates privacy/terms consent` (ValidateGdprConsentAction)
-- `always sets type to customer_user`, `sets email_verified_at`
-- `prevents duplicate email registration` (crea User, poi chiama action con stessa email)
-
-## RegisterPageTest: Livewire vs POST
-
-La pagina di registrazione usa **Folio + Livewire** (RegisterWidget), non un form POST tradizionale. I test devono quindi:
-
-- **GET**: `get('/en/auth/register')` per verificare rendering e contenuti
-- **Livewire**: `Livewire::test(RegisterWidget::class)` per validazione e submit
-
-**Vietato** usare `post('/en/auth/register', [...])` — non esiste rotta POST; il form invia via Livewire `wire:submit="submit"`.
-
-### Pattern corretto
-
-```php
-// ✅ Page rendering
-get('/en/auth/register')->assertSee(trans('gdpr::register.form.cta_title'));
-
-// ✅ Form validation e submit
-Livewire::test(RegisterWidget::class)
-    ->set('first_name', 'John')
-    ->set('email', $email)
-    ->set('privacy_accepted', true)
-    ->set('terms_accepted', true)
-    ->call('submit')
-    ->assertHasErrors(['last_name']);
-```
-
-### TestCase
-
-Tutti i test usano `Modules\Gdpr\Tests\TestCase` che estende `XotBaseTestCase` (DRY + KISS + Laraxot).
+`laravel/Modules/Gdpr/tests/Feature/RegistrationTest.php`

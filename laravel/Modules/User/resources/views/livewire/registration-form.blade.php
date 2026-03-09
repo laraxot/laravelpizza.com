@@ -5,7 +5,7 @@ declare(strict_types=1);
 ?>
 <div>
     <form wire:submit="register">
-        {{ $form }}
+        {{ $this->form }}
     </form>
     
     <div class="text-sm text-center text-gray-600 mt-6">

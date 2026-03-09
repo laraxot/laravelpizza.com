@@ -15,6 +15,7 @@ use Maatwebsite\Excel\Concerns\FromIterator;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use Modules\Lang\Actions\TransCollectionAction;
+use Traversable;
 
 class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, WithMapping
 {
@@ -28,19 +29,19 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     public array $fields = [];
 
     /**
-     * @param array<int, string> $fields
+     * @param  array<int, string>  $fields
      */
-    public function __construct()
+    public function __construct(
         public LazyCollection $collection,
         ?string $transKey = null,
         array $fields = [],
     ) {
-        // $headings = count($headings);
+        // $this->headings = count($headings) > 0 ? $headings : collect($collection->first())->keys()->toArray();
 
-        $transKey = $transKey;
-        $fields = $fields;
+        $this->transKey = $transKey;
+        $this->fields = $fields;
 
-        // $headings = $headings->toArray();
+        // $this->headings = $headings->toArray();
     }
 
     /**
@@ -50,12 +51,12 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     {
         $rowArray = $this->normalizeRow($row);
 
-        if (empty($fields))
+        if (empty($this->fields)) {
             return $rowArray;
         }
 
-        return collect($fields)
-            ->mapWithKeys(function (string $key) use ($rowArray): array {)
+        return collect($this->fields)
+            ->mapWithKeys(function (string $key) use ($rowArray): array {
                 return [$key => $rowArray[$key] ?? null];
             })
             ->toArray();
@@ -69,11 +70,11 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
 
     public function getHead(): Collection
     {
-        if (! empty($fields))
-            return collect($fields);
+        if (! empty($this->fields)) {
+            return collect($this->fields);
         }
 
-        $head = $collection->first();
+        $head = $this->collection->first();
         $headArray = $this->normalizeRow($head);
 
         return collect($headArray)->keys();
@@ -82,7 +83,7 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     public function headings(): array
     {
         $headings = $this->getHead();
-        $transKey = $transKey;
+        $transKey = $this->transKey;
         $headings = app(TransCollectionAction::class)->execute($headings, $transKey);
 
         return $headings->toArray();
@@ -90,16 +91,16 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
 
     public function collection(): LazyCollection
     {
-        return $collection;
+        return $this->collection;
     }
 
     /**
      * Returns an iterator for the current collection.
      */
-    public function iterator(): \Iterator
+    public function iterator(): Iterator
     {
         /* @phpstan-ignore return.type */
-        return $collection->getIterator();
+        return $this->collection->getIterator();
     }
 
     /**
@@ -107,22 +108,22 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
      */
     private function normalizeRow(mixed $row): array
     {
-        if (null === $row) {
+        if ($row === null) {
             return [];
         }
 
         if ($row instanceof Arrayable) {
-            /* @var array<int|string, mixed> */
+            /** @var array<int|string, mixed> */
             return $row->toArray();
         }
 
         if (is_array($row)) {
-            /* @var array<int|string, mixed> */
+            /** @var array<int|string, mixed> */
             return $row;
         }
 
-        if ($row instanceof \Traversable) {
-            /* @var array<int|string, mixed> */
+        if ($row instanceof Traversable) {
+            /** @var array<int|string, mixed> */
             return iterator_to_array($row);
         }
 

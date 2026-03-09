@@ -232,4 +232,4 @@ I file usano chiavi di traduzione nidificate che rimandano a chiavi principali:
 
 **Status**: 📝 **ROADMAP CREATA - PRONTA PER IMPLEMENTAZIONE**
 
-**
+**Ultimo aggiornamento**: [DATE]

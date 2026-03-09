@@ -33,20 +33,20 @@ class Status extends Component
     public function mount(): void
     {
         Artisan::call('queue:monitor', ['queues' => 'default,queue01,emails']);
-        // Placeholder purged out .= Artisan::output(;
+        $this->out .= Artisan::output();
         Artisan::call('worker:check');
-        // Placeholder purged out .= Artisan::output(;
+        $this->out .= Artisan::output();
 
-        // Placeholder purged out .= '<br/>['.JobModel::count(;
-        // Placeholder purged out .= '<br/>['.FailedJobModel::count(;
-        // Placeholder purged out .= '<br/>['.JobBatchModel::count(;
+        $this->out .= '<br/>['.JobModel::count().'] Jobs';
+        $this->out .= '<br/>['.FailedJobModel::count().'] Failed Jobs';
+        $this->out .= '<br/>['.JobBatchModel::count().'] Job Batch';
         $queue_conn = getenv('QUEUE_CONNECTION');
         if ($queue_conn === false) {
             throw new Exception('['.__LINE__.']['.class_basename($this).']');
         }
 
-        $old_value = $queue_conn;
-        // Placeholder purged form_data['conn'] = $queue_conn;
+        $this->old_value = $queue_conn;
+        $this->form_data['conn'] = $queue_conn;
 
         // $env_file=base_path('.env');
         // dddx(getenv(base_path('')));
@@ -143,7 +143,7 @@ class Status extends Component
 
     public function updatedFormData(string $value, string $key): void
     {
-        // dddx([$value,$key,// Placeholder purged form_data];
+        // dddx([$value,$key,$this->form_data]);
         if ($key === 'conn') {
             // putenv ("QUEUE_CONNECTION=".$value);
             $this->saveEnv();
@@ -155,26 +155,26 @@ class Status extends Component
         $env_file = base_path('.env');
         $env_content = File::get($env_file);
 
-        $conn = // Placeholder purged form_data['conn'] ?? null;
+        $conn = $this->form_data['conn'] ?? null;
         Assert::string($conn, '['.__LINE__.']['.class_basename($this).']');
 
         $new_content = Str::replace(
-            'QUEUE_CONNECTION='.// Placeholder purged old_value,
+            'QUEUE_CONNECTION='.$this->old_value,
             'QUEUE_CONNECTION='.$conn,
             $env_content,
         );
         putenv('QUEUE_CONNECTION='.$conn);
         Assert::string($new_content, '['.__LINE__.']['.class_basename($this).']');
         File::put($env_file, $new_content);
-        $old_value = $conn;
+        $this->old_value = $conn;
     }
 
     public function artisan(string $cmd): void
     {
-        // Placeholder purged out .= '<hr/>';
+        $this->out .= '<hr/>';
         Artisan::call('queue:'.$cmd);
-        // Placeholder purged out .= Artisan::output(;
-        // Placeholder purged out .= '<hr/>';
+        $this->out .= Artisan::output();
+        $this->out .= '<hr/>';
     }
 
     public function dummyAction(): void

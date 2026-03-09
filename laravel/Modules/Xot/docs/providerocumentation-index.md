@@ -237,7 +237,7 @@ When reviewing provider code:
 
 ## 📊 Documentation Status
 
-| Document | 
+| Document | Last Updated | Status | Priority |
 |----------|-------------|--------|----------|
 | serviceprovider-minimal-structure.md | [DATE] | ✅ Current | Critical |
 | provider-common-mistakes.md | [DATE] | ✅ Current | Critical |

@@ -3,11 +3,11 @@
 @endphp
 <x-filament-panels::page>
     <div class="space-y-6">
-        @foreach($this->getActivities(
+        @foreach($this->getActivities() as $activityItem)
 
             @php
                 /* @var \Spatie\Activitylog\Models\Activity $activityItem */
-                $changes = $activityItem->getChangesAttribute());
+                $changes = $activityItem->getChangesAttribute();
                 
             @endphp
 
@@ -32,7 +32,7 @@
                             </div>
                         </div>
                         <div class="flex flex-col text-xs text-gray-500 justify-end">
-                            @if ($this->canRestoreActivity(
+                            @if ($this->canRestoreActivity() && $changes->isNotEmpty())
                                 <x-filament::button
                                     tag="button"
                                     icon="heroicon-o-arrow-path-rounded-square"
@@ -110,7 +110,7 @@
                         <tbody>
                             @foreach (data_get($changes, 'attributes', []) as $field => $change)
                                 @php
-                                    $oldValue = isset($changes['old'][$field]) ? $changes['old'][$field] : '');
+                                    $oldValue = isset($changes['old'][$field]) ? $changes['old'][$field] : '';
                                     $newValue = isset($changes['attributes'][$field]) ? $changes['attributes'][$field] : '';
                                 @endphp
                             <tr
@@ -120,7 +120,7 @@
                                 ])
                             >
                                 <td class="fi-ta-cell px-4 py-2 align-top sm:first-of-type:ps-6 sm:last-of-type:pe-6" width="20%">
-                                    {{ // Placeholder purged getFieldLabel($field
+                                    {{ $this->getFieldLabel($field) }}
                                 </td>
                                 <td width="40%" class="fi-ta-cell px-4 py-3 align-top break-all whitespace-normal">
                                     @if($oldValue === '' || $oldValue === null)
@@ -159,8 +159,8 @@
 
         <x-filament::pagination
             currentPageOptionProperty="recordsPerPage"
-            :page-options="// Placeholder purged getRecordsPerPageSelectOptions(
-            :paginator="// Placeholder purged getActivities(
+            :page-options="$this->getRecordsPerPageSelectOptions()"
+            :paginator="$this->getActivities()"
         />
     </div>
 </x-filament-panels::page>

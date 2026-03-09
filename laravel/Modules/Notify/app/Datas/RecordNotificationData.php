@@ -18,21 +18,21 @@ class RecordNotificationData extends Data
 
     public function getChannel(): string
     {
-        return $channel;
+        return $this->channel;
     }
 
     public function getRoute(): string
     {
-        switch ($channel)
+        switch ($this->channel) {
             case 'mail':
-                Assert::string($email = $record->email, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
+                Assert::string($email = $this->record->email, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
                 return $email;
             case 'sms':
-                Assert::string($phone = $record->phone, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
+                Assert::string($phone = $this->record->phone, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
                 return app(NormalizePhoneNumberAction::class)->execute($phone);
         }
-        throw new Exception('Channel ['.$channel.'] not supported');
+        throw new Exception('Channel ['.$this->channel.'] not supported');
     }
 }

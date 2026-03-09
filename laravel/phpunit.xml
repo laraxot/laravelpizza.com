@@ -5,56 +5,36 @@
          colors="true"
 >
     <testsuites>
-        <testsuite name="Modules">
-            <directory suffix="Test.php">./Modules/*/tests/Feature</directory>
-            <directory suffix="Test.php">./Modules/*/tests/Unit</directory>
+        <testsuite name="Unit">
+            <directory>tests/Unit</directory>
         </testsuite>
-        <testsuite name="Activity">
-            <directory suffix="Test.php">./Modules/Activity/tests/Feature</directory>
-            <directory suffix="Test.php">./Modules/Activity/tests/Unit</directory>
+        <testsuite name="Feature">
+            <directory>tests/Feature</directory>
         </testsuite>
     </testsuites>
     <source>
         <include>
-            <directory suffix=".php">./app</directory>
-            <directory suffix=".php">./Modules/*/app</directory>
-            <directory suffix=".php">./Themes/*/app</directory>
+            <directory>app</directory>
+            <directory>Modules</directory>
         </include>
         <exclude>
-            <directory>./Modules/*/config</directory>
-            <directory>./Modules/*/database</directory>
-            <directory>./Modules/*/lang</directory>
-            <directory>./Modules/*/routes</directory>
-            <directory>./Modules/*/resources</directory>
-            <directory>./Modules/*/tests</directory>
-            <directory>./Modules/*/workbench</directory>
-            <file>./Modules/*/rector.php</file>
-            <file>./Modules/*/phpinsights.php</file>
-            <file>./Modules/*/phpstan_constants.php</file>
-            <file>./Modules/*/.php-cs-fixer.dist.php</file>
-            <file>./Modules/*/.php-cs-fixer.php</file>
-            <file>./Modules/*/app/Actions/.php-cs-fixer.dist.php</file>
-            <file>./Modules/*/app/Actions/.gitkeep</file>
+            <directory suffix=".php">./Modules/*/config</directory>
+            <directory suffix=".php">./Modules/*/database</directory>
+            <directory suffix=".php">./Modules/*/resources</directory>
+            <directory suffix=".php">./Modules/*/routes</directory>
+            <directory suffix=".php">./Modules/*/tests</directory>
         </exclude>
     </source>
     <php>
         <env name="APP_ENV" value="testing"/>
-        <env name="APP_DEBUG" value="true"/>
         <env name="APP_MAINTENANCE_DRIVER" value="file"/>
         <env name="BCRYPT_ROUNDS" value="4"/>
         <env name="BROADCAST_CONNECTION" value="null"/>
         <env name="CACHE_STORE" value="array"/>
-        <!-- CRITICAL: Force test DB - PHPUnit sets these BEFORE app bootstrap.
-             Laravel may load .env instead of .env.testing depending on bootstrap order.
-             Without these, TenantServiceProvider uses laravelpizza_data (prod) for activity/user connections. -->
-        <env name="DB_DATABASE" value="laravelpizza_data_test"/>
-        <env name="DB_DATABASE_USER" value="laravelpizza_user_test"/>
-
+        <!-- DB_CONNECTION and DB_DATABASE removed to use .env.testing config -->
         <env name="MAIL_MAILER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>
-        <!-- Use mysql so activity_log (migrated on default) is available in tests -->
-        <env name="ACTIVITY_LOGGER_DB_CONNECTION" value="mysql"/>
         <env name="PULSE_ENABLED" value="false"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
         <env name="NIGHTWATCH_ENABLED" value="false"/>

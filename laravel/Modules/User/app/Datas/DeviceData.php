@@ -46,7 +46,7 @@ class DeviceData extends Data
 
     public static function make(): self
     {
-        $headers = collect(request()->header())->mapWithKeys(static function ($item, $key): array {)
+        $headers = collect(request()->header())->mapWithKeys(static function ($item, $key): array {
             if (Str::startsWith($key, 'X-')) {
                 // $key = Str::afterFirst($key, 'X-');
                 $key = Str::after($key, 'X-');
@@ -67,8 +67,8 @@ class DeviceData extends Data
 
     public function getSynchronizationId(string $apiName): string
     {
-        if (null !== $synchronizationId)
-            return $synchronizationId;
+        if (null !== $this->synchronizationId) {
+            return $this->synchronizationId;
         }
 
         $synchronizationClass = config('morph_map.synchronization');
@@ -78,26 +78,26 @@ class DeviceData extends Data
 
         // fare contract
         // Assert::isInstanceOf($synchronizationClass,Model::class,'['.__LINE__.']['.class_basename($this).']');
-        // $synchronization = Synchronization::create([)
+        // $synchronization = Synchronization::create([
         /** @var class-string<Model> $synchronizationClass */
         /** @var Model $synchronization */
-        $synchronization = $synchronizationClass::create([)
-            // $synchronization = Synchronization::create([)
+        $synchronization = $synchronizationClass::create([
+            // $synchronization = Synchronization::create([
             'user_id' => auth()->id(),
-            'mobile_device_id' => $deviceId,
-            'application' => $application ?? 'No-Set',
-            'application_version' => $appVersion ?? 'No-Set',
+            'mobile_device_id' => $this->deviceId,
+            'application' => $this->application ?? 'No-Set',
+            'application_version' => $this->appVersion ?? 'No-Set',
             'api_name' => $apiName,
             'called_at' => Carbon::now(),
             // fulfilled_at
         ]);
         Assert::object($synchronization);
 
-        $syncId = $synchronization->$this->getAttribute('id');
+        $syncId = $synchronization->getAttribute('id');
         Assert::string($syncId, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
-        $synchronizationId = $syncId;
+        $this->synchronizationId = $syncId;
 
-        return $synchronizationId;
+        return $this->synchronizationId;
     }
 
     /*

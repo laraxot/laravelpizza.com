@@ -32,20 +32,20 @@ final class SendNexmoSMSAction implements SmsActionContract
      */
     public function __construct()
     {
-        $nexmoData = NexmoData::make();
+        $this->nexmoData = NexmoData::make();
 
-        if (! $nexmoData->key)
+        if (! $this->nexmoData->key) {
             throw new Exception('Key Nexmo non configurata in sms.php');
         }
 
-        if (! $nexmoData->secret)
+        if (! $this->nexmoData->secret) {
             throw new Exception('Secret Nexmo non configurato in sms.php');
         }
 
         // Parametri a livello di root
         $sender = config('sms.from');
-        $defaultSender = is_string($sender);
-        $debug = (bool);
+        $this->defaultSender = is_string($sender) ? $sender : null;
+        $this->debug = (bool) config('sms.debug', false);
     }
 
     /**
@@ -73,18 +73,18 @@ final class SendNexmoSMSAction implements SmsActionContract
             $to = '+39'.$to;
         }
 
-        $from = $smsData->from ?? $defaultSender;
+        $from = $smsData->from ?? $this->defaultSender;
 
-        $client = new Client([)
-            'timeout' => $nexmoData->getTimeout()
+        $client = new Client([
+            'timeout' => $this->nexmoData->getTimeout(),
             'headers' => $headers,
         ]);
 
         try {
-            $response = $client->post($nexmoData->getBaseUrl())
+            $response = $client->post($this->nexmoData->getBaseUrl().'/sms/json', [
                 'form_params' => [
-                    'api_key' => $nexmoData->key,
-                    'api_secret' => $nexmoData->secret,
+                    'api_key' => $this->nexmoData->key,
+                    'api_secret' => $this->nexmoData->secret,
                     'to' => $to,
                     'from' => $from,
                     'text' => $smsData->body,
@@ -92,12 +92,12 @@ final class SendNexmoSMSAction implements SmsActionContract
                 ],
             ]);
 
-            $vars['status_code'] = $response->getStatusCode();
-            $vars['status_txt'] = $response->getBody();
+            $this->vars['status_code'] = $response->getStatusCode();
+            $this->vars['status_txt'] = $response->getBody()->getContents();
 
-            return $vars;
+            return $this->vars;
         } catch (ClientException $clientException) {
-            throw new Exception()
+            throw new Exception(
                 $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',
                 $clientException->getCode(),
                 $clientException,

@@ -15,7 +15,7 @@ class ResetPassword extends BaseNotification
 
     protected function resetUrl($notifiable): string
     {
-        return $url;
+        return $this->url;
     }
 
     /**

@@ -92,7 +92,7 @@ declare(strict_types=1);
                 class="divide-y divide-gray-300 filament-table-repeater-rows-wrapper dark:divide-gray-700">
                 @if (count($containers))
                     @foreach ($containers as $uuid => $row)
-                        <tr wire:key="{{ // Placeholder purged id }}.{{ $row->getStatePath(
+                        <tr wire:key="{{ $this->id }}.{{ $row->getStatePath() }}.item"
                             wire:sortable.item="{{ $uuid }}" @class([
                                 'filament-table-repeater-row md:divide-x md:rtl:divide-x-reverse md:divide-gray-300',
                                 'dark:md:divide-gray-700' => config('forms.dark_mode'),

@@ -5,7 +5,7 @@
 2. [Analisi del Codice Attuale](#analisi-del-codice-attuale)
 3. [Best Practice Raccolte](#best-practice-raccolte)
 4. [Casi d'Uso con Percentuali](#casi-duso-con-percentuali)
-5. [Raccomandazioni per <nome progetto>](#raccomandazioni-per-<nome progetto>)
+5. [Raccomandazioni per LaravelPizza](#raccomandazioni-per-laravelpizza)
 6. [Schema Decisionale](#schema-decisionale)
 
 ---
@@ -18,7 +18,7 @@ La separazione tra **User** (tabella per autenticazione) e **Profile** (tabella 
 
 ## Analisi del Codice Attuale
 
-### Struttura Attuale <nome progetto>
+### Struttura Attuale LaravelPizza
 
 ```
 User (connection: user)
@@ -126,7 +126,7 @@ public function profile(): HasOne
 
 ## Casi d'Uso con Percentuali
 
-### Caso 1: Community Platform (es. <nome progetto>)
+### Caso 1: Community Platform (es. LaravelPizza)
 ```
 User: 60% dei dati necessari
 - id, email, password, name, lang, type, state
@@ -231,7 +231,7 @@ START
 
 ---
 
-## Raccomandazioni per <nome progetto>
+## Raccomandazioni per LaravelPizza
 
 ### Attuale (CORRETTO)
 
@@ -306,7 +306,7 @@ Profile: Tutti i dati applicativi
 
 | Scenario | Usa | Note |
 |----------|-----|------|
-| <nome progetto> attuale | User + Profile | Profile in meetup DB |
+| LaravelPizza attuale | User + Profile | Profile in meetup DB |
 | MVP semplice | Solo User | Tutto in una tabella |
 | SaaS multi-tenant | User + Profile | Profile per tenant |
 | Social network | User + Profile | Profile ricco |
@@ -316,7 +316,7 @@ Profile: Tutti i dati applicativi
 
 ## Conclusione
 
-Per **<nome progetto>** la separazione attuale ha senso perché:
+Per **LaravelPizza** la separazione attuale ha senso perché:
 - ✅ Profile è in connection separata (meetup)
 - ✅ Meetup module ha dati specifici
 - ✅ Possibile estensione futura (altri moduli)
@@ -327,4 +327,5 @@ Per **<nome progetto>** la separazione attuale ha senso perché:
 
 ---
 
-*Documento generato per <nome progetto> - Analisi User vs Profile Pattern* (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)*
+*Documento generato per LaravelPizza - Analisi User vs Profile Pattern*
+*Data: [DATE]*

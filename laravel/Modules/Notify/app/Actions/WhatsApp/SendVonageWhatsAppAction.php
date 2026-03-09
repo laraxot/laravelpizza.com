@@ -41,20 +41,20 @@ final class SendVonageWhatsAppAction
         if (! is_string($apiKey)) {
             throw new Exception('put [VONAGE_KEY] variable to your .env and config [services.vonage.api_key]');
         }
-        $apiKey = $apiKey;
+        $this->apiKey = $apiKey;
 
         $apiSecret = config('services.vonage.api_secret');
         if (! is_string($apiSecret)) {
             throw new Exception('put [VONAGE_SECRET] variable to your .env and config [services.vonage.api_secret]');
         }
-        $apiSecret = $apiSecret;
+        $this->apiSecret = $apiSecret;
 
         // Parametri a livello di root
         /** @var string|null $defaultSender */
         $defaultSender = config('whatsapp.from');
-        $defaultSender = $defaultSender;
-        $debug = (bool);
-        $timeout = is_numeric(config('whatsapp.timeout', 30));
+        $this->defaultSender = $defaultSender;
+        $this->debug = (bool) config('whatsapp.debug', false);
+        $this->timeout = is_numeric(config('whatsapp.timeout', 30)) ? (int) config('whatsapp.timeout', 30) : 30;
     }
 
     /**
@@ -67,10 +67,10 @@ final class SendVonageWhatsAppAction
      */
     public function execute(WhatsAppData $whatsAppData): array
     {
-        $from = $whatsAppData->from ?? $defaultSender;
+        $from = $whatsAppData->from ?? $this->defaultSender;
 
-        $client = new Client([)
-            'timeout' => $timeout,
+        $client = new Client([
+            'timeout' => $this->timeout,
             'headers' => [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
@@ -115,9 +115,9 @@ final class SendVonageWhatsAppAction
         }
 
         try {
-            $response = $client->post($baseUrl, [)
+            $response = $client->post($this->baseUrl, [
                 'json' => $payload,
-                'auth' => [$apiKey, $this->apiSecret],
+                'auth' => [$this->apiKey, $this->apiSecret],
             ]);
 
             $statusCode = $response->getStatusCode();
@@ -126,11 +126,11 @@ final class SendVonageWhatsAppAction
             $responseData = json_decode($responseContent, true) ?: [];
 
             // Salva i dati della risposta nelle variabili dell'azione
-            $vars['status_code'] = $statusCode;
-            $vars['status_txt'] = $responseContent;
-            $vars['response_data'] = $responseData;
+            $this->vars['status_code'] = $statusCode;
+            $this->vars['status_txt'] = $responseContent;
+            $this->vars['response_data'] = $responseData;
 
-            Log::info('WhatsApp Vonage inviato con successo', [)
+            Log::info('WhatsApp Vonage inviato con successo', [
                 'to' => $whatsAppData->recipient,
                 'response_code' => $statusCode,
             ]);
@@ -141,7 +141,7 @@ final class SendVonageWhatsAppAction
                     ? $responseData['message_uuid']
                     : null,
                 'response' => $responseData,
-                'vars' => $vars,
+                'vars' => $this->vars,
             ];
         } catch (ClientException $e) {
             $response = $e->getResponse();
@@ -150,11 +150,11 @@ final class SendVonageWhatsAppAction
             $responseBody = json_decode($response->getBody()->getContents(), true) ?: [];
 
             // Salva i dati dell'errore nelle variabili dell'azione
-            $vars['error_code'] = $statusCode;
-            $vars['error_message'] = $e->getMessage();
-            $vars['error_response'] = $responseBody;
+            $this->vars['error_code'] = $statusCode;
+            $this->vars['error_message'] = $e->getMessage();
+            $this->vars['error_response'] = $responseBody;
 
-            Log::warning('Errore invio WhatsApp Vonage', [)
+            Log::warning('Errore invio WhatsApp Vonage', [
                 'to' => $whatsAppData->recipient,
                 'status' => $statusCode,
                 'response' => $responseBody,
@@ -166,7 +166,7 @@ final class SendVonageWhatsAppAction
                     ? $responseBody['title']
                     : 'Errore sconosciuto',
                 'status_code' => $statusCode,
-                'vars' => $vars,
+                'vars' => $this->vars,
             ];
         }
     }

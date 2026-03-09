@@ -10,11 +10,12 @@ uses(TestCase::class);
 
 test('can create role with minimal data', function (): void {
     $role = Role::factory()->create([
-        'name' => 'Test Role '.uniqid(),
+        'name' => 'Test Role',
         'guard_name' => 'web',
     ]);
 
     expect($role->id)->not->toBeNull();
+    expect($role->name)->toBe('Test Role');
     expect($role->guard_name)->toBe('web');
 });
 
@@ -22,28 +23,31 @@ test('can create role with all fields', function (): void {
     $team = Team::factory()->create();
 
     $roleData = [
-        'name' => 'Full Role '.uniqid(),
+        'name' => 'Full Role',
         'guard_name' => 'web',
         'team_id' => $team->id,
+        'uuid' => '550e8400-e29b-41d4-a716-446655440000',
     ];
 
     $role = Role::factory()->create($roleData);
 
     expect($role->id)->not->toBeNull();
+    expect($role->name)->toBe('Full Role');
     expect($role->guard_name)->toBe('web');
     expect($role->team_id)->toBe($team->id);
+    expect($role->uuid)->toBe('550e8400-e29b-41d4-a716-446655440000');
 });
 
 test('role has connection attribute', function (): void {
     $role = new Role();
 
-    expect($role->getConnectionName())->toBe('user');
+    expect($role->connection)->toBe('user');
 });
 
 test('role has key type attribute', function (): void {
     $role = new Role();
 
-    expect($role->getKeyType())->toBe('int');
+    expect($role->keyType)->toBe('string');
 });
 
 test('role constants are defined', function (): void {
@@ -53,22 +57,20 @@ test('role constants are defined', function (): void {
 });
 
 test('can find role by name', function (): void {
-    $uniqueName = 'Unique Role Name '.uniqid();
-    $role = Role::factory()->create(['name' => $uniqueName]);
+    $role = Role::factory()->create(['name' => 'Unique Role Name']);
 
-    $foundRole = Role::where('name', $uniqueName)->first();
+    $foundRole = Role::where('name', 'Unique Role Name')->first();
 
     expect($foundRole)->not->toBeNull();
     expect($foundRole->id)->toBe($role->id);
 });
 
 test('can find role by guard name', function (): void {
-    $suffix = uniqid();
-    Role::factory()->create(['name' => 'Role Web 1 '.$suffix, 'guard_name' => 'web']);
-    Role::factory()->create(['name' => 'Role Api '.$suffix, 'guard_name' => 'api']);
-    Role::factory()->create(['name' => 'Role Web 2 '.$suffix, 'guard_name' => 'web']);
+    Role::factory()->create(['guard_name' => 'web']);
+    Role::factory()->create(['guard_name' => 'api']);
+    Role::factory()->create(['guard_name' => 'web']);
 
-    $webRoles = Role::where('name', 'like', '%'.$suffix)->where('guard_name', 'web')->get();
+    $webRoles = Role::where('guard_name', 'web')->get();
 
     expect($webRoles->count())->toBeGreaterThanOrEqual(2);
     expect($webRoles->every(fn ($role) => 'web' === $role->guard_name))->toBeTrue();
@@ -85,14 +87,7 @@ test('can find role by team id', function (): void {
 });
 
 test('can find role by uuid', function (): void {
-    // Skip if uuid column doesn't exist in roles table
-    if (! Schema::connection('user')->hasColumn('roles', 'uuid')) {
-        $this->markTestSkipped('The roles table does not have a uuid column.');
-
-        return;
-    }
-
-    $uuid = '550e8400-e29b-41d4-'.uniqid('', true);
+    $uuid = '550e8400-e29b-41d4-a716-446655440000';
     $role = Role::factory()->create(['uuid' => $uuid]);
 
     $foundRole = Role::where('uuid', $uuid)->first();
@@ -102,48 +97,46 @@ test('can find role by uuid', function (): void {
 });
 
 test('can find roles by name pattern', function (): void {
-    $suffix = uniqid();
-    Role::factory()->create(['name' => 'Admin Role '.$suffix]);
-    Role::factory()->create(['name' => 'User Role '.$suffix]);
-    Role::factory()->create(['name' => 'Manager Role '.$suffix]);
+    Role::factory()->create(['name' => 'Admin Role']);
+    Role::factory()->create(['name' => 'User Role']);
+    Role::factory()->create(['name' => 'Manager Role']);
 
-    $matchingRoles = Role::where('name', 'like', '%Role '.$suffix.'%')->get();
+    $adminRoles = Role::where('name', 'like', '%Role%')->get();
 
-    expect($matchingRoles->count())->toBeGreaterThanOrEqual(3);
-    expect($matchingRoles->every(fn ($role) => str_contains($role->name, 'Role '.$suffix)))->toBeTrue();
+    expect($adminRoles->count())->toBeGreaterThanOrEqual(3);
+    expect($adminRoles->every(fn ($role) => str_contains($role->name, 'Role')))->toBeTrue();
 });
 
 test('can update role', function (): void {
-    $oldName = 'Old Name '.uniqid();
-    $newName = 'New Name '.uniqid();
-    $role = Role::factory()->create(['name' => $oldName]);
+    $role = Role::factory()->create(['name' => 'Old Name']);
 
-    $role->update(['name' => $newName]);
+    $role->update(['name' => 'New Name']);
 
-    expect($role->fresh()->name)->toBe($newName);
+    expect($role->fresh()->name)->toBe('New Name');
 });
 
 test('can handle null values', function (): void {
     $role = Role::factory()->create([
-        'name' => 'Null Test Role '.uniqid(),
+        'name' => 'Test Role',
         'guard_name' => 'web',
         'team_id' => null,
+        'uuid' => null,
     ]);
 
     expect($role->team_id)->toBeNull();
+    expect($role->uuid)->toBeNull();
 });
 
 test('can find roles by multiple criteria', function (): void {
     $team = Team::factory()->create();
-    $suffix = uniqid();
     Role::factory()->create([
-        'name' => 'Admin Role '.$suffix,
+        'name' => 'Admin Role',
         'guard_name' => 'web',
         'team_id' => $team->id,
     ]);
 
     Role::factory()->create([
-        'name' => 'User Role '.$suffix,
+        'name' => 'User Role',
         'guard_name' => 'api',
         'team_id' => $team->id,
     ]);
@@ -151,35 +144,38 @@ test('can find roles by multiple criteria', function (): void {
     $roles = Role::where('team_id', $team->id)->where('guard_name', 'web')->get();
 
     expect($roles->count())->toBeGreaterThanOrEqual(1);
+    expect($roles->first()->name)->toBe('Admin Role');
     expect($roles->first()->guard_name)->toBe('web');
 });
 
 test('role has permissions relationship', function (): void {
-    $role = Role::factory()->create(['name' => 'perms-rel '.uniqid()]);
+    $role = Role::factory()->create();
 
     expect(method_exists($role, 'permissions'))->toBeTrue();
 });
 
 test('role has team relationship', function (): void {
-    $role = Role::factory()->create(['name' => 'team-rel '.uniqid()]);
+    $role = Role::factory()->create();
 
     expect(method_exists($role, 'team'))->toBeTrue();
 });
 
 test('role has users relationship', function (): void {
-    $role = Role::factory()->create(['name' => 'users-rel '.uniqid()]);
+    $role = Role::factory()->create();
 
     expect(method_exists($role, 'users'))->toBeTrue();
 });
 
 test('role can use permission scopes', function (): void {
-    $role = Role::factory()->create(['name' => 'perm-scope '.uniqid()]);
+    $role = Role::factory()->create();
 
-    expect(is_callable([Role::query(), 'where']))->toBeTrue();
+    expect(method_exists($role, 'permission'))->toBeTrue();
+    expect(method_exists($role, 'withoutPermission'))->toBeTrue();
 });
 
 test('role can use role scopes', function (): void {
-    $role = Role::factory()->create(['name' => 'role-scope '.uniqid()]);
+    $role = Role::factory()->create();
 
-    expect(is_callable([Role::query(), 'where']))->toBeTrue();
+    expect(method_exists($role, 'role'))->toBeTrue();
+    expect(method_exists($role, 'withoutRole'))->toBeTrue();
 });

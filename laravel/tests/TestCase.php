@@ -2,14 +2,12 @@
 
 namespace Tests;
 
-use Modules\Xot\Tests\XotBaseTestCase;
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Modules\Xot\Tests\CreatesApplication;
 
-/**
- * Root test case for app-level tests.
- *
- * Extends XotBaseTestCase (DRY + KISS + Laraxot).
- */
-abstract class TestCase extends XotBaseTestCase
+abstract class TestCase extends BaseTestCase
 {
+    use CreatesApplication;
+
     //
 }

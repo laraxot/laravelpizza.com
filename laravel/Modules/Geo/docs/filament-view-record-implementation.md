@@ -175,7 +175,7 @@ class ViewLocation extends XotBaseViewRecord
 
 ### 5. Informazioni di Sistema
 - **Data Creazione**: Timestamp di creazione
-- **Data Aggiornamento**: Timestamp di 
+- **Data Aggiornamento**: Timestamp di ultimo aggiornamento
 - **Creato da**: Utente che ha creato il record
 - **Aggiornato da**: Utente che ha aggiornato il record
 
@@ -275,8 +275,8 @@ protected function getInfolistSchema()
 
 ## Collegamenti e Riferimenti
 
-- [Filament ViewRecord Errors (Root Docs)](../../../../../docs/filament-view-record-errors.md)
-- [Testing Analysis Documentation](../../../../../docs/testing-analysis.md)
+- [Filament ViewRecord Errors (Root Docs)](../../../docs/filament-view-record-errors.md)
+- [Testing Analysis Documentation](../../../docs/testing-analysis.md)
 - [XotBaseViewRecord Source Code](../../../Xot/app/Filament/Resources/Pages/XotBaseViewRecord.php)
 - [Location Model](../../app/Models/Location.php)
 - [LocationResource](../../app/Filament/Resources/LocationResource.php)
@@ -287,7 +287,7 @@ protected function getInfolistSchema()
 - **Motivazione**: Documentazione della risoluzione dell'errore FatalError in ViewLocation
 - **Autore**: AI Assistant
 - **Stato**: Completato e verificato
-- **
+- **Ultimo Aggiornamento**: [DATE]
 
 ---
 

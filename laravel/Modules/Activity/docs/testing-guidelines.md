@@ -1,29 +1,14 @@
 # Activity Module - Testing Guidelines
 
-## Pre-requisiti (CRITICO)
-
-**Prima di eseguire i test**, migrare il DB di test:
-
-```bash
-php artisan migrate --env=testing --force
-```
-
-**phpunit.xml**: `ACTIVITY_LOGGER_DB_CONNECTION=mysql` per usare la connessione default (activity_log migrata su mysql). Nessun hack nel modello: la connessione viene risolta solo via config `activitylog.database_connection`.
-
-La tabella `activity_log` deve avere `subject_id` e `causer_id` come `string(36)` per supportare User UUID. Vedi [subject-id-causer-id-uuid-migration-fix](./errori/subject-id-causer-id-uuid-migration-fix.md).
-
 ## Testing Framework Requirements
 
 ### Environment Configuration
-All tests MUST use `.env.testing` configuration con MySQL (no SQLite), copia carbone del `.env` con suffisso `_test`:
+All tests MUST use `.env.testing` configuration:
 ```env
 APP_ENV=testing
-DB_CONNECTION=mysql
+DB_CONNECTION=sqlite
 DB_DATABASE=<nome progetto>_data_test
-DB_DATABASE_USER=<nome progetto>_user_test (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)DB_DATABASE=<nome progetto>_data_test
-DB_DATABASE_USER=<nome progetto>_user_test
-DB_DATABASE=laravelpizza_data_test
-DB_DATABASE_USER=laravelpizza_user_test
+DB_DATABASE=<nome progetto>_data_test
 ```
 
 ### Pest Framework Usage

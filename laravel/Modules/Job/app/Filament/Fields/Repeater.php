@@ -16,7 +16,7 @@ class Repeater extends ComponentsRepeater
             return null;
         }
 
-        $res = $this->evaluate($this->itemLabel, [)
+        $res = $this->evaluate($this->itemLabel, [
             'state' => $container->getRawState(),
             'uuid' => $uuid,
         ]);

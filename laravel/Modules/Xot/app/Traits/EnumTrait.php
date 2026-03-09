@@ -75,11 +75,11 @@ trait EnumTrait
      * - **Religion**: Strong typing through enum values
      * - **Zen**: Form without form - one method adapts to both contexts
      *
-     * Inspired by Modules/<nome progetto>/database/migrations/2019_12_12_000004_create_workers_table.php:
+     * Inspired by Modules/TechPlanner/database/migrations/2019_12_12_000004_create_workers_table.php:
      * ```php
      * $address_components = Place::$address_components;
      * foreach ($address_components as $el) {
-     *     if (! $this->hasColumn($el
+     *     if (! $this->hasColumn($el)) {
      *         $table->string($el)->nullable();
      *     }
      * }
@@ -88,20 +88,20 @@ trait EnumTrait
      * Usage in migrations:
      * ```php
      * // In CREATE block (no hasColumn checks needed):
-     * $this->tableCreate(function (Blueprint $table
+     * $this->tableCreate(function (Blueprint $table): void {
      *     $table->id();
      *     ContactTypeEnum::columns($table); // migration = null, adds all
      * });
      *
      * // In UPDATE block (with hasColumn checks):
-     * $this->tableUpdate(function (Blueprint $table
+     * $this->tableUpdate(function (Blueprint $table): void {
      *     ContactTypeEnum::columns($table, $this); // loops with checks
      * });
      * ```
      */
     /**
-     * @param Blueprint             $table     The table blueprint
-     * @param XotBaseMigration|null $migration XotBaseMigration instance for UPDATE context (provides hasColumn())
+     * @param  Blueprint  $table  The table blueprint
+     * @param  XotBaseMigration|null  $migration  XotBaseMigration instance for UPDATE context (provides hasColumn())
      */
     public static function columns(Blueprint $table, ?XotBaseMigration $migration = null): void
     {
@@ -110,7 +110,7 @@ trait EnumTrait
         // }
 
         foreach (static::getColumnDefinitions() as $name => $definition) {
-            if (null === $migration || ! $migration->hasColumn($name)) {
+            if ($migration === null || ! $migration->hasColumn($name)) {
                 $definition($table);
             }
         }

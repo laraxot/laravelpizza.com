@@ -114,4 +114,4 @@ return [
 
 **Status**: 🔴 **REGOLA CRITICA - MAI VIOLARE**
 
-**
+**Ultimo aggiornamento**: 2026-01-09

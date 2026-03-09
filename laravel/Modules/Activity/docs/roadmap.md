@@ -1,34 +1,37 @@
-# Roadmap Modulo Activity
+# Roadmap (Module Activity)
 
-Questa pagina funge da indice della roadmap del modulo `Activity`.  
-I contenuti di dettaglio sono organizzati in sotto-documenti dedicati nella cartella `docs/roadmap/`.
+## Current roadmap
 
-## Mappa dei documenti di roadmap
+- [Overview](roadmap/00-overview.md)
+- [Now](roadmap/01-now.md)
+- [Next](roadmap/02-next.md)
+- [Later](roadmap/03-later.md)
+- [Risks and dependencies](roadmap/04-risks.md)
 
-- **Visione e obiettivi**  
-  Vedi `docs/roadmap/vision.md` per:
-  - il ruolo del modulo come centro dell’audit trail;
-  - obiettivi di business (security audit, accountability);
-  - obiettivi tecnici (modulo di riferimento per la qualità).
+## Legacy / existing roadmap docs
 
-- **Fasi di sviluppo**  
-  Vedi `docs/roadmap/phases.md` per:
-  - stato attuale delle attività di qualità e pulizia;
-  - piani per UI di observability in Filament;
-  - evoluzioni future verso analytics e AI.
-
-- **Checklist qualità**  
-  Vedi `docs/roadmap/quality.md` per:
-  - criteri di qualità del codice e dell’architettura;
-  - requisiti di testing;
-  - aspetti di osservabilità e reporting.
-
-- **Criteri di accettazione**  
-  Vedi `docs/roadmap/acceptance-criteria.md` per criteri verificabili per Fase 1, 2 e 3.
-
-- **Dipendenze e confini**  
-  Vedi `docs/roadmap/dependencies.md` per dipendenze in ingresso/uscita e resilienza del logging.
-
-- **Metriche**  
-  Vedi `docs/roadmap/metrics.md` per obiettivi numerici e verifica.
-
+- [phpstan-override-fix-roadmap.md](phpstan-override-fix-roadmap.md)
+- [phpstan-roadmap.md](phpstan-roadmap.md)
+- [roadmap/00-index.md](roadmap/00-index.md)
+- [roadmap/00-overview.md](roadmap/00-overview.md)
+- [roadmap/01-current-state.md](roadmap/01-current-state.md)
+- [roadmap/01-now.md](roadmap/01-now.md)
+- [roadmap/02-goals.md](roadmap/02-goals.md)
+- [roadmap/02-next.md](roadmap/02-next.md)
+- [roadmap/03-later.md](roadmap/03-later.md)
+- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
+- [roadmap/04-milestones.md](roadmap/04-milestones.md)
+- [roadmap/04-risks.md](roadmap/04-risks.md)
+- [roadmap/05-risks.md](roadmap/05-risks.md)
+- [roadmap/README.md](roadmap/README.md)
+- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
+- [roadmap/legacy/legacy-roadmap-and-issues.md](roadmap/legacy/legacy-roadmap-and-issues.md)
+- [roadmap/legacy/legacy-roadmap-vision.md](roadmap/legacy/legacy-roadmap-vision.md)
+- [roadmap/legacy/legacy-roadmap-x.md](roadmap/legacy/legacy-roadmap-x.md)
+- [roadmap/phases.md](roadmap/phases.md)
+- [roadmap/quality.md](roadmap/quality.md)
+- [roadmap/tasks/enhanced-activity-filtering.md](roadmap/tasks/enhanced-activity-filtering.md)
+- [roadmap/tasks/gdpr-compliance-enhancement.md](roadmap/tasks/gdpr-compliance-enhancement.md)
+- [roadmap/tasks/realtime-monitoring-dashboard.md](roadmap/tasks/realtime-monitoring-dashboard.md)
+- [roadmap/vision.md](roadmap/vision.md)
+- [stabilization-roadmap.md](stabilization-roadmap.md)

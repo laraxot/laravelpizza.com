@@ -24,8 +24,8 @@ class SearchPlacesAction
 
     public function __construct(string $userAgent)
     {
-        $client = new Client();
-        $userAgent = $userAgent.' Application';
+        $this->client = new Client();
+        $this->userAgent = $userAgent.' Application';
     }
 
     /**
@@ -63,10 +63,10 @@ class SearchPlacesAction
             $params['countrycodes'] = $country;
         }
 
-        $response = $client->get(self::API_URL, [
+        $response = $this->client->get(self::API_URL, [
             'query' => $params,
             'headers' => [
-                'User-Agent' => $userAgent,
+                'User-Agent' => $this->userAgent,
             ],
         ]);
 

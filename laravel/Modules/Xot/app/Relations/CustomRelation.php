@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Relations;
 
 use Closure;
+use Exception;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
@@ -22,7 +23,7 @@ use Webmozart\Assert\Assert;
  *
  * @method static Builder when($value = null, callable $callback = null, callable $default = null)
  * @method static Builder whereBetween($column, iterable<int, mixed> $values, $boolean = 'and', $not = false)
- * @method static Builder selectRaw($expression, array<int, mixed> $bindings = [])                            ;
+ * @method static Builder selectRaw($expression, array<int, mixed> $bindings = []) ;
  * @method static Builder where($column, $operator = null, $value = null, $boolean = 'and')
  */
 class CustomRelation extends Relation
@@ -30,22 +31,22 @@ class CustomRelation extends Relation
     /**
      * Create a new belongs to relationship instance.
      */
-    public function __construct()
+    public function __construct(
         Builder $query,
         Model $model,
         /* implements BuilderContract */
         /**
          * The baseConstraints callback.
          */
-        protected \Closure $baseConstraints,
+        protected Closure $baseConstraints,
         /**
          * The eagerConstraints callback.
          */
-        protected ?\Closure $eagerConstraints,
+        protected ?Closure $eagerConstraints,
         /**
          * The eager constraints model matcher.
          */
-        protected ?\Closure $eagerMatcher,
+        protected ?Closure $eagerMatcher,
     ) {
         parent::__construct($query, $model);
     }
@@ -55,7 +56,7 @@ class CustomRelation extends Relation
      */
     public function addConstraints(): void
     {
-        \call_user_func($baseConstraints, $this);
+        \call_user_func($this->baseConstraints, $this);
     }
 
     /**
@@ -64,11 +65,11 @@ class CustomRelation extends Relation
     public function addEagerConstraints(array $models): void
     {
         // Parameter #1 $function of function call_user_func expects callable(): mixed, Closure|null given.
-        if (! \is_callable($eagerConstraints))
-            throw new \Exception('eagerConstraints is not callable');
+        if (! \is_callable($this->eagerConstraints)) {
+            throw new Exception('eagerConstraints is not callable');
         }
 
-        \call_user_func($eagerConstraints, $this, $models);
+        \call_user_func($this->eagerConstraints, $this, $models);
     }
 
     /**
@@ -77,7 +78,7 @@ class CustomRelation extends Relation
     public function initRelation(array $models, $relation): array
     {
         foreach ($models as $model) {
-            $model->setRelation($relation, $related->newCollection());
+            $model->setRelation($relation, $this->related->newCollection());
         }
 
         return $models;
@@ -91,15 +92,15 @@ class CustomRelation extends Relation
     public function match(array $models, Collection $collection, $relation): array
     {
         // Trying to invoke Closure|null but it might not be a callable.
-        if (! \is_callable($eagerMatcher))
-            throw new \Exception('eagerMatcher is not callable');
+        if (! \is_callable($this->eagerMatcher)) {
+            throw new Exception('eagerMatcher is not callable');
         }
 
-        $res = ($eagerMatcher);
+        $res = ($this->eagerMatcher)($models, $collection, $relation, $this);
         Assert::isArray($res);
         Assert::allIsInstanceOf($res, Model::class);
 
-        /* @var array<int, Model> $res */
+        /** @var array<int, Model> $res */
         return $res;
     }
 
@@ -115,18 +116,20 @@ class CustomRelation extends Relation
 
     /**
      * Execute the query as a "select" statement.
+     *
+     * @param  mixed  $columns
      */
     public function get($columns = ['*']): Collection
     {
         // First we'll add the proper select columns onto the query so it is run with
         // the proper columns. Then, we will get the results and hydrate out pivot
         // models with the result of those columns as a separate model relation.
-        $columns = $query->getQuery();
+        $columns = $this->query->getQuery()->columns ? [] : $columns;
         if ($columns === ['*']) {
-            $columns = [$related->getTable();
+            $columns = [$this->related->getTable().'.*'];
         }
 
-        $query = $query->applyScopes();
+        $query = $this->query->applyScopes();
         $models = $query->addSelect($columns)->getModels();
         // If we actually found models we will also eager load any relationships that
         // have been specified as needing to be eager loaded. This will solve the
@@ -138,8 +141,8 @@ class CustomRelation extends Relation
         Assert::isArray($models);
         Assert::allIsInstanceOf($models, Model::class);
 
-        /* @var array<int, Model> $models */
-        return $related->newCollection($models);
+        /** @var array<int, Model> $models */
+        return $this->related->newCollection($models);
     }
 
     /*
@@ -153,6 +156,6 @@ class CustomRelation extends Relation
      * @return \Illuminate\Database\Eloquent\Builder
      */
     // public function where($column, $operator = null, $value = null, $boolean = 'and') {
-    //    return $query->where($column, $operator, $value, $boolean);
+    //    return $this->query->where($column, $operator, $value, $boolean);
     // }
 }

@@ -28,13 +28,13 @@ class JobServiceProvider extends XotBaseServiceProvider
     {
         parent::boot();
         /*
-         * // Placeholder purged app->resolving(Schedule::class, function ($schedule
+         * $this->app->resolving(Schedule::class, function ($schedule) {
          * dddx($schedule);
          * //
          * });
          */
-        // // Placeholder purged app->booted(function (
-        // $schedule = // Placeholder purged app->make(Schedule::class;
+        // $this->app->booted(function () {
+        // $schedule = $this->app->make(Schedule::class);
         // try {
         //    $this->registerSchedule($schedule);
         // } catch (\Illuminate\Database\QueryException $e) {

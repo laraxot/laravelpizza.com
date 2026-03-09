@@ -146,4 +146,4 @@ Per la tabella users, il nome corretto è `create_users_table.php`, non `add_lan
 - [User Migration Best Practices](./migration-best-practices.md)
 - [Root Migration Rules](../../../.windsurf/rules/migration-complete-rules.md)
 
-*
+*Ultimo aggiornamento: 2026-02-26*

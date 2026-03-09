@@ -41,7 +41,7 @@ Questo pattern consente:
 
 ---
 **Ultima modifica:** [DATE]
-**Collegamento indice:** [../../../../docs/index.md](../../../../docs/index.md)
+**Collegamento indice:** [../../../../../docs/index.md](../../../../../docs/index.md)
 
 ## Metodi Validati
 - `getBrandName()`: Restituisce il nome del brand (titolo della pagina)

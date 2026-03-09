@@ -5,4 +5,4 @@ Lista dei task del modulo. Ogni task può essere un file .md separato nella cart
 ## Collegamenti
 
 - [Roadmap Job](../roadmap.md)
-- [Scopo moduli progetto](../../../../docs/moduli-scopo.md)
+- [Scopo moduli progetto](../../../../../docs/moduli-scopo.md)

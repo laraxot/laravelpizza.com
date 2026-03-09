@@ -22,11 +22,6 @@ class GetAddressDataFromFullAddressAction
 {
     public Collection $errors;
 
-    public function __construct()
-    {
-        $errors = collect();
-    }
-
     /**
      * Ottiene i dati dell'indirizzo da un indirizzo completo.
      *
@@ -38,7 +33,7 @@ class GetAddressDataFromFullAddressAction
      */
     public function execute(string $fullAddress): ?AddressData
     {
-        $errors = collect();
+        $this->errors = collect();
         $services = [
             GetAddressFromGoogleMapsAction::class,
             GetAddressFromPhotonAction::class,
@@ -65,7 +60,7 @@ class GetAddressDataFromFullAddressAction
                 }
             } catch (\Exception $e) {
                 // Logga l'errore o gestiscilo in altro modo
-                $errors->push($e->getMessage());
+                $this->errors->push($e->getMessage());
             }
         }
         $message = 'Nessun servizio di geocoding ha restituito un risultato valido.';
@@ -81,6 +76,6 @@ class GetAddressDataFromFullAddressAction
 
     public function getErrors(): Collection
     {
-        return $errors;
+        return $this->errors;
     }
 }

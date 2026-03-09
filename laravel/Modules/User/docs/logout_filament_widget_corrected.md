@@ -11,7 +11,11 @@
 
 ## Introduzione
 
-Questo documento descrive l'implementazione corretta del logout utilizzando un widget Filament, rispettando le convenzioni di Laraxot e la struttura di `XotBaseWidget`. L'approccio con widget Filament è particolarmente utile quando si desidera mantenere una pagina di conferma per il logout. (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+Questo documento descrive l'implementazione corretta del logout utilizzando un widget Filament, rispettando le convenzioni di Laraxot e la struttura di `XotBaseWidget`. L'approccio con widget Filament è particolarmente utile quando si desidera mantenere una pagina di conferma per il logout.
+=======
+Questo documento descrive l'implementazione corretta del logout utilizzando un widget Filament, rispettando le convenzioni di healthcare_app e la struttura di `XotBaseWidget`. L'approccio con widget Filament è particolarmente utile quando si desidera mantenere una pagina di conferma per il logout.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Errore Comune da Evitare
 
@@ -230,7 +234,11 @@ name('logout');
    - Implementare il metodo astratto `getFormSchema()` invece di tentare di sovrascrivere `form()`
    - Utilizzare correttamente i componenti Filament
 
-2. **Convenzioni di Laraxot per i Widget**: (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+2. **Convenzioni di Laraxot per i Widget**:
+=======
+2. **Convenzioni di healthcare_app per i Widget**:
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
    - Namespace corretto: `Modules\User\Filament\Widgets`
    - Path della vista: `filament.widgets.auth.logout` (senza namespace del modulo per l'utilizzo diretto nelle Blade)
    - Due copie della vista: una con namespace del modulo e una senza
@@ -249,7 +257,11 @@ name('logout');
 2. **Coerenza UI**: Utilizza i componenti UI nativi di Filament, garantendo coerenza visiva.
 3. **Manutenibilità**: Separa chiaramente la logica dalla presentazione.
 4. **Estensibilità**: Facilmente estensibile per aggiungere funzionalità aggiuntive.
-5. **Conformità alle convenzioni**: Segue le convenzioni di Laraxot per i widget Filament. (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+5. **Conformità alle convenzioni**: Segue le convenzioni di Laraxot per i widget Filament.
+=======
+5. **Conformità alle convenzioni**: Segue le convenzioni di healthcare_app per i widget Filament.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Alternativa: Logout Immediato
 

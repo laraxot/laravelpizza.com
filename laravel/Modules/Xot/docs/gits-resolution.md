@@ -1,6 +1,6 @@
 # Risoluzione Conflitti Git - 6 Gennaio 2025
 
-## 
+## Data: [DATE]
 
 ## Contesto
 Sono stati identificati e risolti conflitti Git in diversi file del progetto <main module>, coinvolgendo moduli Geo, User e tema Two.
@@ -190,12 +190,12 @@ php artisan lang:check
 - [User Theme Conflicts](laravel/modules/user/docs/theme-translation-conflicts-resolution.md)
 
 ### Documentazione Generale
-- [Translation Standards](../../docs/translation-standards.md)
-- [PHPStan Guidelines](../../docs/phpstan_usage.md)
-- [Git Best Practices](../../docs/git-best-practices.md)
+- [Translation Standards](../../../docs/translation-standards.md)
+- [PHPStan Guidelines](../../../docs/phpstan_usage.md)
+- [Git Best Practices](../../../docs/git-best-practices.md)
 
 ---
 
-**
+**Ultimo aggiornamento**: [DATE]
 **Autore**: Sistema di correzione automatica
 **Stato**: ✅ Completato

@@ -33,7 +33,7 @@ class Clip extends Component
      */
     public function mount(Model $model): void
     {
-        $model = $model;
+        $this->model = $model;
     }
 
     /**
@@ -44,7 +44,7 @@ class Clip extends Component
         /**
          * @phpstan-var view-string
          */
-        $view = app(GetViewAction::class)->execute($tpl);
+        $view = app(GetViewAction::class)->execute($this->tpl);
         $view_params = [
             'view' => $view,
         ];
@@ -57,7 +57,7 @@ class Clip extends Component
      */
     public function editClip(): void
     {
-        $data = $model->toArray();
+        $data = $this->model->toArray();
         $this->dispatch('showModal', ['editClip', $data]);
     }
 
@@ -70,15 +70,15 @@ class Clip extends Component
             return;
         }
 
-        if ($data['id'] !== $model->getKey())
+        if ($data['id'] !== $this->model->getKey()) {
             return;
         }
 
-        // dddx(['data'=>$data,'model'=>$model]);
+        // dddx(['data'=>$data,'model'=>$this->model]);
         /** @var array<string, string> */
         $up = collect($data)->only(['title', 'subtitle'])->all();
 
-        $model->update($up);
-        $model->refresh();
+        $this->model->update($up);
+        $this->model->refresh();
     }
 }

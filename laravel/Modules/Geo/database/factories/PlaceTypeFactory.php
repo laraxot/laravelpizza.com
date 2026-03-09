@@ -41,8 +41,7 @@ class PlaceTypeFactory extends Factory
             'Casa di Cura' => 'Casa di cura privata',
         ];
 
-        $keys = array_keys($placeTypes);
-        $name = $keys[array_rand($keys)];
+        $name = $this->faker->randomElement(array_keys($placeTypes));
 
         return [
             'name' => $name,
@@ -55,7 +54,7 @@ class PlaceTypeFactory extends Factory
      */
     public function hospital(): static
     {
-        return $this->state(fn (array $_attributes))
+        return $this->state(fn (array $_attributes): array => [
             'name' => 'Ospedale',
             'description' => 'Struttura ospedaliera per cure mediche acute e croniche',
         ]);
@@ -66,7 +65,7 @@ class PlaceTypeFactory extends Factory
      */
     public function clinic(): static
     {
-        return $this->state(fn (array $_attributes))
+        return $this->state(fn (array $_attributes): array => [
             'name' => 'Clinica',
             'description' => 'Clinica privata per visite specialistiche e trattamenti',
         ]);
@@ -77,7 +76,7 @@ class PlaceTypeFactory extends Factory
      */
     public function medicalOffice(): static
     {
-        return $this->state(fn (array $_attributes))
+        return $this->state(fn (array $_attributes): array => [
             'name' => 'Studio Medico',
             'description' => 'Studio privato di medici specialisti',
         ]);
@@ -88,7 +87,7 @@ class PlaceTypeFactory extends Factory
      */
     public function pharmacy(): static
     {
-        return $this->state(fn (array $_attributes))
+        return $this->state(fn (array $_attributes): array => [
             'name' => 'Farmacia',
             'description' => 'Farmacia per la vendita di medicinali e prodotti sanitari',
         ]);
@@ -99,7 +98,7 @@ class PlaceTypeFactory extends Factory
      */
     public function laboratory(): static
     {
-        return $this->state(fn (array $_attributes))
+        return $this->state(fn (array $_attributes): array => [
             'name' => 'Laboratorio',
             'description' => 'Laboratorio di analisi mediche e diagnostiche',
         ]);

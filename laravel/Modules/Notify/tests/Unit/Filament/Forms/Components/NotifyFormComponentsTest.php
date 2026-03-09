@@ -11,12 +11,15 @@ use Modules\Notify\Tests\TestCase;
 
 uses(TestCase::class);
 
-class ContactSectionTestProxy extends ContactSection
+function makeContactSectionTestProxy(): ContactSection
 {
-    public function exposedFormSchema(): array
+    return new class extends ContactSection
     {
-        return $this->getFormSchema();
-    }
+        public function exposedFormSchema(): array
+        {
+            return $this->getFormSchema();
+        }
+    };
 }
 
 test('channel checkbox list and selects have expected default names', function () {
@@ -36,7 +39,7 @@ test('html layout path select exposes expected default name via method signature
 });
 
 test('contact section returns text inputs schema from enum', function () {
-    $proxy = new ContactSectionTestProxy();
+    $proxy = makeContactSectionTestProxy();
     $schema = $proxy->exposedFormSchema();
 
     expect($schema)->toBeArray();

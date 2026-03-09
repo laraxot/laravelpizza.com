@@ -4,7 +4,11 @@
 
 È stato identificato un errore comune nell'implementazione delle azioni SMS: l'utilizzo di `config('services.*.token')` invece di `config('sms.drivers.*.token')`.
 
-Questo errore viola i principi di modularità e coerenza dell'architettura di Laraxot, dove ogni modulo gestisce le proprie configurazioni in file dedicati. (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+Questo errore viola i principi di modularità e coerenza dell'architettura di Laraxot, dove ogni modulo gestisce le proprie configurazioni in file dedicati.
+=======
+Questo errore viola i principi di modularità e coerenza dell'architettura di healthcare_app, dove ogni modulo gestisce le proprie configurazioni in file dedicati.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Pattern Corretto
 

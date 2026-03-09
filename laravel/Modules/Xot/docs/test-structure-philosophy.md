@@ -200,7 +200,11 @@ Modules/
 │   │   ├── Feature/
 │   │   └── Unit/
 │   └── app/
+<<<<<<< .merge_file_pamqFD
 └── healthcare_app/
+=======
+└── ModuloEsempio/
+>>>>>>> .merge_file_Ia2esz
     ├── tests/
     │   ├── Feature/
     │   └── Unit/

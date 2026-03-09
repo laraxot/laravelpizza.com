@@ -190,12 +190,12 @@ php artisan lang:check
 - [User Theme Conflicts](laravel/modules/user/docs/theme-translation-conflicts-resolution.md)
 
 ### Documentazione Generale
-- [Translation Standards](../../docs/translation-standards.md)
-- [PHPStan Guidelines](../../docs/phpstan_usage.md)
-- [Git Best Practices](../../docs/git-best-practices.md)
+- [Translation Standards](../../../docs/translation-standards.md)
+- [PHPStan Guidelines](../../../docs/phpstan_usage.md)
+- [Git Best Practices](../../../docs/git-best-practices.md)
 
 ---
 
-**
+**Ultimo aggiornamento**: 2025-01-06
 **Autore**: Sistema di correzione automatica
 **Stato**: ✅ Completato

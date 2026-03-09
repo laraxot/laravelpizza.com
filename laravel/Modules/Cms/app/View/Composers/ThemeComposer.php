@@ -62,7 +62,7 @@ class ThemeComposer
 
     public function showPageContent(string $slug): View
     {
-        Assert::isInstanceOf()
+        Assert::isInstanceOf(
             $page = Page::firstOrCreate(['slug' => $slug], ['title' => $slug, 'content_blocks' => []]),
             Page::class,
             '['.__LINE__.']['.__FILE__.']',
@@ -73,7 +73,7 @@ class ThemeComposer
         if (! is_array($blocks)) {
             $blocks = [];
         }
-        $blocksComponent = new Blocks()
+        $blocksComponent = new Blocks(
             view: 'ui::components.render.blocks.v1',
             blocks: $blocks,
             model: $page
@@ -89,7 +89,7 @@ class ThemeComposer
 
     public function showPageSidebarContent(string $slug): View
     {
-        Assert::isInstanceOf()
+        Assert::isInstanceOf(
             $page = Page::firstOrCreate(['slug' => $slug], ['sidebar_blocks' => []]),
             Page::class,
             '['.__LINE__.']['.__FILE__.']',
@@ -100,7 +100,7 @@ class ThemeComposer
             $blocks = [];
         }
 
-        $blocksComponent = new Blocks()
+        $blocksComponent = new Blocks(
             view: 'ui::components.render.blocks.v1',
             blocks: $blocks,
             model: $page
@@ -111,7 +111,7 @@ class ThemeComposer
 
     public function showContent(string $slug): View
     {
-        Assert::isInstanceOf()
+        Assert::isInstanceOf(
             $page = PageContent::firstOrCreate(['slug' => $slug], ['blocks' => []]),
             PageContent::class,
             '['.__LINE__.']['.__FILE__.']',
@@ -122,7 +122,7 @@ class ThemeComposer
             $blocks = [];
         }
 
-        $blocksComponent = new Blocks()
+        $blocksComponent = new Blocks(
             view: 'ui::components.render.blocks.v1',
             blocks: $blocks,
             model: $page

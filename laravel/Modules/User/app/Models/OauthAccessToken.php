@@ -24,7 +24,6 @@ use Modules\Xot\Contracts\UserContract;
  * @property Carbon|null       $expires_at
  * @property OauthClient|null  $client
  * @property UserContract|null $user
- *
  * @method static Builder|OauthAccessToken newModelQuery()
  * @method static Builder|OauthAccessToken newQuery()
  * @method static Builder|OauthAccessToken query()
@@ -37,13 +36,11 @@ use Modules\Xot\Contracts\UserContract;
  * @method static Builder|OauthAccessToken whereScopes($value)
  * @method static Builder|OauthAccessToken whereUpdatedAt($value)
  * @method static Builder|OauthAccessToken whereUserId($value)
- *
  * @property OauthRefreshToken|null $refreshToken
  * @property string|null            $updated_by
  * @property string|null            $created_by
  * @property string|null            $deleted_at
  * @property string|null            $deleted_by
- *
  * @method static Builder<static>|OauthAccessToken whereCreatedBy($value)
  * @method static Builder<static>|OauthAccessToken whereDeletedAt($value)
  * @method static Builder<static>|OauthAccessToken whereDeletedBy($value)
@@ -51,18 +48,14 @@ use Modules\Xot\Contracts\UserContract;
  * @method static static                           create(array $attributes = [])
  * @method static static                           firstOrCreate(array $attributes, array $values = [])
  * @method static static                           updateOrCreate(array $attributes, array $values = [])
- *
  * @mixin IdeHelperOauthAccessToken
- *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken existsIn(array $haystack)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken existsIn(array $haystack)
- *                                                                                                                   >>>>>>> da38c10 (.)
- * @method static \Modules\User\Database\Factories\OauthAccessTokenFactory       factory($count = null, $state = [])
- *
  * @mixin \Eloquent
  */
 class OauthAccessToken extends PassportToken
 {
     /** @var string */
     protected $connection = 'user';
+
+    // protected $fillable = ['id', 'user_id', 'client_id', 'name', 'scopes', 'revoked', 'expires_at'];
 }

@@ -28,7 +28,7 @@
             "Modules\\Seo\\Database\\Seeders\\": "database/seeders/"
         }
     },
-    "require-comment": {
+    "require_comment": {
         "openai-php/laravel": "*",
         "thecodingmachine/safe": "^2.5"
     },

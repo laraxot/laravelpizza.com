@@ -64,6 +64,6 @@ return [
 ## Collegamenti
 
 - [Geo Module Documentation](../readme.md)
-- [Factory Pattern Guidelines](../../../../../../docs/factory-pattern.md)
+- [Factory Pattern Guidelines](../../../../docs/factory-pattern.md)
 - [PHPStan Compliance Guide](../phpstan-fixes.md)
 

@@ -11,9 +11,12 @@ use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
 
 uses(TestCase::class);
 
-class DummyBulkNotifyRecord extends Model
+function makeDummyBulkNotifyRecord(array $attributes = []): Model
 {
-    protected $guarded = [];
+    return new class($attributes) extends Model
+    {
+        protected $guarded = [];
+    };
 }
 
 test('send records notification action counts successful sends', function (): void {
@@ -36,8 +39,8 @@ test('send records notification action counts successful sends', function (): vo
     });
 
     $records = new EloquentCollection([
-        new DummyBulkNotifyRecord(['id' => 1, 'name' => 'Alpha']),
-        new DummyBulkNotifyRecord(['id' => 2, 'name' => 'Beta']),
+        makeDummyBulkNotifyRecord(['id' => 1, 'name' => 'Alpha']),
+        makeDummyBulkNotifyRecord(['id' => 2, 'name' => 'Beta']),
     ]);
 
     $result = app(SendRecordsNotificationAction::class)->execute(
@@ -74,8 +77,8 @@ test('send records notification action accumulates errors per channel', function
     });
 
     $records = new EloquentCollection([
-        new DummyBulkNotifyRecord(['id' => 1, 'name' => 'Ok Record', 'should_fail' => false]),
-        new DummyBulkNotifyRecord(['id' => 2, 'name' => 'Fail Record', 'should_fail' => true]),
+        makeDummyBulkNotifyRecord(['id' => 1, 'name' => 'Ok Record', 'should_fail' => false]),
+        makeDummyBulkNotifyRecord(['id' => 2, 'name' => 'Fail Record', 'should_fail' => true]),
     ]);
 
     $result = app(SendRecordsNotificationAction::class)->execute(
@@ -108,7 +111,7 @@ test('send records notification action falls back to record key when name is mis
         }
     });
 
-    $record = new DummyBulkNotifyRecord(['id' => 99, 'should_fail' => true]);
+    $record = makeDummyBulkNotifyRecord(['id' => 99, 'should_fail' => true]);
     $records = new EloquentCollection([$record]);
 
     $result = app(SendRecordsNotificationAction::class)->execute(

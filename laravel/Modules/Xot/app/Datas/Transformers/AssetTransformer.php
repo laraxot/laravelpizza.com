@@ -10,7 +10,7 @@ use Spatie\LaravelData\Support\Transformation\TransformationContext;
 use Spatie\LaravelData\Transformers\Transformer;
 
 /**
- * AssetTransformer - Trasforma riferimenti di file in percorsi completi per le risorse.
+ * AssetTransformer - Trasforma riferimenti di file in percorsi completi per le risorse
  *
  * Formato input: "module::path/file.ext" o "file.ext"
  * Output: "/modules/module/resources/path/file.ext" o "/resources/path/file.ext"
@@ -18,12 +18,11 @@ use Spatie\LaravelData\Transformers\Transformer;
 class AssetTransformer implements Transformer
 {
     /**
-     * Trasforma un riferimento di file in un percorso completo.
+     * Trasforma un riferimento di file in un percorso completo
      *
-     * @param DataProperty          $_property La proprietà di dati (non utilizzata)
-     * @param mixed                 $value     Il valore da trasformare (es. "user::image.png")
-     * @param TransformationContext $_context  Il contesto di trasformazione (non utilizzato)
-     *
+     * @param  DataProperty  $_property  La proprietà di dati (non utilizzata)
+     * @param  mixed  $value  Il valore da trasformare (es. "user::image.png")
+     * @param  TransformationContext  $_context  Il contesto di trasformazione (non utilizzato)
      * @return string Il percorso completo (es. "/modules/user/resources/image.png")
      */
     public function transform(DataProperty $_property, mixed $value, TransformationContext $_context): string

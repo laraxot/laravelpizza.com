@@ -27,7 +27,7 @@ class WhatsAppChannel
      */
     public function __construct(WhatsAppActionFactory $factory)
     {
-        $factory = $factory;
+        $this->factory = $factory;
     }
 
     /**
@@ -51,7 +51,7 @@ class WhatsAppChannel
             throw new Exception('toWhatsApp method must return an instance of WhatsAppData');
         }
 
-        $action = $factory->create();
+        $action = $this->factory->create();
 
         return $action->execute($whatsAppData);
     }

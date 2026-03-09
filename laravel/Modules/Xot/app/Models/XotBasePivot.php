@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models;
 
-use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Relations\Pivot as EloquentPivot;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Models\Traits\HasXotFactory;
@@ -18,17 +17,16 @@ use function Safe\preg_match;
  * Centralizes common Pivot configurations and behaviors.
  * The $connection is automatically set based on the child class namespace.
  *
- * @property string|int      $id
- * @property Carbon|null     $created_at
- * @property Carbon|null     $updated_at
- * @property Carbon|null     $deleted_at
+ * @property string|int $id
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property Carbon|null $deleted_at
  * @property string|int|null $created_by
  * @property string|int|null $updated_by
  * @property string|int|null $deleted_by
  */
 abstract class XotBasePivot extends EloquentPivot
 {
-    use HasUuids;
     use HasXotFactory;
     use Updater;
 
@@ -42,7 +40,7 @@ abstract class XotBasePivot extends EloquentPivot
     public static $snakeAttributes = true;
 
     /** @var bool */
-    public $incrementing = false;
+    public $incrementing = true;
 
     /** @var int */
     protected $perPage = 30;
@@ -65,25 +63,14 @@ abstract class XotBasePivot extends EloquentPivot
     public function getConnectionName(): ?string
     {
         if (isset($this->connection)) {
-            $connection = $this->connection;
-
-            if (is_string($connection)) {
-                return $connection;
-            }
-
-            if ($connection instanceof \BackedEnum) {
-                return (string) $connection->value;
-            }
-
-            if ($connection instanceof \UnitEnum) {
-                return $connection->name;
-            }
+            /** @var string */
+            return $this->connection;
         }
 
         // Extract module name from namespace: Modules\User\... → user
         $namespace = static::class;
         $matches = [];
-        if (1 === preg_match('/Modules\\\\(\w+)\\\\/', $namespace, $matches) && isset($matches[1])) {
+        if (preg_match('/Modules\\\\(\w+)\\\\/', $namespace, $matches) === 1 && isset($matches[1])) {
             return strtolower($matches[1]);
         }
 

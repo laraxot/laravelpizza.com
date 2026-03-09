@@ -47,7 +47,7 @@ class MailtrapEngine
     public function setLocalVars(array $vars): self
     {
         foreach ($vars as $k => $v) {
-            // Placeholder purged {$k} = $v;
+            $this->{$k} = $v;
         }
 
         return $this;
@@ -64,13 +64,13 @@ class MailtrapEngine
     {
         // dddx($this);
 
-        // Mail::raw('Hello World!', function($msg) {$msg->to('vair81@gmail.com')->subject('Test Email')); });
+        // Mail::raw('Hello World!', function($msg) {$msg->to('vair81@gmail.com')->subject('Test Email'); });
 
         // try {
-        Assert::string($body, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
-        Mail::raw($body, function (Message $msg))
-            // Verifichiamo che $to sia valido
-            $to = $to;
+        Assert::string($this->body, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
+        Mail::raw($this->body, function (Message $msg): void {
+            // Verifichiamo che $this->to sia valido
+            $to = $this->to;
 
             // Utilizziamo una condizione più appropriata
             if (! $to) {

@@ -1,8 +1,8 @@
-# 🧠 Comprensione Business Logic dei Moduli <nome progetto>
+# 🧠 Comprensione Business Logic dei Moduli TechPlanner
 
 ## Panoramica
 
-Questo documento riassume la logica di business, la filosofia, le regole critiche e lo scopo di ogni modulo nel sistema <nome progetto> Fila4 Mono.
+Questo documento riassume la logica di business, la filosofia, le regole critiche e lo scopo di ogni modulo nel sistema TechPlanner Fila4 Mono.
 
 ## 🔧 Modulo Xot - Il Fondamento (Base Framework)
 
@@ -117,7 +117,7 @@ Questo documento riassume la logica di business, la filosofia, le regole critich
 - Sicurezza e privacy come priorità
 - Supporto per compliance normativa
 
-## 🌐 Modulo <nome progetto> - Pianificazione Tecnica
+## 🌐 Modulo TechPlanner - Pianificazione Tecnica
 
 ### Scopo
 - Gestire la pianificazione di servizi tecnici e ispezioni
@@ -205,7 +205,7 @@ Questo documento riassume la logica di business, la filosofia, le regole critich
 
 ## 🧘 Zen del Progetto
 
-Il "zen" del progetto <nome progetto> risiede nell'equilibrio tra:
+Il "zen" del progetto TechPlanner risiede nell'equilibrio tra:
 
 - **Funzionalità avanzate** e **semplicità di sviluppo**
 - **Flessibilità** e **coerenza architetturale**

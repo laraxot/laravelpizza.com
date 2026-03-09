@@ -13,9 +13,12 @@ use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
 
 uses(TestCase::class);
 
-class DummyRecordForNotify extends Model
+function makeDummyRecordForNotify(array $attributes = []): Model
 {
-    protected $guarded = [];
+    return new class($attributes) extends Model
+    {
+        protected $guarded = [];
+    };
 }
 
 test('send record notification routes valid mail channel', function () {
@@ -31,8 +34,7 @@ test('send record notification routes valid mail channel', function () {
 
     Notification::fake();
 
-    $record = new DummyRecordForNotify();
-    $record->setAttribute('email', 'record@example.test');
+    $record = makeDummyRecordForNotify(['email' => 'record@example.test']);
 
     app(SendRecordNotificationAction::class)->execute(
         record: $record,
@@ -51,7 +53,7 @@ test('send record notification routes valid mail channel', function () {
 test('send record notification ignores non enum channels', function () {
     Notification::fake();
 
-    $record = new DummyRecordForNotify();
+    $record = makeDummyRecordForNotify();
 
     app(SendRecordNotificationAction::class)->execute(
         record: $record,

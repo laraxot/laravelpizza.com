@@ -16,7 +16,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'placeholder' => 'name',
         ],
         'subject' => [
             'label' => 'Oggetto',
@@ -24,7 +23,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'placeholder' => 'subject',
         ],
         'type' => [
             'label' => 'Tipo',
@@ -32,7 +30,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'placeholder' => 'type',
         ],
         'body_text' => [
             'label' => 'Testo Semplice',
@@ -40,7 +37,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'placeholder' => 'body_text',
         ],
         'body_html' => [
             'label' => 'HTML',
@@ -48,7 +44,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'placeholder' => 'body_html',
         ],
         'preview_data' => [
             'label' => 'Dati di Anteprima',
@@ -56,7 +51,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'placeholder' => 'preview_data',
         ],
         'resetFilters' => [
             'label' => 'resetFilters',
@@ -69,12 +63,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-        ],
-        'attachments' => [
-            'label' => 'attachments',
-            'placeholder' => 'attachments',
-            'helper_text' => 'attachments',
-            'description' => 'attachments',
         ],
     ],
     'columns' => [

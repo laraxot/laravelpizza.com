@@ -13,17 +13,19 @@ use Modules\Activity\Traits\HasEvents;
 
 uses(TestCase::class);
 
-class HasEventsDummyModel extends Model
+function makeHasEventsDummyModel(): Model
 {
-    use HasEvents;
+    return new class extends Model {
+        use HasEvents;
 
-    protected $table = 'activity_dummy_models';
+        protected $table = 'activity_dummy_models';
 
-    public $timestamps = false;
+        public $timestamps = false;
+    };
 }
 
 test('stored events relation is configured as morphMany', function () {
-    $model = new HasEventsDummyModel();
+    $model = makeHasEventsDummyModel();
     $relation = $model->storedEvents();
 
     expect($relation)->toBeInstanceOf(MorphMany::class)
@@ -31,7 +33,7 @@ test('stored events relation is configured as morphMany', function () {
 });
 
 test('snapshots relation is configured as morphMany', function () {
-    $model = new HasEventsDummyModel();
+    $model = makeHasEventsDummyModel();
     $relation = $model->snapshots();
 
     expect($relation)->toBeInstanceOf(MorphMany::class)

@@ -5,7 +5,7 @@
 - [README del modulo Notify](./readme.md)
 - [Guida all'utilizzo di SpatieEmail](./spatie_email_usage_guide.md)
 - [Documentazione Template Email](./email_templates.md)
-- [Documentazione Root](../../../../docs/collegamenti-documentazione.md)
+- [Documentazione Root](../../../../../docs/collegamenti-documentazione.md)
 
 ## Panoramica
 

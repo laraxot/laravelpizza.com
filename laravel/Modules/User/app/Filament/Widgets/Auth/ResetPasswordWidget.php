@@ -65,7 +65,7 @@ class ResetPasswordWidget extends XotBaseWidget
      */
     public function mount(): void
     {
-        $form->fill();
+        $this->form->fill();
     }
 
     /**
@@ -82,7 +82,7 @@ class ResetPasswordWidget extends XotBaseWidget
      */
     public function resetPassword()
     {
-        $data = $form->getState();
+        $data = $this->form->getState();
 
         $reset_data = Arr::only($data, ['email', 'password', 'password_confirmation', 'token']);
         $status = Password::reset($reset_data, function (Authenticatable $user, string $password): void {

@@ -1,25 +1,20 @@
-# Fasi di Sviluppo del Modulo Activity
+# Fasi di sviluppo - Activity Module
 
-## Fase 1 · Qualità e pulizia (in corso)
+## Fase 1: Qualità e Pulizia (In Corso)
 
-- PHPStan Level 10 come standard di riferimento per l’intero modulo.
-- Rimozione graduale di file duplicati e obsoleti.
-- Consolidamento della guida agli eventi di dominio e delle convenzioni di logging.
-- Automazione nelle GitHub Actions per eseguire i controlli di qualità del modulo.
+- [x] PHPStan Level 10 Compliance (Modulo di Riferimento)
+- [ ] Rimozione sistematica dei file duplicati e obsoleti
+- [ ] Automazione delle GitHub Actions per il controllo qualità
+- [ ] Consolidamento della guida agli eventi di dominio
 
-## Fase 2 · Enterprise UI (pianificata)
+## Fase 2: Enterprise UI (Pianificato)
 
-- Creazione di un **Cluster Observability** in Filament:
-  - risorse per consultare gli activity log;
-  - dashboard di performance e throughput;
-  - pagina di security audit.
-- Filtri avanzati per tipo di evento, modulo, utente, tenant.
+- [ ] Implementazione del **Cluster Observability** per Filament:
+  - Risorsa per gli Activity Logs
+  - Dashboard di performance
+  - Pagina di Security Audit
 
-## Fase 3 · Analytics evolute e AI (futura)
+## Fase 3: Analytics Evolute e AI (Futuro)
 
-- Introduzione di **AI Anomaly Detection** sugli stream di attività.
-- Integrazione con strumenti di analisi per monitoraggio proattivo delle operazioni critiche.
-- Possibili notifiche automatiche verso il modulo Notify in caso di pattern sospetti.
-
-Criteri di accettazione: [acceptance-criteria.md](acceptance-criteria.md). Metriche: [metrics.md](metrics.md).
-
+- [ ] **AI Anomaly Detection**: Identificazione automatica di pattern anomali o accessi sospetti
+- [ ] Integrazione con strumenti di analisi per monitoraggio proattivo delle operazioni critiche

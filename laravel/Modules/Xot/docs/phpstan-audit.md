@@ -8,7 +8,8 @@ Eseguire analisi PHPStan livello 10 per tutti i moduli del progetto seguendo met
 ### Conflitti Git Risolti
 
 #### 1. Activity Module - ListLogActivities.php
-- **Problema**: Conflitto Git non risolto con marcatori `- **Correzione**: Mantenuta versione corretta con `resolveActivity()` e `getOldProperties()`
+- **Problema**: Conflitto Git non risolto con marcatori `<<<<<<<`, `=======`, `>>>>>>>`
+- **Correzione**: Mantenuta versione corretta con `resolveActivity()` e `getOldProperties()`
 - **Corretta**: Indentazione del blocco `try`
 - **Status**: ✅ Risolto e committato
 

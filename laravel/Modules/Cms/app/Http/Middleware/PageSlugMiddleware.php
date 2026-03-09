@@ -28,10 +28,8 @@ class PageSlugMiddleware
             return $response;
         }
 
-        /** @phpstan-ignore staticMethod.notFound (getMiddlewareBySlug in Page) */
         $middlewares = Page::getMiddlewareBySlug($slug);
-        /** @var array<int, string> $middlewares */
-        $middlewares = is_array($middlewares) ? $middlewares : [];
+        // Should return ["auth", "Modules\User\Http\Middleware\EnsureUserHasType:doctor"]
 
         if (empty($middlewares)) {
             $response = $next($request);

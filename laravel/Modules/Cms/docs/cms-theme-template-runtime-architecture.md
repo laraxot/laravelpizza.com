@@ -4,7 +4,7 @@
 
 This document describes the **actual runtime path** used today by LaravelPizza for frontoffice page rendering (Folio + Theme + CMS JSON blocks), based on source inspection.
 
-Reference 
+Reference date: 2026-03-02.
 
 ## Runtime Pipeline (Request -> HTML)
 

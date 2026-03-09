@@ -85,7 +85,7 @@ readonly class GetAddressFromPhotonAction
      */
     private function makeApiRequest(string $address): string
     {
-        $response = $client->get(self::API_URL, [
+        $response = $this->client->get(self::API_URL, [
             'query' => [
                 'q' => $address,
                 'limit' => 1,

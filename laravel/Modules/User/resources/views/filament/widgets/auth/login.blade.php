@@ -64,7 +64,7 @@
     <!-- Login Form -->
     <form wire:submit.prevent="save" class="space-y-5">
         <div class="filament-form-container">
-            {{ $form }}
+            {{ $this->form }}
         </div>
 
         @if (Route::has('password.request'))

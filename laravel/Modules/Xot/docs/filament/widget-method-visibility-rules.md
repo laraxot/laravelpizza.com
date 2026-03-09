@@ -1,7 +1,7 @@
 # Regole Visibilità Metodi Widget - HasXotTable
 
 **Data Creazione**: 2025-01-27  
-**
+**Ultimo Aggiornamento**: 2026-01-27  
 **Status**: ✅ Critico
 
 ## Regola Fondamentale
@@ -36,7 +36,11 @@ Tutti i metodi `getTable*()` in `HasXotTable` sono dichiarati come `public` perc
 
 declare(strict_types=1);
 
+<<<<<<< .merge_file_M7BN8u
 namespace Modules\healthcare_app\Filament\Widgets;
+=======
+namespace Modules\Chart\Filament\Widgets;
+>>>>>>> .merge_file_NpfTIy
 
 use Modules\Xot\Filament\Widgets\XotBaseTableWidget;
 

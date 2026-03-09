@@ -4,20 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Unit\Models;
 
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\User\Models\Device;
 use Modules\User\Tests\TestCase;
 
-uses(TestCase::class);
-
-beforeEach(function (): void {
-    // Skip all Device tests if factory columns don't match the table schema
-    $tableColumns = \Illuminate\Support\Facades\Schema::connection('user')->getColumnListing('devices');
-    $factoryRequiredCols = ['name', 'type', 'token', 'is_active'];
-    $missingCols = array_diff($factoryRequiredCols, $tableColumns);
-    if (! empty($missingCols)) {
-        $this->markTestSkipped('Device factory uses columns not in devices table: '.implode(', ', $missingCols));
-    }
-});
+uses(TestCase::class, DatabaseTransactions::class);
 
 test('can create device with minimal data', function (): void {
     $device = Device::factory()->create([

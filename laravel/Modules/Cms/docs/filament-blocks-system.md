@@ -175,4 +175,4 @@ Ogni blocco supporta diversi contesti:
 - [Modulo <main module>](../<main module>/docs/homepage-architecture.md)
 - [Modulo UI](../ui/docs/blocks-system.md)
 - [Filament Builder](https://filamentphp.com/docs/3.x/forms/fields/builder)
-- [Laravel Folio](../../docs/folio-routing.md)
+- [Laravel Folio](../../../docs/folio-routing.md)

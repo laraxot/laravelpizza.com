@@ -46,12 +46,6 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
-        'expiration' => [
-            'label' => 'expiration',
-            'placeholder' => 'expiration',
-            'helper_text' => 'expiration',
-            'description' => 'expiration',
-        ],
     ],
     'actions' => [
         'create' => [

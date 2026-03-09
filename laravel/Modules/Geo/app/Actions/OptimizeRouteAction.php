@@ -65,7 +65,7 @@ readonly class OptimizeRouteAction
         $shortestDistance = PHP_FLOAT_MAX;
 
         foreach ($locations as $location) {
-            $distanceResult = $calculateDistance->execute(
+            $distanceResult = $this->calculateDistance->execute(
                 origin: $currentLocation,
                 destination: $location,
             );

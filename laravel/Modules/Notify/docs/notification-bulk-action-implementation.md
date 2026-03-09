@@ -2,7 +2,7 @@
 
 **Date**: 18 Dicembre 2025  
 **Status**: ✅ Completed  
-**Module**: <nome progetto> → Notify  
+**Module**: TechPlanner → Notify  
 **Implementation Type**: Feature Addition
 
 ## Overview
@@ -34,7 +34,7 @@ The implementation leverages existing architecture components:
 
 ### ClientResource Integration
 
-Updated `Modules\<nome progetto>/app/Filament/Resources/ClientResource/Pages/ListClients.php`:
+Updated `Modules\TechPlanner/app/Filament/Resources/ClientResource/Pages/ListClients.php`:
 - Added import for `SendNotificationBulkAction`
 - Integrated the action into `getTableBulkActions()` method
 - Maintained both existing coordinate update action and new notification action
@@ -124,7 +124,7 @@ After implementation, users can:
 - `Modules/Notify/docs/00-index.md` - Documentation index for Notify module
 
 ### Modified:
-- `Modules/<nome progetto>/app/Filament/Resources/ClientResource/Pages/ListClients.php` - Integrated notification bulk action
+- `Modules/TechPlanner/app/Filament/Resources/ClientResource/Pages/ListClients.php` - Integrated notification bulk action
 
 ## Future Considerations
 

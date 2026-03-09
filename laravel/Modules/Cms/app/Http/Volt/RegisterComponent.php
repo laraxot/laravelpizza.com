@@ -19,10 +19,10 @@ use Modules\User\Models\User;
 #[Layout('cms::layouts.auth')]
 class RegisterComponent extends Component
 {
-    #[Validate('required|string|max:255')]
+    #[Validate('required')]
     public string $name = '';
 
-    #[Validate('required|email|max:255|unique:user.users,email')]
+    #[Validate('required|email|unique:users')]
     public string $email = '';
 
     #[Validate('required|min:8|same:password_confirmation')]

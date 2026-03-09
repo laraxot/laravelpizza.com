@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-return array ()
+return array (
   'sections' => 
-  array ()
+  array (
     'empty' => 
-    array ()
+    array (
       'label' => 'empty',
       'heading' => 'empty',
     ),
   ),
   'navigation' => 
-  array ()
+  array (
     'label' => 'Missing Navigation Label',
     'plural_label' => 'Missing Navigation Plural Label',
     'group' => 'Missing Group',
@@ -22,9 +22,9 @@ return array ()
   'label' => 'Missing Label',
   'plural_label' => 'Missing Plural label',
   'fields' => 
-  array ()
+  array (
   ),
   'actions' => 
-  array ()
+  array (
   ),
 );

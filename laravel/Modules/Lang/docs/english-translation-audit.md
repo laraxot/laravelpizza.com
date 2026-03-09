@@ -292,13 +292,13 @@ return array(
 
 ## Collegamenti
 
-- [Regole Traduzioni](../../docs/translation-standards.md)
-- [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
+- [Regole Traduzioni](../../../docs/translation-standards.md)
+- [Best Practices Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
 
 ---
 
-**
+**Ultimo aggiornamento**: 2025-01-06
 **Status**: In corso
 # Audit Traduzioni Inglesi - <nome progetto>
 
@@ -594,11 +594,11 @@ return array(
 
 ## Collegamenti
 
-- [Regole Traduzioni](../../docs/translation-standards.md)
-- [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
+- [Regole Traduzioni](../../../docs/translation-standards.md)
+- [Best Practices Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
 
 ---
 
-**
+**Ultimo aggiornamento**: 2025-01-06
 **Status**: In corso

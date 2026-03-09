@@ -178,4 +178,4 @@ resources/views/components/blocks/products/detail.blade.php
 - [Folio Volt Structure](../folio-volt-structure.md)
 
 ---
-**
+**Ultimo aggiornamento**: Feb 2026

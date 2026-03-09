@@ -140,27 +140,6 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
-        'id' => [
-            'label' => 'id',
-        ],
-        'message' => [
-            'label' => 'message',
-        ],
-        'is_read' => [
-            'label' => 'is_read',
-        ],
-        'created_at' => [
-            'label' => 'created_at',
-        ],
-        'updated_at' => [
-            'label' => 'updated_at',
-        ],
-        'active' => [
-            'label' => 'active',
-        ],
-        'inactive' => [
-            'label' => 'inactive',
-        ],
     ],
     'actions' => [
         'import' => [

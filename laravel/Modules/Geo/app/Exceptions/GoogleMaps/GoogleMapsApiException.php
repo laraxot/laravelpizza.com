@@ -14,7 +14,7 @@ class GoogleMapsApiException extends \RuntimeException
      */
     public static function missingApiKey(): self
     {
-        return new self('API key non configurata (Google Maps)');
+        return new self('API key di Google Maps non configurata');
     }
 
     /**

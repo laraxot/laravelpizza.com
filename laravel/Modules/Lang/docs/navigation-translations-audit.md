@@ -136,4 +136,4 @@ Questo file contiene molteplici occorrenze problematiche:
 - [Standard Qualità Traduzioni](../modules/<nome progetto>/docs/translation-quality-standards.md)
 
 *Audit creato il: [DATE]*
-*
+*Ultimo aggiornamento: [DATE]*

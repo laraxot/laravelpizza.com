@@ -4,7 +4,11 @@ Questo documento analizza il pattern Factory attualmente implementato  per la se
 
 ## Soluzione Attuale: Pattern Factory
 
-Laraxot implementa un pattern Factory ottimale attraverso `SmsActionFactory`: (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+Laraxot implementa un pattern Factory ottimale attraverso `SmsActionFactory`:
+=======
+healthcare_app implementa un pattern Factory ottimale attraverso `SmsActionFactory`:
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ```php
 // SmsActionFactory.php
@@ -75,11 +79,19 @@ public function getProviderAction(): SmsActionInterface
 
 ## Perché il Pattern Factory è Superiore
 
+<<<<<<< HEAD
 Il pattern Factory offre numerosi vantaggi che superano di gran lunga i suoi svantaggi, soprattutto in progetti complessi come Laraxot:
 
 1. **Open/Closed Principle**: Permette di estendere il sistema (aggiungendo nuovi provider) senza modificare il codice esistente, soddisfacendo il principio Open/Closed di SOLID.
 
-2. **Coerenza nell'Architettura**: Si allinea con l'architettura modulare di Laraxot, dove ogni componente ha una responsabilità chiara e specifica. (docs: replace project-specific references with generic placeholders across documentation)
+2. **Coerenza nell'Architettura**: Si allinea con l'architettura modulare di Laraxot, dove ogni componente ha una responsabilità chiara e specifica.
+=======
+Il pattern Factory offre numerosi vantaggi che superano di gran lunga i suoi svantaggi, soprattutto in progetti complessi come healthcare_app:
+
+1. **Open/Closed Principle**: Permette di estendere il sistema (aggiungendo nuovi provider) senza modificare il codice esistente, soddisfacendo il principio Open/Closed di SOLID.
+
+2. **Coerenza nell'Architettura**: Si allinea con l'architettura modulare di healthcare_app, dove ogni componente ha una responsabilità chiara e specifica.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 3. **Flessibilità nella Selezione**: Permette di implementare logiche complesse di selezione del provider (es. fallback, round-robin, basato su regole) senza cambiare il DTO o il Channel.
 
@@ -107,6 +119,10 @@ Il pattern Factory attualmente implementato  per la selezione dei provider SMS �
 - **Manutenibilità**: Centralizza le modifiche relative alla selezione dei provider
 - **Estendibilità**: Facilita l'aggiunta di nuovi provider SMS
 
-Questa scelta architetturale è coerente con i principi SOLID e con l'architettura modulare di Laraxot, garantendo un sistema flessibile, manutenibile e facilmente estendibile nel tempo. (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+Questa scelta architetturale è coerente con i principi SOLID e con l'architettura modulare di Laraxot, garantendo un sistema flessibile, manutenibile e facilmente estendibile nel tempo.
+=======
+Questa scelta architetturale è coerente con i principi SOLID e con l'architettura modulare di healthcare_app, garantendo un sistema flessibile, manutenibile e facilmente estendibile nel tempo.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 Rispetto all'alternativa di spostare la logica nel DTO, il pattern Factory offre vantaggi che superano del 30-40% i suoi svantaggi, mentre spostare la logica nel DTO comporterebbe svantaggi che superano del 60-70% i potenziali vantaggi.

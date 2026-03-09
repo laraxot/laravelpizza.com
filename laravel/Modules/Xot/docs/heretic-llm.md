@@ -12,7 +12,7 @@
 
 È uno strumento di **ricerca sui modelli** (interpretabilità e controllo del comportamento) che opera fuori dal runtime Laravel.
 
-## posizione laraxot/<nome progetto>
+## posizione laraxot/laravelpizza
 
 In questo progetto:
 
@@ -33,7 +33,7 @@ In questo progetto:
   - promemoria che ogni modifica alla pipeline AI deve essere valutata per:
     - sicurezza
     - licenza (AGPL‑3.0)
-    - coerenza con scopi del progetto (<nome progetto> è un sito per meetup, non un laboratorio di abliteration)
+    - coerenza con scopi del progetto (LaravelPizza è un sito per meetup, non un laboratorio di abliteration)
 
 ## collegamenti
 

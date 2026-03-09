@@ -20,7 +20,7 @@ class SyncTranslationsAction
      *
      * @return array<string, mixed> Risultato della sincronizzazione
      */
-    public function execute()
+    public function execute(
         string $sourceLang = 'it',
         array $targetLangs = ['en', 'de'],
         ?string $specificModule = null,
@@ -88,7 +88,7 @@ class SyncTranslationsAction
 
         foreach ($sourceFiles as $sourceFile) {
             $fileName = basename((string) $sourceFile);
-            $sourceTranslations = $this->loadTranslations((string));
+            $sourceTranslations = $this->loadTranslations((string) $sourceFile);
 
             if (empty($sourceTranslations)) {
                 continue;
@@ -106,7 +106,7 @@ class SyncTranslationsAction
                 }
 
                 // Load existing target translations
-                $targetTranslations = File::exists($targetFile) ? $this->loadTranslations($targetFile);
+                $targetTranslations = File::exists($targetFile) ? $this->loadTranslations($targetFile) : [];
 
                 // Merge translations
                 /** @var array<string, mixed> $sourceTranslations */
@@ -222,7 +222,7 @@ class SyncTranslationsAction
                 $subTarget = isset($target[$key]) && is_array($target[$key])
                     ? $this->filterStringKeyArray($target[$key])
                     : [];
-                $merged[$key] = $this->mergeTranslations($this->filterStringKeyArray($value));
+                $merged[$key] = $this->mergeTranslations($this->filterStringKeyArray($value), $subTarget);
             } else {
                 if (! isset($merged[$key])) {
                     $merged[$key] = $value;
@@ -242,7 +242,7 @@ class SyncTranslationsAction
     private function saveTranslations(string $filePath, array $translations): void
     {
         $content = "<?php\n\nreturn [\n";
-        $content .= $this->arrayToPhp($this->filterStringKeyArray($translations));
+        $content .= $this->arrayToPhp($this->filterStringKeyArray($translations), 1);
         $content .= "];\n";
 
         File::put($filePath, $content);
@@ -266,7 +266,7 @@ class SyncTranslationsAction
 
             if (is_array($value)) {
                 $content .= "[\n";
-                $content .= $this->arrayToPhp($this->filterStringKeyArray($value));
+                $content .= $this->arrayToPhp($this->filterStringKeyArray($value), $indent + 1);
                 $content .= $indentStr."],\n";
             } else {
                 /** @phpstan-ignore-next-line */

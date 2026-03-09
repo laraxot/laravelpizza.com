@@ -2,7 +2,7 @@
 
 ## Riferimento Principale
 
-📚 **Documento Completo:** [../../../docs/analisi-metodi-duplicati.md](../../../docs/analisi-metodi-duplicati.md)
+📚 **Documento Completo:** [../../../../docs/analisi-metodi-duplicati.md](../../../../docs/analisi-metodi-duplicati.md)
 
 ## Stato del Modulo Cms
 
@@ -199,7 +199,7 @@ protected function casts(): array
 
 ## Link Correlati
 
-- 📚 [Analisi Completa](../../../docs/analisi-metodi-duplicati.md)
+- 📚 [Analisi Completa](../../../../docs/analisi-metodi-duplicati.md)
 - 📖 [Modulo Xot - Classi Base](../../xot/docs/analisi-metodi-duplicati.md)
 - 📖 [Convenzioni Namespace Filament](./convenzioni-namespace-filament.md)
 - 📖 [Gestione Temi](./frontoffice/create-theme.md)

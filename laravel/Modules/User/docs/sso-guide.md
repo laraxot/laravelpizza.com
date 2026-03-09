@@ -723,5 +723,6 @@ class SsoTest extends TestCase
 
 ---
 
+**Last Updated**: 2025-10-01  
 **Status**: Pianificato Q1 2026  
 **Priority**: MEDIUM  

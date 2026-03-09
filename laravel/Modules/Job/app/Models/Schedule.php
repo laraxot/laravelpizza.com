@@ -50,7 +50,6 @@ use Override;
  * @property \Illuminate\Database\Eloquent\Collection<int, ScheduleHistory> $histories
  * @property int|null $histories_count
  * @property ProfileContract|null $updater
- *
  * @method static Builder<static>|Schedule active()
  * @method static ScheduleFactory factory($count = null, $state = [])
  * @method static Builder<static>|Schedule inactive()
@@ -87,9 +86,7 @@ use Override;
  * @method static Builder<static>|Schedule whereWithoutOverlapping($value)
  * @method static Builder<static>|Schedule withTrashed(bool $withTrashed = true)
  * @method static Builder<static>|Schedule withoutTrashed()
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class Schedule extends BaseModel

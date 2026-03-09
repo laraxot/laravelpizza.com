@@ -9,6 +9,8 @@ use Modules\Notify\Tests\TestCase;
 
 class NotifyThemeTest extends TestCase
 {
+    // DatabaseTransactions is already used in the module TestCase
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -219,10 +221,10 @@ class NotifyThemeTest extends TestCase
             'view_params' => json_encode(['updated' => true, 'version' => '2.0']),
         ]);
 
-        $this->assertEquals('Updated Subject', $theme->fresh());
-        $this->assertEquals('Updated body text', $theme->fresh());
-        $this->assertEquals('updated', $theme->fresh());
-        $this->assertEquals(['updated' => true, 'version' => '2.0'], $theme->fresh());
+        $this->assertEquals('Updated Subject', $theme->fresh()->subject);
+        $this->assertEquals('Updated body text', $theme->fresh()->body);
+        $this->assertEquals('updated', $theme->fresh()->theme);
+        $this->assertEquals(['updated' => true, 'version' => '2.0'], $theme->fresh()->view_params);
     }
 
     /** @test */

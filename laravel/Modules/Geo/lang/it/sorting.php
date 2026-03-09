@@ -15,7 +15,7 @@ return [
         'direction' => [
             'label' => 'Direzione',
             'placeholder' => 'Seleziona la direzione dell\'ordinamento',
-            'help' => 'Direzione dell\'ordinamento (crescente/decrescente]'),
+            'help' => 'Direzione dell\'ordinamento (crescente/decrescente]',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -146,10 +146,10 @@ return [
     'sorting_directions' => [
         'asc' => 'Crescente',
         'desc' => 'Decrescente',
-        'asc_nulls_first' => 'Crescente (nulli prima]'),
-        'asc_nulls_last' => 'Crescente (nulli dopo]'),
-        'desc_nulls_first' => 'Decrescente (nulli prima]'),
-        'desc_nulls_last' => 'Decrescente (nulli dopo]',)
+        'asc_nulls_first' => 'Crescente (nulli prima]',
+        'asc_nulls_last' => 'Crescente (nulli dopo]',
+        'desc_nulls_first' => 'Decrescente (nulli prima]',
+        'desc_nulls_last' => 'Decrescente (nulli dopo]',
     ],
     'nulls_positions' => [
         'first' => 'Prima',

@@ -6,6 +6,7 @@ namespace Modules\Xot\Filament\Resources\XotBaseResource\Pages;
 
 use Filament\Actions\Action;
 use Filament\Actions\CreateAction;
+use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
@@ -13,7 +14,6 @@ use Filament\Tables\Columns\TextColumn;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use Modules\Xot\Filament\Traits\HasXotForm;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Override;
 
@@ -26,9 +26,8 @@ use Override;
  */
 abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 {
-    use HasXotForm;
     use HasXotTable;
-
+    use InteractsWithForms;
     // protected static string $resource;
 
     /**
@@ -37,6 +36,24 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
     public static function getNavigationGroup(): string
     {
         return '';
+    }
+
+    /**
+     * Restituisce lo schema del form per i record correlati.
+     *
+     * @return array<\Filament\Schemas\Components\Component>
+     */
+    // abstract public static function getFormSchema(): array;
+
+    /**
+     * Configura lo schema per i record correlati.
+     */
+    public function schema(Schema $schema): Schema
+    {
+        // getFormSchema() sempre ritorna array per definizione
+        $formSchema = $this->getFormSchema();
+
+        return $schema->components($formSchema);
     }
 
     /**
@@ -55,7 +72,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      *
      * @return array<string, TextColumn>
      */
-    #[\Override]
+    #[Override]
     public function getTableColumns(): array
     {
         return [
@@ -106,7 +123,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
                     // Prova il guessing degli URL nested di Filament (funziona con nesting multi-livello in richieste normali).
                     $url = $resource::getUrl('view', ['record' => $record], shouldGuessMissingParameters: true);
                     // Fallback per contesti senza dati di request (es. test Livewire).
-                    if ('' === $url) {
+                    if ($url === '') {
                         $url = $resource::getUrl('view', ['record' => $record], shouldGuessMissingParameters: false);
                     }
 
@@ -119,7 +136,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
                     // Prova il guessing degli URL nested di Filament (funziona con nesting multi-livello in richieste normali).
                     $url = $resource::getUrl('edit', ['record' => $record], shouldGuessMissingParameters: true);
                     // Fallback per contesti senza dati di request (es. test Livewire).
-                    if ('' === $url) {
+                    if ($url === '') {
                         $url = $resource::getUrl('edit', ['record' => $record], shouldGuessMissingParameters: false);
                     }
 
@@ -137,9 +154,9 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      * public function table(Table $table): Table
      * {
      * return $table
-     * ->columns($getTableColumns(
-     * ->headerActions($getTableHeaderActions(
-     * ->actions($getTableActions(
+     * ->columns($this->getTableColumns())
+     * ->headerActions($this->getTableHeaderActions())
+     * ->actions($this->getTableActions())
      * ->bulkActions([])
      * ->emptyStateActions([
      * 'create' => CreateAction::make()
@@ -151,9 +168,9 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      * public function table(Table $table): Table
      * {
      * return $table
-     * ->columns($getTableColumns(
-     * ->headerActions($getTableHeaderActions(
-     * ->actions($getTableActions(
+     * ->columns($this->getTableColumns())
+     * ->headerActions($this->getTableHeaderActions())
+     * ->actions($this->getTableActions())
      * ->bulkActions([])
      * ->emptyStateActions([
      * 'create' => CreateAction::make()

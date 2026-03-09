@@ -15,7 +15,7 @@ class DownloadAttachmentPlaceHolder extends XotBasePlaceholder
     protected function setUp(): void
     {
         parent::setUp();
-        $this->label('');
+        $this->label('')->content($this->generateContent(...))->columnSpanFull();
     }
 
     protected function generateContent(): HtmlString

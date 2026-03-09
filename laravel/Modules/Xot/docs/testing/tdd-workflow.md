@@ -88,6 +88,6 @@ Livewire::test(WidgetClass::class)
 
 ## Collegamenti
 
-- [tdd-laravel-guide](../../../../../docs/development/tdd-laravel-guide.md)
+- [tdd-laravel-guide](../../../../../../docs/development/tdd-laravel-guide.md)
 - [testing-best-practices](testing-best-practices.md)
 - [testing-strategy](../testing-strategy.md)

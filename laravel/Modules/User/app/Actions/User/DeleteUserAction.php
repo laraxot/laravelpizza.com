@@ -13,7 +13,7 @@ class DeleteUserAction
 {
     use QueueableAction;
 
-    public function __construct()
+    public function __construct(
         private readonly Hasher $hasher,
         private readonly Guard $authGuard,
     ) {
@@ -29,7 +29,7 @@ class DeleteUserAction
      */
     public function execute(User $user, string $confirmPassword): array
     {
-        if (! $hasher->check($confirmPassword, $user->password))
+        if (! $this->hasher->check($confirmPassword, $user->password)) {
             return [
                 'success' => false,
                 'message' => 'La password inserita non è corretta',
@@ -37,7 +37,7 @@ class DeleteUserAction
         }
 
         try {
-            $authGuard->logout();
+            $this->authGuard->logout();
             $user->delete();
 
             return [

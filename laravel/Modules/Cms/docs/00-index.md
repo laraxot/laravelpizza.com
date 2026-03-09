@@ -1,8 +1,23 @@
 # Cms Module Documentation
 
 ## Overview
-
 The Cms module handles content management, page rendering, and multi-language support through a flexible block-based system.
+
+**Pacchetti**: Nessuna dipendenza diretta; usa Xot, Tenant, UI. [Riferimento](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md)
+
+## Roadmap
+
+- [Roadmap Cms](roadmap/00-index.md) - Stato, tasks, fasi
+
+## Runtime Architecture
+
+- [Composer Packages Study](../../../../docs/architecture/composer-packages-study.md) - Analisi globale pacchetto-per-pacchetto (composer show).
+- [CMS Theme Template Runtime Architecture](cms-theme-template-runtime-architecture.md) - Verified runtime pipeline (Folio -> x-page -> JSON blocks -> pub_theme views), risks, and chaos targets.
+- [Template Theme CMS Reference](template-theme-cms-reference.md) - Runtime reference for providers, namespaces, JSON contracts, and fallback behavior.
+- [Package Dependency Chaos Map](package-dependency-chaos-map.md) - Dipendenze chiave (Folio/Volt/Sushi/Data) e superfici di fault.
+- [Chaos Monkey Deep Dive](chaos-monkey-deep-dive.md) - Analisi approfondita: tenant path, BlockData, wrap_in, container0/slug0, punti di rottura.
+- [Chaos Monkey Recovery Playbook](chaos-monkey-recovery-playbook.md) - Incident playbook to restore frontoffice rendering under randomized failures.
+- [Chaos Readiness Toolkit](chaos-readiness-toolkit.md) - Runner operativo e baseline di stabilita prima/dopo bug injection.
 
 ## Key Components
 
@@ -129,9 +144,6 @@ Modules/Cms/
 - Documented content disparity between languages
 - Created comprehensive duplicate content analysis
 
-## Regola Operativa Obbligatoria
+## Dependency Intelligence
 
-- Prima di modificare codice: ragionare, studiare i docs del modulo/tema, aggiornare docs/rules/memory/skills.
-- Riferimento globale: [Pre-Edit Docs-First Rule](../../../../docs/rules/pre-edit-docs-first-rule.md)
-- Memory: [Pre-Edit Docs-First Memory](../../../../docs/memory/pre-edit-docs-first-memory.md)
-- Skill: [Pre-Edit Docs-First Skill](../../../../docs/skills/pre-edit-docs-first-skill.md)
+- [Dependency intelligence](dependency-intelligence.md)

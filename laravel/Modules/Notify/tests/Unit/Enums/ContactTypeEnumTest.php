@@ -31,10 +31,7 @@ it('has trans trait', function (): void {
     $reflection = new ReflectionClass(ContactTypeEnum::class);
     $traits = $reflection->getTraitNames();
 
-    expect(
-        in_array('Modules\\Xot\\Filament\\Traits\\TransTrait', $traits, true)
-        || method_exists(ContactTypeEnum::class, 'trans')
-    )->toBeTrue();
+    expect($traits)->toContain('Modules\\Xot\\Filament\\Traits\\TransTrait');
 });
 
 it('has required methods', function (): void {

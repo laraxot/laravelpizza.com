@@ -1,6 +1,6 @@
 # Chaos Monkey Simulation Results
 
-## Simulation 
+## Simulation Date: 2026-03-02
 
 ## Executive Summary
 
@@ -333,10 +333,10 @@ Overall readiness: 100%
 - `.agents/docs/agents-guide/15-chaos-monkey/chaos-monkey-readiness.md`
 
 ✅ Chaos Monkey Memory
-- `docs/memory/cms-theme-chaos-monkey-memory.md`
+- `laravel/docs/memory/cms-theme-chaos-monkey-memory.md`
 
 ✅ Chaos Monkey Skills
-- `docs/rules/cms-theme-chaos-monkey-skills.md`
+- `laravel/docs/rules/cms-theme-chaos-monkey-skills.md`
 
 ## Recommendations
 

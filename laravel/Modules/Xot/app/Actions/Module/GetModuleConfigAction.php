@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Module;
 
+use Exception;
 use Illuminate\Support\Facades\File;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -16,13 +17,10 @@ class GetModuleConfigAction
         $configPath = app(GetModulePathByGeneratorAction::class)->execute($moduleName, 'config');
         $configFile = $configPath.'/'.$config.'.php';
         if (! file_exists($configFile)) {
-            throw new \Exception('Config file not found: '.$configFile);
+            throw new Exception('Config file not found: '.$configFile);
         }
-        $content = File::getRequire($configFile);
-        if (! is_array($content)) {
-            throw new \Exception('Config file must return an array: '.$configFile);
-        }
+        dddx(File::getRequire($configFile));
 
-        return $content;
+        return [];
     }
 }

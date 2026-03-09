@@ -77,7 +77,7 @@ class AuthenticationLog extends BaseModel
 
     // public function __construct(array $attributes = [])
     // {
-    // if (! isset($connection
+    // if (! isset($this->connection)) {
     //    $this->setConnection(config('authentication-log.db_connection'));
     // }
 

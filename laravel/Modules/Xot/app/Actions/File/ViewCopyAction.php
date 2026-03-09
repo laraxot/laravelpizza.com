@@ -10,20 +10,10 @@ class ViewCopyAction
 {
     use QueueableAction;
 
-    public function execute(string $source, string $destination): void
+    public function execute(string $from, string $to): void
     {
-        $sourcePath = app(ViewPathAction::class)->execute($source);
-        $destPath = app(ViewPathAction::class)->execute($destination);
-
-        // Ensure destination directory exists
-        $destDir = dirname($destPath);
-        if (! is_dir($destDir)) {
-            mkdir($destDir, 0755, true);
-        }
-
-        // Copy the file if source exists
-        if (file_exists($sourcePath)) {
-            copy($sourcePath, $destPath);
-        }
+        $from_path = app(ViewPathAction::class)->execute($from);
+        $to_path = app(ViewPathAction::class)->execute($to);
+        app(CopyAction::class)->execute($from_path, $to_path);
     }
 }

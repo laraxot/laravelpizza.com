@@ -45,7 +45,7 @@ declare(strict_types=1);
             @foreach($available_locales as $locale)
                 <li>
                     <a 
-                        href="{{ $this->getLanguageUrl($locale['code']
+                        href="{{ $this->getLanguageUrl($locale['code']) }}"
                         class="flex items-center space-x-3 px-3 py-2 text-sm hover:bg-emerald-50 dark:hover:bg-emerald-900 rounded-md transition-colors duration-200 {{ $locale['code'] === $current_locale ? 'bg-emerald-100 dark:bg-emerald-800 font-medium' : '' }}"
                         @if($locale['code'] === $current_locale) aria-current="page" @endif
                         wire:click="changeLanguage('{{ $locale['code'] }}')"
@@ -85,7 +85,7 @@ declare(strict_types=1);
  * Gestione del cambio lingua tramite AJAX
  */
 document.addEventListener('DOMContentLoaded', function() {
-    const languageSwitcher = document.querySelector('.language-switcher-container'));
+    const languageSwitcher = document.querySelector('.language-switcher-container');
     
     if (languageSwitcher) {
         // Gestisce il click sui link delle lingue

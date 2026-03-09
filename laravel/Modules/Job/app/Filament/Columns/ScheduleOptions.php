@@ -20,11 +20,11 @@ class ScheduleOptions extends TextColumn
     public function getTags(): array
     {
         /*
-         * if($record = =null
+         * if($this->record==null){
          * return [];
          * }
-         * if(// Placeholder purged withValue
-         * return // Placeholder purged record->getOptions(;
+         * if($this->withValue)
+         * return $this->record->getOptions();
          * else{
          * return parent::getTags();
          * }

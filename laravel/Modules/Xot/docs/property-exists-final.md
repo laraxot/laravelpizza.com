@@ -1,6 +1,6 @@
 # REPORT FINALE: Eliminazione property_exists() da Eloquent Models
 
-## 
+## Data: [DATE]
 ## Durata: ~3 ore
 ## Status: ✅ COMPLETATO
 

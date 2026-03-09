@@ -21,10 +21,10 @@ new class extends Component {
     {
         $this->validate();
 
-        $response = Password::broker()->sendResetLink(['email' => $email]);
+        $response = Password::broker()->sendResetLink(['email' => $this->email]);
 
         if ($response === Password::RESET_LINK_SENT) {
-            $emailSentMessage = trans($response);
+            $this->emailSentMessage = trans($response);
 
             return;
         }

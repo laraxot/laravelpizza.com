@@ -21,7 +21,7 @@ Il file `config/database.php` deve contenere SOLO la connessione base:
 'mysql' => [
     'driver' => 'mysql',
     'host' => env('DB_HOST', '127.0.0.1'),
-    'database' => env('DB_DATABASE', '<nome progetto>_data'),
+    'database' => env('DB_DATABASE', 'laravelpizza_data'),
     'username' => env('DB_USERNAME', 'marco'),
     'password' => env('DB_PASSWORD', 'marco'),
     // ... configurazione base
@@ -53,7 +53,7 @@ Il file `config/database.php` deve contenere SOLO la connessione base:
 
 ### ✅ File corretti:
 - `laravel/config/database.php` - SOLO connessione base `mysql`
-- `laravel/config/local/<nome progetto>/database.php` - configurazione locale
+- `laravel/config/local/laravelpizza/database.php` - configurazione locale
 - Nessuna definizione manuale di connessioni modulari
 
 ### ✅ Sistema funzionante:
@@ -74,12 +74,6 @@ Il file `config/database.php` deve contenere SOLO la connessione base:
 3. Usare le variabili d'ambiente per la configurazione
 4. Verificare che le connessioni siano caricate correttamente
 
-## 🚨 NO CONNECTION HACKS IN MODELS
-**MAI** inserire logica di switch della connessione basata sull'environment (`app()->environment('testing')`) nel costruttore o nei metodi dei Model.
-- È una pratica pessima ("cagata") che rompe la separazione dei compiti.
-- La connessione deve essere gestita a livello di configurazione o dinamicamente dai Service Provider (es. `TenantServiceProvider`).
-- Se un modello necessita di una connessione specifica (es. `$connection = 'activity'`), questa deve essere definita come proprietà, lasciando che il framework la risolva tramite la configurazione caricata.
-
 ## 🔄 WORKFLOW CORRETTO
 
 ### 1. Configurazione ambiente:
@@ -87,7 +81,7 @@ Il file `config/database.php` deve contenere SOLO la connessione base:
 # .env o .env.testing
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
-DB_DATABASE=<nome progetto>_data
+DB_DATABASE=laravelpizza_data
 DB_USERNAME=marco
 DB_PASSWORD=marco
 ```

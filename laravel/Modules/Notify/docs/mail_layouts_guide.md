@@ -2,7 +2,11 @@
 
 ## Introduzione
 
-Questo documento descrive i layout di email disponibili nella directory `resources/mail-layouts` del modulo Notify di Laraxot. Questi layout sono progettati per essere compatibili con la maggior parte dei client email e forniscono una base solida per tutte le email transazionali dell'applicazione. (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+Questo documento descrive i layout di email disponibili nella directory `resources/mail-layouts` del modulo Notify di Laraxot. Questi layout sono progettati per essere compatibili con la maggior parte dei client email e forniscono una base solida per tutte le email transazionali dell'applicazione.
+=======
+Questo documento descrive i layout di email disponibili nella directory `resources/mail-layouts` del modulo Notify di healthcare_app. Questi layout sono progettati per essere compatibili con la maggior parte dei client email e forniscono una base solida per tutte le email transazionali dell'applicazione.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Struttura dei Layout
 

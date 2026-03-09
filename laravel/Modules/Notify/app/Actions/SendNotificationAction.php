@@ -55,9 +55,8 @@ class SendNotificationAction
         $compiled = $template->compile($data);
 
         // Usa i canali specificati o quelli del template
-        $rawChannels = $template->getAttribute('channels');
         /** @var array<int, string> $templateChannels */
-        $templateChannels = is_array($rawChannels) ? $rawChannels : [];
+        $templateChannels = $template->channels;
         /** @var array<int, string> $channelsToUse */
         $channelsToUse = ! empty($channels) ? $channels : $templateChannels;
 

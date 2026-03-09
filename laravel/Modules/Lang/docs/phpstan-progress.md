@@ -1,6 +1,6 @@
 # 🌍 PHPStan Progress Report - Modulo Lang
 
-## 
+## Data: [DATE]
 ## Status: 🔄 IN PROGRESS (38 errori rimanenti, da 58)
 
 ## 🧘 LA FILOSOFIA DEL MODULO LANG

@@ -76,12 +76,6 @@ return [
             'success' => 'Traduzione eliminata con successo',
             'error' => 'Errore durante l\'eliminazione della traduzione',
             'confirmation' => 'Sei sicuro di voler eliminare questa traduzione?',
-            'icon' => 'delete',
-        ],
-        'back' => [
-            'label' => 'back',
-            'icon' => 'back',
-            'tooltip' => 'back',
         ],
     ],
     'messages' => [
@@ -113,10 +107,4 @@ return [
     ],
     'label' => 'Lang Service',
     'plural_label' => 'Lang Service (Plurale)',
-    'sections' => [
-        'empty' => [
-            'label' => 'empty',
-            'heading' => 'empty',
-        ],
-    ],
 ];

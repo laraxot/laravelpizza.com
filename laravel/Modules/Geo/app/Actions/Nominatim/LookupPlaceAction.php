@@ -21,7 +21,7 @@ class LookupPlaceAction
 
     public function __construct()
     {
-        $client = new Client();
+        $this->client = new Client();
     }
 
     /**
@@ -34,7 +34,7 @@ class LookupPlaceAction
      */
     public function execute(string $osmId): LocationData
     {
-        $response = $client->get(self::API_URL, [
+        $response = $this->client->get(self::API_URL, [
             'query' => [
                 'osm_ids' => $osmId,
                 'format' => 'json',

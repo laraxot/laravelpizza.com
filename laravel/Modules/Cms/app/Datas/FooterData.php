@@ -43,18 +43,16 @@ class FooterData extends Data implements Wireable
         return self::$instance;
     }
 
-    public function render(): Renderable
+    public function view(): Renderable
     {
-        $view = $this->view;
-        if (! view()->exists($view)) {
-            $message = 'The view ['.$view.'] does not exist';
+        if (! view()->exists($this->view)) {
+            $message = 'The view ['.$this->view.'] does not exist';
             throw new \Exception($message);
         }
-        
         /** @var array<string, mixed> */
         $view_params = $this->toArray();
 
-        return view($view, $view_params);
+        return view($this->view, $view_params);
     }
 
     public static function rules(): array

@@ -5,17 +5,18 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        if (! $this->shouldRun())
+        if (! $this->shouldRun()) {
             return;
         }
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table))
+        $this->tableCreate(function (Blueprint $table): void {
             $table->id();
             $table->unsignedInteger('bucket');
             $table->unsignedMediumInteger('period');

@@ -65,7 +65,6 @@ use Override;
  * @property-read ProfileContract|null $creator
  * @property-read string $status
  * @property-read ProfileContract|null $updater
- *
  * @method static JobManagerFactory factory($count = null, $state = [])
  * @method static Builder<static>|JobManager newModelQuery()
  * @method static Builder<static>|JobManager newQuery()
@@ -80,9 +79,7 @@ use Override;
  * @method static Builder<static>|JobManager whereProgress($value)
  * @method static Builder<static>|JobManager whereQueue($value)
  * @method static Builder<static>|JobManager whereStartedAt($value)
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class JobManager extends BaseModel
@@ -112,9 +109,9 @@ class JobManager extends BaseModel
 
     public function status(): Attribute
     {
-        return Attribute::make(get: function (): string {)
-            if ($isFinished())
-                $failed = $attributes['failed'] ?? false;
+        return Attribute::make(get: function (): string {
+            if ($this->isFinished()) {
+                $failed = $this->attributes['failed'] ?? false;
 
                 return $failed ? 'failed' : 'succeeded';
             }
@@ -125,25 +122,25 @@ class JobManager extends BaseModel
 
     public function isFinished(): bool
     {
-        if ($hasFailed())
+        if ($this->hasFailed()) {
             return true;
         }
 
-        $finishedAt = $attributes['finished_at'] ?? null;
+        $finishedAt = $this->attributes['finished_at'] ?? null;
 
         return $finishedAt !== null;
     }
 
     public function hasFailed(): bool
     {
-        $failed = $attributes['failed'] ?? false;
+        $failed = $this->attributes['failed'] ?? false;
 
         return (bool) $failed;
     }
 
     public function hasSucceeded(): bool
     {
-        if (! $this->isFinished())
+        if (! $this->isFinished()) {
             return false;
         }
 

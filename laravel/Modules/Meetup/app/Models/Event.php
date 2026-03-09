@@ -6,21 +6,18 @@ namespace Modules\Meetup\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Carbon;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Activity\Traits\HasEvents;
 use Modules\Activity\Traits\HasSnapshots;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
-use Modules\Meetup\Models\EventUser;
 use Modules\User\Models\User;
 use Modules\Xot\Models\Traits\HasXotFactory;
 
 /**
  * Modules\Meetup\Models\Event.
- *
+ * 
  * Schema.org Event implementation with structured data support.
  *
  * @property int $id
@@ -52,7 +49,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property-read User|null $updater
  * @property-read User|null $owner
  * @property-read User|null $organizer
- *
  * @method static Builder<Event> newModelQuery()
  * @method static Builder<Event> newQuery()
  * @method static Builder<Event> query()
@@ -60,9 +56,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder<Event> past()
  * @method static Builder<Event> bySlug(string $slug)
  * @method static Builder<Event> dateRange(Carbon $startDate, Carbon $endDate)
- *
  * @see https://schema.org/Event
- *
  * @property string|null $alternate_name
  * @property string|null $door_time
  * @property int $is_accessible_for_free
@@ -84,7 +78,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property-read int|null $snapshots_count
  * @property-read \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection<\Modules\Activity\Models\StoredEvent> $storedEvents
  * @property-read int|null $stored_events_count
- *
  * @method static \Modules\Meetup\Database\Factories\EventFactory factory($count = null, $state = [])
  * @method static Builder<static>|Event whereAlternateName($value)
  * @method static Builder<static>|Event whereAttendeesCount($value)
@@ -126,7 +119,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder<static>|Event whereUpdatedBy($value)
  * @method static Builder<static>|Event whereUrl($value)
  * @method static Builder<static>|Event whereUserId($value)
- *
  * @mixin \Eloquent
  */
 class Event extends BaseModel
@@ -156,8 +148,6 @@ class Event extends BaseModel
         'meta_data',
         'user_id',
         'organizer_id',
-        'created_by',
-        'updated_by',
     ];
 
     /**
@@ -185,109 +175,6 @@ class Event extends BaseModel
         'event_attendance_mode' => 'OfflineEventAttendanceMode',
     ];
 
-    protected static function booted(): void
-    {
-        static::creating(static function (self $model): void {
-            if (empty($model->slug)) {
-                $model->slug = \Illuminate\Support\Str::slug($model->title);
-            }
-        });
-    }
-
-    /**
-     * Get performers (speakers/hosts) scheduled for this event.
-     *
-     * @return BelongsToMany<Performer>
-     */
-    public function performers(): BelongsToMany
-    {
-        return $this->belongsToManyX(Performer::class, 'event_performer')
-            ->withPivot(['role', 'order'])
-            ->withTimestamps();
-    }
-
-    /**
-     * Get sponsors associated with this event.
-     *
-     * @return BelongsToMany<Sponsor>
-     */
-    public function sponsors(): BelongsToMany
-    {
-        return $this->belongsToManyX(Sponsor::class, 'event_sponsor')
-            ->withTimestamps();
-    }
-
-    /**
-     * Get registered attendees for this event.
-     *
-     * @return BelongsToMany<User>
-     */
-    public function attendees(): BelongsToMany
-    {
-        return $this->belongsToManyX(User::class, 'event_user', 'event_id', 'user_id')
-            ->withTimestamps();
-    }
-
-    /**
-     * Determine if event has reached attendee capacity.
-     */
-    public function isFull(): bool
-    {
-        return $this->attendees_count >= $this->max_attendees;
-    }
-
-    /**
-     * Determine if a user is already registered for this event.
-     * Checks the pivot table directly to avoid JOIN issues with non-existent users.
-     */
-    public function isUserRegistered(string $userId): bool
-    {
-        return EventUser::query()
-            ->where('event_id', $this->getKey())
-            ->where('user_id', $userId)
-            ->exists();
-    }
-
-    /**
-     * Determine if event is pending approval.
-     */
-    public function isPending(): bool
-    {
-        return $this->status === 'pending';
-    }
-
-    /**
-     * Determine if event is publicly visible.
-     */
-    public function isPublished(): bool
-    {
-        return $this->status === 'published';
-    }
-
-    /**
-     * Determine if the given user can view this event.
-     */
-    public function canBeViewedBy(?string $userId): bool
-    {
-        if ($this->isPublished()) {
-            return true;
-        }
-
-        if (! $this->isPending() || $userId === null) {
-            return false;
-        }
-
-        return (string) $this->user_id === $userId;
-    }
-
-    /**
-     * Get the venue where this event is held.
-     */
-    public function venue(): BelongsTo
-    {
-        return $this->belongsTo(Venue::class, 'location_id', 'id');
-    }
-
     public function owner(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
@@ -306,40 +193,6 @@ class Event extends BaseModel
     public function organizer(): BelongsTo
     {
         return $this->belongsTo(User::class, 'organizer_id', 'id');
-    }
-
-    /**
-     * Scope: only published events.
-     *
-     * @param  Builder<Event>  $query
-     * @return Builder<Event>
-     */
-    public function scopePublished(Builder $query): Builder
-    {
-        return $query->where('status', 'published');
-    }
-
-    /**
-     * Scope: events visible to a specific user.
-     * Published events are visible to all.
-     * Pending events are visible only to their owner.
-     *
-     * @param  Builder<Event>  $query
-     * @param  User|null  $user
-     * @return Builder<Event>
-     */
-    public function scopeVisibleTo(Builder $query, ?User $user): Builder
-    {
-        return $query->where(function (Builder $q) use ($user): void {
-            $q->where('status', 'published');
-
-            if ($user !== null) {
-                $q->orWhere(function (Builder $sub) use ($user): void {
-                    $sub->where('status', 'pending')
-                        ->where('user_id', $user->id);
-                });
-            }
-        });
     }
 
     /**
@@ -387,50 +240,6 @@ class Event extends BaseModel
     }
 
     /**
-     * Scope: only events publicly visible.
-     *
-     * @param  Builder<Event>  $query
-     * @return Builder<Event>
-     */
-    public function scopePubliclyVisible(Builder $query): Builder
-    {
-        return $query->where('status', 'published');
-    }
-
-    /**
-     * Scope: events visible to a specific user.
-     * Published events are public; pending events are owner-only.
-     *
-     * @param  Builder<Event>  $query
-     * @return Builder<Event>
-     */
-    public function scopeVisibleToUser(Builder $query, ?string $userId): Builder
-    {
-        return $query->where(static function (Builder $inner) use ($userId): void {
-            $inner->where('status', 'published');
-
-            if ($userId !== null) {
-                $inner->orWhere(static function (Builder $pending) use ($userId): void {
-                    $pending->where('status', 'pending')
-                        ->where('user_id', (int) $userId);
-                });
-            }
-        });
-    }
-
-    /**
-     * Scope: pending events owned by a specific user.
-     *
-     * @param  Builder<Event>  $query
-     * @return Builder<Event>
-     */
-    public function scopeMyPending(Builder $query, string $userId): Builder
-    {
-        return $query->where('status', 'pending')
-            ->where('user_id', (int) $userId);
-    }
-
-    /**
      * Get event by slug (static shortcut).
      */
     public static function getBySlug(string $slug): ?self
@@ -448,14 +257,13 @@ class Event extends BaseModel
     {
         $startDate = $this->start_date ?? Carbon::now();
         $endDate = $this->end_date ?? $startDate;
-        $timingStatus = $startDate->isFuture() ? 'upcoming' : 'past';
+        $status = $startDate->isFuture() ? 'upcoming' : 'past';
 
         return [
             'id' => $this->id,
             'slug' => $this->slug,
-            'timing_status' => $timingStatus,
-            'status' => $this->status, // draft, pending, published
-            'status_label' => ucfirst($this->status),
+            'status' => $status,
+            'status_label' => ucfirst($status),
             'title' => $this->title,
             'description' => $this->description,
             'date' => $startDate->format('F j, Y'),
@@ -534,7 +342,6 @@ class Event extends BaseModel
 
         return $data;
     }
-
     /**
      * Get social share data for this event.
      */

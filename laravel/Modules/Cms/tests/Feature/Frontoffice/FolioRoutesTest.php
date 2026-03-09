@@ -63,10 +63,10 @@ it('validates Folio routes basic accessibility and localization', function (): v
 
         // Skip Not Found (routing misalignment) and any server error with context
         if (404 === $status) {
-            $this->markTestSkipped("Folio route not found (404);
+            $this->markTestSkipped("Folio route not found (404): {$path}");
         }
         if ($status >= 500) {
-            $this->markTestSkipped("Folio route returned server error ({$status});
+            $this->markTestSkipped("Folio route returned server error ({$status}): {$path}");
         }
 
         // For unauthenticated contexts, allow OK, No Content, Redirects, and Auth-required statuses

@@ -9,6 +9,8 @@ use Modules\Notify\Tests\TestCase;
 
 class MailTemplateTest extends TestCase
 {
+    // DatabaseTransactions is already used in the module TestCase
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -196,10 +198,10 @@ class MailTemplateTest extends TestCase
         $this->assertEquals(0, $template->counter);
 
         $template->increment('counter');
-        $this->assertEquals(1, $template->fresh());
+        $this->assertEquals(1, $template->fresh()->counter);
 
         $template->increment('counter', 5);
-        $this->assertEquals(6, $template->fresh());
+        $this->assertEquals(6, $template->fresh()->counter);
     }
 
     /** @test */
@@ -229,7 +231,7 @@ class MailTemplateTest extends TestCase
             'params' => json_encode(['updated']),
         ]);
 
-        $this->assertEquals('updated-name', $template->fresh());
+        $this->assertEquals('updated-name', $template->fresh()->slug);
     }
 
     /** @test */

@@ -19,6 +19,6 @@ class OptimizeCommandHandler implements CommandHandlerInterface
 
     public function supports(string $command): bool
     {
-        return 'optimize' === $command;
+        return $command === 'optimize';
     }
 }

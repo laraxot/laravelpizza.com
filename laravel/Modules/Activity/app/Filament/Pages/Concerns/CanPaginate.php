@@ -22,7 +22,7 @@ trait CanPaginate
     public function updatedRecordsPerPage(): void
     {
         session()->put([
-            $this->getPerPageSessionKey() => $this->recordsPerPage,
+            $this->getPerPageSessionKey() => $this->getRecordsPerPage(),
         ]);
 
         $this->resetLivewirePage();
@@ -47,7 +47,7 @@ trait CanPaginate
 
         $pageOptions = $this->getRecordsPerPageSelectOptions();
 
-        if (is_array($pageOptions) && in_array($option, $pageOptions, true)) {
+        if (is_array($pageOptions) && in_array($option, $pageOptions)) {
             return (int) $option;
         }
 
@@ -74,6 +74,7 @@ trait CanPaginate
     protected function paginateQuery(Builder $query): Paginator|CursorPaginator|LengthAwarePaginator
     {
         $perPage = $this->getRecordsPerPage();
+
         $mode = $this->getPaginationMode();
 
         if ($mode === PaginationMode::Simple) {

@@ -192,6 +192,6 @@ npm run copy
 
 ---
 
-**
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: ✅ Implementazione Completata, ⏳ Test in Corso

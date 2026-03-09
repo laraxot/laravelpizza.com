@@ -6,7 +6,6 @@ namespace Modules\Cms\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Cms\Database\Factories\MenuFactory;
-use Modules\Tenant\Contracts\SushiToJsonsContract;
 use Modules\Tenant\Models\Traits\SushiToJsons;
 use Modules\Xot\Actions\Tree\GetTreeOptionsByModelClassAction;
 use Modules\Xot\Contracts\HasRecursiveRelationshipsContract;
@@ -51,7 +50,6 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
  * @property-read int|null $siblings_count
  * @property-read Collection<int, Menu> $siblingsAndSelf All the parent's children.
  * @property-read int|null $siblings_and_self_count
- *
  * @method static Collection<int, static> all($columns = ['*'])
  * @method static Builder<static>|Menu    breadthFirst()
  * @method static Builder<static>|Menu    depthFirst()
@@ -142,15 +140,11 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
  * @method static static                  onlyTrashed()
  * @method static static                  withTrashed()
  * @method static static                  withoutTrashed()
- *
  * @property ProfileContract|null $deleter
- *
- * @method static MenuFactory                      factory($count = null, $state = [])
- * @method        array<int, array<string, mixed>> getSushiRows()
- *
+ * @method static MenuFactory factory($count = null, $state = [])
  * @mixin \Eloquent
  */
-class Menu extends BaseModel implements HasRecursiveRelationshipsContract, SushiToJsonsContract
+class Menu extends BaseModel implements HasRecursiveRelationshipsContract
 {
     use HasRecursiveRelationships;
     use SushiToJsons;

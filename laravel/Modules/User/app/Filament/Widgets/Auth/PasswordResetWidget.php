@@ -69,7 +69,7 @@ class PasswordResetWidget extends XotBaseWidget
     public function sendResetPasswordLink(): void
     {
         // try {
-        $data = $form->getState();
+        $data = $this->form->getState();
         $password_broker = Password::broker();
 
         $response = $password_broker->sendResetLink([
@@ -77,7 +77,7 @@ class PasswordResetWidget extends XotBaseWidget
         ]);
 
         if (Password::RESET_LINK_SENT === $response) {
-            $emailSent = true;
+            $this->emailSent = true;
 
             Notification::make()
                 ->title(__('user::auth.password_reset.email_sent.title'))
@@ -87,7 +87,7 @@ class PasswordResetWidget extends XotBaseWidget
                 ->send();
 
             // Clear the form
-            $form->fill();
+            $this->form->fill();
         } else {
             Session::flash('error', trans('user::errors.'.$response.'.label'));
             Notification::make()
@@ -112,8 +112,8 @@ class PasswordResetWidget extends XotBaseWidget
      */
     public function resetForm(): void
     {
-        $emailSent = false;
-        $form->fill();
+        $this->emailSent = false;
+        $this->form->fill();
     }
 
     /**
@@ -121,8 +121,8 @@ class PasswordResetWidget extends XotBaseWidget
      */
     public function sendAnotherLink(): void
     {
-        $emailSent = false;
-        $form->fill(['email' => '']);
+        $this->emailSent = false;
+        $this->form->fill(['email' => '']);
     }
 
     /**

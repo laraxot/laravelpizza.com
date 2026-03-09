@@ -16,7 +16,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table))
+        $this->tableCreate(static function (Blueprint $table): void {
             $table->id();
 
             $table->string('slug')->unique()->index();
@@ -26,8 +26,8 @@ return new class extends XotBaseMigration {
             // $table->json('blocks')->default(new Expression('(JSON_ARRAY())'));
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table))
-            $this->updateTimestamps()
+        $this->tableUpdate(function (Blueprint $table): void {
+            $this->updateTimestamps(
                 table: $table,
                 hasSoftDeletes: true,
             );

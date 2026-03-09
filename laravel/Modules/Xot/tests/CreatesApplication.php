@@ -26,14 +26,6 @@ trait CreatesApplication
         // Explicitly set the base path before requiring bootstrap/app.php
         $_ENV['APP_BASE_PATH'] = $basePath;
 
-        // CRITICAL: Load .env.testing BEFORE app bootstrap so TenantServiceProvider
-        // and all module connections (activity, user, etc.) use <nome progetto>_data_test
-        $envTesting = $basePath.'/.env.testing';
-        if (file_exists($envTesting)) {
-            $dotenv = \Dotenv\Dotenv::createMutable($basePath, '.env.testing');
-            $dotenv->safeLoad();
-        }
-
         $app = require $basePath.'/bootstrap/app.php';
 
         // Bind essential paths if they are not correctly resolved
@@ -45,11 +37,10 @@ trait CreatesApplication
         $app->make(Kernel::class)->bootstrap();
         $app->boot(); // Ensure all service providers are booted
 
-        // CRITICAL: Force purge of connections to ensure they pick up the
-        // test database configuration from .env.testing mapped by TenantServiceProvider
-        \Illuminate\Support\Facades\DB::purge('mysql');
-        \Illuminate\Support\Facades\DB::purge('activity');
-        \Illuminate\Support\Facades\DB::purge('user');
+        // CRITICAL: DO NOT force database connections!
+        // TenantServiceProvider automatically configures module connections
+        // by reading DB_DATABASE from .env.testing
+        // Forcing connections here destroys the dynamic configuration system
 
         return $app;
     }

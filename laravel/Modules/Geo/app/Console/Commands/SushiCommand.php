@@ -35,10 +35,10 @@ class SushiCommand extends Command
         $action = $this->argument('action');
 
         return match ($action) {
-            'refresh' => $this->refresh()
-            'clear' => $this->clear()
-            'status' => $this->status()
-            default => $this->handleUnknownAction()
+            'refresh' => $this->refresh(),
+            'clear' => $this->clear(),
+            'status' => $this->status(),
+            default => $this->handleUnknownAction(),
         };
     }
 
@@ -95,7 +95,7 @@ class SushiCommand extends Command
                 $arrayComune = $comune;
 
                 // Validazione sicura degli offset con type guards
-                if (! $this->isValidComuneData($arrayComune))
+                if (! $this->isValidComuneData($arrayComune)) {
                     $this->warn('Dati comune non validi saltati: '.json_encode($arrayComune));
 
                     continue;
@@ -104,7 +104,7 @@ class SushiCommand extends Command
                 /** @var array<string, mixed> $validComune */
                 $validComune = $arrayComune;
 
-                DB::table('comuni')->insert([)
+                DB::table('comuni')->insert([
                     'id' => is_string($validComune['id'] ?? null) ? $validComune['id'] : '',
                     'regione' => is_string($validComune['regione'] ?? null) ? $validComune['regione'] : '',
                     'provincia' => is_string($validComune['provincia'] ?? null) ? $validComune['provincia'] : '',

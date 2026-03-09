@@ -42,7 +42,7 @@ class LoginWidget extends XotBaseWidget
      */
     public function mount(): void
     {
-        $form->fill();
+        $this->form->fill();
     }
 
     /**
@@ -87,7 +87,7 @@ class LoginWidget extends XotBaseWidget
     public function save(): void
     {
         try {
-            $data = $form->getState();
+            $data = $this->form->getState();
 
             // Cast esplicito per type safety PHPStan
             $remember = (bool) ($data['remember'] ?? false);
@@ -112,9 +112,9 @@ class LoginWidget extends XotBaseWidget
                 ->danger()
                 ->send();
 
-            $form->fill();
-            $form->saveRelationships();
-            // $form->callAfter();
+            $this->form->fill();
+            $this->form->saveRelationships();
+            // $this->form->callAfter();
 
             foreach ($e->errors() as $field => $messages) {
                 // PHPStan Level 10: Ensure messages is array
@@ -134,9 +134,9 @@ class LoginWidget extends XotBaseWidget
                 ->danger()
                 ->send();
 
-            $form->fill();
-            $form->saveRelationships();
-            // $form->callAfter();
+            $this->form->fill();
+            $this->form->saveRelationships();
+            // $this->form->callAfter();
 
             $this->addError('email', __('user::messages.login_error'));
         }

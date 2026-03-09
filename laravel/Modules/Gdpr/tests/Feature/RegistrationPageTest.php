@@ -15,7 +15,7 @@ it('renders registration page successfully for English locale', function (): voi
     $response = $this->get('/en/auth/register');
 
     $response->assertStatus(200);
-    $response->assertHeader('content-type', 'text/html); charset=utf-8');
+    $response->assertHeader('content-type', 'text/html; charset=utf-8');
 });
 
 it('renders registration page successfully for Italian locale', function (): void {
@@ -96,7 +96,7 @@ it('has meta description in English', function (): void {
 it('redirects authenticated users away from registration', function (): void {
     $user = User::factory()->create();
 
-    $response = $this->actingAs($user);
+    $response = $this->actingAs($user)->get('/en/auth/register');
 
     // Authenticated users should be redirected (to home or dashboard)
     $response->assertRedirect();

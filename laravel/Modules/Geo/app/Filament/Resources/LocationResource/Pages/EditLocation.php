@@ -26,7 +26,7 @@ class EditLocation extends XotBaseEditRecord
 
     protected function getRedirectUrl(): string
     {
-        Assert::string($url = $this->getResource());
+        Assert::string($url = $this->getResource()::getUrl('index'));
 
         return $url;
     }

@@ -50,7 +50,7 @@ class MediaFactory extends Factory
             'collection_name' => $collectionName,
             'name' => $fileName,
             'file_name' => $fileName.'.'.$extension,
-            'mime_type' => $this->getMimeTypeFromExtension($extension)
+            'mime_type' => $this->getMimeTypeFromExtension($extension),
             'disk' => 'public',
             'conversions_disk' => 'public',
             'size' => random_int(1024, 10485760),
@@ -71,8 +71,8 @@ class MediaFactory extends Factory
         $extension = $extensions[array_rand($extensions)];
         $fileName = 'file'.(string) random_int(1000, 9999);
 
-        return $this->state(fn (array $_attributes))
-            'mime_type' => $this->getMimeTypeFromExtension($extension)
+        return $this->state(fn (array $_attributes): array => [
+            'mime_type' => $this->getMimeTypeFromExtension($extension),
             'file_name' => $fileName.'.'.$extension,
             'name' => $fileName,
         ]);
@@ -87,8 +87,8 @@ class MediaFactory extends Factory
         $extension = $extensions[array_rand($extensions)];
         $fileName = 'file'.(string) random_int(1000, 9999);
 
-        return $this->state(fn (array $_attributes))
-            'mime_type' => $this->getMimeTypeFromExtension($extension)
+        return $this->state(fn (array $_attributes): array => [
+            'mime_type' => $this->getMimeTypeFromExtension($extension),
             'file_name' => $fileName.'.'.$extension,
             'name' => $fileName,
         ]);

@@ -63,9 +63,9 @@ class SmsService
     public function setLocalVars(array $vars): self
     {
         foreach ($vars as $k => $v) {
-            // Placeholder purged {$k} = $v;
+            $this->{$k} = $v;
         }
-        $vars = array_merge($this->vars, $vars);
+        $this->vars = array_merge($this->vars, $vars);
 
         return $this;
     }
@@ -77,7 +77,7 @@ class SmsService
      */
     public function mergeVars(array $vars): self
     {
-        $vars = array_merge($this->vars, $vars);
+        $this->vars = array_merge($this->vars, $vars);
 
         return $this;
     }
@@ -87,7 +87,7 @@ class SmsService
      */
     public function send(): self
     {
-        $engineClassName = '\\Modules\\Notify\\Services\\SmsEngines\\'.Str::studly($driver);
+        $engineClassName = '\\Modules\\Notify\\Services\\SmsEngines\\'.Str::studly($this->driver).'Engine';
 
         // Verifichiamo che la classe esista
         if (! class_exists($engineClassName)) {
@@ -120,7 +120,7 @@ class SmsService
 
             // Chiamiamo setLocalVars
             $setLocalVarsMethod = $reflectionClass->getMethod('setLocalVars');
-            $setLocalVarsMethod->invoke($instance, $vars);
+            $setLocalVarsMethod->invoke($instance, $this->vars);
 
             // Chiamiamo send
             $sendMethod = $reflectionClass->getMethod('send');

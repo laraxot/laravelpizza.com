@@ -220,7 +220,7 @@ $locale = app()->getLocale();
 - [Architettura Folio + Volt + Filament](../../../xot/docs/folio_volt_architecture.md) - Modulo Xot
 - [Struttura dei Moduli](../../../xot/docs/module_structure.md) - Modulo Xot
 - [Localizzazione](../../../lang/docs/packages/localization.md) - Modulo Lang
-- [Collegamenti alla Root](../../../../docs/routing.md)
+- [Collegamenti alla Root](../../../../../docs/routing.md)
 
 ## Collegamenti tra versioni di routing.md
 * [routing.md](docs/routing.md)

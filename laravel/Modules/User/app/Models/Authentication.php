@@ -13,7 +13,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 
 /**
  * Authentication Model.
- *
+ * 
  * Tracks user authentication attempts and sessions.
  *
  * @property int         $id
@@ -28,7 +28,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property string      $authenticatable_id   The ID of the authenticatable model
  * @property Carbon|null $created_at           When the record was created
  * @property Carbon|null $updated_at           When the record was last updated
- *
  * @method static Builder<static>|Authentication newModelQuery()
  * @method static Builder<static>|Authentication newQuery()
  * @method static Builder<static>|Authentication query()
@@ -44,36 +43,20 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder<static>|Authentication whereLoginSuccessful($value)
  * @method static Builder<static>|Authentication whereAuthenticatableType($value)
  * @method static Builder<static>|Authentication whereAuthenticatableId($value)
- *
  * @mixin IdeHelperAuthentication
- *
  * @property Model|\Eloquent      $authenticatable
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
- * @property string|null          $updated_by
- * @property string|null          $created_by
- * @property string|null          $deleted_at
- * @property string|null          $deleted_by
- *
- * @method static \Modules\User\Database\Factories\AuthenticationFactory factory($count = null, $state = [])
- * @method static Builder<static>|Authentication                         whereCreatedBy($value)
- * @method static Builder<static>|Authentication                         whereDeletedAt($value)
- * @method static Builder<static>|Authentication                         whereDeletedBy($value)
- * @method static Builder<static>|Authentication                         whereUpdatedBy($value)
- *
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $deleted_at
  * @property string|null $deleted_by
- *
  * @method static \Modules\User\Database\Factories\AuthenticationFactory factory($count = null, $state = [])
- * @method static Builder<static>|Authentication                         whereCreatedBy($value)
- * @method static Builder<static>|Authentication                         whereDeletedAt($value)
- * @method static Builder<static>|Authentication                         whereDeletedBy($value)
- * @method static Builder<static>|Authentication                         whereUpdatedBy($value)
- *                                                                                                           >>>>>>> da38c10 (.)
- *
+ * @method static Builder<static>|Authentication whereCreatedBy($value)
+ * @method static Builder<static>|Authentication whereDeletedAt($value)
+ * @method static Builder<static>|Authentication whereDeletedBy($value)
+ * @method static Builder<static>|Authentication whereUpdatedBy($value)
  * @mixin \Eloquent
  */
 class Authentication extends BaseModel

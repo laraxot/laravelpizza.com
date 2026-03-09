@@ -43,7 +43,7 @@ class RetrieveOauthUserAction
 
     private function handleInvalidStateException(InvalidStateException $exception): void
     {
-        $eventDispatcher->dispatch(new InvalidState($exception));
+        $this->eventDispatcher->dispatch(new InvalidState($exception));
     }
 }
 

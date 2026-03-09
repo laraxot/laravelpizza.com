@@ -23,25 +23,25 @@ test('components json is valid and contains expected components', function (): v
     // Verifico che il JSON è valido
     expect($json)->not->toBeNull('Il file _components.json non contiene JSON valido: '.json_last_error_msg());
 
-    // Verifico che ci sono 3 componenti
-    expect($json)->toHaveCount(3, 'Il file _components.json non contiene i 3 componenti attesi');
+    // Verifico che ci sono 2 componenti
+    expect($json)->toHaveCount(2, 'Il file _components.json non contiene i 2 componenti attesi');
 
-    // Verifico che ci sono i componenti SendMailCommand, TelegramWebhook e AnalyzeTranslationFiles
-    foreach (range(0, 2) as $index) {
-        expect($json[$index])->toHaveKey('name');
-        expect($json[$index])->toHaveKey('class');
-        expect($json[$index])->toHaveKey('ns');
-    }
+    // Verifico che ci sono i componenti SendMailCommand e TelegramWebhook
+    expect($json[0])->toHaveKey('name', 'Il primo componente non ha una chiave "name"');
+    expect($json[0])->toHaveKey('class', 'Il primo componente non ha una chiave "class"');
+    expect($json[0])->toHaveKey('ns', 'Il primo componente non ha una chiave "ns"');
+
+    expect($json[1])->toHaveKey('name', 'Il secondo componente non ha una chiave "name"');
+    expect($json[1])->toHaveKey('class', 'Il secondo componente non ha una chiave "class"');
+    expect($json[1])->toHaveKey('ns', 'Il secondo componente non ha una chiave "ns"');
 
     // Verifico i nomi specifici dei componenti
     $names = array_column($json, 'name');
-    expect($names)->toContain('send-mail-command');
-    expect($names)->toContain('telegram-webhook');
-    expect($names)->toContain('analyze-translation-files');
+    expect($names)->toContain('send-mail-command', 'Componente "send-mail-command" non trovato');
+    expect($names)->toContain('telegram-webhook', 'Componente "telegram-webhook" non trovato');
 
     // Verifico le classi specifiche dei componenti
     $classes = array_column($json, 'class');
-    expect($classes)->toContain('SendMailCommand');
-    expect($classes)->toContain('TelegramWebhook');
-    expect($classes)->toContain('AnalyzeTranslationFiles');
+    expect($classes)->toContain('SendMailCommand', 'Classe "SendMailCommand" non trovata');
+    expect($classes)->toContain('TelegramWebhook', 'Classe "TelegramWebhook" non trovata');
 });

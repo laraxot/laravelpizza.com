@@ -75,7 +75,7 @@ public static function getBlockLabel(): string
 ## Remaining Error Categories (1495 total)
 
 ### 1. Translation Errors (~110 remaining)
-**Modules Affected**: Employee, Geo, Media, Notify, <nome progetto>, UI, User
+**Modules Affected**: Employee, Geo, Media, Notify, TechPlanner, UI, User
 
 **Key Files Identified**:
 - Employee/app/Filament/Widgets/AttendanceOverviewWidget.php (5 errors)

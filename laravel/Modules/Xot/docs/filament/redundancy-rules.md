@@ -140,5 +140,5 @@ grep -r "PassportServiceProvider" laravel/Modules/User/module.json
 
 - [XotBaseRelationManager Documentation](./relation-managers.md)
 - [Service Provider Architecture](../../user/docs/service_provider_architecture.md)
-- [DRY Principle](../../../docs/dry-kiss-principles.md)
+- [DRY Principle](../../../../docs/dry-kiss-principles.md)
 

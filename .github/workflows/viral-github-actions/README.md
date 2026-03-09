@@ -1,8 +1,8 @@
-# 🚀 GitHub Actions per la Viralità del Progetto healthcare_app Fila5 Mono
+# 🚀 GitHub Actions per la Viralità del Progetto Quaeris Fila5 Mono
 
 ## 📋 Sommario delle Azioni Virali
 
-Questo documento descrive le GitHub Actions complete per promuovere il progetto healthcare_app Fila5 Mono attraverso strategie di viral marketing automation.
+Questo documento descrive le GitHub Actions complete per promuovere il progetto Quaeris Fila5 Mono attraverso strategie di viral marketing automation.
 
 ---
 
@@ -43,7 +43,7 @@ jobs:
         uses: ./.github/actions/twitter-post@v1
         with:
           content: generated-viral-content.md
-          hashtags: "PHP,Laravel,OpenSource,healthcare_app"
+          hashtags: "PHP,Laravel,OpenSource,Quaeris"
           
       - name: 💼 LinkedIn Professional Post
         uses: ./.github/actions/linkedin-post@v1
@@ -72,7 +72,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        module: [Lang,User,Seo,healthcare_app,Chart,Xot,Job,Meetup,Limesurvey,UI,Geo,Tenant,Cms,Media,Notify,Gdpr,Activity,DbForge,CloudStorage]
+        module: [Lang,User,Seo,Quaeris,Chart,Xot,Job,Meetup,Limesurvey,UI,Geo,Tenant,Cms,Media,Notify,Gdpr,Activity,DbForge,CloudStorage]
         
     steps:
       - name: 📊 PHPStan Level 10 Check
@@ -120,7 +120,7 @@ jobs:
         uses: ./.github/actions/smart-response@v1
         with:
           classification: ${{ steps.classify.outputs.type }}
-          context: healthcare_app-project
+          context: quaeris-project
           
       - name: 📢 Contextual Reply
         uses: ./.github/actions/contextual-reply@v1
@@ -165,7 +165,7 @@ jobs:
         uses: ./.github/actions/create-visuals@v1
         with:
           type: infographic,screenshot,demo
-          branding: healthcare_app
+          branding: quaeris
           
       - name: 🚀 Multi-Platform Distribution
         uses: ./.github/actions/distribute-content@v1
@@ -318,14 +318,14 @@ gh secret set DISCORD_WEBHOOK_URL "your-discord-webhook"
 npm install -g @actions/core twitter-api-client linkedin-api-client
 
 # Setup workflow permissions
-gh api repos/healthcare_app/fila5-mono/actions/permissions/set \
+gh api repos/quaeris/fila5-mono/actions/permissions/set \
   --add "issues:write,contents:write,pull-requests:write"
 ```
 
 ### Comandi di Setup Rapido
 ```bash
 # Clonare e installare le azioni virali
-git clone https://github.com/healthcare_app/fila5-mono.git
+git clone https://github.com/quaeris/fila5-mono.git
 cd fila5-mono
 cp -r .github/workflows-viral/* .github/workflows/
 git add .github/workflows/
@@ -431,4 +431,4 @@ jobs:
 
 ---
 
-**Nota:** Queste azioni sono progettate per essere **modulari e riutilizzabili**. Ogni workflow può essere eseguito indipendentemente o combinato con altri per massimizzare l'impatto virale del progetto healthcare_app Fila5 Mono.
+**Nota:** Queste azioni sono progettate per essere **modulari e riutilizzabili**. Ogni workflow può essere eseguito indipendentemente o combinato con altri per massimizzare l'impatto virale del progetto Quaeris Fila5 Mono.

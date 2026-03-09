@@ -255,7 +255,7 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 
-// Nota: in <nome progetto> usare Folio+Volt, NON controller tradizionali
+// Nota: in LaravelPizza usare Folio+Volt, NON controller tradizionali
 // Questo è un esempio per contesti dove il controller è consentito
 class HLSPlaylistController
 {

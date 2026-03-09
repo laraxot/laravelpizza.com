@@ -8,5 +8,6 @@
 4. I link da moduli/temi verso documentazione globale devono puntare a `../../../../docs/...` (o profondita equivalente).
 5. Dopo ogni migrazione docs, eseguire link-check sui file aggiornati.
 6. Prima di qualunque modifica codice, il primo step operativo e sempre docs-first: ragionare, studiare docs del modulo/tema, aggiornare `docs/rules`, `docs/memory`, `docs/skills`.
+7. Gli artefatti operativi temporanei per gli agenti devono vivere nel repository, non in `/tmp`.
 
 Riferimento operativo: `docs/rules/pre-edit-docs-first-rule.md`.

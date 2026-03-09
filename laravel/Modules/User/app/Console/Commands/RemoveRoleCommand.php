@@ -68,7 +68,7 @@ class RemoveRoleCommand extends Command
             $user->removeRole($row);
         }
 
-        $this->info(implode(', ', $rows));
+        $this->info(implode(', ', $rows).' dessigned to '.$email);
     }
 
     /*

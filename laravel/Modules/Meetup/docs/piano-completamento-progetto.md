@@ -1,6 +1,6 @@
 # Piano di Completamento Progetto - Laravel Pizza Meetups
 
-## 
+## Data: [DATE]
 
 ## 📊 Stato Attuale
 

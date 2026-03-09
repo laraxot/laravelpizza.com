@@ -38,9 +38,9 @@ enum ChannelEnum: string implements HasColor, HasIcon, HasLabel
     public function getRecipient(Model $record): ?string
     {
         return match ($this) {
-            self::Mail => $this->getRecordEmail($record)
-            self::Sms => $this->getRecordPhone($record)
-            self::WhatsApp => $this->getRecordWhatsApp($record)
+            self::Mail => $this->getRecordEmail($record),
+            self::Sms => $this->getRecordPhone($record),
+            self::WhatsApp => $this->getRecordWhatsApp($record),
         };
     }
 

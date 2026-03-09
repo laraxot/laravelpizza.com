@@ -2,7 +2,11 @@
 
 ## Overview
 
-Il file `RegistrationWidget.php` si trova in `/var/www/html/ptvx/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php`. Questo widget è utilizzato per la registrazione di diversi tipi di utenti in applicazioni basate su Laravel con Filament. Il modulo `User` è progettato per essere riutilizzabile in vari progetti, quindi la logica del widget deve essere flessibile e adattabile a contesti diversi. (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+Il file `RegistrationWidget.php` si trova in `/var/www/html/ptvx/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php`. Questo widget è utilizzato per la registrazione di diversi tipi di utenti in applicazioni basate su Laravel con Filament. Il modulo `User` è progettato per essere riutilizzabile in vari progetti, quindi la logica del widget deve essere flessibile e adattabile a contesti diversi.
+=======
+Il file `RegistrationWidget.php` si trova in `/var/www/html/healthcare_app/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php`. Questo widget è utilizzato per la registrazione di diversi tipi di utenti in applicazioni basate su Laravel con Filament. Il modulo `User` è progettato per essere riutilizzabile in vari progetti, quindi la logica del widget deve essere flessibile e adattabile a contesti diversi.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Current Issues
 
@@ -61,5 +65,5 @@ protected function getConfirmationRoute(): string
 
 ## References
 
-- [Namespace Issues](../../../docs/references/namespace-issues.md)
+- [Namespace Issues](../../../../docs/references/namespace-issues.md)
 - [Filament Resource Guidelines](../../../modules/xot/docs/rules/filament-resource-guidelines.md)

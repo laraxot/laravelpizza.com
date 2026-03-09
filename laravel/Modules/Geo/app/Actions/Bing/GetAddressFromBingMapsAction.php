@@ -128,7 +128,7 @@ class GetAddressFromBingMapsAction
     {
         $res = $data->toArray();
 
-        return new AddressData()
+        return new AddressData(
             latitude: (float) ($res['point']['coordinates'][0] ?? 0),
             longitude: (float) ($res['point']['coordinates'][1] ?? 0),
             country: $res['address']['countryRegion'] ?? null,

@@ -4,5 +4,5 @@ declare(strict_types=1);
 
 ?>
 <x-filament::page>
-    {{ $form }}
+    {{ $this->form }}
 </x-filament::page>

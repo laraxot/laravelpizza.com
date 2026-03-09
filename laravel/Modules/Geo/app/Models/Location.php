@@ -35,7 +35,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $creator
  * @property array                $location
  * @property ProfileContract|null $updater
- *
  * @method static Builder<static>|Location newModelQuery()
  * @method static Builder<static>|Location newQuery()
  * @method static Builder<static>|Location query()
@@ -59,11 +58,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Location whereUpdatedBy($value)
  * @method static Builder<static>|Location whereZip($value)
  * @method static Builder<static>|Location withinDistance(float $latitude, float $longitude, float $distanceInKm)
- *
  * @property ProfileContract|null $deleter
- *
  * @method static LocationFactory factory($count = null, $state = [])
- *
  * @mixin \Eloquent
  */
 class Location extends BaseModel
@@ -136,13 +132,13 @@ class Location extends BaseModel
     {
         return Attribute::make(
             get: fn (): array => [
-                'lat' => (float) $lat,
-                'lng' => (float) $lng,
+                'lat' => (float) $this->lat,
+                'lng' => (float) $this->lng,
             ],
             set: function (?array $value): void {
                 if (is_array($value)) {
-                    $attributes['lat'] = $value['lat'] ?? null;
-                    $attributes['lng'] = $value['lng'] ?? null;
+                    $this->attributes['lat'] = $value['lat'] ?? null;
+                    $this->attributes['lng'] = $value['lng'] ?? null;
                 }
             },
         );

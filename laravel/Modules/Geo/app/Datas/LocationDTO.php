@@ -18,11 +18,11 @@ readonly class LocationDTO
     public function toArray(): array
     {
         return [
-            'latitude' => $latitude,
-            'longitude' => $longitude,
-            'address' => $address,
-            'city' => $city,
-            'country' => $country,
+            'latitude' => $this->latitude,
+            'longitude' => $this->longitude,
+            'address' => $this->address,
+            'city' => $this->city,
+            'country' => $this->country,
         ];
     }
 }

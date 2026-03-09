@@ -31,9 +31,7 @@ class TestCase extends BaseTestCase
 - Usa nomi descrittivi per i test
 - Mantiene i test indipendenti tra loro
 - Usa factories per la creazione di dati di test
-- Usa `DatabaseTransactions` invece di `RefreshDatabase`.
-- **MAI usare `migrate:fresh`**: È vietato in qualsiasi ambiente. Rompe i database condivisi. Usa solo `migrate` o transazioni.
-
+- Usa `refreshDatabase` solo quando necessario per performance
 - Usa `withoutExceptionHandling()` per test espliciti sugli errori
 
 ## Conversione da PHPUnit a Pest

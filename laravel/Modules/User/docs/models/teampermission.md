@@ -9,7 +9,7 @@ Il modello `TeamPermission` rappresenta i permessi specifici di un utente all'in
 - `user_id` - ID dell'utente
 - `permission` - Nome del permesso
 - `created_at` - Data di creazione
-- `updated_at` - Data di 
+- `updated_at` - Data di ultimo aggiornamento
 
 ## Relazioni
 

@@ -51,12 +51,12 @@ class SendFirebasePushNotificationPage extends XotBasePage
 
     protected function fillForms(): void
     {
-        $pushForm->fill();
+        $this->pushForm->fill();
     }
 
     public function pushForm(Schema $schema): Schema
     {
-        return $schema->components($getPushFormSchema());
+        return $schema->components($this->getPushFormSchema())->model($this->getUser())->statePath('pushData');
     }
 
     /**
@@ -105,7 +105,7 @@ class SendFirebasePushNotificationPage extends XotBasePage
 
     public function sendPushNotification(): void
     {
-        $data = $pushForm->getState();
+        $data = $this->pushForm->getState();
 
         try {
             // Creare i dati della notifica Firebase

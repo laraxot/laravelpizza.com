@@ -1,6 +1,10 @@
 # Pattern di Estensione per Componenti Filament 
 
-Questo documento definisce il pattern di estensione standardizzato per i componenti Filament nel sistema Laraxot, con particolare attenzione al principio di non estendere mai direttamente le classi Filament. (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+Questo documento definisce il pattern di estensione standardizzato per i componenti Filament nel sistema Laraxot, con particolare attenzione al principio di non estendere mai direttamente le classi Filament.
+=======
+Questo documento definisce il pattern di estensione standardizzato per i componenti Filament nel sistema healthcare_app, con particolare attenzione al principio di non estendere mai direttamente le classi Filament.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Regola Fondamentale
 
@@ -20,7 +24,11 @@ Questo documento definisce il pattern di estensione standardizzato per i compone
 
 ## Motivazione
 
-1. **Personalizzazione Centralizzata**: Le classi XotBase forniscono funzionalità e comportamenti personalizzati specifici per Laraxot, mantenendo la coerenza in tutta l'applicazione. (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+1. **Personalizzazione Centralizzata**: Le classi XotBase forniscono funzionalità e comportamenti personalizzati specifici per Laraxot, mantenendo la coerenza in tutta l'applicazione.
+=======
+1. **Personalizzazione Centralizzata**: Le classi XotBase forniscono funzionalità e comportamenti personalizzati specifici per healthcare_app, mantenendo la coerenza in tutta l'applicazione.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 2. **Aggiornamenti Semplificati**: Quando Filament viene aggiornato, è possibile adattare solo le classi XotBase senza dover modificare tutte le implementazioni concrete.
 
@@ -90,7 +98,11 @@ class SendSmsPage extends Page implements HasForms // ❌ ERRORE
 
 ### 1. Personalizzazione Centralizzata
 
-Le classi XotBase possono implementare comportamenti specifici per Laraxot, come: (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+Le classi XotBase possono implementare comportamenti specifici per Laraxot, come:
+=======
+Le classi XotBase possono implementare comportamenti specifici per healthcare_app, come:
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - Gestione multilingua avanzata
 - Integrazione con il sistema di permessi personalizzato
 - Logging e auditing specifici

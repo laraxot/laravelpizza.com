@@ -95,5 +95,5 @@ private function resolveView(): void
 
 ---
 
-**
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0

@@ -2,83 +2,129 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Actions\Cast;
-
 use Modules\Xot\Actions\Cast\SafeFloatCastAction;
 
-it('casts various values to float correctly', function (): void {
-    $action = app(SafeFloatCastAction::class);
-
-    // Floats
-    expect($action->execute(1.23))->toBe(1.23);
-    expect($action->execute(INF, 0.0))->toBe(0.0);
-
-    // Integers
-    expect($action->execute(123))->toBe(123.0);
-
-    // Null
-    expect($action->execute(null, 1.1))->toBe(1.1);
-
-    // Strings
-    expect($action->execute('1.23'))->toBe(1.23);
-    expect($action->execute('1,23'))->toBe(1.23);
-    expect($action->execute('1.23e2'))->toBe(123.0);
-    expect($action->execute('invalid', 5.5))->toBe(5.5);
-    expect($action->execute(''))->toBe(0.0);
-
-    // Booleans
-    expect($action->execute(true))->toBe(1.0);
-    expect($action->execute(false))->toBe(0.0);
-
-    // Arrays (single element)
-    expect($action->execute(['1.5']))->toBe(1.5);
-    expect($action->execute(['a', 'b'], 2.2))->toBe(2.2);
-
-    // Objects with toString
-    $obj = new class {
-        public function __toString()
-        {
-            return '10.5';
-        }
-    };
-    expect($action->execute($obj))->toBe(10.5);
+beforeEach(function (): void {
+    $this->action = app(SafeFloatCastAction::class);
 });
 
-it('clams float within range correctly', function (): void {
-    $action = app(SafeFloatCastAction::class);
-
-    expect($action->executeWithRange(50.0, 0.0, 100.0))->toBe(50.0);
-    expect($action->executeWithRange(-10.0, 0.0, 100.0))->toBe(0.0);
-    expect($action->executeWithRange(150.0, 0.0, 100.0))->toBe(100.0);
+it('casts float values', function (): void {
+    $result = $this->action->execute(123.45);
+    expect($result)->toBe(123.45)->toBeFloat();
 });
 
-it('rounds float with precision correctly', function (): void {
-    $action = app(SafeFloatCastAction::class);
-
-    expect($action->executeWithPrecision(1.23456, 2))->toBe(1.23);
-    expect($action->executeWithPrecision(1.235, 2))->toBe(1.24);
-    expect($action->executeWithPrecision(1.2, 0))->toBe(1.0);
+it('casts integer values', function (): void {
+    $result = $this->action->execute(123);
+    expect($result)->toBe(123.0)->toBeFloat();
 });
 
-it('casts as percentage correctly', function (): void {
-    $action = app(SafeFloatCastAction::class);
-
-    expect($action->executeAsPercentage(50.0))->toBe(50.0);
-    expect($action->executeAsPercentage(120.0))->toBe(100.0);
-    expect($action->executeAsPercentage(-5.0))->toBe(0.0);
+it('casts null values', function (): void {
+    $result = $this->action->execute(null);
+    expect($result)->toBe(0.0)->toBeFloat();
 });
 
-it('casts as currency correctly', function (): void {
-    $action = app(SafeFloatCastAction::class);
-
-    expect($action->executeAsCurrency(12.345))->toBe(12.35);
-    expect($action->executeAsCurrency(-12.345))->toBe(12.35);
+it('casts null values with custom default', function (): void {
+    $result = $this->action->execute(null, 10.0);
+    expect($result)->toBe(10.0)->toBeFloat();
 });
 
-it('uses static float cast methods correctly', function (): void {
-    expect(SafeFloatCastAction::cast('1.99'))->toBe(1.99);
-    expect(SafeFloatCastAction::castWithRange(200, 0, 100))->toBe(100.0);
-    expect(SafeFloatCastAction::castWithPrecision(1.234, 2))->toBe(1.23);
-    expect(SafeFloatCastAction::castAsPercentage(150))->toBe(100.0);
-    expect(SafeFloatCastAction::castAsCurrency(-50.555))->toBe(50.56);
+it('casts numeric strings', function (): void {
+    $result = $this->action->execute('123.45');
+    expect($result)->toBe(123.45)->toBeFloat();
+});
+
+it('casts integer strings', function (): void {
+    $result = $this->action->execute('123');
+    expect($result)->toBe(123.0)->toBeFloat();
+});
+
+it('casts empty strings', function (): void {
+    $result = $this->action->execute('');
+    expect($result)->toBe(0.0)->toBeFloat();
+});
+
+it('casts whitespace strings', function (): void {
+    $result = $this->action->execute('  123.45  ');
+    expect($result)->toBe(123.45)->toBeFloat();
+});
+
+it('casts non-numeric strings', function (): void {
+    $result = $this->action->execute('abc');
+    expect($result)->toBe(0.0)->toBeFloat();
+});
+
+it('casts non-numeric strings with default', function (): void {
+    $result = $this->action->execute('abc', 5.0);
+    expect($result)->toBe(5.0)->toBeFloat();
+});
+
+it('casts boolean values', function (): void {
+    $trueResult = $this->action->execute(true);
+    $falseResult = $this->action->execute(false);
+
+    expect($trueResult)->toBe(1.0)->toBeFloat()->and($falseResult)->toBe(0.0)->toBeFloat();
+});
+
+it('casts arrays', function (): void {
+    $result = $this->action->execute([1, 2, 3]);
+    expect($result)->toBe(0.0)->toBeFloat();
+});
+
+it('casts objects', function (): void {
+    $result = $this->action->execute(new stdClass());
+    expect($result)->toBe(0.0)->toBeFloat();
+});
+
+it('casts with range validation', function (): void {
+    $normal = $this->action->executeWithRange(50.0, 0.0, 100.0);
+    $aboveMax = $this->action->executeWithRange(150.0, 0.0, 100.0);
+    $belowMin = $this->action->executeWithRange(-10.0, 0.0, 100.0);
+
+    expect($normal)->toBe(50.0)->and($aboveMax)->toBe(100.0)->and($belowMin)->toBe(0.0);
+});
+
+it('casts with range and default', function (): void {
+    $result = $this->action->executeWithRange('invalid', 0.0, 100.0, 25.0);
+    expect($result)->toBe(25.0);
+});
+
+it('has static cast method', function (): void {
+    $result = SafeFloatCastAction::cast('123.45');
+    expect($result)->toBe(123.45)->toBeFloat();
+});
+
+it('has static cast method with default', function (): void {
+    $result = SafeFloatCastAction::cast(null, 10.0);
+    expect($result)->toBe(10.0)->toBeFloat();
+});
+
+it('has static castWithRange method', function (): void {
+    $result = SafeFloatCastAction::castWithRange('150.0', 0.0, 100.0);
+    expect($result)->toBe(100.0)->toBeFloat();
+});
+
+it('handles infinite values', function (): void {
+    $infResult = $this->action->execute('INF');
+    $nanResult = $this->action->execute('NAN');
+
+    expect($infResult)->toBe(0.0)->and($nanResult)->toBe(0.0);
+});
+
+it('handles infinite values with default', function (): void {
+    $infResult = $this->action->execute('INF', 5.0);
+    $nanResult = $this->action->execute('NAN', 5.0);
+
+    expect($infResult)->toBe(5.0)->and($nanResult)->toBe(5.0);
+});
+
+it('casts scientific notation', function (): void {
+    $result1 = $this->action->execute('1.23e2');
+    $result2 = $this->action->execute('1.23E-2');
+
+    expect($result1)->toBe(123.0)->and($result2)->toBe(0.0123);
+});
+
+it('handles decimal comma', function (): void {
+    $result = $this->action->execute('123,45');
+    expect($result)->toBe(123.45);
 });

@@ -13,7 +13,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table))
+        $this->tableCreate(static function (Blueprint $table): void {
             $table->increments('id');
             $table->unsignedInteger('task_id');
             $table->timestamp('ran_at')->useCurrent();
@@ -28,7 +28,7 @@ return new class extends XotBaseMigration
             //     ;
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table))
+        $this->tableUpdate(function (Blueprint $table): void {
             $this->updateTimestamps($table);
         });
     }

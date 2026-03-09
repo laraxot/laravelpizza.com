@@ -9,6 +9,8 @@ use Modules\Notify\Tests\TestCase;
 
 class NotificationTypeTest extends TestCase
 {
+    // DatabaseTransactions is already used in the module TestCase
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -70,9 +72,9 @@ class NotificationTypeTest extends TestCase
             'template' => 'updated_template',
         ]);
 
-        $this->assertEquals('Updated Name', $notificationType->fresh());
-        $this->assertEquals('Updated description', $notificationType->fresh());
-        $this->assertEquals('updated_template', $notificationType->fresh());
+        $this->assertEquals('Updated Name', $notificationType->fresh()->name);
+        $this->assertEquals('Updated description', $notificationType->fresh()->description);
+        $this->assertEquals('updated_template', $notificationType->fresh()->template);
     }
 
     /** @test */

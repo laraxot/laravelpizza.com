@@ -3,6 +3,10 @@
 ## Overview
 The Meetup theme is a premium, multi-language responsive theme designed for the Laravel Pizza community platform. Built with Tailwind CSS 4.x, Vite 7, and Alpine.js, it follows Laraxot architecture principles and provides an enhanced user experience for Laravel developer meetups.
 
+## Docs-First Governance
+- Before editing any code that touches the public theme, study and improve this theme documentation and the related module documentation first.
+- After local docs updates, align global `docs/rules`, `docs/memory`, `docs/skills` and evaluate whether the work should be tracked on GitHub Issues/Discussions.
+
 ## Key Features
 - **Multi-Language Support**: Italian (primary), English, German, French, Spanish, Russian
 - **Responsive Design**: Mobile-first approach with breakpoint optimization
@@ -125,13 +129,6 @@ npm run copy   # Copy assets to public_html
 2. Run `npm run build` to compile assets
 3. Run `npm run copy` to publish to `public_html/themes/Meetup/`
 4. **IMPORTANT**: Without `npm run build` and `npm run copy`, changes are NOT visible!
-
-### Testing
-
-I temi non hanno `tests/` propri; vengono testati tramite moduli Cms e Meetup.
-
-- [Testing](./testing.md) — relazione tema/moduli, comandi Pest
-- [Database Testing Configuration](./database-testing-configuration.md) — **CRITICAL**: `.env.testing` copy carbon
 
 ### Database Testing Configuration (CRITICAL)
 
@@ -357,6 +354,6 @@ For issues and questions:
 
 ---
 
-**
+**Last Updated**: [DATE]
 **Version**: 1.0.0
 **Maintainer**: Laravel Pizza Team

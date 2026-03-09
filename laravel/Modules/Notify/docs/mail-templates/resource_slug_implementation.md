@@ -2,7 +2,11 @@
 
 ## Panoramica
 
-Questo documento descrive l'implementazione del campo `slug` nella risorsa Filament `MailTemplateResource`, rispettando le convenzioni e gli standard del progetto Laraxot. (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+Questo documento descrive l'implementazione del campo `slug` nella risorsa Filament `MailTemplateResource`, rispettando le convenzioni e gli standard del progetto Laraxot.
+=======
+Questo documento descrive l'implementazione del campo `slug` nella risorsa Filament `MailTemplateResource`, rispettando le convenzioni e gli standard del progetto healthcare_app.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Implementazione nel Form Schema
 
@@ -42,7 +46,11 @@ public static function getFormSchema(): array
 3. **Validazione Unicità**: L'opzione `unique(ignoreRecord: true)` garantisce unicità, escludendo il record corrente durante l'aggiornamento.
 4. **Generazione Automatica**: La callback `afterStateUpdated()` genera automaticamente lo slug dal nome quando si crea un nuovo record.
 
-## Conformità con gli Standard Laraxot (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+## Conformità con gli Standard Laraxot
+=======
+## Conformità con gli Standard healthcare_app
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 Questa implementazione aderisce a diversi standard chiave del progetto:
 

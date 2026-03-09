@@ -34,7 +34,7 @@ protected static string $resourceClass = AppointmentResource::class;
 
 ## File Modificati
 
-- `laravel/Modules/<nome progetto>/app/Filament/Resources/ClientResource/RelationManagers/AppointmentsRelationManager.php`
+- `laravel/Modules/TechPlanner/app/Filament/Resources/ClientResource/RelationManagers/AppointmentsRelationManager.php`
 
 ## Verifica Soluzione
 

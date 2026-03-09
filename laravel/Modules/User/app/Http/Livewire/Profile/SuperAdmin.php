@@ -19,15 +19,15 @@ class SuperAdmin extends Component
 
     public function mount(): void
     {
-        $profile = XotData::make();
-        $url = url();
+        $this->profile = XotData::make()->getProfileModel();
+        $this->url = url()->current();
     }
 
     public function toggleSuperAdmin(): RedirectResponse|Redirector
     {
-        $profile->toggleSuperAdmin();
+        $this->profile->toggleSuperAdmin();
 
-        return redirect($url, 303);
+        return redirect($this->url, 303);
     }
 
     public function render(): View

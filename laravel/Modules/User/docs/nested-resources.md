@@ -195,7 +195,15 @@ Following the documented approach in `Modules/UI/docs/filament/nested-resource.m
 - Role-based access to specific nested resources
 
 ### 2. Cross-module User Integration
+<<<<<<< .merge_file_MBu4tA
 - Enable nested resources that span multiple modules (User-healthcare_app, User-Notify)
+=======
+<<<<<<< HEAD
+- Enable nested resources that span multiple modules (User-ExternalProject, User-Notify)
+=======
+- Enable nested resources that span multiple modules (User-ModuloEsempio, User-Notify)
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_tDYlRr
 - Implement cross-module relationship management
 
 ### 3. Advanced User Analytics

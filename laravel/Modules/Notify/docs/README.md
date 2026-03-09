@@ -52,7 +52,7 @@ $user->notify($notify);
 
 ---
 
-**🔄 
+**🔄 Ultimo aggiornamento**: 31 Gennaio 2026
 **📦 Versione**: 2.1.0
 **✅ PHPStan level 10**: Compliance verificata
 

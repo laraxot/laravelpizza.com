@@ -15,7 +15,7 @@ return [
         'slug' => [
             'label' => 'Slug',
             'placeholder' => 'testo-per-url',
-            'help' => 'Versione dell\'URL del titolo (solo lettere minuscole, trattini e numeri]'),
+            'help' => 'Versione dell\'URL del titolo (solo lettere minuscole, trattini e numeri]',
             'helper_text' => 'URL SEO-friendly generato automaticamente dal titolo',
             'tooltip' => '',
             'description' => '',
@@ -162,7 +162,7 @@ return [
         'url' => [
             'label' => 'URL',
             'placeholder' => 'https://esempio.com',
-            'help' => 'Inserisci un URL valido (inizia con http:// o https://]'),
+            'help' => 'Inserisci un URL valido (inizia con http:// o https://]',
             'helper_text' => 'Indirizzo web completo di destinazione',
             'tooltip' => '',
             'description' => '',
@@ -170,7 +170,7 @@ return [
         'target' => [
             'label' => 'Destinazione',
             'placeholder' => '_blank, _self, _parent, _top',
-            'helper_text' => 'Come aprire il collegamento (stessa finestra o nuova]'),
+            'helper_text' => 'Come aprire il collegamento (stessa finestra o nuova]',
             'tooltip' => '',
             'description' => '',
         ],
@@ -198,7 +198,7 @@ return [
         ],
         'level' => [
             'label' => 'Livello',
-            'placeholder' => 'Livello gerarchico (1-6]'),
+            'placeholder' => 'Livello gerarchico (1-6]',
             'helper_text' => 'Livello di importanza nella gerarchia del contenuto',
             'tooltip' => '',
             'description' => '',
@@ -373,7 +373,7 @@ return [
         'background' => [
             'label' => 'Sfondo',
             'placeholder' => 'Immagine o colore di sfondo',
-            'helper_text' => 'Sfondo della sezione (immagine, colore o gradiente]'),
+            'helper_text' => 'Sfondo della sezione (immagine, colore o gradiente]',
             'tooltip' => '',
             'description' => '',
         ],
@@ -525,8 +525,8 @@ return [
         'image_size' => 'L\'immagine deve essere inferiore a 5MB',
         'video_format' => 'Formato video non supportato',
         'required_field' => 'Questo campo è obbligatorio',
-        'max_length' => 'Il testo è troppo lungo (massimo :max caratteri]'),
-        'min_length' => 'Il testo è troppo corto (minimo :min caratteri]',)
+        'max_length' => 'Il testo è troppo lungo (massimo :max caratteri]',
+        'min_length' => 'Il testo è troppo corto (minimo :min caratteri]',
     ],
     'label' => 'Txt',
     'plural_label' => 'Txt (Plurale)',

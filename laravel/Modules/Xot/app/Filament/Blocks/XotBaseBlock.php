@@ -19,7 +19,7 @@ abstract class XotBaseBlock
         /** @var array<Component> $schema */
         $schema = array_merge(static::getBlockSchema(), static::getBlockVarSchema());
 
-        return Block::make($name)->schema($schema)->columns('form' === $context ? 3 : 1);
+        return Block::make($name)->schema($schema)->columns($context === 'form' ? 3 : 1);
     }
 
     /**

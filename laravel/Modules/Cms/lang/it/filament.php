@@ -36,7 +36,7 @@ return [
                         'fields' => [
                             'label' => 'Etichetta Link',
                             'url' => 'URL',
-                            'icon' => 'Icona (opzionale]',)
+                            'icon' => 'Icona (opzionale]',
                         ],
                     ],
                 ],

@@ -67,7 +67,7 @@ class UsersChartWidget extends ChartWidget implements HasActions, HasForms
 
         try {
             // Type narrowing for PHPStan Level 10
-            $pageFilters = isset($pageFilters);
+            $pageFilters = isset($this->pageFilters) && is_array($this->pageFilters) ? $this->pageFilters : null;
 
             $startDateValue = is_array($pageFilters) && isset($pageFilters['startDate']) ? $pageFilters['startDate'] : null;
             $endDateValue = is_array($pageFilters) && isset($pageFilters['endDate']) ? $pageFilters['endDate'] : null;

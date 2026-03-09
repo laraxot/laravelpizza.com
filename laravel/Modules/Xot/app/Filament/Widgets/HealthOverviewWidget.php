@@ -27,7 +27,7 @@ class HealthOverviewWidget extends BaseWidget
         $stats = [];
 
         $checkResults = app(ResultStore::class)->latestResults();
-        if (null === $checkResults) {
+        if ($checkResults === null) {
             return $stats;
         }
         foreach ($checkResults->storedCheckResults as $result) {
@@ -36,7 +36,7 @@ class HealthOverviewWidget extends BaseWidget
             $stats[] = Stat::make($label, $value)
                 ->description($result->notificationMessage.' '.$result->status)
                 // ->descriptionIcon('heroicon-m-arrow-trending-up')
-                ->color($iconColor($result->status));
+                ->color($this->iconColor($result->status));
         }
 
         /*

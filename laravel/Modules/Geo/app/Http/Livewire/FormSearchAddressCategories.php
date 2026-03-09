@@ -50,11 +50,11 @@ class FormSearchAddressCategories extends Component
      */
     public function mount(SessionManager $sessionManager): void
     {
-        $session = $sessionManager;
-        // $attributes = $attributes;
-        // $slot = $slot;
-        $form_data[$this->name] = json_encode((object));
-        $form_data[$this->name.'_value'] = null;
+        $this->session = $sessionManager;
+        // $this->attributes = $attributes;
+        // $this->slot = $slot;
+        $this->form_data[$this->name] = json_encode((object) [], JSON_THROW_ON_ERROR);
+        $this->form_data[$this->name.'_value'] = null;
     }
 
     /**
@@ -78,37 +78,38 @@ class FormSearchAddressCategories extends Component
      */
     public function search(): void
     {
-        $warningSuggestedAddresses = false;
-        $warningCivicNumber = false;
-        $showActivityTypes = false;
+        $this->warningSuggestedAddresses = false;
+        $this->warningCivicNumber = false;
+        $this->showActivityTypes = false;
 
-        if (! isset($form_data['latlng']))
-            $warningSuggestedAddresses = true;
-
-            return;
-        }
-
-        if (! isset($form_data['street_number']))
-            $warningCivicNumber = true;
+        if (! isset($this->form_data['latlng'])) {
+            $this->warningSuggestedAddresses = true;
 
             return;
         }
 
-        // $enabledTypes = ActionService::getShopsCatsByCityLatLng($city, $lat, $lng);
-        $enabledTypes = collect([]);
-
-        if ($enabledTypes->isEmpty($dispatch('openModalNotServed')));
+        if (! isset($this->form_data['street_number'])) {
+            $this->warningCivicNumber = true;
 
             return;
         }
 
-        $showActivityTypes = true;
+        // $this->enabledTypes = ActionService::getShopsCatsByCityLatLng($city, $lat, $lng);
+        $this->enabledTypes = collect([]);
 
-        // session()->put('address', $form_data['value']);
+        if ($this->enabledTypes->isEmpty()) {
+            $this->dispatch('openModalNotServed');
+
+            return;
+        }
+
+        $this->showActivityTypes = true;
+
+        // session()->put('address', $this->form_data['value']);
         // forse meglio portarmi tutto per utilizzarlo poi nella gestione checkout
         // Cannot call method put() on mixed
-        // session()->put('address', $form_data);
-        $session->put('address', $this->form_data);
+        // session()->put('address', $this->form_data);
+        $this->session->put('address', $this->form_data);
     }
 
     /**
@@ -116,14 +117,14 @@ class FormSearchAddressCategories extends Component
      */
     public function formatAddress(): string
     {
-        $data = (object) $form_data;
+        $data = (object) $this->form_data;
 
         if (! isset($data->street_number)) {
             $data->street_number = '';
-            $warningCivicNumber = true;
+            $this->warningCivicNumber = true;
         }
 
-        return collect([)
+        return collect([
             $data->route ?? '',
             $data->street_number ?? '',
             $data->locality ?? '',
@@ -136,21 +137,21 @@ class FormSearchAddressCategories extends Component
      */
     public function placeChanged(string $val0, string $val1): void
     {
-        $warningSuggestedAddresses = false;
-        $warningCivicNumber = false;
-        $showActivityTypes = false;
+        $this->warningSuggestedAddresses = false;
+        $this->warningCivicNumber = false;
+        $this->showActivityTypes = false;
 
         $data = json_decode($val0, true, 512, JSON_THROW_ON_ERROR);
         if (! \is_array($data)) {
             $data = [];
         }
-        $form_data = array_merge($this->form_data, $data);
-        $form_data[$this->name] = $val0;
-        $form_data[$this->name.'_value'] = $val1;
+        $this->form_data = array_merge($this->form_data, $data);
+        $this->form_data[$this->name] = $val0;
+        $this->form_data[$this->name.'_value'] = $val1;
 
         if (\strlen($val1) < 4) {
             $val2 = $this->formatAddress();
-            $form_data[$this->name.'_value'] = $val2;
+            $this->form_data[$this->name.'_value'] = $val2;
         }
     }
 
@@ -159,29 +160,29 @@ class FormSearchAddressCategories extends Component
      */
     public function saveNotServed(): void
     {
-        $this->validate([)
+        $this->validate([
             'email' => 'required|email|unique:not_served',
             'cap' => 'required|not_regex:/[a-z]/i|min:5|max:5',
         ]);
         /*
          *
          *
-         * //dddx([$email, filter_var($this->email, FILTER_VALIDATE_EMAIL));
+         * //dddx([$this->email, filter_var($this->email, FILTER_VALIDATE_EMAIL)]);
          * //sembra andare bene
          *
-         * if (false == filter_var($email, FILTER_VALIDATE_EMAIL))
+         * if (false == filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
          * //$this->dispatch('closeModalNotServed');
          * //$this->dispatch('openModalWrongEmailCap');
-         * $messageError = true;
+         * $this->messageError = true;
          * dddx('mail non valida');
          *
          * return;
          * }
          *
-         * //dddx([$cap, preg_match('/[a-z]/i', $this->cap));
+         * //dddx([$this->cap, preg_match('/[a-z]/i', $this->cap)]);
          *
-         * if (preg_match('/[a-z]/i', $cap))
-         * $messageError = true;
+         * if (preg_match('/[a-z]/i', $this->cap)) {
+         * $this->messageError = true;
          * dddx('it has alphabet!');
          * //$this->dispatch('closeModalNotServed');
          * //$this->dispatch('openModalWrongEmailCap');
@@ -193,14 +194,14 @@ class FormSearchAddressCategories extends Component
         $model = xotModel('not_served');
         /*
          * $not_served = new $not_served();
-         * $not_served->cap = $cap;
-         * $not_served->email = $email;
+         * $not_served->cap = $this->cap;
+         * $not_served->email = $this->email;
          * // $not_served->creation_date =
          * $not_served->save();
          */
         $data = [
-            'cap' => $cap,
-            'email' => $email,
+            'cap' => $this->cap,
+            'email' => $this->email,
         ];
         $model->create($data);
         // $this->dispatch('openWrongEmailCap');

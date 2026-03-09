@@ -16,7 +16,7 @@ return new class extends XotBaseMigration {
     {
         // -- CREATE --
 
-        $this->tableCreate()
+        $this->tableCreate(
             function (Blueprint $table): void {
                 $table->uuid('id')->primary();
                 $table->uuid('treatment_id');
@@ -30,26 +30,26 @@ return new class extends XotBaseMigration {
         );
 
         // -- UPDATE --
-        $this->tableUpdate()
+        $this->tableUpdate(
             function (Blueprint $table): void {
-                if (! $this->hasColumn('user_id'))
+                if (! $this->hasColumn('user_id')) {
                     $table->morphs('user');
                 }
-                if (! $this->hasColumn('type'))
+                if (! $this->hasColumn('type')) {
                     $table->string('type')->nullable();
                 }
 
-                if (! $this->hasColumn('accepted_at'))
+                if (! $this->hasColumn('accepted_at')) {
                     $table->timestamp('accepted_at')->nullable();
                 }
-                if (! $this->hasColumn('ip_address'))
+                if (! $this->hasColumn('ip_address')) {
                     $table->string('ip_address', 45)->nullable();
                 }
-                if (! $this->hasColumn('user_agent'))
+                if (! $this->hasColumn('user_agent')) {
                     $table->string('user_agent')->nullable();
                 }
                 // -- Change --
-                if ($hasColumn('user_id'))
+                if ($this->hasColumn('user_id')) {
                     $table->string('user_id')->nullable()->change();
                 }
                 $table->uuid('treatment_id')->nullable()->change();

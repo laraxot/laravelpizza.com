@@ -37,7 +37,7 @@ declare(strict_types=1);
 
                                 @foreach ($columns as $column)
                                     <th
-                                        class="align-middle text-nowrap border-top-0 {{ $this->thClass($column->attribute
+                                        class="align-middle text-nowrap border-top-0 {{ $this->thClass($column->attribute) }}">
                                         @if ($column->sortable)
                                             <span style="cursor: pointer;"
                                                 wire:click="sort('{{ $column->attribute }}')">
@@ -64,14 +64,14 @@ declare(strict_types=1);
                         </thead>
                         <tbody>
                             @foreach ($models as $model)
-                                <tr class="{{ $this->trClass($model
+                                <tr class="{{ $this->trClass($model) }}">
                                     @if ($checkbox && $checkbox_side == 'left')
                                         @include($view.'.checkbox-row')
                                     @endif
 
                                     @foreach ($columns as $column)
                                         <td
-                                            class="align-middle {{ $this->tdClass($column->attribute, $value = Arr::get($model->toArray(
+                                            class="align-middle {{ $this->tdClass($column->attribute, $value = Arr::get($model->toArray(), $column->attribute)) }}">
                                             @if ($column->view)
                                                 @include($column->view)
                                             @else
@@ -87,7 +87,7 @@ declare(strict_types=1);
                                     @endforeach
                                     <td>
                                         {!! Panel::make()->get($model)
-                                        ->setParent($panel->getParent(
+                                        ->setParent($this->panel->getParent())
                                         ->btnCrud() !!}
                                     </td>
 

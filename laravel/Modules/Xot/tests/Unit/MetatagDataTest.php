@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Filament\Support\Colors\Color;
 use Modules\Xot\Datas\MetatagData;
 
-/*
+/**
  * Test che la classe MetatagData possa essere istanziata correttamente.
  * Questo test verifica che la classe possa essere istanziata senza errori.
  */
@@ -14,7 +14,7 @@ test('MetatagData può essere istanziata', function () {
     expect($metatagData)->toBeInstanceOf(MetatagData::class);
 });
 
-/*
+/**
  * Test che il metodo getFilamentColors() restituisca i colori corretti.
  * Questo test verifica che il metodo getFilamentColors() restituisca un array
  * con i colori Filament corretti.
@@ -33,7 +33,7 @@ test('getFilamentColors restituisce i colori Filament corretti', function () {
         ->toBe(Color::Amber);
 });
 
-/*
+/**
  * Test che il metodo getColors() gestisca correttamente i colori personalizzati.
  * Questo test verifica che il metodo getColors() gestisca correttamente i colori
  * personalizzati quando l'array colors contiene valori personalizzati.
@@ -57,7 +57,7 @@ test('getColors gestisce correttamente i colori personalizzati', function () {
     expect($colors)->toBeArray()->and($colors)->toHaveKey('custom_color')->and($colors)->toHaveKey('primary');
 });
 
-/*
+/**
  * Test che il metodo getLogoHeight() restituisca il valore corretto.
  * Questo test verifica che il metodo getLogoHeight() restituisca il valore
  * della proprietà logo_height.
@@ -69,7 +69,7 @@ test('getLogoHeight restituisce il valore corretto', function () {
     expect($metatagData->getLogoHeight())->toBe('3em');
 });
 
-/*
+/**
  * Test che le proprietà della classe abbiano i valori di default corretti.
  * Questo test verifica che le proprietà della classe abbiano i valori di default
  * corretti quando viene istanziata la classe.

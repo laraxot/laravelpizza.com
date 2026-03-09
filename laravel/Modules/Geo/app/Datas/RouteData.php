@@ -21,7 +21,7 @@ class RouteData extends Data
      *     instructions: string
      * }> $steps
      */
-    public function __construct()
+    public function __construct(
         public readonly Collection $waypoints,
         public readonly Collection $originalWaypoints,
         public readonly int $totalDistance,
@@ -35,11 +35,11 @@ class RouteData extends Data
      */
     public function getFormattedDistance(): string
     {
-        if ($totalDistance < 1000)
-            return sprintf('%d m', $totalDistance);
+        if ($this->totalDistance < 1000) {
+            return sprintf('%d m', $this->totalDistance);
         }
 
-        return sprintf('%.1f km', $totalDistance / 1000);
+        return sprintf('%.1f km', $this->totalDistance / 1000);
     }
 
     /**
@@ -47,8 +47,8 @@ class RouteData extends Data
      */
     public function getFormattedDuration(): string
     {
-        $hours = floor($totalDuration / 3600);
-        $minutes = floor(($totalDuration % 3600));
+        $hours = floor($this->totalDuration / 3600);
+        $minutes = floor(($this->totalDuration % 3600) / 60);
 
         if ($hours > 0) {
             return sprintf('%d ore %d min', $hours, $minutes);
@@ -62,9 +62,9 @@ class RouteData extends Data
      *
      * public function isOptimized(): bool
      * {
-     * return ! $waypoints->isEmpty()
-     * && $waypoints->count()
-     * && ! $waypoints->zip($this->originalWaypoints)
+     * return ! $this->waypoints->isEmpty() && ! $this->originalWaypoints->isEmpty()
+     * && $this->waypoints->count() === $this->originalWaypoints->count()
+     * && ! $this->waypoints->zip($this->originalWaypoints)->every(
      * fn (array $pair): bool => $pair[0]->equals($pair[1])
      * );
      * }
@@ -82,11 +82,11 @@ class RouteData extends Data
     public function getSummary(): array
     {
         return [
-            'distance' => $this->getFormattedDistance()
-            'duration' => $this->getFormattedDuration()
-            'steps' => count($steps)
-            'waypoints' => $waypoints->count()
-            // 'optimized' => $this->isOptimized()
+            'distance' => $this->getFormattedDistance(),
+            'duration' => $this->getFormattedDuration(),
+            'steps' => count($this->steps),
+            'waypoints' => $this->waypoints->count(),
+            // 'optimized' => $this->isOptimized(),
         ];
     }
 

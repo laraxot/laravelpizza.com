@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\View;
 use Modules\Xot\Console\Commands\GenerateFilamentResources;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\View\Composers\XotComposer;
+use Override;
 use Webmozart\Assert\Assert;
 
 /**
@@ -36,7 +37,7 @@ class XotServiceProvider extends XotBaseServiceProvider
 
     protected string $module_ns = __NAMESPACE__;
 
-    #[\Override]
+    #[Override]
     public function boot(): void
     {
         parent::boot();
@@ -50,7 +51,7 @@ class XotServiceProvider extends XotBaseServiceProvider
         $this->registerProviders();
     }
 
-    #[\Override]
+    #[Override]
     public function register(): void
     {
         parent::register();
@@ -63,7 +64,7 @@ class XotServiceProvider extends XotBaseServiceProvider
 
     public function registerProviders(): void
     {
-        // $app->register(Filament\ModulesServiceProvider::class);
+        // $this->app->register(Filament\ModulesServiceProvider::class);
     }
 
     public function registerTimezone(): void
@@ -96,7 +97,7 @@ class XotServiceProvider extends XotBaseServiceProvider
         // TODO: Re-implement when compatible with current Filament version
         /*
         TextInput::macro('generateSlug', function () {
-            $this->live(onBlur: true
+            $this->live(onBlur: true)->afterStateUpdated(function (string $operation, string $state, Set $set): void {
                 if ($operation === 'create') {
                     return;
                 }
@@ -112,7 +113,7 @@ class XotServiceProvider extends XotBaseServiceProvider
      * --  guardare come fa sentry
      * public function registerExceptionHandler(): void
      * {
-     * $exceptionHandler = $app->make(ExceptionHandler::class);
+     * $exceptionHandler = $this->app->make(ExceptionHandler::class);
      * if ($exceptionHandler instanceof HandlerDecorator) {
      * $exceptionHandler->reporter(
      * static function (\Throwable $e): void {
@@ -132,7 +133,7 @@ class XotServiceProvider extends XotBaseServiceProvider
      * }
      */
 
-    #[\Override]
+    #[Override]
     public function registerConfig(): void
     {
         // $config_file = realpath(__DIR__.'/../config/metatag.php');
@@ -143,12 +144,12 @@ class XotServiceProvider extends XotBaseServiceProvider
     {
         $files = File::files($path);
         foreach ($files as $file) {
-            if ('php' !== $file->getExtension()) {
+            if ($file->getExtension() !== 'php') {
                 continue;
             }
 
             $realPath = $file->getRealPath();
-            if (false === $realPath) {
+            if ($realPath === false) {
                 continue;
             }
 
@@ -185,7 +186,7 @@ class XotServiceProvider extends XotBaseServiceProvider
      * -- guardare come fa sentry
      * private function registerExceptionHandlersRepository(): void
      * {
-     * $app->singleton(HandlersRepository::class, HandlersRepository::class);
+     * $this->app->singleton(HandlersRepository::class, HandlersRepository::class);
      * }
      */
     /*
@@ -195,7 +196,7 @@ class XotServiceProvider extends XotBaseServiceProvider
      * -- guardare come fa sentry
      * private function extendExceptionHandler(): void
      * {
-     * $app->extend(
+     * $this->app->extend(
      * ExceptionHandler::class,
      * static function (ExceptionHandler $handler, $app) {
      * return new HandlerDecorator($handler, $app[HandlersRepository::class]);

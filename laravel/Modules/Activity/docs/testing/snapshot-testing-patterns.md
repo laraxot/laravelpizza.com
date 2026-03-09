@@ -259,4 +259,4 @@ test('can reconstruct aggregate from snapshots', function () {
 
 **Pattern**: Manual Cleanup con UUID Isolation
 **Status**: ✅ STANDARD PROGETTO
-**
+**Ultimo aggiornamento**: 27 Ottobre 2025

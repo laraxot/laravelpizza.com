@@ -33,7 +33,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
     {
         parent::boot();
         // 36     Cannot access offset 'router' on Illuminate\Contracts\Foundation\Application
-        // $router = // Placeholder purged app['router'];
+        // $router = $this->app['router'];
         $router = app('router');
 
         // Ensure router is of correct type

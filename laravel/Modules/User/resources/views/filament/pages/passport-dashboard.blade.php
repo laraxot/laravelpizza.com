@@ -1,6 +1,6 @@
 <x-filament::page>
-    <div class="space-y-6" wire:poll.visible="{{ $isRunning ? '100' : '1000' }}">
-        @if($isRunning
+    <div class="space-y-6" wire:poll.visible="{{ $this->isRunning ? '100' : '1000' }}">
+        @if($this->isRunning)
             <div class="text-sm text-gray-500 bg-gray-50 p-2 rounded-lg border border-gray-200">
                 The command is running. Please do not close this window.
                 <br>
@@ -43,19 +43,19 @@
             }"
             class="bg-gray-900 text-gray-100 font-mono p-4 rounded-lg overflow-auto max-h-96 relative"
         >
-            @if(filled($currentCommand
+            @if(filled($this->currentCommand))
                 <div class="flex items-center justify-between mb-4 sticky top-0 bg-gray-900 py-2 border-b border-gray-700">
-                    <h3 class="text-lg font-medium">Running command: php artisan {{ $currentCommand }}</h3>
+                    <h3 class="text-lg font-medium">Running command: php artisan {{ $this->currentCommand }}</h3>
                     <div>
-                        @if($status === 'completed'
+                        @if($this->status === 'completed')
                             <x-filament::badge color="success">
                                 Completed
                             </x-filament::badge>
-                        @elseif($status === 'failed'
+                        @elseif($this->status === 'failed')
                             <x-filament::badge color="danger">
                                 Failed
                             </x-filament::badge>
-                        @elseif($isRunning
+                        @elseif($this->isRunning)
                             <div class="flex items-center space-x-2">
                                 <x-filament::loading-indicator class="h-5 w-5" />
                                 <span class="text-sm">Running...</span>
@@ -63,12 +63,12 @@
                         @endif
                     </div>
                 </div>
-                @if(empty($output
+                @if(empty($this->output))
                     <div class="text-gray-400">
                         Waiting for output...
                     </div>
                 @else
-                    @foreach($output as $line
+                    @foreach($this->output as $line)
                         @if(str_starts_with($line, '[ERROR]'))
                             <div class="whitespace-pre-wrap text-red-400 font-bold">{{ $line }}</div>
                         @else
@@ -83,7 +83,7 @@
             @endif
         </div>
 
-        @if(!empty($output
+        @if(!empty($this->output))
             <div class="text-xs text-gray-500 text-right">
                 Use mouse wheel to scroll output.
             </div>

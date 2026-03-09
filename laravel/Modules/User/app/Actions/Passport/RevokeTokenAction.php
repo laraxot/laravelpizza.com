@@ -32,7 +32,7 @@ class RevokeTokenAction
     public function execute(OauthToken|string $token): bool
     {
         if (is_string($token)) {
-            $token = $oauthTokenModel->find($token);
+            $token = $this->oauthTokenModel->find($token);
         }
 
         if (! $token instanceof OauthToken) {

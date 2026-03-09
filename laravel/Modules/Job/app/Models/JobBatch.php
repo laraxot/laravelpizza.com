@@ -33,7 +33,6 @@ use Override;
  * @property Carbon|null $finished_at
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
- *
  * @method static JobBatchFactory factory($count = null, $state = [])
  * @method static Builder<static>|JobBatch newModelQuery()
  * @method static Builder<static>|JobBatch newQuery()
@@ -48,9 +47,7 @@ use Override;
  * @method static Builder<static>|JobBatch whereOptions($value)
  * @method static Builder<static>|JobBatch wherePendingJobs($value)
  * @method static Builder<static>|JobBatch whereTotalJobs($value)
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class JobBatch extends BaseModel
@@ -81,8 +78,8 @@ class JobBatch extends BaseModel
      */
     public function processedJobs(): int|float
     {
-        $totalJobs = (int) ($attributes['total_jobs'] ?? 0);
-        $pendingJobs = (int) ($attributes['pending_jobs'] ?? 0);
+        $totalJobs = (int) ($this->attributes['total_jobs'] ?? 0);
+        $pendingJobs = (int) ($this->attributes['pending_jobs'] ?? 0);
 
         return $totalJobs - $pendingJobs;
     }
@@ -92,8 +89,8 @@ class JobBatch extends BaseModel
      */
     public function progress(): int
     {
-        $totalJobs = (int) ($attributes['total_jobs'] ?? 0);
-        $progress = $totalJobs > 0 ? round($processedJobs());
+        $totalJobs = (int) ($this->attributes['total_jobs'] ?? 0);
+        $progress = $totalJobs > 0 ? round($this->processedJobs() / $totalJobs * 100) : 0;
 
         return (int) $progress;
     }
@@ -103,7 +100,7 @@ class JobBatch extends BaseModel
      */
     public function hasPendingJobs(): bool
     {
-        $pendingJobs = (int) ($attributes['pending_jobs'] ?? 0);
+        $pendingJobs = (int) ($this->attributes['pending_jobs'] ?? 0);
 
         return $pendingJobs > 0;
     }
@@ -113,7 +110,7 @@ class JobBatch extends BaseModel
      */
     public function finished(): bool
     {
-        $finishedAt = $attributes['finished_at'] ?? null;
+        $finishedAt = $this->attributes['finished_at'] ?? null;
 
         return $finishedAt instanceof Carbon;
     }
@@ -123,7 +120,7 @@ class JobBatch extends BaseModel
      */
     public function hasFailures(): bool
     {
-        $failedJobs = (int) ($attributes['failed_jobs'] ?? 0);
+        $failedJobs = (int) ($this->attributes['failed_jobs'] ?? 0);
 
         return $failedJobs > 0;
     }
@@ -133,8 +130,8 @@ class JobBatch extends BaseModel
      */
     public function failed(): bool
     {
-        $failedJobs = (int) ($attributes['failed_jobs'] ?? 0);
-        $totalJobs = (int) ($attributes['total_jobs'] ?? 0);
+        $failedJobs = (int) ($this->attributes['failed_jobs'] ?? 0);
+        $totalJobs = (int) ($this->attributes['total_jobs'] ?? 0);
 
         return $failedJobs === $totalJobs;
     }
@@ -144,7 +141,7 @@ class JobBatch extends BaseModel
      */
     public function cancelled(): bool
     {
-        $cancelledAt = $attributes['cancelled_at'] ?? null;
+        $cancelledAt = $this->attributes['cancelled_at'] ?? null;
 
         return $cancelledAt instanceof Carbon;
     }

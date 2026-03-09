@@ -20,7 +20,7 @@ abstract class XotBaseFormComponent extends Field
     {
         parent::setUp();
 
-        $this->dehydrated(true);
+        $this->dehydrated(true)->required(false);
     }
 
     public function getName(): string
@@ -35,8 +35,8 @@ abstract class XotBaseFormComponent extends Field
     {
         $label = parent::getLabel();
 
-        if (null === $label) {
-            return Str::title($getName());
+        if ($label === null) {
+            return Str::title($this->getName());
         }
 
         if ($label instanceof Htmlable) {
@@ -51,9 +51,7 @@ abstract class XotBaseFormComponent extends Field
      */
     public function getValidationRules(): array
     {
-        /** @var array<string, mixed> $rules */
-        $rules = parent::getValidationRules();
-
-        return $rules;
+        /** @var array<string, mixed> */
+        return parent::getValidationRules();
     }
 }

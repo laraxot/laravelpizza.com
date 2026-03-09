@@ -20,11 +20,11 @@ Il file `.env.testing` deve essere una copia esatta del `.env` con **una sola mo
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=<nome progetto>_data
+DB_DATABASE=laravelpizza_data
 DB_USERNAME=marco
 DB_PASSWORD=marco
 
-DB_DATABASE_USER=<nome progetto>_user
+DB_DATABASE_USER=laravelpizza_user
 DB_USERNAME_USER=marco
 DB_PASSWORD_USER=marco
 ```
@@ -34,11 +34,11 @@ DB_PASSWORD_USER=marco
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=<nome progetto>_data_test
+DB_DATABASE=laravelpizza_data_test
 DB_USERNAME=marco
 DB_PASSWORD=marco
 
-DB_DATABASE_USER=<nome progetto>_user_test
+DB_DATABASE_USER=laravelpizza_user_test
 DB_USERNAME_USER=marco
 DB_PASSWORD_USER=marco
 ```
@@ -46,15 +46,15 @@ DB_PASSWORD_USER=marco
 ### ❌ MAI FARE QUESTO (ERRORI GRAVI)
 ```bash
 # ❌ SBAGLIATO - Inventare database che NON esistono nel .env
-NOTIFY_DB_DATABASE=<nome progetto>_data_test
-GEO_DB_DATABASE=<nome progetto>_data_test
-MEDIA_DB_DATABASE=<nome progetto>_data_test
+NOTIFY_DB_DATABASE=laravelpizza_data_test
+GEO_DB_DATABASE=laravelpizza_data_test
+MEDIA_DB_DATABASE=laravelpizza_data_test
 
 # ❌ SBAGLIATO - Cambiare struttura connessioni
 DB_CONNECTION=user
 
 # ❌ SBAGLIATO - Usare database diversi da quelli nel .env
-DB_DATABASE=<nome progetto>_notify_test
+DB_DATABASE=laravelpizza_notify_test
 ```
 
 ### ❌ REGOLA CRITICA: config/database.php
@@ -67,12 +67,12 @@ Le connessioni per i moduli (notify, geo, media, etc.) vengono create **automati
 // ❌ SBAGLIATO - Non fare mai questo nel database.php
 'notify' => [
     'driver' => 'mysql',
-    'database' => env('NOTIFY_DB_DATABASE', '<nome progetto>_notify_test'),
+    'database' => env('NOTIFY_DB_DATABASE', 'laravelpizza_notify_test'),
     ...
 ],
 'geo' => [
     'driver' => 'mysql',
-    'database' => env('GEO_DB_DATABASE', '<nome progetto>_geo_test'),
+    'database' => env('GEO_DB_DATABASE', 'laravelpizza_geo_test'),
     ...
 ],
 
@@ -97,7 +97,11 @@ $dbName = 'file:memdb_test_'.Str::random(10).'?mode=memory&cache=shared';
 // ✅ CORRETTO - Usa sempre MySQL da .env.testing
 // Il file .env.testing definisce:
 // DB_CONNECTION=mysql
-// DB_DATABASE=<nome progetto>_data_test  (suffisso "_test" obbligatorio)
+<<<<<<< .merge_file_5rb7Qb
+// DB_DATABASE=healthcare_app_data_test  (suffisso "_test" obbligatorio)
+=======
+// DB_DATABASE=ptvx_data_test  (suffisso "_test" obbligatorio)
+>>>>>>> .merge_file_3atUlv
 // DB_HOST=127.0.0.1
 // DB_PORT=3306
 
@@ -108,31 +112,17 @@ $dbName = 'file:memdb_test_'.Str::random(10).'?mode=memory&cache=shared';
 ### 3. Pattern Database Test
 ```bash
 # Schema: {nome_database_produzione}_test
-PRODUZIONE: <nome progetto>_data    → TEST: <nome progetto>_data_test
-PRODUZIONE: <nome progetto>_user    → TEST: <nome progetto>_user_test
+<<<<<<< .merge_file_5rb7Qb
+PRODUZIONE: healthcare_app_data    → TEST: healthcare_app_data_test
+PRODUZIONE: healthcare_app_user    → TEST: healthcare_app_user_test  
+PRODUZIONE: healthcare_app_survey  → TEST: healthcare_app_survey_test
+=======
+PRODUZIONE: ptvx_data    → TEST: ptvx_data_test
+PRODUZIONE: ptvx_user    → TEST: ptvx_user_test  
+PRODUZIONE: ptvx_survey  → TEST: ptvx_survey_test
+>>>>>>> .merge_file_3atUlv
 
 # Pattern: {nome}_test - SEMPRE e SOLO _test
-```
-
-### 4. ❌ Vietato: Logica di connessione dentro i Model
-
-```php
-// ❌ SBAGLIATO - Non mettere mai env() / app()->environment() nei Model
-class Activity extends SpatieActivity
-{
-    // ❌ Cambiare connessione in base all'ambiente rompe TenantServiceProvider
-    public function __construct(array $attributes = [])
-    {
-        parent::__construct($attributes);
-
-        if (app()->environment('testing')) {
-            $this->connection = config('database.default');
-        }
-    }
-}
-
-// ✅ CORRETTO - La connessione si configura nei file di config/env
-// config/activitylog.php + ACTIVITY_LOGGER_DB_CONNECTION in phpunit.xml / .env(.testing)
 ```
 
 ## Configurazione .env.testing
@@ -144,7 +134,11 @@ APP_DEBUG=true
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=<nome progetto>_data_test          # Suffisso "_test" obbligatorio
+<<<<<<< .merge_file_5rb7Qb
+DB_DATABASE=healthcare_app_data_test          # Suffisso "_test" obbligatorio
+=======
+DB_DATABASE=ptvx_data_test          # Suffisso "_test" obbligatorio
+>>>>>>> .merge_file_3atUlv
 DB_USERNAME=marco
 DB_PASSWORD=marco
 
@@ -205,25 +199,6 @@ abstract class TestCase extends BaseTestCase
 > ```
 > Questo crea tutte le tabelle una volta sola. `DatabaseTransactions` gestisce il rollback tra i test.
 
-## CreatesApplication - Caricamento .env.testing Obbligatorio
-
-**Problema**: Laravel può caricare `.env` invece di `.env.testing` a seconda dell'ordine di bootstrap. Se `env('DB_DATABASE')` restituisce il valore di produzione, `TenantServiceProvider` crea le connessioni modulo (activity, user, ecc.) puntando al DB di produzione. I test falliscono con `Table '<nome progetto>_data.activity_log' doesn't exist` perché cercano nel DB sbagliato.
-
-**Soluzione**: Il trait `CreatesApplication` (Modules/Xot/tests/CreatesApplication.php) carica esplicitamente `.env.testing` PRIMA del bootstrap dell'app:
-
-```php
-// CRITICAL: Load .env.testing BEFORE app bootstrap
-$envTesting = $basePath.'/.env.testing';
-if (file_exists($envTesting)) {
-    $dotenv = \Dotenv\Dotenv::createImmutable($basePath, '.env.testing', true);
-    $dotenv->safeLoad();
-}
-```
-
-**Backup**: `phpunit.xml` include anche `DB_DATABASE` e `DB_DATABASE_USER` come fallback.
-
-Vedi [memoria env-testing-creates-application](../../../../../.cursor/memories/env-testing-creates-application.md).
-
 ## ❌ TestCase Pattern VIETATO
 
 ```php
@@ -281,10 +256,10 @@ protected function setUp(): void
 
 ## Riferimenti
 
-- [Database Testing Consistency Rule](../../../../docs/operational-rules/database-testing-consistency-rule.md)
+- [Database Testing Consistency Rule](../../../../../docs/operational-rules/database-testing-consistency-rule.md)
 - [Testing Strategy](./testing-strategy.md)
 - [MySQL Testing Only Rule](../../../../.cursor/rules/mysql-testing-only.mdc)
 
 **Versione**: 1.0  
-**
+**Ultimo aggiornamento**: 2026-01-21  
 **Status**: REGOLA ASSOLUTA - NESSUNA ECCEZIONE

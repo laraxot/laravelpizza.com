@@ -4,28 +4,51 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests;
 
-use Modules\Xot\Tests\XotBaseTestCase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Modules\Geo\Providers\GeoServiceProvider;
+use Modules\User\Providers\UserServiceProvider;
+use Modules\Xot\Providers\XotServiceProvider;
+use Modules\Xot\Tests\CreatesApplication;
 
 /**
  * Base test case for Geo module.
  *
- * Extends XotBaseTestCase (DRY + KISS + Laraxot).
+ * Uses MySQL from .env.testing.
+ * All module connections are mapped by TenantServiceProvider.
  */
-abstract class TestCase extends XotBaseTestCase
+abstract class TestCase extends BaseTestCase
 {
-    /** @var array<int, string> */
-    protected array $connectionsToTransact = [
+    use CreatesApplication;
+    use DatabaseTransactions;
+
+    protected $connectionsToTransact = [
         'mysql',
         'user',
     ];
 
-    /**
-     * @return array<int, class-string<"Illuminate\Support\ServiceProvider>>
-     */
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        config(['xra.pub_theme' => 'Meetup']);
+        config(['xra.main_module' => 'User']);
+
+        \Modules\Xot\Datas\XotData::make()->update([
+            'pub_theme' => 'Meetup',
+            'main_module' => 'User',
+        ]);
+
+        // NOTE: Migrations are NOT run in setUp()
+        // They must be run ONCE externally: php artisan migrate --env=testing
+        // DatabaseTransactions trait handles rollback automatically between tests
+    }
+
     protected function getPackageProviders($app): array
     {
         return [
-            ...parent::getPackageProviders($app),
+            XotServiceProvider::class,
+            UserServiceProvider::class,
             GeoServiceProvider::class,
         ];
     }

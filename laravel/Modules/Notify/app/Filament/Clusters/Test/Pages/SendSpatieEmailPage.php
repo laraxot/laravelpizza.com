@@ -54,15 +54,15 @@ class SendSpatieEmailPage extends XotBasePage
 
     protected function fillForms(): void
     {
-        // $data = $this->getUser();
+        // $data = $this->getUser()->attributesToArray();
 
-        // $editProfileForm->fill($data);
-        $emailForm->fill();
+        // $this->editProfileForm->fill($data);
+        $this->emailForm->fill();
     }
 
     public function emailForm(Schema $schema): Schema
     {
-        return $schema->components($getEmailFormSchema());
+        return $schema->components($this->getEmailFormSchema())->model($this->getUser())->statePath('emailData');
     }
 
     /**
@@ -85,7 +85,7 @@ class SendSpatieEmailPage extends XotBasePage
 
     public function sendEmail(): void
     {
-        $data = $emailForm->getState();
+        $data = $this->emailForm->getState();
         /*
          * $email_data = EmailData::from($data);
          *

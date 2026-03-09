@@ -1,6 +1,6 @@
-# IDE Helper Best Practices - <nome progetto>
+# IDE Helper Best Practices - LaravelPizza
 
-Documentazione completa sull'utilizzo di `barryvdh/laravel-ide-helper` nel progetto <nome progetto>.
+Documentazione completa sull'utilizzo di `barryvdh/laravel-ide-helper` nel progetto LaravelPizza.
 
 ---
 
@@ -42,7 +42,7 @@ Laravel IDE Helper genera PHPDoc automatici per migliorare l'autocomplete e il t
 ### 1. Generate Models PHPDoc
 
 ```bash
-cd /var/www/_bases/base_<nome progetto>/laravel
+cd /var/www/_bases/base_laravelpizza/laravel
 php artisan ide-helper:models --write
 ```
 
@@ -500,4 +500,4 @@ Prima di committare modifiche ai modelli:
 - **Religion**: Strong typing attraverso PHPDoc e type hints
 - **Zen**: IDE intelligente = sviluppatore felice
 
-*
+*Ultimo aggiornamento: 2026-02-26*

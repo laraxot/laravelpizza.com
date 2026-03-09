@@ -26,7 +26,7 @@ class ContactFactory extends Factory
     public function definition(): array
     {
         return [
-            // 'model_id' => $faker->randomNumber(5, false
+            // 'model_id' => $this->faker->randomNumber(5, false),
             'model_type' => fake()->word,
             'contact_type' => fake()->word,
             'value' => fake()->word,
@@ -35,7 +35,7 @@ class ContactFactory extends Factory
             'created_at' => fake()->dateTime,
             'updated_by' => fake()->word,
             'created_by' => fake()->word,
-            // 'user_id' => $faker->randomNumber(5, false
+            // 'user_id' => $this->faker->randomNumber(5, false),
             'token' => fake()->word,
         ];
     }

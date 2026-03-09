@@ -43,7 +43,7 @@ readonly class FetchOpenElevationAction
      */
     private function makeApiRequest(float $latitude, float $longitude): string
     {
-        $response = $client->post(self::API_URL, [
+        $response = $this->client->post(self::API_URL, [
             'json' => [
                 'locations' => [
                     [

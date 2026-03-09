@@ -33,7 +33,7 @@ class LoginComponent extends Component
     {
         $this->validate();
 
-        if (! Auth::attempt(['email' => $email, 'password' => $this->password], $this->remember))
+        if (! Auth::attempt(['email' => $this->email, 'password' => $this->password], $this->remember)) {
             $this->addError('email', trans('auth.failed'));
 
             return back();
@@ -42,11 +42,11 @@ class LoginComponent extends Component
         $guard = 'web';
 
         /** @var Builder<User> $query */
-        $query = User::where('email', $email);
+        $query = User::where('email', $this->email);
         $user = $query->first();
 
         Assert::isInstanceOf($user, Authenticatable::class);
-        $remember = $remember;
+        $remember = $this->remember;
         event(new Login($guard, $user, $remember));
 
         return redirect()->intended('/');

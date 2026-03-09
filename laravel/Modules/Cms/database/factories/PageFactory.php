@@ -5,13 +5,24 @@ declare(strict_types=1);
 namespace Modules\Cms\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 use Modules\Cms\Models\Page;
+
+use function Safe\preg_replace;
+
+use Webmozart\Assert\Assert;
 
 /**
  * @extends Factory<Page>
  */
 class PageFactory extends Factory
 {
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var class-string<Page>
+     */
     protected $model = Page::class;
 
     /**
@@ -19,70 +30,20 @@ class PageFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
+        Assert::string($title = preg_replace('/\./', '', fake()->sentence(3)));
+
         return [
-            'title' => $faker->sentence()
-            'slug' => $faker->slug()
-            'content' => $faker->paragraphs(3, true)
-            'excerpt' => $faker->sentence()
-            'status' => 'published',
-            'template' => 'default',
-            'view_count' => 0,
-            'meta_title' => $faker->sentence()
-            'meta_description' => $faker->sentence()
-            'meta_keywords' => $faker->words(3, true)
+            'slug' => Str::of($title)->slug()->toString(),
+            'title' => $title,
+            'content' => implode('', [
+                '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tortor vitae sem cursus ullamcorper. In pellentesque purus et ante eleifend finibus. Fusce quis sapien nunc. Donec molestie arcu vel suscipit tincidunt. Nunc non neque risus. Aliquam fringilla sed quam eu condimentum. Nam viverra enim ut iaculis vulputate. Aenean quis laoreet mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel venenatis magna.</p>',
+                '<p>Curabitur feugiat sagittis imperdiet. Vestibulum cursus massa sed convallis aliquet. Proin in purus diam. Cras blandit justo in massa imperdiet euismod. Aliquam erat volutpat. Sed quis ornare urna. Cras quis tempus nunc. Vestibulum quis quam a ipsum accumsan gravida in nec arcu. Praesent ut eros eros. Proin vel bibendum eros. In egestas suscipit purus vel efficitur. Proin at elit risus. Nam volutpat massa in lacus bibendum placerat. Suspendisse auctor elit odio, in dapibus risus blandit ut. Sed eu consequat purus.</p>',
+                '<p>Sed sit amet fringilla nunc. Proin consequat dui suscipit magna porta blandit. Nam vel felis commodo, mattis sapien ac, laoreet ligula. Vestibulum egestas cursus nulla in tincidunt. Ut efficitur, purus in faucibus mattis, justo enim mollis elit, vitae rutrum sem orci nec mi. Duis tempus mattis elementum. Etiam faucibus et eros vel dictum. Cras ut elit massa. Fusce tristique lacus ac risus pulvinar tempor. Etiam ultricies sit amet lacus sed gravida. Suspendisse potenti. Donec in massa a sem egestas tincidunt eu at sem.</p>',
+                '<p>Aliquam eget tortor urna. Integer vel tincidunt tellus. Donec ultrices efficitur tortor, vel ullamcorper justo. Proin nec placerat diam, at malesuada metus. Praesent vitae blandit neque. Nulla gravida nulla et molestie placerat. Phasellus porta tortor eu massa laoreet egestas. In sed ultrices magna. Curabitur ut vestibulum metus. Integer porttitor risus at venenatis lobortis. Pellentesque eu libero purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a cursus leo.</p>',
+                '<p>Donec at diam ex. In eleifend commodo suscipit. Vivamus ultrices vehicula nunc quis mollis. Aliquam erat volutpat. Nam id dui consectetur, tristique ex non, fermentum dolor. Morbi lorem purus, lobortis at mauris vel, laoreet pretium dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus semper rhoncus augue at facilisis. Pellentesque ut iaculis justo. Suspendisse sed cursus quam. Duis sollicitudin velit vel eros pulvinar egestas. Donec feugiat massa ac dui elementum, quis mollis sem venenatis. Cras euismod, mauris non lobortis pulvinar, dolor risus gravida nisi, eu tristique mauris nulla eget sapien.</p>',
+            ]),
         ];
-    }
-
-    /**
-     * Indicate that the page is published.
-     */
-    public function published(): static
-    {
-        return $this->state(fn (array $attributes))
-            'status' => 'published',
-        ]);
-    }
-
-    /**
-     * Indicate that the page is draft.
-     */
-    public function draft(): static
-    {
-        return $this->state(fn (array $attributes))
-            'status' => 'draft',
-        ]);
-    }
-
-    /**
-     * Configure the factory to create a page with SEO metadata.
-     */
-    public function withSeo(): static
-    {
-        return $this->afterCreating(function (Page $page))
-            $page->seo()->create([)
-                'meta_title' => $page->title.' - SEO Title',
-                'meta_description' => $page->meta_description,
-                'meta_keywords' => $page->meta_keywords,
-                'og_title' => $page->title,
-                'og_description' => $page->meta_description,
-                'twitter_card' => 'summary',
-            ]);
-        });
-    }
-
-    /**
-     * Configure the factory to create a page with blocks.
-     */
-    public function withBlocks(): static
-    {
-        return $this->afterCreating(function (Page $page))
-            $page->blocks()->create([)
-                'type' => 'text',
-                'content' => $faker->paragraph()
-                'order' => 1,
-            ]);
-        });
     }
 }

@@ -13,7 +13,6 @@
 - ✅ **SOLO** README.md e CHANGELOG.md possono avere maiuscole
 - ✅ Tutti gli altri file .md devono essere in **lowercase**
 - ✅ Usare cartelle docs esistenti, NON crearne di nuove
-- ✅ **MAI** inserire date nel filename markdown (es. vietato `nome-2026-03-06.md`)
 
 ## Esempi Corretti
 

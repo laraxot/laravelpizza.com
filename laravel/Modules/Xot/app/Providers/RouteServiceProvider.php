@@ -69,8 +69,8 @@ class RouteServiceProvider extends ServiceProvider
         $user = request()->user();
         $lang = app()->getLocale();
         if ($user instanceof Model) {
-            $userLang = $user->$this->getAttribute('lang');
-            if (is_string($userLang) && '' !== $userLang) {
+            $userLang = $user->getAttribute('lang');
+            if (is_string($userLang) && $userLang !== '') {
                 $lang = $userLang;
             }
         }
@@ -86,12 +86,12 @@ class RouteServiceProvider extends ServiceProvider
 
         if (in_array(request()->segment(1), $langs, false)) {
             $lang = request()->segment(1);
-            if (null !== $lang) {
+            if ($lang !== null) {
                 app()->setLocale($lang);
             }
         }
 
-        URL::defaults([)
+        URL::defaults([
             'lang' => $lang,
         ]);
     }
@@ -128,7 +128,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes(): void
     {
-        Route::middleware('web')->namespace($moduleNamespace);
+        Route::middleware('web')->namespace($this->moduleNamespace)->group(base_path('Modules/Xot/routes/web.php'));
     }
 
     /**
@@ -139,7 +139,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::prefix('api')
             ->middleware('api')
-            ->namespace($moduleNamespace)
+            ->namespace($this->moduleNamespace)
             ->group(base_path('Modules/Xot/routes/api.php'));
     }
 

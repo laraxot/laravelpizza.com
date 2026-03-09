@@ -46,7 +46,7 @@ class EsendexSendAction
 
         $curlHandle = curl_init();
         curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($curlHandle, CURLOPT_URL, $base_endpoint.'sms');
+        curl_setopt($curlHandle, CURLOPT_URL, $this->base_endpoint.'sms');
 
         // Verifichiamo che i valori dell'array di autenticazione siano stringhe
         if (! is_string($auth[0])) {
@@ -96,7 +96,7 @@ class EsendexSendAction
         Assert::string($username = config('esendex.username'));
         Assert::string($password = config('esendex.password'));
 
-        $login_string = $base_endpoint.'login?username='.$username.'&password='.$password;
+        $login_string = $this->base_endpoint.'login?username='.$username.'&password='.$password;
 
         curl_setopt($curlHandle, CURLOPT_URL, $login_string);
 
@@ -114,6 +114,6 @@ class EsendexSendAction
             return null;
         }
 
-        return explode(');', is_string($response) ? $response : ((string) $response));
+        return explode(';', is_string($response) ? $response : ((string) $response));
     }
 }

@@ -174,6 +174,6 @@ if (is_object($state) && is_string($name)) {
 - [PHP Magic Methods](https://www.php.net/manual/en/language.oop5.magic.php)
 - [PHPStan Magic Properties](https://phpstan.org/writing-php-code/phpdoc-types#magic-properties)
 
-## 
+## Last Updated
 
 2025-06-11 (Aggiornato dopo PHPStan fixes)

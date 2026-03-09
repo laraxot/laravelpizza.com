@@ -53,23 +53,23 @@ class SmtpData extends Data
     public function toArray(): array
     {
         return [
-            'transport' => $transport,
-            'host' => $host,
-            'port' => $port,
-            'encryption' => $encryption,
-            'username' => $username,
-            'password' => $password,
-            'timeout' => $timeout,
-            'local_domain' => $local_domain,
+            'transport' => $this->transport,
+            'host' => $this->host,
+            'port' => $this->port,
+            'encryption' => $this->encryption,
+            'username' => $this->username,
+            'password' => $this->password,
+            'timeout' => $this->timeout,
+            'local_domain' => $this->local_domain,
         ];
     }
 
     public function getTransport(): EsmtpTransport
     {
-        $transport = new EsmtpTransport($host, $this->port, $this->tls);
-        if ($username !== null && $this->password !== null)
-            $transport->setUsername($username);
-            $transport->setPassword($password);
+        $transport = new EsmtpTransport($this->host, $this->port, $this->tls);
+        if ($this->username !== null && $this->password !== null) {
+            $transport->setUsername($this->username);
+            $transport->setPassword($this->password);
         }
 
         return $transport;

@@ -35,11 +35,11 @@ class SmsFactorData extends Data
 
     public function getAuthHeaders(): array
     {
-        switch ($auth_type)
+        switch ($this->auth_type) {
             case 'bearer':
             default:
                 return [
-                    'Authorization' => 'Bearer '.$token,
+                    'Authorization' => 'Bearer '.$this->token,
                     'Content-Type' => 'application/json',
                     'Cache-Control' => 'no-cache',
                 ];
@@ -48,11 +48,11 @@ class SmsFactorData extends Data
 
     public function getBaseUrl(): string
     {
-        return $base_url ?? 'https://api.smsfactor.com';
+        return $this->base_url ?? 'https://api.smsfactor.com';
     }
 
     public function getTimeout(): int
     {
-        return $timeout;
+        return $this->timeout;
     }
 }

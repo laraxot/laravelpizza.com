@@ -123,7 +123,7 @@ Nel campo `value`, il valore di `helper_text` era uguale alla chiave del padre (
 - [Lang Service Provider](lang-service-provider.md)
 
 ### Regole Applicate
-- [Regola Helper Text Critica](../../docs/translation-helper-text-critical-rule.md)
+- [Regola Helper Text Critica](../../../docs/translation-helper-text-critical-rule.md)
 - [Struttura Espansa Traduzioni](struttura-traduzioni.md)
 - [Convenzioni Multi-Lingua](../../../../docs/multi-language-conventions.md)
 
@@ -147,7 +147,7 @@ La gestione delle traduzioni deve essere:
 
 ---
 
-**
+**Ultimo aggiornamento**: 2025-01-06
 **Autore**: Sistema di gestione traduzioni Laraxot
 **Versione**: 1.0
 **Stato**: Implementato e testato

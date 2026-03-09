@@ -2,7 +2,7 @@
 
 Canonical dependency map:
 
-- [../../../../../../docs/dependencies.md](../../../../../../docs/dependencies.md)
+- [../../../../docs/dependencies.md](../../../../docs/dependencies.md)
 
 Module/theme specific notes:
 
@@ -10,4 +10,4 @@ Module/theme specific notes:
 
 Installed packages index:
 
-- [../../../../../../docs/packages/index.md](../../../../../../docs/packages/index.md)
+- [../../../../docs/packages/index.md](../../../../docs/packages/index.md)

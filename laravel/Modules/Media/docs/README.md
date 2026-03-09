@@ -45,7 +45,7 @@ echo $model->getFirstMediaUrl('gallery', 'webp-compressed');
 
 ---
 
-**🔄 
+**🔄 Ultimo aggiornamento**: 31 Gennaio 2026
 **📦 Versione**: 3.2.0
 **✅ PHPStan level 10**: Compliance nativa garantita
 

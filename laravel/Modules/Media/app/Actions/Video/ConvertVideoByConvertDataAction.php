@@ -40,8 +40,7 @@ class ConvertVideoByConvertDataAction
         // Instanziamo il formato prima di usarlo
         $formatInstance = new $format;
 
-        /** @var object $exporter */
-        $exporter = FFMpeg::fromDisk($data->disk)
+        FFMpeg::fromDisk($data->disk)
             ->open($data->file)
             ->export()
             ->onProgress(function (float $percentage, float $remaining, float $rate): void {
@@ -51,15 +50,10 @@ class ConvertVideoByConvertDataAction
 
                 // Log o notifica del progresso
             })
-            ->addFilter('-preset', 'ultrafast');
-
-        if (! method_exists($exporter, 'save')) {
-            throw new Exception('Exporter FFMpeg non supporta il metodo save');
-        }
-
-        /** @var callable(string, object): void $save */
-        $save = [$exporter, 'save'];
-        $save($file_new, $formatInstance);
+            ->addFilter('-preset', 'ultrafast')
+            // Utilizziamo il formato istanziato come parametro
+            // @phpstan-ignore-next-line method.notFound
+            ->save($file_new, $formatInstance);
 
         // Restituisci il percorso del file senza usare il metodo url()
         return $file_new;

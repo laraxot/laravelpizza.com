@@ -141,7 +141,7 @@ $safeForm = $form;
 
 ## Collegamenti
 
-- [../../../docs/phpstan-level10-achievement.md](../../../docs/phpstan-level10-achievement.md)
+- [../../../../docs/phpstan-level10-achievement.md](../../../../docs/phpstan-level10-achievement.md)
 - [Sushi Package Documentation](https://github.com/calebporzio/sushi)
 
 ---

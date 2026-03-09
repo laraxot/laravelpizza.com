@@ -24,12 +24,12 @@ class GetFakerAction
 
     public function execute(string $name, ?string $type = null, ?string $_table = null): string
     {
-        if (null !== $type && Str::startsWith($type, 'factory(')) {
+        if ($type !== null && Str::startsWith($type, 'factory(')) {
             return $type;
         }
 
         $fakeableTypes = [
-            // 'enum' => '$faker->randomElement('.$this->enumValues($table, $name
+            // 'enum' => '$faker->randomElement('.$this->enumValues($table, $name).')',
             'string' => '$faker->word',
             'text' => '$faker->text',
             'date' => '$faker->date()',

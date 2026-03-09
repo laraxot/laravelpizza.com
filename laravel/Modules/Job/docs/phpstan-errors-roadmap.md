@@ -157,4 +157,4 @@ return $options;
 
 **Status**: 🧘 **IN ANALISI**
 
-**
+**Ultimo aggiornamento**: [DATE]

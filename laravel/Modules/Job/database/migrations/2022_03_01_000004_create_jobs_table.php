@@ -13,7 +13,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table))
+        $this->tableCreate(static function (Blueprint $table): void {
             $table->bigIncrements('id');
             $table->string('queue')->index();
             $table->longText('payload');
@@ -23,7 +23,7 @@ return new class extends XotBaseMigration
             $table->unsignedInteger('created_at');
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table))
+        $this->tableUpdate(function (Blueprint $table): void {
             $this->updateTimestamps($table);
         });
     }

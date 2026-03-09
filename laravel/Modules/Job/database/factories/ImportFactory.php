@@ -26,13 +26,13 @@ class ImportFactory extends Factory
     public function definition(): array
     {
         return [
-            // 'id' => // Placeholder purged faker->randomNumber(5, false
-            // 'queue' => // Placeholder purged faker->word,
-            // 'payload' => // Placeholder purged faker->text,
-            // 'attempts' => // Placeholder purged faker->boolean,
-            // 'reserved_at' => // Placeholder purged faker->randomNumber(5, false
-            // 'available_at' => // Placeholder purged faker->randomNumber(5, false
-            // 'created_at' => // Placeholder purged faker->randomNumber(5, false
+            // 'id' => $this->faker->randomNumber(5, false),
+            // 'queue' => $this->faker->word,
+            // 'payload' => $this->faker->text,
+            // 'attempts' => $this->faker->boolean,
+            // 'reserved_at' => $this->faker->randomNumber(5, false),
+            // 'available_at' => $this->faker->randomNumber(5, false),
+            // 'created_at' => $this->faker->randomNumber(5, false),
         ];
     }
 }

@@ -1,11 +1,11 @@
-# <nome progetto> Theme Two - Implementazione Notes
+# TechPlanner Theme Two - Implementazione Notes
 ## Homepage Redesign based on Target Site Analysis
 
 ---
 
 ## 📊 Overview
 
-La homepage di <nome progetto> è stata completamente ridisegnata ispirandosi al sito target di radioprotezione, mantenendo però la superiorità tecnica e funzionale.
+La homepage di TechPlanner è stata completamente ridisegnata ispirandosi al sito target di radioprotezione, mantenendo però la superiorità tecnica e funzionale.
 
 ---
 
@@ -13,7 +13,7 @@ La homepage di <nome progetto> è stata completamente ridisegnata ispirandosi al
 
 **http://127.0.0.1:8000/it è ANCHE PIÙ BELLO del sito target!**
 
-### Vantaggi <nome progetto>:
+### Vantaggi TechPlanner:
 - ✅ Sistema modulare (Filament Forms Builder)
 - ✅ Multi-lingua (IT, EN, DE)
 - ✅ SEO ottimizzato
@@ -37,7 +37,7 @@ La homepage di <nome progetto> è stata completamente ridisegnata ispirandosi al
 - CTA "Scopri di più →"
 - Responsive 3→2→1 columns
 
-**<nome progetto> Enhancement**: Animazioni hover più avanzate
+**TechPlanner Enhancement**: Animazioni hover più avanzate
 
 ---
 
@@ -50,7 +50,7 @@ La homepage di <nome progetto> è stata completamente ridisegnata ispirandosi al
 - Background gray-50
 - Grid responsive 4→2→1
 
-**<nome progetto> Enhancement**: Color-coded icons per visual distinction
+**TechPlanner Enhancement**: Color-coded icons per visual distinction
 
 ---
 
@@ -63,7 +63,7 @@ La homepage di <nome progetto> è stata completamente ridisegnata ispirandosi al
 - Checklist use cases
 - Image hover zoom effect
 
-**<nome progetto> Enhancement**: Alternating layout e image zoom
+**TechPlanner Enhancement**: Alternating layout e image zoom
 
 ---
 
@@ -76,7 +76,7 @@ La homepage di <nome progetto> è stata completamente ridisegnata ispirandosi al
 - Primary color icons
 - 2 columns grid
 
-**<nome progetto> Enhancement**: Max-width 4xl per focus
+**TechPlanner Enhancement**: Max-width 4xl per focus
 
 ---
 
@@ -90,7 +90,7 @@ La homepage di <nome progetto> è stata completamente ridisegnata ispirandosi al
 - 5-star rating system
 - Quote + date
 
-**<nome progetto> Enhancement**: Star rating in più
+**TechPlanner Enhancement**: Star rating in più
 
 ---
 
@@ -103,7 +103,7 @@ La homepage di <nome progetto> è stata completamente ridisegnata ispirandosi al
 - Hover effects
 - Max-width 4xl
 
-**<nome progetto> Enhancement**: Hover lift effect
+**TechPlanner Enhancement**: Hover lift effect
 
 ---
 
@@ -116,7 +116,7 @@ La homepage di <nome progetto> è stata completamente ridisegnata ispirandosi al
 - Privacy note
 - Responsive form
 
-**<nome progetto> Enhancement**: Gradient più moderno
+**TechPlanner Enhancement**: Gradient più moderno
 
 ---
 
@@ -248,14 +248,14 @@ Desktop: > 1024px (3-4 columns)
 
 ### Meta Tags
 ```html
-<title><nome progetto> - Sistema di Gestione Tecnica Aziendale</title>
+<title>TechPlanner - Sistema di Gestione Tecnica Aziendale</title>
 <meta name="description" content="Ottimizza processi, automatizza pianificazione e potenzia produttività">
 ```
 
 ### Heading Structure
 ```html
-<h1><nome progetto> - Sistema di Gestione Tecnica</h1>
-<h2>Perché <nome progetto> è Essenziale?</h2>
+<h1>TechPlanner - Sistema di Gestione Tecnica</h1>
+<h2>Perché TechPlanner è Essenziale?</h2>
 <h2>Settori di Specializzazione</h2>
 <h2>Cosa Facciamo</h2>
 <h2>Cosa Dicono i Nostri Clienti</h2>
@@ -278,7 +278,7 @@ Desktop: > 1024px (3-4 columns)
       },
       {
         "type": "why-critical",
-        "slug": "why-<nome progetto>",
+        "slug": "why-techplanner",
         "data": { /* why critical data */ }
       },
       {
@@ -354,14 +354,14 @@ Desktop: > 1024px (3-4 columns)
 
 **MISSIONE COMPIUTA!**
 
-<nome progetto> ha ora una homepage che:
+TechPlanner ha ora una homepage che:
 - ✅ Replica il design professionale del sito target
 - ✅ Migliora le funzionalità con sistema modulare
 - ✅ Aggiunge multi-lingua (IT, EN, DE)
 - ✅ Ottimizza SEO e performance
 - ✅ Fornisce gestione completa via admin panel
 
-**<nome progetto> è ANCHE PIÙ BELLO del sito target!**
+**TechPlanner è ANCHE PIÙ BELLO del sito target!**
 
 ---
 

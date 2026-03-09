@@ -53,6 +53,6 @@ class TimeZoneData extends Data
      */
     public function getTotalOffset(): int
     {
-        return $rawOffset + $this->dstOffset;
+        return $this->rawOffset + $this->dstOffset;
     }
 }

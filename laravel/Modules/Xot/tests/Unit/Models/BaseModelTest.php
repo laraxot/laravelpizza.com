@@ -4,31 +4,34 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Models;
 
+use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Models\BaseModel;
+use Modules\Xot\Tests\TestCase;
 
-if (! class_exists(TestConcreteBaseModel::class)) {
-    class TestConcreteBaseModel extends BaseModel
-    {
-        protected $table = 'test_table';
-    }
-}
+uses(TestCase::class);
 
 beforeEach(function () {
-    $baseModel = new TestConcreteBaseModel();
+    $this->baseModel = new class extends BaseModel {
+        protected $table = 'test_table';
+    };
 });
 
 test('base model extends eloquent model', function () {
-    expect($baseModel);
+    expect($this->baseModel)->toBeInstanceOf(Model::class);
 });
 
 test('base model has correct table name', function () {
-    expect($baseModel->getTable());
+    expect($this->baseModel->getTable())->toBe('test_table');
 });
 
 test('base model has timestamps enabled', function () {
-    expect($baseModel->timestamps);
+    expect($this->baseModel->usesTimestamps())->toBeTrue();
 });
 
-test('base model can be instantiated via subclass', function () {
-    expect($baseModel);
+test('base model has soft deletes disabled by default', function () {
+    expect($this->baseModel->usesSoftDeletes())->toBeFalse();
+});
+
+test('base model can be instantiated', function () {
+    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
 });

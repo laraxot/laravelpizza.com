@@ -6,7 +6,6 @@ namespace Modules\Notify\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Support\Facades\Blade;
 use Modules\Media\Models\Media;
 use Modules\Notify\Database\Factories\NotificationTemplateFactory;
@@ -50,7 +49,6 @@ use Spatie\Translatable\HasTranslations;
  * @property-read mixed $translations
  * @property-read ProfileContract|null $updater
  * @property-read int|null $versions_count
- *
  * @method static Builder<static>|NotificationTemplate active()
  * @method static NotificationTemplateFactory factory($count = null, $state = [])
  * @method static Builder<static>|NotificationTemplate forCategory(string $category)
@@ -62,17 +60,13 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|NotificationTemplate whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
  * @method static Builder<static>|NotificationTemplate whereLocale(string $column, string $locale)
  * @method static Builder<static>|NotificationTemplate whereLocales(string $column, array $locales)
- *
  * @mixin IdeHelperNotificationTemplate
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class NotificationTemplate extends BaseModel implements HasMedia
 {
     use HasTranslations;
-    use HasUuids;
     use InteractsWithMedia;
 
     public array $translatable = [
@@ -103,13 +97,13 @@ class NotificationTemplate extends BaseModel implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('attachments');
+        $this->addMediaCollection('attachments')->singleFile();
     }
 
     /*
      * public function versions(): HasMany
      * {
-     * return $this->hasMany(NotificationTemplateVersion::class, 'template_id'
+     * return $this->hasMany(NotificationTemplateVersion::class, 'template_id')
      * ->orderByDesc('version');
      * }
      *
@@ -127,14 +121,14 @@ class NotificationTemplate extends BaseModel implements HasMedia
      *
      * public function createNewVersion(string $createdBy, ?string $notes = null): self
      * {
-     * $this->versions(
-     * 'subject' => $subject,
-     * 'body_html' => $body_html,
-     * 'body_text' => $body_text,
-     * 'channels' => $channels,
-     * 'variables' => $variables,
-     * 'conditions' => $conditions,
-     * 'version' => $version,
+     * $this->versions()->create([
+     * 'subject' => $this->subject,
+     * 'body_html' => $this->body_html,
+     * 'body_text' => $this->body_text,
+     * 'channels' => $this->channels,
+     * 'variables' => $this->variables,
+     * 'conditions' => $this->conditions,
+     * 'version' => $this->version,
      * 'created_by' => $createdBy,
      * 'change_notes' => $notes,
      * ]);
@@ -151,9 +145,9 @@ class NotificationTemplate extends BaseModel implements HasMedia
      */
     public function compile(array $data = []): array
     {
-        $subject = $this->compileString($this->getPreviewSubject());
-        $bodyHtml = $this->compileString($this->getPreviewBodyHtml());
-        $bodyText = $this->compileString($this->getPreviewBodyText());
+        $subject = $this->compileString($this->subject, $data);
+        $bodyHtml = $this->compileString($this->body_html, $data);
+        $bodyText = $this->compileString($this->body_text, $data);
 
         return [
             'subject' => $subject ?? '',
@@ -169,14 +163,12 @@ class NotificationTemplate extends BaseModel implements HasMedia
      */
     public function shouldSend(array $data = []): bool
     {
-        /** @var array<string, mixed>|null $conditions */
-        $conditions = $conditions;
-        if (! $conditions) {
+        if (! $this->conditions) {
             return true;
         }
 
-        foreach ($conditions as $path => $value) {
-            $actual = data_get($data, (string) $path);
+        foreach ($this->conditions as $path => $value) {
+            $actual = data_get($data, $path);
             if ($actual !== $value) {
                 return false;
             }
@@ -194,7 +186,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
     public function preview(array $data = []): array
     {
         /** @var array<string, mixed> $previewData */
-        $previewData = $preview_data ?? [];
+        $previewData = $this->preview_data ?? [];
         /** @var array<string, mixed> $mergedData */
         $mergedData = array_merge($previewData, $data);
 
@@ -240,7 +232,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
     public function getChannelsLabelAttribute(): string
     {
         /** @var array<int, string> $channels */
-        $channels = $channels;
+        $channels = $this->channels;
 
         return collect($channels)
             ->map(fn (string $channel): string => (string) __('notify::template.fields.channel.options.'.$channel.'.label'))
@@ -254,9 +246,10 @@ class NotificationTemplate extends BaseModel implements HasMedia
      */
     public function getGrapesJSData(): array
     {
-        /** @var array<string, mixed>|null $grapesData */
-        $grapesData = $grapesjs_data;
-        $data = is_array($grapesData) ? $grapesData : [];
+        $data = $this->grapesjs_data ?? [];
+        if (! \is_array($data)) {
+            $data = [];
+        }
 
         $result = [];
         foreach ($data as $key => $value) {
@@ -274,36 +267,33 @@ class NotificationTemplate extends BaseModel implements HasMedia
      */
     public function setGrapesJSData(array $data): self
     {
-        $grapesjs_data = $data;
+        $this->grapesjs_data = $data;
 
         return $this;
     }
 
     public function getPreviewData(): array
     {
-        /** @var array<string, mixed>|null $previewData */
-        $previewData = $preview_data;
-
-        return $previewData ?? [];
+        return $this->preview_data ?? [];
     }
 
     public function getPreviewSubject(): string
     {
-        $result = $this->getTranslation('subject', app());
+        $result = $this->getTranslation('subject', app()->getLocale());
 
         return is_string($result) ? $result : '';
     }
 
     public function getPreviewBodyText(): string
     {
-        $result = $this->getTranslation('body_text', app());
+        $result = $this->getTranslation('body_text', app()->getLocale());
 
         return is_string($result) ? $result : '';
     }
 
     public function getPreviewBodyHtml(): string
     {
-        $result = $this->getTranslation('body_html', app());
+        $result = $this->getTranslation('body_html', app()->getLocale());
 
         return is_string($result) ? $result : '';
     }

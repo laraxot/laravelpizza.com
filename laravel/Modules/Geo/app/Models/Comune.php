@@ -7,38 +7,15 @@ namespace Modules\Geo\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Modules\Geo\Database\Factories\ComuneFactory;
-use Modules\Tenant\Contracts\SushiToJsonContract;
 use Modules\Tenant\Models\Traits\SushiToJson;
 use Modules\Xot\Contracts\ProfileContract;
 
-use function Safe\file_get_contents;
-use function Safe\file_put_contents;
-use function Safe\json_decode;
-use function Safe\json_encode;
-use function Safe\mkdir;
-
 /**
  * Modello per i comuni italiani con Sushi.
- *
+ * 
  * Implementa il pattern Facade per fornire un'interfaccia unificata a tutti i dati geografici:
  * regioni, province, città, CAP, codici ISTAT, ecc.
  * Tutti i dati sono estratti da file JSON e gestiti tramite Sushi.
- *
- * <<<<<<< HEAD
- * ||||||| 6161e129d
- *
- * @property string|null $nome
- * @property float|null  $codice
- *                               =======
- *
- * @method string getJsonFile()
- * @method array  loadExistingData()
- * @method string authId()
- * @method void   ensureDirectoryExists()
- * @method void   saveToJson()
- * @method int    findRowIndexById(int $id)
- *
- * >>>>>>> feature/ralph-loop-implementation
  *
  * @property string|null                  $nome
  * @property float|null                   $codice
@@ -59,7 +36,6 @@ use function Safe\mkdir;
  * @property string|null                  $updated_by
  * @property ProfileContract|null         $creator
  * @property ProfileContract|null         $updater
- *
  * @method static Builder<static>|Comune newModelQuery()
  * @method static Builder<static>|Comune newQuery()
  * @method static Builder<static>|Comune query()
@@ -80,29 +56,24 @@ use function Safe\mkdir;
  * @method static Builder<static>|Comune whereUpdatedAt($value)
  * @method static Builder<static>|Comune whereUpdatedBy($value)
  * @method static Builder<static>|Comune whereZona($value)
- *
  * @property ProfileContract|null $deleter
- *
  * @method static ComuneFactory factory($count = null, $state = [])
- *
- * @property int|null    $altitudine
+ * @property int|null $altitudine
  * @property string|null $codice_catastale
- * @property float|null  $lat
- * @property float|null  $lng
+ * @property float|null $lat
+ * @property float|null $lng
  * @property string|null $sigla_provincia
- * @property float|null  $superficie
+ * @property float|null $superficie
  * @property string|null $zona_altimetrica
- *
  * @method static Builder<static>|Comune whereAltitudine($value)
  * @method static Builder<static>|Comune whereLat($value)
  * @method static Builder<static>|Comune whereLng($value)
  * @method static Builder<static>|Comune whereSiglaProvincia($value)
  * @method static Builder<static>|Comune whereSuperficie($value)
  * @method static Builder<static>|Comune whereZonaAltimetrica($value)
- *
  * @mixin \Eloquent
  */
-class Comune extends BaseModel implements SushiToJsonContract
+class Comune extends BaseModel
 {
     use SushiToJson;
 
@@ -147,80 +118,6 @@ class Comune extends BaseModel implements SushiToJsonContract
     public function getJsonFile(): string
     {
         return module_path('Geo', 'resources/json/comuni.json');
-    }
-
-    /**
-     * @return array<int, array<string, mixed>>
-     */
-    public function loadExistingData(): array
-    {
-        $path = $this->getJsonFile();
-        if (! file_exists($path)) {
-            return [];
-        }
-        try {
-            $data = json_decode(file_get_contents($path), true);
-            if (! is_array($data)) {
-                return [];
-            }
-
-            /** @var array<int, array<string, mixed>> $rows */
-            $rows = [];
-
-            foreach ($data as $row) {
-                if (! is_array($row)) {
-                    continue;
-                }
-
-                /** @var array<string, mixed> $normalizedRow */
-                $normalizedRow = [];
-                foreach ($row as $key => $value) {
-                    $normalizedRow[(string) $key] = $value;
-                }
-
-                $rows[] = $normalizedRow;
-            }
-
-            return $rows;
-        } catch (\Throwable) {
-            return [];
-        }
-    }
-
-    public function saveToJson(array $data): bool
-    {
-        $file = $this->getJsonFile();
-        $directory = dirname($file);
-        if (! file_exists($directory)) {
-            mkdir($directory, 0o755, true);
-        }
-        file_put_contents($file, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-
-        return true;
-    }
-
-    public function authId(): string
-    {
-        return (string) (auth()->id() ?? 'system');
-    }
-
-    public function ensureDirectoryExists(string $filePath): void
-    {
-        $directory = dirname($filePath);
-        if (! file_exists($directory)) {
-            mkdir($directory, 0o755, true);
-        }
-    }
-
-    public function findRowIndexById(array $rows, int $id): ?int
-    {
-        foreach ($rows as $index => $row) {
-            if (is_array($row) && ((int) ($row['id'] ?? 0)) === $id) {
-                return (int) $index;
-            }
-        }
-
-        return null;
     }
 
     public function getRows(): array
@@ -314,7 +211,7 @@ class Comune extends BaseModel implements SushiToJsonContract
      */
     public function getJsonDirectory(): string
     {
-        return $jsonDirectory;
+        return $this->jsonDirectory;
     }
 
     /**
@@ -322,7 +219,7 @@ class Comune extends BaseModel implements SushiToJsonContract
      */
     public function setJsonDirectory(string $directory): void
     {
-        $jsonDirectory = $directory;
+        $this->jsonDirectory = $directory;
     }
 
     /** @return array<string, string>     */

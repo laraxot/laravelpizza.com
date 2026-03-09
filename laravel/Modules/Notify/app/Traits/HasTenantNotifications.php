@@ -17,7 +17,7 @@ trait HasTenantNotifications
      */
     public function notifications(): MorphMany
     {
-        return $this->morphMany(NotificationLog::class, 'notifiable');
+        return $this->morphMany(NotificationLog::class, 'notifiable')->where('tenant_id', $this->getTenantId());
     }
 
     /**
@@ -25,7 +25,7 @@ trait HasTenantNotifications
      */
     public function unreadNotifications(): MorphMany
     {
-        return $this->notifications();
+        return $this->notifications()->whereNull('read_at');
     }
 
     /**
@@ -33,7 +33,7 @@ trait HasTenantNotifications
      */
     public function readNotifications(): MorphMany
     {
-        return $this->notifications();
+        return $this->notifications()->whereNotNull('read_at');
     }
 
     /**
@@ -51,7 +51,7 @@ trait HasTenantNotifications
      */
     public function belongsToTenant(string $tenantId): bool
     {
-        return $tenant_id === $tenantId;
+        return $this->tenant_id === $tenantId;
     }
 
     /**

@@ -6,17 +6,16 @@ namespace Modules\Meetup\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Meetup\Models\Profile;
-use Modules\User\Models\User;
 
 /**
- * @extends Factory<\Modules\Meetup\Models\Profile>
+ * @extends Factory<Profile>
  */
 class ProfileFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
-     * @var class-string<\Modules\Meetup\Models\Profile>
+     * @var class-string<Profile>
      */
     protected $model = Profile::class;
 
@@ -28,13 +27,18 @@ class ProfileFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::factory(),
-            'first_name' => $this->faker->firstName(),
-            'last_name' => $this->faker->lastName(),
-            'fiscal_code' => $this->faker->regexify('[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]'),
-            'phone' => $this->faker->phoneNumber(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'notes' => $this->faker->paragraph(),
+            'user_id' => null,
+            'first_name' => fake()->firstName(),
+            'last_name' => fake()->lastName(),
+            'email' => fake()->unique()->safeEmail(),
+            'phone' => fake()->phoneNumber(),
+            'bio' => fake()->sentence(),
+            'status' => 'active',
+            'locale' => 'it',
+            'timezone' => 'Europe/Rome',
+            'preferences' => [],
+            'extra' => [],
         ];
     }
 }
+

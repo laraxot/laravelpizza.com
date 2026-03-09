@@ -123,24 +123,24 @@ class ComuneFactory extends Factory
         ];
 
         /** @var array{nome: string, regione: string, provincia: string, cap: string, lat: float|int|string, lng: float|int|string} $comuneData */
-        $comuneData = $faker->randomElement($comuniReali);
+        $comuneData = $this->faker->randomElement($comuniReali);
         $latBase = (float) $comuneData['lat'];
         $lngBase = (float) $comuneData['lng'];
 
         return [
             'nome' => $comuneData['nome'],
-            'codice' => $faker->unique()
+            'codice' => $this->faker->unique()->numberBetween(1000, 9999),
             'regione' => $comuneData['regione'],
             'provincia' => $comuneData['provincia'],
             'sigla_provincia' => strtoupper(substr((string) $comuneData['provincia'], 0, 2)),
             'cap' => $comuneData['cap'],
-            'codice_catastale' => $faker->unique()
-            'popolazione' => $faker->numberBetween(1000, 1000000)
-            'zona_altimetrica' => $faker->randomElement(['montagna', 'collina', 'pianura'])
-            'altitudine' => $faker->numberBetween(0, 2000)
-            'superficie' => $faker->randomFloat(2, 5.0, 500.0)
-            'lat' => $latBase + $faker->randomFloat(4, -0.1, 0.1)
-            'lng' => $lngBase + $faker->randomFloat(4, -0.1, 0.1)
+            'codice_catastale' => $this->faker->unique()->regexify('[A-Z][0-9]{3}'),
+            'popolazione' => $this->faker->numberBetween(1000, 1000000),
+            'zona_altimetrica' => $this->faker->randomElement(['montagna', 'collina', 'pianura']),
+            'altitudine' => $this->faker->numberBetween(0, 2000),
+            'superficie' => $this->faker->randomFloat(2, 5.0, 500.0),
+            'lat' => $latBase + $this->faker->randomFloat(4, -0.1, 0.1),
+            'lng' => $lngBase + $this->faker->randomFloat(4, -0.1, 0.1),
         ];
     }
 
@@ -153,7 +153,7 @@ class ComuneFactory extends Factory
          * @param array<string, mixed> $attributes
          * @return array<string, mixed>
          */
-        return $this->state(function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null))
+        return $this->state(function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null) {
             /** @var array<int, array{nome: string, provincia: string, cap: string}> $comuniLombardia */
             $comuniLombardia = [
                 ['nome' => 'Milano', 'provincia' => 'Milano', 'cap' => '20100'],
@@ -164,10 +164,10 @@ class ComuneFactory extends Factory
             ];
 
             /** @var array{nome: string, provincia: string, cap: string} $comuneData */
-            $comuneData = $faker->randomElement($comuniLombardia);
+            $comuneData = $this->faker->randomElement($comuniLombardia);
 
             /** @var array<string, mixed> $result */
-            $result = array_merge($attributes, [)
+            $result = array_merge($attributes, [
                 'nome' => $comuneData['nome'],
                 'regione' => 'Lombardia',
                 'provincia' => $comuneData['provincia'],
@@ -187,7 +187,7 @@ class ComuneFactory extends Factory
          * @param array<string, mixed> $attributes
          * @return array<string, mixed>
          */
-        return $this->state(function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null))
+        return $this->state(function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null) {
             /** @var array<int, array{nome: string, provincia: string, cap: string}> $comuniEmiliaRomagna */
             $comuniEmiliaRomagna = [
                 ['nome' => 'Bologna', 'provincia' => 'Bologna', 'cap' => '40100'],
@@ -203,10 +203,10 @@ class ComuneFactory extends Factory
             ];
 
             /** @var array{nome: string, provincia: string, cap: string} $comuneData */
-            $comuneData = $faker->randomElement($comuniEmiliaRomagna);
+            $comuneData = $this->faker->randomElement($comuniEmiliaRomagna);
 
             /** @var array<string, mixed> $result */
-            $result = array_merge($attributes, [)
+            $result = array_merge($attributes, [
                 'nome' => $comuneData['nome'],
                 'regione' => 'Emilia-Romagna',
                 'provincia' => $comuneData['provincia'],
@@ -222,9 +222,9 @@ class ComuneFactory extends Factory
      */
     public function small(): static
     {
-        return $this->state([)
-            'popolazione' => $faker->numberBetween(500, 5000)
-            'superficie' => $faker->randomFloat(2, 5.0, 50.0)
+        return $this->state([
+            'popolazione' => $this->faker->numberBetween(500, 5000),
+            'superficie' => $this->faker->randomFloat(2, 5.0, 50.0),
         ]);
     }
 
@@ -233,9 +233,9 @@ class ComuneFactory extends Factory
      */
     public function large(): static
     {
-        return $this->state([)
-            'popolazione' => $faker->numberBetween(100000, 2800000)
-            'superficie' => $faker->randomFloat(2, 100.0, 1285.0)
+        return $this->state([
+            'popolazione' => $this->faker->numberBetween(100000, 2800000),
+            'superficie' => $this->faker->randomFloat(2, 100.0, 1285.0),
         ]);
     }
 
@@ -244,10 +244,10 @@ class ComuneFactory extends Factory
      */
     public function mountain(): static
     {
-        return $this->state([)
+        return $this->state([
             'zona_altimetrica' => 'montagna',
-            'altitudine' => $faker->numberBetween(800, 3500)
-            'popolazione' => $faker->numberBetween(500, 15000)
+            'altitudine' => $this->faker->numberBetween(800, 3500),
+            'popolazione' => $this->faker->numberBetween(500, 15000),
         ]);
     }
 
@@ -256,10 +256,10 @@ class ComuneFactory extends Factory
      */
     public function coastal(): static
     {
-        return $this->state([)
+        return $this->state([
             'zona_altimetrica' => 'pianura',
-            'altitudine' => $faker->numberBetween(0, 50)
-            'popolazione' => $faker->numberBetween(2000, 100000)
+            'altitudine' => $this->faker->numberBetween(0, 50),
+            'popolazione' => $this->faker->numberBetween(2000, 100000),
         ]);
     }
 
@@ -268,7 +268,7 @@ class ComuneFactory extends Factory
      */
     public function named(string $name): static
     {
-        return $this->state(fn (array $attributes))
+        return $this->state(fn (array $attributes) => array_merge($attributes, [
             'nome' => $name,
         ]));
     }

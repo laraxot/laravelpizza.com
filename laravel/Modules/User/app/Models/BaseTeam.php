@@ -100,11 +100,11 @@ abstract class BaseTeam extends BaseModel implements TeamContract
     #[\Override]
     public function allUsers(): Collection
     {
-        if (! $owner instanceof User)
-            return $users;
+        if (! $this->owner instanceof User) {
+            return $this->users;
         }
 
-        return $users->merge([$this->owner]);
+        return $this->users->merge([$this->owner]);
     }
 
     /**
@@ -153,7 +153,7 @@ abstract class BaseTeam extends BaseModel implements TeamContract
     {
         // Corretto l'errore di tipo per il metodo contains
         // Verifico se l'ID dell'utente è presente nella collection degli utenti del team
-        if ($users->contains('id', $user->getKey()))
+        if ($this->users->contains('id', $user->getKey())) {
             return true;
         }
 
@@ -170,7 +170,7 @@ abstract class BaseTeam extends BaseModel implements TeamContract
     #[\Override]
     public function hasUserWithEmail(string $email): bool
     {
-        return $this->allUsers()
+        return $this->allUsers()->contains(static function ($user) use ($email): bool {
             // PHPStan Level 10: $user è sempre Model Eloquent da allUsers()
             // Uso isset() invece di property_exists() per magic properties
             if (! is_object($user) || ! isset($user->email)) {
@@ -216,13 +216,13 @@ abstract class BaseTeam extends BaseModel implements TeamContract
     #[\Override]
     public function removeUser(UserContract $userContract): void
     {
-        if ($userContract->current_team_id === $id)
-            $userContract->forceFill([)
+        if ($userContract->current_team_id === $this->id) {
+            $userContract->forceFill([
                 'current_team_id' => null,
             ])->save();
         }
 
-        $this->users();
+        $this->users()->detach($userContract);
     }
 
     /**
@@ -231,11 +231,11 @@ abstract class BaseTeam extends BaseModel implements TeamContract
     #[\Override]
     public function purge(): void
     {
-        $this->owner();
+        $this->owner()->where('current_team_id', $this->id)->update(['current_team_id' => null]);
 
-        $this->users();
+        $this->users()->where('current_team_id', $this->id)->update(['current_team_id' => null]);
 
-        $this->users();
+        $this->users()->detach();
 
         $this->delete();
     }

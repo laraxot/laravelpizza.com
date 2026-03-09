@@ -109,13 +109,13 @@ enum AddressItemEnum: string implements HasColor, HasIcon, HasLabel
      * Usage in migrations:
      * ```php
      * // In CREATE block (no hasColumn checks needed):
-     * $this->tableCreate(function (Blueprint $table
+     * $this->tableCreate(function (Blueprint $table): void {
      *     $table->id();
      *     AddressItemEnum::columns($table); // migration = null, adds all
      * });
      *
      * // In UPDATE block (with hasColumn checks):
-     * $this->tableUpdate(function (Blueprint $table
+     * $this->tableUpdate(function (Blueprint $table): void {
      *     AddressItemEnum::columns($table, $this); // loops with checks
      * });
      * ```
@@ -146,7 +146,7 @@ enum AddressItemEnum: string implements HasColor, HasIcon, HasLabel
      * Thin wrapper around columns() for semantic clarity in migrations:
      *
      * ```php
-     * $this->tableUpdate(function (Blueprint $table
+     * $this->tableUpdate(function (Blueprint $table): void {
      *     AddressItemEnum::updateColumns($table, $this);
      * });
      * ```

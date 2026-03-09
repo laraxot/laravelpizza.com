@@ -24,8 +24,7 @@
     "autoload": {
         "psr-4": {
             "Modules\\Meetup\\": "app/",
-            "Modules\\Meetup\\Database\\Factories\\": "database/factories/",
-            "Modules\\Meetup\\Database\\Seeders\\": "database/seeders/"
+            "Modules\\Meetup\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {

@@ -36,7 +36,7 @@ class GenerateModelClassCommand extends GeneratorCommand
 
     protected function replaceClass($stub, $name)
     {
-        $class = str_replace($getNamespace($name));
+        $class = str_replace($this->getNamespace($name).'\\', '', $name);
 
         // Do string replacement
         return str_replace('{{service_name}}', $class, $stub);

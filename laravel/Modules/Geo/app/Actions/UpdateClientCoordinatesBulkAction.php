@@ -37,7 +37,7 @@ class UpdateClientCoordinatesBulkAction
         DB::transaction(function () use ($addresses, &$successCount, &$errorMessages) {
             foreach ($addresses as $address) {
                 $fullAddress = is_string($address->full_address) ? $address->full_address : '';
-                $addressData = $getAddressDataFromFullAddressAction->execute($fullAddress);
+                $addressData = $this->getAddressDataFromFullAddressAction->execute($fullAddress);
 
                 if (null !== $addressData) {
                     $toArray = $addressData->toArray();
@@ -52,7 +52,7 @@ class UpdateClientCoordinatesBulkAction
 
                 // PHPStan L10: $address->name è già string|null, non serve is_string()
                 $addressName = $address->name ?? 'Unknown';
-                $errors = $getAddressDataFromFullAddressAction->getErrors();
+                $errors = $this->getAddressDataFromFullAddressAction->getErrors();
                 // PHPStan L10: Collection::implode() restituisce string, non serve ?:
                 $errorMsg = $errors->implode(', ');
                 if ('' === $errorMsg) {

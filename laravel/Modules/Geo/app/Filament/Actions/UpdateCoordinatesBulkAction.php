@@ -43,7 +43,7 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
         $this->label(__('geo::actions.update_coordinates.bulk.label'))
             ->icon('heroicon-o-map-pin')
             ->deselectRecordsAfterCompletion()
-            ->action(function (Collection $records): void {)
+            ->action(function (Collection $records): void {
                 /* @var Collection<int, Place> $records */
                 $this->processRecords($records);
             });
@@ -65,7 +65,7 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
      *
      * @param \Illuminate\Support\Collection<int, string> $errorMessages
      */
-    protected function sendNotifications()
+    protected function sendNotifications(
         int $successCount,
         \Illuminate\Support\Collection $errorMessages,
         int $totalCount,
@@ -83,7 +83,7 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
             Notification::make()
                 ->success()
                 ->title(__('geo::actions.update_coordinates.bulk.notifications.success.title'))
-                ->body(__('geo::actions.update_coordinates.bulk.notifications.success.body', [))
+                ->body(__('geo::actions.update_coordinates.bulk.notifications.success.body', [
                     'count' => $successCount,
                     'total' => $totalCount,
                 ]))
@@ -101,7 +101,7 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
         if ($errorMessages->isNotEmpty()) {
             $errorBody = $errorMessages->take(10)->join("\n");
             if ($errorMessages->count() > 10) {
-                $errorBody .= "\n".__('geo::actions.update_coordinates.bulk.notifications.warning.more_errors', [)
+                $errorBody .= "\n".__('geo::actions.update_coordinates.bulk.notifications.warning.more_errors', [
                     'count' => $errorMessages->count() - 10,
                 ]);
             }
@@ -136,7 +136,7 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
             }
         }
 
-        $this->sendNotifications()
+        $this->sendNotifications(
             $successCount,
             $errors,
             $records->count()

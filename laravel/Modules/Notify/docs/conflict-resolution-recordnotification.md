@@ -79,7 +79,7 @@ Verificare che:
 - [SpatieEmail Integration](spatie_email_usage_guide.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
 
-*
+*Ultimo aggiornamento: giugno 2025*
 # Risoluzione Conflitti RecordNotification.php
 
 ## Contesto del Conflitto
@@ -161,4 +161,4 @@ Verificare che:
 - [SpatieEmail Integration](spatie_email_usage_guide.md)
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
 
-*
+*Ultimo aggiornamento: giugno 2025*

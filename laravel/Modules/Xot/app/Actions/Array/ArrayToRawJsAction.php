@@ -5,10 +5,9 @@ declare(strict_types=1);
 namespace Modules\Xot\Actions\Array;
 
 use Filament\Support\RawJs;
+use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\preg_match;
-
-use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Converte un array PHP in RawJs (oggetto JavaScript) sicuro per attributi HTML.
@@ -24,17 +23,17 @@ class ArrayToRawJsAction
     /**
      * Converte l'array in una stringa JavaScript (oggetto letterale) e restituisce RawJs.
      *
-     * @param array<string|mixed, mixed> $array Array associativo (anche annidato); valori RawJs restano raw
+     * @param  array<string|mixed, mixed>  $array  Array associativo (anche annidato); valori RawJs restano raw
      */
     public function execute(array $array): RawJs
     {
         $parts = [];
         foreach ($array as $key => $value) {
-            $k = $this->jsKey((string));
+            $k = $this->jsKey((string) $key);
             if ($value instanceof RawJs) {
                 $parts[] = $k.': '.$value->toHtml();
             } elseif (is_array($value)) {
-                $parts[] = $k.': '.$this->execute($value);
+                $parts[] = $k.': '.$this->execute($value)->toHtml();
             } else {
                 $parts[] = $k.': '.$this->jsValue($value);
             }

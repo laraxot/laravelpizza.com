@@ -12,11 +12,11 @@ use function Pest\Laravel\get;
 uses(TestCase::class);
 
 // NOTE: Helper functions moved to Modules\Xot\Tests\TestCase for DRY pattern
-// Use $this->createTestUser(
+// Use $this->createTestUser()
 
 describe('Register Page', function () {
     test('register page renders for guest', function () {
-        $locale = app()->getLocale());
+        $locale = app()->getLocale();
         $response = get('/'.$locale.'/auth/register');
         $response->assertStatus(200);
     });

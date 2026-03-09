@@ -164,4 +164,4 @@ Quando si aggiungono nuovi stili CSS per PDF:
 3. **Documentare**: Aggiornare questa documentazione per nuovi componenti
 4. **Testare**: Verificare che i PDF generati abbiano l'aspetto corretto
 
-**
+**Ultimo aggiornamento**: Dicembre 2024

@@ -241,9 +241,9 @@ Tutti gli errori vengono raccolti e mostrati all'utente tramite notifica Filamen
 - Ogni componente ha una responsabilità ben definita
 - Facile da testare e mantenere
 
-## Integrazione in <nome progetto>
+## Integrazione in TechPlanner
 
-**File**: `Modules/<nome progetto>/app/Filament/Resources/ClientResource/Pages/ListClients.php`
+**File**: `Modules/TechPlanner/app/Filament/Resources/ClientResource/Pages/ListClients.php`
 
 ```php
 public function getTableBulkActions(): array
@@ -316,12 +316,12 @@ Vedi: [Actions Calling Actions Pattern](./actions-calling-actions-pattern.md)
 - [Notification System Architecture](./notification-implementation.md)
 - [MailTemplate Model](./models.md#mailtemplate)
 - [RecordNotification Class](../../app/Notifications/RecordNotification.php)
-- [<nome progetto> Client Management](../<nome progetto>/docs/README.md#client-management)
+- [TechPlanner Client Management](../TechPlanner/docs/README.md#client-management)
 - [Geo Module Reusable Components Philosophy](../geo/docs/reusable-components-philosophy.md)
 - [Xot Filament Class Extension Rules](../xot/docs/filament-class-extension-rules.md)
 
 ---
 
-**
+**Ultimo aggiornamento**: [DATE]  
 **PHPStan Level**: ✅ 10  
 **Quality**: ✅ PHPMD, PHPInsights compliant

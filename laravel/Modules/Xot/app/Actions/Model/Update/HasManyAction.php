@@ -7,6 +7,7 @@ namespace Modules\Xot\Actions\Model\Update;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use InvalidArgumentException;
 use Modules\Xot\Actions\Model\UpdateAction;
 use Modules\Xot\Datas\HasManyUpdateData;
 use Modules\Xot\Datas\RelationData;
@@ -20,27 +21,27 @@ class HasManyAction
     /**
      * Execute the HasMany relation update.
      *
-     * @throws \InvalidArgumentException
+     * @throws InvalidArgumentException
      */
     public function execute(Model $model, RelationData $relationDTO): void
     {
         Assert::isInstanceOf($relation = $relationDTO->rows, HasMany::class);
 
-        $updateData = new HasManyUpdateData()
+        $updateData = new HasManyUpdateData(
             foreignKey: $relation->getForeignKeyName(),
-            parentKey: $model->$this->getAttribute($relation->getLocalKeyName()),
+            parentKey: $model->getAttribute($relation->getLocalKeyName()),
         );
 
         match (true) {
-            $this->isDirectUpdate($relationDTO->data)
-            default => $this->handleBatchUpdate($relationDTO, $updateData)
+            $this->isDirectUpdate($relationDTO->data) => $this->handleDirectUpdate($relationDTO, $updateData),
+            default => $this->handleBatchUpdate($relationDTO, $updateData),
         };
     }
 
     /**
      * Determine if the update is a direct update.
      *
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     private function isDirectUpdate(array $data): bool
     {
@@ -74,7 +75,7 @@ class HasManyAction
             }
 
             /** @var array<string, mixed> $itemData */
-            $itemData = array_merge($item, [)
+            $itemData = array_merge($item, [
                 $updateData->foreignKey => $updateData->parentKey,
             ]);
 
@@ -94,9 +95,9 @@ class HasManyAction
     /**
      * Clean up orphaned records after batch update.
      *
-     * @param array<int|string> $updatedIds
+     * @param  array<int|string>  $updatedIds
      */
-    private function cleanupOrphanedRecords()
+    private function cleanupOrphanedRecords(
         RelationData $relationDTO,
         HasManyUpdateData $updateData,
         array $updatedIds,

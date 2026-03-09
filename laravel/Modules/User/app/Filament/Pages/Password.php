@@ -74,7 +74,7 @@ class Password extends XotBasePage
                     ->numeric(), // = 1; // The number of times a password can appear in data leaks before being considered compromised.
             ])
             ->columns(3)
-            // ->model($getUser(
+            // ->model($this->getUser())
             ->statePath('formData');
     }
 
@@ -85,10 +85,10 @@ class Password extends XotBasePage
     {
         try {
             /** @var array<string, mixed> $data */
-            $data = $form->getState();
+            $data = $this->form->getState();
             TenantService::saveConfig('password', $data);
 
-            // $this->handleRecordUpdate($this->getUser());
+            // $this->handleRecordUpdate($this->getUser(), $data);
         } catch (Halt $exception) {
             dddx($exception->getMessage());
 
@@ -108,7 +108,7 @@ class Password extends XotBasePage
         /** @var array<string, mixed> $data */
         $data = PasswordData::make()->toArray();
 
-        $form->fill($data);
+        $this->form->fill($data);
     }
 
     /**

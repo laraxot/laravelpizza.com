@@ -35,7 +35,6 @@ use Override;
  * @property Carbon|null $sent_at
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
- *
  * @method static NotificationFactory factory($count = null, $state = [])
  * @method static Builder<static>|Notification newModelQuery()
  * @method static Builder<static>|Notification newQuery()
@@ -52,11 +51,8 @@ use Override;
  * @method static Builder<static>|Notification whereType($value)
  * @method static Builder<static>|Notification whereUpdatedAt($value)
  * @method static Builder<static>|Notification whereUpdatedBy($value)
- *
  * @mixin IdeHelperNotification
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class Notification extends BaseModel

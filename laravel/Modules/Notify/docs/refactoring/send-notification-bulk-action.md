@@ -34,7 +34,7 @@ No reusable BulkAction exists for this common pattern. Each resource would need 
 
 ```
 ┌──────────────────┐
-│  <nome progetto>     │
+│  TechPlanner     │
 │  (Business)      │
 │                  │
 │  "I need to      │
@@ -93,7 +93,7 @@ Layer 2: UI Integration
                     │
 Layer 3: Resource Usage
 ┌─────────────────────────────────────────────────────┐
-│ Modules/<nome progetto>/.../ListClients.php             │
+│ Modules/TechPlanner/.../ListClients.php             │
 │                                                     │
 │ getTableBulkActions(): array {                      │
 │   return [                                          │
@@ -226,7 +226,7 @@ public function execute(
 
 ### Step 5: Add to ListClients
 
-**File**: `Modules/<nome progetto>/.../ListClients.php`
+**File**: `Modules/TechPlanner/.../ListClients.php`
 
 **Change**:
 ```php

@@ -18,16 +18,16 @@ class OtherDeviceLogoutListener
 
     public function __construct(Request $request)
     {
-        $request = $request;
+        $this->request = $request;
     }
 
     public function handle(OtherDeviceLogout $event): void
     {
         if ($event->user && $event->user instanceof HasAuthentications) {
             $user = $event->user;
-            $ip = $request->ip();
+            $ip = $this->request->ip();
 
-            $userAgent = $request->userAgent();
+            $userAgent = $this->request->userAgent();
             $authenticationLog = $user->authentications()->whereIpAddress($ip)->whereUserAgent($userAgent)->first();
 
             if (! $authenticationLog) {
@@ -59,8 +59,8 @@ class OtherDeviceLogoutListener
             return;
         }
 
-        $newIP = $request->ip();
-        $newUserAgent = $request->userAgent();
+        $newIP = $this->request->ip();
+        $newUserAgent = $this->request->userAgent();
 
         $user = $event->user;
         if (! $user || ! ($user instanceof HasAuthentications)) {

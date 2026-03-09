@@ -87,6 +87,15 @@ Il blocco può essere utilizzato in vari contesti:
    - ARIA labels
    - Focus states
 
+## Blade Namespace Rule
+
+Se il blocco `contact.main` usa sottocomponenti del tema, il naming deve distinguere fra:
+
+- view path: `pub_theme::components.blocks.contact.main`
+- component tag anonimo: `<x-pub_theme::blocks.contact.info />` oppure `<x-blocks.contact.info />`
+
+Non usare `<x-pub_theme::components.blocks.contact.info />`, perche' `view:cache` non riesce a risolverlo come anonymous component.
+
 ## Implementazione
 
 1. **Validazione**:

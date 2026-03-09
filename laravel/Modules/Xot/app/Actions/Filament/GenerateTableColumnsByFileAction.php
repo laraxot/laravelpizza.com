@@ -32,7 +32,7 @@ class GenerateTableColumnsByFileAction
     /**
      * Genera colonne per tabelle e form Filament basate su un file di risorsa.
      *
-     * @param File $file Il file della risorsa Filament
+     * @param  File  $file  Il file della risorsa Filament
      */
     public function execute(File $file): void
     {
@@ -44,7 +44,7 @@ class GenerateTableColumnsByFileAction
         }
         $filename = $file->getPathname();
         $class_name = Str::replace(base_path('Modules/'), 'Modules/', $filename);
-        Assert::string()
+        Assert::string(
             $class_name = Str::replace('/', '\\', $class_name),
             '['.__LINE__.']['.class_basename($this).']',
         );
@@ -73,14 +73,14 @@ class GenerateTableColumnsByFileAction
         // ------------------- TABLE -------------------
         // *
         $body = app(GetMethodBodyAction::class)->execute($class_name, 'table');
-        $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->columns(', '(', ')'));
+        $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->columns(', '(', ')');
         $body_new = '->columns(['.chr(13).'// TODO: Generate table columns'.chr(13).'])';
         $body_up = Str::of($body)->replace($body1, $body_new)->toString();
         $content_new = Str::of($file->getContents())->replace($body, $body_up)->toString();
         LaravelFile::put($filename, $content_new);
         // -------------------- FORM ------------------------------
         $body = app(GetMethodBodyAction::class)->execute($class_name, 'form');
-        $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->schema(', '(', ')'));
+        $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->schema(', '(', ')');
         $body_new = '->schema(['.chr(13).'// TODO: Generate form schema'.chr(13).'])';
         $body_up = Str::of($body)->replace($body1, $body_new)->toString();
         $content_new = Str::of($file->getContents())->replace($body, $body_up)->toString();
@@ -94,8 +94,8 @@ class GenerateTableColumnsByFileAction
             // Verifichiamo che $fillable sia un array e contenga 'anno'
             if (is_array($fillable) && in_array('anno', $fillable, strict: true)) {
                 $body = app(GetMethodBodyAction::class)->execute($class_name, 'table');
-                $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->filters(', '(', ')'));
-                $body_new = "->filters([)
+                $body1 = app(GetStrBetweenStartsWithAction::class)->execute($body, '->filters(', '(', ')');
+                $body_new = "->filters([
                         app(\Modules\Xot\Actions\Filament\Filter\GetYearFilter::class)->execute('anno',intval(date('Y')) - 3,intval(date('Y'))),
                     ],layout: \Filament\Tables\Enums\FiltersLayout::AboveContent)
                     ->persistFiltersInSession()";
@@ -111,13 +111,13 @@ class GenerateTableColumnsByFileAction
     /**
      * Mostra informazioni di debug su un file.
      *
-     * @param File $file Il file da analizzare
+     * @param  File  $file  Il file da analizzare
      */
     public function ddFile(File $file): void
     {
         // Debug information - commented out for production
         /*
-        dd([)
+        dd([
             'getRelativePath' => $file->getRelativePath(), // =  ""
             'getRelativePathname' => $file->getRelativePathname(), //  AssenzeResource.php
             'getFilenameWithoutExtension' => $file->getFilenameWithoutExtension(), // AssenzeResource

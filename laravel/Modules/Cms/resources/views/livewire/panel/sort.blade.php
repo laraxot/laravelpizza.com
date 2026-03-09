@@ -11,12 +11,12 @@ declare(strict_types=1);
             </div>
         @endif
     </div>
-    <a href="{{ // Placeholder purged panel->url('index'; Back</a>
+    <a href="{{ $this->panel->url('index') }}" class="btn btn-info">&laquo; Back</a>
     <ul wire:sortable="updateTaskOrder">
-        {{-- dddx(// Placeholder purged panel->rows($data
-        @foreach (// Placeholder purged rows->sortBy('pos'
+        {{-- dddx($this->panel->rows($data)->get()) --}}
+        @foreach ($this->rows->sortBy('pos') as $row)
             <li wire:sortable.item="{{ $row->id }}" wire:key="task-{{ $row->id }}">
-                <h4 wire:sortable.handle>[{{ $row->pos }}] {!! // Placeholder purged panel->optionLabel($row
+                <h4 wire:sortable.handle>[{{ $row->pos }}] {!! $this->panel->optionLabel($row) !!}</h4>
                 <button wire:click="removeTask({{ $row->id }})">Remove</button>
             </li>
         @endforeach

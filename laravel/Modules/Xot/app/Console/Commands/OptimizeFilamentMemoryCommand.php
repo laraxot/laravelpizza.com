@@ -4,18 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Console\Commands;
 
+use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use Symfony\Component\Process\Process;
 
 use function Safe\preg_match;
 
-use Symfony\Component\Process\Process;
-
 /**
  * Comando per ottimizzare la memory usage di Filament.
- * SuperMucca Memory Optimizer Command 🐄.
+ * SuperMucca Memory Optimizer Command 🐄
  */
 class OptimizeFilamentMemoryCommand extends Command
 {
@@ -108,11 +108,11 @@ class OptimizeFilamentMemoryCommand extends Command
         $this->info('🔍 Analisi problemi di memoria...');
 
         $issues = [
-            'models_with_eager_loading' => $this->findModelsWithEagerLoading()
-            'heavy_widgets' => $this->findHeavyWidgets()
-            'unoptimized_resources' => $this->findUnoptimizedResources()
-            'migration_code_in_forms' => $this->findMigrationCodeInForms()
-            'missing_pagination' => $this->findMissingPagination()
+            'models_with_eager_loading' => $this->findModelsWithEagerLoading(),
+            'heavy_widgets' => $this->findHeavyWidgets(),
+            'unoptimized_resources' => $this->findUnoptimizedResources(),
+            'migration_code_in_forms' => $this->findMigrationCodeInForms(),
+            'missing_pagination' => $this->findMissingPagination(),
         ];
 
         if ($verbose) {
@@ -133,16 +133,16 @@ class OptimizeFilamentMemoryCommand extends Command
         $files = File::allFiles(base_path('Modules'));
 
         foreach ($files as $file) {
-            if ('php' === $file->getExtension() && str_contains($file->getPathname(), '/Models/')) {
+            if ($file->getExtension() === 'php' && str_contains($file->getPathname(), '/Models/')) {
                 $content = File::get($file->getPathname());
 
-                if (1 === preg_match('/protected\s+\$with\s*=\s*\[([^\]]+)\]/', $content, $matches)) {
+                if (preg_match('/protected\s+\$with\s*=\s*\[([^\]]+)\]/', $content, $matches) === 1) {
                     $withContent = $matches[1] ?? '';
                     // Controlla se ha relazioni pesanti
-                    if (str_contains($withContent, 'roles'))
-                        || str_contains($withContent, 'permissions')
-                        || str_contains($withContent, 'teams')
-                        || str_contains($withContent, 'media')) {
+                    if (str_contains($withContent, 'roles') ||
+                        str_contains($withContent, 'permissions') ||
+                        str_contains($withContent, 'teams') ||
+                        str_contains($withContent, 'media')) {
                         $models[] = $file->getPathname();
                     }
                 }
@@ -163,13 +163,13 @@ class OptimizeFilamentMemoryCommand extends Command
         $files = File::allFiles(base_path('Modules'));
 
         foreach ($files as $file) {
-            if ('php' === $file->getExtension() && str_contains($file->getPathname(), '/Widgets/')) {
+            if ($file->getExtension() === 'php' && str_contains($file->getPathname(), '/Widgets/')) {
                 $content = File::get($file->getPathname());
 
                 // Cerca query senza limitazioni
-                if (str_contains($content, '->get()'))
-                    && ! str_contains($content, '->limit('))
-                    && ! str_contains($content, '->take(')) {
+                if (str_contains($content, '->get()') &&
+                    ! str_contains($content, '->limit(') &&
+                    ! str_contains($content, '->take(')) {
                     $widgets[] = $file->getPathname();
                 }
             }
@@ -189,11 +189,11 @@ class OptimizeFilamentMemoryCommand extends Command
         $files = File::allFiles(base_path('Modules'));
 
         foreach ($files as $file) {
-            if ('php' === $file->getExtension() && str_contains($file->getPathname(), '/Resources/') && str_ends_with($file->getFilename(), 'Resource.php')) {
+            if ($file->getExtension() === 'php' && str_contains($file->getPathname(), '/Resources/') && str_ends_with($file->getFilename(), 'Resource.php')) {
                 $content = File::get($file->getPathname());
 
                 // Cerca eager loading eccessivo
-                if (str_contains($content, '->with(') || str_contains($content, '->load(')) {))
+                if (str_contains($content, '->with(') || str_contains($content, '->load(')) {
                     $resources[] = $file->getPathname();
                 }
             }
@@ -213,13 +213,13 @@ class OptimizeFilamentMemoryCommand extends Command
         $files = File::allFiles(base_path('Modules'));
 
         foreach ($files as $file) {
-            if ('php' === $file->getExtension() && (str_contains($file->getPathname(), '/Resources/') || str_contains($file->getPathname(), '/Forms/'))) {
+            if ($file->getExtension() === 'php' && (str_contains($file->getPathname(), '/Resources/') || str_contains($file->getPathname(), '/Forms/'))) {
                 $content = File::get($file->getPathname());
 
                 // Cerca query di migrazione nei form
-                if (str_contains($content, '->whereNull(')))
-                    && str_contains($content, '->update('))
-                    && str_contains($content, 'getFormSchema')) {
+                if (str_contains($content, '->whereNull(') &&
+                    str_contains($content, '->update(') &&
+                    str_contains($content, 'getFormSchema')) {
                     $forms[] = $file->getPathname();
                 }
             }
@@ -239,7 +239,7 @@ class OptimizeFilamentMemoryCommand extends Command
         $files = File::allFiles(base_path('Modules'));
 
         foreach ($files as $file) {
-            if ('php' === $file->getExtension() && str_contains($file->getPathname(), '/Pages/List')) {
+            if ($file->getExtension() === 'php' && str_contains($file->getPathname(), '/Pages/List')) {
                 $content = File::get($file->getPathname());
 
                 // Cerca liste senza paginazione
@@ -255,7 +255,7 @@ class OptimizeFilamentMemoryCommand extends Command
     /**
      * Mostra i risultati dell'analisi.
      *
-     * @param array<string, mixed> $issues
+     * @param  array<string, mixed>  $issues
      */
     private function displayAnalysisResults(array $issues): void
     {
@@ -297,7 +297,7 @@ class OptimizeFilamentMemoryCommand extends Command
     /**
      * Mostra dettagli sui problemi trovati.
      *
-     * @param array<string, mixed> $issues
+     * @param  array<string, mixed>  $issues
      */
     private function displayDetailedIssues(array $issues): void
     {
@@ -307,7 +307,7 @@ class OptimizeFilamentMemoryCommand extends Command
                 $this->warn("Dettagli {$type}:");
                 foreach ($items as $item) {
                     $itemString = is_string($item) ? $item : (string) $item;
-                    $this->line('  - '.str_replace(base_path()));
+                    $this->line('  - '.str_replace(base_path(), '', (string) $itemString));
                 }
             }
         }
@@ -316,7 +316,7 @@ class OptimizeFilamentMemoryCommand extends Command
     /**
      * Applica le ottimizzazioni.
      *
-     * @param array<string, mixed> $issues
+     * @param  array<string, mixed>  $issues
      */
     private function applyOptimizations(array $issues, bool $verbose = false): void
     {
@@ -355,11 +355,11 @@ class OptimizeFilamentMemoryCommand extends Command
 
         // Ottimizza le tabelle MySQL se possibile
         try {
-            if ('mysql' === config('database.default')) {
+            if (config('database.default') === 'mysql') {
                 DB::statement('OPTIMIZE TABLE users');
                 // Aggiungi altre tabelle critiche se necessario
             }
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             // Ignora errori di ottimizzazione database
         }
     }

@@ -23,14 +23,14 @@ class ConfirmComponent extends Component
         /*
          * $this->validate([
          * 'password' => ['required', 'current_password'],
-         * ]));
+         * ]);
          *
          * session()->put('auth.password_confirmed_at', time());
          *
          * $this->redirect(
          * session('url.intended', '/'),
          * navigate: true
-         * ));
+         * );
          */
         $this->validate();
 

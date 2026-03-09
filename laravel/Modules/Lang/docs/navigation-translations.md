@@ -100,4 +100,4 @@ Molte traduzioni utilizzano ancora il pattern `.navigation` invece di traduzioni
 - [Correzioni Errori Sintassi 2025](../correzioni_errori_sintassi_2025.md)
 - [Best Practices Traduzioni](../../xot/docs/translation_rules.md)
 
-*
+*Ultimo aggiornamento: 6 Gennaio 2025*

@@ -60,12 +60,12 @@ class SendAwsEmailPage extends XotBasePage
 
     protected function fillForms(): void
     {
-        $emailForm->fill();
+        $this->emailForm->fill();
     }
 
     public function emailForm(Schema $schema): Schema
     {
-        return $schema->components($getEmailFormSchema());
+        return $schema->components($this->getEmailFormSchema())->model($this->getUser())->statePath('emailData');
     }
 
     /**
@@ -109,7 +109,7 @@ class SendAwsEmailPage extends XotBasePage
 
     public function sendEmail(): void
     {
-        $data = $emailForm->getState();
+        $data = $this->emailForm->getState();
 
         try {
             $recipient = is_string($data['recipient']) ? $data['recipient'] : '';

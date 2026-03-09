@@ -60,12 +60,12 @@ class SendWhatsAppPage extends XotBasePage
 
     protected function fillForms(): void
     {
-        $whatsappForm->fill();
+        $this->whatsappForm->fill();
     }
 
     public function whatsappForm(Schema $schema): Schema
     {
-        return $schema->components($getWhatsAppFormSchema());
+        return $schema->components($this->getWhatsAppFormSchema())->model($this->getUser())->statePath('whatsappData');
     }
 
     /**
@@ -104,7 +104,7 @@ class SendWhatsAppPage extends XotBasePage
     public function sendWhatsApp(): void
     {
         try {
-            $data = $whatsappForm->getState();
+            $data = $this->whatsappForm->getState();
             $user = $this->getUser();
 
             $message = is_string($data['message']) ? $data['message'] : '';

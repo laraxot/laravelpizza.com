@@ -12,9 +12,15 @@ Il modulo Notify è progettato per essere **completamente riutilizzabile** tra d
 $user = \Modules\<nome progetto>\Models\User::factory()->create();
 'database' => '<nome progetto>_test',
 $this->app['config']->set('database.connections.<nome progetto>_test', [
+<<<<<<< HEAD
 $user = \Modules\Laraxot\Models\User::factory()->create();
 'database' => 'ptvx_test',
-$this->app['config']->set('database.connections.ptvx_test', [ (docs: replace project-specific references with generic placeholders across documentation)
+$this->app['config']->set('database.connections.ptvx_test', [
+=======
+$user = \Modules\healthcare_app\Models\User::factory()->create();
+'database' => 'healthcare_app_test',
+$this->app['config']->set('database.connections.healthcare_app_test', [
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ✅ **SEMPRE utilizzare pattern riutilizzabili:**
@@ -32,7 +38,11 @@ Il modulo Notify deve utilizzare `XotData::make()->getUserClass()` per ottenere 
 use Modules\Xot\Datas\XotData;
 
 // Invece di: \Modules\<nome progetto>\Models\User::class
-// Invece di: \Modules\Laraxot\Models\User::class (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+// Invece di: \Modules\Laraxot\Models\User::class
+=======
+// Invece di: \Modules\healthcare_app\Models\User::class
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 $userClass = XotData::make()->getUserClass();
 $user = $userClass::factory()->create();
 ```
@@ -42,7 +52,11 @@ Per i test che richiedono configurazioni database specifiche:
 
 ```php
 // Invece di: '<nome progetto>_test'
-// Invece di: 'ptvx_test' (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+// Invece di: 'ptvx_test'
+=======
+// Invece di: 'healthcare_app_test'
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 $testDatabase = config('database.default') . '_test';
 $this->app['config']->set("database.connections.{$testDatabase}", [
     // configurazione
@@ -67,10 +81,17 @@ use Modules\<nome progetto>\Models\User;
 use Modules\<nome progetto>\Models\Patient;
 'database' => '<nome progetto>_test'
 $this->artisan('migrate', ['--database' => '<nome progetto>_test']);
+<<<<<<< HEAD
 use Modules\Laraxot\Models\User;
 use Modules\Laraxot\Models\Patient;
 'database' => 'ptvx_test'
-$this->artisan('migrate', ['--database' => 'ptvx_test']); (docs: replace project-specific references with generic placeholders across documentation)
+$this->artisan('migrate', ['--database' => 'ptvx_test']);
+=======
+use Modules\healthcare_app\Models\User;
+use Modules\healthcare_app\Models\Patient;
+'database' => 'healthcare_app_test'
+$this->artisan('migrate', ['--database' => 'healthcare_app_test']);
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ### ❌ Configurazioni Project-Specific
@@ -78,8 +99,13 @@ $this->artisan('migrate', ['--database' => 'ptvx_test']); (docs: replace project
 // VIETATO: Configurazioni specifiche del progetto
 'app_name' => '<nome progetto>',
 'tenant_model' => \Modules\<nome progetto>\Models\Studio::class,
+<<<<<<< HEAD
 'app_name' => 'Laraxot',
-'tenant_model' => \Modules\Laraxot\Models\Studio::class, (docs: replace project-specific references with generic placeholders across documentation)
+'tenant_model' => \Modules\Laraxot\Models\Studio::class,
+=======
+'app_name' => 'healthcare_app',
+'tenant_model' => \Modules\healthcare_app\Models\Studio::class,
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ## Pattern Corretti per Riusabilità
@@ -128,7 +154,11 @@ protected function createTestUser(): mixed
 Prima di committare modifiche al modulo Notify:
 
 - [ ] Nessun riferimento hardcoded a "<nome progetto>" o altri nomi di progetti
-- [ ] Nessun riferimento hardcoded a "ptvx" o altri nomi di progetti (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+- [ ] Nessun riferimento hardcoded a "ptvx" o altri nomi di progetti
+=======
+- [ ] Nessun riferimento hardcoded a "healthcare_app" o altri nomi di progetti
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - [ ] Utilizzo di `XotData::make()->getUserClass()` per la classe User
 - [ ] Configurazioni database dinamiche nei test
 - [ ] Nessun import diretto di modelli da altri progetti
@@ -143,14 +173,22 @@ Per verificare che il modulo sia veramente riutilizzabile:
 ```bash
 # Cerca hardcoding di nomi progetti
 grep -r -i "<nome progetto>\|salutemo\|dentalpro" Modules/Notify/ --exclude-dir=vendor
-grep -r -i "ptvx\|salutemo\|dentalpro" Modules/Notify/ --exclude-dir=vendor (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+grep -r -i "ptvx\|salutemo\|dentalpro" Modules/Notify/ --exclude-dir=vendor
+=======
+grep -r -i "healthcare_app\|salutemo\|dentalpro" Modules/Notify/ --exclude-dir=vendor
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 # Cerca import diretti da altri moduli
 grep -r "use Modules\\\\[^N][^o][^t][^i][^f][^y]" Modules/Notify/
 
 # Cerca configurazioni hardcoded
 grep -r "database.*<nome progetto>\|app.*<nome progetto>" Modules/Notify/
-grep -r "database.*ptvx\|app.*ptvx" Modules/Notify/ (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+grep -r "database.*ptvx\|app.*ptvx" Modules/Notify/
+=======
+grep -r "database.*healthcare_app\|app.*healthcare_app" Modules/Notify/
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ## Benefici della Riusabilità

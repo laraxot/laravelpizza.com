@@ -1,6 +1,10 @@
 # Gestione Traduzioni Contenuti JSON
 
+<<<<<<< .merge_file_e1BYY3
 Questo documento descrive come gestire le traduzioni per i contenuti JSON nel progetto healthcare_app, con particolare attenzione ai file di contenuto delle pagine.
+=======
+Questo documento descrive come gestire le traduzioni per i contenuti JSON nel progetto ptvx, con particolare attenzione ai file di contenuto delle pagine.
+>>>>>>> .merge_file_0EDBuW
 
 ## Struttura dei Contenuti Traducibili
 
@@ -8,7 +12,11 @@ Questo documento descrive come gestire le traduzioni per i contenuti JSON nel pr
 
 I contenuti delle pagine sono memorizzati in file JSON nella directory:
 ```
+<<<<<<< .merge_file_e1BYY3
 config/local/healthcare_app/database/content/pages/
+=======
+config/local/ptvx/database/content/pages/
+>>>>>>> .merge_file_0EDBuW
 ```
 
 ### Struttura Standard
@@ -77,8 +85,18 @@ Ogni file JSON può contenere sezioni traducibili seguendo questo pattern:
 ```json
 {
     "title": {
+<<<<<<< .merge_file_e1BYY3
         "it": "Area Dottore - healthcare_app",
         "en": "Doctor Area - healthcare_app"
+=======
+<<<<<<< HEAD
+        "it": "Area Dottore - ExternalProject",
+        "en": "Doctor Area - ExternalProject"
+=======
+        "it": "Area Dottore - ModuloEsempio",
+        "en": "Doctor Area - ModuloEsempio"
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_0EDBuW
     },
     "content_blocks": {
         "it": [
@@ -147,7 +165,11 @@ Ogni file JSON può contenere sezioni traducibili seguendo questo pattern:
 
 Identificare i file JSON che necessitano di traduzione:
 ```bash
+<<<<<<< .merge_file_e1BYY3
 find config/local/healthcare_app/database/content/pages/ -name "*.json"
+=======
+find config/local/ptvx/database/content/pages/ -name "*.json"
+>>>>>>> .merge_file_0EDBuW
 ```
 
 ### 2. Analisi
@@ -192,7 +214,11 @@ jq '.title | keys' file.json
 
 # Controlla che tutti i file JSON abbiano le traduzioni complete
 
+<<<<<<< .merge_file_e1BYY3
 for file in config/local/healthcare_app/database/content/pages/*.json; do
+=======
+for file in config/local/ptvx/database/content/pages/*.json; do
+>>>>>>> .merge_file_0EDBuW
     echo "Checking $file..."
     
     # Verifica presenza sezioni it e en

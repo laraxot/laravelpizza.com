@@ -106,7 +106,7 @@
 
 - [Processo Normalizzazione](../xot/docs/docs-normalization-process.md)
 - [Regole Naming File](../xot/docs/file-naming-rules.md)
-- [Filosofia DRY + KISS](../../docs/philosophy-guide.md)
+- [Filosofia DRY + KISS](../../../docs/philosophy-guide.md)
 
 ---
 

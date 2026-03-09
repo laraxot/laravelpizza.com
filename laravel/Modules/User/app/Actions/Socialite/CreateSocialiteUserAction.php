@@ -38,6 +38,6 @@ class CreateSocialiteUserAction
             'avatar' => $oauthUser->getAvatar(),
         ];
 
-        return $socialiteUserModel->create(attributes: $attributes);
+        return $this->socialiteUserModel->create(attributes: $attributes);
     }
 }

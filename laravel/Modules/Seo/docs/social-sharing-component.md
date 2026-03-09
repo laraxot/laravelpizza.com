@@ -98,7 +98,7 @@ public function getSocialShareData(): SocialShareData
 </div>
 ```
 
-## Final Architecture (
+## Final Architecture (Version 1.0.0)
 
 The final implementation follows a pure Laraxot approach:
 - **DTO**: [SocialShareData.php](file:///var/www/_bases/base_laravelpizza/laravel/Modules/Seo/app/Data/SocialShareData.php)

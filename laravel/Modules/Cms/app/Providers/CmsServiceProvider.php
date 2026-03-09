@@ -25,9 +25,14 @@ class CmsServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
-        $xot = XotData::make();
-        if ($xot->register_pub_theme) {
+
+        $this->xot = XotData::make();
+
+        if ($this->xot->register_pub_theme) {
             $this->registerNamespaces('pub_theme');
+
+            // $this->registerThemeConfig('pub_theme');
+            // $this->registerThemeLivewireComponents();
         }
     }
 
@@ -38,7 +43,8 @@ class CmsServiceProvider extends XotBaseServiceProvider
     public function register(): void
     {
         parent::register();
-        $xot = XotData::make();
+
+        $this->xot = XotData::make();
 
         // Verifica che la configurazione di LaravelLocalization sia caricata
         // NOTA: La configurazione è già gestita dal modulo Lang
@@ -46,20 +52,22 @@ class CmsServiceProvider extends XotBaseServiceProvider
         //     $this->mergeConfigFrom(__DIR__.'/../config/laravellocalization.php', 'laravellocalization');
         // }
 
-        if ($xot->register_pub_theme) {
+        if ($this->xot->register_pub_theme) {
             Assert::isArray($paths = config('view.paths'));
             $theme_path = app(FixPathAction::class)
-                ->execute(base_path('Themes/'.$xot->pub_theme.'/resources/views'));
+                ->execute(base_path('Themes/'.$this->xot->pub_theme.'/resources/views'));
             $paths = array_merge([$theme_path], $paths);
             Config::set('view.paths', $paths);
             Config::set('livewire.view_path', $theme_path.'/livewire');
-            Config::set('livewire.class_namespace', 'Themes\\'.$xot->pub_theme.'\\Http\\Livewire');
+            Config::set('livewire.class_namespace', 'Themes\\'.$this->xot->pub_theme.'\Http\Livewire');
+
+            // $this->registerFolio();
         }
     }
 
     public function registerNamespaces(string $theme_type): void
     {
-        $xot = XotData::make();
+        $xot = $this->xot;
 
         Assert::string($theme = $xot->{$theme_type}, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
         $theme_path = 'Themes/'.$theme;

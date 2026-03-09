@@ -26,7 +26,7 @@ trait HasTenants
      */
     public function canAccessTenant(Model $tenant): bool
     {
-        return $this->tenants();
+        return $this->tenants()->whereKey($tenant)->exists();
     }
 
     /**
@@ -37,7 +37,7 @@ trait HasTenants
     public function getTenants(Panel $_panel): array|Collection
     {
         /** @var Collection<int, Model> $result */
-        $result = $tenants->map(
+        $result = $this->tenants->map(
             static fn (Model $tenant): Model => $tenant,
         );
 

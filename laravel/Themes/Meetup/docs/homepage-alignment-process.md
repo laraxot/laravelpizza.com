@@ -262,6 +262,6 @@ Gli screenshot sono disponibili in:
 
 ---
 
-**
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: ✅ Processo Completato e Documentato

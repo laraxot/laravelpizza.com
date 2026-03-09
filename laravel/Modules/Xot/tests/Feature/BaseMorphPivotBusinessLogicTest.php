@@ -5,13 +5,16 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Feature;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Xot\Models\BaseMorphPivot;
-use Modules\Xot\Tests\TestCase;
+use Tests\TestCase;
 
 class BaseMorphPivotBusinessLogicTest extends TestCase
 {
+    use RefreshDatabase;
+
     /** @test */
-    public function itExtendsPivotClass(): void
+    public function it_extends_pivot_class(): void
     {
         // Arrange & Act
         $pivot = new BaseMorphPivot();
@@ -21,7 +24,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageMorphType(): void
+    public function it_can_manage_morph_type(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -35,7 +38,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageMorphId(): void
+    public function it_can_manage_morph_id(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -49,7 +52,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageRelatedType(): void
+    public function it_can_manage_related_type(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -63,7 +66,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageRelatedId(): void
+    public function it_can_manage_related_id(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -77,7 +80,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManagePivotAttributes(): void
+    public function it_can_manage_pivot_attributes(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -85,8 +88,8 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
         $pivot->setAttribute('numeric_field', 42);
 
         // Act
-        $customField = $pivot->$this->getAttribute('custom_field');
-        $numericField = $pivot->$this->getAttribute('numeric_field');
+        $customField = $pivot->getAttribute('custom_field');
+        $numericField = $pivot->getAttribute('numeric_field');
 
         // Assert
         $this->assertEquals('custom_value', $customField);
@@ -94,7 +97,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageTimestamps(): void
+    public function it_can_manage_timestamps(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -112,7 +115,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageSoftDeletes(): void
+    public function it_can_manage_soft_deletes(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -127,7 +130,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageTenantId(): void
+    public function it_can_manage_tenant_id(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -141,7 +144,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageUserId(): void
+    public function it_can_manage_user_id(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -155,7 +158,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageMetadata(): void
+    public function it_can_manage_metadata(): void
     {
         // Arrange
         $metadata = [
@@ -180,7 +183,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageExtraData(): void
+    public function it_can_manage_extra_data(): void
     {
         // Arrange
         $extraData = [
@@ -205,7 +208,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageStatus(): void
+    public function it_can_manage_status(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -219,7 +222,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManagePriority(): void
+    public function it_can_manage_priority(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -233,7 +236,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageSortOrder(): void
+    public function it_can_manage_sort_order(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -247,7 +250,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageExpiresAt(): void
+    public function it_can_manage_expires_at(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -262,7 +265,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageStartsAt(): void
+    public function it_can_manage_starts_at(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -277,7 +280,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageEndsAt(): void
+    public function it_can_manage_ends_at(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -292,7 +295,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageIsActive(): void
+    public function it_can_manage_is_active(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -312,7 +315,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageIsPublic(): void
+    public function it_can_manage_is_public(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -332,7 +335,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageIsFeatured(): void
+    public function it_can_manage_is_featured(): void
     {
         // Arrange
         $pivot = new BaseMorphPivot();
@@ -352,7 +355,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageTags(): void
+    public function it_can_manage_tags(): void
     {
         // Arrange
         $tags = ['tag1', 'tag2', 'important'];
@@ -372,7 +375,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageCategories(): void
+    public function it_can_manage_categories(): void
     {
         // Arrange
         $categories = ['category1', 'category2'];
@@ -391,7 +394,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManagePermissions(): void
+    public function it_can_manage_permissions(): void
     {
         // Arrange
         $permissions = [
@@ -414,7 +417,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageSettings(): void
+    public function it_can_manage_settings(): void
     {
         // Arrange
         $settings = [
@@ -437,7 +440,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageNotes(): void
+    public function it_can_manage_notes(): void
     {
         // Arrange
         $notes = 'This is a test note for the pivot relationship';
@@ -453,7 +456,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageDescription(): void
+    public function it_can_manage_description(): void
     {
         // Arrange
         $description = 'Test description for pivot relationship';
@@ -469,7 +472,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageUrl(): void
+    public function it_can_manage_url(): void
     {
         // Arrange
         $url = 'https://example.com/pivot/123';
@@ -485,7 +488,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageImageUrl(): void
+    public function it_can_manage_image_url(): void
     {
         // Arrange
         $imageUrl = 'https://example.com/images/pivot.jpg';
@@ -501,7 +504,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageExternalId(): void
+    public function it_can_manage_external_id(): void
     {
         // Arrange
         $externalId = 'ext_12345';
@@ -517,7 +520,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageSource(): void
+    public function it_can_manage_source(): void
     {
         // Arrange
         $source = 'api_import';
@@ -533,7 +536,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageVersion(): void
+    public function it_can_manage_version(): void
     {
         // Arrange
         $version = '1.2.3';
@@ -549,7 +552,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageHash(): void
+    public function it_can_manage_hash(): void
     {
         // Arrange
         $hash = 'abc123def456';
@@ -565,7 +568,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageChecksum(): void
+    public function it_can_manage_checksum(): void
     {
         // Arrange
         $checksum = 'sha256:abc123def456';
@@ -581,7 +584,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageSize(): void
+    public function it_can_manage_size(): void
     {
         // Arrange
         $size = 1024;
@@ -597,7 +600,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageMimeType(): void
+    public function it_can_manage_mime_type(): void
     {
         // Arrange
         $mimeType = 'application/json';
@@ -613,7 +616,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageEncoding(): void
+    public function it_can_manage_encoding(): void
     {
         // Arrange
         $encoding = 'UTF-8';
@@ -629,7 +632,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageLanguage(): void
+    public function it_can_manage_language(): void
     {
         // Arrange
         $language = 'en';
@@ -645,7 +648,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageLocale(): void
+    public function it_can_manage_locale(): void
     {
         // Arrange
         $locale = 'en_US';
@@ -661,7 +664,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageTimezone(): void
+    public function it_can_manage_timezone(): void
     {
         // Arrange
         $timezone = 'Europe/Rome';
@@ -677,7 +680,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageCurrency(): void
+    public function it_can_manage_currency(): void
     {
         // Arrange
         $currency = 'EUR';
@@ -693,7 +696,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageDecimalPlaces(): void
+    public function it_can_manage_decimal_places(): void
     {
         // Arrange
         $decimalPlaces = 2;
@@ -709,7 +712,7 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanManageRoundingMode(): void
+    public function it_can_manage_rounding_mode(): void
     {
         // Arrange
         $roundingMode = 'half_up';

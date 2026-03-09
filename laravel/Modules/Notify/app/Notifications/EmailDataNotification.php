@@ -28,7 +28,7 @@ class EmailDataNotification extends Notification
      */
     public function __construct(EmailData $emailData)
     {
-        $emailData = $emailData;
+        $this->emailData = $emailData;
     }
 
     /**
@@ -50,17 +50,17 @@ class EmailDataNotification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         $mailMessage = (new MailMessage)
-            ->subject($emailData->subject)
-            ->line($emailData->body);
+            ->subject($this->emailData->subject)
+            ->line($this->emailData->body);
 
-        if (! empty($emailData->body_html))
-            $mailMessage->view('notify::emails.template', [)
-                'content' => $emailData->body_html,
+        if (! empty($this->emailData->body_html)) {
+            $mailMessage->view('notify::emails.template', [
+                'content' => $this->emailData->body_html,
             ]);
         }
 
-        if (! empty($emailData->from_email))
-            $mailMessage->from($emailData->from_email, $this->emailData->from);
+        if (! empty($this->emailData->from_email) && ! empty($this->emailData->from)) {
+            $mailMessage->from($this->emailData->from_email, $this->emailData->from);
         }
 
         return $mailMessage;
@@ -75,11 +75,11 @@ class EmailDataNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            'recipient' => $emailData->recipient,
-            'from' => $emailData->from,
-            'from_email' => $emailData->from_email,
-            'subject' => $emailData->subject,
-            'body' => $emailData->body,
+            'recipient' => $this->emailData->recipient,
+            'from' => $this->emailData->from,
+            'from_email' => $this->emailData->from_email,
+            'subject' => $this->emailData->subject,
+            'body' => $this->emailData->body,
         ];
     }
 }

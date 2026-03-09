@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+uses(Modules\Geo\Tests\TestCase::class);
+
 use Modules\Geo\Datas\Photon\PhotonAddressData;
 use Modules\Geo\Datas\Photon\PhotonFeatureData;
 use Modules\Geo\Datas\Photon\PhotonPropertiesData;

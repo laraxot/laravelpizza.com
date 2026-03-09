@@ -1,4 +1,4 @@
-# Xot Module - Framework Base
+# Modulo Xot - Framework Base
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
 [![Filament 5.x](https://img.shields.io/badge/Filament-5.x-blue.svg)](https://filamentphp.com/)
@@ -84,9 +84,9 @@ php artisan xot:status
 
 ## 🔗 Related Documentation
 
-- [Laraxot Main Docs](../../docs/ai-guidelines.md) - Documentazione generale
-- [Architecture Rules](../../docs/fundamentals/architecture-rules.md) - Regole critiche
-- [Module Structure](../../docs/fundamentals/module-structure.md) - Come strutturare moduli
+- [Laraxot Main Docs](../../../docs/ai-guidelines.md) - Documentazione generale
+- [Architecture Rules](../../../docs/fundamentals/architecture-rules.md) - Regole critiche
+- [Module Structure](../../../docs/fundamentals/module-structure.md) - Come strutturare moduli
 
 ## 📞 Support
 

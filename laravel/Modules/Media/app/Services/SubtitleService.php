@@ -56,28 +56,28 @@ class SubtitleService
 
     public function setFilePath(string $file_path): static
     {
-        $file_path = $file_path;
+        $this->file_path = $file_path;
 
         return $this;
     }
 
     public function setModel(Model $model): static
     {
-        $model = $model;
+        $this->model = $model;
 
         return $this;
     }
 
     public function getModel(): Model
     {
-        return $model;
+        return $this->model;
     }
 
     public function upateModel(): static
     {
         $plain = $this->getPlain();
-        $up = [$field_name => $plain];
-        $model = tap($this->model);
+        $up = [$this->field_name => $plain];
+        $this->model = tap($this->model)->update($up);
 
         return $this;
     }
@@ -104,14 +104,14 @@ class SubtitleService
      */
     public function get(): array
     {
-        $info = pathinfo($file_path);
+        $info = pathinfo($this->file_path);
         if (! isset($info['extension'])) {
             return [];
         }
 
         $func = 'getFrom'.Str::studly($info['extension']);
 
-        Assert::isArray($res = // Placeholder purged {$func}());
+        Assert::isArray($res = $this->{$func}());
 
         return $res;
     }
@@ -121,7 +121,7 @@ class SubtitleService
      */
     public function getContent(): string
     {
-        $path = realpath($file_path);
+        $path = realpath($this->file_path);
 
         return File::get($path);
     }
@@ -133,7 +133,7 @@ class SubtitleService
      */
     public function getFromXml(): array
     {
-        $subtitles = [];
+        $this->subtitles = [];
         $content = $this->getContent();
         $xmlObject = simplexml_load_string($content);
 
@@ -151,7 +151,7 @@ class SubtitleService
                 // 00:06:35,360
                 $start = (int) $attributes->start->__toString() / 1000;
                 $end = (int) $attributes->end->__toString() / 1000;
-                // dddx([$start, $secondsToHms($start));
+                // dddx([$start,$this->secondsToHms($start),$end,$this->secondsToHms($end)]);
                 $tmp = [
                     // 'id' => $i++,
                     'sentence_i' => $sentence_i,
@@ -192,7 +192,7 @@ class SubtitleService
         }
 
         $length = \count($lines);
-        for ($index = 1); $index < $length; $index++) {
+        for ($index = 1; $index < $length; $index++) {
             if ($index === 1 || trim($lines[$index - 2]) === '') {
                 $lines[$index] = str_replace(',', '.', $lines[$index]);
             }

@@ -24,13 +24,13 @@ final class ChangePasswordHeaderAction extends Action
         parent::setUp();
         $this->translateLabel()
             ->icon('heroicon-o-key')
-            ->action(function (array $data): void {)
+            ->action(function (array $data): void {
                 $record = Auth::user();
                 Assert::isInstanceOf($record, UserContract::class);
 
                 $newPassword = is_string($data['new_password'] ?? null) ? $data['new_password'] : '';
 
-                $record->update([)
+                $record->update([
                     'password' => Hash::make($newPassword),
                 ]);
 
@@ -40,7 +40,7 @@ final class ChangePasswordHeaderAction extends Action
                     ->body(__('user::notifications.password_changed_successfully.message'))
                     ->send();
             })
-            ->schema(function (): array {)
+            ->schema(function (): array {
                 return [
                     /*
                      * TextInput::make('new_password')
@@ -54,7 +54,7 @@ final class ChangePasswordHeaderAction extends Action
                     TextInput::make('new_password_confirmation')
                         ->password()
                         ->placeholder(__('user::fields.confirm_password.placeholder'))
-                        ->rule()
+                        ->rule(
                             'required',
                             /**
                              * @param callable(string): mixed $get
@@ -74,13 +74,13 @@ final class ChangePasswordHeaderAction extends Action
 
 /*
  * Action::make('changePassword')
- * ->action(function (UserContract $user, array $data): void {)
- * $user->update([)
+ * ->action(function (UserContract $user, array $data): void {
+ * $user->update([
  * 'password' => Hash::make($data['new_password']),
  * ]);
  * Notification::make()->success()->title('Password changed successfully.');
  * })
- * ->form([)
+ * ->form([
  * TextInput::make('new_password')
  * ->password()
  * ->required()

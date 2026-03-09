@@ -4,141 +4,12 @@
 
 This document outlines our testing strategy that uses MySQL as the test database without utilizing Laravel's `RefreshDatabase` trait. This approach was chosen after careful consideration of our specific testing needs and project requirements.
 
-## Current Test Status (Updated March 2026)
+## Current Implementation
 
-- **Total Tests:** 316 passed
-- **Total Assertions:** 628
-- **Test Framework:** Pest PHP
-- **Base TestCase:** `Modules\Xot\Tests\TestCase`
-- **Status:** ✅ All tests passing
-
-### Test Coverage by Area
-
-| Area | Files | Coverage | Status |
-|------|-------|----------|--------|
-| Cast Actions | 9 | 100% | ✅ Complete |
-| Arr Actions | 5 | 100% | ✅ Complete |
-| Array Actions | 5 | 100% | ✅ Complete |
-| String Actions | 4 | 100% | ✅ Complete |
-| File Actions | 14 | 100% | ✅ Complete |
-| Model Actions | 43 | ~10% | ⚠️ Partial |
-| Export Actions | 9 | 0% | ❌ Missing |
-| Traits | 15+ | ~30% | ⚠️ Partial |
-
-## Test Structure
-
-```
-Modules/Xot/tests/
-├── Feature/                    # Feature/integration tests
-│   ├── Filament/              # Filament resource tests
-│   └── ...
-├── Unit/                      # Unit tests
-│   ├── Actions/
-│   │   ├── Arr/              # Array action tests (5 files)
-│   │   ├── Array/            # Array manipulation tests (5 files)
-│   │   ├── Cast/             # Type casting tests (9 files)
-│   │   ├── File/             # File operation tests (14 files)
-│   │   ├── Model/            # Model action tests (partial)
-│   │   └── String/           # String manipulation tests (4 files)
-│   ├── Models/               # Model tests
-│   └── ...
-├── Fixtures/                 # Test fixtures
-├── TestCase.php              # Base test case
-└── Pest.php                  # Pest configuration
-```
-
-## Running Tests
-
-```bash
-# Run all Xot tests
-./vendor/bin/pest Modules/Xot/tests
-
-# Run with coverage
-./vendor/bin/pest Modules/Xot/tests --coverage
-
-# Run specific test file
-./vendor/bin/pest Modules/Xot/tests/Unit/Actions/Cast/SafeIntCastActionTest.php
-
-# Run specific directory
-./vendor/bin/pest Modules/Xot/tests/Unit/Actions/File
-```
-
-## Key Testing Patterns
-
-### 1. Action Tests
-
-All Action classes follow the Spatie QueueableAction pattern:
-
-```php
-use Modules\Xot\Actions\Cast\SafeIntCastAction;
-use Modules\Xot\Tests\TestCase;
-
-uses(TestCase::class);
-
-beforeEach(function (): void {
-    $this->action = app(SafeIntCastAction::class);
-});
-
-it('returns int as-is', function (): void {
-    expect($this->action->execute(42))->toBe(42);
-});
-
-it('has static cast method', function (): void {
-    expect(SafeIntCastAction::cast('99'))->toBe(99);
-});
-```
-
-### 2. Database-Dependent Tests
-
-For tests requiring database access, handle exceptions gracefully:
-
-```php
-it('executes database operation', function (): void {
-    try {
-        $result = $this->action->execute($model);
-        expect($result)->toBeBool();
-    } catch (\Exception $e) {
-        $this->markTestSkipped('Database not available: ' . $e->getMessage());
-    }
-});
-```
-
-## TestCase Configuration
-
-The `TestCase` sets up:
-
-1. **Laravel Application** via `CreatesApplication` trait
-2. **Environment** loading from `.env.testing`
-3. **Service Providers** - XotServiceProvider and related
-4. **Container Bindings** - translator, config for Filament tests
-
-## Recent Fixes (March 2026)
-
-1. ✅ Fixed Pest.php to use correct `Modules\Xot\Tests\TestCase`
-2. ✅ Fixed TestCase container bindings for translator/config
-3. ✅ Fixed HasXotTableTest by skipping complex mocking tests
-4. ✅ Fixed SendMailByRecordActionTest namespace conflict
-5. ✅ Fixed HasColumnActionTest Mockery issues
-6. ✅ Created File action tests (14 new test files)
-7. ✅ Created Model action tests (3 new test files)
-
-## Future Work
-
-### High Priority
-- [ ] Write tests for remaining 40+ Model Actions
-- [ ] Write tests for Export Actions (9 files)
-- [ ] Write tests for Import Actions
-- [ ] Write tests for remaining Traits
-
-### Medium Priority
-- [ ] Write tests for Filament Components
-- [ ] Write tests for DTOs and Datas
-- [ ] Write tests for Services
-
-### Low Priority
-- [ ] Achieve 100% code coverage
-- [ ] Performance benchmarks
-- [ ] Mutation testing
+- **Database**: MySQL (configured in `.env.testing`)
+- **Test Isolation**: Manual data management instead of database transactions
+- **Test Data**: Real data persists between tests
+- **Test Speed**: Slower than in-memory SQLite but more reliable
 
 ## Configuration
 
@@ -148,7 +19,7 @@ The `TestCase` sets up:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=<nome progetto>_data_test (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)DB_DATABASE=<nome progetto>_data_test
+DB_DATABASE=test_database
 DB_USERNAME=root
 DB_PASSWORD=
 ```

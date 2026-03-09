@@ -27,7 +27,6 @@ use Override;
  * @property-read ProfileContract|null $creator
  * @property-read Task|null $task
  * @property-read ProfileContract|null $updater
- *
  * @method static Factory<static> factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Result newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Result newQuery()
@@ -41,9 +40,7 @@ use Override;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Result whereTaskId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Result whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Result whereUpdatedBy($value)
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class Result extends BaseModel
@@ -61,7 +58,7 @@ class Result extends BaseModel
 
     public function getLastRun(): Builder
     {
-        return static::query()->select('ran_at')
+        return $this->select('ran_at')
             // ->whereColumn('task_id', TOTEM_TABLE_PREFIX.'tasks.id')
             ->whereColumn('task_id', 'tasks.id')
             ->latest()
@@ -71,7 +68,7 @@ class Result extends BaseModel
 
     public function getAverageRunTime(): Builder
     {
-        return static::query()->select(DB::raw('avg(duration)'))
+        return $this->select(DB::raw('avg(duration)'))
             // ->whereColumn('task_id', TOTEM_TABLE_PREFIX.'tasks.id')
             ->whereColumn('task_id', 'tasks.id')
             ->getQuery();

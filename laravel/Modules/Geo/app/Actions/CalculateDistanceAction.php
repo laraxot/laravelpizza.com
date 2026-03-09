@@ -53,7 +53,7 @@ final class CalculateDistanceAction implements CalculateDistanceActionContract
         $this->validateCoordinates($destination);
 
         try {
-            $response = $distanceMatrixAction->execute(
+            $response = $this->distanceMatrixAction->execute(
                 new Collection([$origin]),
                 new Collection([$destination])
             );

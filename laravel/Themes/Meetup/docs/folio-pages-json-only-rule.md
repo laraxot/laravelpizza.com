@@ -96,6 +96,6 @@ name('contact');
 
 ---
 
-**
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0
 **Compatibilità**: LaravelPizza.com base_laravelpizza

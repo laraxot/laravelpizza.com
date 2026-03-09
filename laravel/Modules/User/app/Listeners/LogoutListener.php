@@ -26,7 +26,7 @@ class LogoutListener
      */
     public function __construct(Request $request)
     {
-        $request = $request;
+        $this->request = $request;
     }
 
     /**

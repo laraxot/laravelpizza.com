@@ -135,5 +135,5 @@ If you encounter this error:
 ---
 
 *
-*Trait Standards 
+*Trait Standards Version: 2.0*
 

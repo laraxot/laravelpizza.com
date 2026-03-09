@@ -115,4 +115,4 @@ return $dataArray;
 
 **Status**: 🧘 **IN ANALISI**
 
-**
+**Ultimo aggiornamento**: [DATE]

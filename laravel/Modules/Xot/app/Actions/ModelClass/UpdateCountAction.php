@@ -18,11 +18,10 @@ class UpdateCountAction
     /**
      * Execute the count action for the given model class.
      *
-     * @param class-string<Model> $modelClass The fully qualified model class name
+     * @param  class-string<Model>  $modelClass  The fully qualified model class name
      */
     public function execute(string $modelClass, int $total): void
     {
-        /* @phpstan-ignore staticMethod.notFound */
-        InformationSchemaTable::updateModelCount($modelClass, $total);
+        InformationSchemaTable::updateModelCount($modelClass, $total); // Method not implemented
     }
 }

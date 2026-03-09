@@ -142,7 +142,7 @@ if (!$region || !is_array($region) || !isset($region['provinces'])) {
 
 ---
 
-**🔄 
+**🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
 **📦 Versione**: 2.2.0  
 **🐛 PHPStan Level**: 9 ✅  
 **🌐 Translation Standards**: IT/EN/DE complete ✅  

@@ -45,7 +45,7 @@ trait HasAddress
      */
     public function primaryAddress(): ?Address
     {
-        $res = $this->addresses();
+        $res = $this->addresses()->where('is_primary', true)->first();
         if (null === $res) {
             return $res;
         }
@@ -69,8 +69,13 @@ trait HasAddress
         if (null !== $value) {
             return $value;
         }
-        $address = sprintf()
-            '%s, %s - %s, %s (%s)', $route, $street_number, $postal_code, $city, $province,
+        $address = sprintf(
+            '%s, %s - %s, %s (%s)',
+            $this->route,
+            $this->street_number,
+            $this->postal_code,
+            $this->city,
+            $this->province,
         );
 
         return trim(preg_replace('/[,\s]+/', ' ', $address));
@@ -81,7 +86,7 @@ trait HasAddress
         if ($value) {
             return $value;
         }
-        $address = $this->address();
+        $address = $this->address()->first();
         if (null === $address) {
             return null;
         }
@@ -106,7 +111,7 @@ trait HasAddress
             $postalCode.
             ' '.
             $localityNome.
-            ' ('.)
+            ' ('.
             $provinciaNome.
             ') ';
     }
@@ -167,7 +172,7 @@ trait HasAddress
     public function setAsPrimaryAddress(Address $address): bool
     {
         // Verifica che l'indirizzo appartenga a questo modello
-        if ($address->model_id !== $id || $address->model_type !== static::class)
+        if ($address->model_id !== $this->id || $address->model_type !== static::class) {
             return false;
         }
 
@@ -186,7 +191,7 @@ trait HasAddress
      */
     public function getAddressesByType(string $type): Collection
     {
-        return $this->addresses();
+        return $this->addresses()->where('type', $type)->get();
     }
 
     /**
@@ -198,16 +203,17 @@ trait HasAddress
     public function addAddress(array $data, bool $setPrimary = false): Address
     {
         // Se è il primo indirizzo o è richiesto esplicitamente, impostalo come principale
-        if ($setPrimary || 0 === $this->addresses())
+        if ($setPrimary || 0 === $this->addresses()->count()) {
             $data['is_primary'] = true;
 
             // Rimuovi il flag is_primary da tutti gli altri indirizzi
-            if ($addresses($addresses()));
+            if ($this->addresses()->count() > 0) {
+                $this->addresses()->update(['is_primary' => false]);
             }
         }
 
         /* @phpstan-ignore return.type */
-        return $this->addresses();
+        return $this->addresses()->create($data);
     }
 
     /**
@@ -233,7 +239,7 @@ trait HasAddress
      */
     public function scopeInCity(Builder $query, string $city): Builder
     {
-        return $query->whereHas('addresses', function ($q) use ($city): void {)
+        return $query->whereHas('addresses', function ($q) use ($city): void {
             $q->where('locality', $city);
         });
     }
@@ -243,7 +249,7 @@ trait HasAddress
      */
     public function scopeInProvince(Builder $query, string $province): Builder
     {
-        return $query->whereHas('addresses', function ($q) use ($province): void {)
+        return $query->whereHas('addresses', function ($q) use ($province): void {
             $q->where('administrative_area_level_3', $province);
         });
     }
@@ -253,7 +259,7 @@ trait HasAddress
      */
     public function scopeInRegion(Builder $query, string $region): Builder
     {
-        return $query->whereHas('addresses', function ($q) use ($region): void {)
+        return $query->whereHas('addresses', function ($q) use ($region): void {
             $q->where('administrative_area_level_2', $region);
         });
     }
@@ -263,7 +269,7 @@ trait HasAddress
      */
     public function scopeInPostalCode(Builder $query, string $postalCode): Builder
     {
-        return $query->whereHas('addresses', function ($q) use ($postalCode): void {)
+        return $query->whereHas('addresses', function ($q) use ($postalCode): void {
             $q->where('postal_code', $postalCode);
         });
     }

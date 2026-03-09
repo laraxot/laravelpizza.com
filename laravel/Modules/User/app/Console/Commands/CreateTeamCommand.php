@@ -58,9 +58,10 @@ class CreateTeamCommand extends Command
             $this->newLine();
             $this->table($headers, $rows);
             $this->newLine();
+        } else {
+            $this->newLine();
+            $this->warn('⚡ No Teams ['.$modelClass.']');
+            $this->newLine();
         }
-        $this->newLine();
-        $this->warn('⚡ No Teams ['.$modelClass.']');
-        $this->newLine();
     }
 }

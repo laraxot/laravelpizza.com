@@ -84,13 +84,13 @@ class LocationMapWidget extends Widget
         /** @var view-string $viewName */
         $viewName = 'geo::filament.widgets.location-map-widget';
 
-        return ViewFacade::make($viewName, $getViewData());
+        return ViewFacade::make($viewName, $this->getViewData());
     }
 
-    public function getViewData(): array
+    protected function getViewData(): array
     {
         return [
-            'heading' => $this->getHeading(),
+            'heading' => $this->heading,
             'maxHeight' => $this->getMaxHeight(),
             'options' => $this->getOptions(),
             'markers' => $this->getMarkers(),
@@ -102,7 +102,7 @@ class LocationMapWidget extends Widget
      */
     protected function getMaxHeight(): ?string
     {
-        $height = $maxHeight ?? '50vh';
+        $height = $this->maxHeight ?? '50vh';
 
         return is_string($height) ? $height : (string) $height;
     }

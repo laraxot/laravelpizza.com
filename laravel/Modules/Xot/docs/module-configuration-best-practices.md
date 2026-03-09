@@ -242,5 +242,5 @@ Before committing a config file, verify:
 ---
 
 *
-*Configuration Standards 
+*Configuration Standards Version: 2.0*
 

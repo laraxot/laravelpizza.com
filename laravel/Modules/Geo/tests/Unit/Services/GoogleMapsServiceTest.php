@@ -3,13 +3,16 @@
 declare(strict_types=1);
 
 use Modules\Geo\Services\GoogleMapsService;
+use Modules\Geo\Tests\TestCase;
+
+uses(TestCase::class);
 
 beforeEach(function () {
-    $service = new GoogleMapsService();
+    $this->service = new GoogleMapsService();
 });
 
 it('can be instantiated', function (): void {
-    expect($service);
+    expect($this->service)->toBeInstanceOf(GoogleMapsService::class);
 });
 
 it('has correct constants defined', function (): void {
@@ -25,7 +28,7 @@ it('has correct constants defined', function (): void {
 });
 
 it('has required methods', function (): void {
-    expect(method_exists($service, 'reverseGeocode'));
-    expect(method_exists($service, 'getDistanceMatrix'));
-    expect(method_exists($service, 'getElevation'));
+    expect(method_exists($this->service, 'reverseGeocode'))->toBeTrue();
+    expect(method_exists($this->service, 'getDistanceMatrix'))->toBeTrue();
+    expect(method_exists($this->service, 'getElevation'))->toBeTrue();
 });

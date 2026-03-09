@@ -22,26 +22,24 @@ class TransCollectionAction
     /**
      * Esegue la traduzione di una collezione.
      *
-     * @param Collection<int|string, mixed> $collection
-     *
+     * @param  Collection<int|string, mixed>  $collection
      * @return Collection<int|string, string>
      */
     public function execute(Collection $collection, ?string $transKey): Collection
     {
-        if (null === $transKey) {
+        if ($transKey === null) {
             return $collection->map(SafeStringCastAction::cast(...));
         }
 
-        $transKey = $transKey;
+        $this->transKey = $transKey;
 
-        return $collection->map($trans(...));
+        return $collection->map($this->trans(...));
     }
 
     /**
      * Traduce un singolo elemento.
      *
-     * @param mixed $item L'elemento da tradurre
-     *
+     * @param  mixed  $item  L'elemento da tradurre
      * @return string L'elemento tradotto o l'elemento originale se la traduzione non esiste
      */
     public function trans(mixed $item): string
@@ -51,12 +49,12 @@ class TransCollectionAction
             $item = SafeStringCastAction::cast($item);
         }
 
-        if (empty($item) || null === $transKey)
+        if (empty($item) || $this->transKey === null) {
             return $item;
         }
 
         // Prima prova la traduzione diretta
-        $key = $transKey.'.'.$item;
+        $key = $this->transKey.'.'.$item;
         $trans = trans($key);
 
         // Se la traduzione esiste ed è una stringa, la restituisce
@@ -66,7 +64,7 @@ class TransCollectionAction
 
         // Seconda prova: sostituisce i punti con underscore
         $itemWithUnderscore = str_replace('.', '_', $item);
-        $keyWithUnderscore = $transKey.'.'.$itemWithUnderscore;
+        $keyWithUnderscore = $this->transKey.'.'.$itemWithUnderscore;
         $transWithUnderscore = trans($keyWithUnderscore);
 
         // Se la traduzione con underscore esiste ed è una stringa, la restituisce

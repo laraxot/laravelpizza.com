@@ -20,7 +20,7 @@ class GenerateModelByModelClass
     /**
      * Execute the function with the given model class.
      *
-     * @param string $model_class the class name of the model
+     * @param  string  $model_class  the class name of the model
      */
     public function execute(string $model_class): string
     {
@@ -34,15 +34,15 @@ class GenerateModelByModelClass
 
         $content_old = File::get($filename);
         $content = $content_old;
-        foreach ($replaces as $k => $v)
+        foreach ($this->replaces as $k => $v) {
             if (method_exists($this, 'replace'.$k)) {
-                $content = // Placeholder purged {'replace'.$k}($v, $content);
+                $content = $this->{'replace'.$k}($v, $content);
             }
 
             // $content=$this->replace($content,$k,$v);
         }
         $content = is_string($content) ? str_replace(' extends Model', ' extends BaseModel', $content) : $content;
-        $content = is_string($content) ? str_replace('use \Modules\Xot\Models\Traits\HasXotFactory);', '', $content) : $content;
+        $content = is_string($content) ? str_replace('use \Modules\Xot\Models\Traits\HasXotFactory;', '', $content) : $content;
         Assert::string($content, '['.__LINE__.']['.class_basename($this).']');
 
         if ($content !== $content_old) {
@@ -55,12 +55,12 @@ class GenerateModelByModelClass
     public function replaceDummyTable(string $value, string $content): string
     {
         $table_start = mb_strpos($content, 'protected $table');
-        Assert::integer()
+        Assert::integer(
             $fillable_start = mb_strpos($content, 'protected $fillable'),
             '['.__LINE__.']['.class_basename($this).']',
         );
-        $fillable_end = mb_strpos($content, ']);', $fillable_start);
-        if (false === $table_start) {
+        $fillable_end = mb_strpos($content, '];', $fillable_start);
+        if ($table_start === false) {
             $before = mb_substr($content, 0, $fillable_end + 2);
             $after = mb_substr($content, $fillable_end + 2);
             $content = $before.PHP_EOL.'    protected $table = "'.$value.'";'.PHP_EOL.$after;
@@ -72,7 +72,7 @@ class GenerateModelByModelClass
     /**
      * Create a factory for the given model class.
      *
-     * @param string $model_class The class name of the model to create the factory for
+     * @param  string  $model_class  The class name of the model to create the factory for
      */
     public function generate(string $model_class): void
     {
@@ -85,7 +85,7 @@ class GenerateModelByModelClass
         /*
          * $output=Artisan::output();
          *
-         * dddx()
+         * dddx(
          * [
          * 'res'=>$res,
          * 'output'=>$output,
@@ -100,7 +100,7 @@ class GenerateModelByModelClass
 
     public function setCustomReplaces(array $replaces): self
     {
-        $replaces = array_merge($this->replaces, $replaces);
+        $this->replaces = array_merge($this->replaces, $replaces);
 
         return $this;
     }

@@ -19,7 +19,7 @@ Classe base per il modello User che implementa le interfacce `UserContract` e `H
 - `remember_token` (string|null): Token per "ricordami"
 ### Attributi di Sistema
 - `created_at` (DateTime|null): Data di creazione
-- `updated_at` (DateTime|null): Data di 
+- `updated_at` (DateTime|null): Data di ultimo aggiornamento
 - `deleted_at` (DateTime|null): Data di cancellazione soft
 - `created_by` (string|null): ID utente creatore
 - `updated_by` (string|null): ID ultimo utente che ha modificato

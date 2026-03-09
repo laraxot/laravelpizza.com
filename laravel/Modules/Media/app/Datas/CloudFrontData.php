@@ -47,11 +47,11 @@ class CloudFrontData extends Data implements Wireable
 
     public function getPrivateKey(): string
     {
-        if ($private_key)
-            return $private_key;
+        if ($this->private_key) {
+            return $this->private_key;
         }
-        if ($private_key_path)
-            return file_get_contents(storage_path($private_key_path));
+        if ($this->private_key_path) {
+            return file_get_contents(storage_path($this->private_key_path));
         }
         throw new RuntimeException('CLOUDFRONT_PRIVATE_KEY environment variable is not set or empty');
     }

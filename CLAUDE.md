@@ -2,61 +2,6 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
----
-
-## 🚨 CRITICAL: Multi-Agent Coordination Environment
-
-**⚠️ YOU ARE NOT ALONE** - Multiple autonomous AI agents work on LaravelPizza simultaneously.
-
-### Essential Rules (ALWAYS REMEMBER)
-
-1. **Check GitHub Issues FIRST** - Before starting ANY task
-   - `gh issue list --repo base_laravelpizza --label pest-coverage`
-   - See what modules other agents are working on
-   
-2. **Never Delete Files** - Always rename with `.old` suffix
-   - Other agents may still reference old code
-   - Example: `mv old-file.md old-file.md.old`
-
-3. **Use GitHub for Coordination**
-   - Create an issue BEFORE starting work
-   - Update issue status after each batch
-   - Use discussions for blockers
-   - Link commits to issues with `#issue-number`
-
-4. **Pick Non-Overlapping Modules**
-   - Don't work same module as another agent
-   - Check `pest-status` alias: `gh issue list --label pest-coverage,in-progress`
-   - Random selection reduces collisions
-
-5. **Update Documentation Immediately**
-   - After each test batch: update `docs/coverage-plan.md`
-   - Mark completed items with ✅
-   - Remove lines from backlog
-   - Commit with issue reference
-
-### Reference Documents
-- **Multi-Agent Protocol**: `.cursor/rules/MULTI_AGENT_HARMONY.md`
-- **GitHub Communication**: `.cursor/rules/GITHUB_MULTI_AGENT_COMMUNICATION.md`
-- **Coverage Plan**: `docs/coverage-plan.md`
-
-### Quick Commands
-```bash
-# See what agents are working
-gh issue list --repo base_laravelpizza --label "pest-coverage,in-progress"
-
-# Create your batch issue
-gh issue create --title "[PEST] Modules/XYZ: Coverage" --label "pest-coverage,in-progress"
-
-# Check blockers
-gh issue list --label "pest-coverage,blocked"
-
-# Check discussions
-gh discussion list
-```
-
----
-
 ## Project Overview
 
 **LaravelPizza** is a conversion and ENHANCEMENT of https://laravelpizza.com/ - making it **MORE COOL, MORE CLICKBAIT, MORE ENGAGING**. This is NOT just a replica - it's an improved, modernized version of the original site using cutting-edge Laravel architecture.
@@ -112,24 +57,6 @@ Modules/{ModuleName}/
 ```
 
 ## Critical Architecture Rules
-
-### ⚡ 0. Multi-Agent Coordination (CRITICAL - ALWAYS REMEMBER)
-
-**This project has MULTIPLE AI agents working in parallel.** You are NOT working in isolation.
-
-**Rule**: ALWAYS coordinate via GitHub Issues and Discussions. Never work silently.
-
-**Workflow**:
-1. Before starting: Check open issues & discussions
-2. During work: Post comments updating status & mentioning `@agent-XX`
-3. After work: Comment final status, link updated docs
-
-**Current Initiatives**:
-- Epic #191: 100% Pest Coverage (Issues #192-205)
-- Issue #209: Multi-agent status updates
-- Issue #208: Activity module refactoring
-
-See: `docs/memories/multi-agent-coordination.md` and `.cursor/rules/multi-agent-coordination-critical.md`
 
 ### 0. Theme Resolution (CRITICAL – separazione tema)
 
@@ -618,44 +545,6 @@ git push origin feature/your-feature
 
 14. ❌ Forgetting `npm run copy` after theme build
     ✅ Always run copy to deploy assets
-
-## Testing & Coverage (100% Pest Initiative)
-
-**Goal:** 100% Pest test coverage across all 14 modules.
-
-**Status:** In progress - Meetup models done (56 tests, 110 assertions ✅)
-
-**Key Rules:**
-- ✅ Use `DatabaseTransactions` trait
-- ❌ NEVER use `RefreshDatabase`
-- ✅ Test via `php artisan test`
-- ✅ Use Pest `#[Test]` attributes
-- ✅ Follow testing patterns in `.cursor/rules/pest-testing-patterns.md`
-
-**Testing belongsToManyX (Critical Pattern):**
-```php
-// XotBase uses belongsToManyX, NOT belongsToMany
-$event->participants()->attach($user->id, ['role' => 'speaker']);
-$this->assertCount(1, $event->participants);
-```
-
-**Coverage Location:** See `.cursor/rules/pest-testing-patterns.md` for complete guide
-
-**Related Documentation:**
-- `.cursor/rules/pest-testing-patterns.md` - All testing patterns
-- `docs/memories/test-coverage-learnings.md` - Key learnings & edge cases
-- `Modules/{Module}/docs/test-strategy.md` - Module-specific strategies
-
-**Baseline Metrics:**
-| Metric | Value |
-|--------|-------|
-| Total modules | 14 |
-| Total source files | 2,013 |
-| Current test files | 408 |
-| Target: New tests | ~1,600 |
-| Meetup models tested | 56 ✅ |
-
----
 
 ## PHPStan Configuration
 

@@ -14,42 +14,51 @@ use Modules\Notify\Tests\TestCase;
 
 uses(TestCase::class);
 
-class NotifyBaseMorphPivotProxy extends BaseMorphPivot
+function makeNotifyBaseMorphPivotProxy(): BaseMorphPivot
 {
-    protected $table = 'notify_base_morph_pivot_proxy';
-
-    public function exposedCasts(): array
+    return new class extends BaseMorphPivot
     {
-        return $this->casts();
-    }
+        protected $table = 'notify_base_morph_pivot_proxy';
+
+        public function exposedCasts(): array
+        {
+            return $this->casts();
+        }
+    };
 }
 
-class NotifyBasePivotProxy extends BasePivot
+function makeNotifyBasePivotProxy(): BasePivot
 {
-    protected $table = 'notify_base_pivot_proxy';
-
-    public function exposedCasts(): array
+    return new class extends BasePivot
     {
-        return $this->casts();
-    }
+        protected $table = 'notify_base_pivot_proxy';
+
+        public function exposedCasts(): array
+        {
+            return $this->casts();
+        }
+    };
 }
 
-class NotifyNotificationTemplateProxy extends NotificationTemplate
+function makeNotifyNotificationTemplateProxy(): NotificationTemplate
 {
-    public function exposedCompileString(?string $template, array $data): ?string
+    return new class extends NotificationTemplate
     {
-        return $this->compileString($template, $data);
-    }
+        public function exposedCompileString(?string $template, array $data): ?string
+        {
+            return $this->compileString($template, $data);
+        }
 
-    public function exposedCasts(): array
-    {
-        return $this->casts();
-    }
+        public function exposedCasts(): array
+        {
+            return $this->casts();
+        }
+    };
 }
 
 test('base morph pivot and base pivot use notify connection and default casts', function () {
-    $morphPivot = new NotifyBaseMorphPivotProxy();
-    $pivot = new NotifyBasePivotProxy();
+    $morphPivot = makeNotifyBaseMorphPivotProxy();
+    $pivot = makeNotifyBasePivotProxy();
 
     expect($morphPivot->getConnectionName())->toBe('notify')
         ->and($pivot->getConnectionName())->toBe('notify')
@@ -89,7 +98,7 @@ test('notification model has array and datetime casts', function () {
 });
 
 test('notification template compile and helper methods return expected structures', function () {
-    $template = new NotifyNotificationTemplateProxy();
+    $template = makeNotifyNotificationTemplateProxy();
 
     $template->subject = 'Hello {{ $name }}';
     $template->body_html = '<p>Body {{ $name }}</p>';

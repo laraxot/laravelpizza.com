@@ -6,7 +6,11 @@
 
 #### 1. Riusabilità Compromessa
 - **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
-- **336+ occorrenze hardcoded** di "ptvx" in test e documentazione (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+- **336+ occorrenze hardcoded** di "ptvx" in test e documentazione
+=======
+- **336+ occorrenze hardcoded** di "healthcare_app" in test e documentazione
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - **Import diretti** da moduli project-specific
 - **Configurazioni database** hardcoded nei test
 - **Email domains** hardcoded nei test
@@ -21,13 +25,21 @@
 - Test che utilizzano `User::factory()` invece di `XotData::make()->getUserClass()`
 - Configurazioni database hardcoded
 - Riferimenti diretti a modelli <nome progetto>
-- Riferimenti diretti a modelli Laraxot (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+- Riferimenti diretti a modelli Laraxot
+=======
+- Riferimenti diretti a modelli healthcare_app
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## ✅ OTTIMIZZAZIONI IMPLEMENTATE
 
 ### Riusabilità
 1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding "<nome progetto>"
-1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding "Laraxot" (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding "Laraxot"
+=======
+1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding "healthcare_app"
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 2. **NotifyThemeableFactory.php**: Implementato `getProjectNamespace()` dinamico
 3. **File di traduzione**: Aggiornati placeholder con `{{app_name}}`
 4. **Documentazione base**: Creata guida riusabilità
@@ -42,7 +54,11 @@
 // ❌ PRIMA
 $user = User::factory()->create();
 'database' => '<nome progetto>_test'
-'database' => 'ptvx_test' (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+'database' => 'ptvx_test'
+=======
+'database' => 'healthcare_app_test'
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 // ✅ DOPO
 $userClass = XotData::make()->getUserClass();
@@ -229,4 +245,4 @@ php artisan notify:benchmark
 - [Piano Implementazione](../../../../docs/module_reusability_implementation_plan.md)
 - [Script Controllo](../../../bashscripts/check_module_reusability.sh)
 
-*
+*Ultimo aggiornamento: gennaio 2025*

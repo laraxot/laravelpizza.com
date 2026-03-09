@@ -115,5 +115,5 @@ Delega semplice invece di azione complessa separata.
 
 ---
 
-**
+**Ultimo aggiornamento**: 19 Dicembre 2025  
 **Filosofia**: *"Type safety first, simplicity second, DRY always"*

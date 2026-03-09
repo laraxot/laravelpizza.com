@@ -5,7 +5,7 @@ declare(strict_types=1);
 ?>
 <div>
     {{-- <h1>Welcome!</h1> --}}
-    {{-- // Placeholder purged articlesTable --}}
+    {{-- $this->articlesTable --}}
 
-    {{ // Placeholder purged table }}
+    {{ $this->table }}
 </div>

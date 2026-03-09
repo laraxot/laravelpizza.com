@@ -17,7 +17,7 @@ trait SushiToJsons
      */
     public function getSushiRows(): array
     {
-        return Cache::remember($getCacheKey());
+        return Cache::remember($this->getCacheKey(), $this->getCacheDuration(), $this->loadFromJson(...));
     }
 
     /**
@@ -37,7 +37,7 @@ trait SushiToJsons
 
         try {
             File::put($path, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-            Cache::forget($getCacheKey());
+            Cache::forget($this->getCacheKey());
 
             return true;
         } catch (\Exception $e) {
@@ -59,7 +59,7 @@ trait SushiToJsons
 
         $data[] = $attributes;
 
-        if ($saveToJson($data))
+        if ($this->saveToJson($data)) {
             return $this->newInstance($attributes);
         }
 

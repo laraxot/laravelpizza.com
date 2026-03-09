@@ -20,12 +20,12 @@ class PasswordExpiryMiddleware
             return $next($request);
         }
 
-        if ($request->routeIs($getPasswordExpiryRoute()))
+        if ($request->routeIs($this->getPasswordExpiryRoute()) || $request->routeIs('*.auth.*')) {
             return $next($request);
         }
 
-        if ($passwordHasExpired())
-            return redirect(route($getPasswordExpiryRoute()));
+        if ($this->passwordHasExpired()) {
+            return redirect(route($this->getPasswordExpiryRoute()));
         }
 
         return $next($request);
@@ -36,7 +36,7 @@ class PasswordExpiryMiddleware
         return 'errors.password-expired';
 
         /*
-         * $route = Filament::getCurrentPanel()->generateRouteName()
+         * $route = Filament::getCurrentPanel()->generateRouteName(
          * // config('password-expiry.password_expiry_route')
          * // 'password-expiry.reset-password'
          * // 'password.expired'

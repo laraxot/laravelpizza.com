@@ -9,11 +9,6 @@ return [
             'icon' => 'list_log_activities',
             'tooltip' => 'list_log_activities',
         ],
-        'test' => [
-            'label' => 'test',
-            'icon' => 'test',
-            'tooltip' => 'test',
-        ],
     ],
     'label' => 'Log Activities Action Test',
     'plural_label' => 'Log Activities Action Test (Plurale)',

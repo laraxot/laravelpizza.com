@@ -29,7 +29,7 @@ class RevokeRefreshTokenAction
     public function execute(OauthRefreshToken|string $token): bool
     {
         if (is_string($token)) {
-            $token = $refreshTokenModel->find($token);
+            $token = $this->refreshTokenModel->find($token);
         }
 
         if (! $token instanceof OauthRefreshToken) {

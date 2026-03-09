@@ -6,8 +6,8 @@
 
 ## Core Concepts
 
-- [Composer Packages Study](../../../../docs/architecture/composer-packages-study.md) - Studio completo dipendenze runtime e implicazioni chaos monkey.
-- [Riferimento pacchetti](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - Folio, Volt, Livewire, Filament, Tailwind (via root/moduli)
+- [Composer Packages Study](../../../docs/architecture/composer-packages-study.md) - Studio completo dipendenze runtime e implicazioni chaos monkey.
+- [Riferimento pacchetti](../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../docs/architecture/composer-packages-full-inventory.md) - Folio, Volt, Livewire, Filament, Tailwind (via root/moduli)
 - [Package Dependency Chaos Map](package-dependency-chaos-map.md) - Mappa pacchetti e rischio runtime lato tema.
 - [CMS Theme Runtime Memory](memories/cms-theme-runtime-memory.md) - Operational memory for fast diagnosis of theme/CMS runtime failures.
 - [Chaos Monkey Debug Skills](chaos-monkey-debug-skills.md) - Repeatable debugging skills and incident checklist for randomized breakage.
@@ -21,6 +21,7 @@
 - [Project Philosophy](project-philosophy.md) - Core philosophy of the theme
 - [Dashboard Integration](dashboard-integration.md) - Integration between Meetup dashboard and theme
 - [Theme Development Rules](theme-development-rules.md) - Development guidelines
+- [Docs-First Workflow](docs-first-workflow.md) - Regola operativa: prima docs, poi codice, poi tracking GitHub
 - [Architecture Folio Volt Filament](architecture-folio-volt-filament.md) - Architecture patterns
 - [Filament 5 – riferimento tema](filament-5-theme-reference.md) - Filament 5 requirements, nostro setup, CSS nel tema
 - [PasswordData Integration](passworddata-integration.md) - Enterprise-grade password configuration for registration forms
@@ -107,21 +108,3 @@
 ## Dependency Intelligence
 
 - [Dependency intelligence](dependency-intelligence.md)
-
-## Regola Operativa Obbligatoria
-
-- Prima di modificare codice: ragionare, studiare i docs del modulo/tema, aggiornare docs/rules/memory/skills.
-- Riferimento globale: [Pre-Edit Docs-First Rule](../../../../docs/rules/pre-edit-docs-first-rule.md)
-- Memory: [Pre-Edit Docs-First Memory](../../../../docs/memory/pre-edit-docs-first-memory.md)
-- Skill: [Pre-Edit Docs-First Skill](../../../../docs/skills/pre-edit-docs-first-skill.md)
-
-## Coverage 100 Program
-
-- Regola: [Coverage 100% Full-Project Rule](../../../../docs/rules/coverage-100-full-project-rule.md)
-- Memory: [Coverage 100% Full-Project Memory](../../../../docs/memory/coverage-100-full-project-memory.md)
-- Skill: [Coverage 100% Full-Project Skill](../../../../docs/skills/coverage-100-full-project-skill.md)
-- Reference: [Pest coverage/type coverage + Laravel Modules tests](../../../../docs/testing/pest-coverage-type-coverage-laravel-modules-reference-2026-03-04.md)
-
-## Docs Governance
-
-- [Docs Health](./docs-health.md) - Stato qualità docs, checklist di confidenza e prossime azioni di manutenzione.

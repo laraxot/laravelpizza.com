@@ -32,16 +32,16 @@ final class SendSmsFactorSMSAction implements SmsActionContract
      */
     public function __construct()
     {
-        $smsFactorData = SmsFactorData::make();
+        $this->smsFactorData = SmsFactorData::make();
 
-        if (! $smsFactorData->token)
+        if (! $this->smsFactorData->token) {
             throw new Exception('Token SMSFactor non configurato in sms.php');
         }
 
         // Parametri a livello di root
         $sender = config('sms.from');
-        $defaultSender = is_string($sender);
-        $debug = (bool);
+        $this->defaultSender = is_string($sender) ? $sender : null;
+        $this->debug = (bool) config('sms.debug', false);
     }
 
     /**
@@ -55,7 +55,7 @@ final class SendSmsFactorSMSAction implements SmsActionContract
     #[Override]
     public function execute(SmsData $smsData): array
     {
-        $headers = $smsFactorData->getAuthHeaders();
+        $headers = $this->smsFactorData->getAuthHeaders();
 
         // Normalizza il numero di telefono
         $to = (string) $smsData->recipient;
@@ -69,7 +69,7 @@ final class SendSmsFactorSMSAction implements SmsActionContract
 
         $body = [
             'text' => $smsData->body,
-            'sender' => $smsData->from ?? $defaultSender,
+            'sender' => $smsData->from ?? $this->defaultSender,
             'recipients' => [
                 [
                     'phone' => $to,
@@ -78,19 +78,19 @@ final class SendSmsFactorSMSAction implements SmsActionContract
             'type' => 'sms',
         ];
 
-        $client = new Client([)
-            'timeout' => $smsFactorData->getTimeout()
+        $client = new Client([
+            'timeout' => $this->smsFactorData->getTimeout(),
             'headers' => $headers,
         ]);
 
         try {
-            $response = $client->post($smsFactorData->getBaseUrl());
-            $vars['status_code'] = $response->getStatusCode();
-            $vars['status_txt'] = $response->getBody();
+            $response = $client->post($this->smsFactorData->getBaseUrl().'/messages', ['json' => $body]);
+            $this->vars['status_code'] = $response->getStatusCode();
+            $this->vars['status_txt'] = $response->getBody()->getContents();
 
-            return $vars;
+            return $this->vars;
         } catch (ClientException $clientException) {
-            throw new Exception()
+            throw new Exception(
                 $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',
                 $clientException->getCode(),
                 $clientException,

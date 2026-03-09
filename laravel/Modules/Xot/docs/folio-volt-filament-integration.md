@@ -193,7 +193,7 @@ $submit = function() {
 - [Documentazione completa sull'architettura Folio + Volt + Filament](./folio_volt_architecture.md)
 - [README](../readme.md) - Panoramica del modulo Xot
 - [Struttura dei moduli](./module_structure.md) - Convenzioni di struttura dei moduli
-- [Convenzioni di naming](../../../docs/convenzioni-naming-campi.md) - Convenzioni per i nomi dei campi
+- [Convenzioni di naming](../../../../docs/convenzioni-naming-campi.md) - Convenzioni per i nomi dei campi
 
 ### Moduli Collegati
 - [UI](../ui/docs/readme.md) - Componenti di interfaccia

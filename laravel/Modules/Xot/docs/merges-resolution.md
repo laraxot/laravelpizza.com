@@ -193,6 +193,6 @@ class ResourceName extends XotBaseResource
 
 ---
 
-**
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: ⚠️ In Lavorazione

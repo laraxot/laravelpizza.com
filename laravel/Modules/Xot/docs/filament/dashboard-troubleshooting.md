@@ -97,6 +97,6 @@ class Dashboard extends XotBaseDashboard
 ## Related Files
 
 - `Modules/Xot/app/Filament/Pages/XotBaseDashboard.php`
-- `Modules/<nome progetto>/app/Filament/Pages/Dashboard.php`
+- `Modules/TechPlanner/app/Filament/Pages/Dashboard.php`
 - `Modules/Activity/app/Filament/Pages/Dashboard.php`
 - `Modules/User/app/Filament/Pages/Dashboard.php`

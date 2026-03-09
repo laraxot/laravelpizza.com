@@ -37,11 +37,11 @@ class NexmoData extends Data
 
     public function getAuthHeaders(): array
     {
-        switch ($auth_type)
+        switch ($this->auth_type) {
             case 'api_key':
             default:
                 return [
-                    'Authorization' => 'Basic '.base64_encode($key.':'.$this->secret)
+                    'Authorization' => 'Basic '.base64_encode($this->key.':'.$this->secret),
                     'Content-Type' => 'application/json',
                 ];
         }
@@ -49,11 +49,11 @@ class NexmoData extends Data
 
     public function getBaseUrl(): string
     {
-        return $base_url ?? 'https://rest.nexmo.com';
+        return $this->base_url ?? 'https://rest.nexmo.com';
     }
 
     public function getTimeout(): int
     {
-        return $timeout;
+        return $this->timeout;
     }
 }

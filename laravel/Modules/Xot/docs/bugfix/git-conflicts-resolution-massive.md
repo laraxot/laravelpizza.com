@@ -4,7 +4,11 @@
 2025-10-22
 
 ## Contesto
+<<<<<<< .merge_file_PfL7eU
 Il progetto presentava **323 conflitti Git** distribuiti su tutto il modulo Xot, User e healthcare_app, causando errori ParseError e blocco di `composer dump-autoload`.
+=======
+Il progetto presentava **323 conflitti Git** distribuiti su tutto il modulo Xot, User e ModuloEsempio, causando errori ParseError e blocco di `composer dump-autoload`.
+>>>>>>> .merge_file_pl8dAb
 
 ## Strategia Adottata
 
@@ -33,7 +37,9 @@ Organizzati in 8 batch prioritari:
 
 for file in "$@"; do
     if [ -f "$file" ]; then
-        sed -i '/^        sed -i '/^        echo "Cleaned: $file"
+        sed -i '/^>>>>>>> [a-f0-9]* (.*)$/d' "$file"
+        sed -i '/^>>>>>>> [a-f0-9]*$/d' "$file"
+        echo "Cleaned: $file"
     fi
 done
 ```
@@ -76,7 +82,11 @@ find Modules/Xot/app/Actions -name "*.php" | xargs php -l 2>&1 | grep -c "No syn
 
 **Soluzione**: Ripristino da Git dopo tentativo fallito con sed
 ```bash
+<<<<<<< .merge_file_PfL7eU
 git checkout HEAD -- $(find Modules/healthcare_app -name "*Widget.php" -type f)
+=======
+git checkout HEAD -- $(find Modules/ModuloEsempio -name "*Widget.php" -type f)
+>>>>>>> .merge_file_pl8dAb
 ```
 
 **Widget corretti**:
@@ -103,7 +113,8 @@ git checkout HEAD -- $(find Modules/healthcare_app -name "*Widget.php" -type f)
 - ✅ Commit incrementali (se necessario)
 
 ### 2. Script vs Manuale
-- ✅ Script per marker residui semplici (`- ✅ Manuale per conflitti complessi con contenuti sovrapposti
+- ✅ Script per marker residui semplici (`>>>>>>> hash`)
+- ✅ Manuale per conflitti complessi con contenuti sovrapposti
 - ⚠️ MAI usare sed per rimozioni multi-linea complesse
 
 ### 3. Verifica Continua

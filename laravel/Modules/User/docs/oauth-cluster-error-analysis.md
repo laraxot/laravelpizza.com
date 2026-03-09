@@ -119,6 +119,6 @@ class Passport extends XotBaseCluster
 
 ---
 
-**
+**Ultimo aggiornamento**: 2025-01-22
 **Versione**: 1.0.1
 **Status**: ✅ Errore corretto e verificato

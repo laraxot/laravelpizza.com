@@ -2,7 +2,7 @@
 
 ## Critical Architectural Rules
 
-1. **Laraxot Migration Philosophy**: In a module, for each table there must be only ONE migration responsible for its creation (`create_{table}_table.php`). Multiple migrations for the same table is a violation. To modify schema: edit the SAME migration file and UPDATE the timestamp in the filename. NEVER create separate `add_column_to_table.php` migrations. Use tableUpdate() with hasColumn() checks for safe additions. Models strictly dependent on main_module (e.g. Profile): migration goes in main module (<nome progetto>), NOT in User. Use XotBaseMigration::convertIdFromUuidToBigintIfNeeded() for UUID→bigint conversion.
+1. **Laraxot Migration Philosophy**: In a module, for each table there must be only ONE migration responsible for its creation (`create_{table}_table.php`). Multiple migrations for the same table is a violation. To modify schema: edit the SAME migration file and UPDATE the timestamp in the filename. NEVER create separate `add_column_to_table.php` migrations. Use tableUpdate() with hasColumn() checks for safe additions. Models strictly dependent on main_module (e.g. Profile): migration goes in main module (TechPlanner), NOT in User. Use XotBaseMigration::convertIdFromUuidToBigintIfNeeded() for UUID→bigint conversion.
 
 2. **NO property_exists() on Eloquent models**: Use hasAttribute(), isFillable() or Schema::hasColumn() instead, because model attributes are magical properties.
 

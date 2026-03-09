@@ -113,7 +113,7 @@ class StandardConfigResolver implements ConfigResolverInterface
     /**
      * @param  array<string, mixed>  $extraConf
      */
-    private function handleMissingConfig()
+    private function handleMissingConfig(
         string $key,
         string $group,
         array $extraConf,

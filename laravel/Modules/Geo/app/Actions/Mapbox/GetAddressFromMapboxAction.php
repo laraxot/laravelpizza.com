@@ -79,7 +79,7 @@ readonly class GetAddressFromMapboxAction
         $encodedAddress = urlencode($address);
         $url = sprintf('%s/%s.json', self::API_URL, $encodedAddress);
 
-        $response = $client->get($url, [
+        $response = $this->client->get($url, [
             'query' => [
                 'access_token' => config('services.mapbox.access_token'),
                 'limit' => 1,
@@ -157,7 +157,7 @@ readonly class GetAddressFromMapboxAction
             'postal_code' => (int) ($postalCode ? $postalCode : 0),
             'street' => $street,
             'street_number' => $streetNumber,
-            'state' => $province,
+            'province' => $province,
         ]);
     }
 }

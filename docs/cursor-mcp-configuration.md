@@ -1,6 +1,6 @@
 # Cursor MCP Configuration Guide
 
-**
+**Last Updated**:
 **Status**: ✅ Configured
 **Editor**: Cursor AI
 

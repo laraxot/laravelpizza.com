@@ -151,27 +151,15 @@ Il widget fa parte del piano di migrazione a Filament 4.x documentato in:
 - ✅ Compatibilità Filament 4.x mantenuta
 - ✅ Tracciabilità storica preservata (file .disabled4)
 
-### Address.php - map() unresolvable return type (fixed)
-
-- **Errore**: `@phpstan-ignore` comments using `/** */` block comment
-  syntax were not recognized by PHPStan
-- **Fix**: Changed to `// @phpstan-ignore-next-line` single-line
-  comment format before `->map()` calls in `getRegione()` and
-  `getProvincia()` methods
-- **Regola**: PHPStan inline ignores MUST use `//` single-line
-  comments, never `/** */` block comments
-
 ## 🔄 Prossimi Passi
 
-1. **Monitoraggio**: Verificare rilasci di `webbingbrasil/filament-maps`
-   compatibili con Filament 4.x
-2. **Riattivazione**: Quando disponibile, riattivare widget con nuova
-   implementazione
+1. **Monitoraggio**: Verificare rilasci di `webbingbrasil/filament-maps` compatibili con Filament 4.x
+2. **Riattivazione**: Quando disponibile, riattivare widget con nuova implementazione
 3. **Testing**: Test completi di integrazione post-riattivazione
 
 ## 📚 Collegamenti
 
 - [Documentazione Compatibilità Filament 4.x](./filament_4x_compatibility.md)
 - [Documentazione Widget Disabilitati](./widgets/disabled_widgets.md)
-- [Piano Migrazione Filament](../../../../../docs/filament_4x_migration_plan.md)
+- [Piano Migrazione Filament](../../../docs/filament_4x_migration_plan.md)
 

@@ -36,13 +36,14 @@ class ForgotPasswordWidget extends XotBaseWidget
 
     public function sendResetLink(): void
     {
-        $data = $form->getState();
+        $data = $this->form->getState();
 
         $status = Password::sendResetLink(['email' => $data['email']]);
 
         if (Password::RESET_LINK_SENT === $status) {
             session()->flash('status', __($status));
+        } else {
+            $this->addError('email', __($status));
         }
-        $this->addError('email', __($status));
     }
 }

@@ -22,7 +22,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table))
+        $this->tableCreate(function (Blueprint $table): void {
             $table->id();
             $table->foreignIdFor(Media::class, 'media_id');
             $table->string('format')->nullable();
@@ -40,8 +40,8 @@ return new class extends XotBaseMigration
             $table->decimal('execution_time', 7, 3)->nullable();
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table))
-            if (! $this->hasColumn('format'))
+        $this->tableUpdate(function (Blueprint $table): void {
+            if (! $this->hasColumn('format')) {
                 $table->string('format')->nullable();
             }
 

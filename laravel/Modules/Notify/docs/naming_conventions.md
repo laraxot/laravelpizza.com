@@ -56,7 +56,11 @@ public function handleHTTPRequest(): void
 
 # Convenzioni di Naming per le Azioni di Notifica
 
-Questo documento definisce le convenzioni di naming standardizzate per le azioni di notifica nel sistema Laraxot, supportando la risoluzione dinamica delle classi implementata nei factory. (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+Questo documento definisce le convenzioni di naming standardizzate per le azioni di notifica nel sistema Laraxot, supportando la risoluzione dinamica delle classi implementata nei factory.
+=======
+Questo documento definisce le convenzioni di naming standardizzate per le azioni di notifica nel sistema healthcare_app, supportando la risoluzione dinamica delle classi implementata nei factory.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Pattern di Naming
 

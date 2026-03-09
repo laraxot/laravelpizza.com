@@ -30,7 +30,7 @@ trait HasAddresses
      */
     public function primaryAddress(): MorphOne
     {
-        return $this->morphOne(Address::class, 'model');
+        return $this->morphOne(Address::class, 'model')->where('is_primary', true);
     }
 
     /**
@@ -38,7 +38,7 @@ trait HasAddresses
      */
     public function homeAddress(): MorphOne
     {
-        return $this->morphOne(Address::class, 'model');
+        return $this->morphOne(Address::class, 'model')->where('type', AddressTypeEnum::HOME->value);
     }
 
     /**
@@ -46,7 +46,7 @@ trait HasAddresses
      */
     public function workAddress(): MorphOne
     {
-        return $this->morphOne(Address::class, 'model');
+        return $this->morphOne(Address::class, 'model')->where('type', AddressTypeEnum::WORK->value);
     }
 
     /**
@@ -54,7 +54,7 @@ trait HasAddresses
      */
     public function billingAddress(): MorphOne
     {
-        return $this->morphOne(Address::class, 'model');
+        return $this->morphOne(Address::class, 'model')->where('type', AddressTypeEnum::BILLING->value);
     }
 
     /**
@@ -62,7 +62,7 @@ trait HasAddresses
      */
     public function shippingAddress(): MorphOne
     {
-        return $this->morphOne(Address::class, 'model');
+        return $this->morphOne(Address::class, 'model')->where('type', AddressTypeEnum::SHIPPING->value);
     }
 
     /**
@@ -71,12 +71,12 @@ trait HasAddresses
     public function setPrimaryAddress(Address $address): void
     {
         // Assicurati che l'indirizzo appartenga a questo modello
-        if ($address->model_id !== $id || $address->model_type !== static::class)
+        if ($address->model_id !== $this->id || $address->model_type !== static::class) {
             throw new \InvalidArgumentException('L\'indirizzo non appartiene a questo modello.');
         }
 
         // Rimuovi lo stato primario da tutti gli altri indirizzi
-        $this->addresses();
+        $this->addresses()->update(['is_primary' => false]);
 
         // Imposta questo indirizzo come primario
         $address->is_primary = true;
@@ -92,13 +92,13 @@ trait HasAddresses
     {
         // Se l'indirizzo deve essere primario, rimuovi lo stato primario dagli altri
         if ($isPrimary) {
-            $this->addresses();
+            $this->addresses()->update(['is_primary' => false]);
         }
 
         // Crea il nuovo indirizzo
         $data['is_primary'] = $isPrimary;
 
-        return $this->addresses();
+        return $this->addresses()->create($data);
     }
 
     /**
@@ -108,6 +108,6 @@ trait HasAddresses
     {
         $typeValue = $type instanceof AddressTypeEnum ? $type->value : $type;
 
-        return $this->addresses();
+        return $this->addresses()->where('type', $typeValue)->get();
     }
 }

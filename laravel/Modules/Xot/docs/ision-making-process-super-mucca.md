@@ -167,6 +167,6 @@ Ora che il processo decisionale è documentato, il prossimo passo è:
 
 ---
 
-**
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: Pattern consolidato - da riusare per tutte le future decisioni

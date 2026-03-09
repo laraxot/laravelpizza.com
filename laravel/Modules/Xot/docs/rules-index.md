@@ -28,10 +28,6 @@ This file documents the rules and standards specific to the Xot core module.
 - Use Safe\ functions instead of unsafe PHP built-ins
 - Proper type declarations on all methods
 
-### PHPInsights (import order)
-- `use function Safe\*` prima di `use Webmozart\Assert\Assert` (ordine alfabetico)
-- Metodi protected alla fine di trait/class (dopo metodi pubblici)
-
 ### Model Conventions
 - Use `casts()` method NOT `$casts` property
 - Use `isset()` for magic properties, NEVER `property_exists()`
@@ -55,14 +51,11 @@ app(CreateUserAction::class)->execute($data);
 app(CreateClientAction::class)->createPersonalAccessClient(); // calls execute() internally
 ```
 
-See: [Action Execution and DI Rules](./actions/action-execution-and-di-rules.md)
+See: [Action Usage Patterns](./actions/action-usage-patterns.md)
 
 ## Related Documentation
-- [README](./readme.md)
+- [README](./README.md)
 - [phpstan](./phpstan.md)
-
-## Pre-Edit Rule Link
-
-- [Pre-Edit Docs-First Rule](../../../../docs/rules/pre-edit-docs-first-rule.md)
-- [Pre-Edit Docs-First Memory](../../../../docs/memory/pre-edit-docs-first-memory.md)
-- [Pre-Edit Docs-First Skill](../../../../docs/skills/pre-edit-docs-first-skill.md)
+- [Chaos Monkey Operability Rules](./chaos-monkey-operability-rules.md)
+- [Composer Packages Deep Study (2026-03-02)](./composer-packages-deep-study-2026-03-02.md)
+- [Composer Packages Full Catalog (2026-03-02)](./composer-packages-full-catalog-2026-03-02.md)

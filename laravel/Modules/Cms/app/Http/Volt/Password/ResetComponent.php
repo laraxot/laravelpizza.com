@@ -27,14 +27,14 @@ class ResetComponent extends Component
     {
         $this->validate();
 
-        $response = Password::broker()->sendResetLink(['email' => $email]);
+        $response = Password::broker()->sendResetLink(['email' => $this->email]);
 
         if (Password::RESET_LINK_SENT === $response) {
             $message = trans($response);
             if (is_array($message)) {
-                $emailSentMessage = implode(' ', $message);
+                $this->emailSentMessage = implode(' ', $message);
             } else {
-                $emailSentMessage = is_string($message);
+                $this->emailSentMessage = is_string($message) ? $message : (string) $message;
             }
 
             return;

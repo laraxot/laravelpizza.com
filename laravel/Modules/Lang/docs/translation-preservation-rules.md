@@ -149,6 +149,6 @@ Ogni correzione terminologica deve essere documentata:
 
 ---
 
-**
+**Ultimo aggiornamento**: Gennaio 2025
 **Regola Critica**: MAI rimuovere contenuto dalle traduzioni, SOLO aggiungere o migliorare
 **Terminologia**: "Referto" in italiano, "Report" in inglese, "Bericht" in tedesco

@@ -19,6 +19,4 @@ use Illuminate\Support\Carbon;
  *
  * @mixin \Eloquent
  */
-interface UpdaterContract
-{
-}
+interface UpdaterContract {}

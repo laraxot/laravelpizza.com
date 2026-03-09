@@ -43,7 +43,7 @@ Accedere alla sezione **Job Monitor** in Filament per visualizzare grafici di th
 
 ---
 
-**🔄 
+**🔄 Ultimo aggiornamento**: 31 Gennaio 2026
 **📦 Versione**: 2.3.0
 **✅ PHPStan level 10**: Compliance nativa garantita
 

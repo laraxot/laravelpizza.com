@@ -21,12 +21,15 @@ use Modules\Notify\Tests\TestCase;
 
 uses(TestCase::class);
 
-class EditNotifyThemeTestProxy extends EditNotifyTheme
+function makeEditNotifyThemeTestProxy(): EditNotifyTheme
 {
-    public function exposedHeaderActions(): array
+    return new class extends EditNotifyTheme
     {
-        return $this->getHeaderActions();
-    }
+        public function exposedHeaderActions(): array
+        {
+            return $this->getHeaderActions();
+        }
+    };
 }
 
 test('list notification templates page returns empty table columns array', function (): void {
@@ -68,7 +71,7 @@ test('notify theme resource form schema exposes expected components', function (
 });
 
 test('edit notify theme page exposes delete header action', function (): void {
-    $page = new EditNotifyThemeTestProxy;
+    $page = makeEditNotifyThemeTestProxy();
     $actions = $page->exposedHeaderActions();
 
     expect($actions)->toBeArray()

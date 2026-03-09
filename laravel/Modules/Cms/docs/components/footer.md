@@ -54,7 +54,7 @@ Il componente Footer è un elemento fondamentale dell'interfaccia utente che for
 ## Collegamenti
 - [Documentazione Componenti](./readme.md)
 - [Documentazione Blocchi](../blocks/readme.md)
-- [Convenzioni Layout](../../../docs/laravel-conventions.md)
+- [Convenzioni Layout](../../../../docs/laravel-conventions.md)
 
 ## Collegamenti tra versioni di footer.md
 * [footer.md](docs/laravel-app/themes/one/components/footer.md)

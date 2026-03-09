@@ -390,7 +390,7 @@ La tabella `meetup_pizzas` usa soft delete (`deleted_at`) per:
 
 Tutte le tabelle hanno:
 - `created_at` - Data creazione
-- `updated_at` - Data 
+- `updated_at` - Data ultimo aggiornamento
 - Alcuni hanno `deleted_at` per soft delete
 
 ### Decimal Precision

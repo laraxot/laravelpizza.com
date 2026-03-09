@@ -18,7 +18,7 @@ class FileExtensionRule implements Rule
      */
     public function __construct(array $validExtensions = [])
     {
-        $validExtensions = array_map(
+        $this->validExtensions = array_map(
             /**
              * @param  mixed  $ext
              * @return lowercase-string
@@ -38,13 +38,13 @@ class FileExtensionRule implements Rule
             return false;
         }
 
-        return in_array(mb_strtolower($value->getClientOriginalExtension()), $validExtensions, strict: false);
+        return in_array(mb_strtolower($value->getClientOriginalExtension()), $this->validExtensions, strict: false);
     }
 
     public function message(): array|string
     {
         return trans('media::validation.mime', [
-            'mimes' => implode(', ', $validExtensions)
+            'mimes' => implode(', ', $this->validExtensions),
         ]);
     }
 }

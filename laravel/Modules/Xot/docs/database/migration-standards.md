@@ -1,4 +1,4 @@
-# Standard per le Migrazioni in <nome progetto>
+# Standard per le Migrazioni in LaravelPizza
 
 ## Convenzioni di Nomenclatura
 

@@ -10,61 +10,70 @@ use Modules\Tenant\Services\TenantManager;
 
 uses(TestCase::class);
 
-class NotifyRateLimitDummy
+function makeNotifyRateLimitDummy(): object
 {
-    use HasNotificationRateLimiting;
-
-    public function shouldSend(string $key): bool
+    return new class
     {
-        return $this->shouldSendNotification($key);
-    }
+        use HasNotificationRateLimiting;
 
-    public function retryAfter(string $key): int
-    {
-        return $this->getNotificationRateLimitRetryAfter($key);
-    }
+        public function shouldSend(string $key): bool
+        {
+            return $this->shouldSendNotification($key);
+        }
 
-    public function remaining(string $key): int
-    {
-        return $this->getNotificationRateLimitRemainingAttempts($key);
-    }
+        public function retryAfter(string $key): int
+        {
+            return $this->getNotificationRateLimitRetryAfter($key);
+        }
 
-    public function reset(string $key): void
-    {
-        $this->resetNotificationRateLimit($key);
-    }
+        public function remaining(string $key): int
+        {
+            return $this->getNotificationRateLimitRemainingAttempts($key);
+        }
 
-    public function key(string $type, mixed $identifier): string
-    {
-        return $this->getNotificationRateLimitKey($type, $identifier);
-    }
+        public function reset(string $key): void
+        {
+            $this->resetNotificationRateLimit($key);
+        }
+
+        public function key(string $type, mixed $identifier): string
+        {
+            return $this->getNotificationRateLimitKey($type, $identifier);
+        }
+    };
 }
 
-class NotifyTrackingDummy
+function makeNotifyTrackingDummy(): object
 {
-    use HasNotificationTracking;
-
-    public function addTrackingPublic(string $html, string $id): string
+    return new class
     {
-        return $this->addTracking($html, $id);
-    }
+        use HasNotificationTracking;
 
-    public function trackingId(): string
-    {
-        return $this->generateTrackingId();
-    }
+        public function addTrackingPublic(string $html, string $id): string
+        {
+            return $this->addTracking($html, $id);
+        }
 
-    public function trackingEnabled(): bool
-    {
-        return $this->isTrackingEnabled();
-    }
+        public function trackingId(): string
+        {
+            return $this->generateTrackingId();
+        }
+
+        public function trackingEnabled(): bool
+        {
+            return $this->isTrackingEnabled();
+        }
+    };
 }
 
-class NotifyTenantDummy
+function makeNotifyTenantDummy(): object
 {
-    use HasTenantNotifications;
+    return new class
+    {
+        use HasTenantNotifications;
 
-    public ?string $tenant_id = null;
+        public ?string $tenant_id = null;
+    };
 }
 
 test('notification rate limiting helpers work with limiter', function () {
@@ -72,7 +81,7 @@ test('notification rate limiting helpers work with limiter', function () {
     config()->set('notify.rate_limiting.max_attempts', 1);
     config()->set('notify.rate_limiting.decay_minutes', 1);
 
-    $dummy = new NotifyRateLimitDummy();
+    $dummy = makeNotifyRateLimitDummy();
     $key = $dummy->key('mail', 'id-'.uniqid());
     $dummy->reset($key);
 
@@ -90,7 +99,7 @@ test('notification tracking returns original html when tracking is disabled', fu
     config()->set('notify.tracking.pixel.enabled', false);
     config()->set('notify.tracking.links.enabled', false);
 
-    $dummy = new NotifyTrackingDummy();
+    $dummy = makeNotifyTrackingDummy();
     $html = '<a href="https://example.com/path">click</a>';
 
     $tracked = $dummy->addTrackingPublic($html, 'track-1');
@@ -109,7 +118,7 @@ test('tenant notification helpers check tenant ownership', function () {
         }
     });
 
-    $dummy = new NotifyTenantDummy();
+    $dummy = makeNotifyTenantDummy();
     $dummy->tenant_id = 'tenant-42';
 
     expect($dummy->belongsToTenant('tenant-42'))->toBeTrue()

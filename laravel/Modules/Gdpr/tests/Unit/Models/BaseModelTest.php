@@ -4,31 +4,32 @@ declare(strict_types=1);
 
 uses(Modules\Gdpr\Tests\TestCase::class);
 
+use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\BaseModel;
 
 beforeEach(function () {
-    $baseModel = new class extends BaseModel {
+    $this->baseModel = new class extends BaseModel {
         protected $table = 'test_gdpr_table';
     };
 });
 
 test('base model extends eloquent model', function () {
-    expect($baseModel);
+    expect($this->baseModel)->toBeInstanceOf(Model::class);
 });
 
 test('base model has correct table name', function () {
-    expect($baseModel->getTable());
+    expect($this->baseModel->getTable())->toBe('test_gdpr_table');
 });
 
 test('base model can be instantiated', function () {
-    expect($baseModel);
+    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
 });
 
 test('base model has proper inheritance chain', function () {
-    expect($baseModel);
-    expect($baseModel);
+    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
+    expect($this->baseModel)->toBeInstanceOf(Model::class);
 });
 
 test('base model has timestamps enabled', function () {
-    expect($baseModel);
+    expect($this->baseModel)->usesTimestamps()->toBeTrue();
 });

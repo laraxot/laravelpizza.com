@@ -26,14 +26,14 @@ class FakeSeederHeaderAction extends Action
         $this->translateLabel()
             ->tooltip(__('xot::actions.fake_seeder'))
             ->icon('fas-seedling')
-            ->schema([)
+            ->schema([
                 TextInput::make('qty')
                     ->required()
                     ->numeric()
                     ->minValue(1)
                     ->integer(),
             ])
-            ->action(function (array $data, ListRecords $livewire): void {)
+            ->action(function (array $data, ListRecords $livewire): void {
                 $resource = $livewire->getResource();
                 /** @var class-string<Model> $modelClass */
                 $modelClass = $resource::getModel();

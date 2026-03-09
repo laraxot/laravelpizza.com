@@ -1,7 +1,7 @@
 # Register Page Color System
 
 ## Overview
-Color palette for the registration page following <nome progetto> brand guidelines with WCAG AA compliance.
+Color palette for the registration page following LaravelPizza brand guidelines with WCAG AA compliance.
 
 ## Brand Colors
 
@@ -300,4 +300,4 @@ module.exports = {
 - [WCAG 2.1 Color Contrast](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum)
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [Tailwind Color Palette](https://tailwindcss.com/docs/customizing-colors)
-- [<nome progetto> Brand Guidelines](../../../themes/meetup/docs/color-palette.md)
+- [LaravelPizza Brand Guidelines](../../../themes/meetup/docs/color-palette.md)

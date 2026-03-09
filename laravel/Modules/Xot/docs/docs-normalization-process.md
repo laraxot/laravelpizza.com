@@ -202,11 +202,11 @@ Per processi futuri, considerare script di automazione:
 ## Riferimenti
 
 - [Regole Naming File](../file-naming-rules.md)
-- [Piano Consolidamento Documentazione](../../../../docs/consolidamento-documentazione-2025.md)
-- [Filosofia DRY + KISS](../../../../docs/philosophy-guide.md)
+- [Piano Consolidamento Documentazione](../../../../../docs/consolidamento-documentazione-2025.md)
+- [Filosofia DRY + KISS](../../../../../docs/philosophy-guide.md)
 
 ---
 
-**
+**Ultimo aggiornamento**: Gennaio 2025
 **Stato**: Processo attivo
 **Priorità**: Alta (conformità regole progetto)

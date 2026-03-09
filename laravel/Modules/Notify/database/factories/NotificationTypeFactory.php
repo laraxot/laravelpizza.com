@@ -14,12 +14,12 @@ class NotificationTypeFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $faker->word()
-            'slug' => $faker->slug()
-            'description' => $faker->sentence()
-            'is_active' => $faker->boolean(90)
-            'created_at' => $faker->dateTimeBetween('-1 year')
-            'updated_at' => $faker->dateTimeBetween('-1 year')
+            'name' => $this->faker->word(),
+            'slug' => $this->faker->slug(),
+            'description' => $this->faker->sentence(),
+            'is_active' => $this->faker->boolean(90),
+            'created_at' => $this->faker->dateTimeBetween('-1 year'),
+            'updated_at' => $this->faker->dateTimeBetween('-1 year'),
         ];
     }
 }

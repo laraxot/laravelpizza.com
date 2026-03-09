@@ -16,6 +16,6 @@ class EmailAttachmentData extends Data
 
     public function getContent(): string
     {
-        return $content;
+        return $this->content;
     }
 }

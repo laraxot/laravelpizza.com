@@ -50,6 +50,8 @@
     "illuminate/contracts": "*",
     "illuminate/support": "*",
     "irazasyed/telegram-bot-sdk": "*",
+    "kreait/laravel-firebase": "^7.0",
+    "laravel-notification-channels/fcm": "^6.0",
     "laravel-notification-channels/telegram": "*",
     "phpdocumentor/type-resolver": "*",
     "spatie/laravel-database-mail-templates": "*",

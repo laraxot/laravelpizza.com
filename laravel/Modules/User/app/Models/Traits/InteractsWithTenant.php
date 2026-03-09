@@ -47,7 +47,7 @@ trait InteractsWithTenant
      */
     protected function getTenant(): ?Model
     {
-        return $currentTenant;
+        return $this->currentTenant;
     }
 
     /**
@@ -56,10 +56,10 @@ trait InteractsWithTenant
     protected function loadTenantFromSession(): void
     {
         try {
-            $currentTenant = Filament::getTenant();
+            $this->currentTenant = Filament::getTenant();
         } catch (\Throwable $e) {
             // Se Filament non è disponibile, lascia il tenant come null
-            $currentTenant = null;
+            $this->currentTenant = null;
         }
     }
 
@@ -70,7 +70,7 @@ trait InteractsWithTenant
     {
         static::addGlobalScope(new TenantScope());
 
-        static::creating(static function ($model): void {)
+        static::creating(static function ($model): void {
             // PHPStan Level 10: Verifica se il modello ha tenant_id
             // Uso isFillable() invece di property_exists() per Eloquent magic properties
             if (null !== $model && $model instanceof Model && $model->isFillable('tenant_id')) {
@@ -97,7 +97,7 @@ trait InteractsWithTenant
         }
 
         if (null !== $value) {
-            $attributes['tenant_id'] = $value;
+            $this->attributes['tenant_id'] = $value;
         }
     }
 

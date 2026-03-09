@@ -19,7 +19,7 @@ trait SushiToPhpArray
 
     public function getSushiRows(): array
     {
-        $name = Str::of($getTable());
+        $name = Str::of($this->getTable())->replace('_', '-')->toString();
 
         $rows = TenantService::getConfig($name);
 
@@ -31,7 +31,7 @@ trait SushiToPhpArray
          * foreach ($files as $id => $file) {
          * $json = File::json($file);
          * $item = [];
-         * foreach ($schema as $name => $type)
+         * foreach ($this->schema as $name => $type) {
          * $value = $json[$name] ?? null;
          * if (is_array($value)) {
          * $value = json_encode($value, JSON_PRETTY_PRINT);
@@ -54,7 +54,7 @@ trait SushiToPhpArray
          * During a model create Eloquent will also update the updated_at field so
          * need to have the updated_by field here as well.
          */
-        static::creating(function ($model): void {)
+        static::creating(function ($model): void {
             // Type safety for $model in closure
             if (! $model instanceof Model) {
                 return;
@@ -66,7 +66,7 @@ trait SushiToPhpArray
         /*
          * updating.
          */
-        static::updating(function ($model): void {)
+        static::updating(function ($model): void {
             // Type safety for $model in closure
             if (! $model instanceof Model) {
                 return;
@@ -81,7 +81,7 @@ trait SushiToPhpArray
          * For deletes we need to save the model first with the deleted_by field
          */
 
-        static::deleting(function ($model): void {)
+        static::deleting(function ($model): void {
             // Type safety for $model in closure
             if (! $model instanceof Model) {
                 return;

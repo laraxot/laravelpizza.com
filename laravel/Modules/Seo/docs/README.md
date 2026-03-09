@@ -271,7 +271,7 @@ php artisan seo:validate-schema
 
 ---
 
-**🔄 
+**🔄 Ultimo aggiornamento**: 14 Ottobre 2025  
 **📦 Versione**: 1.0.0  
 **🐛 PHPStan Level**: Target Level 9  
 **🌐 Translation**: IT/EN ✅  

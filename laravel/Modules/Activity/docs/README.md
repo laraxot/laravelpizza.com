@@ -427,6 +427,6 @@ $resource::getUrl('edit', ['record' => $record], panel: $panelId);
 
 ---
 
-**
+**Ultimo Aggiornamento:** 2025-01-22  
 **Versione:** 1.0.0  
 **Status:** ✅ Production Ready

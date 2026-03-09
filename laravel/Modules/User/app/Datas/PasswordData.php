@@ -21,7 +21,7 @@ class PasswordData extends Data
 {
     private static ?self $instance = null;
 
-    public function __construct()
+    public function __construct(
         public int $otp_expiration_minutes = 5,
         public int $otp_length = 6,
         public int $expires_in = 60,
@@ -56,22 +56,22 @@ class PasswordData extends Data
      */
     public function getPasswordRule(): Password
     {
-        $pwd = Password::min($min);
+        $pwd = Password::min($this->min);
 
-        if ($mixedCase)
+        if ($this->mixedCase) {
             $pwd = $pwd->mixedCase();
         }
-        if ($letters)
+        if ($this->letters) {
             $pwd = $pwd->letters();
         }
-        if ($numbers)
+        if ($this->numbers) {
             $pwd = $pwd->numbers();
         }
-        if ($symbols)
+        if ($this->symbols) {
             $pwd = $pwd->symbols();
         }
-        if ($uncompromised)
-            $pwd = $pwd->uncompromised($compromisedThreshold);
+        if ($this->uncompromised) {
+            $pwd = $pwd->uncompromised($this->compromisedThreshold);
         }
 
         return $pwd;
@@ -95,25 +95,25 @@ class PasswordData extends Data
      */
     public function getHelperText(): string
     {
-        $msg = 'La password deve essere composta da minimo '.$min.' caratteri';
+        $msg = 'La password deve essere composta da minimo '.$this->min.' caratteri';
 
-        if ($mixedCase)
+        if ($this->mixedCase) {
             $msg .= ', contenere almeno una lettera maiuscola e una minuscola';
         }
 
-        if ($letters)
+        if ($this->letters) {
             $msg .= ', contenere almeno una lettera';
         }
 
-        if ($numbers)
+        if ($this->numbers) {
             $msg .= ', contenere almeno un numero';
         }
 
-        if ($symbols)
+        if ($this->symbols) {
             $msg .= ', contenere almeno un carattere speciale';
         }
 
-        if ($uncompromised)
+        if ($this->uncompromised) {
             $msg .= ', non essere stata compromessa in precedenti violazioni di dati';
         }
 
@@ -125,7 +125,7 @@ class PasswordData extends Data
      */
     public function setFieldName(string $field_name): self
     {
-        $field_name = $field_name;
+        $this->field_name = $field_name;
 
         return $this;
     }
@@ -138,8 +138,8 @@ class PasswordData extends Data
         return FormsTextInput::make($field_name)
             ->password()
             ->required()
-            ->validationMessages($getValidationMessages())
-            ->helperText($getHelperText());
+            ->validationMessages($this->getValidationMessages())
+            ->helperText($this->getHelperText());
     }
 
     /**
@@ -147,15 +147,15 @@ class PasswordData extends Data
      */
     public function getPasswordConfirmationFormComponent(): FormsTextInput
     {
-        if (null === $field_name)
+        if (null === $this->field_name) {
             throw new \RuntimeException('Il nome del campo password non è stato impostato. Utilizzare setFieldName() prima di chiamare questo metodo.');
         }
 
         return FormsTextInput::make('password_confirmation')
             ->password()
             ->required()
-            ->same($field_name)
-            ->validationMessages($getValidationMessages());
+            ->same($this->field_name)
+            ->validationMessages($this->getValidationMessages());
     }
 
     /**
@@ -172,8 +172,8 @@ class PasswordData extends Data
         $this->setFieldName($field_name);
 
         return [
-            $this->getPasswordFormComponent($field_name)
-            $this->getPasswordConfirmationFormComponent()
+            $this->getPasswordFormComponent($field_name),
+            $this->getPasswordConfirmationFormComponent(),
         ];
     }
 

@@ -1,6 +1,6 @@
 # Errore Implementazione Logo - Analisi e Correzione
 
-## 
+## Data: [DATE]
 
 ## 🔴 Problema Identificato
 

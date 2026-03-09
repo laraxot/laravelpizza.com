@@ -69,20 +69,6 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @method static \Modules\User\Database\Factories\TeamFactory factory($count = null, $state = [])
  *
- * @property string|null                     $slug
- * @property string|null                     $description
- * @property string|null                     $avatar_path
- * @property array<array-key, mixed>|null    $settings
- * @property Collection<int, TeamPermission> $permissions
- * @property int|null                        $permissions_count
- * @property Collection<int, TeamUser>       $teamUsers
- * @property int|null                        $team_users_count
- *
- * @method static Builder<static>|Team whereAvatarPath($value)
- * @method static Builder<static>|Team whereDescription($value)
- * @method static Builder<static>|Team whereSettings($value)
- * @method static Builder<static>|Team whereSlug($value)
- *
  * @mixin \Eloquent
  */
 class Team extends BaseTeam

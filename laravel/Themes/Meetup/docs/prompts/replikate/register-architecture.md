@@ -212,7 +212,7 @@ Campi con attributi autocomplete corretti:
 - Password Config: `Modules/User/app/Datas/PasswordData.php`
 - Traduzioni: `Modules/User/lang/*/auth.php`
 
-## 
+## Ultimo Aggiornamento
 
 2026-02-09 - Layout wide-container, progress indicator, trust badges, sezioni form organizzate, WCAG 2.1 AA compliance.
 

@@ -31,8 +31,7 @@ class StateFactory extends Factory
             'Calabria' => 'CAL',
         ];
 
-        $states = array_keys($italianRegions);
-        $state = $states[array_rand($states)];
+        $state = $this->faker->randomElement(array_keys($italianRegions));
 
         return [
             'state' => $state,
@@ -42,7 +41,7 @@ class StateFactory extends Factory
 
     public function lombardia(): static
     {
-        return $this->state(fn (array $_attributes))
+        return $this->state(fn (array $_attributes): array => [
             'state' => 'Lombardia',
             'state_code' => 'LOM',
         ]);
@@ -50,7 +49,7 @@ class StateFactory extends Factory
 
     public function lazio(): static
     {
-        return $this->state(fn (array $_attributes))
+        return $this->state(fn (array $_attributes): array => [
             'state' => 'Lazio',
             'state_code' => 'LAZ',
         ]);

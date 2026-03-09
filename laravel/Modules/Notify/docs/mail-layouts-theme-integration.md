@@ -351,7 +351,7 @@ class EmailLayoutResource extends XotBaseResource
 
 ---
 
-**
+**Ultimo aggiornamento**: 27 Ottobre 2025  
 **Pattern**: Layout per tema con fallback chain  
 **Status**: ✅ IMPLEMENTATO
 

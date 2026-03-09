@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\File;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Database\Factories\LogFactory;
+use Override;
 use Sushi\Sushi;
 
 // --- services
@@ -17,21 +18,18 @@ use Sushi\Sushi;
  *
  * @property string|null $id
  * @property string|null $name
- * @property int|null    $size
- *
- * @method static LogFactory          factory($count = null, $state = [])
+ * @property int|null $size
+ * @method static LogFactory factory($count = null, $state = [])
  * @method static Builder<static>|Log newModelQuery()
  * @method static Builder<static>|Log newQuery()
  * @method static Builder<static>|Log query()
  * @method static Builder<static>|Log whereId($value)
  * @method static Builder<static>|Log whereName($value)
  * @method static Builder<static>|Log whereSize($value)
- *
- * @property ProfileContract|null $creator
- * @property ProfileContract|null $deleter
- * @property string|null          $file_content
- * @property ProfileContract|null $updater
- *
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $deleter
+ * @property-read string|null $file_content
+ * @property-read ProfileContract|null $updater
  * @mixin \Eloquent
  */
 class Log extends BaseModel
@@ -49,7 +47,7 @@ class Log extends BaseModel
         $files = File::files(storage_path('logs'));
 
         foreach ($files as $file) {
-            if ('log' === $file->getExtension()) {
+            if ($file->getExtension() === 'log') {
                 $rows[] = [
                     'id' => $file->getFilenameWithoutExtension(),
                     'name' => $file->getFilenameWithoutExtension(),
@@ -63,11 +61,11 @@ class Log extends BaseModel
 
     public function getFileContentAttribute(?string $value): ?string
     {
-        return File::get(storage_path('logs/'.$id.'.log'));
+        return File::get(storage_path('logs/'.$this->id.'.log'));
     }
 
     /** @return array<string, string> */
-    #[\Override]
+    #[Override]
     protected function casts(): array
     {
         return [

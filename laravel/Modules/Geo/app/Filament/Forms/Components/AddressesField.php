@@ -56,7 +56,7 @@ class AddressesField extends Repeater
         // Campo name: visibile solo con più di 1 elemento
         $baseSchema['name'] = TextInput::make('name')
             ->maxLength(255)
-            ->visible(function (Get $get): bool {)
+            ->visible(function (Get $get): bool {
                 $addresses = $get('../../addresses') ?? [];
 
                 /* @phpstan-ignore argument.type */
@@ -66,20 +66,20 @@ class AddressesField extends Repeater
 
         // Campo is_primary: logica complessa per esclusività
         $baseSchema['is_primary'] = Toggle::make('is_primary')
-            ->visible(function (Get $get): bool {)
+            ->visible(function (Get $get): bool {
                 $addresses = $get('../../addresses') ?? [];
 
                 /* @phpstan-ignore argument.type */
                 return count($addresses) > 1;
             })
-            ->default(function (Get $get): bool {)
+            ->default(function (Get $get): bool {
                 $addresses = $get('../../addresses') ?? [];
 
                 // Se è il primo elemento o c'è un solo elemento, default true
                 /* @phpstan-ignore argument.type */
                 return count($addresses) <= 1;
             })
-            ->afterStateUpdated(function ($state, $set, Get $get, Component $component): void {)
+            ->afterStateUpdated(function ($state, $set, Get $get, Component $component): void {
                 // Se questo diventa primary, disattiva tutti gli altri
                 if (true === $state) {
                     $addresses = $get('../../addresses') ?? [];
@@ -105,7 +105,7 @@ class AddressesField extends Repeater
                 }
             })
             ->live()
-            ->dehydrateStateUsing(function ($state, Get $get): bool {)
+            ->dehydrateStateUsing(function ($state, Get $get): bool {
                 $addresses = $get('../../addresses') ?? [];
                 // Se c'è un solo elemento, forza sempre true
                 /* @phpstan-ignore argument.type */

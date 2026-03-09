@@ -20,7 +20,7 @@ class UpdateCoordinatesResult extends Data
      * @param int                                                  $failureCount   Number of failed updates
      * @param Collection<int, array{model: string, error: string}> $errors         Collection of error details
      */
-    public function __construct()
+    public function __construct(
         public readonly int $totalProcessed,
         public readonly int $successCount,
         public readonly int $failureCount,
@@ -33,7 +33,7 @@ class UpdateCoordinatesResult extends Data
      */
     public function hasErrors(): bool
     {
-        return $failureCount > 0;
+        return $this->failureCount > 0;
     }
 
     /**
@@ -41,7 +41,7 @@ class UpdateCoordinatesResult extends Data
      */
     public function isCompleteSuccess(): bool
     {
-        return 0 === $failureCount && $this->successCount > 0;
+        return 0 === $this->failureCount && $this->successCount > 0;
     }
 
     /**
@@ -49,7 +49,7 @@ class UpdateCoordinatesResult extends Data
      */
     public function isCompleteFailure(): bool
     {
-        return 0 === $successCount && $this->totalProcessed > 0;
+        return 0 === $this->successCount && $this->totalProcessed > 0;
     }
 
     /**
@@ -57,11 +57,11 @@ class UpdateCoordinatesResult extends Data
      */
     public function getSuccessRate(): float
     {
-        if (0 === $totalProcessed)
+        if (0 === $this->totalProcessed) {
             return 0.0;
         }
 
-        return $successCount / $this->totalProcessed * 100;
+        return $this->successCount / $this->totalProcessed * 100;
     }
 
     /**
@@ -72,7 +72,7 @@ class UpdateCoordinatesResult extends Data
     public function getErrorMessages(): array
     {
         /** @var array<int, string> $messages */
-        $messages = $errors
+        $messages = $this->errors
             ->map(fn (array $error): string => "{$error['model']}: {$error['error']}")
             ->values()
             ->toArray();
@@ -85,10 +85,10 @@ class UpdateCoordinatesResult extends Data
      */
     public function getSummaryMessage(): string
     {
-        $rate = number_format($getSuccessRate());
+        $rate = number_format($this->getSuccessRate(), 1);
 
-        return "Processed {$totalProcessed} records. "
-            ."Successfully updated {$successCount} ({$rate}%)
-            ."Failed: {$failureCount}.";
+        return "Processed {$this->totalProcessed} records. "
+            ."Successfully updated {$this->successCount} ({$rate}%). "
+            ."Failed: {$this->failureCount}.";
     }
 }

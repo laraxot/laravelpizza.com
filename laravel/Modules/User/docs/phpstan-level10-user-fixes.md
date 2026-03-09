@@ -314,6 +314,14 @@ Il modulo User è ora **completamente compliant** con PHPStan Level 10. I patter
 ## 📋 Riferimento Incrociato
 
 - **Xot Module**: Vedi `Modules/Xot/docs/phpstan-level10-xot-fixes.md` per pattern di base
+<<<<<<< .merge_file_3wM7gu
 - **healthcare_app Module**: Vedi `Modules/healthcare_app/docs/phpstan-level10-healthcare_app-fixes.md` per pattern simili
+=======
+<<<<<<< HEAD
+- **ExternalProject Module**: Vedi `Modules/ExternalProject/docs/phpstan-level10-app-fixes.md` per pattern simili
+=======
+- **ModuloEsempio Module**: Vedi `Modules/ModuloEsempio/docs/phpstan-level10-ptvx-fixes.md` per pattern simili
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_32qRWd
 
 **Status**: ✅ **COMPLETATO** - Pronto per production con type safety massima.

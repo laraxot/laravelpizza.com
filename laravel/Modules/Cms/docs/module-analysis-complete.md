@@ -238,7 +238,7 @@ Il modulo Cms è il sistema di gestione contenuti di <main module>, fornendo mod
 
 ---
 
-**
+**Ultimo aggiornamento**: Dicembre 2024
 **Versione**: 1.0
 **Stato**: In Progress
 **Responsabile**: Team Sviluppo <main module>

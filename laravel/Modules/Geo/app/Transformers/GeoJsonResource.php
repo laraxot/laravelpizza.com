@@ -40,7 +40,7 @@ class GeoJsonResource extends ResCollection
         return [
             'type' => 'Feature',
             'properties' => [
-                'id' => $post_type.'-'.$this->post_id,
+                'id' => $this->post_type.'-'.$this->post_id,
                 // "index"=> 0,
                 'isActive' => true,
                 // "logo"=> "http://placehold.it/32x32",
@@ -48,24 +48,24 @@ class GeoJsonResource extends ResCollection
                 // expects Illuminate\Database\Eloquent\Model,
                 // $this(Modules\Geo\Transformers\GeoJsonResource) given.
                 // 'image' => Panel::make()->get($this)->imgSrc(['width' => 200, 'height' => 200]),
-                'link' => $url,
+                'link' => $this->url,
                 'url' => '#',
-                'name' => $title,
-                'category' => $post_type,
-                'email' => $email,
-                'stars' => $ratings_avg,
-                'phone' => $phone,
-                'address' => $full_address,
-                'about' => $subtitle."\r\n",
+                'name' => $this->title,
+                'category' => $this->post_type,
+                'email' => $this->email,
+                'stars' => $this->ratings_avg,
+                'phone' => $this->phone,
+                'address' => $this->full_address,
+                'about' => $this->subtitle."\r\n",
                 'tags' => [
-                    $post_type,
+                    $this->post_type,
                     // "Restaurant",
                     // "Contemporary"
                 ],
             ],
             'geometry' => [
                 'type' => 'Point',
-                'coordinates' => [round($longitude, 7)
+                'coordinates' => [round($this->longitude, 7), round($this->latitude, 7)],
             ],
         ];
     }

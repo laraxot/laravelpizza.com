@@ -43,7 +43,7 @@ readonly class GetElevationAction
 
         try {
             /** @var array<string, mixed> $response */
-            $response = $googleMapsService->getElevation($location->latitude, $location->longitude);
+            $response = $this->googleMapsService->getElevation($location->latitude, $location->longitude);
 
             if (! isset($response['results']) || ! is_array($response['results']) || empty($response['results'])) {
                 throw ElevationException::invalidResponse();

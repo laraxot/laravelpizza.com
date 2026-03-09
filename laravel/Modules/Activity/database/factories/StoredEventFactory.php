@@ -35,13 +35,13 @@ class StoredEventFactory extends Factory
             'aggregate_version' => $this->faker->numberBetween(1, 100),
             'event_version' => $this->faker->numberBetween(1, 10),
             'event_class' => $this->faker->randomElement([
-                'Modules\\User\\Events\\UserRegistered',
-                'Modules\\User\\Events\\UserLoggedIn',
-                'Modules\\User\\Events\\UserLoggedOut',
-                'Modules\\User\\Events\\ProfileUpdated',
+                'App\\Events\\UserRegistered',
+                'App\\Events\\UserLoggedIn',
+                'App\\Events\\UserLoggedOut',
+                'App\\Events\\ProfileUpdated',
             ]),
             'event_properties' => [
-                'user_id' => $this->faker->uuid(),
+                'user_id' => $this->faker->numberBetween(1, 100),
                 'action' => $this->faker->randomElement(['create', 'update', 'delete']),
                 'data' => [
                     'field1' => $this->faker->word(),
@@ -62,7 +62,7 @@ class StoredEventFactory extends Factory
      */
     public function withUuid(string $uuid): static
     {
-        return $this->state(fn (array $_attributes) => [
+        return $this->state(fn (array $_attributes): array => [
             'aggregate_uuid' => $uuid,
         ]);
     }
@@ -72,7 +72,7 @@ class StoredEventFactory extends Factory
      */
     public function withVersion(int $version): static
     {
-        return $this->state(fn (array $_attributes) => [
+        return $this->state(fn (array $_attributes): array => [
             'aggregate_version' => $version,
         ]);
     }
@@ -82,7 +82,7 @@ class StoredEventFactory extends Factory
      */
     public function withEventClass(string $eventClass): static
     {
-        return $this->state(fn (array $_attributes) => [
+        return $this->state(fn (array $_attributes): array => [
             'event_class' => $eventClass,
         ]);
     }
@@ -92,10 +92,10 @@ class StoredEventFactory extends Factory
      */
     public function userEvent(): static
     {
-        return $this->state(fn (array $attributes) => [
-            'event_class' => 'Modules\\User\\Events\\UserRegistered',
+        return $this->state(fn (array $attributes): array => [
+            'event_class' => 'App\\Events\\UserRegistered',
             'event_properties' => array_merge((array) ($attributes['event_properties'] ?? []), [
-                'user_id' => $this->faker->uuid(),
+                'user_id' => $this->faker->numberBetween(1, 100),
                 'action' => 'user_registered',
             ]),
         ]);

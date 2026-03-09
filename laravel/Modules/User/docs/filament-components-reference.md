@@ -105,5 +105,5 @@ Questo documento deve essere aggiornato ogni volta che:
 - Si identifica un componente che NON esiste
 - Cambia la versione di Filament nel progetto
 
-**Data 
+**Data ultimo aggiornamento**: 2025-07-30
 **Versione Filament**: Da verificare nel composer.json del progetto

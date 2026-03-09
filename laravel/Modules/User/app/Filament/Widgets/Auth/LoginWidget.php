@@ -52,7 +52,7 @@ class LoginWidget extends XotBaseWidget
     {
         // try {
         /** @var array<string, mixed> $data */
-        $data = $form->getState();
+        $data = $this->form->getState();
 
         $credentials = [
             'email' => is_string($data['email'] ?? null) ? $data['email'] : '',
@@ -64,8 +64,6 @@ class LoginWidget extends XotBaseWidget
         if (Auth::attempt($credentials, $remember)) {
             session()->regenerate();
             redirect()->intended('/');
-
-            return;
         }
 
         $userClass = XotData::make()->getUserClass();

@@ -10,7 +10,7 @@ use Modules\Cms\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    $this->markTestSkipped('Requires full Cms DB schema + container wiring); not available in minimal sqlite test bootstrap.';
+    $this->markTestSkipped('Requires full Cms DB schema + container wiring; not available in minimal sqlite test bootstrap.');
 });
 
 test('cms module models work together in content management', function () {

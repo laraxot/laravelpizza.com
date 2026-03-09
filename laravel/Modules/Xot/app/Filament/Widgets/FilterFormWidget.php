@@ -22,7 +22,7 @@ class FilterFormWidget extends XotBaseWidget
     /*
     public function mount(): void
     {
-        $form->fill();
+        $this->form->fill();
     }
 
 
@@ -35,7 +35,7 @@ class FilterFormWidget extends XotBaseWidget
 
     public function resetFilters(): void
     {
-        $form->fill();
+        $this->form->fill();
         $this->dispatch('filtersUpdated', filters: []);
     }
     */

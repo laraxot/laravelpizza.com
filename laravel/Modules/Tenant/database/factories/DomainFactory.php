@@ -27,12 +27,12 @@ class DomainFactory extends Factory
     public function definition(): array
     {
         return [
-            'domain' => ['example.com', 'test.com', 'demo.org', 'sample.net', 'example.it'][array_rand(['example.com', 'test.com', 'demo.org', 'sample.net', 'example.it'])],
-            'is_primary' => random_int(1, 100) <= 20, // 20% chance
-            'is_ssl_enabled' => random_int(1, 100) <= 80, // 80% chance
-            'is_active' => random_int(1, 100) <= 90, // 90% chance
-            'created_at' => \Carbon\Carbon::now()->subDays(random_int(1, 365)),
-            'updated_at' => \Carbon\Carbon::now()->subDays(random_int(0, 30)),
+            'domain' => $this->faker->domainName(),
+            'is_primary' => $this->faker->boolean(20),
+            'is_ssl_enabled' => $this->faker->boolean(80),
+            'is_active' => $this->faker->boolean(90),
+            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
+            'updated_at' => $this->faker->dateTimeBetween('-1 month', 'now'),
         ];
     }
 
@@ -41,7 +41,7 @@ class DomainFactory extends Factory
      */
     public function primary(): static
     {
-        return $this->state(fn (array $_attributes))
+        return $this->state(fn (array $_attributes) => [
             'is_primary' => true,
         ]);
     }
@@ -51,7 +51,7 @@ class DomainFactory extends Factory
      */
     public function active(): static
     {
-        return $this->state(fn (array $_attributes))
+        return $this->state(fn (array $_attributes) => [
             'is_active' => true,
         ]);
     }
@@ -61,7 +61,7 @@ class DomainFactory extends Factory
      */
     public function sslEnabled(): static
     {
-        return $this->state(fn (array $_attributes))
+        return $this->state(fn (array $_attributes) => [
             'is_ssl_enabled' => true,
         ]);
     }

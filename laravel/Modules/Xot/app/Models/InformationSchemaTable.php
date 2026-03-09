@@ -7,26 +7,25 @@ namespace Modules\Xot\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
-use Modules\Tenant\Contracts\SushiToJsonContract;
+use InvalidArgumentException;
 use Modules\Tenant\Models\Traits\SushiToJson;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Database\Factories\InformationSchemaTableFactory;
 
 /**
- * @property int|null             $table_rows
- * @property string               $table_schema
- * @property string               $table_name
- * @property string|null          $model_class
- * @property Carbon|null          $created_at
- * @property string|null          $created_by
- * @property int                  $id
- * @property Carbon|null          $updated_at
- * @property string|null          $updated_by
- * @property ProfileContract|null $creator
- * @property ProfileContract|null $deleter
- * @property ProfileContract|null $updater
- *
- * @method static InformationSchemaTableFactory          factory($count = null, $state = [])
+ * @property int|null $table_rows
+ * @property string $table_schema
+ * @property string $table_name
+ * @property string|null $model_class
+ * @property Carbon|null $created_at
+ * @property string|null $created_by
+ * @property int $id
+ * @property Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $deleter
+ * @property-read ProfileContract|null $updater
+ * @method static InformationSchemaTableFactory factory($count = null, $state = [])
  * @method static Builder<static>|InformationSchemaTable newModelQuery()
  * @method static Builder<static>|InformationSchemaTable newQuery()
  * @method static Builder<static>|InformationSchemaTable query()
@@ -39,12 +38,9 @@ use Modules\Xot\Database\Factories\InformationSchemaTableFactory;
  * @method static Builder<static>|InformationSchemaTable whereTableSchema($value)
  * @method static Builder<static>|InformationSchemaTable whereUpdatedAt($value)
  * @method static Builder<static>|InformationSchemaTable whereUpdatedBy($value)
- * @method static int                                    getModelCount(class-string<Model> $modelClass)
- * @method static void                                   updateModelCount(class-string<Model> $modelClass, int $total)
- *
  * @mixin \Eloquent
  */
-class InformationSchemaTable extends BaseModel implements SushiToJsonContract
+class InformationSchemaTable extends BaseModel
 {
     use SushiToJson;
 
@@ -86,7 +82,7 @@ class InformationSchemaTable extends BaseModel implements SushiToJsonContract
      */
     public function getSchema(): array
     {
-        return $schema;
+        return $this->schema;
     }
 
     /**
@@ -102,18 +98,18 @@ class InformationSchemaTable extends BaseModel implements SushiToJsonContract
     /**
      * Aggiorna il numero di record memorizzato per un modello.
      *
-     * @param class-string<Model> $modelClass
+     * @param  class-string<Model>  $modelClass
      */
     public static function updateModelCount(string $modelClass, int $total): void
     {
         if (! class_exists($modelClass)) {
-            throw new \InvalidArgumentException("Model class [{$modelClass}] does not exist");
+            throw new InvalidArgumentException("Model class [{$modelClass}] does not exist");
         }
 
         /** @var Model $model */
         $model = app($modelClass);
         if (! $model instanceof Model) {
-            throw new \InvalidArgumentException("Class [{$modelClass}] must be an instance of ".Model::class);
+            throw new InvalidArgumentException("Class [{$modelClass}] must be an instance of ".Model::class);
         }
 
         $connection = $model->getConnection();
@@ -132,18 +128,18 @@ class InformationSchemaTable extends BaseModel implements SushiToJsonContract
     /**
      * Restituisce il numero di record per un modello.
      *
-     * @param class-string<Model> $modelClass
+     * @param  class-string<Model>  $modelClass
      */
     public static function getModelCount(string $modelClass): int
     {
         if (! class_exists($modelClass)) {
-            throw new \InvalidArgumentException("Model class [{$modelClass}] does not exist");
+            throw new InvalidArgumentException("Model class [{$modelClass}] does not exist");
         }
 
         /** @var Model $model */
         $model = app($modelClass);
         if (! $model instanceof Model) {
-            throw new \InvalidArgumentException("Class [{$modelClass}] must be an instance of ".Model::class);
+            throw new InvalidArgumentException("Class [{$modelClass}] must be an instance of ".Model::class);
         }
 
         $connection = $model->getConnection();
@@ -156,7 +152,7 @@ class InformationSchemaTable extends BaseModel implements SushiToJsonContract
             'table_name' => $table,
         ]);
 
-        if (null === $record->table_rows) {
+        if ($record->table_rows === null) {
             $record->update(['table_rows' => $model->count()]);
         }
 

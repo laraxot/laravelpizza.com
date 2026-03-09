@@ -21,7 +21,7 @@ trait HasSocialite
 
     public function getProviderField(string $provider, string $field): string
     {
-        $socialiteUser = $this->socialiteUsers();
+        $socialiteUser = $this->socialiteUsers()->firstWhere(['provider' => $provider]);
         if (null === $socialiteUser) {
             throw new \Exception('SocialiteUser not found');
         }

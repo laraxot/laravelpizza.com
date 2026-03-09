@@ -38,7 +38,7 @@ class SendMailCommand extends Command
         $data['from'] = $this->ask('Enter the sender\'s name', $from);
         $data['from_email'] = $this->ask('Enter the sender\'s email address', $from_email);
         $data['body_html'] = $this->ask('Enter the HTML body of the email', '<p>This is a default HTML body</p>');
-        // $data['body'] = $this->ask('Enter the plain text body of the email (leave blank to use stripped HTML body));
+        // $data['body'] = $this->ask('Enter the plain text body of the email (leave blank to use stripped HTML body)') ?? strip_tags( $data['body_html']);
 
         $emailData = EmailData::from($data);
 

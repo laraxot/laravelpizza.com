@@ -1,6 +1,6 @@
 # User Module - Authentication & Authorization
 
-**
+**Last Update**: 2025-12-05
 **Status**: ✅ Production Ready
 **PHPStan Level**: 10
 **Maintainers**: Laraxot Team
@@ -999,7 +999,7 @@ See [ROADMAP.md](./roadmap.md) for details.
 
 ### Project Documentation
 - [CLAUDE.md](../../../claude.md) - Project architecture
-- [Security Guidelines](../../../docs/security.md)
+- [Security Guidelines](../../../../docs/security.md)
 
 ### External Resources
 - [Laravel Authentication](https://laravel.com/docs/12.x/authentication)
@@ -1011,6 +1011,7 @@ See [ROADMAP.md](./roadmap.md) for details.
 ---
 
 **Module**: User (Authentication & Authorization)
+**Version**: 2.5.0
 **Framework**: Laravel 12 + Filament 4
 **PHPStan**: Level 10 ✅
 **Test Coverage**: 88%+ ✅

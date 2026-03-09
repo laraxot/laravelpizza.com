@@ -175,7 +175,11 @@ protected function createApplication()
     $app = parent::createApplication();
     
     $app['config']->set([
+<<<<<<< .merge_file_2lyvDW
         'database.connections.gdpr.database' => 'healthcare_app_data_test',
+=======
+        'database.connections.gdpr.database' => 'ptvx_data_test',
+>>>>>>> .merge_file_y6Fb9B
     ]);
     
     return $app;
@@ -261,9 +265,9 @@ protected function createApplication()
 
 ### Internal Resources
 
-- [Testing Setup Guide](../../docs/testing-setup.md)
-- [Testing Best Practices](../../docs/testing-best-practices.md)
-- [Troubleshooting Guide](../../docs/troubleshooting.md)
+- [Testing Setup Guide](../../../docs/testing-setup.md)
+- [Testing Best Practices](../../../docs/testing-best-practices.md)
+- [Troubleshooting Guide](../../../docs/troubleshooting.md)
 
 ## Testing Examples
 

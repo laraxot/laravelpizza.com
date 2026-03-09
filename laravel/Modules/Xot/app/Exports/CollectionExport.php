@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Exports;
 
+use BackedEnum;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -31,22 +32,22 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
     public ?array $fields = null;
 
     /**
-     * @param array<int, string> $fields
+     * @param  array<int, string>  $fields
      */
     public function __construct(Collection $collection, ?string $transKey = null, array $fields = [])
     {
-        $collection = $collection;
-        $transKey = $transKey;
-        $fields = $fields;
+        $this->collection = $collection;
+        $this->transKey = $transKey;
+        $this->fields = $fields;
     }
 
     public function getHead(): array
     {
-        if (\is_array($fields))
-            return $fields;
+        if (\is_array($this->fields) && ! empty($this->fields)) {
+            return $this->fields;
         }
 
-        $head = $collection->first();
+        $head = $this->collection->first();
         Assert::isInstanceOf($head, Model::class);
 
         return array_keys($head->getAttributes());
@@ -55,24 +56,24 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
     public function headings(): array
     {
         $headings = $this->getHead();
-        $transKey = $transKey;
+        $transKey = $this->transKey;
 
         return app(TransArrayAction::class)->execute($headings, $transKey);
     }
 
     public function collection(): Collection
     {
-        return $collection;
+        return $this->collection;
     }
 
     public function map(mixed $row): array
     {
-        if (null === $fields || empty($this->fields))
+        if ($this->fields === null || empty($this->fields)) {
             Assert::isInstanceOf($row, Model::class);
             $res = app(SafeArrayByModelCastAction::class)->execute($row);
 
-            return Arr::map($res, function ($value, $_key) {)
-                if ($value instanceof \BackedEnum) {
+            return Arr::map($res, function ($value, $_key) {
+                if ($value instanceof BackedEnum) {
                     if (method_exists($value, 'getLabel')) {
                         return $value->getLabel();
                     }
@@ -84,10 +85,10 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
             });
         }
 
-        // return collect($row)->only($fields);
+        // return collect($row)->only($this->fields)->toArray();
         $data = [];
 
-        foreach ($fields as $field)
+        foreach ($this->fields as $field) {
             $value = data_get($row, $field);
             if (\is_object($value)) {
                 if (enum_exists($value::class) && method_exists($value, 'getLabel')) {

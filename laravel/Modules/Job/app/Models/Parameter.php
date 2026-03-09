@@ -24,7 +24,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property-read ProfileContract|null $creator
  * @property-read Frequency|null $task
  * @property-read ProfileContract|null $updater
- *
  * @method static ParameterFactory factory($count = null, $state = [])
  * @method static Builder<static>|Parameter newModelQuery()
  * @method static Builder<static>|Parameter newQuery()
@@ -37,9 +36,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Parameter whereUpdatedAt($value)
  * @method static Builder<static>|Parameter whereUpdatedBy($value)
  * @method static Builder<static>|Parameter whereValue($value)
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class Parameter extends BaseModel
@@ -64,7 +61,7 @@ class Parameter extends BaseModel
      */
     protected function casts(): array
     {
-        return array_merge(parent::casts(), [)
+        return array_merge(parent::casts(), [
             'id' => 'integer',
             'frequency_id' => 'integer',
             'name' => 'string',

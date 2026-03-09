@@ -1,7 +1,5 @@
 # GEMINI.md
 
-🚨 **CRITICAL**: This project is worked on by **MULTIPLE autonomous AI agents simultaneously**. See `.cursor/rules/MULTI_AGENT_HARMONY.md` and `.cursor/rules/GITHUB_MULTI_AGENT_COMMUNICATION.md` for coordination protocols.
-
 ## Project Overview
 
 This is a Laravel project that aims to provide a "meetup" theme for Laravel meetups. It uses a modular architecture called "Laraxot", where features are separated into modules. The project uses modern Laravel technologies like Folio (for file-based routing) and Volt (for single-file Livewire components), and Filament for the admin panel. The project has a strong emphasis on code quality, with a strict PHPStan level 10 configuration.
@@ -53,12 +51,9 @@ composer run test
 - **Code Quality**: The project enforces a strict PHPStan level 10 configuration. All code must pass PHPStan analysis before being committed.
 - **Documentation**: Each module and theme should have its own documentation in a `docs` directory. All documentation should be written in Markdown.
 
-# Metodologia "Super Mucca" - Laraxot Zen (Updated 2026-03-05)
+# Metodologia "Super Mucca" - Laraxot Zen
 
 > **Aumenta al massimo il tuo livello di confidenza. Hai i poteri della "Super Mucca" 🐄✨**
-> **Multi-Agent Harmony**: Lavora in armonia con gli altri agenti. Prima di iniziare un task, controlla se altri ci stanno lavorando o lo hanno completato. Non andare necessariamente in ordine per limitare collisioni.
-> **Safe Deletion**: NON cancellare mai file; rinominali concatenando `.old`.
-> **Coordination**: Utilizza GitHub Issues e GitHub Discussions per comunicare con gli altri agenti AI. Leggi sempre l'elenco delle issues attive prima di iniziare un nuovo modulo o task.
 
 ---
 
@@ -81,7 +76,6 @@ La metodologia "Super Mucca" si basa su tre pilastri:
 - **Decide autonomamente** basandosi su principi architetturali.
 - **Migliora continuamente** regole e documentazione.
 - **Ragiona criticamente** su approcci alternativi.
-- **Coordina con altri agenti** via GitHub issues e discussions (CRITICAL!)
 
 **Come raggiungere Livello 3**: Segui scrupolosamente questo workflow.
 
@@ -107,6 +101,11 @@ Prima di toccare **qualsiasi** codice, devi comprendere:
 ---
 
 ## 🚀 2. Workflow Operativo (Step-by-Step)
+
+### FASE 0: PRE-ACTION DOCUMENTATION AUDIT (MANDATORY)
+0.  **Studia, aggiorna e migliora** le cartelle `docs/` dentro i moduli e i temi interessati.
+1.  **Valuta** la creazione di **GitHub Issues** e **GitHub Discussions** per tracciare il lavoro e le decisioni.
+2.  Questa fase è propedeutica a qualsiasi modifica al codice.
 
 ### FASE 1: STUDIO E ANALISI
 1.  Leggi documentazione (root + modulo)
@@ -145,8 +144,6 @@ Prima di toccare **qualsiasi** codice, devi comprendere:
 ### ROBUST (Type Safety + Error Handling)
 - `declare(strict_types=1);`
 - Strict type hinting e asserzioni (Webmozart Assert).
-- **Multi-Agent Coordination**: Sempre aggiornare `docs/coverage-plan.md` e altri file di tracking per segnalare l'avancemento ed evitare sovrapposizioni.
-- **Documentation First**: Aggiorna sempre `docs`, `rules`, `memories` e `skills` riflettendo le nuove scoperte o regole.
 
 ---
 
@@ -335,157 +332,9 @@ app(DoSomethingAction::class)->execute($data);
 
 ---
 
-## 🎬 10. Documentazione, Script e Robustezza (Aggiornamento 2026-03-02)
-
-**Regola Critica**: Tutti i file `.md` (eccetto `README.md` e `CHANGELOG.md`) devono seguire queste convenzioni:
-1. **Naming**: Solo caratteri minuscoli, niente date nei nomi dei file, niente caratteri speciali (usare solo hyphen `-` o underscore `_`).
-2. **Contenuto**: Rimuovere riferimenti a date fisse come "Last Updated", "Ultimo aggiornamento" o "[DATE]". La documentazione deve essere agnostica rispetto al tempo.
-3. **PRD**: Ogni modulo e tema DEVE avere un file `PRD.md` nella sua cartella `docs/` che descriva requisiti e architettura.
-4. **Archive**: Le cartelle `archive/` dentro `docs/` sono vietate.
-5. **Links**: Usare sempre link relativi tra i file di documentazione.
-
-**Regola Critica**: Posizione degli Script:
-1. Tutti gli script (`.sh`, `.py`, ecc.) devono risiedere in una sottocartella appropriata di `bashscripts/`.
-2. È vietato avere script nella root, in `laravel/` o dentro le cartelle dei moduli (es. `Modules/Xot/bashscripts` è vietato).
-3. Lo script `generate_coverage.sh` è in `bashscripts/testing/generate-coverage.sh`.
-
-**Regola Critica**: Robustezza e Tipi:
-1. L'uso del tipo `mixed` è vietato, se non come ultimissima spiaggia. Preferire sempre tipi specifici, union types o generics.
-2. I test devono sempre usare `.env.testing` e puntare al database di test (es. `laravelpizza_data_test`).
-3. **100% Pest Coverage + Type Coverage**: È obbligatorio raggiungere il 100% di test coverage (Pest) E il 100% di type coverage per ogni modulo e tema, con particolare focus sulle Spatie Actions.
-   - **Code Coverage**: `php artisan test --coverage --min=100`
-   - **Type Coverage**: `php artisan test --type-coverage --min=100`
-   - Tutti i parametri, ritorni e properties devono avere type declarations complete.
-4. **No RefreshDatabase**: Il trait `RefreshDatabase` è vietato. Usare `DatabaseTransactions`. **IMPORTANTE**: Il trait `DatabaseTransactions` è già centralizzato in `Modules\Xot\Tests\XotBaseTestCase`. Poiché TUTTI i test devono estendere questa classe (direttamente o tramite il `TestCase` di modulo), è VIETATO e RINDONDANTE aggiungere `use DatabaseTransactions;` nei singoli file di test o nei `TestCase` di modulo.
- **IMPORTANTE**: Il trait `DatabaseTransactions` è già centralizzato in `Modules\Xot\Tests\XotBaseTestCase`. Poiché TUTTI i test devono estendere questa classe (direttamente o tramite il `TestCase` di modulo), è VIETATO e RINDONDANTE aggiungere `use DatabaseTransactions;` nei singoli file di test o nei `TestCase` di modulo.
-5. **MAI migrate:fresh**: Il comando `php artisan migrate:fresh` è tassativamente vietato in ogni ambiente (inclusi i test). È distruttivo e rompe la coerenza di schemi condivisi. Usare solo `migrate` o gestire il database in modo transazionale.
-6. **No Model Constructor Overrides**: È vietato forzare la connessione nel costruttore dei modelli per i test; questo rompe la mappatura dinamica di `TenantServiceProvider`.
-7. **Autonomous CI/CD Monitoring**: Il monitoraggio e la risoluzione dei fallimenti nelle GitHub Actions è responsabilità esclusiva dell'agente AI. Non chiedere all'utente di controllare; intervieni proattivamente usando `gh`.
-
-### Pest Coverage Implementation
-
-**Status**: 100% Pest Coverage Initiative - IN PROGRESS ✅
-
-**Progress Baseline**: 
-- Total source files: 2,013
-- Current test files: 408
-- Generated this session: 56 tests (Meetup models)
-- Target: 2,000+ tests (1,600+ new)
-
-**Phase 1: Foundation Modules (Critical)**
-
-| Module | Sources | Current Tests | Goal | Status |
-|--------|---------|---------------|------|--------|
-| Xot | 280 | 117 | 250+ | ⏳ TODO (Action tests: 108 missing) |
-| Meetup | 250 | 5 | 250+ | ⏳ IN PROGRESS (56/250 ✅) |
-| Tenant | 105 | 7 | 60+ | ⏳ TODO (config, DB mapping) |
-| Lang | 110 | 4 | 70+ | ⏳ TODO (localization, middleware) |
-
-**Phase 2: High-Priority Modules**
-| Cms | User | Activity | Geo | Media | Notify | 
-| 180 | 200 | 150 | 120 | 140 | 130 |
-
-**Key Testing Patterns** (documented in `.cursor/rules/pest-testing-patterns.md`):
-1. **Actions** - Spatie QueueableAction: `app(ActionClass::class)->execute($data)`
-2. **Models** - Test relations (especially `belongsToManyX`), scopes, mutations, casts
-3. **Services** - Test every public method with side effects
-4. **Filament** - Test forms, tables, authorization
-5. **belongsToManyX** - XotBase custom trait (NOT standard belongsToMany)
-6. **DatabaseTransactions** - Required, RefreshDatabase forbidden
-
-**Documentation Created**:
-- ✅ `.cursor/rules/pest-testing-patterns.md` (16KB) - Complete testing guide
-- ✅ `docs/memories/test-coverage-learnings.md` (10KB) - Learnings & edge cases
-- ✅ `Modules/Meetup/docs/test-strategy.md` (8KB) - Module-specific strategy
-- ✅ This section in GEMINI.md - Progress tracking
-
-**Key Learnings So Far**:
-1. Use `DatabaseTransactions` (GIA' INCLUSO in `XotBaseTestCase` - NON AGGIUNGERE nei singoli test)
-2. Factory states matter: `factory()->online()`, `factory()->past()`
-3. Slug generation needs `uniqid()` for uniqueness
-4. CMS integration: test `toBlockArray()` and `toSchemaOrg()`
-5. Schema.org structured data for SEO
-6. Cross-connection relations (User DB ↔ Meetup DB)
-7. Anonymous class mocks fail strict typing
-
-**References**:
-- Full testing guide: `.cursor/rules/pest-testing-patterns.md`
-- Implementation learnings: `docs/memories/test-coverage-learnings.md`
-- Coverage progress: GitHub issues #191-205
-- Related commits: dd3958759, e594a7f60, 98cfec88b
-
----
-
----
-
-## ✅ 11. Multi-Agent Coordination via GitHub (🚨 CRITICAL - 2026-03-05)
-
-**CARDINAL RULE**: We are multiple AI agents. **ALWAYS check GitHub Issues & Discussions BEFORE starting work.**
-
-### 🚨 NEVER Assume You're Alone
-Other agents have likely already:
-- Fixed test failures you see
-- Started work on your target module
-- Resolved configuration issues
-- Updated documentation
-
-### GitHub Communication Protocol
-**See**: `docs/GITHUB-AGENT-COMMUNICATION.md` (complete guide)
-
-**Before Starting ANY Work**:
-```bash
-# 1. Check GitHub Issues
-gh issue list --label "coverage" --state open
-# Look for [AGENT-WORK] issues on YOUR target module
-
-# 2. Check Discussions
-gh discussion list
-# Search for recent updates on your module
-
-# 3. IF starting work, CREATE issue
-gh issue create \
-  --title "[AGENT-WORK] ModuleName - YourTask" \
-  --label "coverage,in-progress,module-name"
-
-# 4. Work
-# 5. Close issue when done
-gh issue close <number>
-```
-
-### Key Coordination Rules
-1. **Check GitHub Issues first** - is anyone on your module?
-2. **Create [AGENT-WORK] issue** when starting - mark status: IN PROGRESS
-3. **Use Discussions** for questions ("Who's tested Geo?", "Found pattern for X")
-4. **Update issue** when done: mark completed, link to commit
-5. **Choose low-collision modules** if your target is taken: Geo, Job, Seo, Gdpr
-
-### Database Connections
-| Module | Connection | Migrated |
-|--------|-----------|----------|
-| User | `user` | ✅ 2026-03-05 |
-| Meetup | `meetup` | ✅ 2026-03-05 |
-| Geo, Job, Others | default | ✅ |
-
-### Current Status (2026-03-05 14:50 UTC)
-- **Tests Passing**: 2,866+ (RoleTest fixed: 17 passing)
-- **Coverage Target**: 100% code + 100% type
-- **Modules In Progress** (check GitHub Issues for current work)
-- **Communication**: GitHub Issues + Discussions + coverage-plan.md
-
----
-
 > **Ricorda**: Tutti i prompt e la documentazione devono essere **project-agnostic**. Evita nomi specifici e usa placeholder o descrizioni architetturali universali.
 
-**Status**: Super Mucca Attivata 🐄✨ | 100% Pest Coverage In Progress ✅ | Multi-Agent Coordination Active 🤝
-**Last Updated**: 2026-03-05 14:40 UTC
-**Version**: 4.2
-**Philosophy**: DRY + KISS + SOLID + ROBUST + Laraxot Zen + Test Coverage First + Parallel Execution
-- **Validation is Mandatory**: NEVER claim a task is finished without executing automated tests (`pest`) and static analysis (`phpstan`). A task is only complete when the behavioral correctness is verified and the code is syntactically perfect.
-- **Ralph Loop Integration**: Use `/ralph-loop` for highly iterative tasks. Persistence and self-correction are mandatory.
-- **Git Forward-only Strategy**: Git history moves only forward. Do not use `reset --hard`, `revert`, or `checkout` to restore old versions. Old code can be studied for understanding, but fixes must be applied as new commits.
-- **Module Consolidation Rule (STRICT)**: DO NOT create granular modules. Use existing ones.
-  - **Forbidden Event Modules**: `Event`, `EventCategory`, `EventFeedback`, `EventLocation`, `EventRegistration`, `EventSchedule`, `EventSpeaker`, `EventSponsor`, `EventTag`, `EventTicket`, `EventAttendee`, `EventOrganizer`. Use `Modules/Meetup`.
-  - **Forbidden Forum Modules**: `ForumAnnouncement`, `ForumSubscriber`, `ForumTemplate`. Use `Modules/Meetup` (for community) or `Modules/Cms` (for generic).
-- **Script Location Standard**: ALL scripts (`.sh`, `.php`, `.py`) MUST reside in a subfolder of `./bashscripts/` (e.g., `./bashscripts/automation/`). 
-  - Scripts must be documented in `./bashscripts/docs/`.
-  - NO scripts are allowed in the project root or `laravel/` root.
+**Status**: Super Mucca Attivata 🐄✨
+**Last Updated**:
+**Version**: 4.0
+**Philosophy**: DRY + KISS + SOLID + ROBUST + Laraxot Zen

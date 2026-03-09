@@ -142,8 +142,3 @@ Questo bug fix ha permesso di completare il miglioramento della qualità del cod
 - Transazioni database
 - Notifiche utente
 - Verifica email
-
-
----
-<\!-- merged from: parse-error-orphan-methods-2025-01-27.md -->
-

@@ -6,16 +6,13 @@
 |--------------------------------------------------------------------------
 */
 
-pest()->extend(\Tests\TestCase::class)
+pest()->extend(\Illuminate\Foundation\Testing\TestCase::class)
     ->in('Feature')
     ->in('Unit')
     ->in('tests/Feature')
     ->in('tests/Unit')
-    ->in('../Modules/*/tests/Feature')
-    ->in('../Modules/*/tests/Unit')
-    ->in('../Modules/*/tests/Traits')
-    ->in('../Modules/*/tests/Integration')
-    ->in('../Modules/*/tests/Performance');
+    ->in('Modules/*/tests/Feature')
+    ->in('Modules/*/tests/Unit');
 
 /*
 |--------------------------------------------------------------------------

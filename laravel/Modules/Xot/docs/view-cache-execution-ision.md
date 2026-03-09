@@ -210,6 +210,6 @@ Tutte le Blade templates sono state compilate correttamente e salvate in cache. 
 
 ---
 
-**
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: ✅ Completato con successo

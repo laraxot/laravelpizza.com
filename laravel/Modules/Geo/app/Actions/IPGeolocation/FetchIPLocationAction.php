@@ -19,9 +19,9 @@ class FetchIPLocationAction
 
     private Client $client;
 
-    public function __construct(?Client $client = null)
+    public function __construct()
     {
-        $client = $client ?? new Client();
+        $this->client = new Client();
     }
 
     /**
@@ -34,7 +34,7 @@ class FetchIPLocationAction
      */
     public function execute(string $ip): IPLocationData
     {
-        $response = $client->get(self::API_URL.$ip, [
+        $response = $this->client->get(self::API_URL.$ip, [
             'query' => [
                 'fields' => implode(',', [
                     'status',

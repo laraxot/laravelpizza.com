@@ -250,5 +250,5 @@ Il pattern attuale di `RecordNotification` è **Zen Delegation**: invece di riso
 
 ---
 
-**
+**Ultimo aggiornamento**: 19 Dicembre 2025  
 **Filosofia**: *"Intent over implementation, lazy over eager, simple over complex"*

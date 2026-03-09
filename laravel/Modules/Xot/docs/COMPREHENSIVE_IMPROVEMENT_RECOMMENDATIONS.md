@@ -54,7 +54,11 @@ class ConnectionManagerService
     public static function getConnectionForModule(string $module): string
     {
         return match($module) {
+<<<<<<< .merge_file_prG0As
             'healthcare_app' => 'healthcare_app',
+=======
+            'ModuloEsempio' => 'ptvx',
+>>>>>>> .merge_file_A6YKVE
             'User' => 'user',
             'Notify' => 'notify',
             default => 'mysql'
@@ -137,14 +141,22 @@ class ContactValidationService
 **Solution**: Strategy pattern con interfaces
 
 ```php
+<<<<<<< .merge_file_prG0As
 // Modules/healthcare_app/Contracts/ChartRendererContract.php
+=======
+// Modules/ModuloEsempio/Contracts/ChartRendererContract.php
+>>>>>>> .merge_file_A6YKVE
 interface ChartRendererContract
 {
     public function supports(string $type): bool;
     public function render(array $data, array $config): string;
 }
 
+<<<<<<< .merge_file_prG0As
 // Modules/healthcare_app/Services/Chart/Renderers/PieChartRenderer.php
+=======
+// Modules/ModuloEsempio/Services/Chart/Renderers/PieChartRenderer.php
+>>>>>>> .merge_file_A6YKVE
 class PieChartRenderer implements ChartRendererContract
 {
     public function supports(string $type): bool
@@ -310,7 +322,11 @@ $contacts = Contact::forContext('dashboard')->get(); // Optimized loading
 **Solution**: Chunking e memory management
 
 ```php
+<<<<<<< .merge_file_prG0As
 // Modules/healthcare_app/Services/BulkProcessingService.php
+=======
+// Modules/ModuloEsempio/Services/BulkProcessingService.php
+>>>>>>> .merge_file_A6YKVE
 class BulkProcessingService
 {
     public function processLargeDataset(\Closure $processor, Builder $query, int $chunkSize = 1000): void
@@ -613,7 +629,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-
+          php-version: 8.3
       - name: Install dependencies
         run: composer install
       - name: Run PHPStan

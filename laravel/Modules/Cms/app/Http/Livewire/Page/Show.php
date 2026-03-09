@@ -53,9 +53,9 @@ class Show extends Component
      */
     public function render(): View
     {
-        return view('cms::livewire.page.show', [)
-            'pageContent' => $pageContent,
-            'theme' => $theme ?? ThemeService::getTheme()
+        return view('cms::livewire.page.show', [
+            'pageContent' => $this->pageContent,
+            'theme' => $this->theme ?? ThemeService::getTheme(),
         ]);
     }
 
@@ -80,15 +80,15 @@ class Show extends Component
     protected function loadPageContent(): void
     {
         // Chiave per la cache
-        $cacheKey = 'page_content_'.$slug.'_'.($this->theme ?? ThemeService::getTheme());
+        $cacheKey = 'page_content_'.$this->slug.'_'.($this->theme ?? ThemeService::getTheme());
 
         // Se la cache è abilitata, tenta di recuperare dalla cache
-        if ($cache)
+        if ($this->cache) {
             /** @var array<string, mixed> $cached */
-            $cached = Cache::remember($cacheKey, now()->addHours(24), $fetchPageContent(...));
-            $pageContent = $cached;
+            $cached = Cache::remember($cacheKey, now()->addHours(24), $this->fetchPageContent(...));
+            $this->pageContent = $cached;
         } else {
-            $pageContent = $this->fetchPageContent();
+            $this->pageContent = $this->fetchPageContent();
         }
     }
 
@@ -101,15 +101,15 @@ class Show extends Component
     {
         try {
             // Recupera la pagina dal database
-            $page = Page::where('slug', $slug);
+            $page = Page::where('slug', $this->slug)->where('lang', app()->getLocale())->first();
 
             if (! $page) {
-                return ['error' => 'Page not found', 'slug' => $slug];
+                return ['error' => 'Page not found', 'slug' => $this->slug];
             }
 
             // Type narrowing: ensure $page is a Page model
             if (! $page instanceof Page) {
-                return ['error' => 'Invalid page type', 'slug' => $slug];
+                return ['error' => 'Invalid page type', 'slug' => $this->slug];
             }
 
             // Recupera e processa i contenuti della pagina
@@ -133,7 +133,7 @@ class Show extends Component
                 'layout' => 'default',
             ];
         } catch (\Exception $e) {
-            if ($debug)
+            if ($this->debug) {
                 return [
                     'error' => $e->getMessage(),
                     'file' => $e->getFile(),

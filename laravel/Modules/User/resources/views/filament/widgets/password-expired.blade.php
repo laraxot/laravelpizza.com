@@ -16,7 +16,7 @@ declare(strict_types=1);
     </div>
     
     <x-filament-schemas::form wire:submit="resetPassword">
-        {{ $form }}
+        {{ $this->form }}
         
         <x-filament::button type="submit" class="mt-4">
             @lang('user::password_expired.actions.reset_password.label') <x-filament::loading-indicator class="h-5 w-5" wire:loading wire:target="submit"/>

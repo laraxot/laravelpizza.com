@@ -7,7 +7,7 @@
 - **Verification**: A new feature test `Modules/User/tests/Feature/PasswordDataLabelsTest.php` verifies that labels are correctly translated.
 
 ## PHPStan Fixes
-- **DocBlock Updates**: Fixed `class.notFound` errors in `User` and `TenantUser` models by replacing non-existent `<nome progetto>\Models\Profile` references with `Modules\Xot\Contracts\ProfileContract`.
+- **DocBlock Updates**: Fixed `class.notFound` errors in `User` and `TenantUser` models by replacing non-existent `TechPlanner\Models\Profile` references with `Modules\Xot\Contracts\ProfileContract`.
 - **Compliance**: Module now passes PHPStan analysis at Level 10.
 
 ## Architectural Alignment

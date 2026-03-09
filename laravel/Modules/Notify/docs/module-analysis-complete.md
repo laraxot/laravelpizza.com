@@ -255,7 +255,7 @@ Il modulo Notify è il sistema di gestione notifiche e comunicazioni riutilizzab
 
 ---
 
-**
+**Ultimo aggiornamento**: Dicembre 2024
 **Versione**: 1.0
 **Stato**: In Progress
 **Responsabile**: Team Sviluppo Laraxot

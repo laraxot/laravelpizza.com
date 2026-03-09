@@ -22,7 +22,7 @@ describe('Filament Builder Blocks System', function () {
         $allBlocks = app(GetAllBlocksAction::class)->execute();
 
         $this->assertInstanceOf(DataCollection::class, $allBlocks);
-        $this->assertGreaterThan(0, $allBlocks->count();
+        $this->assertGreaterThan(0, $allBlocks->count(), 'At least one block should be discovered');
 
         // Verify each block has required properties
         $allBlocks->each(function ($block) {
@@ -33,7 +33,7 @@ describe('Filament Builder Blocks System', function () {
             $this->assertArrayHasKey('module', $blockArray);
             $this->assertArrayHasKey('path', $blockArray);
 
-            $this->assertTrue(class_exists($block->class);
+            $this->assertTrue(class_exists($block->class), "Block class {$block->class} should exist");
         });
     });
 
@@ -42,7 +42,7 @@ describe('Filament Builder Blocks System', function () {
 
         $cmsBlocks = $allBlocks->filter(fn ($block) => 'Cms' === $block->module);
 
-        $this->assertGreaterThan(0, $cmsBlocks->count();
+        $this->assertGreaterThan(0, $cmsBlocks->count(), 'CMS module should have blocks');
 
         $cmsBlocks->each(function ($block) {
             $blockClass = $block->class;
@@ -53,8 +53,8 @@ describe('Filament Builder Blocks System', function () {
             $reflection = new \ReflectionClass($blockClass);
 
             // Verify extends XotBaseBlock or has make() method
-            $this->assertTrue($reflection->hasMethod('make');
-            $this->assertTrue($reflection->hasMethod('getBlockSchema');
+            $this->assertTrue($reflection->hasMethod('make'), "Block {$blockClass} should have make() method");
+            $this->assertTrue($reflection->hasMethod('getBlockSchema'), "Block {$blockClass} should have getBlockSchema() method");
         });
     });
 
@@ -93,12 +93,16 @@ describe('Filament Builder Blocks System', function () {
         $allBlocks->each(function ($block) {
             // Verify snake_case naming
             $this->assertIsString($block->name);
-            $this->assertMatchesRegularExpression('/^[a-z]+(_[a-z]+);
+            $this->assertMatchesRegularExpression('/^[a-z]+(_[a-z]+)*$/', $block->name, "Block name {$block->name} should be snake_case");
 
             // Verify class naming (PascalCase ending with Block)
             $className = class_basename($block->class);
             if (str_ends_with($className, 'Block')) {
-                expect($className)->toMatch('/^[A-Z][a-zA-Z]*Block$/');
+                $this->assertMatchesRegularExpression(
+                    '/^[A-Z][a-zA-Z]*Block$/',
+                    $className,
+                    "Block class {$className} should be PascalCase ending with 'Block'",
+                );
             }
         });
     });
@@ -180,11 +184,11 @@ describe('Filament Builder Blocks System', function () {
     test('blocks rendering component exists and works', function () {
         // Verify the Blocks component exists
         $blocksClass = Blocks::class;
-        $this->assertTrue(class_exists($blocksClass);
+        $this->assertTrue(class_exists($blocksClass), 'Blocks render component should exist');
 
         $reflection = new \ReflectionClass($blocksClass);
-        $this->assertTrue($reflection->hasMethod('render');
-        $this->assertTrue($reflection->hasMethod('__construct');
+        $this->assertTrue($reflection->hasMethod('render'), 'Blocks component should have render method');
+        $this->assertTrue($reflection->hasMethod('__construct'), 'Blocks component should have constructor');
 
         // Test component instantiation
         $component = new $blocksClass('ui::components.render.blocks', []);

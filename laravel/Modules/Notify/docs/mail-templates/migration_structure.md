@@ -2,7 +2,11 @@
 
 ## Informazioni Generali
 
-- **File**: `/var/www/html/ptvx/laravel/Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php` (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+- **File**: `/var/www/html/ptvx/laravel/Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php`
+=======
+- **File**: `/var/www/html/healthcare_app/laravel/Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php`
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - **Base**: `XotBaseMigration`
 - **Tabella**: `mail_templates`
 

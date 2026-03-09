@@ -39,17 +39,17 @@ class Welcome extends XotBasePage
         if (is_string($lang)) {
             app()->setLocale($lang);
         }
-        [$containers, $this->items] = params2ContainerItem();
+        [$this->containers, $this->items] = params2ContainerItem();
         $this->initView();
     }
 
     public function getViewData(): array
     {
         $data = [];
-        if ([] !== $containers)
-            $container_last = last($containers);
+        if ([] !== $this->containers) {
+            $container_last = last($this->containers);
             Assert::string($container_last, '['.__LINE__.']['.__FILE__.']');
-            $item_last = last($items);
+            $item_last = last($this->items);
             Assert::string($item_last, '['.__LINE__.']['.__FILE__.']');
 
             $container_last_singular = Str::singular($container_last);
@@ -80,8 +80,8 @@ class Welcome extends XotBasePage
 
     public function initView(): void
     {
-        $containers = $containers;
-        $items = $items;
+        $containers = $this->containers;
+        $items = $this->items;
 
         $view = '';
         if (\count($containers) === \count($items)) {
@@ -94,7 +94,7 @@ class Welcome extends XotBasePage
             $view = 'home';
         }
 
-        $view_type = $view;
+        $this->view_type = $view;
 
         $views = [];
 
@@ -123,14 +123,14 @@ class Welcome extends XotBasePage
         }
         Assert::string($view_work, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
-        $view = $view_work;
+        $this->view = $view_work;
     }
 
     public function url(string $name = 'show', array $parameters = []): string
     {
         // dddx($parameters);
         $parameters['lang'] = app()->getLocale();
-        $record = $parameters['record'] ?? $instanceModel;
+        $record = $parameters['record'] ?? $this->instanceModel;
         // dddx($record);
         if ($record && is_object($record) && 'show' === $name) {
             $container0 = class_basename($record);
@@ -157,7 +157,7 @@ class Welcome extends XotBasePage
 
     public function setModel(Model $model): self
     {
-        $instanceModel = $model;
+        $this->instanceModel = $model;
 
         return $this;
     }

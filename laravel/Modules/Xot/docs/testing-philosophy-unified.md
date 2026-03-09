@@ -16,9 +16,9 @@ Our testing infrastructure had a FUNDAMENTAL CONTRADICTION:
 **What `.env.testing` says:**
 ```ini
 DB_CONNECTION=mysql
-DB_DATABASE=<nome progetto>_data_test
+DB_DATABASE=laravelpizza_data_test
 USER_DB_CONNECTION=mysql
-USER_DB_DATABASE=<nome progetto>_user_test
+USER_DB_DATABASE=laravelpizza_user_test
 ```
 
 **What TestCase.php actually does:**
@@ -167,15 +167,15 @@ abstract class TestCase extends BaseTestCase
 ```ini
 # Production parity - same dialect as production
 DB_CONNECTION=mysql
-DB_DATABASE=<nome progetto>_test
+DB_DATABASE=laravelpizza_test
 DB_USERNAME=marco
 DB_PASSWORD=marco
 
 USER_DB_CONNECTION=mysql
-USER_DB_DATABASE=<nome progetto>_user_test
+USER_DB_DATABASE=laravelpizza_user_test
 
 JOB_DB_CONNECTION=mysql
-JOB_DB_DATABASE=<nome progetto>_job_test
+JOB_DB_DATABASE=laravelpizza_job_test
 ```
 
 **Pros**: Real MySQL behavior, catches dialect-specific bugs

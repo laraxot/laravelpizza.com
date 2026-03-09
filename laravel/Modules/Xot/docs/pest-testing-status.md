@@ -199,5 +199,5 @@ test('user can be saved to database', function () {
 
 ---
 
-**
+**Ultimo aggiornamento**: 9 Gennaio 2026  
 **Status**: 🔄 **IN CORREZIONE**

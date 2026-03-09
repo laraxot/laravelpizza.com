@@ -4,22 +4,37 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\Pages;
 
-use Filament\Actions\Action;
 use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
+use Modules\Xot\Filament\Traits\HasXotTable;
+use Filament\Actions\Action;
+use Filament\Actions\CreateAction;
+use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
-use Modules\Xot\Filament\Traits\HasXotTable;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Override;
 
 /**
- * Base page per la gestione dei record correlati con tabella standard Xot.
+ * ---
  */
 abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 {
     use HasXotTable;
+    use InteractsWithForms;
+    use NavigationLabelTrait;
 
     // protected static string $resource;
     protected static string $recordTitleAttribute = 'name';
+
+    /**
+     * Restituisce il gruppo di navigazione (override opzionale).
+     */
+    public static function getNavigationGroup(): string
+    {
+        return '';
+    }
 
     /**
      * Restituisce il titolo della pagina.
@@ -31,43 +46,24 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 
     public function getRecordTitle(): string
     {
-        $value = $this->getRecord();
+        $value = $this->record->{static::$recordTitleAttribute};
 
-        return is_string($value) ? $value : (string) ($value ?? '');
+        return (string) $value;
     }
 
     /**
-     * Get the navigation label.
-     */
-    public static function getNavigationLabel(): string
-    {
-        return static::transFunc(__FUNCTION__);
-    }
-
-    /**
-     * Get the navigation badge.
-     */
-    public static function getNavigationBadge(): ?string
-    {
-        return null;
-    }
-
-    /**
-     * Get the infolist schema.
-     * This can be used to display metadata of the owner record.
+     * Restituisce lo schema del form per i record correlati.
      *
-     * @return array<int|string, Component>
+     * @return array<\Filament\Schemas\Components\Component>
      */
-    public function getInfolistSchema(): array
-    {
-        return [];
-    }
+    // abstract public static function getFormSchema(): array;
 
     /**
      * Configura lo schema per i record correlati.
      */
     public function schema(Schema $schema): Schema
     {
+        // getFormSchema() sempre ritorna array per definizione
         $formSchema = $this->getFormSchema();
 
         return $schema->components($formSchema);
@@ -89,38 +85,37 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      *
      * @return array<string, TextColumn>
      */
-    #[\Override]
+    #[Override]
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')
-                ->icon('heroicon-o-hashtag')
-                ->iconColor('gray')
-                ->sortable(),
+            'id' => TextColumn::make('id')->label('ID')->sortable(),
             'name' => TextColumn::make('name')
+                ->label('Nome')
                 ->searchable()
                 ->sortable(),
             'created_at' => TextColumn::make('created_at')
+                ->label('Data Creazione')
                 ->dateTime('d/m/Y H:i')
-                ->since()
-                ->color('gray')
                 ->sortable(),
         ];
     }
 
     /**
-     * Azioni header della pagina (non della tabella).
-     *
-     * Per le pagine ManageRelatedRecords il default è vuoto: la creazione
-     * avviene tramite le azioni della tabella (`getTableHeaderActions()` del trait HasXotTable).
-     *
-     * Le classi figlie possono sovrascrivere questo metodo per aggiungere
-     * azioni di pagina (es. export, report PDF).
+     * Definisce le azioni dell'intestazione della tabella.
+     * Questo metodo può essere sovrascritto nelle classi figlie.
      *
      * @return array<string, Action>
      */
-    protected function getHeaderActions(): array
+    public function getTableHeaderActions(): array
     {
-        return [];
+        return [
+            'create' => CreateAction::make()->label('Crea Nuovo')->disableCreateAnother(),
+        ];
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return static::transFunc(__FUNCTION__);
     }
 }

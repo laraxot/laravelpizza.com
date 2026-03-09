@@ -186,13 +186,13 @@ return [
 
 ## 🔗 **Collegamenti**
 
-- [Translation Standards](../../docs/translation-standards.md)
-- [PHPStan Fixes](../../docs/phpstan_level10_fixes.md)
-- [Best Practices](../../docs/best-practices.md)
+- [Translation Standards](../../../docs/translation-standards.md)
+- [PHPStan Fixes](../../../docs/phpstan_level10_fixes.md)
+- [Best Practices](../../../docs/best-practices.md)
 
 ---
 
-**🔄 
+**🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
 **📦 Versione**: 3.1.0  
 **🎯 Obiettivo**: Zero ->label() hardcoded  
 **✅ Status**: Prevenzione attiva e monitorata

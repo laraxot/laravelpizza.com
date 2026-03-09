@@ -841,7 +841,7 @@ public function get(string $key, array $replace = [], ?string $locale = null): s
 
 ---
 
-**
+**Ultimo aggiornamento**: Gennaio 2025
 **Versione**: 2.0.0
 **Autore**: Team Laraxot
 **Mantenuto da**: Community Laraxot

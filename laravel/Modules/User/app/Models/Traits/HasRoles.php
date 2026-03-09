@@ -18,7 +18,7 @@ trait HasRoles
      */
     public function roles(): BelongsToMany
     {
-        return $this->belongsToMany(Role::class, 'model_has_roles', 'model_id', 'role_id')
+        return $this->belongsToMany(Role::class, 'model_has_roles', 'model_id', 'role_id')->where(
             'model_type',
             self::class,
         );
@@ -34,12 +34,12 @@ trait HasRoles
         }
 
         if (is_string($roles)) {
-            return $roles->contains('name', $roles);
+            return $this->roles->contains('name', $roles);
         }
 
         if (is_array($roles)) {
             foreach ($roles as $role) {
-                if ($hasRole($role))
+                if ($this->hasRole($role)) {
                     return true;
                 }
             }
@@ -47,6 +47,6 @@ trait HasRoles
             return false;
         }
 
-        return ! is_null($roles) && $roles->contains('id', $roles->id);
+        return ! is_null($roles) && $this->roles->contains('id', $roles->id);
     }
 }

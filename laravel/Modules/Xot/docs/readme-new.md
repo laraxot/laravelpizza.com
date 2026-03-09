@@ -1,6 +1,6 @@
 # Xot Module - Core Foundation
 
-**
+**Last Update**: [DATE]
 **Status**: ✅ Production Ready
 **PHPStan Level**: 10
 **Maintainers**: Laraxot Team
@@ -50,7 +50,7 @@ The **Xot Module** is the foundational core of the Laraxot PTVX ecosystem. It pr
 ┌─────────────────────────────────────────┐
 │           Application Layer              │
 ├─────────────────────────────────────────┤
-│  <nome progetto> │ Employee │ Cms │ ...     │  ← Business Modules
+│  TechPlanner │ Employee │ Cms │ ...     │  ← Business Modules
 ├─────────────────────────────────────────┤
 │  User │ UI │ Tenant │ Geo │ Lang │ ...  │  ← Infrastructure Modules
 ├─────────────────────────────────────────┤
@@ -75,7 +75,7 @@ Xot Module (Foundation - No dependencies)
     ├── Media Module
     ├── Activity Module
     ├── Cms Module
-    ├── <nome progetto> Module
+    ├── TechPlanner Module
     ├── Employee Module
     └── All other modules
 ```

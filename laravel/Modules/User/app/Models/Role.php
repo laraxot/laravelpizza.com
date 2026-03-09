@@ -41,7 +41,6 @@ use Webmozart\Assert\Assert;
  * @property Collection<int, Model&\Modules\Xot\Contracts\UserContract> $users
  * @property int|null                                                   $users_count
  * @property PermissionRole|null                                        $pivot
- *
  * @method static Builder|Role newModelQuery()
  * @method static Builder|Role newQuery()
  * @method static Builder|Role permission($permissions)
@@ -59,20 +58,10 @@ use Webmozart\Assert\Assert;
  * @method static Builder|Role whereDisplayName($value)
  * @method static static       firstOrCreate(array $attributes, array $values = [])
  * @method static static       updateOrCreate(array $attributes, array $values = [])
- *                                                                                   <<<<<<< HEAD
- *                                                                                   ||||||| 6161e129d
- * @method static static       firstOrCreate(array $attributes, array $values = [])
- * @method static static       updateOrCreate(array $attributes, array $values = [])
- *                                                                                   =======
- *
- * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
- * @property \Modules\Xot\Contracts\ProfileContract|null $updater
- *
+ * @property-read \Modules\Meetup\Models\Profile|null $creator
+ * @property-read \Modules\Meetup\Models\Profile|null $deleter
+ * @property-read \Modules\Meetup\Models\Profile|null $updater
  * @method static \Modules\User\Database\Factories\RoleFactory factory($count = null, $state = [])
- * @method static Builder<static>|Role                         whereUuid($value)
- *                                                                                                 >>>>>>> feature/ralph-loop-implementation
- *
  * @mixin \Eloquent
  */
 class Role extends SpatieRole

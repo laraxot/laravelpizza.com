@@ -255,8 +255,6 @@ it('can handle page permissions and access control', function (): void {
 
 it('can manage page timestamps', function (): void {
     $now = now();
-    $minTimestamp = $now->copy()->subMinute()->timestamp;
-    $maxTimestamp = $now->copy()->addMinute()->timestamp;
 
     $page = Page::create([
         'title' => ['it' => 'Page with Timestamps', 'en' => 'Page with Timestamps'],
@@ -267,6 +265,6 @@ it('can manage page timestamps', function (): void {
     expect($page->updated_at)->not->toBeNull();
 
     // Check that timestamps are close to now
-    expect($page->created_at->timestamp)->toBeGreaterThanOrEqual($minTimestamp);
-    expect($page->created_at->timestamp)->toBeLessThanOrEqual($maxTimestamp);
+    expect($page->created_at->timestamp)->toBeGreaterThanOrEqual($now->subMinute()->timestamp);
+    expect($page->created_at->timestamp)->toBeLessThanOrEqual($now->addMinute()->timestamp);
 });

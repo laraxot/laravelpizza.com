@@ -7,17 +7,21 @@ namespace Modules\Meetup\Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Meetup\Models\Event;
 use Modules\Meetup\Models\EventSponsor;
-use Modules\Meetup\Models\Sponsor;
+use Modules\User\Models\User;
 
 /**
- * @extends Factory<\Modules\Meetup\Models\EventSponsor>
+ * Factory for EventSponsor pivot model.
+ * 
+ * Represents sponsors of an event (companies/individuals providing support).
+ * 
+ * @extends Factory<EventSponsor>
  */
 class EventSponsorFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
-     * @var class-string<\Modules\Meetup\Models\EventSponsor>
+     * @var class-string<EventSponsor>
      */
     protected $model = EventSponsor::class;
 
@@ -30,8 +34,27 @@ class EventSponsorFactory extends Factory
     {
         return [
             'event_id' => Event::factory(),
-            'sponsor_id' => Sponsor::factory(),
-            'sponsorship_details' => $this->faker->optional()->sentence(),
+            'user_id' => User::factory(),
         ];
+    }
+
+    /**
+     * State: attach to specific event.
+     */
+    public function forEvent(Event|int $event): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'event_id' => $event instanceof Event ? $event->id : $event,
+        ]);
+    }
+
+    /**
+     * State: attach to specific sponsor.
+     */
+    public function forSponsor(User|string $user): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'user_id' => $user instanceof User ? $user->id : $user,
+        ]);
     }
 }

@@ -97,6 +97,6 @@ Modules/User/app/Filament/Clusters/Passport/
 
 ---
 
-**
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: 🔴 IN LAVORO

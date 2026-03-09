@@ -41,7 +41,7 @@ class ContactColumn extends ViewColumn
         /** @var array<string> $searchableArray */
         $searchableArray = ContactTypeEnum::getSearchable();
 
-        $this->view(static::getView())
+        $this->view(static::getView(), [
             'contact_types' => $contact_types,
         ])
             ->label(__('notify::columns.contact.label'))

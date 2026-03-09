@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Services;
 
+use Exception;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
@@ -19,8 +20,7 @@ class RouteService
     /**
      * Verifica se l'utente è in modalità amministrazione.
      *
-     * @param array<string,string> $params Parametri aggiuntivi
-     *
+     * @param  array<string,string>  $params  Parametri aggiuntivi
      * @return bool True se l'utente è in modalità amministrazione, false altrimenti
      */
     public static function inAdmin(array $params = []): bool
@@ -32,7 +32,7 @@ class RouteService
         }
 
         // Se il primo segmento dell'URL è 'admin', siamo in modalità amministrazione
-        if ('admin' === Request::segment(1)) {
+        if (Request::segment(1) === 'admin') {
             return true;
         }
 
@@ -40,13 +40,13 @@ class RouteService
         $segments = Request::segments();
 
         // Se abbiamo almeno un segmento, è 'livewire' e la sessione 'in_admin' è true
-        return (is_countable($segments) ? \count($segments) : 0) > 0
-            && 'livewire' === $segments[0]
-            && true === session('in_admin', false);
+        return (is_countable($segments) ? \count($segments) : 0) > 0 &&
+            $segments[0] === 'livewire' &&
+            session('in_admin', false) === true;
     }
 
     /**
-     * @param array<string,string> $params
+     * @param  array<string,string>  $params
      */
     public static function urlAct(array $params): string
     {
@@ -68,7 +68,7 @@ class RouteService
         $routename = ''; // Request::route()->getName();
         $old_act_route = last(explode('.', $routename));
         if (! \is_string($old_act_route)) {
-            throw new \Exception('['.__LINE__.']['.class_basename(self::class).']');
+            throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
         }
 
         $routename_act = Str::before($routename, $old_act_route).''.$act;
@@ -99,7 +99,7 @@ class RouteService
     // se n=0 => 'container0'
     // se n=1 => 'containers.container1'
     /**
-     * @param array<string,string> $params
+     * @param  array<string,string>  $params
      */
     public static function getRoutenameN(array $params): string
     {
@@ -113,7 +113,7 @@ class RouteService
             $tmp[] = 'admin';
         }
 
-        for ($i = 0; $i <= $n; ++$i) {
+        for ($i = 0; $i <= $n; $i++) {
             $tmp[] = 'container'.$i;
         }
 
@@ -201,7 +201,7 @@ class RouteService
      * }
      */
     /**
-     * @param array<string,string> $params
+     * @param  array<string,string>  $params
      */
     public static function urlLang(array $params = []): string
     {
@@ -211,7 +211,7 @@ class RouteService
 
         /*
          * return '?'.$lang; //da fixare dopo
-         * //$row= $row;
+         * //$row=$this->row;
          * //$row->lang=$lang;
          * //return '/wip'.$this->url();
          * $route_name = \Route::currentRouteName();
@@ -273,13 +273,13 @@ class RouteService
     /**
      * Function getAct.
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public static function getAct(): string
     {
         $route_action = Route::currentRouteAction();
-        if (null === $route_action) {
-            throw new \Exception('$route_action is null');
+        if ($route_action === null) {
+            throw new Exception('$route_action is null');
         }
 
         $act = Str::after($route_action, '@');
@@ -299,13 +299,13 @@ class RouteService
     /**
      * Function.
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public static function getModuleName(): string
     {
         $route_action = Route::currentRouteAction();
-        if (null === $route_action) {
-            throw new \Exception('$route_action is null');
+        if ($route_action === null) {
+            throw new Exception('$route_action is null');
         }
 
         return Str::between($route_action, 'Modules\\', '\Http');
@@ -314,13 +314,13 @@ class RouteService
     /**
      * Function.
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public static function getControllerName(): string
     {
         $route_action = Route::currentRouteAction();
-        if (null === $route_action) {
-            throw new \Exception('$route_action is null');
+        if ($route_action === null) {
+            throw new Exception('$route_action is null');
         }
 
         return Str::between($route_action, 'Http\Controllers\\', 'Controller');

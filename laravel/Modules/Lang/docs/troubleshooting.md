@@ -393,8 +393,8 @@ php artisan config:show lang
 ```
 - Laravel Version: 12.x
 - Filament Version: 3.x
-- Lang Module 
-- PHP 
+- Lang Module Version: 2.0.0
+- PHP Version: 8.2+
 - Environment: Production/Development
 ```
 
@@ -416,7 +416,7 @@ php artisan config:show lang
 
 ---
 
-**
+**Ultimo aggiornamento**: Gennaio 2025
 **Versione**: 2.0.0
 **Autore**: Team Laraxot
 **Mantenuto da**: Community Laraxot

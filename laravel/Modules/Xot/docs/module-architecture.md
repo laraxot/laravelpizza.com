@@ -36,7 +36,11 @@
 - Multi-tenant aware models
 - Social authentication integration
 
+<<<<<<< .merge_file_dqYiFM
 #### 3. **healthcare_app Module - Business Core**
+=======
+#### 3. **ModuloEsempio Module - Business Core**
+>>>>>>> .merge_file_67LCr0
 **Role**: Survey management, reporting, analytics
 **Priority**: 0 (Standard priority)
 **Dependencies**: Xot, User, Geo, Media
@@ -228,7 +232,11 @@
 #### 15. **Limesurvey Module - External Integration**
 **Role**: Limesurvey integration, survey synchronization
 **Priority**: 0 (Standard priority)
+<<<<<<< .merge_file_dqYiFM
 **Dependencies**: Xot, healthcare_app
+=======
+**Dependencies**: Xot, ModuloEsempio
+>>>>>>> .merge_file_67LCr0
 
 **Key Components**:
 - `LimeSurvey`, `LimeQuestion` models
@@ -276,7 +284,11 @@
 Xot (Foundation)
 ├── User (Security)
 │   └── Tenant (Multi-tenancy)
+<<<<<<< .merge_file_dqYiFM
 ├── healthcare_app (Business Core)
+=======
+├── ModuloEsempio (Business Core)
+>>>>>>> .merge_file_67LCr0
 │   ├── Geo (Locations)
 │   ├── Media (Files)
 │   └── Limesurvey (External Integration)
@@ -385,7 +397,11 @@ public function register(): void
 #### ⚠️ Needs Attention
 - **Cms**: Mixed file structure issues
 - **UI**: Mixed test structure issues
+<<<<<<< .merge_file_dqYiFM
 - **healthcare_app**: Missing module.json description
+=======
+- **ModuloEsempio**: Missing module.json description
+>>>>>>> .merge_file_67LCr0
 
 #### 🔧 Technical Debt
 - **Translation consistency**: Some .navigation placeholders
@@ -396,7 +412,11 @@ public function register(): void
 
 #### High-Usage Modules
 - **User**: Authentication checks on every request
+<<<<<<< .merge_file_dqYiFM
 - **healthcare_app**: Survey processing and reporting
+=======
+- **ModuloEsempio**: Survey processing and reporting
+>>>>>>> .merge_file_67LCr0
 - **Media**: File uploads and conversions
 - **Job**: Background processing
 

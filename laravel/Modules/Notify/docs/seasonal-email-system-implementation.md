@@ -1,6 +1,6 @@
 # Report di Revisione Sistema Email Stagionali - Dicembre 2025
 
-**Progetto**: <nome progetto> Laravel Multi-Tenant Application  
+**Progetto**: TechPlanner Laravel Multi-Tenant Application  
 **Moduli Interessati**: Notify, Themes/Sixteen  
 **Stato**: ✅ Revisione Completata  
 

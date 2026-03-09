@@ -5,7 +5,7 @@ declare(strict_types=1);
 ?>
 <div>
     <form wire:submit="login">
-        {{ $form }}
+        {{ $this->form }}
 
         <div class="flex items-center justify-between mt-4">
             <div class="text-sm">

@@ -193,6 +193,6 @@ Alcune risorse non hanno tutte le pages standard:
 
 ---
 
-**
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: ✅ Completato e verificato

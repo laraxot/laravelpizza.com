@@ -759,7 +759,7 @@ public function createModel(array $data): MioModello
 
 - [**README.md**](readme.md) - Documentazione principale del modulo
 - [**Architettura**](architecture.md) - Architettura del modulo Xot
-- [**Best Practices Globali**](../docs/best-practices.md) - Best practices globali
+- [**Best Practices Globali**](../../docs/best-practices.md) - Best practices globali
 
 ---
 

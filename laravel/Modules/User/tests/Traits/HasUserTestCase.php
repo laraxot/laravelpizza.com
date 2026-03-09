@@ -19,11 +19,11 @@ use Modules\User\Models\User;
  * uses(HasUserTestCase::class);
  *
  * beforeEach(function () {
- *     $user = User::factory();
+ *     $this->user = User::factory()->create();
  * });
  *
  * it('can access user', function () {
- *     expect($user);
+ *     expect($this->user)->toBeInstanceOf(User::class);
  * });
  * ```
  *

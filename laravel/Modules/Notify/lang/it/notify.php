@@ -266,7 +266,7 @@ return [
             ],
             'attachments' => [
                 'label' => 'Allegati',
-                'helper' => 'Allegati alla notifica (max 5 file, 5MB ciascuno]',)
+                'helper' => 'Allegati alla notifica (max 5 file, 5MB ciascuno]',
             ],
         ],
         'preview' => [

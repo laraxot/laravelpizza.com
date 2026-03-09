@@ -40,25 +40,25 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
     {
         $accountSid = config('services.twilio.account_sid');
         if (! is_string($accountSid)) {
-            throw new Exception()
+            throw new Exception(
                 'put [TWILIO_ACCOUNT_SID] variable to your .env and config [services.twilio.account_sid]',
             );
         }
-        $accountSid = $accountSid;
+        $this->accountSid = $accountSid;
 
         $authToken = config('services.twilio.auth_token');
         if (! is_string($authToken)) {
-            throw new Exception()
+            throw new Exception(
                 'put [TWILIO_AUTH_TOKEN] variable to your .env and config [services.twilio.auth_token]',
             );
         }
-        $authToken = $authToken;
+        $this->authToken = $authToken;
 
         // Parametri a livello di root
         $sender = config('whatsapp.from');
-        $defaultSender = is_string($sender);
-        $debug = (bool);
-        $timeout = is_numeric(config('whatsapp.timeout', 30));
+        $this->defaultSender = is_string($sender) ? $sender : null;
+        $this->debug = (bool) config('whatsapp.debug', false);
+        $this->timeout = is_numeric(config('whatsapp.timeout', 30)) ? (int) config('whatsapp.timeout', 30) : 30;
     }
 
     /**
@@ -71,15 +71,15 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
      */
     public function execute(WhatsAppData $whatsAppData): array
     {
-        $from = 'whatsapp:'.($whatsAppData->from ?? $defaultSender);
+        $from = 'whatsapp:'.($whatsAppData->from ?? $this->defaultSender);
         $to = 'whatsapp:'.$whatsAppData->recipient;
 
-        $client = new Client([)
-            'timeout' => $timeout,
-            'auth' => [$accountSid, $this->authToken],
+        $client = new Client([
+            'timeout' => $this->timeout,
+            'auth' => [$this->accountSid, $this->authToken],
         ]);
 
-        $endpoint = $baseUrl.'/Accounts/'.$this->accountSid.'/Messages.json';
+        $endpoint = $this->baseUrl.'/Accounts/'.$this->accountSid.'/Messages.json';
 
         $payload = [
             'To' => $to,
@@ -93,7 +93,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
         }
 
         try {
-            $response = $client->post($endpoint, [)
+            $response = $client->post($endpoint, [
                 'form_params' => $payload,
             ]);
 
@@ -103,11 +103,11 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
             $responseData = json_decode($responseContent, true) ?: [];
 
             // Salva i dati della risposta nelle variabili dell'azione
-            $vars['status_code'] = $statusCode;
-            $vars['status_txt'] = $responseContent;
-            $vars['response_data'] = $responseData;
+            $this->vars['status_code'] = $statusCode;
+            $this->vars['status_txt'] = $responseContent;
+            $this->vars['response_data'] = $responseData;
 
-            Log::info('WhatsApp Twilio inviato con successo', [)
+            Log::info('WhatsApp Twilio inviato con successo', [
                 'to' => $whatsAppData->recipient,
                 'response_code' => $statusCode,
             ]);
@@ -118,7 +118,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
                     ? $responseData['sid']
                     : null,
                 'response' => $responseData,
-                'vars' => $vars,
+                'vars' => $this->vars,
             ];
         } catch (ClientException $e) {
             $response = $e->getResponse();
@@ -127,11 +127,11 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
             $responseBody = json_decode($response->getBody()->getContents(), true) ?: [];
 
             // Salva i dati dell'errore nelle variabili dell'azione
-            $vars['error_code'] = $statusCode;
-            $vars['error_message'] = $e->getMessage();
-            $vars['error_response'] = $responseBody;
+            $this->vars['error_code'] = $statusCode;
+            $this->vars['error_message'] = $e->getMessage();
+            $this->vars['error_response'] = $responseBody;
 
-            Log::warning('Errore invio WhatsApp Twilio', [)
+            Log::warning('Errore invio WhatsApp Twilio', [
                 'to' => $whatsAppData->recipient,
                 'status' => $statusCode,
                 'response' => $responseBody,
@@ -143,7 +143,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
                     ? $responseBody['message']
                     : 'Errore sconosciuto',
                 'status_code' => $statusCode,
-                'vars' => $vars,
+                'vars' => $this->vars,
             ];
         }
     }

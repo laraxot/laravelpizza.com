@@ -45,24 +45,6 @@
         "https://mcp.clickup.com/mcp"
       ],
       "description": "ClickUp workspace integration for tasks, lists, folders, docs, and time tracking"
-    },
-    "chart-antv": {
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "@antv/mcp-server-chart"
-      ],
-      "description": "AntV chart generation and chart editing support for structured data visualization"
-    },
-    "chart-echarts": {
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "@hustcc/mcp-echarts"
-      ],
-      "description": "ECharts-oriented server for advanced interactive chart configuration"
     }
   }
 }

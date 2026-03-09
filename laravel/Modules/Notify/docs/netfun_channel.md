@@ -373,7 +373,11 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 # Global SMS configuration
 SMS_FROM_NAME=<nome progetto>
-SMS_FROM_NAME=Laraxot (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+SMS_FROM_NAME=Laraxot
+=======
+SMS_FROM_NAME=healthcare_app
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 SMS_FROM_NUMBER=+393331234567
 SMS_DEBUG=false
 

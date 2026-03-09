@@ -35,13 +35,13 @@ The Tenant module implements comprehensive multi-tenancy functionality with data
 
 ### 3. Tenant Customers
 **Parent Resource:** TenantResource
-**Child Resource:** CustomerResource (from <nome progetto> module)
+**Child Resource:** CustomerResource (from Quaeris module)
 **Relationship:** Tenant hasMany Customers (via tenant-customer relationship)
 **Justification:** Organize customers by tenant for better client management in multi-tenant environments.
 
 ### 4. Tenant Surveys
 **Parent Resource:** TenantResource
-**Child Resource:** SurveyPdfResource (from <nome progetto> module)
+**Child Resource:** SurveyPdfResource (from Quaeris module)
 **Relationship:** Tenant hasMany SurveyPdfs (via customer-tenant relationship)
 **Justification:** Group surveys by tenant for comprehensive tenant-level reporting and management.
 

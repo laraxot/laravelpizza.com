@@ -2,25 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Models;
-
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Models\XotBaseModel;
 
-if (! class_exists(TestConcreteXotBaseModel::class)) {
-    class TestConcreteXotBaseModel extends XotBaseModel
-    {
-        protected $table = 'test_xot_table';
-    }
-}
-
 describe('XotBaseModel Business Logic', function () {
     test('xot base model extends eloquent model', function () {
-        expect(is_subclass_of(XotBaseModel::class, Model::class))->toBeTrue();
+        expect(XotBaseModel::class)->toBeSubclassOf(Model::class);
     });
 
-    test('xot base model can be instantiated via subclass', function () {
-        $model = new TestConcreteXotBaseModel();
+    test('xot base model can be instantiated', function () {
+        $model = new XotBaseModel();
 
         expect($model)->toBeInstanceOf(XotBaseModel::class);
         expect($model)->toBeInstanceOf(Model::class);

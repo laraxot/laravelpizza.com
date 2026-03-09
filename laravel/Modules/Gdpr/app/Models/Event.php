@@ -36,7 +36,6 @@ use function Safe\json_encode;
  * @property Consent|null         $consent
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
  * @method static Builder<static>|Event newModelQuery()
  * @method static Builder<static>|Event newQuery()
  * @method static Builder<static>|Event query()
@@ -53,11 +52,8 @@ use function Safe\json_encode;
  * @method static Builder<static>|Event whereTreatmentId($value)
  * @method static Builder<static>|Event whereUpdatedAt($value)
  * @method static Builder<static>|Event whereUpdatedBy($value)
- *
  * @property ProfileContract|null $deleter
- *
  * @method static \Modules\Gdpr\Database\Factories\EventFactory factory($count = null, $state = [])
- *
  * @mixin \Eloquent
  */
 class Event extends BaseModel
@@ -82,11 +78,11 @@ class Event extends BaseModel
 
     public function setPayloadAttribute(?string $value): void
     {
-        $attributes['payload'] = Crypt::encrypt(json_encode($value, JSON_THROW_ON_ERROR));
+        $this->attributes['payload'] = Crypt::encrypt(json_encode($value, JSON_THROW_ON_ERROR));
     }
 
     public function setIpAttribute(?string $value): void
     {
-        $attributes['ip'] = Crypt::encrypt($value);
+        $this->attributes['ip'] = Crypt::encrypt($value);
     }
 }

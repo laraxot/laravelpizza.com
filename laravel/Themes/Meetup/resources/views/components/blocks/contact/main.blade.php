@@ -13,7 +13,7 @@
     $submitLabel = $submit_button_label ?? 'Send Message';
 @endphp
 
-<x-pub_theme::blocks.contact.info
+<x-blocks.contact.info
     :title="$title ?? null"
     :description="$description ?? null"
     :contacts="$contacts"

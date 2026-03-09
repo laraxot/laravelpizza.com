@@ -44,7 +44,7 @@ trait HasAuthenticationLogTrait
      */
     public function latestAuthentication(): MorphOne
     {
-        return $this->morphOne(AuthenticationLog::class, 'authenticatable');
+        return $this->morphOne(AuthenticationLog::class, 'authenticatable')->latestOfMany('login_at');
     }
 
     /**
@@ -65,7 +65,7 @@ trait HasAuthenticationLogTrait
     public function lastLoginAt(): ?Carbon
     {
         /** @var AuthenticationLog|null $auth */
-        $auth = $this->authentications();
+        $auth = $this->authentications()->first();
 
         return null !== $auth ? $auth->login_at : null;
     }
@@ -78,7 +78,7 @@ trait HasAuthenticationLogTrait
     public function lastSuccessfulLoginAt(): ?Carbon
     {
         /** @var AuthenticationLog|null $auth */
-        $auth = $this->authentications();
+        $auth = $this->authentications()->where('login_successful', true)->first();
 
         return null !== $auth ? $auth->login_at : null;
     }
@@ -91,7 +91,7 @@ trait HasAuthenticationLogTrait
     public function lastLoginIp(): ?string
     {
         /** @var AuthenticationLog|null $auth */
-        $auth = $this->authentications();
+        $auth = $this->authentications()->first();
 
         return null !== $auth ? $auth->ip_address : null;
     }
@@ -104,7 +104,7 @@ trait HasAuthenticationLogTrait
     public function lastSuccessfulLoginIp(): ?string
     {
         /** @var AuthenticationLog|null $auth */
-        $auth = $this->authentications();
+        $auth = $this->authentications()->where('login_successful', true)->first();
 
         return null !== $auth ? $auth->ip_address : null;
     }
@@ -117,7 +117,7 @@ trait HasAuthenticationLogTrait
     public function previousLoginAt(): ?Carbon
     {
         /** @var AuthenticationLog|null $auth */
-        $auth = $this->authentications();
+        $auth = $this->authentications()->skip(1)->first();
 
         return null !== $auth ? $auth->login_at : null;
     }
@@ -130,7 +130,7 @@ trait HasAuthenticationLogTrait
     public function previousLoginIp(): ?string
     {
         /** @var AuthenticationLog|null $auth */
-        $auth = $this->authentications();
+        $auth = $this->authentications()->skip(1)->first();
 
         return null !== $auth ? $auth->ip_address : null;
     }
@@ -142,16 +142,16 @@ trait HasAuthenticationLogTrait
      */
     public function consecutiveDaysLogin(): int
     {
-        return once(function (): int {)
+        return once(function (): int {
             $date = Carbon::now();
             $days = 0;
 
             // Count the logins for the current day.
-            $count = $this->authentications();
+            $count = $this->authentications()->whereDate('login_at', $date)->count();
 
             while ($count > 0) {
                 $date = $date->subDay();
-                $count = $this->authentications();
+                $count = $this->authentications()->whereDate('login_at', $date)->count();
                 ++$days;
             }
 

@@ -2,14 +2,14 @@
 
 ## Overview
 
-This document outlines SEO best practices for <nome progetto> Meetups.
+This document outlines SEO best practices for LaravelPizza Meetups.
 
 ## Meta Tags
 
 ### Required Meta Tags
 ```blade
 <x-slot name="title">
-    {{ __('Page Title') }} - <nome progetto> Community
+    {{ __('Page Title') }} - LaravelPizza Community
 </x-slot>
 
 <x-slot name="description">
@@ -46,12 +46,12 @@ This document outlines SEO best practices for <nome progetto> Meetups.
 {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "<nome progetto> Meetups",
-    "url": "https://<nome progetto>.com",
-    "logo": "https://<nome progetto>.com/logo.png",
+    "name": "LaravelPizza Meetups",
+    "url": "https://laravelpizza.com",
+    "logo": "https://laravelpizza.com/logo.png",
     "sameAs": [
-        "https://twitter.com/<nome progetto>",
-        "https://github.com/laraxot/<nome progetto>"
+        "https://twitter.com/laravelpizza",
+        "https://github.com/laraxot/laravelpizza"
     ]
 }
 </script>
@@ -144,7 +144,7 @@ All translatable SEO content should use translation files:
 ```php
 // modules/Gdpr/lang/it/register.php
 'seo' => [
-    'title' => 'Registrati - <nome progetto>',
+    'title' => 'Registrati - LaravelPizza',
     'description' => 'Iscriviti alla community...',
 ]
 ```

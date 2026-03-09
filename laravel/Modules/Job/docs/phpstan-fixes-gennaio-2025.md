@@ -194,7 +194,7 @@ public function __construct(string $output)
 
 ---
 
-**🔄 
+**🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
 **📦 Versione**: 2.0  
 **🐛 PHPStan Level**: 9 ✅  
 **🌐 Translation Standards**: IT/EN complete ✅  

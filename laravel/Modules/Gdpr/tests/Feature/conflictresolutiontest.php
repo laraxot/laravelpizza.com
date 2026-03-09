@@ -9,12 +9,12 @@ namespace Modules\Gdpr\Tests\Feature;
 use Modules\Gdpr\Models\Profile;
 use Modules\Gdpr\Models\Treatment;
 
-it('verifica che le classi corrette siano istanziabili', function (): void {)
+it('verifica che le classi corrette siano istanziabili', function (): void {
     expect(new Treatment())->toBeInstanceOf(Treatment::class);
     expect(new Profile())->toBeInstanceOf(Profile::class);
 });
 
-it('verifica che le proprietà delle classi siano accessibili', function (): void {)
+it('verifica che le proprietà delle classi siano accessibili', function (): void {
     $treatment = new Treatment();
     $profile = new Profile();
 

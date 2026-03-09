@@ -31,7 +31,7 @@ class Change extends Component
 
     public function mount(): void
     {
-        $xot = XotData::make();
+        $this->xot = XotData::make();
         Assert::notNull($authUser = Filament::auth()->user(), '['.__LINE__.']['.class_basename($this).']');
 
         // Verifica che l'utente implementi l'interfaccia UserContract
@@ -39,10 +39,10 @@ class Change extends Component
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
 
-        $user = $authUser;
+        $this->user = $authUser;
         /** @var Collection<int, TeamContract> $allTeams */
-        $allTeams = $user->allTeams();
-        $teams = $allTeams->toArray();
+        $allTeams = $this->user->allTeams();
+        $this->teams = $allTeams->toArray();
     }
 
     /**
@@ -50,16 +50,16 @@ class Change extends Component
      */
     public function switchTeam(int $teamId): Application|RedirectResponse|Redirector
     {
-        $teamClass = $xot->getTeamClass();
+        $teamClass = $this->xot->getTeamClass();
         /** @var TeamContract */
         $team = $teamClass::firstWhere(['id' => $teamId]);
 
-        if (! $user->switchTeam($team))
+        if (! $this->user->switchTeam($team)) {
             abort(403);
         }
         if (null !== $team) {
-            // TeamSwitched::dispatch($team->fresh(), $user);
-            TeamSwitched::dispatch($team, $user);
+            // TeamSwitched::dispatch($team->fresh(), $this->user);
+            TeamSwitched::dispatch($team, $this->user);
         }
         Notification::make()
             ->title(__('Team switched'))
@@ -79,7 +79,7 @@ class Change extends Component
         $view_params = [
             'view' => $view,
         ];
-        if ([] === $teams)
+        if ([] === $this->teams) {
             $view = 'ui::livewire.empty';
         }
 

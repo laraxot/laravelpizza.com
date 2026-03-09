@@ -32,7 +32,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
         parent::boot();
 
         // Skip complex configuration during testing
-        // if (! // Placeholder purged app->environment('testing'
+        // if (! $this->app->environment('testing')) {
         $this->mergeConfigs();
         // }
 
@@ -108,7 +108,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
             if (isset($connections[$default]) && ! isset($connections[$name])) {
                 /** @var array<string, mixed> $moduleConfig */
                 $moduleConfig = $connections[$default];
-
+                
                 // Note: Module-specific env variables disabled for SQLite compatibility
                 // If needed, uncomment and adjust for your database driver:
                 // $moduleConfig['database'] = env("DB_DATABASE_{$upperName}", $moduleConfig['database']);
@@ -116,7 +116,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
                 // $moduleConfig['password'] = env("DB_PASSWORD_{$upperName}", $moduleConfig['password']);
                 // $moduleConfig['host'] = env("DB_HOST_{$upperName}", $moduleConfig['host'] ?? '127.0.0.1');
                 // $moduleConfig['port'] = env("DB_PORT_{$upperName}", $moduleConfig['port'] ?? '3306');
-
+                
                 $connections[$name] = $moduleConfig;
             }
         }
@@ -125,7 +125,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
         Config::set('database', $data);
 
         // Skip purge/reconnect during testing to preserve test DB mappings
-        if (!app()->environment('testing')) {
+        if (! $this->app->environment('testing')) {
             // Call to a member function prepare() on null
             // Database connection [mysql] not configured.
             DB::purge('mysql');
@@ -137,7 +137,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
     public function register(): void
     {
         parent::register();
-        // // Placeholder purged app->register(AdminPanelProvider::class;
+        // $this->app->register(AdminPanelProvider::class);
     }
 
     public function mergeConfigs(): void

@@ -70,4 +70,4 @@ public function send($notifiable, Notification $notification)
 
 ---
 
-*
+*Ultimo aggiornamento: 2025-05-12*

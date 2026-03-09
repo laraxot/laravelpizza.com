@@ -274,6 +274,7 @@ public function run(): void
 ---
 
 **Status**: ✅ **PRODUCTION READY**
+**Last Updated**: Gennaio 2025
 **Maintenance**: Active development
 **Support**: Enterprise-grade
 
@@ -290,8 +291,8 @@ public function run(): void
 - [BaseUser Architecture](./parental_inheritance.md)
 
 ### Root Documentation
-- [UserFactory <nome progetto> Integration](../../../../docs/userfactory_<nome progetto>_integration.md)
-- [Testing Standards](../../../../docs/testing_standards.md)
+- [UserFactory <nome progetto> Integration](../../../../../docs/userfactory_<nome progetto>_integration.md)
+- [Testing Standards](../../../../../docs/testing_standards.md)
 # UserFactory Advanced Integration - Modulo User & <nome progetto>
 
 ## Post Deep-Study Analysis
@@ -568,6 +569,7 @@ public function run(): void
 ---
 
 **Status**: ✅ **PRODUCTION READY**
+**Last Updated**: Gennaio 2025
 **Maintenance**: Active development
 **Support**: Enterprise-grade
 
@@ -584,5 +586,5 @@ public function run(): void
 - [BaseUser Architecture](./parental_inheritance.md)
 
 ### Root Documentation
-- [UserFactory <nome progetto> Integration](../../../../docs/userfactory_<nome progetto>_integration.md)
-- [Testing Standards](../../../../docs/testing_standards.md)
+- [UserFactory <nome progetto> Integration](../../../../../docs/userfactory_<nome progetto>_integration.md)
+- [Testing Standards](../../../../../docs/testing_standards.md)

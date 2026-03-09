@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
+use Exception;
 use Filament\Actions\Action;
 use Filament\Actions\Concerns\InteractsWithActions;
 use Filament\Actions\Contracts\HasActions;
@@ -25,11 +26,11 @@ use Webmozart\Assert\Assert;
  * Classe base astratta per tutti i widget Filament.
  * Fornisce funzionalità comuni e standardizzate per la gestione dei widget.
  *
- * @property bool                      $shouldRender Indica se il widget deve essere renderizzato
- * @property string                    $title        Titolo del widget
- * @property string                    $icon         Icona del widget
- * @property array<string, mixed>|null $data         Dati del form
- * @property Schema                    $form
+ * @property bool $shouldRender Indica se il widget deve essere renderizzato
+ * @property string $title Titolo del widget
+ * @property string $icon Icona del widget
+ * @property array<string, mixed>|null $data Dati del form
+ * @property Schema $form
  */
 abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasForms
 {
@@ -79,21 +80,20 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
     /**
      * Configura il form del widget.
      *
-     * @param Schema $schema Il form da configurare
-     *
+     * @param  Schema  $schema  Il form da configurare
      * @return Schema Il form configurato
      */
     public function form(Schema $schema): Schema
     {
-        $schema = $schema->components($getFormSchema());
+        $schema = $schema->components($this->getFormSchema());
         $schema->statePath('data');
 
         $model = $this->getFormModel();
-        if (null !== $model) {
+        if ($model !== null) {
             // Ensure model is compatible with Schema::model()
             if (\is_string($model)) {
                 if (class_exists($model) && is_subclass_of($model, Model::class)) {
-                    /* @var class-string<Model> $model */
+                    /** @var class-string<Model> $model */
                     $schema->model($model);
                 }
             } else {
@@ -108,7 +108,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
     public function getFormFill(): array
     {
         $model = $this->getFormModel();
-        if (null === $model) {
+        if ($model === null) {
             return [];
         }
         if (\is_string($model)) {
@@ -125,7 +125,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
                     $defaults = $model->getDataDefaults();
                     $merge1 = array_merge($defaults, $res);
                     $merge1 = Arr::map($merge1, static function ($value, string|int $key) use ($defaults) {
-                        if (null === $value) {
+                        if ($value === null) {
                             $value = Arr::get($defaults, $key, null);
                         }
 
@@ -135,7 +135,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
                 }
 
                 return $res;
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 // Se toArray() fallisce (problemi con enum), usa getAttributes()
                 return $model->getAttributes();
             }
@@ -178,7 +178,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
         $submit_view = 'pub_theme::filament.wizard.submit-button';
 
         if (! view()->exists($submit_view)) {
-            throw new \Exception("View {$submit_view} does not exist");
+            throw new Exception("View {$submit_view} does not exist");
         }
 
         return Action::make('submit')
@@ -220,7 +220,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
             ->toString();
 
         /** @var array<Htmlable|string> $schemaComponents */
-        $schemaComponents = $this->{$schema}();
+        $schemaComponents = $this->$schema();
 
         return Step::make($name)->schema($schemaComponents);
     }
@@ -236,9 +236,9 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
         try {
             $view = app(GetViewByClassAction::class)->execute(static::class);
             if (view()->exists($view)) {
-                $view = $view;
+                $this->view = $view;
             }
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             /* @phpstan-ignore identical.alwaysTrue */
             if ($this->view === $defaultView) {
                 throw $e;

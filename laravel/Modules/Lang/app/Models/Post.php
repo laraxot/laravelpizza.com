@@ -96,24 +96,6 @@ use Spatie\Sluggable\SlugOptions;
  * @method static PostFactory factory($count = null, $state = [])
  *
  * @mixin Model
- *
- * @property string|null $excerpt
- * @property string|null $slug
- * @property string|null $status
- * @property Carbon|null $published_at
- * @property string|null $locale
- * @property string|null $category
- * @property string|null $meta_title
- *
- * @method static Builder<static>|Post whereCategory($value)
- * @method static Builder<static>|Post whereExcerpt($value)
- * @method static Builder<static>|Post whereLocale($value)
- * @method static Builder<static>|Post whereMetaTitle($value)
- * @method static Builder<static>|Post wherePublishedAt($value)
- * @method static Builder<static>|Post whereSlug($value)
- * @method static Builder<static>|Post whereStatus($value)
- *
- * @mixin \Eloquent
  */
 class Post extends BaseModel
 {
@@ -206,8 +188,8 @@ class Post extends BaseModel
 
     /* deprecated
      * public function archive() {
-     * $lang = $lang;
-     * $post_type = $post_type;
+     * $lang = $this->lang;
+     * $post_type = $this->post_type;
      * $obj = $this->getLinkedModel();
      * $table = $obj->getTable();
      * $post_table = with(new Post())->getTable();
@@ -228,8 +210,8 @@ class Post extends BaseModel
 
     public function setTitleAttribute(string $value): void
     {
-        $attributes['title'] = $value;
-        $attributes['guid'] = Str::slug($value);
+        $this->attributes['title'] = $value;
+        $this->attributes['guid'] = Str::slug($value);
     }
 
     /**
@@ -241,25 +223,26 @@ class Post extends BaseModel
             return $value;
         }
 
-        if (! empty($attributes['post_type']))
+        if (! empty($this->attributes['post_type'])) {
             // Assicuriamoci che i valori siano stringhe prima della concatenazione
-            $postType = isset($attributes['post_type'])
-                ? $attributes['post_type']
+            $postType = isset($this->attributes['post_type']) && is_string($this->attributes['post_type'])
+                ? $this->attributes['post_type']
                 : '';
-            $postId = isset($attributes['post_id'])
-                ? ((string) $attributes['post_id'])
+            $postId = isset($this->attributes['post_id']) && is_scalar($this->attributes['post_id'])
+                ? ((string) $this->attributes['post_id'])
                 : '';
             $value = $postType.' '.$postId;
         } else {
             // Assicuriamoci che post_type e post_id siano stringhe
-            $postType = is_string($post_type);
-            $postId = is_scalar($post_id);
+            $postType = is_string($this->post_type) ? $this->post_type : '';
+            $postId = is_scalar($this->post_id) ? ((string) $this->post_id) : '';
             $value = $postType.' '.$postId;
         }
 
-        $title = $value;
+        $this->title = $value;
 
-        if (null !== $this->getKey($update([)))
+        if (null !== $this->getKey()) {
+            $this->update([
                 'title' => $value,
             ]);
         }
@@ -275,14 +258,14 @@ class Post extends BaseModel
         if (\is_string($value) && '' !== $value && ! str_contains($value, ' ')) {
             return $value;
         }
-        $value = $title;
+        $value = $this->title;
         if ('' === $value) {
             // Assicuriamoci che i valori siano stringhe prima della concatenazione
-            $postType = isset($attributes['post_type'])
-                ? $attributes['post_type']
+            $postType = isset($this->attributes['post_type']) && is_string($this->attributes['post_type'])
+                ? $this->attributes['post_type']
                 : '';
-            $postId = isset($attributes['post_id'])
-                ? ((string) $attributes['post_id'])
+            $postId = isset($this->attributes['post_id']) && is_scalar($this->attributes['post_id'])
+                ? ((string) $this->attributes['post_id'])
                 : '';
             $value = $postType.' '.$postId;
         }
@@ -290,9 +273,10 @@ class Post extends BaseModel
             $value = 'u-'.random_int(1, 1000);
         }
         $value = Str::slug($value);
-        $guid = $value;
+        $this->guid = $value;
 
-        if (null !== $this->getKey($update([)))
+        if (null !== $this->getKey()) {
+            $this->update([
                 'guid' => $value,
             ]);
         }

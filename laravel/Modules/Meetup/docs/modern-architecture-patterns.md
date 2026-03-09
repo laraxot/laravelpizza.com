@@ -1,6 +1,6 @@
 # Pattern Architetturali Moderni - Sintesi Finale
 
-## 
+## Data: [DATE]
 
 ## Analisi Comparativa: Genesis vs WarriorFolio
 

@@ -167,7 +167,7 @@ L'implementazione riflette una comprensione profonda delle implicazioni:
 ### Strategici
 - [Strategia Contenuti CMS](pages-content-strategy.md)
 - [Componenti Servizi](../../themes/one/docs/components/services-blocks.md)
-- [Content Strategy Frontend](../../../docs/frontend/content-strategy.md)
+- [Content Strategy Frontend](../../../../docs/frontend/content-strategy.md)
 
 ### Tecnici
 - [Blocks Architecture](blocks.md)
@@ -175,9 +175,9 @@ L'implementazione riflette una comprensione profonda delle implicazioni:
 - [Content Management](content-management.md)
 
 ### Filosofici
-- [Architettura Sistema](../../../docs/architettura_sistema.md)
-- [Rules](../../../docs/rules.md)
-- [README Principale](../../../docs/readme.md)
+- [Architettura Sistema](../../../../docs/architettura_sistema.md)
+- [Rules](../../../../docs/rules.md)
+- [README Principale](../../../../docs/readme.md)
 
 ## ✅ Checklist Completamento
 

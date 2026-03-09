@@ -40,20 +40,20 @@ class WhatsAppNotification extends Notification implements ShouldQueue
     public function __construct(string|WhatsAppData $content, array $config = [])
     {
         if ($content instanceof WhatsAppData) {
-            $whatsappData = $content;
+            $this->whatsappData = $content;
         } else {
             $recipient = $config['recipient'] ?? ($config['to'] ?? '');
             $from = $config['from'] ?? null;
 
             /** @phpstan-ignore-next-line */
-            $whatsappData = new WhatsAppData(
+            $this->whatsappData = new WhatsAppData(
                 recipient: SafeStringCastAction::cast($recipient),
                 body: $content,
                 from: $from !== null ? SafeStringCastAction::cast($from) : null,
             );
         }
 
-        $config = $config;
+        $this->config = $config;
     }
 
     /**
@@ -77,10 +77,10 @@ class WhatsAppNotification extends Notification implements ShouldQueue
         // we'll use that to get the destination phone number
         if (is_object($notifiable) && method_exists($notifiable, 'routeNotificationForWhatsApp')) {
             $routeResult = $notifiable->routeNotificationForWhatsApp($this);
-            $whatsappData->recipient = app(SafeStringCastAction::class);
+            $this->whatsappData->recipient = app(SafeStringCastAction::class)->execute($routeResult);
         }
 
-        return $whatsappData;
+        return $this->whatsappData;
     }
 
     /**
@@ -90,7 +90,7 @@ class WhatsAppNotification extends Notification implements ShouldQueue
      */
     public function getConfig(): array
     {
-        return $config;
+        return $this->config;
     }
 
     /**
@@ -98,7 +98,7 @@ class WhatsAppNotification extends Notification implements ShouldQueue
      */
     public function getProvider(): ?string
     {
-        $provider = $config['provider'] ?? null;
+        $provider = $this->config['provider'] ?? null;
 
         return is_string($provider) ? $provider : null;
     }

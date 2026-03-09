@@ -16,7 +16,7 @@ class GetCurrentDeviceAction
 {
     use QueueableAction;
 
-    public function __construct()
+    public function __construct(
         private readonly Agent $agent,
         private readonly Device $deviceModel,
     ) {
@@ -25,29 +25,30 @@ class GetCurrentDeviceAction
     /**
      * Execute the action.
      */
-    public function execute(?string $mobile_id = null): Device
+    public function execute(?string $mobileId = null): Device
     {
-        $agent = app(Agent::class);
+        $deviceInfo = $this->getDeviceInfo();
+        $browserInfo = $this->getBrowserInfo();
 
         if (null !== $mobileId) {
             if (empty($mobileId)) {
                 throw new \InvalidArgumentException('L\'ID mobile non può essere vuoto');
             }
 
-            $device = $deviceModel->firstOrCreate(['mobile_id' => $mobileId]);
+            $device = $this->deviceModel->firstOrCreate(['mobile_id' => $mobileId]);
             if (null === $device) {
                 throw new \RuntimeException('Impossibile creare o trovare il dispositivo');
             }
-            $device->update([...$data, ...$up]);
+            $device->update([...$deviceInfo, ...$browserInfo]);
 
             return $device;
         }
 
-        $device = $deviceModel->firstOrCreate($deviceInfo);
+        $device = $this->deviceModel->firstOrCreate($deviceInfo);
         if (null === $device) {
             throw new \RuntimeException('Impossibile creare o trovare il dispositivo');
         }
-        $device->update($up);
+        $device->update($browserInfo);
 
         return $device;
     }
@@ -59,19 +60,19 @@ class GetCurrentDeviceAction
      */
     private function getDeviceInfo(): array
     {
-        $device = $agent->device();
-        $platform = $agent->platform();
-        $browser = $agent->browser();
+        $device = $this->agent->device();
+        $platform = $this->agent->platform();
+        $browser = $this->agent->browser();
 
         return [
             'device' => is_string($device) ? $device : 'unknown',
             'platform' => is_string($platform) ? $platform : 'unknown',
             'browser' => is_string($browser) ? $browser : 'unknown',
-            'is_desktop' => $agent->isDesktop()
-            'is_mobile' => $agent->isMobile()
-            'is_tablet' => $agent->isTablet()
-            'is_phone' => $agent->isPhone()
-            'is_robot' => $agent->isRobot()
+            'is_desktop' => $this->agent->isDesktop(),
+            'is_mobile' => $this->agent->isMobile(),
+            'is_tablet' => $this->agent->isTablet(),
+            'is_phone' => $this->agent->isPhone(),
+            'is_robot' => $this->agent->isRobot(),
         ];
     }
 
@@ -82,12 +83,12 @@ class GetCurrentDeviceAction
      */
     private function getBrowserInfo(): array
     {
-        $browser = $agent->browser();
-        $browserVersion = is_string($browser) ? $agent->version($browser);
+        $browser = $this->agent->browser();
+        $browserVersion = is_string($browser) ? $this->agent->version($browser) : 'unknown';
 
         return [
             'version' => is_string($browserVersion) ? $browserVersion : 'unknown',
-            'robot' => is_string($agent->robot())
+            'robot' => is_string($this->agent->robot()) ? $this->agent->robot() : 'unknown',
         ];
     }
 }

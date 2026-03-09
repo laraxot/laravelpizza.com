@@ -19,7 +19,7 @@ class ContactSection extends XotBaseSection
     protected function setUp(): void
     {
         parent::setUp();
-        $this->schema(fn ());
+        $this->schema(fn (): array => $this->getFormSchema());
         $this->columns(2);
     }
 
@@ -37,7 +37,7 @@ class ContactSection extends XotBaseSection
      *
      * $state = $this->getState();
      * $record = $this->getRecord();
-     * $relationship = $record->{$this->getRelationship();
+     * $relationship = $record->{$this->getRelationship()}();
      *
      * if (null === $relationship) {
      * return;

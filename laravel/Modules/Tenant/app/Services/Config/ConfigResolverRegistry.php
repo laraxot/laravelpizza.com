@@ -29,7 +29,7 @@ class ConfigResolverRegistry
      */
     public function register(ConfigResolverInterface $resolver): self
     {
-        $resolvers[] = $resolver;
+        $this->resolvers[] = $resolver;
 
         return $this;
     }
@@ -39,7 +39,7 @@ class ConfigResolverRegistry
      */
     public function findResolver(string $key): ConfigResolverInterface
     {
-        foreach ($resolvers as $resolver)
+        foreach ($this->resolvers as $resolver) {
             if ($resolver->canResolve($key)) {
                 return $resolver;
             }

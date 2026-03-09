@@ -1,6 +1,6 @@
 # Analisi Comando `php artisan folio:list`
 
-## 
+## Data: [DATE]
 
 ## Obiettivo
 Analizzare e risolvere l'errore del comando `php artisan folio:list` per verificare lo stato delle pagine Folio configurate nel progetto.

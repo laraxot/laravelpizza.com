@@ -37,23 +37,23 @@ final class SendFacebookWhatsAppAction
     {
         $accessToken = config('services.facebook.access_token');
         if (! is_string($accessToken)) {
-            throw new Exception()
+            throw new Exception(
                 'put [FACEBOOK_ACCESS_TOKEN] variable to your .env and config [services.facebook.access_token]',
             );
         }
-        $accessToken = $accessToken;
+        $this->accessToken = $accessToken;
 
         $phoneNumberId = config('services.facebook.phone_number_id');
         if (! is_string($phoneNumberId)) {
-            throw new Exception()
+            throw new Exception(
                 'put [FACEBOOK_PHONE_NUMBER_ID] variable to your .env and config [services.facebook.phone_number_id]',
             );
         }
-        $phoneNumberId = $phoneNumberId;
+        $this->phoneNumberId = $phoneNumberId;
 
         // Parametri a livello di root
-        $debug = (bool);
-        $timeout = is_numeric(config('whatsapp.timeout', 30));
+        $this->debug = (bool) config('whatsapp.debug', false);
+        $this->timeout = is_numeric(config('whatsapp.timeout', 30)) ? (int) config('whatsapp.timeout', 30) : 30;
     }
 
     /**
@@ -66,15 +66,15 @@ final class SendFacebookWhatsAppAction
      */
     public function execute(WhatsAppData $whatsAppData): array
     {
-        $client = new Client([)
-            'timeout' => $timeout,
+        $client = new Client([
+            'timeout' => $this->timeout,
             'headers' => [
-                'Authorization' => 'Bearer '.$accessToken,
+                'Authorization' => 'Bearer '.$this->accessToken,
                 'Content-Type' => 'application/json',
             ],
         ]);
 
-        $endpoint = $baseUrl.'/'.$this->phoneNumberId.'/messages';
+        $endpoint = $this->baseUrl.'/'.$this->phoneNumberId.'/messages';
 
         $payload = [
             'messaging_product' => 'whatsapp',
@@ -100,7 +100,7 @@ final class SendFacebookWhatsAppAction
         }
 
         try {
-            $response = $client->post($endpoint, [)
+            $response = $client->post($endpoint, [
                 'json' => $payload,
             ]);
 
@@ -110,11 +110,11 @@ final class SendFacebookWhatsAppAction
             $responseData = json_decode($responseContent, true) ?: [];
 
             // Salva i dati della risposta nelle variabili dell'azione
-            $vars['status_code'] = $statusCode;
-            $vars['status_txt'] = $responseContent;
-            $vars['response_data'] = $responseData;
+            $this->vars['status_code'] = $statusCode;
+            $this->vars['status_txt'] = $responseContent;
+            $this->vars['response_data'] = $responseData;
 
-            Log::info('WhatsApp Facebook inviato con successo', [)
+            Log::info('WhatsApp Facebook inviato con successo', [
                 'to' => $whatsAppData->recipient,
                 'response_code' => $statusCode,
             ]);
@@ -132,7 +132,7 @@ final class SendFacebookWhatsAppAction
                 'success' => $statusCode >= 200 && $statusCode < 300,
                 'message_id' => $messageId,
                 'response' => $responseData,
-                'vars' => $vars,
+                'vars' => $this->vars,
             ];
         } catch (ClientException $e) {
             $response = $e->getResponse();
@@ -141,11 +141,11 @@ final class SendFacebookWhatsAppAction
             $responseBody = json_decode($response->getBody()->getContents(), true) ?: [];
 
             // Salva i dati dell'errore nelle variabili dell'azione
-            $vars['error_code'] = $statusCode;
-            $vars['error_message'] = $e->getMessage();
-            $vars['error_response'] = $responseBody;
+            $this->vars['error_code'] = $statusCode;
+            $this->vars['error_message'] = $e->getMessage();
+            $this->vars['error_response'] = $responseBody;
 
-            Log::warning('Errore invio WhatsApp Facebook', [)
+            Log::warning('Errore invio WhatsApp Facebook', [
                 'to' => $whatsAppData->recipient,
                 'status' => $statusCode,
                 'response' => $responseBody,
@@ -162,7 +162,7 @@ final class SendFacebookWhatsAppAction
                 'success' => false,
                 'error' => $errorMessage,
                 'status_code' => $statusCode,
-                'vars' => $vars,
+                'vars' => $this->vars,
             ];
         }
     }

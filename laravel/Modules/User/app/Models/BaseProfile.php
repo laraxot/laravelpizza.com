@@ -11,7 +11,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 use Modules\Media\Models\Media;
 use Modules\User\Models\Traits\IsProfileTrait;
@@ -84,10 +83,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
     {
         static::creating(static function (self $model): void {
             if (empty($model->uuid)) {
-                $connection = $model->getConnectionName() ?? config('database.default');
-                if (is_string($connection) && Schema::connection($connection)->hasColumn($model->getTable(), 'uuid')) {
-                    $model->uuid = (string) Str::uuid();
-                }
+                $model->uuid = (string) Str::uuid();
             }
         });
     }
@@ -160,7 +156,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         }
 
         // Corretto il controllo errato su $this
-        $email = trim((string) $email);
+        $email = trim((string) $this->email);
         // 'MyEmailAddress@example.com'
         $email = mb_strtolower($email);
         // 'myemailaddress@example.com'
@@ -191,30 +187,13 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
             $locale = $defaultLocale;
         }
 
-        $userLang = $lang;
+        $userLang = $this->lang;
 
         if (null === $userLang || ! is_string($userLang)) {
             return $locale;
         }
 
         return $userLang;
-    }
-
-    /**
-     * Toggles the super-admin role for the associated user.
-     */
-    public function toggleSuperAdmin(): void
-    {
-        $user = $this->user;
-        if (null === $user) {
-            return;
-        }
-
-        if ($user->hasRole('super-admin')) {
-            $user->removeRole('super-admin');
-        } else {
-            $user->assignRole('super-admin');
-        }
     }
 
     /** @return array<string, string> */

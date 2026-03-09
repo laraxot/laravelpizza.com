@@ -24,55 +24,61 @@ use Modules\User\Models\User;
 
 uses(TestCase::class);
 
-class ThemeNotifiableDummy extends Model implements CanThemeNotificationContract
+function makeThemeNotifiableDummy(): CanThemeNotificationContract
 {
-    protected $guarded = [];
-
-    public bool $emailCallbackCalled = false;
-
-    public bool $smsCallbackCalled = false;
-
-    public function getNotificationData(string $name, array $view_params = []): NotificationData
+    return new class extends Model implements CanThemeNotificationContract
     {
-        return NotificationData::from([
-            'from' => 'System',
-            'recipient' => 'user@example.test',
-            'body' => 'Body',
-            'channels' => ['mail', 'sms'],
-        ]);
-    }
+        protected $guarded = [];
 
-    public function getModel(): Model
-    {
-        return $this;
-    }
+        public bool $emailCallbackCalled = false;
 
-    public function sendEmailCallback(): void
-    {
-        $emailCallbackCalled = true;
-    }
+        public bool $smsCallbackCalled = false;
 
-    public function sendSmsCallback(): void
-    {
-        $smsCallbackCalled = true;
-    }
+        public function getNotificationData(string $name, array $view_params = []): NotificationData
+        {
+            return NotificationData::from([
+                'from' => 'System',
+                'recipient' => 'user@example.test',
+                'body' => 'Body',
+                'channels' => ['mail', 'sms'],
+            ]);
+        }
 
-    public function increase(string $what, array $data): void {}
+        public function getModel(): Model
+        {
+            return $this;
+        }
+
+        public function sendEmailCallback(): void
+        {
+            $this->emailCallbackCalled = true;
+        }
+
+        public function sendSmsCallback(): void
+        {
+            $this->smsCallbackCalled = true;
+        }
+
+        public function increase(string $what, array $data): void {}
+    };
 }
 
-class GenericNotifiableDummy extends Model
+function makeGenericNotifiableDummy(): Model
 {
-    protected $guarded = [];
-
-    public function getFullName(): string
+    return new class extends Model
     {
-        return 'Mario Rossi';
-    }
+        protected $guarded = [];
 
-    public function routeNotificationForTwilio($notification): string
-    {
-        return '+39000111222';
-    }
+        public function getFullName(): string
+        {
+            return 'Mario Rossi';
+        }
+
+        public function routeNotificationForTwilio($notification): string
+        {
+            return '+39000111222';
+        }
+    };
 }
 
 test('email data notification exposes mail channel and array payload', function () {
@@ -134,7 +140,7 @@ test('whatsapp notification exposes whatsapp channel and provider', function () 
 
 test('theme notification returns channels and array payload', function () {
     $notification = new ThemeNotification('welcome-email', ['foo' => 'bar']);
-    $notifiable = new ThemeNotifiableDummy();
+    $notifiable = makeThemeNotifiableDummy();
 
     expect($notification->via($notifiable))->toBe(['mail', 'sms'])
         ->and($notification->toArray($notifiable))->toMatchArray([
@@ -152,7 +158,7 @@ test('generic notification supports channels mail twilio and database payload', 
         ['action_text' => 'Open', 'action_url' => 'https://example.test']
     );
 
-    $notifiable = new GenericNotifiableDummy();
+    $notifiable = makeGenericNotifiableDummy();
 
     $mail = $notification->toMail($notifiable);
     $twilio = $notification->toTwilio($notifiable);
@@ -190,7 +196,7 @@ test('record notification manages channels and merged payloads', function () {
     expect($channels)->toHaveCount(2)
         ->and($channels[0])->toBe('mail');
 
-    $notification->mergeData(['a' => 'b'])->addAttachments([['name' => 'file.pdf', 'path' => '/tmp/f.pdf']]);
+    $notification->mergeData(['a' => 'b'])->addAttachments([['name' => 'file.pdf', 'path' => base_path('storage/app/f.pdf')]]);
 
     expect($notification->data)->toMatchArray(['a' => 'b'])
         ->and($notification->attachments)->toHaveCount(1);

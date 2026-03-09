@@ -225,7 +225,7 @@ The "Super Mucca" methodology is the advanced operational framework for AI agent
 
 ### File Naming & Structural Rules
 - **Markdown**: All `.md` files must be lowercase, without dates or special characters (except README/CHANGELOG).
-- **No Dates**: NEVER include "
+- **No Dates**: NEVER include "Last Updated" or dates in documentation content.
 - **Relative Links**: All documentation links MUST be relative.
 - **Prompts**: Standard AI prompts are stored in `bashscripts/tools/prompts` and must be project-agnostic.
 

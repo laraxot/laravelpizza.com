@@ -129,9 +129,9 @@ protected function getFormSchema(): array
 ## 🔗 **Collegamenti Documentazione**
 
 - [Media Module README](../readme.md)
-- [Filament Best Practices](../../../../../docs/filament-best-practices.md)
-- [Translation Rules](../../../../../docs/translation-rules.md)
-- [PHPStan Guidelines](../../../../../docs/phpstan-guidelines.md)
+- [Filament Best Practices](../../../../docs/filament-best-practices.md)
+- [Translation Rules](../../../../docs/translation-rules.md)
+- [PHPStan Guidelines](../../../../docs/phpstan-guidelines.md)
 
 ## 📊 **Metriche Miglioramento**
 

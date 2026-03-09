@@ -35,16 +35,16 @@ class Home extends XotBasePage
 
     public function mount(): void
     {
-        [$containers, $this->items] = params2ContainerItem();
+        [$this->containers, $this->items] = params2ContainerItem();
         $this->initView();
     }
 
     public function getViewData(): array
     {
         $data = [];
-        if ([] !== $containers)
-            Assert::string($container_last = last($containers));
-            $item_last = last($items);
+        if ([] !== $this->containers) {
+            Assert::string($container_last = last($this->containers), '['.__LINE__.']['.__FILE__.']');
+            $item_last = last($this->items);
 
             $container_last_singular = Str::singular($container_last);
             $container_last_model = Relation::getMorphedModel($container_last_singular);
@@ -75,7 +75,7 @@ class Home extends XotBasePage
     }
 
     /*
-     * public function mountOLD(?string $lang = null),
+     * public function mountOLD(?string $lang = null,
      * ?string $container0 = null, ?string $item0 = null,
      * ?string $container1 = null, ?string $item1 = null,
      * ?string $container2 = null, ?string $item2 = null,
@@ -95,8 +95,8 @@ class Home extends XotBasePage
      */
     public function initView(): void
     {
-        $containers = $containers;
-        $items = $items;
+        $containers = $this->containers;
+        $items = $this->items;
         $view = '';
         if (\count($containers) === \count($items)) {
             $view = 'show';
@@ -108,7 +108,7 @@ class Home extends XotBasePage
             $view = 'home';
         }
 
-        $view_type = $view;
+        $this->view_type = $view;
 
         $views = [];
 
@@ -133,7 +133,7 @@ class Home extends XotBasePage
         $view_work = Arr::first($views, view()->exists(...));
         Assert::string($view_work, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
-        $view = $view_work;
+        $this->view = $view_work;
     }
 
     public function url(string $name, array $parameters = []): string

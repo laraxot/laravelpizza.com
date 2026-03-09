@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-return array ()
+return array (
   'navigation' => 
-  array ()
+  array (
     'name' => 'Geo',
     'plural' => 'Geo',
     'group' => 
-    array ()
+    array (
       'name' => 'Geo',
       'description' => 'Gestione dati geografici',
     ),
@@ -17,15 +17,15 @@ return array ()
     'icon' => 'heroicon-o-map',
   ),
   'actions' => 
-  array ()
+  array (
     'logout' => 
-    array ()
+    array (
       'tooltip' => 'logout',
     ),
   ),
   'label' => 'Missing Label',
   'plural_label' => 'Missing Plural label',
   'fields' => 
-  array ()
+  array (
   ),
 );

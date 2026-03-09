@@ -1,12 +1,18 @@
-# Roadmap - Meetup Module
+# Roadmap Index - Meetup
 
-## Structure
-- [Overview](00-overview.md)
-- [Now (Current Sprint)](01-now.md)
-- [Next (Upcoming Features)](02-next.md)
-- [Later (Future Ideas)](03-later.md)
-- [Risks & Dependencies](04-risks.md)
+## Scope
 
-## Legacy Documents
-- [Complete Roadmap](../complete-roadmap.md)
-- [Event Management Roadmap](../event-management-roadmap.md)
+Questo piano copre il module **Meetup** e le sue integrazioni principali.
+
+## Files
+
+- [Current State](01-current-state.md)
+- [Goals](02-goals.md)
+- [Workstreams](03-workstreams.md)
+- [Milestones](04-milestones.md)
+- [Risks](05-risks.md)
+
+## Note operative
+
+- Tenere il piano aggiornato con cambiamenti architetturali.
+- Inserire date reali e owner quando disponibili.

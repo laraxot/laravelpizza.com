@@ -10,25 +10,14 @@ use Modules\User\Events\TeamCreated;
 use Modules\User\Events\TeamMemberAdded;
 use Modules\User\Events\TwoFactorAuthenticationEnabled;
 use Modules\User\Events\UserNotAllowed;
-use Modules\User\Models\SocialiteUser;
-use Modules\User\Models\Team;
-use Modules\User\Models\User;
 
 test('Login event can be instantiated', function () {
     expect(class_exists(Login::class))->toBeTrue();
 
     try {
-        // Login event expects SocialiteUser, try to create one or skip
-        $socialiteUser = SocialiteUser::first();
-        if (null === $socialiteUser) {
-            // Cannot test without a SocialiteUser - just verify class exists
-            expect(class_exists(Login::class))->toBeTrue();
-
-            return;
-        }
-        $event = new Login($socialiteUser);
+        $event = new Login(Modules\User\Models\User::first() ?: Modules\User\Models\User::make(['id' => 1, 'email' => 'test@example.com']));
         expect($event)->toBeInstanceOf(Login::class);
-    } catch (Throwable $e) {
+    } catch (Exception $e) {
         expect(true)->toBeTrue(); // Pass if class exists
     }
 });
@@ -37,15 +26,9 @@ test('Registered event can be instantiated', function () {
     expect(class_exists(Registered::class))->toBeTrue();
 
     try {
-        $socialiteUser = SocialiteUser::first();
-        if (null === $socialiteUser) {
-            expect(class_exists(Registered::class))->toBeTrue();
-
-            return;
-        }
-        $event = new Registered($socialiteUser);
+        $event = new Registered(Modules\User\Models\User::first() ?: Modules\User\Models\User::make(['id' => 1, 'email' => 'test@example.com']));
         expect($event)->toBeInstanceOf(Registered::class);
-    } catch (Throwable $e) {
+    } catch (Exception $e) {
         expect(true)->toBeTrue(); // Pass if class exists
     }
 });
@@ -54,10 +37,11 @@ test('TeamCreated event can be instantiated', function () {
     expect(class_exists(TeamCreated::class))->toBeTrue();
 
     try {
-        $team = Team::first() ?: Team::make(['id' => 1, 'name' => 'Test Team']);
+        // Create a simple team-like object for testing
+        $team = Modules\User\Models\Team::first() ?: Modules\User\Models\Team::make(['id' => 1, 'name' => 'Test Team']);
         $event = new TeamCreated($team);
         expect($event)->toBeInstanceOf(TeamCreated::class);
-    } catch (Throwable $e) {
+    } catch (Exception $e) {
         expect(true)->toBeTrue(); // Pass if class exists
     }
 });
@@ -66,13 +50,14 @@ test('TeamMemberAdded event can be instantiated', function () {
     expect(class_exists(TeamMemberAdded::class))->toBeTrue();
 
     try {
-        $team = Team::first() ?: Team::make(['id' => 1, 'name' => 'Test Team']);
-        $user = User::first() ?: User::make(['id' => 1, 'email' => 'test@example.com']);
-        $inviter = User::first() ?: User::make(['id' => 2, 'email' => 'inviter@example.com']);
+        // Create simple objects for testing
+        $team = Modules\User\Models\Team::first() ?: Modules\User\Models\Team::make(['id' => 1, 'name' => 'Test Team']);
+        $user = Modules\User\Models\User::first() ?: Modules\User\Models\User::make(['id' => 1, 'email' => 'test@example.com']);
+        $inviter = Modules\User\Models\User::first() ?: Modules\User\Models\User::make(['id' => 2, 'email' => 'inviter@example.com']);
 
         $event = new TeamMemberAdded($team, $user, $inviter);
         expect($event)->toBeInstanceOf(TeamMemberAdded::class);
-    } catch (Throwable $e) {
+    } catch (Exception $e) {
         expect(true)->toBeTrue(); // Pass if class exists
     }
 });
@@ -81,10 +66,9 @@ test('TwoFactorAuthenticationEnabled event can be instantiated', function () {
     expect(class_exists(TwoFactorAuthenticationEnabled::class))->toBeTrue();
 
     try {
-        $user = User::first() ?: User::make(['id' => 1, 'email' => 'test@example.com']);
-        $event = new TwoFactorAuthenticationEnabled($user);
+        $event = new TwoFactorAuthenticationEnabled(Modules\User\Models\User::first() ?: Modules\User\Models\User::make(['id' => 1, 'email' => 'test@example.com']));
         expect($event)->toBeInstanceOf(TwoFactorAuthenticationEnabled::class);
-    } catch (Throwable $e) {
+    } catch (Exception $e) {
         expect(true)->toBeTrue(); // Pass if class exists
     }
 });
@@ -92,12 +76,10 @@ test('TwoFactorAuthenticationEnabled event can be instantiated', function () {
 test('UserNotAllowed event can be instantiated', function () {
     expect(class_exists(UserNotAllowed::class))->toBeTrue();
 
-    // UserNotAllowed expects SocialiteUserContract - create a mock
     try {
-        $mockSocialiteUser = Mockery::mock(Laravel\Socialite\Contracts\User::class);
-        $event = new UserNotAllowed($mockSocialiteUser);
+        $event = new UserNotAllowed(Modules\User\Models\User::first() ?: Modules\User\Models\User::make(['id' => 1, 'email' => 'test@example.com']));
         expect($event)->toBeInstanceOf(UserNotAllowed::class);
-    } catch (Throwable $e) {
+    } catch (Exception $e) {
         expect(true)->toBeTrue(); // Pass if class exists
     }
 });

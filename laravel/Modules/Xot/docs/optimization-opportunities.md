@@ -348,9 +348,15 @@ abstract class BaseModel extends XotBaseModel
 
 **Widget problematici**:
 - `Modules/UI/app/Filament/Widgets/StatsOverviewWidget.php` → estende `BaseWidget` (Filament)
+<<<<<<< .merge_file_ZVxpwy
 - `Modules/healthcare_app/app/Filament/Widgets/StatsOverviewWidget.php` → estende `BaseWidget` (Filament)
 - `Modules/UI/app/Filament/Widgets/TestWidget.php` → estende `BaseWidget` (Filament)
 - `Modules/healthcare_app/app/Filament/Widgets/TestWidget.php` → estende `BaseWidget` (Filament)
+=======
+- `Modules/ModuloEsempio/app/Filament/Widgets/StatsOverviewWidget.php` → estende `BaseWidget` (Filament)
+- `Modules/UI/app/Filament/Widgets/TestWidget.php` → estende `BaseWidget` (Filament)
+- `Modules/ModuloEsempio/app/Filament/Widgets/TestWidget.php` → estende `BaseWidget` (Filament)
+>>>>>>> .merge_file_lyHFfM
 
 **Soluzione DRY + KISS**:
 ```php

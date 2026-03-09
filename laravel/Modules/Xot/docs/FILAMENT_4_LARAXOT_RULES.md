@@ -20,10 +20,17 @@ class MyPage extends XotBaseViewRecord
 ### 2. **Struttura Namespace Corretta**
 ```php
 // ✅ CORRETTO
+<<<<<<< .merge_file_4GWpti
 namespace Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
 
 // ❌ SBAGLIATO
 namespace Modules\healthcare_app\App\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+=======
+namespace Modules\ModuloEsempio\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+
+// ❌ SBAGLIATO
+namespace Modules\ModuloEsempio\App\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+>>>>>>> .merge_file_EZuT5y
 ```
 
 ### 3. **Uso di Schema invece di Form**
@@ -69,7 +76,11 @@ class MyWidget extends Widget implements HasForms
 
 declare(strict_types=1);
 
+<<<<<<< .merge_file_4GWpti
 namespace Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+=======
+namespace Modules\ModuloEsempio\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+>>>>>>> .merge_file_EZuT5y
 
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 
@@ -92,7 +103,11 @@ class ViewQuestionChart extends XotBaseViewRecord
 
 declare(strict_types=1);
 
+<<<<<<< .merge_file_4GWpti
 namespace Modules\healthcare_app\Filament\Widgets;
+=======
+namespace Modules\ModuloEsempio\Filament\Widgets;
+>>>>>>> .merge_file_EZuT5y
 
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
@@ -157,10 +172,17 @@ public function getFormSchema(): array
 ### 3. **Namespace Errati**
 ```php
 // ❌ SBAGLIATO
+<<<<<<< .merge_file_4GWpti
 namespace Modules\healthcare_app\App\Filament\Widgets;
 
 // ✅ CORRETTO
 namespace Modules\healthcare_app\Filament\Widgets;
+=======
+namespace Modules\ModuloEsempio\App\Filament\Widgets;
+
+// ✅ CORRETTO
+namespace Modules\ModuloEsempio\Filament\Widgets;
+>>>>>>> .merge_file_EZuT5y
 ```
 
 ## 🔧 Implementazione Corretta
@@ -171,12 +193,20 @@ namespace Modules\healthcare_app\Filament\Widgets;
 
 declare(strict_types=1);
 
+<<<<<<< .merge_file_4GWpti
 namespace Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+=======
+namespace Modules\ModuloEsempio\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+>>>>>>> .merge_file_EZuT5y
 
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+<<<<<<< .merge_file_4GWpti
 use Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
+=======
+use Modules\ModuloEsempio\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
+>>>>>>> .merge_file_EZuT5y
 
 class ViewQuestionChart extends XotBaseViewRecord
 {
@@ -220,7 +250,11 @@ class ViewQuestionChart extends XotBaseViewRecord
 
 declare(strict_types=1);
 
+<<<<<<< .merge_file_4GWpti
 namespace Modules\healthcare_app\Filament\Widgets;
+=======
+namespace Modules\ModuloEsempio\Filament\Widgets;
+>>>>>>> .merge_file_EZuT5y
 
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;

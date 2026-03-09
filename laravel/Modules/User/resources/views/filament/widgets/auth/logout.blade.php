@@ -15,7 +15,7 @@ declare(strict_types=1);
             @endif
 
             <form wire:submit="logout">
-                {{ $form }}
+                {{ $this->form }}
 
                 <div class="mt-6 flex flex-col gap-3">
                     <x-filament::button 

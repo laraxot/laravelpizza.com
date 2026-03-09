@@ -25,7 +25,6 @@ use Override;
  * @property string|null $created_by
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
- *
  * @method static FailedImportRowFactory factory($count = null, $state = [])
  * @method static Builder<static>|FailedImportRow newModelQuery()
  * @method static Builder<static>|FailedImportRow newQuery()
@@ -38,9 +37,7 @@ use Override;
  * @method static Builder<static>|FailedImportRow whereUpdatedAt($value)
  * @method static Builder<static>|FailedImportRow whereUpdatedBy($value)
  * @method static Builder<static>|FailedImportRow whereValidationError($value)
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class FailedImportRow extends BaseModel

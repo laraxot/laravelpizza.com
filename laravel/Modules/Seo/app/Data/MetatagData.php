@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Seo\Data;
 
+use BadMethodCallException;
 use DateTimeInterface;
 use Illuminate\Support\Arr;
 use Livewire\Wireable;

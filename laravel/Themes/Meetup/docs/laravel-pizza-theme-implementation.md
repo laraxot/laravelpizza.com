@@ -1,6 +1,6 @@
 # Laravel Pizza Meetups Theme Implementation
 
-## 
+## Date: [DATE]
 
 ## Objective
 Implement the Laravel Pizza Meetups design to match the original laravelpizza.com website, ensuring the site at http://127.0.0.1:8002/it appears identical to https://laravelpizza.com/.

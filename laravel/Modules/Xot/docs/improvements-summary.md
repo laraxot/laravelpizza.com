@@ -139,4 +139,4 @@ public function getUpcomingEvents(): Collection
 
 **Status**: ✅ **ANALISI COMPLETATA**
 
-**
+**Ultimo aggiornamento**: 2026-01-09

@@ -20,15 +20,15 @@ abstract class BaseS3Action
 
     public function __construct(LoggerInterface $logger)
     {
-        $logger = $logger;
-        $bucketName = $this->getStringConfig('media.aws.bucket_name', 'AWS_BUCKET_NAME', '');
+        $this->logger = $logger;
+        $this->bucketName = $this->getStringConfig('media.aws.bucket_name', 'AWS_BUCKET_NAME', '');
 
-        $s3Client = new S3Client([)
-            'region' => $this->getStringConfig('media.aws.region', 'AWS_REGION', 'us-east-1')
+        $this->s3Client = new S3Client([
+            'region' => $this->getStringConfig('media.aws.region', 'AWS_REGION', 'us-east-1'),
             'version' => '2006-03-01',
             'credentials' => [
-                'key' => $this->getStringConfig('media.aws.access_key_id', 'AWS_ACCESS_KEY_ID', '')
-                'secret' => $this->getStringConfig('media.aws.secret_access_key', 'AWS_SECRET_ACCESS_KEY', '')
+                'key' => $this->getStringConfig('media.aws.access_key_id', 'AWS_ACCESS_KEY_ID', ''),
+                'secret' => $this->getStringConfig('media.aws.secret_access_key', 'AWS_SECRET_ACCESS_KEY', ''),
             ],
         ]);
     }

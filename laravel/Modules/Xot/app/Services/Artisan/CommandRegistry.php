@@ -35,7 +35,7 @@ class CommandRegistry
      */
     public function register(CommandHandlerInterface $handler): self
     {
-        $handlers[] = $handler;
+        $this->handlers[] = $handler;
 
         return $this;
     }
@@ -45,7 +45,7 @@ class CommandRegistry
      */
     public function findHandler(string $command): ?CommandHandlerInterface
     {
-        foreach ($handlers as $handler)
+        foreach ($this->handlers as $handler) {
             if ($handler->supports($command)) {
                 return $handler;
             }
@@ -59,14 +59,14 @@ class CommandRegistry
      */
     private function registerDefaultHandlers(): void
     {
-        $this->register(new MigrationCommandHandler())
-            ->register(new CacheCommandHandler())
-            ->register(new RouteCommandHandler())
-            ->register(new ViewCommandHandler())
-            ->register(new ErrorCommandHandler())
-            ->register(new ModuleCommandHandler())
-            ->register(new OptimizeCommandHandler())
-            ->register(new QueueCommandHandler())
-            ->register(new DebugbarCommandHandler());
+        $this->register(new MigrationCommandHandler)
+            ->register(new CacheCommandHandler)
+            ->register(new RouteCommandHandler)
+            ->register(new ViewCommandHandler)
+            ->register(new ErrorCommandHandler)
+            ->register(new ModuleCommandHandler)
+            ->register(new OptimizeCommandHandler)
+            ->register(new QueueCommandHandler)
+            ->register(new DebugbarCommandHandler);
     }
 }

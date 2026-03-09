@@ -809,7 +809,7 @@ else {
 - [eloquent-models-critical-rules.md](./eloquent-models-critical-rules.md) - Regole critiche
 - [property-exists-elimination-philosophy.md](./property-exists-elimination-philosophy.md) - Filosofia
 - [phpstan/](./phpstan/) - PHPStan guides
-- [../../../docs/quality/](../../../docs/quality/) - Root quality docs
+- [../../../../docs/quality/](../../../../docs/quality/) - Root quality docs
 
 ---
 

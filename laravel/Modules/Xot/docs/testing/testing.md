@@ -4,8 +4,6 @@
 
 Il modulo Xot utilizza **Pest** per testare il core framework, i trait condivisi, e i componenti base utilizzati da tutti gli altri moduli del sistema Laraxot.
 
-**Riferimento Laravel Modules**: [Tests](https://laravelmodules.com/docs/12/advanced/tests) | [laravel-modules-pest-guide](../../../../../docs/testing/laravel-modules-pest-guide.md)
-
 ### Focus del Modulo Xot
 
 - **Core Framework**: Testing di base system, configurazioni, provider
@@ -175,15 +173,40 @@ trait CreatesApplication
 }
 ```
 
-## XotBaseTestCase (DRY + KISS + Laraxot)
+## TestCase Base Framework
 
-**Tutti i TestCase dei moduli estendono `Modules\Xot\Tests\XotBaseTestCase`**, mai `Illuminate\Foundation\Testing\TestCase`.
+```php
+<?php
 
-- **XotBaseTestCase**: Setup unificato (CreatesApplication, translator, xra config, helper user/email)
-- **TestCase** (Xot): Estende XotBaseTestCase
-- **TestCase** (altri moduli): Estendono XotBaseTestCase, aggiungono solo `getPackageProviders()`
+declare(strict_types=1);
 
-Vedi [.cursor/rules/testcase-xotbase-extends.mdc](../../../../.cursor/rules/testcase-xotbase-extends.mdc).
+namespace Modules\Xot\Tests;
+
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+
+abstract class TestCase extends BaseTestCase
+{
+    use CreatesApplication;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->setUpXotTestEnvironment();
+    }
+
+    /**
+     * Helper per mock di moduli in test.
+     */
+    protected function mockModule(string $moduleName, array $config = []): void
+    {
+        $moduleConfig = createTestModuleConfig($moduleName);
+        $moduleConfig = array_merge($moduleConfig, $config);
+
+        config(["modules.modules.{$moduleName}" => $moduleConfig]);
+    }
+}
+```
 
 ## Test Core Framework
 
@@ -666,6 +689,6 @@ test('no memory leaks in repeated operations', function (): void {
 
 ---
 
-**
+**Ultimo aggiornamento**: Dicembre 2024
 **Framework**: Pest v2.x
 **Coverage Target**: 90%+ per core framework

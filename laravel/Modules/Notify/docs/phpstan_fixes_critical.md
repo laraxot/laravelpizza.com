@@ -32,5 +32,5 @@ Implementato pattern corretto per factory riutilizzabili con namespace dinamico.
 - **Factory riutilizzabili** per tutti i progetti
 - **Type safety** migliorata per configurazioni
 
-*
+*Ultimo aggiornamento: gennaio 2025*
 

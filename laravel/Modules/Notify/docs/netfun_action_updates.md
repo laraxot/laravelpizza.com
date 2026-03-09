@@ -2,7 +2,11 @@
 
 ## Panoramica delle Modifiche
 
-La classe `SendNetfunSMSAction` è stata completamente rivista per allinearla con le best practice del progetto Laraxot e con il pattern di configurazione standardizzato per i servizi SMS. Inoltre, è stato creato un nuovo DTO `SmsMessageData` per standardizzare la gestione dei dati SMS. (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+La classe `SendNetfunSMSAction` è stata completamente rivista per allinearla con le best practice del progetto Laraxot e con il pattern di configurazione standardizzato per i servizi SMS. Inoltre, è stato creato un nuovo DTO `SmsMessageData` per standardizzare la gestione dei dati SMS.
+=======
+La classe `SendNetfunSMSAction` è stata completamente rivista per allinearla con le best practice del progetto healthcare_app e con il pattern di configurazione standardizzato per i servizi SMS. Inoltre, è stato creato un nuovo DTO `SmsMessageData` per standardizzare la gestione dei dati SMS.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## 1. Correzioni alla Configurazione
 
@@ -306,7 +310,11 @@ protected function normalizePhoneNumber(string $phoneNumber): string
 
 ## 6. Conclusioni
 
-Le modifiche apportate a `SendNetfunSMSAction` e l'aggiunta del nuovo DTO `SmsMessageData` hanno migliorato significativamente la qualità e la robustezza del codice, allineandolo con le best practice del progetto Laraxot e con i pattern di configurazione standardizzati. (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+Le modifiche apportate a `SendNetfunSMSAction` e l'aggiunta del nuovo DTO `SmsMessageData` hanno migliorato significativamente la qualità e la robustezza del codice, allineandolo con le best practice del progetto Laraxot e con i pattern di configurazione standardizzati.
+=======
+Le modifiche apportate a `SendNetfunSMSAction` e l'aggiunta del nuovo DTO `SmsMessageData` hanno migliorato significativamente la qualità e la robustezza del codice, allineandolo con le best practice del progetto healthcare_app e con i pattern di configurazione standardizzati.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 Questi miglioramenti garantiscono:
 1. Maggiore manutenibilità del codice
@@ -317,4 +325,4 @@ Questi miglioramenti garantiscono:
 
 ---
 
-*
+*Ultimo aggiornamento: 2023-05-12*

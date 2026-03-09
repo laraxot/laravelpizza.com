@@ -1,6 +1,6 @@
 # MeetupDashboard Philosophy and Implementation
 
-## 
+## Date: [DATE]
 
 ## Overview
 

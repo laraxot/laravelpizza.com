@@ -1,6 +1,6 @@
 # AI Assistant - Regole Operative
 
-**
+**Last Updated**:
 **Status**: 🔒 CRITICAL - Always Follow
 
 ---
@@ -112,7 +112,7 @@ AI: "Vuoi che inizi con PHPStan o con i docs?"
    - Component structure
    - Styling guidelines
 
-3. Root: docs/
+3. Root: laravel/docs/
    - Cross-cutting concerns
    - Project-wide guidelines
    - Master documentation
@@ -258,7 +258,7 @@ REGOLA: Esattamente 1 task in_progress per volta
 ✅ USA cartelle esistenti:
 - Modules/{Module}/docs/
 - Themes/{Theme}/docs/
-- docs/
+- laravel/docs/
 
 ❌ NON creare:
 - Modules/{Module}/documentation/
@@ -386,5 +386,5 @@ Document everything.
 
 **Versione**:
 **Maintained by**: AI Assistant (Self-Documented)
-**
+**Last Updated**:
 **Next Review**: Ogni sessione Super Mucca

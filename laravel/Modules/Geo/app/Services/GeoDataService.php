@@ -51,7 +51,7 @@ class GeoDataService
      */
     public function __construct()
     {
-        $validator = new GeoDataValidator();
+        $this->validator = new GeoDataValidator();
     }
 
     /**
@@ -62,10 +62,10 @@ class GeoDataService
     public function getRegions(): Collection
     {
         /** @var Collection<int, array{name: string, code: string}> $result */
-        $result = Cache::remember()
+        $result = Cache::remember(
             self::CACHE_KEY_REGIONS,
             self::CACHE_TTL,
-            fn (): Collection => $this->loadData()
+            fn (): Collection => $this->loadData()->pluck('name', 'code'),
         );
 
         return $result;
@@ -83,9 +83,9 @@ class GeoDataService
         $cacheKey = \sprintf(self::CACHE_KEY_PROVINCES, $regionCode);
 
         /** @var Collection<int, array{name: string, code: string}> $result */
-        $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($regionCode): Collection {)
+        $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($regionCode): Collection {
             /** @var array<string, mixed>|null $region */
-            $region = $this->loadData();
+            $region = $this->loadData()->firstWhere('code', $regionCode);
 
             if (! $region || ! \is_array($region) || ! isset($region['provinces']) || ! \is_array($region['provinces'])) {
                 /** @var Collection<int, array{name: string, code: string}> $empty */
@@ -102,7 +102,7 @@ class GeoDataService
 
             /** @var Collection<int, array{name: string, code: string}> $provinceResult */
             $provinceResult = $provincesCollection
-                ->map(static function (array $province): array {)
+                ->map(static function (array $province): array {
                     $name = $province['name'] ?? '';
                     $code = $province['code'] ?? '';
 
@@ -131,9 +131,9 @@ class GeoDataService
         $cacheKey = \sprintf(self::CACHE_KEY_CITIES, $provinceCode);
 
         /** @var Collection<int, array{name: string, code: string}> $result */
-        $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($provinceCode): Collection {)
+        $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($provinceCode): Collection {
             /** @var array<string, mixed>|null $province */
-            $province = $this->loadData()
+            $province = $this->loadData()->flatMap(static fn (array $region): array => \is_array($region['provinces'] ?? null)
                 ? $region['provinces']
                 : [])->firstWhere('code', $provinceCode);
 
@@ -167,9 +167,9 @@ class GeoDataService
         $cacheKey = \sprintf(self::CACHE_KEY_CAP, $provinceCode, $cityCode);
 
         /** @var string|null $result */
-        $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($provinceCode, $cityCode): null|string {)
+        $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($provinceCode, $cityCode): null|string {
             /** @var array<string, mixed>|null $province */
-            $province = $this->loadData()
+            $province = $this->loadData()->flatMap(static fn (array $region): array => \is_array($region['provinces'] ?? null)
                 ? $region['provinces']
                 : [])->firstWhere('code', $provinceCode);
 
@@ -223,7 +223,7 @@ class GeoDataService
             throw new \RuntimeException('Il file JSON dei comuni non è valido');
         }
 
-        if (! $validator->checkIntegrity($data))
+        if (! $this->validator->checkIntegrity($data)) {
             throw new \RuntimeException('Il file JSON dei comuni non è valido');
         }
 

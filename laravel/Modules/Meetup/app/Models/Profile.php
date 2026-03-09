@@ -7,7 +7,7 @@ namespace Modules\Meetup\Models;
 use Modules\User\Models\BaseProfile;
 
 /**
- * @property string $id
+ * @property int $id
  * @property string|null $user_id
  * @property string|null $first_name
  * @property string|null $last_name
@@ -46,7 +46,6 @@ use Modules\User\Models\BaseProfile;
  * @property-read Profile|null $updater
  * @property-read \Modules\User\Models\User|null $user
  * @property-read string|null $user_name
- *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile childrenWith(array $relations)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile childrenWithCount(array $relations)
  * @method static \Modules\Meetup\Database\Factories\ProfileFactory factory($count = null, $state = [])
@@ -71,72 +70,10 @@ use Modules\User\Models\BaseProfile;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutRole($roles, ?string $guard = null)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile byUuid(string $uuid)
- *
  * @mixin \Eloquent
  */
 class Profile extends BaseProfile
 {
     /** @var string */
     protected $connection = 'meetup';
-
-    /** @var bool */
-    public $incrementing = false;
-
-    /** @var string */
-    protected $keyType = 'string';
-
-    /**
-     * Fillable limitato allo schema Meetup (tabella profiles connessione meetup).
-     * BaseProfile ha fillable più ampio per lo schema User; qui solo colonne esistenti.
-     *
-     * @var list<string>
-     */
-    protected $fillable = [
-        'user_id',
-        'first_name',
-        'last_name',
-        'fiscal_code',
-        'phone',
-        'email',
-        'notes',
-    ];
-
-    /**
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'id' => 'string',
-            'user_id' => 'string',
-            'created_at' => 'datetime',
-            'updated_at' => 'datetime',
-            'deleted_at' => 'datetime',
-            'updated_by' => 'string',
-            'created_by' => 'string',
-            'deleted_by' => 'string',
-        ];
-    }
-
-    /**
-     * Boot: la tabella Meetup non ha colonna uuid (solo id come UUID).
-     * Rimuove uuid dagli attributi prima del save per evitare SQL error.
-     * Imposta id come UUID se vuoto.
-     */
-    protected static function booted(): void
-    {
-        parent::booted();
-
-        static::saving(static function (self $model): void {
-            $model->offsetUnset('uuid');
-        });
-
-        static::creating(static function (self $model): void {
-            $model->offsetUnset('uuid');
-            if (empty($model->id)) {
-                $model->id = (string) \Illuminate\Support\Str::uuid();
-            }
-        });
-    }
 }

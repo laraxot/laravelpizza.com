@@ -137,4 +137,4 @@ php artisan view:cache
 
 **Status**: ✅ **DOCUMENTAZIONE AGGIORNATA**
 
-**
+**Ultimo aggiornamento**: [DATE]

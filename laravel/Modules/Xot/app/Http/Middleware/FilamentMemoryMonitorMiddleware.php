@@ -4,22 +4,23 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Http\Middleware;
 
+use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Middleware per monitorare l'uso della memoria nei pannelli Filament.
- * SuperMucca Memory Monitor 🐄.
+ * SuperMucca Memory Monitor 🐄
  */
 class FilamentMemoryMonitorMiddleware
 {
     /**
      * Handle an incoming request.
      *
-     * @param \Closure(Request):Response $next
+     * @param  Closure(Request):Response  $next
      */
-    public function handle(Request $request, \Closure $next): Response
+    public function handle(Request $request, Closure $next): Response
     {
         // Memoria iniziale
         $memoryStart = memory_get_usage(true);
@@ -48,8 +49,8 @@ class FilamentMemoryMonitorMiddleware
         $isFilamentAdmin = $this->isFilamentAdminRequest($request);
 
         // Log solo per richieste Filament admin o se supera soglie
-        if ($isFilamentAdmin || $this->shouldLog($memoryUsedMB, $executionTime))
-            $this->logMemoryUsage($request, [)
+        if ($isFilamentAdmin || $this->shouldLog($memoryUsedMB, $executionTime)) {
+            $this->logMemoryUsage($request, [
                 'memory_used_mb' => $memoryUsedMB,
                 'memory_peak_mb' => $memoryPeakMB,
                 'memory_total_mb' => $memoryTotalMB,
@@ -113,13 +114,13 @@ class FilamentMemoryMonitorMiddleware
     /**
      * Logga l'uso della memoria.
      *
-     * @param array<string, mixed> $metrics
+     * @param  array<string, mixed>  $metrics
      */
     private function logMemoryUsage(Request $request, array $metrics): void
     {
         $logLevel = $this->determineLogLevel($metrics);
 
-        $message = sprintf()
+        $message = sprintf(
             'Filament Memory Usage: %sMB used, %sMB peak, %sms execution time - %s %s',
             (string) $metrics['memory_used_mb'],
             (string) $metrics['memory_peak_mb'],
@@ -147,7 +148,7 @@ class FilamentMemoryMonitorMiddleware
     /**
      * Determina il livello di log basato sulle metriche.
      *
-     * @param array<string, mixed> $metrics
+     * @param  array<string, mixed>  $metrics
      */
     private function determineLogLevel(array $metrics): string
     {

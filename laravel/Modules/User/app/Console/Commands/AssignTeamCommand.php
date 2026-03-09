@@ -70,7 +70,7 @@ class AssignTeamCommand extends Command
          * $user->assignRole($role);
          * }
          */
-        $this->info('Teams :'.implode(', ', $rows));
+        $this->info('Teams :'.implode(', ', $rows).' assigned to '.$email);
 
         $rows = $user->teams()->get()->toArray();
 
@@ -81,10 +81,11 @@ class AssignTeamCommand extends Command
             $this->newLine();
             $this->table($headers, $rows);
             $this->newLine();
+        } else {
+            $this->newLine();
+            $this->warn('⚡ No teams ['.$teamClass.']');
+            $this->newLine();
         }
-        $this->newLine();
-        $this->warn('⚡ No teams ['.$teamClass.']');
-        $this->newLine();
     }
 
     /*

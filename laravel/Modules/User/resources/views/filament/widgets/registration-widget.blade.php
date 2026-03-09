@@ -5,7 +5,7 @@ declare(strict_types=1);
 ?>
 <div>
     <form wire:submit.prevent="register">
-        {{ $form }}
+        {{ $this->form }}
 
         <x-filament::button type="submit" class="w-full">
             {{ __('user::registration.submit') }}

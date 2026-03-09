@@ -1,470 +1,573 @@
----
-title: Getting Started
-description: Getting started with Jigsaw's docs starter template is as easy as 1, 2, 3.
-extends: _layouts.documentation
-section: content
----
+# 🚀 Guida Rapida - Getting Started
 
-# Getting Started {#getting-started}
-
-This is a starter template for creating a beautiful, customizable documentation site for your project with minimal effort. You’ll only have to change a few settings and you’re ready to go.
-
-## Configuration {#getting-started-configuration}
-
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/docs/site-variables/) to learn more.
-
-```php
-// config.php
-return [
-    'baseUrl' => 'https://my-awesome-jigsaw-site.com/',
-    'production' => false,
-    'siteName' => 'My Site',
-    'siteDescription' => 'Give your documentation a boost with Jigsaw.',
-    'docsearchApiKey' => '',
-    'docsearchIndexName' => '',
-    'navigation' => require_once('navigation.php'),
-];
-```
-
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/project_docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/project_docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/project_docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/project_docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/project_docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/project_docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/project_docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/project_docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/project_docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/project_docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/project_docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/project_docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/project_docs/collections/) to learn more.
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/docs/collections/) to learn more.
+**Ultimo aggiornamento**:
+**Tempo richiesto**: 30-45 minuti
+**Livello**: Intermedio-Avanzato
 
 ---
 
-### Adding Content {#getting-started-adding-content}
+## 📋 Prerequisiti
 
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
+### Software Richiesto
+- **PHP**: 8.3+
+- **Composer**: 2.x
+- **Node.js**: 18.x+
+- **NPM**: 9.x+
+- **MySQL**: 8.0+ oppure **SQLite** (per development)
+- **Git**: 2.x+
 
-[Read more about navigation.](/project_docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-
-[Read more about navigation.](/project_docs/navigation)
-[Read more about navigation.](/project_docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-
-[Read more about navigation.](/project_docs/navigation)
-[Read more about navigation.](/project_docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-
-[Read more about navigation.](/project_docs/navigation)
-[Read more about navigation.](/project_docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-
-[Read more about navigation.](/project_docs/navigation)
-[Read more about navigation.](/project_docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-
-[Read more about navigation.](/project_docs/navigation)
-[Read more about navigation.](/project_docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-
-[Read more about navigation.](/project_docs/navigation)
-[Read more about navigation.](/project_docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/docs/navigation.php).
-
-[Read more about navigation.](/docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/docs/navigation.php).
-
-[Read more about navigation.](/docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/docs/navigation.php).
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/docs/navigation.php).
-
-[Read more about navigation.](/docs/navigation)
-[Read more about navigation.](/docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/docs/navigation.php).
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/docs/navigation.php).
-
-[Read more about navigation.](/docs/navigation)
-[Read more about navigation.](/docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/docs/navigation.php).
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/docs/navigation.php).
-
-[Read more about navigation.](/docs/navigation)
-[Read more about navigation.](/docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/docs/navigation.php).
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/docs/navigation.php).
-
-[Read more about navigation.](/docs/navigation)
-[Read more about navigation.](/docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-
-[Read more about navigation.](/project_docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/docs/navigation.php).
-
-[Read more about navigation.](/docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/docs/navigation.php).
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/docs/navigation.php).
-
-[Read more about navigation.](/docs/navigation)
-[Read more about navigation.](/docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-
-[Read more about navigation.](/project_docs/navigation)
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/docs/navigation.php).
-
-[Read more about navigation.](/docs/navigation)
-
-The first section of each content page contains a YAML header that specifies how it should be rendered. The `title` attribute is used to dynamically generate HTML `title` and OpenGraph tags for each page. The `extends` attribute defines which parent Blade layout this content file will render with (e.g. `_layouts.documentation` will render with `source/_layouts/documentation.blade.php`), and the `section` attribute defines the Blade "section" that expects this content to be placed into it.
-
-```yaml
----
-title: Navigation
-description: Building a navigation menu for your site
-extends: _layouts.documentation
-section: content
----
-```
-
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/project_docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/project_docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/project_docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/project_docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/project_docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/project_docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/project_docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/project_docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/project_docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/project_docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/project_docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/project_docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/project_docs/content-blade/)
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/docs/content-blade/)
+### Conoscenze Richieste
+- Laravel intermediario/avanzato
+- Conoscenza base di modularità (nwidart/laravel-modules)
+- Filament (admin panel)
+- Livewire/Volt (frontend components)
+- Folio (file-based routing)
+- PHPStan (static analysis)
 
 ---
 
-### Adding Assets {#getting-started-adding-assets}
-
-Any assets that need to be compiled (such as JavaScript, Less, or Sass files) can be added to the `source/_assets/` directory, and Laravel Mix will process them when running `npm run dev` or `npm run prod`. The processed assets will be stored in `/source/assets/build/` (note there is no underscore on this second `assets` directory).
-
-Then, when Jigsaw builds your site, the entire `/source/assets/` directory containing your built files (and any other directories containing static assets, such as images or fonts, that you choose to store there) will be copied to the destination build folders (`build_local`, on your local machine).
-
-Files that don't require processing (such as images and fonts) can be added directly to `/source/assets/`.
-
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/project_docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/project_docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/project_docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/project_docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/project_docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/project_docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/project_docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/project_docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/project_docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/project_docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/project_docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/project_docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/project_docs/compiling-assets/)
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
-
----
-
-## Building Your Site {#getting-started-building-your-site}
-
-Now that you’ve edited your configuration variables and know how to customize your styles and content, let’s build the site.
+## 🎯 1. Clone e Setup Iniziale
 
 ```bash
+# Clona il repository
+git clone git@github.com:laraxot/laravelpizza.com.git base_laravelpizza
+cd base_laravelpizza
 
-# build static files with Jigsaw
-./vendor/bin/jigsaw build
+# Installa dipendenze PHP
+cd laravel
+composer install
 
-# compile assets with Laravel Mix
-# options: dev, prod
-npm run dev
-```
-# options: dev, prod
-# options: dev, prod
-npm run dev
-npm run dev
-```
-```
-# options: dev, prod
-# options: dev, prod
-npm run dev
-npm run dev
-```
-```
-# options: dev, prod
-# options: dev, prod
-npm run dev
-npm run dev
-```
-```
-# options: dev, prod
-# options: dev, prod
-npm run dev
-npm run dev
-```
-```
-# options: dev, prod
-# options: dev, prod
-npm run dev
-npm run dev
-```
-```
-# options: dev, prod
-# options: dev, prod
-npm run dev
-npm run dev
-```
-```
-# options: dev, prod
-# options: dev, prod
-npm run dev
-npm run dev
-```
-```
-# options: dev, prod
-# options: dev, prod
-npm run dev
-npm run dev
-```
-```
-# options: dev, prod
-# options: dev, prod
-npm run dev
-npm run dev
-```
-```
-# options: dev, prod
-# options: dev, prod
-npm run dev
-npm run dev
-```
-```
-# options: dev, prod
-# options: dev, prod
-npm run dev
-npm run dev
-```
-```
-# options: dev, prod
-# options: dev, prod
-npm run dev
-npm run dev
-```
-```
+# Installa dipendenze Node
+npm install
 
-# options: dev, prod
-npm run dev
+# Copia .env
+cp .env.example .env
+
+# Genera application key
+php artisan key:generate
+
+# Configura il database (modifica .env)
+# Per development usa SQLite:
+touch database/database.sqlite
+
+# Configura .env per SQLite:
+# DB_CONNECTION=sqlite
+# DB_DATABASE={PROJECT_ROOT}/laravel/database/database.sqlite
+
+# Esegui migrations
+php artisan migrate
+
+# Build assets frontend
+npm run dev  # Per development
+# oppure
+npm run build  # Per production
 ```
-
-### Versione HEAD
-
-## Collegamenti tra versioni di getting-started.md
-* [getting-started.md](../../../gdpr/project_docs/getting-started.md)
-* [getting-started.md](../../../xot/project_docs/getting-started.md)
-* [getting-started.md](../../../ui/project_docs/getting-started.md)
-* [getting-started.md](../../../tenant/project_docs/it/getting-started.md)
-* [getting-started.md](../../../cms/project_docs/getting-started.md)
-* [getting-started.md](../../../gdpr/docs/getting-started.md)
-* [getting-started.md](../../../xot/docs/getting-started.md)
-* [getting-started.md](../../../ui/docs/getting-started.md)
-* [getting-started.md](../../../tenant/docs/it/getting-started.md)
-* [getting-started.md](../../../cms/docs/getting-started.md)
-
-### Versione Incoming
-
----
----
-title: Getting Started
-description: Getting started with Jigsaw's docs starter template is as easy as 1, 2, 3.
-extends: _layouts.documentation
-section: content
----
-
-# Getting Started {#getting-started}
-
-This is a starter template for creating a beautiful, customizable documentation site for your project with minimal effort. You’ll only have to change a few settings and you’re ready to go.
-
-## Configuration {#getting-started-configuration}
-
-As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
-
-```php
-// config.php
-return [
-    'baseUrl' => 'https://my-awesome-jigsaw-site.com/',
-    'production' => false,
-    'siteName' => 'My Site',
-    'siteDescription' => 'Give your documentation a boost with Jigsaw.',
-    'docsearchApiKey' => '',
-    'docsearchIndexName' => '',
-    'navigation' => require_once('navigation.php'),
-];
-```
-
-> Tip: This configuration file is also where you’ll define any "collections" (for example, a collection of the contributors to your site, or a collection of blog posts). Check out the official [Jigsaw documentation](https://jigsaw.tighten.co/project_docs/collections/) to learn more.
 
 ---
 
-### Adding Content {#getting-started-adding-content}
-
-You can write your content using a [variety of file types](http://jigsaw.tighten.co/project_docs/content-other-file-types/). By default, this starter template expects your content to be located in the `source/docs` folder. If you change this, be sure to update the URL references in [navigation.php](/project_docs/navigation.php).
-
-[Read more about navigation.](/project_docs/navigation)
-
-The first section of each content page contains a YAML header that specifies how it should be rendered. The `title` attribute is used to dynamically generate HTML `title` and OpenGraph tags for each page. The `extends` attribute defines which parent Blade layout this content file will render with (e.g. `_layouts.documentation` will render with `source/_layouts/documentation.blade.php`), and the `section` attribute defines the Blade "section" that expects this content to be placed into it.
-
-```yaml
----
-title: Navigation
-description: Building a navigation menu for your site
-extends: _layouts.documentation
-section: content
----
-```
-
-[Read more about Jigsaw layouts.](https://jigsaw.tighten.co/project_docs/content-blade/)
-
----
-
-### Adding Assets {#getting-started-adding-assets}
-
-Any assets that need to be compiled (such as JavaScript, Less, or Sass files) can be added to the `source/_assets/` directory, and Laravel Mix will process them when running `npm run dev` or `npm run prod`. The processed assets will be stored in `/source/assets/build/` (note there is no underscore on this second `assets` directory).
-
-Then, when Jigsaw builds your site, the entire `/source/assets/` directory containing your built files (and any other directories containing static assets, such as images or fonts, that you choose to store there) will be copied to the destination build folders (`build_local`, on your local machine).
-
-Files that don't require processing (such as images and fonts) can be added directly to `/source/assets/`.
-
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/project_docs/compiling-assets/)
-
----
-
-## Building Your Site {#getting-started-building-your-site}
-
-Now that you’ve edited your configuration variables and know how to customize your styles and content, let’s build the site.
+## 🧱 2. Struttura del Progetto
 
 ```bash
-# build static files with Jigsaw
-./vendor/bin/jigsaw build
-
-# compile assets with Laravel Mix
-# options: dev, prod
-npm run dev
+base_laravelpizza/
+├── laravel/              # Applicazione Laravel
+│   ├── Modules/          # Moduli business logic (14 moduli)
+│   │   ├── Xot/          # Framework Laraxot (core)
+│   │   ├── User/         # Autenticazione & Autorizzazione
+│   │   ├── Meetup/       # Business logic meetup
+│   │   └── ...
+│   │
+│   ├── Themes/           # Temi frontend
+│   │   └── Meetup/       # Tema frontoffice premium
+│   │
+│   └── app/              # Core legacy (minimo utilizzo)
+│
+└── docs/                 # Documentazione root
 ```
-### Versione HEAD
-
-## Collegamenti tra versioni di getting-started.md
-* [getting-started.md](../../../gdpr/project_docs/getting-started.md)
-* [getting-started.md](../../../xot/project_docs/getting-started.md)
-* [getting-started.md](../../../ui/project_docs/getting-started.md)
-* [getting-started.md](../../../tenant/project_docs/it/getting-started.md)
-* [getting-started.md](../../../cms/project_docs/getting-started.md)
-
-### Versione Incoming
 
 ---
+
+## 📚 3. Leggi la Documentazione Critica
+
+### In Ordine di Importanza
+
+1. **Regole Critiche Laraxot**
+   ```
+   laravel/Modules/Xot/docs/critical-rules-consolidated.md
+   ```
+   - Fondamentale per capire l'architettura Laraxot
+   - Regole obbligatorie per tutto il codice
+   - 30 minuti di lettura
+
+2. **Regole Meetup Theme**
+   ```
+   laravel/Themes/Meetup/docs/critical-rules-consolidated.md
+   ```
+   - Fondamentale per lavoro frontend
+   - Folio + Volt architecture
+   - 20 minuti di lettura
+
+3. **PHPStan Level 10**
+   ```
+   laravel/Modules/Xot/docs/phpstan-code-quality-guide.md
+   ```
+   - Quality guide per type safety
+   - Pattern di correzione errori
+   - 45 minuti di lettura
+
+4. **Panoramica Progetto**
+   ```
+   docs/project-overview.md
+   ```
+   - Overview completo di tutti i moduli
+   - Architettura e dipendenze
+   - 30 minuti di lettura
+
+---
+
+## 🧪 4. Verifica Setup
+
+```bash
+# Verifica PHPStan Level 10
+./vendor/bin/phpstan analyse Modules --level=10 --memory-limit=-1
+
+# Dovresti vedere: [OK] No errors
+
+# Verifica moduli attivi
+php artisan module:list
+
+# Verifica tema Meetup
+cd ../Themes/Meetup
+npm run build && npm run copy
+cd ../..
+
+# Avvia server sviluppo
+php artisan serve
+
+# Apri browser:
+# - http://127.0.0.1:8000/it (frontoffice)
+# - http://127.0.0.1:8000/admin (Filament admin)
+```
+
+---
+
+## 🔑 5. Credenziali Admin
+
+### Utente Admin di Default
+Dopo le migrations, crea un utente admin:
+
+```bash
+php artisan tinker
+
+# Esegui in tinker:
+use Modules\User\Models\User;
+use Illuminate\Support\Facades\Hash;
+
+User::create([
+    'email' => 'admin@{PROJECT_DOMAIN}',
+    'name' => 'Admin User',
+    'password' => Hash::make('<PASSWORD>'),
+])->assignRole('super_admin');
+```
+
+Oppure usa i seeders se disponibili:
+```bash
+php artisan db:seed --class=AdminUserSeeder
+```
+
+---
+
+## 🎨 6. Sviluppo Frontend (Meetup Theme)
+
+### Workflow Sviluppo Frontend
+
+```bash
+# Entra nella directory tema
+cd laravel/Themes/Meetup
+
+# Watch mode per development
+npm run watch
+
+# In un altro terminal, avvia Laravel
+cd ../..
+php artisan serve
+```
+
+### Creare una Nuova Pagina (Folio)
+
+```bash
+# Crea file pagina in Folio
+touch laravel/Themes/Meetup/resources/views/pages/test-page.blade.php
+```
+
+```php
+<!-- laravel/Themes/Meetup/resources/views/pages/test-page.blade.php -->
+<x-meetup-layouts.app>
+    <x-slot:title>Test Page</x-slot:title>
+
+    <div class="container mx-auto py-12">
+        <h1 class="text-4xl font-bold">Test Page</h1>
+        <p>Questa è una pagina di test con Folio.</p>
+    </div>
+</x-meetup-layouts.app>
+```
+
+### Creare un Componente Volt
+
+```bash
+# Crea file componente Volt
+touch laravel/Themes/Meetup/resources/views/livewire/test-component.blade.php
+```
+
+```php
+<!-- laravel/Themes/Meetup/resources/views/livewire/test-component.blade.php -->
+<?php
+
+use Livewire\Volt\Component;
+
+new class extends Component {
+    public int $count = 0;
+
+    public function increment(): void
+    {
+        $this->count++;
+    }
+?>
+
+<div>
+    <h1>Count: {{ $count }}</h1>
+    <button wire:click="increment">Increment</button>
+</div>
+```
+
+### Importante: Dopo Modifiche CSS/JS
+
+```bash
+# OBBLIGATORIO dopo ogni modifica CSS/JS
+cd laravel/Themes/Meetup
+npm run build && npm run copy
+```
+
+---
+
+## 🛠️ 7. Sviluppo Backend (Moduli)
+
+### Esempio: Creare una nuova Action
+
+```php
+<?php
+
+// Modules/{ModuleName}/app/Actions/CreateEventAction.php
+
+declare(strict_types=1);
+
+namespace Modules\Meetup\Actions;
+
+use Modules\Meetup\Models\Event;
+use Modules\Meetup\Data\EventData;
+use Spatie\QueueableAction\QueueableAction;
+
+class CreateEventAction
+{
+    use QueueableAction;
+
+    public function execute(EventData $data): Event
+    {
+        return Event::create([
+            'title' => $data->title,
+            'description' => $data->description,
+            'event_date' => $data->eventDate,
+            'location' => $data->location,
+        ]);
+    }
+}
+```
+
+### Esempio: Usare l'Action
+
+```php
+<?php
+
+// In un controller o Volt component
+
+use Modules\Meetup\Actions\CreateEventAction;
+use Modules\Meetup\Data\EventData;
+
+class CreateEventComponent extends Component
+{
+    public string $title = '';
+    public string $description = '';
+    public ?string $eventDate = null;
+    public string $location = '';
+
+    public function create(): void
+    {
+        $data = EventData::from([
+            'title' => $this->title,
+            'description' => $this->description,
+            'eventDate' => $this->eventDate,
+            'location' => $this->location,
+        ]);
+
+        $event = CreateEventAction::dispatch($data);
+
+        session()->flash('message', 'Evento creato con successo!');
+    }
+}
+```
+
+---
+
+## ✅ 8. PHPStan Compliance
+
+### Verifica Prima di Commit
+
+```bash
+# Analisi completa
+./vendor/bin/phpstan analyse Modules --level=10 --memory-limit=-1
+
+# Analisi singolo modulo
+./vendor/bin/phpstan analyse Modules/Meetup --level=10
+
+# Analisi file specifico
+./vendor/bin/phpstan analyse Modules/Meetup/app/Actions/CreateEventAction.php --level=10
+```
+
+### Pattern Comuni PHPStan
+
+#### Type Narrowing
+```php
+// ❌ SBAGLIATO
+public function process($data)
+{
+    return $data['key'];
+}
+
+// ✅ CORRETTO
+public function process(array $data): string
+{
+    $value = $data['key'] ?? '';
+    /** @var string $value */
+    return $value;
+}
+```
+
+#### Eloquent Magic Properties
+```php
+// ❌ SBAGLIATO - property_exists() non funziona con magic attributes
+if (property_exists($model, 'attribute')) {
+    return $model->attribute;
+}
+
+// ✅ CORRETTO - usa isset()
+if (isset($model->attribute)) {
+    return $model->attribute;
+}
+
+// ✅ ANCHE CORRETTO - usa hasAttribute()
+if ($model->hasAttribute('attribute')) {
+    return $model->attribute;
+}
+```
+
+---
+
+## 🧪 9. Testing
+
+### Esegui Test
+
+```bash
+# Tutti i test
+./vendor/bin/pest
+
+# Test specifico modulo
+./vendor/bin/pest Modules/User/tests
+
+# Test specifico file
+./vendor/bin/pest Modules/Meetup/tests/Feature/EventTest.php
+
+# Test con coverage
+./vendor/bin/pest --coverage
+```
+
+### Esempio Test Feature
+
+```php
+<?php
+
+// Modules/{ModuleName}/tests/Feature/EventTest.php
+
+use Modules\Meetup\Models\Event;
+use Modules\User\Models\User;
+use function Pest\Laravel\actingAs;
+
+it('can create an event', function () {
+    $user = User::factory()->create();
+    actingAs($user)
+        ->post('/admin/events', [
+            'title' => 'Test Event',
+            'description' => 'Test Description',
+            'event_date' => now()->addWeek(),
+        ])
+        ->assertStatus(302);
+
+    expect(Event::where('title', 'Test Event')->exists())->toBeTrue();
+});
+```
+
+---
+
+## 📝 10. Flusso di Lavoro Consigliato
+
+### Per Nuova Funzionalità
+
+1. **Leggi la documentazione** del modulo pertinente
+2. **Crea/Aggiorna docs** per la nuova funzionalità
+3. **Scrivi test** prima del codice (TDD)
+4. **Implementa codice** seguendo regole Laraxot
+5. **Verifica PHPStan Level 10**
+6. **Esegui test**
+7. **Formatta codice** con Pint
+8. **Commit e push**
+
+### Comandi Utili
+
+```bash
+# Verifica PHPStan
+./vendor/bin/phpstan analyse Modules --level=10
+
+# Formatta codice
+./vendor/bin/pint --dirty
+
+# Verifica test
+./vendor/bin/pest
+
+# Clear cache
+php artisan config:clear
+php artisan cache:clear
+php artisan route:clear
+php artisan view:clear
+
+# Build assets tema
+cd laravel/Themes/Meetup
+npm run build && npm run copy
+```
+
+---
+
+## 🐛 11. Troubleshooting Comune
+
+### Problema: PHPStan Errors
+```bash
+# Analisi dettagliata
+./vendor/bin/phpstan analyse Modules --level=10 --error-format=table
+
+# Controlla pattern comuni nel code quality guide
+cat laravel/Modules/Xot/docs/phpstan-code-quality-guide.md
+```
+
+### Problema: Assets Non Funzionano
+```bash
+# Rebuild assets tema
+cd laravel/Themes/Meetup
+npm run build && npm run copy
+
+# Clear cache
+cd ../..
+php artisan view:clear
+php artisan cache:clear
+```
+
+### Problema: Folio Routes Non Trovate
+```bash
+# Clear route cache
+php artisan route:clear
+
+# Verifica file Folmino esistono
+ls -la laravel/Themes/Meetup/resources/views/pages/
+```
+
+### Problema: Moduli Non Caricati
+```bash
+# Verifica moduli attivi
+php artisan module:list
+
+# Verifica modules_statuses.json
+cat laravel/modules_statuses.json
+
+# Clear cache
+php artisan config:clear
+composer dump-autoload
+```
+
+---
+
+## 📚 12. Risorse Aggiuntive
+
+### Documentazione Essenziale
+- [Panoramica Progetto](project-overview.md)
+- [Regole Critiche Xot](../laravel/Modules/Xot/docs/critical-rules-consolidated.md)
+- [Regole Critiche Meetup Theme](../laravel/Themes/Meetup/docs/critical-rules-consolidated.md)
+- [PHPStan Code Quality Guide](../laravel/Modules/Xot/docs/phpstan-code-quality-guide.md)
+- [Filament v5 Study](filament-v5-study-summary.md)
+
+### Documentazione Moduli
+- [Xot Module](../laravel/Modules/Xot/docs/README.md)
+- [User Module](../laravel/Modules/User/docs/README.md)
+- [Meetup Module](../laravel/Modules/Meetup/docs/README.md)
+- [Meetup Theme](../laravel/Themes/Meetup/docs/README.md)
+
+### Documentazione Esterna
+- [Laravel 12.x Documentation](https://laravel.com/docs/12.x)
+- [Filament 5.x Documentation](https://filamentphp.com/docs/5.x)
+- [Livewire 4.x Documentation](https://livewire.laravel.com/docs/4.x)
+- [Laravel Volt Documentation](https://laravel.com/docs/12.x/volt)
+- [Laravel Folio Documentation](https://laravel.com/docs/12.x/folio)
+- [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
+
+---
+
+## 🎯 Checklist Primo Commit
+
+Prima di fare il tuo primo commit, verifica:
+
+- [ ] Ho letto le regole critiche Laraxot
+- [ ] Ho letto le regole critiche Meetup Theme
+- [ ] Ho capito l'architettura DRY+KISS+SOLID
+- [ ] PHPStan Level 10 passa (0 errori)
+- [ ] Tutti i test passano
+- [ ] Codice formattato con Pint
+- [ ] Ho aggiornato/creato documentazione
+- [ ] Ho aggiunto test per nuove funzionalità
+- [ ] Assets tema rebuilt (se modifiche CSS/JS)
+- [ ] Commit message segue convention
+
+---
+
+## 🚀 Primi Passi Suggeriti
+
+### Per Sviluppatori Frontend
+1. Esplora `Themes/Meetup/resources/views/pages/`
+2. Studia componenti in `Themes/Meetup/resources/views/components/`
+3. Crea una pagina di test con Folio
+4. Crea un componente Volt semplice
+5. Integrazione con layout Meetup
+
+### Per Sviluppatori Backend
+1. Esplora `Modules/Xot/` per capire architettura base
+2. Studia `Modules/User/` per pattern RBAC
+3. Esplora `Modules/Meetup/` per business logic
+4. Crea una nuova Action
+5. Crea un nuovo Resource Filament
+
+### Per Sviluppatori Full-Stack
+1. Segui entrambi i percorsi sopra
+2. Integrazione frontend-backend
+3. Creazione feature end-to-end
+4. Testing completo
+5. PHPStan compliance
+
+---
+
+**Buon coding! 🍕**
+
+Se hai domande o problemi, controlla prima la documentazione del modulo pertinente. Se non trovi risposta, apri un issue su GitHub.

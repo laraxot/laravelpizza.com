@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
+use Mockery;
+use Override;
 use Filament\Tables\Table;
 use Illuminate\Support\Collection;
 use Modules\Xot\Filament\Traits\HasXotTable;
@@ -17,14 +19,14 @@ class HasTableWithXotTestClass
 
     public function getLayoutView(): mixed
     {
-        $mock = \Mockery::mock();
+        $mock = Mockery::mock();
         $mock->shouldReceive('getTableColumns')->andReturn([]);
         $mock->shouldReceive('getTableContentGrid')->andReturn([]);
 
         return $mock;
     }
 
-    #[\Override]
+    #[Override]
     public function getTableColumns(): array
     {
         return [];
@@ -32,10 +34,10 @@ class HasTableWithXotTestClass
 
     public function getTable(): Table
     {
-        return \Mockery::mock(Table::class);
+        return Mockery::mock(Table::class);
     }
 
-    public function getTablePage(): ?int
+    public function getTablePage(): null|int
     {
         return 1;
     }
@@ -45,12 +47,12 @@ class HasTableWithXotTestClass
         return 10;
     }
 
-    public function getTableSortColumn(): ?string
+    public function getTableSortColumn(): null|string
     {
         return null;
     }
 
-    public function getTableSortDirection(): ?string
+    public function getTableSortDirection(): null|string
     {
         return null;
     }
@@ -65,17 +67,17 @@ class HasTableWithXotTestClass
         return null;
     }
 
-    public function getTableFilterState(string $_name): ?array
+    public function getTableFilterState(string $_name): null|array
     {
         return [];
     }
 
-    public function getTableGrouping(): ?string
+    public function getTableGrouping(): null|string
     {
         return null;
     }
 
-    public function getTableSearchIndicator(): ?string
+    public function getTableSearchIndicator(): null|string
     {
         return null;
     }
@@ -150,7 +152,7 @@ class HasTableWithXotTestClass
         return null;
     }
 
-    public function getMountedTableAction(): ?string
+    public function getMountedTableAction(): null|string
     {
         return null;
     }
@@ -170,7 +172,7 @@ class HasTableWithXotTestClass
         return null;
     }
 
-    public function getMountedTableBulkAction(): ?string
+    public function getMountedTableBulkAction(): null|string
     {
         return null;
     }
@@ -180,7 +182,7 @@ class HasTableWithXotTestClass
         return null;
     }
 
-    public function getActiveTableLocale(): ?string
+    public function getActiveTableLocale(): null|string
     {
         return null;
     }

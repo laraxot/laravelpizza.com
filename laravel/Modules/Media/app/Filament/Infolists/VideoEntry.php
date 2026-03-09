@@ -58,28 +58,28 @@ class VideoEntry extends Entry
 
     public function disk(string|Closure|null $disk): static
     {
-        $disk = $disk;
+        $this->disk = $disk;
 
         return $this;
     }
 
     public function height(int|string|Closure|null $height): static
     {
-        $height = $height;
+        $this->height = $height;
 
         return $this;
     }
 
     public function circular(bool|Closure $condition = true): static
     {
-        $isCircular = $condition;
+        $this->isCircular = $condition;
 
         return $this;
     }
 
     public function square(bool|Closure $condition = true): static
     {
-        $isSquare = $condition;
+        $this->isSquare = $condition;
 
         return $this;
     }
@@ -94,26 +94,26 @@ class VideoEntry extends Entry
 
     public function visibility(string|Closure $visibility): static
     {
-        $visibility = $visibility;
+        $this->visibility = $visibility;
 
         return $this;
     }
 
     public function width(int|string|Closure|null $width): static
     {
-        $width = $width;
+        $this->width = $width;
 
         return $this;
     }
 
     public function getDisk(): Filesystem
     {
-        return Storage::disk($getDiskName());
+        return Storage::disk($this->getDiskName());
     }
 
     public function getDiskName(): string
     {
-        Assert::string($res = $this->evaluate($this->disk));
+        Assert::string($res = $this->evaluate($this->disk) ?? config('filament.default_filesystem_disk'));
 
         return $res;
     }
@@ -146,7 +146,7 @@ class VideoEntry extends Entry
 
     public function defaultImageUrl(string|Closure|null $url): static
     {
-        $defaultImageUrl = $url;
+        $this->defaultImageUrl = $url;
 
         return $this;
     }
@@ -163,7 +163,7 @@ class VideoEntry extends Entry
         /** @var FilesystemAdapter $storage */
         $storage = $this->getDisk();
 
-        if ($shouldCheckFileExistence())
+        if ($this->shouldCheckFileExistence()) {
             try {
                 if (! $storage->exists($state)) {
                     return null;
@@ -173,7 +173,7 @@ class VideoEntry extends Entry
             }
         }
 
-        if ($getVisibility())
+        if ($this->getVisibility() === 'private') {
             try {
                 return $storage->temporaryUrl($state, now()->addMinutes(5));
             } catch (Throwable) {
@@ -260,7 +260,7 @@ class VideoEntry extends Entry
      */
     public function extraImgAttributes(array|Closure $attributes): static
     {
-        $extraImgAttributes = $attributes;
+        $this->extraImgAttributes = $attributes;
 
         return $this;
     }
@@ -282,12 +282,12 @@ class VideoEntry extends Entry
 
     public function getExtraImgAttributeBag(): ComponentAttributeBag
     {
-        return new ComponentAttributeBag($getExtraImgAttributes());
+        return new ComponentAttributeBag($this->getExtraImgAttributes());
     }
 
     public function stacked(bool|Closure $condition = true): static
     {
-        $isStacked = $condition;
+        $this->isStacked = $condition;
 
         return $this;
     }
@@ -299,7 +299,7 @@ class VideoEntry extends Entry
 
     public function overlap(int|Closure|null $overlap): static
     {
-        $overlap = $overlap;
+        $this->overlap = $overlap;
 
         return $this;
     }
@@ -326,7 +326,7 @@ class VideoEntry extends Entry
 
     public function ring(string|int|Closure|null $ring): static
     {
-        $ring = $ring;
+        $this->ring = $ring;
 
         return $this;
     }
@@ -353,7 +353,7 @@ class VideoEntry extends Entry
 
     public function limit(int|Closure|null $limit = 3): static
     {
-        $limit = $limit;
+        $this->limit = $limit;
 
         return $this;
     }
@@ -378,12 +378,12 @@ class VideoEntry extends Entry
         return null;
     }
 
-    public function limitedRemainingText()
+    public function limitedRemainingText(
         bool|Closure $condition = true,
         bool|Closure $isSeparate = false,
         string|Closure|null $size = null,
     ): static {
-        $hasLimitedRemainingText = $condition;
+        $this->hasLimitedRemainingText = $condition;
         $this->limitedRemainingTextSeparate($isSeparate);
         $this->limitedRemainingTextSize($size);
 
@@ -392,7 +392,7 @@ class VideoEntry extends Entry
 
     public function limitedRemainingTextSeparate(bool|Closure $condition = true): static
     {
-        $isLimitedRemainingTextSeparate = $condition;
+        $this->isLimitedRemainingTextSeparate = $condition;
 
         return $this;
     }
@@ -409,7 +409,7 @@ class VideoEntry extends Entry
 
     public function limitedRemainingTextSize(string|Closure|null $size): static
     {
-        $limitedRemainingTextSize = $size;
+        $this->limitedRemainingTextSize = $size;
 
         return $this;
     }
@@ -436,7 +436,7 @@ class VideoEntry extends Entry
 
     public function checkFileExistence(bool|Closure $condition = true): static
     {
-        $shouldCheckFileExistence = $condition;
+        $this->shouldCheckFileExistence = $condition;
 
         return $this;
     }

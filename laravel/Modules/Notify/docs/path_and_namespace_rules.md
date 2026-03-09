@@ -7,19 +7,33 @@
 ### ✅ Path Corretti
 
 ```
+<<<<<<< HEAD
 /var/www/html/ptvx/laravel/Modules/Notify/app/Actions/SMS
 /var/www/html/ptvx/laravel/Modules/Notify/app/Http/Controllers
 /var/www/html/ptvx/laravel/Modules/Notify/app/Providers
 /var/www/html/ptvx/laravel/Modules/Notify/app/Models
-/var/www/html/ptvx/laravel/Modules/Notify/app/Filament (docs: replace project-specific references with generic placeholders across documentation)
+/var/www/html/ptvx/laravel/Modules/Notify/app/Filament
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Actions/SMS
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Http/Controllers
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Providers
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Models
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Filament
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ### ❌ Path Errati
 
 ```
+<<<<<<< HEAD
 /var/www/html/ptvx/laravel/Modules/Notify/App/Actions/SMS
 /var/www/html/ptvx/laravel/Modules/Notify/App/Http/Controllers
-/var/www/html/ptvx/laravel/Modules/Notify/App/Providers (docs: replace project-specific references with generic placeholders across documentation)
+/var/www/html/ptvx/laravel/Modules/Notify/App/Providers
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/App/Actions/SMS
+/var/www/html/healthcare_app/laravel/Modules/Notify/App/Http/Controllers
+/var/www/html/healthcare_app/laravel/Modules/Notify/App/Providers
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ## Struttura Corretta dei Namespace
@@ -54,7 +68,11 @@ namespace Modules\Notify\App\Datas;
 
 **Path fisico corretto:**
 ```
-/var/www/html/ptvx/laravel/Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 **Namespace corretto:**
@@ -66,7 +84,11 @@ namespace Modules\Notify\Actions\SMS;
 
 **Path fisico corretto:**
 ```
-/var/www/html/ptvx/laravel/Modules/Notify/app/Http/Controllers/NotificationController.php (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/app/Http/Controllers/NotificationController.php
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Http/Controllers/NotificationController.php
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 **Namespace corretto:**
@@ -78,7 +100,11 @@ namespace Modules\Notify\Http\Controllers;
 
 **Path fisico corretto:**
 ```
-/var/www/html/ptvx/laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 **Namespace corretto:**
@@ -90,7 +116,11 @@ namespace Modules\Notify\Providers;
 
 **Path fisico corretto:**
 ```
-/var/www/html/ptvx/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 **Namespace corretto:**
@@ -107,7 +137,11 @@ namespace Modules\Notify\App\Datas;
 
 ## Motivo di questa Regola
 
-Questa struttura di namespace mantiene compatibilità con la convenzione di Laravel e il sistema di moduli Nwidart, anche se i file sono fisicamente organizzati in modo diverso. Questo approccio è stato adottato per standardizzare i namespace in tutto il progetto Laraxot. (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+Questa struttura di namespace mantiene compatibilità con la convenzione di Laravel e il sistema di moduli Nwidart, anche se i file sono fisicamente organizzati in modo diverso. Questo approccio è stato adottato per standardizzare i namespace in tutto il progetto Laraxot.
+=======
+Questa struttura di namespace mantiene compatibilità con la convenzione di Laravel e il sistema di moduli Nwidart, anche se i file sono fisicamente organizzati in modo diverso. Questo approccio è stato adottato per standardizzare i namespace in tutto il progetto healthcare_app.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Esempio per Datas
 
@@ -133,13 +167,17 @@ Per le regole generali e condivise tra tutti i moduli, consulta anche:
 - [Regole Generali per i Namespace](/laravel/modules/xot/docs/namespace-rules.md)
 - [Convenzioni di Codice](/laravel/modules/xot/docs/code-conventions.md)
 - [Struttura dei Moduli](/laravel/modules/xot/docs/module-structure.md)
-- [Collegamento Bidirezionale: Documentazione Root](../../../../docs/links.md)
+- [Collegamento Bidirezionale: Documentazione Root](../../../../../docs/links.md)
 
 ### Esempio 5: Console Command
 
 **Path fisico corretto:**
 ```
-/var/www/html/ptvx/laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php (docs: replace project-specific references with generic placeholders across documentation)
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 **Namespace corretto:**
@@ -156,4 +194,4 @@ namespace Modules\Notify\App\Console\Commands;
 
 ---
 
-*
+*Ultimo aggiornamento: 2025-05-12*

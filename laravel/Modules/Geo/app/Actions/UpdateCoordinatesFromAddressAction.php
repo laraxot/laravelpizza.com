@@ -43,7 +43,7 @@ class UpdateCoordinatesFromAddressAction
     public function __construct(
         private readonly GetAddressDataFromFullAddressAction $getAddressDataAction,
     ) {
-        $errors = collect();
+        $this->errors = collect();
     }
 
     /**
@@ -56,27 +56,27 @@ class UpdateCoordinatesFromAddressAction
     public function execute(Model $model): bool
     {
         // Reset errori per questa esecuzione
-        $errors = collect();
+        $this->errors = collect();
 
         // Ottieni l'indirizzo completo dal modello
         $fullAddress = $this->getFullAddressFromModel($model);
 
         if (empty($fullAddress)) {
-            $errors->push(__('geo::actions.update_coordinates.errors.empty_address'));
+            $this->errors->push(__('geo::actions.update_coordinates.errors.empty_address'));
 
             return false;
         }
 
         // Esegui geocoding per ottenere i dati dell'indirizzo
-        $addressData = $getAddressDataAction->execute($fullAddress);
+        $addressData = $this->getAddressDataAction->execute($fullAddress);
 
         if (null === $addressData) {
             // Raccogli errori dal servizio di geocoding
-            $geocodingErrors = $getAddressDataAction->getErrors();
+            $geocodingErrors = $this->getAddressDataAction->getErrors();
             if ($geocodingErrors->isNotEmpty()) {
-                $errors->merge($geocodingErrors);
+                $this->errors->merge($geocodingErrors);
             } else {
-                $errors->push(__('geo::actions.update_coordinates.errors.geocoding_failed'));
+                $this->errors->push(__('geo::actions.update_coordinates.errors.geocoding_failed'));
             }
 
             return false;
@@ -93,7 +93,7 @@ class UpdateCoordinatesFromAddressAction
      */
     public function getErrors(): Collection
     {
-        return $errors;
+        return $this->errors;
     }
 
     /**
@@ -144,7 +144,7 @@ class UpdateCoordinatesFromAddressAction
                 'error' => $e->getMessage(),
             ]);
 
-            $errors->push($e->getMessage());
+            $this->errors->push($e->getMessage());
 
             return false;
         }

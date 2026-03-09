@@ -22,10 +22,10 @@ final class ChangePasswordAction extends Action
         parent::setUp();
         $this->translateLabel()
             ->icon('heroicon-o-key')
-            ->action(function (UserContract $record, array $data): void {)
+            ->action(function (UserContract $record, array $data): void {
                 $newPassword = is_string($data['new_password'] ?? null) ? $data['new_password'] : '';
 
-                $record->update([)
+                $record->update([
                     'password' => Hash::make($newPassword),
                 ]);
                 Notification::make()
@@ -34,13 +34,13 @@ final class ChangePasswordAction extends Action
                     ->body(__('user::notifications.password_changed_successfully.message'))
                     ->send();
             })
-            ->schema(function (): array {)
+            ->schema(function (): array {
                 return [
                     PasswordData::make()->getPasswordFormComponent('new_password'),
                     TextInput::make('new_password_confirmation')
                         ->password()
                         ->placeholder(__('user::fields.confirm_password.placeholder'))
-                        ->rule()
+                        ->rule(
                             'required',
                             /**
                              * @param callable(string): mixed $get
@@ -60,13 +60,13 @@ final class ChangePasswordAction extends Action
 
 /*
  * Action::make('changePassword')
- * ->action(function (UserContract $user, array $data): void {)
- * $user->update([)
+ * ->action(function (UserContract $user, array $data): void {
+ * $user->update([
  * 'password' => Hash::make($data['new_password']),
  * ]);
  * Notification::make()->success()->title('Password changed successfully.');
  * })
- * ->form([)
+ * ->form([
  * TextInput::make('new_password')
  * ->password()
  * ->required()

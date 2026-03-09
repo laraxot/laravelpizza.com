@@ -59,9 +59,7 @@ readonly class GetCoordinatesFromGoogleMapsAction
     private function validateInput(string $address): void
     {
         $apiKey = config('services.google.maps_api_key');
-        if (! is_string($apiKey) || '' === trim($apiKey)) {
-            throw new \RuntimeException('Google Maps API key not configured');
-        }
+        Assert::notEmpty($apiKey, 'Google Maps API key not configured');
         Assert::notEmpty($address, 'Address cannot be empty');
         Assert::maxLength($address, 1000, 'Address is too long');
     }
@@ -73,7 +71,7 @@ readonly class GetCoordinatesFromGoogleMapsAction
      */
     private function makeApiRequest(string $address): string
     {
-        $response = $client->get(self::API_URL, [
+        $response = $this->client->get(self::API_URL, [
             'query' => [
                 'address' => $address,
                 'key' => config('services.google.maps_api_key'),

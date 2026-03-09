@@ -12,6 +12,6 @@ class VerifyEmail extends BaseNotification
 
     protected function verificationUrl($notifiable): string
     {
-        return $url;
+        return $this->url;
     }
 }

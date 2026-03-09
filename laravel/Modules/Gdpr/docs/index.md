@@ -139,17 +139,17 @@ The `.env.testing` file must be a **COPY CARBON** of `.env` with **ONLY "_test"*
 
 ❌ **NEVER invent new environment variables like**:
 ```bash
-NOTIFY_DB_DATABASE=<nome progetto>_data_test  # WRONG!
-GDPR_DB_DATABASE=<nome progetto>_data_test    # WRONG!
+NOTIFY_DB_DATABASE=laravelpizza_data_test  # WRONG!
+GDPR_DB_DATABASE=laravelpizza_data_test    # WRONG!
 ```
 
 ✅ **CORRECT approach**:
 ```bash
 # If .env has:
-DB_DATABASE=<nome progetto>_data
+DB_DATABASE=laravelpizza_data
 
 # Then .env.testing has:
-DB_DATABASE=<nome progetto>_data_test  # Only add "_test"!
+DB_DATABASE=laravelpizza_data_test  # Only add "_test"!
 ```
 
 See [Database Testing Configuration](./database-testing-configuration.md) for complete details.

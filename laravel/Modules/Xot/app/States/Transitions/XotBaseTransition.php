@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\States\Transitions;
 
+use BackedEnum;
 use Filament\Notifications\Notification as FilamentNotification;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Notification;
@@ -12,15 +13,15 @@ use Modules\Notify\Datas\RecordNotificationData;
 use Modules\Notify\Notifications\RecordNotification;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\ModelStates\Transition;
+use TypeError;
 use Webmozart\Assert\InvalidArgumentException;
 
 abstract class XotBaseTransition extends Transition
 {
-    public function __construct()
+    public function __construct(
         public Model $record,
         public ?string $message = '',
-    ) {
-    }
+    ) {}
 
     public function handle(): Model
     {
@@ -32,10 +33,10 @@ abstract class XotBaseTransition extends Transition
         $newStateClass = $stateNamespace.'\\'.$stateClassName;
 
         /* @phpstan-ignore-next-line */
-        $record->state = new $newStateClass($this->record);
-        $record->save();
+        $this->record->state = new $newStateClass($this->record);
+        $this->record->save();
 
-        return $record;
+        return $this->record;
     }
 
     public function sendNotifications(): void
@@ -53,10 +54,10 @@ abstract class XotBaseTransition extends Transition
     public function getNotificationRecipients(): array
     {
         return [
-            // 'me' => $record,
-            'me_mail' => RecordNotificationData::from(['record' => $record, 'channel' => 'mail'])
-            // 'patient' => $record->patient,
-            // 'doctor' => $record->doctor,
+            // 'me' => $this->record,
+            'me_mail' => RecordNotificationData::from(['record' => $this->record, 'channel' => 'mail']),
+            // 'patient' => $this->record->patient,
+            // 'doctor' => $this->record->doctor,
             // 'patient_mail' => RecordNotificationData::from(['record' => $record->patient, 'channel' => 'mail']),
             // 'doctor_mail' => RecordNotificationData::from(['record' => $record->doctor, 'channel' => 'mail']),
         ];
@@ -75,10 +76,10 @@ abstract class XotBaseTransition extends Transition
     public function getNotificationSlug(UserContract $recipient): string
     {
         $typeEnum = $recipient->type;
-        $type = $typeEnum instanceof \BackedEnum ? (string) $typeEnum->value : 'unknown';
+        $type = $typeEnum instanceof BackedEnum ? (string) $typeEnum->value : 'unknown';
 
         $slug =
-            class_basename($record)
+            class_basename($this->record).
             '-'.
             $type.
             '-'.
@@ -89,7 +90,7 @@ abstract class XotBaseTransition extends Transition
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public function sendRecipientNotification(RecordNotificationData $recipient, array $data): void
     {
@@ -101,7 +102,7 @@ abstract class XotBaseTransition extends Transition
 
         // RecordNotification resolves MailTemplate internally from slug (lazy resolution)
         // No need to pre-load MailTemplate - pass slug directly
-        $notify = new RecordNotification($record, $slug);
+        $notify = new RecordNotification($this->record, $slug);
         $mergeData = $data;
 
         $notify->mergeData($mergeData);
@@ -112,7 +113,7 @@ abstract class XotBaseTransition extends Transition
 
         try {
             Notification::route($recipient->getChannel(), $recipient->getRoute())->notify($notify);
-        } catch (\TypeError|InvalidArgumentException $e) {
+        } catch (TypeError|InvalidArgumentException $e) {
             $message = 'channel :['.$recipient->getChannel().'] error: ['.$e->getMessage().']';
             FilamentNotification::make()
                 ->title('Error')
@@ -128,10 +129,10 @@ abstract class XotBaseTransition extends Transition
     public function getNotificationData(): array
     {
         return [
-            'message' => $message,
-            // 'appointment_date' => $appointment->starts_at?->format('d/m/Y H:i')
-            // 'patient_name' => $appointment->patient->name ?? 'N/A',
-            // 'doctor_name' => $appointment->doctor->name ?? 'N/A',
+            'message' => $this->message,
+            // 'appointment_date' => $this->appointment->starts_at?->format('d/m/Y H:i') ?? 'N/A',
+            // 'patient_name' => $this->appointment->patient->name ?? 'N/A',
+            // 'doctor_name' => $this->appointment->doctor->name ?? 'N/A',
         ];
     }
 }

@@ -455,7 +455,7 @@ La documentazione deve essere mantenuta aggiornata in:
 
 1. **Modulo specifico**: `Modules/<nome progetto>/docs/`
 1. **Modulo specifico**: `Modules/<nome progetto>/docs/`
-2. **Documentazione root**: `docs/`
+2. **Documentazione root**: `laravel/docs/`
 3. **Regole Cursor**: `.cursor/rules/`
 4. **Regole Windsurf**: `.windsurf/rules/`
 

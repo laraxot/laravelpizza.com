@@ -196,7 +196,7 @@ it('displays submit button', function (): void {
     $response->assertSee('submit', false);
 });
 
-it('has registration form', function (): void {
+it('has form with post method', function (): void {
     $response = $this->get('/en/auth/register');
     $response->assertSee('<form', false);
 });
@@ -207,12 +207,14 @@ it('has registration form', function (): void {
 
 it('displays login link', function (): void {
     $response = $this->get('/en/auth/register');
-    $response->assertSee('auth/login', false);
+    $response->assertSee('Already have an account', false);
+    $response->assertSee('Sign in', false);
 });
 
 it('displays Italian login link', function (): void {
     $response = $this->get('/it/auth/register');
-    $response->assertSee('auth/login', false);
+    $response->assertSee('Hai già un account', false);
+    $response->assertSee('Accedi', false);
 });
 
 // ---------------------------------------------------------------------------
@@ -224,10 +226,9 @@ it('includes proper title tag', function (): void {
     $response->assertSee('<title>', false);
 });
 
-it('includes livewire or csrf token', function (): void {
+it('includes csrf token in form', function (): void {
     $response = $this->get('/en/auth/register');
-    $response->assertStatus(200);
-    expect(str_contains($response->getContent(), 'wire:') || str_contains($response->getContent(), '_token') || str_contains($response->getContent(), 'csrf'))->toBeTrue();
+    $response->assertSee('_token', false);
 });
 
 // ---------------------------------------------------------------------------

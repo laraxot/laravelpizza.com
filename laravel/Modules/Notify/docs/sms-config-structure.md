@@ -156,4 +156,4 @@ $retryDelay = $config['drivers'][$driver]['retry_delay'] ?? $config['retry']['de
 
 ---
 
-*
+*Ultimo aggiornamento: [DATE]*

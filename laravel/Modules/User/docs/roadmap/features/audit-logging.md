@@ -47,14 +47,6 @@ Sistema completo di logging per audit delle attività degli utenti, con supporto
 - Custom reports
 - Export system
 
-### Logging Guidelines (2026-03-02)
-
-- Non usare `Log::info()` generici nei widget di autenticazione (es. `RegisterWidget`, `LoginWidget`) per evitare di intasare i log e rallentare il sistema.
-- Per l’audit delle operazioni utente preferire:
-  - `activity()` di Spatie Activity Log (già usata per registrare la creazione utente);
-  - canali di log dedicati (es. `audit`) con volume controllato.
-- Mantenere `Log::error()` solo per errori eccezionali e non frequenti, documentando il pattern nelle regole di logging globali.
-
 ## Dependencies
 - Laravel Framework v10.x
 - Spatie Activity Log

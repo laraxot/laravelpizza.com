@@ -272,6 +272,6 @@ Questa regola si integra perfettamente con la [Metodologia Super Mucca](./super-
 
 ---
 
-**
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: ✅ Regola Critica OBBLIGATORIA

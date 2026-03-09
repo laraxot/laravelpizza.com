@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Rules;
 
+use Exception;
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Support\Carbon;
 
@@ -15,8 +16,8 @@ class DateTimeRule implements Rule
     /**
      * Determine if the validation rule passes.
      *
-     * @param string $attribute The attribute name being validated
-     * @param mixed  $value     The value being validated
+     * @param  string  $attribute  The attribute name being validated
+     * @param  mixed  $value  The value being validated
      */
     public function passes($attribute, $value): bool
     {
@@ -31,7 +32,7 @@ class DateTimeRule implements Rule
         $format = 'd/m/Y H:i';
         try {
             $value_new = Carbon::createFromFormat($format, $value);
-        } catch (\Exception) {
+        } catch (Exception) {
             return false;
         }
 
@@ -56,9 +57,9 @@ class DateTimeRule implements Rule
  * ...
  * public function validationData() {
  * return array_merge(
- * $this->all(
+ * $this->all(),
  * [
- * 'number' => preg_replace("/[^0-9]/", "", $number
+ * 'number' => preg_replace("/[^0-9]/", "", $this->number)
  * ]
  * );
  * }
@@ -105,10 +106,10 @@ class DateTimeRule implements Rule
  * protected function prepareForValidation()
  * {
  * $this->merge([
- * 'title' => fix_typos($title
- * 'body' => filter_malicious_content($body
- * 'tags' => convert_comma_separated_values_to_array($tags
- * 'is_published' => (bool) $is_published,
+ * 'title' => fix_typos($this->title),
+ * 'body' => filter_malicious_content($this->body),
+ * 'tags' => convert_comma_separated_values_to_array($this->tags),
+ * 'is_published' => (bool) $this->is_published,
  * ]);
  * }
  * }

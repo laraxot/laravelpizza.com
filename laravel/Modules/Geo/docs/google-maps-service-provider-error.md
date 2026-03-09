@@ -71,7 +71,7 @@ Il ServiceProvider deve essere registrato nel `composer.json` del modulo:
 ```
 
 ## Collegamenti Correlati
-- [Documentazione Root: Google Maps Integration](../../../../../../docs/google-maps-integration.md)
+- [Documentazione Root: Google Maps Integration](../../../../docs/google-maps-integration.md)
 - [Modulo Geo: Filament Integration](./filament-integration.md)
 - [Modulo Geo: Address Implementation](./address-implementation.md)
 

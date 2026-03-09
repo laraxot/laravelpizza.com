@@ -65,7 +65,7 @@ class AssignRoleCommand extends Command
             $user->assignRole($role);
         }
 
-        $this->info(implode(', ', $rows));
+        $this->info(implode(', ', $rows).' assigned to '.$email);
     }
 
     /*

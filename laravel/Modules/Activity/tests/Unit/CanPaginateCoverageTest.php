@@ -10,52 +10,57 @@ use Modules\Activity\Tests\TestCase;
 
 uses(TestCase::class);
 
-final class CanPaginateHarness
+function makeCanPaginateHarness(): object
 {
-    use CanPaginate;
-
-    public int $pageResetCount = 0;
-
-    private PaginationMode $mode = PaginationMode::Default;
-
-    public function setMode(PaginationMode $mode): void
+    return new class
     {
-        $mode = $mode;
-    }
+        use CanPaginate;
 
-    public function getPaginationMode(): PaginationMode
-    {
-        return $mode;
-    }
+        public int $pageResetCount = 0;
 
-    public function getPage(string $pageName): int
-    {
-        return 2;
-    }
+        private PaginationMode $mode = PaginationMode::Default;
 
-    public function resetLivewirePage(): void
-    {
-        $pageResetCount++;
-    }
+        private int|string|null $defaultRecordsPerPageSelectOption = null;
 
-    public function exposePaginateQuery(Builder $query)
-    {
-        return $this->paginateQuery($query);
-    }
+        public function setMode(PaginationMode $mode): void
+        {
+            $this->mode = $mode;
+        }
 
-    public function exposeOptions(): ?array
-    {
-        return $this->getRecordsPerPageSelectOptions();
-    }
+        public function getPaginationMode(): PaginationMode
+        {
+            return $this->mode;
+        }
 
-    public function setDefaultPerPage(int|string|null $value): void
-    {
-        $defaultRecordsPerPageSelectOption = $value;
-    }
+        public function getPage(string $pageName): int
+        {
+            return 2;
+        }
+
+        public function resetLivewirePage(): void
+        {
+            $this->pageResetCount++;
+        }
+
+        public function exposePaginateQuery(Builder $query)
+        {
+            return $this->paginateQuery($query);
+        }
+
+        public function exposeOptions(): ?array
+        {
+            return $this->getRecordsPerPageSelectOptions();
+        }
+
+        public function setDefaultPerPage(int|string|null $value): void
+        {
+            $this->defaultRecordsPerPageSelectOption = $value;
+        }
+    };
 }
 
 test('can paginate trait manages session, defaults and page helpers', function (): void {
-    $harness = new CanPaginateHarness;
+    $harness = makeCanPaginateHarness();
     $harness->recordsPerPage = 25;
 
     $harness->updatedRecordsPerPage();
@@ -69,7 +74,7 @@ test('can paginate trait manages session, defaults and page helpers', function (
 });
 
 test('can paginate default option fallback behaves correctly', function (): void {
-    $harness = new CanPaginateHarness;
+    $harness = makeCanPaginateHarness();
     $harness->setDefaultPerPage(25);
 
     expect($harness->getDefaultRecordsPerPageSelectOption())->toBe(25)
@@ -90,21 +95,21 @@ test('can paginate trait covers default, simple and cursor modes', function (): 
 
     $query = Activity::query()->orderBy('id');
 
-    $defaultHarness = new CanPaginateHarness;
+    $defaultHarness = makeCanPaginateHarness();
     $defaultHarness->recordsPerPage = 10;
     $defaultHarness->setMode(PaginationMode::Default);
     $defaultPaginator = $defaultHarness->exposePaginateQuery(clone $query);
 
     expect($defaultPaginator)->toBeInstanceOf(\Illuminate\Pagination\LengthAwarePaginator::class);
 
-    $simpleHarness = new CanPaginateHarness;
+    $simpleHarness = makeCanPaginateHarness();
     $simpleHarness->recordsPerPage = 10;
     $simpleHarness->setMode(PaginationMode::Simple);
     $simplePaginator = $simpleHarness->exposePaginateQuery(clone $query);
 
     expect($simplePaginator)->toBeInstanceOf(\Illuminate\Contracts\Pagination\Paginator::class);
 
-    $cursorHarness = new CanPaginateHarness;
+    $cursorHarness = makeCanPaginateHarness();
     $cursorHarness->recordsPerPage = 10;
     $cursorHarness->setMode(PaginationMode::Cursor);
     $cursorPaginator = $cursorHarness->exposePaginateQuery(clone $query);

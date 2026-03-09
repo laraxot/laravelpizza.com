@@ -6,6 +6,7 @@ namespace Modules\Geo\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Geo\Models\Place;
+use Modules\Geo\Models\PlaceType;
 
 /**
  * Place Factory.
@@ -19,29 +20,26 @@ class PlaceFactory extends Factory
     public function definition(): array
     {
         return [
-            'locality' => $faker->city()
-            'administrative_area_level_1' => $faker->state()
-            'country' => 'Italia',
-            'route' => $faker->streetName()
-            'street_number' => (string) $faker->buildingNumber()
-            'postal_code' => $faker->postcode()
-            'formatted_address' => $faker->address()
-            'latitude' => $faker->latitude(35.0, 47.0)
-            'longitude' => $faker->longitude(6.0, 19.0)
+            'name' => $this->faker->city(),
+            'slug' => $this->faker->slug(),
+            'latitude' => $this->faker->latitude(35.0, 47.0),
+            'longitude' => $this->faker->longitude(6.0, 19.0),
+            'place_type_id' => PlaceType::factory(),
+            'description' => $this->faker->optional()->paragraph(),
         ];
     }
 
     public function hospital(): static
     {
-        return $this->state([)
-            'locality' => 'Ospedale '.$faker->lastName()
+        return $this->state([
+            'name' => 'Ospedale '.$this->faker->lastName(),
         ]);
     }
 
     public function clinic(): static
     {
-        return $this->state([)
-            'locality' => 'Clinica '.$faker->lastName()
+        return $this->state([
+            'name' => 'Clinica '.$this->faker->lastName(),
         ]);
     }
 }

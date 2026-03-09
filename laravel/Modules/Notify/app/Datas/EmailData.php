@@ -25,7 +25,7 @@ class EmailData extends Data
 
     public array $attachments = [];
 
-    public function __construct()
+    public function __construct(
         string $recipient,
         string $subject,
         string $body_html,
@@ -35,52 +35,52 @@ class EmailData extends Data
         ?string $body = null,
     ) {
         Assert::email($recipient, 'Invalid "recipient" email format');
-        $recipient = $recipient;
+        $this->recipient = $recipient;
         if (! is_string($from)) {
             Assert::string($from = config('mail.from.name', 'Default Sender'));
         }
-        $from = $from;
+        $this->from = $from;
         if (! is_string($from_email)) {
             Assert::string($from_email = config('mail.from.address', 'default@example.com'));
         }
-        $from_email = $from_email;
+        $this->from_email = $from_email;
 
-        Assert::email($from_email, 'Invalid "from" email format');
+        Assert::email($this->from_email, 'Invalid "from" email format');
 
-        $subject = strip_tags($subject); // Sanitize the subject
-        $body_html = $body_html;
-        $body = $body ?? strip_tags($body_html); // Default to plain-text version of HTML body
-        $attachments = $attachments;
+        $this->subject = strip_tags($subject); // Sanitize the subject
+        $this->body_html = $body_html;
+        $this->body = $body ?? strip_tags($body_html); // Default to plain-text version of HTML body
+        $this->attachments = $attachments;
     }
 
     public function getFrom(): Address
     {
-        if (! isset($from))
+        if (! isset($this->from)) {
             Assert::string($from = config('mail.from.name', 'Default Sender'));
-            $from = $from;
+            $this->from = $from;
         }
-        if (! isset($from_email))
+        if (! isset($this->from_email)) {
             Assert::string($from_email = config('mail.from.address', 'default@example.com'));
-            $from_email = $from_email;
+            $this->from_email = $from_email;
         }
 
-        return new Address($from_email, $this->from);
+        return new Address($this->from_email, $this->from);
     }
 
     public function getMimeEmail(): MimeEmail
     {
-        if ($body === '')
-            $body = strip_tags($this->body_html);
+        if ($this->body === '') {
+            $this->body = strip_tags($this->body_html);
         }
 
         $email = (new MimeEmail)
-            ->from($getFrom())
-            ->to($recipient)
-            ->subject(strip_tags($subject))
-            ->html($body_html)
-            ->text($body);
+            ->from($this->getFrom())
+            ->to($this->recipient)
+            ->subject(strip_tags($this->subject))
+            ->html($this->body_html)
+            ->text($this->body);
 
-        foreach ($attachments as $attachment)
+        foreach ($this->attachments as $attachment) {
             Assert::string($attachment, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
             $email->attachFromPath($attachment); // string $path, ?string $name = null, ?string $contentType = null
         }

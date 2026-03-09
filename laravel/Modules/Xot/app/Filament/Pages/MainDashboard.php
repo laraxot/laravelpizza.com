@@ -40,15 +40,16 @@ class MainDashboard extends XotBaseDashboard
         Assert::notNull($user, '['.__LINE__.']['.class_basename($this).']');
         // Usa roles() come metodo invece della magic property per type safety
         $modules = $user->getModules();
+        
 
-        if (0 === count($modules)) {
+        if (count($modules) === 0) {
             $url = '/'.app()->getLocale();
             redirect($url);
 
             return;
         }
 
-        if (1 === count($modules)) {
+        if (count($modules) === 1) {
             $module_first = Arr::first($modules);
             Assert::isInstanceOf($module_first, Module::class);
             $module_name = $module_first->getLowerName();

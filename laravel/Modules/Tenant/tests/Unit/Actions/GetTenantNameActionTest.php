@@ -2,52 +2,54 @@
 
 declare(strict_types=1);
 
-namespace Modules\Tenant\Tests\Unit\Actions;
-
 use Modules\Tenant\Actions\GetTenantNameAction;
 use Tests\TestCase;
 
 uses(TestCase::class);
 
-it('returns tenant name from config', function (): void {
-    config(['app.url' => 'https://myapp.example.com']);
+test('get tenant name action returns correct tenant name from server name', function () {
+    $_SERVER['SERVER_NAME'] = 'myapp.example.com';
 
-    $action = app(GetTenantNameAction::class);
+    $action = new GetTenantNameAction;
     $result = $action->execute();
 
-    expect($result)->toBeString();
+    expect($result)->toBe('com/example/myapp');
 });
 
-it('returns localhost when no server name', function (): void {
-    $action = app(GetTenantNameAction::class);
+test('get tenant name action handles www prefix correctly', function () {
+    $_SERVER['SERVER_NAME'] = 'www.myapp.example.com';
+
+    $action = new GetTenantNameAction;
     $result = $action->execute();
 
-    expect($result)->toBeString();
+    expect($result)->toBe('com/example/myapp');
 });
 
-it('removes www from domain', function (): void {
-    config(['app.url' => 'https://www.example.com']);
+test('get tenant name action falls back to default when server name is localhost', function () {
+    $_SERVER['SERVER_NAME'] = '127.0.0.1';
 
-    $action = app(GetTenantNameAction::class);
+    $action = new GetTenantNameAction;
     $result = $action->execute();
 
-    expect($result)->not->toContain('www');
+    expect($result)->toBe('localhost');
 });
 
-it('handles local url', function (): void {
-    config(['app.url' => 'http://localhost']);
+test('get tenant name action uses app url config when server name not set', function () {
+    unset($_SERVER['SERVER_NAME']);
+    config(['app.url' => 'https://myapp.test']);
 
-    $action = app(GetTenantNameAction::class);
+    $action = new GetTenantNameAction;
     $result = $action->execute();
 
-    expect($result)->toBeString();
+    expect($result)->toBe('test/myapp');
 });
 
-it('handles ip address', function (): void {
-    config(['app.url' => 'http://127.0.0.1']);
+test('get tenant name action handles empty app url config', function () {
+    unset($_SERVER['SERVER_NAME']);
+    config(['app.url' => '']);
 
-    $action = app(GetTenantNameAction::class);
+    $action = new GetTenantNameAction;
     $result = $action->execute();
 
-    expect($result)->toBeString();
+    expect($result)->toBe('localhost');
 });

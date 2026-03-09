@@ -58,7 +58,7 @@ class LocationWidget extends XotBaseWidget
      */
     public function __construct()
     {
-        $locationForm = new LocationForm();
+        $this->locationForm = new LocationForm();
     }
 
     /**
@@ -66,7 +66,7 @@ class LocationWidget extends XotBaseWidget
      */
     public function mount(): void
     {
-        $form->fill();
+        $this->form->fill();
     }
 
     /**
@@ -77,7 +77,7 @@ class LocationWidget extends XotBaseWidget
     #[\Override]
     public function getFormSchema(): array
     {
-        return $locationForm->getSchema();
+        return $this->locationForm->getSchema();
     }
 
     /**
@@ -85,7 +85,7 @@ class LocationWidget extends XotBaseWidget
      */
     public function submit(): void
     {
-        $data = $form->getState();
+        $data = $this->form->getState();
 
         $this->dispatch('location-selected', $data);
 

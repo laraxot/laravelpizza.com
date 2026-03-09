@@ -19,29 +19,42 @@ use Modules\Notify\Datas\EmailData;
 use Modules\Notify\Emails\EmailDataEmail;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\Xot\Filament\Pages\XotBasePage;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 
+/**
+ * @property \Filament\Schemas\Schema $emailForm
+ */
 class SendEmail extends XotBasePage
 {
+    // use NavigationLabelTrait;
+
     public ?array $emailData = [];
 
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-paper-airplane';
+
     protected string $view = 'notify::filament.pages.send-email';
+
     protected static ?string $cluster = Test::class;
 
     public function mount(): void
     {
-        $this->emailForm->fill();
+        $this->fillForms();
     }
 
     public function emailForm(Schema $schema): Schema
     {
         return $schema
             ->components([
-                Section::make()->schema([
-                    TextInput::make('recipient')->email()->required(),
-                    TextInput::make('subject')->required(),
-                    RichEditor::make('body_html')->required(),
-                ]),
+                Section::make()
+                    // ->description('Update your account\'s profile information and email address.')
+                    ->schema([
+                        TextInput::make('recipient')
+                            // ->unique(ignoreRecord: true)
+                            ->email()
+                            ->required(),
+                        TextInput::make('subject')->required(),
+                        RichEditor::make('body_html')->required(),
+                    ]),
             ])
             ->model($this->getUser())
             ->statePath('emailData');
@@ -51,22 +64,49 @@ class SendEmail extends XotBasePage
     {
         $data = $this->emailForm->getState();
         $email_data = EmailData::from($data);
+        // $from_address = config('mail.from.address');
+
         Mail::to($data['recipient'])->send(new EmailDataEmail($email_data));
 
-        Notification::make()->success()->title(__('check your email client'))->send();
+        Notification::make()
+            ->success()
+            // ->title(__('filament-panels::pages/auth/edit-profile.notifications.saved.title'))
+            ->title(__('check your email client'))
+            ->send();
     }
 
     protected function getForms(): array
     {
-        return ['emailForm'];
+        return [
+            'emailForm',
+        ];
+    }
+
+    protected function getEmailFormActions(): array
+    {
+        return [
+            Action::make('emailFormActions')->submit('emailFormActions'),
+        ];
     }
 
     protected function getUser(): Authenticatable&Model
     {
         $user = Filament::auth()->user();
+
         if (! ($user instanceof Model)) {
-            throw new Exception('User must be Eloquent model');
+            throw new Exception(
+                'The authenticated user object must be an Eloquent model to allow the profile page to update it.',
+            );
         }
+
         return $user;
+    }
+
+    protected function fillForms(): void
+    {
+        // $data = $this->getUser()->attributesToArray();
+
+        // $this->editProfileForm->fill($data);
+        $this->emailForm->fill();
     }
 }

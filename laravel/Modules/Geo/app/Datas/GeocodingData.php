@@ -11,7 +11,7 @@ use Spatie\LaravelData\Data;
  */
 class GeocodingData extends Data
 {
-    public function __construct()
+    public function __construct(
         public readonly ?float $latitude,
         public readonly ?float $longitude,
         public readonly ?string $formatted_address,
@@ -22,7 +22,6 @@ class GeocodingData extends Data
         public readonly ?string $country,
         public readonly ?string $postal_code,
         public readonly ?string $error = null,
-        public readonly ?string $status = null,
     ) {
     }
 
@@ -31,7 +30,7 @@ class GeocodingData extends Data
      */
     public static function error(string $error): self
     {
-        return new self()
+        return new self(
             latitude: null,
             longitude: null,
             formatted_address: null,
@@ -42,7 +41,6 @@ class GeocodingData extends Data
             country: null,
             postal_code: null,
             error: $error,
-            status: $error,
         );
     }
 
@@ -73,7 +71,7 @@ class GeocodingData extends Data
         $location = $result['geometry']['location'];
         $components = self::extractAddressComponents($result['address_components']);
 
-        return new self()
+        return new self(
             latitude: $location['lat'],
             longitude: $location['lng'],
             formatted_address: $result['formatted_address'],
@@ -83,13 +81,7 @@ class GeocodingData extends Data
             administrative_area: $components['administrative_area_level_1'] ?? null,
             country: $components['country'] ?? null,
             postal_code: $components['postal_code'] ?? null,
-            status: 'OK',
         );
-    }
-
-    public function isError(): bool
-    {
-        return null !== $error || (null !== $this->status && 'OK' !== $this->status);
     }
 
     /**

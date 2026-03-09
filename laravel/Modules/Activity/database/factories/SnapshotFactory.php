@@ -38,7 +38,7 @@ class SnapshotFactory extends Factory
                 'status' => $this->faker->randomElement(['active', 'inactive', 'pending']),
                 'metadata' => [
                     'user_id' => $this->faker->numberBetween(1, 100),
-                    'timestamp' => $this->faker->dateTime()->getTimestamp(),
+                    'timestamp' => $this->faker->dateTime()->format('Y-m-d H:i:s'),
                 ],
             ],
         ];
@@ -49,7 +49,7 @@ class SnapshotFactory extends Factory
      */
     public function withUuid(string $uuid): static
     {
-        return $this->state(fn (array $_attributes) => [
+        return $this->state(fn (array $_attributes): array => [
             'aggregate_uuid' => $uuid,
         ]);
     }
@@ -59,7 +59,7 @@ class SnapshotFactory extends Factory
      */
     public function withVersion(int $version): static
     {
-        return $this->state(fn (array $_attributes) => [
+        return $this->state(fn (array $_attributes): array => [
             'aggregate_version' => $version,
         ]);
     }
@@ -71,7 +71,7 @@ class SnapshotFactory extends Factory
      */
     public function withState(array $state): static
     {
-        return $this->state(fn (array $_attributes) => [
+        return $this->state(fn (array $_attributes): array => [
             'state' => $state,
         ]);
     }

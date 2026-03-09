@@ -14,14 +14,14 @@ use Spatie\Activitylog\Models\Activity as SpatieActivity;
 
 /**
  * Class Activity.
- *
+ * 
  * This class extends the BaseActivity model to represent activities in the application.
  *
  * @property int $id
  * @property string|null $log_name
  * @property string $description
  * @property string|null $subject_type
- * @property string|null $subject_id
+ * @property int|null $subject_id
  * @property string|null $causer_type
  * @property string|null $causer_id
  * @property array<string, mixed>|Collection<array-key, mixed>|null $properties
@@ -36,7 +36,6 @@ use Spatie\Activitylog\Models\Activity as SpatieActivity;
  * @property-read Model|null $causer
  * @property-read Collection $changes
  * @property-read Model|null $subject
- *
  * @method static ActivityFactory factory($count = null, $state = [])
  * @method static Builder<static>|Activity forBatch(string $batchUuid)
  * @method static Builder<static>|Activity forEvent(string $event)
@@ -100,14 +99,13 @@ use Spatie\Activitylog\Models\Activity as SpatieActivity;
  * @method static Builder<static>|Activity rightJoin(string $table, string $first, string $operator = null, string $second = null)
  * @method static Builder<static>|Activity crossJoin(string $table)
  * @method static Builder<static>|Activity causedBy(Model $causer)
- *
  * @mixin \Eloquent
  */
 class Activity extends SpatieActivity
 {
     use HasXotFactory;
 
-    protected $connection;
+    protected $connection = 'activity';
 
     /** @var list<string> */
     protected $fillable = [
@@ -117,13 +115,9 @@ class Activity extends SpatieActivity
         'subject_type',
         'event',
         'subject_id',
-        'causer_type',
-        'causer_id',
-        'properties',
-        'created_at',
-        'updated_at',
-        'updated_by',
-        'created_by',
+        'causer_type', // Added
+        'causer_id',   // Added
+        'properties', // Added
     ];
 
     // NOTE

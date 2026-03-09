@@ -19,6 +19,6 @@ class ViewCommandHandler implements CommandHandlerInterface
 
     public function supports(string $command): bool
     {
-        return 'viewclear' === $command;
+        return $command === 'viewclear';
     }
 }

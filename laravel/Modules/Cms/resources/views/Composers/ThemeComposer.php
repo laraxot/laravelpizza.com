@@ -19,7 +19,7 @@ class ThemeComposer
     /**
      * Get menu items by name.
      *
-     * @return array<mixed, mixed>|null
+     * @return array<string, mixed>|null
      */
     public function getMenu(string $menu_name): ?array
     {
@@ -31,13 +31,8 @@ class ThemeComposer
             return null;
         }
 
-        /** @var array<string, mixed> $normalized */
-        $normalized = [];
-        foreach ($items as $key => $value) {
-            $normalized[(string) $key] = $value;
-        }
-
-        return $normalized;
+        /* @var array<string, mixed> $items */
+        return $items;
     }
 
     public function getMenuUrl(array $menu): string
@@ -69,7 +64,7 @@ class ThemeComposer
 
     public function showPageContent(string $slug): Renderable
     {
-        Assert::isInstanceOf()
+        Assert::isInstanceOf(
             $page = Page::firstOrCreate(['slug' => $slug], ['title' => $slug, 'content_blocks' => []]),
             Page::class,
             '['.__LINE__.']['.__FILE__.']',
@@ -79,8 +74,8 @@ class ThemeComposer
         if (! is_array($blocks)) {
             $blocks = [];
         }
-        $blocksComponent = new Blocks()
-            view: 'ui::components.render.blocks.v1',
+        $blocksComponent = new Blocks(
+            tpl: 'ui::components.render.blocks.v1',
             blocks: $blocks,
             model: $page,
         );
@@ -90,7 +85,7 @@ class ThemeComposer
 
     public function showPageSidebarContent(string $slug): Renderable
     {
-        Assert::isInstanceOf()
+        Assert::isInstanceOf(
             $page = Page::firstOrCreate(['slug' => $slug], ['sidebar_blocks' => []]),
             Page::class,
             '['.__LINE__.']['.__FILE__.']',
@@ -101,8 +96,8 @@ class ThemeComposer
             $blocks = [];
         }
 
-        $blocksComponent = new Blocks()
-            view: 'ui::components.render.blocks.v1',
+        $blocksComponent = new Blocks(
+            tpl: 'ui::components.render.blocks.v1',
             blocks: $blocks,
             model: $page,
         );
@@ -112,7 +107,7 @@ class ThemeComposer
 
     public function showContent(string $slug): Renderable
     {
-        Assert::isInstanceOf()
+        Assert::isInstanceOf(
             $page = PageContent::firstOrCreate(['slug' => $slug], ['blocks' => []]),
             PageContent::class,
             '['.__LINE__.']['.__FILE__.']',
@@ -123,8 +118,8 @@ class ThemeComposer
             return view('ui::empty');
         }
 
-        $blocksComponent = new Blocks()
-            view: 'ui::components.render.blocks.v1',
+        $blocksComponent = new Blocks(
+            tpl: 'ui::components.render.blocks.v1',
             blocks: $blocks,
             model: $page,
         );

@@ -3,19 +3,19 @@
 declare(strict_types=1);
 
 return [
-    'label' => 'Genere',
+    'label' => 'Gender',
     'options' => [
-        'f' => 'Femmina',
-        'm' => 'Maschio',
+        'f' => 'Female',
+        'm' => 'Male',
     ],
     'navigation' => [
-        'label' => 'Genere',
-        'plural_label' => 'Generi',
-        'group' => 'Xot',
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
         'icon' => 'heroicon-o-puzzle-piece',
         'sort' => 100,
     ],
-    'plural_label' => 'Generi',
+    'plural_label' => 'Missing Plural label',
     'fields' => [
     ],
     'actions' => [

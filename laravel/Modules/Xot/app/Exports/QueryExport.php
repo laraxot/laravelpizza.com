@@ -16,6 +16,7 @@ use Maatwebsite\Excel\Concerns\WithChunkReading;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use Modules\Lang\Actions\TransCollectionAction;
+use Traversable;
 
 // use Staudenmeir\LaravelCte\Query\Builder as CteBuilder;
 
@@ -33,18 +34,18 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
     public QueryBuilder|EloquentBuilder $query;
 
     /**
-     * @param array<int, int|string> $fields
+     * @param  array<int, int|string>  $fields
      */
     public function __construct(QueryBuilder|EloquentBuilder $query, ?string $transKey = null, array $fields = [])
     {
-        $query = $query;
-        $transKey = $transKey;
-        $fields = $fields;
+        $this->query = $query;
+        $this->transKey = $transKey;
+        $this->fields = $fields;
 
         /*
-         * $headings = collect($query->first())
+         * $this->headings = collect($query->first())
          * ->keys()
-         * ->map()
+         * ->map(
          * function ($item) use ($transKey) {
          * $t = $transKey.'.'.$item;
          * $trans = trans($t);
@@ -64,17 +65,17 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
      */
     public function getHead(): Collection
     {
-        if (! empty($fields))
-            return collect(array_values($fields))
-                ->map()
+        if (! empty($this->fields)) {
+            return collect(array_values($this->fields))
+                ->map(
                     static fn (mixed $heading): int|string => \is_int($heading) ? $heading : (string) $heading
                 );
         }
         /**
          * @var Arrayable<(int|string), mixed>|iterable<(int|string), mixed>|null
          */
-        $first = $query->first();
-        if (null === $first) {
+        $first = $this->query->first();
+        if ($first === null) {
             /** @var Collection<int, int|string> $emptyCollection */
             $emptyCollection = collect([]);
 
@@ -82,8 +83,8 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
         }
 
         /** @var Collection<int, int|string> $result */
-        $result = collect(array_keys($normalizeRow($first)))
-            ->map()
+        $result = collect(array_keys($this->normalizeRow($first)))
+            ->map(
                 static fn (mixed $heading): int|string => \is_int($heading) ? $heading : (string) $heading
             );
 
@@ -95,7 +96,7 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
         /** @var Collection<int|string, mixed> $headingsWithKeys */
         $headingsWithKeys = $this->getHead()
             ->values()
-            ->mapWithKeys()
+            ->mapWithKeys(
                 static function (int|string $value, int $key): array {
                     $stringKey = (string) $value;
 
@@ -103,7 +104,7 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
                 },
             );
 
-        $translated = app(TransCollectionAction::class)->execute($headingsWithKeys, $transKey);
+        $translated = app(TransCollectionAction::class)->execute($headingsWithKeys, $this->transKey);
 
         return $translated->toArray();
     }
@@ -113,7 +114,7 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
      */
     public function query(): QueryBuilder|EloquentBuilder|Relation
     {
-        return $query;
+        return $this->query;
 
         // ->orderBy('id');
     }
@@ -130,12 +131,12 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
     {
         $rowArray = $this->normalizeRow($row);
 
-        if (empty($fields))
+        if (empty($this->fields)) {
             return $rowArray;
         }
 
-        return collect($fields)
-            ->mapWithKeys(static function (mixed $field, int|string $_key) use ($rowArray): array {)
+        return collect($this->fields)
+            ->mapWithKeys(static function (mixed $field, int|string $_key) use ($rowArray): array {
                 $keyString = \is_string($field) ? $field : (string) $field;
 
                 return [$keyString => $rowArray[$keyString] ?? null];
@@ -148,22 +149,22 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
      */
     private function normalizeRow(mixed $row): array
     {
-        if (null === $row) {
+        if ($row === null) {
             return [];
         }
 
         if ($row instanceof Arrayable) {
-            /* @var array<int|string, mixed> */
+            /** @var array<int|string, mixed> */
             return $row->toArray();
         }
 
         if (\is_array($row)) {
-            /* @var array<int|string, mixed> */
+            /** @var array<int|string, mixed> */
             return $row;
         }
 
-        if ($row instanceof \Traversable) {
-            /* @var array<int|string, mixed> */
+        if ($row instanceof Traversable) {
+            /** @var array<int|string, mixed> */
             return iterator_to_array($row);
         }
 
