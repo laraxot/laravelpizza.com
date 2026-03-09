@@ -65,7 +65,7 @@ class GeoDataService
         $result = Cache::remember(
             self::CACHE_KEY_REGIONS,
             self::CACHE_TTL,
-            fn (): Collection => $this->loadData(
+            fn (): Collection => $this->loadData()
         );
 
         return $result;

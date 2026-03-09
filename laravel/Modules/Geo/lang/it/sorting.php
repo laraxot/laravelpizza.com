@@ -149,7 +149,7 @@ return [
         'asc_nulls_first' => 'Crescente (nulli prima]',
         'asc_nulls_last' => 'Crescente (nulli dopo]',
         'desc_nulls_first' => 'Decrescente (nulli prima]',
-        'desc_nulls_last' => 'Decrescente (nulli dopo]',
+        'desc_nulls_last' => 'Decrescente (nulli dopo]',)
     ],
     'nulls_positions' => [
         'first' => 'Prima',

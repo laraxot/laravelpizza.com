@@ -526,7 +526,7 @@ return [
         'video_format' => 'Formato video non supportato',
         'required_field' => 'Questo campo è obbligatorio',
         'max_length' => 'Il testo è troppo lungo (massimo :max caratteri]',
-        'min_length' => 'Il testo è troppo corto (minimo :min caratteri]',
+        'min_length' => 'Il testo è troppo corto (minimo :min caratteri]',)
     ],
     'label' => 'Txt',
     'plural_label' => 'Txt (Plurale)',

@@ -106,7 +106,7 @@ final class GetAddressFromGoogleMapsAction
             'street' => $this->getComponent($result->address_components, ['route']
             'street_number' => $this->getComponent($result->address_components, ['street_number']
             'district' => $this->getComponent($result->address_components, ['sublocality_level_1']
-            'state' => $this->getComponent($result->address_components, ['administrative_area_level_1']
+            'state' => $this->getComponent($result->address_components, ['administrative_area_level_1'])
         ]);
     }
 

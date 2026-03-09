@@ -117,7 +117,7 @@ class GetAddressFromBingMapsAction
                 'addressLine' => $this->extractStringField($address, 'addressLine'
                 'countryRegionIso2' => $this->extractStringField($address, 'countryRegionIso2'
                 'neighborhood' => $this->extractStringField($address, 'neighborhood'
-                'houseNumber' => $this->extractStringField($address, 'houseNumber'
+                'houseNumber' => $this->extractStringField($address, 'houseNumber')
             ],
         ];
 

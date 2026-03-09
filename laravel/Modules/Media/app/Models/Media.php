@@ -339,7 +339,7 @@ class Media extends SpatieMedia
             $item = [
                 'name' => is_string($conv) ? $conv : ((string) $conv),
                 'generated' => $state,
-                'src' => $this->getUrlConv(is_string($conv
+                'src' => $this->getUrlConv(is_string($conv))
             ];
             $conversions[] = $item;
         }

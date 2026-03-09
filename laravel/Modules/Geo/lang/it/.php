@@ -26,6 +26,6 @@ return array (
   'label' => 'Missing Label',
   'plural_label' => 'Missing Plural label',
   'fields' => 
-  array (
+  array ()
   ),
 );

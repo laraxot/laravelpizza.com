@@ -143,7 +143,7 @@ class LangServiceProvider extends XotBaseServiceProvider
 
     public function registerTranslator(): void
     {
-        // @var mixed app->singleton('translator', function (Container $app
+        $this->app->singleton('translator', function (Container $app) {
             $loader = $app['translation.loader'];
 
             // When registering the translator component, we'll need to set the default

@@ -184,7 +184,7 @@ abstract class XotBasePage extends Page implements HasForms
      */
     public function getView(): string
     {
-        if ('' === $view
+        if ('' === $this->view) {
             $view = app(GetViewByClassAction::class)->execute(static::class);
             if (view()->exists($view)) {
                 return (string) $view;
@@ -194,7 +194,7 @@ abstract class XotBasePage extends Page implements HasForms
             throw new \RuntimeException('Nessuna vista trovata per la classe: '.static::class);
         }
 
-        return $view;
+        return $this->view;
     }
 
     /**

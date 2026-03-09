@@ -148,7 +148,7 @@ class ProvinceFactory extends Factory
 
         return [
             'name' => $provinceName,
-            'region_id' => $faker->numberBetween(1, 20
+            'region_id' => $faker->numberBetween(1, 20)
         ];
     }
 

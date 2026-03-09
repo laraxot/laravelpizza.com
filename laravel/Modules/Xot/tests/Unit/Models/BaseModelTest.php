@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Models\BaseModel;
 
 if (! class_exists(TestConcreteBaseModel::class)) {

@@ -59,11 +59,11 @@ use Webmozart\Assert\Assert;
  * @method static Builder|Role whereDisplayName($value)
  * @method static static       firstOrCreate(array $attributes, array $values = [])
  * @method static static       updateOrCreate(array $attributes, array $values = [])
-<<<<<<< HEAD
-||||||| 6161e129d
- * @method static static firstOrCreate(array $attributes, array $values = [])
- * @method static static updateOrCreate(array $attributes, array $values = [])
-=======
+ *                                                                                   <<<<<<< HEAD
+ *                                                                                   ||||||| 6161e129d
+ * @method static static       firstOrCreate(array $attributes, array $values = [])
+ * @method static static       updateOrCreate(array $attributes, array $values = [])
+ *                                                                                   =======
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
@@ -71,7 +71,7 @@ use Webmozart\Assert\Assert;
  *
  * @method static \Modules\User\Database\Factories\RoleFactory factory($count = null, $state = [])
  * @method static Builder<static>|Role                         whereUuid($value)
->>>>>>> feature/ralph-loop-implementation
+ *                                                                                                 >>>>>>> feature/ralph-loop-implementation
  *
  * @mixin \Eloquent
  */

@@ -28,7 +28,7 @@ abstract class BaseS3Action
             'version' => '2006-03-01',
             'credentials' => [
                 'key' => $this->getStringConfig('media.aws.access_key_id', 'AWS_ACCESS_KEY_ID', ''
-                'secret' => $this->getStringConfig('media.aws.secret_access_key', 'AWS_SECRET_ACCESS_KEY', ''
+                'secret' => $this->getStringConfig('media.aws.secret_access_key', 'AWS_SECRET_ACCESS_KEY', '')
             ],
         ]);
     }

@@ -87,7 +87,7 @@ return [
                     'options' => [
                         'small' => [
                             'label' => 'Piccolo',
-                            'tooltip' => 'Testo piccolo (es: note]',
+                            'tooltip' => 'Testo piccolo (es: note]',)
                         ],
                         'normal' => [
                             'label' => 'Normale',
@@ -95,7 +95,7 @@ return [
                         ],
                         'large' => [
                             'label' => 'Grande',
-                            'tooltip' => 'Testo grande (es: titoli]',
+                            'tooltip' => 'Testo grande (es: titoli]',)
                         ],
                     ],
                 ],

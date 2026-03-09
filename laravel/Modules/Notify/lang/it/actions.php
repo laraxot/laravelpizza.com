@@ -26,7 +26,7 @@ return [
             'email_not_available' => 'Email non disponibile per questo record',
             'phone_not_available' => 'Numero di telefono non disponibile per questo record',
             'whatsapp_not_available' => 'Numero WhatsApp non disponibile per questo record',
-            'channel_not_sent' => 'Canale non inviato (dati non disponibili]',
+            'channel_not_sent' => 'Canale non inviato (dati non disponibili]',)
         ],
         'notifications' => [
             'success' => [

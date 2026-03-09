@@ -27,21 +27,21 @@ class PlaceFactory extends Factory
             'postal_code' => $faker->postcode(
             'formatted_address' => $faker->address(
             'latitude' => $faker->latitude(35.0, 47.0
-            'longitude' => $faker->longitude(6.0, 19.0
+            'longitude' => $faker->longitude(6.0, 19.0)
         ];
     }
 
     public function hospital(): static
     {
         return $this->state([
-            'locality' => 'Ospedale '.$faker->lastName(
+            'locality' => 'Ospedale '.$faker->lastName()
         ]);
     }
 
     public function clinic(): static
     {
         return $this->state([
-            'locality' => 'Clinica '.$faker->lastName(
+            'locality' => 'Clinica '.$faker->lastName()
         ]);
     }
 }

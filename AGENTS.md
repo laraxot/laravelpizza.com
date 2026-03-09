@@ -114,3 +114,34 @@ Riferimento: `docs/memory/no-new-modules-use-existing-memory.md`
 
 ### **PROMEMORIA PER SEMPRE:**
 > "MAI creare nuovi moduli. SEMPRE estendere quelli esistenti!"
+
+## Ralph Loop - Sviluppo Autonomo AI
+
+**Ralph Loop** è una tecnica di sviluppo AI che fa lavorare l'agente in loop fino al completamento.
+
+### Installazione
+```bash
+git clone https://github.com/rot13maxi/opencode-ralph.git /tmp/opencode-ralph
+cp /tmp/opencode-ralph/plugin/* ~/.config/opencode/plugin/
+cp /tmp/opencode-ralph/command/* ~/.config/opencode/command/
+```
+
+### Utilizzo
+```bash
+/ralph-loop "Task description. Output: <promise>COMPLETE</promise>" --max-iterations 50
+```
+
+Riferimento: `docs/memory/ralph-loop-memory.md`
+
+## Marketing - Piano Virale
+
+Per far crescere Laravel Pizza:
+
+1. **Product Hunt Launch** - Launch con demo video
+2. **Twitter/X Dev Relations** - Hashtag #Laravel
+3. **YouTube Content** - Tutorial series
+4. **Newsletter** - Weekly updates
+5. **Free Tools** - Engineering as marketing
+6. **GitHub Stars** - Community building
+
+Riferimento: `docs/marketing/viral-marketing-plan.md`

@@ -44,7 +44,7 @@ class FileExtensionRule implements Rule
     public function message(): array|string
     {
         return trans('media::validation.mime', [
-            'mimes' => implode(', ', $validExtensions
+            'mimes' => implode(', ', $validExtensions)
         ]);
     }
 }

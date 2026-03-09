@@ -6,7 +6,6 @@ namespace Modules\Cms\Tests\Unit\Http\Volt\Password;
 
 use Livewire\Volt\Component as VoltComponent;
 use Modules\Cms\Http\Volt\Password\TokenComponent;
-use ReflectionClass;
 
 uses(\Modules\Cms\Tests\TestCase::class);
 
@@ -42,7 +41,7 @@ describe('Password TokenComponent', function (): void {
     });
 
     test('reset password method returns redirector or redirect response', function (): void {
-        $reflection = new ReflectionClass(TokenComponent::class);
+        $reflection = new \ReflectionClass(TokenComponent::class);
         $method = $reflection->getMethod('resetPassword');
         $returnType = $method->getReturnType();
 

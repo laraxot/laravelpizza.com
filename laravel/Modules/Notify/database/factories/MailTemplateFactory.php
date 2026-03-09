@@ -22,7 +22,7 @@ class MailTemplateFactory extends Factory
             'type' => $faker->randomElement(['email', 'notification', 'sms']
             'is_active' => $faker->boolean(80
             'created_at' => $faker->dateTimeBetween('-1 year'
-            'updated_at' => $faker->dateTimeBetween('-1 year'
+            'updated_at' => $faker->dateTimeBetween('-1 year')
         ];
     }
 }

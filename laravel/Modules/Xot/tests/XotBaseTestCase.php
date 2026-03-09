@@ -6,8 +6,6 @@ namespace Modules\Xot\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Modules\Tenant\Providers\TenantServiceProvider;
-use Modules\UI\Providers\UIServiceProvider;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Providers\XotServiceProvider;

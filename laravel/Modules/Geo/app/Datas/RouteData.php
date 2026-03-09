@@ -86,7 +86,7 @@ class RouteData extends Data
             'duration' => $this->getFormattedDuration(
             'steps' => count($steps
             'waypoints' => $waypoints->count(
-            // 'optimized' => $this->isOptimized(
+            // 'optimized' => $this->isOptimized()
         ];
     }
 

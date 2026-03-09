@@ -6,7 +6,6 @@ namespace Modules\Cms\Tests\Unit\Http\Volt;
 
 use Livewire\Volt\Component as VoltComponent;
 use Modules\Cms\Http\Volt\VerifyComponent;
-use ReflectionClass;
 
 uses(\Modules\Cms\Tests\TestCase::class);
 
@@ -22,7 +21,7 @@ describe('VerifyComponent', function (): void {
     });
 
     test('resend method returns void', function (): void {
-        $reflection = new ReflectionClass(VerifyComponent::class);
+        $reflection = new \ReflectionClass(VerifyComponent::class);
         $method = $reflection->getMethod('resend');
         $returnType = $method->getReturnType();
 

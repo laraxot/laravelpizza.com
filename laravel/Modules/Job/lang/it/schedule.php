@@ -160,7 +160,7 @@ return [
         'timezone' => 'All schedules will be executed in the timezone: ',
         'select' => 'Select a command',
         'custom' => 'Custom Command',
-        'custom-command-here' => 'Custom Command here (e.g. `cat /proc/cpuinfo` or `artisan db:migrate`]',
+        'custom-command-here' => 'Custom Command here (e.g. `cat /proc/cpuinfo` or `artisan db:migrate`]',)
     ],
     'status' => [
         'active' => 'Active',

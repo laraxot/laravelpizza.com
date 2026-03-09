@@ -301,7 +301,7 @@ return [
     'validation' => [
         'required' => 'Questo campo è obbligatorio',
         'email' => 'Inserisci un indirizzo email valido',
-        'url' => 'Inserisci un URL valido (inizia con http:// o https://]',
+        'url' => 'Inserisci un URL valido (inizia con http:// o https://]',)
     ],
     'label' => 'Create',
     'plural_label' => 'Create (Plurale)',

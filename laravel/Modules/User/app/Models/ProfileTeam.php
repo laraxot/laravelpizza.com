@@ -42,15 +42,16 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @mixin IdeHelperProfileTeam
  *
-<<<<<<< HEAD
- * @property ProfileContract|null $deleter
- * @property Team|null            $team
- * @property User|null            $user
-||||||| 6161e129d
- * @property ProfileContract|null $deleter
- * @property Team|null $team
- * @property User|null $user
-=======
+ * <<<<<<< HEAD
+ *
+ * @property ProfileContract|null         $deleter
+ * @property Team|null                    $team
+ * @property User|null                    $user
+ *                                                     ||||||| 6161e129d
+ * @property ProfileContract|null         $deleter
+ * @property Team|null                    $team
+ * @property User|null                    $user
+ *                                                     =======
  * @property ProfileContract|null         $deleter
  * @property Team|null                    $team
  * @property User|null                    $user
@@ -78,7 +79,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|ProfileTeam                         wherePermissions($value)
  * @method static Builder<static>|ProfileTeam                         whereProfileId($value)
  *                                                                                                        >>>>>>> da38c10 (.)
->>>>>>> feature/ralph-loop-implementation
+ *                                                                                                        >>>>>>> feature/ralph-loop-implementation
  *
  * @mixin \Eloquent
  */

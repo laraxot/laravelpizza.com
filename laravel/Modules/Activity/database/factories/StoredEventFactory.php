@@ -31,28 +31,28 @@ class StoredEventFactory extends Factory
     public function definition(): array
     {
         return [
-            'aggregate_uuid' => // @var mixed faker->uuid(
-            'aggregate_version' => // @var mixed faker->numberBetween(1, 100
-            'event_version' => // @var mixed faker->numberBetween(1, 10
-            'event_class' => // @var mixed faker->randomElement([
-                'App\\Events\\UserRegistered',
-                'App\\Events\\UserLoggedIn',
-                'App\\Events\\UserLoggedOut',
-                'App\\Events\\ProfileUpdated',
+            'aggregate_uuid' => $this->faker->uuid(),
+            'aggregate_version' => $this->faker->numberBetween(1, 100),
+            'event_version' => $this->faker->numberBetween(1, 10),
+            'event_class' => $this->faker->randomElement([
+                'Modules\\User\\Events\\UserRegistered',
+                'Modules\\User\\Events\\UserLoggedIn',
+                'Modules\\User\\Events\\UserLoggedOut',
+                'Modules\\User\\Events\\ProfileUpdated',
             ]),
             'event_properties' => [
-                'user_id' => // @var mixed faker->numberBetween(1, 100
-                'action' => // @var mixed faker->randomElement(['create', 'update', 'delete']
+                'user_id' => $this->faker->uuid(),
+                'action' => $this->faker->randomElement(['create', 'update', 'delete']),
                 'data' => [
-                    'field1' => // @var mixed faker->word(
-                    'field2' => // @var mixed faker->sentence(
+                    'field1' => $this->faker->word(),
+                    'field2' => $this->faker->sentence(),
                 ],
-                'ip_address' => // @var mixed faker->ipv4(
-                'user_agent' => // @var mixed faker->userAgent(
+                'ip_address' => $this->faker->ipv4(),
+                'user_agent' => $this->faker->userAgent(),
             ],
             'meta_data' => [
-                'source' => // @var mixed faker->randomElement(['web', 'api', 'console']
-                'environment' => // @var mixed faker->randomElement(['production', 'staging', 'local']
+                'source' => $this->faker->randomElement(['web', 'api', 'console']),
+                'environment' => $this->faker->randomElement(['production', 'staging', 'local']),
             ],
         ];
     }
@@ -62,7 +62,7 @@ class StoredEventFactory extends Factory
      */
     public function withUuid(string $uuid): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes) => [
             'aggregate_uuid' => $uuid,
         ]);
     }
@@ -72,7 +72,7 @@ class StoredEventFactory extends Factory
      */
     public function withVersion(int $version): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes) => [
             'aggregate_version' => $version,
         ]);
     }
@@ -82,7 +82,7 @@ class StoredEventFactory extends Factory
      */
     public function withEventClass(string $eventClass): static
     {
-        return // @var mixed state(fn (array $_attributes
+        return $this->state(fn (array $_attributes) => [
             'event_class' => $eventClass,
         ]);
     }
@@ -92,10 +92,10 @@ class StoredEventFactory extends Factory
      */
     public function userEvent(): static
     {
-        return // @var mixed state(fn (array $attributes
-            'event_class' => 'App\\Events\\UserRegistered',
+        return $this->state(fn (array $attributes) => [
+            'event_class' => 'Modules\\User\\Events\\UserRegistered',
             'event_properties' => array_merge((array) ($attributes['event_properties'] ?? []), [
-                'user_id' => // @var mixed faker->numberBetween(1, 100
+                'user_id' => $this->faker->uuid(),
                 'action' => 'user_registered',
             ]),
         ]);

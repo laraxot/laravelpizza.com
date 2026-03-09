@@ -140,7 +140,7 @@ class ComuneFactory extends Factory
             'altitudine' => $faker->numberBetween(0, 2000
             'superficie' => $faker->randomFloat(2, 5.0, 500.0
             'lat' => $latBase + $faker->randomFloat(4, -0.1, 0.1
-            'lng' => $lngBase + $faker->randomFloat(4, -0.1, 0.1
+            'lng' => $lngBase + $faker->randomFloat(4, -0.1, 0.1)
         ];
     }
 
@@ -224,7 +224,7 @@ class ComuneFactory extends Factory
     {
         return $this->state([
             'popolazione' => $faker->numberBetween(500, 5000
-            'superficie' => $faker->randomFloat(2, 5.0, 50.0
+            'superficie' => $faker->randomFloat(2, 5.0, 50.0)
         ]);
     }
 
@@ -235,7 +235,7 @@ class ComuneFactory extends Factory
     {
         return $this->state([
             'popolazione' => $faker->numberBetween(100000, 2800000
-            'superficie' => $faker->randomFloat(2, 100.0, 1285.0
+            'superficie' => $faker->randomFloat(2, 100.0, 1285.0)
         ]);
     }
 
@@ -247,7 +247,7 @@ class ComuneFactory extends Factory
         return $this->state([
             'zona_altimetrica' => 'montagna',
             'altitudine' => $faker->numberBetween(800, 3500
-            'popolazione' => $faker->numberBetween(500, 15000
+            'popolazione' => $faker->numberBetween(500, 15000)
         ]);
     }
 
@@ -259,7 +259,7 @@ class ComuneFactory extends Factory
         return $this->state([
             'zona_altimetrica' => 'pianura',
             'altitudine' => $faker->numberBetween(0, 50
-            'popolazione' => $faker->numberBetween(2000, 100000
+            'popolazione' => $faker->numberBetween(2000, 100000)
         ]);
     }
 

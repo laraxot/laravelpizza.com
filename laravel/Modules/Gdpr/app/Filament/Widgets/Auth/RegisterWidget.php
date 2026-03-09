@@ -75,16 +75,15 @@ class RegisterWidget extends XotBaseWidget
         $this->validate();
 
         // Validate GDPR consents
-        app(ValidateGdprConsentAction::class)->execute($privacy_accepted, $terms_accepted
-        );
+        app(ValidateGdprConsentAction::class)->execute($this->privacy_accepted, $this->terms_accepted);
 
         // Prepare form data
         $formData = [
-            'first_name' => $first_name,
-            'last_name' => $last_name,
-            'email' => $email,
-            'password' => $password,
-            'password_confirmation' => $password_confirmation,
+            'first_name' => $this->first_name,
+            'last_name' => $this->last_name,
+            'email' => $this->email,
+            'password' => $this->password,
+            'password_confirmation' => $this->password_confirmation,
         ];
 
         $validatedData = app(ValidateUserDataAction::class)->execute($formData);
@@ -94,7 +93,7 @@ class RegisterWidget extends XotBaseWidget
             $user = app(CreateUserAction::class)->execute($validatedData);
             app(SaveGdprConsentsAction::class)->execute($user, app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent));
             app(LogRegistrationAction::class)->execute($user, [
-                'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent
+                'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent),
             ]);
 
             return $user;
@@ -111,7 +110,7 @@ class RegisterWidget extends XotBaseWidget
             'email_hash' => hash('sha256', $email),
             'ip' => request()->ip(),
             'user_agent' => request()->userAgent(),
-            'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent
+            'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($privacy_accepted, $this->terms_accepted, $this->marketing_consent),
         ]);
     }
 }

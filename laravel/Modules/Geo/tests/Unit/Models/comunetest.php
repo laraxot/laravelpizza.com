@@ -35,7 +35,7 @@ beforeEach(function (): void {
 
     File::put(
         base_path('database/content/comuni.json'),
-        json_encode($testData, JSON_PRETTY_PRINT
+        json_encode($testData, JSON_PRETTY_PRINT)
     );
 });
 

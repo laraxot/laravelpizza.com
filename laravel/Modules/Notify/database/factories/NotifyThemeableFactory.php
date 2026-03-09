@@ -26,7 +26,7 @@ class NotifyThemeableFactory extends Factory
                 'Modules\\User\\Models\\User', // Generic fallback instead of project-specific
                 'Modules\\User\\Models\\User', // Generic fallback instead of project-specific
             ]),
-            'themeable_id' => $faker->randomNumber(
+            'themeable_id' => $faker->randomNumber()
         ];
     }
 

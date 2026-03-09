@@ -40,7 +40,7 @@ enum ChannelEnum: string implements HasColor, HasIcon, HasLabel
         return match ($this) {
             self::Mail => $this->getRecordEmail($record
             self::Sms => $this->getRecordPhone($record
-            self::WhatsApp => $this->getRecordWhatsApp($record
+            self::WhatsApp => $this->getRecordWhatsApp($record)
         };
     }
 

@@ -21,8 +21,8 @@ class LocationMapTableWidget extends BaseWidget
     public function table(Table $table): Table
     {
         return $table
-            ->query($getTableQuery(
-            ->columns($getTableColumns());
+            ->query($this->getTableQuery())
+            ->columns($this->getTableColumns());
     }
 
     protected function getTableQuery(): Builder

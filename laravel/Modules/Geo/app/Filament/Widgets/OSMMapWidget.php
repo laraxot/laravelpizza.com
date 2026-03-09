@@ -42,7 +42,7 @@ class OSMMapWidget extends Widget
                         'lng' => (float) $place->longitude,
                     ],
                     'title' => (string) ($place->name ?? 'Unnamed Place'),
-                    'content' => $this->getInfoWindowContent($place
+                    'content' => $this->getInfoWindowContent($place),
                 ];
 
                 $icon = $this->getMarkerIcon($place);
@@ -60,7 +60,7 @@ class OSMMapWidget extends Widget
         $viewName = 'geo::filament.widgets.osm-map-widget';
 
         return view($viewName, [
-            'data' => $this->getData(
+            'data' => $this->getData(),
         ]);
     }
 
@@ -70,9 +70,9 @@ class OSMMapWidget extends Widget
         $places = Place::with(['address', 'placeType'])->get();
 
         return [
-            'markers' => $this->getMarkers(
-            'center' => $this->getMapCenter($places
-            'zoom' => $this->getMapZoom($places
+            'markers' => $this->getMarkers(),
+            'center' => $this->getMapCenter($places),
+            'zoom' => $this->getMapZoom($places),
         ];
     }
 

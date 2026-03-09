@@ -50,7 +50,7 @@ return [
             'marketing_label' => 'Consenso Marketing',
             'marketing_hint' => 'Voglio ricevere consigli sulla pizza e inviti ai meetup',
             'privacy_complete' => 'Informativa completa ai sensi degli articoli 13 e 14 del Regolamento (UE] 2016/679 (GDPR]',
-            'terms_complete' => 'Contratto di servizio ai sensi dell\'articolo 6(1](b] del Regolamento (UE] 2016/679 (GDPR]',
+            'terms_complete' => 'Contratto di servizio ai sensi dell\'articolo 6(1](b] del Regolamento (UE] 2016/679 (GDPR]',))))
         ],
         'actions' => [
             'read_privacy_policy' => 'Leggi informativa privacy',

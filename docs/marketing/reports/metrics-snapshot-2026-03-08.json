@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-03-08T21:10:00+01:00",
+  "source": "mysql .env.testing baseline",
+  "events_total": 26,
+  "rsvp_total": 4,
+  "attendees_total": 101,
+  "published_events": 6,
+  "pending_events": 0,
+  "notes": "attendees_total is seeded aggregate across events and not a checked-in metric"
+}

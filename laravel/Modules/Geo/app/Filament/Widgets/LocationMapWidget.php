@@ -59,7 +59,7 @@ class LocationMapWidget extends Widget
      */
     public function getMarkers(): array
     {
-        return $this->getPlaces(
+        return $this->getPlaces()
             ->filter(fn (Place $place) => null !== $place->latitude && null !== $place->longitude)
             ->map(function (Place $place): array {
                 $marker = [
@@ -87,13 +87,13 @@ class LocationMapWidget extends Widget
         return ViewFacade::make($viewName, $getViewData());
     }
 
-    protected function getViewData(): array
+    public function getViewData(): array
     {
         return [
-            'heading' => $heading,
-            'maxHeight' => $this->getMaxHeight(
-            'options' => $this->getOptions(
-            'markers' => $this->getMarkers(
+            'heading' => $this->getHeading(),
+            'maxHeight' => $this->getMaxHeight(),
+            'options' => $this->getOptions(),
+            'markers' => $this->getMarkers(),
         ];
     }
 
@@ -119,7 +119,7 @@ class LocationMapWidget extends Widget
 
         return [
             'zoom' => is_numeric($config['zoom'] ?? null) ? (int) $config['zoom'] : 12,
-            'center' => $this->getMapCenter(
+            'center' => $this->getMapCenter(),
             'mapTypeId' => is_string($config['type'] ?? null) ? $config['type'] : 'roadmap',
             'mapTypeControl' => true,
             'streetViewControl' => true,

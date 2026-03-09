@@ -24,7 +24,7 @@ class ResolvePageAction
     public function execute(string $container0, string $slug0): ResolvePageData
     {
         // 1. Tenta il caricamento di un modello dinamico
-        $item = // @var mixed loadDynamicModel($container0, $slug0;
+        $item = $this->loadDynamicModel($container0, $slug0);
 
         if (null !== $item) {
             return new ResolvePageData(
@@ -72,7 +72,7 @@ class ResolvePageAction
         if (isset($knownMappings[$container0])) {
             $modelClass = $knownMappings[$container0];
 
-            return // @var mixed queryModel($modelClass, $slug0;
+            return $this->queryModel($modelClass, $slug0);
         }
 
         // Mappature da config (Priority 2)
@@ -80,7 +80,7 @@ class ResolvePageAction
         if (is_array($modelMap) && isset($modelMap[$container0])) {
             $modelClass = $modelMap[$container0];
             if (is_string($modelClass)) {
-                return // @var mixed queryModel($modelClass, $slug0;
+                return $this->queryModel($modelClass, $slug0);
             }
         }
 
@@ -92,7 +92,7 @@ class ResolvePageAction
         ];
 
         foreach ($possibleModels as $modelClass) {
-            $item = // @var mixed queryModel($modelClass, $slug0;
+            $item = $this->queryModel($modelClass, $slug0);
             if (null !== $item) {
                 return $item;
             }

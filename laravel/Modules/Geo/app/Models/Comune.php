@@ -24,11 +24,13 @@ use function Safe\mkdir;
  * regioni, province, città, CAP, codici ISTAT, ecc.
  * Tutti i dati sono estratti da file JSON e gestiti tramite Sushi.
  *
-<<<<<<< HEAD
-||||||| 6161e129d
+ * <<<<<<< HEAD
+ * ||||||| 6161e129d
+ *
  * @property string|null $nome
- * @property float|null $codice
-=======
+ * @property float|null  $codice
+ *                               =======
+ *
  * @method string getJsonFile()
  * @method array  loadExistingData()
  * @method string authId()
@@ -36,7 +38,8 @@ use function Safe\mkdir;
  * @method void   saveToJson()
  * @method int    findRowIndexById(int $id)
  *
->>>>>>> feature/ralph-loop-implementation
+ * >>>>>>> feature/ralph-loop-implementation
+ *
  * @property string|null                  $nome
  * @property float|null                   $codice
  * @property array<array-key, mixed>|null $zona

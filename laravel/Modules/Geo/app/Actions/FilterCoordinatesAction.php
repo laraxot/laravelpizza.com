@@ -44,7 +44,7 @@ class FilterCoordinatesAction
                 return [
                     'latitude' => $lat,
                     'longitude' => $lng,
-                    'distance' => $this->calculateDistance($centerLat, $centerLng, $lat, $lng
+                    'distance' => $this->calculateDistance($centerLat, $centerLng, $lat, $lng),
                 ];
             })
             ->filter(fn (array $coord): bool => $coord['distance'] <= $radiusKm)

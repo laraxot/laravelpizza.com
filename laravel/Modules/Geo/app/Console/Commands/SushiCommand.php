@@ -38,7 +38,7 @@ class SushiCommand extends Command
             'refresh' => $this->refresh(
             'clear' => $this->clear(
             'status' => $this->status(
-            default => $this->handleUnknownAction(
+            default => $this->handleUnknownAction()
         };
     }
 

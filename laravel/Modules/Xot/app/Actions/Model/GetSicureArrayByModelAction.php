@@ -25,10 +25,9 @@ class GetSicureArrayByModelAction
             $data = [];
             foreach ($model->getAttributes() as $key => $value) {
                 try {
-                    $data[$key] = // @var mixed $key;
-
-                    /* @phpstan-ignore-next-line */
+                    $data[$key] = $model->{$key};
                 } catch (\ValueError $e) {
+                    $data[$key] = $value;
                 }
             }
 

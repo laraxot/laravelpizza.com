@@ -8,9 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Support\Str;
 use Modules\Xot\Contracts\ExtraContract;
-
-use function Safe\json_encode;
-
 use Spatie\SchemalessAttributes\SchemalessAttributes;
 use Webmozart\Assert\Assert;
 

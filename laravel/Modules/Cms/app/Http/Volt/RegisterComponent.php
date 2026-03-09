@@ -19,10 +19,10 @@ use Modules\User\Models\User;
 #[Layout('cms::layouts.auth')]
 class RegisterComponent extends Component
 {
-    #[Validate('required')]
+    #[Validate('required|string|max:255')]
     public string $name = '';
 
-    #[Validate('required|email|unique:users')]
+    #[Validate('required|email|max:255|unique:user.users,email')]
     public string $email = '';
 
     #[Validate('required|min:8|same:password_confirmation')]
@@ -33,13 +33,13 @@ class RegisterComponent extends Component
 
     public function register(): RedirectResponse
     {
-        // @var mixed validate(;
+        $this->validate();
 
         /** @var User $user */
         $user = User::create([
-            'email' => // @var mixed email,
-            'name' => // @var mixed name,
-            'password' => Hash::make(// @var mixed password
+            'email' => $this->email,
+            'name' => $this->name,
+            'password' => Hash::make($this->password),
         ]);
 
         event(new Registered($user));

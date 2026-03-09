@@ -19,17 +19,17 @@ use Illuminate\Database\Eloquent\Model;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    // @var mixed user = User::factory(;
+    $this->user = User::factory()->create();
 });
 
 describe('ActivityLogger', function (): void {
     it('logs simple activity', function (): void {
         $logger = new ActivityLogger();
-        $activity = $logger->log('test_event', // @var mixed user;
+        $activity = $logger->log('test_event', $this->user);
 
         expect($activity)->toBeInstanceOf(Activity::class);
         expect($activity->event)->toBe('test_event');
-        expect($activity->causer_id)->toBe(// @var mixed user->id;
+        expect($activity->causer_id)->toBe($this->user->id);
     });
 
     it('logs created event', function (): void {

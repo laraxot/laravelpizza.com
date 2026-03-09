@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Datas;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Livewire\Wireable;
@@ -166,7 +164,7 @@ class XotData extends Data implements Wireable
     {
         $class = Str::of($this->tenant_class)->toString();
         /** @var TenantContract $model */
-        $model = new $class;
+        $model = new $class();
 
         return $model;
     }
@@ -300,7 +298,7 @@ class XotData extends Data implements Wireable
     {
         $user_class = $this->getUserClass();
         /** @var Model&UserContract $user */
-        $user = new $user_class;
+        $user = new $user_class();
         $type_field = $user->getTypeField();
         /** @var class-string<Model&UserContract> $class */
         $class = $user_class::query()->where($type_field, $type)->first()?->getMorphClass() ?? $user_class;
@@ -312,19 +310,19 @@ class XotData extends Data implements Wireable
     {
         $class = $this->getUserClassByType($type);
         /** @var UserContract $model */
-        $model = new $class;
+        $model = new $class();
 
         return $model;
     }
 
     /**
-     * @return class-string<\Illuminate\Database\Eloquent\Model>
+     * @return class-string<Model>
      */
     public function getUserChildTypeClass(): string
     {
         $user_class = $this->getUserClass();
         /** @var \Modules\User\Models\User $user */
-        $user = new $user_class;
+        $user = new $user_class();
 
         return $user->getChildTypeClass();
     }
@@ -346,7 +344,7 @@ class XotData extends Data implements Wireable
     {
         $user_class = $this->getUserClass();
         /** @var \Modules\User\Models\User $user */
-        $user = new $user_class;
+        $user = new $user_class();
 
         return $user->getTypeEnumClass();
     }
@@ -355,7 +353,7 @@ class XotData extends Data implements Wireable
     {
         $profileClass = $this->getProfileClass();
         /** @var ProfileContract $model */
-        $model = new $profileClass;
+        $model = new $profileClass();
 
         return $model;
     }

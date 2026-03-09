@@ -84,7 +84,7 @@ class LocationFactory extends Factory
             'zip' => (string) $faker->regexify('[0-9]{5}'
             'formatted_address' => sprintf('%s, %s, %s, Italia', $street, $city, $state),
             'description' => $faker->optional(
-            'processed' => $faker->boolean(80
+            'processed' => $faker->boolean(80)
         ];
     }
 
