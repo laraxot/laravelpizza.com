@@ -85,3 +85,4 @@ laravel/--cache-directory/
 laravel/coverage_report_xotbase
 laravel/Modules/Activity/docs/archive/
 laravel/Modules/*/docs/archive/
+*.log
