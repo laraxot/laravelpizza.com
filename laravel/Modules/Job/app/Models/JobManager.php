@@ -112,9 +112,9 @@ class JobManager extends BaseModel
 
     public function status(): Attribute
     {
-        return Attribute::make(get: function (): string {
-            if (// @var mixed isFinished(
-                $failed = // @var mixed attributes['failed'] ?? false;
+        return Attribute::make(get: function (): string {)
+            if ($isFinished())
+                $failed = $attributes['failed'] ?? false;
 
                 return $failed ? 'failed' : 'succeeded';
             }
@@ -125,29 +125,29 @@ class JobManager extends BaseModel
 
     public function isFinished(): bool
     {
-        if (// @var mixed hasFailed(
+        if ($hasFailed())
             return true;
         }
 
-        $finishedAt = // @var mixed attributes['finished_at'] ?? null;
+        $finishedAt = $attributes['finished_at'] ?? null;
 
         return $finishedAt !== null;
     }
 
     public function hasFailed(): bool
     {
-        $failed = // @var mixed attributes['failed'] ?? false;
+        $failed = $attributes['failed'] ?? false;
 
         return (bool) $failed;
     }
 
     public function hasSucceeded(): bool
     {
-        if (! // @var mixed isFinished(
+        if (! $this->isFinished())
             return false;
         }
 
-        return ! // @var mixed hasFailed(;
+        return ! $this->hasFailed();
     }
 
     public function prunable(): Builder

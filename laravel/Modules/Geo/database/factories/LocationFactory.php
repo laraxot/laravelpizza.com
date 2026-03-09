@@ -75,15 +75,15 @@ class LocationFactory extends Factory
         $state = (string) $faker->randomElement($italianRegions);
 
         return [
-            'name' => $faker->optional(
-            'lat' => $faker->latitude(35.0, 47.0
-            'lng' => $faker->longitude(6.0, 19.0
-            'street' => $street.' '.((string) $faker->numberBetween(1, 999
+            'name' => $faker->optional()
+            'lat' => $faker->latitude(35.0, 47.0)
+            'lng' => $faker->longitude(6.0, 19.0)
+            'street' => $street.' '.((string) $faker->numberBetween(1, 999))
             'city' => $city,
             'state' => $state,
-            'zip' => (string) $faker->regexify('[0-9]{5}'
+            'zip' => (string) $faker->regexify('[0-9]{5}')
             'formatted_address' => sprintf('%s, %s, %s, Italia', $street, $city, $state),
-            'description' => $faker->optional(
+            'description' => $faker->optional()
             'processed' => $faker->boolean(80)
         ];
     }
@@ -93,7 +93,7 @@ class LocationFactory extends Factory
      */
     public function unprocessed(): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'processed' => false,
         ]);
     }
@@ -103,7 +103,7 @@ class LocationFactory extends Factory
      */
     public function processed(): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'processed' => true,
         ]);
     }
@@ -113,10 +113,10 @@ class LocationFactory extends Factory
      */
     public function inCity(string $city, ?string $state = null): static
     {
-        return $this->state(fn (array $attributes
+        return $this->state(fn (array $attributes))
             'city' => $city,
             'state' => $state ?? ((string) ($attributes['state'] ?? 'Lazio')),
-            'formatted_address' => sprintf(
+            'formatted_address' => sprintf()
                 '%s, %s, %s, Italia',
                 (string) ($attributes['street'] ?? 'Via Roma 1'),
                 $city,
@@ -130,7 +130,7 @@ class LocationFactory extends Factory
      */
     public function withCoordinates(float $latitude, float $longitude): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'lat' => $latitude,
             'lng' => $longitude,
         ]);

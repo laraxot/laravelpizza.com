@@ -27,7 +27,7 @@ class RouteCommandHandler implements CommandHandlerInterface
         if (isset(self::ROUTE_COMMANDS[$command])) {
             $method = self::ROUTE_COMMANDS[$command];
 
-            return // @var mixed $method();
+            return $this->$method();
         }
 
         return '';

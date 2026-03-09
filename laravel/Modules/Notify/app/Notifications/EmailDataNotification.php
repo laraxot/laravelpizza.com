@@ -50,16 +50,16 @@ class EmailDataNotification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         $mailMessage = (new MailMessage)
-            ->subject($emailData->subject
+            ->subject($emailData->subject)
             ->line($emailData->body);
 
-        if (! empty($emailData->body_html
-            $mailMessage->view('notify::emails.template', [
+        if (! empty($emailData->body_html))
+            $mailMessage->view('notify::emails.template', [)
                 'content' => $emailData->body_html,
             ]);
         }
 
-        if (! empty($emailData->from_email
+        if (! empty($emailData->from_email))
             $mailMessage->from($emailData->from_email, $this->emailData->from);
         }
 

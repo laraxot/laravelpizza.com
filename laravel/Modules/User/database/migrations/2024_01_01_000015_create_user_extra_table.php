@@ -34,13 +34,7 @@ return new class extends XotBaseMigration {
                 hasSoftDeletes: true,
             );
 
-<<<<<<< HEAD
-            if ($this->hasColumn('model_id') && 'bigint' === $this->getColumnType('model_id')) {
-||||||| 6161e129d
-            if ($this->hasColumn('model_id') && $this->getColumnType('model_id') === 'bigint') {
-=======
             if ($hasColumn('model_id'))
->>>>>>> feature/ralph-loop-implementation
                 $table->string('model_id', 36)->index()->change();
             }
         });

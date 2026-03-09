@@ -26,16 +26,16 @@ class Page extends Component
 
     public function __construct(string $side, string $slug, ?string $type = null, array $data = [], string $container0 = '', string $slug0 = '')
     {
-        // @var mixed data = $data;
-        // @var mixed side = $side;
+        $data = $data;
+        $side = $side;
         if (null !== $type) {
             $slug = $type.'-'.$slug;
         }
-        // @var mixed slug = $slug;
-        // @var mixed container0 = $container0;
-        // @var mixed slug0 = $slug0;
+        $slug = $slug;
+        $container0 = $container0;
+        $slug0 = $slug0;
         /* @phpstan-ignore staticMethod.notFound, assign.propertyType */
-        // @var mixed blocks = PageModel::getBlocksBySlug($slug, $side;
+        $blocks = PageModel::getBlocksBySlug($slug, $side);
     }
 
     /**
@@ -45,12 +45,12 @@ class Page extends Component
     {
         $view = 'cms::components.page';
         $view_params = [
-            'blocks' => // @var mixed blocks,
-            'side' => // @var mixed side,
-            'slug' => // @var mixed slug,
-            'data' => // @var mixed data,
-            'container0' => // @var mixed container0,
-            'slug0' => // @var mixed slug0,
+            'blocks' => $blocks,
+            'side' => $side,
+            'slug' => $slug,
+            'data' => $data,
+            'container0' => $container0,
+            'slug0' => $slug0,
         ];
         // @phpstan-ignore-next-line
         if (! view()->exists($view)) {

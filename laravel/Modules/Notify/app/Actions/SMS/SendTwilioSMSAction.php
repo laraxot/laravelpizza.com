@@ -34,11 +34,11 @@ final class SendTwilioSMSAction implements SmsActionContract
     {
         $twilioData = TwilioData::make();
 
-        if (! $twilioData->account_sid
+        if (! $twilioData->account_sid)
             throw new Exception('Account SID Twilio non configurato in sms.php');
         }
 
-        if (! $twilioData->auth_token
+        if (! $twilioData->auth_token)
             throw new Exception('Auth Token Twilio non configurato in sms.php');
         }
 
@@ -72,19 +72,19 @@ final class SendTwilioSMSAction implements SmsActionContract
         $from = $smsData->from ?? $defaultSender;
 
         // Twilio richiede l'autenticazione Basic
-        $client = new Client([
-            'timeout' => $twilioData->getTimeout(
+        $client = new Client([)
+            'timeout' => $twilioData->getTimeout()
             'auth' => [$twilioData->account_sid, $this->twilioData->auth_token],
         ]);
 
         $endpoint =
-            $twilioData->getBaseUrl(
+            $twilioData->getBaseUrl()
             '/2010-04-01/Accounts/'.
             $twilioData->account_sid.
             '/Messages.json';
 
         try {
-            $response = $client->post($endpoint, [
+            $response = $client->post($endpoint, [)
                 'form_params' => [
                     'To' => $to,
                     'From' => $from,
@@ -97,7 +97,7 @@ final class SendTwilioSMSAction implements SmsActionContract
 
             return $vars;
         } catch (ClientException $clientException) {
-            throw new Exception(
+            throw new Exception()
                 $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',
                 $clientException->getCode(),
                 $clientException,

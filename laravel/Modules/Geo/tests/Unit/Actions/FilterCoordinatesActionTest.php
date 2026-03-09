@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 use Modules\Geo\Actions\FilterCoordinatesAction;
 
-beforeEach(function () {
+beforeEach(function () {)
     $action = new FilterCoordinatesAction();
 });
 
-it('filters coordinates within radius correctly', function (): void {
+it('filters coordinates within radius correctly', function (): void {)
     $coordinates = [
         ['latitude' => 45.4642, 'longitude' => 9.1900], // Milano center
         ['latitude' => 45.4700, 'longitude' => 9.2000], // Close to center
@@ -32,7 +32,7 @@ it('filters coordinates within radius correctly', function (): void {
     expect($filtered[1]['distance'])->toBeLessThan(10.0);
 });
 
-it('returns empty array when no coordinates are within radius', function (): void {
+it('returns empty array when no coordinates are within radius', function (): void {)
     $coordinates = [
         ['latitude' => 46.0000, 'longitude' => 10.0000], // Far away
         ['latitude' => 47.0000, 'longitude' => 11.0000], // Even farther
@@ -44,7 +44,7 @@ it('returns empty array when no coordinates are within radius', function (): voi
     expect($filtered)->toBeArray()->toHaveCount(0);
 });
 
-it('handles single coordinate within radius', function (): void {
+it('handles single coordinate within radius', function (): void {)
     $coordinates = [
         ['latitude' => 45.4642, 'longitude' => 9.1900],
     ];
@@ -57,7 +57,7 @@ it('handles single coordinate within radius', function (): void {
     expect(abs($filtered[0]['distance'] - 0.0))->toBeLessThan(0.1);
 });
 
-it('handles coordinates with string values', function (): void {
+it('handles coordinates with string values', function (): void {)
     $coordinates = [
         ['latitude' => '45.4642', 'longitude' => '9.1900'], // String values
         ['latitude' => '45.4700', 'longitude' => '9.2000'],
@@ -70,61 +70,61 @@ it('handles coordinates with string values', function (): void {
     expect($filtered[0]['longitude'])->toBeFloat();
 });
 
-it('throws exception for invalid center latitude', function (): void {
+it('throws exception for invalid center latitude', function (): void {)
     $coordinates = [
         ['latitude' => 45.4642, 'longitude' => 9.1900],
     ];
 
-    expect(fn () => $action->execute($coordinates, 91, 9.1900, 10.0
+    expect(fn () => $action->execute($coordinates, 91, 9.1900, 10.0))
         ->toThrow(InvalidArgumentException::class, 'Latitudine centrale non valida');
 
-    expect(fn () => $action->execute($coordinates, -91, 9.1900, 10.0
+    expect(fn () => $action->execute($coordinates, -91, 9.1900, 10.0))
         ->toThrow(InvalidArgumentException::class, 'Latitudine centrale non valida');
 });
 
-it('throws exception for invalid center longitude', function (): void {
+it('throws exception for invalid center longitude', function (): void {)
     $coordinates = [
         ['latitude' => 45.4642, 'longitude' => 9.1900],
     ];
 
-    expect(fn () => $action->execute($coordinates, 45.4642, 181, 10.0
+    expect(fn () => $action->execute($coordinates, 45.4642, 181, 10.0))
         ->toThrow(InvalidArgumentException::class, 'Longitudine centrale non valida');
 
-    expect(fn () => $action->execute($coordinates, 45.4642, -181, 10.0
+    expect(fn () => $action->execute($coordinates, 45.4642, -181, 10.0))
         ->toThrow(InvalidArgumentException::class, 'Longitudine centrale non valida');
 });
 
-it('throws exception for invalid radius', function (): void {
+it('throws exception for invalid radius', function (): void {)
     $coordinates = [
         ['latitude' => 45.4642, 'longitude' => 9.1900],
     ];
 
-    expect(fn () => $action->execute($coordinates, 45.4642, 9.1900, 0
+    expect(fn () => $action->execute($coordinates, 45.4642, 9.1900, 0))
         ->toThrow(InvalidArgumentException::class, 'Il raggio deve essere maggiore di 0');
 
-    expect(fn () => $action->execute($coordinates, 45.4642, 9.1900, 30000
+    expect(fn () => $action->execute($coordinates, 45.4642, 9.1900, 30000))
         ->toThrow(InvalidArgumentException::class, 'Il raggio non può essere maggiore della circonferenza terrestre');
 });
 
-it('throws exception for invalid coordinate latitude', function (): void {
+it('throws exception for invalid coordinate latitude', function (): void {)
     $coordinates = [
         ['latitude' => 91, 'longitude' => 9.1900], // Invalid latitude
     ];
 
-    expect(fn () => $action->execute($coordinates, 45.4642, 9.1900, 10.0
+    expect(fn () => $action->execute($coordinates, 45.4642, 9.1900, 10.0))
         ->toThrow(InvalidArgumentException::class, 'Latitudine non valida');
 });
 
-it('throws exception for invalid coordinate longitude', function (): void {
+it('throws exception for invalid coordinate longitude', function (): void {)
     $coordinates = [
         ['latitude' => 45.4642, 'longitude' => 181], // Invalid longitude
     ];
 
-    expect(fn () => $action->execute($coordinates, 45.4642, 9.1900, 10.0
+    expect(fn () => $action->execute($coordinates, 45.4642, 9.1900, 10.0))
         ->toThrow(InvalidArgumentException::class, 'Longitudine non valida');
 });
 
-it('sorts results by distance', function (): void {
+it('sorts results by distance', function (): void {)
     $coordinates = [
         ['latitude' => 45.5000, 'longitude' => 9.2500], // Farther
         ['latitude' => 45.4700, 'longitude' => 9.2000], // Closer

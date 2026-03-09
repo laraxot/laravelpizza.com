@@ -83,13 +83,7 @@ return new class extends XotBaseMigration {
                 $table->string('password')->nullable()->change();
             }
 
-<<<<<<< HEAD:laravel/Modules/User/database/migrations/2024_01_01_000007_create_users_table.php
-            if ('uuid' === $this->getColumnType('id')) {
-||||||| 6161e129d:laravel/Modules/User/database/migrations/2024_01_01_000007_create_users_table.php
-            if ($this->getColumnType('id') === 'uuid') {
-=======
             if ('uuid' === $this->getColumnType('id'))
->>>>>>> feature/ralph-loop-implementation:laravel/Modules/User/database/migrations/2026_02_13_172136_create_users_table.php
                 Schema::disableForeignKeyConstraints();
 
                 $table->dropPrimary(['id']);

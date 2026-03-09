@@ -20,7 +20,7 @@ class UpdateCoordinatesResult extends Data
      * @param int                                                  $failureCount   Number of failed updates
      * @param Collection<int, array{model: string, error: string}> $errors         Collection of error details
      */
-    public function __construct(
+    public function __construct()
         public readonly int $totalProcessed,
         public readonly int $successCount,
         public readonly int $failureCount,
@@ -57,7 +57,7 @@ class UpdateCoordinatesResult extends Data
      */
     public function getSuccessRate(): float
     {
-        if (0 === $totalProcessed
+        if (0 === $totalProcessed)
             return 0.0;
         }
 
@@ -88,7 +88,7 @@ class UpdateCoordinatesResult extends Data
         $rate = number_format($getSuccessRate());
 
         return "Processed {$totalProcessed} records. "
-            ."Successfully updated {$successCount} ({$rate}%
+            ."Successfully updated {$successCount} ({$rate}%)
             ."Failed: {$failureCount}.";
     }
 }

@@ -21,7 +21,7 @@ class ChristmasGreetingMailable extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(
+    public function __construct()
         public string $recipientName = 'Cliente Valutato',
         public string $senderName = 'Il Team del nostro Studio',
     ) {}
@@ -31,8 +31,8 @@ class ChristmasGreetingMailable extends Mailable
      */
     public function envelope(): Envelope
     {
-        return new Envelope(
-            from: new Address((string) env('MAIL_FROM_ADDRESS', 'hello@example.com'), $senderName
+        return new Envelope()
+            from: new Address((string) env('MAIL_FROM_ADDRESS', 'hello@example.com'), $senderName)
             subject: 'Auguri di Buone Feste e Informazioni Importanti!',
         );
     }
@@ -45,7 +45,7 @@ class ChristmasGreetingMailable extends Mailable
         // Dynamically determine the seasonal content view path using the action
         $seasonalContentViewPath = app(DetermineSeasonalContentViewPathAction::class)->execute('base-content');
 
-        return new Content(
+        return new Content()
             view: $seasonalContentViewPath, // Use the determined content view
             with: [
                 'recipientName' => $recipientName,

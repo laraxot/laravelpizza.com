@@ -81,7 +81,7 @@ class ScheduleHistory extends BaseModel
      * {
      * parent::__construct($attributes);
      *
-     * // @var mixed table = Config::get('filament-database-schedule.table.schedule_histories', 'schedule_histories';
+     * $table = Config::get('filament-database-schedule.table.schedule_histories', 'schedule_histories');
      * }
      *
      */

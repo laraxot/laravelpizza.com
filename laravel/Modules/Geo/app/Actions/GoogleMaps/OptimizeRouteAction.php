@@ -33,7 +33,7 @@ class OptimizeRouteAction
      *
      * @return array<RouteData> Lista di percorsi ottimizzati
      */
-    public function execute(
+    public function execute()
         array $locations,
         LocationData $origin,
         LocationData $destination,
@@ -50,9 +50,9 @@ class OptimizeRouteAction
         }
 
         $waypoints = $this->formatWaypoints($locations);
-        $response = Http::get(self::BASE_URL, [
-            'origin' => $this->formatLocation($origin
-            'destination' => $this->formatLocation($destination
+        $response = Http::get(self::BASE_URL, [)
+            'origin' => $this->formatLocation($origin)
+            'destination' => $this->formatLocation($destination)
             'waypoints' => 'optimize:true|'.implode('|', $waypoints),
             'mode' => $mode,
             'optimize' => $optimize,
@@ -127,7 +127,7 @@ class OptimizeRouteAction
      */
     private function parseRoutes(array $routes, Collection $originalLocations): array
     {
-        return array_map(
+        return array_map()
             function (array $route) use ($originalLocations): RouteData {
                 /** @var Collection<int, LocationData> $waypoints */
                 $waypoints = collect();
@@ -136,7 +136,7 @@ class OptimizeRouteAction
                 $totalDuration = 0;
 
                 foreach ($route['legs'] as $leg) {
-                    $waypoints->push(new LocationData(
+                    $waypoints->push(new LocationData())
                         latitude: $leg['start_location']['lat'],
                         longitude: $leg['start_location']['lng'],
                         address: null,
@@ -163,7 +163,7 @@ class OptimizeRouteAction
                 // Aggiungi l'ultima posizione
                 if (! empty($route['legs'])) {
                     $lastLeg = end($route['legs']);
-                    $waypoints->push(new LocationData(
+                    $waypoints->push(new LocationData())
                         latitude: $lastLeg['end_location']['lat'],
                         longitude: $lastLeg['end_location']['lng'],
                         address: null,
@@ -173,7 +173,7 @@ class OptimizeRouteAction
                 /** @var Collection<int, LocationData> $typedWaypoints */
                 $typedWaypoints = $waypoints;
 
-                return new RouteData(
+                return new RouteData()
                     waypoints: $waypoints,
                     originalWaypoints: $originalLocations,
                     totalDistance: $totalDistance,

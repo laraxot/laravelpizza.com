@@ -4,16 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets;
 
-use Filament\Schemas\Components\Component;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
 use Livewire\Features\SupportRedirects\Redirector;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
-use Webmozart\Assert\Assert;
 
 class RegistrationWidget extends XotBaseWidget
 {
@@ -35,7 +31,8 @@ class RegistrationWidget extends XotBaseWidget
     public function getFormModel(): Model
     {
         $modelClass = $this->model;
-        return new $modelClass;
+
+        return new $modelClass();
     }
 
     public function getFormSchema(): array

@@ -18,7 +18,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table
+        $this->tableCreate(function (Blueprint $table))
             $table->increments('id');
             $table->string('lang')->nullable();
             $table->string('type')->nullable();
@@ -27,43 +27,43 @@ return new class extends XotBaseMigration
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table
-            if (! $this->hasColumn('from'
+        $this->tableUpdate(function (Blueprint $table))
+            if (! $this->hasColumn('from'))
                 $table->string('from')->nullable();
             }
 
-            if (! $this->hasColumn('post_type'
+            if (! $this->hasColumn('post_type'))
                 $table->nullableMorphs('post');
             }
 
-            if (! $this->hasColumn('body_html'
+            if (! $this->hasColumn('body_html'))
                 $table->text('body_html')->nullable();
             }
 
-            if (! $this->hasColumn('theme'
+            if (! $this->hasColumn('theme'))
                 $table->string('theme')->nullable();
             }
 
-            if (! $this->hasColumn('from_email'
+            if (! $this->hasColumn('from_email'))
                 $table->string('from_email')->nullable();
             }
 
-            if (! $this->hasColumn('logo_src'
+            if (! $this->hasColumn('logo_src'))
                 $table->string('logo_src')->nullable();
             }
 
-            if (! $this->hasColumn('logo_width'
+            if (! $this->hasColumn('logo_width'))
                 $table->integer('logo_width')->nullable();
             }
 
-            if (! $this->hasColumn('logo_height'
+            if (! $this->hasColumn('logo_height'))
                 $table->integer('logo_height')->nullable();
             }
 
-            if (! $this->hasColumn('view_params'
+            if (! $this->hasColumn('view_params'))
                 $table->json('view_params')->nullable();
             }
-            $this->updateTimestamps(
+            $this->updateTimestamps()
                 table: $table,
                 hasSoftDeletes: true,
             );

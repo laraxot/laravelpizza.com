@@ -22,16 +22,16 @@ class PageFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => // @var mixed faker->sentence(
-            'slug' => // @var mixed faker->slug(
-            'content' => // @var mixed faker->paragraphs(3, true
-            'excerpt' => // @var mixed faker->sentence(
+            'title' => $faker->sentence()
+            'slug' => $faker->slug()
+            'content' => $faker->paragraphs(3, true)
+            'excerpt' => $faker->sentence()
             'status' => 'published',
             'template' => 'default',
             'view_count' => 0,
-            'meta_title' => // @var mixed faker->sentence(
-            'meta_description' => // @var mixed faker->sentence(
-            'meta_keywords' => // @var mixed faker->words(3, true
+            'meta_title' => $faker->sentence()
+            'meta_description' => $faker->sentence()
+            'meta_keywords' => $faker->words(3, true)
         ];
     }
 
@@ -40,7 +40,7 @@ class PageFactory extends Factory
      */
     public function published(): static
     {
-        return // @var mixed state(fn (array $attributes
+        return $this->state(fn (array $attributes))
             'status' => 'published',
         ]);
     }
@@ -50,7 +50,7 @@ class PageFactory extends Factory
      */
     public function draft(): static
     {
-        return // @var mixed state(fn (array $attributes
+        return $this->state(fn (array $attributes))
             'status' => 'draft',
         ]);
     }
@@ -60,8 +60,8 @@ class PageFactory extends Factory
      */
     public function withSeo(): static
     {
-        return // @var mixed afterCreating(function (Page $page
-            $page->seo()->create([
+        return $this->afterCreating(function (Page $page))
+            $page->seo()->create([)
                 'meta_title' => $page->title.' - SEO Title',
                 'meta_description' => $page->meta_description,
                 'meta_keywords' => $page->meta_keywords,
@@ -77,10 +77,10 @@ class PageFactory extends Factory
      */
     public function withBlocks(): static
     {
-        return // @var mixed afterCreating(function (Page $page
-            $page->blocks()->create([
+        return $this->afterCreating(function (Page $page))
+            $page->blocks()->create([)
                 'type' => 'text',
-                'content' => // @var mixed faker->paragraph(
+                'content' => $faker->paragraph()
                 'order' => 1,
             ]);
         });

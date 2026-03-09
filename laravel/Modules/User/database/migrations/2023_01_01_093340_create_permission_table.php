@@ -43,22 +43,8 @@ return new class extends XotBaseMigration {
 
         try {
             // Verifica se l'applicazione è completamente inizializzata
-<<<<<<< HEAD
-            if (app()->bound(CacheFactory::class)) {
-                $cache = app(CacheFactory::class);
-                $store = 'default' !== $cache_store ? $cache_store : null;
-
-                $cache->store($store)->forget($cache_key);
-||||||| 6161e129d
-            if (app()->bound(CacheFactory::class)) {
-                $cache = app(CacheFactory::class);
-                $store = $cache_store !== 'default' ? $cache_store : null;
-
-                $cache->store($store)->forget($cache_key);
-=======
             if (app()->bound('cache')) {
                 app('cache')->store('default' !== $cache_store ? $cache_store : null)->forget($cache_key);
->>>>>>> feature/ralph-loop-implementation
             }
         } catch (Exception $e) {
             // Silently ignore cache errors during package discovery

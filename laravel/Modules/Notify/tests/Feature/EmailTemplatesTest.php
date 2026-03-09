@@ -28,7 +28,7 @@ test('html template contains optional function', function (): void {
     $hasSubjectVar = str_contains($content, '$subject');
 
     $this->assertTrue($hasEmailData || $hasSubjectVar, 'Il template html.blade.php non gestisce subject via $email_data o $subject');
-    $this->assertTrue($hasOptional, 'Il template html.blade.php non utilizza optional());
+    $this->assertTrue($hasOptional, 'Il template html.blade.php non utilizza optional()');
 });
 
 test('sunny sample template exists', function (): void {

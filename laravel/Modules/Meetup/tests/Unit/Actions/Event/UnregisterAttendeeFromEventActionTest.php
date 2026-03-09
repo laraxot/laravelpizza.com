@@ -19,6 +19,7 @@ test('it unregisters attendee and decrements counter', function () {
         'max_attendees' => 10,
         'attendees_count' => 1,
         'start_date' => now()->addDays(30),
+        'end_date' => now()->addDays(30)->addHours(3),
     ]);
 
     EventUser::query()->create([
@@ -31,7 +32,7 @@ test('it unregisters attendee and decrements counter', function () {
     expect($result)->toBeTrue();
     $event->refresh();
     expect($event->attendees_count)->toBe(0);
-    expect(EventUser::query()->where('user_id', 'user-001')->exists())->toBeFalse();
+    expect(EventUser::query()->where('event_id', $event->getKey())->where('user_id', 'user-001')->exists())->toBeFalse();
 });
 
 test('it throws when user is not registered', function () {
@@ -41,6 +42,7 @@ test('it throws when user is not registered', function () {
         'max_attendees' => 10,
         'attendees_count' => 0,
         'start_date' => now()->addDays(30),
+        'end_date' => now()->addDays(30)->addHours(3),
     ]);
 
     expect(fn () => app(UnregisterAttendeeFromEventAction::class)->execute($event, 'user-not-registered'))
@@ -54,6 +56,7 @@ test('it preserves minimum attendees count at zero', function () {
         'max_attendees' => 10,
         'attendees_count' => 0,
         'start_date' => now()->addDays(30),
+        'end_date' => now()->addDays(30)->addHours(3),
     ]);
 
     EventUser::query()->create([

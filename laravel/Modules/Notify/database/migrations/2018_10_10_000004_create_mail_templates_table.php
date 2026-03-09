@@ -17,7 +17,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE -- Definizione iniziale della tabella
-        $this->tableCreate(function (Blueprint $table
+        $this->tableCreate(function (Blueprint $table))
             $table->id();
             $table->string('name');
             $table->string('mailable');
@@ -29,18 +29,18 @@ return new class extends XotBaseMigration
         });
 
         // -- UPDATE -- Aggiornamento della tabella esistente
-        $this->tableUpdate(function (Blueprint $table
-            if (! $this->hasColumn('name'
+        $this->tableUpdate(function (Blueprint $table))
+            if (! $this->hasColumn('name'))
                 $table->string('name');
             }
-            if (! $this->hasColumn('slug'
+            if (! $this->hasColumn('slug'))
                 $table->string('slug')->unique();
             }
-            if (! $this->hasColumn('params'
+            if (! $this->hasColumn('params'))
                 $table->text('params')->nullable();
             }
 
-            $this->updateTimestamps(
+            $this->updateTimestamps()
                 table: $table,
                 hasSoftDeletes: true,
             );

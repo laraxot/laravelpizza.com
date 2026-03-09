@@ -34,7 +34,7 @@ final class SendSmsFactorSMSAction implements SmsActionContract
     {
         $smsFactorData = SmsFactorData::make();
 
-        if (! $smsFactorData->token
+        if (! $smsFactorData->token)
             throw new Exception('Token SMSFactor non configurato in sms.php');
         }
 
@@ -78,8 +78,8 @@ final class SendSmsFactorSMSAction implements SmsActionContract
             'type' => 'sms',
         ];
 
-        $client = new Client([
-            'timeout' => $smsFactorData->getTimeout(
+        $client = new Client([)
+            'timeout' => $smsFactorData->getTimeout()
             'headers' => $headers,
         ]);
 
@@ -90,7 +90,7 @@ final class SendSmsFactorSMSAction implements SmsActionContract
 
             return $vars;
         } catch (ClientException $clientException) {
-            throw new Exception(
+            throw new Exception()
                 $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',
                 $clientException->getCode(),
                 $clientException,

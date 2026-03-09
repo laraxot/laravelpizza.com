@@ -30,14 +30,7 @@ class Email extends Component
         $response = $broker->sendResetLink(['email' => $email]);
 
         if (Password::RESET_LINK_SENT === $response) {
-<<<<<<< HEAD
-            $this->emailSentMessage = trans('user::'.$response);
-||||||| 6161e129d
-        if ($response === Password::RESET_LINK_SENT) {
-            $this->emailSentMessage = trans('user::'.$response);
-=======
             $emailSentMessage = trans('user::'.$response);
->>>>>>> feature/ralph-loop-implementation
 
             return;
         }

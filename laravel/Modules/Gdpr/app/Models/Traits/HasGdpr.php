@@ -49,7 +49,7 @@ trait HasGdpr
      */
     public function treatments(): HasManyThrough
     {
-        return $this->hasManyThrough(Treatment::class, Consent::class, 'user_id', 'id', 'id', 'treatment_id'
+        return $this->hasManyThrough(Treatment::class, Consent::class, 'user_id', 'id', 'id', 'treatment_id')
             'consents.user_type',
             static::class,
         ); // Foreign key on consents table // Foreign key on treatments table // Local key on users table // Local key on consents table
@@ -95,7 +95,7 @@ trait HasGdpr
         $type = $type instanceof ConsentType ? $type->value : $type;
 
         /** @var Consent $consent */
-        $consent = $this->consents(
+        $consent = $this->consents()
             'type' => $type,
             'metadata' => $metadata,
             'ip_address' => request()->ip(),
@@ -115,9 +115,9 @@ trait HasGdpr
     {
         $type = $type instanceof ConsentType ? $type->value : $type;
 
-        $updated = $this->activeConsents(
+        $updated = $this->activeConsents()
             ->where('type', $type)
-            ->update([
+            ->update([)
                 'revoked_at' => now(),
                 'revoked_ip_address' => request()->ip(),
             ]);

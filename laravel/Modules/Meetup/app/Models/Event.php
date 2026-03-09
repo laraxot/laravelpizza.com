@@ -14,6 +14,7 @@ use Modules\Activity\Traits\HasEvents;
 use Modules\Activity\Traits\HasSnapshots;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
+use Modules\Meetup\Models\EventUser;
 use Modules\User\Models\User;
 use Modules\Xot\Models\Traits\HasXotFactory;
 
@@ -237,10 +238,14 @@ class Event extends BaseModel
 
     /**
      * Determine if a user is already registered for this event.
+     * Checks the pivot table directly to avoid JOIN issues with non-existent users.
      */
     public function isUserRegistered(string $userId): bool
     {
-        return $this->attendees()->where('user_id', $userId)->exists();
+        return EventUser::query()
+            ->where('event_id', $this->getKey())
+            ->where('user_id', $userId)
+            ->exists();
     }
 
     /**
@@ -411,6 +416,18 @@ class Event extends BaseModel
                 });
             }
         });
+    }
+
+    /**
+     * Scope: pending events owned by a specific user.
+     *
+     * @param  Builder<Event>  $query
+     * @return Builder<Event>
+     */
+    public function scopeMyPending(Builder $query, string $userId): Builder
+    {
+        return $query->where('status', 'pending')
+            ->where('user_id', (int) $userId);
     }
 
     /**

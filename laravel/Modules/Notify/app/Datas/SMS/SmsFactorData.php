@@ -35,7 +35,7 @@ class SmsFactorData extends Data
 
     public function getAuthHeaders(): array
     {
-        switch ($auth_type
+        switch ($auth_type)
             case 'bearer':
             default:
                 return [

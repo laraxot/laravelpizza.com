@@ -40,8 +40,8 @@ class SushiSeeder extends Seeder
             foreach ($data as $comune) {
                 /** @var array<string, mixed> $validComune */
                 $validComune = (array) $comune;
-                if (is_array($comune) && $this->isValidComuneData($validComune
-                    DB::table('comuni')->insert([
+                if (is_array($comune) && $this->isValidComuneData($validComune))
+                    DB::table('comuni')->insert([)
                         'id' => $validComune['id'],
                         'regione' => $validComune['regione'],
                         'provincia' => $validComune['provincia'],

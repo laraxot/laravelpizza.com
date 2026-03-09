@@ -163,7 +163,7 @@ class VideoEntry extends Entry
         /** @var FilesystemAdapter $storage */
         $storage = $this->getDisk();
 
-        if ($shouldCheckFileExistence(
+        if ($shouldCheckFileExistence())
             try {
                 if (! $storage->exists($state)) {
                     return null;
@@ -173,7 +173,7 @@ class VideoEntry extends Entry
             }
         }
 
-        if ($getVisibility(
+        if ($getVisibility())
             try {
                 return $storage->temporaryUrl($state, now()->addMinutes(5));
             } catch (Throwable) {
@@ -378,7 +378,7 @@ class VideoEntry extends Entry
         return null;
     }
 
-    public function limitedRemainingText(
+    public function limitedRemainingText()
         bool|Closure $condition = true,
         bool|Closure $isSeparate = false,
         string|Closure|null $size = null,

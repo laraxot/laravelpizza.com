@@ -13,33 +13,33 @@ use Modules\Geo\Actions\GoogleMaps\CalculateTravelTimeAction;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Datas\TravelTimeData;
 
-beforeEach(function () {
+beforeEach(function () {)
     $mockHandler = new MockHandler();
     $handlerStack = HandlerStack::create($mockHandler);
     $client = new Client(['handler' => $handlerStack]);
     $action = new CalculateTravelTimeAction($this->client);
 });
 
-it('throws exception when api key is not configured', function (): void {
+it('throws exception when api key is not configured', function (): void {)
     config(['services.google.maps_api_key' => null]);
 
     $origin = new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano');
     $destination = new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma');
 
-    expect(fn () => $action->execute($origin, $destination
+    expect(fn () => $action->execute($origin, $destination))
         ->toThrow(RuntimeException::class, 'Google Maps API key not configured');
 });
 
-it('throws exception when origin and destination are the same', function (): void {
+it('throws exception when origin and destination are the same', function (): void {)
     config(['services.google.maps_api_key' => 'test_key']);
 
     $location = new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano');
 
-    expect(fn () => $action->execute($location, $location
+    expect(fn () => $action->execute($location, $location))
         ->toThrow(InvalidArgumentException::class, 'Origin and destination cannot be the same');
 });
 
-it('returns error travel time data for failed api request', function (): void {
+it('returns error travel time data for failed api request', function (): void {)
     config(['services.google.maps_api_key' => 'test_key']);
 
     $mockHandler->append(new Response(500, [], 'Server Error'));
@@ -54,10 +54,10 @@ it('returns error travel time data for failed api request', function (): void {
         ->and($result->status)->toBe('REQUEST_FAILED');
 });
 
-it('returns error for invalid response status', function (): void {
+it('returns error for invalid response status', function (): void {)
     config(['services.google.maps_api_key' => 'test_key']);
 
-    $mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([)))
         'status' => 'INVALID_REQUEST',
     ])));
 
@@ -71,10 +71,10 @@ it('returns error for invalid response status', function (): void {
         ->and($result->status)->toBe('INVALID_RESPONSE');
 });
 
-it('returns error when no route found', function (): void {
+it('returns error when no route found', function (): void {)
     config(['services.google.maps_api_key' => 'test_key']);
 
-    $mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([)))
         'status' => 'OK',
         'rows' => [[
             'elements' => [[
@@ -93,10 +93,10 @@ it('returns error when no route found', function (): void {
         ->and($result->status)->toBe('NO_ROUTE');
 });
 
-it('returns travel time data for valid route', function (): void {
+it('returns travel time data for valid route', function (): void {)
     config(['services.google.maps_api_key' => 'test_key']);
 
-    $mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([)))
         'status' => 'OK',
         'rows' => [[
             'elements' => [[
@@ -122,10 +122,10 @@ it('returns travel time data for valid route', function (): void {
         ->and($result->status)->toBe('OK');
 });
 
-it('uses duration as fallback for duration in traffic', function (): void {
+it('uses duration as fallback for duration in traffic', function (): void {)
     config(['services.google.maps_api_key' => 'test_key']);
 
-    $mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([)))
         'status' => 'OK',
         'rows' => [[
             'elements' => [[

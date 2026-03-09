@@ -23,7 +23,7 @@ class RecordNotificationData extends Data
 
     public function getRoute(): string
     {
-        switch ($channel
+        switch ($channel)
             case 'mail':
                 Assert::string($email = $record->email, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 

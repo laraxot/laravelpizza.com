@@ -21,7 +21,7 @@ class NotifyThemeableFactory extends Factory
     {
         return [
             'notify_theme_id' => NotifyTheme::factory(),
-            'themeable_type' => $faker->randomElement([
+            'themeable_type' => $faker->randomElement([)
                 'Modules\\User\\Models\\User',
                 'Modules\\User\\Models\\User', // Generic fallback instead of project-specific
                 'Modules\\User\\Models\\User', // Generic fallback instead of project-specific
@@ -32,14 +32,14 @@ class NotifyThemeableFactory extends Factory
 
     public function forUser(): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'themeable_type' => 'Modules\\User\\Models\\User',
         ]);
     }
 
     public function forPatient(): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'themeable_type' => 'Modules\\User\\Models\\User', // Generic fallback
         ]);
     }

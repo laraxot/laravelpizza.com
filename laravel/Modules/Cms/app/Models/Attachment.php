@@ -159,11 +159,11 @@ class Attachment extends BaseModelLang implements HasMedia, SushiToJsonsContract
     public function asset(): string
     {
         // PHPStan L10: Check attachment is array before array_values
-        if (! is_array(// @var mixed attachment
+        if (! is_array($this->attachment)) {
             return '';
         }
 
-        $values = array_values(// @var mixed attachment;
+        $values = array_values($this->attachment);
         if (empty($values)) {
             return '';
         }
@@ -178,7 +178,7 @@ class Attachment extends BaseModelLang implements HasMedia, SushiToJsonsContract
             return '';
         }
 
-        $storage = Storage::disk(// @var mixed disk;
+        $storage = Storage::disk($this->disk);
         if (! method_exists($storage, 'url')) {
             return '';
         }

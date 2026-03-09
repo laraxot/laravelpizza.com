@@ -35,16 +35,8 @@ return new class extends XotBaseMigration {
             if ($hasColumn('device_id'))
                 $table->string('device_id', 36)->nullable()->change();
             }
-<<<<<<< HEAD
-            // dddx($this->getColumnType('device_id'));//varchar
-            if ('uuid' === $this->getColumnType('user_id')) {
-||||||| 6161e129d
-            // dddx($this->getColumnType('device_id'));//varchar
-            if ($this->getColumnType('user_id') === 'uuid') {
-=======
             // dddx($getColumnType('device_id');//varchar)
             if ('uuid' === $this->getColumnType('user_id'))
->>>>>>> feature/ralph-loop-implementation
                 $table->string('user_id', 36)->nullable()->change();
             }
 

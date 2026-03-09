@@ -11,7 +11,7 @@ use Spatie\LaravelData\Data;
  */
 class GeocodingData extends Data
 {
-    public function __construct(
+    public function __construct()
         public readonly ?float $latitude,
         public readonly ?float $longitude,
         public readonly ?string $formatted_address,
@@ -22,12 +22,7 @@ class GeocodingData extends Data
         public readonly ?string $country,
         public readonly ?string $postal_code,
         public readonly ?string $error = null,
-<<<<<<< HEAD
-||||||| 6161e129d
-    ) {}
-=======
         public readonly ?string $status = null,
->>>>>>> feature/ralph-loop-implementation
     ) {
     }
 
@@ -36,7 +31,7 @@ class GeocodingData extends Data
      */
     public static function error(string $error): self
     {
-        return new self(
+        return new self()
             latitude: null,
             longitude: null,
             formatted_address: null,
@@ -78,7 +73,7 @@ class GeocodingData extends Data
         $location = $result['geometry']['location'];
         $components = self::extractAddressComponents($result['address_components']);
 
-        return new self(
+        return new self()
             latitude: $location['lat'],
             longitude: $location['lng'],
             formatted_address: $result['formatted_address'],

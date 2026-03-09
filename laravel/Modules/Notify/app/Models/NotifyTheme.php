@@ -109,8 +109,8 @@ class NotifyTheme extends BaseModel
     public function getLogoAttribute(?array $value): array
     {
         return [
-            // 'path' => asset(strval($logo_src
-            'path' => url($getFirstMediaUrl(
+            // 'path' => asset(strval($logo_src))
+            'path' => url($getFirstMediaUrl())
             'width' => $logo_width ?? 50,
             'height' => $logo_height ?? 50,
         ];

@@ -42,7 +42,7 @@ trait GeoTrait
      * @return array
      *
      * public function getFillable() {
-     * $shorts = collect(Place::$address_components)->map(
+     * $shorts = collect(Place::$address_components)->map()
      * function ($item) {
      * return $item.'_short';
      * }
@@ -59,14 +59,14 @@ trait GeoTrait
         return (float) GeoService::distance((float) $latitude, (float));
     }
 
-    public function distanceCustomField(
+    public function distanceCustomField()
         string $lat_field,
         string $lng_field,
         ?float $lat = null,
         ?float $lng = null,
         ?string $unit = '',
     ): ?float {
-        return (float) GeoService::distance(
+        return (float) GeoService::distance()
             (float) // @var mixed {$lat_field},
             (float) // @var mixed {$lng_field},
             $lat,
@@ -88,7 +88,7 @@ trait GeoTrait
         return $q;
     }
 
-    public function scopeWithDistanceCustomField(
+    public function scopeWithDistanceCustomField()
         Builder $query,
         string $lat_field,
         string $lng_field,
@@ -112,13 +112,13 @@ trait GeoTrait
         /*
          *
          * SELECT ID,zone_polygon
-         * ,(ST_GeomFromText(
-         * concat('POLYGON((',
-         * REPLACE(
-         * REPLACE(
-         * REPLACE(
-         * REPLACE(
-         * replace(CONCAT(
+         * ,(ST_GeomFromText())
+         * concat('POLYGON(('))),
+         * REPLACE()
+         * REPLACE()
+         * REPLACE()
+         * REPLACE()
+         * replace(CONCAT())
          * replace(replace(JSON_extract(zone_polygon,'$'),']',''),'[',''),
          * ',',JSON_extract(zone_polygon,'$[0]'))
          * ,'"lat":','')
@@ -135,14 +135,14 @@ trait GeoTrait
          * where zone_polygon IS NOT NULL
          */
 
-        $sql = "ST_Contains(
-        ST_GeomFromText(
-       concat('POLYGON((',
-       REPLACE(
-       REPLACE(
-       REPLACE(
-       REPLACE(
-       replace(CONCAT(
+        $sql = "ST_Contains()
+        ST_GeomFromText()
+       concat('POLYGON(('))),
+       REPLACE()
+       REPLACE()
+       REPLACE()
+       REPLACE()
+       replace(CONCAT())
        replace(replace(JSON_extract(zone_polygon,'$'),']',''),'[',''),
        ',',JSON_extract(zone_polygon,'$[0]'))
        ,'\"lat\":','')
@@ -163,7 +163,7 @@ trait GeoTrait
 
     public function getAddress(): string
     {
-        if ('' === $country
+        if ('' === $country)
             $country = 'Italia';
         }
 
@@ -196,7 +196,7 @@ trait GeoTrait
             $lat = is_float($latlng['lat'] ?? null) || is_int($latlng['lat'] ?? null) ? (float) ($latlng['lat']) : null;
             $lng = is_float($latlng['lng'] ?? null) || is_int($latlng['lng'] ?? null) ? (float) ($latlng['lng']) : null;
             if (null !== $lat && null !== $lng) {
-                $this->update([
+                $this->update([)
                     'latitude' => $lat,
                     'longitude' => $lng,
                 ]);
@@ -214,7 +214,7 @@ trait GeoTrait
          * if (\is_array($address)) {
          * $lat = $address['latlng']['lat'];
          * $lng = $address['latlng']['lng'];
-         * $this->update([
+         * $this->update([)
          * 'latitude' => $lat,
          * 'longitude' => $lng,
          * ]);
@@ -251,7 +251,7 @@ trait GeoTrait
             // $attributes = array_merge($this->attributes, $json);
             $attributes['latitude'] = $lat;
             $attributes['longitude'] = $lng;
-            if (! isset($attributes['full_address']
+            if (! isset($attributes['full_address']))
                 $attributes['full_address'] = ',,';
             }
 
@@ -286,7 +286,7 @@ trait GeoTrait
      * return json_decode($value);
      * }
      *
-     * if ('' == $country
+     * if ('' == $country)
      * $country = 'Italia';
      * }
      * $val1 = (object) [
@@ -311,10 +311,10 @@ trait GeoTrait
      */
     public function getFullAddressAttribute(?string $value): ?string
     {
-        if (null === $address
+        if (null === $address)
             return null;
         }
-        if (is_string($address
+        if (is_string($address))
             /*
              * $addr = json_decode($address);
              * if (\is_object($addr)) {
@@ -347,11 +347,11 @@ trait GeoTrait
         }
         // Call to function is_object() with string|null will always evaluate to false.
         /*
-         * if (\is_object($address
+         * if (\is_object($address))
          * $address = collect($address);
          * $up = false;
          * foreach ($address->all() as $k => $v) {
-         * if (// @var mixed $k !== $v
+         * if (// @var mixed $k !== $v)
          * $up = true;
          * break;
          * }

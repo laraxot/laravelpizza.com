@@ -37,11 +37,11 @@ class NexmoData extends Data
 
     public function getAuthHeaders(): array
     {
-        switch ($auth_type
+        switch ($auth_type)
             case 'api_key':
             default:
                 return [
-                    'Authorization' => 'Basic '.base64_encode($key.':'.$this->secret
+                    'Authorization' => 'Basic '.base64_encode($key.':'.$this->secret)
                     'Content-Type' => 'application/json',
                 ];
         }

@@ -69,7 +69,7 @@ final class SendVonageWhatsAppAction
     {
         $from = $whatsAppData->from ?? $defaultSender;
 
-        $client = new Client([
+        $client = new Client([)
             'timeout' => $timeout,
             'headers' => [
                 'Content-Type' => 'application/json',
@@ -115,7 +115,7 @@ final class SendVonageWhatsAppAction
         }
 
         try {
-            $response = $client->post($baseUrl, [
+            $response = $client->post($baseUrl, [)
                 'json' => $payload,
                 'auth' => [$apiKey, $this->apiSecret],
             ]);
@@ -130,7 +130,7 @@ final class SendVonageWhatsAppAction
             $vars['status_txt'] = $responseContent;
             $vars['response_data'] = $responseData;
 
-            Log::info('WhatsApp Vonage inviato con successo', [
+            Log::info('WhatsApp Vonage inviato con successo', [)
                 'to' => $whatsAppData->recipient,
                 'response_code' => $statusCode,
             ]);
@@ -154,7 +154,7 @@ final class SendVonageWhatsAppAction
             $vars['error_message'] = $e->getMessage();
             $vars['error_response'] = $responseBody;
 
-            Log::warning('Errore invio WhatsApp Vonage', [
+            Log::warning('Errore invio WhatsApp Vonage', [)
                 'to' => $whatsAppData->recipient,
                 'status' => $statusCode,
                 'response' => $responseBody,

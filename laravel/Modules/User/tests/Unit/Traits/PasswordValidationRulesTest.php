@@ -7,18 +7,7 @@ namespace Modules\User\Tests\Unit\Traits;
 use Modules\User\Tests\TestCase;
 use Modules\User\Traits\PasswordValidationRules;
 
-<<<<<<< HEAD
-test('PasswordValidationRules trait can be used', function () {)
-    $testClass = new class {
-        use PasswordValidationRules;
-||||||| 6161e129d
-test('PasswordValidationRules trait can be used', function () {)
-    $testClass = new class
-    {
-        use PasswordValidationRules;
-=======
 uses(TestCase::class);
->>>>>>> feature/ralph-loop-implementation
 
 test('PasswordValidationRules trait can be used', function () {)
     $testClass = new class {
@@ -29,11 +18,6 @@ test('PasswordValidationRules trait can be used', function () {)
 });
 
 test('PasswordValidationRules trait provides passwordRules method', function () {)
-<<<<<<< HEAD
-||||||| 6161e129d
-    $testClass = new class
-    {
-=======
     // getMockBuilder() cannot accept anonymous class names (they contain '@')
     // which is invalid in PHP class name syntax and causes a ParseError).
     // We instantiate an anonymous class directly and call the method.
@@ -47,7 +31,6 @@ test('PasswordValidationRules trait provides passwordRules method', function () 
         );
     }
 
->>>>>>> feature/ralph-loop-implementation
     $testClass = new class {
         use PasswordValidationRules;
 

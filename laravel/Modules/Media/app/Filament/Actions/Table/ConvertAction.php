@@ -18,13 +18,13 @@ class ConvertAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        $this->translateLabel(
+        $this->translateLabel()
             ->tooltip('convert')
             ->openUrlInNewTab()
             ->icon('media-convert')
-            ->schema([
+            ->schema([)
                 Radio::make('format')
-                    ->options([
+                    ->options([)
                         'webm01' => 'webm01',
                         'webm02' => 'webm02',
                     ])

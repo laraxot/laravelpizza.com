@@ -201,14 +201,14 @@ class Post extends BaseModel
     // -------- relationship ------
     public function linkable(): MorphTo
     {
-        return // @var mixed morphTo('post';
+        return $this->morphTo('post');
     }
 
     /* deprecated
      * public function archive() {
-     * $lang = // @var mixed lang;
-     * $post_type = // @var mixed post_type;
-     * $obj = // @var mixed getLinkedModel(;
+     * $lang = $lang;
+     * $post_type = $post_type;
+     * $obj = $this->getLinkedModel();
      * $table = $obj->getTable();
      * $post_table = with(new Post())->getTable();
      * $rows = $obj->join($post_table, $post_table.'.post_id', $table.'.post_id')
@@ -228,8 +228,8 @@ class Post extends BaseModel
 
     public function setTitleAttribute(string $value): void
     {
-        // @var mixed attributes['title'] = $value;
-        // @var mixed attributes['guid'] = Str::slug($value;
+        $attributes['title'] = $value;
+        $attributes['guid'] = Str::slug($value);
     }
 
     /**
@@ -241,26 +241,25 @@ class Post extends BaseModel
             return $value;
         }
 
-        if (! empty(// @var mixed attributes['post_type']
+        if (! empty($attributes['post_type']))
             // Assicuriamoci che i valori siano stringhe prima della concatenazione
-            $postType = isset(// @var mixed attributes['post_type']
-                ? // @var mixed attributes['post_type']
+            $postType = isset($attributes['post_type'])
+                ? $attributes['post_type']
                 : '';
-            $postId = isset(// @var mixed attributes['post_id']
-                ? ((string) // @var mixed attributes['post_id']
+            $postId = isset($attributes['post_id'])
+                ? ((string) $attributes['post_id'])
                 : '';
             $value = $postType.' '.$postId;
         } else {
             // Assicuriamoci che post_type e post_id siano stringhe
-            $postType = is_string(// @var mixed post_type;
-            $postId = is_scalar(// @var mixed post_id;
+            $postType = is_string($post_type);
+            $postId = is_scalar($post_id);
             $value = $postType.' '.$postId;
         }
 
-        // @var mixed title = $value;
+        $title = $value;
 
-        if (null !== // @var mixed getKey(
-            // @var mixed update([
+        if (null !== $this->getKey($update([)))
                 'title' => $value,
             ]);
         }
@@ -276,14 +275,14 @@ class Post extends BaseModel
         if (\is_string($value) && '' !== $value && ! str_contains($value, ' ')) {
             return $value;
         }
-        $value = // @var mixed title;
+        $value = $title;
         if ('' === $value) {
             // Assicuriamoci che i valori siano stringhe prima della concatenazione
-            $postType = isset(// @var mixed attributes['post_type']
-                ? // @var mixed attributes['post_type']
+            $postType = isset($attributes['post_type'])
+                ? $attributes['post_type']
                 : '';
-            $postId = isset(// @var mixed attributes['post_id']
-                ? ((string) // @var mixed attributes['post_id']
+            $postId = isset($attributes['post_id'])
+                ? ((string) $attributes['post_id'])
                 : '';
             $value = $postType.' '.$postId;
         }
@@ -291,10 +290,9 @@ class Post extends BaseModel
             $value = 'u-'.random_int(1, 1000);
         }
         $value = Str::slug($value);
-        // @var mixed guid = $value;
+        $guid = $value;
 
-        if (null !== // @var mixed getKey(
-            // @var mixed update([
+        if (null !== $this->getKey($update([)))
                 'guid' => $value,
             ]);
         }
@@ -309,7 +307,7 @@ class Post extends BaseModel
 
     public function toSearchableArray(): array
     {
-        return // @var mixed only(self::SEARCHABLE_FIELDS;
+        return $this->only(self::SEARCHABLE_FIELDS);
     }
 
     /**

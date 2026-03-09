@@ -32,14 +32,14 @@ trait HasBlocks
 
         if (! is_array($blocks)) {
             $primary_lang = XotData::make()->primary_lang;
-            $blocks = // @var mixed getTranslation($field, $primary_lang;
+            $blocks = $this->getTranslation($field, $primary_lang);
         }
 
         if (! is_array($blocks)) {
             $blocks = [];
         }
 
-        $blocks = // @var mixed compile($blocks;
+        $blocks = $this->compile($blocks);
 
         // Create BlockData instances manually to ensure constructor is called
         // This is necessary because Laravel Data's collect() doesn't call custom constructors
@@ -85,7 +85,7 @@ trait HasBlocks
                 $result[$key] = $value;
             }
             if (is_array($value)) {
-                $result[$key] = // @var mixed compile($value;
+                $result[$key] = $this->compile($value);
             }
         }
 

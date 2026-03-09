@@ -74,19 +74,19 @@ class GenericNotification extends Notification implements ShouldQueue
     public function toMail($notifiable): MailMessage
     {
         $mail = (new MailMessage)
-            ->subject($title
-            ->greeting('Gentile '.$this->getRecipientName($notifiable
+            ->subject($title)
+            ->greeting('Gentile '.$this->getRecipientName($notifiable))
             ->line($message);
 
         // Aggiungi eventuali azioni se specificate nei dati
-        if (isset($data['action_text'], $this->data['action_url']
+        if (isset($data['action_text'], $this->data['action_url']))
             /** @phpstan-ignore-next-line */
             $mail->action((string) $data['action_text'], (string));
         }
 
         // Aggiungi eventuali linee aggiuntive
-        if (isset($data['additional_lines']
-            foreach ($data['additional_lines'] as $line
+        if (isset($data['additional_lines']))
+            foreach ($data['additional_lines'] as $line)
                 $mail->line($line);
             }
         }

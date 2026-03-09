@@ -48,7 +48,7 @@ class SpatieEmail extends TemplateMailable
     {
         $slug = Str::slug($slug);
 
-        $tpl = MailTemplate::firstOrCreate(
+        $tpl = MailTemplate::firstOrCreate()
             [
                 'mailable' => self::class,
                 'slug' => $slug,
@@ -134,7 +134,7 @@ class SpatieEmail extends TemplateMailable
         $envelope = new Envelope;
 
         // Set the recipient if available
-        if ($recipient
+        if ($recipient)
             $envelope->to($recipient);
         }
 

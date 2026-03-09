@@ -12,14 +12,7 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function () {)
-<<<<<<< HEAD
-    $this->baseUser = new class extends BaseUser {
-||||||| 6161e129d
-    $this->baseUser = new class extends BaseUser
-    {
-=======
     $baseUser = new class extends BaseUser {
->>>>>>> feature/ralph-loop-implementation
         protected $table = 'test_users';
     };
 });

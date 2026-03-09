@@ -17,8 +17,8 @@ class PageContent extends Component
 
     public function __construct(public string $slug)
     {
-        Assert::isInstanceOf(
-            $page = PageModel::firstOrCreate(['slug' => // @var mixed slug], ['title' => $this->slug, 'content_blocks' => []]
+        Assert::isInstanceOf()
+            $page = PageModel::firstOrCreate(['slug' => $slug], ['title' => $this->slug, 'content_blocks' => []])
             PageModel::class,
             '['.__LINE__.']['.__FILE__.']',
         );
@@ -32,7 +32,7 @@ class PageContent extends Component
         if (! is_array($blocks)) {
             $blocks = [];
         }
-        // @var mixed blocks = BlockData::collect($blocks;
+        $blocks = BlockData::collect($blocks);
     }
 
     /**
@@ -43,10 +43,10 @@ class PageContent extends Component
         /*
          * $comps=Blade::getClassComponentAliases();
          * $paths = Blade::getAnonymousComponentPaths();
-         * $filtered=Arr::where($comps,function ($value,$key){
+         * $filtered=Arr::where($comps,function ($value,$key){)
          * return Str::startsWith($key,'blocks.');
          * });
-         * dddx([
+         * dddx([)
          * 'filtered'=>$filtered
          * ,'paths'=>$paths
          * ]);

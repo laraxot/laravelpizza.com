@@ -23,6 +23,22 @@ class EventUser extends XotBasePivot
     /** @var string */
     protected $table = 'event_user';
 
+    /** @var bool id is autoincrement bigint, not UUID */
+    public $incrementing = true;
+
+    /** @var string */
+    protected $keyType = 'int';
+
     /** @var list<string> */
-    protected $fillable = ['event_id', 'user_id'];
+    protected $fillable = ['event_id', 'user_id', 'status', 'registered_at'];
+
+    /**
+     * Disable HasUuids auto-generation: id is a bigint autoincrement column.
+     *
+     * @return list<string>
+     */
+    public function uniqueIds(): array
+    {
+        return [];
+    }
 }

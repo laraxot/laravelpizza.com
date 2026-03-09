@@ -13,7 +13,7 @@ class TicketAssignedNotification extends Notification
 {
     use Queueable;
 
-    public function __construct(
+    public function __construct()
         public mixed $ticket, // Using mixed type since Ticket model doesn't exist
         public User $assignedBy
     ) {}
@@ -30,7 +30,7 @@ class TicketAssignedNotification extends Notification
     {
         return (new MailMessage)
             ->subject('New Ticket Assigned')
-            ->line("A new ticket has been assigned to you by {$assignedBy->name}"
+            ->line("A new ticket has been assigned to you by {$assignedBy->name}")
             ->action('View Ticket', url('/'));
     }
 

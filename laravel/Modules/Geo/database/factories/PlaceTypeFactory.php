@@ -55,7 +55,7 @@ class PlaceTypeFactory extends Factory
      */
     public function hospital(): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'name' => 'Ospedale',
             'description' => 'Struttura ospedaliera per cure mediche acute e croniche',
         ]);
@@ -66,7 +66,7 @@ class PlaceTypeFactory extends Factory
      */
     public function clinic(): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'name' => 'Clinica',
             'description' => 'Clinica privata per visite specialistiche e trattamenti',
         ]);
@@ -77,7 +77,7 @@ class PlaceTypeFactory extends Factory
      */
     public function medicalOffice(): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'name' => 'Studio Medico',
             'description' => 'Studio privato di medici specialisti',
         ]);
@@ -88,7 +88,7 @@ class PlaceTypeFactory extends Factory
      */
     public function pharmacy(): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'name' => 'Farmacia',
             'description' => 'Farmacia per la vendita di medicinali e prodotti sanitari',
         ]);
@@ -99,7 +99,7 @@ class PlaceTypeFactory extends Factory
      */
     public function laboratory(): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'name' => 'Laboratorio',
             'description' => 'Laboratorio di analisi mediche e diagnostiche',
         ]);

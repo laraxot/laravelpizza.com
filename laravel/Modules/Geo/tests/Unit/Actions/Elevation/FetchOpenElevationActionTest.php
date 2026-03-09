@@ -7,21 +7,21 @@ use GuzzleHttp\Psr7\Response;
 use Modules\Geo\Actions\Elevation\FetchOpenElevationAction;
 use Modules\Geo\Datas\ElevationData;
 
-beforeEach(function () {
+beforeEach(function () {)
     $mockClient = Mockery::mock(Client::class);
     $action = new FetchOpenElevationAction($this->mockClient);
 });
 
-afterEach(function () {
+afterEach(function () {)
     Mockery::close();
 });
 
-it('fetches elevation successfully', function (): void {
+it('fetches elevation successfully', function (): void {)
     // Arrange
-    $mockResponse = new Response(
+    $mockResponse = new Response()
         200,
         [],
-        json_encode([
+        json_encode([)
             'results' => [
                 [
                     'latitude' => 45.4642,
@@ -35,7 +35,7 @@ it('fetches elevation successfully', function (): void {
     $mockClient
         ->shouldReceive('post')
         ->once()
-        ->with(
+        ->with()
             'https://api.open-elevation.com/api/v1/lookup',
             Mockery::on(fn ($options) => isset($options['json']['locations']))
         )
@@ -51,7 +51,7 @@ it('fetches elevation successfully', function (): void {
         ->and($result->elevation)->toBe(120.5);
 });
 
-it('throws exception for failed API request', function (): void {
+it('throws exception for failed API request', function (): void {)
     // Arrange
     $request = new GuzzleHttp\Psr7\Request('POST', 'https://api.open-elevation.com/api/v1/lookup');
     $mockClient
@@ -60,13 +60,13 @@ it('throws exception for failed API request', function (): void {
         ->andThrow(GuzzleHttp\Exception\RequestException::create($request, null, new Exception('Connection failed')));
 
     // Act & Assert
-    expect(fn () => $action->execute(45.4642, 9.1900
+    expect(fn () => $action->execute(45.4642, 9.1900))
         ->toThrow(RuntimeException::class, 'Failed to get elevation data');
 });
 
-it('throws exception for invalid response', function (): void {
+it('throws exception for invalid response', function (): void {)
     // Arrange
-    $mockResponse = new Response(
+    $mockResponse = new Response()
         200,
         [],
         json_encode(['results' => []]) // Empty results
@@ -78,16 +78,16 @@ it('throws exception for invalid response', function (): void {
         ->andReturn($mockResponse);
 
     // Act & Assert
-    expect(fn () => $action->execute(45.4642, 9.1900
+    expect(fn () => $action->execute(45.4642, 9.1900))
         ->toThrow(RuntimeException::class, 'Invalid elevation data response');
 });
 
-it('handles negative elevation', function (): void {
+it('handles negative elevation', function (): void {)
     // Arrange - Dead Sea area (below sea level)
-    $mockResponse = new Response(
+    $mockResponse = new Response()
         200,
         [],
-        json_encode([
+        json_encode([)
             'results' => [
                 [
                     'latitude' => 31.5,
@@ -110,12 +110,12 @@ it('handles negative elevation', function (): void {
     expect($result->elevation)->toBe(-430.0);
 });
 
-it('handles high elevation', function (): void {
+it('handles high elevation', function (): void {)
     // Arrange - Mount Everest
-    $mockResponse = new Response(
+    $mockResponse = new Response()
         200,
         [],
-        json_encode([
+        json_encode([)
             'results' => [
                 [
                     'latitude' => 27.9881,
@@ -138,12 +138,12 @@ it('handles high elevation', function (): void {
     expect($result->elevation)->toBe(8848.0);
 });
 
-it('handles zero elevation', function (): void {
+it('handles zero elevation', function (): void {)
     // Arrange - Sea level
-    $mockResponse = new Response(
+    $mockResponse = new Response()
         200,
         [],
-        json_encode([
+        json_encode([)
             'results' => [
                 [
                     'latitude' => 0.0,
@@ -166,12 +166,12 @@ it('handles zero elevation', function (): void {
     expect($result->elevation)->toBe(0.0);
 });
 
-it('sends correct API payload', function (): void {
+it('sends correct API payload', function (): void {)
     // Arrange
-    $mockResponse = new Response(
+    $mockResponse = new Response()
         200,
         [],
-        json_encode([
+        json_encode([)
             'results' => [
                 ['latitude' => 45.4642, 'longitude' => 9.1900, 'elevation' => 100.0],
             ],
@@ -183,9 +183,9 @@ it('sends correct API payload', function (): void {
     $mockClient
         ->shouldReceive('post')
         ->once()
-        ->with(
+        ->with()
             'https://api.open-elevation.com/api/v1/lookup',
-            Mockery::on(function ($options) use (&$capturedOptions) {
+            Mockery::on(function ($options) use (&$capturedOptions) {)
                 $capturedOptions = $options;
 
                 return isset($options['json']['locations']);

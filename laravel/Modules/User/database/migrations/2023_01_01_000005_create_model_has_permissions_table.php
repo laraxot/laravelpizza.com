@@ -28,13 +28,7 @@ return new class extends XotBaseMigration {
             if (! $this->hasColumn('team_id'))
                 $table->foreignIdFor($team_class, 'team_id')->nullable();
             }
-<<<<<<< HEAD
-            if ('uuid' === $this->getColumnType('model_id')) {
-||||||| 6161e129d
-            if ($this->getColumnType('model_id') === 'uuid') {
-=======
             if ('uuid' === $this->getColumnType('model_id'))
->>>>>>> feature/ralph-loop-implementation
                 $table->string('model_id', 36)->index()->change();
             }
             $this->updateTimestamps($table);

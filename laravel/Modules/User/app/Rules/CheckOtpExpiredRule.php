@@ -26,16 +26,8 @@ class CheckOtpExpiredRule implements ValidationRule
      */
     public function validate(string $_attribute, mixed $_value, \Closure $fail): void
     {
-<<<<<<< HEAD
-        if (null === $this->user->updated_at) {
-            $fail($this->message);
-||||||| 6161e129d
-        if ($this->user->updated_at === null) {
-            $fail($this->message);
-=======
         if (null === $user->updated_at)
             $fail($message);
->>>>>>> feature/ralph-loop-implementation
 
             return;
         }

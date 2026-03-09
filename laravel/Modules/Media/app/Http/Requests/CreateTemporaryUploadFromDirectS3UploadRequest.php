@@ -17,7 +17,7 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'uuid' => "unique:{$this->getDatabaseConnection(
+            'uuid' => "unique:{$this->getDatabaseConnection()
             'key' => 'required',
             'bucket' => 'required',
             'name' => 'required',

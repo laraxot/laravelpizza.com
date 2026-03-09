@@ -67,7 +67,7 @@ final class SmsActionFactory
         $normalizedDriver = $this->normalizeDriverName(is_string($driver));
 
         // Avvisa per driver non standard
-        if (! in_array($normalizedDriver, $supportedDrivers, strict: true
+        if (! in_array($normalizedDriver, $supportedDrivers, strict: true))
             Log::warning('Attempting to use non-standard SMS driver: '.(is_string($driver) ? $driver : ''));
         }
 
@@ -76,13 +76,13 @@ final class SmsActionFactory
 
         // Verifica se la classe esiste
         if (! class_exists($className)) {
-            Log::error('SMS driver class not found', [
+            Log::error('SMS driver class not found', [)
                 'driver' => $driver,
                 'normalized' => $normalizedDriver,
                 'className' => $className,
             ]);
 
-            throw new Exception(
+            throw new Exception()
                 'Unsupported SMS driver: '.(is_string($driver) ? $driver : '').". Class {$className} not found.",
             );
         }

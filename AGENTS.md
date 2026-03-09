@@ -25,6 +25,23 @@ Questo file ora funge da indice rapido. La guida completa e modulare e' stata su
 - [Chaos Monkey readiness](./.agents/docs/agents-guide/15-chaos-monkey/chaos-monkey-readiness.md)
 - [Bug Injection Recovery Playbook](./docs/bug-injection-recovery-playbook.md) - Quando bug/file infetti sono introdotti deliberatamente
 
+## REGOLA: Verifica Prima di Dichiarare Completato
+
+**MAI dichiarare completato un task senza aver verificato!**
+
+### Perché
+- Evita falsi positivi
+- Rispetta il tempo dell'utente
+- Garantisce qualità
+
+### Come
+1. Esegui i test: `cd laravel && ./vendor/bin/pest`
+2. Verifica output: controlla errori
+3. Check PHPStan
+4. Solo allora dichiara "fatto"
+
+Riferimento: `docs/rules/verify-before-declare-rule.md`
+
 ## Comunicazione Multi-Agente (REGOLA CRITICA)
 
 Questo progetto ha **multipli agenti AI** che lavorano in parallelo. La comunicazione tra agenti avviene **esclusivamente** tramite:

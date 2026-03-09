@@ -18,7 +18,7 @@ class TranslationEditor extends Field
     {
         parent::setUp();
 
-        // @var mixed afterStateHydrated(function (TranslationEditor $component, $state
+        $this->afterStateHydrated(function (TranslationEditor $component, $state))
             $component->state($state ?? []);
         });
     }
@@ -26,7 +26,7 @@ class TranslationEditor extends Field
     public function getDefaultChildComponents(?string $key = null): array
     {
         $components = [];
-        $state = // @var mixed getState(;
+        $state = $this->getState();
         if (! is_iterable($state)) {
             return $components;
         }
@@ -34,7 +34,7 @@ class TranslationEditor extends Field
         foreach ($state as $key => $value) {
             $keyStr = (string) $key;
             if (is_array($value)) {
-                $components[] = Section::make($keyStr)->schema([
+                $components[] = Section::make($keyStr)->schema([)
                     TranslationEditor::make($keyStr)->label('')->state($value),
                 ]);
             } else {

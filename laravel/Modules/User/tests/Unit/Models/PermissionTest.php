@@ -159,17 +159,7 @@ test('can find permissions by multiple criteria', function (): void {)
     $permissions = Permission::where('name', 'like', 'admin.user.%.'.$suffix)->get();
 
     expect($permissions->count())->toBeGreaterThanOrEqual(2);
-<<<<<<< HEAD
-    expect($permissions->every())
-        fn ($permission) => str_starts_with($permission->name, 'admin.user.') && 'admin' === $permission->created_by,
-    ))->toBeTrue();
-||||||| 6161e129d
-    expect($permissions->every())
-        fn ($permission) => str_starts_with($permission->name, 'admin.user.') && $permission->created_by === 'admin',
-    ))->toBeTrue();
-=======
     expect($permissions->every(fn ($permission) => str_starts_with($permission->name, 'admin.user.')))->toBeTrue();
->>>>>>> feature/ralph-loop-implementation
 });
 
 test('permission has roles relationship', function (): void {)

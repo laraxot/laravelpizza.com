@@ -213,7 +213,7 @@ class Place extends BaseModel implements HasGeolocation
 
     public function getLatitudeAttribute(): ?float
     {
-        if (! isset($attributes['latitude']
+        if (! isset($attributes['latitude']))
             return null;
         }
 
@@ -229,7 +229,7 @@ class Place extends BaseModel implements HasGeolocation
 
     public function getLongitudeAttribute(): ?float
     {
-        if (! isset($attributes['longitude']
+        if (! isset($attributes['longitude']))
             return null;
         }
 

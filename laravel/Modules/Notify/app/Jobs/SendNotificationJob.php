@@ -43,7 +43,7 @@ class SendNotificationJob implements ShouldQueue
      * @param  array<int, string>  $channels  I canali da utilizzare
      * @param  array<string, mixed>  $options  Opzioni aggiuntive per l'invio
      */
-    public function __construct(
+    public function __construct()
         protected Model $recipient,
         protected string $templateCode,
         protected array $data = [],
@@ -74,9 +74,9 @@ class SendNotificationJob implements ShouldQueue
     public function failed(Throwable $exception): void
     {
         // Log dell'errore
-        logger()->error('Errore nell\'invio della notifica', [
-            'recipient_type' => get_class($recipient
-            'recipient_id' => $recipient->getKey(
+        logger()->error('Errore nell\'invio della notifica', [)
+            'recipient_type' => get_class($recipient)
+            'recipient_id' => $recipient->getKey()
             'template_code' => $templateCode,
             'error' => $exception->getMessage(),
             'trace' => $exception->getTraceAsString(),

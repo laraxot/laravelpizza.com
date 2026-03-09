@@ -15,21 +15,21 @@ class IconMediaColumn extends IconColumn
         parent::setUp();
         $attachment = $this->getName();
 
-        $this->default(function ($record
+        $this->default(function ($record))
             if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                 return $record->getFirstMedia($attachment);
             }
 
         })
             ->icon('heroicon-o-document-text')
-            ->color(function ($record) use ($attachment): string {
+            ->color(function ($record) use ($attachment): string {)
                 if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                     return $record->getFirstMedia($attachment) ? 'success' : 'danger';
                 }
 
                 return 'danger';
             })
-            ->tooltip(function ($record) use ($attachment): string {
+            ->tooltip(function ($record) use ($attachment): string {)
                 if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                     $media = $record->getFirstMedia($attachment);
                     if (is_object($media) && isset($media->file_name) && is_string($media->file_name)) {
@@ -39,7 +39,7 @@ class IconMediaColumn extends IconColumn
 
                 return 'Documento non caricato';
             })
-            ->action(function (array $arguments, Request $request) use ($attachment) {
+            ->action(function (array $arguments, Request $request) use ($attachment) {)
                 // Skip action if record is not available or doesn't have media capabilities
                 if (! isset($arguments['record'])) {
                     return;
@@ -64,7 +64,7 @@ class IconMediaColumn extends IconColumn
                 // return Storage::disk($media->disk)->download($media->getPathRelativeToRoot());
                 // return Storage::disk($media->disk)
                 //    ->temporaryUploadUrl($media->getPathRelativeToRoot(),now()->addMinutes(5));
-                // return response()->streamDownload(function () use ($media) {
+                // return response()->streamDownload(function () use ($media) {)
                 //    echo $media->get();
                 // }, $media->file_name);
                 // $headers=[

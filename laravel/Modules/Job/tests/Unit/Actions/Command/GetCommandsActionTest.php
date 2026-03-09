@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 use Modules\Job\Actions\Command\GetCommandsAction;
 
-describe('GetCommandsAction', function () {
-    beforeEach(function () {
-        // @var mixed action = new GetCommandsAction;
+describe('GetCommandsAction', function () {)
+    beforeEach(function () {)
+        $action = new GetCommandsAction;
     });
 
-    it('can be instantiated', function () {
-        expect(// @var mixed action;
+    it('can be instantiated', function () {)
+        expect($action);
     });
 
-    it('has correct method signature', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+    it('has correct method signature', function () {)
+        $reflection = new ReflectionClass($action);
         $method = $reflection->getMethod('execute');
 
         expect($method->isPublic())
@@ -23,14 +23,14 @@ describe('GetCommandsAction', function () {
             ->toBe(0);
     });
 
-    it('can be resolved from container', function () {
+    it('can be resolved from container', function () {)
         $actionFromContainer = app(GetCommandsAction::class);
 
         expect($actionFromContainer)->toBeInstanceOf(GetCommandsAction::class);
     });
 
-    it('uses strict types', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+    it('uses strict types', function () {)
+        $reflection = new ReflectionClass($action);
         $filename = $reflection->getFileName();
 
         expect($filename)->not->toBeNull();
@@ -38,14 +38,14 @@ describe('GetCommandsAction', function () {
         expect($content)->toContain('declare(strict_types=1);');
     });
 
-    it('has correct namespace', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+    it('has correct namespace', function () {)
+        $reflection = new ReflectionClass($action);
 
         expect($reflection->getNamespaceName())->toBe('Modules\Job\Actions\Command');
     });
 
-    it('uses required imports', function () {
-        $filename = (new ReflectionClass(// @var mixed action;
+    it('uses required imports', function () {)
+        $filename = (new ReflectionClass($action));
         $content = file_get_contents($filename);
 
         expect($content)->toContain('use Illuminate\Console\Application;')
@@ -53,8 +53,8 @@ describe('GetCommandsAction', function () {
             ->and($content)->toContain('use Modules\Job\Datas\CommandData;');
     });
 
-    it('has proper class structure', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+    it('has proper class structure', function () {)
+        $reflection = new ReflectionClass($action);
 
         expect($reflection->isInstantiable())
             ->toBeTrue()
@@ -64,8 +64,8 @@ describe('GetCommandsAction', function () {
             ->toBeFalse();
     });
 
-    it('has execute method returning DataCollection', function () {
-        $reflection = new ReflectionClass(// @var mixed action;
+    it('has execute method returning DataCollection', function () {)
+        $reflection = new ReflectionClass($action);
         $method = $reflection->getMethod('execute');
 
         // Method should return DataCollection type

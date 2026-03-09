@@ -25,7 +25,7 @@ class EmailData extends Data
 
     public array $attachments = [];
 
-    public function __construct(
+    public function __construct()
         string $recipient,
         string $subject,
         string $body_html,
@@ -55,11 +55,11 @@ class EmailData extends Data
 
     public function getFrom(): Address
     {
-        if (! isset($from
+        if (! isset($from))
             Assert::string($from = config('mail.from.name', 'Default Sender'));
             $from = $from;
         }
-        if (! isset($from_email
+        if (! isset($from_email))
             Assert::string($from_email = config('mail.from.address', 'default@example.com'));
             $from_email = $from_email;
         }
@@ -69,18 +69,18 @@ class EmailData extends Data
 
     public function getMimeEmail(): MimeEmail
     {
-        if ($body === ''
+        if ($body === '')
             $body = strip_tags($this->body_html);
         }
 
         $email = (new MimeEmail)
-            ->from($getFrom(
-            ->to($recipient
-            ->subject(strip_tags($subject
-            ->html($body_html
+            ->from($getFrom())
+            ->to($recipient)
+            ->subject(strip_tags($subject))
+            ->html($body_html)
             ->text($body);
 
-        foreach ($attachments as $attachment
+        foreach ($attachments as $attachment)
             Assert::string($attachment, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
             $email->attachFromPath($attachment); // string $path, ?string $name = null, ?string $contentType = null
         }

@@ -23,10 +23,10 @@ class SendRecordsNotificationBulkAction extends XotBaseBulkAction
     {
         parent::setUp();
 
-        $this->label(__('notify::actions.send_notification_bulk.label'
+        $this->label(__('notify::actions.send_notification_bulk.label'))
             ->icon('heroicon-o-envelope')
             ->color('primary')
-            ->action(function (Collection $records, array $data): void {
+            ->action(function (Collection $records, array $data): void {)
                 /** @var Collection<int, Model> $records */
                 /** @var array<string, mixed> $data */
                 $mailTemplateSlug = (string) $data['mail_template_slug'];
@@ -34,7 +34,7 @@ class SendRecordsNotificationBulkAction extends XotBaseBulkAction
                 $channels = (array) $data['channels'];
                 app(SendRecordsNotificationAction::class)->execute($records, $mailTemplateSlug, $channels);
             })
-            ->schema([
+            ->schema([)
                 'mail_template_slug' => MailTemplateSelect::make('mail_template_slug'),
                 'channels' => ChannelCheckboxList::make('channels'),
             ])

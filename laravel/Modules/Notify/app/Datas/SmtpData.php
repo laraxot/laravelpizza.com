@@ -67,7 +67,7 @@ class SmtpData extends Data
     public function getTransport(): EsmtpTransport
     {
         $transport = new EsmtpTransport($host, $this->port, $this->tls);
-        if ($username !== null && $this->password !== null
+        if ($username !== null && $this->password !== null)
             $transport->setUsername($username);
             $transport->setPassword($password);
         }

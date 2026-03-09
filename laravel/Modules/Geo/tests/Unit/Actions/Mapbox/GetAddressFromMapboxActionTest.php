@@ -12,37 +12,37 @@ use GuzzleHttp\Psr7\Response;
 use Modules\Geo\Actions\Mapbox\GetAddressFromMapboxAction;
 use Modules\Geo\Datas\AddressData;
 
-beforeEach(function () {
+beforeEach(function () {)
     $mockHandler = new MockHandler();
     $handlerStack = HandlerStack::create($mockHandler);
     $client = new Client(['handler' => $handlerStack]);
     $action = new GetAddressFromMapboxAction($this->client);
 });
 
-it('throws exception when api key is not configured', function (): void {
+it('throws exception when api key is not configured', function (): void {)
     config(['services.mapbox.access_token' => null]);
 
-    expect(fn () => $action->execute('Milano, Italia'
+    expect(fn () => $action->execute('Milano, Italia'))
         ->toThrow(RuntimeException::class, 'Mapbox access token not configured');
 });
 
-it('throws exception for empty address', function (): void {
+it('throws exception for empty address', function (): void {)
     config(['services.mapbox.access_token' => 'test_key']);
 
-    expect(fn () => $action->execute(''
+    expect(fn () => $action->execute(''))
         ->toThrow(RuntimeException::class, 'Address cannot be empty');
 });
 
-it('throws exception for too long address', function (): void {
+it('throws exception for too long address', function (): void {)
     config(['services.mapbox.access_token' => 'test_key']);
 
     $longAddress = str_repeat('a', 1001);
 
-    expect(fn () => $action->execute($longAddress
+    expect(fn () => $action->execute($longAddress))
         ->toThrow(RuntimeException::class, 'Address is too long');
 });
 
-it('throws exception for guzzle exception', function (): void {
+it('throws exception for guzzle exception', function (): void {)
     config(['services.mapbox.access_token' => 'test_key']);
 
     $mockHandler->append(new GuzzleHttp\Exception\RequestException('Error', new GuzzleHttp\Psr7\Request('GET', 'http://test')));
@@ -52,10 +52,10 @@ it('throws exception for guzzle exception', function (): void {
     expect($result)->toBeNull();
 });
 
-it('returns null when no features in response', function (): void {
+it('returns null when no features in response', function (): void {)
     config(['services.mapbox.access_token' => 'test_key']);
 
-    $mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([)))
         'features' => [],
     ])));
 
@@ -64,10 +64,10 @@ it('returns null when no features in response', function (): void {
     expect($result)->toBeNull();
 });
 
-it('returns address data for valid response', function (): void {
+it('returns address data for valid response', function (): void {)
     config(['services.mapbox.access_token' => 'test_key']);
 
-    $mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([)))
         'features' => [[
             'center' => [9.1900, 45.4642],
             'context' => [
@@ -95,10 +95,10 @@ it('returns address data for valid response', function (): void {
         ->and($result->state)->toBe('MI');
 });
 
-it('handles address without house number', function (): void {
+it('handles address without house number', function (): void {)
     config(['services.mapbox.access_token' => 'test_key']);
 
-    $mockHandler->append(new Response(200, [], json_encode([
+    $mockHandler->append(new Response(200, [], json_encode([)))
         'features' => [[
             'center' => [9.1900, 45.4642],
             'context' => [

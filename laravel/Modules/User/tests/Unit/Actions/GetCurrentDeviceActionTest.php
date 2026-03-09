@@ -26,15 +26,7 @@ class GetCurrentDeviceActionTest extends TestCase
         $agent->shouldReceive('version')->with('Chrome')->andReturn('120.0');
         $agent->shouldReceive('robot')->andReturn(null);
 
-<<<<<<< HEAD
-beforeEach(function () {)
-    $this->action = new GetCurrentDeviceAction();
-||||||| 6161e129d
-beforeEach(function () {)
-    $this->action = new GetCurrentDeviceAction;
-=======
         $deviceModel = new Device();
->>>>>>> feature/ralph-loop-implementation
 
         $action = new GetCurrentDeviceAction($agent, $deviceModel);
         $result = $action->execute();

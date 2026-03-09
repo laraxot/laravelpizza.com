@@ -17,6 +17,8 @@ test('it registers attendee and increments counter', function () {
         'slug' => 'meetup-'.uniqid(),
         'max_attendees' => 10,
         'attendees_count' => 0,
+        'start_date' => now()->addDays(30),
+        'end_date' => now()->addDays(30)->addHours(3),
     ]);
 
     $registration = app(RegisterAttendeeToEventAction::class)->execute($event, 'user-001');
@@ -34,6 +36,8 @@ test('it throws when event is full', function () {
         'slug' => 'full-'.uniqid(),
         'max_attendees' => 1,
         'attendees_count' => 1,
+        'start_date' => now()->addDays(30),
+        'end_date' => now()->addDays(30)->addHours(3),
     ]);
 
     expect(fn () => app(RegisterAttendeeToEventAction::class)->execute($event, 'user-002'))
@@ -46,6 +50,8 @@ test('it throws on duplicate registration', function () {
         'slug' => 'dup-'.uniqid(),
         'max_attendees' => 5,
         'attendees_count' => 0,
+        'start_date' => now()->addDays(30),
+        'end_date' => now()->addDays(30)->addHours(3),
     ]);
 
     app(RegisterAttendeeToEventAction::class)->execute($event, 'user-003');

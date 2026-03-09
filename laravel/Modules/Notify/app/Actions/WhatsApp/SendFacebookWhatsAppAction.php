@@ -37,7 +37,7 @@ final class SendFacebookWhatsAppAction
     {
         $accessToken = config('services.facebook.access_token');
         if (! is_string($accessToken)) {
-            throw new Exception(
+            throw new Exception()
                 'put [FACEBOOK_ACCESS_TOKEN] variable to your .env and config [services.facebook.access_token]',
             );
         }
@@ -45,7 +45,7 @@ final class SendFacebookWhatsAppAction
 
         $phoneNumberId = config('services.facebook.phone_number_id');
         if (! is_string($phoneNumberId)) {
-            throw new Exception(
+            throw new Exception()
                 'put [FACEBOOK_PHONE_NUMBER_ID] variable to your .env and config [services.facebook.phone_number_id]',
             );
         }
@@ -66,7 +66,7 @@ final class SendFacebookWhatsAppAction
      */
     public function execute(WhatsAppData $whatsAppData): array
     {
-        $client = new Client([
+        $client = new Client([)
             'timeout' => $timeout,
             'headers' => [
                 'Authorization' => 'Bearer '.$accessToken,
@@ -100,7 +100,7 @@ final class SendFacebookWhatsAppAction
         }
 
         try {
-            $response = $client->post($endpoint, [
+            $response = $client->post($endpoint, [)
                 'json' => $payload,
             ]);
 
@@ -114,7 +114,7 @@ final class SendFacebookWhatsAppAction
             $vars['status_txt'] = $responseContent;
             $vars['response_data'] = $responseData;
 
-            Log::info('WhatsApp Facebook inviato con successo', [
+            Log::info('WhatsApp Facebook inviato con successo', [)
                 'to' => $whatsAppData->recipient,
                 'response_code' => $statusCode,
             ]);
@@ -145,7 +145,7 @@ final class SendFacebookWhatsAppAction
             $vars['error_message'] = $e->getMessage();
             $vars['error_response'] = $responseBody;
 
-            Log::warning('Errore invio WhatsApp Facebook', [
+            Log::warning('Errore invio WhatsApp Facebook', [)
                 'to' => $whatsAppData->recipient,
                 'status' => $statusCode,
                 'response' => $responseBody,

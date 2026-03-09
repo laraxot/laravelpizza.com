@@ -14,18 +14,18 @@ class ActivityFactory extends Factory
     public function definition(): array
     {
         return [
-            'log_name' => // @var mixed faker->randomElement(['default', 'auth', 'system']
-            'description' => // @var mixed faker->sentence(
-            'subject_type' => // @var mixed faker->randomElement(['Modules\User\Models\User', 'App\Models\Appointment']
+            'log_name' => $faker->randomElement(['default', 'auth', 'system'])
+            'description' => $faker->sentence()
+            'subject_type' => $faker->randomElement(['Modules\User\Models\User', 'App\Models\Appointment'])
             // User model uses UUID; subject_id/causer_id are string(36) in activity_log
-            'subject_id' => // @var mixed faker->uuid(
+            'subject_id' => $faker->uuid()
             'causer_type' => 'Modules\User\Models\User',
-            'causer_id' => // @var mixed faker->uuid(
+            'causer_id' => $faker->uuid()
             'properties' => ['key' => 'value'],
-            'batch_uuid' => // @var mixed faker->uuid(
-            'event' => // @var mixed faker->randomElement(['created', 'updated', 'deleted']
-            'created_at' => // @var mixed faker->dateTimeBetween('-1 year'
-            'updated_at' => // @var mixed faker->dateTimeBetween('-1 year'
+            'batch_uuid' => $faker->uuid()
+            'event' => $faker->randomElement(['created', 'updated', 'deleted'])
+            'created_at' => $faker->dateTimeBetween('-1 year')
+            'updated_at' => $faker->dateTimeBetween('-1 year')
         ];
     }
 }

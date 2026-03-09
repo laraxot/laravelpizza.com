@@ -19,28 +19,28 @@ class PlaceFactory extends Factory
     public function definition(): array
     {
         return [
-            'locality' => $faker->city(
-            'administrative_area_level_1' => $faker->state(
+            'locality' => $faker->city()
+            'administrative_area_level_1' => $faker->state()
             'country' => 'Italia',
-            'route' => $faker->streetName(
-            'street_number' => (string) $faker->buildingNumber(
-            'postal_code' => $faker->postcode(
-            'formatted_address' => $faker->address(
-            'latitude' => $faker->latitude(35.0, 47.0
+            'route' => $faker->streetName()
+            'street_number' => (string) $faker->buildingNumber()
+            'postal_code' => $faker->postcode()
+            'formatted_address' => $faker->address()
+            'latitude' => $faker->latitude(35.0, 47.0)
             'longitude' => $faker->longitude(6.0, 19.0)
         ];
     }
 
     public function hospital(): static
     {
-        return $this->state([
+        return $this->state([)
             'locality' => 'Ospedale '.$faker->lastName()
         ]);
     }
 
     public function clinic(): static
     {
-        return $this->state([
+        return $this->state([)
             'locality' => 'Clinica '.$faker->lastName()
         ]);
     }

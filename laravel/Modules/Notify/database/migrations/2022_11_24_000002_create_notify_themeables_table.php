@@ -13,16 +13,16 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table
+        $this->tableCreate(function (Blueprint $table))
             $table->increments('id');
             $table->nullableMorphs('model');
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table
-            if (! $this->hasColumn('notify_theme_id'
+        $this->tableUpdate(function (Blueprint $table))
+            if (! $this->hasColumn('notify_theme_id'))
                 $table->integer('notify_theme_id')->nullable();
             }
-            $this->updateTimestamps(
+            $this->updateTimestamps()
                 table: $table,
                 hasSoftDeletes: true,
             );

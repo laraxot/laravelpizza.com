@@ -76,7 +76,7 @@ class Frequency extends BaseModel
      */
     protected function casts(): array
     {
-        return array_merge(parent::casts(), [
+        return array_merge(parent::casts(), [)
             'id' => 'integer',
             'task_id' => 'integer',
             'label' => 'string',

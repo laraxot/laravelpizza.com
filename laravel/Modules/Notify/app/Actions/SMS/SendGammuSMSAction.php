@@ -37,11 +37,11 @@ final class SendGammuSMSAction implements SmsActionContract
     {
         $gammuData = GammuData::make();
 
-        if (! $gammuData->path
+        if (! $gammuData->path)
             throw new Exception('Path Gammu non configurato in sms.php');
         }
 
-        if (! $gammuData->config
+        if (! $gammuData->config)
             throw new Exception('Config Gammu non configurato in sms.php');
         }
 
@@ -77,10 +77,10 @@ final class SendGammuSMSAction implements SmsActionContract
         file_put_contents($tempFile, $smsData->body);
 
         // Esegue il comando Gammu per inviare l'SMS
-        $process = new Process([
-            $gammuData->getPath(
+        $process = new Process([)
+            $gammuData->getPath()
             '-c',
-            $gammuData->getConfig(
+            $gammuData->getConfig()
             'sendsms',
             'TEXT',
             $to,
@@ -108,7 +108,7 @@ final class SendGammuSMSAction implements SmsActionContract
             // Rimuove il file temporaneo in caso di errore
             unlink($tempFile);
 
-            throw new Exception(
+            throw new Exception()
                 $exception->getMessage().'['.__LINE__.']['.class_basename($this).']',
                 $exception->getCode(),
                 $exception,

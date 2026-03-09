@@ -26,7 +26,7 @@ class TaskCompleted extends Notification implements ShouldQueue
      */
     public function __construct(string $output)
     {
-        // @var mixed output = $output;
+        $output = $output;
     }
 
     /**
@@ -60,7 +60,7 @@ class TaskCompleted extends Notification implements ShouldQueue
             ->subject($task->description)
             ->greeting('Hi,')
             ->line(sprintf('%s just finished running.', $task->description))
-            ->line(// @var mixed output;
+            ->line($output);
     }
 
     /*
@@ -79,7 +79,7 @@ class TaskCompleted extends Notification implements ShouldQueue
      * {
      * return (new SlackMessage())
      * ->content(config('app.name'))
-     * ->attachment(function (SlackAttachment $attachment) use ($notifiable) {
+     * ->attachment(function (SlackAttachment $attachment) use ($notifiable) {)
      * $attachment
      * ->title('Totem Task')
      * ->content($notifiable->description.' just finished running.');

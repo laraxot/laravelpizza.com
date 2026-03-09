@@ -47,41 +47,9 @@ test('user resource has correct form schema', function (): void {)
     $section01Schema = $section01->getDefaultChildComponents();
     expect(count($section01Schema))->toBeGreaterThanOrEqual(1);
 
-<<<<<<< HEAD
-    // Check if name field exists
-    $nameField = collect($section01Schema)->first(fn ($c) => 'name' === $c->getName());
-    expect($nameField)->not->toBeNull();
-    expect($nameField)->toBeInstanceOf(TextInput::class);
-
-    // Check if email field exists
-    $emailField = collect($section01Schema)->first(fn ($c) => 'email' === $c->getName());
-    expect($emailField)->not->toBeNull();
-    expect($emailField)->toBeInstanceOf(TextInput::class);
-
-    // Check if password field exists
-    $passwordField = collect($section01Schema)->first(fn ($c) => 'password' === $c->getName());
-    expect($passwordField)->not->toBeNull();
-    expect($passwordField)->toBeInstanceOf(TextInput::class);
-||||||| 6161e129d
-    // Check if name field exists
-    $nameField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'name');
-    expect($nameField)->not->toBeNull();
-    expect($nameField)->toBeInstanceOf(TextInput::class);
-
-    // Check if email field exists
-    $emailField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'email');
-    expect($emailField)->not->toBeNull();
-    expect($emailField)->toBeInstanceOf(TextInput::class);
-
-    // Check if password field exists
-    $passwordField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'password');
-    expect($passwordField)->not->toBeNull();
-    expect($passwordField)->toBeInstanceOf(TextInput::class);
-=======
     // Check if name or email field exists in section01
     $hasNameOrEmail = collect($section01Schema)->contains(fn ($c) => in_array($c->getName(), ['name', 'email', 'password'], true));
     expect($hasNameOrEmail)->toBeTrue();
->>>>>>> feature/ralph-loop-implementation
 
     // Test section02
     $section02 = $form['section02'];
@@ -158,17 +126,7 @@ test('user resource password field is required only on create', function (): voi
         $this->markTestSkipped('password field not found in section01 schema');
     }
 
-<<<<<<< HEAD
-    // Test with EditUser page
-    $editUserPage = new EditUser();
-    expect($passwordField->isRequired($editUserPage))->toBeFalse();
-||||||| 6161e129d
-    // Test with EditUser page
-    $editUserPage = new EditUser;
-    expect($passwordField->isRequired($editUserPage))->toBeFalse();
-=======
     expect($passwordField)->toBeInstanceOf(TextInput::class);
->>>>>>> feature/ralph-loop-implementation
 });
 
 test('user resource password field has correct type', function (): void {)

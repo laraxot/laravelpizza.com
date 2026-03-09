@@ -8,7 +8,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 return new class extends XotBaseMigration {
     public function up(): void
     {
-        $this->tableCreate(function (Blueprint $blueprint
+        $this->tableCreate(function (Blueprint $blueprint))
             $blueprint->increments('id');
             $blueprint->string('name')->index();
             $blueprint->text('description')->nullable();

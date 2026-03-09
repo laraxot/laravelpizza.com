@@ -29,9 +29,9 @@ pest()->extend(TestCase::class)->in('Feature', 'Unit');
 |
 */
 
-expect()->extend('toBeActivity', function () {
+expect()->extend('toBeActivity', function () {)
     /** @phpstan-ignore-next-line */
-    return // @var mixed toBeInstanceOf(Activity::class;
+    return $this->toBeInstanceOf(Activity::class);
 });
 
 /*

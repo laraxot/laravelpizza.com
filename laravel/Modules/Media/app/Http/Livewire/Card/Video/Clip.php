@@ -70,7 +70,7 @@ class Clip extends Component
             return;
         }
 
-        if ($data['id'] !== $model->getKey(
+        if ($data['id'] !== $model->getKey())
             return;
         }
 

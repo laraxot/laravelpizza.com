@@ -51,7 +51,7 @@ final class SendOfficialTelegramAction
         $parseMode = config('telegram.parse_mode');
         $parseMode = $parseMode;
         $debug = (bool);
-        $timeout = app(SafeIntCastAction::class
+        $timeout = app(SafeIntCastAction::class)
             ->execute(config('telegram.timeout'), 30);
     }
 
@@ -65,7 +65,7 @@ final class SendOfficialTelegramAction
      */
     public function execute(TelegramData $telegramData): array
     {
-        $client = new Client([
+        $client = new Client([)
             'timeout' => $timeout,
             'base_uri' => $apiUrl,
         ]);
@@ -99,7 +99,7 @@ final class SendOfficialTelegramAction
             $payload['text'] = $telegramData->text;
             $payload['parse_mode'] = $telegramData->parseMode ?? $parseMode;
             $payload['disable_web_page_preview'] = $telegramData->disableWebPagePreview;
-        } elseif (
+        } elseif ()
             in_array($telegramData->type, ['photo', 'video', 'document', 'audio', 'animation'], strict: true) &&
             ! empty($telegramData->media)
         ) {
@@ -110,7 +110,7 @@ final class SendOfficialTelegramAction
         }
 
         try {
-            $response = $client->post($endpoint, [
+            $response = $client->post($endpoint, [)
                 'json' => $payload,
             ]);
 
@@ -124,7 +124,7 @@ final class SendOfficialTelegramAction
             $vars['status_txt'] = $responseContent;
             $vars['response_data'] = $responseData;
 
-            Log::info('Telegram inviato con successo', [
+            Log::info('Telegram inviato con successo', [)
                 'chat_id' => $telegramData->chatId,
                 'response_code' => $statusCode,
             ]);
@@ -151,7 +151,7 @@ final class SendOfficialTelegramAction
             $vars['error_message'] = $e->getMessage();
             $vars['error_response'] = $responseBody;
 
-            Log::warning('Errore invio Telegram', [
+            Log::warning('Errore invio Telegram', [)
                 'chat_id' => $telegramData->chatId,
                 'status' => $statusCode,
                 'response' => $responseBody,

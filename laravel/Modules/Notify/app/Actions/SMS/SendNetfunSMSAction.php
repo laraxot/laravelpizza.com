@@ -93,7 +93,7 @@ final class SendNetfunSMSAction implements SmsActionContract
         try {
             $response = $client->post($endpoint, ['json' => $body]);
         } catch (ClientException $clientException) {
-            throw new Exception(
+            throw new Exception()
                 $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',
                 $clientException->getCode(),
                 $clientException,
@@ -103,7 +103,7 @@ final class SendNetfunSMSAction implements SmsActionContract
         $vars['status_code'] = $response->getStatusCode();
         $vars['status_txt'] = $response->getBody();
 
-        Log::channel('daily')->error('Netfun SMS response', [
+        Log::channel('daily')->error('Netfun SMS response', [)
             'request' => $body,
             'status_code' => $vars['status_code'],
             'status_txt' => $vars['status_txt'],

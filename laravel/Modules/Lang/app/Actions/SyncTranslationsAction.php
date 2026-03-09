@@ -20,13 +20,13 @@ class SyncTranslationsAction
      *
      * @return array<string, mixed> Risultato della sincronizzazione
      */
-    public function execute(
+    public function execute()
         string $sourceLang = 'it',
         array $targetLangs = ['en', 'de'],
         ?string $specificModule = null,
     ): array {
         $modulesPath = base_path('Modules');
-        $modules = $specificModule ? [$specificModule] : // @var mixed getModules($modulesPath;
+        $modules = $specificModule ? [$specificModule] : $this->getModules($modulesPath);
 
         $results = [
             'total_modules' => 0,
@@ -36,7 +36,7 @@ class SyncTranslationsAction
         ];
 
         foreach ($modules as $module) {
-            $moduleResults = // @var mixed syncModule($module, $sourceLang, $targetLangs;
+            $moduleResults = $this->syncModule($module, $sourceLang, $targetLangs);
             $results['modules'][$module] = $moduleResults;
             $results['total_files'] += is_numeric($moduleResults['files_processed'] ?? null)
                 ? ((int) $moduleResults['files_processed'])
@@ -88,7 +88,7 @@ class SyncTranslationsAction
 
         foreach ($sourceFiles as $sourceFile) {
             $fileName = basename((string) $sourceFile);
-            $sourceTranslations = // @var mixed loadTranslations((string;
+            $sourceTranslations = $this->loadTranslations((string));
 
             if (empty($sourceTranslations)) {
                 continue;
@@ -106,15 +106,15 @@ class SyncTranslationsAction
                 }
 
                 // Load existing target translations
-                $targetTranslations = File::exists($targetFile) ? // @var mixed loadTranslations($targetFile;
+                $targetTranslations = File::exists($targetFile) ? $this->loadTranslations($targetFile);
 
                 // Merge translations
                 /** @var array<string, mixed> $sourceTranslations */
                 /** @var array<string, mixed> $targetTranslations */
-                $mergedTranslations = // @var mixed mergeTranslations($sourceTranslations, $targetTranslations;
+                $mergedTranslations = $this->mergeTranslations($sourceTranslations, $targetTranslations);
 
                 // Save merged translations
-                // @var mixed saveTranslations($targetFile, $mergedTranslations;
+                $this->saveTranslations($targetFile, $mergedTranslations);
 
                 $newKeys = count($mergedTranslations) - count($targetTranslations);
                 $translationsAdded += (int) $newKeys;
@@ -220,9 +220,9 @@ class SyncTranslationsAction
             if (is_array($value)) {
                 /** @var array<string, mixed> $subTarget */
                 $subTarget = isset($target[$key]) && is_array($target[$key])
-                    ? // @var mixed filterStringKeyArray($target[$key]
+                    ? $this->filterStringKeyArray($target[$key])
                     : [];
-                $merged[$key] = // @var mixed mergeTranslations($this->filterStringKeyArray($value;
+                $merged[$key] = $this->mergeTranslations($this->filterStringKeyArray($value));
             } else {
                 if (! isset($merged[$key])) {
                     $merged[$key] = $value;
@@ -242,7 +242,7 @@ class SyncTranslationsAction
     private function saveTranslations(string $filePath, array $translations): void
     {
         $content = "<?php\n\nreturn [\n";
-        $content .= // @var mixed arrayToPhp($this->filterStringKeyArray($translations;
+        $content .= $this->arrayToPhp($this->filterStringKeyArray($translations));
         $content .= "];\n";
 
         File::put($filePath, $content);
@@ -266,7 +266,7 @@ class SyncTranslationsAction
 
             if (is_array($value)) {
                 $content .= "[\n";
-                $content .= // @var mixed arrayToPhp($this->filterStringKeyArray($value;
+                $content .= $this->arrayToPhp($this->filterStringKeyArray($value));
                 $content .= $indentStr."],\n";
             } else {
                 /** @phpstan-ignore-next-line */

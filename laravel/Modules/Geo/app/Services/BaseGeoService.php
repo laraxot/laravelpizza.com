@@ -114,7 +114,7 @@ abstract class BaseGeoService
         /** @var array<string> $whenTypes */
         $whenTypes = config('geo.http_client.retry.when', []);
 
-        return Http::timeout($timeout)->retry($retryTimes, $retrySleep, function (\Throwable $exception) use ($whenTypes): bool {
+        return Http::timeout($timeout)->retry($retryTimes, $retrySleep, function (\Throwable $exception) use ($whenTypes): bool {)
             foreach ($whenTypes as $type) {
                 if (is_a($exception, "\\GuzzleHttp\\Exception\\{$type}")) {
                     return true;

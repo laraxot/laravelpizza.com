@@ -82,13 +82,13 @@ class FormSearchAddressCategories extends Component
         $warningCivicNumber = false;
         $showActivityTypes = false;
 
-        if (! isset($form_data['latlng']
+        if (! isset($form_data['latlng']))
             $warningSuggestedAddresses = true;
 
             return;
         }
 
-        if (! isset($form_data['street_number']
+        if (! isset($form_data['street_number']))
             $warningCivicNumber = true;
 
             return;
@@ -123,7 +123,7 @@ class FormSearchAddressCategories extends Component
             $warningCivicNumber = true;
         }
 
-        return collect([
+        return collect([)
             $data->route ?? '',
             $data->street_number ?? '',
             $data->locality ?? '',
@@ -159,7 +159,7 @@ class FormSearchAddressCategories extends Component
      */
     public function saveNotServed(): void
     {
-        $this->validate([
+        $this->validate([)
             'email' => 'required|email|unique:not_served',
             'cap' => 'required|not_regex:/[a-z]/i|min:5|max:5',
         ]);
@@ -169,7 +169,7 @@ class FormSearchAddressCategories extends Component
          * //dddx([$email, filter_var($this->email, FILTER_VALIDATE_EMAIL));
          * //sembra andare bene
          *
-         * if (false == filter_var($email, FILTER_VALIDATE_EMAIL
+         * if (false == filter_var($email, FILTER_VALIDATE_EMAIL))
          * //$this->dispatch('closeModalNotServed');
          * //$this->dispatch('openModalWrongEmailCap');
          * $messageError = true;
@@ -180,7 +180,7 @@ class FormSearchAddressCategories extends Component
          *
          * //dddx([$cap, preg_match('/[a-z]/i', $this->cap));
          *
-         * if (preg_match('/[a-z]/i', $cap
+         * if (preg_match('/[a-z]/i', $cap))
          * $messageError = true;
          * dddx('it has alphabet!');
          * //$this->dispatch('closeModalNotServed');

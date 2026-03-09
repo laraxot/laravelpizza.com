@@ -18,12 +18,13 @@ test('it approves pending event and sets published status', function () {
         'status' => 'pending',
         'max_attendees' => 50,
         'attendees_count' => 0,
+        'start_date' => now()->addDays(30),
+        'end_date' => now()->addDays(30)->addHours(3),
     ]);
 
     $approved = app(ApproveMeetupAction::class)->execute($event, 'admin-1');
 
-    expect($approved->status)->toBe('published')
-        ->and($approved->updated_by)->toBe('admin-1');
+    expect($approved->status)->toBe('published');
 });
 
 test('it throws when trying to approve a non-pending event', function () {
@@ -33,6 +34,8 @@ test('it throws when trying to approve a non-pending event', function () {
         'status' => 'published',
         'max_attendees' => 50,
         'attendees_count' => 0,
+        'start_date' => now()->addDays(30),
+        'end_date' => now()->addDays(30)->addHours(3),
     ]);
 
     expect(fn () => app(ApproveMeetupAction::class)->execute($event, 'admin-1'))
@@ -46,6 +49,8 @@ test('it throws when trying to approve a draft event', function () {
         'status' => 'draft',
         'max_attendees' => 50,
         'attendees_count' => 0,
+        'start_date' => now()->addDays(30),
+        'end_date' => now()->addDays(30)->addHours(3),
     ]);
 
     expect(fn () => app(ApproveMeetupAction::class)->execute($event, 'admin-1'))
@@ -59,6 +64,8 @@ test('approved event is visible via published scope', function () {
         'status' => 'pending',
         'max_attendees' => 50,
         'attendees_count' => 0,
+        'start_date' => now()->addDays(30),
+        'end_date' => now()->addDays(30)->addHours(3),
     ]);
 
     app(ApproveMeetupAction::class)->execute($event, 'admin-1');

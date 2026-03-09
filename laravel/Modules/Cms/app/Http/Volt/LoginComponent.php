@@ -31,10 +31,10 @@ class LoginComponent extends Component
 
     public function authenticate(): RedirectResponse
     {
-        // @var mixed validate(;
+        $this->validate();
 
-        if (! Auth::attempt(['email' => // @var mixed email, 'password' => $this->password], $this->remember
-            // @var mixed addError('email', trans('auth.failed';
+        if (! Auth::attempt(['email' => $email, 'password' => $this->password], $this->remember))
+            $this->addError('email', trans('auth.failed'));
 
             return back();
         }
@@ -42,11 +42,11 @@ class LoginComponent extends Component
         $guard = 'web';
 
         /** @var Builder<User> $query */
-        $query = User::where('email', // @var mixed email;
+        $query = User::where('email', $email);
         $user = $query->first();
 
         Assert::isInstanceOf($user, Authenticatable::class);
-        $remember = // @var mixed remember;
+        $remember = $remember;
         event(new Login($guard, $user, $remember));
 
         return redirect()->intended('/');

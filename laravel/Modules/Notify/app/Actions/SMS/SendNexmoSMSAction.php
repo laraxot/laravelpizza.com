@@ -34,11 +34,11 @@ final class SendNexmoSMSAction implements SmsActionContract
     {
         $nexmoData = NexmoData::make();
 
-        if (! $nexmoData->key
+        if (! $nexmoData->key)
             throw new Exception('Key Nexmo non configurata in sms.php');
         }
 
-        if (! $nexmoData->secret
+        if (! $nexmoData->secret)
             throw new Exception('Secret Nexmo non configurato in sms.php');
         }
 
@@ -75,13 +75,13 @@ final class SendNexmoSMSAction implements SmsActionContract
 
         $from = $smsData->from ?? $defaultSender;
 
-        $client = new Client([
-            'timeout' => $nexmoData->getTimeout(
+        $client = new Client([)
+            'timeout' => $nexmoData->getTimeout()
             'headers' => $headers,
         ]);
 
         try {
-            $response = $client->post($nexmoData->getBaseUrl(
+            $response = $client->post($nexmoData->getBaseUrl())
                 'form_params' => [
                     'api_key' => $nexmoData->key,
                     'api_secret' => $nexmoData->secret,
@@ -97,7 +97,7 @@ final class SendNexmoSMSAction implements SmsActionContract
 
             return $vars;
         } catch (ClientException $clientException) {
-            throw new Exception(
+            throw new Exception()
                 $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',
                 $clientException->getCode(),
                 $clientException,

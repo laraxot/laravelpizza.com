@@ -24,28 +24,14 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-<<<<<<< HEAD
-        $this->tableUpdate(function (Blueprint $table): void {)
-            if ('string' !== $this->getColumnType('id')) {
-||||||| 6161e129d
-        $this->tableUpdate(function (Blueprint $table): void {)
-            if ($this->getColumnType('id') !== 'string') {
-=======
         $this->tableUpdate(function (Blueprint $table))
             if ('string' !== $this->getColumnType('id'))
->>>>>>> feature/ralph-loop-implementation
                 $table->uuid('id')->change(); // is  just primary
             }
             if (! $this->hasColumn('owner_id'))
                 $table->nullableMorphs('owner');
             }
-<<<<<<< HEAD
-            if ($this->hasColumn('owner_id') && 'string' !== $this->getColumnType('owner_id')) {
-||||||| 6161e129d
-            if ($this->hasColumn('owner_id') && $this->getColumnType('owner_id') !== 'string') {
-=======
             if ($hasColumn('owner_id'))
->>>>>>> feature/ralph-loop-implementation
                 $table->string('owner_id', 36)->nullable()->change();
             }
             if (! $this->hasColumn('name'))

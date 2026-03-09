@@ -64,7 +64,7 @@ class Parameter extends BaseModel
      */
     protected function casts(): array
     {
-        return array_merge(parent::casts(), [
+        return array_merge(parent::casts(), [)
             'id' => 'integer',
             'frequency_id' => 'integer',
             'name' => 'string',

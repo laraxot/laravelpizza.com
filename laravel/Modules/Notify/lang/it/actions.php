@@ -39,7 +39,7 @@ return [
             ],
             'error' => [
                 'title' => 'Alcune notifiche non sono state inviate',
-                'item' => 'Record :record (canale :channel]: :error',
+                'item' => 'Record :record (canale :channel]: :error'),
                 'more_errors' => '... e altri :count errori',
             ],
         ],

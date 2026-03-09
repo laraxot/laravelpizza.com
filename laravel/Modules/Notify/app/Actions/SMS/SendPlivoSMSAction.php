@@ -34,11 +34,11 @@ final class SendPlivoSMSAction implements SmsActionContract
     {
         $plivoData = PlivoData::make();
 
-        if (! $plivoData->auth_id
+        if (! $plivoData->auth_id)
             throw new Exception('Auth ID Plivo non configurato in sms.php');
         }
 
-        if (! $plivoData->auth_token
+        if (! $plivoData->auth_token)
             throw new Exception('Auth Token Plivo non configurato in sms.php');
         }
 
@@ -72,8 +72,8 @@ final class SendPlivoSMSAction implements SmsActionContract
         $from = $smsData->from ?? $defaultSender;
 
         // Plivo richiede l'autenticazione Basic
-        $client = new Client([
-            'timeout' => $plivoData->getTimeout(
+        $client = new Client([)
+            'timeout' => $plivoData->getTimeout()
             'auth' => [$plivoData->auth_id, $this->plivoData->auth_token],
             'headers' => [
                 'Content-Type' => 'application/json',
@@ -83,7 +83,7 @@ final class SendPlivoSMSAction implements SmsActionContract
         $endpoint = $plivoData->getBaseUrl();
 
         try {
-            $response = $client->post($endpoint, [
+            $response = $client->post($endpoint, [)
                 'json' => [
                     'src' => $from,
                     'dst' => $to,
@@ -96,7 +96,7 @@ final class SendPlivoSMSAction implements SmsActionContract
 
             return $vars;
         } catch (ClientException $clientException) {
-            throw new Exception(
+            throw new Exception()
                 $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',
                 $clientException->getCode(),
                 $clientException,

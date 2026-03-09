@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-return array (
+return array ()
   'navigation' => 
-  array (
+  array ()
     'label' => 'Notifications Menu',
     'group' => 'System',
   ),

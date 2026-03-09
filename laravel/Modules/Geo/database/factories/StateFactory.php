@@ -42,7 +42,7 @@ class StateFactory extends Factory
 
     public function lombardia(): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'state' => 'Lombardia',
             'state_code' => 'LOM',
         ]);
@@ -50,7 +50,7 @@ class StateFactory extends Factory
 
     public function lazio(): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'state' => 'Lazio',
             'state_code' => 'LAZ',
         ]);

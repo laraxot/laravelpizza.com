@@ -81,8 +81,8 @@ class JobBatch extends BaseModel
      */
     public function processedJobs(): int|float
     {
-        $totalJobs = (int) (// @var mixed attributes['total_jobs'] ?? 0;
-        $pendingJobs = (int) (// @var mixed attributes['pending_jobs'] ?? 0;
+        $totalJobs = (int) ($attributes['total_jobs'] ?? 0);
+        $pendingJobs = (int) ($attributes['pending_jobs'] ?? 0);
 
         return $totalJobs - $pendingJobs;
     }
@@ -92,8 +92,8 @@ class JobBatch extends BaseModel
      */
     public function progress(): int
     {
-        $totalJobs = (int) (// @var mixed attributes['total_jobs'] ?? 0;
-        $progress = $totalJobs > 0 ? round(// @var mixed processedJobs(;
+        $totalJobs = (int) ($attributes['total_jobs'] ?? 0);
+        $progress = $totalJobs > 0 ? round($processedJobs());
 
         return (int) $progress;
     }
@@ -103,7 +103,7 @@ class JobBatch extends BaseModel
      */
     public function hasPendingJobs(): bool
     {
-        $pendingJobs = (int) (// @var mixed attributes['pending_jobs'] ?? 0;
+        $pendingJobs = (int) ($attributes['pending_jobs'] ?? 0);
 
         return $pendingJobs > 0;
     }
@@ -113,7 +113,7 @@ class JobBatch extends BaseModel
      */
     public function finished(): bool
     {
-        $finishedAt = // @var mixed attributes['finished_at'] ?? null;
+        $finishedAt = $attributes['finished_at'] ?? null;
 
         return $finishedAt instanceof Carbon;
     }
@@ -123,7 +123,7 @@ class JobBatch extends BaseModel
      */
     public function hasFailures(): bool
     {
-        $failedJobs = (int) (// @var mixed attributes['failed_jobs'] ?? 0;
+        $failedJobs = (int) ($attributes['failed_jobs'] ?? 0);
 
         return $failedJobs > 0;
     }
@@ -133,8 +133,8 @@ class JobBatch extends BaseModel
      */
     public function failed(): bool
     {
-        $failedJobs = (int) (// @var mixed attributes['failed_jobs'] ?? 0;
-        $totalJobs = (int) (// @var mixed attributes['total_jobs'] ?? 0;
+        $failedJobs = (int) ($attributes['failed_jobs'] ?? 0);
+        $totalJobs = (int) ($attributes['total_jobs'] ?? 0);
 
         return $failedJobs === $totalJobs;
     }
@@ -144,7 +144,7 @@ class JobBatch extends BaseModel
      */
     public function cancelled(): bool
     {
-        $cancelledAt = // @var mixed attributes['cancelled_at'] ?? null;
+        $cancelledAt = $attributes['cancelled_at'] ?? null;
 
         return $cancelledAt instanceof Carbon;
     }

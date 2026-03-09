@@ -41,21 +41,7 @@ $component = new class extends Component {
     #[Validate('required|string|max:255')]
     public string $email = '';
 
-<<<<<<< HEAD
-    /**
-     * User ID (locked to prevent tampering).
-     *
-     * @var string
-     */
-||||||| 6161e129d
-    /**
-     * User ID (locked to prevent tampering).
-     *
-     * @var int
-     */
-=======
     /** @var string */
->>>>>>> feature/ralph-loop-implementation
     #[Locked]
     public string $user_id = '';
 
@@ -82,61 +68,11 @@ $component = new class extends Component {
             Assert::notNull($user, 'User must be authenticated');
             Assert::isInstanceOf($user, User::class);
 
-<<<<<<< HEAD
-            // Type-safe property initialization
-            $this->first_name = (string) ($user->first_name ?? '');
-            $this->last_name = (string) ($user->last_name ?? '');
-            $this->email = (string) ($user->email ?? '');
-            $this->user_id = (string) ($user->id ?? '');
-||||||| 6161e129d
-            // Type-safe property initialization
-            $this->first_name = (string) ($user->first_name ?? '');
-            $this->last_name = (string) ($user->last_name ?? '');
-            $this->email = (string) ($user->email ?? '');
-            $this->user_id = (int) ($user->id ?? 0);
-=======
             $first_name = (string);
             $last_name = (string);
             $email = (string);
             $user_id = (string);
->>>>>>> feature/ralph-loop-implementation
 
-<<<<<<< HEAD
-            Assert::stringNotEmpty($this->first_name, 'User first name cannot be empty');
-            Assert::stringNotEmpty($this->last_name, 'User last name cannot be empty');
-            Assert::stringNotEmpty($this->email, 'User email cannot be empty');
-            Assert::stringNotEmpty($this->user_id, 'User ID cannot be empty');
-
-            // Validate email format
-            Assert::true(filter_var($this->email, FILTER_VALIDATE_EMAIL) !== false, 'User email must be valid');
-        } catch (\Webmozart\Assert\InvalidArgumentException $e) {
-            Log::error('Profile mount validation failed', [)
-                'error' => $e->getMessage(),
-                'user_id' => Auth::id(),
-                'trace' => $e->getTraceAsString(),
-            ]);
-
-            // Redirect to login if user data is corrupted
-            redirect()->route('login')->with('error', 'Invalid user session. Please log in again.');
-||||||| 6161e129d
-            Assert::stringNotEmpty($this->first_name, 'User first name cannot be empty');
-            Assert::stringNotEmpty($this->last_name, 'User last name cannot be empty');
-            Assert::stringNotEmpty($this->email, 'User email cannot be empty');
-            Assert::greaterThan($this->user_id, 0, 'User ID must be positive');
-
-            // Validate email format
-            Assert::true(filter_var($this->email, FILTER_VALIDATE_EMAIL) !== false, 'User email must be valid');
-        } catch (\Webmozart\Assert\InvalidArgumentException $e) {
-            Log::error('Profile mount validation failed', [)
-                'error' => $e->getMessage(),
-                'user_id' => Auth::id(),
-                'trace' => $e->getTraceAsString(),
-            ]);
-
-            // Redirect to login if user data is corrupted
-            redirect()->route('login')->with('error', 'Invalid user session. Please log in again.');
-=======
->>>>>>> feature/ralph-loop-implementation
         } catch (\Exception $e) {
             Log::error('Profile mount failed', ['error' => $e->getMessage()]);
             redirect()->route('dashboard');
@@ -259,111 +195,6 @@ $component = new class extends Component {
                                 <x-filament::button type="submit">{{ __('Save') }}</x-filament::button>
                             </div>
                         </form>
-<<<<<<< HEAD
-                    </div>
-                </section>
-
-                {{-- Delete Account Section --}}
-                <section class="p-4 bg-white shadow sm:p-8 dark:bg-gray-800 sm:rounded-lg dark:bg-gray-900/50 dark:border dark:border-gray-200/10">
-                    <div class="max-w-xl">
-                        <header>
-                            <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-                                {{ __('Delete Account') }}
-                            </h2>
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                                {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
-                            </p>
-                        </header>
-
-                        <div class="flex items-start justify-start w-auto mt-6 text-left">
-                            <x-ui.button 
-                                type="danger" 
-                                x-data
-                                @click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
-                            >
-                                {{ __('Delete Account') }}
-                            </x-ui.button>
-                        </div>
-
-                        {{-- Delete Account Confirmation Modal --}}
-                        {{-- Delete Account Confirmation Modal --}}
-                        <x-ui.modal name="confirm-user-deletion" maxWidth="lg" :show="$errors->userDeletion->isNotEmpty()" focusable>
-                            <form wire:submit="deleteAccount" class="p-6">
-                                <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-                                    {{ __('Are you sure you want to delete your account?') }}
-                                </h2>
-                                
-                                <p class="mt-1 mb-6 text-sm text-gray-600 dark:text-gray-400">
-                                    {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
-                                </p>
-
-                                {{-- Input and Buttons commented out
-                                <x-ui.input ... />
-                                <div ...> ... </div>
-                                --}}
-                            </form>
-                        </x-ui.modal>
-||||||| 6161e129d
-                    </div>
-                </section>
-
-                {{-- Delete Account Section --}}
-                <section class="p-4 bg-white shadow sm:p-8 dark:bg-gray-800 sm:rounded-lg dark:bg-gray-900/50 dark:border dark:border-gray-200/10">
-                    <div class="max-w-xl">
-                        <header>
-                            <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-                                {{ __('Delete Account') }}
-                            </h2>
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                                {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
-                            </p>
-                        </header>
-
-                        <div class="flex items-start justify-start w-auto mt-6 text-left">
-                            <x-ui.button 
-                                type="danger" 
-                                x-data
-                                @click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
-                            >
-                                {{ __('Delete Account') }}
-                            </x-ui.button>
-                        </div>
-
-                        {{-- Delete Account Confirmation Modal --}}
-                        <x-ui.modal name="confirm-user-deletion" maxWidth="lg" :show="$errors->userDeletion->isNotEmpty()" focusable>
-                            <form wire:submit="deleteAccount" class="p-6">
-                                <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-                                    {{ __('Are you sure you want to delete your account?') }}
-                                </h2>
-                                
-                                <p class="mt-1 mb-6 text-sm text-gray-600 dark:text-gray-400">
-                                    {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
-                                </p>
-
-                                <x-ui.input 
-                                    label="Password" 
-                                    type="password" 
-                                    id="delete_password"
-                                    name="delete_password" 
-                                    wire:model="delete_password"
-                                    required
-                                    autocomplete="current-password"
-                                    placeholder="{{ __('Enter your password to confirm deletion') }}"
-                                />
-
-                                <div class="flex justify-end mt-6 space-x-3">
-                                    <x-ui.button type="secondary" x-on:click="$dispatch('close')">
-                                        {{ __('Cancel') }}
-                                    </x-ui.button>
-
-                                    <x-ui.button type="danger" submit="true">
-                                        {{ __('Delete Account') }}
-                                    </x-ui.button>
-                                </div>
-                            </form>
-                        </x-ui.modal>
-=======
->>>>>>> feature/ralph-loop-implementation
                     </section>
                 </div>
             </div>

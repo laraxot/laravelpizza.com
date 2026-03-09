@@ -9,7 +9,7 @@ return new class extends XotBaseMigration
 {
     public function up(): void
     {
-        // @var mixed tableCreate(
+        $this->tableCreate()
             function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('log_name')->nullable();
@@ -23,9 +23,9 @@ return new class extends XotBaseMigration
             },
         );
 
-        // @var mixed tableUpdate(
+        $this->tableUpdate()
             function (Blueprint $table) {
-                // @var mixed updateTimestamps($table, true;
+                $this->updateTimestamps($table, true);
             },
         );
     }

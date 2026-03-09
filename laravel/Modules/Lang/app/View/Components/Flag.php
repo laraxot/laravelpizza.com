@@ -13,7 +13,7 @@ use Modules\Xot\Actions\GetViewAction;
  */
 class Flag extends Component
 {
-    public function __construct(
+    public function __construct()
         public string $name,
     ) {
     }
@@ -27,7 +27,7 @@ class Flag extends Component
 
         $viewParams = [
             'view' => $view,
-            'name' => // @var mixed name,
+            'name' => $name,
         ];
 
         return view($view, $viewParams);

@@ -27,13 +27,13 @@ uses(Modules\Cms\Tests\TestCase::class)->in('Feature', 'Unit');
  * |
  */
 
-expect()->extend('toBeSubclassOf', function (string $parentClass) {
-    $class = // @var mixed value;
+expect()->extend('toBeSubclassOf', function (string $parentClass) {)
+    $class = $value;
     if (! is_string($class)) {
         throw new InvalidArgumentException('Expected a class name string');
     }
 
-    return // @var mixed and(is_subclass_of($class, $parentClass;
+    return $this->and(is_subclass_of($class, $parentClass));
 });
 
 /*

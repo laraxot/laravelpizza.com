@@ -24,16 +24,8 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-<<<<<<< HEAD
-        $this->tableUpdate(function (Blueprint $table): void {)
-            if ('string' !== $this->getColumnType('id')) {
-||||||| 6161e129d
-        $this->tableUpdate(function (Blueprint $table): void {)
-            if ($this->getColumnType('id') !== 'string') {
-=======
         $this->tableUpdate(function (Blueprint $table))
             if ('string' !== $this->getColumnType('id'))
->>>>>>> feature/ralph-loop-implementation
                 $table->uuid('id')->change(); // is  just primary
             }
             if (! $this->hasColumn('owner_id'))

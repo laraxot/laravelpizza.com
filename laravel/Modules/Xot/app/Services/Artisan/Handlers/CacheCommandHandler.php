@@ -26,7 +26,7 @@ class CacheCommandHandler implements CommandHandlerInterface
         if (isset(self::CACHE_COMMANDS[$command])) {
             $method = self::CACHE_COMMANDS[$command];
 
-            return // @var mixed $method();
+            return $this->$method();
         }
 
         return '';

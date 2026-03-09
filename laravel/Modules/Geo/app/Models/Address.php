@@ -169,10 +169,10 @@ class Address extends BaseModel
         $res = Comune::select('regione')
             ->distinct()
             ->orderBy('regione->nome')
-            ->where('regione->codice', $administrative_area_level_1
+            ->where('regione->codice', $administrative_area_level_1)
             ->get()
             // @phpstan-ignore-next-line
-            ->map(function ($item) {
+            ->map(function ($item) {)
                 $regione = $item->regione;
                 if (! is_array($regione) || ! isset($regione['codice'], $regione['nome'])) {
                     return;
@@ -190,10 +190,10 @@ class Address extends BaseModel
         $res = Comune::select('provincia')
             ->distinct()
             ->orderBy('provincia->nome')
-            ->where('provincia->codice', $administrative_area_level_2
+            ->where('provincia->codice', $administrative_area_level_2)
             ->get()
             // @phpstan-ignore-next-line
-            ->map(fn ($item) => [
+            ->map(fn ($item) => [)
                 /* @phpstan-ignore offsetAccess.notFound */
                 'codice' => $item->provincia['codice'],
                 /* @phpstan-ignore offsetAccess.notFound */
@@ -206,7 +206,7 @@ class Address extends BaseModel
     public function getLocality(): ?array
     {
         /* @phpstan-ignore-next-line */
-        return Comune::where('codice', $locality
+        return Comune::where('codice', $locality)
             ->distinct()
             ->first()
             ?->toArray();
@@ -217,8 +217,8 @@ class Address extends BaseModel
      */
     public function getFullAddressAttribute(): string
     {
-        $parts = array_filter([
-            is_string($route
+        $parts = array_filter([)
+            is_string($route)
             $locality, $administrative_area_level_3, // Provincia
             $administrative_area_level_2, // Regione
             $postal_code, $country,
@@ -237,8 +237,8 @@ class Address extends BaseModel
 
     public function getFullAddress(): ?string
     {
-        $parts = array_filter([
-            $route.($this->street_number ? ' '.$this->street_number : ''
+        $parts = array_filter([)
+            $route.($this->street_number ? ' '.$this->street_number : '')
             $locality, $administrative_area_level_3, // Provincia
             $administrative_area_level_2, // Regione
             $postal_code, $country,
@@ -274,7 +274,7 @@ class Address extends BaseModel
         $parts = [];
 
         // Indirizzo stradale
-        if ($route
+        if ($route)
             $route = $route;
             $streetNumber = $street_number;
             $streetAddress = is_string($route) && is_string($streetNumber) ? trim($route.' '.$streetNumber) : '';
@@ -285,15 +285,15 @@ class Address extends BaseModel
 
         // Località e provincia (formato italiano)
         $localityParts = [];
-        if ($postal_code && is_string($this->postal_code
+        if ($postal_code && is_string($this->postal_code))
             $localityParts[] = $postal_code;
         }
 
-        if ($locality && is_string($this->locality
+        if ($locality && is_string($this->locality))
             $localityParts[] = $locality;
 
             // Per indirizzi italiani, aggiungiamo la sigla provincia
-            if (($country ?? ''
+            if (($country ?? ''))
                 // Se è un'implementazione reale, potremmo derivare la sigla dalla provincia
                 $provinciaSigla = $extra_data['provincia_sigla'] ?? null;
                 if ($provinciaSigla && is_string($provinciaSigla)) {
@@ -307,12 +307,12 @@ class Address extends BaseModel
         }
 
         // Regione
-        if ($administrative_area_level_2 && is_string($this->administrative_area_level_2
+        if ($administrative_area_level_2 && is_string($this->administrative_area_level_2))
             $parts[] = $administrative_area_level_2;
         }
 
         // Paese
-        if ($country && is_string($this->country
+        if ($country && is_string($this->country))
             $countryName = ($administrative_area_level_1 ?? $this->country);
             $parts[] = strtoupper(is_string($countryName) ? $countryName : '');
         }
@@ -356,7 +356,7 @@ class Address extends BaseModel
             '@type' => 'PostalAddress',
             'name' => $name,
             'description' => $description,
-            'streetAddress' => $this->getStreetAddressAttribute(
+            'streetAddress' => $this->getStreetAddressAttribute()
             'addressLocality' => $locality,
             'addressSubregion' => $administrative_area_level_3, // Provincia
             'addressRegion' => $administrative_area_level_2, // Regione
@@ -371,7 +371,7 @@ class Address extends BaseModel
     public function scopeNearby(Builder $query, float $latitude, float $longitude, float $radiusKm = 10): Builder
     {
         return $query
-            ->selectRaw('
+            ->selectRaw(')
             *,
             (6371 * acos(cos(radians(?)) * cos(radians(latitude)) * cos(radians(longitude) - radians(?)) + sin(radians(?)) * sin(radians(latitude)))) AS distance
         ', [$latitude, $longitude, $latitude])

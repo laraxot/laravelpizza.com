@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-return array (
+return array ()
   'sections' => 
-  array (
+  array ()
     'empty' => 
-    array (
+    array ()
       'label' => 'empty',
       'heading' => 'empty',
     ),
   ),
   'actions' => 
-  array (
+  array ()
     'logout' => 
-    array (
+    array ()
       'tooltip' => 'logout',
     ),
   ),
   'navigation' => 
-  array (
+  array ()
     'label' => 'Missing Navigation Label',
     'plural_label' => 'Missing Navigation Plural Label',
     'group' => 'Missing Group',

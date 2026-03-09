@@ -9,21 +9,21 @@ uses(LightTestCase::class);
 use Modules\Geo\Actions\LocationIQ\GetAddressFromLocationIQAction;
 use Modules\Geo\Datas\AddressData;
 
-beforeEach(function () {
+beforeEach(function () {)
     $action = new GetAddressFromLocationIQAction();
 });
 
-it('throws exception when api key is not configured', function (): void {
+it('throws exception when api key is not configured', function (): void {)
     config(['services.locationiq.key' => null]);
 
-    expect(fn () => $action->execute('Milano, Italia'
+    expect(fn () => $action->execute('Milano, Italia'))
         ->toThrow(Exception::class, 'LocationIQ API key not configured');
 });
 
-it('returns null when api response is not successful', function (): void {
+it('returns null when api response is not successful', function (): void {)
     config(['services.locationiq.key' => 'test_key']);
 
-    Http::fake([
+    Http::fake([)
         '*' => Http::response(null, 500),
     ]);
 
@@ -32,10 +32,10 @@ it('returns null when api response is not successful', function (): void {
     expect($result)->toBeNull();
 });
 
-it('returns null when no results found', function (): void {
+it('returns null when no results found', function (): void {)
     config(['services.locationiq.key' => 'test_key']);
 
-    Http::fake([
+    Http::fake([)
         '*' => Http::response([], 200),
     ]);
 
@@ -44,10 +44,10 @@ it('returns null when no results found', function (): void {
     expect($result)->toBeNull();
 });
 
-it('returns null when first result is empty', function (): void {
+it('returns null when first result is empty', function (): void {)
     config(['services.locationiq.key' => 'test_key']);
 
-    Http::fake([
+    Http::fake([)
         '*' => Http::response([[]], 200),
     ]);
 
@@ -56,11 +56,11 @@ it('returns null when first result is empty', function (): void {
     expect($result)->toBeNull();
 });
 
-it('returns address data for valid response', function (): void {
+it('returns address data for valid response', function (): void {)
     config(['services.locationiq.key' => 'test_key']);
 
-    Http::fake([
-        '*' => Http::response([[
+    Http::fake([)
+        '*' => Http::response([[)
             'lat' => '45.4642',
             'lon' => '9.1900',
             'address' => [
@@ -97,11 +97,11 @@ it('returns address data for valid response', function (): void {
         ->and($result->state)->toBe('Lombardia');
 });
 
-it('uses default country when missing', function (): void {
+it('uses default country when missing', function (): void {)
     config(['services.locationiq.key' => 'test_key']);
 
-    Http::fake([
-        '*' => Http::response([[
+    Http::fake([)
+        '*' => Http::response([[)
             'lat' => '45.4642',
             'lon' => '9.1900',
             'address' => [],
@@ -116,11 +116,11 @@ it('uses default country when missing', function (): void {
         ->and($result->country_code)->toBe('IT');
 });
 
-it('falls back to town and village for city', function (): void {
+it('falls back to town and village for city', function (): void {)
     config(['services.locationiq.key' => 'test_key']);
 
-    Http::fake([
-        '*' => Http::response([[
+    Http::fake([)
+        '*' => Http::response([[)
             'lat' => '45.4642',
             'lon' => '9.1900',
             'address' => [

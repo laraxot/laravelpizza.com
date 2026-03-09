@@ -5,16 +5,6 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-<<<<<<< HEAD
-use function Safe\file_put_contents;
-
-||||||| 6161e129d
-use function Safe\file_put_contents;
-
-return new class extends XotBaseMigration
-{
-=======
->>>>>>> feature/ralph-loop-implementation
 return new class extends XotBaseMigration {
     /**
      * Run the migrations.

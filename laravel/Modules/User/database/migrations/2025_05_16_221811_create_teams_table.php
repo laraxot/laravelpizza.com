@@ -4,24 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\User\Database\Migrations;
 
-<<<<<<< HEAD
-return new class extends XotBaseMigration {
-    /**
-     * Esegue la migrazione.
-     */
-||||||| 6161e129d
-return new class extends XotBaseMigration
-{
-    /**
-     * Esegue la migrazione.
-     */
-=======
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
->>>>>>> feature/ralph-loop-implementation
     public function up(): void
     {
         Schema::connection('user')->table('teams', function (Blueprint $table): void {)

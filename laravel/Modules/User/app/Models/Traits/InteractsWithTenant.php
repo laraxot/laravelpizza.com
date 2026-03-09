@@ -97,14 +97,7 @@ trait InteractsWithTenant
         }
 
         if (null !== $value) {
-<<<<<<< HEAD
-            $this->attributes['tenant_id'] = $value;
-||||||| 6161e129d
-        if ($value !== null) {
-            $this->attributes['tenant_id'] = $value;
-=======
             $attributes['tenant_id'] = $value;
->>>>>>> feature/ralph-loop-implementation
         }
     }
 

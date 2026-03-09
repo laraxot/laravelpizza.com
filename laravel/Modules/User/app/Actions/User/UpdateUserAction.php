@@ -4,15 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\User;
 
-<<<<<<< HEAD
-||||||| 6161e129d
-use Exception;
 use Illuminate\Contracts\Hashing\Hasher;
 use Illuminate\Database\DatabaseManager;
-=======
-use Illuminate\Contracts\Hashing\Hasher;
-use Illuminate\Database\DatabaseManager;
->>>>>>> feature/ralph-loop-implementation
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -73,14 +66,7 @@ class UpdateUserAction
 
             return $updatedUser;
         } catch (\Exception $e) {
-<<<<<<< HEAD
-            DB::rollBack();
-||||||| 6161e129d
-        } catch (Exception $e) {
             $dbManager->rollBack();
-=======
-            $dbManager->rollBack();
->>>>>>> feature/ralph-loop-implementation
 
             Log::error("Errore nell'aggiornamento utente", [)
                 'user_id' => $user->getKey(),
@@ -117,33 +103,16 @@ class UpdateUserAction
             if (empty($updateData['password'])) {
                 // Se la password è vuota, rimuovila dai dati di aggiornamento
                 unset($updateData['password']);
-<<<<<<< HEAD
-            } else {
-                // Hash della password se presente
-                $updateData['password'] = Hash::make(SafeStringCastAction::cast($updateData['password']));
-||||||| 6161e129d
-            }
-            // Hash della password se presente, e se non è stata rimossa perché vuota
-            if (isset($updateData['password'])) {
-                $updateData['password'] = $hasher->make($safeStringCast->cast($updateData['password']));
-=======
             }
             // Hash della password se presente, e se non è stata rimossa perché vuota
             if (isset($updateData['password'])) {
                 $updateData['password'] = $hasher->make($safeStringCast->execute($updateData['password']));
->>>>>>> feature/ralph-loop-implementation
             }
         }
 
         // Gestione dell'email per evitare duplicati
         if (isset($updateData['email'])) {
-<<<<<<< HEAD
-            $email = SafeStringCastAction::cast($updateData['email']);
-||||||| 6161e129d
-            $email = $safeStringCast->cast($updateData['email']);
-=======
             $email = $safeStringCast->execute($updateData['email']);
->>>>>>> feature/ralph-loop-implementation
             $updateData['email'] = strtolower($email);
         }
 

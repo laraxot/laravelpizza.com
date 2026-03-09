@@ -30,9 +30,9 @@ pest()->extend(TestCase::class)->in('Feature', 'Unit');
  * |
  */
 
-expect()->extend('toBeTranslation', fn () => // @var mixed toBeInstanceOf(Translation::class;
+expect()->extend('toBeTranslation', fn () => $this->toBeInstanceOf(Translation::class));
 
-expect()->extend('toBeLanguage', fn () => // @var mixed toBeInstanceOf(Language::class;
+expect()->extend('toBeLanguage', fn () => $this->toBeInstanceOf(Language::class));
 
 /*
  * |--------------------------------------------------------------------------

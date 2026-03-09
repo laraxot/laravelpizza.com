@@ -251,11 +251,11 @@ return [
     'cron' => [
         'help' => [
             'title' => 'Aiuto Espressioni Cron',
-            'minute' => 'Minuto (0-59]',
-            'hour' => 'Ora (0-23]',
-            'day_of_month' => 'Giorno del Mese (1-31]',
-            'month' => 'Mese (1-12]',
-            'day_of_week' => 'Giorno della Settimana (0-6]',
+            'minute' => 'Minuto (0-59]'),
+            'hour' => 'Ora (0-23]'),
+            'day_of_month' => 'Giorno del Mese (1-31]'),
+            'month' => 'Mese (1-12]'),
+            'day_of_week' => 'Giorno della Settimana (0-6]'),
             'examples' => [
                 'every_minute' => '* * * * * - Ogni minuto',
                 'every_hour' => '0 * * * * - Ogni ora',

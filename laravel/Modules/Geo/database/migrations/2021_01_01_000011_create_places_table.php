@@ -21,7 +21,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $blueprint
+        $this->tableCreate(function (Blueprint $blueprint))
             $blueprint->increments('id');
             $blueprint->nullableMorphs('model');
             $blueprint->text('address')->nullable();
@@ -31,10 +31,10 @@ return new class extends XotBaseMigration {
             /*
              * $address_components = MyModel::$address_components;
              * foreach ($address_components as $address_component) {
-             * if (! $this->hasColumn($address_component
+             * if (! $this->hasColumn($address_component))
              * $blueprint->text($address_component)->nullable();
              * }
-             * if (! $this->hasColumn($address_component.'_short'
+             * if (! $this->hasColumn($address_component.'_short'))
              * $blueprint->text($address_component.'_short')->nullable();
              * }
              * }
@@ -46,21 +46,21 @@ return new class extends XotBaseMigration {
             $blueprint->timestamps();
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $blueprint
-            if (! $this->hasColumn('post_type'
+        $this->tableUpdate(function (Blueprint $blueprint))
+            if (! $this->hasColumn('post_type'))
                 $blueprint->string('post_type', 50)->index()->nullable();
             }
             /*
-             * if (! $this->hasColumn('address'
+             * if (! $this->hasColumn('address'))
              * $table->text('address')->nullable();
              * }
              */
-            if (! $this->hasColumn('latitude'
+            if (! $this->hasColumn('latitude'))
                 $blueprint->decimal('latitude', 15, 10)->nullable();
                 $blueprint->decimal('longitude', 15, 10)->nullable();
             }
 
-            if (! $this->hasColumn('model_id'
+            if (! $this->hasColumn('model_id'))
                 $blueprint->nullableMorphs('model');
             }
         });

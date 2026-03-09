@@ -172,7 +172,7 @@ class Task extends BaseModel
      */
     public function getUpcomingAttribute(): string
     {
-        // return CronExpression::factory(// @var mixed getCronExpression(;
+        // return CronExpression::factory($this->getCronExpression());
         return 'preso';
     }
 

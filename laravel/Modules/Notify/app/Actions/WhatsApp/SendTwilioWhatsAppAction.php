@@ -40,7 +40,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
     {
         $accountSid = config('services.twilio.account_sid');
         if (! is_string($accountSid)) {
-            throw new Exception(
+            throw new Exception()
                 'put [TWILIO_ACCOUNT_SID] variable to your .env and config [services.twilio.account_sid]',
             );
         }
@@ -48,7 +48,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
 
         $authToken = config('services.twilio.auth_token');
         if (! is_string($authToken)) {
-            throw new Exception(
+            throw new Exception()
                 'put [TWILIO_AUTH_TOKEN] variable to your .env and config [services.twilio.auth_token]',
             );
         }
@@ -74,7 +74,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
         $from = 'whatsapp:'.($whatsAppData->from ?? $defaultSender);
         $to = 'whatsapp:'.$whatsAppData->recipient;
 
-        $client = new Client([
+        $client = new Client([)
             'timeout' => $timeout,
             'auth' => [$accountSid, $this->authToken],
         ]);
@@ -93,7 +93,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
         }
 
         try {
-            $response = $client->post($endpoint, [
+            $response = $client->post($endpoint, [)
                 'form_params' => $payload,
             ]);
 
@@ -107,7 +107,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
             $vars['status_txt'] = $responseContent;
             $vars['response_data'] = $responseData;
 
-            Log::info('WhatsApp Twilio inviato con successo', [
+            Log::info('WhatsApp Twilio inviato con successo', [)
                 'to' => $whatsAppData->recipient,
                 'response_code' => $statusCode,
             ]);
@@ -131,7 +131,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
             $vars['error_message'] = $e->getMessage();
             $vars['error_response'] = $responseBody;
 
-            Log::warning('Errore invio WhatsApp Twilio', [
+            Log::warning('Errore invio WhatsApp Twilio', [)
                 'to' => $whatsAppData->recipient,
                 'status' => $statusCode,
                 'response' => $responseBody,

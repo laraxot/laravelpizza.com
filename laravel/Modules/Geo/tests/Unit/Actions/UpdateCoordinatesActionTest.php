@@ -10,68 +10,14 @@ use Modules\Geo\Tests\TestCase;
 
 uses(TestCase::class);
 
-<<<<<<< HEAD
-beforeEach(function () {
-    // Set up Google Maps API key for tests
-    Config::set('services.google.maps.key', 'test-api-key');
-
-    // Mock HTTP responses
-    Http::fake([
-        'maps.googleapis.com/*' => Http::response([
-            'status' => 'OK',
-            'results' => [
-                [
-                    'geometry' => [
-                        'location' => [
-                            'lat' => 45.4642,
-                            'lng' => 9.1900,
-                        ],
-                    ],
-                ],
-            ],
-        ], 200),
-    ]);
-
-    $this->getCoordinatesAction = new GetCoordinatesAction();
-    $this->action = new UpdateCoordinatesAction($this->getCoordinatesAction);
-});
-
-||||||| 6161e129d
-beforeEach(function () {
-    // Set up Google Maps API key for tests
-    Config::set('services.google.maps.key', 'test-api-key');
-
-    // Mock HTTP responses
-    Http::fake([
-        'maps.googleapis.com/*' => Http::response([
-            'status' => 'OK',
-            'results' => [
-                [
-                    'geometry' => [
-                        'location' => [
-                            'lat' => 45.4642,
-                            'lng' => 9.1900,
-                        ],
-                    ],
-                ],
-            ],
-        ], 200),
-    ]);
-
-    $this->getCoordinatesAction = new GetCoordinatesAction;
-    $this->action = new UpdateCoordinatesAction($this->getCoordinatesAction);
-});
-
-=======
->>>>>>> feature/ralph-loop-implementation
-it('updates coordinates for a place with valid address', function (): void {
+it('updates coordinates for a place with valid address', function (): void {)
     $address = (object) ['formatted_address' => 'Via Roma 123, Milano, Italia'];
 
     $place = Mockery::mock(Place::class);
     $place->shouldReceive('getAttribute')->with('address')->andReturn($address);
     $place->shouldReceive('update')
         ->once()
-        ->with([
+        ->with([)
             'latitude' => 45.4642,
             'longitude' => 9.1900,
         ])
@@ -88,7 +34,7 @@ it('updates coordinates for a place with valid address', function (): void {
     $action->execute($place);
 });
 
-it('throws exception when place has no address', function (): void {
+it('throws exception when place has no address', function (): void {)
     $place = Mockery::mock(Place::class);
     $place->shouldReceive('getAttribute')->with('address')->andReturn(null);
 
@@ -99,7 +45,7 @@ it('throws exception when place has no address', function (): void {
         ->toThrow(RuntimeException::class, 'Place address is required');
 });
 
-it('throws exception when address formatted_address is null', function (): void {
+it('throws exception when address formatted_address is null', function (): void {)
     $address = (object) ['formatted_address' => null];
 
     $place = Mockery::mock(Place::class);
@@ -112,7 +58,7 @@ it('throws exception when address formatted_address is null', function (): void 
         ->toThrow(RuntimeException::class, 'Place address is required');
 });
 
-it('throws exception when coordinates cannot be retrieved', function (): void {
+it('throws exception when coordinates cannot be retrieved', function (): void {)
     $address = (object) ['formatted_address' => 'Invalid Address That Does Not Exist'];
 
     $place = Mockery::mock(Place::class);
@@ -130,14 +76,14 @@ it('throws exception when coordinates cannot be retrieved', function (): void {
         ->toThrow(RuntimeException::class, 'Could not get coordinates for address: Invalid Address That Does Not Exist');
 });
 
-it('updates coordinates with different address', function (): void {
+it('updates coordinates with different address', function (): void {)
     $address = (object) ['formatted_address' => 'Piazza del Duomo, Milano, Italia'];
 
     $place = Mockery::mock(Place::class);
     $place->shouldReceive('getAttribute')->with('address')->andReturn($address);
     $place->shouldReceive('update')
         ->once()
-        ->with([
+        ->with([)
             'latitude' => 45.4641,
             'longitude' => 9.1912,
         ])

@@ -11,7 +11,7 @@ use Spatie\LaravelData\Data;
  */
 class AddressData extends Data
 {
-    public function __construct(
+    public function __construct()
         public readonly float $latitude,
         public readonly float $longitude,
         public readonly ?string $country = null,
@@ -34,26 +34,26 @@ class AddressData extends Data
     {
         $parts = [];
 
-        if ($street
+        if ($street)
             $parts[] = $street;
-            if ($street_number
+            if ($street_number)
                 $parts[count($parts) - 1] .= ', '.$street_number;
             }
         }
 
-        if ($city
+        if ($city)
             $parts[] = $city;
         }
 
-        if ($state
+        if ($state)
             $parts[] = $state;
         }
 
-        if ($country
+        if ($country)
             $parts[] = $country;
         }
 
-        if ($postal_code
+        if ($postal_code)
             $parts[] = (string) $postal_code;
         }
 
@@ -65,7 +65,7 @@ class AddressData extends Data
      * {
      * $address = $data['address'] ?? [];
      *
-     * return new self(
+     * return new self()
      * latitude: (float) $data['lat'],
      * longitude: (float) $data['lon'],
      * city: $address['city'] ?? $address['town'] ?? '',

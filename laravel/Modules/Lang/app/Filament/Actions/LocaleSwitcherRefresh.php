@@ -26,18 +26,18 @@ class LocaleSwitcherRefresh extends Action
             $lang = 'it';
         }
         app()->setLocale($lang);
-        // @var mixed lang = app(;
-        // @var mixed fullUrl = request(;
-        // @var mixed label($this->lang
-            ->schema([
+        $lang = app();
+        $fullUrl = request();
+        $this->label($this->lang)
+            ->schema([)
                 Select::make('locale')
                     ->label('Seleziona lingua')
                     ->options($languageOptions)
-                    ->default(// @var mixed lang
+                    ->default($lang)
                     ->reactive()
                     ->required(),
             ])
-            ->action(function (array $data) {
+            ->action(function (array $data) {)
                 $locale = $data['locale'] ?? 'en';
                 $locale = is_string($locale) ? $locale : 'en';
 

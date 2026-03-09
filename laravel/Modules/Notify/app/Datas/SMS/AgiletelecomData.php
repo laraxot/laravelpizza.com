@@ -47,7 +47,7 @@ class AgiletelecomData extends Data
 
     public function getAuthHeaders(): array
     {
-        switch ($auth_type
+        switch ($auth_type)
             case 'api_key':
                 return [
                     'Authorization' => 'Api-Key '.$api_key,
@@ -63,7 +63,7 @@ class AgiletelecomData extends Data
             case 'basic':
             default:
                 return [
-                    'Authorization' => 'Basic '.base64_encode($username.':'.$this->password
+                    'Authorization' => 'Basic '.base64_encode($username.':'.$this->password)
                     'Content-Type' => 'application/json',
                 ];
         }

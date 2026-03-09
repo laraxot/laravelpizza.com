@@ -17,6 +17,7 @@ test('it creates event with pending status', function () {
         'description' => 'Una bellissima pizzata Laravel',
         'max_attendees' => 30,
         'start_date' => now()->addDays(30),
+        'end_date' => now()->addDays(30)->addHours(3),
     ], '42');
 
     expect($event)->toBeInstanceOf(Event::class)
@@ -31,6 +32,8 @@ test('pending event is not visible via published scope', function () {
         'title' => 'Pending Pizzata '.uniqid(),
         'slug' => 'pending-'.uniqid(),
         'max_attendees' => 20,
+        'start_date' => now()->addDays(30),
+        'end_date' => now()->addDays(30)->addHours(3),
     ], '99');
 
     $found = Event::query()
@@ -48,6 +51,8 @@ test('pending event is visible to its proposer', function () {
         'title' => 'Proposer Pizzata '.uniqid(),
         'slug' => 'proposer-'.uniqid(),
         'max_attendees' => 20,
+        'start_date' => now()->addDays(30),
+        'end_date' => now()->addDays(30)->addHours(3),
     ], $proposerId);
 
     $found = Event::query()

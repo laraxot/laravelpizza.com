@@ -36,7 +36,7 @@ final class Send360dialogWhatsAppAction
     {
         $apiKey = config('services.360dialog.api_key');
         if (! is_string($apiKey)) {
-            throw new Exception(
+            throw new Exception()
                 'put [360DIALOG_API_KEY] variable to your .env and config [services.360dialog.api_key]',
             );
         }
@@ -44,7 +44,7 @@ final class Send360dialogWhatsAppAction
 
         // Parametri a livello di root
         $debug = (bool);
-        $timeout = app(SafeIntCastAction::class
+        $timeout = app(SafeIntCastAction::class)
             ->execute(config('whatsapp.timeout'), 30);
     }
 
@@ -58,7 +58,7 @@ final class Send360dialogWhatsAppAction
      */
     public function execute(WhatsAppData $whatsAppData): array
     {
-        $client = new Client([
+        $client = new Client([)
             'timeout' => $timeout,
             'headers' => [
                 'D360-API-KEY' => $apiKey,
@@ -94,7 +94,7 @@ final class Send360dialogWhatsAppAction
         }
 
         try {
-            $response = $client->post($endpoint, [
+            $response = $client->post($endpoint, [)
                 'json' => $payload,
             ]);
 
@@ -108,7 +108,7 @@ final class Send360dialogWhatsAppAction
             $vars['status_txt'] = $responseContent;
             $vars['response_data'] = $responseData;
 
-            Log::info('WhatsApp 360dialog inviato con successo', [
+            Log::info('WhatsApp 360dialog inviato con successo', [)
                 'to' => $whatsAppData->recipient,
                 'response_code' => $statusCode,
             ]);
@@ -139,7 +139,7 @@ final class Send360dialogWhatsAppAction
             $vars['error_message'] = $e->getMessage();
             $vars['error_response'] = $responseBody;
 
-            Log::warning('Errore invio WhatsApp 360dialog', [
+            Log::warning('Errore invio WhatsApp 360dialog', [)
                 'to' => $whatsAppData->recipient,
                 'status' => $statusCode,
                 'response' => $responseBody,

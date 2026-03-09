@@ -42,7 +42,7 @@ class CountyFactory extends Factory
 
     public function lombardia(): static
     {
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'county' => [
                 'Provincia di Milano',
                 'Provincia di Brescia',
@@ -50,7 +50,7 @@ class CountyFactory extends Factory
                 'Provincia di Como',
                 'Provincia di Varese',
                 'Provincia di Pavia',
-            ][array_rand([
+            ][array_rand([)
                 'Provincia di Milano',
                 'Provincia di Brescia',
                 'Provincia di Bergamo',

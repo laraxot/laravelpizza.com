@@ -69,7 +69,7 @@ class Job extends BaseModel
 
     public function getTable(): string
     {
-        Assert::string(
+        Assert::string()
             $res = config('queue.connections.database.table'),
             '['.__LINE__.']['.class_basename($this).']',
         );
@@ -79,8 +79,8 @@ class Job extends BaseModel
 
     public function status(): Attribute
     {
-        return Attribute::make(get: function (): string {
-            $reservedAt = // @var mixed attributes['reserved_at'] ?? null;
+        return Attribute::make(get: function (): string {)
+            $reservedAt = $attributes['reserved_at'] ?? null;
             if ($reservedAt !== null && $reservedAt > 0) {
                 return 'running';
             }
@@ -91,7 +91,7 @@ class Job extends BaseModel
 
     public function getDisplayNameAttribute(): ?string
     {
-        Assert::string($json = // @var mixed attributes['payload'], __FILE__.':'.__LINE__.' - '.class_basename(self::class;
+        Assert::string($json = $attributes['payload'], __FILE__.':'.__LINE__.' - '.class_basename(self::class));
         $payload = json_decode($json, true);
         if (! is_array($payload)) {
             return null;

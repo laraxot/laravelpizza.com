@@ -68,7 +68,7 @@ class MailtrapEngine
 
         // try {
         Assert::string($body, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
-        Mail::raw($body, function (Message $msg
+        Mail::raw($body, function (Message $msg))
             // Verifichiamo che $to sia valido
             $to = $to;
 

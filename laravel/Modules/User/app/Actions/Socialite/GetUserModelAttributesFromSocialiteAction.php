@@ -6,13 +6,7 @@ namespace Modules\User\Actions\Socialite;
 
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Actions\Socialite\Utils\UserNameFieldsResolver;
-<<<<<<< HEAD
-||||||| 6161e129d
-use RuntimeException;
 use Modules\User\Datas\SocialiteUserAttributesData;
-=======
-use Modules\User\Datas\SocialiteUserAttributesData;
->>>>>>> feature/ralph-loop-implementation
 use Spatie\QueueableAction\QueueableAction;
 
 class GetUserModelAttributesFromSocialiteAction
@@ -35,15 +29,7 @@ class GetUserModelAttributesFromSocialiteAction
             throw new \InvalidArgumentException('Il provider non può essere vuoto');
         }
 
-<<<<<<< HEAD
-        $nameFieldsResolver = app(UserNameFieldsResolver::class, ['user' => $this->oauthUser]);
-||||||| 6161e129d
         $nameFieldsResolver = app(UserNameFieldsResolver::class, ['user' => $oauthUser]);
-        if ($nameFieldsResolver === null) {
-            throw new RuntimeException('Impossibile istanziare UserNameFieldsResolver');
-=======
-        $nameFieldsResolver = app(UserNameFieldsResolver::class, ['user' => $oauthUser]);
->>>>>>> feature/ralph-loop-implementation
         if (null === $nameFieldsResolver) {
             throw new \RuntimeException('Impossibile istanziare UserNameFieldsResolver');
         }
@@ -51,14 +37,7 @@ class GetUserModelAttributesFromSocialiteAction
         if (! is_string($nameFieldsResolver->name)) {
             throw new \RuntimeException('Il nome deve essere una stringa');
         }
-<<<<<<< HEAD
-        if (! is_string($nameFieldsResolver->last_name)) {
-||||||| 6161e129d
         if (! is_string($nameFieldsResolver->lastName)) {
-            throw new RuntimeException('Il cognome deve essere una stringa');
-=======
-        if (! is_string($nameFieldsResolver->lastName)) {
->>>>>>> feature/ralph-loop-implementation
             throw new \RuntimeException('Il cognome deve essere una stringa');
         }
 

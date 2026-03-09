@@ -28,13 +28,13 @@ class Change extends Component
 
     public function mount(): void
     {
-        // @var mixed lang = app(;
+        $lang = app();
         $langs = LaravelLocalization::getSupportedLocales();
-        unset($langs[// @var mixed lang];
-        // @var mixed url = Request::getRequestUri(;
-        $langs = Arr::map($langs, function (array $item, string $key): array {
+        unset($langs[$lang]);
+        $url = Request::getRequestUri();
+        $langs = Arr::map($langs, function (array $item, string $key): array {)
             // Recupera la URL localizzata corrente
-            $url = LaravelLocalization::getLocalizedURL($key, // @var mixed url, [], true;
+            $url = LaravelLocalization::getLocalizedURL($key, $url, [], true);
 
             // Verifichiamo che $url sia una stringa o la convertiamo in modo sicuro
             if (! is_string($url)) {
@@ -50,12 +50,12 @@ class Change extends Component
 
             return $item;
         });
-        // @var mixed langs = $langs;
+        $langs = $langs;
     }
 
     // public function switchLang(string $lang): Application|RedirectResponse|Redirector
     // {
-    //    $url = LaravelLocalization::getLocalizedURL($lang, // @var mixed url;
+    //    $url = LaravelLocalization::getLocalizedURL($lang, $url);
 
     //   return redirect($url, 303);
     // }
@@ -66,7 +66,7 @@ class Change extends Component
         $viewParams = [
             'view' => $view,
         ];
-        // if ([] === // @var mixed teams
+        // if ([] === $teams)
         //    $view = 'ui::livewire.empty';
         // }
 

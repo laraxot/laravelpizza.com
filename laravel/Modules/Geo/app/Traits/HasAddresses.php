@@ -71,7 +71,7 @@ trait HasAddresses
     public function setPrimaryAddress(Address $address): void
     {
         // Assicurati che l'indirizzo appartenga a questo modello
-        if ($address->model_id !== $id || $address->model_type !== static::class
+        if ($address->model_id !== $id || $address->model_type !== static::class)
             throw new \InvalidArgumentException('L\'indirizzo non appartiene a questo modello.');
         }
 

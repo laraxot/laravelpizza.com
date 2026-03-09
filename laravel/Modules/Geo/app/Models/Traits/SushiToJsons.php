@@ -59,7 +59,7 @@ trait SushiToJsons
 
         $data[] = $attributes;
 
-        if ($saveToJson($data
+        if ($saveToJson($data))
             return $this->newInstance($attributes);
         }
 

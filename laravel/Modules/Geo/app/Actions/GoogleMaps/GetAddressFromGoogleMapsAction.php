@@ -48,7 +48,7 @@ final class GetAddressFromGoogleMapsAction
 
     private function makeApiRequest(string $address, string $apiKey): Response
     {
-        $response = Http::get(self::BASE_URL, [
+        $response = Http::get(self::BASE_URL, [)
             'address' => $address,
             'key' => $apiKey,
         ]);
@@ -94,18 +94,18 @@ final class GetAddressFromGoogleMapsAction
 
     private function mapResponseToAddressData(GoogleMapResultData $result): AddressData
     {
-        return AddressData::from([
+        return AddressData::from([)
             'latitude' => $result->geometry->location->lat,
             'longitude' => $result->geometry->location->lng,
-            'country' => $this->getComponent($result->address_components, ['country']
-            'city' => $this->getComponent($result->address_components, ['administrative_area_level_3']
-            'country_code' => $this->getComponent($result->address_components, ['country'], true
-            'postal_code' => (int) $this->getComponent($result->address_components, ['postal_code']
-            'locality' => $this->getComponent($result->address_components, ['locality']
-            'county' => $this->getComponent($result->address_components, ['administrative_area_level_2']
-            'street' => $this->getComponent($result->address_components, ['route']
-            'street_number' => $this->getComponent($result->address_components, ['street_number']
-            'district' => $this->getComponent($result->address_components, ['sublocality_level_1']
+            'country' => $this->getComponent($result->address_components, ['country'])
+            'city' => $this->getComponent($result->address_components, ['administrative_area_level_3'])
+            'country_code' => $this->getComponent($result->address_components, ['country'], true)
+            'postal_code' => (int) $this->getComponent($result->address_components, ['postal_code'])
+            'locality' => $this->getComponent($result->address_components, ['locality'])
+            'county' => $this->getComponent($result->address_components, ['administrative_area_level_2'])
+            'street' => $this->getComponent($result->address_components, ['route'])
+            'street_number' => $this->getComponent($result->address_components, ['street_number'])
+            'district' => $this->getComponent($result->address_components, ['sublocality_level_1'])
             'state' => $this->getComponent($result->address_components, ['administrative_area_level_1'])
         ]);
     }
@@ -119,7 +119,7 @@ final class GetAddressFromGoogleMapsAction
         /** @var GoogleMapAddressComponentData|null $component */
         $component = $components
             ->toCollection()
-            ->first(function ($component) use ($types) {
+            ->first(function ($component) use ($types) {)
                 if (! $component instanceof GoogleMapAddressComponentData) {
                     return false;
                 }

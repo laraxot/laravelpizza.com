@@ -27,20 +27,20 @@ return new class extends XotBaseMigration
      */
     public function up(): void
     {
-        $this->tableUpdate(function (Blueprint $table
-            if (! $this->hasColumn('user_id'
+        $this->tableUpdate(function (Blueprint $table))
+            if (! $this->hasColumn('user_id'))
                 $table->uuid('user_id')->nullable();
             }
-            if (! $this->hasColumn('file_name'
+            if (! $this->hasColumn('file_name'))
                 $table->string('file_name')->nullable();
             }
-            if (! $this->hasColumn('file_size'
+            if (! $this->hasColumn('file_size'))
                 $table->integer('file_size')->nullable();
             }
-            if (! $this->hasColumn('mime_type'
+            if (! $this->hasColumn('mime_type'))
                 $table->string('mime_type')->nullable();
             }
-            if (! $this->hasColumn('status'
+            if (! $this->hasColumn('status'))
                 $table->string('status')->default('uploading');
             }
         });

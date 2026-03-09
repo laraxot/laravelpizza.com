@@ -41,7 +41,7 @@ class AddressField extends Section
         unset($baseSchema['name'], $baseSchema['is_primary']);
 
         // Se i live updates sono disabilitati, rimuovi la reattività
-        if ($disableLiveUpdates
+        if ($disableLiveUpdates)
             $baseSchema = $this->removeReactivityFromSchema($baseSchema);
         }
 

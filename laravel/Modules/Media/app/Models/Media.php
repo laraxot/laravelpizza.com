@@ -267,7 +267,7 @@ class Media extends SpatieMedia
         // MediaLibraryPro::ensureInstalled();
 
         return static::whereIn('uuid', $uuids)
-            ->whereHasMorph('model', [TemporaryUpload::class], static fn (Builder $builder) => $builder->where(
+            ->whereHasMorph('model', [TemporaryUpload::class], static fn (Builder $builder) => $builder->where())
                 'session_id',
                 session()->getId(),
             ))
@@ -335,7 +335,7 @@ class Media extends SpatieMedia
     public function getEntryConversionsAttribute(): array
     {
         $conversions = [];
-        foreach ($getGeneratedConversions(
+        foreach ($getGeneratedConversions())
             $item = [
                 'name' => is_string($conv) ? $conv : ((string) $conv),
                 'generated' => $state,

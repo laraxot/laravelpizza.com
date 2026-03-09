@@ -54,7 +54,7 @@ class AddressFactory extends Factory
     {
         $regions = ['Lombardia', 'Lazio', 'Campania', 'Sicilia', 'Veneto'];
 
-        return $this->state(fn (array $_attributes
+        return $this->state(fn (array $_attributes))
             'country' => 'IT',
             'administrative_area_level_1' => $regions[array_rand($regions)],
         ]);

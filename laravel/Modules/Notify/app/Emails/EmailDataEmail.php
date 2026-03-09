@@ -19,7 +19,7 @@ class EmailDataEmail extends Mailable
     use Queueable;
     use SerializesModels;
 
-    public function __construct(
+    public function __construct()
         public EmailData $email_data,
     ) {}
 
@@ -28,17 +28,17 @@ class EmailDataEmail extends Mailable
      */
     public function envelope(): Envelope
     {
-        if ($email_data->from === null
+        if ($email_data->from === null)
             Assert::string($from = config('mail.from.name', 'Default Sender'));
             $email_data->from = $from;
         }
-        if ($email_data->from_email === null
+        if ($email_data->from_email === null)
             Assert::string($from_email = config('mail.from.address', 'default@example.com'));
             $email_data->from_email = $from_email;
         }
 
-        return new Envelope(
-            from: new Address($email_data->from_email, $this->email_data->from
+        return new Envelope()
+            from: new Address($email_data->from_email, $this->email_data->from)
             subject: $email_data->subject,
         );
     }
@@ -48,7 +48,7 @@ class EmailDataEmail extends Mailable
      */
     public function content(): Content
     {
-        return new Content(
+        return new Content()
             html: 'notify::emails.html',
             text: 'notify::emails.text',
             with: [

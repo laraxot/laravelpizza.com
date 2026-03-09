@@ -13,7 +13,7 @@ return new class extends XotBaseMigration
     public function up(): void
     {
         // -- CREATE --
-        // @var mixed tableCreate(static function (Blueprint $table
+        $this->tableCreate(static function (Blueprint $table))
             $table->increments('id');
             $table->string('description');
             $table->string('command');
@@ -38,8 +38,8 @@ return new class extends XotBaseMigration
             $table->boolean('run_in_background')->default(false);
         });
         // -- UPDATE --
-        // @var mixed tableUpdate(function (Blueprint $table
-            // @var mixed updateTimestamps(
+        $this->tableUpdate(function (Blueprint $table))
+            $this->updateTimestamps()
                 table: $table,
                 hasSoftDeletes: true,
             );

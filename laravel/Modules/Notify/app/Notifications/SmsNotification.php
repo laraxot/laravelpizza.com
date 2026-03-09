@@ -44,7 +44,7 @@ class SmsNotification extends Notification implements ShouldQueue
             $recipient = $config['recipient'] ?? ($config['to'] ?? '');
             $from = $config['from'] ?? '';
 
-            $smsData = SmsData::from([
+            $smsData = SmsData::from([)
                 'body' => $content,
                 'recipient' => (string) $recipient,
                 'from' => (string) $from,

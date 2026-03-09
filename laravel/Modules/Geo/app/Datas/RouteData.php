@@ -21,7 +21,7 @@ class RouteData extends Data
      *     instructions: string
      * }> $steps
      */
-    public function __construct(
+    public function __construct()
         public readonly Collection $waypoints,
         public readonly Collection $originalWaypoints,
         public readonly int $totalDistance,
@@ -35,7 +35,7 @@ class RouteData extends Data
      */
     public function getFormattedDistance(): string
     {
-        if ($totalDistance < 1000
+        if ($totalDistance < 1000)
             return sprintf('%d m', $totalDistance);
         }
 
@@ -62,9 +62,9 @@ class RouteData extends Data
      *
      * public function isOptimized(): bool
      * {
-     * return ! $waypoints->isEmpty(
-     * && $waypoints->count(
-     * && ! $waypoints->zip($this->originalWaypoints
+     * return ! $waypoints->isEmpty()
+     * && $waypoints->count()
+     * && ! $waypoints->zip($this->originalWaypoints)
      * fn (array $pair): bool => $pair[0]->equals($pair[1])
      * );
      * }
@@ -82,10 +82,10 @@ class RouteData extends Data
     public function getSummary(): array
     {
         return [
-            'distance' => $this->getFormattedDistance(
-            'duration' => $this->getFormattedDuration(
-            'steps' => count($steps
-            'waypoints' => $waypoints->count(
+            'distance' => $this->getFormattedDistance()
+            'duration' => $this->getFormattedDuration()
+            'steps' => count($steps)
+            'waypoints' => $waypoints->count()
             // 'optimized' => $this->isOptimized()
         ];
     }

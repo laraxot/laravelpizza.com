@@ -59,7 +59,7 @@ class VideoStream
         $fileModifiedTime = $filesystem->lastModified($path);
         $size = $filesystem->size($path);
 
-        if (! is_string($mime
+        if (! is_string($mime))
             throw new Exception('Unable to determine MIME type.');
         }
     }
@@ -113,7 +113,7 @@ class VideoStream
         $start = (int) $rangeParts[0];
         $end = isset($rangeParts[1]) ? ((int) $rangeParts[1]) : $end;
 
-        if ($start > $end || $start >= $size || $end >= $this->size
+        if ($start > $end || $start >= $size || $end >= $this->size)
             header('HTTP/1.1 416 Requested Range Not Satisfiable');
             header(sprintf('Content-Range: bytes %d-%d/%d', $start, $this->end, $this->size));
             exit;
@@ -135,12 +135,12 @@ class VideoStream
     {
         set_time_limit(0); // Disable time limit for streaming
 
-        if (! is_resource($stream
+        if (! is_resource($stream))
             throw new Exception('Stream resource is not valid.');
         }
 
         fseek($stream, $this->start);
-        while (! feof($stream
+        while (! feof($stream))
             $bytesToRead = min($bufferSize, $this->end - $this->start + 1);
             if ($bytesToRead > 0) {
                 $data = fread($stream, $bytesToRead);
@@ -158,7 +158,7 @@ class VideoStream
      */
     private function closeStream(): void
     {
-        if (is_resource($stream
+        if (is_resource($stream))
             fclose($stream);
         }
 

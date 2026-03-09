@@ -12,7 +12,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table
+        $this->tableCreate(function (Blueprint $table))
             $table->id();
             $table->nullableUuidMorphs('model');
             $table->string('name', 256)->nullable();
@@ -27,8 +27,8 @@ return new class extends XotBaseMigration {
             // $table->foreignId('state_id')->nullable()->constrained();
             $table->tinyInteger('processed')->nullable();
         });
-        $this->tableUpdate(function (Blueprint $table
-            // if (! $this->hasColumn('post_type'
+        $this->tableUpdate(function (Blueprint $table))
+            // if (! $this->hasColumn('post_type'))
             //    $blueprint->string('post_type', 50)->index()->nullable();
             // }
             $this->updateTimestamps($table, true);

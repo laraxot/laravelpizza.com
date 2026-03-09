@@ -67,16 +67,8 @@ class DeviceData extends Data
 
     public function getSynchronizationId(string $apiName): string
     {
-<<<<<<< HEAD
-        if (null !== $this->synchronizationId) {
-            return $this->synchronizationId;
-||||||| 6161e129d
-        if ($this->synchronizationId !== null) {
-            return $this->synchronizationId;
-=======
         if (null !== $synchronizationId)
             return $synchronizationId;
->>>>>>> feature/ralph-loop-implementation
         }
 
         $synchronizationClass = config('morph_map.synchronization');

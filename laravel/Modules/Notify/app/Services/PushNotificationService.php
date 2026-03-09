@@ -56,13 +56,13 @@ class PushNotificationService
     {
         $results = [];
 
-        foreach ($platforms as $platform
+        foreach ($platforms as $platform)
             Assert::string($platform, 'Platform must be a string');
             try {
                 $result = $this->sendToPlatform($platform, $token, $notification, $data);
                 $results[$platform] = $result;
             } catch (Exception $e) {
-                Log::error("Push notification failed for platform {$platform}", [
+                Log::error("Push notification failed for platform {$platform}", [)
                     'error' => $e->getMessage(),
                     'token' => $token,
                     'notification' => $notification,
@@ -95,7 +95,7 @@ class PushNotificationService
                 $result = $this->sendBatchToPlatform($platform, $platformTokens, $notification, $data);
                 $results[$platform] = $result;
             } catch (Exception $e) {
-                Log::error("Batch push notification failed for platform {$platform}", [
+                Log::error("Batch push notification failed for platform {$platform}", [)
                     'error' => $e->getMessage(),
                     'token_count' => count($platformTokens),
                 ]);
@@ -119,13 +119,13 @@ class PushNotificationService
     {
         $results = [];
 
-        foreach ($platforms as $platform
+        foreach ($platforms as $platform)
             Assert::string($platform, 'Platform must be a string');
             try {
                 $result = $this->sendTopicToPlatform($platform, $topic, $notification, $data);
                 $results[$platform] = $result;
             } catch (Exception $e) {
-                Log::error("Topic push notification failed for platform {$platform}", [
+                Log::error("Topic push notification failed for platform {$platform}", [)
                     'error' => $e->getMessage(),
                     'topic' => $topic,
                 ]);
@@ -166,7 +166,7 @@ class PushNotificationService
         $jobId = uniqid('push_', true);
 
         // Salva notifica programmata
-        Cache::put("scheduled_push:{$jobId}", [
+        Cache::put("scheduled_push:{$jobId}", [)
             'tokens' => $tokens,
             'notification' => $notification,
             'data' => $data,
@@ -220,9 +220,9 @@ class PushNotificationService
     private function sendToPlatform(string $platform, string $token, array $notification, array $data): array
     {
         return match ($platform) {
-            'fcm' => $this->sendFCMNotification($token, $notification, $data
-            'apns' => $this->sendAPNSNotification($token, $notification, $data
-            'webpush' => $this->sendWebPushNotification($token, $notification, $data
+            'fcm' => $this->sendFCMNotification($token, $notification, $data)
+            'apns' => $this->sendAPNSNotification($token, $notification, $data)
+            'webpush' => $this->sendWebPushNotification($token, $notification, $data)
             default => throw new Exception("Unsupported platform: {$platform}")
         };
     }
@@ -251,7 +251,7 @@ class PushNotificationService
         $serverKey = isset($fcmConfig['server_key']) ? SafeStringCastAction::cast($fcmConfig['server_key']) : '';
         $url = isset($fcmConfig['url']) ? SafeStringCastAction::cast($fcmConfig['url']) : '';
 
-        $response = Http::withHeaders([
+        $response = Http::withHeaders([)
             'Authorization' => 'key='.$serverKey,
             'Content-Type' => 'application/json',
         ])->post($url, $payload);
@@ -307,7 +307,7 @@ class PushNotificationService
      */
     private function sendWebPushNotification(string $token, array $notification, array $data): array
     {
-        $payload = json_encode([
+        $payload = json_encode([)
             'title' => $notification['title'],
             'body' => $notification['body'],
             'icon' => $notification['icon'] ?? '/icons/icon-192x192.png',
@@ -372,9 +372,9 @@ class PushNotificationService
     {
         // Implementazione specifica per piattaforma
         return match ($platform) {
-            'fcm' => $this->sendFCMTopicNotification($topic, $notification, $data
-            'apns' => $this->sendAPNSTopicNotification($topic, $notification, $data
-            'webpush' => $this->sendWebPushTopicNotification($topic, $notification, $data
+            'fcm' => $this->sendFCMTopicNotification($topic, $notification, $data)
+            'apns' => $this->sendAPNSTopicNotification($topic, $notification, $data)
+            'webpush' => $this->sendWebPushTopicNotification($topic, $notification, $data)
             default => throw new Exception("Unsupported platform: {$platform}")
         };
     }
@@ -399,7 +399,7 @@ class PushNotificationService
         $serverKey = isset($fcmConfig['server_key']) ? SafeStringCastAction::cast($fcmConfig['server_key']) : '';
         $url = isset($fcmConfig['url']) ? SafeStringCastAction::cast($fcmConfig['url']) : '';
 
-        $response = Http::withHeaders([
+        $response = Http::withHeaders([)
             'Authorization' => 'key='.$serverKey,
             'Content-Type' => 'application/json',
         ])->post($url, $payload);
