@@ -6,16 +6,15 @@ namespace Modules\Xot\Tests\Feature;
 
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
 use Modules\Xot\Models\BaseModel;
 use Modules\Xot\Models\Module;
 use Modules\Xot\Models\XotBaseModel;
-use Tests\TestCase;
+use Modules\Xot\Tests\TestCase;
 
 class XotBaseModelBusinessLogicTest extends TestCase
 {
     /** @test */
-    public function it_extends_correct_base_class(): void
+    public function itExtendsCorrectBaseClass(): void
     {
         // Arrange & Act
         $baseModel = new BaseModel();
@@ -26,7 +25,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_has_required_traits(): void
+    public function itHasRequiredTraits(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -38,7 +37,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_be_instantiated_without_database(): void
+    public function itCanBeInstantiatedWithoutDatabase(): void
     {
         // Arrange & Act
         $baseModel = new BaseModel();
@@ -49,7 +48,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_table_name_override(): void
+    public function itSupportsTableNameOverride(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -63,7 +62,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_connection_override(): void
+    public function itSupportsConnectionOverride(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -77,7 +76,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_key_name_override(): void
+    public function itSupportsKeyNameOverride(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -91,7 +90,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_be_used_as_base_for_other_models(): void
+    public function itCanBeUsedAsBaseForOtherModels(): void
     {
         // Arrange
         $module = new Module();
@@ -102,7 +101,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_model_configuration(): void
+    public function itSupportsModelConfiguration(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -119,7 +118,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_soft_deletes_when_configured(): void
+    public function itSupportsSoftDeletesWhenConfigured(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -134,7 +133,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_timestamps_when_configured(): void
+    public function itSupportsTimestampsWhenConfigured(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -148,7 +147,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_tenant_isolation_when_configured(): void
+    public function itSupportsTenantIsolationWhenConfigured(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -163,7 +162,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_audit_trail_when_configured(): void
+    public function itSupportsAuditTrailWhenConfigured(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -178,7 +177,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_be_serialized(): void
+    public function itCanBeSerialized(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -192,7 +191,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_be_unserialized(): void
+    public function itCanBeUnserialized(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -206,7 +205,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_json_serialization(): void
+    public function itSupportsJsonSerialization(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -221,7 +220,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_array_conversion(): void
+    public function itSupportsArrayConversion(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -235,7 +234,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_json_conversion(): void
+    public function itSupportsJsonConversion(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -249,7 +248,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_relationship_loading(): void
+    public function itSupportsRelationshipLoading(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -262,7 +261,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_attribute_access(): void
+    public function itSupportsAttributeAccess(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -277,7 +276,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_mass_assignment_protection(): void
+    public function itSupportsMassAssignmentProtection(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -292,7 +291,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_model_events(): void
+    public function itSupportsModelEvents(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -305,7 +304,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_observers(): void
+    public function itSupportsObservers(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -318,7 +317,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_scopes(): void
+    public function itSupportsScopes(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -331,7 +330,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_accessors_and_mutators(): void
+    public function itSupportsAccessorsAndMutators(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -346,7 +345,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_casting(): void
+    public function itSupportsCasting(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -359,7 +358,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_dates(): void
+    public function itSupportsDates(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -372,7 +371,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_hidden_attributes(): void
+    public function itSupportsHiddenAttributes(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -385,7 +384,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_visible_attributes(): void
+    public function itSupportsVisibleAttributes(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -398,7 +397,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_appends(): void
+    public function itSupportsAppends(): void
     {
         // Arrange
         $baseModel = new BaseModel();
@@ -411,7 +410,7 @@ class XotBaseModelBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_supports_with_relationships(): void
+    public function itSupportsWithRelationships(): void
     {
         // Arrange
         $baseModel = new BaseModel();

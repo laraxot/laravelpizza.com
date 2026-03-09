@@ -252,6 +252,11 @@ new class extends Component {
 
 ## Development Best Practices
 
+### 0. Pre-Action Documentation Audit (MANDATORY)
+- **Always** study, update, and improve the `docs/` folders within the relevant modules and themes BEFORE making any file modification.
+- **Evaluate** the use of GitHub Issues and GitHub Discussions to track progress, bugs, and architectural decisions.
+- Documentation is the source of truth and must be updated preventively.
+
 ### 1. DRY (Don't Repeat Yourself)
 - Reuse components and functions across the application
 - Extract common functionality to shared services/actions

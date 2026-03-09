@@ -107,12 +107,14 @@
 - One class per file
 
 ## DOCUMENTATION
-- Always consult docs folders before taking action
+- **MANDATORY**: Always study, update, and improve 'docs' folders BEFORE taking any action
+- Evaluate the creation of GitHub Issues or GitHub Discussions to track decisions and progress
 - Never include specific absolute paths (e.g., base_*_fila5)
 - Document model relationships and field purposes
 - Add PHPDoc blocks to all classes and methods
+- Links in .md files must be relative and filenames lowercase (except README.md)
 
 ## VALIDATION
-- Run PHPStan level 7 before starting work
-- Process: 1) Update docs 2) Study 3) Fix
-- Document all changes and decisions
+- Run PHPStan level 10 (Zero errors) before finalizing work
+- Process: 1) Pre-Action Documentation Audit (Study & Update Docs) 2) Implementation 3) Quality Check (PHPStan, PHPMD, PHP Insights)
+- Document all changes and decisions in relevant docs folders

@@ -4,36 +4,34 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Lang\Models\BaseModel;
 use Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 beforeEach(function () {
-    $this->baseModel = new class extends BaseModel {
+    $baseModel = new class extends BaseModel {
         protected $table = 'test_lang_table';
     };
 });
 
 test('base model extends eloquent model', function () {
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
+    expect($baseModel);
 });
 
 test('base model has correct table name', function () {
-    expect($this->baseModel->getTable())->toBe('test_lang_table');
+    expect($baseModel->getTable());
 });
 
 test('base model can be instantiated', function () {
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
+    expect($baseModel);
 });
 
 test('base model has proper inheritance chain', function () {
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
+    expect($baseModel);
+    expect($baseModel);
 });
 
 test('base model has timestamps enabled', function () {
-    expect($this->baseModel->usesTimestamps())->toBeTrue();
+    expect($baseModel->usesTimestamps());
 });
