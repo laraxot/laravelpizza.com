@@ -45,6 +45,15 @@ That keeps:
 
 as the only source of truth.
 
+## Presenter rules for the detail block
+
+For `pub_theme::components.blocks.events.detail`:
+
+- no model query in the standard `/events/{slug}` path;
+- no fake RSVP or client-only success states when no real registration backend exists;
+- organizer, owner, attendance mode, location and optional metadata must be rendered only from data already present on the resolved `Event`;
+- empty states must be explicit and localized.
+
 ## Impact
 
 - detail pages can render the CMS block again
@@ -57,3 +66,27 @@ as the only source of truth.
 - `Themes/Meetup/resources/views/components/blocks/events/detail.blade.php`
 - `Modules/Cms/resources/views/components/page.blade.php`
 - `Modules/Meetup/app/Models/Event.php`
+
+## Verification evidence (2026-03-09)
+
+- Runtime URL check completed on `http://127.0.0.1:8000/it/events/ut-quae-facere-placeat-labore-expedita-TwKN`
+- HTTP status: `200 OK`
+- Detail page renders event content (no fallback text `Nessun evento trovato`)
+- No runtime errors for `$pageSlug` or `Property [$event]`
+- Pest test: `Modules/Meetup/tests/Feature/EventDetailPageTest.php` passes
+- phpinsights on test file: passing (`98.8%` style score)
+
+## UX improvement target for real event pages
+
+The real page `/it/events/id-id-quidem-quae-eveniet-Jy1p` should help the user answer:
+
+1. what the event is;
+2. when it happens;
+3. where or how to attend;
+4. who organizes it;
+5. how to join, or why joining is not currently available.
+
+## Quality gate notes
+
+- `phpmd` is not available in current vendor bin (`./vendor/bin/phpmd` missing)
+- `phpstan` on full `Modules/Meetup` reports pre-existing module-wide issues not introduced by this detail-page fix

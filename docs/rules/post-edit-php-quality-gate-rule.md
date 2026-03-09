@@ -5,6 +5,8 @@
 Dopo aver modificato qualsiasi file `.php`, prima di considerare il lavoro completato,
 eseguire obbligatoriamente la quality gate completa sul file o modulo coinvolto.
 
+Questa regola vale anche per hotfix e bugfix urgenti: il controllo non si salta.
+
 ## Quality gate obbligatoria (ordine)
 
 ### 1. PHPStan Level 10
@@ -46,6 +48,16 @@ Se il file modificato e' "testabile" (Actions, Models, Services, Traits, Data):
 cd laravel
 ./vendor/bin/pest Modules/{NomeModulo}/tests/Unit/path/al/test/FileTest.php
 ```
+
+## Regola di reporting
+
+Nel report finale bisogna dichiarare in modo esplicito:
+
+- quale scope e' stato controllato con `phpstan`;
+- quale scope e' stato controllato con `phpmd`;
+- quale scope e' stato controllato con `phpinsights`;
+- quale test Pest e' stato eseguito o creato;
+- se uno strumento manca o non e' eseguibile nel repository.
 
 ## Cosa e' "testabile"
 

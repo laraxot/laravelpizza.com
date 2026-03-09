@@ -1,45 +1,48 @@
 # Event Detail Page - Theme Implementation
 
-## Status: ✅ WORKING (Updated: 17 Feb 2026)
+## Status
 
-The event detail page at `http://127.0.0.1:8000/it/events/laravel-11-release-pizza-party` is fully functional.
+Updated on 2026-03-09 after a real review of `/it/events/id-id-quidem-quae-eveniet-Jy1p`.
 
-## Note
-The original laravelpizza.com site is currently showing a "Hostinger Horizons" error page, making it impossible to compare with the original design.
+## Current route/component chain
 
-## Component
+- Folio route: `Themes/Meetup/resources/views/pages/[container0]/[slug0]/index.blade.php`
+- CMS page slug: `events.view`
+- Theme presenter: `Themes/Meetup/resources/views/components/blocks/events/detail.blade.php`
 
-- `Themes/Meetup/resources/views/pages/[slug].blade.php` - Folio catch-all page
-- `Themes/Meetup/resources/views/components/blocks/events/detail.blade.php` - Event detail component
+## Improvements applied
 
-## Features
+- kept the detail page on localized slug URLs (`/it/events/{slug}`)
+- preserved schema.org JSON-LD and social share support
+- added clearer event summary badges:
+  - status
+  - attendance mode
+  - free entry
+- improved location usefulness:
+  - multiline rendering
+  - direct map CTA
+- added event metadata section when available:
+  - organizer
+  - registration opening date
+  - audience
+  - age range
+  - topics/keywords
+- replaced the misleading fake RSVP state with a real booking modal backed by:
+  - `POST /events/{slug}/book`
+  - `Themes/Meetup/Http/Controllers/EventBookingController.php`
+- improved the attendees empty state when nobody has joined yet
 
-- SEO-friendly URLs with slugs (`/it/events/{slug}`)
-- Schema.org JSON-LD structured data
-- Breadcrumb navigation
-- Event status badge (Upcoming/Past)
-- Full event details (date, time, location, language)
-- Attendee count display
-- Description with rich text
-- CTA button for registration
-- Back to events link
+## Review outcome on the real page
 
-## URL Fix Applied (17 Feb 2026)
+The page was not broken structurally anymore, but it still underused available event data and showed a CTA that looked actionable without clearly completing a real flow.
 
-**Issue**: Event links pointed to `/events/{slug}` without locale prefix
+The theme presenter now aims to be:
 
-**Fix**: Use `event.url` from `Event::toBlockArray()`:
-```php
-// Modules/Meetup/app/Models/Event.php
-'url' => LaravelLocalization::localizeUrl('/events/'.$this->slug),
-```
+- more informative
+- more honest about booking behavior
+- still DRY and presenter-only
 
-## Screenshots
+## Related documentation
 
-- Desktop: `docs/screenshots/event-detail-desktop.png`
-- Mobile: `docs/screenshots/event-detail-mobile.png`
-
-## Related Documentation
-
+- `Themes/Meetup/docs/troubleshooting/undefined-pageslug-container0-view.md`
 - `Modules/Meetup/docs/event-detail-page-status.md`
-- `Modules/Meetup/docs/events-page-implementation-feb2026.md`

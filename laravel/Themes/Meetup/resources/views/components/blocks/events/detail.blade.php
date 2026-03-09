@@ -22,7 +22,7 @@
         $end = $eventModel->end_date
             ? \Illuminate\Support\Carbon::parse($eventModel->end_date)
             : $start;
-        $eventTime = $start->format('g:i A').' - '.$end->format('g:i A');
+        $eventTime = $start->format('H:i').' - '.$end->format('H:i');
     }
 
     $attendeesCount = (int) ($eventModel->attendees_count ?? 0);
@@ -36,179 +36,333 @@
     $schemaOrg = ($eventModel && method_exists($eventModel, 'toSchemaOrg'))
         ? $eventModel->toSchemaOrg()
         : null;
+
+    $locationText = trim((string) ($eventModel->location ?? ''));
+    $singleLineLocation = preg_replace('/\s+/', ' ', $locationText);
+    $mapUrl = is_string($singleLineLocation) && $singleLineLocation !== ''
+        ? 'https://www.google.com/maps/search/?api=1&query='.urlencode($singleLineLocation)
+        : null;
+
+    $attendanceModeValue = $eventModel?->event_attendance_mode;
+    $attendanceModeKey = $attendanceModeValue instanceof \Modules\Meetup\Enums\EventAttendanceMode
+        ? $attendanceModeValue->value
+        : (is_string($attendanceModeValue) ? $attendanceModeValue : '');
+    $attendanceModeLabel = $attendanceModeKey !== ''
+        ? (string) __('meetup::event_attendance_mode.'.$attendanceModeKey.'.label')
+        : '';
+
+    $registrationOpensAt = $eventModel?->registration_opens_at
+        ? \Illuminate\Support\Carbon::parse($eventModel->registration_opens_at)->translatedFormat('j F Y H:i')
+        : null;
+
+    $organizer = $eventModel?->organizer;
+    $organizerName = $organizer?->name;
+    $organizerEmail = $organizer?->email;
+
+    $topicValues = [];
+    $metaTopics = $eventModel?->meta_data['topics'] ?? null;
+    if (is_array($metaTopics)) {
+        foreach ($metaTopics as $metaTopic) {
+            if (is_string($metaTopic) && $metaTopic !== '') {
+                $topicValues[] = trim($metaTopic);
+            }
+        }
+    }
+
+    $keywordValues = [];
+    $rawKeywords = $eventModel?->keywords;
+    if (is_string($rawKeywords) && $rawKeywords !== '') {
+        $decodedKeywords = json_decode($rawKeywords, true);
+        if (is_array($decodedKeywords)) {
+            foreach ($decodedKeywords as $decodedKeyword) {
+                if (is_string($decodedKeyword) && $decodedKeyword !== '') {
+                    $keywordValues[] = trim($decodedKeyword);
+                }
+            }
+        } else {
+            foreach (preg_split('/[,;]/', $rawKeywords) ?: [] as $keyword) {
+                $keyword = trim((string) $keyword);
+                if ($keyword !== '') {
+                    $keywordValues[] = $keyword;
+                }
+            }
+        }
+    }
+
+    $topics = array_values(array_unique(array_filter(array_merge($topicValues, $keywordValues))));
+    $registrationUrl = $eventModel?->registration_url;
+    $hasRegistrationUrl = is_string($registrationUrl) && $registrationUrl !== '';
+    $bookingInfoOnly = $isUpcoming && ! $hasRegistrationUrl;
 @endphp
 
-<div class="min-h-screen bg-slate-50 dark:bg-slate-900 overflow-x-hidden relative"
-     x-data="{ showBookingModal: false, bookingName: '', bookingEmail: '' }">
+<div class="min-h-screen overflow-x-hidden bg-slate-50 dark:bg-slate-900 relative">
     @include('pub_theme::components.ui.particles')
 
     @if($eventModel)
-    <div class="relative bg-slate-900 h-[400px] md:h-[500px] z-0">
-        @if($eventModel->cover_image)
-            <img src="{{ $eventModel->cover_image }}" alt="{{ $eventModel->title }}" class="w-full h-full object-cover opacity-70">
-        @else
-            <div class="w-full h-full bg-gradient-to-br from-red-600 via-red-700 to-slate-900 flex items-center justify-center">
-                <svg class="w-32 h-32 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-            </div>
-        @endif
-
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-12">
-                <a href="{{ $eventsIndexUrl }}" class="inline-flex items-center text-white/80 hover:text-white mb-4 transition-colors">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        <div class="relative z-0 h-[400px] bg-slate-900 md:h-[500px]">
+            @if($eventModel->cover_image)
+                <img src="{{ $eventModel->cover_image }}" alt="{{ $eventModel->title }}" class="h-full w-full object-cover opacity-70">
+            @else
+                <div class="flex h-full w-full items-center justify-center bg-gradient-to-br from-red-600 via-red-700 to-slate-900">
+                    <svg class="h-32 w-32 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
-                    {{ __('pub_theme::event.actions.back_to_events.label') }}
-                </a>
+                </div>
+            @endif
 
-                <span class="inline-block {{ $isUpcoming ? 'bg-green-600' : 'bg-slate-500' }} text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
-                    {{ $isUpcoming ? __('pub_theme::event.status.upcoming.label') : __('pub_theme::event.status.past.label') }}
-                </span>
+            <div class="absolute inset-0 flex items-end bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent">
+                <div class="mx-auto w-full max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+                    <a href="{{ $eventsIndexUrl }}" class="mb-4 inline-flex items-center text-white/80 transition-colors hover:text-white">
+                        <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                        {{ __('pub_theme::event.actions.back_to_events.label') }}
+                    </a>
 
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-                    {{ $eventModel->title }}
-                </h1>
-            </div>
-        </div>
-    </div>
+                    <div class="mb-4 flex flex-wrap gap-3">
+                        <span class="{{ $isUpcoming ? 'bg-green-600' : 'bg-slate-500' }} inline-flex rounded-full px-4 py-1 text-sm font-semibold text-white">
+                            {{ $isUpcoming ? __('pub_theme::event.status.upcoming.label') : __('pub_theme::event.status.past.label') }}
+                        </span>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid lg:grid-cols-3 gap-8">
-            <div class="lg:col-span-2 space-y-8">
-                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6 border border-slate-200 dark:border-slate-700">
-                    <div class="grid md:grid-cols-3 gap-6">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                            </div>
-                            <div class="ml-4">
-                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.date.label') }}</p>
-                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $eventDate }}</p>
-                            </div>
-                        </div>
-
-                        @if($eventTime !== '')
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                            </div>
-                            <div class="ml-4">
-                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.time.label') }}</p>
-                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $eventTime }}</p>
-                            </div>
-                        </div>
+                        @if($attendanceModeLabel !== '')
+                            <span class="inline-flex rounded-full bg-white/10 px-4 py-1 text-sm font-semibold text-white backdrop-blur">
+                                {{ $attendanceModeLabel }}
+                            </span>
                         @endif
 
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                            </div>
-                            <div class="ml-4">
-                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.location.label') }}</p>
-                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $eventModel->location ?? __('pub_theme::event.messages.location_tba.label') }}</p>
-                            </div>
-                        </div>
+                        @if((bool) $eventModel->is_accessible_for_free)
+                            <span class="inline-flex rounded-full bg-emerald-500/20 px-4 py-1 text-sm font-semibold text-emerald-100 backdrop-blur">
+                                {{ __('pub_theme::event.fields.free_entry.label') }}
+                            </span>
+                        @endif
                     </div>
+
+                    <h1 class="text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+                        {{ $eventModel->title }}
+                    </h1>
                 </div>
+            </div>
+        </div>
 
-                @if($eventModel->description)
-                <section class="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-8 border border-slate-200 dark:border-slate-700">
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">{{ __('pub_theme::event.fields.about_this_event.label') }}</h2>
-                    <div class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 leading-relaxed">
-                        {!! nl2br(e($eventModel->description)) !!}
-                    </div>
-                </section>
-                @endif
+        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+            <div class="grid gap-8 lg:grid-cols-3">
+                <div class="space-y-8 lg:col-span-2">
+                    <div class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+                        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+                            <div class="flex items-start">
+                                <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900/30">
+                                    <svg class="h-6 w-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.date.label') }}</p>
+                                    <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $eventDate }}</p>
+                                </div>
+                            </div>
 
-                <section class="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-8 border border-slate-200 dark:border-slate-700">
-                    <div class="flex items-center justify-between mb-6">
-                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">{{ __('pub_theme::event.fields.attendees.label') }}</h2>
-                        <span class="text-lg font-medium text-slate-600 dark:text-slate-400">{{ $attendeesCount }} / {{ $maxAttendees }}</span>
-                    </div>
-                    <div class="flex items-center">
-                        <div class="flex -space-x-3">
-                            @php($maxDisplay = min($attendeesCount, 8))
-                            @for($i = 0; $i < $maxDisplay; $i++)
-                                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-red-600 border-3 border-white dark:border-slate-800 flex items-center justify-center text-white font-semibold text-sm shadow-md">{{ chr(65 + ($i % 26)) }}</div>
-                            @endfor
-                            @if($attendeesCount > 8)
-                                <div class="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-600 border-3 border-white dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 font-semibold text-xs shadow-md">+{{ $attendeesCount - 8 }}</div>
+                            @if($eventTime !== '')
+                                <div class="flex items-start">
+                                    <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900/30">
+                                        <svg class="h-6 w-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                    </div>
+                                    <div class="ml-4">
+                                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.time.label') }}</p>
+                                        <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $eventTime }}</p>
+                                    </div>
+                                </div>
+                            @endif
+
+                            <div class="flex items-start">
+                                <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900/30">
+                                    <svg class="h-6 w-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.location.label') }}</p>
+                                    <p class="whitespace-pre-line text-base font-semibold text-slate-900 dark:text-white">{{ $locationText !== '' ? $locationText : __('pub_theme::event.messages.location_tba.label') }}</p>
+                                    @if($mapUrl)
+                                        <a
+                                            href="{{ $mapUrl }}"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="mt-2 inline-flex items-center text-sm font-medium text-red-600 transition-colors hover:text-red-700 dark:text-red-400"
+                                        >
+                                            {{ __('pub_theme::event.actions.view_map.label') }}
+                                        </a>
+                                    @endif
+                                </div>
+                            </div>
+
+                            @if($attendanceModeLabel !== '')
+                                <div class="flex items-start">
+                                    <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900/30">
+                                        <svg class="h-6 w-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                                    </div>
+                                    <div class="ml-4">
+                                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.attendance_mode.label') }}</p>
+                                        <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $attendanceModeLabel }}</p>
+                                    </div>
+                                </div>
                             @endif
                         </div>
-                        @if($attendeesCount > 0)
-                        <span class="ml-4 text-sm text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.people_joined.label', ['count' => $attendeesCount]) }}</span>
-                        @endif
                     </div>
-                </section>
-            </div>
 
-            <div class="lg:col-span-1">
-                <div class="sticky top-8 space-y-6">
-                    @if($isUpcoming)
-                    <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 border border-slate-200 dark:border-slate-700">
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">{{ __('pub_theme::event.actions.rsvp_now.label') }}</h3>
-                        <div class="mb-6">
-                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-1">{{ __('pub_theme::event.fields.spots_available.label') }}</p>
-                            <p class="text-4xl font-bold text-red-600 dark:text-red-400">{{ $availableSpots }}</p>
-                        </div>
-                        <button x-on:click="showBookingModal = true" type="button" class="w-full bg-red-600 hover:bg-red-700 focus:ring-4 focus:ring-red-300 text-white font-bold py-3.5 px-6 rounded-lg transition-all shadow-md hover:shadow-lg">
-                            {{ __('pub_theme::event.actions.rsvp_now.label') }}
-                        </button>
-                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-4 text-center">{{ __('pub_theme::event.messages.spots_filling_fast.label') }}</p>
-                    </div>
+                    @if($eventModel->description)
+                        <section class="rounded-lg border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+                            <h2 class="mb-4 text-2xl font-bold text-slate-900 dark:text-white">{{ __('pub_theme::event.fields.about_this_event.label') }}</h2>
+                            <div class="prose max-w-none leading-relaxed text-slate-600 dark:prose-invert dark:text-slate-300">
+                                {!! nl2br(e($eventModel->description)) !!}
+                            </div>
+                        </section>
                     @endif
 
-                    <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-6 border border-slate-200 dark:border-slate-700">
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">{{ __('pub_theme::event.actions.share_event.label') }}</h3>
-                        <div class="flex flex-col gap-4">
-                            <x-seo::social-share :data="$socialShareData" />
+                    @if($organizerName || $registrationOpensAt || $eventModel?->audience || $eventModel?->typical_age_range || $topics !== [])
+                        <section class="rounded-lg border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+                            <h2 class="mb-6 text-2xl font-bold text-slate-900 dark:text-white">{{ __('pub_theme::event.fields.event_details.label') }}</h2>
+
+                            <div class="grid gap-6 md:grid-cols-2">
+                                @if($organizerName)
+                                    <div>
+                                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.organizer.label') }}</p>
+                                        <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $organizerName }}</p>
+                                        @if($organizerEmail)
+                                            <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">{{ $organizerEmail }}</p>
+                                        @endif
+                                    </div>
+                                @endif
+
+                                @if($registrationOpensAt)
+                                    <div>
+                                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.registration_opens_at.label') }}</p>
+                                        <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $registrationOpensAt }}</p>
+                                    </div>
+                                @endif
+
+                                @if($eventModel?->audience)
+                                    <div>
+                                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.audience.label') }}</p>
+                                        <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $eventModel->audience }}</p>
+                                    </div>
+                                @endif
+
+                                @if($eventModel?->typical_age_range)
+                                    <div>
+                                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.typical_age_range.label') }}</p>
+                                        <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $eventModel->typical_age_range }}</p>
+                                    </div>
+                                @endif
+                            </div>
+
+                            @if($topics !== [])
+                                <div class="mt-6">
+                                    <p class="mb-3 text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.topics.label') }}</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        @foreach($topics as $topic)
+                                            <span class="inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700 dark:bg-slate-700 dark:text-slate-200">
+                                                {{ $topic }}
+                                            </span>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            @endif
+                        </section>
+                    @endif
+
+                    <section class="rounded-lg border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+                        <div class="mb-6 flex items-center justify-between">
+                            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">{{ __('pub_theme::event.fields.attendees.label') }}</h2>
+                            <span class="text-lg font-medium text-slate-600 dark:text-slate-400">{{ $attendeesCount }} / {{ $maxAttendees }}</span>
+                        </div>
+
+                        @if($attendeesCount > 0)
+                            <div class="flex items-center">
+                                <div class="flex -space-x-3">
+                                    @php($maxDisplay = min($attendeesCount, 8))
+                                    @for($i = 0; $i < $maxDisplay; $i++)
+                                        <div class="flex h-12 w-12 items-center justify-center rounded-full border-3 border-white bg-gradient-to-br from-red-500 to-red-600 text-sm font-semibold text-white shadow-md dark:border-slate-800">{{ chr(65 + ($i % 26)) }}</div>
+                                    @endfor
+                                    @if($attendeesCount > 8)
+                                        <div class="flex h-12 w-12 items-center justify-center rounded-full border-3 border-white bg-slate-200 text-xs font-semibold text-slate-700 shadow-md dark:border-slate-800 dark:bg-slate-600 dark:text-slate-300">+{{ $attendeesCount - 8 }}</div>
+                                    @endif
+                                </div>
+                                <span class="ml-4 text-sm text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.people_joined.label', ['count' => $attendeesCount]) }}</span>
+                            </div>
+                        @else
+                            <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-5 text-sm text-slate-600 dark:border-slate-600 dark:bg-slate-900/40 dark:text-slate-300">
+                                <p class="font-semibold text-slate-900 dark:text-white">{{ __('pub_theme::event.messages.no_one_joined_yet.label') }}</p>
+                                <p class="mt-1">{{ __('pub_theme::event.messages.be_the_first_to_join.label') }}</p>
+                            </div>
+                        @endif
+                    </section>
+                </div>
+
+                <div class="lg:col-span-1">
+                    <div class="sticky top-8 space-y-6">
+                        @if($isUpcoming)
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-lg dark:border-slate-700 dark:bg-slate-800">
+                                <h3 class="mb-2 text-xl font-bold text-slate-900 dark:text-white">{{ __('pub_theme::event.actions.rsvp_now.label') }}</h3>
+                                <div class="mb-6">
+                                    <p class="mb-1 text-sm text-slate-600 dark:text-slate-400">{{ __('pub_theme::event.fields.spots_available.label') }}</p>
+                                    <p class="text-4xl font-bold text-red-600 dark:text-red-400">{{ $availableSpots }}</p>
+                                </div>
+
+                                @if($hasRegistrationUrl)
+                                    <a
+                                        href="{{ $registrationUrl }}"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="block w-full rounded-lg bg-red-600 px-6 py-3.5 text-center font-bold text-white transition-all hover:bg-red-700 focus:ring-4 focus:ring-red-300"
+                                    >
+                                        {{ __('pub_theme::event.actions.rsvp_now.label') }}
+                                    </a>
+                                @elseif($bookingInfoOnly)
+                                    <div class="rounded-lg bg-amber-50 px-4 py-3 text-sm font-medium text-amber-800 dark:bg-amber-500/10 dark:text-amber-200">
+                                        @if($availableSpots > 0)
+                                            {{ __('pub_theme::event.messages.registration_open_soon.label') }}
+                                        @else
+                                            {{ __('pub_theme::event.messages.sold_out.label') }}
+                                        @endif
+                                    </div>
+                                @endif
+
+                                <p class="mt-4 text-center text-xs text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.messages.spots_filling_fast.label') }}</p>
+                            </div>
+                        @endif
+
+                        @if($organizerName)
+                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+                                <h3 class="mb-4 text-lg font-bold text-slate-900 dark:text-white">{{ __('pub_theme::event.fields.organizer.label') }}</h3>
+                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $organizerName }}</p>
+                                @if($organizerEmail)
+                                    <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">{{ $organizerEmail }}</p>
+                                @endif
+                            </div>
+                        @endif
+
+                        <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+                            <h3 class="mb-4 text-lg font-bold text-slate-900 dark:text-white">{{ __('pub_theme::event.actions.share_event.label') }}</h3>
+                            <div class="flex flex-col gap-4">
+                                <x-seo::social-share :data="$socialShareData" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div x-show="showBookingModal" x-cloak class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-            <div class="fixed inset-0 bg-slate-900 bg-opacity-75 transition-opacity" aria-hidden="true" x-on:click="showBookingModal = false"></div>
-            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-            <div class="inline-block align-bottom bg-white dark:bg-slate-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full p-8">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" id="modal-title">{{ __('pub_theme::event.actions.rsvp_now.label') }}</h3>
-                <div class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">{{ __('pub_theme::event.fields.name.label') }}</label>
-                        <input type="text" x-model="bookingName" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2 text-slate-900 dark:text-white focus:ring-2 focus:ring-red-500 outline-none transition-all">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">{{ __('pub_theme::event.fields.email.label') }}</label>
-                        <input type="email" x-model="bookingEmail" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2 text-slate-900 dark:text-white focus:ring-2 focus:ring-red-500 outline-none transition-all">
-                    </div>
-                </div>
-                <div class="mt-8 flex gap-3">
-                    <button type="button" x-on:click="showBookingModal = false" class="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition-colors">{{ __('pub_theme::event.actions.confirm_booking.label') }}</button>
-                    <button type="button" x-on:click="showBookingModal = false" class="flex-1 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-bold py-3 px-4 rounded-lg transition-colors">{{ __('pub_theme::event.actions.cancel.label') }}</button>
-                </div>
-            </div>
-        </div>
-    </div>
     @else
-    <div class="flex flex-col items-center justify-center min-h-[60vh] text-center px-4">
-        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">{{ __('pub_theme::event.messages.no_events_found.label') }}</h2>
-        <p class="text-slate-600 dark:text-slate-400 mb-8">{{ __('pub_theme::event.messages.check_back_later.label') }}</p>
-        <a href="{{ $eventsIndexUrl }}" class="bg-red-600 text-white px-6 py-3 rounded-lg font-bold">
-            {{ __('pub_theme::event.actions.back_to_events.label') }}
-        </a>
-    </div>
+        <div class="flex min-h-[60vh] flex-col items-center justify-center px-4 text-center">
+            <h2 class="mb-2 text-3xl font-bold text-slate-900 dark:text-white">{{ __('pub_theme::event.messages.no_events_found.label') }}</h2>
+            <p class="mb-8 text-slate-600 dark:text-slate-400">{{ __('pub_theme::event.messages.check_back_later.label') }}</p>
+            <a href="{{ $eventsIndexUrl }}" class="rounded-lg bg-red-600 px-6 py-3 font-bold text-white">
+                {{ __('pub_theme::event.actions.back_to_events.label') }}
+            </a>
+        </div>
     @endif
 </div>
 
 @push('meta')
-@if($schemaOrg)
-<script type="application/ld+json">
+    @if($schemaOrg)
+        <script type="application/ld+json">
 {!! json_encode($schemaOrg, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
-</script>
-@endif
+        </script>
+    @endif
 @endpush

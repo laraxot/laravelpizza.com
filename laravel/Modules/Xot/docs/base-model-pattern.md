@@ -70,22 +70,13 @@ abstract class XotBaseModel extends Model
 Each module has its own BaseModel that extends XotBaseModel:
 
 ```php
-<<<<<<< .merge_file_FclNAo
-// Example from healthcare_app module
-=======
-// Example from ModuloEsempio module
->>>>>>> .merge_file_A1njAf
 abstract class BaseModel extends XotBaseModel implements HasMedia, ModelContract
 {
     use Cachable;
     use HasExtraTrait;
     use InteractsWithMedia;
 
-<<<<<<< .merge_file_FclNAo
-    protected $connection = 'healthcare_app'; // Module-specific connection
-=======
-    protected $connection = 'ptvx'; // Module-specific connection
->>>>>>> .merge_file_A1njAf
+    protected $connection = 'module_name'; // Module-specific connection
 
     protected $with = [
         'extra', // Always load extra fields
@@ -113,11 +104,6 @@ class SurveyPdf extends XotBaseModel // Never do this!
 
 ✅ **CORRECT:**
 ```php
-<<<<<<< .merge_file_FclNAo
-// In healthcare_app module
-=======
-// In ModuloEsempio module
->>>>>>> .merge_file_A1njAf
 class SurveyPdf extends BaseModel // Extends module's BaseModel
 ```
 
@@ -136,6 +122,19 @@ The module BaseModel is where you add:
 - Module-specific traits (Cachable, HasMedia, etc.)
 - Module-specific relationship loading
 - Module-specific configurations
+
+### Rule 4: Use Contracts for Auditing PHPDocs (CRITICAL)
+Always use `\Modules\Xot\Contracts\ProfileContract|null` for auditing properties managed by the `Updater` trait (`creator`, `updater`, `deleter`). NEVER use the concrete `Profile` model of the module to avoid tight coupling and ensure modular decoupling.
+
+✅ **CORRECT:**
+```php
+/**
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ */
+class Event extends BaseModel { ... }
+```
 
 ## Authentication Model Pattern
 

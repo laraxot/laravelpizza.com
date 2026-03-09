@@ -20,7 +20,7 @@
                             setTimeout(() => copied = false, 2000)
                         "
                         class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-all active:scale-95"
-                        title="Copy to clipboard"
+                        title="{{ __('pub_theme::event.actions.copy_link.label') }}"
                         type="button"
                     >
                         <span x-show="!copied">
@@ -36,7 +36,7 @@
                         x-cloak
                         class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-gray-800 text-white text-xs rounded shadow-lg pointer-events-none whitespace-nowrap"
                     >
-                        URL Copied!
+                        {{ __('pub_theme::event.messages.link_copied.label') }}
                     </div>
                 </div>
             @else

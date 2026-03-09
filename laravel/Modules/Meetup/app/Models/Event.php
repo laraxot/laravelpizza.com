@@ -45,10 +45,10 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property string|null $updated_by
  * @property int|null $user_id
  * @property int|null $organizer_id
- * @property-read User|null $creator
- * @property-read User|null $updater
- * @property-read User|null $owner
- * @property-read User|null $organizer
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ * @property-read \Modules\Xot\Contracts\UserContract|null $owner
+ * @property-read \Modules\Xot\Contracts\UserContract|null $organizer
  * @method static Builder<Event> newModelQuery()
  * @method static Builder<Event> newQuery()
  * @method static Builder<Event> query()
@@ -73,7 +73,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property string|null $except_dates
  * @property string $schedule_timezone
  * @property int|null $super_event_id
- * @property-read \Modules\Meetup\Models\Profile|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Activity\Models\Snapshot> $snapshots
  * @property-read int|null $snapshots_count
  * @property-read \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection<\Modules\Activity\Models\StoredEvent> $storedEvents

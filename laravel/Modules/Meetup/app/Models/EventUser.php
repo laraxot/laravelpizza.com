@@ -7,9 +7,9 @@ namespace Modules\Meetup\Models;
 use Modules\Xot\Models\XotBasePivot;
 
 /**
- * @property-read \Modules\Meetup\Models\Profile|null $creator
- * @property-read \Modules\Meetup\Models\Profile|null $deleter
- * @property-read \Modules\Meetup\Models\Profile|null $updater
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @method static \Modules\Meetup\Database\Factories\EventUserFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventUser newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventUser newQuery()

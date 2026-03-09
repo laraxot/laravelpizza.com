@@ -87,3 +87,4 @@ laravel/Modules/Activity/docs/archive/
 laravel/Modules/*/docs/archive/
 *.log
 .venv/
+laravel/coverage-xot/

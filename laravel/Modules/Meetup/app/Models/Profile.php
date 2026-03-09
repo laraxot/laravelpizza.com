@@ -23,8 +23,8 @@ use Modules\User\Models\BaseProfile;
  * @property string|null $deleted_by
  * @property \Spatie\SchemalessAttributes\SchemalessAttributes $extra
  * @property-read string $avatar
- * @property-read Profile|null $creator
- * @property-read Profile|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\DeviceUser> $deviceUsers
  * @property-read int|null $device_users_count
  * @property-read \Modules\User\Models\DeviceProfile|null $pivot
@@ -43,7 +43,7 @@ use Modules\User\Models\BaseProfile;
  * @property-read int|null $permissions_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Role> $roles
  * @property-read int|null $roles_count
- * @property-read Profile|null $updater
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @property-read \Modules\User\Models\User|null $user
  * @property-read string|null $user_name
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile childrenWith(array $relations)

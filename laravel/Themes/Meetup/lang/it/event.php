@@ -94,6 +94,60 @@ return [
             'icon' => 'heroicon-o-ticket',
             'color' => 'success',
         ],
+        'attendance_mode' => [
+            'label' => 'Modalita evento',
+            'placeholder' => '',
+            'tooltip' => 'Indica se l evento e in presenza, online o ibrido',
+            'helper_text' => '',
+            'description' => 'Modalita di partecipazione prevista per l evento',
+            'icon' => 'heroicon-o-signal',
+            'color' => 'primary',
+        ],
+        'organizer' => [
+            'label' => 'Organizzato da',
+            'placeholder' => '',
+            'tooltip' => 'Host o organizzatore dell evento',
+            'helper_text' => '',
+            'description' => 'Persona o team che organizza l evento',
+            'icon' => 'heroicon-o-user-circle',
+            'color' => 'primary',
+        ],
+        'event_details' => [
+            'label' => 'Dettagli evento',
+            'placeholder' => '',
+            'tooltip' => 'Informazioni aggiuntive sull evento',
+            'helper_text' => '',
+            'description' => 'Metadati utili per capire meglio il contesto dell evento',
+            'icon' => 'heroicon-o-list-bullet',
+            'color' => 'info',
+        ],
+        'audience' => [
+            'label' => 'Pubblico',
+            'placeholder' => '',
+            'tooltip' => 'Pubblico ideale dell evento',
+            'helper_text' => '',
+            'description' => 'Tipologia di persone a cui l evento e rivolto',
+            'icon' => 'heroicon-o-users',
+            'color' => 'primary',
+        ],
+        'typical_age_range' => [
+            'label' => 'Fascia di eta',
+            'placeholder' => '',
+            'tooltip' => 'Fascia di eta consigliata',
+            'helper_text' => '',
+            'description' => 'Range indicativo dell eta dei partecipanti',
+            'icon' => 'heroicon-o-identification',
+            'color' => 'primary',
+        ],
+        'registration_opens_at' => [
+            'label' => 'Registrazioni aperte dal',
+            'placeholder' => '',
+            'tooltip' => 'Data di apertura delle registrazioni',
+            'helper_text' => '',
+            'description' => 'Momento in cui diventano disponibili le iscrizioni',
+            'icon' => 'heroicon-o-calendar-days',
+            'color' => 'primary',
+        ],
         'name' => [
             'label' => 'Nome',
             'placeholder' => 'Il tuo nome completo',
@@ -112,6 +166,15 @@ return [
             'icon' => 'heroicon-o-envelope',
             'color' => 'primary',
         ],
+        'spots' => [
+            'label' => 'Posti da prenotare',
+            'placeholder' => 'Numero posti',
+            'tooltip' => 'Numero di posti che vuoi prenotare',
+            'helper_text' => '',
+            'description' => 'Quantita di posti da confermare nella prenotazione',
+            'icon' => 'heroicon-o-user-plus',
+            'color' => 'primary',
+        ],
     ],
     'actions' => [
         'share_event' => [
@@ -122,6 +185,15 @@ return [
             'description' => 'Avvia il processo di condivisione dell\'evento',
             'icon' => 'heroicon-o-share',
             'color' => 'primary',
+        ],
+        'copy_link' => [
+            'label' => 'Copia link',
+            'placeholder' => '',
+            'tooltip' => 'Copia il link dell\'evento negli appunti',
+            'helper_text' => '',
+            'description' => 'Azione per copiare il link diretto alla pagina evento',
+            'icon' => 'heroicon-o-link',
+            'color' => 'secondary',
         ],
         'view_map' => [
             'label' => 'Vedi sulla mappa',
@@ -148,6 +220,15 @@ return [
             'helper_text' => '',
             'description' => 'Reindirizza alla pagina di login per la registrazione RSVP',
             'icon' => 'heroicon-o-arrow-right-on-rectangle',
+            'color' => 'primary',
+        ],
+        'rsvp_create_account' => [
+            'label' => 'Crea account e partecipa',
+            'placeholder' => '',
+            'tooltip' => 'Registrati per poter confermare la partecipazione',
+            'helper_text' => '',
+            'description' => 'Invita i visitatori non autenticati a creare un account prima della partecipazione',
+            'icon' => 'heroicon-o-user-plus',
             'color' => 'primary',
         ],
         'back_to_events' => [
@@ -197,6 +278,22 @@ return [
             'label' => 'Posti in esaurimento!',
             'description' => 'Avviso quando la capacità dell\'evento è quasi esaurita',
         ],
+        'spots_available_regular' => [
+            'label' => 'Ci sono ancora molti posti disponibili',
+            'description' => 'Messaggio mostrato quando la disponibilità posti è ampia',
+        ],
+        'no_spots_available' => [
+            'label' => 'Posti esauriti',
+            'description' => 'Messaggio mostrato quando non ci sono più posti disponibili',
+        ],
+        'no_attendees_yet' => [
+            'label' => 'Nessun partecipante ancora',
+            'description' => 'Empty state mostrato quando il numero partecipanti è zero',
+        ],
+        'registration_open_soon' => [
+            'label' => 'Iscrizione online in arrivo',
+            'description' => 'Messaggio mostrato agli utenti autenticati quando il flusso iscrizione non è ancora attivo',
+        ],
         'no_events_found' => [
             'label' => 'Nessun evento trovato',
             'description' => 'Visualizzato quando non ci sono eventi disponibili',
@@ -208,6 +305,34 @@ return [
         'location_tba' => [
             'label' => 'Luogo da definire',
             'description' => 'Visualizzato quando il luogo dell\'evento non è ancora stato annunciato',
+        ],
+        'link_copied' => [
+            'label' => 'Link copiato',
+            'description' => 'Conferma mostrata dopo la copia del link negli appunti',
+        ],
+        'no_one_joined_yet' => [
+            'label' => 'Nessun partecipante confermato per ora',
+            'description' => 'Stato vuoto della sezione partecipanti',
+        ],
+        'be_the_first_to_join' => [
+            'label' => 'Puoi essere il primo a prenotare il tuo posto.',
+            'description' => 'Invito all azione quando non ci sono ancora iscritti',
+        ],
+        'booking_success' => [
+            'label' => 'Prenotazione confermata. Aggiorniamo la pagina tra un attimo.',
+            'description' => 'Messaggio mostrato dopo una prenotazione andata a buon fine',
+        ],
+        'booking_error_generic' => [
+            'label' => 'Prenotazione non riuscita. Riprova tra poco.',
+            'description' => 'Errore generico della prenotazione evento',
+        ],
+        'booking_submitting' => [
+            'label' => 'Invio in corso...',
+            'description' => 'Stato del pulsante durante la prenotazione',
+        ],
+        'sold_out' => [
+            'label' => 'Posti esauriti per questo evento.',
+            'description' => 'Messaggio mostrato quando non ci sono piu posti disponibili',
         ],
     ],
 ];

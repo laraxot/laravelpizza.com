@@ -20,3 +20,9 @@ Nel renderer pagina CMS usare merge dati globale+blocco:
 - `array_merge($data, $block->data)`
 
 Questo mantiene DRY+KISS e risolve tutti i block che dipendono da `container0/slug0`.
+
+## Verifica finale
+
+- URL verificata: `/it/events/ut-quae-facere-placeat-labore-expedita-TwKN`
+- Esito: `200 OK`, dettaglio evento visualizzato
+- Fallback `Nessun evento trovato`: non presente

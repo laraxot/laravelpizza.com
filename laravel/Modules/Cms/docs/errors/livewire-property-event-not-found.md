@@ -20,3 +20,4 @@ Se il block file incluso usa stato/metodi Livewire (`$this->event`, `wire:click`
   - usare Alpine per UI locale, oppure
   - montare un componente Livewire dedicato con `@livewire(...)`.
 - Per i dettagli dinamici (`/it/events/{slug}`), il modello deve essere risolto prima nel route layer tramite `ResolvePageAction` e passato a `x-page` come `item`/`event`.
+- **Best Practice Decoupling**: Quando si referenziano modelli correlati (come `creator`, `updater`), usare sempre i Contracts (es. `ProfileContract`) nei PHPDocs per evitare accoppiamento stretto tra i moduli.

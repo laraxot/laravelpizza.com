@@ -94,6 +94,60 @@ return [
             'icon' => 'heroicon-o-ticket',
             'color' => 'success',
         ],
+        'attendance_mode' => [
+            'label' => 'Attendance mode',
+            'placeholder' => '',
+            'tooltip' => 'Shows whether the event is in person, online, or hybrid',
+            'helper_text' => '',
+            'description' => 'How attendees are expected to join the event',
+            'icon' => 'heroicon-o-signal',
+            'color' => 'primary',
+        ],
+        'organizer' => [
+            'label' => 'Organized by',
+            'placeholder' => '',
+            'tooltip' => 'Host or organizer of the event',
+            'helper_text' => '',
+            'description' => 'Person or team running the event',
+            'icon' => 'heroicon-o-user-circle',
+            'color' => 'primary',
+        ],
+        'event_details' => [
+            'label' => 'Event details',
+            'placeholder' => '',
+            'tooltip' => 'Additional event information',
+            'helper_text' => '',
+            'description' => 'Useful metadata that adds context to the event',
+            'icon' => 'heroicon-o-list-bullet',
+            'color' => 'info',
+        ],
+        'audience' => [
+            'label' => 'Audience',
+            'placeholder' => '',
+            'tooltip' => 'Ideal audience for the event',
+            'helper_text' => '',
+            'description' => 'Who this event is meant for',
+            'icon' => 'heroicon-o-users',
+            'color' => 'primary',
+        ],
+        'typical_age_range' => [
+            'label' => 'Age range',
+            'placeholder' => '',
+            'tooltip' => 'Suggested age range',
+            'helper_text' => '',
+            'description' => 'Indicative age range for attendees',
+            'icon' => 'heroicon-o-identification',
+            'color' => 'primary',
+        ],
+        'registration_opens_at' => [
+            'label' => 'Registration opens at',
+            'placeholder' => '',
+            'tooltip' => 'Date and time when registration opens',
+            'helper_text' => '',
+            'description' => 'When attendees can start registering',
+            'icon' => 'heroicon-o-calendar-days',
+            'color' => 'primary',
+        ],
         'name' => [
             'label' => 'Name',
             'placeholder' => 'Your full name',
@@ -112,6 +166,15 @@ return [
             'icon' => 'heroicon-o-envelope',
             'color' => 'primary',
         ],
+        'spots' => [
+            'label' => 'Spots to book',
+            'placeholder' => 'Number of spots',
+            'tooltip' => 'How many spots you want to reserve',
+            'helper_text' => '',
+            'description' => 'Number of spots to confirm during booking',
+            'icon' => 'heroicon-o-user-plus',
+            'color' => 'primary',
+        ],
     ],
     'actions' => [
         'share_event' => [
@@ -122,6 +185,15 @@ return [
             'description' => 'Starts the process of sharing the event',
             'icon' => 'heroicon-o-share',
             'color' => 'primary',
+        ],
+        'copy_link' => [
+            'label' => 'Copy link',
+            'placeholder' => '',
+            'tooltip' => 'Copy event link to clipboard',
+            'helper_text' => '',
+            'description' => 'Action that copies the direct link to the event page',
+            'icon' => 'heroicon-o-link',
+            'color' => 'secondary',
         ],
         'view_map' => [
             'label' => 'View on map',
@@ -148,6 +220,15 @@ return [
             'helper_text' => '',
             'description' => 'Redirects to the login page for RSVP registration',
             'icon' => 'heroicon-o-arrow-right-on-rectangle',
+            'color' => 'primary',
+        ],
+        'rsvp_create_account' => [
+            'label' => 'Create account and join',
+            'placeholder' => '',
+            'tooltip' => 'Register to confirm participation',
+            'helper_text' => '',
+            'description' => 'Prompts unauthenticated visitors to create an account before joining',
+            'icon' => 'heroicon-o-user-plus',
             'color' => 'primary',
         ],
         'back_to_events' => [
@@ -197,6 +278,22 @@ return [
             'label' => 'Spots filling fast!',
             'description' => 'Warning when event capacity is almost reached',
         ],
+        'spots_available_regular' => [
+            'label' => 'Many spots are still available',
+            'description' => 'Shown when remaining capacity is high',
+        ],
+        'no_spots_available' => [
+            'label' => 'Sold out',
+            'description' => 'Shown when no spots are left',
+        ],
+        'no_attendees_yet' => [
+            'label' => 'No attendees yet',
+            'description' => 'Empty state shown when attendees count is zero',
+        ],
+        'registration_open_soon' => [
+            'label' => 'Online registration coming soon',
+            'description' => 'Shown to authenticated users while full registration flow is not active yet',
+        ],
         'no_events_found' => [
             'label' => 'No events found',
             'description' => 'Displayed when no events are available',
@@ -208,6 +305,34 @@ return [
         'location_tba' => [
             'label' => 'Location TBA',
             'description' => 'Displayed when event location has not been announced yet',
+        ],
+        'link_copied' => [
+            'label' => 'Link copied',
+            'description' => 'Confirmation shown after copying the event link',
+        ],
+        'no_one_joined_yet' => [
+            'label' => 'No attendees confirmed yet',
+            'description' => 'Empty state for the attendees section',
+        ],
+        'be_the_first_to_join' => [
+            'label' => 'You can be the first to reserve a spot.',
+            'description' => 'Call to action when nobody has joined yet',
+        ],
+        'booking_success' => [
+            'label' => 'Booking confirmed. Refreshing the page shortly.',
+            'description' => 'Success message shown after a successful booking',
+        ],
+        'booking_error_generic' => [
+            'label' => 'Booking failed. Please try again shortly.',
+            'description' => 'Generic event booking error message',
+        ],
+        'booking_submitting' => [
+            'label' => 'Submitting...',
+            'description' => 'Button state while booking is being submitted',
+        ],
+        'sold_out' => [
+            'label' => 'This event is currently sold out.',
+            'description' => 'Message shown when no spots are available',
         ],
     ],
 ];

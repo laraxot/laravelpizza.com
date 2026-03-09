@@ -125,6 +125,8 @@ Prima di toccare **qualsiasi** codice, devi comprendere:
 9.  PHPStan Level 10 (Zero errori)
 10. PHPMD (Complexity < 10)
 11. PHP Insights (Quality > 80%)
+12. Pest Tests (100% coverage per la logica modificata)
+13. **Mandatorio**: Eseguire questi check dopo ogni modifica a file .php.
 
 ---
 
@@ -320,6 +322,34 @@ app(DoSomethingAction::class)->execute($data);
     *   L'utilizzo del facade `LaravelLocalization` per la localizzazione degli URL è una funzionalità specifica e ben definita. Iniettare il servizio di localizzazione per ogni utilizzo aggiungerebbe boilerplate. Vengono mantenute.
 
 **Giustificazione**: In questi casi specifici, il costo in termini di complessità e deviazione dai pattern idiomatici supera i benefici teorici della completa eliminazione dell'accesso statico. La decisione è basata sulla pragmatica e sull'aderenza alle convenzioni dei framework utilizzati, bilanciando la rigorosità con l'efficienza di sviluppo e la leggibilità del codice.
+
+---
+
+## 🎬 10. Modular Decoupling and Contracts
+
+**Regola Critica**: Per garantire il disaccoppiamento tra i moduli (Modular Monolith), le dipendenze incrociate tra modelli di domini diversi devono passare attraverso i **Contracts** definiti nel modulo `Xot`.
+
+### Regola PHPDoc per Auditing
+Nelle annotazioni `@property` dei modelli Eloquent, per le proprietà gestite dal trait `Updater` (`creator`, `updater`, `deleter`), deve essere utilizzato SEMPRE il contract `\Modules\Xot\Contracts\ProfileContract|null`.
+
+❌ **SBAGLIATO (Accoppiamento stretto):**
+```php
+/**
+ * @property-read \Modules\Meetup\Models\Profile|null $creator
+ */
+```
+
+✅ **CORRETTO (Disaccoppiato):**
+```php
+/**
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ */
+```
+
+**Perché?**
+- Permette di cambiare l'implementazione del Profilo (es. da `User` a `Meetup` o `Quaeris`) senza dover aggiornare tutti i modelli che lo referenziano.
+- Rispetta il Dependency Inversion Principle.
+- Garantisce la coerenza con i tipi ritornati dal trait `Updater`.
 
 ---
 
