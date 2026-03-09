@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\View\Components;
 
-use Modules\Cms\Tests\TestCase;
 use Modules\Cms\View\Components\Page;
 
-uses(TestCase::class);
-
 /**
- * Tests for Modules\Cms\View\Components\Page (the Blade VIEW component).
+ * Pure unit tests for Modules\Cms\View\Components\Page (the Blade VIEW component).
+ *
+ * Uses only reflection — no database required.
+ * For integration tests (constructor that queries DB), see Feature tests.
  *
  * Not to be confused with Modules\Cms\Tests\Unit\Models\PageTest
  * which tests the Page Eloquent model.
@@ -18,14 +18,9 @@ uses(TestCase::class);
  * @see \Modules\Cms\View\Components\Page
  * @see https://github.com/laraxot/laravelpizza.com/issues/544
  */
-describe('Page component constructor', function () {
-    test('can be instantiated with required params only', function () {
-        $component = new Page('content', 'test-slug');
 
-        expect($component)->toBeInstanceOf(Page::class);
-    });
-
-    test('accepts four constructor params: side, slug, type, data', function () {
+describe('Page component contract — constructor signature', function () {
+    test('has exactly four constructor params: side, slug, type, data', function () {
         $reflection = new \ReflectionMethod(Page::class, '__construct');
         $paramNames = array_map(fn ($p) => $p->getName(), $reflection->getParameters());
 
@@ -47,94 +42,66 @@ describe('Page component constructor', function () {
         expect($paramNames)->not->toContain('slug0');
     });
 
-    test('sets side property correctly', function () {
-        $component = new Page('sidebar', 'test-slug');
+    test('type param is nullable (optional)', function () {
+        $reflection = new \ReflectionMethod(Page::class, '__construct');
+        $params = $reflection->getParameters();
+        $typeParam = $params[2]; // third param = type
 
-        expect($component->side)->toBe('sidebar');
+        expect($typeParam->getName())->toBe('type');
+        expect($typeParam->allowsNull())->toBeTrue();
     });
 
-    test('sets slug property correctly', function () {
-        $component = new Page('content', 'my-page');
+    test('data param defaults to empty array', function () {
+        $reflection = new \ReflectionMethod(Page::class, '__construct');
+        $params = $reflection->getParameters();
+        $dataParam = $params[3]; // fourth param = data
 
-        expect($component->slug)->toBe('my-page');
-    });
-
-    test('prepends type to slug when type is provided', function () {
-        $component = new Page('content', 'my-event', 'events');
-
-        expect($component->slug)->toBe('events-my-event');
-    });
-
-    test('slug is unchanged when type is null', function () {
-        $component = new Page('content', 'my-event', null);
-
-        expect($component->slug)->toBe('my-event');
+        expect($dataParam->getName())->toBe('data');
+        expect($dataParam->isDefaultValueAvailable())->toBeTrue();
+        expect($dataParam->getDefaultValue())->toBe([]);
     });
 });
 
-describe('Page component public properties', function () {
-    test('does not expose container0 as public property', function () {
-        $component = new Page('content', 'test');
+describe('Page component contract — public properties', function () {
+    test('has public property: side', function () {
+        $reflection = new \ReflectionClass(Page::class);
 
-        expect(property_exists($component, 'container0'))->toBeFalse();
+        expect($reflection->hasProperty('side'))->toBeTrue();
+        expect($reflection->getProperty('side')->isPublic())->toBeTrue();
     });
 
-    test('does not expose slug0 as public property', function () {
-        $component = new Page('content', 'test');
+    test('has public property: slug', function () {
+        $reflection = new \ReflectionClass(Page::class);
 
-        expect(property_exists($component, 'slug0'))->toBeFalse();
+        expect($reflection->hasProperty('slug'))->toBeTrue();
+        expect($reflection->getProperty('slug')->isPublic())->toBeTrue();
     });
 
-    test('exposes data as public property', function () {
-        $component = new Page('content', 'test');
+    test('has public property: data (the context carrier)', function () {
+        $reflection = new \ReflectionClass(Page::class);
 
-        expect(property_exists($component, 'data'))->toBeTrue();
+        expect($reflection->hasProperty('data'))->toBeTrue();
+        expect($reflection->getProperty('data')->isPublic())->toBeTrue();
+    });
+
+    test('data property defaults to empty array', function () {
+        $reflection = new \ReflectionClass(Page::class);
+        $defaults = $reflection->getDefaultProperties();
+
+        expect($defaults['data'])->toBe([]);
+    });
+
+    test('does NOT have public property container0', function () {
+        expect(property_exists(Page::class, 'container0'))->toBeFalse();
+    });
+
+    test('does NOT have public property slug0', function () {
+        expect(property_exists(Page::class, 'slug0'))->toBeFalse();
     });
 });
 
-describe('Page component $data carrier', function () {
-    test('stores data array as-is', function () {
-        $data = [
-            'container0' => 'events',
-            'slug0' => 'my-event',
-        ];
-        $component = new Page('content', 'test-slug', null, $data);
-
-        expect($component->data)->toBe($data);
-    });
-
-    test('container0 is accessible via data array', function () {
-        $component = new Page('content', 'test', null, [
-            'container0' => 'events',
-            'slug0' => 'my-event',
-        ]);
-
-        expect($component->data)->toHaveKey('container0', 'events');
-        expect($component->data)->toHaveKey('slug0', 'my-event');
-    });
-
-    test('supports arbitrary context keys for future extensibility', function () {
-        $component = new Page('content', 'test', null, [
-            'container0' => 'events',
-            'slug0' => 'my-event',
-            'container1' => 'speakers',
-            'slug1' => 'john-doe',
-            'item' => null,
-            'event' => null,
-        ]);
-
-        expect($component->data)->toHaveKey('container0');
-        expect($component->data)->toHaveKey('container1');
-        expect($component->data)->toHaveKey('slug1');
-    });
-
-    test('data defaults to empty array', function () {
-        $component = new Page('content', 'test');
-
-        expect($component->data)->toBe([]);
-    });
-
-    test('no resolveContext method exists', function () {
+describe('Page component contract — removed methods', function () {
+    test('resolveContext() has been removed', function () {
         expect(method_exists(Page::class, 'resolveContext'))->toBeFalse();
     });
 });

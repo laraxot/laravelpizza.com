@@ -6,6 +6,11 @@
         ? $eventInput
         : ($itemInput instanceof \Modules\Meetup\Models\Event ? $itemInput : null);
 
+    // Fallback estremo: prova a caricare dallo slug0 se siamo in una rotta Folio
+    if (! $eventModel && isset($slug0)) {
+        $eventModel = \Modules\Meetup\Models\Event::where('slug', $slug0)->first();
+    }
+
     $eventsIndexUrl = \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeUrl('/events');
 
     $isUpcoming = $eventModel?->start_date

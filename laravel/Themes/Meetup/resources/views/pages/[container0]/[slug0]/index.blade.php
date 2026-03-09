@@ -32,10 +32,17 @@ new class extends Component
         $this->slug0 = $slug0;
         $this->pageSlug = $this->container0.'.view';
 
-        $resolved = $resolvePageAction->execute($this->container0, $this->slug0);
+        // Caricamento robusto specifico per eventi se il container corrisponde
+        if ($this->container0 === 'events') {
+            $this->item = Event::where('slug', $this->slug0)->first();
+        }
 
-        $this->pageSlug = $resolved->pageSlug;
-        $this->item = $resolved->item;
+        // Se non ancora risolto, usa l'azione generica
+        if ($this->item === null) {
+            $resolved = $resolvePageAction->execute($this->container0, $this->slug0);
+            $this->pageSlug = $resolved->pageSlug;
+            $this->item = $resolved->item;
+        }
 
         if ($this->item instanceof Event) {
             $this->event = $this->item;

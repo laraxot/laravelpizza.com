@@ -6,7 +6,6 @@ namespace Modules\User\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\User\Tests\TestCase;
-use ReflectionClass;
 
 uses(TestCase::class);
 
@@ -22,7 +21,7 @@ test('every vendor passport eloquent model has a local oauth wrapper', function 
                 return false;
             }
 
-            $reflection = new ReflectionClass($class);
+            $reflection = new \ReflectionClass($class);
 
             return ! $reflection->isAbstract()
                 && $reflection->isSubclassOf(Model::class);

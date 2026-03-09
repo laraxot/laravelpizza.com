@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\View\Components;
 
-use Exception;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\View\Component;
 use Modules\Cms\Datas\BlockData;
@@ -27,16 +26,16 @@ final class Page extends Component
     public array $data = [];
 
     /**
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function __construct(
         string $side,
         string $slug,
         ?string $type = null,
-        array $data = []
+        array $data = [],
     ) {
         $this->side = $side;
-        if ($type !== null) {
+        if (null !== $type) {
             $slug = $type.'-'.$slug;
         }
         $this->slug = $slug;
@@ -60,7 +59,7 @@ final class Page extends Component
         ];
         // @phpstan-ignore-next-line
         if (! view()->exists($view)) {
-            throw new Exception('view not found: '.$view);
+            throw new \Exception('view not found: '.$view);
         }
 
         return view($view, $viewParams);

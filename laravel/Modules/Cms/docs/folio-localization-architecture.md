@@ -12,6 +12,11 @@ LaravelPizza.com uses Laravel Folio for file-based routing and Laravel Localizat
 
 This middleware extracts the locale from the first URL segment and sets it for the application.
 
+Important rule after studying `mcamara/laravel-localization`:
+
+- locale resolution belongs in routing / middleware;
+- Blade files must not become the primary place where locale is fixed manually.
+
 ```php
 // Extracts locale from URL
 // /it/home → sets locale to 'it'
@@ -66,6 +71,15 @@ All URLs follow the pattern: `/{locale}/{path}`
 <a href="{{ LaravelLocalization::getLocalizedURL('en') }}">Switch to English</a>
 <a href="{{ LaravelLocalization::getLocalizedURL('it') }}">Passa all'italiano</a>
 ```
+
+## Canonical usage note
+
+Prefer:
+
+- `LaravelLocalization::getLocalizedURL()`
+- `LaravelLocalization::localizeUrl()`
+
+Avoid manual string concatenation for localized links.
 
 ## Configuration
 

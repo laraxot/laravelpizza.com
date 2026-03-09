@@ -6,7 +6,6 @@ namespace Modules\User\Tests\Unit\Passport;
 
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Passport\Passport;
-use ReflectionClass;
 
 uses(\Modules\User\Tests\TestCase::class);
 
@@ -14,7 +13,7 @@ test('every eloquent passport model has a local oauth wrapper', function (): voi
     /** @var array<int, string>|false $files */
     $files = glob(base_path('vendor/laravel/passport/src').'/*.php');
 
-    if ($files === false) {
+    if (false === $files) {
         $files = [];
     }
 
@@ -27,7 +26,7 @@ test('every eloquent passport model has a local oauth wrapper', function (): voi
             continue;
         }
 
-        $reflection = new ReflectionClass($class);
+        $reflection = new \ReflectionClass($class);
 
         if ($reflection->isAbstract()) {
             continue;

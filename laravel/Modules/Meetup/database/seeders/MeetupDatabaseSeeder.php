@@ -33,19 +33,28 @@ class MeetupDatabaseSeeder extends Seeder
         }
 
         // 1. Create venues across Italian cities
-        $venues = Venue::factory(5)->create();
+        $venueFactory = Venue::factory(5);
+        \Webmozart\Assert\Assert::isInstanceOf($venueFactory, \Illuminate\Database\Eloquent\Factories\Factory::class);
+        $venues = $venueFactory->create();
+        \Webmozart\Assert\Assert::isInstanceOf($venues, \Illuminate\Support\Collection::class);
         if ($this->command !== null) {
             $this->command->info('Venues created: '.$venues->count());
         }
 
         // 2. Create performers (speakers, hosts, moderators)
-        $performers = Performer::factory(10)->create();
+        $performerFactory = Performer::factory(10);
+        \Webmozart\Assert\Assert::isInstanceOf($performerFactory, \Illuminate\Database\Eloquent\Factories\Factory::class);
+        $performers = $performerFactory->create();
+        \Webmozart\Assert\Assert::isInstanceOf($performers, \Illuminate\Support\Collection::class);
         if ($this->command !== null) {
             $this->command->info('Performers created: '.$performers->count());
         }
 
         // 3. Create sponsors across tiers (gold + silver/bronze)
-        $sponsors = Sponsor::factory(3)->create();
+        $sponsorFactory = Sponsor::factory(3);
+        \Webmozart\Assert\Assert::isInstanceOf($sponsorFactory, \Illuminate\Database\Eloquent\Factories\Factory::class);
+        $sponsors = $sponsorFactory->create();
+        \Webmozart\Assert\Assert::isInstanceOf($sponsors, \Illuminate\Support\Collection::class);
         if ($this->command !== null) {
             $this->command->info('Sponsors created: '.$sponsors->count());
         }

@@ -4,13 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\View;
 
-use Modules\Cms\Tests\TestCase;
 use Modules\Cms\View\Components\PageContent;
 use Modules\Cms\View\Components\Section;
 
-uses(TestCase::class);
-
-/**
+/*
  * Smoke tests for Section and PageContent view components.
  *
  * Page component tests are in:

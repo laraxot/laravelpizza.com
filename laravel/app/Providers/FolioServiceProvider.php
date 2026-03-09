@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Folio\Folio;
+use Modules\Cms\Http\Middleware\SetFolioLocale;
 
 class FolioServiceProvider extends ServiceProvider
 {
@@ -29,7 +30,7 @@ class FolioServiceProvider extends ServiceProvider
         if (is_dir($pagesPath)) {
             Folio::path($pagesPath)->middleware([
                 '*' => [
-
+                    SetFolioLocale::class,
                 ],
             ]);
         }

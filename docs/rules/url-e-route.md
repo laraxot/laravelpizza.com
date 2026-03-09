@@ -46,62 +46,48 @@ Esempi errati:
 
 ### Recupero della Locale Corrente
 
-La locale corrente deve essere recuperata usando:
+La locale corrente puo' essere letta con `app()->getLocale()`, ma nel progetto non va usata per costruire URL concatenando manualmente il path.
 
-```php
-$locale = app()->getLocale();
-```
-
-Non utilizzare hardcoded values come `'it'` o `'en'`.
+Per URL e switch lingua usare gli helper del pacchetto `mcamara/laravel-localization`.
 
 ## Generazione dei Link
 
 ### Utilizzare la Locale Corrente
 
-Quando si generano link nel codice, includere sempre la locale corrente:
+Quando si generano link nel codice, usare sempre gli helper del pacchetto:
 
 ```php
 // CORRETTO
+<a href="{{ LaravelLocalization::localizeUrl('/pages/' . $page->slug) }}">{{ $page->title }}</a>
+
+// CORRETTO - language switcher / alternate locale
+<a href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">{{ $label }}</a>
+
+// ERRATO
 <a href="{{ url('/' . app()->getLocale() . '/pages/' . $page->slug) }}">{{ $page->title }}</a>
 
 // ERRATO
-<a href="{{ url('/pages/' . $page->slug) }}">{{ $page->title }}</a>
-```
-
-### Helper per Link Localizzati
-
-Considerare la creazione di un helper per generare link localizzati:
-
-```php
-// Nel file app/helpers.php
-function localized_url($path, $locale = null) {
-    $locale = $locale ?: app()->getLocale();
-    return url('/' . $locale . '/' . ltrim($path, '/'));
-}
-
-// Uso
-<a href="{{ localized_url('pages/' . $page->slug) }}">{{ $page->title }}</a>
+<a href="/it/pages/{{ $page->slug }}">{{ $page->title }}</a>
 ```
 
 ## Folio e Route Dinamiche
 
 ### Laravel Folio
 
-Quando si utilizzano le pagine Folio, assicurarsi di recuperare la locale nella funzione `render()`:
+Quando si utilizzano le pagine Folio, assicurarsi che la route viva nel gruppo localizzato del pacchetto e passare alla vista solo i dati che servono:
 
 ```php
 <?php
 use Illuminate\View\View;
 use function Laravel\Folio\render;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 render(function (View $view) {
-    $locale = app()->getLocale();
-
     // Altre operazioni...
 
     return $view->with([
         'data' => $data,
-        'locale' => $locale,
+        'eventsUrl' => LaravelLocalization::localizeUrl('/events'),
     ]);
 });
 ?>
@@ -109,12 +95,12 @@ render(function (View $view) {
 
 ### Passaggio della Locale alle Viste
 
-Passare sempre la locale corrente alle viste per generare i link localizzati:
+Passare alle viste URL gia' localizzati o usare direttamente gli helper del pacchetto:
 
 ```php
 return view('pages.index', [
     'pages' => $pages,
-    'locale' => app()->getLocale(),
+    'eventsUrl' => LaravelLocalization::localizeUrl('/events'),
 ]);
 ```
 

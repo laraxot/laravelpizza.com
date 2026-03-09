@@ -27,16 +27,16 @@ test('it uses user language with highest priority', function (): void {
 test('it uses first url segment when locale is supported', function (): void {
     LaravelLocalization::shouldReceive('getSupportedLanguagesKeys')
         ->once()
-        ->andReturn(['it', 'en', 'fr']);
+        ->andReturn(['it', 'en', 'de', 'fr']);
 
-    $request = Request::create('/en/some-page', 'GET');
+    $request = Request::create('/de/some-page', 'GET');
     $request->setUserResolver(fn () => null);
 
     $middleware = new SetFolioLocale();
     $response = $middleware->handle($request, fn (Request $req) => response('ok'));
 
     expect($response->getStatusCode())->toBe(200)
-        ->and(app()->getLocale())->toBe('en');
+        ->and(app()->getLocale())->toBe('de');
 });
 
 test('it falls back to default app locale when url segment is not supported', function (): void {

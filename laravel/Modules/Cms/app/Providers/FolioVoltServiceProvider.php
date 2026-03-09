@@ -12,6 +12,7 @@ use Laravel\Folio\Folio;
 use Livewire\Volt\Volt;
 use Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter;
 use Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect;
+use Modules\Cms\Http\Middleware\SetFolioLocale;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Datas\XotData;
 use Nwidart\Modules\Facades\Module;
@@ -91,17 +92,16 @@ class FolioVoltServiceProvider extends ServiceProvider
         $modules = Module::all();
         $paths = [];
 
-        // Register Folio paths WITHOUT locale-setting middleware to avoid serialization issues
-        // The locale will be set in the page templates themselves
-
         // Verifica che il percorso tema esista e sia una directory prima di passarlo a Folio
         if (File::exists($theme_path) && File::isDirectory($theme_path)) {
-            // Registra Folio per ogni lingua supportata - WITHOUT locale middleware
             foreach ($supportedLocales as $locale) {
                 Folio::path($theme_path)
                     ->uri($locale)
                     ->middleware([
-                        '*' => $base_middleware, // No locale-setting middleware here
+                        '*' => [
+                            SetFolioLocale::class,
+                            ...$base_middleware,
+                        ],
                     ]);
             }
             $paths[] = $theme_path;
@@ -124,12 +124,14 @@ class FolioVoltServiceProvider extends ServiceProvider
                 continue;
             }
             $paths[] = $path;
-            // Registra Folio per ogni lingua supportata - WITHOUT locale middleware
             foreach ($supportedLocales as $locale) {
                 Folio::path($path)
                     ->uri($locale)
                     ->middleware([
-                        '*' => $base_middleware, // No locale-setting middleware here
+                        '*' => [
+                            SetFolioLocale::class,
+                            ...$base_middleware,
+                        ],
                     ]);
             }
         }

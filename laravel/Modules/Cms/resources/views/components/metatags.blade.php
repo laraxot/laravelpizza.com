@@ -47,6 +47,10 @@
     <meta name="theme-color" content="#ffffff">
     --}}
 
+    @if(isset($pageSchema) && is_array($pageSchema) && $pageSchema !== [])
+        <script type="application/ld+json">{!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+    @endif
+
     {{ $slot }}
     @filamentStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'], 'themes/' . $meta->getPubTheme())

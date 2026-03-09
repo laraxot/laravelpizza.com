@@ -1,5 +1,6 @@
 <?php
 use Livewire\Volt\Component;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 use Modules\Cms\Models\Page;
 use Modules\Tenant\Services\TenantService;
@@ -33,6 +34,9 @@ new class extends Component
 // Check if slug is a locale - redirect to home with that locale
 $locales = array_keys(config('laravellocalization.supportedLocales', ['it' => []]));
 if (in_array($slug, $locales, true)) {
+    LaravelLocalization::setLocale($slug);
+    app()->setLocale($slug);
+
     // This is a locale, redirect to home page with this locale
     // Actually, just render the home page instead
     $slug = 'home';
