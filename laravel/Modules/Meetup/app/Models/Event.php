@@ -165,6 +165,7 @@ class Event extends BaseModel
             'end_date' => 'datetime',
             'meta_data' => 'array',
             'offers' => 'array',
+            'keywords' => 'array',
             'attendees_count' => 'integer',
             'max_attendees' => 'integer',
             'event_status' => EventStatus::class,

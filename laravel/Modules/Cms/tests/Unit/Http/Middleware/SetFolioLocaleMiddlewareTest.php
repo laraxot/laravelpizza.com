@@ -28,6 +28,9 @@ test('it uses first url segment when locale is supported', function (): void {
     LaravelLocalization::shouldReceive('getSupportedLanguagesKeys')
         ->once()
         ->andReturn(['it', 'en', 'de', 'fr']);
+    LaravelLocalization::shouldReceive('setLocale')
+        ->once()
+        ->with('de');
 
     $request = Request::create('/de/some-page', 'GET');
     $request->setUserResolver(fn () => null);
@@ -45,6 +48,9 @@ test('it falls back to default app locale when url segment is not supported', fu
     LaravelLocalization::shouldReceive('getSupportedLanguagesKeys')
         ->once()
         ->andReturn(['it', 'en', 'fr']);
+    LaravelLocalization::shouldReceive('setLocale')
+        ->once()
+        ->with('it');
 
     $request = Request::create('/blog/post-1', 'GET');
     $request->setUserResolver(fn () => null);

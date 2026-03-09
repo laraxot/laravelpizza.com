@@ -6,6 +6,14 @@ LaravelPizza.com uses Laravel Folio for file-based routing and Laravel Localizat
 
 ## Architecture
 
+Questa architettura deve restare coerente con le primitive ufficiali di Laravel Folio:
+
+- mount via `Folio::path(...)->uri(...)`
+- middleware assegnati sul mount o nella page
+- route parameters espressi dal filename
+- named route opzionali via `name()`
+- render hook via `render()` solo quando necessario
+
 ### Custom Middleware: SetFolioLocale
 
 **Location**: `laravel/Modules/Cms/app/Http/Middleware/SetFolioLocale.php`

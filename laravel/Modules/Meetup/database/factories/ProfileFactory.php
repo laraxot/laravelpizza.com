@@ -32,11 +32,7 @@ class ProfileFactory extends Factory
             'last_name' => fake()->lastName(),
             'email' => fake()->unique()->safeEmail(),
             'phone' => fake()->phoneNumber(),
-            'bio' => fake()->sentence(),
-            'status' => 'active',
-            'locale' => 'it',
-            'timezone' => 'Europe/Rome',
-            'preferences' => [],
+            'notes' => fake()->sentence(),
             'extra' => [],
         ];
     }
