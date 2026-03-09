@@ -10,7 +10,7 @@ use Modules\Geo\Actions\GoogleMaps\GetAddressFromGoogleMapsAction;
 use Modules\Geo\Datas\AddressData;
 use Modules\Geo\Exceptions\GoogleMaps\GoogleMapsApiException;
 
-beforeEach(function () {)
+beforeEach(function () {
     $action = new GetAddressFromGoogleMapsAction();
 });
 

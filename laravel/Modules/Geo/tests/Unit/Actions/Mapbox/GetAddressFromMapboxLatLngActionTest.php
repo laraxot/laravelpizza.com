@@ -10,7 +10,7 @@ use Modules\Geo\Actions\Mapbox\GetAddressFromMapboxLatLngAction;
 use Modules\Geo\Datas\AddressData;
 use Modules\Geo\Exceptions\InvalidLocationException;
 
-beforeEach(function () {)
+beforeEach(function () {
     $action = new GetAddressFromMapboxLatLngAction();
 });
 

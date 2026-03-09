@@ -43,6 +43,6 @@ class EditSchedule extends XotBaseEditRecord
 
     // protected function getRedirectUrl(): string
     // {
-    //    return // @var mixed getResource(;
+    //    return $this->getResource();
     // }
 }

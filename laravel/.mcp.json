@@ -60,7 +60,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "mcp-echarts"
+        "@hustcc/mcp-echarts"
       ],
       "description": "ECharts-oriented server for advanced interactive chart configuration"
     }

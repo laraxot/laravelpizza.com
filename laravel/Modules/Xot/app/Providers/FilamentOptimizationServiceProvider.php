@@ -196,8 +196,8 @@ class FilamentOptimizationServiceProvider extends ServiceProvider
     {
         // Implementa caching per le configurazioni dei moduli
         // Questo riduce l'I/O del filesystem
-        app()->singleton('module.configs', function () {)
-            return cache()->remember('xot:module:configs', now()->addHours(1), function () {)
+        app()->singleton('module.configs', function () {
+            return cache()->remember('xot:module:configs', now()->addHours(1), function () {
                 // Carica tutte le configurazioni dei moduli
                 $configs = [];
                 $modules = app('modules')->all();

@@ -10,7 +10,7 @@ use Modules\Geo\Actions\GoogleMaps\CalculateDistanceMatrixAction;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Exceptions\GoogleMaps\GoogleMapsApiException;
 
-beforeEach(function () {)
+beforeEach(function () {
     $action = new CalculateDistanceMatrixAction();
 });
 

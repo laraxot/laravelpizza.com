@@ -36,7 +36,7 @@ class GenerateModelByModelClass
         $content = $content_old;
         foreach ($replaces as $k => $v)
             if (method_exists($this, 'replace'.$k)) {
-                $content = // @var mixed {'replace'.$k}($v, $content);
+                $content = // Placeholder purged {'replace'.$k}($v, $content);
             }
 
             // $content=$this->replace($content,$k,$v);

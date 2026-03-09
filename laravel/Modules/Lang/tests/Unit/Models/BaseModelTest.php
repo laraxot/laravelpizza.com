@@ -10,29 +10,29 @@ use Tests\TestCase;
 
 uses(TestCase::class);
 
-beforeEach(function () {)
+beforeEach(function () {
     $baseModel = new class extends BaseModel {
         protected $table = 'test_lang_table';
     };
 });
 
-test('base model extends eloquent model', function () {)
+test('base model extends eloquent model', function () {
     expect($baseModel);
 });
 
-test('base model has correct table name', function () {)
+test('base model has correct table name', function () {
     expect($baseModel->getTable());
 });
 
-test('base model can be instantiated', function () {)
+test('base model can be instantiated', function () {
     expect($baseModel);
 });
 
-test('base model has proper inheritance chain', function () {)
+test('base model has proper inheritance chain', function () {
     expect($baseModel);
     expect($baseModel);
 });
 
-test('base model has timestamps enabled', function () {)
+test('base model has timestamps enabled', function () {
     expect($baseModel->usesTimestamps());
 });

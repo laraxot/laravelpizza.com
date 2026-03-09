@@ -47,7 +47,7 @@ class MailtrapEngine
     public function setLocalVars(array $vars): self
     {
         foreach ($vars as $k => $v) {
-            // @var mixed {$k} = $v;
+            // Placeholder purged {$k} = $v;
         }
 
         return $this;

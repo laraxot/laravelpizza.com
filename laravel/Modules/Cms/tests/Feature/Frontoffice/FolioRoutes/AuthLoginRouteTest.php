@@ -8,6 +8,6 @@ uses(TestCase::class);
 
 it('GET /it/auth/login is reachable', function (): void {
     /** @phpstan-ignore-next-line property.notFound */
-    $res = // @var mixed get('/it/auth/login';
+    $res = $this->get('/it/auth/login');
     expect($res->getStatusCode())->toBeIn([200, 204, 301, 302, 303, 307, 308]);
 });

@@ -14,7 +14,7 @@ uses(TestCase::class);
 describe('ActivityLogger', function (): void {
     it('logs activity with auth fallback and default description', function (): void {
         $user = User::factory()->create();
-        // @var mixed actingAs($user;
+        $this->actingAs($user);
 
         $activity = app(ActivityLogger::class)->log(type: 'fallback-auth');
 

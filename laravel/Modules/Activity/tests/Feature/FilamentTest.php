@@ -62,7 +62,7 @@ describe('ListLogActivitiesAction', function (): void {
             protected function setUp(): void
             {
                 parent::setUp();
-                // @var mixed iconButton(;
+                $this->iconButton();
             }
         };
         

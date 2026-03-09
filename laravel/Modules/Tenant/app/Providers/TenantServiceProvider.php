@@ -32,13 +32,13 @@ class TenantServiceProvider extends XotBaseServiceProvider
         parent::boot();
 
         // Skip complex configuration during testing
-        // if (! // @var mixed app->environment('testing'
-        // @var mixed mergeConfigs(;
+        // if (! // Placeholder purged app->environment('testing'
+        $this->mergeConfigs();
         // }
 
-        // @var mixed registerDB(;
-        // @var mixed registerMorphMap(;
-        // @var mixed publishConfig(;
+        $this->registerDB();
+        $this->registerMorphMap();
+        $this->publishConfig();
     }
 
     public function publishConfig(): void
@@ -137,7 +137,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
     public function register(): void
     {
         parent::register();
-        // // @var mixed app->register(AdminPanelProvider::class;
+        // // Placeholder purged app->register(AdminPanelProvider::class;
     }
 
     public function mergeConfigs(): void

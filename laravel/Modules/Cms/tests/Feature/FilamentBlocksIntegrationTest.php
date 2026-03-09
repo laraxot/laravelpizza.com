@@ -23,7 +23,7 @@ describe('Filament Blocks Integration', function () {
         $response = get('/');
 
         $status = $response->getStatusCode();
-        // @var mixed assertTrue(in_array($status, [200, 302], true;
+        $this->assertTrue(in_array($status, [200, 302], true);
 
         // Verifica che il PageContentBuilder funzioni correttamente
         // Questo test verifica l'integrazione tra CMS e frontend
@@ -33,16 +33,16 @@ describe('Filament Blocks Integration', function () {
         $response = get('/');
 
         $status = $response->getStatusCode();
-        // @var mixed assertTrue(in_array($status, [200, 302], true;
+        $this->assertTrue(in_array($status, [200, 302], true);
         // Verifica struttura dati blocchi
-        // @var mixed assertTrue(true;
+        $this->assertTrue(true);
     });
 
     it('renders blocks using correct view templates', function () {
         $response = get('/');
 
         $status = $response->getStatusCode();
-        // @var mixed assertTrue(in_array($status, [200, 302], true;
+        $this->assertTrue(in_array($status, [200, 302], true);
 
         // Verifica che i blocchi usino i template corretti
         // Questo test verifica l'integrazione con il sistema di view
@@ -52,16 +52,16 @@ describe('Filament Blocks Integration', function () {
         $response = get('/');
 
         $status = $response->getStatusCode();
-        // @var mixed assertTrue(in_array($status, [200, 302], true;
+        $this->assertTrue(in_array($status, [200, 302], true);
         // Avoid brittle CSS class assertions in this base install
-        // @var mixed assertTrue(true;
+        $this->assertTrue(true);
     });
 
     it('displays block content with proper formatting', function () {
         $response = get('/');
 
         $status = $response->getStatusCode();
-        // @var mixed assertTrue(in_array($status, [200, 302], true;
+        $this->assertTrue(in_array($status, [200, 302], true);
 
         // Verifica formattazione contenuto blocchi
         // Titolo e sottotitolo devono essere formattati correttamente
@@ -71,7 +71,7 @@ describe('Filament Blocks Integration', function () {
         $response = get('/');
 
         $status = $response->getStatusCode();
-        // @var mixed assertTrue(in_array($status, [200, 302], true;
+        $this->assertTrue(in_array($status, [200, 302], true);
 
         // Verifica relazioni tra blocchi
         // Questo test verifica che i blocchi si integrino correttamente
@@ -81,9 +81,9 @@ describe('Filament Blocks Integration', function () {
         $response = get('/');
 
         $status = $response->getStatusCode();
-        // @var mixed assertTrue(in_array($status, [200, 302], true;
+        $this->assertTrue(in_array($status, [200, 302], true);
         // Avoid brittle markup assertions in this base install
-        // @var mixed assertTrue(true;
+        $this->assertTrue(true);
 
         // Verifica che le classi CSS siano applicate correttamente
     });
@@ -92,7 +92,7 @@ describe('Filament Blocks Integration', function () {
         $response = get('/');
 
         $status = $response->getStatusCode();
-        // @var mixed assertTrue(in_array($status, [200, 302], true;
+        $this->assertTrue(in_array($status, [200, 302], true);
 
         // Verifica validazione blocchi
         // Questo test verifica che i blocchi siano validati correttamente
@@ -102,20 +102,20 @@ describe('Filament Blocks Integration', function () {
         // Test italiano
         $response = get('/');
         $status = $response->getStatusCode();
-        // @var mixed assertTrue(in_array($status, [200, 302], true;
+        $this->assertTrue(in_array($status, [200, 302], true);
         // Avoid brittle project-name assertions in this base install
-        // @var mixed assertTrue(true;
+        $this->assertTrue(true);
 
         // Test inglese
         $response = get('/en');
         $status = $response->getStatusCode();
-        // @var mixed assertTrue(in_array($status, [200, 302, 404], true;
+        $this->assertTrue(in_array($status, [200, 302, 404], true);
         // Verifica localizzazione blocchi
 
         // Test tedesco
         $response = get('/de');
         $status = $response->getStatusCode();
-        // @var mixed assertTrue(in_array($status, [200, 302, 404], true;
+        $this->assertTrue(in_array($status, [200, 302, 404], true);
 
         // Verifica localizzazione blocchi
     });
@@ -124,7 +124,7 @@ describe('Filament Blocks Integration', function () {
         $response = get('/');
 
         $status = $response->getStatusCode();
-        // @var mixed assertTrue(in_array($status, [200, 302], true;
+        $this->assertTrue(in_array($status, [200, 302], true);
 
         // Verifica gestione errori blocchi
         // Questo test verifica che gli errori siano gestiti correttamente
@@ -140,10 +140,10 @@ describe('Filament Blocks Integration', function () {
 
         $status = $response->getStatusCode();
         if (200 !== $status) {
-            // @var mixed markTestSkipped('Homepage is not directly renderable (redirect/non-200; performance check is not applicable.');
+            $this->markTestSkipped('Homepage is not directly renderable (redirect/non-200); performance check is not applicable.');
         }
 
         // Verifica che i blocchi si carichino entro tempi accettabili
-        // @var mixed assertLessThan(500, $loadTime;
+        $this->assertLessThan(500, $loadTime);
     });
 });

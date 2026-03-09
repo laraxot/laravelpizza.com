@@ -14,8 +14,8 @@ class StoredEventPolicyTest extends TestCase
     #[Test]
     public function policy_extends_user_base_policy(): void
     {
-        $this->assertTrue()
-            is_subclass_of()
+        $this->assertTrue(
+            is_subclass_of(
                 StoredEventPolicy::class,
                 \Modules\User\Models\Policies\UserBasePolicy::class
             )
@@ -54,7 +54,7 @@ class StoredEventPolicyTest extends TestCase
         ];
 
         $user = $this->createMock(User::class);
-        $user->method('hasPermissionTo')->willReturnCallback()
+        $user->method('hasPermissionTo')->willReturnCallback(
             static fn (string $permission): bool => in_array($permission, $permissions, true)
         );
 

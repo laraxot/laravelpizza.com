@@ -10,7 +10,7 @@ use Modules\Geo\Actions\IPGeolocation\FetchIPLocationAction;
 use Modules\Geo\Actions\IPGeolocation\GetLocationFromIPAction;
 use Modules\Geo\Datas\IPLocationData;
 
-beforeEach(function () {)
+beforeEach(function () {
     $fetchAction = Mockery::mock(FetchIPLocationAction::class);
     $action = new GetLocationFromIPAction($this->fetchAction);
 });

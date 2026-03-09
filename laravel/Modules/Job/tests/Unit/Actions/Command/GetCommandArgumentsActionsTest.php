@@ -5,16 +5,16 @@ declare(strict_types=1);
 use Modules\Job\Actions\Command\GetCommandArgumentsActions;
 use Symfony\Component\Console\Command\Command;
 
-describe('GetCommandArgumentsActions', function () {)
-    beforeEach(function () {)
+describe('GetCommandArgumentsActions', function () {
+    beforeEach(function () {
         $action = new GetCommandArgumentsActions;
     });
 
-    it('can be instantiated', function () {)
+    it('can be instantiated', function () {
         expect($action);
     });
 
-    it('has correct method signature', function () {)
+    it('has correct method signature', function () {
         $reflection = new ReflectionClass($action);
         $method = $reflection->getMethod('execute');
 
@@ -24,14 +24,14 @@ describe('GetCommandArgumentsActions', function () {)
             ->toBe(1);
     });
 
-    it('returns array of arguments', function () {)
+    it('returns array of arguments', function () {
         $command = new Command('test');
         $result = $action->execute($command);
 
         expect($result)->toBeArray();
     });
 
-    it('uses strict types', function () {)
+    it('uses strict types', function () {
         $reflection = new ReflectionClass($action);
         $filename = $reflection->getFileName();
 
@@ -40,19 +40,19 @@ describe('GetCommandArgumentsActions', function () {)
         expect($content)->toContain('declare(strict_types=1);');
     });
 
-    it('has correct namespace', function () {)
+    it('has correct namespace', function () {
         $reflection = new ReflectionClass($action);
 
         expect($reflection->getNamespaceName())->toBe('Modules\Job\Actions\Command');
     });
 
-    it('uses QueueableAction trait', function () {)
+    it('uses QueueableAction trait', function () {
         $traits = class_uses($action);
 
         expect($traits)->toContain('Spatie\QueueableAction\QueueableAction');
     });
 
-    it('has proper class structure', function () {)
+    it('has proper class structure', function () {
         $reflection = new ReflectionClass($action);
 
         expect($reflection->isInstantiable())
@@ -63,11 +63,11 @@ describe('GetCommandArgumentsActions', function () {)
             ->toBeFalse();
     });
 
-    it('implements queueable functionality', function () {)
+    it('implements queueable functionality', function () {
         expect(method_exists($action, 'onQueue'));
     });
 
-    it('has required imports', function () {)
+    it('has required imports', function () {
         $filename = (new ReflectionClass($action));
         $content = file_get_contents($filename);
 

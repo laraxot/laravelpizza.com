@@ -7,12 +7,12 @@ use GuzzleHttp\Psr7\Response;
 use Modules\Geo\Actions\Elevation\FetchOpenElevationAction;
 use Modules\Geo\Datas\ElevationData;
 
-beforeEach(function () {)
+beforeEach(function () {
     $mockClient = Mockery::mock(Client::class);
     $action = new FetchOpenElevationAction($this->mockClient);
 });
 
-afterEach(function () {)
+afterEach(function () {
     Mockery::close();
 });
 

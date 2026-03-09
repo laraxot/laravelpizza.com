@@ -24,7 +24,7 @@ class ListLogActivitiesPageTest extends TestCase
 
     public function test_uses_can_paginate_trait(): void
     {
-        $this->assertContains()
+        $this->assertContains(
             CanPaginate::class,
             class_uses_recursive(ListLogActivities::class)
         );

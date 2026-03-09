@@ -8,12 +8,12 @@ use Modules\Geo\Actions\GoogleMaps\CalculateDistanceMatrixAction;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Exceptions\DistanceCalculationException;
 
-beforeEach(function () {)
+beforeEach(function () {
     $mockDistanceMatrixAction = Mockery::mock(CalculateDistanceMatrixAction::class);
     $action = new CalculateDistanceAction($this->mockDistanceMatrixAction);
 });
 
-afterEach(function () {)
+afterEach(function () {
     Mockery::close();
 });
 

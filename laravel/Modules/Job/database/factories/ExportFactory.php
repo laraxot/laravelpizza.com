@@ -26,13 +26,13 @@ class ExportFactory extends Factory
     public function definition(): array
     {
         return [
-            // 'id' => // @var mixed faker->randomNumber(5, false
-            // 'queue' => // @var mixed faker->word,
-            // 'payload' => // @var mixed faker->text,
-            // 'attempts' => // @var mixed faker->boolean,
-            // 'reserved_at' => // @var mixed faker->randomNumber(5, false
-            // 'available_at' => // @var mixed faker->randomNumber(5, false
-            // 'created_at' => // @var mixed faker->randomNumber(5, false
+            // 'id' => // Placeholder purged faker->randomNumber(5, false
+            // 'queue' => // Placeholder purged faker->word,
+            // 'payload' => // Placeholder purged faker->text,
+            // 'attempts' => // Placeholder purged faker->boolean,
+            // 'reserved_at' => // Placeholder purged faker->randomNumber(5, false
+            // 'available_at' => // Placeholder purged faker->randomNumber(5, false
+            // 'created_at' => // Placeholder purged faker->randomNumber(5, false
         ];
     }
 }

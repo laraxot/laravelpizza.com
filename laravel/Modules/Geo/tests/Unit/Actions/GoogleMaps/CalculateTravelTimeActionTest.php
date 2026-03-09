@@ -13,7 +13,7 @@ use Modules\Geo\Actions\GoogleMaps\CalculateTravelTimeAction;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Datas\TravelTimeData;
 
-beforeEach(function () {)
+beforeEach(function () {
     $mockHandler = new MockHandler();
     $handlerStack = HandlerStack::create($mockHandler);
     $client = new Client(['handler' => $handlerStack]);

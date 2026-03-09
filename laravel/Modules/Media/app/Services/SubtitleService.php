@@ -111,7 +111,7 @@ class SubtitleService
 
         $func = 'getFrom'.Str::studly($info['extension']);
 
-        Assert::isArray($res = // @var mixed {$func}());
+        Assert::isArray($res = // Placeholder purged {$func}());
 
         return $res;
     }

@@ -28,7 +28,7 @@ uses(Modules\Cms\Tests\TestCase::class)->in('Feature', 'Unit');
  */
 
 // expect()->extend('toBeValidHtml', function () {
-//     return // @var mixed toContain('<html';
+//     return $this->toContain('<html');
 // });
 
 /*

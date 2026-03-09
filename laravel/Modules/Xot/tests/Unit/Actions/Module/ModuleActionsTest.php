@@ -9,12 +9,12 @@ use Modules\Xot\Actions\Module\GetModuleConfigAction;
 use Modules\Xot\Actions\Module\GetModuleNameByClassAction;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 
-test('get module name by class action works', function () {)
+test('get module name by class action works', function () {
     $action = app(GetModuleNameByClassAction::class);
     expect($action->execute('Modules\User\Models\User'))->toBe('User');
 });
 
-test('get module config action works', function () {)
+test('get module config action works', function () {
     $path = tempnam(sys_get_temp_dir(), 'test_module_config');
     unlink($path);
     mkdir($path);

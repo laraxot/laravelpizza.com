@@ -63,7 +63,7 @@ class SmsService
     public function setLocalVars(array $vars): self
     {
         foreach ($vars as $k => $v) {
-            // @var mixed {$k} = $v;
+            // Placeholder purged {$k} = $v;
         }
         $vars = array_merge($this->vars, $vars);
 

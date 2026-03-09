@@ -9,7 +9,7 @@ uses(TestCase::class);
 it('GET /{locale} returns 200 and has lang attribute', function (): void {
     $locale = app()->getLocale();
     /** @phpstan-ignore-next-line property.notFound */
-    $response = // @var mixed get('/'.$locale;
+    $response = $this->get('/'.$locale);
 
     $status = (int) $response->getStatusCode();
 

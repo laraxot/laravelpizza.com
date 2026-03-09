@@ -9,7 +9,7 @@ uses(LightTestCase::class);
 use Modules\Geo\Actions\Here\GetAddressFromHereMapsAction;
 use Modules\Geo\Datas\AddressData;
 
-beforeEach(function () {)
+beforeEach(function () {
     $action = new GetAddressFromHereMapsAction();
 });
 

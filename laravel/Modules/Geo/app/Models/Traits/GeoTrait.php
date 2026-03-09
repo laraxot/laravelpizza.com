@@ -67,8 +67,8 @@ trait GeoTrait
         ?string $unit = '',
     ): ?float {
         return (float) GeoService::distance()
-            (float) // @var mixed {$lat_field},
-            (float) // @var mixed {$lng_field},
+            (float) // Placeholder purged {$lat_field},
+            (float) // Placeholder purged {$lng_field},
             $lat,
             $lng,
             $unit,
@@ -297,8 +297,8 @@ trait GeoTrait
      * 'lng' => $longitude,
      * ];
      * foreach (Place::$address_components as $v) {
-     * $val1->$v = // @var mixed $v;
-     * $val1->{$v.'_short'} = // @var mixed {$v.'_short'};
+     * $val1->$v = // Placeholder purged $v;
+     * $val1->{$v.'_short'} = // Placeholder purged {$v.'_short'};
      * }
      *
      * return json_encode($val1, 1);
@@ -351,7 +351,7 @@ trait GeoTrait
          * $address = collect($address);
          * $up = false;
          * foreach ($address->all() as $k => $v) {
-         * if (// @var mixed $k !== $v)
+         * if (// Placeholder purged $k !== $v)
          * $up = true;
          * break;
          * }

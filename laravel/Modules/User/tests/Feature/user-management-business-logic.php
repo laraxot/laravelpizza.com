@@ -10,8 +10,8 @@ use Modules\Xot\Datas\XotData;
 
 uses(TestCase::class);
 
-describe('User Management Business Logic', function () {)
-    it('can create user with profile', function () {)
+describe('User Management Business Logic', function () {
+    it('can create user with profile', function () {
         $email = 'test-'.uniqid().'@example.com';
 
         /** @var User $user */
@@ -47,7 +47,7 @@ describe('User Management Business Logic', function () {)
         expect($user->profile->phone)->toBe('+39 123 456 7890');
     });
 
-    it('can update user profile', function () {)
+    it('can update user profile', function () {
         /** @var User $user */
         $user = User::factory()->create();
 
@@ -66,7 +66,7 @@ describe('User Management Business Logic', function () {)
         ], $profile->getConnectionName());
     });
 
-    it('can search users by email', function () {)
+    it('can search users by email', function () {
         $uniqueToken = uniqid();
         User::factory()->create(['email' => "search1.{$uniqueToken}@example.com"]);
         User::factory()->create(['email' => "search2.{$uniqueToken}@example.com"]);
@@ -77,7 +77,7 @@ describe('User Management Business Logic', function () {)
         expect($results)->toHaveCount(2);
     });
 
-    it('can validate user email uniqueness', function () {)
+    it('can validate user email uniqueness', function () {
         $email = 'unique-'.uniqid().'@example.com';
         User::factory()->create(['email' => $email]);
 
@@ -86,7 +86,7 @@ describe('User Management Business Logic', function () {)
         User::factory()->create(['email' => $email]);
     });
 
-    it('handles user active status', function () {)
+    it('handles user active status', function () {
         /** @var User $user */
         $user = User::factory()->create(['is_active' => true]);
         expect($user->is_active)->toBeTrue();
@@ -95,7 +95,7 @@ describe('User Management Business Logic', function () {)
         expect($user->fresh()->is_active)->toBeFalse();
     });
 
-    it('handles user otp status', function () {)
+    it('handles user otp status', function () {
         /** @var User $user */
         $user = User::factory()->create(['is_otp' => false]);
         expect($user->is_otp)->toBeFalse();

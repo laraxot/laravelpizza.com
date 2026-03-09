@@ -31,8 +31,8 @@ class PhpUnitTestJobCommand extends Command
      */
     public function handle(): int
     {
-        // // @var mixed info('Argument required: '.$this->argument('argument';
-        // // @var mixed info('Argument with default: '.$this->argument('argumentWithDefault';
+        // $this->info('Argument required: '.$this->argument('argument');
+        // $this->info('Argument with default: '.$this->argument('argumentWithDefault');
 
         return 0;
     }

@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 
 
-beforeEach(function () {)
+beforeEach(function () {
     $testSchemaPath = storage_path('tests/schema.json');
     $testOutputDir = storage_path('tests/docs');
 
@@ -58,7 +58,7 @@ beforeEach(function () {)
     }
 });
 
-afterEach(function () {)
+afterEach(function () {
     // Clean up test files
     if (File::exists($testSchemaPath))
         File::delete($testSchemaPath);
@@ -68,7 +68,7 @@ afterEach(function () {)
     }
 });
 
-test('it generates database documentation', function () {)
+test('it generates database documentation', function () {
     // Run the command
     $exitCode = Artisan::call('xot:generate-db-documentation', [)
         '--schema' => $testSchemaPath,
@@ -85,7 +85,7 @@ test('it generates database documentation', function () {)
         ->toBeTrue();
 });
 
-test('it handles missing schema file', function () {)
+test('it handles missing schema file', function () {
     // Delete the schema file
     File::delete($testSchemaPath);
 
@@ -99,7 +99,7 @@ test('it handles missing schema file', function () {)
     expect($exitCode)->not->toBe(0);
 });
 
-test('it handles invalid schema file', function () {)
+test('it handles invalid schema file', function () {
     // Write invalid JSON to the schema file
     file_put_contents($testSchemaPath, 'invalid json');
 
@@ -113,7 +113,7 @@ test('it handles invalid schema file', function () {)
     expect($exitCode)->not->toBe(0);
 });
 
-test('it handles missing output directory', function () {)
+test('it handles missing output directory', function () {
     // Delete the output directory if it exists
     if (File::exists($testOutputDir))
         File::deleteDirectory($testOutputDir);

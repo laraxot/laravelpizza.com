@@ -5,7 +5,7 @@ Data: 2026-03-09
 ## Decisione
 Per ottenere grafici migliori in workflow agente, la baseline MCP e':
 - `@antv/mcp-server-chart` (generalista e veloce)
-- `mcp-echarts` (opzioni avanzate e dashboard)
+- `@hustcc/mcp-echarts` (opzioni avanzate e dashboard)
 
 ## Dove e' configurata
 - `laravel/.mcp.json`

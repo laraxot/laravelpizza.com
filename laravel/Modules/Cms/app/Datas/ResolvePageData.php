@@ -24,8 +24,8 @@ class ResolvePageData extends Data
         ?object $item,
         string $pageSlug,
     ) {
-        // @var mixed renderMode = $renderMode;
-        // @var mixed item = $item;
-        // @var mixed pageSlug = $pageSlug;
+        $renderMode = $renderMode;
+        $item = $item;
+        $pageSlug = $pageSlug;
     }
 }

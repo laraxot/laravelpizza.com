@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Modules\Geo\Actions\FilterCoordinatesAction;
 
-beforeEach(function () {)
+beforeEach(function () {
     $action = new FilterCoordinatesAction();
 });
 

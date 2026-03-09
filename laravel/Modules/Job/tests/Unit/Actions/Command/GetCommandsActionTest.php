@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 use Modules\Job\Actions\Command\GetCommandsAction;
 
-describe('GetCommandsAction', function () {)
-    beforeEach(function () {)
+describe('GetCommandsAction', function () {
+    beforeEach(function () {
         $action = new GetCommandsAction;
     });
 
-    it('can be instantiated', function () {)
+    it('can be instantiated', function () {
         expect($action);
     });
 
-    it('has correct method signature', function () {)
+    it('has correct method signature', function () {
         $reflection = new ReflectionClass($action);
         $method = $reflection->getMethod('execute');
 
@@ -23,13 +23,13 @@ describe('GetCommandsAction', function () {)
             ->toBe(0);
     });
 
-    it('can be resolved from container', function () {)
+    it('can be resolved from container', function () {
         $actionFromContainer = app(GetCommandsAction::class);
 
         expect($actionFromContainer)->toBeInstanceOf(GetCommandsAction::class);
     });
 
-    it('uses strict types', function () {)
+    it('uses strict types', function () {
         $reflection = new ReflectionClass($action);
         $filename = $reflection->getFileName();
 
@@ -38,13 +38,13 @@ describe('GetCommandsAction', function () {)
         expect($content)->toContain('declare(strict_types=1);');
     });
 
-    it('has correct namespace', function () {)
+    it('has correct namespace', function () {
         $reflection = new ReflectionClass($action);
 
         expect($reflection->getNamespaceName())->toBe('Modules\Job\Actions\Command');
     });
 
-    it('uses required imports', function () {)
+    it('uses required imports', function () {
         $filename = (new ReflectionClass($action));
         $content = file_get_contents($filename);
 
@@ -53,7 +53,7 @@ describe('GetCommandsAction', function () {)
             ->and($content)->toContain('use Modules\Job\Datas\CommandData;');
     });
 
-    it('has proper class structure', function () {)
+    it('has proper class structure', function () {
         $reflection = new ReflectionClass($action);
 
         expect($reflection->isInstantiable())
@@ -64,7 +64,7 @@ describe('GetCommandsAction', function () {)
             ->toBeFalse();
     });
 
-    it('has execute method returning DataCollection', function () {)
+    it('has execute method returning DataCollection', function () {
         $reflection = new ReflectionClass($action);
         $method = $reflection->getMethod('execute');
 

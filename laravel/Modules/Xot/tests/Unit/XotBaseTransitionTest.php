@@ -6,8 +6,8 @@ use Modules\Notify\Datas\RecordNotificationData;
 use Modules\Xot\States\Transitions\XotBaseTransition;
 
 
-describe('XotBaseTransition', function () {)
-    beforeEach(function () {)
+describe('XotBaseTransition', function () {
+    beforeEach(function () {
         // Create a test record
         $record = new Modules\User\Models\User();
         $record->id = '1';
@@ -36,35 +36,35 @@ describe('XotBaseTransition', function () {)
         };
     });
 
-    it('can be instantiated', function () {)
+    it('can be instantiated', function () {
         expect($transition);
     });
 
-    it('has static name property', function () {)
+    it('has static name property', function () {
         expect($transition::$name);
     });
 
-    it('can get record', function () {)
+    it('can get record', function () {
         $record = $transition->record;
         expect($record)->toBe($record);
     });
 
-    it('can send notifications without errors', function () {)
+    it('can send notifications without errors', function () {
         expect(fn () => $transition->sendNotifications());
     });
 
-    it('returns correct notification recipients structure', function () {)
+    it('returns correct notification recipients structure', function () {
         $recipients = $transition->getNotificationRecipients();
         expect($recipients)->toBeArray()->toHaveKey('test_user');
         expect($recipients['test_user'])->toBeInstanceOf(RecordNotificationData::class);
     });
 
-    it('can send recipient notification', function () {)
+    it('can send recipient notification', function () {
         $recipient = RecordNotificationData::from(['record' => $record, 'channel' => 'mail']);
         expect(fn () => $transition->sendRecipientNotification($recipient, []));
     });
 
-    it('validates abstract class structure', function () {)
+    it('validates abstract class structure', function () {
         $reflection = new ReflectionClass(XotBaseTransition::class);
         expect($reflection->isAbstract())->toBeTrue()
             ->and($reflection->hasMethod('sendNotifications'))->toBeTrue();

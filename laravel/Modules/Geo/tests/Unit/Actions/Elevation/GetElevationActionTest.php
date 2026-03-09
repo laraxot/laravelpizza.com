@@ -7,12 +7,12 @@ use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Exceptions\ElevationException;
 use Modules\Geo\Services\GoogleMapsService;
 
-beforeEach(function () {)
+beforeEach(function () {
     $mockGoogleMapsService = Mockery::mock(GoogleMapsService::class);
     $action = new GetElevationAction($this->mockGoogleMapsService);
 });
 
-afterEach(function () {)
+afterEach(function () {
     Mockery::close();
 });
 

@@ -6,7 +6,7 @@ use Modules\Cms\Models\Module;
 use Modules\Cms\Tests\TestHelper;
 use Modules\Xot\Actions\Filament\GetModulesNavigationItems;
 
-describe('CMS Module', function () {)
+describe('CMS Module', function () {
     it('user admin can view module dashboard', function (): void {)
         // Test business logic: check that Module class exists and has required methods
         expect(class_exists(Module::class))->toBeTrue();

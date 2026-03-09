@@ -26,7 +26,7 @@ class FrequencyFactory extends Factory
     public function definition(): array
     {
         return [
-            // 'id' => // @var mixed faker->randomNumber(5, false
+            // 'id' => // Placeholder purged faker->randomNumber(5, false
             'label' => fake()->word,
             'interval' => fake()->word,
         ];

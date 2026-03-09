@@ -6,18 +6,18 @@ uses(Modules\Lang\Tests\TestCase::class);
 
 use Modules\Lang\Actions\GetAllTranslationAction;
 
-beforeEach(function () {)
+beforeEach(function () {
     $action = new GetAllTranslationAction();
 });
 
-describe('GetAllTranslationAction Business Logic', function () {)
-    test('returns array of translation files', function () {)
+describe('GetAllTranslationAction Business Logic', function () {
+    test('returns array of translation files', function () {
         $result = $action->execute();
 
         expect($result)->toBeArray();
     });
 
-    test('returns files with key and path', function () {)
+    test('returns files with key and path', function () {
         $result = $action->execute();
 
         if (count($result) > 0) {
@@ -26,7 +26,7 @@ describe('GetAllTranslationAction Business Logic', function () {)
         }
     });
 
-    test('handles session locale setting', function () {)
+    test('handles session locale setting', function () {
         session()->put('locale', 'it');
 
         $result = $action->execute();
@@ -34,7 +34,7 @@ describe('GetAllTranslationAction Business Logic', function () {)
         expect($result)->toBeArray();
     });
 
-    test('handles invalid session locale gracefully', function () {)
+    test('handles invalid session locale gracefully', function () {
         session()->put('locale', 'invalid_locale');
 
         $result = $action->execute();
@@ -42,7 +42,7 @@ describe('GetAllTranslationAction Business Logic', function () {)
         expect($result)->toBeArray();
     });
 
-    test('returns empty array when no translation files exist', function () {)
+    test('returns empty array when no translation files exist', function () {
         // Test that action handles empty results gracefully
         $result = $action->execute();
 

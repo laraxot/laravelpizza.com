@@ -12,7 +12,7 @@ use GuzzleHttp\Psr7\Response;
 use Modules\Geo\Actions\Mapbox\GetAddressFromMapboxAction;
 use Modules\Geo\Datas\AddressData;
 
-beforeEach(function () {)
+beforeEach(function () {
     $mockHandler = new MockHandler();
     $handlerStack = HandlerStack::create($mockHandler);
     $client = new Client(['handler' => $handlerStack]);

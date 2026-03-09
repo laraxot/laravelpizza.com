@@ -54,7 +54,7 @@ final class CanPaginateHarness
     }
 }
 
-test('can paginate trait manages session, defaults and page helpers', function (): void {)
+test('can paginate trait manages session, defaults and page helpers', function (): void {
     $harness = new CanPaginateHarness;
     $harness->recordsPerPage = 25;
 
@@ -68,7 +68,7 @@ test('can paginate trait manages session, defaults and page helpers', function (
         ->and($harness->getPerPageSessionKey())->toStartWith('pages.');
 });
 
-test('can paginate default option fallback behaves correctly', function (): void {)
+test('can paginate default option fallback behaves correctly', function (): void {
     $harness = new CanPaginateHarness;
     $harness->setDefaultPerPage(25);
 
@@ -81,8 +81,8 @@ test('can paginate default option fallback behaves correctly', function (): void
         ->and(session()->has($harness->getPerPageSessionKey()))->toBeFalse();
 });
 
-test('can paginate trait covers default, simple and cursor modes', function (): void {)
-    Activity::query()->create([)
+test('can paginate trait covers default, simple and cursor modes', function (): void {
+    Activity::query()->create([
         'log_name' => 'default',
         'description' => 'paginate default',
         'event' => 'paginate-default',

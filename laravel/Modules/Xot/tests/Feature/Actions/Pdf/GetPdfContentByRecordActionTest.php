@@ -7,6 +7,7 @@ namespace Modules\Xot\Tests\Feature\Actions\Pdf;
 use Illuminate\Database\Eloquent\Model;
 use Modules\User\Models\User;
 use Modules\Xot\Actions\Pdf\GetPdfContentByRecordAction;
+use Modules\Xot\Tests\TestCase;
 
 /**
  * Test suite for GetPdfContentByRecordAction.

@@ -12,8 +12,8 @@ use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
-describe('HasTeams Trait', function () {)
-    it('can be used in a model', function () {)
+describe('HasTeams Trait', function () {
+    it('can be used in a model', function () {
         $user = User::factory()->create();
 
         expect($user)->toBeInstanceOf(User::class);
@@ -21,7 +21,7 @@ describe('HasTeams Trait', function () {)
         expect(method_exists($user, 'belongsToTeam'))->toBeTrue();
     });
 
-    it('has teams relationship method', function () {)
+    it('has teams relationship method', function () {
         $user = User::factory()->create();
 
         $teamsRelation = $user->teams();
@@ -29,7 +29,7 @@ describe('HasTeams Trait', function () {)
         expect($teamsRelation)->toBeInstanceOf(BelongsToMany::class);
     });
 
-    it('can check if user belongs to a team by ID', function () {)
+    it('can check if user belongs to a team by ID', function () {
         $user = User::factory()->create();
         $team = Team::factory()->create();
 
@@ -41,7 +41,7 @@ describe('HasTeams Trait', function () {)
         expect($result)->toBeTrue();
     });
 
-    it('can check if user belongs to a team by Team model', function () {)
+    it('can check if user belongs to a team by Team model', function () {
         $user = User::factory()->create();
         $team = Team::factory()->create();
 
@@ -53,7 +53,7 @@ describe('HasTeams Trait', function () {)
         expect($result)->toBeTrue();
     });
 
-    it('returns false when user does not belong to team', function () {)
+    it('returns false when user does not belong to team', function () {
         $user = User::factory()->create();
         $team = Team::factory()->create();
 
@@ -64,7 +64,7 @@ describe('HasTeams Trait', function () {)
         expect($result)->toBeFalse();
     });
 
-    it('handles Team model parameters', function () {)
+    it('handles Team model parameters', function () {
         $user = User::factory()->create();
         $team = Team::factory()->create();
 
@@ -76,7 +76,7 @@ describe('HasTeams Trait', function () {)
         expect($result)->toBeTrue();
     });
 
-    it('can get all teams for user', function () {)
+    it('can get all teams for user', function () {
         $user = User::factory()->create();
         $team1 = Team::factory()->create(['name' => 'Team A']);
         $team2 = Team::factory()->create(['name' => 'Team B']);
@@ -89,7 +89,7 @@ describe('HasTeams Trait', function () {)
         expect($userTeams)->toHaveCount(3);
     });
 
-    it('can filter teams by specific criteria', function () {)
+    it('can filter teams by specific criteria', function () {
         $user = User::factory()->create();
         $team1 = Team::factory()->create(['name' => 'Active Team 1']);
         $team2 = Team::factory()->create(['name' => 'Active Team 2']);
@@ -101,7 +101,7 @@ describe('HasTeams Trait', function () {)
         expect($activeUserTeams)->toHaveCount(2);
     });
 
-    it('can check team membership', function () {)
+    it('can check team membership', function () {
         $user = User::factory()->create();
         $team = Team::factory()->create();
 
@@ -113,7 +113,7 @@ describe('HasTeams Trait', function () {)
         expect($result)->toBeTrue();
     });
 
-    it('can handle multiple team memberships', function () {)
+    it('can handle multiple team memberships', function () {
         $user = User::factory()->create();
         $teams = Team::factory()->count(5)->create();
 
@@ -129,7 +129,7 @@ describe('HasTeams Trait', function () {)
         }
     });
 
-    it('can handle non-existent team membership', function () {)
+    it('can handle non-existent team membership', function () {
         $user = User::factory()->create();
         $team = Team::factory()->create();
 
@@ -139,7 +139,7 @@ describe('HasTeams Trait', function () {)
         expect($result)->toBeFalse();
     });
 
-    it('can work with team pivot table', function () {)
+    it('can work with team pivot table', function () {
         $user = User::factory()->create();
         $team = Team::factory()->create();
 
@@ -151,7 +151,7 @@ describe('HasTeams Trait', function () {)
         expect($result)->toBeTrue();
     });
 
-    it('can handle team relationship with custom pivot table', function () {)
+    it('can handle team relationship with custom pivot table', function () {
         $user = User::factory()->create();
 
         $teamsRelation = $user->teams();
@@ -160,7 +160,7 @@ describe('HasTeams Trait', function () {)
         expect($teamsRelation->getTable())->toBe('team_user');
     });
 
-    it('can handle team relationship with correct foreign keys', function () {)
+    it('can handle team relationship with correct foreign keys', function () {
         $user = User::factory()->create();
 
         $teamsRelation = $user->teams();
@@ -171,15 +171,15 @@ describe('HasTeams Trait', function () {)
     });
 });
 
-describe('HasTeams Trait Integration', function () {)
-    it('can be used with User model', function () {)
+describe('HasTeams Trait Integration', function () {
+    it('can be used with User model', function () {
         $user = new User();
 
         expect(method_exists($user, 'teams'))->toBeTrue();
         expect(method_exists($user, 'belongsToTeam'))->toBeTrue();
     });
 
-    it('maintains trait functionality across different users', function () {)
+    it('maintains trait functionality across different users', function () {
         $user1 = User::factory()->create();
         $user2 = User::factory()->create();
 
@@ -189,7 +189,7 @@ describe('HasTeams Trait Integration', function () {)
         expect(method_exists($user2, 'belongsToTeam'))->toBeTrue();
     });
 
-    it('can handle concurrent team checks', function () {)
+    it('can handle concurrent team checks', function () {
         $user = User::factory()->create();
         $team10 = Team::factory()->create();
         $team20 = Team::factory()->create();
@@ -208,7 +208,7 @@ describe('HasTeams Trait Integration', function () {)
         expect($result30)->toBeFalse();
     });
 
-    it('can work with team collections', function () {)
+    it('can work with team collections', function () {
         $user = User::factory()->create();
         $team1 = Team::factory()->create(['name' => 'Team Alpha']);
         $team2 = Team::factory()->create(['name' => 'Team Beta']);
@@ -222,8 +222,8 @@ describe('HasTeams Trait Integration', function () {)
     });
 });
 
-describe('HasTeams Trait Error Handling', function () {)
-    it('handles missing team gracefully', function () {)
+describe('HasTeams Trait Error Handling', function () {
+    it('handles missing team gracefully', function () {
         $user = User::factory()->create();
         $team = Team::factory()->create();
 
@@ -234,7 +234,7 @@ describe('HasTeams Trait Error Handling', function () {)
         expect($result)->toBeFalse();
     });
 
-    it('handles empty team collections', function () {)
+    it('handles empty team collections', function () {
         $user = User::factory()->create();
 
         $userTeams = $user->teams()->get();
@@ -244,7 +244,7 @@ describe('HasTeams Trait Error Handling', function () {)
         expect($userTeams->isEmpty())->toBeTrue();
     });
 
-    it('handles null team parameter', function () {)
+    it('handles null team parameter', function () {
         $user = User::factory()->create();
 
         $result = $user->belongsToTeam(null);
@@ -253,8 +253,8 @@ describe('HasTeams Trait Error Handling', function () {)
     });
 });
 
-describe('HasTeams Trait Performance', function () {)
-    it('can handle large numbers of team checks efficiently', function () {)
+describe('HasTeams Trait Performance', function () {
+    it('can handle large numbers of team checks efficiently', function () {
         $user = User::factory()->create();
         $team2 = Team::factory()->create();
         $team3 = Team::factory()->create();
@@ -275,7 +275,7 @@ describe('HasTeams Trait Performance', function () {)
         expect($executionTime)->toBeLessThan(1.0);
     });
 
-    it('can handle team relationship queries efficiently', function () {)
+    it('can handle team relationship queries efficiently', function () {
         $user = User::factory()->create();
         $teams = Team::factory()->count(10)->create();
 

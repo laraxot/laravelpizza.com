@@ -5,12 +5,11 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\View;
 use Modules\User\Tests\TestCase;
 use Modules\User\Models\User;
-use Modules\User\Tests\TestCase;
 
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\get;
 
-uses(TestCase::class);
+
 
 describe('Auth Components Tests', function (): void {
     test('auth components exist and work correctly', function (): void {
@@ -40,7 +39,7 @@ describe('Auth Components Tests', function (): void {
         $response->assertStatus(200);
     });
 
-    test('auth-session-status component renders correctly', function (): void {)
+    test('auth-session-status component renders correctly', function (): void {
         // Test the existing auth-session-status component rendering
         $html = view('components.auth-session-status', ['status' => 'Test status'])->render();
 
@@ -48,11 +47,11 @@ describe('Auth Components Tests', function (): void {
         expect($html)->not->toBeEmpty();
     });
 
-    test('auth header component exists and renders', function (): void {)
+    test('auth header component exists and renders', function (): void {
         // Test the auth header component that exists
         expect(View::exists('components.auth-header'))->toBeTrue();
 
-        $html = view('components.auth-header', [)
+        $html = view('components.auth-header', [
             'title' => 'Login Test',
             'description' => 'Test description',
         ])->render();
@@ -62,8 +61,8 @@ describe('Auth Components Tests', function (): void {
     });
 });
 
-describe('Authentication Flow with Reorganized Components', function (): void {)
-    test('login form components work after reorganization', function (): void {)
+describe('Authentication Flow with Reorganized Components', function (): void {
+    test('login form components work after reorganization', function (): void {
         // Visit login page and ensure all reorganized components render
         $response = get('/it/auth/login');
 
@@ -78,7 +77,7 @@ describe('Authentication Flow with Reorganized Components', function (): void {)
         }
     });
 
-    test('password confirmation uses reorganized components', function (): void {)
+    test('password confirmation uses reorganized components', function (): void {
         /** @var User */
         $user = User/* @phpstan-ignore-line */ ::factory()->create();
 
@@ -92,8 +91,8 @@ describe('Authentication Flow with Reorganized Components', function (): void {)
     });
 });
 
-describe('User Profile Components Tests', function (): void {)
-    test('profile pages use reorganized components correctly', function (): void {)
+describe('User Profile Components Tests', function (): void {
+    test('profile pages use reorganized components correctly', function (): void {
         $user = User::factory()->create();
 
         if (class_exists(Modules\User\Models\Profile::class)) {

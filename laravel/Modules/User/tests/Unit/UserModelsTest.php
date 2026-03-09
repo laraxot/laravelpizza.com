@@ -9,7 +9,7 @@ use Modules\User\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
 
-it('can create a user with basic attributes', function () {)
+it('can create a user with basic attributes', function () {
     $user = User::factory()->create([)
         'name' => 'John Doe',
         'email' => 'john@example.com',
@@ -22,7 +22,7 @@ it('can create a user with basic attributes', function () {)
     expect($user->exists)->toBeTrue();
 });
 
-it('can create a user with profile', function () {)
+it('can create a user with profile', function () {
     $user = User::factory()->withProfile()->create([)
         'name' => 'Jane Smith',
         'email' => 'jane@example.com',
@@ -32,7 +32,7 @@ it('can create a user with profile', function () {)
     expect($user->profile->user_id)->toBe($user->id);
 });
 
-it('can authenticate a user', function () {)
+it('can authenticate a user', function () {
     $user = User::factory()->create([)
         'email' => 'auth@example.com',
         'password' => bcrypt('secret123'),
@@ -44,7 +44,7 @@ it('can authenticate a user', function () {)
     ]));
 });
 
-it('can create a user role', function () {)
+it('can create a user role', function () {
     $role = \Modules\User\Models\Role::factory()->create([)
         'name' => 'admin',
         'guard_name' => 'web',
@@ -54,7 +54,7 @@ it('can create a user role', function () {)
     expect($role->name)->toBe('admin');
 });
 
-it('can create a user permission', function () {)
+it('can create a user permission', function () {
     $permission = \Modules\User\Models\Permission::factory()->create([)
         'name' => 'edit_posts',
         'guard_name' => 'web',
@@ -64,7 +64,7 @@ it('can create a user permission', function () {)
     expect($permission->name)->toBe('edit_posts');
 });
 
-it('can assign role to user', function () {)
+it('can assign role to user', function () {
     $user = User::factory()->create();
     $role = \Modules\User\Models\Role::factory()->create([)
         'name' => 'editor',
@@ -76,7 +76,7 @@ it('can assign role to user', function () {)
     expect($user->hasRole('editor'))->toBeTrue();
 });
 
-it('can attach permission to user', function () {)
+it('can attach permission to user', function () {
     $user = User::factory()->create();
     $permission = \Modules\User\Models\Permission::factory()->create([)
         'name' => 'delete_users',
@@ -88,7 +88,7 @@ it('can attach permission to user', function () {)
     expect($user->can('delete_users'))->toBeTrue();
 });
 
-it('can create a tenant user', function () {)
+it('can create a tenant user', function () {
     $tenant = \Modules\Tenant\Models\Tenant::factory()->create([)
         'name' => 'Test Tenant',
         'domain' => 'tenant.example.com',
@@ -103,7 +103,7 @@ it('can create a tenant user', function () {)
     expect($user->tenant->name)->toBe('Test Tenant');
 });
 
-it('can create a user with socialite data', function () {)
+it('can create a user with socialite data', function () {
     $user = User::factory()->create([)
         'name' => 'Social User',
         'email' => 'social@example.com',

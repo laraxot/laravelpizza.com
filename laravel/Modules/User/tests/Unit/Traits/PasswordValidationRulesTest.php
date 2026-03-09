@@ -9,7 +9,7 @@ use Modules\User\Traits\PasswordValidationRules;
 
 uses(TestCase::class);
 
-test('PasswordValidationRules trait can be used', function () {)
+test('PasswordValidationRules trait can be used', function () {
     $testClass = new class {
         use PasswordValidationRules;
     };
@@ -17,7 +17,7 @@ test('PasswordValidationRules trait can be used', function () {)
     expect($testClass)->not->toBeNull();
 });
 
-test('PasswordValidationRules trait provides passwordRules method', function () {)
+test('PasswordValidationRules trait provides passwordRules method', function () {
     // getMockBuilder() cannot accept anonymous class names (they contain '@')
     // which is invalid in PHP class name syntax and causes a ParseError).
     // We instantiate an anonymous class directly and call the method.

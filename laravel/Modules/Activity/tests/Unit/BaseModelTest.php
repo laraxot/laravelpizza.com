@@ -15,13 +15,13 @@ class BaseModelTest extends TestCase
     public function base_model_is_abstract(): void
     {
         $reflection = new \ReflectionClass(BaseModel::class);
-        // @var mixed assertTrue($reflection->isAbstract(;
+        $this->assertTrue($reflection->isAbstract();
     }
 
     #[Test]
     public function base_model_extends_xot_base_model(): void
     {
-        // @var mixed assertTrue(is_subclass_of(BaseModel::class, \Modules\Xot\Models\XotBaseModel::class;
+        $this->assertTrue(is_subclass_of(BaseModel::class, \Modules\Xot\Models\XotBaseModel::class);
     }
 
     #[Test]
@@ -34,13 +34,13 @@ class BaseModelTest extends TestCase
 
         // Since BaseModel is abstract, we need to check the default value
         $default = $property->getDefaultValue();
-        // @var mixed assertEquals('activity', $default;
+        $this->assertEquals('activity', $default);
     }
 
     #[Test]
     public function base_model_has_casts_method(): void
     {
         // Test that casts() method exists
-        // @var mixed assertTrue(method_exists(BaseModel::class, 'casts';
+        $this->assertTrue(method_exists(BaseModel::class, 'casts');
     }
 }

@@ -21,18 +21,18 @@ class ConfirmComponent extends Component
     public function confirm(): RedirectResponse
     {
         /*
-         * // @var mixed validate([
+         * $this->validate([
          * 'password' => ['required', 'current_password'],
-         * ]);
+         * ]));
          *
          * session()->put('auth.password_confirmed_at', time());
          *
-         * // @var mixed redirect(
+         * $this->redirect(
          * session('url.intended', '/'),
          * navigate: true
-         * );
+         * ));
          */
-        // @var mixed validate(;
+        $this->validate();
 
         session()->put('auth.password_confirmed_at', time());
 

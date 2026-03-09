@@ -13,7 +13,7 @@ use GuzzleHttp\Psr7\Response;
 use Modules\Geo\Actions\IPGeolocation\FetchIPLocationAction;
 use Modules\Geo\Datas\IPLocationData;
 
-beforeEach(function () {)
+beforeEach(function () {
     $mockHandler = new MockHandler();
     $handlerStack = HandlerStack::create($mockHandler);
     $client = new Client(['handler' => $handlerStack]);

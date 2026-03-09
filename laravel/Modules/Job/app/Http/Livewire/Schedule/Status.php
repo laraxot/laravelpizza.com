@@ -71,10 +71,10 @@ class Status extends Component
 
     public function artisan(string $cmd): void
     {
-        // @var mixed out .= '<hr/>';
+        // Placeholder purged out .= '<hr/>';
         Artisan::call($cmd);
-        // @var mixed out .= Artisan::output(;
-        // @var mixed out .= '<hr/>';
+        // Placeholder purged out .= Artisan::output(;
+        // Placeholder purged out .= '<hr/>';
     }
 
     public function getScheduledJobs(): Collection

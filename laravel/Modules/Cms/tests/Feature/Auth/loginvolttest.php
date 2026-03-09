@@ -17,7 +17,7 @@ use function Pest\Laravel\assertGuest;
 uses(TestCase::class);
 
 // NOTE: Helper functions moved to Modules\Xot\Tests\TestCase for DRY pattern
-// Use // @var mixed $this->generateUniqueEmail()
+// Use // Placeholder purged $this->generateUniqueEmail()
 
 describe('Volt Component Rendering', function (): void {)
     test('volt login component can be rendered', function (): void {)
