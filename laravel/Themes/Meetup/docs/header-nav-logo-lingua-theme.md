@@ -14,6 +14,16 @@ Dropdown in linea con la grafica del sito:
 - Lingue da `config('laravellocalization.supportedLocales')`; link con `LaravelLocalization::getLocalizedURL($code, null, [], true)`
 - Interattività: Alpine.js (`x-data`, `x-show`, `@click.outside`)
 
+## Auth CTA localizzate
+
+- Le CTA guest dell'header non possono usare stringhe hardcoded come `Accedi` o `Registrati`.
+- Devono usare chiavi di traduzione del tema (`pub_theme::navigation.auth.*`) cosi' il prefisso lingua controlla anche le label finali.
+- Gerarchia UI/UX:
+- login come azione secondaria con bordo/ghost button;
+- register come primary CTA piena, piu' evidente e con hit area generosa;
+- stessa semantica su desktop e mobile.
+- Verifica minima: su `/de` il guest header deve mostrare `Anmelden` e `Registrieren`, e non deve mostrare label italiane.
+
 ## Toggle light/dark
 
 Toggle versione chiara / scura con **icone standard** (sole = light, luna = dark):

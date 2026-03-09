@@ -11,7 +11,8 @@ use Modules\Xot\Datas\MetatagData;
 final class PageSchemaBuilder
 {
     /**
-     * @param  array<string, mixed>  $routeParameters
+     * @param array<string, mixed> $routeParameters
+     *
      * @return array<string, mixed>
      */
     public function build(
@@ -19,7 +20,7 @@ final class PageSchemaBuilder
         ?string $routeName,
         string $path,
         array $routeParameters = [],
-        ?Authenticatable $user = null
+        ?Authenticatable $user = null,
     ): array {
         $pageType = $this->resolvePageType($routeName, $path, $routeParameters);
 
@@ -32,14 +33,14 @@ final class PageSchemaBuilder
             'inLanguage' => app()->getLocale(),
         ];
 
-        if ($pageType === 'ProfilePage' && $user !== null) {
+        if ('ProfilePage' === $pageType && null !== $user) {
             $fullName = trim((string) ($user->name ?? ''));
-            if ($fullName === '') {
+            if ('' === $fullName) {
                 $first = trim((string) ($user->first_name ?? ''));
                 $last = trim((string) ($user->last_name ?? ''));
                 $fullName = trim($first.' '.$last);
             }
-            if ($fullName === '') {
+            if ('' === $fullName) {
                 $fullName = 'Profile';
             }
 
@@ -50,11 +51,11 @@ final class PageSchemaBuilder
         }
 
         if (
-            $pageType === 'ItemPage'
-            && ($routeName === 'container0.view' || Str::contains($path, '/events/'))
+            'ItemPage' === $pageType
+            && ('container0.view' === $routeName || Str::contains($path, '/events/'))
             && isset($routeParameters['slug0'])
             && is_string($routeParameters['slug0'])
-            && $routeParameters['slug0'] !== ''
+            && '' !== $routeParameters['slug0']
         ) {
             $schema['mainEntity'] = [
                 '@type' => 'Event',
@@ -66,29 +67,29 @@ final class PageSchemaBuilder
     }
 
     /**
-     * @param  array<string, mixed>  $routeParameters
+     * @param array<string, mixed> $routeParameters
      */
     private function resolvePageType(?string $routeName, string $path, array $routeParameters): string
     {
-        if ($routeName !== null && Str::startsWith($routeName, 'profile.')) {
+        if (null !== $routeName && Str::startsWith($routeName, 'profile.')) {
             return 'ProfilePage';
         }
 
         if (
-            $routeName === 'container0.index'
+            'container0.index' === $routeName
             && (($routeParameters['container0'] ?? null) === 'events' || Str::contains($path, '/events'))
         ) {
             return 'CollectionPage';
         }
 
         if (
-            $routeName === 'container0.view'
+            'container0.view' === $routeName
             && (($routeParameters['container0'] ?? null) === 'events' || Str::contains($path, '/events/'))
         ) {
             return 'ItemPage';
         }
 
-        if ($routeName === 'home' || $path === '/' || $path === '') {
+        if ('home' === $routeName || '/' === $path || '' === $path) {
             return 'WebPage';
         }
 
@@ -101,7 +102,7 @@ final class PageSchemaBuilder
         }
 
         if (
-            ($routeName !== null && Str::startsWith($routeName, 'auth.'))
+            (null !== $routeName && Str::startsWith($routeName, 'auth.'))
             || Str::contains($path, '/auth/')
             || Str::contains($path, '/login')
             || Str::contains($path, '/register')

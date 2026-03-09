@@ -3,24 +3,24 @@
 declare(strict_types=1);
 
 return [
-    'main' => 'Main Navigation',
+    'main' => 'Hauptnavigation',
     'site_title' => 'Laravel Pizza Meetups',
-    'home' => 'Home',
-    'about' => 'About',
-    'contact' => 'Contact',
+    'home' => 'Startseite',
+    'about' => 'Uber uns',
+    'contact' => 'Kontakt',
     'events' => 'Events',
-    'community_chat' => 'Community Chat',
+    'community_chat' => 'Community-Chat',
     'user_menu' => [
         'dashboard' => 'Dashboard',
-        'my_events' => 'My Events',
-        'nearby_events' => 'Nearby Events',
-        'my_profile' => 'My Profile',
+        'my_events' => 'Meine Events',
+        'nearby_events' => 'Events in meiner Nahe',
+        'my_profile' => 'Mein Profil',
         'settings' => 'Settings',
-        'logout' => 'Log out',
+        'logout' => 'Abmelden',
     ],
     'auth' => [
-        'login' => 'Log in',
-        'register' => 'Sign up',
+        'login' => 'Anmelden',
+        'register' => 'Registrieren',
     ],
     'navigation' => [
         'label' => 'Missing Navigation Label',

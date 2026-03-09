@@ -94,14 +94,7 @@ declare(strict_types=1);
                 
             @else
                 <div class="flex items-center w-auto">
-                    <x-ui.button type="secondary" submit="true" tag="a" href="{{ route('login') }}">
-                        {{ __('user::auth.login-in') }}
-                    </x-ui.button>
-                </div>
-                <div class="flex items-center w-auto">
-                    <x-ui.button type="primary" submit="true" tag="a" href="{{ route('register') }}">
-                        {{ __('user::auth.sign-up') }}
-                    </x-ui.button>
+                    @include('pub_theme::components.ui.auth-buttons', ['showLabels' => true, 'size' => 'md'])
                 </div>
             @endauth
 

@@ -5,11 +5,15 @@
  * e <x-filament::icon icon="meetup-{nome}" />. Vedi Modules/Meetup/docs/svg-icons-no-hardcoded-blade.md
  */
 --}}
-<nav class="bg-slate-900/95 backdrop-blur-md border-b border-slate-700 sticky top-0 z-50" role="navigation" aria-label="{{ __('Main navigation') }}" id="main-navigation">
+<nav class="bg-slate-900/95 backdrop-blur-md border-b border-slate-700 sticky top-0 z-50" role="navigation" aria-label="{{ __('pub_theme::navigation.main') }}" id="main-navigation">
+    @php
+        $loginLabel = __('pub_theme::navigation.auth.login');
+        $registerLabel = __('pub_theme::navigation.auth.register');
+    @endphp
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-16">
             <!-- Logo -->
-            <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="flex items-center space-x-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-lg" aria-label="{{ __('Laravel Pizza Meetups - Home') }}">
+            <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="flex items-center space-x-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-lg" aria-label="{{ __('pub_theme::navigation.site_title') }}">
                 <x-filament::icon
                     icon="meetup-logo"
                     class="h-12 w-12 text-red-500 transition-opacity group-hover:opacity-90"
@@ -22,15 +26,15 @@
             <div class="hidden md:flex items-center space-x-6">
                 <!-- WCAG 2.1 AA: text-slate-100 on slate-800 = 9:1 contrast (4.5:1 required) -->
                 <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-slate-100 hover:text-white transition-colors flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" data-nav-link>
-                    <span>{{ __('Home') }}</span>
+                    <span>{{ __('pub_theme::navigation.home') }}</span>
                 </a>
                 <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="text-slate-100 hover:text-white transition-colors flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" data-nav-link>
                     <x-filament::icon icon="meetup-icon-calendar" class="w-4 h-4 text-red-500 group-hover:scale-110 transition-transform" />
-                    <span>{{ __('Events') }}</span>
+                    <span>{{ __('pub_theme::navigation.events') }}</span>
                 </a>
                 <a href="#" class="text-slate-100 hover:text-white transition-colors flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" data-nav-link>
                     <x-filament::icon icon="meetup-icon-chat" class="w-4 h-4 text-red-500 group-hover:scale-110 transition-transform" />
-                    <span>{{ __('Community Chat') }}</span>
+                    <span>{{ __('pub_theme::navigation.community_chat') }}</span>
                 </a>
                 
                 {{-- Language Switcher Component --}}
@@ -40,10 +44,12 @@
             <!-- Auth Toggle -->
             <div class="hidden md:flex items-center space-x-4">
                 @guest
-                    <a href="{{ LaravelLocalization::localizeUrl('/auth/login') }}" class="text-slate-300 hover:text-white font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900 px-3 py-2 rounded-lg hover:bg-slate-700/30">{{ __('Accedi') }}</a>
-                    <a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" class="relative group overflow-hidden bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-xl font-bold tracking-wide transition-all hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900 shadow-lg shadow-red-900/20">
-                        <span class="relative z-10">{{ __('Registrati') }}</span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                    <a href="{{ LaravelLocalization::localizeUrl('/auth/login') }}" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold tracking-tight text-slate-100 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">
+                        {{ $loginLabel }}
+                    </a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-red-500 via-red-600 to-orange-500 px-5 py-2.5 text-sm font-black tracking-[0.02em] text-white shadow-[0_18px_45px_-22px_rgba(239,68,68,0.75)] ring-1 ring-white/10 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_22px_55px_-22px_rgba(249,115,22,0.8)] focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 focus:ring-offset-slate-900">
+                        <span class="relative z-10">{{ $registerLabel }}</span>
+                        <span class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/15 to-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
                     </a>
                 @else
                     @livewire(\Modules\User\Filament\Widgets\UserDropdown::class)
@@ -63,10 +69,10 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden pb-6">
             <div class="flex flex-col space-y-2 pt-4 border-t border-slate-700/50">
-                <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium" data-nav-link>{{ __('Home') }}</a>
+                <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium" data-nav-link>{{ __('pub_theme::navigation.home') }}</a>
                 <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors flex items-center gap-3 font-medium" data-nav-link>
                     <x-filament::icon icon="meetup-icon-calendar" class="w-5 h-5 text-red-500" />
-                    <span>{{ __('Events') }}</span>
+                    <span>{{ __('pub_theme::navigation.events') }}</span>
                 </a>
                 
                 <div class="px-4 py-4 border-t border-slate-700/30 mt-2">
@@ -75,8 +81,8 @@
 
                 @guest
                     <div class="grid grid-cols-1 gap-3 px-4 pt-4 border-t border-slate-700/30">
-                        <a href="{{ LaravelLocalization::localizeUrl('/auth/login') }}" class="text-slate-100 hover:text-white py-3 text-center rounded-xl border border-slate-700 bg-slate-800/50 font-medium">{{ __('Accedi') }}</a>
-                        <a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" class="bg-red-600 text-white py-3 rounded-xl text-center font-bold shadow-lg shadow-red-900/20">{{ __('Registrati') }}</a>
+                        <a href="{{ LaravelLocalization::localizeUrl('/auth/login') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-center text-sm font-semibold tracking-tight text-slate-100 shadow-sm transition-all duration-200 hover:border-white/30 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ $loginLabel }}</a>
+                        <a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-500 via-red-600 to-orange-500 px-4 py-3 text-center text-sm font-black tracking-[0.02em] text-white shadow-[0_18px_45px_-22px_rgba(239,68,68,0.75)] ring-1 ring-white/10 transition-all duration-200 hover:from-red-400 hover:via-red-500 hover:to-orange-400 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 focus:ring-offset-slate-900">{{ $registerLabel }}</a>
                     </div>
                 @else
                     <div class="px-4 py-2 space-y-1">

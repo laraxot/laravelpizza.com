@@ -64,13 +64,13 @@ test('HTML lang attribute matches the requested locale', function (string $local
         return;
     }
 
-    if ($status !== 200) {
+    if (200 !== $status) {
         test()->markTestSkipped("Route /{$locale} returned {$status} (redirect). Cannot check HTML lang attribute.");
 
         return;
     }
 
-    /** @phpstan-ignore-next-line method.nonObject */
+    /* @phpstan-ignore-next-line method.nonObject */
     $response->assertSee('lang="'.$locale.'"', false);
 })->with(function () {
     foreach (supportedTestLocales() as $locale) {
@@ -90,13 +90,13 @@ test('/de route sets German locale', function () {
         return;
     }
 
-    if ($status !== 200) {
+    if (200 !== $status) {
         test()->markTestSkipped("Route /de returned {$status} (redirect). Cannot verify locale.");
 
         return;
     }
 
-    /** @phpstan-ignore-next-line method.nonObject */
+    /* @phpstan-ignore-next-line method.nonObject */
     $response->assertSee('lang="de"', false);
 
     // Verify mcamara has set the locale correctly
@@ -115,13 +115,13 @@ test('/it route sets Italian locale', function () {
         return;
     }
 
-    if ($status !== 200) {
+    if (200 !== $status) {
         test()->markTestSkipped("Route /it returned {$status} (redirect).");
 
         return;
     }
 
-    /** @phpstan-ignore-next-line method.nonObject */
+    /* @phpstan-ignore-next-line method.nonObject */
     $response->assertSee('lang="it"', false);
 
     expect(LaravelLocalization::getCurrentLocale())->toBe('it');
@@ -139,13 +139,13 @@ test('/en route sets English locale', function () {
         return;
     }
 
-    if ($status !== 200) {
+    if (200 !== $status) {
         test()->markTestSkipped("Route /en returned {$status} (redirect).");
 
         return;
     }
 
-    /** @phpstan-ignore-next-line method.nonObject */
+    /* @phpstan-ignore-next-line method.nonObject */
     $response->assertSee('lang="en"', false);
 
     expect(LaravelLocalization::getCurrentLocale())->toBe('en');

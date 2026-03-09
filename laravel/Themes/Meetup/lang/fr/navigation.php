@@ -19,8 +19,8 @@ return [
         'logout' => 'Log out',
     ],
     'auth' => [
-        'login' => 'Log in',
-        'register' => 'Sign up',
+        'login' => 'Se connecter',
+        'register' => 'S\'inscrire',
     ],
     'navigation' => [
         'label' => 'Missing Navigation Label',

@@ -37,12 +37,18 @@
             @guest
                 @if($ctaButton)
                     <a href="{{ $ctaButton['url'] }}"
-                       class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">
+                       class="bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-5 rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-red-900/40">
                         {{ $ctaButton['label'] }}
                     </a>
                 @endif
-                <a href="{{ LaravelLocalization::localizeURL('/login') }}" class="text-gray-200 hover:text-white transition-colors">{{ __('pub_theme::navigation.auth.login') }}</a>
-                <a href="{{ LaravelLocalization::localizeURL('/register') }}" class="text-gray-200 hover:text-white transition-colors">{{ __('pub_theme::navigation.auth.register') }}</a>
+                <a href="{{ LaravelLocalization::localizeUrl('/auth/login') }}" 
+                   class="backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 text-white py-2 px-6 rounded-full transition-all duration-300 font-medium">
+                    {{ __('pub_theme::navigation.auth.login') }}
+                </a>
+                <a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" 
+                   class="bg-red-600 hover:bg-red-500 text-white py-2 px-6 rounded-full transition-all duration-300 font-bold hover:scale-105 shadow-lg shadow-red-900/40">
+                    {{ __('pub_theme::navigation.auth.register') }}
+                </a>
             @else
                 @php
                     $user = Auth::user();
@@ -126,10 +132,16 @@
         @endforeach
     </div>
 
-    <div class="border-t border-slate-700 pt-3 space-y-2">
+    <div class="border-t border-slate-700 pt-3 flex flex-col space-y-3">
         @guest
-            <a href="{{ LaravelLocalization::localizeURL('/login') }}" class="text-gray-200 hover:text-white">{{ __('pub_theme::navigation.auth.login') }}</a>
-            <a href="{{ LaravelLocalization::localizeURL('/register') }}" class="bg-[#ef4444] text-white px-3 py-2 rounded-lg inline-block">{{ __('pub_theme::navigation.auth.register') }}</a>
+            <a href="{{ LaravelLocalization::localizeUrl('/auth/login') }}" 
+               class="backdrop-blur-md bg-white/10 hover:bg-white/20 border border-white/20 text-white py-3 px-4 rounded-xl text-center transition-all duration-300 font-medium">
+                {{ __('pub_theme::navigation.auth.login') }}
+            </a>
+            <a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" 
+               class="bg-red-600 hover:bg-red-500 text-white py-3 px-4 rounded-xl text-center transition-all duration-300 font-bold shadow-lg">
+                {{ __('pub_theme::navigation.auth.register') }}
+            </a>
         @else
             @can('access-dashboard')
                 <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="flex items-center gap-2 hover:text-red-400">

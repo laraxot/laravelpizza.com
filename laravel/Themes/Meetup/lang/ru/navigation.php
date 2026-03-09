@@ -19,8 +19,8 @@ return [
         'logout' => 'Log out',
     ],
     'auth' => [
-        'login' => 'Log in',
-        'register' => 'Sign up',
+        'login' => 'Войти',
+        'register' => 'Регистрация',
     ],
     'navigation' => [
         'label' => 'Missing Navigation Label',

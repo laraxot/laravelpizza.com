@@ -9,7 +9,7 @@ use Modules\User\Models\User;
 
 uses(TestCase::class);
 
-test('header renders correct navigation items for guests', function () {
+test('header renders correct navigation items for guests', function (): void {
     $this->get('/it')
         ->assertStatus(200)
         ->assertSee('Home')
@@ -18,7 +18,7 @@ test('header renders correct navigation items for guests', function () {
         ->assertDontSee('Dashboard');
 });
 
-test('header renders avatar dropdown for authenticated users', function () {
+test('header renders avatar dropdown for authenticated users', function (): void {
     $user = User::factory()->create();
 
     $response = $this->actingAs($user)->get('/it');

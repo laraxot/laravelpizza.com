@@ -27,11 +27,11 @@ class BaseModelFactory extends Factory
     public function definition(): array
     {
         return [
-            'is_active' => $faker->boolean(80)
-            'is_visible' => $faker->boolean(90)
-            'sort_order' => $faker->numberBetween(1, 100)
-            'created_at' => $faker->dateTimeBetween('-1 year', 'now')
-            'updated_at' => $faker->dateTimeBetween('-1 month', 'now')
+            'is_active' => $this->faker->boolean(80),
+            'is_visible' => $this->faker->boolean(90),
+            'sort_order' => $this->faker->numberBetween(1, 100),
+            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
+            'updated_at' => $this->faker->dateTimeBetween('-1 month', 'now'),
         ];
     }
 
@@ -40,7 +40,7 @@ class BaseModelFactory extends Factory
      */
     public function active(): static
     {
-        return $this->state(fn (array $_attributes))
+        return $this->state(fn (array $_attributes) => [
             'is_active' => true,
         ]);
     }
@@ -50,7 +50,7 @@ class BaseModelFactory extends Factory
      */
     public function visible(): static
     {
-        return $this->state(fn (array $_attributes))
+        return $this->state(fn (array $_attributes) => [
             'is_visible' => true,
         ]);
     }

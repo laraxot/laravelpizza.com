@@ -6,7 +6,7 @@ namespace Modules\Cms\Tests\Unit\View\Components;
 
 use Modules\Cms\View\Components\Page;
 
-/**
+/*
  * Pure unit tests for Modules\Cms\View\Components\Page (the Blade VIEW component).
  *
  * Uses only reflection — no database required.
