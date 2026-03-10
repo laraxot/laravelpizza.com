@@ -101,3 +101,4 @@ laravel/coverage-xot/
 .grok
 .opencode
 .ralph
+laravel/database/laravelpizza_data.sqlite
