@@ -233,10 +233,7 @@ class Event extends BaseModel
 
     public function isUserRegistered(string|int $userId): bool
     {
-        return EventUser::query()
-            ->where('event_id', $this->id)
-            ->where('user_id', $userId)
-            ->exists();
+        return $this->attendees()->where('user_id', $userId)->exists();
     }
 
     /**

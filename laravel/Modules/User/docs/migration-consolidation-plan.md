@@ -158,7 +158,7 @@ This plan will consolidate duplicate migrations while preserving data integrity 
 
 This consolidation plan aligns with Laraxot philosophy:
 - ✅ Single source of truth for each table
-- ✅ Predictable migration order
+- ✅ <nome progetto>able migration order
 - ✅ DRY principle compliance
 - ✅ Maintained simplicity
 - ✅ Clear schema definition

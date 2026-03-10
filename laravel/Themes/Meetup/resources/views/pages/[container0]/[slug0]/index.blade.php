@@ -60,10 +60,12 @@ new class extends Component
 
 <x-layouts.app>
     @volt('container0.view')
+    <div>
         <x-page
             side="content"
             :slug="$this->pageSlug"
             :data="$this->data"
         />
+    </div>
     @endvolt
 </x-layouts.app>

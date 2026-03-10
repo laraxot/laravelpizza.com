@@ -13,7 +13,7 @@
             {
                 "type": "text",
                 "data": {
-                    "view": "pub_theme::components.blocks.text",
+                    "view": "pub_theme::components.blocks.legal.article",
                     "title": "Termini e Condizioni",
                     "content": "Contenuto dei termini e condizioni in italiano..."
                 }
@@ -23,7 +23,7 @@
             {
                 "type": "text",
                 "data": {
-                    "view": "pub_theme::components.blocks.text",
+                    "view": "pub_theme::components.blocks.legal.article",
                     "title": "Terms and Conditions",
                     "content": "Terms and conditions content in English..."
                 }
@@ -33,7 +33,7 @@
             {
                 "type": "text",
                 "data": {
-                    "view": "pub_theme::components.blocks.text",
+                    "view": "pub_theme::components.blocks.legal.article",
                     "title": "Allgemeine Geschäftsbedingungen",
                     "content": "Inhalt der allgemeinen Geschäftsbedingungen auf Deutsch..."
                 }

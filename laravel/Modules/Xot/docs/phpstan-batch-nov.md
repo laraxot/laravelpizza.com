@@ -147,7 +147,7 @@ return $schema->components($formSchema);
 9. **ExternalProject** - 0 errori ✨ (USER fix applicati)
 =======
 9. **ModuloEsempio** - 0 errori ✨ (USER fix applicati)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_LIvGYT
 10. **Tenant** - 57 file analizzati, 0 errori (1 errore corretto)
 
@@ -257,7 +257,7 @@ return $schema->components($formSchema);
 4. ExternalProject (30+ errori)
 =======
 4. ModuloEsempio (30+ errori)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_LIvGYT
 5. Tenant (10+ errori)
 6. UI (50+ errori)

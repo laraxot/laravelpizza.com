@@ -76,6 +76,10 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|Tenant                         whereSettings($value)
  * @method static Builder<static>|Tenant                         whereUpdatedBy($value)
  *
+ * @property string|null $trial_ends_at
+ *
+ * @method static Builder<static>|Tenant whereTrialEndsAt($value)
+ *
  * @mixin \Eloquent
  */
 class Tenant extends BaseTenant

@@ -71,7 +71,7 @@ try {
 ### ExternalProject Module
 =======
 ### ModuloEsempio Module
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_g7dRzx
 - Optimize survey contact imports
 - Implement JSON payload persistence

@@ -9,7 +9,7 @@ Questo documento fornisce best practices per implementare Filament Nesting in pr
 Questo documento fornisce best practices per implementare Filament Nesting in progetti Laraxot, basandosi sulla documentazione ufficiale di Filament 5.x e sulla strategia di implementazione nel modulo ExternalProject.
 =======
 Questo documento fornisce best practices per implementare Filament Nesting in progetti Laraxot, basandosi sulla documentazione ufficiale di Filament 5.x e sulla strategia di implementazione nel modulo ModuloEsempio.
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_KE7YG3
 
 ---
@@ -427,7 +427,7 @@ protected static bool $shouldRegisterNavigation = false; // ✅
 - **ExternalProject Nesting Strategy**: `/Modules/ExternalProject/docs/filament-nesting-strategy.md`
 =======
 - **ModuloEsempio Nesting Strategy**: `/Modules/ModuloEsempio/docs/filament-nesting-strategy.md`
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_KE7YG3
 
 ---

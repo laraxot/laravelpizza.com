@@ -16,12 +16,12 @@ Il modulo Tenant gestisce la multi-tenancy dell'applicazione. Ogni tenant ha il 
 
 ```php
 // L'identificazione del tenant avviene via dominio
-// https://acme.quaeris.it -> tenant "acme"
-// https://beta.quaeris.it -> tenant "beta"
+// https://acme.<nome progetto>.it -> tenant "acme"
+// https://beta.<nome progetto>.it -> tenant "beta"
 
 // La connessione database si auto-risolve dal namespace
 // Modules\User\Models\User -> connessione "user"
-// Modules\Quaeris\Models\Survey -> connessione "quaeris"
+// Modules\<nome progetto>\Models\Survey -> connessione "<nome progetto>"
 
 // Config tenant-specific
 // config/acme/app.php sovrascrive config/app.php per tenant "acme"
@@ -106,7 +106,7 @@ config/acme/              # Override per tenant "acme"
 ```php
 // Un tenant puo avere piu domini
 $tenant = Tenant::where('slug', 'acme')->first();
-$tenant->domains; // ['acme.quaeris.it', 'survey.acme.com']
+$tenant->domains; // ['acme.<nome progetto>.it', 'survey.acme.com']
 
 // Il primo dominio e il primario
 // Gli altri sono alias che risolvono allo stesso tenant
@@ -118,7 +118,7 @@ $tenant->domains; // ['acme.quaeris.it', 'survey.acme.com']
 
 ```
 Tenant ──> User       (utenti per tenant, team per tenant)
-Tenant ──> Quaeris    (survey e dashboard per tenant)
+Tenant ──> <nome progetto>    (survey e dashboard per tenant)
 Tenant ──> Limesurvey (survey isolati per tenant)
 Tenant ──> Notify     (comunicazioni per tenant)
 Tenant ──> UI         (tema per tenant)

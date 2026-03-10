@@ -15,13 +15,21 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table))
+<<<<<<< HEAD
+        $this->tableCreate(static function (Blueprint $table): void {
+=======
+        $this->tableCreate(static function (Blueprint $table) {
+>>>>>>> 74e589dbb (.)
             $table->id();
             $table->unsignedBigInteger('permission_id');
             $table->unsignedBigInteger('role_id');
         });
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table))
+<<<<<<< HEAD
+        $this->tableUpdate(function (Blueprint $table): void {
+=======
+        $this->tableUpdate(function (Blueprint $table) {
+>>>>>>> 74e589dbb (.)
             $this->updateTimestamps($table);
 
             // $this->updateUser($table);

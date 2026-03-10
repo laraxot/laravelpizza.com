@@ -73,6 +73,25 @@ test('it resolves profile route as profile page with person main entity', functi
         ->and($schema['mainEntity'])->toHaveKey('name', 'Mario Rossi');
 });
 
+test('it resolves public profile detail route as profile page with person identifier', function (): void {
+    $builder = new PageSchemaBuilder();
+
+    $schema = $builder->build(
+        meta: MetatagData::make(),
+        routeName: 'container0.view',
+        path: 'it/profile/019cca1b-1f72-700a-ba0b-0bb414ca0c88',
+        routeParameters: [
+            'container0' => 'profile',
+            'slug0' => '019cca1b-1f72-700a-ba0b-0bb414ca0c88',
+        ],
+    );
+
+    expect($schema)->toHaveKey('@type', 'ProfilePage')
+        ->and($schema)->toHaveKey('mainEntity')
+        ->and($schema['mainEntity'])->toHaveKey('@type', 'Person')
+        ->and($schema['mainEntity'])->toHaveKey('identifier', '019cca1b-1f72-700a-ba0b-0bb414ca0c88');
+});
+
 test('it keeps auth routes as generic webpage', function (): void {
     $builder = new PageSchemaBuilder();
     $schema = $builder->build(

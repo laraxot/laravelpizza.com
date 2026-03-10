@@ -21,7 +21,7 @@ Il file `config/database.php` deve contenere SOLO la connessione base:
 'mysql' => [
     'driver' => 'mysql',
     'host' => env('DB_HOST', '127.0.0.1'),
-    'database' => env('DB_DATABASE', 'laravelpizza_data'),
+    'database' => env('DB_DATABASE', '<nome progetto>_data'),
     'username' => env('DB_USERNAME', 'marco'),
     'password' => env('DB_PASSWORD', 'marco'),
     // ... configurazione base
@@ -53,7 +53,7 @@ Il file `config/database.php` deve contenere SOLO la connessione base:
 
 ### ✅ File corretti:
 - `laravel/config/database.php` - SOLO connessione base `mysql`
-- `laravel/config/local/laravelpizza/database.php` - configurazione locale
+- `laravel/config/local/<nome progetto>/database.php` - configurazione locale
 - Nessuna definizione manuale di connessioni modulari
 
 ### ✅ Sistema funzionante:
@@ -81,7 +81,7 @@ Il file `config/database.php` deve contenere SOLO la connessione base:
 # .env o .env.testing
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
-DB_DATABASE=laravelpizza_data
+DB_DATABASE=<nome progetto>_data
 DB_USERNAME=marco
 DB_PASSWORD=marco
 ```

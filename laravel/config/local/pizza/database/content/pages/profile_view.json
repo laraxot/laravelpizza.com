@@ -1,0 +1,44 @@
+{
+    "id": "4",
+    "title": {
+        "it": "Profilo pubblico",
+        "en": "Public profile"
+    },
+    "slug": "profile.view",
+    "middleware": null,
+    "content": null,
+    "content_blocks": {
+        "it": [
+            {
+                "type": "profile",
+                "slug": "profile-detail",
+                "data": {
+                    "view": "pub_theme::components.blocks.profile.detail",
+                    "title": "Profilo"
+                }
+            }
+        ],
+        "en": [
+            {
+                "type": "profile",
+                "slug": "profile-detail",
+                "data": {
+                    "view": "pub_theme::components.blocks.profile.detail",
+                    "title": "Profile"
+                }
+            }
+        ]
+    },
+    "sidebar_blocks": {
+        "it": [],
+        "en": []
+    },
+    "footer_blocks": {
+        "it": [],
+        "en": []
+    },
+    "created_at": "2026-03-10T00:00:00.000000Z",
+    "updated_at": "2026-03-10T00:00:00.000000Z",
+    "created_by": null,
+    "updated_by": null
+}

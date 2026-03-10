@@ -157,7 +157,7 @@ namespace Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\
 namespace Modules\ExternalProject\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
 =======
 namespace Modules\ModuloEsempio\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_P23loR
 
 use Filament\Actions\Action;
@@ -170,7 +170,7 @@ use Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\Questi
 use Modules\ExternalProject\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
 =======
 use Modules\ModuloEsempio\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_P23loR
 
 class ViewQuestionChart extends XotBaseViewRecord
@@ -220,7 +220,7 @@ namespace Modules\healthcare_app\Filament\Widgets;
 namespace Modules\ExternalProject\Filament\Widgets;
 =======
 namespace Modules\ModuloEsempio\Filament\Widgets;
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_P23loR
 
 use Filament\Forms\Components\DatePicker;
@@ -293,7 +293,7 @@ namespace Modules\ModuloEsempio\Filament\Resources;
 
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\ModuloEsempio\Models\QuestionChart;
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_P23loR
 
 class QuestionChartResource extends XotBaseResource

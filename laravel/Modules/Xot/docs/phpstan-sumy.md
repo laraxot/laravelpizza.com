@@ -196,7 +196,7 @@ if (null !== $value) {
 <<<<<<< HEAD
 - [PHPStan Code Quality Guide](../phpstan-code-quality-guide.md)
 =======
-- [ExternalProject Corrections](../quaeris/docs/phpstan-corrections-january-2026.md)
+- [ExternalProject Corrections](../<nome progetto>/docs/phpstan-corrections-january-2026.md)
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 >>>>>>> .merge_file_cJoc42
 - [Geo Corrections](../geo/docs/phpstan-corrections-january-2026.md)

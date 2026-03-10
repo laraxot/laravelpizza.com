@@ -11,7 +11,7 @@
 - **Zen Principle**: One truth, many manifestations
 
 #### 2. **Consistency Over Flexibility**
-- **Predictable behavior > Unlimited options**
+- **<nome progetto>able behavior > Unlimited options**
 - Same patterns across all modules, same file structures
 - **Violation Example**: Different test structures across modules
 - **Zen Principle**: Harmony through uniformity
@@ -35,7 +35,7 @@ Xot (Core Engine)
 ├── ExternalProject (Core Business Logic - Surveys)
 =======
 ├── ModuloEsempio (Core Business Logic - Surveys)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_mSTn06
 ├── Cms (Content Management)
 ├── Media (File Management)
@@ -123,7 +123,7 @@ TextInput::make('name');
 #### 3. **ExternalProject Module (The Economy)**
 =======
 #### 3. **ModuloEsempio Module (The Economy)**
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_mSTn06
 - **Role**: Core business logic, surveys, reporting
 - **Power**: Main revenue-generating functionality
@@ -194,7 +194,7 @@ if (isset($model->email)) { ... }
 
 #### 3. **Test Structure Consistency**
 - **Rule**: Tests in traditional Laravel structure only
-- **Reason**: Predictable autoloader behavior
+- **Reason**: <nome progetto>able autoloader behavior
 - **Location**: `Modules/{Module}/tests/`
 
 ## 🎯 Implementation Guidelines
@@ -318,6 +318,6 @@ grep -r "\.navigation" Modules/*/lang/**/*.php
 ---
 
 **Maintained by**: Xot Module (The Laraxot Government)
-**Philosophy**: Consistency, Predictability, Simplicity
+**Philosophy**: Consistency, <nome progetto>ability, Simplicity
 **Goal**: Create a harmonious, maintainable, and scalable application architecture
 

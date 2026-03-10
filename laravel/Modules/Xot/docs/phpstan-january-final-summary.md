@@ -207,8 +207,8 @@ $result = $model->traitMethod();
 <<<<<<< HEAD
 - [PHPStan Corrections - Modulo Esempio](../phpstan-code-quality-guide.md)
 =======
-- [ExternalProject Corrections Parte 1](../quaeris/docs/phpstan-corrections-january-2026.md)
-- [ExternalProject Corrections Parte 2](../quaeris/docs/phpstan-corrections-january-2026-part2.md)
+- [ExternalProject Corrections Parte 1](../<nome progetto>/docs/phpstan-corrections-january-2026.md)
+- [ExternalProject Corrections Parte 2](../<nome progetto>/docs/phpstan-corrections-january-2026-part2.md)
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 >>>>>>> .merge_file_NNONjJ
 

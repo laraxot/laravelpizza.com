@@ -67,7 +67,7 @@ public function get<Nome>Attribute(?type $value): ?type
 ### Scopo Business
 
 **Nei sistemi PA (PTVX)**:
-- Schede valutazione calcolano valori durante edit
+- Scheda valutazione calcola valori durante edit
 - Performance evaluation aggrega dati storici
 - Indennità calcola importi da timbrature
 
@@ -124,7 +124,7 @@ if (null == $this->getKey()) {
 
 6. ⏳ **Rating/Models/Traits/RatingTrait.php**
 7. ⏳ **Ptv/Models/BaseScheda.php**
-8. ⏳ **Progressioni/Models/Schede.php**
+8. ⏳ **Progressioni/Models/Scheda.php**
 9. ⏳ **Performance/Models/StabiDirigente.php**
 10. ⏳ **User/Models/BaseTenant.php**
 
@@ -219,7 +219,7 @@ public function getMediaAttribute(): float {
 **Settimana 2**:
 - [ ] Rating/RatingTrait
 - [ ] Ptv/BaseScheda
-- [ ] Progressioni/Schede
+- [ ] Progressioni/Scheda
 
 **Settimana 3**:
 - [ ] Altri moduli + cleanup finale

@@ -11,7 +11,7 @@
 - **Zen Principle**: One truth, many manifestations
 
 #### 2. **Consistency Over Flexibility**
-- **Predictable behavior > Unlimited options**
+- **<nome progetto>able behavior > Unlimited options**
 - Same patterns across all modules, same file structures
 - **Violation Example**: Different test structures across modules
 - **Zen Principle**: Harmony through uniformity
@@ -186,7 +186,7 @@ if (isset($model->email)) { ... }
 
 #### 3. **Test Structure Consistency**
 - **Rule**: Tests in traditional Laravel structure only
-- **Reason**: Predictable autoloader behavior
+- **Reason**: <nome progetto>able autoloader behavior
 - **Location**: `Modules/{Module}/tests/`
 
 ## 🎯 Implementation Guidelines
@@ -310,6 +310,6 @@ grep -r "\.navigation" Modules/*/lang/**/*.php
 ---
 
 **Maintained by**: Xot Module (The Laraxot Government)
-**Philosophy**: Consistency, Predictability, Simplicity
+**Philosophy**: Consistency, <nome progetto>ability, Simplicity
 **Goal**: Create a harmonious, maintainable, and scalable application architecture
 

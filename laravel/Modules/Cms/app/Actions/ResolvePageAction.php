@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Cms\Datas\ResolvePageData;
 use Modules\Cms\Models\Page as PageModel;
 use Spatie\QueueableAction\QueueableAction;
+use Throwable;
 
 /**
  * Class ResolvePageAction.
@@ -65,6 +66,10 @@ final class ResolvePageAction
 
     private function loadDynamicModel(string $container0, string $slug0): ?object
     {
+        if ('profile' === $container0) {
+            return $this->resolvePublicProfileItem($slug0);
+        }
+
         // Mappature note (Priority 1)
         $knownMappings = [
             'events' => 'Modules\\Meetup\\Models\\Event',
@@ -102,13 +107,54 @@ final class ResolvePageAction
         return null;
     }
 
-    private function queryModel(string $modelClass, string $slug): ?object
+    private function queryModel(string $modelClass, string $identifier): ?object
     {
         if (class_exists($modelClass) && is_subclass_of($modelClass, Model::class)) {
             /** @var Model $model */
             $model = app($modelClass);
+            $candidateKeys = array_values(array_unique([
+                $model->getRouteKeyName(),
+                'slug',
+                'id',
+                'uuid',
+                'user_id',
+                'user_name',
+            ]));
 
-            return $model->newQuery()->where('slug', $slug)->first();
+            foreach ($candidateKeys as $key) {
+                try {
+                    $item = $model->newQuery()->where($key, $identifier)->first();
+                } catch (Throwable) {
+                    continue;
+                }
+
+                if (null !== $item) {
+                    return $item;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    private function resolvePublicProfileItem(string $identifier): ?object
+    {
+        $userClass = 'Modules\\User\\Models\\User';
+        $user = $this->queryModel($userClass, $identifier);
+        if (null !== $user) {
+            return $user;
+        }
+
+        $profileClasses = [
+            'Modules\\Meetup\\Models\\Profile',
+            'Modules\\User\\Models\\Profile',
+        ];
+
+        foreach ($profileClasses as $profileClass) {
+            $profile = $this->queryModel($profileClass, $identifier);
+            if (null !== $profile) {
+                return $profile;
+            }
         }
 
         return null;

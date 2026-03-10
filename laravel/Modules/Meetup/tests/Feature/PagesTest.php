@@ -17,5 +17,5 @@ test('can access terms page', function (): void {
 test('can access privacy page', function (): void {
     $response = $this->get('/it/privacy');
     $response->assertStatus(200)
-             ->assertSee('Privacy Policy');
+             ->assertSee('Informativa sulla Privacy');
 });

@@ -29,6 +29,12 @@
 - [Optimize Filament Memory Command](./memory-optimization-dashboard-fixes.md)
 - [Performance Analysis Guide](./performance-guidelines.md)
 
+### Filament
+- [HasXotForm form() DEVE essere final](./hasxotform-form-final.md) — Regola: form() final, usare getFormSchema()
+
+### PHPStan
+- [phpstan.neon immutabile](./phpstan-neon-immutable.md) — laravel/phpstan.neon è l'unico config, NON modificare, NON creare altri
+
 ### Error Prevention & Fixes
 - [Common PHPStan Errors & Solutions](./analisi-phpstan.md)
 - [Model Casting Migration Guide](./model-casting-rules.md)

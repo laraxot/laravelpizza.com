@@ -7,7 +7,7 @@
 ### Why This Rule Exists
 
 1. **Database Consistency**: Multiple migrations for the same table create confusion about the authoritative schema definition
-2. **Migration Order Issues**: Different timestamps can cause unpredictable execution order in different environments
+2. **Migration Order Issues**: Different timestamps can cause un<nome progetto>able execution order in different environments
 3. **Maintenance Complexity**: Multiple files for the same table make it difficult to track schema changes
 4. **DRY Violation**: Duplicate migrations violate the "Don't Repeat Yourself" principle
 5. **Single Source of Truth**: Each table should have exactly one authoritative migration file

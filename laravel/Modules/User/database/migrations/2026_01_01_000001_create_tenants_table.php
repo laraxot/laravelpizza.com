@@ -17,7 +17,11 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(function (Blueprint $table))
+<<<<<<< HEAD
+        $this->tableCreate(function (Blueprint $table): void {
+=======
+        $this->tableCreate(function (Blueprint $table) {
+>>>>>>> 74e589dbb (.)
             $table->string('id')->primary();
             $table->string('name');
             $table->string('slug')->unique()->nullable();
@@ -29,14 +33,15 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table))
-            if (! $this->hasColumn('settings'))
+<<<<<<< HEAD
+        $this->tableUpdate(function (Blueprint $table): void {
+=======
+        $this->tableUpdate(function (Blueprint $table) {
+>>>>>>> 74e589dbb (.)
+            if (! $this->hasColumn('settings')) {
                 $table->json('settings')->nullable();
             }
-            $this->updateTimestamps()
-                table: $table,
-                hasSoftDeletes: true,
-            );
+            $this->updateTimestamps(table: $table, hasSoftDeletes: true);
         });
     }
 };

@@ -14,7 +14,7 @@ Spostare `UserTypeRegistrationsChartWidget` dal modulo User al modulo appropriat
 Spostare `UserTypeRegistrationsChartWidget` dal modulo User al modulo appropriato (es. ExternalProject). User non può dipendere da moduli business specifici.
 =======
 Spostare `UserTypeRegistrationsChartWidget` dal modulo User al modulo appropriato (es. ModuloEsempio). User non può dipendere da moduli business specifici.
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_hk8a2J
 
 ## Sottotask
@@ -27,7 +27,7 @@ Spostare `UserTypeRegistrationsChartWidget` dal modulo User al modulo appropriat
 - [ ] Analizzare dove collocarlo (ExternalProject o altro modulo)
 =======
 - [ ] Analizzare dove collocarlo (ModuloEsempio o altro modulo)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_hk8a2J
 - [ ] Spostare widget e aggiornare namespace
 - [ ] Rimuovere file originale da User

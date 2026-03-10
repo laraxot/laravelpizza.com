@@ -430,7 +430,7 @@ ImageColumn::configureUsing(fn (ImageColumn $imageColumn) => $imageColumn
 
 ### Consistency
 - **Uniform Interface**: Tutte le classi seguono gli stessi pattern
-- **Predictable Behavior**: Comportamento consistente across modules
+- **<nome progetto>able Behavior**: Comportamento consistente across modules
 - **Standard Conventions**: Naming e structure conventions
 
 ### Maintainability

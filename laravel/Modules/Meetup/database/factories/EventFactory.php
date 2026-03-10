@@ -51,7 +51,7 @@ class EventFactory extends Factory
                 EventAttendanceMode::ONLINE,
                 EventAttendanceMode::MIXED,
             ]),
-            'attendees_count' => $this->faker->numberBetween(0, 50),
+            'attendees_count' => 0,
             'max_attendees' => $this->faker->numberBetween(50, 200),
             'cover_image' => $this->faker->optional()->imageUrl(1200, 630, 'tech', true),
             'url' => $this->faker->optional()->url(),

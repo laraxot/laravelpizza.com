@@ -47,7 +47,7 @@ return [
     'subtitle_start' => 'Oder',
     'subtitle_link' => 'neues Konto erstellen',
     'page' => [
-        'title' => 'Willkommen bei LaravelPizza! 🍕',
+        'title' => 'Willkommen bei <nome progetto>! 🍕',
         'subtitle' => 'Treten Sie der Community von Entwicklern und Pizza-Liebhabern bei',
     ],
     'already_registered' => 'Noch kein Konto?',

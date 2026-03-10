@@ -59,7 +59,7 @@ Themes/[ThemeName]/
 ├── _app_fila5_mono.code-workspace
 =======
 ├── _ptvx_fila5_mono.code-workspace
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_SeKRJk
 ├── package.json
 ├── postcss.config.js
@@ -301,7 +301,7 @@ Themes implement accessibility features while maintaining module functionality:
 
 ### KISS (Keep It Simple, Stupid)
 - Simple theme switching
-- Predictable view resolution
+- <nome progetto>able view resolution
 - Clear separation of concerns
 - Minimal configuration needed
 

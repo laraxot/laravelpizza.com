@@ -25,7 +25,7 @@ Building modular Laravel applications requires a consistent foundation. Without 
 | **Module Developer** | Creates new Laraxot modules | Base classes, generators, conventions |
 | **Theme Developer** | Builds UI themes | Theme registration, component slots |
 | **System Administrator** | Deploys and configures | Health checks, session management, cache |
-| **AI Agent** | Automates code generation | Predictable patterns, strict typing |
+| **AI Agent** | Automates code generation | <nome progetto>able patterns, strict typing |
 
 ## 4. Scope
 

@@ -4,7 +4,7 @@
 
 set -e
 
-MODULES_DIR="/var/www/_bases/base_quaeris_fila5_mono/laravel/Modules"
+MODULES_DIR="/var/www/_bases/base_<nome progetto>_fila5_mono/laravel/Modules"
 
 echo "🔍 Correzione Naming Conventions - Tutti i Moduli"
 echo "================================================"
@@ -51,7 +51,7 @@ tar -czf "$BACKUP_FILE" */docs/ 2>/dev/null || true
 echo ""
 
 # Processa ogni modulo
-for module in Activity AI Blog Chart CloudStorage Cms Comment DbForge Fixcity Gdpr Geo Job Lang Limesurvey Media Notify Quaeris Rating Seo Tenant UI User Xot; do
+for module in Activity AI Blog Chart CloudStorage Cms Comment DbForge Fixcity Gdpr Geo Job Lang Limesurvey Media Notify <nome progetto> Rating Seo Tenant UI User Xot; do
     if [ ! -d "$MODULES_DIR/$module/docs" ]; then
         continue
     fi

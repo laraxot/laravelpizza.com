@@ -99,27 +99,28 @@
                         </div>
                         <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
                             <x-heroicon-o-squares-2x2 class="h-5 w-5 text-slate-500" />
-                            <span>{{ __('Dashboard') }}</span>
+                            <span>{{ __('pub_theme::navigation.user_menu.dashboard') }}</span>
                         </a>
                         <a href="{{ LaravelLocalization::localizeUrl('/events-my') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
                             <x-heroicon-o-calendar class="h-5 w-5 text-slate-500" />
-                            <span>{{ __('I miei eventi') }}</span>
+                            <span>{{ __('pub_theme::navigation.user_menu.my_events') }}</span>
                         </a>
                         <a href="{{ LaravelLocalization::localizeUrl('/events-near-me') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
                             <x-heroicon-o-map-pin class="h-5 w-5 text-slate-500" />
-                            <span>{{ __('Eventi vicini') }}</span>
+                            <span>{{ __('pub_theme::navigation.user_menu.nearby_events') }}</span>
                         </a>
                         <a href="{{ LaravelLocalization::localizeUrl('/profile') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
                             <x-heroicon-o-user class="h-5 w-5 text-slate-500" />
-                            <span>{{ __('Profilo') }}</span>
+                            <span>{{ __('pub_theme::navigation.user_menu.my_profile') }}</span>
                         </a>
                         
                         {{-- In Folio projects, we redirect to localized paths, not named routes --}}
                         <form method="POST" action="/{{ app()->getLocale() }}" class="pt-4 mt-4 border-t border-slate-700/30">
                             @csrf
+                            <input type="hidden" name="_method" value="POST"> {{-- logout often needs a form --}}
                             <button type="submit" class="flex w-full items-center space-x-3 text-red-400 hover:text-red-300 px-4 py-3 hover:bg-red-500/10 rounded-xl transition-colors font-bold block">
                                 <x-heroicon-o-arrow-right-start-on-rectangle class="h-5 w-5" />
-                                <span>{{ __('Esci') }}</span>
+                                <span>{{ __('pub_theme::navigation.user_menu.logout') }}</span>
                             </button>
                         </form>
                     </div>

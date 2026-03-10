@@ -91,9 +91,9 @@ Se la pagina Edit si apre (URL tipo `.../survey-pdfs/16/question-charts/230/edit
 - Se la nested resource definisce i campi solo in un metodo “secondario” (es. `getFormSchemaBySurveyId($survey_id)`) e lascia `getFormSchema()` vuoto o con placeholder, Filament/Xot renderizzano uno schema vuoto → form vuoto in pagina.
 - **Regola**: per le nested resource il form deve essere fornito da `getFormSchema()` della Resource (o dalla Page che override lo schema). Se lo schema dipende dal parent (es. survey_id), va recuperato il parent e usato nel flusso che costruisce lo schema (es. in getFormSchema() o nella pagina).
 
-Vedi: [Quaeris – Perché il form Edit QuestionCharts è vuoto](../../Quaeris/docs/edit-question-chart-form-empty-cause.md).
+Vedi: [<nome progetto> – Perché il form Edit QuestionCharts è vuoto](../../<nome progetto>/docs/edit-question-chart-form-empty-cause.md).
 
 ## Backlinks
 
 - [XotBaseManageRelatedRecords Pattern](../architecture/xot-base-manage-related-records-pattern.md)
-- [Quaeris – Form Edit QuestionCharts vuoto](../../Quaeris/docs/edit-question-chart-form-empty-cause.md)
+- [<nome progetto> – Form Edit QuestionCharts vuoto](../../<nome progetto>/docs/edit-question-chart-form-empty-cause.md)

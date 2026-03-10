@@ -278,7 +278,7 @@ public function redirectToProvider(string $provider)
 *"BaseUser is the bedrock upon which all security stands"*
 - UUID-based identity across all systems
 - Immutable core properties (id, email)
-- Predictable behavior in all contexts
+- <nome progetto>able behavior in all contexts
 
 #### **2. Water (Adaptability)**
 *"Authentication flows like water, taking the shape of any system"*

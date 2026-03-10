@@ -323,7 +323,7 @@ Filament resources integrate with Laraxot's multi-tenancy system:
 - Standardized patterns across all modules
 
 ### KISS (Keep It Simple, Stupid)
-- Clear, predictable inheritance
+- Clear, <nome progetto>able inheritance
 - Minimal configuration required
 - Consistent API across resources
 

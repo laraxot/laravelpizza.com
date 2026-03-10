@@ -54,7 +54,7 @@ All tests **MUST** use `laravel/.env.testing` for configuration.
 
 **Key Requirements**:
 - Database type in `.env.testing` MUST match `.env` (avoid dialect issues)
-- Each module should have its own test database (e.g., `laravelpizza_user_test`)
+- Each module should have its own test database (e.g., `<nome progetto>_user_test`)
 - Use `array` driver for cache and sessions in testing
 - Use `sync` queue connection for immediate execution
 

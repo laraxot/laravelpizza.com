@@ -30,4 +30,4 @@ Allo stesso tempo, documentazione parallela (es. `testing-migrate-env-testing-de
 1.  **Separazione Semantica**: È necessario distinguere tra `user_id` (audit/owner) e `user_id` (business/domain).
 2.  **Ripristino Audit**: Se Laraxot richiede `user_id` di audit, esso deve essere presente in `timestamps()`.
 3.  **Gestione Conflitti**: Nelle tabelle dove `user_id` è una colonna di dominio, si deve usare un helper che NON aggiunga la versione di audit (es. `updateTimestamps()`) oppure gestire esplicitamente le collisioni.
-4.  **Inconsistenza Testing**: Attualmente il database di test `laravelpizza_data_test` è in uno stato inconsistente (tabelle migrate ma con schemi incompleti). Si consiglia una revisione sistematica dei pivot.
+4.  **Inconsistenza Testing**: Attualmente il database di test `<nome progetto>_data_test` è in uno stato inconsistente (tabelle migrate ma con schemi incompleti). Si consiglia una revisione sistematica dei pivot.

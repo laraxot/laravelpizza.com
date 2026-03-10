@@ -15,7 +15,7 @@
 Laraxot is built on the **DRY (Don't Repeat Yourself)** and **KISS (Keep It Simple, Stupid)** principles with a strong emphasis on:
 
 - **Modularity**: Everything is organized into independent modules
-- **Inheritance Chain**: Clear, predictable inheritance patterns
+- **Inheritance Chain**: Clear, <nome progetto>able inheritance patterns
 - **Convention over Configuration**: Predefined patterns that reduce decision-making
 - **Separation of Concerns**: Clear boundaries between different system components
 
@@ -183,4 +183,4 @@ Laraxot is not just a framework but a **way of thinking** about application deve
 - **Inheritance over Composition**: Clear inheritance chains for maintainability
 - **Type Safety over Speed**: Strong typing for long-term maintainability
 
-This architecture creates a harmonious system where all components work together in a predictable, maintainable way that supports the DRY and KISS principles while providing the flexibility needed for complex applications.
+This architecture creates a harmonious system where all components work together in a <nome progetto>able, maintainable way that supports the DRY and KISS principles while providing the flexibility needed for complex applications.

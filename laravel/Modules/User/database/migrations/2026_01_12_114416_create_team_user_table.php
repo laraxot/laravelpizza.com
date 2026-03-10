@@ -23,7 +23,11 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table))
+<<<<<<< HEAD
+        $this->tableCreate(static function (Blueprint $table): void {
+=======
+        $this->tableCreate(static function (Blueprint $table) {
+>>>>>>> 74e589dbb (.)
             $table->id();
             $table->foreignId('team_id')->constrained('teams')->cascadeOnDelete();
             $table->uuid('user_id')->nullable()->index();
@@ -38,43 +42,44 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table))
+<<<<<<< HEAD
+        $this->tableUpdate(function (Blueprint $table): void {
+=======
+        $this->tableUpdate(function (Blueprint $table) {
+>>>>>>> 74e589dbb (.)
             // Se la tabella esiste già con id UUID, convertiamo a autoincrement
-            if ($hasColumn('id'))
+            if ($this->hasColumn('id')) {
                 // Rimuoviamo la PRIMARY KEY esistente
                 $this->dropPrimaryKey();
 
                 // Se non esiste già, rinominiamo id a uuid per preservare i dati
-                if (! $this->hasColumn('uuid'))
+                if (! $this->hasColumn('uuid')) {
                     $this->renameColumn('id', 'uuid');
                 }
 
                 // Aggiungiamo la nuova colonna id come bigint autoincrement
-                if (! $this->hasColumn('id'))
+                if (! $this->hasColumn('id')) {
                     $table->id()->first();
                 }
 
                 // Impostiamo la nuova PRIMARY KEY su id
-                $this->query('ALTER TABLE `'.$this->table_name.'` ADD PRIMARY KEY (`id`));
+                $this->query('ALTER TABLE `'.$this->table_name.'` ADD PRIMARY KEY (`id`)');
             }
 
-            if (! $this->hasColumn('role'))
+            if (! $this->hasColumn('role')) {
                 $table->string('role')->nullable();
             }
 
-            if (! $this->hasColumn('permissions'))
+            if (! $this->hasColumn('permissions')) {
                 $table->json('permissions')->nullable();
             }
 
-            if (! $this->hasColumn('joined_at'))
+            if (! $this->hasColumn('joined_at')) {
                 $table->timestamp('joined_at')->nullable();
             }
 
             // Aggiorniamo i timestamp e soft deletes
-            $this->updateTimestamps()
-                table: $table,
-                hasSoftDeletes: true,
-            );
+            $this->updateTimestamps(table: $table, hasSoftDeletes: true);
             /*
             // Aggiungiamo l'indice univoco se non esiste già
             // Verifichiamo tramite query SQL se l'indice esiste

@@ -1,26 +1,15 @@
 <?php
+
+declare(strict_types=1);
+
 use Livewire\Volt\Component;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
-use Modules\Cms\Models\Page;
-use Modules\Tenant\Services\TenantService;
 
 use function Laravel\Folio\middleware;
 use function Laravel\Folio\name;
 
-/** @var array */
-// $middleware=TenantService::config('middleware');
-// $base_middleware=Arr::get($middleware,'base',[]);
-
-$base_middleware = [];
-
 name('pages.view');
-/*
-if(isset($slug)){
-    $middleware=Page::getMiddlewareBySlug($slug);
-    middleware($middleware);
-}
-*/
 middleware(PageSlugMiddleware::class);
 
 new class extends Component
@@ -31,31 +20,61 @@ new class extends Component
 ?>
 
 @php
-// Check if slug is a locale - redirect to home with that locale
+use Illuminate\Support\Str;
+
 $locales = array_keys(config('laravellocalization.supportedLocales', ['it' => []]));
 if (in_array($slug, $locales, true)) {
     LaravelLocalization::setLocale($slug);
     app()->setLocale($slug);
-
-    // This is a locale, redirect to home page with this locale
-    // Actually, just render the home page instead
     $slug = 'home';
 }
 
-// Check if this is an auth route and redirect to the appropriate auth page
 $authRoutes = ['login', 'register', 'password', 'verify'];
-if (in_array($slug, $authRoutes)) {
-    $authPage = 'auth.' . $slug;
+if (in_array($slug, $authRoutes, true)) {
+    $authPage = 'auth.'.$slug;
     echo view($authPage);
     return;
 }
 
+$renderProfilePage = null;
+if (isset($slug) && Str::startsWith($slug, 'profile/')) {
+    $profileUuid = Str::after($slug, 'profile/');
+    $profileUser = \Modules\User\Models\User::where('id', $profileUuid)->first();
+    
+    if ($profileUser) {
+        $renderProfilePage = $profileUser;
+    }
+}
 @endphp
 
-<x-layouts.app>
-    @volt('pages.view')
-    <div>
-        <x-page side="content" :slug="$slug" />
-    </div>
-    @endvolt
-</x-layouts.app>
+@if($renderProfilePage)
+    <x-layouts.app>
+        <div class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-red-900 py-12 px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-slate-800/80 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50">
+                    <div class="flex items-center gap-6 mb-8">
+                        @if($renderProfilePage->profile_photo_url)
+                            <img src="{{ $renderProfilePage->profile_photo_url }}" alt="{{ $renderProfilePage->name }}" class="w-24 h-24 rounded-full object-cover border-4 border-red-500/50">
+                        @else
+                            <div class="w-24 h-24 rounded-full bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center text-4xl font-bold text-white">
+                                {{ strtoupper(substr($renderProfilePage->name ?? 'U', 0, 1)) }}
+                            </div>
+                        @endif
+                        <div>
+                            <h1 class="text-3xl font-bold text-white">{{ $renderProfilePage->name }}</h1>
+                            <p class="text-slate-400">{{ $renderProfilePage->email }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </x-layouts.app>
+@else
+    <x-layouts.app>
+        @volt('pages.view')
+            <div>
+                <x-page side="content" :slug="$slug" />
+            </div>
+        @endvolt
+    </x-layouts.app>
+@endif

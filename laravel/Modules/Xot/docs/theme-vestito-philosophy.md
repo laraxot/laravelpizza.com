@@ -297,7 +297,7 @@ Themes implement accessibility features while maintaining module functionality:
 
 ### KISS (Keep It Simple, Stupid)
 - Simple theme switching
-- Predictable view resolution
+- <nome progetto>able view resolution
 - Clear separation of concerns
 - Minimal configuration needed
 

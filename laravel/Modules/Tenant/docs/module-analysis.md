@@ -57,7 +57,7 @@ The Tenant module provides comprehensive multi-tenancy functionality:
 ## Integration with Other Modules
 - **User**: Tenant-user relationships
 - **Xot**: Base tenant infrastructure
-- **Quaeris**: Survey data per-tenant isolation
+- **<nome progetto>**: Survey data per-tenant isolation
 - **Limesurvey**: Tenant-specific survey access
 - **Filament**: Tenant administration interface
 

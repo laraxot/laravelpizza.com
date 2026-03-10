@@ -313,7 +313,7 @@ php artisan queue:prune-failed --hours=48
 - [ ] **User Analytics**
   - Activity metrics
   - Engagement tracking
-  - Churn prediction
+  - Churn <nome progetto>ion
 
 ---
 

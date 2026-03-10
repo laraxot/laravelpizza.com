@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
-// use Laravel\Passport\AccessToken as PassportAccessToken;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
-use Laravel\Passport\Token as PassportToken;
+use Laravel\Passport\AccessToken as PassportAccessToken;
 use Modules\Xot\Contracts\UserContract;
 
 /**
@@ -58,10 +57,25 @@ use Modules\Xot\Contracts\UserContract;
  *
  * @mixin \Eloquent
  */
-class OauthAccessToken extends PassportToken
+class OauthAccessToken extends PassportAccessToken
 {
     /** @var string */
     protected $connection = 'user';
 
-    // protected $fillable = ['id', 'user_id', 'client_id', 'name', 'scopes', 'revoked', 'expires_at'];
+    /**
+     * Get the user that the access token belongs to.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        /** @var string|null $userModel */
+        $userModel = config('auth.providers.users.model');
+        if (null === $userModel) {
+            // Fallback to a safe default or return an empty relation
+            return $this->belongsTo(self::class, 'id', 'id')->whereRaw('1=0');
+        }
+
+        return $this->belongsTo($userModel, 'user_id');
+    }
 }

@@ -5,7 +5,7 @@
 La documentazione del progetto è organizzata in modo gerarchico:
 
 ```
-base_predict_fila5_mono/
+base_<nome progetto>_fila5_mono/
 ├── docs/                           # Documentazione globale del progetto
 │   ├── ARCHITECTURE.md            # Architettura generale
 │   ├── MODULES.md                 # Panoramica dei moduli

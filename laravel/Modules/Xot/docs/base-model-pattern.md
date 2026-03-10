@@ -204,7 +204,7 @@ class SurveyPdf extends BaseModel
 
 ### KISS (Keep It Simple, Stupid)
 - Clear inheritance chain
-- Predictable patterns
+- <nome progetto>able patterns
 - Minimal configuration needed
 
 ## Type Safety and Contracts

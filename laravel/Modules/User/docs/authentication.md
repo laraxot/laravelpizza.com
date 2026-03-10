@@ -1,7 +1,7 @@
-# Autenticazione in Predict
+# Autenticazione in <nome progetto>
 
 ## Panoramica
-Il sistema di autenticazione in Predict è basato su Laravel Volt e supporta sia l'autenticazione tradizionale che quella sociale.
+Il sistema di autenticazione in <nome progetto> è basato su Laravel Volt e supporta sia l'autenticazione tradizionale che quella sociale.
 
 ## Configurazione
 

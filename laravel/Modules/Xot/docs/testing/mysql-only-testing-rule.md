@@ -20,11 +20,11 @@ Il file `.env.testing` deve essere una copia esatta del `.env` con **una sola mo
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=laravelpizza_data
+DB_DATABASE=<nome progetto>_data
 DB_USERNAME=marco
 DB_PASSWORD=marco
 
-DB_DATABASE_USER=laravelpizza_user
+DB_DATABASE_USER=<nome progetto>_user
 DB_USERNAME_USER=marco
 DB_PASSWORD_USER=marco
 ```
@@ -34,11 +34,11 @@ DB_PASSWORD_USER=marco
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=laravelpizza_data_test
+DB_DATABASE=<nome progetto>_data_test
 DB_USERNAME=marco
 DB_PASSWORD=marco
 
-DB_DATABASE_USER=laravelpizza_user_test
+DB_DATABASE_USER=<nome progetto>_user_test
 DB_USERNAME_USER=marco
 DB_PASSWORD_USER=marco
 ```
@@ -46,15 +46,15 @@ DB_PASSWORD_USER=marco
 ### ❌ MAI FARE QUESTO (ERRORI GRAVI)
 ```bash
 # ❌ SBAGLIATO - Inventare database che NON esistono nel .env
-NOTIFY_DB_DATABASE=laravelpizza_data_test
-GEO_DB_DATABASE=laravelpizza_data_test
-MEDIA_DB_DATABASE=laravelpizza_data_test
+NOTIFY_DB_DATABASE=<nome progetto>_data_test
+GEO_DB_DATABASE=<nome progetto>_data_test
+MEDIA_DB_DATABASE=<nome progetto>_data_test
 
 # ❌ SBAGLIATO - Cambiare struttura connessioni
 DB_CONNECTION=user
 
 # ❌ SBAGLIATO - Usare database diversi da quelli nel .env
-DB_DATABASE=laravelpizza_notify_test
+DB_DATABASE=<nome progetto>_notify_test
 ```
 
 ### ❌ REGOLA CRITICA: config/database.php
@@ -67,12 +67,12 @@ Le connessioni per i moduli (notify, geo, media, etc.) vengono create **automati
 // ❌ SBAGLIATO - Non fare mai questo nel database.php
 'notify' => [
     'driver' => 'mysql',
-    'database' => env('NOTIFY_DB_DATABASE', 'laravelpizza_notify_test'),
+    'database' => env('NOTIFY_DB_DATABASE', '<nome progetto>_notify_test'),
     ...
 ],
 'geo' => [
     'driver' => 'mysql',
-    'database' => env('GEO_DB_DATABASE', 'laravelpizza_geo_test'),
+    'database' => env('GEO_DB_DATABASE', '<nome progetto>_geo_test'),
     ...
 ],
 

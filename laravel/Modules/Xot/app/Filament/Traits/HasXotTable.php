@@ -70,6 +70,17 @@ trait HasXotTable
      */
     public function getTableHeaderActions(): array
     {
+        $resource = $this;
+        /* @phpstan-ignore-next-line */
+        if ($this instanceof ListRecords) {
+            $resourceClass = $this->getResource();
+            // @phpstan-ignore-next-line staticMethod.alreadyNarrowedType
+            Assert::string($resourceClass);
+            $resource = app($resourceClass);
+        }
+
+        // dddx(method_exists($resource, 'canAttach'));
+
         $actions = [];
 
         $actions['create'] = CreateAction::make();
@@ -80,11 +91,12 @@ trait HasXotTable
                 ->icon('heroicon-o-paper-clip');
         }
 
-        if ($this->shouldShowAttachAction()) {
+        if (method_exists($resource, 'canAttach')) {
             $actions['attach'] = AttachAction::make()
-                ->label('')
                 ->icon('heroicon-o-link')
-                ->preloadRecordSelect();
+                ->iconButton()
+                ->visible(fn (): bool => (bool) $resource->canAttach())
+                ;
         }
 
         $actions['layout'] = TableLayoutToggleTableAction::make('layout');
@@ -204,12 +216,12 @@ trait HasXotTable
         // Configurazioni opzionali personalizzabili
         $sortColumn = $this->getDefaultTableSortColumn();
         $sortDirection = $this->getDefaultTableSortDirection();
-        if ($sortColumn !== null && $sortDirection !== null) {
+        if (null !== $sortColumn && null !== $sortDirection) {
             $table = $table->defaultSort($sortColumn, $sortDirection);
         }
 
         $pollInterval = $this->getTablePollInterval();
-        if ($pollInterval !== null) {
+        if (null !== $pollInterval) {
             $table = $table->poll($pollInterval);
         }
 
@@ -251,7 +263,7 @@ trait HasXotTable
 
         $actions = [];
         $resource = $this;
-        /** @phpstan-ignore-next-line */
+        /* @phpstan-ignore-next-line */
         if ($this instanceof ListRecords) {
             $resourceClass = $this->getResource();
             // @phpstan-ignore-next-line staticMethod.alreadyNarrowedType
@@ -339,10 +351,9 @@ trait HasXotTable
     /**
      * Get model class.
      *
+     * @throws \Exception Se non viene trovata una classe modello valida
      *
      * @return class-string<Model>
-     *
-     * @throws \Exception Se non viene trovata una classe modello valida
      */
     public function getModelClass(): string
     {

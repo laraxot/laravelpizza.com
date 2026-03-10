@@ -13,7 +13,7 @@
             {
                 "type": "text",
                 "data": {
-                    "view": "pub_theme::components.blocks.text",
+                    "view": "pub_theme::components.blocks.legal.article",
                     "title": "Informativa sulla Privacy",
                     "content": "Contenuto dell'informativa sulla privacy in italiano..."
                 }
@@ -23,7 +23,7 @@
             {
                 "type": "text",
                 "data": {
-                    "view": "pub_theme::components.blocks.text",
+                    "view": "pub_theme::components.blocks.legal.article",
                     "title": "Privacy Policy",
                     "content": "Privacy policy content in English..."
                 }
@@ -33,7 +33,7 @@
             {
                 "type": "text",
                 "data": {
-                    "view": "pub_theme::components.blocks.text",
+                    "view": "pub_theme::components.blocks.legal.article",
                     "title": "Datenschutzerklärung",
                     "content": "Inhalt der Datenschutzerklärung auf Deutsch..."
                 }

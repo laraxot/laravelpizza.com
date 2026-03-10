@@ -9,7 +9,7 @@ Every entity has exactly ONE authoritative definition:
 - **Models**: One inheritance chain per model type
 
 ### 2. **Consistency Over Flexibility**
-Predictable behavior is more valuable than unlimited options:
+<nome progetto>able behavior is more valuable than unlimited options:
 - Same file structure across all modules
 - Same inheritance patterns for all models
 - Same migration philosophy for all tables
@@ -155,7 +155,7 @@ composer dump-autoload
 ## 🎯 Why These Principles Matter
 
 ### Technical Benefits
-- **Predictable Autoloading**: No ambiguous class resolution
+- **<nome progetto>able Autoloading**: No ambiguous class resolution
 - **Reliable Test Execution**: Consistent test discovery
 - **Easy Maintenance**: Clear, unambiguous code structure
 - **Fast Debugging**: Obvious source of truth for each entity
@@ -203,4 +203,4 @@ class Permission extends BaseModel  // ❌ Should extend SpatiePermission
 
 ---
 
-**Philosophy Summary**: Laraxot values simplicity, consistency, and predictability above all else. Follow these principles to build maintainable, scalable applications with minimal technical debt.
+**Philosophy Summary**: Laraxot values simplicity, consistency, and <nome progetto>ability above all else. Follow these principles to build maintainable, scalable applications with minimal technical debt.

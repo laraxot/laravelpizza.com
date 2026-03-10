@@ -59,7 +59,7 @@ Verificare **TUTTI i moduli** per accessor che chiamano `save()` senza guard `if
 ### ⏳ Progressioni - DA VERIFICARE
 
 **File Principali**:
-1. `Models/Schede.php` - Da verificare
+1. `Models/Scheda.php` - Da verificare
 2. `Models/Pesi.php` - Da verificare
 3. `Models/MaxCatecoPosfunAnno.php` - Da verificare
 

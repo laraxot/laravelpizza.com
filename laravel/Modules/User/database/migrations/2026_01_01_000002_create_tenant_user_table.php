@@ -12,7 +12,11 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table))
+<<<<<<< HEAD
+        $this->tableCreate(static function (Blueprint $table): void {
+=======
+        $this->tableCreate(static function (Blueprint $table) {
+>>>>>>> 74e589dbb (.)
             // $table->uuid('id')->primary();
             $table->id();
             $table->foreignId('tenant_id');
@@ -24,11 +28,16 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table))
+<<<<<<< HEAD
+        $this->tableUpdate(function (Blueprint $table): void {
+            $this->updateTimestamps(table: $table, hasSoftDeletes: true);
+=======
+        $this->tableUpdate(function (Blueprint $table) {
             $this->updateTimestamps()
                 table: $table,
                 hasSoftDeletes: true,
             );
+>>>>>>> 74e589dbb (.)
         });
     }
 };

@@ -4,10 +4,10 @@ La **risoluzione del tema** dipende dal modulo Tenant: il nome tenant determina 
 
 ## Catena
 
-1. **`APP_URL`** (`.env`) → es. `http://laravelpizza.local`
-2. **`GetTenantNameAction::execute()`** → ricava l’host da `config('app.url')` (o `$_SERVER['SERVER_NAME']`), inverte le parti (es. `laravelpizza.local` → `local/laravelpizza`)
-3. **Cartella config** → `config_path($tenantName)` = `laravel/config/local/laravelpizza/`
-4. **`TenantService::getConfig('xra')`** → carica `config/local/laravelpizza/xra.php`
+1. **`APP_URL`** (`.env`) → es. `http://<nome progetto>.local`
+2. **`GetTenantNameAction::execute()`** → ricava l’host da `config('app.url')` (o `$_SERVER['SERVER_NAME']`), inverte le parti (es. `<nome progetto>.local` → `local/<nome progetto>`)
+3. **Cartella config** → `config_path($tenantName)` = `laravel/config/local/<nome progetto>/`
+4. **`TenantService::getConfig('xra')`** → carica `config/local/<nome progetto>/xra.php`
 5. **`pub_theme`** → in `xra.php` la chiave `pub_theme` (es. `'Meetup'`) identifica il tema pubblico
 6. **Percorso tema** → `laravel/Themes/{pub_theme}` (es. `laravel/Themes/Meetup`)
 

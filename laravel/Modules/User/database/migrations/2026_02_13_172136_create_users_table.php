@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /*
@@ -19,7 +20,11 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table))
+<<<<<<< HEAD
+        $this->tableCreate(static function (Blueprint $table): void {
+=======
+        $this->tableCreate(static function (Blueprint $table) {
+>>>>>>> 74e589dbb (.)
             // $table->uuid('id')->primary();
             $table->string('id', 36)->primary();
             $table->string('name')->nullable();
@@ -35,55 +40,63 @@ return new class extends XotBaseMigration {
         });
 
         // Aggiunge lang solo se non esiste
-        $this->tableUpdate(function (Blueprint $table))
-            if (! $this->hasColumn('first_name'))
+<<<<<<< HEAD
+        $this->tableUpdate(function (Blueprint $table): void {
+=======
+        $this->tableUpdate(function (Blueprint $table) {
+>>>>>>> 74e589dbb (.)
+            if (! $this->hasColumn('first_name')) {
                 $table->string('first_name')->after('name')->nullable();
             } else {
                 $table->string('first_name')->nullable()->change();
             }
 
-            if (! $this->hasColumn('last_name'))
+            if (! $this->hasColumn('last_name')) {
                 $table->string('last_name')->after('name')->nullable();
             } else {
                 $table->string('last_name')->nullable()->change();
             }
 
-            if (! $this->hasColumn('current_team_id'))
+            if (! $this->hasColumn('current_team_id')) {
                 $table->foreignId('current_team_id')->nullable();
             }
 
-            if (! $this->hasColumn('profile_photo_path'))
+            if (! $this->hasColumn('profile_photo_path')) {
                 $table->string('profile_photo_path', 2048)->nullable();
             }
 
-            if (! $this->hasColumn('lang'))
+            if (! $this->hasColumn('lang')) {
                 $table->string('lang', 3)->nullable();
             }
 
-            if (! $this->hasColumn('is_active'))
+            if (! $this->hasColumn('is_active')) {
                 $table->boolean('is_active')->default(true);
             }
 
-            if (! $this->hasColumn('type'))
+            if (! $this->hasColumn('type')) {
                 $table->string('type')->default('customer_user')->after('is_active');
             }
 
-            if (! $this->hasColumn('state'))
+            if (! $this->hasColumn('state')) {
                 $table->string('state')->default('active')->after('type');
             }
 
-            if (! $this->hasColumn('is_otp'))
+            if (! $this->hasColumn('is_otp')) {
                 $table->boolean('is_otp')->default(false);
             }
 
-            if (! $this->hasColumn('password_expires_at'))
+            if (! $this->hasColumn('password_expires_at')) {
                 $table->timestamp('password_expires_at')->nullable();
             }
-            if ($hasColumn('password'))
+<<<<<<< HEAD
+
+=======
+>>>>>>> 74e589dbb (.)
+            if ($this->hasColumn('password')) {
                 $table->string('password')->nullable()->change();
             }
 
-            if ('uuid' === $this->getColumnType('id'))
+            if ('uuid' === $this->getColumnType('id')) {
                 Schema::disableForeignKeyConstraints();
 
                 $table->dropPrimary(['id']);
@@ -95,11 +108,11 @@ return new class extends XotBaseMigration {
             // $this->updateUser($table);
             $this->updateTimestamps($table, true);
 
-            if (! $this->hasColumn('lang'))
+            if (! $this->hasColumn('lang')) {
                 $table->string('lang', 5)->default('it')->after('state');
             }
 
-            if (! $this->hasColumn('uuid'))
+            if (! $this->hasColumn('uuid')) {
                 $table->uuid('uuid')->nullable()->unique()->after('id');
             }
         });

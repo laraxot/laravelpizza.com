@@ -8,7 +8,7 @@
 
 ### Why This Architecture Matters
 
-1. **Predictable Schema Evolution**: Clear, linear progression of database changes
+1. **<nome progetto>able Schema Evolution**: Clear, linear progression of database changes
 2. **Environment Consistency**: Same migration order across all environments
 3. **Maintainability**: Single file to modify for each table's base schema
 4. **DRY Compliance**: Eliminates redundant schema definitions

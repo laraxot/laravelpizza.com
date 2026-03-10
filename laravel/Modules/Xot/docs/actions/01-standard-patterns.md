@@ -36,7 +36,7 @@ This document details mandatory rules and best practices for executing Spatie Qu
 ### Rule 2: Use `execute()` as the Primary Action Entry Point
 
 *   **Description**: When interacting with Spatie Queueable Actions, always invoke the `execute()` method. Other public methods within an Action should be considered internal helpers or specific sub-tasks, not the main entry point for the Action's business logic.
-*   **Motivation**: This enforces a consistent API for all Actions, making them predictable, easier to test, and suitable for queuing. It aligns with the contract implied by `Spatie\QueueableAction\QueueableAction`.
+*   **Motivation**: This enforces a consistent API for all Actions, making them <nome progetto>able, easier to test, and suitable for queuing. It aligns with the contract implied by `Spatie\QueueableAction\QueueableAction`.
 *   **❌ Incorrect**:
     ```php
     app(CreateUserAction::class)->createSpecificUser(...); // Assumes createSpecificUser is the main logic

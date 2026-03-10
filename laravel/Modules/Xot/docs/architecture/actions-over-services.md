@@ -141,7 +141,7 @@ namespace Modules\healthcare_app\Filament\Widgets;
 namespace Modules\ExternalProject\Filament\Widgets;
 =======
 namespace Modules\ModuloEsempio\Filament\Widgets;
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_2ctWg2
 
 use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
@@ -181,10 +181,10 @@ class SimpleChartWidget extends XotBaseChartWidget
 - [Chart Widget Best Practices (healthcare_app)](../../../healthcare_app/docs/chart-widget-best-practices.md)
 =======
 <<<<<<< HEAD
-- [Chart Widget Best Practices (ExternalProject)](../../../quaeris/docs/chart-widget-best-practices.md)
+- [Chart Widget Best Practices (ExternalProject)](../../../<nome progetto>/docs/chart-widget-best-practices.md)
 =======
 - [Chart Widget Best Practices (ModuloEsempio)](../../../ptvx/docs/chart-widget-best-practices.md)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_2ctWg2
 - [Critical No Services Rule](../critical-no-services-rule.md)
 ```

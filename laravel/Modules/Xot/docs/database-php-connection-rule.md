@@ -14,14 +14,14 @@ I file `config/*/database.php` NON devono contenere connessioni hardcoded per i 
     // ❌ SBAGLIATO - Non definire connessioni modulo!
     'notify' => [
         'driver' => 'mysql',
-        'database' => env('NOTIFY_DB_DATABASE', 'laravelpizza_notify_test'),
+        'database' => env('NOTIFY_DB_DATABASE', '<nome progetto>_notify_test'),
         'username' => env('NOTIFY_DB_USERNAME', 'root'),
         'password' => env('NOTIFY_DB_PASSWORD', ''),
         ...
     ],
     'geo' => [
         'driver' => 'mysql',
-        'database' => env('GEO_DB_DATABASE', 'laravelpizza_geo_test'),
+        'database' => env('GEO_DB_DATABASE', '<nome progetto>_geo_test'),
         ...
     ],
     // ... ecc per tutti i moduli
@@ -142,17 +142,17 @@ Aggiungi questo commento nel file `config/database.php` per ricordare agli svilu
 
 **❌ SBAGLIATO:**
 ```bash
-NOTIFY_DB_DATABASE=laravelpizza_data_test
-GEO_DB_DATABASE=laravelpizza_data_test
+NOTIFY_DB_DATABASE=<nome progetto>_data_test
+GEO_DB_DATABASE=<nome progetto>_data_test
 ```
 
 **✅ CORRETTO:**
 ```bash
 # Se .env ha:
-DB_DATABASE=laravelpizza_data
+DB_DATABASE=<nome progetto>_data
 
 # .env.testing ha:
-DB_DATABASE=laravelpizza_data_test  # Solo aggiungi "_test"!
+DB_DATABASE=<nome progetto>_data_test  # Solo aggiungi "_test"!
 ```
 
 ### 2. TestCase setUp() Rule

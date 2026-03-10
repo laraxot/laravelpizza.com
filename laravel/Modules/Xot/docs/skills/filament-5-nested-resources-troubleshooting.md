@@ -131,4 +131,4 @@ grep -r "EditAction::make" Modules/*/Filament/Resources/*/Pages/Manage*.php
 
 - [Stato Nested Resources v5](../../filament-nested-resources-v5-status.md)
 - [XotBaseManageRelatedRecords Pattern](../../architecture/xot-base-manage-related-records.md)
-- [Errore Form Vuoto](../../Quaeris/docs/manage-charts-edit-form-error.md)
+- [Errore Form Vuoto](../../<nome progetto>/docs/manage-charts-edit-form-error.md)

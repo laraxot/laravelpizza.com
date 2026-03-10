@@ -131,6 +131,22 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  *
  * @method static \Modules\User\Database\Factories\UserFactory factory($count = null, $state = [])
  *
+ * @property string|null                  $uuid
+ * @property string                       $surname
+ * @property string|null                  $two_factor_secret
+ * @property string|null                  $two_factor_recovery_codes
+ * @property string|null                  $two_factor_confirmed_at
+ * @property Collection<int, OauthClient> $oauthApps
+ * @property int|null                     $oauth_apps_count
+ *
+ * @method static Builder<static>|User childrenWith(array $relations)
+ * @method static Builder<static>|User childrenWithCount(array $relations)
+ * @method static Builder<static>|User whereSurname($value)
+ * @method static Builder<static>|User whereTwoFactorConfirmedAt($value)
+ * @method static Builder<static>|User whereTwoFactorRecoveryCodes($value)
+ * @method static Builder<static>|User whereTwoFactorSecret($value)
+ * @method static Builder<static>|User whereUuid($value)
+ *
  * @mixin \Eloquent
  */
 class User extends BaseUser
