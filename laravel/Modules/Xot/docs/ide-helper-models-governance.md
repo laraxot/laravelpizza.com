@@ -23,3 +23,13 @@ Se il primo run mostra errori di connessione su alias come `activity`, `tenant`,
 - `php artisan ide-helper:models -W` con accesso DB reale ha completato la wave senza `Could not analyze class`;
 - i PHPDoc dei model sono stati rigenerati correttamente sui moduli attivi;
 - il problema osservato nel sandbox era infrastrutturale, non applicativo.
+
+## Guardrail contract-first
+
+Per relazioni audit/profile come `creator`, `updater`, `deleter`, il PHPDoc corretto deve restare:
+
+```php
+\Modules\Xot\Contracts\ProfileContract|null
+```
+
+non un model concreto `Modules\*\Models\Profile`.

@@ -19,5 +19,7 @@ cd laravel && php artisan ide-helper:models -W
 
 1. controllare che non ci siano classi `Could not analyze`;
 2. correggere solo le classi che falliscono davvero;
-3. eseguire quality gate sul perimetro toccato;
-4. aggiornare issue/discussion se la wave coinvolge molti moduli.
+3. se il PHPDoc di una relazione audit/profile (`creator`, `updater`, `deleter`) punta a un model concreto, riallinearlo al contratto `\Modules\Xot\Contracts\ProfileContract`;
+4. per queste relazioni il contratto viene prima del model concreto, per ridurre accoppiamento cross-modulo e mantenere il tipo stabile;
+5. eseguire quality gate sul perimetro toccato;
+6. aggiornare issue/discussion se la wave coinvolge molti moduli.

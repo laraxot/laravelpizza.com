@@ -15,6 +15,7 @@ The Meetup theme is a premium, multi-language responsive theme designed for the 
 - Quando una change del tema dipende da metadata di modelli Eloquent, pianificare una wave `php artisan ide-helper:models -W` tracciata via Issue/Discussion prima del rilascio.
 - Nei metadata/model-doc usati dal tema per rendering typed, i campi audit (`creator/updater/deleter`) devono restare sul contratto `\Modules\Xot\Contracts\ProfileContract|null`.
 - Se la wave `ide-helper` fallisce nel sandbox per connessione DB, non attribuire subito il problema al tema o ai model: prima verificare il run con accesso locale reale.
+- Se il tema consuma metadata audit dei model (`creator`, `updater`, `deleter`), il tipo canonico da assumere e' `\Modules\Xot\Contracts\ProfileContract|null`, mai un model concreto di `Meetup`.
 
 ## Key Features
 - **Multi-Language Support**: Italian (primary), English, German, French, Spanish, Russian

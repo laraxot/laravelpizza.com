@@ -5,3 +5,4 @@
 - Se il primo run nel sandbox fallisce con errori di connessione, bisogna distinguere il blocker infrastrutturale dal codice rilanciando con accesso locale reale.
 - Se il run completo con DB reale finisce senza `Could not analyze class`, le segnalazioni erano ambientali, non bug dei model.
 - I PHPDoc generati restano nel file corrente: niente restore da git, solo rigenerazione forward-only.
+- Guardrail tipizzazione: per relazioni audit/profile come `creator`, `updater`, `deleter` il PHPDoc corretto e' `\Modules\Xot\Contracts\ProfileContract|null`, non un model `Profile` concreto.
