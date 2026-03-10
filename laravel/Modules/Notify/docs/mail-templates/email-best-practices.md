@@ -15,9 +15,7 @@ Questo documento descrive le best practices per la creazione e gestione di email
 
 ### 2. Branding Coerente
 
-<<<<<<< HEAD
 - **Elementi visuali**: Utilizzare logo, colori e font Laraxot
-=======
 - **Elementi visuali**: Utilizzare logo, colori e font healthcare_app
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - **Voce e tono**: Mantenere un tono professionale ma amichevole
@@ -65,9 +63,7 @@ I template di [mailpace/templates](https://github.com/mailpace/templates) integr
 
 ### Directory `mail-layouts`
 
-<<<<<<< HEAD
 La directory `/var/www/html/ptvx/laravel/Modules/Notify/resources/mail-layouts/` contiene:
-=======
 La directory `/var/www/html/healthcare_app/laravel/Modules/Notify/resources/mail-layouts/` contiene:
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
@@ -78,9 +74,7 @@ La directory `/var/www/html/healthcare_app/laravel/Modules/Notify/resources/mail
 
 ### Integrazione con Spatie Mail Templates
 
-<<<<<<< HEAD
 Seguendo le regole di progetto Laraxot, ricordare di:
-=======
 Seguendo le regole di progetto healthcare_app, ricordare di:
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 

@@ -238,7 +238,12 @@ vim Modules/Meetup/database/migrations/2026_*_create_events_table.php
 php artisan migrate
 
 # 3. Rigenera PHPDoc
-php artisan ide-helper:models --write
+php artisan ide-helper:models -W
+
+# 3b. Correggi ProfileContract (OBBLIGATORIO dopo ide-helper)
+# Verifica se ci sono tipi Profile concreti nei docblock
+grep -r "@property-read.*Models\\\\Profile.*\$(creator\|updater\|deleter)" Modules --include="*.php"
+# Se ci sono: correggi con \Modules\Xot\Contracts\ProfileContract|null
 
 # 4. Verifica PHPStan
 ./vendor/bin/phpstan analyze Modules/Meetup --level=10

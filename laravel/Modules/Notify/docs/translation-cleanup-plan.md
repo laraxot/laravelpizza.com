@@ -1,12 +1,10 @@
 # Piano di Pulizia e Standardizzazione delle Traduzioni
 
-<<<<<<< HEAD
 Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di Laraxot.
 
 ## Analisi della Situazione Attuale
 
 Dall'analisi dei file di traduzione nella cartella `/var/www/html/ptvx/laravel/Modules/Notify/lang/it`, sono stati identificati i seguenti problemi:
-=======
 Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di healthcare_app.
 
 ## Analisi della Situazione Attuale

@@ -119,11 +119,9 @@ if(!$this->hasColumn('subject')) {
 }
 ```
 
-<<<<<<< HEAD
 ## Applicazione a Laraxot
 
 Nel contesto di Laraxot, tutte le migrazioni che coinvolgono la conversione di campi esistenti a JSON devono seguire queste linee guida, in particolare:
-=======
 ## Applicazione a healthcare_app
 
 Nel contesto di healthcare_app, tutte le migrazioni che coinvolgono la conversione di campi esistenti a JSON devono seguire queste linee guida, in particolare:
@@ -138,9 +136,7 @@ Nel contesto di healthcare_app, tutte le migrazioni che coinvolgono la conversio
 È necessario esaminare tutte le migrazioni esistenti per identificare pattern simili di conversione diretta a JSON:
 
 ```bash
-<<<<<<< HEAD
 grep -r "json.*change" /var/www/html/ptvx/laravel/Modules/*/database/migrations/
-=======
 grep -r "json.*change" /var/www/html/healthcare_app/laravel/Modules/*/database/migrations/
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```

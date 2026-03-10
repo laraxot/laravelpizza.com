@@ -16,9 +16,7 @@ L'errore si manifesta in due forme principali:
 
 ### 1. Architettura a Strati
 
-<<<<<<< HEAD
 Il progetto Laraxot utilizza un'architettura a strati per i componenti Filament:
-=======
 Il progetto healthcare_app utilizza un'architettura a strati per i componenti Filament:
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
@@ -34,9 +32,7 @@ Saltare il livello intermedio (XotBase) rompe questa architettura e crea inconsi
 
 ### 2. Personalizzazioni Centralizzate
 
-<<<<<<< HEAD
 Le classi XotBase contengono personalizzazioni specifiche per il progetto Laraxot:
-=======
 Le classi XotBase contengono personalizzazioni specifiche per il progetto healthcare_app:
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - Gestione multilingua
@@ -100,8 +96,6 @@ L'adozione coerente del pattern di estensione XotBase offre vantaggi significati
 
 ## Conclusione
 
-<<<<<<< HEAD
 Il pattern di estensione XotBase è un aspetto fondamentale dell'architettura di Laraxot. Seguire questo pattern garantisce coerenza, manutenibilità e estensibilità del codice. È essenziale comprendere non solo come implementare questo pattern, ma anche perché è importante per il successo a lungo termine del progetto.
-=======
 Il pattern di estensione XotBase è un aspetto fondamentale dell'architettura di healthcare_app. Seguire questo pattern garantisce coerenza, manutenibilità e estensibilità del codice. È essenziale comprendere non solo come implementare questo pattern, ma anche perché è importante per il successo a lungo termine del progetto.
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)

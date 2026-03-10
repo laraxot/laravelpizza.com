@@ -43,9 +43,7 @@ Le azioni SMS sono organizzate secondo questa struttura:
 $smsData = new SmsData(
     to: '+393331234567',
     body: 'Il tuo codice OTP è: 123456',
-<<<<<<< HEAD
     from: 'Laraxot'
-=======
     from: 'healthcare_app'
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 );

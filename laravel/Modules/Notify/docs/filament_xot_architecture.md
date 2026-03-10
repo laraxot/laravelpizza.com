@@ -2,9 +2,7 @@
 
 ## Introduzione
 
-<<<<<<< HEAD
 Laraxot utilizza un pattern architetturale fondamentale per l'integrazione con Filament: **non estendere mai direttamente** le classi Filament, ma utilizzare sempre le classi wrapper con prefisso `XotBase` fornite dal modulo `Xot`.
-=======
 healthcare_app utilizza un pattern architetturale fondamentale per l'integrazione con Filament: **non estendere mai direttamente** le classi Filament, ma utilizzare sempre le classi wrapper con prefisso `XotBase` fornite dal modulo `Xot`.
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
@@ -153,9 +151,7 @@ protected function getFormSchema(): array
 Per verificare che tutte le classi seguano questa regola:
 
 ```bash
-<<<<<<< HEAD
 find /var/www/html/ptvx/laravel/Modules -type f -name "*.php" -exec grep -l "extends.*\\\\Filament\\\\Pages\\\\Page" {} \;
-=======
 find /var/www/html/healthcare_app/laravel/Modules -type f -name "*.php" -exec grep -l "extends.*\\\\Filament\\\\Pages\\\\Page" {} \;
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```

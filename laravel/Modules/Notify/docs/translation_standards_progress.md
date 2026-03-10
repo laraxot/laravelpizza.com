@@ -14,13 +14,11 @@
    - Le strutture gerarchiche sono spesso incomplete (mancano elementi come icon, sort, plural in navigation)
 
 3. **File Problematici Identificati**
-<<<<<<< HEAD
    - `/var/www/html/ptvx/laravel/Modules/Notify/lang/it/send_aws_email.php`
    - `/var/www/html/ptvx/laravel/Modules/Notify/lang/it/setting.php`
    - `/var/www/html/ptvx/laravel/Modules/Notify/lang/it/edit_mail_template.php`
    - `/var/www/html/ptvx/laravel/Modules/Notify/lang/it/send_netfun_sms.php`
    - `/var/www/html/ptvx/laravel/Modules/Notify/lang/it/notification_template.php`
-=======
    - `/var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/send_aws_email.php`
    - `/var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/setting.php`
    - `/var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/edit_mail_template.php`
@@ -32,14 +30,12 @@
 ### Correzioni Implementate
 
 1. **Documentazione Standard**
-<<<<<<< HEAD
    - Creato `/var/www/html/ptvx/laravel/Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
    - Creato `/var/www/html/ptvx/laravel/Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
 
 2. **File Corretti**
    - Creato `/var/www/html/ptvx/laravel/Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
    - Aggiornato `/var/www/html/ptvx/laravel/Modules/Notify/lang/it/send_netfun_sms.php` con struttura completa
-=======
    - Creato `/var/www/html/healthcare_app/laravel/Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
    - Creato `/var/www/html/healthcare_app/laravel/Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
 
@@ -52,14 +48,12 @@
 ### Prossime Correzioni da Implementare
 
 1. **File da Correggere Prioritariamente**
-<<<<<<< HEAD
    - `/var/www/html/ptvx/laravel/Modules/Notify/lang/it/send_email.php`
    - `/var/www/html/ptvx/laravel/Modules/Notify/lang/it/send_sms.php`
    - `/var/www/html/ptvx/laravel/Modules/Notify/lang/it/send_telegram.php`
 
 2. **Verifiche da Eseguire**
    - Analisi della cartella `/var/www/html/ptvx/laravel/Modules/Notify/lang/en/` per identificare problemi simili
-=======
    - `/var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/send_email.php`
    - `/var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/send_sms.php`
    - `/var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/send_telegram.php`
@@ -83,7 +77,6 @@
 ## Appendice: Elenco Completo dei File Non Conformi
 
 ```
-<<<<<<< HEAD
 /var/www/html/ptvx/laravel/Modules/Notify/lang/it/send_aws_email.php
 /var/www/html/ptvx/laravel/Modules/Notify/lang/it/setting.php
 /var/www/html/ptvx/laravel/Modules/Notify/lang/it/edit_mail_template.php
@@ -104,7 +97,6 @@
 /var/www/html/ptvx/laravel/Modules/Notify/lang/it/send_email.php
 /var/www/html/ptvx/laravel/Modules/Notify/lang/it/send_spatie_email.php
 /var/www/html/ptvx/laravel/Modules/Notify/lang/it/create_mail_template.php
-=======
 /var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/send_aws_email.php
 /var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/setting.php
 /var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/edit_mail_template.php

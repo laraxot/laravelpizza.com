@@ -1,8 +1,6 @@
 # Standard per le Traduzioni 
 
-<<<<<<< HEAD
 Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di Laraxot, con particolare attenzione al modulo Notify.
-=======
 Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di healthcare_app, con particolare attenzione al modulo Notify.
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 

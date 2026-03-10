@@ -253,9 +253,7 @@ return [
 ### 1. Controllo Sintassi PHP
 ```bash
 cd /var/www/html/_bases/base_<nome progetto>/laravel
-<<<<<<< HEAD
 cd /var/www/html/_bases/base_ptvx/laravel
-=======
 cd /var/www/html/_bases/base_healthcare_app/laravel
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 cd /var/www/html/_bases/base_techplanner_fila5_mono/laravel

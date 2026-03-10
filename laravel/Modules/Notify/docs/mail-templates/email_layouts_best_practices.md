@@ -1,8 +1,6 @@
 # Email Layouts Best Practices 
 
-<<<<<<< HEAD
 Questa documentazione descrive le best practices da seguire per i layout email quando si utilizza `spatie/laravel-database-mail-templates` nel modulo Notify di Laraxot.
-=======
 Questa documentazione descrive le best practices da seguire per i layout email quando si utilizza `spatie/laravel-database-mail-templates` nel modulo Notify di healthcare_app.
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
@@ -19,9 +17,7 @@ Questa documentazione descrive le best practices da seguire per i layout email q
 
 ## Introduzione
 
-<<<<<<< HEAD
 Laraxot utilizza `spatie/laravel-database-mail-templates` per memorizzare e gestire i template email nel database. Questo approccio separa nettamente:
-=======
 healthcare_app utilizza `spatie/laravel-database-mail-templates` per memorizzare e gestire i template email nel database. Questo approccio separa nettamente:
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 

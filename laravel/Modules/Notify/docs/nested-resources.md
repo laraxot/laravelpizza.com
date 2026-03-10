@@ -68,10 +68,7 @@ The Notify module provides a comprehensive notification system for the Laraxot s
 ### 7. Customer Communication History
 <<<<<<< .merge_file_D3JnwM
 **Parent Resource:** CustomerResource (from healthcare_app module)
-=======
-<<<<<<< HEAD
 **Parent Resource:** CustomerResource (from ExternalProject module)
-=======
 **Parent Resource:** CustomerResource (from ModuloEsempio module)
 >>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_y4v0o8
@@ -82,10 +79,7 @@ The Notify module provides a comprehensive notification system for the Laraxot s
 ### 8. Survey Communication Logs
 <<<<<<< .merge_file_D3JnwM
 **Parent Resource:** SurveyPdfResource (from healthcare_app module)
-=======
-<<<<<<< HEAD
 **Parent Resource:** SurveyPdfResource (from ExternalProject module)
-=======
 **Parent Resource:** SurveyPdfResource (from ModuloEsempio module)
 >>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_y4v0o8
@@ -197,10 +191,7 @@ Following the documented approach in `Modules/UI/docs/filament/nested-resource.m
 ### 4. Integration with Other Modules
 <<<<<<< .merge_file_D3JnwM
 - Handle relationships with healthcare_app module (surveys and contacts)
-=======
-<<<<<<< HEAD
 - Handle relationships with ExternalProject module (surveys and contacts)
-=======
 - Handle relationships with ModuloEsempio module (surveys and contacts)
 >>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_y4v0o8

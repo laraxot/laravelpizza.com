@@ -56,9 +56,7 @@ Le configurazioni specifiche per provider sono definite all'interno della sezion
         // Credenziali e parametri di connessione
         'username' => env('NETFUN_USERNAME'),
         'password' => env('NETFUN_PASSWORD'),
-<<<<<<< HEAD
         'sender' => env('NETFUN_SENDER', 'Laraxot'),
-=======
         'sender' => env('NETFUN_SENDER', 'healthcare_app'),
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
         'api_url' => env('NETFUN_API_URL', 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json'),
@@ -117,9 +115,7 @@ Le configurazioni specifiche per provider sono definite all'interno della sezion
     'netfun' => [
         'username' => env('NETFUN_USERNAME'),
         'password' => env('NETFUN_PASSWORD'),
-<<<<<<< HEAD
         'sender' => env('NETFUN_SENDER', 'Laraxot'),
-=======
         'sender' => env('NETFUN_SENDER', 'healthcare_app'),
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
         'api_url' => env('NETFUN_API_URL', 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json'),

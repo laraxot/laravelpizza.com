@@ -14,9 +14,7 @@ Questa guida descrive i template email responsive disponibili nel modulo Notify,
 
 ## Introduzione
 
-<<<<<<< HEAD
 I template email responsive di Laraxot sono progettati per offrire una comunicazione professionale e coinvolgente con gli utenti. Tutti i template sono:
-=======
 I template email responsive di healthcare_app sono progettati per offrire una comunicazione professionale e coinvolgente con gli utenti. Tutti i template sono:
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
@@ -125,9 +123,7 @@ Tutti i template utilizzano il motore di templating Blade di Laravel. Le variabi
 | `$name` | Nome destinatario | "Utente" |
 | `$intro_text` | Testo introduttivo | Varia per template |
 | `$outro_text` | Testo conclusivo | Varia per template |
-<<<<<<< HEAD
 | `$contact_email` | Email di contatto | "supporto@ptvx.it" |
-=======
 | `$contact_email` | Email di contatto | "supporto@healthcare_app.it" |
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 | `$contact_phone` | Telefono di contatto | "+39 06 1234567" |

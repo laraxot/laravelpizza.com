@@ -73,9 +73,7 @@ Per parametri critici come `sender`, non utilizzare valori predefiniti:
 
 ```php
 // ❌ ERRATO
-<<<<<<< HEAD
 'sender' => env('NETFUN_SENDER', 'Laraxot'),
-=======
 'sender' => env('NETFUN_SENDER', 'healthcare_app'),
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 

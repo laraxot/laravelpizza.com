@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 # Errori Comuni da Evitare nelle Implementazioni di Moduli Laraxot
-=======
 # Errori Comuni da Evitare nelle Implementazioni di Moduli healthcare_app
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Errori di Struttura Directory e Namespace
 
 1. **Errore di Case nelle Directory**
-<<<<<<< HEAD
    - ❌ ERRATO: `/var/www/html/ptvx/laravel/Modules/Notify/App/Actions/`
    - ✅ CORRETTO: `/var/www/html/ptvx/laravel/Modules/Notify/app/Actions/`
-=======
    - ❌ ERRATO: `/var/www/html/healthcare_app/laravel/Modules/Notify/App/Actions/`
    - ✅ CORRETTO: `/var/www/html/healthcare_app/laravel/Modules/Notify/app/Actions/`
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)

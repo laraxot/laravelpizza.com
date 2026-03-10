@@ -149,8 +149,6 @@ Per massimizzare i vantaggi della risoluzione dinamica:
 
 La risoluzione dinamica delle classi offre vantaggi significativi in termini di estensibilità, manutenibilità e coerenza del codice, con svantaggi minimi in termini di complessità e performance. È particolarmente adatta per sistemi che evolvono frequentemente con l'aggiunta di nuovi driver o implementazioni.
 
-<<<<<<< HEAD
 Per il sistema di notifiche di Laraxot, l'approccio dinamico rappresenta una scelta ottimale, poiché facilita l'aggiunta di nuovi provider senza necessità di modificare il codice esistente, rispettando il principio Open/Closed e promuovendo una struttura di codice coerente e manutenibile.
-=======
 Per il sistema di notifiche di healthcare_app, l'approccio dinamico rappresenta una scelta ottimale, poiché facilita l'aggiunta di nuovi provider senza necessità di modificare il codice esistente, rispettando il principio Open/Closed e promuovendo una struttura di codice coerente e manutenibile.
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)

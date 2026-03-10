@@ -6,9 +6,7 @@
 
 #### 1. Riusabilità Compromessa
 - **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
-<<<<<<< HEAD
 - **336+ occorrenze hardcoded** di "ptvx" in test e documentazione
-=======
 - **336+ occorrenze hardcoded** di "healthcare_app" in test e documentazione
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - **Import diretti** da moduli project-specific
@@ -25,9 +23,7 @@
 - Test che utilizzano `User::factory()` invece di `XotData::make()->getUserClass()`
 - Configurazioni database hardcoded
 - Riferimenti diretti a modelli <nome progetto>
-<<<<<<< HEAD
 - Riferimenti diretti a modelli Laraxot
-=======
 - Riferimenti diretti a modelli healthcare_app
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
@@ -35,9 +31,7 @@
 
 ### Riusabilità
 1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding "<nome progetto>"
-<<<<<<< HEAD
 1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding "Laraxot"
-=======
 1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding "healthcare_app"
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 2. **NotifyThemeableFactory.php**: Implementato `getProjectNamespace()` dinamico
@@ -54,9 +48,7 @@
 // ❌ PRIMA
 $user = User::factory()->create();
 'database' => '<nome progetto>_test'
-<<<<<<< HEAD
 'database' => 'ptvx_test'
-=======
 'database' => 'healthcare_app_test'
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 

@@ -16,9 +16,7 @@
 
 ### Directory Fisiche (path su disco)
 ```
-<<<<<<< HEAD
 /var/www/html/ptvx/laravel/Modules/Notify/
-=======
 /var/www/html/healthcare_app/laravel/Modules/Notify/
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ├── app/                           # Directory fisica con app minuscolo

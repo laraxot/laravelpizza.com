@@ -2,9 +2,7 @@
 
 ## Introduzione
 
-<<<<<<< HEAD
 Questo documento esplora i componenti Filament che possono migliorare l'esperienza utente per i campi `name` e `slug` nel form di gestione dei template email. I miglioramenti proposti seguono le convenzioni del progetto Laraxot, mantenendo la coerenza visiva e migliorando l'usabilità.
-=======
 Questo documento esplora i componenti Filament che possono migliorare l'esperienza utente per i campi `name` e `slug` nel form di gestione dei template email. I miglioramenti proposti seguono le convenzioni del progetto healthcare_app, mantenendo la coerenza visiva e migliorando l'usabilità.
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
@@ -217,9 +215,7 @@ return [
 ];
 ```
 
-<<<<<<< HEAD
 ## Conformità con gli Standard Laraxot
-=======
 ## Conformità con gli Standard healthcare_app
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
@@ -237,9 +233,7 @@ I miglioramenti UI/UX proposti per i campi `name` e `slug` si concentrano su:
 3. **Azioni contestuali** che facilitano operazioni comuni
 4. **Relazioni intuitive** tra campi correlati
 
-<<<<<<< HEAD
 L'implementazione di questi miglioramenti rispetta le convenzioni del progetto Laraxot mentre offre un'esperienza utente significativamente migliorata nella gestione dei template email.
-=======
 L'implementazione di questi miglioramenti rispetta le convenzioni del progetto healthcare_app mentre offre un'esperienza utente significativamente migliorata nella gestione dei template email.
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 

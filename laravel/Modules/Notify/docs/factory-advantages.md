@@ -4,9 +4,7 @@ Questo documento analizza il pattern Factory attualmente implementato  per la se
 
 ## Soluzione Attuale: Pattern Factory
 
-<<<<<<< HEAD
 Laraxot implementa un pattern Factory ottimale attraverso `SmsActionFactory`:
-=======
 healthcare_app implementa un pattern Factory ottimale attraverso `SmsActionFactory`:
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
@@ -79,13 +77,11 @@ public function getProviderAction(): SmsActionInterface
 
 ## Perché il Pattern Factory è Superiore
 
-<<<<<<< HEAD
 Il pattern Factory offre numerosi vantaggi che superano di gran lunga i suoi svantaggi, soprattutto in progetti complessi come Laraxot:
 
 1. **Open/Closed Principle**: Permette di estendere il sistema (aggiungendo nuovi provider) senza modificare il codice esistente, soddisfacendo il principio Open/Closed di SOLID.
 
 2. **Coerenza nell'Architettura**: Si allinea con l'architettura modulare di Laraxot, dove ogni componente ha una responsabilità chiara e specifica.
-=======
 Il pattern Factory offre numerosi vantaggi che superano di gran lunga i suoi svantaggi, soprattutto in progetti complessi come healthcare_app:
 
 1. **Open/Closed Principle**: Permette di estendere il sistema (aggiungendo nuovi provider) senza modificare il codice esistente, soddisfacendo il principio Open/Closed di SOLID.
@@ -119,9 +115,7 @@ Il pattern Factory attualmente implementato  per la selezione dei provider SMS �
 - **Manutenibilità**: Centralizza le modifiche relative alla selezione dei provider
 - **Estendibilità**: Facilita l'aggiunta di nuovi provider SMS
 
-<<<<<<< HEAD
 Questa scelta architetturale è coerente con i principi SOLID e con l'architettura modulare di Laraxot, garantendo un sistema flessibile, manutenibile e facilmente estendibile nel tempo.
-=======
 Questa scelta architetturale è coerente con i principi SOLID e con l'architettura modulare di healthcare_app, garantendo un sistema flessibile, manutenibile e facilmente estendibile nel tempo.
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 

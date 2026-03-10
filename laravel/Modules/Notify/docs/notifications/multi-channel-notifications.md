@@ -1,9 +1,7 @@
 # Implementazione di Notifiche Multi-Canale 
 
 Questa documentazione descrive come implementare correttamente notifiche multi-canale (email, SMS, Telegram) nel modulo Notify di <nome progetto>.
-<<<<<<< HEAD
 Questa documentazione descrive come implementare correttamente notifiche multi-canale (email, SMS, Telegram) nel modulo Notify di Laraxot.
-=======
 Questa documentazione descrive come implementare correttamente notifiche multi-canale (email, SMS, Telegram) nel modulo Notify di healthcare_app.
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
@@ -21,9 +19,7 @@ Questa documentazione descrive come implementare correttamente notifiche multi-c
 ## Introduzione
 
 <nome progetto> utilizza il sistema di notifiche di Laravel per inviare comunicazioni attraverso diversi canali. Ogni canale richiede un'implementazione specifica per garantire la corretta consegna dei messaggi.
-<<<<<<< HEAD
 Laraxot utilizza il sistema di notifiche di Laravel per inviare comunicazioni attraverso diversi canali. Ogni canale richiede un'implementazione specifica per garantire la corretta consegna dei messaggi.
-=======
 healthcare_app utilizza il sistema di notifiche di Laravel per inviare comunicazioni attraverso diversi canali. Ogni canale richiede un'implementazione specifica per garantire la corretta consegna dei messaggi.
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
@@ -95,9 +91,7 @@ public function toMail($notifiable): SpatieEmail
 ### Configurazione Provider SMS
 
 <nome progetto> supporta diversi provider SMS. La configurazione di base prevede:
-<<<<<<< HEAD
 Laraxot supporta diversi provider SMS. La configurazione di base prevede:
-=======
 healthcare_app supporta diversi provider SMS. La configurazione di base prevede:
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
@@ -256,9 +250,7 @@ class AppointmentNotification extends Notification
 ## Implementazione Netfun SMS
 
 Netfun è un provider di SMS italiano che offre API per l'invio di messaggi SMS. Seguendo l'architettura di <nome progetto>, implementeremo l'integrazione con Netfun utilizzando Spatie Queueable Actions.
-<<<<<<< HEAD
 Netfun è un provider di SMS italiano che offre API per l'invio di messaggi SMS. Seguendo l'architettura di Laraxot, implementeremo l'integrazione con Netfun utilizzando Spatie Queueable Actions.
-=======
 Netfun è un provider di SMS italiano che offre API per l'invio di messaggi SMS. Seguendo l'architettura di healthcare_app, implementeremo l'integrazione con Netfun utilizzando Spatie Queueable Actions.
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
@@ -275,9 +267,7 @@ return [
         'username' => env('NETFUN_USERNAME'),
         'password' => env('NETFUN_PASSWORD'),
         'sender' => env('NETFUN_SENDER', '<nome progetto>'),
-<<<<<<< HEAD
         'sender' => env('NETFUN_SENDER', 'Laraxot'),
-=======
         'sender' => env('NETFUN_SENDER', 'healthcare_app'),
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
         'api_url' => env('NETFUN_API_URL', 'https://api.netfun.it/sms/v1/'),
@@ -291,9 +281,7 @@ Assicurati di aggiungere le corrispondenti variabili al tuo file `.env`:
 NETFUN_USERNAME=your_username
 NETFUN_PASSWORD=your_password
 NETFUN_SENDER=<nome progetto>
-<<<<<<< HEAD
 NETFUN_SENDER=Laraxot
-=======
 NETFUN_SENDER=healthcare_app
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
@@ -627,9 +615,7 @@ class AppointmentReminder extends Notification
         
         return (new NetfunSMSMessage())
             ->content("Gentile {$notifiable->first_name}, le ricordiamo il suo appuntamento del {$date}. <nome progetto>.")
-<<<<<<< HEAD
             ->content("Gentile {$notifiable->first_name}, le ricordiamo il suo appuntamento del {$date}. Laraxot.")
-=======
             ->content("Gentile {$notifiable->first_name}, le ricordiamo il suo appuntamento del {$date}. healthcare_app.")
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
             ->reference('app_' . $this->appointment->id);
@@ -677,9 +663,7 @@ class NetfunSMSTest extends TestCase
         
         $message = (new NetfunSMSMessage())
             ->content('Test SMS da <nome progetto>')
-<<<<<<< HEAD
             ->content('Test SMS da Laraxot')
-=======
             ->content('Test SMS da healthcare_app')
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
             ->reference('test_123');
@@ -718,9 +702,7 @@ class AppointmentReminderController extends Controller
         
         $message = (new NetfunSMSMessage())
             ->content("Gentile {$appointment->patient->first_name}, le ricordiamo il suo appuntamento del {$appointment->date->format('d/m/Y H:i')}. <nome progetto>.")
-<<<<<<< HEAD
             ->content("Gentile {$appointment->patient->first_name}, le ricordiamo il suo appuntamento del {$appointment->date->format('d/m/Y H:i')}. Laraxot.")
-=======
             ->content("Gentile {$appointment->patient->first_name}, le ricordiamo il suo appuntamento del {$appointment->date->format('d/m/Y H:i')}. healthcare_app.")
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
             ->reference('app_' . $appointment->id);
