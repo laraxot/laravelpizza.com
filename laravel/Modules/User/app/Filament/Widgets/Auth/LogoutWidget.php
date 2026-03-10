@@ -160,7 +160,7 @@ class LogoutWidget extends XotBaseWidget
      */
     protected function logLogoutSuccess(Authenticatable $user): void
     {
-        Log::info('User logged out', [
+        Log::debug('User logged out', [
             'user_id' => $user->getAuthIdentifier(),
             'timestamp' => now()->toDateTimeString(),
         ]);

@@ -27,6 +27,7 @@ use function Safe\json_encode;
 
 class OauthAccessTokenResource extends XotBaseResource
 {
+    /** @phpstan-ignore-next-line Passport wrapper model is valid at runtime, but PHPStan does not fully infer the upstream subtype here. */
     protected static ?string $model = OauthAccessToken::class;
 
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-key';

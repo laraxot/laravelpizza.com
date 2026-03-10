@@ -2,11 +2,8 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Notify\Tests\Unit\Datas;
 
-=======
->>>>>>> 8e583cd (.)
 use Modules\Notify\Datas\EmailData;
 
 describe('EmailData', function () {

@@ -2,24 +2,22 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Notify\Tests\Unit\Actions\SMS;
 
-=======
->>>>>>> 8e583cd (.)
 use Modules\Notify\Actions\SMS\FormatSmsMessageAction;
+use ReflectionClass;
 
 describe('FormatSmsMessageAction', function () {
     beforeEach(function () {
-        $action = new FormatSmsMessageAction;
+        $this->action = new FormatSmsMessageAction;
     });
 
     it('can be instantiated', function () {
-        expect($action);
+        expect($this->action)->toBeInstanceOf(FormatSmsMessageAction::class);
     });
 
     it('has execute method with correct signature', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new ReflectionClass($this->action);
         $method = $reflection->getMethod('execute');
 
         expect($method->isPublic())->toBeTrue();
@@ -27,7 +25,7 @@ describe('FormatSmsMessageAction', function () {
     });
 
     it('execute accepts string parameter', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new ReflectionClass($this->action);
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
@@ -35,7 +33,7 @@ describe('FormatSmsMessageAction', function () {
     });
 
     it('execute returns array', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new ReflectionClass($this->action);
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
@@ -43,29 +41,34 @@ describe('FormatSmsMessageAction', function () {
     });
 
     it('uses strict types', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new ReflectionClass($this->action);
         $filename = $reflection->getFileName();
 
         expect($filename)->not->toBeNull();
+        /** @var string $filename */
         $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1));');
+        expect($content)->toContain('declare(strict_types=1);');
     });
 
     it('has correct namespace', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new ReflectionClass($this->action);
 
         expect($reflection->getNamespaceName())->toBe('Modules\Notify\Actions\SMS');
     });
 
     it('has required imports', function () {
-        $filename = (new ReflectionClass($action));
+        $reflection = new ReflectionClass($this->action);
+        $filename = $reflection->getFileName();
+
+        expect($filename)->not->toBeNull();
+        /** @var string $filename */
         $content = file_get_contents($filename);
 
-        expect($content)->toContain('use function Safe\preg_split);');
+        expect($content)->toContain('use function Safe\preg_split;');
     });
 
     it('is not using QueueableAction trait', function () {
-        $traits = class_uses($action);
+        $traits = class_uses($this->action);
 
         expect($traits)->not->toContain('Spatie\QueueableAction\QueueableAction');
     });

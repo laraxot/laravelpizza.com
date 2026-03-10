@@ -35,3 +35,14 @@ Esempi:
 ## Nota
 
 `OauthPersonalAccessClient` e altri model OAuth locali senza equivalente Eloquent diretto nel vendor non rientrano nella regola di parita 1:1 col vendor; sono model applicativi aggiuntivi.
+
+## Fix pattern confermato (2026-03-10)
+
+- `OauthClient` -> wrapper di `Laravel\Passport\Client`
+- `OauthToken` -> wrapper di `Laravel\Passport\Token`
+- `OauthAuthCode` -> wrapper di `Laravel\Passport\AuthCode`
+- `OauthRefreshToken` -> wrapper di `Laravel\Passport\RefreshToken`
+- `OauthDeviceCode` -> wrapper di `Laravel\Passport\DeviceCode`
+- `OauthPersonalAccessClient` -> model locale del modulo `User`, con tabella `oauth_personal_access_clients` e relazione `client()` verso `OauthClient`
+
+Quando PHPStan segnala generic subtype errors sui token o relazioni OAuth, la prima verifica va fatta su questa distinzione.

@@ -2,11 +2,8 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Notify\Tests\Feature;
 
-=======
->>>>>>> 8e583cd (.)
 uses(\Modules\Notify\Tests\TestCase::class);
 
 use Modules\Notify\Models\MailTemplate;

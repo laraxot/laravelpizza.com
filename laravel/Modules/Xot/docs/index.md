@@ -39,6 +39,7 @@
 - [Testing Strategy](testing/testing-strategy.md)
 - [Complete Testing Guide](testing/testing.md)
 - [PHPStan Complete Guide](phpstan/phpstan-complete-guide.md)
+- [PHPStan Runtime Governance](phpstan-runtime-governance.md)
 
 ### 🌐 Translations & Localization
 - [Translation System](translations/translation-system.md)

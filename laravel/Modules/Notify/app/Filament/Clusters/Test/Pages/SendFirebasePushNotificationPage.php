@@ -129,7 +129,7 @@ class SendFirebasePushNotificationPage extends XotBasePage
                 ->send();
 
             // Loggare l'invio
-            Log::info('Notifica push inviata con successo', [
+            Log::debug('Notifica push inviata con successo', [
                 'token' => $data['token'],
                 'title' => $data['title'],
                 'type' => $data['notification_type'],

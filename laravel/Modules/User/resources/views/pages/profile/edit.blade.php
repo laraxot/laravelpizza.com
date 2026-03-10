@@ -210,7 +210,7 @@ $component = new class extends Component {
             }
 
             // Log before saving to capture original values
-            Log::info('Updating user profile', [
+            Log::debug('Updating user profile', [
                 'user_id' => $user->id,
                 'old_first_name' => $user->first_name,
                 'new_first_name' => $validated['first_name'],
@@ -231,7 +231,7 @@ $component = new class extends Component {
             /** @var array<string, mixed> $changes */
             $changes = $user->getChanges();
 
-            Log::info('Profile updated', [
+            Log::debug('Profile updated', [
                 'user_id' => $user->id,
                 'changes' => $changes,
                 'ip_address' => request()->ip(),
@@ -329,7 +329,7 @@ $component = new class extends Component {
             event(new PasswordReset($user));
 
             // Log successful password update for audit trail
-            Log::info('User password updated successfully', [
+            Log::debug('User password updated successfully', [
                 'user_id' => $user->id,
                 'email' => $user->email,
                 'ip_address' => request()->ip(),
@@ -412,7 +412,7 @@ $component = new class extends Component {
             ];
 
             // Log account deletion for audit trail (before deletion)
-            Log::info('User account deletion initiated', $userData);
+            Log::debug('User account deletion initiated', $userData);
 
             // Logout user before deletion
             Auth::logout();
@@ -427,7 +427,7 @@ $component = new class extends Component {
             Assert::true($deleted, 'Failed to delete user account');
 
             // Log successful deletion
-            Log::info('User account deleted successfully', $userData);
+            Log::debug('User account deleted successfully', $userData);
 
             // Redirect to home with success message
             return Redirect::to('/')->with('status', 'Your account has been deleted successfully.');

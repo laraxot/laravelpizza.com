@@ -25,3 +25,5 @@ Aggiornamento operativo (2026-03-09):
 
 - Per file singoli, partire da comandi focalizzati riduce rumore e tempo di verifica.
 - Se un tool non e' installato o produce un blocco infrastrutturale, il fatto va documentato e non nascosto.
+- Se `phpstan analyse Modules` si ferma per severe syntax errors, la priorita' non e' abbassare il livello o nascondere il problema: bisogna ripristinare la parsabilita' dei file rotti, tipicamente marker di merge o file PHP troncati.
+- `Log::info(...)` non e' un quality gate e non e' un sostituto di test o analisi: va evitato.

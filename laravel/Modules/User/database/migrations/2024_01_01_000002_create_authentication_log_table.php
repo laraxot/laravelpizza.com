@@ -12,11 +12,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-<<<<<<< HEAD
         $this->tableCreate(function (Blueprint $table): void {
-=======
-        $this->tableCreate(function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             $table->id();
             // $table->morphs('authenticatable');
             $table->uuidMorphs('authenticatable', 'k_authenticatable');
@@ -30,11 +26,7 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-<<<<<<< HEAD
         $this->tableUpdate(function (Blueprint $table): void {
-=======
-        $this->tableUpdate(function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             // if (! $this->hasColumn('email'))
             //    $table->string('email')->nullable();
             // }

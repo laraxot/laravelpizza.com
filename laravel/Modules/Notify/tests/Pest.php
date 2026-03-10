@@ -2,24 +2,9 @@
 
 declare(strict_types=1);
 
-require_once __DIR__.'/TestCase.php';
-
-use Modules\Notify\Models\MailTemplate;
-use Modules\Notify\Models\Notification;
 use Modules\Notify\Tests\TestCase;
 
-/*
- * |--------------------------------------------------------------------------
- * | Test Case
- * |--------------------------------------------------------------------------
- * |
- * | The closure you provide to your test functions is always bound to a specific PHPUnit test
- * | case class. By default, that class is "PHPUnit\Framework\TestCase". Of course, you may
- * | need to change it using the "pest()" function to bind a different classes or traits.
- * |
- */
-
-pest()->extend(TestCase::class)->in('Feature');
+uses(TestCase::class)->in('Feature', 'Unit');
 
 /*
  * |--------------------------------------------------------------------------
@@ -30,11 +15,11 @@ pest()->extend(TestCase::class)->in('Feature');
  * | "expect()" function gives you access to a set of "expectations" methods that you can use
  * | to assert different things. Of course, you may extend the Expectation API at any time.
  * |
- */
+ * */
 
-expect()->extend('toBeNotification', fn () => $this->toBeInstanceOf(Notification::class));
+expect()->extend('toBeNotification', fn () => $this->toBeInstanceOf(\Modules\Notify\Models\Notification::class));
 
-expect()->extend('toBeMailTemplate', fn () => $this->toBeInstanceOf(MailTemplate::class));
+expect()->extend('toBeMailTemplate', fn () => $this->toBeInstanceOf(\Modules\Notify\Models\MailTemplate::class));
 
 /*
  * |--------------------------------------------------------------------------
@@ -45,24 +30,24 @@ expect()->extend('toBeMailTemplate', fn () => $this->toBeInstanceOf(MailTemplate
  * | project that you don't want to repeat in every file. Here you can also expose helpers as
  * | global functions to help you to reduce the number of lines of code in your test files.
  * |
- */
+ * */
 
-function createNotification(array $attributes = []): Notification
+function createNotification(array $attributes = []): \Modules\Notify\Models\Notification
 {
-    return Notification::factory()->create($attributes);
+    return \Modules\Notify\Models\Notification::factory()->create($attributes);
 }
 
-function makeNotification(array $attributes = []): Notification
+function makeNotification(array $attributes = []): \Modules\Notify\Models\Notification
 {
-    return Notification::factory()->make($attributes);
+    return \Modules\Notify\Models\Notification::factory()->make($attributes);
 }
 
-function createMailTemplate(array $attributes = []): MailTemplate
+function createMailTemplate(array $attributes = []): \Modules\Notify\Models\MailTemplate
 {
-    return MailTemplate::factory()->create($attributes);
+    return \Modules\Notify\Models\MailTemplate::factory()->create($attributes);
 }
 
-function makeMailTemplate(array $attributes = []): MailTemplate
+function makeMailTemplate(array $attributes = []): \Modules\Notify\Models\MailTemplate
 {
-    return MailTemplate::factory()->make($attributes);
+    return \Modules\Notify\Models\MailTemplate::factory()->make($attributes);
 }

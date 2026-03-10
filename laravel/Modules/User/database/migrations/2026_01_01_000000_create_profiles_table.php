@@ -50,7 +50,10 @@ return new class extends XotBaseMigration {
                 $table->string('uuid', 36)->index()->nullable()->after('id');
             }
             if (! $this->hasColumn('user_id')) {
-                $table->string('user_id', 36)->index()->nullable()->after('uuid');
+                $table->string('user_id', 36)
+                    ->index()
+                    ->nullable()
+                    ->after('uuid');
             }
             if (! $this->hasColumn('email')) {
                 $table->string('email')->nullable()->after('last_name');
@@ -78,4 +81,4 @@ return new class extends XotBaseMigration {
             }
         });
     }
-}
+};

@@ -2,11 +2,8 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Notify\Tests\Unit\Actions;
 
-=======
->>>>>>> 8e583cd (.)
 use Modules\Notify\Actions\EsendexSendAction;
 use Modules\Notify\Datas\SmsData;
 use Spatie\QueueableAction\QueueableAction;

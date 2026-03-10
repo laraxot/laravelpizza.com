@@ -109,7 +109,7 @@ class RegisterWidget extends XotBaseWidget
     {
         $email = app(SafeStringCastAction::class)->execute($formData['email']);
 
-        Log::info('Registration attempt', [
+        Log::debug('Registration attempt', [
             'email_hash' => hash('sha256', $email),
             'ip' => request()->ip(),
             'user_agent' => request()->userAgent(),

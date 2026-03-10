@@ -29,6 +29,7 @@ class OauthAccessTokenResource extends XotBaseResource
 {
     protected static ?string $cluster = Passport::class;
 
+    /** @phpstan-ignore-next-line Passport wrapper model is valid at runtime, but PHPStan does not fully infer the upstream subtype here. */
     protected static ?string $model = OauthAccessToken::class;
 
     public static function table(\Filament\Tables\Table $table): \Filament\Tables\Table

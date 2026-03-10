@@ -11,6 +11,7 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 final class PersonalAccessTokenResource extends XotBaseResource
 {
+    /** @phpstan-ignore-next-line Passport wrapper model is valid at runtime, but PHPStan does not fully infer the upstream subtype here. */
     protected static ?string $model = OauthAccessToken::class;
 
     protected static ?string $recordTitleAttribute = 'name';

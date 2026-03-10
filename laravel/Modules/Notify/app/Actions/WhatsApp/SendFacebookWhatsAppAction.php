@@ -114,7 +114,7 @@ final class SendFacebookWhatsAppAction
             $this->vars['status_txt'] = $responseContent;
             $this->vars['response_data'] = $responseData;
 
-            Log::info('WhatsApp Facebook inviato con successo', [
+            Log::debug('WhatsApp Facebook inviato con successo', [
                 'to' => $whatsAppData->recipient,
                 'response_code' => $statusCode,
             ]);

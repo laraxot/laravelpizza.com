@@ -14,9 +14,9 @@ class ThemeFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $faker->words(3, true)
-            'description' => $faker->sentence()
-            'is_active' => $faker->boolean()
+            'name' => $this->faker->words(3, true),
+            'description' => $this->faker->sentence(),
+            'is_active' => $this->faker->boolean(),
             'config' => [
                 'primary_color' => '#007bff',
                 'secondary_color' => '#6c757d',

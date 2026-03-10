@@ -108,7 +108,7 @@ final class Send360dialogWhatsAppAction
             $this->vars['status_txt'] = $responseContent;
             $this->vars['response_data'] = $responseData;
 
-            Log::info('WhatsApp 360dialog inviato con successo', [
+            Log::debug('WhatsApp 360dialog inviato con successo', [
                 'to' => $whatsAppData->recipient,
                 'response_code' => $statusCode,
             ]);

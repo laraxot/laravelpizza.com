@@ -97,10 +97,10 @@
 - [PHPStan](./phpstan.md) - Utilizzo di PHPStan
 - [PHPStan Incrementale](./phpstan-incremental.md) - Utilizzo incrementale di PHPStan
 - [Problemi PHPStan](./phpstan_issues.md) - Problemi comuni con PHPStan
+- [PHPStan Cluster 2026-03-10](./phpstan-cluster-2026-03-10.md) - Contratti fuori sync tra composer, componenti e factory legacy
 
 ## Roadmap e Sviluppo Futuro
 - [Roadmap](./roadmap.md) - Piano di sviluppo futuro del modulo CMS
 
 ## Note sulla Manutenzione
 Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice del modulo CMS, consultare la documentazione pertinente e aggiornare i documenti correlati.
-

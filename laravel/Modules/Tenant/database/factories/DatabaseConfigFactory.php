@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Tenant\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -10,6 +12,7 @@ use Modules\Tenant\Models\DatabaseConfig;
  */
 class DatabaseConfigFactory extends Factory
 {
+    /** @var class-string<DatabaseConfig> */
     protected $model = DatabaseConfig::class;
 
     /**
@@ -20,11 +23,11 @@ class DatabaseConfigFactory extends Factory
     public function definition(): array
     {
         return [
-            'host' => $faker->word()
+            'host' => $this->faker->word(),
             'port' => 3306,
-            'database' => 'tenant_' . $faker->word()
+            'database' => 'tenant_'.$this->faker->word(),
             'username' => 'tenant_user',
-            'password' => $faker->password()
+            'password' => $this->faker->password(),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',

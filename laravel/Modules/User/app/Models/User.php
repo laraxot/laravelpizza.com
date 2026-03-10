@@ -58,7 +58,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property int|null                                          $teams_count
  * @property Collection<int, Tenant>                           $tenants
  * @property int|null                                          $tenants_count
- * @property Collection<int, OauthAccessToken>                 $tokens
+ * @property Collection<int, OauthToken>                       $tokens
  * @property int|null                                          $tokens_count
  *
  * @method static Builder|User         newModelQuery()

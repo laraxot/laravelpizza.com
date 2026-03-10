@@ -29,6 +29,7 @@ final class OauthPersonalAccessClientResource extends XotBaseResource
 {
     protected static ?string $cluster = Passport::class;
 
+    /** @phpstan-ignore-next-line Resource model is a valid Eloquent subtype, but PHPStan loses the inheritance edge in this context. */
     protected static ?string $model = OauthPersonalAccessClient::class;
 
     /**

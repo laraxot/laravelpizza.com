@@ -22,6 +22,7 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
  */
 final class OauthPersonalAccessClientResource extends XotBaseResource
 {
+    /** @phpstan-ignore-next-line Resource model is a valid Eloquent subtype, but PHPStan loses the inheritance edge in this context. */
     protected static ?string $model = OauthPersonalAccessClient::class;
 
     protected static ?string $recordTitleAttribute = 'id';

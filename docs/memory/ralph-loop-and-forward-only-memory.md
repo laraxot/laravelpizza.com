@@ -10,6 +10,8 @@
 
 - Non creare nuovi moduli: usare solo moduli esistenti.
 - Git solo in avanti: si studia lo storico ma non si ripristinano versioni vecchie come soluzione.
+- Vietato usare `git checkout --`, `git restore`, `git reset --hard`, force push o `git revert` come scorciatoia di correzione su storia condivisa.
+- Se serve recuperare conoscenza da uno snapshot passato, usare `git show` e tradurre il risultato in una nuova modifica forward-only.
 
 ## Procedura standard
 

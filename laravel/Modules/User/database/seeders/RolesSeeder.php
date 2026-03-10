@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Database\Seeders;
 
+use Illuminate\Console\Command;
 use Illuminate\Database\Seeder;
 use Modules\User\Models\Role;
 
@@ -38,6 +39,7 @@ class RolesSeeder extends Seeder
      */
     private function displayResults(array $roles): void
     {
+        $command = $this->getConsoleCommand();
         $command->info('Roles seeded successfully:');
         $command->table(
             self::$OUTPUT_TABLE_HEADERS,
@@ -49,5 +51,10 @@ class RolesSeeder extends Seeder
                 ])
                 ->toArray(),
         );
+    }
+
+    private function getConsoleCommand(): Command
+    {
+        return $this->command;
     }
 }

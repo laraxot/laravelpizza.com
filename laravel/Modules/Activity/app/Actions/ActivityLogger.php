@@ -61,7 +61,7 @@ class ActivityLogger
             'event' => $type,
         ]);
 
-        Log::info('Activity logged', [
+        Log::debug('Activity logged', [
             'activity_id' => $activity->id,
             'type' => $type,
         ]);
@@ -222,7 +222,7 @@ class ActivityLogger
 
         $deleted = is_int($deletedCount) ? $deletedCount : 0;
 
-        Log::info('Old activities cleaned', [
+        Log::debug('Old activities cleaned', [
             'deleted_count' => $deleted,
             'older_than_days' => $days,
         ]);

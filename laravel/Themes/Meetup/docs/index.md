@@ -7,6 +7,7 @@ The Meetup theme is a premium, multi-language responsive theme designed for the 
 - Before editing any code that touches the public theme, study and improve this theme documentation and the related module documentation first.
 - After local docs updates, align global `docs/rules`, `docs/memory`, `docs/skills` and evaluate whether the work should be tracked on GitHub Issues/Discussions.
 - After editing PHP files in the theme or in related backend modules, apply the post-edit quality gate: `phpstan`, `phpmd`, `phpinsights`, plus the relevant Pest test when the changed behavior is testable.
+- For PHPStan runtime in this repository, use the workspace cache dir (`laravel/storage/app/phpstan`), never `/tmp/phpstan`; if PHPStan crashes before analysis, retry with `XDEBUG_MODE=off`.
 - Public blocks and JSON-LD must rely on canonical backend relations; for many-to-many domain links in Meetup this means `belongsToManyX()`, not `belongsToMany()`.
 - Public pages must also declare the correct page type (`WebPage`, `ProfilePage`, `ItemPage`, `CollectionPage`, `ContactPage`) and connect it to the entity via `mainEntity` or `mainEntityOfPage`.
 - No stringhe UI hardcoded nel tema: il testo utente deve sempre usare chiavi di traduzione (`pub_theme::...` o namespace modulo).

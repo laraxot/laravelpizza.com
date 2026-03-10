@@ -12,11 +12,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-<<<<<<< HEAD
         $this->tableCreate(static function (Blueprint $table): void {
-=======
-        $this->tableCreate(static function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             $table->id();
             $table->string('name')->unique();
             $table->string('display_name');
@@ -34,11 +30,7 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-<<<<<<< HEAD
         $this->tableUpdate(function (Blueprint $table): void {
-=======
-        $this->tableUpdate(function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             if (! $this->hasColumn('type')) {
                 $table->string('type')->default('oauth')->after('display_name');
             }
@@ -63,11 +55,7 @@ return new class extends XotBaseMigration {
                 $table->json('role_mapping')->nullable()->after('domain_whitelist');
             }
 
-<<<<<<< HEAD
             if ($this->hasColumn('is_active')) {
-=======
-            if ($hasColumn('is_active')) {
->>>>>>> 74e589dbb (.)
                 $table->boolean('is_active')->default(true)->change();
             }
 

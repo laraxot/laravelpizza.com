@@ -79,7 +79,7 @@ class SaveGdprConsents
             }
         }
 
-        Log::info('GDPR consents saved for user registration', [
+        Log::debug('GDPR consents saved for user registration', [
             'user_id' => $user->id,
             'ip' => $event->ipAddress,
             'consents' => array_keys($consentMapping),

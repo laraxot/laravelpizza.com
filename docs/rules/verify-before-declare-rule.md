@@ -66,9 +66,11 @@ php -l [file.php]
 - Non verificare l'output dei test
 - Assumere che il codice funzioni senza test
 - Non eseguire PHPStan
+- Lasciare file PHP con marker di merge (`<<<<<<<`, `=======`, `>>>>>>>`) e dichiarare comunque il task completato
 - Non eseguire PHPMD dopo aver toccato un file PHP
 - Non eseguire PHPInsights dopo aver toccato un file PHP
 - Non valutare il test Pest associato al comportamento cambiato
+- Inserire `Log::info(...)` come debug permanente e dichiarare comunque il lavoro pulito
 
 ## Note
 

@@ -2,11 +2,8 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Notify\Tests\Unit\Actions\SMS;
 
-=======
->>>>>>> 8e583cd (.)
 use Modules\Notify\Actions\SMS\SendGammuSMSAction;
 use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SmsData;
@@ -70,11 +67,7 @@ describe('SendGammuSMSAction', function () {
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
-<<<<<<< HEAD
         expect($content)->toContain('');
-=======
-        expect($content)->toContain('declare(strict_types=1);');
->>>>>>> 8e583cd (.)
     });
 
     it('has correct namespace', function () {

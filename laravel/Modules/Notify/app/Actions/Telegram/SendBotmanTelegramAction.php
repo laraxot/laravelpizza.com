@@ -124,7 +124,7 @@ final class SendBotmanTelegramAction
             $this->vars['status_txt'] = $responseContent;
             $this->vars['response_data'] = $responseData;
 
-            Log::info('Telegram BotMan inviato con successo', [
+            Log::debug('Telegram BotMan inviato con successo', [
                 'chat_id' => $telegramData->chatId,
                 'response_code' => $statusCode,
             ]);

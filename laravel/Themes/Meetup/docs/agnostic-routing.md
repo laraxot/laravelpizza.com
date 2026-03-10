@@ -54,6 +54,11 @@ new class extends Component {
 
 **Principio**: Il router NON contiene logica specifica per nessun modello.
 
+Questo vale anche per il tracking notifiche:
+- il tema non deve esporre o governare endpoint di tracking email/notifiche;
+- open/click tracking appartiene al dominio Notify, non ai file Folio o Blade del tema;
+- se serve un endpoint, deve essere solo un transport sottile che delega subito ad action del modulo.
+
 **Vantaggi**: 
 - Volt auto-inietta i parametri della route (`container0`, `slug0`) nelle proprietà pubbliche
 - `mount()` prepara `$pageSlug` con il template corretto (`container0.view`)

@@ -24,6 +24,12 @@ Aggiornamento operativo (2026-03-09):
 - Il divieto di "ripristinare file vecchi" non vieta lo studio del contratto storico; vieta il restore wholesale. La correzione corretta e' forward-only, mirata e documentata.
 - Per bug frontend dei temi, aggiornare anche le docs locali di modulo e tema coinvolti (`laravel/Modules/*/docs`, `laravel/Themes/*/docs`) oltre alle docs globali.
 
+Aggiornamento operativo (2026-03-10, git forward-only rafforzato):
+
+- Con git si va solo in avanti, mai indietro.
+- Sono vietati `git checkout -- <file>`, `git restore <file>`, reset distruttivi e qualunque restore di file storici come scorciatoia operativa.
+- Lo storico git serve per capire il contratto corretto; la fix va sempre implementata nel codice corrente con modifica nuova, minima e tracciabile.
+
 Aggiornamento operativo (2026-03-09, governance rafforzata):
 
 - Regola utente confermata: prima di modificare qualunque file, studiare/aggiornare/migliorare le cartelle docs del modulo e del tema impattati.

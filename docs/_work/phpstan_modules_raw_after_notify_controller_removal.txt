@@ -1,0 +1,9 @@
+Note: Using configuration file /var/www/_bases/base_laravelpizza/laravel/phpstan.neon.
+    0/3318 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%
+In TcpServer.php line 167:
+                                                    
+  Failed to listen on "tcp://127.0.0.1:0": Success  
+                                                    
+
+analyse [-c|--configuration CONFIGURATION] [-l|--level LEVEL] [--no-progress] [--debug] [-a|--autoload-file AUTOLOAD-FILE] [--error-format ERROR-FORMAT] [-b|--generate-baseline [GENERATE-BASELINE]] [--allow-empty-baseline] [--memory-limit MEMORY-LIMIT] [--xdebug] [--tmp-file TMP-FILE] [--instead-of INSTEAD-OF] [--fix] [--watch] [--pro] [--fail-without-result-cache] [--] [<paths>...]
+

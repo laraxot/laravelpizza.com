@@ -3,6 +3,15 @@
 declare(strict_types=1);
 
 return [
+    'navigation' => [
+        'label' => 'Profilo',
+        'plural_label' => 'Profili',
+        'group' => 'Utenti',
+        'icon' => 'heroicon-o-user',
+        'sort' => 1,
+    ],
+    'label' => 'Profilo',
+    'plural_label' => 'Profili',
     'badges' => [
         'public_profile' => [
             'label' => 'Profilo pubblico',
@@ -40,7 +49,7 @@ return [
             'label' => 'Utente della community',
         ],
         'short_bio_fallback' => [
-            'label' => 'Questo membro non ha ancora aggiunto una biografia pubblica, ma fa gia parte della community.',
+            'label' => 'Biografia pubblica non ancora disponibile.',
         ],
     ],
 ];

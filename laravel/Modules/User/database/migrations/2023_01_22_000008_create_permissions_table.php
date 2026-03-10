@@ -16,11 +16,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-<<<<<<< HEAD
         $this->tableCreate(static function (Blueprint $table): void {
-=======
-        $this->tableCreate(static function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             $table->bigIncrements('id');
             // permission id
             $table->string('name');
@@ -30,11 +26,7 @@ return new class extends XotBaseMigration {
             $table->unique(['name', 'guard_name']);
         });
         // -- UPDATE --
-<<<<<<< HEAD
         $this->tableUpdate(function (Blueprint $table): void {
-=======
-        $this->tableUpdate(function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             // $this->updateUser($table);
             $this->updateTimestamps($table);
         });

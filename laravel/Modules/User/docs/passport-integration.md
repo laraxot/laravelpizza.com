@@ -2,7 +2,7 @@
 
 > **Generato**: [DATE]
 > **Filosofia**: L'Architetto Laraxot (Vincitore del Dibattito Interno)
-> **PHPStan Status**: ✅ Level MAX Compliant (Zero Errori)
+> **PHPStan Status**: ✅ Modulo `User` verificato pulito il 2026-03-10
 
 ---
 
@@ -38,11 +38,18 @@ Durante l'analisi dell'integrazione Passport, sono emerse tre posizioni:
 laravel/Modules/User/app/Models/
 ├── BaseUser.php              # Implements OAuthenticatable + HasApiTokens
 ├── OauthClient.php          # Extends Laravel\Passport\Client
-├── OauthAccessToken.php     # Extends Laravel\Passport\Token
+├── OauthToken.php           # Extends Laravel\Passport\Token
+├── OauthAccessToken.php     # Local alias/model used by app consumers when needed
 ├── OauthRefreshToken.php    # Extends Laravel\Passport\RefreshToken
 ├── OauthAuthCode.php        # Extends Laravel\Passport\AuthCode
-└── OauthPersonalAccessClient.php  # Extends Laravel\Passport\PersonalAccessClient
+└── OauthPersonalAccessClient.php  # Local application model for oauth_personal_access_clients
 ```
+
+### Distinzione critica
+
+- I wrapper 1:1 obbligatori esistono solo per i model vendor Passport che estendono `Illuminate\Database\Eloquent\Model`
+- `Laravel\Passport\PersonalAccessClient` non e un model Eloquent vendor disponibile come wrapper 1:1 nel progetto
+- `OauthPersonalAccessClient` resta quindi un model locale del modulo `User`, non un mirror diretto del vendor
 
 ### BaseUser + Passport
 

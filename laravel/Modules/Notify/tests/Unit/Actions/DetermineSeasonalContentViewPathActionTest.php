@@ -2,11 +2,8 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Notify\Tests\Unit\Actions;
 
-=======
->>>>>>> 8e583cd (.)
 use Carbon\Carbon;
 use Modules\Notify\Actions\DetermineSeasonalContentViewPathAction;
 use Spatie\QueueableAction\QueueableAction;

@@ -15,9 +15,6 @@ class GuestLayout extends Component
      */
     public function render(): View|Htmlable|\Closure|string
     {
-        /** @var string $view */
-        $view = 'pub_theme::components.layouts.guest';
-
-        return view($view);
+        return view('pub_theme::components.layouts.guest');
     }
 }

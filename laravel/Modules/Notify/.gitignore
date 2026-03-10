@@ -102,6 +102,7 @@ Thumbs.db
 *.old
 *.old1
 *.old2
+*.old*
 *.backup
 *.backup.*
 *.bak

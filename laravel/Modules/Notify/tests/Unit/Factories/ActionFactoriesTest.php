@@ -2,11 +2,8 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Notify\Tests\Unit\Factories;
 
-=======
->>>>>>> 8e583cd (.)
 use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Contracts\WhatsAppProviderActionInterface;
 use Modules\Notify\Factories\SmsActionFactory;

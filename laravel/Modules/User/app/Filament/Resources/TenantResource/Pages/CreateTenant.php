@@ -33,10 +33,10 @@ class CreateTenant extends XotBaseCreateRecord
     //  */
     // private function createTenantRecord(array $data)
     // {
-    //     \Log::info('Saving Tenant');
+    //     \Log::debug('Saving Tenant');
     //     $record = new Tenant(collect($data)->except('domain')->toArray());
     //     $record->saveOrFail();
-    //     \Log::info('Saving Domains');
+    //     \Log::debug('Saving Domains');
     //     $record = $record::find($record->);
     //     $record->domains()->create(['domain' => collect($data)->get('domain')]);
     //     return $record;

@@ -25,6 +25,8 @@ Questa non è una raccomandazione, è una **legge del progetto**.
 - Storia preservata SEMPRE
 - Tracciabilità totale
 - Documentare correzioni con commit message chiari
+- Studiare lo storico con `git show` senza ripristinare file completi
+- Reintrodurre solo compatibilita' minima nel codice corrente quando serve
 
 ## Il Perché
 
@@ -50,6 +52,19 @@ Gli errori sono maestri. Non si nascondono, si documentano e si correggono andan
 - Trasparenza assoluta
 
 ## Workflow Corretto
+
+### Scenario 0: Un file attuale e' sbagliato
+
+```bash
+# ❌ SBAGLIATO
+git checkout -- Modules/Foo/app/Bar.php
+git restore Modules/Foo/app/Bar.php
+
+# ✅ CORRETTO
+git show HEAD~3:Modules/Foo/app/Bar.php
+# studio il contratto utile
+# poi modifico il file attuale con una fix forward-only
+```
 
 ### Scenario 1: Ho committato un bug
 
@@ -113,6 +128,15 @@ git reset --hard abc123
 # Usa revert per creare un nuovo commit che annulla
 git revert HEAD~2..HEAD
 git push
+```
+
+### Scenario 5: Mi serve un metodo rimosso in un refactor
+
+```bash
+# ✅ CORRETTO
+git show <old-sha>:Modules/Xot/app/Datas/XotData.php
+# identifico la firma storica
+# implemento un wrapper compatibile minimo nel file corrente
 ```
 
 ## Eccezioni Rarissime

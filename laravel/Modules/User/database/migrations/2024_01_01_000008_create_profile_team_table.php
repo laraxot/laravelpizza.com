@@ -17,11 +17,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-<<<<<<< HEAD
         $this->tableCreate(static function (Blueprint $table): void {
-=======
-        $this->tableCreate(static function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             $table->id();
             $table->uuid('profile_id')->nullable()->index();
             $table->foreignId('team_id');
@@ -33,11 +29,7 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-<<<<<<< HEAD
         $this->tableUpdate(function (Blueprint $table): void {
-=======
-        $this->tableUpdate(function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             // Aggiorniamo i timestamp e soft deletes
             $this->updateTimestamps(table: $table, hasSoftDeletes: true);
         });

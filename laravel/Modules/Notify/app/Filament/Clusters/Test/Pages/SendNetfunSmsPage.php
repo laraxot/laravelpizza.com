@@ -123,7 +123,7 @@ class SendNetfunSmsPage extends XotBasePage
                 ->body(__('notify::sms.notifications.sent.body'))
                 ->send();
 
-            Log::info('SMS inviato con successo', [
+            Log::debug('SMS inviato con successo', [
                 'recipient' => $data['recipient'],
                 'from' => $data['from'],
                 'provider' => $provider,

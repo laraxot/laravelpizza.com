@@ -61,6 +61,11 @@ class HeadernavData extends Data implements Wireable
         return view($view, $view_params);
     }
 
+    public function view(): Renderable
+    {
+        return $this->render();
+    }
+
     public static function rules(): array
     {
         return [

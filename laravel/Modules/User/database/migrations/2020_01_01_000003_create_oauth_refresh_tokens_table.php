@@ -13,11 +13,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-<<<<<<< HEAD
         $this->tableCreate(static function (Blueprint $table): void {
-=======
-        $this->tableCreate(static function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             $table->string('id', 100)->primary();
             // $table->string('access_token_id', 100)->index();
             $table->foreignIdFor(OauthAccessToken::class, 'access_token_id')->index();
@@ -26,11 +22,7 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-<<<<<<< HEAD
         $this->tableUpdate(function (Blueprint $table): void {
-=======
-        $this->tableUpdate(function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             // if (! $this->hasColumn('email'))
             //    $table->string('email')->nullable();
             // }

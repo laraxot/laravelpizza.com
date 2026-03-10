@@ -39,7 +39,7 @@ class SendAppointmentNotificationAction
 
             // Since patient models are not available in this project,
             // we return early with logging
-            Log::info('Notification service not fully implemented - missing Patient models', [
+            Log::debug('Notification service not fully implemented - missing Patient models', [
                 'type' => $type,
                 'additional_data' => $additionalData,
             ]);

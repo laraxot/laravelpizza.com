@@ -19,11 +19,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // Aggiunge lang solo se non esiste.
-<<<<<<< HEAD
         $this->tableUpdate(function (Blueprint $table): void {
-=======
-        $this->tableUpdate(function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             if (! $this->hasColumn('lang')) {
                 $table->string('lang', 5)->default('it')->after('state');
             }

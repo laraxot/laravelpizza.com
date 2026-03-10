@@ -107,7 +107,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
             $this->vars['status_txt'] = $responseContent;
             $this->vars['response_data'] = $responseData;
 
-            Log::info('WhatsApp Twilio inviato con successo', [
+            Log::debug('WhatsApp Twilio inviato con successo', [
                 'to' => $whatsAppData->recipient,
                 'response_code' => $statusCode,
             ]);

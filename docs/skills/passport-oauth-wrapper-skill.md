@@ -22,3 +22,11 @@ Eseguire sempre:
 - model OAuth applicativi aggiuntivi del progetto
 
 Esempio: `OauthPersonalAccessClient` e un model locale utile al progetto, ma non deriva da una classe Eloquent del vendor Passport.
+
+## Recovery workflow validato (2026-03-10)
+
+1. Eseguire `./vendor/bin/phpstan analyse Modules/User --error-format=raw`.
+2. Se emergono errori su `OauthAccessToken`, verificare che estenda `Laravel\Passport\Token` e non classi non-Eloquent del vendor.
+3. Se emergono errori su `tokens` nei PHPDoc di `BaseUser`/`User`, allineare il tipo a `Collection<int, OauthToken>`.
+4. Se emergono errori su `OauthPersonalAccessClient`, trattarlo come model locale del modulo, non come wrapper vendor 1:1.
+5. Rieseguire `./vendor/bin/phpstan analyse Modules` per validare il delta finale.

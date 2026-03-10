@@ -17,28 +17,20 @@ new class extends Component
 
     public ?object $item = null;
 
-    public array $data = [];
-
     public function mount(ResolvePageAction $resolvePageAction, string $id): void
     {
         $this->id = $id;
         $resolved = $resolvePageAction->execute('profile', $id);
         $this->item = $resolved->item;
-        $this->data = [
-            'container0' => 'profile',
-            'slug0' => $this->id,
-            'item' => $this->item,
-        ];
     }
 };
 ?>
 
 <x-layouts.app>
     @volt('profile.view')
-        <x-page
-            side="content"
-            slug="profile.view"
-            :data="$this->data"
-        />
+        @include('pub_theme::components.blocks.profile.detail', [
+            'item' => $this->item,
+            'slug0' => $this->id,
+        ])
     @endvolt
 </x-layouts.app>

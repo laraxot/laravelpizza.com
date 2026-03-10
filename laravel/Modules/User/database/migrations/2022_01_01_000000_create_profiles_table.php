@@ -15,11 +15,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-<<<<<<< HEAD
         $this->tableCreate(static function (Blueprint $table): void {
-=======
-        $this->tableCreate(static function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             $table->uuid('id')->primary();
             $table->string('user_id', 36)->index()->nullable();
             $table->string('type')->index()->nullable();
@@ -48,11 +44,7 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-<<<<<<< HEAD
         $this->tableUpdate(function (Blueprint $table): void {
-=======
-        $this->tableUpdate(function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             if (! $this->hasColumn('user_id')) {
                 $table->string('user_id', 36)->index()->nullable()->after('id');
             }

@@ -112,7 +112,7 @@ class FilamentOptimizationServiceProvider extends ServiceProvider
                 $totalTime = array_sum($times);
 
                 if ($totalQueries > 50 || $totalTime > 1000) {
-                    Log::info('High query count or time detected', [
+                    Log::debug('High query count or time detected', [
                         'total_queries' => $totalQueries,
                         'total_time' => $totalTime,
                         'url' => request()->fullUrl(),

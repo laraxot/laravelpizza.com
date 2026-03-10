@@ -34,16 +34,16 @@ public function markAsClicked(): void
 ```
 
 ### 2. NotificationTrackingController.php
-**Problema**: Uso di `base64_decode` non sicuro
+**Stato aggiornato**: rimosso dal runtime
 
-**Soluzione**: Utilizzo della funzione sicura
+**Motivo**: il fix locale su `base64_decode()` non risolveva il problema architetturale principale. Il controller era una superficie HTTP legacy non coerente con l'approccio action/channel-first del modulo Notify.
+
+**Direzione corretta**:
 ```php
-// PRIMA (non sicuro)
-$decodedData = base64_decode($encodedData);
-
-// DOPO (sicuro)
-use function Safe\base64_decode;
-$decodedData = base64_decode($encodedData);
+// Tracking e mutazioni nel dominio, non in un controller dedicato
+// - action per registrare open/click
+// - service/channel per costruire i payload di tracking
+// - route sottili solo se strettamente necessarie
 ```
 
 ## Dipendenze
@@ -54,10 +54,9 @@ $decodedData = base64_decode($encodedData);
 ## Risultati
 - ✅ **0 errori** PHPStan livello 9
 - ✅ **Metodi mancanti** implementati correttamente
-- ✅ **Gestione sicura** di base64_decode
+- ✅ **Rimozione** del controller legacy non conforme
 - ✅ **Conformità** agli standard di sicurezza
 
 ## Collegamenti
 - [Report Completo PHPStan Fixes](../../../bashscripts/docs/phpstan_fixes_comprehensive_report.md)
 - [Script Risoluzione Conflitti](../../../bashscripts/docs/conflict_resolution_script_improvements.md)
-

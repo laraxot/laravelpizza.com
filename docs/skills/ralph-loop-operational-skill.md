@@ -19,5 +19,5 @@ Quando serve orchestrare lavoro iterativo con PRD + build loop mantenendo govern
 ## Guardrail
 
 - No nuovi moduli non approvati.
-- Git forward-only.
+- Git forward-only senza `reset`, force push o `revert` come scorciatoia standard.
 - Nessuna modifica fuori perimetro senza documentazione preventiva.

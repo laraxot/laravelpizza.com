@@ -257,7 +257,7 @@ class XotServiceProvider extends XotBaseServiceProvider
         //             'modules.xot.filament.widgets.modules-overview-widget',
         //             \Modules\Xot\Filament\Widgets\ModulesOverviewWidget::class
         //         );
-        //         \Log::info('ModulesOverviewWidget registrato correttamente');
+        //         \Log::debug('ModulesOverviewWidget registrato correttamente');
         //     } catch (\Exception $e) {
         //         \Log::error('Errore nella registrazione ModulesOverviewWidget: ' . $e->getMessage());
         //     }

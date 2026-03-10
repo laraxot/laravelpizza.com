@@ -81,7 +81,7 @@ class LogoutListener
             }
 
             // Log dell'evento
-            Log::info('Logout effettuato', [
+            Log::debug('Logout effettuato', [
                 'user_id' => $event->user->getAuthIdentifier(),
                 'device_id' => $device->id,
                 'timestamp' => now(),

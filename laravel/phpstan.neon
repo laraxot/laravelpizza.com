@@ -49,6 +49,6 @@ parameters:
         - ./Modules/Xot/Helpers/Helper.php
 
     editorUrl: 'vscode://file/%%file%%:%%line%%'
-    tmpDir: /tmp/phpstan
+    tmpDir: ./storage/app/phpstan
     treatPhpDocTypesAsCertain: false
     reportUnmatchedIgnoredErrors: false

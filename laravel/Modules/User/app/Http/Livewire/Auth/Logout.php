@@ -52,7 +52,7 @@ class Logout extends Component
 
             // Log per audit
             if ($user) {
-                Log::info('User logged out successfully', [
+                Log::debug('User logged out successfully', [
                     'user_id' => $user->id,
                     'email' => $user->email,
                 ]);

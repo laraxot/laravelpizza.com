@@ -7,6 +7,7 @@ namespace Modules\Cms\Support;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Str;
 use Modules\User\Models\User;
+use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Datas\MetatagData;
 
 final class PageSchemaBuilder
@@ -154,11 +155,29 @@ final class PageSchemaBuilder
         }
 
         $profile = $publicUser->profile;
+        $profileFirstName = '';
+        $profileLastName = '';
+        $profileEmail = '';
+        $profileBio = '';
+        $profileImage = null;
+
+        if ($profile instanceof ProfileContract) {
+            $profileFirstName = $this->readNullableStringProperty($profile, 'first_name');
+            $profileLastName = $this->readNullableStringProperty($profile, 'last_name');
+            $profileEmail = $this->readNullableStringProperty($profile, 'email');
+            $profileBio = $this->readNullableStringProperty($profile, 'bio');
+
+            $avatarUrl = $profile->getAvatarUrl();
+            if (is_string($avatarUrl) && '' !== $avatarUrl) {
+                $profileImage = $avatarUrl;
+            }
+        }
+
         $name = trim((string) ($publicUser->name ?? ''));
 
         if ('' === $name) {
-            $firstName = trim((string) ($publicUser->first_name ?? $profile?->first_name ?? ''));
-            $lastName = trim((string) ($publicUser->last_name ?? $profile?->last_name ?? ''));
+            $firstName = trim((string) ($publicUser->first_name ?? $profileFirstName));
+            $lastName = trim((string) ($publicUser->last_name ?? $profileLastName));
             $name = trim($firstName.' '.$lastName);
         }
 
@@ -169,18 +188,18 @@ final class PageSchemaBuilder
         $schema = [
             '@type' => 'Person',
             'name' => $name,
-            'url' => url('/profile/'.$publicUser->getKey()),
+            'url' => url('/profile/'.(string) $publicUser->getKey()),
         ];
 
         if (is_string($publicIdentifier) && '' !== $publicIdentifier) {
             $schema['identifier'] = $publicIdentifier;
         }
 
-        $givenName = trim((string) ($publicUser->first_name ?? $profile?->first_name ?? ''));
-        $familyName = trim((string) ($publicUser->last_name ?? $profile?->last_name ?? ''));
-        $email = trim((string) ($publicUser->email ?? $profile?->email ?? ''));
-        $description = trim((string) ($profile?->bio ?? ''));
-        $image = $profile?->getAvatarUrl();
+        $givenName = trim((string) ($publicUser->first_name ?? $profileFirstName));
+        $familyName = trim((string) ($publicUser->last_name ?? $profileLastName));
+        $email = trim((string) ($publicUser->email ?? $profileEmail));
+        $description = trim((string) $profileBio);
+        $image = $profileImage;
 
         if ('' !== $givenName) {
             $schema['givenName'] = $givenName;
@@ -198,10 +217,21 @@ final class PageSchemaBuilder
             $schema['description'] = $description;
         }
 
-        if (is_string($image) && '' !== $image) {
+        if (null !== $image) {
             $schema['image'] = $image;
         }
 
         return $schema;
+    }
+
+    private function readNullableStringProperty(object $object, string $property): string
+    {
+        if (! isset($object->{$property})) {
+            return '';
+        }
+
+        $value = $object->{$property};
+
+        return is_string($value) ? trim($value) : '';
     }
 }

@@ -36,7 +36,7 @@ class TelegramChannel
 
         // TODO: Implementare BotTelegramAction e TelegramMessageData
         // Per ora, logghiamo solo l'intento di invio
-        Log::info('Telegram notification would be sent', [
+        Log::debug('Telegram notification would be sent', [
             'chat_id' => $chatId,
             'message' => $message,
         ]);

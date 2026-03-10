@@ -27,7 +27,7 @@ class CmsMassSeeder extends Seeder
      */
     public function run(): void
     {
-        $command->info('🚀 Inizializzazione seeding di massa per modulo Cms...');
+        $this->command->info('Inizializzazione seeding di massa per modulo Cms...');
 
         $startTime = microtime(true);
 
@@ -53,10 +53,10 @@ class CmsMassSeeder extends Seeder
             $endTime = microtime(true);
             $executionTime = round($endTime - $startTime, 2);
 
-            $command->info("🎉 Seeding modulo Cms completato in {$executionTime} secondi!");
+            $this->command->info("Seeding modulo Cms completato in {$executionTime} secondi.");
             $this->displaySummary();
         } catch (\Exception $e) {
-            $command->error('❌ Errore durante il seeding: '.$e->getMessage());
+            $this->command->error('Errore durante il seeding: '.$e->getMessage());
             throw $e;
         }
     }
@@ -66,13 +66,13 @@ class CmsMassSeeder extends Seeder
      */
     private function createCmsModules(): void
     {
-        $command->info('🔧 Creazione moduli CMS...');
+        $this->command->info('Creazione moduli CMS...');
 
         // Module is a Sushi model and doesn't support factories
         // Data is loaded dynamically from NwModule::getByStatus(1)
         $modules = Module::all();
 
-        $command->info('✅ Loaded '.$modules->count());
+        $this->command->info('Loaded '.$modules->count().' moduli.');
     }
 
     /**
@@ -80,16 +80,16 @@ class CmsMassSeeder extends Seeder
      */
     private function createSections(): void
     {
-        $command->info('📑 Creazione sezioni...');
+        $this->command->info('Creazione sezioni...');
 
         // Crea 100 sezioni
         /** @phpstan-ignore-next-line */
-        $sections = Section::factory(100)->create([)
+        $sections = Section::factory(100)->create([
             'created_at' => Carbon::now()->subDays(rand(1, 365)),
         ]);
         /** @var Collection<int, Section> $sections */
         $sectionCount = is_object($sections) && method_exists($sections, 'count') ? $sections->count() : 0;
-        $command->info('✅ Create '.$sectionCount.' sezioni');
+        $this->command->info('Create '.$sectionCount.' sezioni.');
     }
 
     /**
@@ -97,16 +97,16 @@ class CmsMassSeeder extends Seeder
      */
     private function createPages(): void
     {
-        $command->info('📄 Creazione pagine...');
+        $this->command->info('Creazione pagine...');
 
         // Crea 500 pagine
         /** @phpstan-ignore-next-line */
-        $pages = Page::factory(500)->create([)
+        $pages = Page::factory(500)->create([
             'created_at' => Carbon::now()->subDays(rand(1, 365)),
         ]);
         /** @var Collection<int, Page> $pages */
         $pageCount = is_object($pages) && method_exists($pages, 'count') ? $pages->count() : 0;
-        $command->info('✅ Create '.$pageCount.' pagine');
+        $this->command->info('Create '.$pageCount.' pagine.');
     }
 
     /**
@@ -114,16 +114,16 @@ class CmsMassSeeder extends Seeder
      */
     private function createPageContents(): void
     {
-        $command->info('📝 Creazione contenuti delle pagine...');
+        $this->command->info('Creazione contenuti delle pagine...');
 
         // Crea 1000 contenuti di pagina
         /** @phpstan-ignore-next-line */
-        $contents = PageContent::factory(1000)->create([)
+        $contents = PageContent::factory(1000)->create([
             'created_at' => Carbon::now()->subDays(rand(1, 365)),
         ]);
         /** @var Collection<int, PageContent> $contents */
         $contentCount = is_object($contents) && method_exists($contents, 'count') ? $contents->count() : 0;
-        $command->info('✅ Creati '.$contentCount.' contenuti di pagina');
+        $this->command->info('Creati '.$contentCount.' contenuti di pagina.');
     }
 
     /**
@@ -131,16 +131,16 @@ class CmsMassSeeder extends Seeder
      */
     private function createMenus(): void
     {
-        $command->info('🍽️ Creazione menu...');
+        $this->command->info('Creazione menu...');
 
         // Crea 50 menu
         /** @phpstan-ignore-next-line */
-        $menus = Menu::factory(50)->create([)
+        $menus = Menu::factory(50)->create([
             'created_at' => Carbon::now()->subDays(rand(1, 365)),
         ]);
         /** @var Collection<int, Menu> $menus */
         $menuCount = is_object($menus) && method_exists($menus, 'count') ? $menus->count() : 0;
-        $command->info('✅ Creati '.$menuCount.' menu');
+        $this->command->info('Creati '.$menuCount.' menu.');
     }
 
     /**
@@ -148,13 +148,13 @@ class CmsMassSeeder extends Seeder
      */
     private function createConfigurations(): void
     {
-        $command->info('⚙️ Creazione configurazioni...');
+        $this->command->info('Creazione configurazioni...');
 
         // Conf è un modello Sushi che ottiene i dati da TenantService::getConfigNames()
         // Non supporta factories, i dati sono caricati dinamicamente
         $configs = Conf::all();
 
-        $command->info('✅ Caricati '.$configs->count());
+        $this->command->info('Caricati '.$configs->count().' config.');
     }
 
     /**
@@ -162,44 +162,34 @@ class CmsMassSeeder extends Seeder
      */
     private function displaySummary(): void
     {
-        $command->info('📊 RIASSUNTO DATI CREATI PER MODULO CMS:');
-        $command->info('┌─────────────────────────────────────┐');
+        $this->command->info('RIASSUNTO DATI CREATI PER MODULO CMS:');
+        $this->command->info('-------------------------------------');
 
         try {
             // Conta moduli
             $totalModules = Module::count();
 
-            $command->info('│ 🔧 Moduli totali:             '.)
-            str_pad((string) $totalModules, 6, ' ', STR_PAD_LEFT).
-                ' │');
+            $this->command->info('Moduli totali: '.str_pad((string) $totalModules, 6, ' ', STR_PAD_LEFT));
 
             // Conta sezioni
             $totalSections = Section::count();
 
-            $command->info('│ 📑 Sezioni totali:            '.)
-            str_pad((string) $totalSections, 6, ' ', STR_PAD_LEFT).
-                ' │');
+            $this->command->info('Sezioni totali: '.str_pad((string) $totalSections, 6, ' ', STR_PAD_LEFT));
 
             // Conta pagine
             $totalPages = Page::count();
 
-            $command->info('│ 📄 Pagine totali:             '.)
-            str_pad((string) $totalPages, 6, ' ', STR_PAD_LEFT).
-                ' │');
+            $this->command->info('Pagine totali: '.str_pad((string) $totalPages, 6, ' ', STR_PAD_LEFT));
 
             // Conta contenuti
             $totalContents = PageContent::count();
 
-            $command->info('│ 📝 Contenuti totali:          '.)
-            str_pad((string) $totalContents, 6, ' ', STR_PAD_LEFT).
-                ' │');
+            $this->command->info('Contenuti totali: '.str_pad((string) $totalContents, 6, ' ', STR_PAD_LEFT));
 
             // Conta menu
             $totalMenus = Menu::count();
 
-            $command->info('│ 🍽️ Menu totali:               '.)
-            str_pad((string) $totalMenus, 6, ' ', STR_PAD_LEFT).
-                ' │');
+            $this->command->info('Menu totali: '.str_pad((string) $totalMenus, 6, ' ', STR_PAD_LEFT));
 
             // Conta configurazioni
             try {
@@ -208,14 +198,12 @@ class CmsMassSeeder extends Seeder
                 $totalConfigs = 0;
             }
 
-            $command->info('│ ⚙️ Configurazioni totali:     '.)
-            str_pad((string) $totalConfigs, 6, ' ', STR_PAD_LEFT).
-                ' │');
+            $this->command->info('Configurazioni totali: '.str_pad((string) $totalConfigs, 6, ' ', STR_PAD_LEFT));
         } catch (\Exception $e) {
-            $command->info('│ ❌ Errore nel conteggio: '.$e->getMessage());
+            $this->command->info('Errore nel conteggio: '.$e->getMessage());
         }
 
-        $command->info('└─────────────────────────────────────┘');
-        $command->info('');
+        $this->command->info('-------------------------------------');
+        $this->command->info('');
     }
 }

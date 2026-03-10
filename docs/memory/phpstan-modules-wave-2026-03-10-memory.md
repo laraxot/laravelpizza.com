@@ -1,0 +1,26 @@
+# Memory: PHPStan Modules Wave 2026-03-10
+
+- Comando eseguito: `./vendor/bin/phpstan analyse Modules`
+- Risultato: `106 errors`.
+- Errori concentrati in: `Cms`, `Notify`, `User`, `Tenant`, `Meetup`.
+- Delta misurato in questa wave: da `171` a `106` errori globali.
+- Fix applicati in questa wave:
+  - `Modules/Cms/database/Migrations/2024_01_01_000000_create_page_contents_table.php`
+  - `Modules/Cms/database/seeders/CmsMassSeeder.php`
+  - `Modules/User/database/factories/OauthClientFactory.php`
+  - `Modules/User/database/factories/OauthAccessTokenFactory.php`
+  - `Modules/User/database/factories/OauthAuthCodeFactory.php`
+  - `Modules/User/database/factories/OauthRefreshTokenFactory.php`
+  - `Modules/User/database/factories/TenantFactory.php`
+  - `Modules/User/database/seeders/RolesSeeder.php`
+  - `Modules/User/database/seeders/UserMassSeeder.php`
+- Test aggiunto:
+  - `Modules/User/tests/Unit/Database/OauthFactoriesDefinitionTest.php`
+- Esito test mirati:
+  - Pest: `3 passed (43 assertions)`
+- Nota ambiente: `phpmd.phar` richiede esecuzione fuori sandbox per cache pdepend.
+- Backlog residuo dominante:
+  - `Cms` semantic drift (`Page/Show`, `GuestLayout`, `ThemeComposer`, `PostFactory`)
+  - `Notify` class not found / unsafe json encode
+  - `Tenant` factory su model non risolto
+  - `User/Passport` wrapper typing e PHPDoc incompleti

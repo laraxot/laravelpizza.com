@@ -63,13 +63,16 @@ class Show extends Component
                 return ['error' => 'Page not found', 'slug' => $this->slug];
             }
 
+            $title = is_scalar($page->title) ? (string) $page->title : $this->slug;
+            $content = is_scalar($page->content) ? (string) $page->content : '';
+
             return [
-                'title' => (string) $page->title,
-                'subtitle' => $page->subtitle,
-                'content' => (string) $page->content,
+                'title' => $title,
+                'subtitle' => null,
+                'content' => $content,
                 'meta' => [
-                    'description' => $page->meta_description,
-                    'keywords' => $page->meta_keywords,
+                    'description' => is_scalar($page->description) ? (string) $page->description : null,
+                    'keywords' => null,
                 ],
                 'blocks' => is_array($page->content_blocks) ? $page->content_blocks : [],
                 'layout' => 'default',

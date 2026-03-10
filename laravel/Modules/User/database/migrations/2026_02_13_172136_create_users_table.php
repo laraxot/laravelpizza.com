@@ -20,11 +20,7 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-<<<<<<< HEAD
         $this->tableCreate(static function (Blueprint $table): void {
-=======
-        $this->tableCreate(static function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             // $table->uuid('id')->primary();
             $table->string('id', 36)->primary();
             $table->string('name')->nullable();
@@ -40,11 +36,7 @@ return new class extends XotBaseMigration {
         });
 
         // Aggiunge lang solo se non esiste
-<<<<<<< HEAD
         $this->tableUpdate(function (Blueprint $table): void {
-=======
-        $this->tableUpdate(function (Blueprint $table) {
->>>>>>> 74e589dbb (.)
             if (! $this->hasColumn('first_name')) {
                 $table->string('first_name')->after('name')->nullable();
             } else {
@@ -88,10 +80,7 @@ return new class extends XotBaseMigration {
             if (! $this->hasColumn('password_expires_at')) {
                 $table->timestamp('password_expires_at')->nullable();
             }
-<<<<<<< HEAD
 
-=======
->>>>>>> 74e589dbb (.)
             if ($this->hasColumn('password')) {
                 $table->string('password')->nullable()->change();
             }

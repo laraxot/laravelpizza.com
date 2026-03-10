@@ -56,7 +56,7 @@ class SaveGdprConsentsAction
             }
         }
 
-        Log::info('GDPR consents saved via action', [
+        Log::debug('GDPR consents saved via action', [
             'user_id' => $user->id,
             'ip' => $ipAddress,
             'consents' => $consents,

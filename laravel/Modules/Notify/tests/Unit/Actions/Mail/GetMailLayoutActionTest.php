@@ -2,11 +2,8 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Notify\Tests\Unit\Actions\Mail;
 
-=======
->>>>>>> 8e583cd (.)
 use Modules\Notify\Actions\Mail\GetMailLayoutAction;
 use Spatie\QueueableAction\QueueableAction;
 

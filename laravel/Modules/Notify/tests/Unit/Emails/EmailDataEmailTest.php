@@ -2,11 +2,8 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Notify\Tests\Unit\Emails;
 
-=======
->>>>>>> 8e583cd (.)
 use Illuminate\Mail\Mailables\Address;
 use Modules\Notify\Datas\EmailData;
 use Modules\Notify\Emails\EmailDataEmail;

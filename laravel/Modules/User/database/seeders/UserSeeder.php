@@ -27,22 +27,22 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        $command->info('👤 Inizializzazione seeding User...');
+        $this->command->info('👤 Inizializzazione seeding User...');
 
         // Disabilita i controlli di foreign key (solo per MySQL)
         if ('sqlite' !== DB::getDriverName()) {
-            DB::statement('SET FOREIGN_KEY_CHECKS=0);');
+            DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         }
 
         try {
             $this->seedSystemRolesAndPermissions();
             $this->seedSystemTeams();
 
-            $command->info('✅ Seeding User completato con successo!');
+            $this->command->info('✅ Seeding User completato con successo!');
         } finally {
             // Riabilita i controlli di foreign key (solo per MySQL)
             if ('sqlite' !== DB::getDriverName()) {
-                DB::statement('SET FOREIGN_KEY_CHECKS=1);');
+                DB::statement('SET FOREIGN_KEY_CHECKS=1;');
             }
         }
     }
@@ -52,7 +52,7 @@ class UserSeeder extends Seeder
      */
     private function seedSystemRolesAndPermissions(): void
     {
-        $command->info('🔐 Creazione ruoli e permessi di sistema...');
+        $this->command->info('🔐 Creazione ruoli e permessi di sistema...');
 
         // Permessi di sistema
         $systemPermissions = [
@@ -96,29 +96,29 @@ class UserSeeder extends Seeder
         ];
 
         foreach ($systemPermissions as $permission) {
-            Permission::firstOrCreate([)
+            Permission::firstOrCreate([
                 'name' => $permission,
                 'guard_name' => 'web',
             ]);
         }
 
         // Ruoli di sistema
-        $superAdminRole = Role::firstOrCreate([)
+        $superAdminRole = Role::firstOrCreate([
             'name' => 'super-admin',
             'guard_name' => 'web',
         ]);
 
-        $systemAdminRole = Role::firstOrCreate([)
+        $systemAdminRole = Role::firstOrCreate([
             'name' => 'system-admin',
             'guard_name' => 'web',
         ]);
 
-        $moderatorRole = Role::firstOrCreate([)
+        $moderatorRole = Role::firstOrCreate([
             'name' => 'moderator',
             'guard_name' => 'web',
         ]);
 
-        $userRole = Role::firstOrCreate([)
+        $userRole = Role::firstOrCreate([
             'name' => 'user',
             'guard_name' => 'web',
         ]);
@@ -126,7 +126,7 @@ class UserSeeder extends Seeder
         // Assegna permessi ai ruoli
         $superAdminRole->givePermissionTo(Permission::all());
 
-        $systemAdminRole->givePermissionTo([)
+        $systemAdminRole->givePermissionTo([
             'manage users',
             'create users',
             'edit users',
@@ -140,7 +140,7 @@ class UserSeeder extends Seeder
             'generate reports',
         ]);
 
-        $moderatorRole->givePermissionTo([)
+        $moderatorRole->givePermissionTo([
             'view users',
             'edit users',
             'view roles',
@@ -150,15 +150,15 @@ class UserSeeder extends Seeder
             'view analytics',
         ]);
 
-        $userRole->givePermissionTo([)
+        $userRole->givePermissionTo([
             'view users',
             'view teams',
             'join teams',
             'leave teams',
         ]);
 
-        $command->info('   ✓ Creati '.count($systemPermissions));
-        $command->info('   ✓ Creati 4 ruoli di sistema (super-admin, system-admin, moderator, user));
+        $this->command->info('   ✓ Creati '.count($systemPermissions));
+        $this->command->info('   ✓ Creati 4 ruoli di sistema (super-admin, system-admin, moderator, user)');
     }
 
     /**
@@ -166,7 +166,7 @@ class UserSeeder extends Seeder
      */
     private function seedSystemTeams(): void
     {
-        $command->info('👥 Creazione team di sistema...');
+        $this->command->info('👥 Creazione team di sistema...');
 
         $adminTeam = $this->createTeam('Amministratori');
         $devTeam = $this->createTeam('Sviluppatori');
@@ -174,14 +174,14 @@ class UserSeeder extends Seeder
         $marketingTeam = $this->createTeam('Marketing');
         $generalTeam = $this->createTeam('Team Generale');
 
-        $command->info('   ✓ Creati 5 team di sistema');
+        $this->command->info('   ✓ Creati 5 team di sistema');
     }
 
     private function createTeam(string $name): Team
     {
         $factory = \Modules\User\Database\Factories\TeamFactory::new();
         /** @var Team $team */
-        $team = $factory->create([)
+        $team = $factory->create([
             'name' => $name,
             'personal_team' => false,
         ]);

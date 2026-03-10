@@ -20,11 +20,11 @@ Questa non è una raccomandazione, è una **legge del progetto**.
 ## ✅ Cosa è OBBLIGATORIO
 
 - Nuovi commit per correggere errori
-- `git revert` per annullare modifiche (crea nuovo commit di revert)
 - Progressione forward-only
 - Storia preservata SEMPRE
 - Tracciabilità totale
 - Documentare correzioni con commit message chiari
+- Correggere esplicitamente il problema invece di "annullare" il passato
 
 ## Il Perché
 
@@ -96,28 +96,26 @@ git reset --hard HEAD~1
 git checkout correct-branch
 git cherry-pick wrong-branch
 git push
-
-# Annulla sul branch sbagliato
-git checkout wrong-branch
-git revert HEAD
-git push
 ```
 
-### Scenario 4: Voglio "annullare" modifiche
+### Scenario 4: Voglio correggere modifiche sbagliate
 
 ```bash
 # ❌ SBAGLIATO
 git reset --hard abc123
+git revert HEAD
 
 # ✅ CORRETTO
-# Usa revert per creare un nuovo commit che annulla
-git revert HEAD~2..HEAD
+# Analizza il problema e applica un commit correttivo esplicito
+vim file.php
+git add file.php
+git commit -m "fix: corregge regressione introdotta da abc123 senza revert"
 git push
 ```
 
 ## Eccezioni Rarissime
 
-Le UNICHE 3 eccezioni accettabili:
+Le UNICHE 2 eccezioni accettabili:
 
 1. **Branch feature personale NON pushato**: OK fare rebase/squash
    ```bash
@@ -141,7 +139,7 @@ Le UNICHE 3 eccezioni accettabili:
 3. **Team Trust**: Tutti si fidano della storia condivisa
 4. **Compliance**: Soddisfa audit e requisiti legali
 5. **Learning Culture**: Gli errori diventano lezioni documentate
-6. **Rollback Sicuro**: Posso sempre tornare indietro con `git revert`
+6. **Recupero Consapevole**: Anche sotto pressione si corregge in avanti, senza usare il repository come tasto undo
 
 ## Commit Message Format
 
@@ -175,7 +173,7 @@ Violare questa regola significa:
 
 ## Questa è la Via
 
-**Forward. Always forward. Never backward.**
+**Forward. Always forward. Never backward. Never revert as routine.**
 
 Non è un consiglio, è un **comandamento**.
 Non è una preferenza, è una **legge**.

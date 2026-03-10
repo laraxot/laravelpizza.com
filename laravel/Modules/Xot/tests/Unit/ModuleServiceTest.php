@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
-<<<<<<< HEAD
 use Tests\TestCase;
-=======
->>>>>>> 2253954 (.)
 use Modules\Xot\Services\ModuleService;
-use Tests\TestCase;
 
 uses(TestCase::class);
 
