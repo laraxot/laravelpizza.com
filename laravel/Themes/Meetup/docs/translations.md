@@ -7,6 +7,18 @@ Le traduzioni nel tema Meetup seguono la **filosofia Laraxot**:
 - **Nessuna stringa hardcoded**: Tutte le stringhe UI vengono dai file di traduzione
 - **Namespace `pub_theme::`**: Tutte le traduzioni usano il namespace del tema
 
+## Regola critica
+
+Nel tema non devono comparire stringhe UI hardcoded in nessuna lingua.
+
+Anche forme come:
+
+- `__('Accedi')`
+- `__('Registrati')`
+- testo diretto dentro `<span>` o `<a>`
+
+sono da considerare violazioni se la stringa appartiene all'interfaccia del tema.
+
 ## Struttura dei File
 
 ```

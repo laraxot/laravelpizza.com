@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Meetup\Actions\Event;
 
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Models\Event;
@@ -96,6 +97,7 @@ class SeedEventsFromJsonAction
         Event::updateOrCreate(
             ['title' => $data['title'], 'start_date' => $startDate],
             [
+                'slug' => Str::slug($title),
                 'description' => $data['description'] ?? null,
                 'end_date' => $endDate,
                 'location' => $data['location'] ?? 'Online',
@@ -106,6 +108,7 @@ class SeedEventsFromJsonAction
                 'max_attendees' => $data['attendees_max'] ?? 30,
                 'url' => $data['url'] ?? null,
                 'in_language' => app()->getLocale(),
+                'user_id' => \Modules\User\Models\User::first()?->id,
             ]
         );
     }

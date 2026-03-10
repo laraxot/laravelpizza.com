@@ -15,8 +15,9 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table))
+        $this->tableCreate(static function (Blueprint $table): void {
             $table->uuid('id')->primary();
+            $table->string('uuid', 36)->index()->nullable();
             $table->string('user_id', 36)->index()->nullable();
             $table->string('type')->index()->nullable();
             $table->string('first_name')->nullable();
@@ -44,31 +45,37 @@ return new class extends XotBaseMigration {
         });
 
         // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table))
-            if (! $this->hasColumn('user_id'))
-                $table->string('user_id', 36)->index()->nullable()->after('id');
+        $this->tableUpdate(function (Blueprint $table): void {
+            if (! $this->hasColumn('uuid')) {
+                $table->string('uuid', 36)->index()->nullable()->after('id');
             }
-            if (! $this->hasColumn('email'))
+            if (! $this->hasColumn('user_id')) {
+                $table->string('user_id', 36)->index()->nullable()->after('uuid');
+            }
+            if (! $this->hasColumn('email')) {
                 $table->string('email')->nullable()->after('last_name');
             }
-            if (! $this->hasColumn('phone'))
+            if (! $this->hasColumn('phone')) {
                 $table->string('phone')->nullable()->after('email');
             }
-            if (! $this->hasColumn('avatar'))
-                $table->string('avatar')->nullable();
+            if (! $this->hasColumn('avatar')) {
+                $table->string('avatar')->nullable()->after('bio');
             }
-            if (! $this->hasColumn('timezone'))
-                $table->string('timezone')->nullable();
+            if (! $this->hasColumn('timezone')) {
+                $table->string('timezone')->nullable()->after('avatar');
             }
-            if (! $this->hasColumn('locale'))
-                $table->string('locale')->nullable();
+            if (! $this->hasColumn('locale')) {
+                $table->string('locale')->nullable()->after('timezone');
             }
-            if (! $this->hasColumn('preferences'))
-                $table->json('preferences')->nullable();
+            if (! $this->hasColumn('preferences')) {
+                $table->json('preferences')->nullable()->after('locale');
             }
-            if (! $this->hasColumn('status'))
-                $table->string('status')->nullable();
+            if (! $this->hasColumn('status')) {
+                $table->string('status')->nullable()->after('preferences');
+            }
+            if (! $this->hasColumn('extra')) {
+                $table->json('extra')->nullable()->after('status');
             }
         });
     }
-};
+}

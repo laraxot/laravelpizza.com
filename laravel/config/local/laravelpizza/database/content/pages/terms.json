@@ -1,160 +1,22 @@
 {
-    "id": "terms",
-    "title": {
-        "it": "Termini e Condizioni - Laravel Pizza",
-        "en": "Terms and Conditions - Laravel Pizza"
-    },
     "slug": "terms",
-    "middleware": null,
-    "content": null,
-    "content_blocks": {
-        "it": [
-            {
-                "type": "legal",
-                "slug": "terms-article",
-                "data": {
-                    "view": "pub_theme::components.blocks.legal.article",
-                    "title": "Termini e Condizioni",
-                    "subtitle": "Regole principali per l'utilizzo del sito Laravel Pizza, la partecipazione alla community e l'adesione agli eventi.",
-                    "description": "L'accesso al sito e la partecipazione alle iniziative Laravel Pizza presuppongono la lettura e il rispetto di queste condizioni.",
-                    "last_updated": "Ultimo aggiornamento: 9 marzo 2026",
-                    "sections": [
-                        {
-                            "title": "Ambito di applicazione",
-                            "paragraphs": [
-                                "Questi termini regolano l'uso del sito Laravel Pizza, dei form di contatto, delle iscrizioni agli eventi e delle comunicazioni correlate alla community."
-                            ]
-                        },
-                        {
-                            "title": "Uso corretto del sito e della community",
-                            "items": [
-                                "Non usare il sito per attivita illecite, abusive o contrarie alle regole di convivenza della community.",
-                                "Non tentare accessi non autorizzati, scraping aggressivo o comportamenti che compromettano il servizio.",
-                                "Fornire dati veritieri quando si compilano moduli o richieste di partecipazione."
-                            ]
-                        },
-                        {
-                            "title": "Eventi e partecipazione",
-                            "items": [
-                                "Le informazioni sugli eventi possono cambiare per motivi organizzativi, logistici o di sicurezza.",
-                                "La disponibilita dei posti e l'eventuale accesso all'evento dipendono dalle indicazioni pubblicate nella pagina evento o nelle comunicazioni inviate dagli organizzatori.",
-                                "Laravel Pizza puo modificare o annullare eventi quando necessario."
-                            ]
-                        },
-                        {
-                            "title": "Contenuti e proprieta intellettuale",
-                            "paragraphs": [
-                                "Marchi, loghi, testi, asset grafici e contenuti del sito restano di titolarita dei rispettivi proprietari. Non e consentito riutilizzarli in modo da creare confusione, falsi endorsement o copie non autorizzate."
-                            ]
-                        },
-                        {
-                            "title": "Limitazione di responsabilita",
-                            "paragraphs": [
-                                "Laravel Pizza si impegna a mantenere il sito aggiornato e funzionante, ma non garantisce assenza assoluta di errori, interruzioni o indisponibilita temporanee.",
-                                "Nei limiti consentiti dalla legge, l'uso del sito e la partecipazione alle iniziative restano a rischio e responsabilita dell'utente."
-                            ]
-                        },
-                        {
-                            "title": "Modifiche ai termini",
-                            "paragraphs": [
-                                "Questi termini possono essere aggiornati in qualsiasi momento. La versione pubblicata su questa pagina sostituisce le precedenti dalla data di aggiornamento indicata."
-                            ]
-                        }
-                    ],
-                    "contacts": [
-                        {
-                            "label": "Email generale",
-                            "value": "info@laravelpizza.com",
-                            "url": "mailto:info@laravelpizza.com"
-                        },
-                        {
-                            "label": "Contatti eventi",
-                            "value": "hello@laravelpizza.com",
-                            "url": "mailto:hello@laravelpizza.com"
-                        }
-                    ]
-                }
+    "view": "pub_theme::pages.terms",
+    "name": "Terms of Service",
+    "content_blocks": [
+        {
+            "type": "hero",
+            "view": "pub_theme::components.blocks.hero.simple",
+            "data": {
+                "title": "Terms of Service",
+                "subtitle": "Last updated: March 2026"
             }
-        ],
-        "en": [
-            {
-                "type": "legal",
-                "slug": "terms-article",
-                "data": {
-                    "view": "pub_theme::components.blocks.legal.article",
-                    "title": "Terms and Conditions",
-                    "subtitle": "Main rules for using the Laravel Pizza website, joining the community and attending events.",
-                    "description": "Using the website and taking part in Laravel Pizza activities implies reading and accepting these conditions.",
-                    "last_updated": "Last updated: March 9, 2026",
-                    "sections": [
-                        {
-                            "title": "Scope",
-                            "paragraphs": [
-                                "These terms govern the use of the Laravel Pizza website, contact forms, event registrations and communications related to the community."
-                            ]
-                        },
-                        {
-                            "title": "Proper use of the website and community",
-                            "items": [
-                                "Do not use the website for unlawful, abusive or community-disruptive activities.",
-                                "Do not attempt unauthorized access, aggressive scraping or actions that may compromise the service.",
-                                "Provide truthful information when submitting forms or participation requests."
-                            ]
-                        },
-                        {
-                            "title": "Events and attendance",
-                            "items": [
-                                "Event details may change for organizational, logistical or safety reasons.",
-                                "Seat availability and access depend on the information shown on the event page or sent by organizers.",
-                                "Laravel Pizza may change or cancel events when necessary."
-                            ]
-                        },
-                        {
-                            "title": "Content and intellectual property",
-                            "paragraphs": [
-                                "Trademarks, logos, text, visual assets and website content remain the property of their respective owners. Reuse that creates confusion, false endorsement or unauthorized copies is not allowed."
-                            ]
-                        },
-                        {
-                            "title": "Limitation of liability",
-                            "paragraphs": [
-                                "Laravel Pizza aims to keep the website updated and available, but cannot guarantee the absence of errors, interruptions or temporary unavailability.",
-                                "To the extent permitted by law, use of the website and participation in activities remain the user's responsibility."
-                            ]
-                        },
-                        {
-                            "title": "Changes to these terms",
-                            "paragraphs": [
-                                "These terms may be updated at any time. The version published on this page replaces prior versions from the stated update date."
-                            ]
-                        }
-                    ],
-                    "contacts": [
-                        {
-                            "label": "General email",
-                            "value": "info@laravelpizza.com",
-                            "url": "mailto:info@laravelpizza.com"
-                        },
-                        {
-                            "label": "Event contacts",
-                            "value": "hello@laravelpizza.com",
-                            "url": "mailto:hello@laravelpizza.com"
-                        }
-                    ]
-                }
+        },
+        {
+            "type": "text",
+            "view": "pub_theme::components.blocks.text.simple",
+            "data": {
+                "content": "<h2>1. Introduction</h2><p>Welcome to Laravel Pizza Meetups...</p>"
             }
-        ]
-    },
-    "sidebar_blocks": {
-        "it": [],
-        "en": []
-    },
-    "footer_blocks": {
-        "it": [],
-        "en": []
-    },
-    "created_at": "2026-03-09T16:10:00.000000Z",
-    "updated_at": "2026-03-09T16:10:00.000000Z",
-    "created_by": null,
-    "updated_by": null
+        }
+    ]
 }

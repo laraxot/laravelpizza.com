@@ -16,3 +16,14 @@ it('GET /de localizes guest auth labels in header', function (): void {
         ->assertSee('/de/auth/login', false)
         ->assertSee('/de/auth/register', false);
 });
+
+it('GET /en localizes guest auth labels in header', function (): void {
+    $this->get('/en')
+        ->assertOk()
+        ->assertSee('lang="en"', false)
+        ->assertSeeText('Log in')
+        ->assertSeeText('Create account')
+        ->assertDontSeeText('Accedi')
+        ->assertSee('/en/auth/login', false)
+        ->assertSee('/en/auth/register', false);
+});

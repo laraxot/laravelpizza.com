@@ -20,6 +20,8 @@ return new class extends XotBaseMigration
                 $table->id();
                 $table->unsignedBigInteger('event_id')->index();
                 $table->unsignedBigInteger('sponsor_id')->index();
+                $table->string('role')->nullable();
+                $table->unsignedInteger('order')->default(0);
                 $table->json('sponsorship_details')->nullable();
                 $table->unique(['event_id', 'sponsor_id']);
                 $this->timestamps($table);
@@ -34,6 +36,12 @@ return new class extends XotBaseMigration
                 }
                 if (! $this->hasColumn('sponsorship_details')) {
                     $table->json('sponsorship_details')->nullable()->after('sponsor_id');
+                }
+                if (! $this->hasColumn('role')) {
+                    $table->string('role')->nullable()->after('sponsor_id');
+                }
+                if (! $this->hasColumn('order')) {
+                    $table->unsignedInteger('order')->default(0)->after('role');
                 }
             });
         }

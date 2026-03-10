@@ -132,6 +132,18 @@ class Event extends BaseModel
     use HasSnapshots;
     use HasXotFactory;
 
+    /**
+     * The "booted" method of the model.
+     */
+    protected static function booted(): void
+    {
+        static::creating(static function (self $model): void {
+            if (empty($model->slug)) {
+                $model->slug = \Illuminate\Support\Str::slug($model->title);
+            }
+        });
+    }
+
     protected $fillable = [
         'title',
         'description',
@@ -179,6 +191,7 @@ class Event extends BaseModel
         'status' => 'draft',
         'event_status' => 'EventScheduled',
         'event_attendance_mode' => 'OfflineEventAttendanceMode',
+        'is_accessible_for_free' => 1,
     ];
 
     public function owner(): BelongsTo
@@ -210,7 +223,7 @@ class Event extends BaseModel
 
     public function isPending(): bool
     {
-        return $this->status === 'draft';
+        return in_array($this->status, ['pending', 'draft']);
     }
 
     public function isFull(): bool
@@ -224,6 +237,28 @@ class Event extends BaseModel
             ->where('event_id', $this->id)
             ->where('user_id', $userId)
             ->exists();
+    }
+
+    /**
+     * Scope: filter events visible to a user.
+     *
+     * @param  Builder<Event>  $query
+     * @param  User|null  $user
+     * @return Builder<Event>
+     */
+    public function scopeVisibleTo(Builder $query, ?User $user = null): Builder
+    {
+        if ($user !== null && $user->hasRole('super-admin')) {
+            return $query;
+        }
+
+        return $query->where(function (Builder $q) use ($user): void {
+            $q->where('status', 'published');
+
+            if ($user !== null) {
+                $q->orWhere('user_id', $user->id);
+            }
+        });
     }
 
     /**

@@ -22,9 +22,10 @@ abstract class TestCase extends BaseTestCase
     use CreatesApplication;
     use DatabaseTransactions;
 
-    protected $connections = [
+    protected $connectionsToTransact = [
         'mysql',
         'user',
+        'meetup',
     ];
 
     protected function setUp(): void

@@ -14,16 +14,17 @@ use Modules\Cms\Models\Conf;
  */
 class ConfFactory extends Factory
 {
+    /** @var class-string<Conf> */
     protected $model = Conf::class;
 
     public function definition(): array
     {
         return [
-            'key' => $faker->unique()
-            'value' => $faker->sentence()
-            'type' => $faker->randomElement(['string', 'integer', 'boolean', 'json'])
-            'group' => $faker->randomElement(['general', 'email', 'social', 'seo'])
-            'description' => $faker->optional()
+            'key' => $this->faker->unique()->word(),
+            'value' => $this->faker->sentence(),
+            'type' => $this->faker->randomElement(['string', 'integer', 'boolean', 'json']),
+            'group' => $this->faker->randomElement(['general', 'email', 'social', 'seo']),
+            'description' => $this->faker->optional()->sentence(),
         ];
     }
 
@@ -34,9 +35,9 @@ class ConfFactory extends Factory
 
     public function boolean(): static
     {
-        return $this->state([)
+        return $this->state([
             'type' => 'boolean',
-            'value' => $faker->boolean()
+            'value' => (string) $this->faker->boolean(),
         ]);
     }
 }

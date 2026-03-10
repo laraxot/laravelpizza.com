@@ -1,25 +1,27 @@
 # No Hardcoded Theme Strings Rule
 
-## Regola critica
+## Regola canonica
 
-Nei temi (`laravel/Themes/*`) non sono ammesse stringhe UI hardcoded in lingua naturale.
+Nei temi di LaravelPizza non si hardcodano stringhe UI.
 
-## Obblighi
+Ogni testo visibile nel frontoffice deve usare una chiave di traduzione, con namespace coerente:
 
-1. Tutte le label/testi visibili devono usare chiavi di traduzione (`__()`, `@lang`).
-2. Le chiavi devono appartenere al namespace tema (`pub_theme::...`) o modulo pertinente.
-3. Le viste Blade del tema non devono contenere microcopy italiano/inglese hardcoded.
-4. Per nuovi componenti UI, creare prima le chiavi in `lang/{locale}`.
+- `pub_theme::...` per il tema;
+- `module::...` per contenuti posseduti dal modulo.
 
-## Anti-pattern
+## Anti-pattern vietati
 
-- `Accedi`, `Registrati`, `Login`, `Sign up` scritti direttamente nel Blade.
-- Placeholder, tooltip, aria-label hardcoded in lingua.
+- CTA scritte raw dentro Blade (`Accedi`, `Registrati`, `Log in`, `Sign up`, ecc.);
+- voci menu, heading, footer copy, badge, empty states o messaggi inline hardcoded;
+- fallback italiani dentro pagine con locale diverso;
+- traduzioni "temporanee" nel Blade in attesa di sistemare i file `lang`.
 
-## Verifica rapida
+## Pattern corretto
 
-```bash
-rg -n \"(Accedi|Registrati|Login|Sign up|Sign in)\" laravel/Themes
-```
+1. aggiungere o aggiornare le chiavi in `lang/{locale}/*.php`;
+2. usare solo `__()`, `@lang()` o equivalent wrapper con namespace corretto;
+3. coprire almeno una route localizzata nei test se il testo e' user-facing.
 
-Ogni occorrenza va validata: se e' testo UI, deve diventare chiave traduzione.
+## Impatto
+
+Questa regola vale per tutti i temi attivi e per qualunque view modulo che renda markup del tema.

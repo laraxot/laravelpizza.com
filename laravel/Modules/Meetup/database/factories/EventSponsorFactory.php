@@ -34,7 +34,9 @@ class EventSponsorFactory extends Factory
     {
         return [
             'event_id' => Event::factory(),
-            'user_id' => User::factory(),
+            'sponsor_id' => User::factory(),
+            'role' => $this->faker->randomElement(['gold', 'silver', 'bronze']),
+            'order' => $this->faker->numberBetween(1, 10),
         ];
     }
 
@@ -54,7 +56,7 @@ class EventSponsorFactory extends Factory
     public function forSponsor(User|string $user): static
     {
         return $this->state(fn (array $attributes) => [
-            'user_id' => $user instanceof User ? $user->id : $user,
+            'sponsor_id' => $user instanceof User ? $user->id : $user,
         ]);
     }
 }

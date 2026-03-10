@@ -34,6 +34,16 @@ return [
             'label' => 'Anmelden',
             'tooltip' => 'Klicken Sie, um auf Ihr Konto zuzugreifen',
         ],
+        'hidePassword' => [
+            'tooltip' => 'hidePassword',
+            'label' => 'hidePassword',
+            'icon' => 'hidePassword',
+        ],
+        'showPassword' => [
+            'label' => 'showPassword',
+            'icon' => 'showPassword',
+            'tooltip' => 'showPassword',
+        ],
     ],
     'messages' => [
         'login_success' => 'Anmeldung erfolgreich',

@@ -17,10 +17,12 @@ Usare questa skill quando il task riguarda:
 3. Tenere Folio per routing, Volt per interazione, Action per business logic.
 4. Se il componente vive nel tema, controllare quali package Filament 5 sono realmente dichiarati nel composer del tema.
 5. Se la richiesta riguarda font in Filament, valutare plugin dedicato prima di script/link custom.
-6. Se si tocca PHP, eseguire quality gate completo.
+6. Nei Blade del tema eliminare stringhe user-facing hardcoded e pseudo-traduzioni come `__('Accedi')`; usare solo chiavi namespaced o contenuto localizzato.
+7. Se si tocca PHP, eseguire quality gate completo.
 
 ## Anti-pattern
 
 - scrivere business logic pesante nel page file o nel template Volt;
 - usare plugin/pattern Filament senza verificare che il package sia davvero presente;
 - confondere font del panel Filament con font del sito pubblico.
+- lasciare testo localizzabile hardcoded nei Blade del tema.

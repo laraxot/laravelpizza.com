@@ -56,8 +56,8 @@
                                     {{ __('Area personale') }}
                                 </a>
                             @else
-                                <a class="btn btn-primary btn-sm" href="{{ route('filament.admin.auth.login') }}" aria-label="{{ __('Accedi') }}">
-                                    {{ __('Accedi') }}
+                                <a class="btn btn-primary btn-sm" href="{{ route('filament.admin.auth.login') }}" aria-label="{{ __('pub_theme::navigation.auth.login') }}">
+                                    {{ __('pub_theme::navigation.auth.login') }}
                                 </a>
                             @endauth
                         </div>

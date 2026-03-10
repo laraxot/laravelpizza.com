@@ -26,22 +26,34 @@ final class Page extends Component
     public array $data = [];
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public function __construct(
-        string $side,
-        string $slug,
-        ?string $type = null,
         array $data = [],
+        string $side = 'content',
+        ?string $slug = null,
+        ?string $type = null,
     ) {
         $this->side = $side;
-        if (null !== $type) {
-            $slug = $type.'-'.$slug;
-        }
-        $this->slug = $slug;
         $this->data = $data;
 
-        $this->blocks = PageModel::getBlocksBySlug($slug, $side);
+        // Resolve slug from data if not passed explicitly
+        if ($slug === null && isset($data['slug'])) {
+            $slug = (string) $data['slug'];
+        }
+
+        // Fallback or composition
+        if ($slug === null) {
+            $slug = '';
+        }
+
+        if ($type !== null) {
+            $slug = $type.'-'.$slug;
+        }
+
+        $this->slug = $slug;
+
+        $this->blocks = PageModel::getBlocksBySlug($this->slug, $this->side);
     }
 
     /**

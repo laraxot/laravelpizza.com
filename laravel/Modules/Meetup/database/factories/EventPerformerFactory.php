@@ -34,7 +34,9 @@ class EventPerformerFactory extends Factory
     {
         return [
             'event_id' => Event::factory(),
-            'user_id' => User::factory(),
+            'performer_id' => User::factory(),
+            'role' => $this->faker->randomElement(['speaker', 'host', 'moderator']),
+            'order' => $this->faker->numberBetween(1, 10),
         ];
     }
 
@@ -54,7 +56,7 @@ class EventPerformerFactory extends Factory
     public function forPerformer(User|string $user): static
     {
         return $this->state(fn (array $attributes) => [
-            'user_id' => $user instanceof User ? $user->id : $user,
+            'performer_id' => $user instanceof User ? $user->id : $user,
         ]);
     }
 }

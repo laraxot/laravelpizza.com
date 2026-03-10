@@ -21,10 +21,15 @@ return new class extends XotBaseMigration
             $table->string('phone')->nullable();
             $table->string('email')->nullable()->index();
             $table->text('notes')->nullable();
+            $table->schemalessAttributes('extra');
         });
 
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
+
+            if (! $this->hasColumn('extra')) {
+                $table->schemalessAttributes('extra');
+            }
 
             if (in_array($this->getColumnType('id'), ['varchar'], strict: true)) {
                 $table->id('id')->change();
