@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Notify\Tests\Unit\Console;
 
+=======
+>>>>>>> 8e583cd (.)
 use Modules\Notify\Console\Commands\TelegramWebhook;
 use Modules\Notify\Tests\TestCase;
 

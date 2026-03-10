@@ -22,7 +22,7 @@ Il modulo **Notify** è il motore di comunicazione dell'applicazione, fornendo:
 **Architettura**: Modulo infrastrutturale per comunicazioni; utilizzato da ExternalProject per distribuzione survey.
 =======
 **Architettura**: Modulo infrastrutturale per comunicazioni; utilizzato da ModuloEsempio per distribuzione survey.
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_guGzX6
 
 ## Stato Attuale Implementazione
@@ -144,7 +144,7 @@ Il modulo **Notify** è il motore di comunicazione dell'applicazione, fornendo:
 - [ ] **Click Heatmaps** - Mappe di calore click
 - [ ] **Conversion Funnels** - Funnel conversione
 - [ ] **Engagement Scoring** - Scoring engagement
-- [ ] **Predictive Analytics** - Analisi predittive
+- [ ] **<nome progetto>ive Analytics** - Analisi predittive
 - [ ] **Cohort Analysis** - Analisi coorti
 - [ ] **Attribution Modeling** - Modelli attribuzione
 
@@ -211,7 +211,7 @@ Nessuna funzionalità critica mancante - il modulo Notify è ben implementato
 ### ⚪ BASSA (Nice to Have)
 
 1. **Rich Media Push** - Push con media
-2. **Predictive Analytics** - Analisi predittive
+2. **<nome progetto>ive Analytics** - Analisi predittive
 3. **Advanced Segmentation** - Segmentazione avanzata
 
 ## Roadmap Implementazione
@@ -240,10 +240,10 @@ Nessuna funzionalità critica mancante - il modulo Notify è ben implementato
 - [Modulo healthcare_app](../healthcare_app/docs/readme.md)
 =======
 <<<<<<< HEAD
-- [Modulo ExternalProject](../quaeris/docs/readme.md)
+- [Modulo ExternalProject](../<nome progetto>/docs/readme.md)
 =======
 - [Modulo ModuloEsempio](../ptvx/docs/readme.md)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_guGzX6
 - [Modulo Limesurvey](../limesurvey/docs/readme.md)
 - [Notify README](./readme.md)

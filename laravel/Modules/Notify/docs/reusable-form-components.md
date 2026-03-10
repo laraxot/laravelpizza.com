@@ -121,7 +121,7 @@ class ChannelCheckboxList extends CheckboxList
 ### KISS (Keep It Simple, Stupid)
 - Simple API for reusing complex form fields
 - Minimal configuration needed when using these components
-- Clear and predictable behavior
+- Clear and <nome progetto>able behavior
 
 ### Maintainability
 - Changes to mail template or channel selection logic only need to be made in one place

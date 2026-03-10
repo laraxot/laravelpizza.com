@@ -172,7 +172,7 @@ class SmartChannelSelectorAction {
     ): ChannelEnum;
 
     public function analyzeDeliveryPatterns(Model $recipient): DeliveryInsights;
-    public function predictDeliverySuccess(
+    public function <nome progetto>DeliverySuccess(
         ChannelEnum $channel,
         Model $recipient
     ): float; // Probability 0-1
@@ -398,7 +398,7 @@ class SecurityManagerAction {
 
 **By End of 2026**: The Notify module will be the **communication backbone** for enterprise applications, featuring:
 
-- **Predictive Intelligence**: AI-powered delivery optimization and timing
+- **<nome progetto>ive Intelligence**: AI-powered delivery optimization and timing
 - **Universal Compatibility**: Seamless integration with any external system
 - **Zero-Configuration**: Self-configuring based on application context
 - **Enterprise Grade**: Battle-tested reliability with Fortune 500 companies

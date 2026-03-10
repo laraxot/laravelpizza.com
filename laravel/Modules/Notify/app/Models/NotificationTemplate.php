@@ -62,6 +62,33 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|NotificationTemplate whereLocales(string $column, array $locales)
  * @mixin IdeHelperNotificationTemplate
  * @property-read ProfileContract|null $deleter
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property string|null $deleted_by
+ * @method static Builder<static>|NotificationTemplate whereBodyHtml($value)
+ * @method static Builder<static>|NotificationTemplate whereBodyText($value)
+ * @method static Builder<static>|NotificationTemplate whereCategory($value)
+ * @method static Builder<static>|NotificationTemplate whereChannels($value)
+ * @method static Builder<static>|NotificationTemplate whereCode($value)
+ * @method static Builder<static>|NotificationTemplate whereConditions($value)
+ * @method static Builder<static>|NotificationTemplate whereCreatedAt($value)
+ * @method static Builder<static>|NotificationTemplate whereCreatedBy($value)
+ * @method static Builder<static>|NotificationTemplate whereDeletedAt($value)
+ * @method static Builder<static>|NotificationTemplate whereDeletedBy($value)
+ * @method static Builder<static>|NotificationTemplate whereDescription($value)
+ * @method static Builder<static>|NotificationTemplate whereGrapesjsData($value)
+ * @method static Builder<static>|NotificationTemplate whereId($value)
+ * @method static Builder<static>|NotificationTemplate whereIsActive($value)
+ * @method static Builder<static>|NotificationTemplate whereMetadata($value)
+ * @method static Builder<static>|NotificationTemplate whereName($value)
+ * @method static Builder<static>|NotificationTemplate wherePreviewData($value)
+ * @method static Builder<static>|NotificationTemplate whereSubject($value)
+ * @method static Builder<static>|NotificationTemplate whereTenantId($value)
+ * @method static Builder<static>|NotificationTemplate whereType($value)
+ * @method static Builder<static>|NotificationTemplate whereUpdatedAt($value)
+ * @method static Builder<static>|NotificationTemplate whereUpdatedBy($value)
+ * @method static Builder<static>|NotificationTemplate whereVariables($value)
+ * @method static Builder<static>|NotificationTemplate whereVersion($value)
  * @mixin \Eloquent
  */
 class NotificationTemplate extends BaseModel implements HasMedia

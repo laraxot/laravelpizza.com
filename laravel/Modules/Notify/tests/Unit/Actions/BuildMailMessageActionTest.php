@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Notify\Tests\Unit\Actions;
 
+=======
+>>>>>>> 8e583cd (.)
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Messages\MailMessage;
 use Modules\Notify\Actions\BuildMailMessageAction;
@@ -54,7 +57,11 @@ describe('BuildMailMessageAction', function () {
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
+<<<<<<< HEAD
         expect($content)->toContain('');
+=======
+        expect($content)->toContain('declare(strict_types=1);');
+>>>>>>> 8e583cd (.)
     });
 
     it('has correct namespace', function () {

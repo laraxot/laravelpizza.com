@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Notify\Tests\Unit\Actions;
 
+=======
+>>>>>>> 8e583cd (.)
 use Modules\Notify\Actions\NetfunSendAction;
 use Modules\Notify\Datas\SmsData;
 use Spatie\QueueableAction\QueueableAction;
@@ -63,7 +66,11 @@ describe('NetfunSendAction', function () {
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
+<<<<<<< HEAD
         expect($content)->toContain('');
+=======
+        expect($content)->toContain('declare(strict_types=1);');
+>>>>>>> 8e583cd (.)
     });
 
     it('has correct namespace', function () {

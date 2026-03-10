@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Notify\Tests\Unit\Channels;
 
+=======
+>>>>>>> 8e583cd (.)
 use Modules\Notify\Channels\NetfunChannel;
 
 describe('NetfunChannel', function () {
@@ -33,7 +36,11 @@ describe('NetfunChannel', function () {
 
         expect($filename)->not->toBeNull();
         $content = file_get_contents($filename);
+<<<<<<< HEAD
         expect($content)->toContain('');
+=======
+        expect($content)->toContain('declare(strict_types=1);');
+>>>>>>> 8e583cd (.)
     });
 
     it('has protected sendSMSAction property', function () {

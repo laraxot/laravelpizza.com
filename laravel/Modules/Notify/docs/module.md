@@ -63,7 +63,7 @@ The Notify module provides comprehensive notification and communication function
 - **ExternalProject**: Survey participant notifications
 =======
 - **ModuloEsempio**: Survey participant notifications
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_I9QAZv
 - **Limesurvey**: Survey response notifications
 - **Xot**: Base notification infrastructure

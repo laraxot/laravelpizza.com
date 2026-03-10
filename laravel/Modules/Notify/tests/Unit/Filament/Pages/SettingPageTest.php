@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Notify\Tests\Unit\Filament\Pages;
 
+=======
+>>>>>>> 8e583cd (.)
 use Modules\Notify\Filament\Pages\SettingPage;
 use Modules\Notify\Tests\TestCase;
 use Filament\Widgets\WidgetConfiguration;

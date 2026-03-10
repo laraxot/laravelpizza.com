@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Notify\Tests\Unit\Actions\NotifyTheme;
 
+=======
+>>>>>>> 8e583cd (.)
 use Modules\Notify\Actions\NotifyTheme\Get;
 use Modules\Notify\Datas\NotifyThemeData;
 use Spatie\QueueableAction\QueueableAction;
