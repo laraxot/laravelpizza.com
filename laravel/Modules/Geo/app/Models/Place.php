@@ -24,9 +24,11 @@ use function Safe\json_encode;
  * @property Model|\Eloquent      $linked
  * @property PlaceType|null       $placeType
  * @property ProfileContract|null $updater
+ *
  * @method static Builder<static>|Place newModelQuery()
  * @method static Builder<static>|Place newQuery()
  * @method static Builder<static>|Place query()
+ *
  * @property int                  $id
  * @property string|null          $model_type
  * @property int|null             $model_id
@@ -66,6 +68,7 @@ use function Safe\json_encode;
  * @property Carbon|null          $updated_at
  * @property string|null          $post_type
  * @property ProfileContract|null $deleter
+ *
  * @method static PlaceFactory          factory($count = null, $state = [])
  * @method static Builder<static>|Place whereAddress($value)
  * @method static Builder<static>|Place whereAdministrativeAreaLevel1($value)
@@ -109,14 +112,17 @@ use function Safe\json_encode;
  * @method static Builder<static>|Place whereStreetNumberShort($value)
  * @method static Builder<static>|Place whereUpdatedAt($value)
  * @method static Builder<static>|Place whereUpdatedBy($value)
+ *
  * @property string|null $name
  * @property string|null $slug
  * @property string|null $description
- * @property int|null $place_type_id
+ * @property int|null    $place_type_id
+ *
  * @method static Builder<static>|Place whereDescription($value)
  * @method static Builder<static>|Place whereName($value)
  * @method static Builder<static>|Place wherePlaceTypeId($value)
  * @method static Builder<static>|Place whereSlug($value)
+ *
  * @mixin \Eloquent
  */
 class Place extends BaseModel implements HasGeolocation

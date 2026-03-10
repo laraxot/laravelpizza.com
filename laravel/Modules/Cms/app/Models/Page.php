@@ -31,6 +31,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null         $creator
  * @property mixed                        $translations
  * @property ProfileContract|null         $updater
+ *
  * @method static Builder<static>|Page    newModelQuery()
  * @method static Builder<static>|Page    newQuery()
  * @method static Builder<static>|Page    query()
@@ -178,10 +179,15 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Collection<int, static> get($columns = ['*'])
  * @method static static|null             first($columns = ['*'])
  * @method static static|null             find($id, $columns = ['*'])
+ *
  * @property ProfileContract|null $deleter
+ *
  * @method static PageFactory factory($count = null, $state = [])
+ *
  * @property array<array-key, mixed>|null $blocks
+ *
  * @method static Builder<static>|Page whereBlocks($value)
+ *
  * @mixin \Eloquent
  */
 class Page extends BaseModelLang

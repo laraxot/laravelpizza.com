@@ -49,6 +49,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string                       $street_address
  * @property Model|\Eloquent|null         $model
  * @property ProfileContract|null         $updater
+ *
  * @method static Builder<static>|Address nearby(float $latitude, float $longitude, float $radiusKm = 10)
  * @method static Builder<static>|Address newModelQuery()
  * @method static Builder<static>|Address newQuery()
@@ -81,10 +82,15 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Address whereType($value)
  * @method static Builder<static>|Address whereUpdatedAt($value)
  * @method static Builder<static>|Address whereUpdatedBy($value)
+ *
  * @property ProfileContract|null $deleter
+ *
  * @method static AddressFactory factory($count = null, $state = [])
+ *
  * @property string|null $phone
+ *
  * @method static Builder<static>|Address wherePhone($value)
+ *
  * @mixin \Eloquent
  */
 class Address extends BaseModel
