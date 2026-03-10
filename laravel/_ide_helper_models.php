@@ -962,7 +962,7 @@ namespace Modules\Geo\Models{
  * @method static Builder<static>|County                        newQuery()
  * @method static Builder<static>|County                        query()
  *                                                                                                  >>>>>>> 65bf1208 (.)
- * @property-read \Modules\Meetup\Models\Profile|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @mixin \Eloquent
  */
 	class County extends \Eloquent {}
@@ -2330,7 +2330,7 @@ namespace Modules\Meetup\Models{
  * @property string|null $except_dates
  * @property string $schedule_timezone
  * @property int|null $super_event_id
- * @property-read \Modules\Meetup\Models\Profile|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Activity\Models\Snapshot> $snapshots
  * @property-read int|null $snapshots_count
  * @property-read \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection<int, \Modules\Activity\Models\StoredEvent> $storedEvents
@@ -2383,9 +2383,9 @@ namespace Modules\Meetup\Models{
 
 namespace Modules\Meetup\Models{
 /**
- * @property-read \Modules\Meetup\Models\Profile|null $creator
- * @property-read \Modules\Meetup\Models\Profile|null $deleter
- * @property-read \Modules\Meetup\Models\Profile|null $updater
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @method static \Modules\Meetup\Database\Factories\EventPerformerFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventPerformer newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventPerformer newQuery()
@@ -2397,9 +2397,9 @@ namespace Modules\Meetup\Models{
 
 namespace Modules\Meetup\Models{
 /**
- * @property-read \Modules\Meetup\Models\Profile|null $creator
- * @property-read \Modules\Meetup\Models\Profile|null $deleter
- * @property-read \Modules\Meetup\Models\Profile|null $updater
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @method static \Modules\Meetup\Database\Factories\EventSponsorFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventSponsor newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventSponsor newQuery()
@@ -2411,9 +2411,9 @@ namespace Modules\Meetup\Models{
 
 namespace Modules\Meetup\Models{
 /**
- * @property-read \Modules\Meetup\Models\Profile|null $creator
- * @property-read \Modules\Meetup\Models\Profile|null $deleter
- * @property-read \Modules\Meetup\Models\Profile|null $updater
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @method static \Modules\Meetup\Database\Factories\EventUserFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventUser newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|EventUser newQuery()
@@ -3764,9 +3764,9 @@ namespace Modules\User\Models{
  * @method static Builder<static>|Permission withoutRole($roles, $guard = null)
  * @method static static                     firstOrCreate(array $attributes, array $values = [])
  * @method static static                     updateOrCreate(array $attributes, array $values = [])
- * @property-read \Modules\Meetup\Models\Profile|null $creator
- * @property-read \Modules\Meetup\Models\Profile|null $deleter
- * @property-read \Modules\Meetup\Models\Profile|null $updater
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @method static \Modules\User\Database\Factories\PermissionFactory factory($count = null, $state = [])
  * @mixin \Eloquent
  */
@@ -4033,9 +4033,9 @@ namespace Modules\User\Models{
  * @method static Builder|Role whereDisplayName($value)
  * @method static static       firstOrCreate(array $attributes, array $values = [])
  * @method static static       updateOrCreate(array $attributes, array $values = [])
- * @property-read \Modules\Meetup\Models\Profile|null $creator
- * @property-read \Modules\Meetup\Models\Profile|null $deleter
- * @property-read \Modules\Meetup\Models\Profile|null $updater
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @method static \Modules\User\Database\Factories\RoleFactory factory($count = null, $state = [])
  * @mixin \Eloquent
  */

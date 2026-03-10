@@ -170,7 +170,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait as HasSchemalessAttrib
  * @property string|null $type
  * @property string|null $birth_date
  * @property string|null $gender
- * @property bool $is_active
+ * @property bool        $is_active
  * @method static Builder<static>|Profile whereBirthDate($value)
  * @method static Builder<static>|Profile whereExtra($value)
  * @method static Builder<static>|Profile whereGender($value)

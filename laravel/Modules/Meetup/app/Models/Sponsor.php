@@ -32,12 +32,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property string|null $contact_name
  * @property int|null $order
  * @property string|null $user_id
- * @property-read \Modules\Meetup\Models\Profile|null $creator
- * @property-read \Modules\Meetup\Models\Profile|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @property-read \Modules\Meetup\Models\EventSponsor|null $pivot
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Meetup\Models\Event> $events
  * @property-read int|null $events_count
- * @property-read \Modules\Meetup\Models\Profile|null $updater
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @method static \Modules\Meetup\Database\Factories\SponsorFactory factory($count = null, $state = [])
  * @method static Builder<static>|Sponsor whereContactEmail($value)
  * @method static Builder<static>|Sponsor whereContactName($value)

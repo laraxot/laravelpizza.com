@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Cms\Datas\ResolvePageData;
 use Modules\Cms\Models\Page as PageModel;
 use Spatie\QueueableAction\QueueableAction;
-use Throwable;
 
 /**
  * Class ResolvePageAction.
@@ -124,7 +123,7 @@ final class ResolvePageAction
             foreach ($candidateKeys as $key) {
                 try {
                     $item = $model->newQuery()->where($key, $identifier)->first();
-                } catch (Throwable) {
+                } catch (\Throwable) {
                     continue;
                 }
 

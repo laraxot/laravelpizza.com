@@ -73,7 +73,7 @@ test('send records notification action accumulates errors per channel', function
         public function execute(Model $record, string $templateSlug, array $channels): void
         {
             if ((bool) $record->getAttribute('should_fail')) {
-                throw new Exception('bulk failure');
+                throw new \Exception('bulk failure');
             }
         }
     });
@@ -109,7 +109,7 @@ test('send records notification action falls back to record key when name is mis
     {
         public function execute(Model $record, string $templateSlug, array $channels): void
         {
-            throw new Exception('forced error');
+            throw new \Exception('forced error');
         }
     });
 

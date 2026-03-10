@@ -22,7 +22,7 @@ describe('GetMailLayoutAction', function () {
     });
 
     it('has execute method with correct signature', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new \ReflectionClass($action);
         $method = $reflection->getMethod('execute');
 
         expect($method->isPublic())->toBeTrue();
@@ -30,7 +30,7 @@ describe('GetMailLayoutAction', function () {
     });
 
     it('execute accepts string parameter', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new \ReflectionClass($action);
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
@@ -38,7 +38,7 @@ describe('GetMailLayoutAction', function () {
     });
 
     it('execute returns string', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new \ReflectionClass($action);
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
@@ -46,7 +46,7 @@ describe('GetMailLayoutAction', function () {
     });
 
     it('uses strict types', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new \ReflectionClass($action);
         $filename = $reflection->getFileName();
 
         expect($filename)->not->toBeNull();
@@ -55,13 +55,13 @@ describe('GetMailLayoutAction', function () {
     });
 
     it('has correct namespace', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new \ReflectionClass($action);
 
         expect($reflection->getNamespaceName())->toBe('Modules\Notify\Actions\Mail');
     });
 
     it('has required imports', function () {
-        $filename = (new ReflectionClass($action));
+        $filename = (new \ReflectionClass($action));
         $content = file_get_contents($filename);
 
         expect($content)->toContain('use Modules\Xot\Actions\Cast\SafeStringCastAction);');

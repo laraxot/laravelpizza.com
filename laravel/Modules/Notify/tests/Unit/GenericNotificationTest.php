@@ -23,7 +23,7 @@ describe('GenericNotification getRecipientName', function (): void {
             }
         };
 
-        $ref = new ReflectionClass(GenericNotification::class);
+        $ref = new \ReflectionClass(GenericNotification::class);
         $method = $ref->getMethod('getRecipientName');
         $method->setAccessible(true);
 
@@ -40,7 +40,7 @@ describe('GenericNotification getRecipientName', function (): void {
             ];
         };
 
-        $ref = new ReflectionClass(GenericNotification::class);
+        $ref = new \ReflectionClass(GenericNotification::class);
         $method = $ref->getMethod('getRecipientName');
         $method->setAccessible(true);
 
@@ -66,7 +66,7 @@ describe('GenericNotification getRecipientName', function (): void {
             protected $attributes = [];
         };
 
-        $ref = new ReflectionClass(GenericNotification::class);
+        $ref = new \ReflectionClass(GenericNotification::class);
         $method = $ref->getMethod('getRecipientName');
         $method->setAccessible(true);
 

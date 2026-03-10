@@ -33,7 +33,7 @@ test('channel checkbox list and selects have expected default names', function (
 });
 
 test('html layout path select exposes expected default name via method signature', function () {
-    $reflection = new ReflectionMethod(HtmlLayoutPathSelect::class, 'make');
+    $reflection = new \ReflectionMethod(HtmlLayoutPathSelect::class, 'make');
     $params = $reflection->getParameters();
 
     expect($params)->toHaveCount(1)

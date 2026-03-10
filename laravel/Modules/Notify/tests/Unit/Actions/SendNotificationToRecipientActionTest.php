@@ -47,4 +47,4 @@ test('send notification to recipient throws for invalid email', function () {
         'invalid-email',
         makeDummyNotificationForRecipient(),
     );
-})->throws(InvalidArgumentException::class);
+})->throws(\InvalidArgumentException::class);

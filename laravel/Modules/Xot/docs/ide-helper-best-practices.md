@@ -221,6 +221,16 @@ git add .
 git commit -m "feat: add new fields to Event model"
 ```
 
+### Ambiente di esecuzione
+
+`ide-helper:models --write` o `-W` non va interpretato correttamente se il processo non puo' interrogare il database reale.
+
+Nel progetto molti modelli usano connessioni non standard (`activity`, `gdpr`, `xot`, oltre a `mysql`), quindi:
+
+- errori `SQLSTATE[HY000] [2002]` indicano spesso un problema di raggiungibilita' DB, non del model;
+- prima di correggere relation o phpdoc bisogna ripetere il comando in ambiente con MySQL locale raggiungibile;
+- solo il secondo run "live" puo' essere usato come base per valutare segnalazioni reali.
+
 ### Setup Nuovo Sviluppatore
 
 ```bash

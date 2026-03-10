@@ -7,7 +7,7 @@ namespace Modules\Notify\Tests\Feature;
 use Illuminate\Support\Facades\Config;
 use Modules\Notify\Actions\Mail\GetMailLayoutAction;
 
-uses(Modules\Notify\Tests\TestCase::class);
+uses(\Modules\Notify\Tests\TestCase::class);
 
 it('resolves christmas professional layout when context is christmas', function (): void {
     // Arrange

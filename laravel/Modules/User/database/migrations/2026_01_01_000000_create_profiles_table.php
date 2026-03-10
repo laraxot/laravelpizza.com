@@ -25,6 +25,12 @@ return new class extends XotBaseMigration {
             $table->string('user_name')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
+            $table->date('date_of_birth')->nullable();
+            $table->string('website')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('github')->nullable();
             $table->string('address')->nullable();
             $table->date('birth_date')->nullable();
             $table->string('gender', 1)->nullable();

@@ -17,4 +17,4 @@
 
 - [ ] AI Theme Generator: generazione automatica di palette colori accessibili da immagine di brand
 - [ ] Dynamic Layout Optimization: AI suggerisce layout migliori in base al tipo di contenuto
-- [ ] Predictive Prefetching: caricamento anticipato delle risorse UI in base ai pattern di navigazione
+- [ ] <nome progetto>ive Prefetching: caricamento anticipato delle risorse UI in base ai pattern di navigazione

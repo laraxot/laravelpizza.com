@@ -157,7 +157,7 @@ test('view notification page infolist schema contains section with text entries'
     expect($schema)->toBeArray()
         ->and($schema[0])->toBeInstanceOf(Section::class);
 
-    $reflection = new ReflectionClass($schema[0]);
+    $reflection = new \ReflectionClass($schema[0]);
     $prop = $reflection->getProperty('childComponents');
     $prop->setAccessible(true);
     $components = $prop->getValue($schema[0]);

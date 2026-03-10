@@ -123,4 +123,4 @@ test('telegram notifications channel throws when notification has no toTelegram 
     $channel = new TelegramChannel();
 
     $channel->send(makeTelegramNotifiableDummy(), new class extends Notification {});
-})->throws(Exception::class);
+})->throws(\Exception::class);

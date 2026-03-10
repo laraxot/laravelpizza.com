@@ -26,19 +26,19 @@ test('sms action factory throws for unsupported driver', function () {
     $factory = new SmsActionFactory();
 
     $factory->create('definitely-unsupported-driver');
-})->throws(Exception::class);
+})->throws(\Exception::class);
 
 test('telegram action factory throws when selected class does not implement interface', function () {
     config()->set('services.telegram.token', 'telegram-token');
 
     $factory = new TelegramActionFactory();
     $factory->create('official');
-})->throws(Exception::class);
+})->throws(\Exception::class);
 
 test('telegram action factory throws for unsupported driver', function () {
     $factory = new TelegramActionFactory();
     $factory->create('unsupported');
-})->throws(Exception::class);
+})->throws(\Exception::class);
 
 test('whatsapp action factory creates twilio driver instance', function () {
     config()->set('services.twilio.account_sid', 'sid-123');
@@ -54,4 +54,4 @@ test('whatsapp action factory throws for unsupported driver', function () {
     $factory = new WhatsAppActionFactory();
 
     $factory->create('unsupported');
-})->throws(Exception::class);
+})->throws(\Exception::class);

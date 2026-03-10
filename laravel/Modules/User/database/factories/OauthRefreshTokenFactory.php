@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Modules\User\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Modules\User\Models\OauthClient;
 use Modules\User\Models\OauthAccessToken;
+use Modules\User\Models\OauthClient;
 use Modules\User\Models\OauthRefreshToken;
 
 /**

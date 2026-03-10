@@ -1,16 +1,13 @@
 # IDE Helper Models Wave Rule
 
-## Regola
+Quando si esegue `cd laravel && php artisan ide-helper:models -W`:
 
-Quando richiesto un passaggio `php artisan ide-helper:models -W`:
+1. aggiornare prima docs, rules, memory e skill del contesto coinvolto;
+2. non fidarsi dell'esito in sandbox se i modelli interrogano MySQL locale;
+3. se compaiono `Could not analyze class ...` con errori di connessione, rilanciare con accesso reale al DB locale prima di toccare la configurazione;
+4. leggere il diff generato nei modelli;
+5. rilanciare almeno `./vendor/bin/phpstan analyse Modules --no-progress`.
 
-1. prima si aggiorna documentazione operativa (`docs/rules`, `docs/memory`, `docs/skills`) e la doc del modulo/tema toccato;
-2. si apre o aggiorna una GitHub Issue dedicata alla wave;
-3. si aggiorna almeno una GitHub Discussion con stato e decisioni;
-4. solo dopo si esegue il comando e si correggono tutte le segnalazioni.
+Regola chiave:
 
-## Vincoli operativi
-
-- niente rollback git: solo patch forward-only;
-- niente fix nascosti: ogni cluster di errori va tracciato in issue/discussion;
-- dopo le correzioni PHP: quality gate obbligatorio (`phpstan`, `phpmd`, `phpinsights`) e Pest quando testabile.
+- `ide-helper:models -W` e' sincronizzazione dei PHPDoc, non sostituisce design del modello o fix manuali del dominio.

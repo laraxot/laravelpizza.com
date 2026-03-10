@@ -23,7 +23,7 @@ describe('DetermineSeasonalContentViewPathAction', function () {
     });
 
     it('has execute method with correct signature', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new \ReflectionClass($action);
         $method = $reflection->getMethod('execute');
 
         expect($method->isPublic())->toBeTrue();
@@ -31,7 +31,7 @@ describe('DetermineSeasonalContentViewPathAction', function () {
     });
 
     it('returns string from execute', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new \ReflectionClass($action);
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
@@ -39,14 +39,14 @@ describe('DetermineSeasonalContentViewPathAction', function () {
     });
 
     it('has private determineViewFileName method', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new \ReflectionClass($action);
         $method = $reflection->getMethod('determineViewFileName');
 
         expect($method->isPrivate())->toBeTrue();
     });
 
     it('has private getEasterDate method', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new \ReflectionClass($action);
         $method = $reflection->getMethod('getEasterDate');
 
         expect($method->isPrivate())->toBeTrue();
@@ -59,7 +59,7 @@ describe('DetermineSeasonalContentViewPathAction', function () {
     });
 
     it('uses strict types', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new \ReflectionClass($action);
         $filename = $reflection->getFileName();
 
         expect($filename)->not->toBeNull();
@@ -68,13 +68,13 @@ describe('DetermineSeasonalContentViewPathAction', function () {
     });
 
     it('has correct namespace', function () {
-        $reflection = new ReflectionClass($action);
+        $reflection = new \ReflectionClass($action);
 
         expect($reflection->getNamespaceName())->toBe('Modules\Notify\Actions');
     });
 
     it('has required imports', function () {
-        $filename = (new ReflectionClass($action));
+        $filename = (new \ReflectionClass($action));
         $content = file_get_contents($filename);
 
         expect($content)->toContain('use Carbon\Carbon);');

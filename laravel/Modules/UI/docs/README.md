@@ -1,109 +1,57 @@
-# 🎨 UI Module - Componenti e Interfaccia Utente
+# Modulo UI - Componenti Condivisi
 
-[![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
-[![Filament 5.x](https://img.shields.io/badge/Filament-5.x-blue.svg)](https://filamentphp.com/)
-[![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
+## Overview
 
-> **Version**: 4.1.0
-> **Status**: ✅ UI Components Module
+Il modulo **UI** fornisce componenti Blade, widget Filament e asset condivisi per tutti i moduli e temi.
 
-## 📋 Panoramica
+## Struttura Componenti
 
-Il modulo **UI** fornisce componenti, widget e funzionalità di interfaccia utente condivise per l'ecosistema Laraxot.
-
-## ⚡ Funzionalità Core
-
-### 🧩 Blade Components
-```php
-// Componente riutilizzabile
-<x-ui.card>
-    <x-slot:header>
-        <h2>Dashboard</h2>
-    </x-slot:header>
-    <x-ui.button variant="primary">Crea Nuovo</x-ui.button>
-</x-ui.card>
+```
+resources/views/components/ui/
+├── buttons/
+│   ├── primary.blade.php
+│   └── secondary.blade.php
+├── cards/
+│   ├── base.blade.php
+│   └── collapsible.blade.php
+├── forms/
+│   ├── input.blade.php
+│   └── select.blade.php
+└── layout/
+    ├── container.blade.php
+    └── divider.blade.php
 ```
 
-### 🎨 Filament Widgets
-```php
-class UserCalendarWidget extends XotBaseWidget
-{
-    protected static string $view = 'ui::filament.widgets.user-calendar';
+## Utilizzo
 
-    public function getViewData(): array
-    {
-        return [
-            'events' => $this->getUserEvents(),
-            'layout' => TableLayoutEnum::GRID,
-        ];
-    }
-}
+```blade
+<x-ui::ui.button type="primary">
+    Salva
+</x-ui::ui.button>
+
+<x-ui::ui.card>
+    Contenuto
+</x-ui::ui.card>
 ```
 
-### 📱 TableLayoutEnum System
-Sistema di layout per tabelle Filament (lista/griglia) con traduzioni automatiche.
+## Widget Filament
 
-## 📦 Installazione
+- `CalendarWidget`: FullCalendar integration
+- `StatsOverviewWidget`: Statistiche dashboard
+- `ChartWidget`: Grafici integrati
 
-```bash
-php artisan module:enable UI
-php artisan vendor:publish --tag=ui-config
-npm run build
-```
+## Collegamenti
 
-## 🎯 Regole Critiche
+- [Regole Posizionamento](../../.cursor/rules/ui-components-rules.mdc)
+- [Filament Widgets](./widgets/)
 
-### ❌ MAI usare ->label()
-```php
-// ERRORE
-TextColumn::make('name')->label('Nome')
+## Regole Fondamentali
 
-// ✅ CORRETTO
-TextColumn::make('name')
-```
+1. **MAI posizionare componenti in root** - Usare solo `Modules/UI/resources/views/components/ui/`
+2. **Prefisso obbligatorio** - Usare `<x-ui::ui.componente />`
+3. **PHPDoc completo** per ogni componente
 
-### ✅ SEMPRE usa transClass() negli Enum
-```php
-enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
-{
-    use TransTrait;
+## Backlinks
 
-    case LIST = 'list';
-    case GRID = 'grid';
-
-    public function getLabel(): string
-    {
-        return $this->transClass(self::class, $this->value . '.label');
-    }
-}
-```
-
-## ✅ Stato Qualità
-
-- **PHPStan Level 10**: ✅ Compliant
-- **Translation Standards**: ✅ 100%
-- **Componenti**: 50+ Blade components
-- **Widget**: 20+ Filament widgets
-
-## 📚 Documentazione
-
-- [Components Guide](components.md)
-- [TableLayoutEnum Guide](table-layout-enum-complete-guide.md)
-- [Filament Components](filament-components.md)
-
-## 🔗 Moduli Collegati
-
-- [Xot Module](../xot/docs/readme.md) - Framework core
-- [User Module](../user/docs/readme.md) - Gestione utenti
-- [Lang Module](../lang/docs/readme.md) - Traduzioni
-
----
-
-**🔄 Ultimo aggiornamento**: 27 Gennaio 2025
-**📦 Versione**: 4.1.0
-
-## 🔁 CI & Semantic Versioning
-Workflow: `.github/workflows/semantic-versioning.yml`
-
-## 📄 License
-MIT
+- [Xot Base](../Xot/docs/)
+- [User Module](../User/docs/)

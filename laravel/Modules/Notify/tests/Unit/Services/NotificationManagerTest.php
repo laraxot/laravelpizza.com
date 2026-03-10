@@ -102,7 +102,7 @@ class NotificationManagerTest extends TestCase
     /** @test */
     public function it_throws_exception_when_template_not_found(): void
     {
-        $this->expectException(Exception::class);
+        $this->expectException(\Exception::class);
         $this->expectExceptionMessage('Template not found: invalid_template');
 
         $recipient = Mockery::mock('Illuminate\Database\Eloquent\Model');

@@ -6,7 +6,7 @@ dataset('userMigrationFiles', static function (): array {
     $basePath = dirname(__DIR__, 4).'/database/migrations';
     $files = glob($basePath.'/*.php');
 
-    if ($files === false) {
+    if (false === $files) {
         return [];
     }
 

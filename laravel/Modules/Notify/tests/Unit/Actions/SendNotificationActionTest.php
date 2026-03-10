@@ -69,7 +69,7 @@ test('send notification action throws when template is missing', function (): vo
     $recipient = makeDummySendNotificationRecipient(['email' => 'user@example.test']);
 
     app(SendNotificationAction::class)->execute($recipient, 'missing-template');
-})->throws(Exception::class);
+})->throws(\Exception::class);
 
 test('send notification action returns false when template should not send', function (): void {
     NotificationTemplate::query()->create([

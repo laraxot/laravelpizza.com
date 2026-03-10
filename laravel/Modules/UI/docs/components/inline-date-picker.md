@@ -342,7 +342,7 @@ public function setCurrentViewMonth(string $monthString): void
 ### Versione 3.0 - AI-Powered Temporal Intelligence
 - **Smart Suggestions**: Suggerimenti AI per date ottimali
 - **Pattern Recognition**: Riconoscimento pattern utente
-- **Predictive Availability**: Previsione disponibilità
+- **<nome progetto>ive Availability**: Previsione disponibilità
 ### Versione 4.0 - Universal Temporal Interface
 - **Multiple Calendars**: Supporto calendari diversi (Gregoriano, Lunare, etc.)
 - **Timezone Handling**: Gestione fusi orari avanzata

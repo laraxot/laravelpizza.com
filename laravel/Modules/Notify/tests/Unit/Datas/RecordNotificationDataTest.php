@@ -54,4 +54,4 @@ test('record notification data throws for unsupported channel', function (): voi
     ]);
 
     $data->getRoute();
-})->throws(Exception::class);
+})->throws(\Exception::class);

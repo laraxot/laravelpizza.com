@@ -16,6 +16,7 @@
 - Workflow cache clear dopo modifiche Blade
 - Workflow build asset dopo modifiche CSS/JS
 - Workflow screenshot per documentazione
+- Quality note: `ide-helper:models -W` appartiene al lato modulo/model e va verificato solo con DB locale raggiungibile, non dal tema
 - 31 file con accenti blu da correggere
 - Raccomandazioni prioritarie identificate
 

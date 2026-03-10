@@ -24,7 +24,7 @@ function makeDummyNotifyBulkModel(array $attributes = []): Model
 
 test('send records notification bulk action exposes expected schema components', function (): void {
     $action = SendRecordsNotificationBulkAction::make();
-    $reflection = new ReflectionClass($action);
+    $reflection = new \ReflectionClass($action);
     $prop = $reflection->getProperty('schema');
     $prop->setAccessible(true);
     $schemaResolver = $prop->getValue($action);
@@ -64,7 +64,7 @@ test('send records notification bulk action delegates to send records action', f
     app()->instance(SendRecordsNotificationAction::class, $spy);
 
     $action = SendRecordsNotificationBulkAction::make();
-    $reflection = new ReflectionClass($action);
+    $reflection = new \ReflectionClass($action);
     $prop = $reflection->getProperty('action');
     $prop->setAccessible(true);
     /** @var Closure(EloquentCollection, array<string, mixed>): void $callback */

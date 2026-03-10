@@ -13,7 +13,6 @@ use Modules\User\Models\User;
  * OauthAccessToken Factory.
  *
  * Factory for creating OauthAccessToken model instances for testing and seeding.
- *
  */
 class OauthAccessTokenFactory extends Factory
 {

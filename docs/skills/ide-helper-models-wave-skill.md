@@ -1,20 +1,20 @@
-# Skill: IDE Helper Models Wave
+# Skill: ide-helper models wave
 
 ## Trigger
 
-Quando il task richiede `php artisan ide-helper:models -W` o la correzione di segnalazioni emerse da quel comando.
+Quando serve eseguire `php artisan ide-helper:models -W` o riallineare i PHPDoc dei modelli.
 
-## Procedura
+## Workflow
 
-1. aggiornare prima docs globali (`rules`, `memory`, `skills`);
-2. aggiornare doc del modulo/tema coinvolto;
-3. aprire/aggiornare issue GitHub della wave e commentare una discussion;
-4. eseguire `php artisan ide-helper:models -W` dalla cartella `laravel/`;
-5. correggere tutte le segnalazioni;
-6. chiudere con `phpstan`, `phpmd`, `phpinsights` e Pest per parti testabili.
+1. studiare docs dei modelli/moduli coinvolti;
+2. aggiornare rule + memory + skill locali;
+3. eseguire `php artisan ide-helper:models -W`;
+4. se il comando fallisce su molte classi con errori di connessione, verificare il perimetro DB locale prima di cambiare `config/ide-helper.php`;
+5. leggere il diff generato;
+6. rilanciare `./vendor/bin/phpstan analyse Modules --no-progress`.
 
 ## Guardrail
 
-- solo forward-only con git;
-- non introdurre workaround opachi: preferire fix esplicite su model/relation/config;
-- riportare in issue/discussion sia root cause sia fix applicata.
+- non usare ide-helper come generatore cieco;
+- non nascondere blocchi ambientali dietro liste `ignored_models` non motivate;
+- se il diff introduce rumore, correggere forward-only e documentare.

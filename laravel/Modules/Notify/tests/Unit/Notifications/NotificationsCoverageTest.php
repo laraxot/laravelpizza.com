@@ -95,8 +95,8 @@ test('email data notification exposes mail channel and array payload', function 
 
     $notification = new EmailDataNotification($emailData);
 
-    expect($notification->via(new stdClass()))->toBe(['mail'])
-        ->and($notification->toArray(new stdClass()))->toMatchArray([
+    expect($notification->via(new \stdClass()))->toBe(['mail'])
+        ->and($notification->toArray(new \stdClass()))->toMatchArray([
             'recipient' => 'recipient@example.test',
             'subject' => 'Subject',
         ]);
@@ -109,9 +109,9 @@ test('sms notification builds sms payload and provider config', function () {
         'provider' => 'netfun',
     ]);
 
-    $sms = $notification->toSms(new stdClass());
+    $sms = $notification->toSms(new \stdClass());
 
-    expect($notification->via(new stdClass()))->toBe(['sms'])
+    expect($notification->via(new \stdClass()))->toBe(['sms'])
         ->and($sms)->toBeInstanceOf(SmsData::class)
         ->and($sms->recipient)->toBe('+39123')
         ->and($notification->getProvider())->toBe('netfun')
@@ -121,9 +121,9 @@ test('sms notification builds sms payload and provider config', function () {
 test('telegram notification uses telegram channel class and returns message', function () {
     $notification = new TelegramNotification('Hello telegram');
 
-    expect($notification->via(new stdClass()))->toHaveCount(1)
-        ->and($notification->toTelegram(new stdClass()))->toBe('Hello telegram')
-        ->and($notification->toArray(new stdClass()))->toBeArray();
+    expect($notification->via(new \stdClass()))->toHaveCount(1)
+        ->and($notification->toTelegram(new \stdClass()))->toBe('Hello telegram')
+        ->and($notification->toArray(new \stdClass()))->toBeArray();
 });
 
 test('whatsapp notification exposes whatsapp channel and provider', function () {
@@ -132,9 +132,9 @@ test('whatsapp notification exposes whatsapp channel and provider', function () 
         'provider' => 'twilio',
     ]);
 
-    $wa = $notification->toWhatsApp(new stdClass());
+    $wa = $notification->toWhatsApp(new \stdClass());
 
-    expect($notification->via(new stdClass()))->toBe(['whatsapp'])
+    expect($notification->via(new \stdClass()))->toBe(['whatsapp'])
         ->and($wa)->toBeInstanceOf(WhatsAppData::class)
         ->and($wa->recipient)->toBe('+39999')
         ->and($notification->getProvider())->toBe('twilio');
@@ -212,8 +212,8 @@ test('ticket notifications expose channels and array payload', function () {
     $assigned = new TicketAssignedNotification((object) ['id' => 10], $user);
     $changed = new TicketStatusChangedNotification((object) ['id' => 10], 'open', 'closed');
 
-    expect($assigned->via(new stdClass()))->toBe(['mail', 'database'])
-        ->and($assigned->toArray(new stdClass()))->toMatchArray(['assigned_by' => 'user-1'])
-        ->and($changed->via(new stdClass()))->toBe(['mail', 'database'])
-        ->and($changed->toArray(new stdClass()))->toMatchArray(['old_status' => 'open', 'new_status' => 'closed']);
+    expect($assigned->via(new \stdClass()))->toBe(['mail', 'database'])
+        ->and($assigned->toArray(new \stdClass()))->toMatchArray(['assigned_by' => 'user-1'])
+        ->and($changed->via(new \stdClass()))->toBe(['mail', 'database'])
+        ->and($changed->toArray(new \stdClass()))->toMatchArray(['old_status' => 'open', 'new_status' => 'closed']);
 });

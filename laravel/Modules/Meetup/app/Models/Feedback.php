@@ -21,9 +21,9 @@ use Modules\User\Models\User;
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property \Illuminate\Support\Carbon|null $deleted_at
- * @property-read \Modules\Meetup\Models\Profile|null $creator
- * @property-read \Modules\Meetup\Models\Profile|null $deleter
- * @property-read \Modules\Meetup\Models\Profile|null $updater
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @method static \Modules\Meetup\Database\Factories\FeedbackFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Feedback newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Feedback newQuery()

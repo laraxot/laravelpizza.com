@@ -166,7 +166,7 @@ class ValutatoreColumn extends GroupColumn
 
 ```php
 // In your Model (e.g., Schede.php)
-class Schede extends BaseModel
+class Scheda extends BaseModel
 {
     protected function valutatoreNomeDiri(): Attribute
     {

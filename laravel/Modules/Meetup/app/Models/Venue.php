@@ -30,11 +30,11 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static Builder<Venue> newQuery()
  * @method static Builder<Venue> query()
  * @property string|null $user_id
- * @property-read \Modules\Meetup\Models\Profile|null $creator
- * @property-read \Modules\Meetup\Models\Profile|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Meetup\Models\Event> $events
  * @property-read int|null $events_count
- * @property-read \Modules\Meetup\Models\Profile|null $updater
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @method static \Modules\Meetup\Database\Factories\VenueFactory factory($count = null, $state = [])
  * @method static Builder<static>|Venue whereAddress($value)
  * @method static Builder<static>|Venue whereCapacity($value)
