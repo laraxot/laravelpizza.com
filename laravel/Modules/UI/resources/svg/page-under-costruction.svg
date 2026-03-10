@@ -1,8 +1,0 @@
-<svg width="500" height="500" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; margin: auto; display: block;">
-    <circle cx="512" cy="512" r="400" fill="#f3f4f6"/>
-    <path d="M512 200c-172.5 0-312 139.5-312 312s139.5 312 312 312 312-139.5 312-312S684.5 200 512 200z" fill="#e5e7eb"/>
-    <path d="M512 100c-226.8 0-412 185.2-412 412s185.2 412 412 412 412-185.2 412-412S738.8 100 512 100zM512 924c-227.2 0-412-184.8-412-412S284.8 100 512 100s412 184.8 412 412-184.8 412-412 412z" fill="#d1d5db"/>
-    <path d="M684 422h-84V338h-44v84h-88v44h88v88h44v-88h84z" fill="#9ca3af"/>
-    <text x="512" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="#374151">Page Under Construction</text>
-    <text x="512" y="700" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#6b7280">We’re working on this feature for you!</text>
-</svg>

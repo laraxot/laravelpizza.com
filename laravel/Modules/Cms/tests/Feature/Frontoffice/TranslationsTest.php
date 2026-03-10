@@ -8,7 +8,7 @@ use Modules\Cms\Tests\TestCase;
 
 uses(TestCase::class);
 
-/**
+/*
  * Test that translations work correctly for each locale.
  *
  * This test verifies that when visiting a locale-specific route (e.g., /de),
@@ -38,7 +38,7 @@ test('auth buttons show correct translation for German locale on login page', fu
     }
 
     $content = $response->getContent();
-    
+
     // Assert translations work correctly
     expect($content)->toContain('Anmelden')
         ->toContain('Registrieren')
@@ -65,7 +65,7 @@ test('auth buttons show correct translation for Italian locale on login page', f
     }
 
     $content = $response->getContent();
-    
+
     expect($content)->toContain('>Accedi<')
         ->toContain('>Registrati<')
         ->not->toContain('>Anmelden<');
@@ -90,7 +90,7 @@ test('auth buttons show correct translation for English locale on login page', f
     }
 
     $content = $response->getContent();
-    
+
     expect($content)->not->toContain('>Accedi<')
         ->toContain('>Log in<')
         ->toContain('>Sign up<');
@@ -105,9 +105,9 @@ test('no hardcoded Italian strings in theme header components', function () {
         if (! file_exists($path)) {
             continue;
         }
-        
+
         $content = file_get_contents($path);
-        
+
         expect($content)
             ->not->toContain("__('Accedi')")
             ->not->toContain("__('Registrati')")
