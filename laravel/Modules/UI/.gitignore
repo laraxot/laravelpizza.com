@@ -1,0 +1,176 @@
+# ==============================================
+# LARAXOT MODULE UI - .GITIGNORE
+# ==============================================
+# Modulo UI Laraxot - Template standardizzato
+# Ultimo aggiornamento: 2025-01-31
+# ==============================================
+
+
+# ==============================================
+# DEPENDENCIES & PACKAGES
+# ==============================================
+/vendor/
+/node_modules/
+/docs/vendor/
+
+composer.lock
+package-lock.json
+yarn.lock
+yarn-error.log
+npm-debug.log
+
+
+# ==============================================
+# BUILD & COMPILED FILES
+# ==============================================
+/build/
+/dist/
+docs/cache/
+cache/
+
+
+# ==============================================
+# CACHE & TEMPORARY FILES
+# ==============================================
+*.cache
+*.lock
+*.phar
+*.jar
+*.tmp
+*.swp
+*.swo
+*.stackdump
+*:Zone.Identifier
+v8-compile-cache-*
+
+.php-cs-fixer.cache
+.phpunit.result.cache
+
+
+# ==============================================
+# LOG FILES
+# ==============================================
+*.log
+error_log
+npm-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+
+# ==============================================
+# LARAVEL SPECIFIC
+# ==============================================
+/storage/*.key
+/public/storage
+/public/hot
+/public_html/storage
+/public_html/hot
+
+.env
+.env.*
+!.env.example
+
+
+# ==============================================
+# ENVIRONMENT & IDE
+# ==============================================
+Homestead.yaml
+Homestead.json
+/.vagrant
+/.idea
+.phpintel
+.phpstorm.meta.php
+
+
+# ==============================================
+# GIT SPECIFIC
+# ==============================================
+.git-rewrite/
+.git-blame-ignore-revs
+
+
+# ==============================================
+# SYSTEM FILES
+# ==============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+# ==============================================
+# BACKUP FILES
+# ==============================================
+*.old
+*.old1
+*.old2
+*.backup
+*.backup.*
+*.bak
+*.new
+
+
+# ==============================================
+# DEVELOPMENT TOOLS
+# ==============================================
+.windsurf/
+.cursor/
+
+
+# ==============================================
+# DOCUMENTATION & ANALYSIS CACHE
+# ==============================================
+docs/phpstan/
+docs/cache/
+
+
+# ==============================================
+# LANGUAGE FILES (generated / duplicated)
+# ==============================================
+lang/lang/
+resources/lang/
+
+
+# ==============================================
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+resources/views/Components_old/
+database/Migrations_old/
+database/Seeders_old/
+database/Factories_old/
+database_old/
+
+
+# ==============================================
+# MODULE SPECIFIC - UI
+# ==============================================
+# Config locale
+config/local.php
+config/development.php
+
+# Asset UI compilati
+public/css/compiled/
+public/js/compiled/
+public/mix-manifest.json
+
+# Design / UI tools
+*.psd
+*.sketch
+*.fig
+design_notes.txt
+
+
+# ==============================================
+# PROJECT-SPECIFIC
+# ==============================================
+*.fila2
+laravel
+public_html
+
+
+# ==============================================
+# END OF UI .GITIGNORE
+# ==============================================
