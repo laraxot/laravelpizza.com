@@ -142,4 +142,27 @@ class Profile extends BaseProfile implements HasMedia
      * @var string
      */
     protected $table = 'profiles';
+
+    /**
+     * Generate Schema.org ProfilePage/Person JSON-LD structured data.
+     *
+     * @see https://schema.org/Person
+     * @see https://schema.org/ProfilePage
+     *
+     * @return array<string, mixed>
+     */
+    public function toSchemaOrg(): array
+    {
+        return [
+            '@context' => 'https://schema.org',
+            '@type' => 'Person',
+            'name' => $this->full_name,
+            'givenName' => $this->first_name,
+            'familyName' => $this->last_name,
+            'email' => $this->email,
+            'description' => $this->bio,
+            'image' => $this->avatar ? asset($this->avatar) : null,
+            'url' => url('/profile/'.$this->user_name),
+        ];
+    }
 }

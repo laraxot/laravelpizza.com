@@ -1,22 +1,55 @@
 {
+    "id": "terms",
+    "title": {
+        "it": "Termini e Condizioni",
+        "en": "Terms and Conditions",
+        "de": "Allgemeine Geschäftsbedingungen"
+    },
     "slug": "terms",
-    "view": "pub_theme::pages.terms",
-    "name": "Terms of Service",
-    "content_blocks": [
-        {
-            "type": "hero",
-            "view": "pub_theme::components.blocks.hero.simple",
-            "data": {
-                "title": "Terms of Service",
-                "subtitle": "Last updated: March 2026"
+    "middleware": null,
+    "content": null,
+    "content_blocks": {
+        "it": [
+            {
+                "type": "text",
+                "data": {
+                    "view": "pub_theme::components.blocks.text",
+                    "title": "Termini e Condizioni",
+                    "content": "Contenuto dei termini e condizioni in italiano..."
+                }
             }
-        },
-        {
-            "type": "text",
-            "view": "pub_theme::components.blocks.text.simple",
-            "data": {
-                "content": "<h2>1. Introduction</h2><p>Welcome to Laravel Pizza Meetups...</p>"
+        ],
+        "en": [
+            {
+                "type": "text",
+                "data": {
+                    "view": "pub_theme::components.blocks.text",
+                    "title": "Terms and Conditions",
+                    "content": "Terms and conditions content in English..."
+                }
             }
-        }
-    ]
+        ],
+        "de": [
+            {
+                "type": "text",
+                "data": {
+                    "view": "pub_theme::components.blocks.text",
+                    "title": "Allgemeine Geschäftsbedingungen",
+                    "content": "Inhalt der allgemeinen Geschäftsbedingungen auf Deutsch..."
+                }
+            }
+        ]
+    },
+    "sidebar_blocks": {
+        "it": [],
+        "en": [],
+        "de": []
+    },
+    "footer_blocks": {
+        "it": [],
+        "en": [],
+        "de": []
+    },
+    "created_at": "2025-01-06T15:30:00.000000Z",
+    "updated_at": "2025-01-06T15:30:00.000000Z"
 }

@@ -425,11 +425,21 @@ class Event extends BaseModel
         }
 
         if ($this->organizer !== null) {
-            $data['organizer'] = [
+            $organizerData = [
                 '@type' => 'Person',
                 'name' => $this->organizer->name,
-                'email' => $this->organizer->email,
             ];
+            
+            // Add profile URL if available (Schema.org recommends URL for organizers)
+            $organizerProfileUrl = LaravelLocalization::localizeUrl('/profile/'.$this->organizer->getRouteKey());
+            $organizerData['url'] = $organizerProfileUrl;
+            
+            // Add email only if appropriate ( Schema.org recommends being careful with PII)
+            if ($this->show_organizer_email ?? false) {
+                $organizerData['email'] = $this->organizer->email;
+            }
+            
+            $data['organizer'] = $organizerData;
         }
 
         if ($this->offers !== null) {

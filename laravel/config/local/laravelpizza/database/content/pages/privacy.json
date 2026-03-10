@@ -1,22 +1,55 @@
 {
+    "id": "privacy",
+    "title": {
+        "it": "Informativa sulla Privacy",
+        "en": "Privacy Policy",
+        "de": "Datenschutzerklärung"
+    },
     "slug": "privacy",
-    "view": "pub_theme::pages.privacy",
-    "name": "Privacy Policy",
-    "content_blocks": [
-        {
-            "type": "hero",
-            "view": "pub_theme::components.blocks.hero.simple",
-            "data": {
-                "title": "Privacy Policy",
-                "subtitle": "Your privacy matters to us"
+    "middleware": null,
+    "content": null,
+    "content_blocks": {
+        "it": [
+            {
+                "type": "text",
+                "data": {
+                    "view": "pub_theme::components.blocks.text",
+                    "title": "Informativa sulla Privacy",
+                    "content": "Contenuto dell'informativa sulla privacy in italiano..."
+                }
             }
-        },
-        {
-            "type": "text",
-            "view": "pub_theme::components.blocks.text.simple",
-            "data": {
-                "content": "<h2>1. Data Collection</h2><p>We collect minimal data...</p>"
+        ],
+        "en": [
+            {
+                "type": "text",
+                "data": {
+                    "view": "pub_theme::components.blocks.text",
+                    "title": "Privacy Policy",
+                    "content": "Privacy policy content in English..."
+                }
             }
-        }
-    ]
+        ],
+        "de": [
+            {
+                "type": "text",
+                "data": {
+                    "view": "pub_theme::components.blocks.text",
+                    "title": "Datenschutzerklärung",
+                    "content": "Inhalt der Datenschutzerklärung auf Deutsch..."
+                }
+            }
+        ]
+    },
+    "sidebar_blocks": {
+        "it": [],
+        "en": [],
+        "de": []
+    },
+    "footer_blocks": {
+        "it": [],
+        "en": [],
+        "de": []
+    },
+    "created_at": "2025-01-06T15:30:00.000000Z",
+    "updated_at": "2025-01-06T15:30:00.000000Z"
 }

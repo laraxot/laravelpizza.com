@@ -64,6 +64,12 @@
     $organizer = $eventModel?->organizer;
     $organizerName = $organizer?->name;
     $organizerEmail = $organizer?->email;
+    $organizerProfileUrl = null;
+    if ($organizer) {
+        $possibleProfileRoute = '/profile/'.$organizer->getRouteKey();
+        // Check if profile page exists by testing the localized URL
+        $organizerProfileUrl = \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeUrl($possibleProfileRoute);
+    }
 
     $topicValues = [];
     $metaTopics = $eventModel?->meta_data['topics'] ?? null;
@@ -228,7 +234,13 @@
                                 @if($organizerName)
                                     <div>
                                         <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.organizer.label') }}</p>
-                                        <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $organizerName }}</p>
+                                        @if($organizerProfileUrl)
+                                            <a href="{{ $organizerProfileUrl }}" class="text-base font-semibold text-slate-900 dark:text-white hover:text-red-600 dark:hover:text-red-400 transition-colors">
+                                                {{ $organizerName }}
+                                            </a>
+                                        @else
+                                            <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $organizerName }}</p>
+                                        @endif
                                         @if($organizerEmail)
                                             <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">{{ $organizerEmail }}</p>
                                         @endif
@@ -344,7 +356,13 @@
                         @if($organizerName)
                             <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
                                 <h3 class="mb-4 text-lg font-bold text-slate-900 dark:text-white">{{ __('pub_theme::event.fields.organizer.label') }}</h3>
-                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $organizerName }}</p>
+                                @if($organizerProfileUrl)
+                                    <a href="{{ $organizerProfileUrl }}" class="text-base font-semibold text-slate-900 dark:text-white hover:text-red-600 dark:hover:text-red-400 transition-colors">
+                                        {{ $organizerName }}
+                                    </a>
+                                @else
+                                    <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $organizerName }}</p>
+                                @endif
                                 @if($organizerEmail)
                                     <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">{{ $organizerEmail }}</p>
                                 @endif
