@@ -14,7 +14,7 @@ use Spatie\Activitylog\Models\Activity as SpatieActivity;
 
 /**
  * Class Activity.
- * 
+ *
  * This class extends the BaseActivity model to represent activities in the application.
  *
  * @property int $id

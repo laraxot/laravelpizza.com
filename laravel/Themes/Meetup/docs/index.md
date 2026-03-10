@@ -11,6 +11,8 @@ The Meetup theme is a premium, multi-language responsive theme designed for the 
 - Public blocks and JSON-LD must rely on canonical backend relations; for many-to-many domain links in Meetup this means `belongsToManyX()`, not `belongsToMany()`.
 - Public pages must also declare the correct page type (`WebPage`, `ProfilePage`, `ItemPage`, `CollectionPage`, `ContactPage`) and connect it to the entity via `mainEntity` or `mainEntityOfPage`.
 - No stringhe UI hardcoded nel tema: il testo utente deve sempre usare chiavi di traduzione (`pub_theme::...` o namespace modulo).
+- Il tema deve dipendere solo da boundary HTTP reali e documentati: nessun componente pubblico deve assumere l'esistenza di controller legacy o orfani nei moduli backend.
+- Quando una change del tema dipende da metadata di modelli Eloquent, pianificare una wave `php artisan ide-helper:models -W` tracciata via Issue/Discussion prima del rilascio.
 
 ## Key Features
 - **Multi-Language Support**: Italian (primary), English, German, French, Spanish, Russian

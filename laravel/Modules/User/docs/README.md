@@ -49,6 +49,18 @@ Modules\User\Models\Tenant
 - [Tenant Module](../Tenant/docs/)
 - [UI Components](../UI/docs/)
 
+## Architectural Rules — Violations Fixed
+
+### No Log calls in production code
+`Log::info()`, `Log::debug()`, `Log::error()` are forbidden in Actions, Models, Services, and Widgets.
+Found and removed from `RegisterWidget`. Laravel logs unhandled exceptions automatically.
+See: [no-log-in-production.md](./no-log-in-production.md)
+
+### Git merge conflicts in migrations
+46 migration files in `database/migrations/` had unresolved conflict markers (`<<<<<<< HEAD`, `=======`, `>>>>>>>`).
+These break PHP syntax and halt PHPStan entirely. All were resolved.
+Rule: never commit files with conflict markers. Fix immediately when found.
+
 ## Requisiti
 
 - PHP 8.3+

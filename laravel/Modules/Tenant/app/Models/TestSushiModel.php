@@ -16,7 +16,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 
 /**
  * Modello di test per il trait SushiToJson.
- * 
+ *
  * Utilizzato esclusivamente per i test del trait.
  *
  * @property int $id

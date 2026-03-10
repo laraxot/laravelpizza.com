@@ -21,7 +21,7 @@ final class ApplyCalendarToPanelAction
 
         // Log per debug
         if (config('app.debug')) {
-            Log::debug('ApplyCalendarToPanelAction: FullCalendar temporaneamente disabilitato per Filament v4');
+            Log::info('ApplyCalendarToPanelAction: FullCalendar temporaneamente disabilitato per Filament v4');
         }
 
         return $panel;

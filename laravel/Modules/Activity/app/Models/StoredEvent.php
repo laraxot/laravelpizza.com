@@ -14,7 +14,7 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
 
 /**
  * Class StoredEvent.
- * 
+ *
  * Represents a stored event in the activity module.
  *
  * @property int $id

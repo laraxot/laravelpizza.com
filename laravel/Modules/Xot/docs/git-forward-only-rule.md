@@ -20,7 +20,6 @@ Questa non è una raccomandazione, è una **legge del progetto**.
 ## ✅ Cosa è OBBLIGATORIO
 
 - Nuovi commit per correggere errori
-- `git revert` per annullare modifiche (crea nuovo commit di revert)
 - Progressione forward-only
 - Storia preservata SEMPRE
 - Tracciabilità totale
@@ -107,15 +106,13 @@ git push
 git reset --hard HEAD~1
 
 # ✅ CORRETTO
-# Sposta il commit sul branch giusto
+# Ricrea la modifica corretta sul branch giusto
 git checkout correct-branch
-git cherry-pick wrong-branch
+# studia il delta utile e reimplementalo nel presente
 git push
 
-# Annulla sul branch sbagliato
-git checkout wrong-branch
-git revert HEAD
-git push
+# Sul branch sbagliato fai un nuovo commit di riallineamento
+# senza usare revert automatici
 ```
 
 ### Scenario 4: Voglio "annullare" modifiche
@@ -125,8 +122,9 @@ git push
 git reset --hard abc123
 
 # ✅ CORRETTO
-# Usa revert per creare un nuovo commit che annulla
-git revert HEAD~2..HEAD
+# Studia la differenza e applica una correzione forward-only
+git diff abc123..HEAD -- path/to/file
+# poi fai un nuovo commit con la forma corretta del codice
 git push
 ```
 
@@ -165,7 +163,7 @@ Le UNICHE 3 eccezioni accettabili:
 3. **Team Trust**: Tutti si fidano della storia condivisa
 4. **Compliance**: Soddisfa audit e requisiti legali
 5. **Learning Culture**: Gli errori diventano lezioni documentate
-6. **Rollback Sicuro**: Posso sempre tornare indietro con `git revert`
+6. **Correzione Sicura**: Posso sempre produrre un nuovo stato corretto senza distruggere il contesto accumulato
 
 ## Commit Message Format
 

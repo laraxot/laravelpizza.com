@@ -28,12 +28,35 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null $created_by
  * @property string|null $updated_by
- *
  * @method static Builder<Performer> newModelQuery()
  * @method static Builder<Performer> newQuery()
  * @method static Builder<Performer> query()
  * @method static Builder<Performer> byType(string $type)
- *
+ * @property string|null $user_id
+ * @property-read \Modules\Meetup\Models\Profile|null $creator
+ * @property-read \Modules\Meetup\Models\Profile|null $deleter
+ * @property-read \Modules\Meetup\Models\EventPerformer|null $pivot
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Meetup\Models\Event> $events
+ * @property-read int|null $events_count
+ * @property-read \Modules\Meetup\Models\Profile|null $updater
+ * @method static \Modules\Meetup\Database\Factories\PerformerFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Performer whereBio($value)
+ * @method static Builder<static>|Performer whereCompany($value)
+ * @method static Builder<static>|Performer whereCreatedAt($value)
+ * @method static Builder<static>|Performer whereCreatedBy($value)
+ * @method static Builder<static>|Performer whereEmail($value)
+ * @method static Builder<static>|Performer whereGithub($value)
+ * @method static Builder<static>|Performer whereId($value)
+ * @method static Builder<static>|Performer whereLinkedin($value)
+ * @method static Builder<static>|Performer whereMetaData($value)
+ * @method static Builder<static>|Performer whereName($value)
+ * @method static Builder<static>|Performer wherePhoto($value)
+ * @method static Builder<static>|Performer whereTwitter($value)
+ * @method static Builder<static>|Performer whereType($value)
+ * @method static Builder<static>|Performer whereUpdatedAt($value)
+ * @method static Builder<static>|Performer whereUpdatedBy($value)
+ * @method static Builder<static>|Performer whereUserId($value)
+ * @method static Builder<static>|Performer whereWebsite($value)
  * @mixin \Eloquent
  */
 class Performer extends BaseModel

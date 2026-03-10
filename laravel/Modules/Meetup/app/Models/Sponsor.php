@@ -25,11 +25,35 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null $created_by
  * @property string|null $updated_by
- *
  * @method static Builder<Sponsor> newModelQuery()
  * @method static Builder<Sponsor> newQuery()
  * @method static Builder<Sponsor> query()
- *
+ * @property string|null $contact_email
+ * @property string|null $contact_name
+ * @property int|null $order
+ * @property string|null $user_id
+ * @property-read \Modules\Meetup\Models\Profile|null $creator
+ * @property-read \Modules\Meetup\Models\Profile|null $deleter
+ * @property-read \Modules\Meetup\Models\EventSponsor|null $pivot
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Meetup\Models\Event> $events
+ * @property-read int|null $events_count
+ * @property-read \Modules\Meetup\Models\Profile|null $updater
+ * @method static \Modules\Meetup\Database\Factories\SponsorFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Sponsor whereContactEmail($value)
+ * @method static Builder<static>|Sponsor whereContactName($value)
+ * @method static Builder<static>|Sponsor whereCreatedAt($value)
+ * @method static Builder<static>|Sponsor whereCreatedBy($value)
+ * @method static Builder<static>|Sponsor whereDescription($value)
+ * @method static Builder<static>|Sponsor whereId($value)
+ * @method static Builder<static>|Sponsor whereLevel($value)
+ * @method static Builder<static>|Sponsor whereLogo($value)
+ * @method static Builder<static>|Sponsor whereMetaData($value)
+ * @method static Builder<static>|Sponsor whereName($value)
+ * @method static Builder<static>|Sponsor whereOrder($value)
+ * @method static Builder<static>|Sponsor whereUpdatedAt($value)
+ * @method static Builder<static>|Sponsor whereUpdatedBy($value)
+ * @method static Builder<static>|Sponsor whereUserId($value)
+ * @method static Builder<static>|Sponsor whereWebsite($value)
  * @mixin \Eloquent
  */
 class Sponsor extends BaseModel

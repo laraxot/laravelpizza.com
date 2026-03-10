@@ -10,6 +10,16 @@ namespace Modules\Notify\Models;
  * @property array<string, mixed>|null $config
  * @property bool|null $is_enabled
  * @property int|null $priority
+ * @property-read \Modules\Meetup\Models\Profile|null $creator
+ * @property-read \Modules\Meetup\Models\Profile|null $deleter
+ * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Modules\Media\Models\Media> $media
+ * @property-read int|null $media_count
+ * @property-read \Modules\Meetup\Models\Profile|null $updater
+ * @method static \Modules\Notify\Database\Factories\NotificationChannelFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationChannel newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationChannel newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|NotificationChannel query()
+ * @mixin \Eloquent
  */
 class NotificationChannel extends BaseModel
 {

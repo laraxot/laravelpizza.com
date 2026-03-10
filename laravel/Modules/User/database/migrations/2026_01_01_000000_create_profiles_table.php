@@ -61,6 +61,24 @@ return new class extends XotBaseMigration {
             if (! $this->hasColumn('phone')) {
                 $table->string('phone')->nullable()->after('email');
             }
+            if (! $this->hasColumn('date_of_birth')) {
+                $table->date('date_of_birth')->nullable()->after('phone');
+            }
+            if (! $this->hasColumn('website')) {
+                $table->string('website')->nullable()->after('date_of_birth');
+            }
+            if (! $this->hasColumn('twitter')) {
+                $table->string('twitter')->nullable()->after('website');
+            }
+            if (! $this->hasColumn('facebook')) {
+                $table->string('facebook')->nullable()->after('twitter');
+            }
+            if (! $this->hasColumn('linkedin')) {
+                $table->string('linkedin')->nullable()->after('facebook');
+            }
+            if (! $this->hasColumn('github')) {
+                $table->string('github')->nullable()->after('linkedin');
+            }
             if (! $this->hasColumn('avatar')) {
                 $table->string('avatar')->nullable()->after('bio');
             }

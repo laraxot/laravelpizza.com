@@ -63,7 +63,7 @@
 - UserServiceProvider, TenantServiceProvider
 - Altri file PHP
 
-**Metodo**: `git checkout --theirs` per risoluzione rapida
+**Metodo corretto**: studio dei due lati del conflitto e merge intenzionale forward-only
 
 **Verifica**: ✅ Comandi artisan funzionanti (dopo autoload dump)
 

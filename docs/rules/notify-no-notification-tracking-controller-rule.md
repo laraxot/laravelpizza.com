@@ -12,6 +12,7 @@ Regola operativa:
 - il tracking di open/click va orchestrato tramite action o service dedicati;
 - le route, se servono, devono restare sottili e delegare subito al dominio;
 - il tema non deve implementare o governare endpoint di tracking notifiche.
+- la ricomparsa di `NotificationTrackingController.php` va trattata come regressione architetturale.
 
 Alternative consentite:
 - action class dedicate;

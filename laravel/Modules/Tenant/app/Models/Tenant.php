@@ -58,6 +58,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Tenant whereName($value)
  * @method static Builder<static>|Tenant whereSlug($value)
  * @method static Builder<static>|Tenant whereUpdatedAt($value)
+ * @method static Builder<static>|Tenant whereSettings($value)
  * @mixin \Eloquent
  */
 class Tenant extends BaseModel

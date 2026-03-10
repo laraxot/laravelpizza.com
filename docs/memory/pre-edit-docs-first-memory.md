@@ -29,6 +29,7 @@ Aggiornamento operativo (2026-03-10, git forward-only rafforzato):
 - Con git si va solo in avanti, mai indietro.
 - Sono vietati `git checkout -- <file>`, `git restore <file>`, reset distruttivi e qualunque restore di file storici come scorciatoia operativa.
 - Lo storico git serve per capire il contratto corretto; la fix va sempre implementata nel codice corrente con modifica nuova, minima e tracciabile.
+- In contesto multi-agente il motivo non e' solo filosofico: andare indietro altera il workspace condiviso e puo' cancellare o oscurare lavoro altrui ancora non integrato.
 
 Aggiornamento operativo (2026-03-09, governance rafforzata):
 

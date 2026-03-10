@@ -6,16 +6,17 @@ During the February 2026 rebase operation, we resolved a large number of git con
 
 ## Conflict Resolution Strategy
 
-### 1. Bulk Resolution for Documentation Files
+### 1. Forward-Only Resolution for Documentation Files
 
-For documentation files (`.md`), configuration files, and test files:
+For documentation files (`.md`), configuration files, and test files, the correct default is inspection first, not wholesale checkout:
 
 ```bash
-# Accept all incoming changes (theirs)
-for f in $(git diff --name-only --diff-filter=U); do
-    git checkout --theirs "$f" && git add "$f"
-done
+git diff --name-only --diff-filter=U
+git show :2:path/to/file
+git show :3:path/to/file
 ```
+
+Then merge intentionally into the current file and `git add` only after the resulting file reflects the current project contract.
 
 ### 2. Composer.json Conflicts
 
@@ -32,15 +33,15 @@ For PHP source files in `app/` directories:
 
 ### Pattern 1: Documentation Updates
 - **Location**: `docs/*.md`, `README.md`
-- **Resolution**: Accept incoming (theirs) - documentation should be latest
+- **Resolution**: merge intentionally; never assume "theirs" is automatically correct
 
 ### Pattern 2: Composer Dependencies
 - **Location**: `composer.json` in module roots
-- **Resolution**: Accept incoming (theirs) - dependencies must be current
+- **Resolution**: inspect both sides and keep the dependency set coherent with the current project state
 
 ### Pattern 3: Resource Files
 - **Location**: `Resources/views/*.blade.php`, `Resources/assets/*`
-- **Resolution**: Accept incoming (theirs) - frontend assets should be latest
+- **Resolution**: preserve the active UX and behavioral contract, merging only the needed delta
 
 ## Rebase Workflow
 
@@ -51,19 +52,13 @@ ls -la .git/rebase-merge .git/rebase-apply
 # 2. Check for unmerged files
 git status --short | grep "^UU"
 
-# 3. Resolve conflicts in batches
-for f in $(git diff --name-only --diff-filter=U); do
-    git checkout --theirs "$f" && git add "$f"
-done
+# 3. Resolve conflicts after inspection
+#    no wholesale checkout of ours/theirs as default strategy
 
 # 4. Continue rebase
 git rebase --continue
 
-# 5. If index corruption occurs
-rm -f .git/index.lock .git/index
-git reset --hard HEAD
-
-# 6. Push when complete
+# 5. Push when complete
 git push origin dev
 ```
 
@@ -77,10 +72,10 @@ After resolving conflicts:
 
 ## Lessons Learned
 
-1. **Efficiency over Precision**: For 200+ files, bulk resolution is necessary
-2. **Theirs Strategy**: During rebase, `--theirs` represents the commits being applied
-3. **Index Corruption**: Large rebases can corrupt git index - reset and restart
-4. **Documentation Priority**: Keep latest documentation, archive old versions
+1. **Precision over shortcuts**: bulk acceptance creates regressions that are hard to audit later
+2. **History is for study**: old sides are references, not restore targets
+3. **Forward-only**: conflict resolution must produce a new coherent state
+4. **Documentation priority**: preserve the current correct intent, not blindly one side
 
 ## Files Affected
 
@@ -90,4 +85,3 @@ After resolving conflicts:
   - `composer.json` - Dependency configurations
   - `Resources/views/*` - Blade templates
   - `tests/*.php` - Test files
-

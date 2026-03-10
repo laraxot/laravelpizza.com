@@ -25,7 +25,6 @@ use Spatie\Translatable\HasTranslations;
  * @property ProfileContract|null         $creator
  * @property mixed                        $translations
  * @property ProfileContract|null         $updater
- *
  * @method static Builder<static>|PageContent newModelQuery()
  * @method static Builder<static>|PageContent newQuery()
  * @method static Builder<static>|PageContent query()
@@ -42,11 +41,8 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|PageContent whereUpdatedAt($value)
  * @method static Builder<static>|PageContent whereUpdatedBy($value)
  * @method static int                         count()
- *
  * @property ProfileContract|null $deleter
- *
  * @method static PageContentFactory factory($count = null, $state = [])
- *
  * @mixin \Eloquent
  */
 class PageContent extends BaseModel

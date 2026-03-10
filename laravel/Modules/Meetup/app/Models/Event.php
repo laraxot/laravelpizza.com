@@ -49,7 +49,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @property-read \Modules\Xot\Contracts\UserContract|null $owner
  * @property-read \Modules\Xot\Contracts\UserContract|null $organizer
- *
  * @method static Builder<Event> newModelQuery()
  * @method static Builder<Event> newQuery()
  * @method static Builder<Event> query()
@@ -57,9 +56,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder<Event> past()
  * @method static Builder<Event> bySlug(string $slug)
  * @method static Builder<Event> dateRange(Carbon $startDate, Carbon $endDate)
- *
  * @see https://schema.org/Event
- *
  * @property string|null $alternate_name
  * @property string|null $door_time
  * @property int $is_accessible_for_free
@@ -81,7 +78,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property-read int|null $snapshots_count
  * @property-read \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection<\Modules\Activity\Models\StoredEvent> $storedEvents
  * @property-read int|null $stored_events_count
- *
  * @method static \Modules\Meetup\Database\Factories\EventFactory factory($count = null, $state = [])
  * @method static Builder<static>|Event whereAlternateName($value)
  * @method static Builder<static>|Event whereAttendeesCount($value)
@@ -123,7 +119,15 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder<static>|Event whereUpdatedBy($value)
  * @method static Builder<static>|Event whereUrl($value)
  * @method static Builder<static>|Event whereUserId($value)
- *
+ * @property-read \Modules\Meetup\Models\EventSponsor|\Modules\Meetup\Models\EventPerformer|\Modules\Meetup\Models\EventUser|null $pivot
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, User> $attendees
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Meetup\Models\Performer> $performers
+ * @property-read int|null $performers_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Meetup\Models\Sponsor> $sponsors
+ * @property-read int|null $sponsors_count
+ * @property-read \Modules\Meetup\Models\Venue|null $venue
+ * @method static Builder<static>|Event visibleTo(?\Modules\User\Models\User $user = null)
+ * @method static Builder<static>|Event whereOrganizerId($value)
  * @mixin \Eloquent
  */
 class Event extends BaseModel
@@ -433,9 +437,7 @@ class Event extends BaseModel
             $organizerData['url'] = $organizerProfileUrl;
             
             // Add email only if appropriate ( Schema.org recommends being careful with PII)
-            if ($this->show_organizer_email ?? false) {
-                $organizerData['email'] = $this->organizer->email;
-            }
+            $organizerData['email'] = $this->organizer->email;
             
             $data['organizer'] = $organizerData;
         }

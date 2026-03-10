@@ -32,7 +32,6 @@ use Modules\Xot\Datas\XotData;
  * @property string|null       $updated_by
  * @property string|null       $created_by
  * @property UserContract|null $user
- *
  * @method static Builder|SocialiteUser newModelQuery()
  * @method static Builder|SocialiteUser newQuery()
  * @method static Builder|SocialiteUser query()
@@ -48,20 +47,13 @@ use Modules\Xot\Datas\XotData;
  * @method static Builder|SocialiteUser whereUpdatedAt($value)
  * @method static Builder|SocialiteUser whereUpdatedBy($value)
  * @method static Builder|SocialiteUser whereUserId($value)
- *
  * @property string $uuid (DC2Type:guid)
- *
  * @method static Builder|SocialiteUser whereUuid($value)
- *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
  * @mixin IdeHelperSocialiteUser
- *
  * @property ProfileContract|null $deleter
- *
  * @method static \Modules\User\Database\Factories\SocialiteUserFactory factory($count = null, $state = [])
- *
  * @mixin \Eloquent
  */
 class SocialiteUser extends BaseModel

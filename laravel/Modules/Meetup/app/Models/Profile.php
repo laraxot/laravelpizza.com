@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Modules\User\Models\BaseProfile;
 
 /**
@@ -70,6 +71,7 @@ use Modules\User\Models\BaseProfile;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutRole($roles, ?string $guard = null)
+ * @method static Builder<static>|Profile byUuid(string $uuid)
  * @mixin \Eloquent
  */
 class Profile extends BaseProfile

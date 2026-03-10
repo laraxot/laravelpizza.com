@@ -26,11 +26,33 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null $created_by
  * @property string|null $updated_by
- *
  * @method static Builder<Venue> newModelQuery()
  * @method static Builder<Venue> newQuery()
  * @method static Builder<Venue> query()
- *
+ * @property string|null $user_id
+ * @property-read \Modules\Meetup\Models\Profile|null $creator
+ * @property-read \Modules\Meetup\Models\Profile|null $deleter
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Meetup\Models\Event> $events
+ * @property-read int|null $events_count
+ * @property-read \Modules\Meetup\Models\Profile|null $updater
+ * @method static \Modules\Meetup\Database\Factories\VenueFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Venue whereAddress($value)
+ * @method static Builder<static>|Venue whereCapacity($value)
+ * @method static Builder<static>|Venue whereCity($value)
+ * @method static Builder<static>|Venue whereCountry($value)
+ * @method static Builder<static>|Venue whereCreatedAt($value)
+ * @method static Builder<static>|Venue whereCreatedBy($value)
+ * @method static Builder<static>|Venue whereDescription($value)
+ * @method static Builder<static>|Venue whereId($value)
+ * @method static Builder<static>|Venue whereLatitude($value)
+ * @method static Builder<static>|Venue whereLongitude($value)
+ * @method static Builder<static>|Venue whereMetaData($value)
+ * @method static Builder<static>|Venue whereName($value)
+ * @method static Builder<static>|Venue wherePhone($value)
+ * @method static Builder<static>|Venue whereUpdatedAt($value)
+ * @method static Builder<static>|Venue whereUpdatedBy($value)
+ * @method static Builder<static>|Venue whereUserId($value)
+ * @method static Builder<static>|Venue whereWebsite($value)
  * @mixin \Eloquent
  */
 class Venue extends BaseModel
