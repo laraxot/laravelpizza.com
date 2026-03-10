@@ -45,7 +45,7 @@ The Activity module provides comprehensive activity logging and audit trail func
 ### ❌ Missing Features
 - Real-time activity monitoring
 - Advanced activity visualization
-- Predictive analytics for activity patterns
+- <nome progetto>ive analytics for activity patterns
 - Automated compliance reporting
 - Activity-based security alerts
 - Advanced filtering and search capabilities
@@ -79,7 +79,7 @@ The Activity module provides comprehensive activity logging and audit trail func
 ## Future Enhancements
 - Real-time monitoring
 - Advanced analytics
-- Predictive capabilities
+- <nome progetto>ive capabilities
 - Enhanced visualization
 - Automated alerts
 - Performance optimization

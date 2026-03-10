@@ -8,7 +8,7 @@ SEO optimization for the registration page focusing on semantic HTML, meta tags,
 ### Essential Meta Tags
 ```html
 <!-- Page Title -->
-<title>{{ __('gdpr::register.meta.title') }} - LaravelPizza</title>
+<title>{{ __('gdpr::register.meta.title') }} - <nome progetto></title>
 
 <!-- Page Description -->
 <meta name="description" content="{{ __('gdpr::register.meta.description') }}">
@@ -26,13 +26,13 @@ SEO optimization for the registration page focusing on semantic HTML, meta tags,
 <link rel="canonical" href="{{ LaravelLocalization::getLocalizedURL($locale, null, [], true) }}">
 
 <!-- Alternate Languages -->
-<link rel="alternate" hreflang="it" href="https://laravelpizza.com/it/auth/register">
-<link rel="alternate" hreflang="en" href="https://laravelpizza.com/en/auth/register">
-<link rel="alternate" hreflang="de" href="https://laravelpizza.com/de/auth/register">
-<link rel="alternate" hreflang="es" href="https://laravelpizza.com/es/auth/register">
-<link rel="alternate" hreflang="fr" href="https://laravelpizza.com/fr/auth/register">
-<link rel="alternate" hreflang="ru" href="https://laravelpizza.com/ru/auth/register">
-<link rel="alternate" hreflang="x-default" href="https://laravelpizza.com/it/auth/register">
+<link rel="alternate" hreflang="it" href="https://<nome progetto>.com/it/auth/register">
+<link rel="alternate" hreflang="en" href="https://<nome progetto>.com/en/auth/register">
+<link rel="alternate" hreflang="de" href="https://<nome progetto>.com/de/auth/register">
+<link rel="alternate" hreflang="es" href="https://<nome progetto>.com/es/auth/register">
+<link rel="alternate" hreflang="fr" href="https://<nome progetto>.com/fr/auth/register">
+<link rel="alternate" hreflang="ru" href="https://<nome progetto>.com/ru/auth/register">
+<link rel="alternate" hreflang="x-default" href="https://<nome progetto>.com/it/auth/register">
 ```
 
 ### Open Graph Tags
@@ -42,7 +42,7 @@ SEO optimization for the registration page focusing on semantic HTML, meta tags,
 <meta property="og:description" content="{{ __('gdpr::register.meta.description') }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ LaravelLocalization::getLocalizedURL($locale, null, [], true) }}">
-<meta property="og:image" content="https://laravelpizza.com/images/og-register.jpg">
+<meta property="og:image" content="https://<nome progetto>.com/images/og-register.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -54,7 +54,7 @@ SEO optimization for the registration page focusing on semantic HTML, meta tags,
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ __('gdpr::register.meta.title') }}">
 <meta name="twitter:description" content="{{ __('gdpr::register.meta.description') }}">
-<meta name="twitter:image" content="https://laravelpizza.com/images/og-register.jpg">
+<meta name="twitter:image" content="https://<nome progetto>.com/images/og-register.jpg">
 <meta name="twitter:url" content="{{ LaravelLocalization::getLocalizedURL($locale, null, [], true) }}">
 ```
 
@@ -70,7 +70,7 @@ SEO optimization for the registration page focusing on semantic HTML, meta tags,
 <meta name="language" content="{{ app()->getLocale() }}">
 
 <!-- Author -->
-<meta name="author" content="LaravelPizza">
+<meta name="author" content="<nome progetto>">
 
 <!-- Keywords -->
 <meta name="keywords" content="{{ __('gdpr::register.meta.keywords') }}">
@@ -187,19 +187,19 @@ SEO optimization for the registration page focusing on semantic HTML, meta tags,
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "LaravelPizza",
-  "url": "https://laravelpizza.com",
-  "logo": "https://laravelpizza.com/logo.svg",
+  "name": "<nome progetto>",
+  "url": "https://<nome progetto>.com",
+  "logo": "https://<nome progetto>.com/logo.svg",
   "description": "{{ __('gdpr::register.meta.description') }}",
   "sameAs": [
-    "https://twitter.com/laravelpizza",
-    "https://github.com/laraxot/laravelpizza.com",
-    "https://linkedin.com/company/laravelpizza"
+    "https://twitter.com/<nome progetto>",
+    "https://github.com/laraxot/<nome progetto>.com",
+    "https://linkedin.com/company/<nome progetto>"
   ],
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
-    "email": "info@laravelpizza.com"
+    "email": "info@<nome progetto>.com"
   }
 }
 </script>
@@ -219,8 +219,8 @@ SEO optimization for the registration page focusing on semantic HTML, meta tags,
   "dateModified": "[DATE]",
   "isPartOf": {
     "@type": "WebSite",
-    "name": "LaravelPizza",
-    "url": "https://laravelpizza.com"
+    "name": "<nome progetto>",
+    "url": "https://<nome progetto>.com"
   }
 }
 </script>
@@ -237,7 +237,7 @@ SEO optimization for the registration page focusing on semantic HTML, meta tags,
       "@type": "ListItem",
       "position": 1,
       "name": "{{ __('gdpr::register.breadcrumb.home') }}",
-      "item": "https://laravelpizza.com"
+      "item": "https://<nome progetto>.com"
     },
     {
       "@type": "ListItem",
@@ -306,8 +306,8 @@ SEO optimization for the registration page focusing on semantic HTML, meta tags,
 
 ### Clean URLs
 ```
-✅ Good: https://laravelpizza.com/it/auth/register
-❌ Bad: https://laravelpizza.com/it/auth/register?step=1
+✅ Good: https://<nome progetto>.com/it/auth/register
+❌ Bad: https://<nome progetto>.com/it/auth/register?step=1
 ```
 
 ### URL Parameters
@@ -388,7 +388,7 @@ SEO optimization for the registration page focusing on semantic HTML, meta tags,
 <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 768px)">
 
 <!-- Accelerated Mobile Pages (AMP) - optional -->
-<link rel="amphtml" href="https://laravelpizza.com/it/auth/register/amp">
+<link rel="amphtml" href="https://<nome progetto>.com/it/auth/register/amp">
 ```
 
 ## SEO Testing Checklist

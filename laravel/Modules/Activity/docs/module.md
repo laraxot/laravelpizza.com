@@ -146,7 +146,7 @@ Event Store ← Snapshot ← Aggregate ← Event Sourcing
 1. **Advanced Analytics Engine**
    - Missing: Activity pattern detection
    - Missing: Anomaly detection
-   - No predictive analytics
+   - No <nome progetto>ive analytics
    - Missing behavior analysis
 
 2. **Real-time Monitoring**
@@ -275,7 +275,7 @@ activity()->withProperties([
 
 ### Fase 3: Advanced Features (3-4 settimane)
 - [ ] Machine learning categorization
-- [ ] Predictive analytics
+- [ ] <nome progetto>ive analytics
 - [ ] Advanced filtering system
 - [ ] Custom report builder
 

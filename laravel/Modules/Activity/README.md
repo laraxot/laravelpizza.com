@@ -174,7 +174,7 @@ Activity <── healthcare_app   (survey CRUD, dashboard actions)
 Activity <── Survey    (survey CRUD, dashboard actions)
 =======
 Activity <── ModuloEsempio   (survey CRUD, dashboard actions)
->>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_bD7FZH
 Activity <── Cms       (page/content modifications)
 Activity <── Media     (file upload/delete tracking)

@@ -1,6 +1,6 @@
-# Radice Aggregate per Prediction Market
+# Radice Aggregate per <nome progetto>ion Market
 
-La radice aggregate `PredictionMarketAggregateRoot` è responsabile della gestione della logica di business per un mercato di previsione. Incapsula gli eventi e garantisce che lo stato del mercato rimanga coerente.
+La radice aggregate `<nome progetto>ionMarketAggregateRoot` è responsabile della gestione della logica di business per un mercato di previsione. Incapsula gli eventi e garantisce che lo stato del mercato rimanga coerente.
 
 ## Funzionalità Principali
 
@@ -14,13 +14,13 @@ La radice aggregate `PredictionMarketAggregateRoot` è responsabile della gestio
 ```php
 namespace Modules\Activity\Aggregates;
 
-use Modules\Activity\Events\PredictionMarket\MarketCreated;
-use Modules\Activity\Events\PredictionMarket\BetPlaced;
-use Modules\Activity\Events\PredictionMarket\MarketUpdated;
-use Modules\Activity\Events\PredictionMarket\MarketResolved;
-use Modules\Activity\Events\PredictionMarket\PayoutDistributed;
+use Modules\Activity\Events\<nome progetto>ionMarket\MarketCreated;
+use Modules\Activity\Events\<nome progetto>ionMarket\BetPlaced;
+use Modules\Activity\Events\<nome progetto>ionMarket\MarketUpdated;
+use Modules\Activity\Events\<nome progetto>ionMarket\MarketResolved;
+use Modules\Activity\Events\<nome progetto>ionMarket\PayoutDistributed;
 
-class PredictionMarketAggregateRoot
+class <nome progetto>ionMarketAggregateRoot
 {
     private $marketId;
     private $bets = [];

@@ -103,6 +103,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @method static \Modules\Gdpr\Database\Factories\ProfileFactory factory($count = null, $state = [])
  * @method static Builder<static>|Profile                         whereFiscalCode($value)
  * @method static Builder<static>|Profile                         whereNotes($value)
+ * @method static Builder<static>|Profile                         byUuid(string $uuid)
  *
  * @mixin \Eloquent
  */

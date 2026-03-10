@@ -1,4 +1,4 @@
-# Linee Guida API Prediction Market
+# Linee Guida API <nome progetto>ion Market
 
 ## Endpoints Principali
 - GET /markets: lista mercati attivi

@@ -13,7 +13,7 @@
 - [enterprise-job-system-roadmap.md](enterprise-job-system-roadmap.md)
 - [navigation-translations-completion-roadmap.md](navigation-translations-completion-roadmap.md)
 - [phpstan-errors-roadmap.md](phpstan-errors-roadmap.md)
-- [phpstan-roadmap.md](phpstan-roadmap.md)
+- [phpstan-roadmap.md](phpstan-roadmap.md) (✅ Completed)
 - [roadmap/00-index.md](roadmap/00-index.md)
 - [roadmap/00-overview.md](roadmap/00-overview.md)
 - [roadmap/01-current-state.md](roadmap/01-current-state.md)

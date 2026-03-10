@@ -209,7 +209,7 @@ use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Modules\Activity\Models\Activity;
 
-class SchedeEmailStatsWidget extends BaseWidget
+class SchedaEmailStatsWidget extends BaseWidget
 {
     protected function getStats(): array
     {

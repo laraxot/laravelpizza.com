@@ -1,4 +1,4 @@
-# Flusso degli Eventi - Prediction Market
+# Flusso degli Eventi - <nome progetto>ion Market
 
 ## 1. Creazione Mercato
 ```mermaid

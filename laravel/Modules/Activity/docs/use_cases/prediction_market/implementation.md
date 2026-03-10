@@ -1,6 +1,6 @@
-# Implementazione del Prediction Market
+# Implementazione del <nome progetto>ion Market
 
-Questa guida fornisce i passaggi per implementare un prediction market nel modulo `Activity` utilizzando l'Event Sourcing.
+Questa guida fornisce i passaggi per implementare un <nome progetto>ion market nel modulo `Activity` utilizzando l'Event Sourcing.
 
 ## Passaggi Principali
 
@@ -13,7 +13,7 @@ Questa guida fornisce i passaggi per implementare un prediction market nel modul
    - Assicurarsi che ogni evento contenga i dati necessari per aggiornare lo stato.
 
 3. **Implementazione della Radice Aggregate**
-   - Creare `PredictionMarketAggregateRoot` per gestire la logica di business.
+   - Creare `<nome progetto>ionMarketAggregateRoot` per gestire la logica di business.
    - Garantire che la radice aggregate impedisca operazioni non valide (es. scommesse su mercati chiusi).
 
 4. **Sviluppo dei Proiettori**
@@ -58,15 +58,15 @@ Analizzando piattaforme di successo, possiamo integrare diverse best practices n
 ```php
 namespace Modules\Activity\Http\Controllers;
 
-use Modules\Activity\Aggregates\PredictionMarketAggregateRoot;
+use Modules\Activity\Aggregates\<nome progetto>ionMarketAggregateRoot;
 use Illuminate\Http\Request;
 
-class PredictionMarketController
+class <nome progetto>ionMarketController
 {
     public function createMarket(Request $request)
     {
         $marketId = uniqid();
-        $aggregate = PredictionMarketAggregateRoot::createMarket(
+        $aggregate = <nome progetto>ionMarketAggregateRoot::createMarket(
             $marketId,
             $request->input('title'),
             $request->input('description'),
@@ -78,7 +78,7 @@ class PredictionMarketController
 
     public function placeBet(Request $request, $marketId)
     {
-        $aggregate = PredictionMarketAggregateRoot::retrieve($marketId);
+        $aggregate = <nome progetto>ionMarketAggregateRoot::retrieve($marketId);
         $aggregate->placeBet(
             auth()->user()->uuid,
             $request->input('option_id'),

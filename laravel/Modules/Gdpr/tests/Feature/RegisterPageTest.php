@@ -411,7 +411,7 @@ it('contains proper SEO meta tags', function () {
     get('/en/auth/register')
         ->assertStatus(200)
         ->assertSee('<title>', false)
-        ->assertSee('LaravelPizza Community');
+        ->assertSee('<nome progetto> Community');
 });
 
 it('has proper accessibility attributes', function () {

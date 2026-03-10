@@ -13,7 +13,7 @@
 - [gdpr-compliance-roadmap.md](gdpr-compliance-roadmap.md)
 - [phpstan-merge-conflicts-roadmap.md](phpstan-merge-conflicts-roadmap.md)
 - [phpstan-phpdoc-migration-errors-roadmap.md](phpstan-phpdoc-migration-errors-roadmap.md)
-- [phpstan-roadmap.md](phpstan-roadmap.md)
+- [phpstan-roadmap.md](phpstan-roadmap.md) (✅ Completed)
 - [roadmap/00-index.md](roadmap/00-index.md)
 - [roadmap/00-overview.md](roadmap/00-overview.md)
 - [roadmap/01-current-state.md](roadmap/01-current-state.md)

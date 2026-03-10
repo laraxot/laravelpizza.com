@@ -1,8 +1,8 @@
-# 🏗️ Architettura del Modulo Prediction Market
+# 🏗️ Architettura del Modulo <nome progetto>ion Market
 
 ## 🌟 Panoramica dell'Architettura
 
-L'architettura del modulo Prediction Market è progettata seguendo i principi del **Domain-Driven Design (DDD)** e dell'**Event Sourcing**, garantendo scalabilità, manutenibilità e tracciabilità completa di tutte le operazioni.
+L'architettura del modulo <nome progetto>ion Market è progettata seguendo i principi del **Domain-Driven Design (DDD)** e dell'**Event Sourcing**, garantendo scalabilità, manutenibilità e tracciabilità completa di tutte le operazioni.
 
 ## 🧱 Componenti Fondamentali
 
@@ -70,7 +70,7 @@ L'architettura del modulo Prediction Market è progettata seguendo i principi de
 
 Analizzando i progetti `laravel-shop-main` e `laravel-shop-command-bus`, ho identificato diversi principi architetturali che possono essere applicati al nostro mercato delle previsioni:
 
-- **Event Sourcing come Fondamento**: Entrambi i progetti utilizzano Event Sourcing per tracciare ogni modifica allo stato del sistema (es. aggiunta di un articolo al carrello). Nel contesto del mercato delle previsioni, possiamo usare eventi come `PredictionMade`, `MarketResolved` o `BetPlaced` per costruire una storia immutabile delle interazioni degli utenti. Questo garantisce tracciabilità e auditabilità, cruciali per un sistema che gestisce scommesse o previsioni.
+- **Event Sourcing come Fondamento**: Entrambi i progetti utilizzano Event Sourcing per tracciare ogni modifica allo stato del sistema (es. aggiunta di un articolo al carrello). Nel contesto del mercato delle previsioni, possiamo usare eventi come `<nome progetto>ionMade`, `MarketResolved` o `BetPlaced` per costruire una storia immutabile delle interazioni degli utenti. Questo garantisce tracciabilità e auditabilità, cruciali per un sistema che gestisce scommesse o previsioni.
 - **Aggregate Root per la Logica di Business**: Nei progetti Spatie, gli aggregate come `CartAggregateRoot` centralizzano la logica di business, decidendo quali eventi generare in risposta a comandi. Per il nostro sistema, possiamo creare un `MarketAggregate` che gestisce la creazione di mercati, l'accettazione di previsioni e la risoluzione dei risultati.
 - **Proiettori per Viste Ottimizzate**: Spatie utilizza proiettori per trasformare eventi in viste ottimizzate per le query (es. una tabella che mostra il contenuto del carrello). Possiamo adottare lo stesso approccio per generare viste in tempo reale delle classifiche degli utenti, dei mercati attivi e dei risultati storici.
 
@@ -78,16 +78,16 @@ Analizzando i progetti `laravel-shop-main` e `laravel-shop-command-bus`, ho iden
 
 Basandoci sulla documentazione di Laravel Modules ([https://laravelmodules.com/docs/12/getting-started/introduction](https://laravelmodules.com/docs/12/getting-started/introduction)), possiamo strutturare il nostro mercato delle previsioni come un modulo isolato all'interno del progetto più ampio:
 
-- **Isolamento del Modulo**: Creare un modulo `PredictionMarket` in `Modules/PredictionMarket` ci permette di sviluppare e testare il sistema in modo indipendente, con la possibilità di riutilizzarlo in altri progetti. Questo modulo avrà la propria struttura di directory con `app`, `config`, `database`, ecc.
-- **Organizzazione DDD Interna**: All'interno del modulo, possiamo adottare una struttura ispirata al Domain-Driven Design, simile a quella di Spatie. Ad esempio, `Modules/PredictionMarket/app/Domain/Market` conterrà aggregate, eventi e proiettori relativi ai mercati delle previsioni.
+- **Isolamento del Modulo**: Creare un modulo `<nome progetto>ionMarket` in `Modules/<nome progetto>ionMarket` ci permette di sviluppare e testare il sistema in modo indipendente, con la possibilità di riutilizzarlo in altri progetti. Questo modulo avrà la propria struttura di directory con `app`, `config`, `database`, ecc.
+- **Organizzazione DDD Interna**: All'interno del modulo, possiamo adottare una struttura ispirata al Domain-Driven Design, simile a quella di Spatie. Ad esempio, `Modules/<nome progetto>ionMarket/app/Domain/Market` conterrà aggregate, eventi e proiettori relativi ai mercati delle previsioni.
 
 ## Architettura Proposta
 
 ### Componenti Principali
 
-- **Modulo PredictionMarket**: Isolato e riutilizzabile, contiene tutta la logica del mercato delle previsioni.
-- **Domain/Market**: Contiene `MarketAggregate` per la logica di business, eventi come `PredictionMade` e proiettori per viste come `MarketSummary`.
-- **Domain/UserPrediction**: Gestisce le previsioni degli utenti con eventi come `BetPlaced` e viste per le statistiche personali.
+- **Modulo <nome progetto>ionMarket**: Isolato e riutilizzabile, contiene tutta la logica del mercato delle previsioni.
+- **Domain/Market**: Contiene `MarketAggregate` per la logica di business, eventi come `<nome progetto>ionMade` e proiettori per viste come `MarketSummary`.
+- **Domain/User<nome progetto>ion**: Gestisce le previsioni degli utenti con eventi come `BetPlaced` e viste per le statistiche personali.
 - **Controllers**: Punti di ingresso per comandi utente, come creare un mercato o fare una previsione.
 - **Projections**: Tabelle ottimizzate per query, come classifiche e mercati attivi.
 
@@ -366,4 +366,4 @@ CREATE TABLE user_bets (
 
 ## Conclusione
 
-Questa architettura separa chiaramente le responsabilità tra logica di business (radice aggregate), registrazione storica (eventi) e query ottimizzate (proiettori e modelli di lettura). L'Event Sourcing garantisce tracciabilità e flessibilità, rendendo il sistema di Prediction Market scalabile e manutenibile.
+Questa architettura separa chiaramente le responsabilità tra logica di business (radice aggregate), registrazione storica (eventi) e query ottimizzate (proiettori e modelli di lettura). L'Event Sourcing garantisce tracciabilità e flessibilità, rendendo il sistema di <nome progetto>ion Market scalabile e manutenibile.

@@ -1,4 +1,4 @@
-# Modello di Dominio - Prediction Market
+# Modello di Dominio - <nome progetto>ion Market
 
 ## Aggregate
 - **Market**: rappresenta un mercato predittivo

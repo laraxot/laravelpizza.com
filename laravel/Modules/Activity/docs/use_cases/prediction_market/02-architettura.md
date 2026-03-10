@@ -1,4 +1,4 @@
-# Architettura di un Prediction Market
+# Architettura di un <nome progetto>ion Market
 
 ## Pattern Principali
 - **Event Sourcing**: ogni cambiamento di stato è registrato come evento immutabile.

@@ -1,4 +1,4 @@
-# Best Practice Prediction Market
+# Best Practice <nome progetto>ion Market
 
 ## Sicurezza
 - Audit trail completo tramite eventi

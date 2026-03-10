@@ -1,4 +1,4 @@
-# mcamara/laravel-localization Deep Dive (LaravelPizza)
+# mcamara/laravel-localization Deep Dive (<nome progetto>)
 
 ## Obiettivo
 

@@ -40,7 +40,7 @@ The Activity module provides comprehensive audit trail and event sourcing capabi
 ### Phase 4: Advanced Analytics (Q4 2026)
 - [ ] Machine learning insights
 - [ ] Anomaly detection
-- [ ] Predictive analytics
+- [ ] <nome progetto>ive analytics
 - [ ] Custom dashboard widgets
 - [ ] API for external analytics tools
 

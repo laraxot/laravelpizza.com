@@ -21,7 +21,7 @@ L'obiettivo è fornire una panoramica neutra e riutilizzabile dei pattern, dei v
 - **Projector**: componente che aggiorna proiezioni leggibili a partire dagli eventi
 
 ## Collegamenti correlati
-- [Prediction Market](../prediction_market/readme.md)
+- [<nome progetto>ion Market](../<nome progetto>ion_market/readme.md)
 - [Event Sourcing & CQRS](../event_sourcing_cqrs/readme.md)
 - [Audit Log](../audit_log/readme.md)
 - [Workflow Approval](../workflow_approval/readme.md)

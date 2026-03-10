@@ -1,4 +1,4 @@
-# Testing Prediction Market
+# Testing <nome progetto>ion Market
 
 ## Unit Test
 - Test per ogni evento, proiettore, reattore

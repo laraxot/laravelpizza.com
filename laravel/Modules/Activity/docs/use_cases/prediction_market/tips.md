@@ -1,4 +1,4 @@
-# Consigli e Best Practice - Prediction Market
+# Consigli e Best Practice - <nome progetto>ion Market
 
 ## Refactoring e Miglioramenti
 - Separare sempre comandi (write) e query (read) secondo CQRS

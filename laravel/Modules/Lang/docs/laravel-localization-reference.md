@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides the complete reference for `mcamara/laravel-localization` package (v2.x) used in the LaravelPizza project.
+This document provides the complete reference for `mcamara/laravel-localization` package (v2.x) used in the <nome progetto> project.
 
 ## Installation
 

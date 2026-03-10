@@ -138,7 +138,7 @@ user::authentication_log.fields.id.label
 > "This structure was designed specifically to allow:
 > - Multiple sections in one file (fields, actions, messages, navigation)
 > - Clear semantic separation (field translations vs action translations)
-> - Predictable key resolution (GetTransKeyAction → GetTransPathAction → GetTranslationAction)"
+> - <nome progetto>able key resolution (GetTransKeyAction → GetTransPathAction → GetTranslationAction)"
 
 **The Business Logic**:
 > "Without 'fields' section:

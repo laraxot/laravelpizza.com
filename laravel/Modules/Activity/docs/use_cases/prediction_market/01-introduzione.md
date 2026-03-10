@@ -1,6 +1,6 @@
-# Introduzione al Prediction Market
+# Introduzione al <nome progetto>ion Market
 
-Un **prediction market** è una piattaforma dove gli utenti possono scommettere sull'esito di eventi futuri (politica, sport, economia, ecc.), aggregando la "saggezza della folla" per produrre previsioni statisticamente rilevanti. I prediction market moderni sono spesso decentralizzati (Web3), basati su blockchain e smart contract.
+Un **<nome progetto>ion market** è una piattaforma dove gli utenti possono scommettere sull'esito di eventi futuri (politica, sport, economia, ecc.), aggregando la "saggezza della folla" per produrre previsioni statisticamente rilevanti. I <nome progetto>ion market moderni sono spesso decentralizzati (Web3), basati su blockchain e smart contract.
 
 ## Vantaggi
 - Aggregazione della conoscenza collettiva
@@ -9,7 +9,7 @@ Un **prediction market** è una piattaforma dove gli utenti possono scommettere 
 - Applicazioni in politica, sport, economia, scienza
 
 ## Contesto
-Questa documentazione descrive come progettare e realizzare un prediction market moderno, ispirato alle migliori piattaforme internazionali, utilizzando Laravel e i pattern di event sourcing.
+Questa documentazione descrive come progettare e realizzare un <nome progetto>ion market moderno, ispirato alle migliori piattaforme internazionali, utilizzando Laravel e i pattern di event sourcing.
 
 ## Novità: LMSR (Logarithmic Market Scoring Rule)
 Il modulo integra ora la regola LMSR per garantire liquidità automatica e prezzi dinamici nei mercati predittivi. Per dettagli matematici e implementativi vedi il file `lmsr.md`.

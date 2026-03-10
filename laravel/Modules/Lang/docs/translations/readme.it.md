@@ -82,7 +82,7 @@ Questo progetto è open-source e disponibile sotto la [Licenza MIT](../../LICENS
 ---
 
 <div align="center">
-  <sub>Costruito con ❤️ dal team Base Predict Fila3 Mono</sub>
+  <sub>Costruito con ❤️ dal team Base <nome progetto> Fila3 Mono</sub>
 </div>
 <div align="center">
   <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup.png" alt="Laraxot PTVX" width="350"/>
@@ -168,5 +168,5 @@ Questo progetto è open-source e disponibile sotto la [Licenza MIT](../../LICENS
 ---
 
 <div align="center">
-  <sub>Costruito con ❤️ dal team Base Predict Fila3 Mono</sub>
+  <sub>Costruito con ❤️ dal team Base <nome progetto> Fila3 Mono</sub>
 </div>

@@ -1,10 +1,10 @@
-# Console Commands per Prediction Market
+# Console Commands per <nome progetto>ion Market
 
 ## Introduzione
-I console commands permettono di gestire operazioni batch, manutenzione, import/export, simulazioni e automazioni nel prediction market.
+I console commands permettono di gestire operazioni batch, manutenzione, import/export, simulazioni e automazioni nel <nome progetto>ion market.
 
 ## Struttura Consigliata
-- Tutti i comandi vanno in `app/Console/Commands` del modulo PredictionMarket.
+- Tutti i comandi vanno in `app/Console/Commands` del modulo <nome progetto>ionMarket.
 - Naming: usare nomi descrittivi, es: `CloseExpiredMarkets`, `ImportMarketData`, `SimulateMarketOutcome`.
 - Ogni comando deve:
   - Usare dependency injection per servizi e repository
@@ -13,14 +13,14 @@ I console commands permettono di gestire operazioni batch, manutenzione, import/
 
 ## Esempio di Comando
 ```php
-namespace Modules\PredictionMarket\Console\Commands;
+namespace Modules\<nome progetto>ionMarket\Console\Commands;
 
 use Illuminate\Console\Command;
-use Modules\PredictionMarket\Services\MarketService;
+use Modules\<nome progetto>ionMarket\Services\MarketService;
 
 class CloseExpiredMarkets extends Command
 {
-    protected $signature = 'prediction:close-expired';
+    protected $signature = '<nome progetto>ion:close-expired';
     protected $description = 'Chiude tutti i mercati scaduti e distribuisce i payout';
 
     public function __construct(private MarketService $marketService) {
@@ -37,7 +37,7 @@ class CloseExpiredMarkets extends Command
 ```
 
 ## Best Practice
-- Usare signature descrittive (`prediction:close-expired`)
+- Usare signature descrittive (`<nome progetto>ion:close-expired`)
 - Gestire eccezioni e loggare errori
 - Scrivere test per ogni comando (feature test)
 - Documentare ogni comando in README del modulo
@@ -48,8 +48,8 @@ class CloseExpiredMarkets extends Command
 - Mancanza di test
 
 ## Collegamenti correlati
-- [Architettura prediction_market](./02_architettura.md)
-- [Best practice prediction_market](./04_best_practice.md)
-- [Testing prediction_market](./07_test.md)
-- [API prediction_market](./06_api.md)
-- [Glossario prediction_market](./08_glossario.md)
+- [Architettura <nome progetto>ion_market](./02_architettura.md)
+- [Best practice <nome progetto>ion_market](./04_best_practice.md)
+- [Testing <nome progetto>ion_market](./07_test.md)
+- [API <nome progetto>ion_market](./06_api.md)
+- [Glossario <nome progetto>ion_market](./08_glossario.md)

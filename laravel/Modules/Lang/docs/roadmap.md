@@ -11,7 +11,7 @@
 ## Legacy / existing roadmap docs
 
 - [phpstan-errors-resolution-roadmap.md](phpstan-errors-resolution-roadmap.md)
-- [phpstan-roadmap.md](phpstan-roadmap.md)
+- [phpstan-roadmap.md](phpstan-roadmap.md) (❌ Found 126 errors - Reported #83)
 - [roadmap/00-index.md](roadmap/00-index.md)
 - [roadmap/00-overview.md](roadmap/00-overview.md)
 - [roadmap/01-current-state.md](roadmap/01-current-state.md)

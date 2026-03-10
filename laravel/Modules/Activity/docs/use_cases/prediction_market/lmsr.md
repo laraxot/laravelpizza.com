@@ -1,7 +1,7 @@
-# LMSR – Logarithmic Market Scoring Rule nei Prediction Market
+# LMSR – Logarithmic Market Scoring Rule nei <nome progetto>ion Market
 
 ## Cos'è LMSR?
-LMSR (Logarithmic Market Scoring Rule) è un algoritmo di market making ideato da Robin Hanson per prediction market. Permette di fornire liquidità automatica e prezzi sempre aggiornati per ogni possibile esito, senza necessità di una controparte umana.
+LMSR (Logarithmic Market Scoring Rule) è un algoritmo di market making ideato da Robin Hanson per <nome progetto>ion market. Permette di fornire liquidità automatica e prezzi sempre aggiornati per ogni possibile esito, senza necessità di una controparte umana.
 
 ### Formula e Funzionamento
 - **Funzione di costo**: `C(q) = b * ln(∑_i exp(q_i / b))`
@@ -15,7 +15,7 @@ LMSR (Logarithmic Market Scoring Rule) è un algoritmo di market making ideato d
 - Perdita massima limitata per il market maker
 - Incentiva la partecipazione e la scoperta del prezzo
 
-## Integrazione LMSR nel modulo Prediction Market
+## Integrazione LMSR nel modulo <nome progetto>ion Market
 
 ### Dove si inserisce LMSR
 - **Calcolo quote**: sostituisce il calcolo statico delle quote con uno dinamico e reattivo.
@@ -49,4 +49,4 @@ $prices = $lmsr->getPrices($quantities);
 
 ---
 
-> **Nota:** L’integrazione di LMSR rende il modulo Prediction Market più robusto, liquido e trasparente, allineandolo alle migliori piattaforme internazionali. Per dettagli matematici e implementativi, consultare la sezione "Best Practice" e gli esempi pratici.
+> **Nota:** L’integrazione di LMSR rende il modulo <nome progetto>ion Market più robusto, liquido e trasparente, allineandolo alle migliori piattaforme internazionali. Per dettagli matematici e implementativi, consultare la sezione "Best Practice" e gli esempi pratici.

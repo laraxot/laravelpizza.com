@@ -1,23 +1,44 @@
-# Module Documentation
+# Modulo Lang
 
-This directory contains the documentation for the Lang module.
+## Overview
 
-## Purpose
+Il modulo **Lang** fa parte dell'ecosistema Laraxot PTVX.
 
-The purpose of this documentation is to provide comprehensive information about the Lang's functionality, architecture, and usage. It aims to:
-- Explain key features and their implementation details.
-- Guide developers on how to use, extend, and maintain the module.
-- Ensure consistency with Laraxot architectural principles and coding standards.
+## Scopo
 
-## Structure
+Questo modulo gestisce [DESCRIZIONE SPECIFICA DA COMPLETARE].
 
-- `README.md`: This overview file.
-- Other Markdown files will detail specific aspects of the module, such as:
-    - `installation.md`
-    - `usage.md`
-    - `architecture.md`
-    - `troubleshooting.md`
+## Struttura
 
-## Contribution
+```
+Lang/
+├── app/
+│   ├── Models/
+│   ├── Filament/
+│   └── ...
+├── docs/
+├── lang/
+└── resources/
+```
 
-Developers are encouraged to contribute to this documentation to keep it accurate and up-to-date.
+## Dipendenze
+
+- [Xot Base](../Xot/docs/)
+- [User Module](../User/docs/) (se usa autenticazione)
+- [Tenant Module](../Tenant/docs/) (se multi-tenant)
+
+## Collegamenti
+
+- [Documentazione Root](../../../docs/LANG_MODULE.md)
+- [Regole Architecture](../Xot/docs/architecture/)
+
+## Backlinks
+
+- [Indice Moduli](../README.md)
+
+## TODO
+
+- [ ] Completare descrizione funzionalità
+- [ ] Documentare modelli principali
+- [ ] Documentare risorse Filament
+- [ ] Aggiungere esempi codice

@@ -63,7 +63,7 @@ protected function getPackageProviders($app): array
 If you encounter migration issues:
 1. Drop and recreate the test database manually:
    ```bash
-   mysql -u user -p -e "DROP DATABASE IF EXISTS laravelpizza_data_test; CREATE DATABASE laravelpizza_data_test;"
+   mysql -u user -p -e "DROP DATABASE IF EXISTS <nome progetto>_data_test; CREATE DATABASE <nome progetto>_data_test;"
    ```
 2. Run migrations manually to see errors:
    ```bash

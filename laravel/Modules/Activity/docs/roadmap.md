@@ -11,7 +11,7 @@
 ## Legacy / existing roadmap docs
 
 - [phpstan-override-fix-roadmap.md](phpstan-override-fix-roadmap.md)
-- [phpstan-roadmap.md](phpstan-roadmap.md)
+- [phpstan-roadmap.md](phpstan-roadmap.md) (✅ Completed)
 - [roadmap/00-index.md](roadmap/00-index.md)
 - [roadmap/00-overview.md](roadmap/00-overview.md)
 - [roadmap/01-current-state.md](roadmap/01-current-state.md)

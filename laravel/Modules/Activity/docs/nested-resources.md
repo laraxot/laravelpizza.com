@@ -169,7 +169,7 @@ Pattern minimo (quando applicabile):
 
 ### 1. Intelligent Activity Analysis
 - Automated anomaly detection in activity patterns
-- Predictive analytics for security threats
+- <nome progetto>ive analytics for security threats
 - Machine learning-based activity categorization
 
 ### 2. Advanced Compliance Features

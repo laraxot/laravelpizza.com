@@ -14,7 +14,7 @@ il modulo **activity** è un sistema avanzato di audit trail e event sourcing ch
 
 ### ✅ documentazione
 - documentazione estremamente completa (100+ file)
-- esempi pratici dettagliati (bank, prediction_market, shop)
+- esempi pratici dettagliati (bank, <nome progetto>ion_market, shop)
 - copertura completa di event sourcing patterns
 - integrazione filament ben documentata
 
@@ -148,7 +148,7 @@ docs/
 ├── examples/                   # esempi pratici
 │   ├── bank-scenario.md        # scenario bancario
 │   ├── ecommerce-scenario.md   # scenario e-commerce
-│   └── prediction-market.md    # mercato predizioni
+│   └── <nome progetto>ion-market.md    # mercato predizioni
 ├── development/               # guide sviluppo
 │   ├── testing.md             # testing
 │   ├── phpstan-compliance.md  # conformità phpstan
