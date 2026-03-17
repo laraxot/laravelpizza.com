@@ -9,3 +9,6 @@ docs/phpstan/
 *.old1
 *.backup
 *.backup.*
+lang/lang/
+_docs/
+_docs/

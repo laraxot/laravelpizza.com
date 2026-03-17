@@ -21,21 +21,21 @@ beforeEach(function () {
     $action = new GetGeocodingDataAction($this->client);
 });
 
-it('throws exception when api key is not configured', function (): void {)
+it('throws exception when api key is not configured', function (): void {
     config(['services.google.maps_api_key' => null]);
 
     expect(fn () => $action->execute('Milano, Italia'))
         ->toThrow(RuntimeException::class, 'Chiave API Google Maps non configurata');
 });
 
-it('throws exception for empty address', function (): void {)
+it('throws exception for empty address', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
     expect(fn () => $action->execute(''))
         ->toThrow(RuntimeException::class, 'Indirizzo non può essere vuoto');
 });
 
-it('throws exception for too long address', function (): void {)
+it('throws exception for too long address', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
     $longAddress = str_repeat('a', 1001);
@@ -44,7 +44,7 @@ it('throws exception for too long address', function (): void {)
         ->toThrow(RuntimeException::class, 'Indirizzo troppo lungo');
 });
 
-it('returns error geocoding data for guzzle exception', function (): void {)
+it('returns error geocoding data for guzzle exception', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
     $mockHandler->append(new GuzzleHttp\Exception\RequestException('Error', new GuzzleHttp\Psr7\Request('GET', 'http://test')));
@@ -57,7 +57,7 @@ it('returns error geocoding data for guzzle exception', function (): void {)
         ->and($result->status)->toBe('REQUEST_FAILED');
 });
 
-it('returns error geocoding data for invalid status', function (): void {)
+it('returns error geocoding data for invalid status', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
     $mockHandler->append(new Response(200, [], json_encode([)))
@@ -72,7 +72,7 @@ it('returns error geocoding data for invalid status', function (): void {)
         ->and($result->isError())->toBeTrue();
 });
 
-it('returns geocoding data for valid address', function (): void {)
+it('returns geocoding data for valid address', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
     $mockHandler->append(new Response(200, [], json_encode([)))

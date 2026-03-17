@@ -17,7 +17,7 @@ beforeEach(function () {
     $action = new GetLocationFromIPAction($this->fetchAction);
 });
 
-it('delegates to fetch action and returns result', function (): void {)
+it('delegates to fetch action and returns result', function (): void {
     $fetchAction
         ->shouldReceive('execute')
         ->once()
@@ -42,7 +42,7 @@ it('delegates to fetch action and returns result', function (): void {)
         ->and($result->city)->toBe('Ashburn');
 });
 
-it('returns null when fetch action returns null', function (): void {)
+it('returns null when fetch action returns null', function (): void {
     $fetchAction
         ->shouldReceive('execute')
         ->once()

@@ -1,31 +1,9 @@
-# Roadmap (Module Media)
+# Product Roadmap - Media Module
 
-## Current roadmap
+## 🎯 Vision & Strategy
+Develop the Media Module as a high-performance, specialized component of the Laraxot ecosystem.
 
-- [Overview](roadmap/00-overview.md)
-- [Now](roadmap/01-now.md)
-- [Next](roadmap/02-next.md)
-- [Later](roadmap/03-later.md)
-- [Risks and dependencies](roadmap/04-risks.md)
-
-## Legacy / existing roadmap docs
-
-- [phpstan-errors-resolution-roadmap.md](phpstan-errors-resolution-roadmap.md)
-- [phpstan-roadmap.md](phpstan-roadmap.md)
-- [roadmap/00-index.md](roadmap/00-index.md)
-- [roadmap/00-overview.md](roadmap/00-overview.md)
-- [roadmap/01-current-state.md](roadmap/01-current-state.md)
-- [roadmap/01-now.md](roadmap/01-now.md)
-- [roadmap/02-goals.md](roadmap/02-goals.md)
-- [roadmap/02-next.md](roadmap/02-next.md)
-- [roadmap/03-later.md](roadmap/03-later.md)
-- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
-- [roadmap/04-milestones.md](roadmap/04-milestones.md)
-- [roadmap/04-risks.md](roadmap/04-risks.md)
-- [roadmap/05-risks.md](roadmap/05-risks.md)
-- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
-- [roadmap/legacy/legacy-roadmap-root-symlink-1.md](roadmap/legacy/legacy-roadmap-root-symlink-1.md)
-- [roadmap/legacy/legacy-roadmap-root-symlink.md](roadmap/legacy/legacy-roadmap-root-symlink.md)
-- [roadmap/phases.md](roadmap/phases.md)
-- [roadmap/quality.md](roadmap/quality.md)
-- [roadmap/vision.md](roadmap/vision.md)
+## 🗓️ Timeline
+### Q1 2026: Foundation
+- Standardize Media Module Documentation - *Status: Shipped*
+- PHPStan Level 10 Audit - *Status: In Progress*

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Traits;
 
-uses(Modules\Geo\Tests\TestCase::class);
+uses(\Modules\Geo\Tests\TestCase::class);
 
 use Modules\Geo\Traits\HandlesCoordinates;
 use Modules\Geo\Traits\HasAddresses;

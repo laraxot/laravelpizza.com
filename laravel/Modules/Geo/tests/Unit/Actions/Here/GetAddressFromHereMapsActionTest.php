@@ -15,14 +15,14 @@ beforeEach(function () {
     $action = new GetAddressFromHereMapsAction();
 });
 
-it('throws exception when api key is not configured', function (): void {)
+it('throws exception when api key is not configured', function (): void {
     config(['services.here.key' => null]);
 
     expect(fn () => $action->execute('Milano, Italia'))
         ->toThrow(Exception::class, 'Here Maps API key not configured');
 });
 
-it('returns null when api response is not successful', function (): void {)
+it('returns null when api response is not successful', function (): void {
     config(['services.here.key' => 'test_key']);
 
     Http::fake([)
@@ -34,7 +34,7 @@ it('returns null when api response is not successful', function (): void {)
     expect($result)->toBeNull();
 });
 
-it('returns null when no position in response', function (): void {)
+it('returns null when no position in response', function (): void {
     config(['services.here.key' => 'test_key']);
 
     Http::fake([)
@@ -53,7 +53,7 @@ it('returns null when no position in response', function (): void {)
     expect($result)->toBeNull();
 });
 
-it('returns null when no address in response', function (): void {)
+it('returns null when no address in response', function (): void {
     config(['services.here.key' => 'test_key']);
 
     Http::fake([)
@@ -72,7 +72,7 @@ it('returns null when no address in response', function (): void {)
     expect($result)->toBeNull();
 });
 
-it('returns address data for valid response', function (): void {)
+it('returns address data for valid response', function (): void {
     config(['services.here.key' => 'test_key']);
 
     Http::fake([)
@@ -106,7 +106,7 @@ it('returns address data for valid response', function (): void {)
         ->and($result->street_number)->toBe('1');
 });
 
-it('uses default country when missing', function (): void {)
+it('uses default country when missing', function (): void {
     config(['services.here.key' => 'test_key']);
 
     Http::fake([)

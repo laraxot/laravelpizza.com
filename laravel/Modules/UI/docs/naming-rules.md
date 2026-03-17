@@ -88,6 +88,6 @@ I nomi specifici dell'applicazione devono apparire solo:
 - [Componenti](components.md)
 
 ## Vedi Anche
-- [Documentazione Principale](../../../project_docs/readme.md)
-- [Standard di Codice](../../../project_docs/standards/coding-standards.md)
-- [Best Practices](../../../project_docs/standards/best-practices.md)
+- [Documentazione Principale](../../../../docs/project/readme.md)
+- [Standard di Codice](../../../../docs/project/standards/coding-standards.md)
+- [Best Practices](../../../../docs/project/standards/best-practices.md)

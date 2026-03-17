@@ -8,3 +8,4 @@ npm-debug.log
 -e 
 # PHPStan documentation
 docs/phpstan/
+_docs/

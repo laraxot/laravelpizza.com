@@ -16,7 +16,7 @@ beforeEach(function () {
     $action = new OptimizeRouteAction();
 });
 
-it('throws exception when api key is not configured', function (): void {)
+it('throws exception when api key is not configured', function (): void {
     config(['services.google.maps.key' => null]);
 
     $locations = [
@@ -29,7 +29,7 @@ it('throws exception when api key is not configured', function (): void {)
         ->toThrow(RuntimeException::class, 'API key not found');
 });
 
-it('returns empty array for empty locations', function (): void {)
+it('returns empty array for empty locations', function (): void {
     config(['services.google.maps.key' => 'test_key']);
 
     $origin = new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano');
@@ -40,7 +40,7 @@ it('returns empty array for empty locations', function (): void {)
     expect($result)->toBeArray()->toBeEmpty();
 });
 
-it('returns empty array when api returns no routes', function (): void {)
+it('returns empty array when api returns no routes', function (): void {
     config(['services.google.maps.key' => 'test_key']);
 
     Http::fake([)
@@ -58,7 +58,7 @@ it('returns empty array when api returns no routes', function (): void {)
     expect($result)->toBeArray()->toBeEmpty();
 });
 
-it('returns route data for valid request', function (): void {)
+it('returns route data for valid request', function (): void {
     config(['services.google.maps.key' => 'test_key']);
 
     Http::fake([)
@@ -113,7 +113,7 @@ it('returns route data for valid request', function (): void {)
         ->and($result[0]->totalDuration)->toBe(36000);
 });
 
-it('throws exception when api request fails', function (): void {)
+it('throws exception when api request fails', function (): void {
     config(['services.google.maps.key' => 'test_key']);
 
     Http::fake([)

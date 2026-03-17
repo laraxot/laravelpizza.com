@@ -82,5 +82,5 @@ Este proyecto es de código abierto y está disponible bajo la [Licencia MIT](..
 ---
 
 <div align="center">
-  <sub>Construido con ❤️ por el equipo Base <nome progetto> Fila3 Mono</sub>
+  <sub>Construido con ❤️ por el equipo Base <nome progetto> Fila 5</sub>
 </div>

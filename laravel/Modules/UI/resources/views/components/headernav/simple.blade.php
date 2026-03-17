@@ -8,7 +8,7 @@ declare(strict_types=1);
         <div x-data="{ mobileMenuOpen: false }" class="relative flex items-center md:space-x-2 text-neutral-800">
             <div class="relative z-50 flex items-center w-auto h-full">
                 <a href="{{ route('home') }}" class="flex items-center mr-0 md:mr-5 shrink-0">
-                    <x-filament-panels::logo />
+                    <img src="{{ asset('assets/predict/img/logo-ft.svg') }}" alt="{{ config('app.name') }}" class="h-8 w-auto" />
                 </a>
 
                 {{-- Hamburger Menu Button --}}

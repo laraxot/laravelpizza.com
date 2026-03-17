@@ -1,38 +1,9 @@
-# Roadmap (Module Gdpr)
+# Product Roadmap - Gdpr Module
 
-## Current roadmap
+## 🎯 Vision & Strategy
+Develop the Gdpr Module as a high-performance, specialized component of the Laraxot ecosystem.
 
-- [Overview](roadmap/00-overview.md)
-- [Now](roadmap/01-now.md)
-- [Next](roadmap/02-next.md)
-- [Later](roadmap/03-later.md)
-- [Risks and dependencies](roadmap/04-risks.md)
-
-## Legacy / existing roadmap docs
-
-- [gdpr-compliance-roadmap.md](gdpr-compliance-roadmap.md)
-- [phpstan-merge-conflicts-roadmap.md](phpstan-merge-conflicts-roadmap.md)
-- [phpstan-phpdoc-migration-errors-roadmap.md](phpstan-phpdoc-migration-errors-roadmap.md)
-- [phpstan-roadmap.md](phpstan-roadmap.md) (✅ Completed)
-- [roadmap/00-index.md](roadmap/00-index.md)
-- [roadmap/00-overview.md](roadmap/00-overview.md)
-- [roadmap/01-current-state.md](roadmap/01-current-state.md)
-- [roadmap/01-now.md](roadmap/01-now.md)
-- [roadmap/02-goals.md](roadmap/02-goals.md)
-- [roadmap/02-next.md](roadmap/02-next.md)
-- [roadmap/03-later.md](roadmap/03-later.md)
-- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
-- [roadmap/04-milestones.md](roadmap/04-milestones.md)
-- [roadmap/04-risks.md](roadmap/04-risks.md)
-- [roadmap/05-risks.md](roadmap/05-risks.md)
-- [roadmap/2025-q4-roadmap.md](roadmap/2025-q4-roadmap.md)
-- [roadmap/backup-dati.md](roadmap/backup-dati.md)
-- [roadmap/cookie-consent.md](roadmap/cookie-consent.md)
-- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
-- [roadmap/log-attivita.md](roadmap/log-attivita.md)
-- [roadmap/phases.md](roadmap/phases.md)
-- [roadmap/q4-roadmap.md](roadmap/q4-roadmap.md)
-- [roadmap/quality-fixes-log.md](roadmap/quality-fixes-log.md)
-- [roadmap/quality.md](roadmap/quality.md)
-- [roadmap/roadmap.md](roadmap/roadmap.md)
-- [roadmap/vision.md](roadmap/vision.md)
+## 🗓️ Timeline
+### Q1 2026: Foundation
+- Standardize Gdpr Module Documentation - *Status: Shipped*
+- PHPStan Level 10 Audit - *Status: In Progress*

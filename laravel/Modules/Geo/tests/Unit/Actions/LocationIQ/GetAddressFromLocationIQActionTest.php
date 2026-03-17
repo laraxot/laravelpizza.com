@@ -15,14 +15,14 @@ beforeEach(function () {
     $action = new GetAddressFromLocationIQAction();
 });
 
-it('throws exception when api key is not configured', function (): void {)
+it('throws exception when api key is not configured', function (): void {
     config(['services.locationiq.key' => null]);
 
     expect(fn () => $action->execute('Milano, Italia'))
         ->toThrow(Exception::class, 'LocationIQ API key not configured');
 });
 
-it('returns null when api response is not successful', function (): void {)
+it('returns null when api response is not successful', function (): void {
     config(['services.locationiq.key' => 'test_key']);
 
     Http::fake([)
@@ -34,7 +34,7 @@ it('returns null when api response is not successful', function (): void {)
     expect($result)->toBeNull();
 });
 
-it('returns null when no results found', function (): void {)
+it('returns null when no results found', function (): void {
     config(['services.locationiq.key' => 'test_key']);
 
     Http::fake([)
@@ -46,7 +46,7 @@ it('returns null when no results found', function (): void {)
     expect($result)->toBeNull();
 });
 
-it('returns null when first result is empty', function (): void {)
+it('returns null when first result is empty', function (): void {
     config(['services.locationiq.key' => 'test_key']);
 
     Http::fake([)
@@ -58,7 +58,7 @@ it('returns null when first result is empty', function (): void {)
     expect($result)->toBeNull();
 });
 
-it('returns address data for valid response', function (): void {)
+it('returns address data for valid response', function (): void {
     config(['services.locationiq.key' => 'test_key']);
 
     Http::fake([)
@@ -99,7 +99,7 @@ it('returns address data for valid response', function (): void {)
         ->and($result->state)->toBe('Lombardia');
 });
 
-it('uses default country when missing', function (): void {)
+it('uses default country when missing', function (): void {
     config(['services.locationiq.key' => 'test_key']);
 
     Http::fake([)
@@ -118,7 +118,7 @@ it('uses default country when missing', function (): void {)
         ->and($result->country_code)->toBe('IT');
 });
 
-it('falls back to town and village for city', function (): void {)
+it('falls back to town and village for city', function (): void {
     config(['services.locationiq.key' => 'test_key']);
 
     Http::fake([)

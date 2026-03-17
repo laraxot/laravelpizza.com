@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Tests\Feature;
 
-uses(Modules\UI\Tests\TestCase::class);
+uses(\Modules\UI\Tests\TestCase::class);
 
 describe('Component Files Existence Tests', function (): void {
     test('reorganized component files exist in correct locations', function (): void {

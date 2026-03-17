@@ -253,7 +253,7 @@ Includere controlli PHPStan nella pipeline:
 
 ## Backlink
 
-- [Root PHPStan Rules](../../../project_docs/phpstan_rules.md)
+- [Root PHPStan Rules](../../../../docs/project/phpstan_rules.md)
 - [Geo Module Structure](./structure.md)
 - [Employee PHPStan Covariance](../../employee/project_docs/phpstan_covariance_issues.md)
 

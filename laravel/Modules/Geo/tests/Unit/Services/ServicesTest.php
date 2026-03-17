@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Services;
 
-uses(Modules\Geo\Tests\TestCase::class);
+uses(\Modules\Geo\Tests\TestCase::class);
 
 use Modules\Geo\Services\GeoService;
 use Modules\Geo\Services\GoogleMapsService;

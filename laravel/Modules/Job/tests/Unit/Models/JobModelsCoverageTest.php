@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Job\Tests\Unit\Models;
 
+use Modules\Job\Models\BaseModel;
 use Modules\Job\Models\Export;
 use Modules\Job\Models\FailedJob;
 use Modules\Job\Models\Frequency;
@@ -89,7 +90,7 @@ describe('Job Models Coverage', function () {
 
         it('extends BaseModel', function () {
             $reflection = new ReflectionClass(Frequency::class);
-            expect($reflection->isSubclassOf(\Modules\Job\Models\BaseModel::class))->toBeTrue();
+            expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
         });
 
         it('uses strict types', function () {
@@ -107,7 +108,7 @@ describe('Job Models Coverage', function () {
 
         it('extends BaseModel', function () {
             $reflection = new ReflectionClass(Result::class);
-            expect($reflection->isSubclassOf(\Modules\Job\Models\BaseModel::class))->toBeTrue();
+            expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
         });
 
         it('uses strict types', function () {
@@ -125,7 +126,7 @@ describe('Job Models Coverage', function () {
 
         it('extends BaseModel', function () {
             $reflection = new ReflectionClass(Schedule::class);
-            expect($reflection->isSubclassOf(\Modules\Job\Models\BaseModel::class))->toBeTrue();
+            expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
         });
 
         it('uses strict types', function () {
@@ -143,7 +144,7 @@ describe('Job Models Coverage', function () {
 
         it('extends BaseModel', function () {
             $reflection = new ReflectionClass(Import::class);
-            expect($reflection->isSubclassOf(\Modules\Job\Models\BaseModel::class))->toBeTrue();
+            expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
         });
 
         it('uses strict types', function () {
@@ -179,7 +180,7 @@ describe('Job Models Coverage', function () {
 
         it('extends BaseModel', function () {
             $reflection = new ReflectionClass(JobBatch::class);
-            expect($reflection->isSubclassOf(\Modules\Job\Models\BaseModel::class))->toBeTrue();
+            expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
         });
 
         it('uses strict types', function () {
@@ -197,7 +198,7 @@ describe('Job Models Coverage', function () {
 
         it('extends BaseModel', function () {
             $reflection = new ReflectionClass(JobManager::class);
-            expect($reflection->isSubclassOf(\Modules\Job\Models\BaseModel::class))->toBeTrue();
+            expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
         });
 
         it('uses strict types', function () {
@@ -215,7 +216,7 @@ describe('Job Models Coverage', function () {
 
         it('extends BaseModel', function () {
             $reflection = new ReflectionClass(FailedJob::class);
-            expect($reflection->isSubclassOf(\Modules\Job\Models\BaseModel::class))->toBeTrue();
+            expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
         });
 
         it('uses strict types', function () {

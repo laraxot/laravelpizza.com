@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Datas;
 
-uses(Modules\Geo\Tests\TestCase::class);
+uses(\Modules\Geo\Tests\TestCase::class);
 
 use Modules\Geo\Datas\GoogleMaps\GoogleMapAddressComponentData;
 use Modules\Geo\Datas\GoogleMaps\GoogleMapBoundsData;

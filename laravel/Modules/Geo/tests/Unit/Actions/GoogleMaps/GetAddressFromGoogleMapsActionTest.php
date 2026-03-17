@@ -16,24 +16,24 @@ beforeEach(function () {
     $action = new GetAddressFromGoogleMapsAction();
 });
 
-it('throws exception when api key is not configured', function (): void {)
+it('throws exception when api key is not configured', function (): void {
     config(['services.google.maps_api_key' => null]);
 
     expect(fn () => $action->execute('Milano, Italia'))
         ->toThrow(GoogleMapsApiException::class, 'API key non configurata');
 });
 
-it('throws exception when api key is empty', function (): void {)
+it('throws exception when api key is empty', function (): void {
     config(['services.google.maps_api_key' => '']);
 
     expect(fn () => $action->execute('Milano, Italia'))
         ->toThrow(GoogleMapsApiException::class);
 });
 
-it('throws exception when api response is not successful', function (): void {)
+it('throws exception when api response is not successful', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    Http::fake([)
+    Http::fake([
         '*' => Http::response(['statusCode' => 500], 500),
     ]);
 
@@ -41,7 +41,7 @@ it('throws exception when api response is not successful', function (): void {)
         ->toThrow(GoogleMapsApiException::class, 'Richiesta fallita');
 });
 
-it('throws exception when no results found', function (): void {)
+it('throws exception when no results found', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
     Http::fake([)
@@ -54,7 +54,7 @@ it('throws exception when no results found', function (): void {)
         ->toThrow(GoogleMapsApiException::class, 'Nessun risultato');
 });
 
-it('returns address data for valid address', function (): void {)
+it('returns address data for valid address', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
     Http::fake([)
@@ -98,7 +98,7 @@ it('returns address data for valid address', function (): void {)
         ->and($result->state)->toBe('Lombardia');
 });
 
-it('handles missing optional address components', function (): void {)
+it('handles missing optional address components', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
     Http::fake([)

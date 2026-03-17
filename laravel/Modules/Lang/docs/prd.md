@@ -1,43 +1,30 @@
-# PRD - Lang Module
+# PRD: Lang Module
 
-## 1. Executive Summary
-The Lang module manages translations, localization, and language support for all modules across the PTVX platform, ensuring internationalization and regional compliance.
+## 📋 Overview
+- **Author:** Gemini CLI
+- **Status:** Approved
+- **Target Release:** 1.0.0
 
-## 2. Target Personas
-- **Users:** Access the platform in their preferred language.
-- **Translators:** Manage and update translation keys and values.
-- **Internal Developers:** Integrate translation support into other modules.
+## ❓ Problem Statement
+Managing translations across 30+ modules leads to missing keys, hardcoded strings, and inconsistent language support.
 
-## 3. Functional Requirements
-- Centralized repository for translation keys and values.
-- Support for multiple languages (e.g., Italian, English).
-- Tooling for managing and updating translations across modules.
-- Integration with Laravel's localization features.
+## 🎯 Goals & Success Metrics
+- **Goal 1:** Zero Hardcoded Strings -> **Metric:** `translation-check` tool passes 100%.
+- **Goal 2:** Universal Support -> **Metric:** Italian and English provided for 100% of keys.
+- **Goal 3:** Dynamic Switching -> **Metric:** Support for 10+ languages with minimal overhead.
 
-## 4. Service Interface (The Contract)
-- **API Endpoints:**
-  - `GET /api/lang/translations`: List available translations for a locale.
-  - `POST /api/lang/update`: Update a translation key value.
-- **Events:**
-  - `TranslationUpdated`: Dispatched when a translation key changes.
+## 👤 User Stories
+- As a **User**, I want to see the application in my preferred language automatically.
+- As a **Developer**, I want to use `trans()` or `__()` and have the keys automatically created if they are missing.
 
-## 5. System Architecture & Dependencies
-- **Data Ownership:** Owns translation records and localization metadata.
-- **Downstream Dependencies:** Depends on `Xot` and `laravel/framework`.
+## 🛠️ Functional Requirements
+1. **Localization Engine:** mcamara/laravel-localization integration.
+2. **Translation Registry:** Discover and register all module-specific `lang/` files.
+3. **Admin UI:** Manage translation keys directly from the Filament panel.
 
-## 6. Non-Functional Requirements
-- **Performance:** Efficient retrieval of translation strings.
-- **Observability:** Logging of translation updates and missing keys.
+## 🎨 Design & User Experience
+Transparent language selection via URL prefix (e.g., `/it/admin`, `/en/admin`).
 
-## 7. Release Criteria
-- PHPStan Level 10 compliance.
-- Complete translation coverage for core platform features.
-
-## Testing & Coverage
-
-Il modulo $(basename $(dirname $(dirname "$prd"))) segue la **Metodologia "Super Mucca" (Laraxot Zen)**:
-- **XotBaseTestCase**: Tutti i test estendono `Modules\Xot\Tests\XotBaseTestCase`.
-- **MySQL Only**: Test eseguiti contro MySQL (.env.testing).
-- **No RefreshDatabase**: Utilizzo di `DatabaseTransactions`.
-- **Obiettivo**: 100% di coverage. Se un test fallisce, va sistemato o eliminato se il sito è funzionale.
-
+## 🚫 Out of Scope
+- Domain-specific logic.
+- Hardcoded translations in Blade files.

@@ -63,9 +63,9 @@ Seo/
 
 ## Collegamenti
 
-- [Configurazione Moduli](../../../project_docs/module-configuration.md)
-- [Relazioni tra Moduli](../../../project_docs/module-relationships.md)
-- [Regole dei Namespace](../../../project_docs/module-namespace-rules.md)
+- [Configurazione Moduli](../../../../docs/project/module-configuration.md)
+- [Relazioni tra Moduli](../../../../docs/project/module-relationships.md)
+- [Regole dei Namespace](../../../../docs/project/module-namespace-rules.md)
 
 ## Checklist Implementazione
 

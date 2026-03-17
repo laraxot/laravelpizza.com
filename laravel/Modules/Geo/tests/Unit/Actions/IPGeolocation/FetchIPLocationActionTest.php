@@ -23,7 +23,7 @@ beforeEach(function () {
     $action = new FetchIPLocationAction($client);
 });
 
-it('throws exception when ip-api returns failure status', function (): void {)
+it('throws exception when ip-api returns failure status', function (): void {
     $mockHandler->append(new Response(200, [], json_encode([)))
         'status' => 'fail',
         'message' => 'invalid query',
@@ -33,7 +33,7 @@ it('throws exception when ip-api returns failure status', function (): void {)
         ->toThrow(RuntimeException::class, 'Failed to get IP location: invalid query');
 });
 
-it('returns ip location data for valid response', function (): void {)
+it('returns ip location data for valid response', function (): void {
     $mockHandler->append(new Response(200, [], json_encode([)))
         'status' => 'success',
         'country' => 'United States',
@@ -62,7 +62,7 @@ it('returns ip location data for valid response', function (): void {)
         ->and($result->isp)->toBe('Google LLC');
 });
 
-it('handles response with null values', function (): void {)
+it('handles response with null values', function (): void {
     $mockHandler->append(new Response(200, [], json_encode([)))
         'status' => 'success',
     ])));

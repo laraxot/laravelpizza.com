@@ -42,3 +42,4 @@ package-lock.json
 # PHPStan documentation
 docs/phpstan/
 
+_docs/

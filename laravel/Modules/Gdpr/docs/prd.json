@@ -1,0 +1,35 @@
+{
+  "name": "Gdpr",
+  "type": "module",
+  "status": "baseline",
+  "purpose": "Gestire privacy, consenso e adempimenti di compliance per utenti e visitatori.",
+  "goals": [
+    "Rendere tracciabile il consenso",
+    "Ridurre il rischio legale e operativo",
+    "Integrare banner e policy nel frontoffice"
+  ],
+  "nonGoals": [
+    "Sostituire auth o notification layer"
+  ],
+  "dependencies": [
+    "Cms",
+    "User",
+    "Xot"
+  ],
+  "qualityGates": [
+    "./vendor/bin/phpstan analyse Modules/Gdpr",
+    "./vendor/bin/phpinsights analyse Modules/Gdpr --min-quality=0 --min-complexity=0 --min-architecture=0 --min-style=0"
+  ],
+  "suiteVersion": "baseline-v1",
+  "sourceFramework": "Notion product template family adapted to repository governance",
+  "companionDocs": [
+    "product-roadmap.md",
+    "product-launch-plan.md",
+    "product-strategy.md",
+    "user-research.md",
+    "sprint-planning-meeting.md"
+  ],
+  "implementationPattern": "action-first",
+  "actionStandard": "spatie/laravel-queueable-action",
+  "architectureRule": "No generic Services for business logic; use Action classes with execute()"
+}

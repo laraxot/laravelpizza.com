@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Actions\GoogleMaps;
 
+use Illuminate\Support\Facades\Http;
 use Modules\Geo\Tests\LightTestCase;
 
 uses(LightTestCase::class);
@@ -12,102 +13,102 @@ use Modules\Geo\Actions\GoogleMaps\CalculateDistanceMatrixAction;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Exceptions\GoogleMaps\GoogleMapsApiException;
 
-beforeEach(function () {
-    $action = new CalculateDistanceMatrixAction();
+beforeEach(function (): void {
+    $this->action = new CalculateDistanceMatrixAction();
 });
 
-it('throws exception when google maps api key is not configured', function (): void {)
+it('throws exception when google maps api key is not configured', function (): void {
     config(['services.google.maps_api_key' => null]);
 
-    $origins = collect([)
+    $origins = collect([
         new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano'),
     ]);
 
-    $destinations = collect([)
+    $destinations = collect([
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
     ]);
 
-    expect(fn () => $action->execute($origins, $destinations))
+    expect(fn () => $this->action->execute($origins, $destinations))
         ->toThrow(GoogleMapsApiException::class, 'API key non configurata');
 });
 
-it('throws exception when api key is empty string', function (): void {)
+it('throws exception when api key is empty string', function (): void {
     config(['services.google.maps_api_key' => '']);
 
-    $origins = collect([)
+    $origins = collect([
         new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano'),
     ]);
 
-    $destinations = collect([)
+    $destinations = collect([
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
     ]);
 
-    expect(fn () => $action->execute($origins, $destinations))
+    expect(fn () => $this->action->execute($origins, $destinations))
         ->toThrow(GoogleMapsApiException::class);
 });
 
-it('throws exception when api response is not successful', function (): void {)
+it('throws exception when api response is not successful', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    Http::fake([)
+    Http::fake([
         '*' => Http::response(['status' => 'REQUEST_DENIED'], 403),
     ]);
 
-    $origins = collect([)
+    $origins = collect([
         new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano'),
     ]);
 
-    $destinations = collect([)
+    $destinations = collect([
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
     ]);
 
-    expect(fn () => $action->execute($origins, $destinations))
+    expect(fn () => $this->action->execute($origins, $destinations))
         ->toThrow(GoogleMapsApiException::class, 'Richiesta fallita');
 });
 
-it('throws exception when response status is not OK', function (): void {)
+it('throws exception when response status is not OK', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    Http::fake([)
+    Http::fake([
         '*' => Http::response(['status' => 'ZERO_RESULTS'], 200),
     ]);
 
-    $origins = collect([)
+    $origins = collect([
         new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano'),
     ]);
 
-    $destinations = collect([)
+    $destinations = collect([
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
     ]);
 
-    expect(fn () => $action->execute($origins, $destinations))
+    expect(fn () => $this->action->execute($origins, $destinations))
         ->toThrow(GoogleMapsApiException::class, 'Stato della risposta non valido');
 });
 
-it('throws exception when response has no rows', function (): void {)
+it('throws exception when response has no rows', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    Http::fake([)
+    Http::fake([
         '*' => Http::response(['status' => 'OK', 'rows' => []], 200),
     ]);
 
-    $origins = collect([)
+    $origins = collect([
         new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano'),
     ]);
 
-    $destinations = collect([)
+    $destinations = collect([
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
     ]);
 
-    expect(fn () => $action->execute($origins, $destinations))
+    expect(fn () => $this->action->execute($origins, $destinations))
         ->toThrow(GoogleMapsApiException::class, 'Nessun risultato');
 });
 
-it('returns distance matrix for valid locations', function (): void {)
+it('returns distance matrix for valid locations', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    Http::fake([)
-        '*' => Http::response([)
+    Http::fake([
+        '*' => Http::response([
             'status' => 'OK',
             'rows' => [[
                 'elements' => [[
@@ -119,15 +120,15 @@ it('returns distance matrix for valid locations', function (): void {)
         ], 200),
     ]);
 
-    $origins = collect([)
+    $origins = collect([
         new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano'),
     ]);
 
-    $destinations = collect([)
+    $destinations = collect([
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
     ]);
 
-    $result = $action->execute($origins, $destinations);
+    $result = $this->action->execute($origins, $destinations);
 
     expect($result)
         ->toBeArray()
@@ -138,11 +139,11 @@ it('returns distance matrix for valid locations', function (): void {)
         ->and($result[0][0]['status'])->toBe('OK');
 });
 
-it('handles multiple origins and destinations', function (): void {)
+it('handles multiple origins and destinations', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    Http::fake([)
-        '*' => Http::response([)
+    Http::fake([
+        '*' => Http::response([
             'status' => 'OK',
             'rows' => [
                 [
@@ -161,17 +162,17 @@ it('handles multiple origins and destinations', function (): void {)
         ], 200),
     ]);
 
-    $origins = collect([)
+    $origins = collect([
         new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano'),
         new LocationData(latitude: 44.4056, longitude: 8.9463, address: 'Genova'),
     ]);
 
-    $destinations = collect([)
+    $destinations = collect([
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
         new LocationData(latitude: 40.8518, longitude: 14.2681, address: 'Napoli'),
     ]);
 
-    $result = $action->execute($origins, $destinations);
+    $result = $this->action->execute($origins, $destinations);
 
     expect($result)
         ->toBeArray()
@@ -182,11 +183,11 @@ it('handles multiple origins and destinations', function (): void {)
         ->and($result[1][1]['distance']['value'])->toBe(250000);
 });
 
-it('handles zero results status', function (): void {)
+it('handles zero results status', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    Http::fake([)
-        '*' => Http::response([)
+    Http::fake([
+        '*' => Http::response([
             'status' => 'OK',
             'rows' => [[
                 'elements' => [[
@@ -198,15 +199,15 @@ it('handles zero results status', function (): void {)
         ], 200),
     ]);
 
-    $origins = collect([)
+    $origins = collect([
         new LocationData(latitude: 45.4642, longitude: 9.1900, address: 'Milano'),
     ]);
 
-    $destinations = collect([)
+    $destinations = collect([
         new LocationData(latitude: 41.9028, longitude: 12.4964, address: 'Roma'),
     ]);
 
-    $result = $action->execute($origins, $destinations);
+    $result = $this->action->execute($origins, $destinations);
 
     expect($result[0][0]['status'])->toBe('ZERO_RESULTS');
 });

@@ -2,7 +2,7 @@
 
 ## Panoramica
 
-I componenti UI forniscono elementi riutilizzabili e standardizzati per l'interfaccia utente dell'ecosistema PTVX Fila3 Mono.
+I componenti UI forniscono elementi riutilizzabili e standardizzati per l'interfaccia utente dell'ecosistema PTVX Fila 5.
 
 ## 🎯 Principi di Design
 

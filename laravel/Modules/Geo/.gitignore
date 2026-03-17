@@ -119,7 +119,6 @@ Thumbs.db
 # ==============================================
 # LANGUAGE FILES
 # ==============================================
-lang/lang/
 resources/lang/
 
 # ==============================================
@@ -159,3 +158,6 @@ test_geo_data.sql
 *.fila2
 laravel
 public_html
+lang/lang/
+_docs/
+_docs/

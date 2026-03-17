@@ -116,3 +116,6 @@ database_old
 *.fila2
 laravel
 public_html
+lang/lang/
+_docs/
+_docs/

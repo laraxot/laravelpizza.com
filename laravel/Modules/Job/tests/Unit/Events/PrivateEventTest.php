@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Job\Tests\Unit\Events;
 
 use Illuminate\Broadcasting\Channel;
-use Illuminate\Broadcasting\PrivateChannel;
 use Modules\Job\Events\PrivateEvent;
 
 describe('PrivateEvent', function () {

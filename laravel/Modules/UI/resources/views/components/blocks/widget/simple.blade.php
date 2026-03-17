@@ -5,9 +5,12 @@ declare(strict_types=1);
 ?>
 @props(['widget'])
 <div>
-    {{--  
-    <x-dynamic-component :component="$widget" />
-    --}}
-    
-    @livewire($widget, $block->data)
+    @php
+        $canRenderWidget = class_exists($widget)
+            && (! method_exists($widget, 'canView') || $widget::canView());
+    @endphp
+
+    @if($canRenderWidget)
+        @livewire($widget, $block->data)
+    @endif
 </div>

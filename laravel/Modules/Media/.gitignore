@@ -164,3 +164,6 @@ test_media_files/
 *.fila2
 laravel
 public_html
+lang/lang/
+_docs/
+_docs/

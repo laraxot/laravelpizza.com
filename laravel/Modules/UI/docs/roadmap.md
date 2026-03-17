@@ -1,45 +1,20 @@
-# Roadmap (Module UI)
+# Product Roadmap - UI Module
 
-## Current roadmap
+## 🎯 Vision & Strategy
+Provide a consistent, accessible, and high-performance UI kit for all Laraxot modules based on Filament v5 and specialized Blade components.
 
-- [Overview](roadmap/00-overview.md)
-- [Now](roadmap/01-now.md)
-- [Next](roadmap/02-next.md)
-- [Later](roadmap/03-later.md)
-- [Risks and dependencies](roadmap/04-risks.md)
+## 🗓️ Timeline
+### Q1 2026: Design System (Current)
+- **Super Mucca Component Library** - *Status: In Progress*
+- **Filament v5 Theme Customization** - *Status: Shipped*
+- **Accessibility Audit (WCAG 2.1)** - *Status: Planned*
 
-## Legacy / existing roadmap docs
+## 🚦 Status Overview
+| Feature | Status | Owner | Target Date |
+| :--- | :--- | :--- | :--- |
+| Core UI Kit | ✅ Stable | @CoreTeam | Feb 2026 |
+| Custom Icons Pack | 🏗️ In Dev | @CoreTeam | Apr 2026 |
 
-- [phpstan-errors-roadmap.md](phpstan-errors-roadmap.md)
-- [phpstan-roadmap.md](phpstan-roadmap.md)
-- [roadmap/00-index.md](roadmap/00-index.md)
-- [roadmap/00-overview.md](roadmap/00-overview.md)
-- [roadmap/01-current-state.md](roadmap/01-current-state.md)
-- [roadmap/01-now.md](roadmap/01-now.md)
-- [roadmap/02-goals.md](roadmap/02-goals.md)
-- [roadmap/02-next.md](roadmap/02-next.md)
-- [roadmap/03-later.md](roadmap/03-later.md)
-- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
-- [roadmap/04-milestones.md](roadmap/04-milestones.md)
-- [roadmap/04-risks.md](roadmap/04-risks.md)
-- [roadmap/05-risks.md](roadmap/05-risks.md)
-- [roadmap/archive/component-system.md](roadmap/archive/component-system.md)
-- [roadmap/archive/component_system.md](roadmap/archive/component_system.md)
-- [roadmap/archive/form-component.md](roadmap/archive/form-component.md)
-- [roadmap/archive/form_component.md](roadmap/archive/form_component.md)
-- [roadmap/archive/theme-system.md](roadmap/archive/theme-system.md)
-- [roadmap/archive/theme_system.md](roadmap/archive/theme_system.md)
-- [roadmap/bottlenecks.md](roadmap/bottlenecks.md)
-- [roadmap/component-system.md](roadmap/component-system.md)
-- [roadmap/form-component.md](roadmap/form-component.md)
-- [roadmap/form-components.md](roadmap/form-components.md)
-- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
-- [roadmap/legacy/legacy-roadmap-and-issues.md](roadmap/legacy/legacy-roadmap-and-issues.md)
-- [roadmap/legacy/legacy-roadmap-conflict.md](roadmap/legacy/legacy-roadmap-conflict.md)
-- [roadmap/legacy/legacy-roadmap.md](roadmap/legacy/legacy-roadmap.md)
-- [roadmap/phases.md](roadmap/phases.md)
-- [roadmap/q4-roadmap.md](roadmap/q4-roadmap.md)
-- [roadmap/quality.md](roadmap/quality.md)
-- [roadmap/roadmap.md](roadmap/roadmap.md)
-- [roadmap/theme-system.md](roadmap/theme-system.md)
-- [roadmap/vision.md](roadmap/vision.md)
+## 📂 Backlog / Future Ideas
+- Dark mode optimization for all custom components.
+- Livewire Volt integration for ultra-fast reactive elements.

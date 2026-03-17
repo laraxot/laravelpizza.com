@@ -81,5 +81,5 @@ class S3Test extends XotBasePage
 ## Collegamenti
 - [Regole Estensione Filament](../../../.cursor/rules/filament-extension-rules.mdc)
 - [XotBasePage Implementation](../../xot/project_docs/xotbasepage_implementation.md)
-- [Filament Best Practices](../../../project_docs/filament-best-practices.md)
+- [Filament Best Practices](../../../../docs/project/filament-best-practices.md)
 

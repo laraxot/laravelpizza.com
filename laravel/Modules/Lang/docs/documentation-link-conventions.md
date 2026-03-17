@@ -58,7 +58,7 @@ Per collegare documenti tra moduli diversi:
 [Link a ModuloB](../../ModuloB/project_docs/file.md)
 
 <!-- Da Modules/ModuloA/project_docs/file.md a docs/file.md nella root -->
-[Link a docs root](../../../project_docs/file.md)
+[Link a docs root](../../../../docs/project/file.md)
 ```
 
 ### 5. Verificare Sempre i Link
@@ -77,7 +77,7 @@ Prima di fare commit dei documenti:
 
 ### Da Modules/Lang/project_docs/ a docs/ nella root
 ```markdown
-[Documentazione Principale](../../../project_docs/README.md)
+[Documentazione Principale](../../../../docs/project/README.md)
 ```
 
 ### Da Modules/Lang/project_docs/ a un altro file nella stessa cartella

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Tests\Feature;
 
-uses(Modules\UI\Tests\TestCase::class);
+uses(\Modules\UI\Tests\TestCase::class);
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\View;

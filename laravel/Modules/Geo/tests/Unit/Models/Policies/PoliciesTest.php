@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Models\Policies;
 
-uses(Modules\Geo\Tests\TestCase::class);
+uses(\Modules\Geo\Tests\TestCase::class);
 
 use Modules\Geo\Models\Policies\CountyPolicy;
 use Modules\Geo\Models\Policies\GeoNamesCapPolicy;

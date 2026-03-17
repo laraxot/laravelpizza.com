@@ -267,5 +267,5 @@ class GeoDataValidator
 
 ## Collegamenti
 - [Documentazione Squire](../../geo/project_docs/squire-integration.md)
-- [Best Practices Filament](../../../project_docs/filament-best-practices.md)
-- [Clean Code](../../../project_docs/clean-code.md) 
+- [Best Practices Filament](../../../../docs/project/filament-best-practices.md)
+- [Clean Code](../../../../docs/project/clean-code.md) 

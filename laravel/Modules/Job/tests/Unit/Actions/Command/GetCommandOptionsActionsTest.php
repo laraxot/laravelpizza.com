@@ -6,7 +6,6 @@ namespace Modules\Job\Tests\Unit\Actions\Command;
 
 use Modules\Job\Actions\Command\GetCommandOptionsActions;
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputOption;
 
 describe('GetCommandOptionsActions', function () {
     beforeEach(function () {

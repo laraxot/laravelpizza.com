@@ -1,29 +1,20 @@
-# Roadmap (Module Lang)
+# Product Roadmap - Lang Module
 
-## Current roadmap
+## 🎯 Vision & Strategy
+Make the Laraxot ecosystem fully multilingual with zero developer effort for common translation patterns.
 
-- [Overview](roadmap/00-overview.md)
-- [Now](roadmap/01-now.md)
-- [Next](roadmap/02-next.md)
-- [Later](roadmap/03-later.md)
-- [Risks and dependencies](roadmap/04-risks.md)
+## 🗓️ Timeline
+### Q1 2026: Discovery (Current)
+- **Automatic Translation Discovery** - *Status: Shipped*
+- **Multilingual Routing** - *Status: In Progress*
+- **Google Translate API Integration** - *Status: Planned*
 
-## Legacy / existing roadmap docs
+## 🚦 Status Overview
+| Feature | Status | Owner | Target Date |
+| :--- | :--- | :--- | :--- |
+| Core Localization | ✅ Stable | @CoreTeam | Jan 2026 |
+| Translation Manager | 🏗️ In Dev | @CoreTeam | Mar 2026 |
 
-- [phpstan-errors-resolution-roadmap.md](phpstan-errors-resolution-roadmap.md)
-- [phpstan-roadmap.md](phpstan-roadmap.md) (❌ Found 126 errors - Reported #83)
-- [roadmap/00-index.md](roadmap/00-index.md)
-- [roadmap/00-overview.md](roadmap/00-overview.md)
-- [roadmap/01-current-state.md](roadmap/01-current-state.md)
-- [roadmap/01-now.md](roadmap/01-now.md)
-- [roadmap/02-goals.md](roadmap/02-goals.md)
-- [roadmap/02-next.md](roadmap/02-next.md)
-- [roadmap/03-later.md](roadmap/03-later.md)
-- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
-- [roadmap/04-milestones.md](roadmap/04-milestones.md)
-- [roadmap/04-risks.md](roadmap/04-risks.md)
-- [roadmap/05-risks.md](roadmap/05-risks.md)
-- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
-- [roadmap/phases.md](roadmap/phases.md)
-- [roadmap/quality.md](roadmap/quality.md)
-- [roadmap/vision.md](roadmap/vision.md)
+## 📂 Backlog / Future Ideas
+- AI-assisted translation for technical terms.
+- Support for RTL (Right-to-Left) languages.
