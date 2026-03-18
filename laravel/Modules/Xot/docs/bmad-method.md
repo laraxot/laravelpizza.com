@@ -4,7 +4,27 @@
 
 Integrare il **BMAD Method** (Build More Architect Dreams) come cornice di lavoro per tutte le attività di sviluppo Laraxot, mantenendo l'allineamento con le regole esistenti (`DRY + KISS`, focus su business logic, PHPStan livello 10).
 
-BMAD viene usato come **metodo di pensiero** per guidare analisi, architettura e implementazione, non come codice o tool esterno.
+BMAD viene usato come **metodo di pensiero** per guidare analisi, architettura e implementazione, e nel progetto è anche **installato come toolkit** (skills + workflow) per aumentare disciplina e tracciabilità.
+
+## stato nel progetto
+
+- installazione locale: `_bmad/`
+- versione installata: v6.2.0 (vedi `_bmad/_config/manifest.yaml`)
+- orchestratore primario: GSD (`.planning/`), BMAD è supplementare per deep-research e architettura (vedi `_bmad/bmap.md`)
+
+## perché `bmad-help` “non funziona” in Cursor
+
+Nel nostro repository `bmad-help` è una **skill BMAD** (file `SKILL.md` + `workflow.md` dentro `_bmad/`), non un comando Laravel o uno script di shell.
+
+Quindi:
+
+- se lo lanci in **terminal** (`bmad-help`), è normale che fallisca: non è un binario;
+- se lo scrivi in **chat**, funziona solo se l’IDE ha un’integrazione che “registra” automaticamente le skill dal repo.
+
+In questo progetto i file BMAD ci sono, ma Cursor può non esporre automaticamente le skill come comandi. In quel caso, il fallback corretto è:
+
+- usare GSD come orchestratore (`/gsd-*`) e trattare BMAD come “workflow in repo”;
+- oppure aprire e seguire manualmente `_bmad/core/skills/bmad-help/workflow.md` (la logica di routing è lì).
 
 ## principi chiave (adattati)
 
@@ -50,7 +70,8 @@ BMAD viene usato come **metodo di pensiero** per guidare analisi, architettura e
 
 ## collegamenti
 
-- metodo originale: `https://github.com/bmad-code-org/BMAD-METHOD`
+- metodo originale: <https://github.com/bmad-code-org/BMAD-METHOD>
+- mappa BMAD ↔ GSD: `../../../../_bmad/bmap.md`
 - regole generali laraxot: `Xot/docs/laraxot-rules.md` (e `.cursor/rules/laraxot-rules.mdc`)
 - testing e qualità: `Xot/docs/testing-best-practices.md`, `Xot/docs/phpstan-code-quality-guide.md`
 

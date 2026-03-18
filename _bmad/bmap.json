@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "name": "BMAD-GSD Integration",
+  "description": "Mapping between BMAD Method and GSD workflows for LaravelPizza",
+  "primary_orchestrator": "GSD",
+  "frameworks": {
+    "gsd": {
+      "location": ".planning/",
+      "artifacts": ["PROJECT.md", "ROADMAP.md", "REQUIREMENTS.md", "STATE.md", "phases/"],
+      "commands": [
+        "gsd-new-project",
+        "gsd-map-codebase",
+        "gsd-discuss-phase",
+        "gsd-plan-phase",
+        "gsd-execute-phase",
+        "gsd-verify-work",
+        "gsd-progress"
+      ]
+    },
+    "bmad": {
+      "location": "_bmad/",
+      "modules": ["bmm", "gds", "cis", "wds", "tea"],
+      "commands": [
+        "bmad-help",
+        "bmad-create-prd",
+        "bmad-create-architecture",
+        "bmad-create-epics-and-stories",
+        "bmad-dev-story",
+        "bmad-code-review",
+        "bmad-party-mode"
+      ]
+    }
+  },
+  "phase_mapping": {
+    "analysis": {
+      "gsd": "internal research",
+      "bmad": ["bmad-domain-research", "bmad-technical-research", "bmad-market-research"]
+    },
+    "planning": {
+      "gsd": "REQUIREMENTS.md + ROADMAP.md",
+      "bmad": ["bmad-create-prd", "bmad-create-architecture", "bmad-create-epics-and-stories"]
+    },
+    "solutioning": {
+      "gsd": "phase planning",
+      "bmad": ["bmad-sprint-planning", "bmad-create-story"]
+    },
+    "implementation": {
+      "gsd": "execute-phase + verify-work",
+      "bmad": ["bmad-dev-story", "bmad-code-review", "bmad-retrospective"]
+    }
+  },
+  "usage": {
+    "primary": "GSD - phase orchestration, roadmap, verification",
+    "supplementary": "BMAD - deep research, architecture, specialized workflows"
+  },
+  "config": {
+    "mode": "yolo",
+    "parallelization": true,
+    "auto_advance": true
+  }
+}

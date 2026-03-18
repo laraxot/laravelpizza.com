@@ -8,6 +8,7 @@
 
 - [Composer Packages Study](../../../docs/architecture/composer-packages-study.md) - Studio completo dipendenze runtime e implicazioni chaos monkey.
 - [Riferimento pacchetti](../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../docs/architecture/composer-packages-full-inventory.md) - Folio, Volt, Livewire, Filament, Tailwind (via root/moduli)
+- [Kinetic UX Checklist](kinetic-ux-checklist.md) - Motion, micro-interazioni, performance e accessibilità (tema Meetup)
 - [Package Dependency Chaos Map](package-dependency-chaos-map.md) - Mappa pacchetti e rischio runtime lato tema.
 - [CMS Theme Runtime Memory](memories/cms-theme-runtime-memory.md) - Operational memory for fast diagnosis of theme/CMS runtime failures.
 - [Chaos Monkey Debug Skills](chaos-monkey-debug-skills.md) - Repeatable debugging skills and incident checklist for randomized breakage.

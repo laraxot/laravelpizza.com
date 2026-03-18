@@ -48,6 +48,11 @@ Benvenuto nella documentazione di **LaravelPizza.com** - una piattaforma complet
    - Pattern di correzione
    - Quality metrics
 
+5. **[Kinetic UX Checklist](kinetic-ux-checklist.md)**
+   - Motion e micro-interazioni (utilità, non decorazione)
+   - Performance (Core Web Vitals) e accessibilità (`prefers-reduced-motion`)
+   - Checklist operativa applicata al tema Meetup
+
 ---
 
 ## 📦 Moduli del Progetto

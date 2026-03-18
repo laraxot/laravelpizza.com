@@ -1,0 +1,7 @@
+module,phase,name,code,sequence,workflow-file,command,required,agent,options,description,output-location,outputs,
+bmb,anytime,Create Agent,CA,,skill:bmad-agent-builder,bmad-agent-builder,false,,Create Mode,"Build a new agent skill from scratch through guided conversational discovery.",output_folder,"agent skill",
+bmb,anytime,Edit Agent,EA,,skill:bmad-agent-builder,bmad-agent-builder,false,,Edit Mode,"Edit, convert or fix an existing agent skill.",output_folder,"agent skill",
+bmb,anytime,Optimize Agent,OA,,skill:bmad-agent-builder,bmad-agent-builder,false,,Validate Mode,"Quality check, validate, review or optimize an existing agent skill.",output_folder,"quality report",
+bmb,anytime,Create Workflow,CW,,skill:bmad-workflow-builder,bmad-workflow-builder,false,,Create Mode,"Build a new workflow or skill from scratch through guided conversational discovery.",output_folder,"workflow or skill",
+bmb,anytime,Edit Workflow,EW,,skill:bmad-workflow-builder,bmad-workflow-builder,false,,Edit Mode,"Edit, convert or fix an existing workflow or skill.",output_folder,"workflow or skill",
+bmb,anytime,Optimize Workflow,OW,,skill:bmad-workflow-builder,bmad-workflow-builder,false,,Validate Mode,"Quality check, validate, review or optimize an existing workflow or skill.",output_folder,"quality report",

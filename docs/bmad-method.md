@@ -10,6 +10,25 @@ Applicare il **BMAD Method** al tema `Meetup` per mantenere:
 
 Questo documento integra le regole esistenti (`theme-development-rules.md`, `architecture-folio-volt-filament.md`, `critical-rules-and-patterns.md`).
 
+## stato nel progetto
+
+BMAD è già installato nel repository (cartella `_bmad/`) e convive con GSD:
+
+- GSD resta l'orchestratore primario (`.planning/`)
+- BMAD si usa come supporto per ricerca profonda, architettura e code review
+- la mappa di integrazione è in `_bmad/bmap.md`
+
+## perché `bmad-help` sembra non funzionare
+
+`bmad-help` **non è un comando da terminale**: è una “skill” descritta da file dentro `_bmad/`.
+
+Se Cursor non ha caricato/registrato automaticamente le skill del repo, allora scrivere `bmad-help` non attiva nulla.
+In quel caso l’uso corretto è:
+
+- continuare con i comandi GSD (`/gsd-plan-phase`, `/gsd-execute-phase`, …) come percorso principale;
+- usare BMAD come “workflow in repo” leggendo e seguendo `_bmad/core/skills/bmad-help/workflow.md`;
+- oppure chiedere direttamente in chat “usiamo bmad-help per: …” e io applico il workflow (leggendo `_bmad/_config/bmad-help.csv` e suggerendo il prossimo passo).
+
 ## come usiamo bmad nel tema
 
 - **scale‑adaptive**:
@@ -45,5 +64,6 @@ Questo documento integra le regole esistenti (`theme-development-rules.md`, `arc
 - regole tema: `theme-development-rules.md`, `critical-rules-and-patterns.md`
 - architettura Folio + Volt + Filament: `architecture-folio-volt-filament.md`
 - SEO e metatag: `seo.md`, `seo-best-practices.md`, metatags docs in `Modules/Seo/docs/`
-- metodo globale: `../../Modules/Xot/docs/bmad-method.md`
+- mappa BMAD ↔ GSD: `../_bmad/bmap.md`
+- metodo globale (Xot): `../laravel/Modules/Xot/docs/bmad-method.md`
 
