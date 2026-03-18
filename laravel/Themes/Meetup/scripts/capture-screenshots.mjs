@@ -25,7 +25,15 @@ const themeRoot = path.resolve(__dirname, '..');
 const outDir = path.join(themeRoot, 'docs', 'screenshots', 'grafica-confronto');
 
 const PROD_URL = 'https://laravelpizza.com/';
+const PROD_EVENTS_URL = 'https://laravelpizza.com/events';
+
 const LOCAL_URL = process.env.LOCAL_URL || 'http://127.0.0.1:8002/it';
+const LOCAL_EVENTS_URL = process.env.LOCAL_EVENTS_URL || `${LOCAL_URL.replace(/\/$/, '')}/events`;
+
+async function gotoStable(page, url, timeoutMs) {
+  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: timeoutMs });
+  await page.waitForTimeout(1200);
+}
 
 async function main() {
   if (!fs.existsSync(outDir)) {
@@ -41,7 +49,7 @@ async function main() {
   try {
     // Screenshot produzione
     const pageProd = await context.newPage();
-    await pageProd.goto(PROD_URL, { waitUntil: 'networkidle', timeout: 15000 });
+    await pageProd.goto(PROD_URL, { waitUntil: 'networkidle', timeout: 20000 });
     await pageProd.screenshot({
       path: path.join(outDir, 'laravelpizza-com-home.png'),
       fullPage: true,
@@ -55,7 +63,7 @@ async function main() {
   try {
     // Screenshot nostra home (richiede app avviata)
     const pageLocal = await context.newPage();
-    await pageLocal.goto(LOCAL_URL, { waitUntil: 'networkidle', timeout: 15000 });
+    await gotoStable(pageLocal, LOCAL_URL, 20000);
     await pageLocal.screenshot({
       path: path.join(outDir, 'nostra-home.png'),
       fullPage: true,
@@ -64,6 +72,34 @@ async function main() {
     console.log('Salvato: docs/screenshots/grafica-confronto/nostra-home.png');
   } catch (e) {
     console.warn('Locale (avvia l\'app prima):', e.message);
+  }
+
+  try {
+    // Screenshot produzione eventi
+    const pageProdEvents = await context.newPage();
+    await pageProdEvents.goto(PROD_EVENTS_URL, { waitUntil: 'networkidle', timeout: 20000 });
+    await pageProdEvents.screenshot({
+      path: path.join(outDir, 'laravelpizza-com-events.png'),
+      fullPage: true,
+    });
+    await pageProdEvents.close();
+    console.log('Salvato: docs/screenshots/grafica-confronto/laravelpizza-com-events.png');
+  } catch (e) {
+    console.warn('Produzione events:', e.message);
+  }
+
+  try {
+    // Screenshot nostri eventi (richiede app avviata)
+    const pageLocalEvents = await context.newPage();
+    await gotoStable(pageLocalEvents, LOCAL_EVENTS_URL, 20000);
+    await pageLocalEvents.screenshot({
+      path: path.join(outDir, 'nostri-events.png'),
+      fullPage: true,
+    });
+    await pageLocalEvents.close();
+    console.log('Salvato: docs/screenshots/grafica-confronto/nostri-events.png');
+  } catch (e) {
+    console.warn('Locale events (avvia l\'app prima):', e.message);
   }
 
   await browser.close();

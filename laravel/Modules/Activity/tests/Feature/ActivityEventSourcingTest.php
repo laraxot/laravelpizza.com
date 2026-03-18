@@ -42,9 +42,9 @@ test('activity event sourcing lifecycle works correctly', function () {
     $this->assertSame('created', $activity->event);
 
     $properties = $activity->properties;
-    $this->assertInstanceOf(Collection::class, $properties);
-    $this->assertSame('test', $properties->get('action'));
-    $this->assertSame('success', $properties->get('result'));
+    $this->assertInstanceOf(\Spatie\SchemalessAttributes\SchemalessAttributes::class, $properties);
+    $this->assertSame('test', $properties->action);
+    $this->assertSame('success', $properties->result);
 });
 
 test('activity can be queried with complex scopes', function () {
@@ -279,15 +279,15 @@ test('activity properties support complex nested structures', function () {
     $this->assertNotNull($freshActivity);
 
     $properties = $freshActivity->properties;
-    $this->assertInstanceOf(Collection::class, $properties);
-    $this->assertTrue($properties->has('user'));
-    $this->assertTrue($properties->has('action'));
-    $this->assertTrue($properties->has('context'));
-    $this->assertTrue($properties->has('timestamps'));
+    $this->assertInstanceOf(\Spatie\SchemalessAttributes\SchemalessAttributes::class, $properties);
+    $this->assertTrue(isset($properties->user));
+    $this->assertTrue(isset($properties->action));
+    $this->assertTrue(isset($properties->context));
+    $this->assertTrue(isset($properties->timestamps));
 
-    $userData = $properties->get('user');
-    $contextData = $properties->get('context');
-    $timestampsData = $properties->get('timestamps');
+    $userData = $properties->user;
+    $contextData = $properties->context;
+    $timestampsData = $properties->timestamps;
 
     $this->assertIsArray($userData);
     $this->assertArrayHasKey('id', $userData);

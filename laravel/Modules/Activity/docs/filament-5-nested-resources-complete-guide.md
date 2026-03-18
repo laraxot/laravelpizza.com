@@ -42,19 +42,11 @@ php artisan make:filament-page ManageCourseLessons --resource=CourseResource --t
 ```php
 <?php
 
-<<<<<<< .merge_file_JNLQ75
-namespace Modules\healthcare_app\Filament\Resources\Courses;
+namespace Modules\Quaeris\Filament\Resources\Courses;
 
 use Filament\Resources\Resource;
 use Filament\Resources\Pages\Page;
-use Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons\LessonResource;
-=======
-namespace Modules\ModuloEsempio\Filament\Resources\Courses;
-
-use Filament\Resources\Resource;
-use Filament\Resources\Pages\Page;
-use Modules\ModuloEsempio\Filament\Resources\Courses\Resources\Lessons\LessonResource;
->>>>>>> .merge_file_lLMzJw
+use Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons\LessonResource;
 
 class CourseResource extends Resource
 {
@@ -91,19 +83,11 @@ class CourseResource extends Resource
 ```php
 <?php
 
-<<<<<<< .merge_file_JNLQ75
-namespace Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons;
+namespace Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons;
 
 use Filament\Resources\Resource;
 use Filament\Resources\Pages\Page;
-use Modules\healthcare_app\Filament\Resources\Courses\CourseResource;
-=======
-namespace Modules\ModuloEsempio\Filament\Resources\Courses\Resources\Lessons;
-
-use Filament\Resources\Resource;
-use Filament\Resources\Pages\Page;
-use Modules\ModuloEsempio\Filament\Resources\Courses\CourseResource;
->>>>>>> .merge_file_lLMzJw
+use Modules\Quaeris\Filament\Resources\Courses\CourseResource;
 
 class LessonResource extends Resource
 {
@@ -142,22 +126,14 @@ class LessonResource extends Resource
 ```php
 <?php
 
-<<<<<<< .merge_file_JNLQ75
-namespace Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons;
-=======
-namespace Modules\ModuloEsempio\Filament\Resources\Courses\Resources\Lessons;
->>>>>>> .merge_file_lLMzJw
+namespace Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons;
 
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
 use Filament\Forms;
 use Filament\Tables\Table;
 use Filament\Forms\Form;
-<<<<<<< .merge_file_JNLQ75
-use Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons\LessonResource;
-=======
-use Modules\ModuloEsempio\Filament\Resources\Courses\Resources\Lessons\LessonResource;
->>>>>>> .merge_file_lLMzJw
+use Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons\LessonResource;
 
 class LessonsRelationManager extends RelationManager
 {
@@ -220,19 +196,11 @@ class LessonsRelationManager extends RelationManager
 ```php
 <?php
 
-<<<<<<< .merge_file_JNLQ75
-namespace Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons;
+namespace Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons;
 
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Resources\ParentResourceRegistration;
-use Modules\healthcare_app\Filament\Resources\Courses\CourseResource;
-=======
-namespace Modules\ModuloEsempio\Filament\Resources\Courses\Resources\Lessons;
-
-use Filament\Resources\RelationManagers\RelationManager;
-use Filament\Resources\ParentResourceRegistration;
-use Modules\ModuloEsempio\Filament\Resources\Courses\CourseResource;
->>>>>>> .merge_file_lLMzJw
+use Modules\Quaeris\Filament\Resources\Courses\CourseResource;
 
 class LessonResource extends Resource
 {
@@ -253,11 +221,7 @@ class LessonResource extends Resource
 ```php
 <?php
 
-<<<<<<< .merge_file_JNLQ75
-namespace Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons;
-=======
-namespace Modules\ModuloEsempio\Filament\Resources\Courses\Resources\Lessons;
->>>>>>> .merge_file_lLMzJw
+namespace Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons;
 
 use Filament\Resources\RelationManagers\RelationManager;
 use Illuminate\Database\Eloquent\Model;
@@ -284,11 +248,7 @@ class LessonsRelationManager extends RelationManager
 ```php
 <?php
 
-<<<<<<< .merge_file_JNLQ75
-namespace Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons;
-=======
-namespace Modules\ModuloEsempio\Filament\Resources\Courses\Resources\Lessons;
->>>>>>> .merge_file_lLMzJw
+namespace Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons;
 
 use Filament\Resources\RelationManagers\RelationManager;
 use Illuminate\Database\Eloquent\Model;
@@ -360,19 +320,11 @@ public function create(): array
 ```php
 <?php
 
-<<<<<<< .merge_file_JNLQ75
-namespace Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons\Pages;
+namespace Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons\Pages;
 
 use Filament\Resources\Pages\CreateRecord;
-use Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons\LessonResource;
-use Modules\healthcare_app\Models\Course;
-=======
-namespace Modules\ModuloEsempio\Filament\Resources\Courses\Resources\Lessons\Pages;
-
-use Filament\Resources\Pages\CreateRecord;
-use Modules\ModuloEsempio\Filament\Resources\Courses\Resources\Lessons\LessonResource;
-use Modules\ModuloEsempio\Models\Course;
->>>>>>> .merge_file_lLMzJw
+use Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons\LessonResource;
+use Modules\Quaeris\Models\Course;
 
 class CreateLesson extends CreateRecord
 {
@@ -397,17 +349,10 @@ class CreateLesson extends CreateRecord
 ```php
 <?php
 
-<<<<<<< .merge_file_JNLQ75
-namespace Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons\Pages;
+namespace Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons\Pages;
 
 use Filament\Resources\Pages\CreateRecord;
-use Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons\LessonResource;
-=======
-namespace Modules\ModuloEsempio\Filament\Resources\Courses\Resources\Lessons\Pages;
-
-use Filament\Resources\Pages\CreateRecord;
-use Modules\ModuloEsempio\Filament\Resources\Courses\Resources\Lessons\LessonResource;
->>>>>>> .merge_file_lLMzJw
+use Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons\LessonResource;
 use Illuminate\Validation\Rule;
 
 class CreateLesson extends CreateRecord
@@ -508,11 +453,7 @@ dd($this->getRouteKey(), $this->getRecord());
 public function test_nested_resource_routing()
 {
     $course = Course::factory()->create();
-<<<<<<< .merge_file_JNLQ75
-    $response = $this->get(route('filament.healthcare_app.resources.courses.resources.lessons.list', [
-=======
-    $response = $this->get(route('filament.ptvx.resources.courses.resources.lessons.list', [
->>>>>>> .merge_file_lLMzJw
+$response = $this->get(route('filament.Quaeris.resources.courses.resources.lessons.list', [
         'course' => $course,
     ]));
     
@@ -526,11 +467,7 @@ public function test_nested_resource_routing()
 - **API Reference**: https://filamentphp.com/docs/5.x/api/resources/nested-resources
 - **Plugin Guava**: https://filamentphp.com/plugins/guava-nested-resources
 
-<<<<<<< .merge_file_JNLQ75
-## 🔄 **Integrazione con healthcare_app**
-=======
-## 🔄 **Integrazione con ModuloEsempio**
->>>>>>> .merge_file_lLMzJw
+## 🔄 **Integrazione con Quaeris**
 
 ### **Pattern di Integrazione**
 

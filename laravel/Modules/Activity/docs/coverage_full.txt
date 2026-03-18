@@ -1,0 +1,2700 @@
+
+   PASS  Modules\Activity\tests\Feature\Actions\ListLogActivitiesActionTest
+  ✓ action can be instantiated                                           0.79s  
+  ✓ action has correct configuration                                     0.67s  
+  ✓ action generates a log-activity URL containing record key            0.78s  
+
+   PASS  Modules\Activity\tests\Feature\ActivityBusinessLogicTest
+  ✓ Activity Business Logic → it can create activity with basic informa… 0.57s  
+  ✓ Activity Business Logic → it can track user authentication activiti… 0.57s  
+  ✓ Activity Business Logic → it can track model crud activities         0.57s  
+  ✓ Activity Business Logic → it can use batch uuid for grouping activi… 0.57s  
+  ✓ Activity Business Logic → it can filter activities by log name       0.86s  
+  ✓ Activity Business Logic → it can handle activity with complex prope… 0.57s  
+
+   PASS  Modules\Activity\tests\Feature\ActivityEventSourcingTest
+  ✓ activity event sourcing lifecycle works correctly                    0.58s  
+  ✓ activity can be queried with complex scopes                          0.59s  
+  ✓ snapshot creation and retrieval works correctly                      0.57s  
+  ✓ stored event creation and event reconstruction works                 0.88s  
+  ✓ activity batch operations work correctly                             0.58s  
+  ✓ activity with batch scope returns correct results                    0.59s  
+  ✓ activity properties support complex nested structures                0.58s  
+  ✓ snapshot state maintains data integrity with large datasets          0.57s  
+  ✓ stored event handles complex event properties with nested arrays     0.57s  
+
+   PASS  Modules\Activity\tests\Feature\ActivityIntegrationTest
+  ✓ activity module models work together in integrated scenarios         0.60s  
+  ✓ activity batch processing with multiple models                       0.58s  
+  ✓ activity module handles concurrent operations correctly              0.62s  
+  ✓ activity module supports complex query patterns                      0.59s  
+  ✓ activity module handles data consistency across models               0.58s  
+  ✓ activity module supports bulk operations efficiently                 0.57s  
+
+   PASS  Modules\Activity\tests\Feature\ActivityManagementTest
+  ✓ user can create activity                                             0.58s  
+  ✓ activity can be updated                                              0.58s  
+  ✓ activity can be deleted                                              0.58s  
+  ✓ activity belongs to user                                             0.58s  
+
+   PASS  Modules\Activity\tests\Feature\BaseModelBusinessLogicPestTest
+  ✓ can create base model instance                                       0.58s  
+  ✓ has correct connection setting                                       0.58s  
+  ✓ has correct primary key setting                                      0.57s  
+  ✓ has correct timestamps setting                                       0.59s  
+  ✓ has correct per page setting                                         0.57s  
+  ✓ has correct snake attributes setting                                 0.57s  
+  ✓ has correct casts configuration                                      0.58s  
+  ✓ can use factory                                                      0.61s  
+  ✓ has updater trait                                                    0.58s  
+  ✓ has has factory trait                                                0.57s  
+  ✓ can handle uuid generation                                           0.58s  
+  ✓ can handle timestamps                                                0.58s  
+  ✓ can handle soft deletes                                              0.58s  
+  ✓ can handle published at timestamp                                    0.58s  
+  ✓ can handle created by tracking                                       0.57s  
+  ✓ has correct fillable configuration                                   0.58s  
+  ✓ can access attributes                                                0.57s  
+  ✓ has correct table name                                               0.58s  
+  ✓ has timestamps enabled                                               0.58s  
+  ✓ can get connection                                                   0.58s  
+
+   PASS  Modules\Activity\tests\Feature\BaseModelBusinessLogicTest
+  ✓ BaseModel Business Logic → it can create base model instance         0.60s  
+  ✓ BaseModel Business Logic → it has correct connection setting         0.58s  
+  ✓ BaseModel Business Logic → it has correct primary key setting        0.58s  
+  ✓ BaseModel Business Logic → it has correct timestamps setting         0.58s  
+  ✓ BaseModel Business Logic → it has correct per page setting           0.58s  
+  ✓ BaseModel Business Logic → it has correct snake attributes setting   0.59s  
+  ✓ BaseModel Business Logic → it has correct casts configuration        0.58s  
+  ✓ BaseModel Business Logic → it can use factory                        0.61s  
+  ✓ BaseModel Business Logic → it has updater trait                      0.58s  
+  ✓ BaseModel Business Logic → it has has factory trait                  0.58s  
+  ✓ BaseModel Business Logic → it can handle uuid generation             0.58s  
+  ✓ BaseModel Business Logic → it can handle timestamps                  0.57s  
+  ✓ BaseModel Business Logic → it can handle soft deletes                0.59s  
+  ✓ BaseModel Business Logic → it can handle published at timestamp      0.60s  
+  ✓ BaseModel Business Logic → it can handle user tracking fields        0.58s  
+  ✓ BaseModel Business Logic → it has correct hidden attributes          0.58s  
+  ✓ BaseModel Business Logic → it can use connection methods             0.58s  
+  ✓ BaseModel Business Logic → it can use table methods                  0.58s  
+  ✓ BaseModel Business Logic → it can use key methods                    0.59s  
+  ✓ BaseModel Business Logic → it can use timestamp methods              0.58s  
+  ✓ BaseModel Business Logic → it can use per page methods               0.58s  
+  ✓ BaseModel Business Logic → it can use snake attributes methods       0.58s  
+  ✓ BaseModel Business Logic → it can use casts methods                  0.58s  
+  ✓ BaseModel Business Logic → it can use fillable methods               0.58s  
+  ✓ BaseModel Business Logic → it can use hidden methods                 0.59s  
+
+   PASS  Modules\Activity\tests\Feature\CodeQualityTest
+  ✓ all php files have valid syntax                                      3.12s  
+  ✓ main classes exist and are instantiable                              0.58s  
+  ✓ configuration files exist                                            0.58s  
+  ✓ translations exist and are structured                                0.58s  
+  ✓ views exist and are valid                                            0.58s  
+  ✓ service provider configuration                                       0.58s  
+  ✓ documentation is up to date                                          0.59s  
+
+   PASS  Modules\Activity\tests\Feature\Filament\Actions\ListLogActivitiesActionTest
+  ✓ action has correct default name                                      0.58s  
+  ✓ action tooltip is translated correctly                               0.59s  
+  ✓ action is configured correctly                                       0.58s  
+  ✓ action generates correct URL for activity log page                   0.58s  
+
+   PASS  Modules\Activity\tests\Feature\PHPStanComplianceTest
+  ✓ phpstan placeholder                                                  0.57s  
+  ✓ classes extend correct base classes                                  0.59s  
+  ✓ translations are properly structured                                 0.58s  
+  ✓ service provider configuration                                       0.58s  
+  ✓ views exist and are structured                                       0.59s  
+
+   PASS  Modules\Activity\tests\Feature\SnapshotBusinessLogicTest
+  ✓ it can create snapshot with basic information                        0.58s  
+  ✓ it can create snapshot with complex state                            0.59s  
+  ✓ it can manage snapshot versioning                                    0.60s  
+  ✓ it can query snapshots by aggregate uuid                             0.58s  
+  ✓ it can query snapshots by version                                    0.59s  
+  ✓ it can handle snapshot with empty state                              0.59s  
+  ✓ it can handle snapshot with empty array state                        0.59s  
+  ✓ it can restore state from snapshot                                   0.58s  
+  ✓ it can compare snapshot versions                                     0.58s  
+  ✓ it can handle snapshot with timestamps                               0.59s  
+  ✓ it can query snapshots by date range                                 0.59s  
+  ✓ it can handle snapshot with metadata                                 0.59s  
+
+   PASS  Modules\Activity\tests\Feature\StoredEventBusinessLogicTest
+  ✓ it can create stored event with basic information                    0.59s  
+  ✓ it can create stored event with complex properties                   0.59s  
+  ✓ it can manage event versioning                                       0.58s  
+  ✓ it can query events by aggregate uuid                                0.58s  
+  ✓ it can query events by event class                                   0.58s  
+  ✓ it can handle event with empty properties                            0.62s  
+  ✓ it can handle event with null properties                             0.58s  
+  ✓ it can restore event from stored event                               0.58s  
+  ✓ it can compare event versions                                        0.57s  
+  ✓ it can handle event with timestamps                                  0.60s  
+  ✓ it can query events by date range                                    0.60s  
+  ✓ it can handle event with metadata                                    0.58s  
+
+   PASS  Modules\Activity\tests\Feature\TempActivityTest
+  ✓ it can create activity with basic information                        0.59s  
+
+   PASS  Modules\Activity\tests\Unit\EventSourcingBusinessLogicTest
+  ✓ Event Sourcing Business Logic → Activity Logging Business Logic → i… 0.25s  
+  ✓ Event Sourcing Business Logic → Activity Logging Business Logic → i… 0.24s  
+  ✓ Event Sourcing Business Logic → Activity Logging Business Logic → i… 0.24s  
+  ✓ Event Sourcing Business Logic → Activity Logging Business Logic → i… 0.24s  
+  ✓ Event Sourcing Business Logic → Activity Logging Business Logic → i… 0.23s  
+  ✓ Event Sourcing Business Logic → Event Sourcing Business Logic → it…  0.24s  
+  ✓ Event Sourcing Business Logic → Event Sourcing Business Logic → it…  0.24s  
+  ✓ Event Sourcing Business Logic → Event Sourcing Business Logic → it…  0.23s  
+  ✓ Event Sourcing Business Logic → Event Sourcing Business Logic → it…  0.23s  
+  ✓ Event Sourcing Business Logic → Event Sourcing Business Logic → it…  0.24s  
+  ✓ Event Sourcing Business Logic → Snapshot Business Logic → it create… 0.23s  
+  ✓ Event Sourcing Business Logic → Snapshot Business Logic → it preser… 0.23s  
+  ✓ Event Sourcing Business Logic → Snapshot Business Logic → it valida… 0.24s  
+  ✓ Event Sourcing Business Logic → Snapshot Business Logic → it ensure… 0.24s  
+  ✓ Event Sourcing Business Logic → Event Replay Business Logic → it ha… 0.23s  
+  ✓ Event Sourcing Business Logic → Event Replay Business Logic → it va… 0.25s  
+  ✓ Event Sourcing Business Logic → Event Replay Business Logic → it ha… 0.23s  
+  ✓ Event Sourcing Business Logic → Performance and Scalability Logic →… 0.23s  
+  ✓ Event Sourcing Business Logic → Performance and Scalability Logic →… 0.24s  
+  ✓ Event Sourcing Business Logic → Performance and Scalability Logic →… 0.24s  
+
+   PASS  Modules\Activity\tests\Unit\Filament\ResourceExtensionTest
+  ✓ activity resources extend xot base resource                          0.01s  
+  ✓ activity resource does not implement unnecessary methods
+  ✓ activity resource implements required getFormSchema method
+  ✓ snapshot resource should not implement unnecessary methods
+  ✓ stored event resource should not implement unnecessary methods
+  ✓ activity resource has correct model configuration
+  ✓ activity resource form schema returns array
+  ✓ snapshot resource form schema returns array
+  ✓ stored event resource form schema returns array
+  ✓ resources use proper xot base resource functionality
+  ✓ resources follow xot base resource naming conventions
+
+   WARN  Modules\Activity\tests\Unit\Listeners\LoginListenerTest
+  - login listener is registered for login event → LoginListener is not… 0.58s  
+  ✓ login listener can be instantiated                                   0.59s  
+  ✓ login listener has handle method                                     0.59s  
+  ✓ login listener handle method is callable                             0.58s  
+
+   WARN  Modules\Activity\tests\Unit\Listeners\LogoutListenerTest
+  - logout listener is registered for logout event → LogoutListener may… 0.60s  
+  ✓ logout listener can be instantiated                                  0.58s  
+  ✓ logout listener has handle method                                    0.60s  
+  ✓ logout listener handle method accepts logout event                   0.60s  
+  ✓ logout listener handles event without user gracefully                0.59s  
+
+   PASS  Modules\Activity\tests\Unit\Models\ActivityBusinessLogicTest
+  ✓ Activity Business Logic → activity has correct connection configured
+  ✓ Activity Business Logic → activity has expected fillable fields
+  ✓ Activity Business Logic → activity extends spatie activity functionality
+  ✓ Activity Business Logic → activity has scope methods documented
+
+   PASS  Modules\Activity\tests\Unit\Models\ActivityTest
+  ✓ a basic module pest test runs
+
+   PASS  Modules\Activity\tests\Unit\Models\BaseModelTest
+  ✓ base model extends eloquent model                                    0.58s  
+  ✓ base model has correct table name                                    0.58s  
+  ✓ base model can be instantiated                                       0.58s  
+  ✓ base model has proper inheritance chain                              0.59s  
+  ✓ base model has timestamps enabled                                    0.58s  
+
+   PASS  Modules\Activity\tests\Unit\Models\SnapshotBusinessLogicTest
+  ✓ Snapshot Business Logic → snapshot has correct connection configured
+  ✓ Snapshot Business Logic → snapshot has expected fillable fields for event sourcing
+  ✓ Snapshot Business Logic → snapshot extends eloquent snapshot from spatie
+  ✓ Snapshot Business Logic → snapshot has query builder methods documented
+
+   PASS  Modules\Activity\tests\Unit\Models\StoredEventBusinessLogicTest
+  ✓ StoredEvent Business Logic → stored event has correct connection configured
+  ✓ StoredEvent Business Logic → stored event has correct table configured
+  ✓ StoredEvent Business Logic → stored event has expected fillable fields for event sourcing
+  ✓ StoredEvent Business Logic → stored event extends eloquent stored event for event sourcing
+  ✓ StoredEvent Business Logic → stored event has query builder methods documented
+
+  Tests:    2 skipped, 171 passed (864 assertions)
+  Duration: 83.09s
+
+  Activity/app/Actions/ActivityLogger [90m...................................[39m [31m0.0%[39m  
+  Activity/app/Actions/LogActivityAction [90m................................[39m [31m0.0%[39m  
+  Activity/app/Actions/LogModelCreatedAction [90m............................[39m [31m0.0%[39m  
+  Activity/app/Actions/LogModelDeletedAction [90m............................[39m [31m0.0%[39m  
+  Activity/app/Actions/LogModelUpdatedAction [90m............................[39m [31m0.0%[39m  
+  Activity/app/Actions/LogUserLoginAction [90m...............................[39m [31m0.0%[39m  
+  Activity/app/Actions/LogUserLogoutAction [90m..............................[39m [31m0.0%[39m  
+  Activity/app/Actions/RestoreActivityAction [90m............................[39m [31m0.0%[39m  
+  Activity/app/Events/ActivityEvent [90m.....................................[39m [31m0.0%[39m  
+  Activity/app/Filament/Actions/ListLogActivitiesAction [90m.................[39m [31m0.0%[39m  
+  Activity/app/Filament/Pages/Concerns/CanPaginate [90m......................[39m [31m0.0%[39m  
+  Activity/app/Filament/Pages/Dashboard [90m...............................[39m [32m100.0%[39m  
+  Activity/app/Filament/Pages/ListLogActivities [90m.........................[39m [31m0.0%[39m  
+  Activity/app/Filament/Resources/ActivityResource [90m......................[39m [31m0.0%[39m  
+  Activity/app/Filament/Resources/ActivityResource/Pages/CreateActivi…  [32m100.0%[39m  
+  Activity/app/Filament/Resources/ActivityResource/Pages/EditActivity [90m...[39m [31m0.0%[39m  
+  Activity/app/Filament/Resources/ActivityResource/Pages/ListActiviti… [90m..[39m [31m0.0%[39m  
+  Activity/app/Filament/Resources/SnapshotResource [90m......................[39m [31m0.0%[39m  
+  Activity/app/Filament/Resources/SnapshotResource/Pages/CreateSnapsh…  [32m100.0%[39m  
+  Activity/app/Filament/Resources/SnapshotResource/Pages/EditSnapshot [90m.[39m [32m100.0%[39m  
+  Activity/app/Filament/Resources/SnapshotResource/Pages/ListSnapshot… [90m..[39m [31m0.0%[39m  
+  Activity/app/Filament/Resources/StoredEventResource [90m...................[39m [31m0.0%[39m  
+  Activity/app/Filament/Resources/StoredEventResource/Pages/CreateSto…  [32m100.0%[39m  
+  Activity/app/Filament/Resources/StoredEventResource/Pages/EditStore…  [32m100.0%[39m  
+  Activity/app/Filament/Resources/StoredEventResource/Pages/ListStore… [90m..[39m [31m0.0%[39m  
+  Activity/app/Listeners/LoginListener [90m..................................[39m [31m0.0%[39m  
+  Activity/app/Listeners/LogoutListener [90m.................................[39m [31m0.0%[39m  
+  Activity/app/Models/Activity [90m........................................[39m [32m100.0%[39m  
+  Activity/app/Models/BaseModel [90m.........................................[39m [31m0.0%[39m  
+  Activity/app/Models/Policies/ActivityBasePolicy [90m.......................[39m [31m0.0%[39m  
+  Activity/app/Models/Policies/ActivityPolicy [90m...........................[39m [31m0.0%[39m  
+  Activity/app/Models/Policies/SnapshotPolicy [90m...........................[39m [31m0.0%[39m  
+  Activity/app/Models/Policies/StoredEventPolicy [90m........................[39m [31m0.0%[39m  
+  Activity/app/Models/Snapshot [90m........................................[39m [32m100.0%[39m  
+  Activity/app/Models/StoredEvent [90m.....................................[39m [32m100.0%[39m  
+  Activity/app/Traits/HasEvents [90m.........................................[39m [31m0.0%[39m  
+  Activity/app/Traits/HasSnapshots [90m....................................[39m [32m100.0%[39m  
+  Chart/app/Actions/Chart/GetFontFamilyOptions [90m..........................[39m [31m0.0%[39m  
+  Chart/app/Actions/Chart/GetFontStyleOptions [90m...........................[39m [31m0.0%[39m  
+  Chart/app/Actions/Chart/GetTypeOptions [90m................................[39m [31m0.0%[39m  
+  Chart/app/Actions/ChartJs/ExportToPngAction [90m...........................[39m [31m0.0%[39m  
+  Chart/app/Actions/ChartJs/ExportToSvgAction [90m...........................[39m [31m0.0%[39m  
+  Chart/app/Actions/ChartJs/SavePngToFileAction [90m.........................[39m [31m0.0%[39m  
+  Chart/app/Actions/ChartJs/SaveSvgToFileAction [90m.........................[39m [31m0.0%[39m  
+  Chart/app/Actions/ExportChartFromWidgetAction [90m.........................[39m [31m0.0%[39m  
+  Chart/app/Actions/ExportChartToPngAction [90m..............................[39m [31m0.0%[39m  
+  Chart/app/Actions/ExportChartToSvgAction [90m..............................[39m [31m0.0%[39m  
+  Chart/app/Actions/JpGraph/ApplyGraphStyleAction [90m.......................[39m [31m0.0%[39m  
+  Chart/app/Actions/JpGraph/ApplyPlotStyleAction [90m........................[39m [31m0.0%[39m  
+  Chart/app/Actions/JpGraph/GetGraphAction [90m..............................[39m [31m0.0%[39m  
+  Chart/app/Actions/JpGraph/V1/Bar2Action [90m...............................[39m [31m0.0%[39m  
+  Chart/app/Actions/JpGraph/V1/Bar3Action [90m...............................[39m [31m0.0%[39m  
+  Chart/app/Actions/JpGraph/V1/Horizbar1Action [90m..........................[39m [31m0.0%[39m  
+  Chart/app/Actions/JpGraph/V1/LineSubQuestionAction [90m....................[39m [31m0.0%[39m  
+  Chart/app/Actions/JpGraph/V1/Pie1Action [90m...............................[39m [31m0.0%[39m  
+  Chart/app/Actions/JpGraph/V1/PieAvgAction [90m.............................[39m [31m0.0%[39m  
+  Chart/app/Actions/Widget/RenderChartWidgetHtmlAction [90m..................[39m [31m0.0%[39m  
+  Chart/app/Actions/Widget/SaveChartWidgetAsPngAction [90m...................[39m [31m0.0%[39m  
+  Chart/app/Actions/Widget/SaveChartWidgetAsSvgAction [90m...................[39m [31m0.0%[39m  
+  Chart/app/Datas/AnswerData [90m............................................[39m [31m0.0%[39m  
+  Chart/app/Datas/AnswersChartData [90m......................................[39m [31m0.0%[39m  
+  Chart/app/Datas/ChartData [90m.............................................[39m [31m0.0%[39m  
+  Chart/app/Filament/Pages/Dashboard [90m....................................[39m [31m0.0%[39m  
+  Chart/app/Filament/Pages/DashboardV2 [90m..................................[39m [31m0.0%[39m  
+  Chart/app/Filament/Resources/ChartResource [90m............................[39m [31m0.0%[39m  
+  Chart/app/Filament/Resources/ChartResource/Pages/CreateChart [90m........[39m [32m100.0%[39m  
+  Chart/app/Filament/Resources/ChartResource/Pages/EditChart [90m............[39m [31m0.0%[39m  
+  Chart/app/Filament/Resources/ChartResource/Pages/ListCharts [90m...........[39m [31m0.0%[39m  
+  Chart/app/Filament/Resources/MixedChartResource [90m.......................[39m [31m0.0%[39m  
+  Chart/app/Filament/Resources/MixedChartResource/Pages/CreateMixedCh…  [32m100.0%[39m  
+  Chart/app/Filament/Resources/MixedChartResource/Pages/EditMixedChar… [90m..[39m [31m0.0%[39m  
+  Chart/app/Filament/Resources/MixedChartResource/Pages/ListMixedChar… [90m..[39m [31m0.0%[39m  
+  Chart/app/Filament/Widgets/Samples/Bar01Chart [90m.........................[39m [31m0.0%[39m  
+  Chart/app/Filament/Widgets/Samples/Bar02Chart [90m.........................[39m [31m0.0%[39m  
+  Chart/app/Filament/Widgets/Samples/Doughnut01Chart [90m....................[39m [31m0.0%[39m  
+  Chart/app/Filament/Widgets/Samples/Sample01Chart [90m......................[39m [31m0.0%[39m  
+  Chart/app/Filament/Widgets/Samples/Sample02Chart [90m......................[39m [31m0.0%[39m  
+  Chart/app/Filament/Widgets/Samples/Sample03Chart [90m......................[39m [31m0.0%[39m  
+  Chart/app/Models/BaseModel [90m............................................[39m [31m0.0%[39m  
+  Chart/app/Models/Chart [90m................................................[39m [31m0.0%[39m  
+  Chart/app/Models/MixedChart [90m...........................................[39m [31m0.0%[39m  
+  Chart/app/Models/Policies/ChartBasePolicy [90m.............................[39m [31m0.0%[39m  
+  Chart/app/Models/Policies/ChartPolicy [90m.................................[39m [31m0.0%[39m  
+  Chart/app/Models/Policies/MixedChartPolicy [90m............................[39m [31m0.0%[39m  
+  Chart/app/Tables/Columns/ChartColumn [90m..................................[39m [31m0.0%[39m  
+  CloudStorage/app/Filament/Pages/Dashboard [90m...........................[39m [32m100.0%[39m  
+  CloudStorage/app/Filament/Pages/GDriveFileListPage [90m....................[39m [31m0.0%[39m  
+  CloudStorage/app/Filament/Pages/GoogleDriveFileListPage [90m...............[39m [31m0.0%[39m  
+  CloudStorage/app/Models/BaseModel [90m...................................[39m [32m100.0%[39m  
+  CloudStorage/app/Models/CloudStorageFile [90m..............................[39m [31m0.0%[39m  
+  CloudStorage/app/Models/CloudStorageProvider [90m..........................[39m [31m0.0%[39m  
+  CloudStorage/app/Models/CloudStorageQuota [90m.............................[39m [31m0.0%[39m  
+  CloudStorage/app/Models/CloudStorageShare [90m.............................[39m [31m0.0%[39m  
+  CloudStorage/app/Models/CloudStorageUpload [90m............................[39m [31m0.0%[39m  
+  CloudStorage/app/Models/Policies/CloudstorageBasePolicy [90m...............[39m [31m0.0%[39m  
+  CloudStorage/app/Services/GoogleDriveService [90m..........................[39m [31m0.0%[39m  
+  Cms/app/Actions/GetStyleClassAction [90m...................................[39m [31m0.0%[39m  
+  Cms/app/Actions/GetViewThemeByViewAction [90m..............................[39m [31m0.0%[39m  
+  Cms/app/Actions/Module/FixJigSawByModuleAction [90m........................[39m [31m0.0%[39m  
+  Cms/app/Actions/SaveFooterConfigAction [90m................................[39m [31m0.0%[39m  
+  Cms/app/Actions/SaveHeadernavConfigAction [90m.............................[39m [31m0.0%[39m  
+  Cms/app/Actions/View/GetCmsViewAction [90m.................................[39m [31m0.0%[39m  
+  Cms/app/Config/xra [90m....................................................[39m [31m0.0%[39m  
+  Cms/app/Datas/.php-cs-fixer.dist [90m......................................[39m [31m0.0%[39m  
+  Cms/app/Datas/BlockData [90m...............................................[39m [31m0.0%[39m  
+  Cms/app/Datas/FooterData [90m..............................................[39m [31m0.0%[39m  
+  Cms/app/Datas/HeadernavData [90m...........................................[39m [31m0.0%[39m  
+  Cms/app/Datas/LinkData [90m..............................................[39m [32m100.0%[39m  
+  Cms/app/Datas/NavbarMenuData [90m........................................[39m [32m100.0%[39m  
+  Cms/app/Datas/ThemeData [90m.............................................[39m [32m100.0%[39m  
+  Cms/app/Enums/AttachmentDiskEnum [90m......................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/ActionsBlock [90m..................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/ContactBlock [90m..................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/CtaBlock [90m......................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/FeatureSectionsBlock [90m..........................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/HeroBlock [90m.....................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/InfoBlock [90m.....................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/LinksBlock [90m....................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/LogoBlock [90m.....................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/NavigationBlock [90m...............................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/NewsletterBlock [90m...............................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/ParagraphBlock [90m................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/QuickLinksBlock [90m...............................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/SocialBlock [90m...................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/SocialLinksBlock [90m..............................[39m [31m0.0%[39m  
+  Cms/app/Filament/Blocks/StatsBlock [90m....................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Clusters/Appearance [90m................................[39m [32m100.0%[39m  
+  Cms/app/Filament/Clusters/Appearance/Pages/Breadcrumb [90m.................[39m [31m0.0%[39m  
+  Cms/app/Filament/Clusters/Appearance/Pages/Footer [90m.....................[39m [31m0.0%[39m  
+  Cms/app/Filament/Clusters/Appearance/Pages/Headernav [90m..................[39m [31m0.0%[39m  
+  Cms/app/Filament/Fields/LeftSidebarContent [90m............................[39m [31m0.0%[39m  
+  Cms/app/Filament/Fields/PageContent [90m...................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Fields/PageContentBuilder [90m............................[39m [31m0.0%[39m  
+  Cms/app/Filament/Forms/Components/DownloadAttachmentPlaceHolder [90m.......[39m [31m0.0%[39m  
+  Cms/app/Filament/Front/Pages/Home [90m.....................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Front/Pages/Welcome [90m..................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Infolists/Components/SectionPreview [90m..................[39m [31m0.0%[39m  
+  Cms/app/Filament/Pages/Dashboard [90m....................................[39m [32m100.0%[39m  
+  Cms/app/Filament/Pages/Themes [90m.........................................[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/AttachmentResource [90m.........................[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/AttachmentResource/Pages/CreateAttachmen… [90m..[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/AttachmentResource/Pages/EditAttachment [90m....[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/AttachmentResource/Pages/ListAttachments [90m...[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/MenuResource [90m...............................[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/MenuResource/Pages/CreateMenu [90m............[39m [32m100.0%[39m  
+  Cms/app/Filament/Resources/MenuResource/Pages/EditMenu [90m................[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/MenuResource/Pages/ListMenus [90m...............[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/PageContentResource [90m........................[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/PageContentResource/Pages/CreatePageCont…  [32m100.0%[39m  
+  Cms/app/Filament/Resources/PageContentResource/Pages/EditPageConten… [90m..[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/PageContentResource/Pages/ListPageConten… [90m..[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/PageContentResource/Pages/ViewPageConten… [90m..[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/PageResource [90m...............................[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/PageResource/Pages/CreatePage [90m............[39m [32m100.0%[39m  
+  Cms/app/Filament/Resources/PageResource/Pages/EditPage [90m..............[39m [32m100.0%[39m  
+  Cms/app/Filament/Resources/PageResource/Pages/ListPages [90m...............[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/SectionResource [90m............................[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/SectionResource/Pages/CreateSection [90m......[39m [32m100.0%[39m  
+  Cms/app/Filament/Resources/SectionResource/Pages/EditSection [90m........[39m [32m100.0%[39m  
+  Cms/app/Filament/Resources/SectionResource/Pages/ListSections [90m.........[39m [31m0.0%[39m  
+  Cms/app/Filament/Resources/SectionResource/Pages/ViewSection [90m..........[39m [31m0.0%[39m  
+  Cms/app/Http/Controllers/Admin/XotPanelController [90m.....................[39m [31m0.0%[39m  
+  Cms/app/Http/Controllers/BaseController [90m.............................[39m [32m100.0%[39m  
+  Cms/app/Http/Livewire/Page/Show [90m.......................................[39m [31m0.0%[39m  
+  Cms/app/Http/Middleware/PageSlugMiddleware [90m............................[39m [31m0.0%[39m  
+  Cms/app/Http/View/Composers/XotComposer [90m...............................[39m [31m0.0%[39m  
+  Cms/app/Http/Volt/CounterComponent [90m....................................[39m [31m0.0%[39m  
+  Cms/app/Http/Volt/LoginComponent [90m......................................[39m [31m0.0%[39m  
+  Cms/app/Http/Volt/Password/ConfirmComponent [90m...........................[39m [31m0.0%[39m  
+  Cms/app/Http/Volt/Password/ResetComponent [90m.............................[39m [31m0.0%[39m  
+  Cms/app/Http/Volt/Password/TokenComponent [90m.............................[39m [31m0.0%[39m  
+  Cms/app/Http/Volt/RegisterComponent [90m...................................[39m [31m0.0%[39m  
+  Cms/app/Http/Volt/VerifyComponent [90m.....................................[39m [31m0.0%[39m  
+  Cms/app/Models/Attachment [90m.............................................[39m [31m0.0%[39m  
+  Cms/app/Models/BaseModel [90m..............................................[39m [31m0.0%[39m  
+  Cms/app/Models/BaseModelLang [90m..........................................[39m [31m0.0%[39m  
+  Cms/app/Models/BaseMorphPivot [90m.........................................[39m [31m0.0%[39m  
+  Cms/app/Models/BasePivot [90m............................................[39m [32m100.0%[39m  
+  Cms/app/Models/BaseTreeModel [90m..........................................[39m [31m0.0%[39m  
+  Cms/app/Models/Conf [90m...................................................[39m [31m0.0%[39m  
+  Cms/app/Models/Menu [90m...................................................[39m [31m0.0%[39m  
+  Cms/app/Models/Module [90m.................................................[39m [31m0.0%[39m  
+  Cms/app/Models/Page [90m...................................................[39m [31m0.0%[39m  
+  Cms/app/Models/PageContent [90m............................................[39m [31m0.0%[39m  
+  Cms/app/Models/Policies/CmsBasePolicy [90m.................................[39m [31m0.0%[39m  
+  Cms/app/Models/Policies/ConfPolicy [90m....................................[39m [31m0.0%[39m  
+  Cms/app/Models/Policies/MenuPolicy [90m....................................[39m [31m0.0%[39m  
+  Cms/app/Models/Policies/ModulePolicy [90m..................................[39m [31m0.0%[39m  
+  Cms/app/Models/Policies/PageContentPolicy [90m.............................[39m [31m0.0%[39m  
+  Cms/app/Models/Policies/PagePolicy [90m....................................[39m [31m0.0%[39m  
+  Cms/app/Models/Policies/SectionPolicy [90m.................................[39m [31m0.0%[39m  
+  Cms/app/Models/Section [90m................................................[39m [31m0.0%[39m  
+  Cms/app/Models/Traits/.php-cs-fixer.dist [90m..............................[39m [31m0.0%[39m  
+  Cms/app/Models/Traits/HasBlocks [90m.......................................[39m [31m0.0%[39m  
+  Cms/app/View/Components/AppLayout [90m.....................................[39m [31m0.0%[39m  
+  Cms/app/View/Components/GuestLayout [90m...................................[39m [31m0.0%[39m  
+  Cms/app/View/Components/Metatags [90m......................................[39m [31m0.0%[39m  
+  Cms/app/View/Components/Page [90m..........................................[39m [31m0.0%[39m  
+  Cms/app/View/Components/PageContent [90m...................................[39m [31m0.0%[39m  
+  Cms/app/View/Components/Section [90m.......................................[39m [31m0.0%[39m  
+  Cms/app/View/Composers/ThemeComposer [90m..................................[39m [31m0.0%[39m  
+  DbForge/app/Actions/Model/DeleteTableIndexByModelClassIndexNameActi… [90m..[39m [31m0.0%[39m  
+  DbForge/app/Actions/Model/GenerateModelByTableAction [90m..................[39m [31m0.0%[39m  
+  DbForge/app/Actions/Model/GetSchemaManagerByModelClassAction [90m..........[39m [31m0.0%[39m  
+  DbForge/app/Actions/Model/GetTableIndexesByModelClassAction [90m...........[39m [31m0.0%[39m  
+  DbForge/app/Actions/Model/HasColumnAction [90m.............................[39m [31m0.0%[39m  
+  DbForge/app/Actions/Query/CreateTableIndexByModelClassColumnsAction [90m...[39m [31m0.0%[39m  
+  DbForge/app/Actions/Query/GetFieldnamesByTablenameAction [90m..............[39m [31m0.0%[39m  
+  DbForge/app/Actions/Query/StartQueryLogAction [90m.........................[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/AnalyzeNamingCommand [90m.....................[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/DatabaseBackUpCommand [90m....................[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/DatabaseSchemaExportCommand [90m..............[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/DatabaseSchemaExporterCommand [90m............[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/ExecuteSqlFileCommand [90m....................[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/GenerateDbDocumentationCommand [90m...........[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/GenerateFilamentResources [90m................[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/GenerateFormCommand [90m......................[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/GenerateModelByModelClassCommand [90m.........[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/GenerateModelClassCommand [90m................[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/GenerateModelsFromSchemaCommand [90m..........[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/GenerateResourceFormSchemaCommand [90m........[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/GenerateTableColumnsCommand [90m..............[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/ImportMdbToMySQL [90m.........................[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/ImportMdbToSQLite [90m........................[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/ListFilamentPanels [90m.......................[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/LivewireComponentsListCommand [90m............[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/ParsePrintPageStringCommand [90m..............[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/SearchStringInDatabaseCommand [90m............[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/SearchTextInDbCommand [90m....................[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/ViewDatabaseConfigCommand [90m................[39m [31m0.0%[39m  
+  DbForge/app/Console/Commands/XotBaseCommand [90m.........................[39m [32m100.0%[39m  
+  DbForge/app/Models/BaseModel [90m........................................[39m [32m100.0%[39m  
+  DbForge/app/Models/DbForgeBackup [90m......................................[39m [31m0.0%[39m  
+  DbForge/app/Models/DbForgeMigration [90m...................................[39m [31m0.0%[39m  
+  Gdpr/app/Datas/GdprData [90m...............................................[39m [31m0.0%[39m  
+  Gdpr/app/Enums/ConsentType [90m............................................[39m [31m0.0%[39m  
+  Gdpr/app/Filament/Clusters/Profile [90m..................................[39m [32m100.0%[39m  
+  Gdpr/app/Filament/Clusters/Profile/Resources/ConsentResource [90m..........[39m [31m0.0%[39m  
+  Gdpr/app/Filament/Clusters/Profile/Resources/ConsentResource/Pages/…  [32m100.0%[39m  
+  Gdpr/app/Filament/Clusters/Profile/Resources/ConsentResource/Pages/…  [32m100.0%[39m  
+  Gdpr/app/Filament/Clusters/Profile/Resources/ConsentResource/Pages/… [90m..[39m [31m0.0%[39m  
+  Gdpr/app/Filament/Clusters/Profile/Resources/ProfileResource [90m..........[39m [31m0.0%[39m  
+  Gdpr/app/Filament/Clusters/Profile/Resources/ProfileResource/Pages/…  [32m100.0%[39m  
+  Gdpr/app/Filament/Clusters/Profile/Resources/ProfileResource/Pages/…  [32m100.0%[39m  
+  Gdpr/app/Filament/Clusters/Profile/Resources/ProfileResource/Pages/…  [32m100.0%[39m  
+  Gdpr/app/Filament/Pages/Dashboard [90m...................................[39m [32m100.0%[39m  
+  Gdpr/app/Filament/Pages/EditProfile [90m.................................[39m [32m100.0%[39m  
+  Gdpr/app/Filament/Resources/ConsentResource [90m...........................[39m [31m0.0%[39m  
+  Gdpr/app/Filament/Resources/ConsentResource/Pages/CreateConsent [90m.....[39m [32m100.0%[39m  
+  Gdpr/app/Filament/Resources/ConsentResource/Pages/EditConsent [90m.......[39m [32m100.0%[39m  
+  Gdpr/app/Filament/Resources/ConsentResource/Pages/ListConsents [90m........[39m [31m0.0%[39m  
+  Gdpr/app/Filament/Resources/EventResource [90m.............................[39m [31m0.0%[39m  
+  Gdpr/app/Filament/Resources/EventResource/Pages/CreateEvent [90m.........[39m [32m100.0%[39m  
+  Gdpr/app/Filament/Resources/EventResource/Pages/EditEvent [90m...........[39m [32m100.0%[39m  
+  Gdpr/app/Filament/Resources/EventResource/Pages/ListEvents [90m............[39m [31m0.0%[39m  
+  Gdpr/app/Filament/Resources/ProfileResource [90m...........................[39m [31m0.0%[39m  
+  Gdpr/app/Filament/Resources/ProfileResource/Pages/CreateProfile [90m.....[39m [32m100.0%[39m  
+  Gdpr/app/Filament/Resources/ProfileResource/Pages/EditProfile [90m.......[39m [32m100.0%[39m  
+  Gdpr/app/Filament/Resources/ProfileResource/Pages/ListProfiles [90m........[39m [31m0.0%[39m  
+  Gdpr/app/Filament/Resources/TreatmentResource [90m.........................[39m [31m0.0%[39m  
+  Gdpr/app/Filament/Resources/TreatmentResource/Pages/CreateTreatment [90m.[39m [32m100.0%[39m  
+  Gdpr/app/Filament/Resources/TreatmentResource/Pages/EditTreatment [90m...[39m [32m100.0%[39m  
+  Gdpr/app/Filament/Resources/TreatmentResource/Pages/ListTreatments [90m....[39m [31m0.0%[39m  
+  Gdpr/app/Models/BaseModel [90m...........................................[39m [32m100.0%[39m  
+  Gdpr/app/Models/BaseMorphPivot [90m......................................[39m [32m100.0%[39m  
+  Gdpr/app/Models/BasePivot [90m...........................................[39m [32m100.0%[39m  
+  Gdpr/app/Models/Consent [90m...............................................[39m [31m0.0%[39m  
+  Gdpr/app/Models/Event [90m.................................................[39m [31m0.0%[39m  
+  Gdpr/app/Models/Policies/ConsentPolicy [90m................................[39m [31m0.0%[39m  
+  Gdpr/app/Models/Policies/EventPolicy [90m..................................[39m [31m0.0%[39m  
+  Gdpr/app/Models/Policies/GdprBasePolicy [90m...............................[39m [31m0.0%[39m  
+  Gdpr/app/Models/Policies/ProfilePolicy [90m................................[39m [31m0.0%[39m  
+  Gdpr/app/Models/Policies/TreatmentPolicy [90m..............................[39m [31m0.0%[39m  
+  Gdpr/app/Models/Profile [90m.............................................[39m [32m100.0%[39m  
+  Gdpr/app/Models/Traits/HasGdpr [90m........................................[39m [31m0.0%[39m  
+  Gdpr/app/Models/Treatment [90m...........................................[39m [32m100.0%[39m  
+  Geo/app/Actions/Bing/GetAddressFromBingMapsAction [90m.....................[39m [31m0.0%[39m  
+  Geo/app/Actions/BingMaps/GetAddressFromBingMapsAction [90m.................[39m [31m0.0%[39m  
+  Geo/app/Actions/CalculateDistanceAction [90m...............................[39m [31m0.0%[39m  
+  Geo/app/Actions/ClusterLocationsAction [90m................................[39m [31m0.0%[39m  
+  Geo/app/Actions/Elevation/FetchOpenElevationAction [90m....................[39m [31m0.0%[39m  
+  Geo/app/Actions/Elevation/GetElevationAction [90m..........................[39m [31m0.0%[39m  
+  Geo/app/Actions/FilterCoordinatesAction [90m...............................[39m [31m0.0%[39m  
+  Geo/app/Actions/FilterCoordinatesInRadius [90m.............................[39m [31m0.0%[39m  
+  Geo/app/Actions/FilterCoordinatesInRadiusAction [90m.......................[39m [31m0.0%[39m  
+  Geo/app/Actions/FormatCoordinatesAction [90m...............................[39m [31m0.0%[39m  
+  Geo/app/Actions/GetAddressDataFromFullAddressAction [90m...................[39m [31m0.0%[39m  
+  Geo/app/Actions/GetBoundingBoxAction [90m..................................[39m [31m0.0%[39m  
+  Geo/app/Actions/GetCoordinatesAction [90m..................................[39m [31m0.0%[39m  
+  Geo/app/Actions/GetCoordinatesByAddressAction [90m.........................[39m [31m0.0%[39m  
+  Geo/app/Actions/GoogleMaps/CalculateDistanceMatrixAction [90m..............[39m [31m0.0%[39m  
+  Geo/app/Actions/GoogleMaps/CalculateTravelTimeAction [90m..................[39m [31m0.0%[39m  
+  Geo/app/Actions/GoogleMaps/GetAddressByLatLngFromGoogleMapsAction [90m.....[39m [31m0.0%[39m  
+  Geo/app/Actions/GoogleMaps/GetAddressFromGoogleMapsAction [90m.............[39m [31m0.0%[39m  
+  Geo/app/Actions/GoogleMaps/GetCoordinatesFromGoogleMapsAction [90m.........[39m [31m0.0%[39m  
+  Geo/app/Actions/GoogleMaps/GetGeocodingDataAction [90m.....................[39m [31m0.0%[39m  
+  Geo/app/Actions/GoogleMaps/OptimizeRouteAction [90m........................[39m [31m0.0%[39m  
+  Geo/app/Actions/Here/GetAddressFromHereMapsAction [90m.....................[39m [31m0.0%[39m  
+  Geo/app/Actions/IPGeolocation/FetchIPLocationAction [90m...................[39m [31m0.0%[39m  
+  Geo/app/Actions/IPGeolocation/GetLocationFromIPAction [90m.................[39m [31m0.0%[39m  
+  Geo/app/Actions/LocationIQ/GetAddressFromLocationIQAction [90m.............[39m [31m0.0%[39m  
+  Geo/app/Actions/Mapbox/GetAddressFromMapboxAction [90m.....................[39m [31m0.0%[39m  
+  Geo/app/Actions/Mapbox/GetAddressFromMapboxLatLngAction [90m...............[39m [31m0.0%[39m  
+  Geo/app/Actions/Nominatim/FetchCoordinatesAction [90m......................[39m [31m0.0%[39m  
+  Geo/app/Actions/Nominatim/GetAddressFromNominatimAction [90m...............[39m [31m0.0%[39m  
+  Geo/app/Actions/Nominatim/LookupPlaceAction [90m...........................[39m [31m0.0%[39m  
+  Geo/app/Actions/Nominatim/ReverseGeocodeAction [90m........................[39m [31m0.0%[39m  
+  Geo/app/Actions/Nominatim/SearchPlacesAction [90m..........................[39m [31m0.0%[39m  
+  Geo/app/Actions/OpenCage/GetAddressFromOpenCageAction [90m.................[39m [31m0.0%[39m  
+  Geo/app/Actions/OpenStreetMap/GetCoordinatesFromOpenStreetMapAction [90m...[39m [31m0.0%[39m  
+  Geo/app/Actions/OptimizeRouteAction [90m...................................[39m [31m0.0%[39m  
+  Geo/app/Actions/Photon/GetAddressFromPhotonAction [90m.....................[39m [31m0.0%[39m  
+  Geo/app/Actions/TimeZone/GetTimeZoneAction [90m............................[39m [31m0.0%[39m  
+  Geo/app/Actions/UpdateClientCoordinatesBulkAction [90m.....................[39m [31m0.0%[39m  
+  Geo/app/Actions/UpdateCoordinatesAction [90m...............................[39m [31m0.0%[39m  
+  Geo/app/Actions/UpdateCoordinatesFromAddressAction [90m....................[39m [31m0.0%[39m  
+  Geo/app/Actions/ValidateCoordinatesAction [90m.............................[39m [31m0.0%[39m  
+  Geo/app/Actions/Weather/GetOpenWeatherDataAction [90m......................[39m [31m0.0%[39m  
+  Geo/app/Console/Commands/SushiCommand [90m.................................[39m [31m0.0%[39m  
+  Geo/app/Contracts/GeocodingServiceInterface [90m.........................[39m [32m100.0%[39m  
+  Geo/app/Contracts/HasGeolocation [90m....................................[39m [32m100.0%[39m  
+  Geo/app/DataTransferObjects/LocationDTO [90m...............................[39m [31m0.0%[39m  
+  Geo/app/Datas/AddressData [90m.............................................[39m [31m0.0%[39m  
+  Geo/app/Datas/BingMapData [90m.............................................[39m [31m0.0%[39m  
+  Geo/app/Datas/CoordinatesData [90m.........................................[39m [31m0.0%[39m  
+  Geo/app/Datas/ElevationData [90m...........................................[39m [31m0.0%[39m  
+  Geo/app/Datas/ElevationResultDTO [90m......................................[39m [31m0.0%[39m  
+  Geo/app/Datas/GeoData [90m...............................................[39m [32m100.0%[39m  
+  Geo/app/Datas/GeocodingData [90m...........................................[39m [31m0.0%[39m  
+  Geo/app/Datas/GoogleMaps/GoogleMapAddressComponentData [90m................[39m [31m0.0%[39m  
+  Geo/app/Datas/GoogleMaps/GoogleMapBoundsData [90m..........................[39m [31m0.0%[39m  
+  Geo/app/Datas/GoogleMaps/GoogleMapComponentData [90m.......................[39m [31m0.0%[39m  
+  Geo/app/Datas/GoogleMaps/GoogleMapGeometryData [90m........................[39m [31m0.0%[39m  
+  Geo/app/Datas/GoogleMaps/GoogleMapLocationData [90m........................[39m [31m0.0%[39m  
+  Geo/app/Datas/GoogleMaps/GoogleMapResponseData [90m........................[39m [31m0.0%[39m  
+  Geo/app/Datas/GoogleMaps/GoogleMapResultData [90m..........................[39m [31m0.0%[39m  
+  Geo/app/Datas/HereMap/HereMapResponseData [90m.............................[39m [31m0.0%[39m  
+  Geo/app/Datas/IPLocationData [90m..........................................[39m [31m0.0%[39m  
+  Geo/app/Datas/LocationDTO [90m.............................................[39m [31m0.0%[39m  
+  Geo/app/Datas/LocationData [90m............................................[39m [31m0.0%[39m  
+  Geo/app/Datas/Map/IconData [90m............................................[39m [31m0.0%[39m  
+  Geo/app/Datas/Map/MarkerData [90m..........................................[39m [31m0.0%[39m  
+  Geo/app/Datas/Map/PositionData [90m........................................[39m [31m0.0%[39m  
+  Geo/app/Datas/Map/SizeData [90m............................................[39m [31m0.0%[39m  
+  Geo/app/Datas/MapboxMapData [90m...........................................[39m [31m0.0%[39m  
+  Geo/app/Datas/Photon/PhotonAddressData [90m................................[39m [31m0.0%[39m  
+  Geo/app/Datas/Photon/PhotonFeatureData [90m................................[39m [31m0.0%[39m  
+  Geo/app/Datas/Photon/PhotonPropertiesData [90m.............................[39m [31m0.0%[39m  
+  Geo/app/Datas/Photon/PhotonResponseData [90m...............................[39m [31m0.0%[39m  
+  Geo/app/Datas/PlaceData [90m...............................................[39m [31m0.0%[39m  
+  Geo/app/Datas/RouteData [90m...............................................[39m [31m0.0%[39m  
+  Geo/app/Datas/TimeZoneData [90m............................................[39m [31m0.0%[39m  
+  Geo/app/Datas/TravelTimeData [90m..........................................[39m [31m0.0%[39m  
+  Geo/app/Datas/UpdateCoordinatesResult [90m.................................[39m [31m0.0%[39m  
+  Geo/app/Enums/AddressItemEnum [90m.........................................[39m [31m0.0%[39m  
+  Geo/app/Enums/AddressTypeEnum [90m.........................................[39m [31m0.0%[39m  
+  Geo/app/Exceptions/DistanceCalculationException [90m.......................[39m [31m0.0%[39m  
+  Geo/app/Exceptions/ElevationException [90m.................................[39m [31m0.0%[39m  
+  Geo/app/Exceptions/GoogleMaps/GoogleMapsApiException [90m..................[39m [31m0.0%[39m  
+  Geo/app/Exceptions/InvalidElevationDataException [90m......................[39m [31m0.0%[39m  
+  Geo/app/Exceptions/InvalidLocationException [90m...........................[39m [31m0.0%[39m  
+  Geo/app/Filament/Actions/UpdateCoordinatesBulkAction [90m..................[39m [31m0.0%[39m  
+  Geo/app/Filament/Blocks/MapBlock [90m......................................[39m [31m0.0%[39m  
+  Geo/app/Filament/Fields/AddressField [90m..................................[39m [31m0.0%[39m  
+  Geo/app/Filament/Forms/Components/AddressField [90m........................[39m [31m0.0%[39m  
+  Geo/app/Filament/Forms/Components/AddressSection [90m......................[39m [31m0.0%[39m  
+  Geo/app/Filament/Forms/Components/AddressesField [90m......................[39m [31m0.0%[39m  
+  Geo/app/Filament/Forms/LocationForm [90m...................................[39m [31m0.0%[39m  
+  Geo/app/Filament/Pages/Dashboard [90m....................................[39m [32m100.0%[39m  
+  Geo/app/Filament/Pages/DotswanMap [90m.....................................[39m [31m0.0%[39m  
+  Geo/app/Filament/Pages/LatLng [90m.........................................[39m [31m0.0%[39m  
+  Geo/app/Filament/Pages/LocationMap [90m....................................[39m [31m0.0%[39m  
+  Geo/app/Filament/Pages/LocationMapTable [90m...............................[39m [31m0.0%[39m  
+  Geo/app/Filament/Pages/OSMMap [90m.........................................[39m [31m0.0%[39m  
+  Geo/app/Filament/Pages/SettingPage [90m....................................[39m [31m0.0%[39m  
+  Geo/app/Filament/Pages/WebbingbrasilMap [90m...............................[39m [31m0.0%[39m  
+  Geo/app/Filament/Resources/AddressResource [90m............................[39m [31m0.0%[39m  
+  Geo/app/Filament/Resources/AddressResource/Pages/CreateAddress [90m......[39m [32m100.0%[39m  
+  Geo/app/Filament/Resources/AddressResource/Pages/EditAddress [90m..........[39m [31m0.0%[39m  
+  Geo/app/Filament/Resources/AddressResource/Pages/ListAddresses [90m........[39m [31m0.0%[39m  
+  Geo/app/Filament/Resources/AddressResource/Pages/ViewAddress [90m..........[39m [31m0.0%[39m  
+  Geo/app/Filament/Resources/LocationResource [90m...........................[39m [31m0.0%[39m  
+  Geo/app/Filament/Resources/LocationResource/Pages/CreateLocation [90m......[39m [31m0.0%[39m  
+  Geo/app/Filament/Resources/LocationResource/Pages/EditLocation [90m........[39m [31m0.0%[39m  
+  Geo/app/Filament/Resources/LocationResource/Pages/ListLocations [90m.......[39m [31m0.0%[39m  
+  Geo/app/Filament/Resources/LocationResource/Pages/ViewLocation [90m........[39m [31m0.0%[39m  
+  Geo/app/Filament/Resources/Pages/CreateLocation [90m.....................[39m [32m100.0%[39m  
+  Geo/app/Filament/Resources/Pages/EditLocation [90m.......................[39m [32m100.0%[39m  
+  Geo/app/Filament/Resources/Pages/ListLocations [90m........................[39m [31m0.0%[39m  
+  Geo/app/Filament/Resources/Pages/ViewLocation [90m.........................[39m [31m0.0%[39m  
+  Geo/app/Filament/Tables/Columns/AddressColumn [90m.........................[39m [31m0.0%[39m  
+  Geo/app/Filament/Widgets/LatLngWidget [90m...............................[39m [32m100.0%[39m  
+  Geo/app/Filament/Widgets/LocationMapTableWidget [90m.......................[39m [31m0.0%[39m  
+  Geo/app/Filament/Widgets/LocationMapWidget [90m............................[39m [31m0.0%[39m  
+  Geo/app/Filament/Widgets/LocationWidget [90m...............................[39m [31m0.0%[39m  
+  Geo/app/Filament/Widgets/OSMMapWidget [90m.................................[39m [31m0.0%[39m  
+  Geo/app/Filament/Widgets/WebbingbrasilMap [90m.............................[39m [31m0.0%[39m  
+  Geo/app/Http/Livewire/FormSearchAddressCategories [90m.....................[39m [31m0.0%[39m  
+  Geo/app/Http/Livewire/Test [90m............................................[39m [31m0.0%[39m  
+  Geo/app/Models/Address [90m................................................[39m [31m0.0%[39m  
+  Geo/app/Models/BaseModel [90m..............................................[39m [31m0.0%[39m  
+  Geo/app/Models/BaseMorphPivot [90m.........................................[39m [31m0.0%[39m  
+  Geo/app/Models/BasePivot [90m..............................................[39m [31m0.0%[39m  
+  Geo/app/Models/Comune [90m.................................................[39m [31m0.0%[39m  
+  Geo/app/Models/ComuneJson [90m.............................................[39m [31m0.0%[39m  
+  Geo/app/Models/County [90m...............................................[39m [32m100.0%[39m  
+  Geo/app/Models/GeoJsonModel [90m...........................................[39m [31m0.0%[39m  
+  Geo/app/Models/GeoNamesCap [90m..........................................[39m [32m100.0%[39m  
+  Geo/app/Models/Locality [90m...............................................[39m [31m0.0%[39m  
+  Geo/app/Models/Location [90m...............................................[39m [31m0.0%[39m  
+  Geo/app/Models/Place [90m..................................................[39m [31m0.0%[39m  
+  Geo/app/Models/PlaceType [90m............................................[39m [32m100.0%[39m  
+  Geo/app/Models/Policies/AddressPolicy [90m.................................[39m [31m0.0%[39m  
+  Geo/app/Models/Policies/ComuneJsonPolicy [90m..............................[39m [31m0.0%[39m  
+  Geo/app/Models/Policies/ComunePolicy [90m..................................[39m [31m0.0%[39m  
+  Geo/app/Models/Policies/CountyPolicy [90m..................................[39m [31m0.0%[39m  
+  Geo/app/Models/Policies/GeoBasePolicy [90m.................................[39m [31m0.0%[39m  
+  Geo/app/Models/Policies/GeoNamesCapPolicy [90m.............................[39m [31m0.0%[39m  
+  Geo/app/Models/Policies/LocalityPolicy [90m................................[39m [31m0.0%[39m  
+  Geo/app/Models/Policies/LocationPolicy [90m................................[39m [31m0.0%[39m  
+  Geo/app/Models/Policies/PlacePolicy [90m...................................[39m [31m0.0%[39m  
+  Geo/app/Models/Policies/PlaceTypePolicy [90m...............................[39m [31m0.0%[39m  
+  Geo/app/Models/Policies/ProvincePolicy [90m................................[39m [31m0.0%[39m  
+  Geo/app/Models/Policies/RegionPolicy [90m..................................[39m [31m0.0%[39m  
+  Geo/app/Models/Policies/StatePolicy [90m...................................[39m [31m0.0%[39m  
+  Geo/app/Models/Province [90m...............................................[39m [31m0.0%[39m  
+  Geo/app/Models/Region [90m.................................................[39m [31m0.0%[39m  
+  Geo/app/Models/State [90m................................................[39m [32m100.0%[39m  
+  Geo/app/Models/Traits/GeoTrait [90m........................................[39m [31m0.0%[39m  
+  Geo/app/Models/Traits/GeographicalScopes [90m..............................[39m [31m0.0%[39m  
+  Geo/app/Models/Traits/HasAddress [90m......................................[39m [31m0.0%[39m  
+  Geo/app/Models/Traits/HasPlaceTrait [90m...................................[39m [31m0.0%[39m  
+  Geo/app/Models/Traits/SushiToJsons [90m....................................[39m [31m0.0%[39m  
+  Geo/app/Rules/FilterCoordinatesInRadius [90m...............................[39m [31m0.0%[39m  
+  Geo/app/Services/BaseGeoService [90m.......................................[39m [31m0.0%[39m  
+  Geo/app/Services/GeoDataService [90m.......................................[39m [31m0.0%[39m  
+  Geo/app/Services/GeoDataValidator [90m.....................................[39m [31m0.0%[39m  
+  Geo/app/Services/GeoService [90m...........................................[39m [31m0.0%[39m  
+  Geo/app/Services/GoogleMapsService [90m....................................[39m [31m0.0%[39m  
+  Geo/app/Services/HereService [90m..........................................[39m [31m0.0%[39m  
+  Geo/app/Traits/HandlesCoordinates [90m.....................................[39m [31m0.0%[39m  
+  Geo/app/Traits/HasAddresses [90m...........................................[39m [31m0.0%[39m  
+  Geo/app/Transformers/GeoJsonCollection [90m................................[39m [31m0.0%[39m  
+  Geo/app/Transformers/GeoJsonResource [90m..................................[39m [31m0.0%[39m  
+  Geo/app/View/Components/Dashboard/Item [90m................................[39m [31m0.0%[39m  
+  Geo/app/View/Components/FormSearchAddressCategories [90m...................[39m [31m0.0%[39m  
+  Job/app/Actions/Command/GetCommandArgumentsActions [90m....................[39m [31m0.0%[39m  
+  Job/app/Actions/Command/GetCommandOptionsActions [90m......................[39m [31m0.0%[39m  
+  Job/app/Actions/Command/GetCommandsAction [90m.............................[39m [31m0.0%[39m  
+  Job/app/Actions/DummyAction [90m...........................................[39m [31m0.0%[39m  
+  Job/app/Actions/ExecuteTaskAction [90m.....................................[39m [31m0.0%[39m  
+  Job/app/Actions/GetTaskCommandsAction [90m.................................[39m [31m0.0%[39m  
+  Job/app/Actions/GetTaskFrequenciesAction [90m..............................[39m [31m0.0%[39m  
+  Job/app/Console/Commands/PhpUnitTestJobCommand [90m........................[39m [31m0.0%[39m  
+  Job/app/Console/Commands/ScheduleClearCacheCommand [90m....................[39m [31m0.0%[39m  
+  Job/app/Console/Commands/TestJobCommand [90m...............................[39m [31m0.0%[39m  
+  Job/app/Console/Commands/WorkerCheck [90m..................................[39m [31m0.0%[39m  
+  Job/app/Contracts/TaskInterface [90m.....................................[39m [32m100.0%[39m  
+  Job/app/Datas/CommandData [90m.............................................[39m [31m0.0%[39m  
+  Job/app/Enums/Status [90m..................................................[39m [31m0.0%[39m  
+  Job/app/Events/BroadcastingEvent [90m......................................[39m [31m0.0%[39m  
+  Job/app/Events/Event [90m................................................[39m [32m100.0%[39m  
+  Job/app/Events/Executed [90m...............................................[39m [31m0.0%[39m  
+  Job/app/Events/Executing [90m............................................[39m [32m100.0%[39m  
+  Job/app/Events/PrivateEvent [90m...........................................[39m [31m0.0%[39m  
+  Job/app/Events/PublicEvent [90m............................................[39m [31m0.0%[39m  
+  Job/app/Events/TaskEvent [90m..............................................[39m [31m0.0%[39m  
+  Job/app/Filament/Columns/ActionGroup [90m..................................[39m [31m0.0%[39m  
+  Job/app/Filament/Columns/ScheduleArguments [90m............................[39m [31m0.0%[39m  
+  Job/app/Filament/Columns/ScheduleOptions [90m..............................[39m [31m0.0%[39m  
+  Job/app/Filament/Fields/Repeater [90m......................................[39m [31m0.0%[39m  
+  Job/app/Filament/Pages/Dashboard [90m....................................[39m [32m100.0%[39m  
+  Job/app/Filament/Pages/JobMonitor [90m...................................[39m [32m100.0%[39m  
+  Job/app/Filament/Pages/JobStatus [90m......................................[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/ExportResource [90m.............................[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/ExportResource/Pages/CreateExport [90m........[39m [32m100.0%[39m  
+  Job/app/Filament/Resources/ExportResource/Pages/EditExport [90m..........[39m [32m100.0%[39m  
+  Job/app/Filament/Resources/ExportResource/Pages/ListExports [90m...........[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/FailedImportRowResource [90m....................[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/FailedImportRowResource/Pages/CreateFail…  [32m100.0%[39m  
+  Job/app/Filament/Resources/FailedImportRowResource/Pages/EditFailed…  [32m100.0%[39m  
+  Job/app/Filament/Resources/FailedImportRowResource/Pages/ListFailed… [90m..[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/FailedJobResource [90m..........................[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/FailedJobResource/Pages/ListFailedJobs [90m.....[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/ImportResource [90m.............................[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/ImportResource/Pages/CreateImport [90m........[39m [32m100.0%[39m  
+  Job/app/Filament/Resources/ImportResource/Pages/EditImport [90m..........[39m [32m100.0%[39m  
+  Job/app/Filament/Resources/ImportResource/Pages/ListImports [90m...........[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/JobBatchResource [90m...........................[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/JobBatchResource/Pages/ListJobBatches [90m......[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/JobManagerResource [90m.........................[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/JobManagerResource/Pages/CreateJobManage…  [32m100.0%[39m  
+  Job/app/Filament/Resources/JobManagerResource/Pages/EditJobManager [90m..[39m [32m100.0%[39m  
+  Job/app/Filament/Resources/JobManagerResource/Pages/ListJobManagers [90m...[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/JobManagerResource/Widgets/JobStatsOverv… [90m..[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/JobResource [90m................................[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/JobResource/Pages/BoardJobs [90m..............[39m [32m100.0%[39m  
+  Job/app/Filament/Resources/JobResource/Pages/CreateJob [90m..............[39m [32m100.0%[39m  
+  Job/app/Filament/Resources/JobResource/Pages/EditJob [90m..................[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/JobResource/Pages/ListJobs [90m.................[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/JobResource/Widgets/JobStatsOverview [90m.......[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/JobsWaitingResource [90m........................[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/JobsWaitingResource/Pages/CreateJobsWait…  [32m100.0%[39m  
+  Job/app/Filament/Resources/JobsWaitingResource/Pages/EditJobsWaitin… [90m..[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/JobsWaitingResource/Pages/ListJobsWaitin… [90m..[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/JobsWaitingResource/Pages/ListJobsWaitin… [90m..[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/JobsWaitingResource/Widgets/JobsWaitingO… [90m..[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/ScheduleResource [90m...........................[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/ScheduleResource/Pages/CreateSchedule [90m......[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/ScheduleResource/Pages/EditSchedule [90m........[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/ScheduleResource/Pages/ListSchedules [90m.......[39m [31m0.0%[39m  
+  Job/app/Filament/Resources/ScheduleResource/Pages/ViewSchedule [90m........[39m [31m0.0%[39m  
+  Job/app/Filament/Tables/Columns/ActionGroup [90m...........................[39m [31m0.0%[39m  
+  Job/app/Filament/Tables/Columns/ScheduleArguments [90m.....................[39m [31m0.0%[39m  
+  Job/app/Filament/Tables/Columns/ScheduleOptions [90m.......................[39m [31m0.0%[39m  
+  Job/app/Filament/Widgets/ClockWidget [90m..................................[39m [31m0.0%[39m  
+  Job/app/Filament/Widgets/QueueListenWidget [90m............................[39m [31m0.0%[39m  
+  Job/app/Http/Livewire/Broad [90m...........................................[39m [31m0.0%[39m  
+  Job/app/Http/Livewire/Job/Status [90m......................................[39m [31m0.0%[39m  
+  Job/app/Http/Livewire/Schedule/Crud [90m...................................[39m [31m0.0%[39m  
+  Job/app/Http/Livewire/Schedule/Status [90m.................................[39m [31m0.0%[39m  
+  Job/app/Http/Requests/ScheduleRequest [90m.................................[39m [31m0.0%[39m  
+  Job/app/Models/BaseModel [90m..............................................[39m [31m0.0%[39m  
+  Job/app/Models/BaseMorphPivot [90m.........................................[39m [31m0.0%[39m  
+  Job/app/Models/Export [90m.................................................[39m [31m0.0%[39m  
+  Job/app/Models/FailedImportRow [90m........................................[39m [31m0.0%[39m  
+  Job/app/Models/FailedJob [90m..............................................[39m [31m0.0%[39m  
+  Job/app/Models/Frequency [90m..............................................[39m [31m0.0%[39m  
+  Job/app/Models/Import [90m.................................................[39m [31m0.0%[39m  
+  Job/app/Models/Job [90m....................................................[39m [31m0.0%[39m  
+  Job/app/Models/JobBatch [90m...............................................[39m [31m0.0%[39m  
+  Job/app/Models/JobManager [90m.............................................[39m [31m0.0%[39m  
+  Job/app/Models/JobsWaiting [90m..........................................[39m [32m100.0%[39m  
+  Job/app/Models/Parameter [90m..............................................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/ExportPolicy [90m..................................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/FailedImportRowPolicy [90m.........................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/FailedJobPolicy [90m...............................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/FrequencyPolicy [90m...............................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/ImportPolicy [90m..................................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/JobBasePolicy [90m.................................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/JobBatchPolicy [90m................................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/JobManagerPolicy [90m..............................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/JobPolicy [90m.....................................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/JobsWaitingPolicy [90m.............................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/ParameterPolicy [90m...............................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/ResultPolicy [90m..................................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/ScheduleHistoryPolicy [90m.........................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/SchedulePolicy [90m................................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/TaskCommentPolicy [90m.............................[39m [31m0.0%[39m  
+  Job/app/Models/Policies/TaskPolicy [90m....................................[39m [31m0.0%[39m  
+  Job/app/Models/Result [90m.................................................[39m [31m0.0%[39m  
+  Job/app/Models/Schedule [90m...............................................[39m [31m0.0%[39m  
+  Job/app/Models/ScheduleHistory [90m........................................[39m [31m0.0%[39m  
+  Job/app/Models/Task [90m...................................................[39m [31m0.0%[39m  
+  Job/app/Models/TaskComment [90m............................................[39m [31m0.0%[39m  
+  Job/app/Models/Traits/FrontendSortable [90m................................[39m [31m0.0%[39m  
+  Job/app/Notifications/TaskCompleted [90m...................................[39m [31m0.0%[39m  
+  Job/app/Observers/ScheduleObserver [90m....................................[39m [31m0.0%[39m  
+  Job/app/Rules/Corn [90m....................................................[39m [31m0.0%[39m  
+  Job/app/Services/ScheduleService [90m......................................[39m [31m0.0%[39m  
+  Job/app/Traits/FormatSeconds [90m..........................................[39m [31m0.0%[39m  
+  Lang/app/Actions/Filament/AutoLabelAction [90m.............................[39m [31m0.0%[39m  
+  Lang/app/Actions/GetAllModuleTranslationAction [90m........................[39m [31m0.0%[39m  
+  Lang/app/Actions/GetAllTranslationAction [90m..............................[39m [31m0.0%[39m  
+  Lang/app/Actions/GetTransPathAction [90m...................................[39m [31m0.0%[39m  
+  Lang/app/Actions/PublishTranslationAction [90m.............................[39m [31m0.0%[39m  
+  Lang/app/Actions/ReadTranslationFileAction [90m............................[39m [31m0.0%[39m  
+  Lang/app/Actions/SaveTransAction [90m......................................[39m [31m0.0%[39m  
+  Lang/app/Actions/SyncTranslationsAction [90m...............................[39m [31m0.0%[39m  
+  Lang/app/Actions/TransArrayAction [90m.....................................[39m [31m0.0%[39m  
+  Lang/app/Actions/TransCollectionAction [90m................................[39m [31m0.0%[39m  
+  Lang/app/Actions/WriteTranslationFileAction [90m...........................[39m [31m0.0%[39m  
+  Lang/app/Casts/LangField [90m..............................................[39m [31m0.0%[39m  
+  Lang/app/Datas/LangData [90m...............................................[39m [31m0.0%[39m  
+  Lang/app/Datas/TranslationData [90m........................................[39m [31m0.0%[39m  
+  Lang/app/Filament/Actions/LocaleSwitcherRefresh [90m.......................[39m [31m0.0%[39m  
+  Lang/app/Filament/Forms/Components/NationalFlagSelect [90m.................[39m [31m0.0%[39m  
+  Lang/app/Filament/Forms/Components/TranslationEditor [90m..................[39m [31m0.0%[39m  
+  Lang/app/Filament/Pages/Dashboard [90m...................................[39m [32m100.0%[39m  
+  Lang/app/Filament/Resources/LangBaseResource [90m..........................[39m [31m0.0%[39m  
+  Lang/app/Filament/Resources/Pages/LangBaseCreateRecord [90m................[39m [31m0.0%[39m  
+  Lang/app/Filament/Resources/Pages/LangBaseEditRecord [90m..................[39m [31m0.0%[39m  
+  Lang/app/Filament/Resources/Pages/LangBaseListRecords [90m.................[39m [31m0.0%[39m  
+  Lang/app/Filament/Resources/Pages/LangBaseViewRecord [90m..................[39m [31m0.0%[39m  
+  Lang/app/Filament/Resources/TranslationFileResource [90m...................[39m [31m0.0%[39m  
+  Lang/app/Filament/Resources/TranslationFileResource/Pages/CreateTra…  [32m100.0%[39m  
+  Lang/app/Filament/Resources/TranslationFileResource/Pages/EditTrans… [90m..[39m [31m0.0%[39m  
+  Lang/app/Filament/Resources/TranslationFileResource/Pages/ListTrans… [90m..[39m [31m0.0%[39m  
+  Lang/app/Filament/Widgets/LanguageSwitcherWidget [90m......................[39m [31m0.0%[39m  
+  Lang/app/Http/Livewire/Lang/Change [90m....................................[39m [31m0.0%[39m  
+  Lang/app/Http/Livewire/Lang/Switcher [90m..................................[39m [31m0.0%[39m  
+  Lang/app/Models/BaseModel [90m.............................................[39m [31m0.0%[39m  
+  Lang/app/Models/BaseModelLang [90m.........................................[39m [31m0.0%[39m  
+  Lang/app/Models/BaseMorphPivot [90m........................................[39m [31m0.0%[39m  
+  Lang/app/Models/Contracts/HasTranslationsContract [90m...................[39m [32m100.0%[39m  
+  Lang/app/Models/Policies/LangBasePolicy [90m...............................[39m [31m0.0%[39m  
+  Lang/app/Models/Policies/PostPolicy [90m...................................[39m [31m0.0%[39m  
+  Lang/app/Models/Policies/TranslationFilePolicy [90m........................[39m [31m0.0%[39m  
+  Lang/app/Models/Policies/TranslationPolicy [90m............................[39m [31m0.0%[39m  
+  Lang/app/Models/Post [90m..................................................[39m [31m0.0%[39m  
+  Lang/app/Models/Traits/HasStrictTranslations [90m..........................[39m [31m0.0%[39m  
+  Lang/app/Models/Traits/LinkedTrait [90m..................................[39m [32m100.0%[39m  
+  Lang/app/Models/Translation [90m...........................................[39m [31m0.0%[39m  
+  Lang/app/Models/TranslationFile [90m.......................................[39m [31m0.0%[39m  
+  Lang/app/Services/TranslatorService [90m...................................[39m [31m0.0%[39m  
+  Lang/app/View/Components/Flag [90m.........................................[39m [31m0.0%[39m  
+  Lang/app/View/Components/LanguageSwitcher [90m.............................[39m [31m0.0%[39m  
+  Lang/app/View/Composers/ThemeComposer [90m.................................[39m [31m0.0%[39m  
+  Limesurvey/app/Actions/GetParticipantModelBySurveyIdAction [90m............[39m [31m0.0%[39m  
+  Limesurvey/app/Actions/PopulateSurveyFlipBySurveyIdAction [90m.............[39m [31m0.0%[39m  
+  Limesurvey/app/Casts/LimeLangField [90m....................................[39m [31m0.0%[39m  
+  Limesurvey/app/Contracts/LimeSurveyXXXContract [90m......................[39m [32m100.0%[39m  
+  Limesurvey/app/Datas/LimeQuestionData [90m.................................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Pages/Dashboard [90m.............................[39m [32m100.0%[39m  
+  Limesurvey/app/Filament/Resources/SurveyFlipResponseResource [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Resources/SurveyFlipResponseResource/Pages/…  [32m100.0%[39m  
+  Limesurvey/app/Filament/Resources/SurveyFlipResponseResource/Pages/…  [32m100.0%[39m  
+  Limesurvey/app/Filament/Resources/SurveyFlipResponseResource/Pages/… [90m..[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/ChartItemWidget [90m.......................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/LikertScaleChart [90m......................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/MatrixChart [90m...........................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/MultipleChoiceChart [90m...................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/OpenEndedResponses [90m....................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/RankingChart [90m..........................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/SingleChoiceChart [90m.....................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/TypeB [90m.................................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/TypeExclamationPoint [90m..................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/TypeF [90m.................................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/TypeL [90m.................................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/TypeM [90m.................................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/TypeN [90m.................................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/TypeS [90m.................................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/TypeT [90m.................................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/TypeX [90m.................................[39m [31m0.0%[39m  
+  Limesurvey/app/Filament/Widgets/TypeY [90m.................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/BaseModel [90m.......................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/BaseTreeModel [90m.................................[39m [32m100.0%[39m  
+  Limesurvey/app/Models/Extra [90m.........................................[39m [32m100.0%[39m  
+  Limesurvey/app/Models/LimeAnswer [90m......................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeAnswerL10n [90m..................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeAssessment [90m..................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeAssetVersion [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeBox [90m.........................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeCondition [90m...................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeDefaultvalue [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeExpressionError [90m.............................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeFailedLoginAttempt [90m..........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeGroup [90m.......................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeGroupL10n [90m...................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeLabel [90m.......................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeLabelset [90m....................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeMapTutorialUser [90m.............................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeNotification [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeParticipant [90m.................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeParticipantAttribute [90m........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeParticipantAttributeName [90m....................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeParticipantAttributeNamesLang [90m...............[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeParticipantAttributeValue [90m...................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeParticipantShare [90m............................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimePermission [90m..................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimePlugin [90m......................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimePluginSetting [90m...............................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeQuestion [90m....................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeQuestionAttribute [90m...........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeQuestionL10n [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeQuota [90m.......................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeQuotaLanguagesetting [90m........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeQuotaMember [90m.................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeQuotum [90m......................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSavedControl [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSession [90m.....................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSettingsGlobal [90m............................[39m [32m100.0%[39m  
+  Limesurvey/app/Models/LimeSettingsUser [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey [90m......................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey139982 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey139982Timing [90m..........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey139982Timings [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey153279 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey153495 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey155327 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey166311 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey176817 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey176817Timings [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey196427 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey196427Timings [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey254378 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey276383 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey285519 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey285519Timings [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey299355 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey299355Timings [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey325712 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey325712Timings [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey39275 [90m...............................[39m [32m100.0%[39m  
+  Limesurvey/app/Models/LimeSurvey417991 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey422747 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey422747Timings [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey541561 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey541561Timings [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey568792 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey568792Timings [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey578443 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey594579 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey628829 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey628829Timings [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey657328 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey665844 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey684277 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey723653 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey726613 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey726613Timings [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey733454 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey733454Timings [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey735128 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey735128Timings [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey739792 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey742962 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey787795 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey799586 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey799586Timings [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey821423 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey821676 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey824761 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey886589 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey892883 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurvey946595 [90m..............................[39m [32m100.0%[39m  
+  Limesurvey/app/Models/LimeSurvey955466 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurveyLink [90m..................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurveyUrlParameter [90m..........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurveymenu [90m..................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurveymenuEntry [90m.............................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurveysGroup [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeSurveysLanguagesetting [90m......................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTemplate [90m....................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTemplateConfiguration [90m.......................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens139982 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens147256 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens155327 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens166311 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens176817 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens196427 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens198853 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens282718 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens316127 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens39275 [90m.................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens417991 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens451625 [90m..............................[39m [32m100.0%[39m  
+  Limesurvey/app/Models/LimeTokens546331 [90m..............................[39m [32m100.0%[39m  
+  Limesurvey/app/Models/LimeTokens578443 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens583577 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens594579 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens594635 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens595865 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens616664 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens628667 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens657328 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens723653 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens739792 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens772588 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens799586 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens821423 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens821676 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens824761 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens863694 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens892883 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens923353 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens946595 [90m..............................[39m [32m100.0%[39m  
+  Limesurvey/app/Models/LimeTokens947365 [90m..............................[39m [32m100.0%[39m  
+  Limesurvey/app/Models/LimeTokens947723 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens955466 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTokens981813 [90m................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTutorial [90m....................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTutorialEntrie [90m..............................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTutorialEntry [90m...............................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeTutorialEntryRelation [90m.......................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeUser [90m........................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/LimeUserGroup [90m...................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/ExtraPolicy [90m............................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeAnswerL10nPolicy [90m...................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeAnswerPolicy [90m.......................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeAssessmentPolicy [90m...................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeAssetVersionPolicy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeBoxPolicy [90m..........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeConditionPolicy [90m....................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeDefaultvaluePolicy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeExpressionErrorPolicy [90m..............[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeFailedLoginAttemptPolicy [90m...........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeGroupL10nPolicy [90m....................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeGroupPolicy [90m........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeLabelPolicy [90m........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeLabelsetPolicy [90m.....................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeMapTutorialUserPolicy [90m..............[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeNotificationPolicy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeParticipantAttributeNamePolicy [90m.....[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeParticipantAttributeNamesLangPol… [90m..[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeParticipantAttributePolicy [90m.........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeParticipantAttributeValuePolicy [90m....[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeParticipantPolicy [90m..................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeParticipantSharePolicy [90m.............[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimePermissionPolicy [90m...................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimePluginPolicy [90m.......................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimePluginSettingPolicy [90m................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeQuestionAttributePolicy [90m............[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeQuestionL10nPolicy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeQuestionPolicy [90m.....................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeQuotaLanguagesettingPolicy [90m.........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeQuotaMemberPolicy [90m..................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeQuotaPolicy [90m........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeQuotumPolicy [90m.......................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSavedControlPolicy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSessionPolicy [90m......................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSettingsGlobalPolicy [90m...............[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSettingsUserPolicy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey139982Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey139982TimingPolicy [90m...........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey139982TimingsPolicy [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey153279Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey153495Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey155327Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey166311Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey176817Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey176817TimingsPolicy [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey196427Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey196427TimingsPolicy [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey254378Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey276383Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey285519Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey285519TimingsPolicy [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey299355Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey299355TimingsPolicy [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey325712Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey325712TimingsPolicy [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey39275Policy [90m..................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey417991Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey422747Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey422747TimingsPolicy [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey541561Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey541561TimingsPolicy [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey568792Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey568792TimingsPolicy [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey578443Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey594579Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey628829Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey628829TimingsPolicy [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey657328Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey665844Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey684277Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey723653Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey726613Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey726613TimingsPolicy [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey733454Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey733454TimingsPolicy [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey735128Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey735128TimingsPolicy [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey739792Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey742962Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey787795Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey799586Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey799586TimingsPolicy [90m..........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey821423Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey821676Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey824761Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey886589Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey892883Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey946595Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurvey955466Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurveyLinkPolicy [90m...................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurveyPolicy [90m.......................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurveyUrlParameterPolicy [90m...........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurveymenuEntryPolicy [90m..............[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurveymenuPolicy [90m...................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurveysGroupPolicy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeSurveysLanguagesettingPolicy [90m.......[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTemplateConfigurationPolicy [90m........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTemplatePolicy [90m.....................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens139982Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens147256Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens155327Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens166311Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens176817Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens196427Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens198853Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens282718Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens316127Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens39275Policy [90m..................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens417991Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens451625Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens546331Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens578443Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens583577Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens594579Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens594635Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens595865Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens616664Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens628667Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens657328Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens723653Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens739792Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens772588Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens799586Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens821423Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens821676Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens824761Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens863694Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens892883Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens923353Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens946595Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens947365Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens947723Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens955466Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTokens981813Policy [90m.................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTutorialEntriePolicy [90m...............[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTutorialEntryPolicy [90m................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTutorialEntryRelationPolicy [90m........[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeTutorialPolicy [90m.....................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeUserGroupPolicy [90m....................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimeUserPolicy [90m.........................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/LimesurveyBasePolicy [90m...................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/SurveyFlipResponsePolicy [90m...............[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/SurveyResponsePolicy [90m...................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/Policies/TokensResponsePolicy [90m...................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/SurveyFlipResponse [90m..............................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/SurveyResponse [90m..................................[39m [31m0.0%[39m  
+  Limesurvey/app/Models/TokensResponse [90m..................................[39m [31m0.0%[39m  
+  Media/app/Actions/AttachMediaAction [90m.................................[39m [32m100.0%[39m  
+  Media/app/Actions/CloudFront/GetCloudFrontSignedUrlAction [90m.............[39m [31m0.0%[39m  
+  Media/app/Actions/GetAttachmentsSchemaAction [90m..........................[39m [31m0.0%[39m  
+  Media/app/Actions/Image/Merge [90m.........................................[39m [31m0.0%[39m  
+  Media/app/Actions/Image/SvgExistsAction [90m...............................[39m [31m0.0%[39m  
+  Media/app/Actions/S3/BaseS3Action [90m.....................................[39m [31m0.0%[39m  
+  Media/app/Actions/S3/CheckFileExistsAction [90m............................[39m [31m0.0%[39m  
+  Media/app/Actions/S3/DeleteFileAction [90m.................................[39m [31m0.0%[39m  
+  Media/app/Actions/S3/GetFileInfoAction [90m................................[39m [31m0.0%[39m  
+  Media/app/Actions/S3/UploadFileAction [90m.................................[39m [31m0.0%[39m  
+  Media/app/Actions/SaveAttachmentsAction [90m...............................[39m [31m0.0%[39m  
+  Media/app/Actions/Video/ConvertVideoAction [90m............................[39m [31m0.0%[39m  
+  Media/app/Actions/Video/ConvertVideoByConvertDataAction [90m...............[39m [31m0.0%[39m  
+  Media/app/Actions/Video/ConvertVideoByMediaConvertAction [90m..............[39m [31m0.0%[39m  
+  Media/app/Actions/Video/GetVideoDurationAction [90m........................[39m [31m0.0%[39m  
+  Media/app/Actions/Video/GetVideoFrameContentAction [90m....................[39m [31m0.0%[39m  
+  Media/app/Actions/Video/GetVideoScreenshotAction [90m....................[39m [32m100.0%[39m  
+  Media/app/Console/Commands/ConvertVideoCommand [90m........................[39m [31m0.0%[39m  
+  Media/app/Contracts/PathGenerator [90m...................................[39m [32m100.0%[39m  
+  Media/app/Conversions/ImageGenerators/PowerPoint [90m......................[39m [31m0.0%[39m  
+  Media/app/Conversions/VideoGenerators/Webm [90m............................[39m [31m0.0%[39m  
+  Media/app/Datas/CloudFrontData [90m........................................[39m [31m0.0%[39m  
+  Media/app/Datas/ConvertData [90m...........................................[39m [31m0.0%[39m  
+  Media/app/Enums/AttachmentTypeEnum [90m....................................[39m [31m0.0%[39m  
+  Media/app/Exceptions/CouldNotAddUpload [90m................................[39m [31m0.0%[39m  
+  Media/app/Exceptions/TemporaryUploadDoesNotBelongToCurrentSession [90m.....[39m [31m0.0%[39m  
+  Media/app/Filament/Actions/Table/ConvertAction [90m........................[39m [31m0.0%[39m  
+  Media/app/Filament/Clusters/Test [90m....................................[39m [32m100.0%[39m  
+  Media/app/Filament/Clusters/Test/Pages/AwsTest [90m........................[39m [31m0.0%[39m  
+  Media/app/Filament/Clusters/Test/Pages/S3Test [90m.........................[39m [31m0.0%[39m  
+  Media/app/Filament/Clusters/极est/Pages/AwsTest [90m.....................[39m [32m100.0%[39m  
+  Media/app/Filament/Infolists/VideoEntry [90m...............................[39m [31m0.0%[39m  
+  Media/app/Filament/Pages/Dashboard [90m..................................[39m [32m100.0%[39m  
+  Media/app/Filament/Resources/HasMediaResource/Actions/AddAttachment… [90m..[39m [31m0.0%[39m  
+  Media/app/Filament/Resources/HasMediaResource/RelationManagers/Medi… [90m..[39m [31m0.0%[39m  
+  Media/app/Filament/Resources/MediaConvertResource [90m.....................[39m [31m0.0%[39m  
+  Media/app/Filament/Resources/MediaConvertResource/Pages/CreateMedia…  [32m100.0%[39m  
+  Media/app/Filament/Resources/MediaConvertResource/Pages/EditMediaCo…  [32m100.0%[39m  
+  Media/app/Filament/Resources/MediaConvertResource/Pages/ListMediaCo… [90m..[39m [31m0.0%[39m  
+  Media/app/Filament/Resources/MediaResource [90m............................[39m [31m0.0%[39m  
+  Media/app/Filament/Resources/MediaResource/Pages/ConvertMedia [90m.........[39m [31m0.0%[39m  
+  Media/app/Filament/Resources/MediaResource/Pages/CreateMedia [90m........[39m [32m100.0%[39m  
+  Media/app/Filament/Resources/MediaResource/Pages/EditMedia [90m............[39m [31m0.0%[39m  
+  Media/app/Filament/Resources/MediaResource/Pages/ListMedia [90m............[39m [31m0.0%[39m  
+  Media/app/Filament/Resources/MediaResource/Pages/ViewMedia [90m............[39m [31m0.0%[39m  
+  Media/app/Filament/Resources/MediaResource/Widgets/ConvertWidget [90m......[39m [31m0.0%[39m  
+  Media/app/Filament/Resources/TemporaryUploadResource [90m..................[39m [31m0.0%[39m  
+  Media/app/Filament/Resources/TemporaryUploadResource/Pages/CreateTe…  [32m100.0%[39m  
+  Media/app/Filament/Resources/TemporaryUploadResource/Pages/EditTemp… [90m..[39m [31m0.0%[39m  
+  Media/app/Filament/Resources/TemporaryUploadResource/Pages/ListTemp… [90m..[39m [31m0.0%[39m  
+  Media/app/Filament/Tables/Columns/CloudFrontIconMediaColumn [90m...........[39m [31m0.0%[39m  
+  Media/app/Filament/Tables/Columns/IconMediaColumn [90m.....................[39m [31m0.0%[39m  
+  Media/app/Http/Controllers/BaseController [90m...........................[39m [32m100.0%[39m  
+  Media/app/Http/Controllers/ConvertController [90m..........................[39m [31m0.0%[39m  
+  Media/app/Http/Livewire/Card/Video/Clip [90m...............................[39m [31m0.0%[39m  
+  Media/app/Http/Requests/CreateTemporaryUploadFromDirectS3UploadRequ… [90m..[39m [31m0.0%[39m  
+  Media/app/Models/BaseModel [90m............................................[39m [31m0.0%[39m  
+  Media/app/Models/Media [90m................................................[39m [31m0.0%[39m  
+  Media/app/Models/MediaConvert [90m.........................................[39m [31m0.0%[39m  
+  Media/app/Models/Policies/MediaBasePolicy [90m.............................[39m [31m0.0%[39m  
+  Media/app/Models/Policies/MediaConvertPolicy [90m..........................[39m [31m0.0%[39m  
+  Media/app/Models/Policies/MediaPolicy [90m.................................[39m [31m0.0%[39m  
+  Media/app/Models/Policies/TemporaryUploadPolicy [90m.......................[39m [31m0.0%[39m  
+  Media/app/Models/TemporaryUpload [90m......................................[39m [31m0.0%[39m  
+  Media/app/Rules/FileExtensionRule [90m.....................................[39m [31m0.0%[39m  
+  Media/app/Services/SubtitleService [90m....................................[39m [31m0.0%[39m  
+  Media/app/Services/VideoStream [90m........................................[39m [31m0.0%[39m  
+  Media/app/Support/TemporaryUploadPathGenerator [90m........................[39m [31m0.0%[39m  
+  Media/app/View/Components/VideoPlayer [90m.................................[39m [31m0.0%[39m  
+  Notify/app/Actions/BuildMailMessageAction [90m.............................[39m [31m0.0%[39m  
+  Notify/app/Actions/DetermineSeasonalContentViewPathAction [90m.............[39m [31m0.0%[39m  
+  Notify/app/Actions/EsendexSendAction [90m..................................[39m [31m0.0%[39m  
+  Notify/app/Actions/Mail/GetMailLayoutAction [90m...........................[39m [31m0.0%[39m  
+  Notify/app/Actions/NetfunSendAction [90m...................................[39m [31m0.0%[39m  
+  Notify/app/Actions/NormalizePhoneNumberAction [90m.........................[39m [31m0.0%[39m  
+  Notify/app/Actions/NotifyTheme/Attachment/Pdf [90m.........................[39m [31m0.0%[39m  
+  Notify/app/Actions/NotifyTheme/Get [90m....................................[39m [31m0.0%[39m  
+  Notify/app/Actions/SMS/.php-cs-fixer.dist [90m.............................[39m [31m0.0%[39m  
+  Notify/app/Actions/SMS/FormatSmsMessageAction [90m.........................[39m [31m0.0%[39m  
+  Notify/app/Actions/SMS/NormalizePhoneNumberAction [90m.....................[39m [31m0.0%[39m  
+  Notify/app/Actions/SMS/SendAgiletelecomSMSAction [90m......................[39m [31m0.0%[39m  
+  Notify/app/Actions/SMS/SendAgiletelecomSMSv1Action [90m....................[39m [31m0.0%[39m  
+  Notify/app/Actions/SMS/SendAgiletelecomSMSv2Action [90m....................[39m [31m0.0%[39m  
+  Notify/app/Actions/SMS/SendGammuSMSAction [90m.............................[39m [31m0.0%[39m  
+  Notify/app/Actions/SMS/SendNetfunSMSAction [90m............................[39m [31m0.0%[39m  
+  Notify/app/Actions/SMS/SendNexmoSMSAction [90m.............................[39m [31m0.0%[39m  
+  Notify/app/Actions/SMS/SendPlivoSMSAction [90m.............................[39m [31m0.0%[39m  
+  Notify/app/Actions/SMS/SendSmsFactorSMSAction [90m.........................[39m [31m0.0%[39m  
+  Notify/app/Actions/SMS/SendTwilioSMSAction [90m............................[39m [31m0.0%[39m  
+  Notify/app/Actions/SendNotificationAction [90m.............................[39m [31m0.0%[39m  
+  Notify/app/Actions/SendNotificationToRecipientAction [90m..................[39m [31m0.0%[39m  
+  Notify/app/Actions/SendRecordNotificationAction [90m.......................[39m [31m0.0%[39m  
+  Notify/app/Actions/SendRecordsNotificationAction [90m......................[39m [31m0.0%[39m  
+  Notify/app/Actions/SmtpMailSendAction [90m.................................[39m [31m0.0%[39m  
+  Notify/app/Actions/Telegram/SendBotmanTelegramAction [90m..................[39m [31m0.0%[39m  
+  Notify/app/Actions/Telegram/SendNutgramTelegramAction [90m.................[39m [31m0.0%[39m  
+  Notify/app/Actions/Telegram/SendOfficialTelegramAction [90m................[39m [31m0.0%[39m  
+  Notify/app/Actions/WhatsApp/Send360dialogWhatsAppAction [90m...............[39m [31m0.0%[39m  
+  Notify/app/Actions/WhatsApp/SendFacebookWhatsAppAction [90m................[39m [31m0.0%[39m  
+  Notify/app/Actions/WhatsApp/SendTwilioWhatsAppAction [90m..................[39m [31m0.0%[39m  
+  Notify/app/Actions/WhatsApp/SendVonageWhatsAppAction [90m..................[39m [31m0.0%[39m  
+  Notify/app/Channels/NetfunChannel [90m.....................................[39m [31m0.0%[39m  
+  Notify/app/Channels/SmsChannel [90m........................................[39m [31m0.0%[39m  
+  Notify/app/Channels/TelegramChannel [90m...................................[39m [31m0.0%[39m  
+  Notify/app/Channels/WhatsAppChannel [90m...................................[39m [31m0.0%[39m  
+  Notify/app/Console/Commands/AnalyzeTranslationFiles [90m...................[39m [31m0.0%[39m  
+  Notify/app/Console/Commands/SendMailCommand [90m...........................[39m [31m0.0%[39m  
+  Notify/app/Console/Commands/TelegramWebhook [90m...........................[39m [31m0.0%[39m  
+  Notify/app/Contracts/CanReceivePushNotifications [90m....................[39m [32m100.0%[39m  
+  Notify/app/Contracts/CanThemeNotificationContract [90m...................[39m [32m100.0%[39m  
+  Notify/app/Contracts/MobilePushNotification [90m.........................[39m [32m100.0%[39m  
+  Notify/app/Contracts/SMS/SmsActionContract [90m..........................[39m [32m100.0%[39m  
+  Notify/app/Contracts/SmsActionContract [90m..............................[39m [32m100.0%[39m  
+  Notify/app/Contracts/SmsProviderContract [90m............................[39m [32m100.0%[39m  
+  Notify/app/Contracts/TelegramProviderActionInterface [90m................[39m [32m100.0%[39m  
+  Notify/app/Contracts/WhatsAppProviderActionInterface [90m................[39m [32m100.0%[39m  
+  Notify/app/Datas/AttachmentData [90m.....................................[39m [32m100.0%[39m  
+  Notify/app/Datas/BeautyEmailData [90m....................................[39m [32m100.0%[39m  
+  Notify/app/Datas/EmailAttachmentData [90m..................................[39m [31m0.0%[39m  
+  Notify/app/Datas/EmailData [90m............................................[39m [31m0.0%[39m  
+  Notify/app/Datas/FirebaseNotificationData [90m.............................[39m [31m0.0%[39m  
+  Notify/app/Datas/NetfunSmsData [90m........................................[39m [31m0.0%[39m  
+  Notify/app/Datas/NetfunSmsMessage [90m.....................................[39m [31m0.0%[39m  
+  Notify/app/Datas/NetfunSmsRequestData [90m.................................[39m [31m0.0%[39m  
+  Notify/app/Datas/NetfunSmsResponseData [90m................................[39m [31m0.0%[39m  
+  Notify/app/Datas/NotificationData [90m.....................................[39m [31m0.0%[39m  
+  Notify/app/Datas/NotifyThemeData [90m....................................[39m [32m100.0%[39m  
+  Notify/app/Datas/PushNotificationDebugData [90m............................[39m [31m0.0%[39m  
+  Notify/app/Datas/RecordNotificationData [90m...............................[39m [31m0.0%[39m  
+  Notify/app/Datas/SMS/AgiletelecomData [90m.................................[39m [31m0.0%[39m  
+  Notify/app/Datas/SMS/GammuData [90m........................................[39m [31m0.0%[39m  
+  Notify/app/Datas/SMS/NexmoData [90m........................................[39m [31m0.0%[39m  
+  Notify/app/Datas/SMS/PlivoData [90m........................................[39m [31m0.0%[39m  
+  Notify/app/Datas/SMS/SmsFactorData [90m....................................[39m [31m0.0%[39m  
+  Notify/app/Datas/SMS/TwilioData [90m.......................................[39m [31m0.0%[39m  
+  Notify/app/Datas/SendNotificationBulkResultData [90m.......................[39m [31m0.0%[39m  
+  Notify/app/Datas/SmsData [90m..............................................[39m [31m0.0%[39m  
+  Notify/app/Datas/SmsMessageData [90m.......................................[39m [31m0.0%[39m  
+  Notify/app/Datas/SmtpData [90m.............................................[39m [31m0.0%[39m  
+  Notify/app/Datas/TelegramData [90m.........................................[39m [31m0.0%[39m  
+  Notify/app/Datas/WhatsAppData [90m.........................................[39m [31m0.0%[39m  
+  Notify/app/Emails/EmailDataEmail [90m......................................[39m [31m0.0%[39m  
+  Notify/app/Emails/SpatieEmail [90m.........................................[39m [31m0.0%[39m  
+  Notify/app/Enums/ChannelEnum [90m..........................................[39m [31m0.0%[39m  
+  Notify/app/Enums/ContactTypeEnum [90m......................................[39m [31m0.0%[39m  
+  Notify/app/Enums/MediaTypeEnum [90m........................................[39m [31m0.0%[39m  
+  Notify/app/Enums/NotificationLogStatusEnum [90m............................[39m [31m0.0%[39m  
+  Notify/app/Enums/NotificationTypeEnum [90m.................................[39m [31m0.0%[39m  
+  Notify/app/Enums/SmsDriverEnum [90m........................................[39m [31m0.0%[39m  
+  Notify/app/Enums/TelegramDriverEnum [90m...................................[39m [31m0.0%[39m  
+  Notify/app/Enums/WhatsAppDriverEnum [90m...................................[39m [31m0.0%[39m  
+  Notify/app/Factories/SmsActionFactory [90m.................................[39m [31m0.0%[39m  
+  Notify/app/Factories/TelegramActionFactory [90m............................[39m [31m0.0%[39m  
+  Notify/app/Factories/WhatsAppActionFactory [90m............................[39m [31m0.0%[39m  
+  Notify/app/Filament/Actions/SendRecordsNotificationBulkAction [90m.........[39m [31m0.0%[39m  
+  Notify/app/Filament/Clusters/Test [90m...................................[39m [32m100.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/SendAwsEmailPage [90m..............[39m [31m0.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/SendEmail [90m.....................[39m [31m0.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/SendEmailPage [90m.................[39m [31m0.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/SendFirebasePushNotificatio… [90m..[39m [31m0.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/SendNetfunSmsPage [90m.............[39m [31m0.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/SendPushNotification [90m..........[39m [31m0.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/SendPushNotificationPage [90m......[39m [31m0.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/SendSmsPage [90m...................[39m [31m0.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/SendSpatieEmailPage [90m...........[39m [31m0.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/SendTelegram [90m..................[39m [31m0.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/SendTelegramPage [90m..............[39m [31m0.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/SendWhatsAppPage [90m..............[39m [31m0.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/SlackNotification [90m...........[39m [32m100.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/SlackNotificationPage [90m.......[39m [32m100.0%[39m  
+  Notify/app/Filament/Clusters/Test/Pages/TestSmtpPage [90m..................[39m [31m0.0%[39m  
+  Notify/app/Filament/Forms/Components/ChannelCheckboxList [90m..............[39m [31m0.0%[39m  
+  Notify/app/Filament/Forms/Components/ContactSection [90m...................[39m [31m0.0%[39m  
+  Notify/app/Filament/Forms/Components/HtmlLayoutPathSelect [90m.............[39m [31m0.0%[39m  
+  Notify/app/Filament/Forms/Components/MailTemplateSelect [90m...............[39m [31m0.0%[39m  
+  Notify/app/Filament/Pages/Dashboard [90m.................................[39m [32m100.0%[39m  
+  Notify/app/Filament/Pages/SettingPage [90m.................................[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/ContactResource [90m.........................[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/ContactResource/Pages/CreateContact [90m...[39m [32m100.0%[39m  
+  Notify/app/Filament/Resources/ContactResource/Pages/EditContact [90m.......[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/ContactResource/Pages/ListContacts [90m......[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/MailTemplateResource [90m....................[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/MailTemplateResource/Pages/CreateMail…  [32m100.0%[39m  
+  Notify/app/Filament/Resources/MailTemplateResource/Pages/EditMailTe…  [32m100.0%[39m  
+  Notify/app/Filament/Resources/MailTemplateResource/Pages/ListMailTe… [90m..[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/MailTemplateResource/Pages/PreviewMai… [90m..[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/NotificationResource [90m....................[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/NotificationResource/Pages/CreateNoti…  [32m100.0%[39m  
+  Notify/app/Filament/Resources/NotificationResource/Pages/EditNotifi…  [32m100.0%[39m  
+  Notify/app/Filament/Resources/NotificationResource/Pages/ListNotifi… [90m..[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/NotificationResource/Pages/ViewNotifi… [90m..[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/NotificationTemplateResource [90m............[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/NotificationTemplateResource/Pages/Cr…  [32m100.0%[39m  
+  Notify/app/Filament/Resources/NotificationTemplateResource/Pages/Ed…  [32m100.0%[39m  
+  Notify/app/Filament/Resources/NotificationTemplateResource/Pages/Li… [90m..[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/NotificationTemplateResource/Pages/Pr… [90m..[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/NotifyThemeResource [90m.....................[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/NotifyThemeResource/Pages/CreateNotif…  [32m100.0%[39m  
+  Notify/app/Filament/Resources/NotifyThemeResource/Pages/EditNotifyT… [90m..[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/NotifyThemeResource/Pages/ListNotifyT… [90m..[39m [31m0.0%[39m  
+  Notify/app/Filament/Resources/NotifyThemeResource/RelationManagers/… [90m..[39m [31m0.0%[39m  
+  Notify/app/Filament/Tables/Columns/ContactColumn [90m......................[39m [31m0.0%[39m  
+  Notify/app/Helpers/ConfigHelper [90m.......................................[39m [31m0.0%[39m  
+  Notify/app/Jobs/SendNotificationJob [90m...................................[39m [31m0.0%[39m  
+  Notify/app/Jobs/SendScheduledPushNotification [90m.........................[39m [31m0.0%[39m  
+  Notify/app/Mail/ChristmasGreetingMailable [90m.............................[39m [31m0.0%[39m  
+  Notify/app/Models/BaseModel [90m...........................................[39m [31m0.0%[39m  
+  Notify/app/Models/BaseMorphPivot [90m......................................[39m [31m0.0%[39m  
+  Notify/app/Models/BasePivot [90m...........................................[39m [31m0.0%[39m  
+  Notify/app/Models/Contact [90m.............................................[39m [31m0.0%[39m  
+  Notify/app/Models/MailTemplate [90m........................................[39m [31m0.0%[39m  
+  Notify/app/Models/MailTemplateLog [90m.....................................[39m [31m0.0%[39m  
+  Notify/app/Models/MailTemplateVersion [90m.................................[39m [31m0.0%[39m  
+  Notify/app/Models/Notification [90m........................................[39m [31m0.0%[39m  
+  Notify/app/Models/NotificationLog [90m.....................................[39m [31m0.0%[39m  
+  Notify/app/Models/NotificationTemplate [90m................................[39m [31m0.0%[39m  
+  Notify/app/Models/NotificationTemplateVersion [90m.........................[39m [31m0.0%[39m  
+  Notify/app/Models/NotificationType [90m..................................[39m [32m100.0%[39m  
+  Notify/app/Models/NotifyTheme [90m.........................................[39m [31m0.0%[39m  
+  Notify/app/Models/NotifyThemeable [90m...................................[39m [32m100.0%[39m  
+  Notify/app/Models/Policies/ContactPolicy [90m............................[39m [32m100.0%[39m  
+  Notify/app/Models/Policies/MailTemplateLogPolicy [90m....................[39m [32m100.0%[39m  
+  Notify/app/Models/Policies/MailTemplatePolicy [90m.......................[39m [32m100.0%[39m  
+  Notify/app/Models/Policies/MailTemplateVersionPolicy [90m................[39m [32m100.0%[39m  
+  Notify/app/Models/Policies/NotificationPolicy [90m.......................[39m [32m100.0%[39m  
+  Notify/app/Models/Policies/NotificationTemplatePolicy [90m...............[39m [32m100.0%[39m  
+  Notify/app/Models/Policies/NotificationTemplateVersionPolicy [90m........[39m [32m100.0%[39m  
+  Notify/app/Models/Policies/NotificationTypePolicy [90m...................[39m [32m100.0%[39m  
+  Notify/app/Models/Policies/NotifyBasePolicy [90m.........................[39m [32m100.0%[39m  
+  Notify/app/Models/Policies/NotifyThemePolicy [90m........................[39m [32m100.0%[39m  
+  Notify/app/Models/Policies/NotifyThemeablePolicy [90m....................[39m [32m100.0%[39m  
+  Notify/app/Models/Traits/HasContact [90m...................................[39m [31m0.0%[39m  
+  Notify/app/Notifications/Channels/FirebaseCloudMessagingChannel [90m.......[39m [31m0.0%[39m  
+  Notify/app/Notifications/Channels/NetfunChannel [90m.......................[39m [31m0.0%[39m  
+  Notify/app/Notifications/Channels/TelegramChannel [90m.....................[39m [31m0.0%[39m  
+  Notify/app/Notifications/EmailDataNotification [90m........................[39m [31m0.0%[39m  
+  Notify/app/Notifications/FirebaseAndroidNotification [90m..................[39m [31m0.0%[39m  
+  Notify/app/Notifications/GenericNotification [90m..........................[39m [31m0.0%[39m  
+  Notify/app/Notifications/RecordNotification [90m...........................[39m [31m0.0%[39m  
+  Notify/app/Notifications/SmsNotification [90m..............................[39m [31m0.0%[39m  
+  Notify/app/Notifications/TelegramNotification [90m.........................[39m [31m0.0%[39m  
+  Notify/app/Notifications/ThemeNotification [90m............................[39m [31m0.0%[39m  
+  Notify/app/Notifications/TicketAssignedNotification [90m...................[39m [31m0.0%[39m  
+  Notify/app/Notifications/TicketStatusChangedNotification [90m..............[39m [31m0.0%[39m  
+  Notify/app/Notifications/WhatsAppNotification [90m.........................[39m [31m0.0%[39m  
+  Notify/app/Services/MailEngines/MailtrapEngine [90m........................[39m [31m0.0%[39m  
+  Notify/app/Services/NotificationManager [90m...............................[39m [31m0.0%[39m  
+  Notify/app/Services/PushNotificationService [90m...........................[39m [31m0.0%[39m  
+  Notify/app/Services/SmsService [90m........................................[39m [31m0.0%[39m  
+  Notify/app/Traits/HasNotificationRateLimiting [90m.........................[39m [31m0.0%[39m  
+  Notify/app/Traits/HasNotificationTracking [90m.............................[39m [31m0.0%[39m  
+  Notify/app/Traits/HasTenantNotifications [90m..............................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Contact/CreateContactFromArrayAction [90m..............[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Dashboard/StatsAction [90m.............................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Dashboard/StatsAction2 [90m............................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/DummyPdfAction [90m....................................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/GetQuestionsChartsAction [90m..........................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/PersistJsonPayloadAction [90m..........................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Question/GetAnswerFieldNameByQuestionCollAction [90m...[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Question/GetAnswerFieldNameByQuestionDataAction [90m...[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Question/GetAnswerFieldNameByQuestionIdAction [90m.....[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Question/GetParticipantByAskAction [90m................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Question/GetQuestionBreadsByQuestionDataAction [90m....[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Question/GetQuestionBreadsByQuestionIdSurveyIdA… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Question/GetQuestionBreadsByTitleAction [90m...........[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Question/GetQuestionsBySurveyIdAction [90m.............[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Question/GetSurveysAction [90m.........................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Question/GetSurveysOptsAction [90m.....................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Question/GetValue [90m.................................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Question/GetValueByQuestionPropsAction [90m............[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/Custom/AvgGroup2 [90m....................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/Custom/ContactsCompleted [90m............[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/Custom/ContactsCompleted2 [90m...........[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/Custom/Custom/MergeInvitedAnswers [90m...[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/Custom/MailResponseRate [90m.............[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/Custom/RootGroupedBf [90m................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/Custom/SmsResponseRate [90m..............[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetAnswersByQuestionChart [90m...........[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetAnswersCount [90m.....................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetChartsDataByQuestionChart [90m........[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetNotAnswersCount [90m..................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetPieceQueryBySurveyIdAction [90m.......[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetQuestionOptionsBySurveyId [90m........[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetQuestionOptionsBySurveyId2 [90m.......[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetQuestionOptionsBySurveyPdfId [90m.....[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetSelectTypeBB [90m.....................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetSelectTypeBT [90m.....................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetSelectTypeExclamationPoint [90m.......[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetSelectTypeF [90m......................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetSelectTypeFF [90m.....................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetSelectTypeFT [90m.....................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetSelectTypeL [90m......................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetSelectTypeM [90m......................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetSelectTypeT [90m......................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetSelectTypeY [90m......................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/GetTot [90m..............................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/Graph/GetFooterAction [90m...............[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/Graph/GetSubtitleAction [90m.............[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/Graph/GetTitleAction [90m................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/MakeImgByQuestionChartModel2Actio… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/SaveChartJsPngAction [90m................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/SaveChartJsSvgAction [90m................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/QuestionChart/SetMixedChartId [90m.....................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/SendInviteAction [90m..................................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/SurveyPdf/CreateContactsForSurveyAction [90m...........[39m [31m0.0%[39m  
+  Quaeris/app/Actions/SurveyPdf/ExportTypeAction [90m........................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/SurveyPdf/ExportTypeAction/PdfAction [90m..............[39m [31m0.0%[39m  
+  Quaeris/app/Actions/SurveyPdf/GetQuestionFilterNameFieldAction [90m........[39m [31m0.0%[39m  
+  Quaeris/app/Actions/SurveyPdf/MakeHtmlBySurveyPdfModelAction [90m..........[39m [31m0.0%[39m  
+  Quaeris/app/Actions/SurveyPdf/MakePdf2Action [90m..........................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/SurveyPdf/MakePdfAction [90m...........................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/SurveyPdf/SaveJsonPayloadAction [90m...................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/SurveyPdf/UpdateJsonPayloadStatusAction [90m...........[39m [31m0.0%[39m  
+  Quaeris/app/Actions/UpdateContactTokenAction [90m..........................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Xls/Get/AlertData [90m.................................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Xls/Get/EmailData [90m.................................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Xls/Get/GetQuestionsFromSurveyId [90m..................[39m [31m0.0%[39m  
+  Quaeris/app/Actions/Xls/Get/OtpOutData [90m................................[39m [31m0.0%[39m  
+  Quaeris/app/Console/Commands/AssociatePassportClientToUser [90m............[39m [31m0.0%[39m  
+  Quaeris/app/Console/Commands/DropOldTables [90m............................[39m [31m0.0%[39m  
+  Quaeris/app/Console/Commands/SearchTokenCommand [90m.......................[39m [31m0.0%[39m  
+  Quaeris/app/Console/Commands/SearchTokensInLimeSurvey [90m.................[39m [31m0.0%[39m  
+  Quaeris/app/Console/Commands/UpdateLimeTokensTables [90m...................[39m [31m0.0%[39m  
+  Quaeris/app/Console/Commands/UpdateMobilePhoneContacts [90m................[39m [31m0.0%[39m  
+  Quaeris/app/Contracts/FormContract [90m..................................[39m [32m100.0%[39m  
+  Quaeris/app/Contracts/MixedQuestionActionContract [90m...................[39m [32m100.0%[39m  
+  Quaeris/app/Database/Seeders/QuaerisDatabaseSeeder [90m....................[39m [31m0.0%[39m  
+  Quaeris/app/Datas/AlertDashboardFilterData [90m............................[39m [31m0.0%[39m  
+  Quaeris/app/Datas/AnswersFilterData [90m...................................[39m [31m0.0%[39m  
+  Quaeris/app/Datas/DashboardFilterData [90m.................................[39m [31m0.0%[39m  
+  Quaeris/app/Datas/InvitedCompletedData [90m..............................[39m [32m100.0%[39m  
+  Quaeris/app/Datas/LimeAnswerData [90m....................................[39m [32m100.0%[39m  
+  Quaeris/app/Datas/QuestionChartData [90m.................................[39m [32m100.0%[39m  
+  Quaeris/app/Datas/QuestionChartFilterData [90m.............................[39m [31m0.0%[39m  
+  Quaeris/app/Datas/QuestionData [90m........................................[39m [31m0.0%[39m  
+  Quaeris/app/Datas/SurveyAttributeDescriptionData [90m....................[39m [32m100.0%[39m  
+  Quaeris/app/Enums/SurveyExportTypesEnum [90m...............................[39m [31m0.0%[39m  
+  Quaeris/app/Exports/AlertExport [90m.......................................[39m [31m0.0%[39m  
+  Quaeris/app/Exports/AlertUser2Export [90m..................................[39m [31m0.0%[39m  
+  Quaeris/app/Exports/AnswersCompleteExport [90m.............................[39m [31m0.0%[39m  
+  Quaeris/app/Exports/ContactListExport [90m.................................[39m [31m0.0%[39m  
+  Quaeris/app/Exports/EmailsExport [90m......................................[39m [31m0.0%[39m  
+  Quaeris/app/Exports/OptoutExport [90m......................................[39m [31m0.0%[39m  
+  Quaeris/app/Exports/QueryExport [90m.......................................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Forms/Components/FilterButton [90m....................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Imports/ContactImporter [90m..........................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Pages/AlertPage [90m..................................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Pages/AutoPage [90m...................................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Pages/BasePageExport [90m.............................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Pages/CompletePage [90m...............................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Pages/ContactPage [90m................................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Pages/Dashboard [90m................................[39m [32m100.0%[39m  
+  Quaeris/app/Filament/Pages/DashboardV2 [90m................................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Pages/ExportPage [90m.................................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Pages/OptOutPage [90m.................................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/ContactResource [90m........................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/ContactResource/Pages/CreateContact [90m..[39m [32m100.0%[39m  
+  Quaeris/app/Filament/Resources/ContactResource/Pages/EditContact [90m......[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/ContactResource/Pages/ListContacts [90m.....[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/CustomerResource [90m.......................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/CustomerResource/Pages/CreateCustome…  [32m100.0%[39m  
+  Quaeris/app/Filament/Resources/CustomerResource/Pages/EditCustomer [90m....[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/CustomerResource/Pages/ListCustomers [90m...[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/CustomerResource/RelationManagers/Su… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/PdfStyleResource [90m.......................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/PdfStyleResource/Pages/CreatePdfStyl…  [32m100.0%[39m  
+  Quaeris/app/Filament/Resources/PdfStyleResource/Pages/EditPdfStyle [90m..[39m [32m100.0%[39m  
+  Quaeris/app/Filament/Resources/PdfStyleResource/Pages/ListPdfStyles [90m...[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/QuestionChartResource [90m..................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/QuestionChartResource/Pages/CreateQu…  [32m100.0%[39m  
+  Quaeris/app/Filament/Resources/QuestionChartResource/Pages/EditQues… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/QuestionChartResource/Pages/ListQues… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/QuestionChartResource/Pages/Pdf [90m........[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/QuestionChartResource/Pages/RegenImg… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource [90m......................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Pages/CreateSurvey…  [32m100.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Pages/EditSurveyPd… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Pages/ListSurveyPd… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Pages/ManageCharts [90m...[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Pages/ManageContac… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Pages/ManageMailTe… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Pages/ManageNotify… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Pages/ManagePdfSty… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Pages/ManageQuesti… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Pages/ManageSurvey… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/RelationManagers/C… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/RelationManagers/C… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/RelationManagers/N… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/RelationManagers/P… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/RelationManagers/Q… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Resources/Question…  [32m100.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Resources/Question… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Resources/Question… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Resources/Question… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Resources/Question… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Resources/Question… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Resources/Question… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Resources/Question… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Resources/Question… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Resources/Question… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Resources/SurveyPdfResource/Resources/Question… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/AlertWidget [90m..............................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/BaseTableWidget [90m..........................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/CompleteAnswers [90m..........................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/Concerns/HasChartExport [90m..................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/ContactWidget [90m............................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/FilterFormWidget [90m.........................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/Filters [90m..................................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/HeroWidget [90m...............................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/OptOutWidget [90m.............................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/OverlookStatsWidget [90m......................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartAnswersAVGByMouthChartWid… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartAnswersAVGByWeekChartWidg… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartAnswersByMonthChartWidget [90m...[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartAnswersByMonthChartWidget… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartAnswersByMonthTableWidget [90m...[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartAnswersByValueChartWidget [90m...[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartAnswersByValueDonutChartW… [90m..[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartAnswersByValueTableWidget [90m...[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartAnswersByWeekTableWidget [90m....[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartAnswersTableWidget [90m..........[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartDataWidget [90m..................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartFilterWidget [90m................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartItemWidget [90m..................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartStatsOverviewWidget [90m.........[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/QuestionChartWidget [90m......................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/ResponseRateWidget [90m.......................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/StatsOverview [90m............................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/StatsOverviewWidget [90m......................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/SurveysSentWidget [90m........................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/TestChartWidget [90m..........................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/TestWidget [90m...............................[39m [31m0.0%[39m  
+  Quaeris/app/Filament/Widgets/TotAnswersWidget [90m.........................[39m [31m0.0%[39m  
+  Quaeris/app/Http/Controllers/Api/AddContactController [90m.................[39m [31m0.0%[39m  
+  Quaeris/app/Http/Controllers/Api/AddContactMultiController [90m............[39m [31m0.0%[39m  
+  Quaeris/app/Http/Controllers/Api/SurveyController [90m.....................[39m [31m0.0%[39m  
+  Quaeris/app/Http/Controllers/BaseController [90m.........................[39m [32m100.0%[39m  
+  Quaeris/app/Http/Controllers/Controller [90m.............................[39m [32m100.0%[39m  
+  Quaeris/app/Http/Controllers/ExportPdfController [90m......................[39m [31m0.0%[39m  
+  Quaeris/app/Http/Controllers/QuestionChartPdfController [90m...............[39m [31m0.0%[39m  
+  Quaeris/app/Http/Livewire/QuestionChart [90m...............................[39m [31m0.0%[39m  
+  Quaeris/app/Http/Livewire/QuestionCharts [90m..............................[39m [31m0.0%[39m  
+  Quaeris/app/Http/Requests/CreateContactsRequest [90m.......................[39m [31m0.0%[39m  
+  Quaeris/app/Jobs/BulkUpdateContactTokensJob [90m...........................[39m [31m0.0%[39m  
+  Quaeris/app/Models/.php-cs-fixer.dist [90m.................................[39m [31m0.0%[39m  
+  Quaeris/app/Models/BaseModel [90m........................................[39m [32m100.0%[39m  
+  Quaeris/app/Models/Cliente [90m............................................[39m [31m0.0%[39m  
+  Quaeris/app/Models/ClienteEnpam [90m.......................................[39m [31m0.0%[39m  
+  Quaeris/app/Models/Contact [90m............................................[39m [31m0.0%[39m  
+  Quaeris/app/Models/ContactSimple [90m....................................[39m [32m100.0%[39m  
+  Quaeris/app/Models/Customer [90m...........................................[39m [31m0.0%[39m  
+  Quaeris/app/Models/CustomerUser [90m.....................................[39m [32m100.0%[39m  
+  Quaeris/app/Models/Extra [90m............................................[39m [32m100.0%[39m  
+  Quaeris/app/Models/PdfStyle [90m.........................................[39m [32m100.0%[39m  
+  Quaeris/app/Models/Policies/ContactPolicy [90m.............................[39m [31m0.0%[39m  
+  Quaeris/app/Models/Policies/ContactSimplePolicy [90m.......................[39m [31m0.0%[39m  
+  Quaeris/app/Models/Policies/CustomerPolicy [90m............................[39m [31m0.0%[39m  
+  Quaeris/app/Models/Policies/CustomerUserPolicy [90m........................[39m [31m0.0%[39m  
+  Quaeris/app/Models/Policies/ExtraPolicy [90m...............................[39m [31m0.0%[39m  
+  Quaeris/app/Models/Policies/PdfStylePolicy [90m............................[39m [31m0.0%[39m  
+  Quaeris/app/Models/Policies/ProfilePolicy [90m...........................[39m [32m100.0%[39m  
+  Quaeris/app/Models/Policies/QuaerisBasePolicy [90m.........................[39m [31m0.0%[39m  
+  Quaeris/app/Models/Policies/QuestionChartPolicy [90m.......................[39m [31m0.0%[39m  
+  Quaeris/app/Models/Policies/QuestionChartTmpPolicy [90m....................[39m [31m0.0%[39m  
+  Quaeris/app/Models/Policies/SurveyPdfPolicy [90m...........................[39m [31m0.0%[39m  
+  Quaeris/app/Models/Profile [90m............................................[39m [31m0.0%[39m  
+  Quaeris/app/Models/QuestionChart [90m......................................[39m [31m0.0%[39m  
+  Quaeris/app/Models/QuestionChartTmp [90m.................................[39m [32m100.0%[39m  
+  Quaeris/app/Models/SurveyPdf [90m..........................................[39m [31m0.0%[39m  
+  Quaeris/app/Models/Traits/BuildsAnswersByValueDataset [90m.................[39m [31m0.0%[39m  
+  Quaeris/app/Models/Traits/HandlesAnswerLabels [90m.........................[39m [31m0.0%[39m  
+  Quaeris/app/Models/Traits/HasChartTrait [90m...............................[39m [31m0.0%[39m  
+  Quaeris/app/Models/User [90m.............................................[39m [32m100.0%[39m  
+  Quaeris/app/Services/LimeJsonService [90m..................................[39m [31m0.0%[39m  
+  Quaeris/app/Services/QuaerisService [90m...................................[39m [31m0.0%[39m  
+  Quaeris/app/Services/QuestionChartRequestCache [90m........................[39m [31m0.0%[39m  
+  Quaeris/app/Services/TrendX [90m...........................................[39m [31m0.0%[39m  
+  Quaeris/app/Tables/Columns/ChartsColumn [90m...............................[39m [31m0.0%[39m  
+  Quaeris/app/View/Composers/ThemeComposer [90m............................[39m [32m100.0%[39m  
+  Tenant/app/Actions/Config/GetTenantConfigArrayAction [90m..................[39m [31m0.0%[39m  
+  Tenant/app/Actions/Config/GetTenantConfigNamesAction [90m..................[39m [31m0.0%[39m  
+  Tenant/app/Actions/Config/GetTenantConfigPathAction [90m...................[39m [31m0.0%[39m  
+  Tenant/app/Actions/Config/GetTenantFilePathAction [90m.....................[39m [31m0.0%[39m  
+  Tenant/app/Actions/Config/ResolveTenantConfigValueAction [90m..............[39m [31m0.0%[39m  
+  Tenant/app/Actions/Config/SaveTenantConfigAction [90m......................[39m [31m0.0%[39m  
+  Tenant/app/Actions/Domains/GetDomainsArrayAction [90m......................[39m [31m0.0%[39m  
+  Tenant/app/Actions/GetTenantNameAction [90m................................[39m [31m0.0%[39m  
+  Tenant/app/Actions/Markdown/GetLocalizedMarkdownPathAction [90m............[39m [31m0.0%[39m  
+  Tenant/app/Actions/Models/ResolveTenantModelClassAction [90m...............[39m [31m0.0%[39m  
+  Tenant/app/Actions/Models/ResolveTenantModelInstanceAction [90m............[39m [31m0.0%[39m  
+  Tenant/app/Actions/Modules/GetTenantModulesAction [90m.....................[39m [31m0.0%[39m  
+  Tenant/app/Actions/Translations/TranslateTenantKeyAction [90m..............[39m [31m0.0%[39m  
+  Tenant/app/Console/Commands/TestCommand [90m...............................[39m [31m0.0%[39m  
+  Tenant/app/Filament/Pages/Dashboard [90m.................................[39m [32m100.0%[39m  
+  Tenant/app/Filament/Resources/DomainResource [90m..........................[39m [31m0.0%[39m  
+  Tenant/app/Filament/Resources/DomainResource/Pages/CreateDomain [90m.....[39m [32m100.0%[39m  
+  Tenant/app/Filament/Resources/DomainResource/Pages/EditDomain [90m.......[39m [32m100.0%[39m  
+  Tenant/app/Filament/Resources/DomainResource/Pages/ListDomains [90m......[39m [32m100.0%[39m  
+  Tenant/app/Models/BaseModel [90m...........................................[39m [31m0.0%[39m  
+  Tenant/app/Models/BaseModelJsons [90m....................................[39m [32m100.0%[39m  
+  Tenant/app/Models/Domain [90m..............................................[39m [31m0.0%[39m  
+  Tenant/app/Models/Policies/DomainPolicy [90m...............................[39m [31m0.0%[39m  
+  Tenant/app/Models/Policies/TenantBasePolicy [90m...........................[39m [31m0.0%[39m  
+  Tenant/app/Models/Tenant [90m..............................................[39m [31m0.0%[39m  
+  Tenant/app/Models/TenantDomain [90m........................................[39m [31m0.0%[39m  
+  Tenant/app/Models/TenantSetting [90m.......................................[39m [31m0.0%[39m  
+  Tenant/app/Models/TenantSubscription [90m..................................[39m [31m0.0%[39m  
+  Tenant/app/Models/TestSushiModel [90m......................................[39m [31m0.0%[39m  
+  Tenant/app/Models/Traits/SushiToCsv [90m...................................[39m [31m0.0%[39m  
+  Tenant/app/Models/Traits/SushiToJson [90m..................................[39m [31m0.0%[39m  
+  Tenant/app/Models/Traits/SushiToJsons [90m.................................[39m [31m0.0%[39m  
+  Tenant/app/Models/Traits/SushiToPhpArray [90m..............................[39m [31m0.0%[39m  
+  Tenant/app/Services/Config/ConfigResolverRegistry [90m.....................[39m [31m0.0%[39m  
+  Tenant/app/Services/Config/Contracts/ConfigResolverInterface [90m........[39m [32m100.0%[39m  
+  Tenant/app/Services/Config/Resolvers/DatabaseConfigResolver [90m...........[39m [31m0.0%[39m  
+  Tenant/app/Services/Config/Resolvers/MorphMapConfigResolver [90m...........[39m [31m0.0%[39m  
+  Tenant/app/Services/Config/Resolvers/StandardConfigResolver [90m...........[39m [31m0.0%[39m  
+  Tenant/app/Services/TenantService [90m.....................................[39m [31m0.0%[39m  
+  UI/app/Actions/Block/GetAllBlocksAction [90m...............................[39m [31m0.0%[39m  
+  UI/app/Actions/Datetime/GetDaysMappingAction [90m..........................[39m [31m0.0%[39m  
+  UI/app/Actions/GetUserDataAction [90m......................................[39m [31m0.0%[39m  
+  UI/app/Actions/Icon/GetAllIconsAction [90m.................................[39m [31m0.0%[39m  
+  UI/app/Actions/Panel/ApplyCalendarToPanelAction [90m.......................[39m [31m0.0%[39m  
+  UI/app/Data/UserData [90m..................................................[39m [31m0.0%[39m  
+  UI/app/Datas/SliderData [90m...............................................[39m [31m0.0%[39m  
+  UI/app/Datas/SliderDataCollection [90m.....................................[39m [31m0.0%[39m  
+  UI/app/Datas/UserData [90m.................................................[39m [31m0.0%[39m  
+  UI/app/Enums/CornerPositionEnum [90m.......................................[39m [31m0.0%[39m  
+  UI/app/Enums/FieldTypeEnum [90m............................................[39m [31m0.0%[39m  
+  UI/app/Enums/TableLayout [90m..............................................[39m [31m0.0%[39m  
+  UI/app/Enums/TableLayoutEnum [90m..........................................[39m [31m0.0%[39m  
+  UI/app/Filament/Actions/Header/TableLayoutToggleHeaderAction [90m..........[39m [31m0.0%[39m  
+  UI/app/Filament/Actions/Table/HasTableLayout [90m........................[39m [32m100.0%[39m  
+  UI/app/Filament/Actions/Table/TableLayoutToggleTableAction [90m............[39m [31m0.0%[39m  
+  UI/app/Filament/Actions/Table/TableLayoutTrait [90m........................[39m [31m0.0%[39m  
+  UI/app/Filament/Blocks/Category [90m.......................................[39m [31m0.0%[39m  
+  UI/app/Filament/Blocks/Contact [90m........................................[39m [31m0.0%[39m  
+  UI/app/Filament/Blocks/Heading [90m........................................[39m [31m0.0%[39m  
+  UI/app/Filament/Blocks/Hero [90m...........................................[39m [31m0.0%[39m  
+  UI/app/Filament/Blocks/Image [90m..........................................[39m [31m0.0%[39m  
+  UI/app/Filament/Blocks/ImageSpatie [90m....................................[39m [31m0.0%[39m  
+  UI/app/Filament/Blocks/ImagesGallery [90m..................................[39m [31m0.0%[39m  
+  UI/app/Filament/Blocks/Navigation [90m.....................................[39m [31m0.0%[39m  
+  UI/app/Filament/Blocks/Page [90m...........................................[39m [31m0.0%[39m  
+  UI/app/Filament/Blocks/Paragraph [90m......................................[39m [31m0.0%[39m  
+  UI/app/Filament/Blocks/Post [90m...........................................[39m [31m0.0%[39m  
+  UI/app/Filament/Blocks/Slider [90m.........................................[39m [31m0.0%[39m  
+  UI/app/Filament/Blocks/Title [90m..........................................[39m [31m0.0%[39m  
+  UI/app/Filament/Blocks/VideoSpatie [90m....................................[39m [31m0.0%[39m  
+  UI/app/Filament/Clusters/Test [90m.......................................[39m [32m100.0%[39m  
+  UI/app/Filament/Components/SpatieDocumentUpload [90m.......................[39m [31m0.0%[39m  
+  UI/app/Filament/Forms/Components/AddressField [90m.........................[39m [31m0.0%[39m  
+  UI/app/Filament/Forms/Components/Children [90m...........................[39m [32m100.0%[39m  
+  UI/app/Filament/Forms/Components/Field/QrReader [90m.....................[39m [32m100.0%[39m  
+  UI/app/Filament/Forms/Components/IconPicker [90m...........................[39m [31m0.0%[39m  
+  UI/app/Filament/Forms/Components/InlineDatePicker [90m.....................[39m [31m0.0%[39m  
+  UI/app/Filament/Forms/Components/LocationSelector [90m.....................[39m [31m0.0%[39m  
+  UI/app/Filament/Forms/Components/OpeningHoursField [90m....................[39m [31m0.0%[39m  
+  UI/app/Filament/Forms/Components/ParentSelect [90m.......................[39m [32m100.0%[39m  
+  UI/app/Filament/Forms/Components/PasswordStrengthField [90m................[39m [31m0.0%[39m  
+  UI/app/Filament/Forms/Components/RadioBadge [90m...........................[39m [31m0.0%[39m  
+  UI/app/Filament/Forms/Components/RadioCollection [90m......................[39m [31m0.0%[39m  
+  UI/app/Filament/Forms/Components/RadioIcon [90m..........................[39m [32m100.0%[39m  
+  UI/app/Filament/Forms/Components/RadioImage [90m.........................[39m [32m100.0%[39m  
+  UI/app/Filament/Forms/Components/SelectState [90m..........................[39m [31m0.0%[39m  
+  UI/app/Filament/Forms/Components/TreeField [90m............................[39m [31m0.0%[39m  
+  UI/app/Filament/Pages/Dashboard [90m.......................................[39m [31m0.0%[39m  
+  UI/app/Filament/Resources/Pages/BaseListRecords [90m.....................[39m [32m100.0%[39m  
+  UI/app/Filament/Tables/Columns/DummyActionsColumn [90m...................[39m [32m100.0%[39m  
+  UI/app/Filament/Tables/Columns/GroupColumn [90m............................[39m [31m0.0%[39m  
+  UI/app/Filament/Tables/Columns/IconColumn [90m...........................[39m [32m100.0%[39m  
+  UI/app/Filament/Tables/Columns/IconStateColumn [90m........................[39m [31m0.0%[39m  
+  UI/app/Filament/Tables/Columns/IconStateGroupColumn [90m...................[39m [31m0.0%[39m  
+  UI/app/Filament/Tables/Columns/IconStateSplitColumn [90m...................[39m [31m0.0%[39m  
+  UI/app/Filament/Tables/Columns/SelectStateColumn [90m......................[39m [31m0.0%[39m  
+  UI/app/Filament/Tables/Columns/TreeColumn [90m...........................[39m [32m100.0%[39m  
+  UI/app/Filament/Widgets/DarkModeSwitcherWidget [90m........................[39m [31m0.0%[39m  
+  UI/app/Filament/Widgets/GroupWidget [90m...................................[39m [31m0.0%[39m  
+  UI/app/Filament/Widgets/HeroWidget [90m....................................[39m [31m0.0%[39m  
+  UI/app/Filament/Widgets/OverlookWidget [90m................................[39m [31m0.0%[39m  
+  UI/app/Filament/Widgets/RedirectWidget [90m................................[39m [31m0.0%[39m  
+  UI/app/Filament/Widgets/RowWidget [90m.....................................[39m [31m0.0%[39m  
+  UI/app/Filament/Widgets/StatWithIconWidget [90m............................[39m [31m0.0%[39m  
+  UI/app/Filament/Widgets/StatsOverviewWidget [90m.........................[39m [32m100.0%[39m  
+  UI/app/Filament/Widgets/TestChartWidget [90m...............................[39m [31m0.0%[39m  
+  UI/app/Filament/Widgets/TestWidget [90m....................................[39m [31m0.0%[39m  
+  UI/app/Filament/Widgets/UserCalendarWidget [90m............................[39m [31m0.0%[39m  
+  UI/app/Forms/Components/RadioCardSelector [90m.............................[39m [31m0.0%[39m  
+  UI/app/Http/Controllers/LanguageController [90m............................[39m [31m0.0%[39m  
+  UI/app/Http/Kernel [90m..................................................[39m [32m100.0%[39m  
+  UI/app/Http/Livewire/DarkModeSwitcher [90m.................................[39m [31m0.0%[39m  
+  UI/app/Http/Livewire/Toast [90m............................................[39m [31m0.0%[39m  
+  UI/app/Http/Middleware/SetLocale [90m......................................[39m [31m0.0%[39m  
+  UI/app/Livewire/Components/Map/InteractiveMap [90m.........................[39m [31m0.0%[39m  
+  UI/app/Models/BaseModel [90m.............................................[39m [32m100.0%[39m  
+  UI/app/Models/Category [90m..............................................[39m [32m100.0%[39m  
+  UI/app/Models/Collection [90m............................................[39m [32m100.0%[39m  
+  UI/app/Models/FieldOption [90m...........................................[39m [32m100.0%[39m  
+  UI/app/Models/Policies/UiBasePolicy [90m...................................[39m [31m0.0%[39m  
+  UI/app/Rules/OpeningHoursRule [90m.........................................[39m [31m0.0%[39m  
+  UI/app/Services/UIService [90m.............................................[39m [31m0.0%[39m  
+  UI/app/Traits/TableLayoutTrait [90m........................................[39m [31m0.0%[39m  
+  UI/app/View/Components/Blocks/Hero/Simple [90m.............................[39m [31m0.0%[39m  
+  UI/app/View/Components/BreadLink [90m......................................[39m [31m0.0%[39m  
+  UI/app/View/Components/DarkModeSwitcher [90m...............................[39m [31m0.0%[39m  
+  UI/app/View/Components/Logo [90m...........................................[39m [31m0.0%[39m  
+  UI/app/View/Components/Navbar [90m.........................................[39m [31m0.0%[39m  
+  UI/app/View/Components/Page/WithSidebar [90m...............................[39m [31m0.0%[39m  
+  UI/app/View/Components/Render/Block [90m...................................[39m [31m0.0%[39m  
+  UI/app/View/Components/Render/Blocks [90m..................................[39m [31m0.0%[39m  
+  UI/app/View/Components/Sidebar [90m........................................[39m [31m0.0%[39m  
+  UI/app/View/Components/Std [90m............................................[39m [31m0.0%[39m  
+  UI/app/View/Components/Svg [90m............................................[39m [31m0.0%[39m  
+  UI/app/View/Composers/ThemeComposer [90m...................................[39m [31m0.0%[39m  
+  User/app/Actions/GetCurrentDeviceAction [90m...............................[39m [31m0.0%[39m  
+  User/app/Actions/Otp/SendOtpByUserAction [90m..............................[39m [31m0.0%[39m  
+  User/app/Actions/Passport/CreateClientAction [90m..........................[39m [31m0.0%[39m  
+  User/app/Actions/Passport/RegenerateClientSecretAction [90m................[39m [31m0.0%[39m  
+  User/app/Actions/Passport/RevokeAllUserTokensAction [90m...................[39m [31m0.0%[39m  
+  User/app/Actions/Passport/RevokeClientAction [90m..........................[39m [31m0.0%[39m  
+  User/app/Actions/Passport/RevokeRefreshTokenAction [90m....................[39m [31m0.0%[39m  
+  User/app/Actions/Passport/RevokeTokenAction [90m...........................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/CreateSocialiteUserAction [90m..................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/CreateUserAction [90m...........................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/GetDomainAllowListAction [90m...................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/GetGuardAction [90m.............................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/GetLoginRedirectRouteAction [90m................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/GetProviderButtonsAction [90m...................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/GetProviderScopesAction [90m....................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/GetUserModelAttributesFromSocialiteActio… [90m..[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/IsProviderConfiguredAction [90m.................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/IsRegistrationEnabledAction [90m................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/IsUserAllowedAction [90m........................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/LoginUserAction [90m............................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/LogoutUserAction [90m...........................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/RedirectToLoginAction [90m......................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/RegisterOauthUserAction [90m....................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/RegisterSocialiteUserAction [90m................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/RetrieveOauthUserAction [90m....................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/RetrieveSocialiteUserAction [90m................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/SetDefaultRolesBySocialiteUserAction [90m.......[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/Utils/EmailDomainAnalyzer [90m..................[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/Utils/UserNameFieldsResolver [90m...............[39m [31m0.0%[39m  
+  User/app/Actions/Socialite/ValidateProviderAction [90m.....................[39m [31m0.0%[39m  
+  User/app/Actions/Team/GetUserTeamsOptionAction [90m........................[39m [31m0.0%[39m  
+  User/app/Actions/User/DeleteUserAction [90m................................[39m [31m0.0%[39m  
+  User/app/Actions/User/GetNewPasswordAction [90m............................[39m [31m0.0%[39m  
+  User/app/Actions/User/UpdateUserAction [90m................................[39m [31m0.0%[39m  
+  User/app/Console/Commands/AssignModuleCommand [90m.........................[39m [31m0.0%[39m  
+  User/app/Console/Commands/AssignRoleCommand [90m...........................[39m [31m0.0%[39m  
+  User/app/Console/Commands/AssignTeamCommand [90m...........................[39m [31m0.0%[39m  
+  User/app/Console/Commands/AssignTenantCommand [90m.........................[39m [31m0.0%[39m  
+  User/app/Console/Commands/ChangePasswordCommand [90m.......................[39m [31m0.0%[39m  
+  User/app/Console/Commands/ChangeTypeCommand [90m...........................[39m [31m0.0%[39m  
+  User/app/Console/Commands/CreateTeamCommand [90m...........................[39m [31m0.0%[39m  
+  User/app/Console/Commands/CreateTenantCommand [90m.........................[39m [31m0.0%[39m  
+  User/app/Console/Commands/FetchUserApiTokenCommand [90m....................[39m [31m0.0%[39m  
+  User/app/Console/Commands/PassportInstallCommand [90m......................[39m [31m0.0%[39m  
+  User/app/Console/Commands/RemoveRoleCommand [90m...........................[39m [31m0.0%[39m  
+  User/app/Console/Commands/SetCurrentTeamCommand [90m.......................[39m [31m0.0%[39m  
+  User/app/Console/Commands/ShowTenantListCommand [90m.......................[39m [31m0.0%[39m  
+  User/app/Console/Commands/ShowUserListCommand [90m.........................[39m [31m0.0%[39m  
+  User/app/Console/Commands/SuperAdminCommand [90m...........................[39m [31m0.0%[39m  
+  User/app/Contracts/AddsTeamMembers [90m..................................[39m [32m100.0%[39m  
+  User/app/Contracts/CreatesNewUsers [90m..................................[39m [32m100.0%[39m  
+  User/app/Contracts/CreatesTeams [90m.....................................[39m [32m100.0%[39m  
+  User/app/Contracts/DeletesTeams [90m.....................................[39m [32m100.0%[39m  
+  User/app/Contracts/DeletesUsers [90m.....................................[39m [32m100.0%[39m  
+  User/app/Contracts/HasAuthentications [90m...............................[39m [32m100.0%[39m  
+  User/app/Contracts/HasProfilePhotoContract [90m..........................[39m [32m100.0%[39m  
+  User/app/Contracts/HasShieldPermissions [90m.............................[39m [32m100.0%[39m  
+  User/app/Contracts/HasTeamsAndUserContract [90m..........................[39m [32m100.0%[39m  
+  User/app/Contracts/HasTeamsContract [90m.................................[39m [32m100.0%[39m  
+  User/app/Contracts/InvitesTeamMembers [90m...............................[39m [32m100.0%[39m  
+  User/app/Contracts/ModelContract [90m....................................[39m [32m100.0%[39m  
+  User/app/Contracts/PassportHasApiTokensContract [90m.....................[39m [32m100.0%[39m  
+  User/app/Contracts/RemovesTeamMembers [90m...............................[39m [32m100.0%[39m  
+  User/app/Contracts/ResetsUserPasswords [90m..............................[39m [32m100.0%[39m  
+  User/app/Contracts/TeamContract [90m.....................................[39m [32m100.0%[39m  
+  User/app/Contracts/TeamInvitationContract [90m...........................[39m [32m100.0%[39m  
+  User/app/Contracts/TenantContract [90m...................................[39m [32m100.0%[39m  
+  User/app/Contracts/TwoFactorAuthenticatableContract [90m.................[39m [32m100.0%[39m  
+  User/app/Contracts/TwoFactorAuthenticationProvider [90m..................[39m [32m100.0%[39m  
+  User/app/Contracts/UpdatesTeamNames [90m.................................[39m [32m100.0%[39m  
+  User/app/Contracts/UpdatesUserPasswords [90m.............................[39m [32m100.0%[39m  
+  User/app/Contracts/UpdatesUserProfileInformation [90m....................[39m [32m100.0%[39m  
+  User/app/Contracts/UserContract [90m.....................................[39m [32m100.0%[39m  
+  User/app/Datas/DeviceData [90m.............................................[39m [31m0.0%[39m  
+  User/app/Datas/FilamentShieldData [90m.....................................[39m [31m0.0%[39m  
+  User/app/Datas/FilamentUserData [90m.....................................[39m [32m100.0%[39m  
+  User/app/Datas/PasswordData [90m...........................................[39m [31m0.0%[39m  
+  User/app/Datas/PermissionCacheData [90m..................................[39m [32m100.0%[39m  
+  User/app/Datas/PermissionColumnNamesData [90m............................[39m [32m100.0%[39m  
+  User/app/Datas/PermissionData [90m.........................................[39m [31m0.0%[39m  
+  User/app/Datas/PermissionModelsData [90m.................................[39m [32m100.0%[39m  
+  User/app/Datas/PermissionTableNamesData [90m.............................[39m [32m100.0%[39m  
+  User/app/Datas/ShieldResourceData [90m...................................[39m [32m100.0%[39m  
+  User/app/Datas/SocialProviderData [90m.....................................[39m [31m0.0%[39m  
+  User/app/Datas/SuperAdminData [90m.......................................[39m [32m100.0%[39m  
+  User/app/Enums/Enums/LanguageEnum [90m.....................................[39m [31m0.0%[39m  
+  User/app/Enums/LanguageEnum [90m...........................................[39m [31m0.0%[39m  
+  User/app/Enums/SocialProviderEnum [90m...................................[39m [32m100.0%[39m  
+  User/app/Enums/SystemRole [90m...........................................[39m [32m100.0%[39m  
+  User/app/Enums/UserType [90m...............................................[39m [31m0.0%[39m  
+  User/app/Events/AddingTeam [90m............................................[39m [31m0.0%[39m  
+  User/app/Events/AddingTeamMember [90m......................................[39m [31m0.0%[39m  
+  User/app/Events/InvalidState [90m..........................................[39m [31m0.0%[39m  
+  User/app/Events/InvitingTeamMember [90m....................................[39m [31m0.0%[39m  
+  User/app/Events/Login [90m.................................................[39m [31m0.0%[39m  
+  User/app/Events/NewPasswordSet [90m........................................[39m [31m0.0%[39m  
+  User/app/Events/RecoveryCodeReplaced [90m..................................[39m [31m0.0%[39m  
+  User/app/Events/RecoveryCodesGenerated [90m................................[39m [31m0.0%[39m  
+  User/app/Events/Registered [90m............................................[39m [31m0.0%[39m  
+  User/app/Events/RegistrationNotEnabled [90m................................[39m [31m0.0%[39m  
+  User/app/Events/RemovingTeamMember [90m....................................[39m [31m0.0%[39m  
+  User/app/Events/SocialiteUserConnected [90m................................[39m [31m0.0%[39m  
+  User/app/Events/TeamCreated [90m.........................................[39m [32m100.0%[39m  
+  User/app/Events/TeamDeleted [90m.........................................[39m [32m100.0%[39m  
+  User/app/Events/TeamEvent [90m.............................................[39m [31m0.0%[39m  
+  User/app/Events/TeamMemberAdded [90m.......................................[39m [31m0.0%[39m  
+  User/app/Events/TeamMemberRemoved [90m.....................................[39m [31m0.0%[39m  
+  User/app/Events/TeamMemberUpdated [90m.....................................[39m [31m0.0%[39m  
+  User/app/Events/TeamSwitched [90m..........................................[39m [31m0.0%[39m  
+  User/app/Events/TeamUpdated [90m.........................................[39m [32m100.0%[39m  
+  User/app/Events/TwoFactorAuthenticationChallenged [90m...................[39m [32m100.0%[39m  
+  User/app/Events/TwoFactorAuthenticationConfirmed [90m....................[39m [32m100.0%[39m  
+  User/app/Events/TwoFactorAuthenticationDisabled [90m.....................[39m [32m100.0%[39m  
+  User/app/Events/TwoFactorAuthenticationEnabled [90m......................[39m [32m100.0%[39m  
+  User/app/Events/TwoFactorAuthenticationEvent [90m..........................[39m [31m0.0%[39m  
+  User/app/Events/UserNotAllowed [90m........................................[39m [31m0.0%[39m  
+  User/app/Exceptions/ProviderNotConfigured [90m.............................[39m [31m0.0%[39m  
+  User/app/Facades/FilamentShield [90m.......................................[39m [31m0.0%[39m  
+  User/app/Filament/Actions/AlwaysAskPasswordConfirmationAction [90m.........[39m [31m0.0%[39m  
+  User/app/Filament/Actions/ChangePasswordAction [90m........................[39m [31m0.0%[39m  
+  User/app/Filament/Actions/Header/AttachRoleAction [90m.....................[39m [31m0.0%[39m  
+  User/app/Filament/Actions/Header/ChangePasswordHeaderAction [90m...........[39m [31m0.0%[39m  
+  User/app/Filament/Actions/Profile/ChangeProfilePasswordAction [90m.........[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Appearance [90m...............................[39m [32m100.0%[39m  
+  User/app/Filament/Clusters/Appearance/Pages/Alignment [90m.................[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Appearance/Pages/Background [90m................[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Appearance/Pages/Colors [90m....................[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Appearance/Pages/CustomCss [90m.................[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Appearance/Pages/Favicon [90m...................[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Appearance/Pages/Logo [90m......................[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport [90m.................................[39m [32m100.0%[39m  
+  User/app/Filament/Clusters/Passport/Pages/PassportDashboard [90m...........[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthAccessTokenResou… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthAccessTokenResou… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthAccessTokenResou… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthAccessTokenResou… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthAuthCodeResource [90m...[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthAuthCodeResource… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthAuthCodeResource…  [32m100.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthAuthCodeResource… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthClientResource [90m.....[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthClientResource/P…  [32m100.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthClientResource/P…  [32m100.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthClientResource/P… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthClientResource/P… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthPersonalAccessCl… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthPersonalAccessCl…  [32m100.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthPersonalAccessCl…  [32m100.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthPersonalAccessCl…  [32m100.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthPersonalAccessCl… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthRefreshTokenReso… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthRefreshTokenReso…  [32m100.0%[39m  
+  User/app/Filament/Clusters/Passport/Resources/OauthRefreshTokenReso… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Socialite [90m................................[39m [32m100.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SocialProviderResour… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SocialProviderResour…  [32m100.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SocialProviderResour… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SocialProviderResour… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SocialProviderResour… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SocialiteUserResourc… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SocialiteUserResourc… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SocialiteUserResourc… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SocialiteUserResourc… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SsoProviderResource [90m....[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SsoProviderResource/…  [32m100.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SsoProviderResource/…  [32m100.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SsoProviderResource/… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SsoProviderResource/… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Clusters/Socialite/Resources/SsoProviderResource/… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Forms/Components/SingleRoleSelect [90m...................[39m [31m0.0%[39m  
+  User/app/Filament/Pages/Auth/EditProfile [90m..............................[39m [31m0.0%[39m  
+  User/app/Filament/Pages/Auth/Login [90m..................................[39m [32m100.0%[39m  
+  User/app/Filament/Pages/Auth/PasswordExpired [90m..........................[39m [31m0.0%[39m  
+  User/app/Filament/Pages/Auth/Register [90m...............................[39m [32m100.0%[39m  
+  User/app/Filament/Pages/Dashboard [90m.....................................[39m [31m0.0%[39m  
+  User/app/Filament/Pages/MyProfilePage [90m.................................[39m [31m0.0%[39m  
+  User/app/Filament/Pages/Password [90m......................................[39m [31m0.0%[39m  
+  User/app/Filament/Pages/Tenancy/EditTeamProfile [90m.......................[39m [31m0.0%[39m  
+  User/app/Filament/Pages/Tenancy/EditTenantProfile [90m.....................[39m [31m0.0%[39m  
+  User/app/Filament/Pages/Tenancy/RegisterTeam [90m..........................[39m [31m0.0%[39m  
+  User/app/Filament/Pages/Tenancy/RegisterTenant [90m........................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/.php-cs-fixer.dist [90m........................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/AuthenticationLogResource [90m.................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/AuthenticationLogResource/Pages/EditAut… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/AuthenticationLogResource/Pages/ListAut… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/AuthenticationLogResource/Pages/ViewAut… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/BaseProfileResource [90m.......................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/BaseProfileResource/Pages/CreateProfile [90m...[39m [31m0.0%[39m  
+  User/app/Filament/Resources/BaseProfileResource/Pages/EditProfile [90m...[39m [32m100.0%[39m  
+  User/app/Filament/Resources/BaseProfileResource/Pages/ListProfiles [90m....[39m [31m0.0%[39m  
+  User/app/Filament/Resources/BaseProfileResource/Pages/ViewProfile [90m.....[39m [31m0.0%[39m  
+  User/app/Filament/Resources/BaseUserResource [90m..........................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/ClientResource [90m............................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/ClientResource/Pages/CreateClient [90m.......[39m [32m100.0%[39m  
+  User/app/Filament/Resources/ClientResource/Pages/EditClient [90m.........[39m [32m100.0%[39m  
+  User/app/Filament/Resources/ClientResource/Pages/ListClients [90m........[39m [32m100.0%[39m  
+  User/app/Filament/Resources/ClientResource/Pages/ViewClient [90m...........[39m [31m0.0%[39m  
+  User/app/Filament/Resources/DeviceResource [90m............................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/DeviceResource/Pages/CreateDevice [90m.......[39m [32m100.0%[39m  
+  User/app/Filament/Resources/DeviceResource/Pages/EditDevice [90m...........[39m [31m0.0%[39m  
+  User/app/Filament/Resources/DeviceResource/Pages/ListDevices [90m..........[39m [31m0.0%[39m  
+  User/app/Filament/Resources/DeviceResource/RelationManagers/UsersRe… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/FeatureResource [90m...........................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/FeatureResource/Pages/CreateFeature [90m.....[39m [32m100.0%[39m  
+  User/app/Filament/Resources/FeatureResource/Pages/EditFeature [90m.......[39m [32m100.0%[39m  
+  User/app/Filament/Resources/FeatureResource/Pages/ListFeatures [90m........[39m [31m0.0%[39m  
+  User/app/Filament/Resources/OauthAccessTokenResource [90m................[39m [32m100.0%[39m  
+  User/app/Filament/Resources/OauthAuthCodeResource [90m.....................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/OauthAuthCodeResource/Pages/ListOauthAu…  [32m100.0%[39m  
+  User/app/Filament/Resources/OauthAuthCodeResource/Pages/ViewOauthAu… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/OauthClientResource [90m.......................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/OauthClientResource/Pages/CreateOauthCl…  [32m100.0%[39m  
+  User/app/Filament/Resources/OauthClientResource/Pages/EditOauthClie… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/OauthClientResource/Pages/ListOauthClie… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/OauthClientResource/Pages/ViewOauthClie… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/PasswordResetResource [90m.....................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/PasswordResetResource/Pages/ListPasswor…  [32m100.0%[39m  
+  User/app/Filament/Resources/PasswordResetResource/Pages/ViewPasswor… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/PermissionResource [90m........................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/PermissionResource/Pages/CreatePermissi…  [32m100.0%[39m  
+  User/app/Filament/Resources/PermissionResource/Pages/EditPermission [90m.[39m [32m100.0%[39m  
+  User/app/Filament/Resources/PermissionResource/Pages/ListPermission… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/PermissionResource/Pages/ViewPermission [90m...[39m [31m0.0%[39m  
+  User/app/Filament/Resources/PermissionResource/RelationManager/Role… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/PersonalAccessTokenResource [90m...............[39m [31m0.0%[39m  
+  User/app/Filament/Resources/PersonalAccessTokenResource/Pages/Manag… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/ProfileResource [90m.........................[39m [32m100.0%[39m  
+  User/app/Filament/Resources/ProfileResource/Pages/CreateProfile [90m.....[39m [32m100.0%[39m  
+  User/app/Filament/Resources/ProfileResource/Pages/EditProfile [90m.......[39m [32m100.0%[39m  
+  User/app/Filament/Resources/ProfileResource/Pages/ListProfiles [90m........[39m [31m0.0%[39m  
+  User/app/Filament/Resources/RoleResource [90m..............................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/RoleResource/Pages/CreateRole [90m.............[39m [31m0.0%[39m  
+  User/app/Filament/Resources/RoleResource/Pages/EditRole [90m...............[39m [31m0.0%[39m  
+  User/app/Filament/Resources/RoleResource/Pages/ListRoles [90m..............[39m [31m0.0%[39m  
+  User/app/Filament/Resources/RoleResource/Pages/ManageRolePermission… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/RoleResource/Pages/ViewRole [90m...............[39m [31m0.0%[39m  
+  User/app/Filament/Resources/RoleResource/RelationManagers/Permissio… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/RoleResource/RelationManagers/UsersRela… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TeamInvitationResource [90m....................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TeamInvitationResource/Pages/EditTeamIn… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TeamInvitationResource/Pages/ListTeamIn… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TeamPermissionResource [90m....................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TeamPermissionResource/Pages/CreateTeam…  [32m100.0%[39m  
+  User/app/Filament/Resources/TeamPermissionResource/Pages/EditTeamPe…  [32m100.0%[39m  
+  User/app/Filament/Resources/TeamPermissionResource/Pages/ListTeamPe…  [32m100.0%[39m  
+  User/app/Filament/Resources/TeamResource [90m..............................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TeamResource/Pages/CreateTeam [90m.............[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TeamResource/Pages/EditTeam [90m...............[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TeamResource/Pages/ListTeams [90m..............[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TeamResource/Pages/ViewTeam [90m...............[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TeamResource/RelationManagers/TeamInvit… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TeamResource/RelationManagers/UsersRela… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TeamUserResource [90m..........................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TeamUserResource/Pages/CreateTeamUser [90m...[39m [32m100.0%[39m  
+  User/app/Filament/Resources/TeamUserResource/Pages/EditTeamUser [90m.....[39m [32m100.0%[39m  
+  User/app/Filament/Resources/TeamUserResource/Pages/ListTeamUsers [90m......[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TeamUserResource/Pages/ViewTeamUser [90m.......[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TenantResource [90m............................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TenantResource/Pages/CreateTenant [90m.........[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TenantResource/Pages/EditTenant [90m...........[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TenantResource/Pages/ListTenants [90m..........[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TenantResource/Pages/ManageTenants [90m......[39m [32m100.0%[39m  
+  User/app/Filament/Resources/TenantResource/Pages/ViewTenant [90m...........[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TenantResource/RelationManagers/Domains… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TenantResource/RelationManagers/UsersRe… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TenantUserResource [90m........................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TenantUserResource/Pages/CreateTenantUs…  [32m100.0%[39m  
+  User/app/Filament/Resources/TenantUserResource/Pages/EditTenantUser [90m.[39m [32m100.0%[39m  
+  User/app/Filament/Resources/TenantUserResource/Pages/ListTenantUser… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/TenantUserResource/Pages/ViewTenantUser [90m...[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource [90m..............................[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/Actions/SendOtpAction [90m........[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/Pages/BaseCreateUser [90m.......[39m [32m100.0%[39m  
+  User/app/Filament/Resources/UserResource/Pages/BaseEditUser [90m...........[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/Pages/BaseListUsers [90m..........[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/Pages/BaseViewUser [90m...........[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/Pages/CreateUser [90m...........[39m [32m100.0%[39m  
+  User/app/Filament/Resources/UserResource/Pages/EditUser [90m...............[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/Pages/ListUsers [90m..............[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/Pages/ViewUser [90m...............[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/RelationManagers/Authentic… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/RelationManagers/ClientsRe… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/RelationManagers/DevicesRe… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/RelationManagers/OauthToke… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/RelationManagers/ProfileRe… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/RelationManagers/RolesRela… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/RelationManagers/Socialite… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/RelationManagers/TeamsRela… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/RelationManagers/TenantsRe… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/RelationManagers/TokensRel… [90m..[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/Widgets/UserOverview [90m.........[39m [31m0.0%[39m  
+  User/app/Filament/Resources/UserResource/Widgets/UserWidget [90m...........[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/Auth/BaseAuthWidget [90m.........................[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/Auth/ForgotPasswordWidget [90m...................[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/Auth/LoginWidget [90m............................[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/Auth/LogoutWidget [90m...........................[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/Auth/PasswordResetConfirmWidget [90m.............[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/Auth/PasswordResetWidget [90m....................[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/Auth/RegisterWidget [90m.........................[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/Auth/ResetPasswordWidget [90m....................[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/EditUserWidget [90m..............................[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/LoginWidget [90m.................................[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/LogoutWidget [90m................................[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/PasswordExpiredWidget [90m.......................[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/RecentLoginsWidget [90m..........................[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/RegistrationWidget [90m..........................[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/UserTypeRegistrationsChartWidget [90m............[39m [31m0.0%[39m  
+  User/app/Filament/Widgets/UsersChartWidget [90m............................[39m [31m0.0%[39m  
+  User/app/Http/Controllers/Api/GetLoggedUserController [90m.................[39m [31m0.0%[39m  
+  User/app/Http/Controllers/Api/LoginController [90m.........................[39m [31m0.0%[39m  
+  User/app/Http/Controllers/Api/LogoutController [90m........................[39m [31m0.0%[39m  
+  User/app/Http/Controllers/Api/RegisterController [90m......................[39m [31m0.0%[39m  
+  User/app/Http/Controllers/Auth/EmailVerificationController [90m............[39m [31m0.0%[39m  
+  User/app/Http/Controllers/Auth/LogoutController [90m.......................[39m [31m0.0%[39m  
+  User/app/Http/Controllers/Auth/VerifyEmailController [90m..................[39m [31m0.0%[39m  
+  User/app/Http/Controllers/Controller [90m................................[39m [32m100.0%[39m  
+  User/app/Http/Controllers/Socialite/ProcessCallbackController [90m.........[39m [31m0.0%[39m  
+  User/app/Http/Controllers/Socialite/RedirectToProviderController [90m......[39m [31m0.0%[39m  
+  User/app/Http/Controllers/UpgradeController [90m...........................[39m [31m0.0%[39m  
+  User/app/Http/Livewire/Auth/AuthLogout [90m................................[39m [31m0.0%[39m  
+  User/app/Http/Livewire/Auth/Login [90m.....................................[39m [31m0.0%[39m  
+  User/app/Http/Livewire/Auth/Logout [90m....................................[39m [31m0.0%[39m  
+  User/app/Http/Livewire/Auth/Passwords/Confirm [90m.........................[39m [31m0.0%[39m  
+  User/app/Http/Livewire/Auth/Passwords/Email [90m...........................[39m [31m0.0%[39m  
+  User/app/Http/Livewire/Auth/Passwords/Reset [90m...........................[39m [31m0.0%[39m  
+  User/app/Http/Livewire/Auth/Register [90m..................................[39m [31m0.0%[39m  
+  User/app/Http/Livewire/Auth/Verify [90m....................................[39m [31m0.0%[39m  
+  User/app/Http/Livewire/PrivacyPolicy [90m..................................[39m [31m0.0%[39m  
+  User/app/Http/Livewire/Profile/DeleteAccount [90m..........................[39m [31m0.0%[39m  
+  User/app/Http/Livewire/Profile/SuperAdmin [90m.............................[39m [31m0.0%[39m  
+  User/app/Http/Livewire/Socialite/Buttons [90m..............................[39m [31m0.0%[39m  
+  User/app/Http/Livewire/Team/Change [90m....................................[39m [31m0.0%[39m  
+  User/app/Http/Livewire/TermsOfService [90m.................................[39m [31m0.0%[39m  
+  User/app/Http/Middleware/EnsureRegistrationEnabled [90m....................[39m [31m0.0%[39m  
+  User/app/Http/Middleware/EnsureUserHasRole [90m............................[39m [31m0.0%[39m  
+  User/app/Http/Middleware/EnsureUserHasType [90m............................[39m [31m0.0%[39m  
+  User/app/Http/Middleware/PasswordExpiryMiddleware [90m.....................[39m [31m0.0%[39m  
+  User/app/Http/Resources/ClientResource [90m................................[39m [31m0.0%[39m  
+  User/app/Http/Resources/OwnerResource [90m.................................[39m [31m0.0%[39m  
+  User/app/Http/Response/PasswordResetResponse [90m..........................[39m [31m0.0%[39m  
+  User/app/Http/Volt/LogoutAction [90m.......................................[39m [31m0.0%[39m  
+  User/app/Listeners/FailedLoginListener [90m................................[39m [31m0.0%[39m  
+  User/app/Listeners/LoginListener [90m......................................[39m [31m0.0%[39m  
+  User/app/Listeners/LogoutListener [90m.....................................[39m [31m0.0%[39m  
+  User/app/Listeners/OtherDeviceLogoutListener [90m..........................[39m [31m0.0%[39m  
+  User/app/Livewire/Logout [90m..............................................[39m [31m0.0%[39m  
+  User/app/Mail/TeamInvitation [90m........................................[39m [32m100.0%[39m  
+  User/app/Models/Authentication [90m........................................[39m [31m0.0%[39m  
+  User/app/Models/AuthenticationLog [90m.....................................[39m [31m0.0%[39m  
+  User/app/Models/BaseInteractsWithExtra [90m..............................[39m [32m100.0%[39m  
+  User/app/Models/BaseInteractsWithTenant [90m.............................[39m [32m100.0%[39m  
+  User/app/Models/BaseIsTenant [90m........................................[39m [32m100.0%[39m  
+  User/app/Models/BaseModel [90m.............................................[39m [31m0.0%[39m  
+  User/app/Models/BaseMorphPivot [90m........................................[39m [31m0.0%[39m  
+  User/app/Models/BasePivot [90m.............................................[39m [31m0.0%[39m  
+  User/app/Models/BaseProfile [90m...........................................[39m [31m0.0%[39m  
+  User/app/Models/BaseTeam [90m..............................................[39m [31m0.0%[39m  
+  User/app/Models/BaseTeamUser [90m..........................................[39m [31m0.0%[39m  
+  User/app/Models/BaseTenant [90m............................................[39m [31m0.0%[39m  
+  User/app/Models/BaseUser [90m..............................................[39m [31m0.0%[39m  
+  User/app/Models/BaseUuidModel [90m.........................................[39m [31m0.0%[39m  
+  User/app/Models/Device [90m................................................[39m [31m0.0%[39m  
+  User/app/Models/DeviceProfile [90m.........................................[39m [31m0.0%[39m  
+  User/app/Models/DeviceUser [90m............................................[39m [31m0.0%[39m  
+  User/app/Models/Extra [90m.................................................[39m [31m0.0%[39m  
+  User/app/Models/Feature [90m.............................................[39m [32m100.0%[39m  
+  User/app/Models/Membership [90m............................................[39m [31m0.0%[39m  
+  User/app/Models/ModelHasPermission [90m..................................[39m [32m100.0%[39m  
+  User/app/Models/ModelHasRole [90m..........................................[39m [31m0.0%[39m  
+  User/app/Models/ModelRole [90m...........................................[39m [32m100.0%[39m  
+  User/app/Models/Notification [90m........................................[39m [32m100.0%[39m  
+  User/app/Models/OauthAccessToken [90m....................................[39m [32m100.0%[39m  
+  User/app/Models/OauthAuthCode [90m.......................................[39m [32m100.0%[39m  
+  User/app/Models/OauthClient [90m...........................................[39m [31m0.0%[39m  
+  User/app/Models/OauthDeviceCode [90m.....................................[39m [32m100.0%[39m  
+  User/app/Models/OauthPersonalAccessClient [90m.............................[39m [31m0.0%[39m  
+  User/app/Models/OauthRefreshToken [90m...................................[39m [32m100.0%[39m  
+  User/app/Models/OauthToken [90m..........................................[39m [32m100.0%[39m  
+  User/app/Models/Passport/Client [90m.......................................[39m [31m0.0%[39m  
+  User/app/Models/PasswordReset [90m.......................................[39m [32m100.0%[39m  
+  User/app/Models/Permission [90m..........................................[39m [32m100.0%[39m  
+  User/app/Models/PermissionRole [90m........................................[39m [31m0.0%[39m  
+  User/app/Models/PermissionUser [90m......................................[39m [32m100.0%[39m  
+  User/app/Models/Policies/AuthenticationLogPolicy [90m......................[39m [31m0.0%[39m  
+  User/app/Models/Policies/AuthenticationPolicy [90m.......................[39m [32m100.0%[39m  
+  User/app/Models/Policies/BaseTeamPolicy [90m...............................[39m [31m0.0%[39m  
+  User/app/Models/Policies/BaseUserPolicy [90m...............................[39m [31m0.0%[39m  
+  User/app/Models/Policies/DevicePolicy [90m...............................[39m [32m100.0%[39m  
+  User/app/Models/Policies/DeviceProfilePolicy [90m..........................[39m [31m0.0%[39m  
+  User/app/Models/Policies/DeviceUserPolicy [90m.............................[39m [31m0.0%[39m  
+  User/app/Models/Policies/ExtraPolicy [90m..................................[39m [31m0.0%[39m  
+  User/app/Models/Policies/FeaturePolicy [90m................................[39m [31m0.0%[39m  
+  User/app/Models/Policies/MembershipPolicy [90m.............................[39m [31m0.0%[39m  
+  User/app/Models/Policies/ModelHasPermissionPolicy [90m.....................[39m [31m0.0%[39m  
+  User/app/Models/Policies/ModelHasRolePolicy [90m...........................[39m [31m0.0%[39m  
+  User/app/Models/Policies/NotificationPolicy [90m.........................[39m [32m100.0%[39m  
+  User/app/Models/Policies/OauthAccessTokenPolicy [90m.......................[39m [31m0.0%[39m  
+  User/app/Models/Policies/OauthAuthCodePolicy [90m..........................[39m [31m0.0%[39m  
+  User/app/Models/Policies/OauthClientPolicy [90m..........................[39m [32m100.0%[39m  
+  User/app/Models/Policies/OauthPersonalAccessClientPolicy [90m..............[39m [31m0.0%[39m  
+  User/app/Models/Policies/OauthRefreshTokenPolicy [90m......................[39m [31m0.0%[39m  
+  User/app/Models/Policies/PasswordResetPolicy [90m........................[39m [32m100.0%[39m  
+  User/app/Models/Policies/PermissionPolicy [90m.............................[39m [31m0.0%[39m  
+  User/app/Models/Policies/PermissionRolePolicy [90m.........................[39m [31m0.0%[39m  
+  User/app/Models/Policies/PermissionUserPolicy [90m.........................[39m [31m0.0%[39m  
+  User/app/Models/Policies/ProfilePolicy [90m..............................[39m [32m100.0%[39m  
+  User/app/Models/Policies/ProfileTeamPolicy [90m..........................[39m [32m100.0%[39m  
+  User/app/Models/Policies/RoleHasPermissionPolicy [90m......................[39m [31m0.0%[39m  
+  User/app/Models/Policies/RolePolicy [90m...................................[39m [31m0.0%[39m  
+  User/app/Models/Policies/SocialProviderPolicy [90m.........................[39m [31m0.0%[39m  
+  User/app/Models/Policies/SocialiteUserPolicy [90m........................[39m [32m100.0%[39m  
+  User/app/Models/Policies/TeamInvitationPolicy [90m.......................[39m [32m100.0%[39m  
+  User/app/Models/Policies/TeamPermissionPolicy [90m.......................[39m [32m100.0%[39m  
+  User/app/Models/Policies/TeamPolicy [90m...................................[39m [31m0.0%[39m  
+  User/app/Models/Policies/TeamUserPolicy [90m.............................[39m [32m100.0%[39m  
+  User/app/Models/Policies/TenantPolicy [90m.................................[39m [31m0.0%[39m  
+  User/app/Models/Policies/TenantUserPolicy [90m...........................[39m [32m100.0%[39m  
+  User/app/Models/Policies/UserBasePolicy [90m...............................[39m [31m0.0%[39m  
+  User/app/Models/Policies/UserPermissionBasePolicy [90m.....................[39m [31m0.0%[39m  
+  User/app/Models/Policies/UserPolicy [90m...................................[39m [31m0.0%[39m  
+  User/app/Models/Profile [90m...............................................[39m [31m0.0%[39m  
+  User/app/Models/ProfileTeam [90m.........................................[39m [32m100.0%[39m  
+  User/app/Models/Role [90m..................................................[39m [31m0.0%[39m  
+  User/app/Models/RoleHasPermission [90m...................................[39m [32m100.0%[39m  
+  User/app/Models/Scopes/TenantScope [90m....................................[39m [31m0.0%[39m  
+  User/app/Models/SocialProvider [90m........................................[39m [31m0.0%[39m  
+  User/app/Models/SocialiteUser [90m.........................................[39m [31m0.0%[39m  
+  User/app/Models/SsoProvider [90m...........................................[39m [31m0.0%[39m  
+  User/app/Models/Team [90m..................................................[39m [31m0.0%[39m  
+  User/app/Models/TeamInvitation [90m........................................[39m [31m0.0%[39m  
+  User/app/Models/TeamPermission [90m........................................[39m [31m0.0%[39m  
+  User/app/Models/TeamUser [90m..............................................[39m [31m0.0%[39m  
+  User/app/Models/Tenant [90m..............................................[39m [32m100.0%[39m  
+  User/app/Models/TenantUser [90m............................................[39m [31m0.0%[39m  
+  User/app/Models/Traits/HasAuthenticationLogTrait [90m......................[39m [31m0.0%[39m  
+  User/app/Models/Traits/HasDevices [90m.....................................[39m [31m0.0%[39m  
+  User/app/Models/Traits/HasModules [90m.....................................[39m [31m0.0%[39m  
+  User/app/Models/Traits/HasPasswordExpiry [90m..............................[39m [31m0.0%[39m  
+  User/app/Models/Traits/HasSocialite [90m...................................[39m [31m0.0%[39m  
+  User/app/Models/Traits/HasSpatiePermission [90m..........................[39m [32m100.0%[39m  
+  User/app/Models/Traits/HasTeams [90m.......................................[39m [31m0.0%[39m  
+  User/app/Models/Traits/HasTenants [90m.....................................[39m [31m0.0%[39m  
+  User/app/Models/Traits/InteractsWithTenant [90m............................[39m [31m0.0%[39m  
+  User/app/Models/Traits/IsProfileTrait [90m.................................[39m [31m0.0%[39m  
+  User/app/Models/Traits/IsTenant [90m.......................................[39m [31m0.0%[39m  
+  User/app/Models/User [90m..................................................[39m [31m0.0%[39m  
+  User/app/Notifications/Auth/Otp [90m.......................................[39m [31m0.0%[39m  
+  User/app/Notifications/Auth/ResetPassword [90m.............................[39m [31m0.0%[39m  
+  User/app/Notifications/Auth/VerifyEmail [90m...............................[39m [31m0.0%[39m  
+  User/app/Observers/UserObserver [90m.......................................[39m [31m0.0%[39m  
+  User/app/Rules/CheckOtpExpiredRule [90m....................................[39m [31m0.0%[39m  
+  User/app/Support/Utils [90m................................................[39m [31m0.0%[39m  
+  User/app/Traits/PasswordValidationRules [90m...............................[39m [31m0.0%[39m  
+  User/app/View/Components/Mail/Message [90m.................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Arr/DiffAssocRecursiveAction [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Arr/RangeIntersectAction [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Arr/SaveArrayAction [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Arr/SaveJsonArrayAction [90m...............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Arr/SavePhpArrayAction [90m................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Array/DiffAssocRecursiveAction [90m........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Array/RangeIntersectAction [90m............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Array/SaveArrayAction [90m...............................[39m [32m100.0%[39m  
+  Xot/app/Actions/Array/SaveJsonArrayAction [90m.............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Array/SavePhpArrayAction [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Blade/RegisterBladeComponentsAction [90m...................[39m [31m0.0%[39m  
+  Xot/app/Actions/Cast/SafeArrayByModelCastAction [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Cast/SafeArrayCastAction [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Cast/SafeAttributeCastAction [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Cast/SafeBooleanCastAction [90m............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Cast/SafeEloquentCastAction [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Cast/SafeFloatCastAction [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Cast/SafeIntCastAction [90m................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Cast/SafeObjectCastAction [90m.............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Cast/SafeStringCastAction [90m.............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Class/GetFilenameByClassnameAction [90m....................[39m [31m0.0%[39m  
+  Xot/app/Actions/Collection/TransCollectionAction [90m......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Config/GetTenantConfigArrayAction [90m.....................[39m [31m0.0%[39m  
+  Xot/app/Actions/Config/GetTenantConfigPathAction [90m......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Debug/MeasureAction [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Dummy/GetProductsArrayDummyAction [90m.....................[39m [31m0.0%[39m  
+  Xot/app/Actions/ExecuteArtisanCommandAction [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Export/ExportXlsByCollection [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Export/ExportXlsByLazyCollection [90m......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Export/ExportXlsByQuery [90m...............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Export/ExportXlsByView [90m................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Export/ExportXlsStreamByLazyCollection [90m................[39m [31m0.0%[39m  
+  Xot/app/Actions/Export/PdfByHtmlAction [90m................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Export/PdfByHtmlAction_Portrait [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Export/PdfByModelAction [90m...............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Export/PdfByViewAction [90m................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Export/XlsByModelClassAction [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Factory/GetFactoryAction [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Factory/GetFakerAction [90m................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Factory/GetPropertiesFromMethodsByModelAction [90m.........[39m [31m0.0%[39m  
+  Xot/app/Actions/Filament/Actions/CopyFromLastYearButton [90m...............[39m [31m0.0%[39m  
+  Xot/app/Actions/Filament/Actions/ExportButton [90m.........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Filament/Actions/ImportButton [90m.........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Filament/AutoLabelAction [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Filament/Block/GetViewBlocksOptionsByTypeAction [90m.......[39m [31m0.0%[39m  
+  Xot/app/Actions/Filament/Filter/GetYearFilter [90m.........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Filament/GenerateFormByFileAction [90m.....................[39m [31m0.0%[39m  
+  Xot/app/Actions/Filament/GenerateTableColumnsByFileAction [90m.............[39m [31m0.0%[39m  
+  Xot/app/Actions/Filament/GetModulesNavigationItems [90m....................[39m [31m0.0%[39m  
+  Xot/app/Actions/Filament/RenderContextNavigation [90m......................[39m [31m0.0%[39m  
+  Xot/app/Actions/File/AddStrictTypesDeclarationAction [90m..................[39m [31m0.0%[39m  
+  Xot/app/Actions/File/AssetAction [90m......................................[39m [31m0.0%[39m  
+  Xot/app/Actions/File/AssetPathAction [90m..................................[39m [31m0.0%[39m  
+  Xot/app/Actions/File/CopyAction [90m.......................................[39m [31m0.0%[39m  
+  Xot/app/Actions/File/CreateDirectoryForFilenameAction [90m.................[39m [31m0.0%[39m  
+  Xot/app/Actions/File/DownloadZipByPathsDiskAction [90m.....................[39m [31m0.0%[39m  
+  Xot/app/Actions/File/FixPathAction [90m....................................[39m [31m0.0%[39m  
+  Xot/app/Actions/File/GetClassNameByPathAction [90m.........................[39m [31m0.0%[39m  
+  Xot/app/Actions/File/GetComponentsAction [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Actions/File/GetModulePathAction [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Actions/File/GetViewNameSpacePathAction [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Actions/File/SvgExistsAction [90m..................................[39m [31m0.0%[39m  
+  Xot/app/Actions/File/ViewCopyAction [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Actions/File/ViewPathAction [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Generate/GenerateModelByModelClass [90m....................[39m [31m0.0%[39m  
+  Xot/app/Actions/GeneratePdfAction [90m.....................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Geo/GetDistanceExpressionAction [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Actions/GetModelByModelTypeAction [90m.............................[39m [31m0.0%[39m  
+  Xot/app/Actions/GetModelClassByModelTypeAction [90m........................[39m [31m0.0%[39m  
+  Xot/app/Actions/GetModelTypeByModelAction [90m.............................[39m [31m0.0%[39m  
+  Xot/app/Actions/GetTransKeyAction [90m.....................................[39m [31m0.0%[39m  
+  Xot/app/Actions/GetViewAction [90m.........................................[39m [31m0.0%[39m  
+  Xot/app/Actions/GetViewByClassAction [90m..................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Import/ImportCsvAction [90m................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Livewire/RegisterLivewireComponentsAction [90m.............[39m [31m0.0%[39m  
+  Xot/app/Actions/Mail/SendMailByRecordAction [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Mail/SendMailByRecordsAction [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/DeleteTableIndexByModelClassIndexNameAction [90m.....[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/DestroyAction [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/FilterRelationsAction [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/GenerateModelByTableAction [90m......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/GetAllModelsAction [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/GetAllModelsByModuleNameAction [90m..................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/GetFirstModelClassByModelNameAction [90m.............[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/GetModelClassByModelNameAction [90m..................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/GetModelFieldsByModelAction [90m.....................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/GetSchemaManagerByModelClassAction [90m..............[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/GetSicureArrayByModelAction [90m.....................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/GetTableIndexesByModelClassAction [90m...............[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/GetTransKeyByModelClassAction [90m...................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/HasColumnAction [90m.................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Store/BelongsToAction [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Store/BelongsToManyAction [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Store/HasManyAction [90m.............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Store/HasManyDeepAction [90m.........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Store/HasManyThroughAction [90m......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Store/HasOneAction [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Store/MorphManyAction [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Store/MorphOneAction [90m............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Store/MorphToManyAction [90m.........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Store/MorphToOneAction [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Store/MorphedByManyAction [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Store/PivotAction [90m...............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/StoreAction [90m.....................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/TableExistsByModelClassActions [90m..................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Update/BelongsToAction [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Update/BelongsToManyAction [90m......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Update/CustomRelationAction [90m.....................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Update/HasManyAction [90m............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Update/HasManyDeepAction [90m........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Update/HasManyThroughAction [90m.....................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Update/HasOneAction [90m.............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Update/MorphManyAction [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Update/MorphOneAction [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Update/MorphToManyAction [90m........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Update/MorphToOneAction [90m.........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Update/MorphedByManyAction [90m......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Update/PivotAction [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/Update/RelationAction [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Model/UpdateAction [90m....................................[39m [31m0.0%[39m  
+  Xot/app/Actions/ModelClass/CopyFromLastYearAction [90m.....................[39m [31m0.0%[39m  
+  Xot/app/Actions/ModelClass/CountAction [90m................................[39m [31m0.0%[39m  
+  Xot/app/Actions/ModelClass/FakeSeederAction [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Actions/ModelClass/GetMethodBodyAction [90m........................[39m [31m0.0%[39m  
+  Xot/app/Actions/ModelClass/SelectAction [90m...............................[39m [31m0.0%[39m  
+  Xot/app/Actions/ModelClass/TableExistsByModelClassActions [90m.............[39m [31m0.0%[39m  
+  Xot/app/Actions/ModelClass/UpdateCountAction [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Module/GetModuleConfigAction [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Module/GetModuleNameByClassAction [90m.....................[39m [31m0.0%[39m  
+  Xot/app/Actions/Module/GetModuleNameByModelAction [90m.....................[39m [31m0.0%[39m  
+  Xot/app/Actions/Module/GetModuleNameByModelClassAction [90m................[39m [31m0.0%[39m  
+  Xot/app/Actions/Module/GetModulePathByGeneratorAction [90m.................[39m [31m0.0%[39m  
+  Xot/app/Actions/Panel/ApplyMetatagToPanelAction [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Panel/ApplyTenancyToPanelAction [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Actions/ParsePrintPageStringAction [90m............................[39m [31m0.0%[39m  
+  Xot/app/Actions/Pdf/ContentPdfAction [90m..................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Pdf/Engine/SpatiePdfByHtmlAction [90m......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Pdf/Engine/SpipuPdfByHtmlAction [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Pdf/GetPdfContentByRecordAction [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Actions/Pdf/PdfByHtmlAction [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Pdf/PdfEngineEnum [90m...................................[39m [32m100.0%[39m  
+  Xot/app/Actions/Pdf/StreamDownloadPdfAction [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Query/CreateTableIndexByModelClassColumnsAction [90m.......[39m [31m0.0%[39m  
+  Xot/app/Actions/Query/GetFieldnamesByTablenameAction [90m..................[39m [31m0.0%[39m  
+  Xot/app/Actions/Query/StartQueryLogAction [90m.............................[39m [31m0.0%[39m  
+  Xot/app/Actions/String/GetPronounceablePasswordAction [90m.................[39m [31m0.0%[39m  
+  Xot/app/Actions/String/GetStrBetweenStartsWithAction [90m..................[39m [31m0.0%[39m  
+  Xot/app/Actions/String/NormalizeDriverNameAction [90m......................[39m [31m0.0%[39m  
+  Xot/app/Actions/String/SanitizeAction [90m.................................[39m [31m0.0%[39m  
+  Xot/app/Actions/Theme/GetThemeContextAction [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Trans/GetTransFilenameAction [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Actions/Tree/GetTreeOptionsByModelClassAction [90m.................[39m [31m0.0%[39m  
+  Xot/app/Actions/View/GetViewByClassAction [90m.............................[39m [31m0.0%[39m  
+  Xot/app/Actions/View/GetViewByModelClassAction [90m........................[39m [31m0.0%[39m  
+  Xot/app/Actions/View/GetViewDirAction [90m.................................[39m [31m0.0%[39m  
+  Xot/app/Actions/View/GetViewNameSpacePathAction [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Actions/View/GetViewPathAction [90m................................[39m [31m0.0%[39m  
+  Xot/app/Actions/View/GetViewsSiblingsAndSelfAction [90m....................[39m [31m0.0%[39m  
+  Xot/app/Casts/PhoneCast [90m...............................................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/AddStrictTypesDeclarationCommand [90m.............[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/AnalyzeComponentsCommand [90m.....................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/DatabaseBackUpCommand [90m........................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/ExecuteSqlFileCommand [90m........................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/GenerateFilamentResources [90m....................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/GenerateFormCommand [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/GenerateModelByModelClassCommand [90m.............[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/GenerateModelClassCommand [90m....................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/GenerateTableColumnsCommand [90m..................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/ImportMdbToMySQL [90m.............................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/ListFilamentPanels [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/LivewireComponentsListCommand [90m................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/OptimizeFilamentMemoryCommand [90m................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/ParsePrintPageStringCommand [90m..................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/SearchTextInDbCommand [90m........................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/ViewDatabaseConfigCommand [90m....................[39m [31m0.0%[39m  
+  Xot/app/Console/Commands/XotBaseCommand [90m.............................[39m [32m100.0%[39m  
+  Xot/app/Contracts/ErrorFormatterContract [90m............................[39m [32m100.0%[39m  
+  Xot/app/Contracts/ExtraContract [90m.....................................[39m [32m100.0%[39m  
+  Xot/app/Contracts/HasRecursiveRelationshipsContract [90m.................[39m [32m100.0%[39m  
+  Xot/app/Contracts/ModelContactContract [90m..............................[39m [32m100.0%[39m  
+  Xot/app/Contracts/ModelContract [90m.....................................[39m [32m100.0%[39m  
+  Xot/app/Contracts/ModelInputContract [90m................................[39m [32m100.0%[39m  
+  Xot/app/Contracts/ModelProfileContract [90m..............................[39m [32m100.0%[39m  
+  Xot/app/Contracts/ModelWithAuthorContract [90m...........................[39m [32m100.0%[39m  
+  Xot/app/Contracts/ModelWithPosContract [90m..............................[39m [32m100.0%[39m  
+  Xot/app/Contracts/ModelWithStatusContract [90m...........................[39m [32m100.0%[39m  
+  Xot/app/Contracts/ModelWithUserContract [90m.............................[39m [32m100.0%[39m  
+  Xot/app/Contracts/PassportHasApiTokensContract [90m......................[39m [32m100.0%[39m  
+  Xot/app/Contracts/PivotContract [90m.....................................[39m [32m100.0%[39m  
+  Xot/app/Contracts/ProfileContract [90m...................................[39m [32m100.0%[39m  
+  Xot/app/Contracts/StateContract [90m.....................................[39m [32m100.0%[39m  
+  Xot/app/Contracts/UpdaterContract [90m...................................[39m [32m100.0%[39m  
+  Xot/app/Contracts/UserContract [90m......................................[39m [32m100.0%[39m  
+  Xot/app/Contracts/WithStateStatusContract [90m...........................[39m [32m100.0%[39m  
+  Xot/app/DTOs/FieldDTO [90m...............................................[39m [32m100.0%[39m  
+  Xot/app/DTOs/FieldFilterDTO [90m...........................................[39m [31m0.0%[39m  
+  Xot/app/Database/Migrations/XotBaseMigration [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Datas/ArticleData [90m.............................................[39m [31m0.0%[39m  
+  Xot/app/Datas/AuthData [90m................................................[39m [31m0.0%[39m  
+  Xot/app/Datas/ColumnData [90m..............................................[39m [31m0.0%[39m  
+  Xot/app/Datas/ComponentFileData [90m.......................................[39m [31m0.0%[39m  
+  Xot/app/Datas/CookieData [90m..............................................[39m [31m0.0%[39m  
+  Xot/app/Datas/EnvData [90m.................................................[39m [31m0.0%[39m  
+  Xot/app/Datas/FilemanagerData [90m.........................................[39m [31m0.0%[39m  
+  Xot/app/Datas/HasManyRelationData [90m.....................................[39m [31m0.0%[39m  
+  Xot/app/Datas/HasManyUpdateData [90m.......................................[39m [31m0.0%[39m  
+  Xot/app/Datas/JsonResponseData [90m........................................[39m [31m0.0%[39m  
+  Xot/app/Datas/MailData [90m................................................[39m [31m0.0%[39m  
+  Xot/app/Datas/MetatagData [90m.............................................[39m [31m0.0%[39m  
+  Xot/app/Datas/NotificationData [90m........................................[39m [31m0.0%[39m  
+  Xot/app/Datas/OptionData [90m..............................................[39m [31m0.0%[39m  
+  Xot/app/Datas/PdfData [90m.................................................[39m [31m0.0%[39m  
+  Xot/app/Datas/PwaData [90m.................................................[39m [31m0.0%[39m  
+  Xot/app/Datas/RelationData [90m..........................................[39m [32m100.0%[39m  
+  Xot/app/Datas/RouteData [90m...............................................[39m [31m0.0%[39m  
+  Xot/app/Datas/SearchEngineData [90m........................................[39m [31m0.0%[39m  
+  Xot/app/Datas/SubscriptionData [90m........................................[39m [31m0.0%[39m  
+  Xot/app/Datas/Transformers/AssetTransformer [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Datas/TrendData [90m.............................................[39m [32m100.0%[39m  
+  Xot/app/Datas/XotData [90m.................................................[39m [31m0.0%[39m  
+  Xot/app/Enums/DayOfWeek [90m...............................................[39m [31m0.0%[39m  
+  Xot/app/Enums/GenderEnum [90m..............................................[39m [31m0.0%[39m  
+  Xot/app/Enums/PdfEngineEnum [90m...........................................[39m [31m0.0%[39m  
+  Xot/app/Enums/YesNoEnum [90m...............................................[39m [31m0.0%[39m  
+  Xot/app/Events/CommandOutputEvent [90m.....................................[39m [31m0.0%[39m  
+  Xot/app/Exceptions/ApplicationError [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Exceptions/ApplicationException [90m...............................[39m [31m0.0%[39m  
+  Xot/app/Exceptions/ExceptionHandler [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Exceptions/Formatters/WebhookErrorFormatter [90m...................[39m [31m0.0%[39m  
+  Xot/app/Exceptions/Handlers/HandlerDecorator [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Exceptions/Handlers/HandlersRepository [90m........................[39m [31m0.0%[39m  
+  Xot/app/Exceptions/JsonEncodeException [90m................................[39m [31m0.0%[39m  
+  Xot/app/Exceptions/ModelDeletionException [90m.............................[39m [31m0.0%[39m  
+  Xot/app/Exceptions/RepositoryException [90m..............................[39m [32m100.0%[39m  
+  Xot/app/Exports/CollectionExport [90m......................................[39m [31m0.0%[39m  
+  Xot/app/Exports/LazyCollectionExport [90m..................................[39m [31m0.0%[39m  
+  Xot/app/Exports/QueryExport [90m...........................................[39m [31m0.0%[39m  
+  Xot/app/Exports/ViewExport [90m............................................[39m [31m0.0%[39m  
+  Xot/app/Facades/Profile [90m...............................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Actions/Form/FieldRefreshAction [90m......................[39m [31m0.0%[39m  
+  Xot/app/Filament/Actions/Header/ArtisanHeaderAction [90m...................[39m [31m0.0%[39m  
+  Xot/app/Filament/Actions/Header/ExportTreeXlsAction [90m...................[39m [31m0.0%[39m  
+  Xot/app/Filament/Actions/Header/ExportXlsAction [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Filament/Actions/Header/ExportXlsLazyAction [90m...................[39m [31m0.0%[39m  
+  Xot/app/Filament/Actions/Header/FakeSeederHeaderAction [90m................[39m [31m0.0%[39m  
+  Xot/app/Filament/Actions/Header/SanitizeFieldsHeaderAction [90m............[39m [31m0.0%[39m  
+  Xot/app/Filament/Actions/Table/ExportXlsTableAction [90m...................[39m [31m0.0%[39m  
+  Xot/app/Filament/Actions/Table/PdfAction [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Filament/Actions/XotBaseAction [90m..............................[39m [32m100.0%[39m  
+  Xot/app/Filament/Actions/XotBaseActionGroup [90m.........................[39m [32m100.0%[39m  
+  Xot/app/Filament/Blocks/XotBaseBlock [90m..................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Builders/ColumnBuilder [90m...............................[39m [31m0.0%[39m  
+  Xot/app/Filament/Builders/FilterBuilder [90m...............................[39m [31m0.0%[39m  
+  Xot/app/Filament/Clusters/XotBaseCluster [90m............................[39m [32m100.0%[39m  
+  Xot/app/Filament/Forms/Components/XotBaseCheckboxList [90m.................[39m [31m0.0%[39m  
+  Xot/app/Filament/Forms/Components/XotBaseDatePicker [90m.................[39m [32m100.0%[39m  
+  Xot/app/Filament/Forms/Components/XotBaseField [90m......................[39m [32m100.0%[39m  
+  Xot/app/Filament/Forms/Components/XotBaseFormComponent [90m................[39m [31m0.0%[39m  
+  Xot/app/Filament/Forms/Components/XotBasePlaceholder [90m................[39m [32m100.0%[39m  
+  Xot/app/Filament/Forms/Components/XotBaseRadio [90m........................[39m [31m0.0%[39m  
+  Xot/app/Filament/Forms/Components/XotBaseSelect [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Filament/Forms/Components/XotBaseViewField [90m..................[39m [32m100.0%[39m  
+  Xot/app/Filament/Infolists/Components/FileContentEntry [90m..............[39m [32m100.0%[39m  
+  Xot/app/Filament/Pages/ArtisanCommandsManager [90m.........................[39m [31m0.0%[39m  
+  Xot/app/Filament/Pages/Auth/XotBaseEditProfile [90m......................[39m [32m100.0%[39m  
+  Xot/app/Filament/Pages/Auth/XotBaseLogin [90m............................[39m [32m100.0%[39m  
+  Xot/app/Filament/Pages/Auth/XotBaseRegister [90m.........................[39m [32m100.0%[39m  
+  Xot/app/Filament/Pages/Dashboard [90m......................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Pages/EnvPage [90m......................................[39m [32m100.0%[39m  
+  Xot/app/Filament/Pages/HealthPage [90m.....................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Pages/MainDashboard [90m..................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Pages/MetatagPage [90m....................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Pages/Test [90m.........................................[39m [32m100.0%[39m  
+  Xot/app/Filament/Pages/XotBaseDashboard [90m...............................[39m [31m0.0%[39m  
+  Xot/app/Filament/Pages/XotBasePage [90m....................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/CacheLockResource [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/CacheLockResource/Pages/CreateCacheLock [90m..[39m [32m100.0%[39m  
+  Xot/app/Filament/Resources/CacheLockResource/Pages/EditCacheLock [90m....[39m [32m100.0%[39m  
+  Xot/app/Filament/Resources/CacheLockResource/Pages/ListCacheLocks [90m.....[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/CacheResource [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/CacheResource/Pages/CreateCache [90m..........[39m [32m100.0%[39m  
+  Xot/app/Filament/Resources/CacheResource/Pages/EditCache [90m............[39m [32m100.0%[39m  
+  Xot/app/Filament/Resources/CacheResource/Pages/ListCaches [90m.............[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/ExtraResource [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/ExtraResource/Pages/CreateExtra [90m..........[39m [32m100.0%[39m  
+  Xot/app/Filament/Resources/ExtraResource/Pages/EditExtra [90m............[39m [32m100.0%[39m  
+  Xot/app/Filament/Resources/ExtraResource/Pages/ListExtras [90m.............[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/LogResource [90m................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/LogResource/Pages/CreateLog [90m..............[39m [32m100.0%[39m  
+  Xot/app/Filament/Resources/LogResource/Pages/EditLog [90m................[39m [32m100.0%[39m  
+  Xot/app/Filament/Resources/LogResource/Pages/ListLogs [90m.................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/LogResource/Pages/ViewLog [90m..................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/ModuleResource [90m.............................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/ModuleResource/Pages/CreateModule [90m........[39m [32m100.0%[39m  
+  Xot/app/Filament/Resources/ModuleResource/Pages/EditModule [90m............[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/ModuleResource/Pages/ListModules [90m...........[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/Pages/XotBaseCreateRecord [90m..................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/Pages/XotBaseEditRecord [90m....................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/Pages/XotBaseListRecords [90m...................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/Pages/XotBaseManageRelatedRecords [90m........[39m [32m100.0%[39m  
+  Xot/app/Filament/Resources/Pages/XotBasePage [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/Pages/XotBaseResourcePage [90m................[39m [32m100.0%[39m  
+  Xot/app/Filament/Resources/Pages/XotBaseViewBanca [90m...................[39m [32m100.0%[39m  
+  Xot/app/Filament/Resources/Pages/XotBaseViewRecord [90m....................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/RelationManagers/XotBaseRelationManager [90m....[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/SessionResource [90m............................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/SessionResource/Pages/CreateSession [90m......[39m [32m100.0%[39m  
+  Xot/app/Filament/Resources/SessionResource/Pages/EditSession [90m........[39m [32m100.0%[39m  
+  Xot/app/Filament/Resources/SessionResource/Pages/ListSessions [90m.........[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/XotBaseResource [90m............................[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/XotBaseResource/Pages/XotBaseManageRelat… [90m..[39m [31m0.0%[39m  
+  Xot/app/Filament/Resources/XotBaseResource/RelationManager/XotBaseR… [90m..[39m [31m0.0%[39m  
+  Xot/app/Filament/Schemas/Components/XotBaseGroup [90m......................[39m [31m0.0%[39m  
+  Xot/app/Filament/Schemas/Components/XotBaseSection [90m....................[39m [31m0.0%[39m  
+  Xot/app/Filament/Support/ColumnBuilder [90m................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Tables/Actions/XotBaseBulkAction [90m.....................[39m [31m0.0%[39m  
+  Xot/app/Filament/Tables/Actions/XotBaseTableAction [90m....................[39m [31m0.0%[39m  
+  Xot/app/Filament/Tables/Columns/XotBaseColumn [90m.......................[39m [32m100.0%[39m  
+  Xot/app/Filament/Tables/Columns/XotBaseColumnGroup [90m..................[39m [32m100.0%[39m  
+  Xot/app/Filament/Tables/Columns/XotBaseIconColumn [90m...................[39m [32m100.0%[39m  
+  Xot/app/Filament/Tables/Columns/XotBaseSelectColumn [90m.................[39m [32m100.0%[39m  
+  Xot/app/Filament/Traits/.php-cs-fixer.dist [90m............................[39m [31m0.0%[39m  
+  Xot/app/Filament/Traits/HasXotTable [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Traits/NavigationLabelTrait [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Filament/Traits/NavigationPageLabelTrait [90m......................[39m [31m0.0%[39m  
+  Xot/app/Filament/Traits/TransFuncTrait [90m................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Traits/TransTrait [90m....................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Widgets/Clock [90m........................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Widgets/EnvWidget [90m....................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Widgets/FilterFormWidget [90m.............................[39m [31m0.0%[39m  
+  Xot/app/Filament/Widgets/HealthOverviewWidget [90m.........................[39m [31m0.0%[39m  
+  Xot/app/Filament/Widgets/ModelTrendChartWidget [90m........................[39m [31m0.0%[39m  
+  Xot/app/Filament/Widgets/ModulesOverviewWidget [90m........................[39m [31m0.0%[39m  
+  Xot/app/Filament/Widgets/StateOverviewWidget [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Filament/Widgets/StatesChartWidget [90m............................[39m [31m0.0%[39m  
+  Xot/app/Filament/Widgets/TestWidget [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Filament/Widgets/XotBaseChartWidget [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Filament/Widgets/XotBaseStatsOverviewWidget [90m.................[39m [32m100.0%[39m  
+  Xot/app/Filament/Widgets/XotBaseTableWidget [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Filament/Widgets/XotBaseWidget [90m................................[39m [31m0.0%[39m  
+  Xot/app/Helpers/ResourceFormSchemaGenerator [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Http/Controllers/XotBaseController [90m............................[39m [31m0.0%[39m  
+  Xot/app/Http/Http/Controllers/XotBaseController [90m.....................[39m [32m100.0%[39m  
+  Xot/app/Http/Http/Controllers/xotbasecontroller [90m.....................[39m [32m100.0%[39m  
+  Xot/app/Http/Livewire/XotBaseComponent [90m................................[39m [31m0.0%[39m  
+  Xot/app/Http/Middleware/Cors [90m..........................................[39m [31m0.0%[39m  
+  Xot/app/Http/Middleware/FilamentMemoryMonitorMiddleware [90m...............[39m [31m0.0%[39m  
+  Xot/app/Http/Middleware/PerformanceMonitoringMiddleware [90m...............[39m [31m0.0%[39m  
+  Xot/app/Http/Middleware/SecurityMiddleware [90m............................[39m [31m0.0%[39m  
+  Xot/app/Http/Middleware/SetDefaultLocaleForUrls [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Http/Middleware/SetDefaultTenantForUrlsMiddleware [90m.............[39m [31m0.0%[39m  
+  Xot/app/Interfaces/HasTableFunctions [90m................................[39m [32m100.0%[39m  
+  Xot/app/Mail/RecordMail [90m...............................................[39m [31m0.0%[39m  
+  Xot/app/Models/BaseActivity [90m.........................................[39m [32m100.0%[39m  
+  Xot/app/Models/BaseComment [90m..........................................[39m [32m100.0%[39m  
+  Xot/app/Models/BaseExtra [90m..............................................[39m [31m0.0%[39m  
+  Xot/app/Models/BaseModel [90m..............................................[39m [31m0.0%[39m  
+  Xot/app/Models/BaseMorphPivot [90m.........................................[39m [31m0.0%[39m  
+  Xot/app/Models/BaseRating [90m...........................................[39m [32m100.0%[39m  
+  Xot/app/Models/BaseRatingMorph [90m......................................[39m [32m100.0%[39m  
+  Xot/app/Models/BaseTreeModel [90m........................................[39m [32m100.0%[39m  
+  Xot/app/Models/Cache [90m................................................[39m [32m100.0%[39m  
+  Xot/app/Models/CacheLock [90m............................................[39m [32m100.0%[39m  
+  Xot/app/Models/Extra [90m................................................[39m [32m100.0%[39m  
+  Xot/app/Models/Feed [90m.................................................[39m [32m100.0%[39m  
+  Xot/app/Models/HealthCheckResultHistoryItem [90m.........................[39m [32m100.0%[39m  
+  Xot/app/Models/InformationSchemaTable [90m.................................[39m [31m0.0%[39m  
+  Xot/app/Models/Log [90m....................................................[39m [31m0.0%[39m  
+  Xot/app/Models/Module [90m.................................................[39m [31m0.0%[39m  
+  Xot/app/Models/Policies/CacheLockPolicy [90m...............................[39m [31m0.0%[39m  
+  Xot/app/Models/Policies/CachePolicy [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Models/Policies/ExtraPolicy [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Models/Policies/FeedPolicy [90m....................................[39m [31m0.0%[39m  
+  Xot/app/Models/Policies/HealthCheckResultHistoryItemPolicy [90m............[39m [31m0.0%[39m  
+  Xot/app/Models/Policies/InformationSchemaTablePolicy [90m..................[39m [31m0.0%[39m  
+  Xot/app/Models/Policies/LogPolicy [90m.....................................[39m [31m0.0%[39m  
+  Xot/app/Models/Policies/ModulePolicy [90m..................................[39m [31m0.0%[39m  
+  Xot/app/Models/Policies/PulseAggregatePolicy [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Models/Policies/PulseEntryPolicy [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Models/Policies/PulseValuePolicy [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Models/Policies/SessionPolicy [90m.................................[39m [31m0.0%[39m  
+  Xot/app/Models/Policies/XotBasePolicy [90m.................................[39m [31m0.0%[39m  
+  Xot/app/Models/PulseAggregate [90m.......................................[39m [32m100.0%[39m  
+  Xot/app/Models/PulseEntry [90m...........................................[39m [32m100.0%[39m  
+  Xot/app/Models/PulseValue [90m...........................................[39m [32m100.0%[39m  
+  Xot/app/Models/Session [90m..............................................[39m [32m100.0%[39m  
+  Xot/app/Models/Traits/HasCommonScopes [90m.................................[39m [31m0.0%[39m  
+  Xot/app/Models/Traits/HasDynamicFillable [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Models/Traits/HasExtraTrait [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Models/Traits/HasXotFactory [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Models/Traits/RelationX [90m.......................................[39m [31m0.0%[39m  
+  Xot/app/Models/Traits/TypedHasRecursiveRelationships [90m..................[39m [31m0.0%[39m  
+  Xot/app/Models/XotBaseModel [90m...........................................[39m [31m0.0%[39m  
+  Xot/app/Models/XotBaseMorphPivot [90m......................................[39m [31m0.0%[39m  
+  Xot/app/Models/XotBasePivot [90m...........................................[39m [31m0.0%[39m  
+  Xot/app/Models/XotBaseTreeModel [90m.....................................[39m [32m100.0%[39m  
+  Xot/app/Models/XotBaseUuidModel [90m.......................................[39m [31m0.0%[39m  
+  Xot/app/Relations/CustomRelation [90m......................................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/acts/artisan/show_route_list.blade [90m............[39m [31m0.0%[39m  
+  Xot/app/Resources/views/admin/acts/manage_lang_module.blade [90m...........[39m [31m0.0%[39m  
+  Xot/app/Resources/views/admin/dashboard.blade [90m.........................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/admin/home/acts/db.blade [90m......................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/admin/home/acts/xls_import.blade [90m..............[39m [31m0.0%[39m  
+  Xot/app/Resources/views/admin/index/acts/manage_lang_module.blade [90m.....[39m [31m0.0%[39m  
+  Xot/app/Resources/views/admin/standalone/manage/php-array.blade [90m.....[39m [32m100.0%[39m  
+  Xot/app/Resources/views/admin/store/acts/xls_import.blade [90m...........[39m [32m100.0%[39m  
+  Xot/app/Resources/views/admin/store/acts/xls_import/step1.blade [90m.......[39m [31m0.0%[39m  
+  Xot/app/Resources/views/components/dashboard/item.blade [90m...............[39m [31m0.0%[39m  
+  Xot/app/Resources/views/factory-generator/class-factory.blade [90m.......[39m [32m100.0%[39m  
+  Xot/app/Resources/views/factory-generator/method-factory.blade [90m........[39m [31m0.0%[39m  
+  Xot/app/Resources/views/filament/infolists/components/file-content.… [90m..[39m [31m0.0%[39m  
+  Xot/app/Resources/views/filament/pages/dashboard.blade [90m................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/filament/pages/env.blade [90m......................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/filament/pages/health.blade [90m...................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/filament/pages/metatag.blade [90m..................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/filament/widgets/clock.blade [90m..................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/filament/widgets/env.blade [90m....................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/home/index/acts/artisan.blade [90m.................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/index.blade [90m...................................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/layouts/master.blade [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/livewire/favorite.blade [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/livewire/manage_lang_module.blade [90m.............[39m [31m0.0%[39m  
+  Xot/app/Resources/views/livewire/manage_lang_module/edit.blade [90m........[39m [31m0.0%[39m  
+  Xot/app/Resources/views/livewire/rate/multi.blade [90m.....................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/livewire/rate/single.blade [90m....................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/livewire/rate_it.blade [90m........................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/livewire/xot_base_table_component.blade [90m.......[39m [31m0.0%[39m  
+  Xot/app/Resources/views/livewire/xot_base_table_component/checkbox-… [90m..[39m [31m0.0%[39m  
+  Xot/app/Resources/views/livewire/xot_base_table_component/checkbox-… [90m..[39m [31m0.0%[39m  
+  Xot/app/Resources/views/rss/feed.blade [90m................................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/services/table.blade [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/sitemap/index.blade [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/test/index/acts/artisan.blade [90m.................[39m [31m0.0%[39m  
+  Xot/app/Resources/views/x-debug.blade [90m.................................[39m [31m0.0%[39m  
+  Xot/app/Routes/api [90m..................................................[39m [32m100.0%[39m  
+  Xot/app/Routes/seo [90m....................................................[39m [31m0.0%[39m  
+  Xot/app/Routes/web [90m..................................................[39m [32m100.0%[39m  
+  Xot/app/Routes/web_seo [90m................................................[39m [31m0.0%[39m  
+  Xot/app/Rules/DateTimeRule [90m............................................[39m [31m0.0%[39m  
+  Xot/app/Services/Artisan/CommandRegistry [90m..............................[39m [31m0.0%[39m  
+  Xot/app/Services/Artisan/Contracts/CommandHandlerInterface [90m..........[39m [32m100.0%[39m  
+  Xot/app/Services/Artisan/Handlers/CacheCommandHandler [90m.................[39m [31m0.0%[39m  
+  Xot/app/Services/Artisan/Handlers/DebugbarCommandHandler [90m..............[39m [31m0.0%[39m  
+  Xot/app/Services/Artisan/Handlers/ErrorCommandHandler [90m.................[39m [31m0.0%[39m  
+  Xot/app/Services/Artisan/Handlers/MigrationCommandHandler [90m.............[39m [31m0.0%[39m  
+  Xot/app/Services/Artisan/Handlers/ModuleCommandHandler [90m................[39m [31m0.0%[39m  
+  Xot/app/Services/Artisan/Handlers/OptimizeCommandHandler [90m..............[39m [31m0.0%[39m  
+  Xot/app/Services/Artisan/Handlers/QueueCommandHandler [90m.................[39m [31m0.0%[39m  
+  Xot/app/Services/Artisan/Handlers/RouteCommandHandler [90m.................[39m [31m0.0%[39m  
+  Xot/app/Services/Artisan/Handlers/ViewCommandHandler [90m..................[39m [31m0.0%[39m  
+  Xot/app/Services/ArtisanService [90m.......................................[39m [31m0.0%[39m  
+  Xot/app/Services/ConfigService [90m........................................[39m [31m0.0%[39m  
+  Xot/app/Services/HtmlService [90m..........................................[39m [31m0.0%[39m  
+  Xot/app/Services/ModuleService [90m........................................[39m [31m0.0%[39m  
+  Xot/app/Services/ProfileTest [90m..........................................[39m [31m0.0%[39m  
+  Xot/app/Services/RouteDynService [90m......................................[39m [31m0.0%[39m  
+  Xot/app/Services/RouteService [90m.........................................[39m [31m0.0%[39m  
+  Xot/app/Services/ThemeService [90m.........................................[39m [31m0.0%[39m  
+  Xot/app/Services/Translators/Apertium [90m...............................[39m [32m100.0%[39m  
+  Xot/app/Services/Translators/BaseTranslator [90m.........................[39m [32m100.0%[39m  
+  Xot/app/Services/Translators/DeepL [90m..................................[39m [32m100.0%[39m  
+  Xot/app/Services/Translators/Google [90m.................................[39m [32m100.0%[39m  
+  Xot/app/Services/Translators/MyMemory [90m...............................[39m [32m100.0%[39m  
+  Xot/app/Services/Translators/Systran [90m................................[39m [32m100.0%[39m  
+  Xot/app/Services/Trend/Adapters/AbstractAdapter [90m.......................[39m [31m0.0%[39m  
+  Xot/app/Services/Trend/Adapters/MySqlAdapter [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Services/Trend/Adapters/PgsqlAdapter [90m..........................[39m [31m0.0%[39m  
+  Xot/app/Services/Trend/Adapters/SqliteAdapter [90m.........................[39m [31m0.0%[39m  
+  Xot/app/Services/UrlService [90m...........................................[39m [31m0.0%[39m  
+  Xot/app/Services/XotService [90m...........................................[39m [31m0.0%[39m  
+  Xot/app/States/Transitions/XotBaseTransition [90m..........................[39m [31m0.0%[39m  
+  Xot/app/States/XotBaseState [90m...........................................[39m [31m0.0%[39m  
+  Xot/app/Traits/EnumTrait [90m..............................................[39m [31m0.0%[39m  
+  Xot/app/Traits/Filament/HasCustomModelLabel [90m...........................[39m [31m0.0%[39m  
+  Xot/app/Traits/HasCsrfToken [90m...........................................[39m [31m0.0%[39m  
+  Xot/app/Traits/HasCustomRelations [90m.....................................[39m [31m0.0%[39m  
+  Xot/app/Traits/HasTableFunctionsTrait [90m.................................[39m [31m0.0%[39m  
+  Xot/app/Traits/Updater [90m................................................[39m [31m0.0%[39m  
+  Xot/app/ValueObjects/EmailValueObject [90m.................................[39m [31m0.0%[39m  
+  Xot/app/ValueObjects/PhoneValueObject [90m.................................[39m [31m0.0%[39m  
+  Xot/app/View/Components/Dashboard/Item [90m................................[39m [31m0.0%[39m  
+  Xot/app/View/Components/XDebug [90m........................................[39m [31m0.0%[39m  
+  Xot/app/View/Components/XotBaseComponent [90m..............................[39m [31m0.0%[39m  
+  Xot/app/View/Composers/XotComposer [90m....................................[39m [31m0.0%[39m  
+  [90m────────────────────────────────────────────────────────────────────────────[39m  
+                                                                  [1mTotal: 0.0 %[22m  
+

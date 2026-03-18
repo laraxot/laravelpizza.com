@@ -22,7 +22,7 @@ class ListLogActivitiesActionTest extends TestCase
     public function it_has_correct_default_name(): void
     {
         $action = new ListLogActivitiesAction('list_log_activities');
-        $this->assertEquals('list_log_activities', $action->getDefaultName();
+        $this->assertEquals('list_log_activities', $action->getDefaultName());
     }
 
     #[Test]
@@ -30,7 +30,7 @@ class ListLogActivitiesActionTest extends TestCase
     {
         $action = ListLogActivitiesAction::make('test');
         // The setUp method configures iconButton
-        $this->assertTrue($action->isIconButton();
+        $this->assertTrue($action->isIconButton());
     }
 
     #[Test]

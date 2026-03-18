@@ -45,7 +45,7 @@ public static function getRelations(): array
 }
 
 // ❌ WRONG - Don't implement form() or table() directly
-public static function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema { ... }
+public static function form(Form $form): Form { ... }
 public static function table(Table $table): Table { ... }
 ```
 
@@ -61,7 +61,7 @@ public static function table(Table $table): Table { ... }
 - Implements unnecessary getPages() and getRelations() methods ✗
 - These methods return standard/default values and should be removed
 
-#### ❌ StoredEventResource - NEEDS REFACTORING
+#### ❌ StoredEventResource - NEEDS REFACTORING  
 - Extends XotBaseResource ✓
 - Implements unnecessary getPages() and getRelations() methods ✗
 - These methods return standard/default values and should be removed
@@ -103,6 +103,6 @@ All resources must be tested to ensure:
 
 ### Related Documentation
 
-- [XotBaseResource Documentation](../../xot/docs/filament/resources/xot-base-resource.md)
-- [Filament Best Practices](../../xot/docs/filament-best-practices.md)
-- [Laraxot Extension Patterns](../../xot/docs/base-classes.md)
+- [XotBaseResource Documentation](../../Xot/project_docs/filament/resources/xot-base-resource.md)
+- [Filament Best Practices](../../Xot/project_docs/filament-best-practices.md)
+- [Laraxot Extension Patterns](../../Xot/project_docs/base-classes.md)

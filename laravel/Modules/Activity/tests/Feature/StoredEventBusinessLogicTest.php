@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Modules\Activity\Models\StoredEvent;
 
-uses(Modules\Activity\Tests\TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
 it('can create stored event with basic information', function (): void {
     $eventData = [
