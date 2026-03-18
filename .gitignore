@@ -102,3 +102,4 @@ laravel/coverage-xot/
 .opencode
 .ralph
 laravel/database/laravelpizza_data.sqlite
+.qwen/
