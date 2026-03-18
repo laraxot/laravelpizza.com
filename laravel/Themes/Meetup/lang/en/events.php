@@ -113,6 +113,10 @@ return [
             'label'       => 'Check back later',
             'description' => 'Encouragement to check again later',
         ],
+        'event_fallback_title' => [
+            'label'       => 'Event',
+            'description' => 'Fallback title when event title is missing',
+        ],
         'spots_filling_fast' => [
             'label'       => 'Spots are filling up fast!',
             'description' => 'Urgency message for limited spots',

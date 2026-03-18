@@ -87,7 +87,7 @@
         <div class="grid md:grid-cols-3 gap-8">
             <template x-for="event in filteredEvents" :key="event.id">
                 <a :href="event.url"
-                    class="block bg-white dark:bg-slate-800 border border-slate-200 dark:border-red-900/20 rounded-lg overflow-hidden hover:border-red-500/50 hover:shadow-lg transition-all group h-full">
+                    class="kinetic-lift block bg-white dark:bg-slate-800 border border-slate-200 dark:border-red-900/20 rounded-lg overflow-hidden hover:border-red-500/50 hover:shadow-lg transition-all group h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
                     <div class="relative">
                         <div class="aspect-video bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
                             <div class="text-center text-slate-500 dark:text-gray-400">
@@ -97,14 +97,14 @@
                             </div>
                         </div>
                         <template x-if="event.status === 'upcoming'">
-                            <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Upcoming</span>
+                            <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">{{ __('pub_theme::events.status.upcoming.label') }}</span>
                         </template>
                         <template x-if="event.status !== 'upcoming'">
-                            <span class="absolute top-4 right-4 bg-slate-500 text-white px-3 py-1 rounded-full text-xs font-semibold">Past</span>
+                            <span class="absolute top-4 right-4 bg-slate-500 text-white px-3 py-1 rounded-full text-xs font-semibold">{{ __('pub_theme::events.status.past.label') }}</span>
                         </template>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors" x-text="event.title || 'Event'">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors" x-text="event.title || @js(__('pub_theme::events.messages.event_fallback_title.label'))">
                         </h3>
                         <template x-if="event.description">
                             <p class="text-slate-600 dark:text-gray-400 mb-4 line-clamp-3" x-text="event.description">

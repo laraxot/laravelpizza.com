@@ -1,10 +1,6 @@
 // Laravel Pizza - Main JavaScript
 // import './components/AppHeader.js';
 
-// Import particle system
-import './particles.js';
-
-
 // Cart management with localStorage persistence
 class PizzaCart {
     constructor() {
@@ -120,18 +116,6 @@ let pizzaCart;
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize cart
     pizzaCart = new PizzaCart();
-
-    // Mobile Menu Toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', function () {
-            const isExpanded = mobileMenu.classList.contains('hidden');
-            mobileMenu.classList.toggle('hidden');
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-        });
-    }
 
     // Cart functionality for add to cart buttons
     const cartButtons = document.querySelectorAll('.add-to-cart');
