@@ -10,14 +10,14 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\ServiceProvider;
 use Modules\Xot\Http\Middleware\FilamentMemoryMonitorMiddleware;
 use Nwidart\Modules\Module;
-use PDO;
-use Webmozart\Assert\Assert;
 
 use function Safe\preg_match;
 
+use Webmozart\Assert\Assert;
+
 /**
  * Service Provider per ottimizzazioni Filament.
- * SuperMucca Optimization Provider 🐄
+ * SuperMucca Optimization Provider 🐄.
  */
 class FilamentOptimizationServiceProvider extends ServiceProvider
 {
@@ -164,8 +164,8 @@ class FilamentOptimizationServiceProvider extends ServiceProvider
                 'database.connections.mysql.options' => array_merge(
                     $optionsArray,
                     [
-                        PDO::ATTR_PERSISTENT => true,
-                        PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
+                        \PDO::ATTR_PERSISTENT => true,
+                        \PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
                     ]
                 ),
             ]);
@@ -245,9 +245,9 @@ class FilamentOptimizationServiceProvider extends ServiceProvider
         if (! app()->runningInConsole() && request()) {
             $path = request()->path();
 
-            return str_contains($path, '/admin') ||
-                   str_ends_with($path, '/admin') ||
-                   preg_match('/\/(user|<nome progetto>|cms|geo|notify|tenant)\/admin/', $path);
+            return str_contains($path, '/admin')
+                   || str_ends_with($path, '/admin')
+                   || preg_match('/\/(user|<nome progetto>|cms|geo|notify|tenant)\/admin/', $path);
         }
 
         return false;

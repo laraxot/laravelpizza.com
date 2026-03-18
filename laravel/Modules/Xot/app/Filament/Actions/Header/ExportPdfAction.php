@@ -25,7 +25,7 @@ class ExportPdfAction extends Action
             ->label('')
             ->tooltip(__('xot::actions.export_pdf.tooltip'))
             ->icon('ui-files.pdf')
-            ->action(static function (ListRecords $livewire) {)
+            ->action(static function (ListRecords $livewire) {
                 $filename =
                     class_basename($livewire).
                     '-'.

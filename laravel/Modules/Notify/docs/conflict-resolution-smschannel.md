@@ -52,7 +52,7 @@ return $action->execute($smsData);
 ## Collegamenti
 - [Notify Module Documentation](readme.md)
 - [SMS Channel Architecture](sms_channel_action_resolution.md)
-- [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
+- [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
 # Risoluzione Conflitti SmsChannel.php
@@ -109,6 +109,6 @@ return $action->execute($smsData);
 ## Collegamenti
 - [Notify Module Documentation](README.md)
 - [SMS Channel Architecture](sms_channel_action_resolution.md)
-- [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
+- [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*

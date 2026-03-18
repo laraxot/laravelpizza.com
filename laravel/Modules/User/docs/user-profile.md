@@ -327,5 +327,17 @@ Per **<nome progetto>** la separazione attuale ha senso perché:
 
 ---
 
+
+*Documento generato per <nome progetto> - Analisi User vs Profile Pattern*
+*Documento generato per LaravelPizza - Analisi User vs Profile Pattern*
+
+*Documento generato per <nome progetto> - Analisi User vs Profile Pattern*
+
+*Documento generato per <nome progetto> - Analisi User vs Profile Pattern*
+
+*Documento generato per <nome progetto> - Analisi User vs Profile Pattern*
+
+*Documento generato per LaravelPizza - Analisi User vs Profile Pattern*
 *Documento generato per <nome progetto> - Analisi User vs Profile Pattern*
 *Data: [DATE]*
+

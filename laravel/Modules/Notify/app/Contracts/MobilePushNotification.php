@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Contracts;
 
+use Kreait\Firebase\Messaging\Message;
+
 /**
  * Contract for mobile push notifications (Firebase FCM, etc.).
  * Implementations may use Kreait Firebase or other providers.
@@ -21,7 +23,7 @@ interface MobilePushNotification
     /**
      * Convert to a cloud message (Firebase CloudMessage or compatible).
      *
-     * @return object Cloud message instance (Kreait\Firebase\Messaging\Message when Kreait is available)
+     * @return Message|array<string, mixed>
      */
-    public function toCloudMessage(): object;
+    public function toCloudMessage(): Message|array;
 }

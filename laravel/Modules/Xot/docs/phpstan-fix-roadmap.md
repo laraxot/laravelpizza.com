@@ -15,7 +15,7 @@ The Xot module serves as the core infrastructure module for the Laraxot framewor
 
 ## Error Analysis by File
 
-### 1. Modules/Xot/Helpers/Helper.php
+### 1. Modules/Xot/helpers/Helper.php
 - **Issues**:
   - Line 179: `define` function unsafe usage
   - Line 407: `preg_match` function unsafe usage

@@ -16,7 +16,7 @@ class ThemeComposer
     /**
      * Get menu items by name.
      *
-     * @return array<string, mixed>|null
+     * @return array<int|string, mixed>|null
      */
     public function getMenu(string $menu_name): ?array
     {
@@ -139,8 +139,7 @@ class ThemeComposer
 
     public function getPageModel(string $slug): ?Page
     {
-        /* @var Page|null $page */
-        return Page::where('slug', $slug)->first();
+        return Page::findUniqueBySlug($slug);
     }
 
     public function getUrlPage(string $slug): string

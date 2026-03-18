@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\Filament\Front\Pages;
 
-uses(Modules\Cms\Tests\TestCase::class);
-
 use Modules\Cms\Filament\Front\Pages\Welcome;
 
 test('Welcome page can be instantiated', function () {

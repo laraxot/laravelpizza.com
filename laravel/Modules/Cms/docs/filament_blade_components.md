@@ -1,7 +1,7 @@
 # Filament Blade Components Usage (CMS)
 
 ## Collegamenti
-- [Documentazione Root](../../../../project_docs/collegamenti-documentazione.md) - Indice centrale dei collegamenti
+- [Documentazione Root](../../../../../docs/project/collegamenti-documentazione.md) - Indice centrale dei collegamenti
 - [Documentazione in Themes/One](../../../../themes/one/project_docs/filament-blade-components.md) - Contesto del tema principale
 
 Per le best practice di **Filament** (https://filamentphp.com/project_docs/3.x/support/blade-components/overview), utilizziamo sempre i componenti Blade di Filament per elementi interattivi e di navigazione.

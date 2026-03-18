@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Import;
 
-use Exception;
 use Filament\Notifications\Notification;
 use Illuminate\Database\Schema\Builder;
 use Illuminate\Support\Facades\DB;
@@ -12,10 +11,11 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\ColumnData;
-use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
 
 use function Safe\ini_set;
+
+use Spatie\QueueableAction\QueueableAction;
+use Webmozart\Assert\Assert;
 
 class ImportCsvAction
 {
@@ -24,12 +24,12 @@ class ImportCsvAction
     /**
      * Import a CSV file into a database table.
      *
-     * @param  string  $disk  the storage disk where the file is located
-     * @param  string  $filename  the name of the file to import
-     * @param  string  $db  the database connection name
-     * @param  string  $tbl  the table name where data will be imported
+     * @param string $disk     the storage disk where the file is located
+     * @param string $filename the name of the file to import
+     * @param string $db       the database connection name
+     * @param string $tbl      the table name where data will be imported
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function execute(string $disk, string $filename, string $db, string $tbl): void
     {
@@ -96,13 +96,14 @@ class ImportCsvAction
     /**
      * Prepare fields for the SQL query.
      *
-     * @param  array<ColumnData>  $columns
+     * @param array<ColumnData> $columns
+     *
      * @return array<string>
      */
     private function prepareFields(array $columns): array
     {
         return array_map(
-            fn (ColumnData $column) => $column->type === 'decimal' ? '@'.$column->name : $column->name,
+            fn (ColumnData $column) => 'decimal' === $column->type ? '@'.$column->name : $column->name,
             $columns,
         );
     }
@@ -110,7 +111,7 @@ class ImportCsvAction
     /**
      * Build the SQL query for importing data.
      *
-     * @param  array<ColumnData>  $columns
+     * @param array<ColumnData> $columns
      */
     private function buildSql(string $path, string $db, string $tbl, string $fieldsUpList, array $columns): string
     {
@@ -127,7 +128,7 @@ class ImportCsvAction
 
         $sqlReplace = [];
         foreach ($columns as $column) {
-            if ($column->type === 'decimal') {
+            if ('decimal' === $column->type) {
                 $sqlReplace[] = "{$column->name} = REPLACE(@{$column->name}, ',', '.')";
             }
         }
@@ -142,10 +143,11 @@ class ImportCsvAction
     /**
      * Transform columns into ColumnData objects.
      *
-     * @param  array<string>  $columns
+     * @param array<string> $columns
+     *
      * @return array<ColumnData>
      *
-     * @deprecated This method is currently unused but kept for future expansion.
+     * @deprecated this method is currently unused but kept for future expansion
      *
      * @phpstan-ignore method.unused
      */

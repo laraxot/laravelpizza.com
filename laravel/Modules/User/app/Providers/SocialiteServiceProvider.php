@@ -18,7 +18,9 @@ class SocialiteServiceProvider extends BaseSocialiteServiceProvider
         parent::boot();
 
         Event::listen(function (SocialiteWasCalled $event): void {
-            $event->extendSocialite('microsoft', \SocialiteProviders\Microsoft\Provider::class);
+            if (class_exists('SocialiteProviders\\Microsoft\\Provider')) {
+                $event->extendSocialite('microsoft', \SocialiteProviders\Microsoft\Provider::class);
+            }
         });
     }
 }

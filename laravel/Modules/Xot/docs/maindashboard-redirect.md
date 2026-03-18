@@ -157,7 +157,7 @@ performance::admin
 - [PDND Redirect Loop Fix](../../pdnd/project_docs/redirect_loop_fix.md)
 - [XotBasePanelProvider](xotbasepanelprovider.md)
 - [User Role Management](../../user/project_docs/console_commands/readme.md)
-- [Filament Best Practices](../../../project_docs/filament-best-practices.md)
+- [Filament Best Practices](../../../../docs/project/filament-best-practices.md)
 
 ## Aggiornamenti
 

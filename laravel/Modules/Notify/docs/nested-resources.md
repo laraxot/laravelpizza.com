@@ -66,23 +66,13 @@ The Notify module provides a comprehensive notification system for the Laraxot s
 **Justification:** Group notification logs by tenant for multi-tenant monitoring and compliance.
 
 ### 7. Customer Communication History
-<<<<<<< .merge_file_D3JnwM
-**Parent Resource:** CustomerResource (from healthcare_app module)
-**Parent Resource:** CustomerResource (from ExternalProject module)
-**Parent Resource:** CustomerResource (from ModuloEsempio module)
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_y4v0o8
+**Parent Resource:** CustomerResource (from Quaeris module)
 **Child Resource:** NotificationLogResource
 **Relationship:** Customer-related notifications (via contacts/surveys)
 **Justification:** Track all communication with customers across different channels for relationship management.
 
 ### 8. Survey Communication Logs
-<<<<<<< .merge_file_D3JnwM
-**Parent Resource:** SurveyPdfResource (from healthcare_app module)
-**Parent Resource:** SurveyPdfResource (from ExternalProject module)
-**Parent Resource:** SurveyPdfResource (from ModuloEsempio module)
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_y4v0o8
+**Parent Resource:** SurveyPdfResource (from Quaeris module)
 **Child Resource:** NotificationLogResource
 **Relationship:** Survey-related notifications (via survey contacts)
 **Justification:** Monitor all communication related to specific surveys for better survey management.
@@ -189,12 +179,7 @@ Following the documented approach in `Modules/UI/docs/filament/nested-resource.m
 - Optimize queries for common notification log patterns
 
 ### 4. Integration with Other Modules
-<<<<<<< .merge_file_D3JnwM
-- Handle relationships with healthcare_app module (surveys and contacts)
-- Handle relationships with ExternalProject module (surveys and contacts)
-- Handle relationships with ModuloEsempio module (surveys and contacts)
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_y4v0o8
+- Handle relationships with Quaeris module (surveys and contacts)
 - Coordinate with User module for recipient management
 - Integrate with Tenant module for multi-tenant operations
 

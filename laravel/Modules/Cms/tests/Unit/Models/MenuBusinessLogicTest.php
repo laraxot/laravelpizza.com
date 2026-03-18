@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-uses(Modules\Cms\Tests\TestCase::class);
 use Modules\Cms\Models\BaseModel;
 use Modules\Cms\Models\Menu;
 use Modules\Tenant\Models\Traits\SushiToJsons;

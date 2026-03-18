@@ -13,46 +13,46 @@ use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Actions\File\AssetAction;
 use Modules\Xot\Actions\File\AssetPathAction;
 use Modules\Xot\Datas\Transformers\AssetTransformer;
-use Spatie\LaravelData\Attributes\WithTransformer;
-use Spatie\LaravelData\Concerns\WireableData;
-use Spatie\LaravelData\Data;
-use Throwable;
 
 use function Safe\file_get_contents;
 
+use Spatie\LaravelData\Attributes\WithTransformer;
+use Spatie\LaravelData\Concerns\WireableData;
+use Spatie\LaravelData\Data;
+
 /**
- * Class MetatagData
+ * Class MetatagData.
  *
- * @property string $title
- * @property string $sitename
- * @property string $subtitle
- * @property string|null $generator
- * @property string $charset
- * @property string|null $author
- * @property string|null $description
- * @property string|null $keywords
- * @property string $nome_regione
- * @property string $nome_comune
- * @property string $site_title
- * @property string $logo
- * @property string $logo_square
- * @property string $logo_header
- * @property string $logo_header_dark
- * @property string $logo_height
- * @property string $logo_footer
- * @property string $logo_alt
- * @property string $hide_megamenu
- * @property string $hero_type
- * @property string $facebook_href
- * @property string $twitter_href
- * @property string $youtube_href
- * @property string $fastlink
- * @property string $color_primary
- * @property string $color_title
- * @property string $color_megamenu
- * @property string $color_hamburger
- * @property string $color_banner
- * @property string $favicon
+ * @property string                                                          $title
+ * @property string                                                          $sitename
+ * @property string                                                          $subtitle
+ * @property string|null                                                     $generator
+ * @property string                                                          $charset
+ * @property string|null                                                     $author
+ * @property string|null                                                     $description
+ * @property string|null                                                     $keywords
+ * @property string                                                          $nome_regione
+ * @property string                                                          $nome_comune
+ * @property string                                                          $site_title
+ * @property string                                                          $logo
+ * @property string                                                          $logo_square
+ * @property string                                                          $logo_header
+ * @property string                                                          $logo_header_dark
+ * @property string                                                          $logo_height
+ * @property string                                                          $logo_footer
+ * @property string                                                          $logo_alt
+ * @property string                                                          $hide_megamenu
+ * @property string                                                          $hero_type
+ * @property string                                                          $facebook_href
+ * @property string                                                          $twitter_href
+ * @property string                                                          $youtube_href
+ * @property string                                                          $fastlink
+ * @property string                                                          $color_primary
+ * @property string                                                          $color_title
+ * @property string                                                          $color_megamenu
+ * @property string                                                          $color_hamburger
+ * @property string                                                          $color_banner
+ * @property string                                                          $favicon
  * @property array<string, array{key?: string, color: string, hex?: string}> $colors
  *
  * @method string getBrandLogoBase64() Get the brand logo as base64 data URI for inline embedding
@@ -169,7 +169,7 @@ class MetatagData extends Data implements Wireable
             $path = app(AssetAction::class)->execute($this->logo_header);
 
             return asset($path);
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             return asset($this->logo_header);
         }
     }
@@ -190,7 +190,7 @@ class MetatagData extends Data implements Wireable
             $path = app(AssetAction::class)->execute($this->logo_header_dark);
 
             return asset($path);
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             return asset($this->logo_header_dark);
         }
     }
@@ -237,7 +237,7 @@ class MetatagData extends Data implements Wireable
 
             // Return as data URI
             return "data:{$mimeType};base64,{$base64Content}";
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             // Fallback: try with the raw logo_header path
             try {
                 $fallbackPath = public_path($this->logo_header);
@@ -248,7 +248,7 @@ class MetatagData extends Data implements Wireable
 
                     return "data:{$mimeType};base64,{$base64Content}";
                 }
-            } catch (Throwable $fallbackException) {
+            } catch (\Throwable $fallbackException) {
                 // Log the error but don't break the application
                 Log::warning('Could not generate base64 logo', [
                     'original_error' => $e->getMessage(),
@@ -367,7 +367,7 @@ class MetatagData extends Data implements Wireable
     {
         try {
             return app(AssetAction::class)->execute($this->favicon);
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             return asset($this->favicon);
         }
     }
@@ -652,7 +652,7 @@ class MetatagData extends Data implements Wireable
      * Concatenate a title to the existing title.
      * This method allows adding page-specific titles to the base site title.
      *
-     * @param  string|null  $title  The title to concatenate
+     * @param string|null $title The title to concatenate
      */
     public function concatTitle(?string $title): self
     {
@@ -674,7 +674,7 @@ class MetatagData extends Data implements Wireable
      * Concatenate a description to the existing description.
      * This method allows adding page-specific descriptions to the base site description.
      *
-     * @param  string|null  $description  The description to concatenate
+     * @param string|null $description The description to concatenate
      */
     public function concatDescription(?string $description): self
     {

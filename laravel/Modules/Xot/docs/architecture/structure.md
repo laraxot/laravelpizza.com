@@ -846,7 +846,7 @@ lang/fr
 lang/gr
 lang/it
 lang/ka
-lang/lang
+lang/<locale>
 lang/lang/ar
 lang/lang/da
 lang/lang/de
@@ -997,7 +997,7 @@ tests_old
             "Coolsam\\FilamentModules\\": "packages/coolsam/panel-modules/src/"
         },
         "files": [
-            "Helpers/Helper.php"
+            "helpers/Helper.php"
         ]
     },
     "scripts": {

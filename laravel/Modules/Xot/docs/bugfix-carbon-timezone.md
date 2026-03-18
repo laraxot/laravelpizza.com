@@ -73,7 +73,7 @@ public function registerTimezone(): void
 - [Carbon Documentation](https://carbon.nesbot.com/project_docs/)
 - [Laravel Timezone Configuration](https://laravel.com/project_docs/configuration#timezone)
 - [PHP date_default_timezone_set](https://www.php.net/manual/en/function.date-default-timezone-set.php)
-- [Root Bugfix Guidelines](../../../project_docs/bugfix-guidelines.md)
+- [Root Bugfix Guidelines](../../../../docs/project/bugfix-guidelines.md)
 
 *Risolto da: Windsurf AI Assistant*
 # Bugfix: Carbon Timezone Error in XotServiceProvider
@@ -151,6 +151,6 @@ public function registerTimezone(): void
 - [Carbon Documentation](https://carbon.nesbot.com/project_docs/)
 - [Laravel Timezone Configuration](https://laravel.com/project_docs/configuration#timezone)
 - [PHP date_default_timezone_set](https://www.php.net/manual/en/function.date-default-timezone-set.php)
-- [Root Bugfix Guidelines](../../../project_docs/bugfix-guidelines.md)
+- [Root Bugfix Guidelines](../../../../docs/project/bugfix-guidelines.md)
 
 *Risolto da: Windsurf AI Assistant*

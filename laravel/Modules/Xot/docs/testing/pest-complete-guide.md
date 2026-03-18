@@ -411,6 +411,194 @@ it('can create user', function () {
 - Esegui le migrazioni appropriate per la connessione specifica del modulo
 - Assicurati che il percorso delle migrazioni sia corretto
 
+<<<<<<< .merge_file_xNtsAv
+<<<<<<< HEAD
+## CI/CD Integration with GitHub Actions
+
+### Database setup in CI (two test databases required)
+
+```yaml
+services:
+  mysql:
+    image: mysql:8.0
+    env:
+      MYSQL_ROOT_PASSWORD: password
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      MYSQL_DATABASE: <nome progetto>_data_test
+=======
+      MYSQL_DATABASE: laravelpizza_data_test
+>>>>>>> a038b0f2 (.)
+=======
+      MYSQL_DATABASE: <nome progetto>_data_test
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+      MYSQL_DATABASE: laravelpizza_data_test
+>>>>>>> a038b0f2 (.)
+=======
+      MYSQL_DATABASE: <nome progetto>_data_test
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+      MYSQL_DATABASE: laravelpizza_data_test
+>>>>>>> a038b0f2 (.)
+=======
+      MYSQL_DATABASE: <nome progetto>_data_test
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+    ports:
+      - 3306:3306
+
+steps:
+  - name: Create test databases
+    run: |
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS <nome progetto>_data_test;"
+      mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS <nome progetto>_user_test;"
+=======
+      mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS laravelpizza_data_test;"
+      mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS laravelpizza_user_test;"
+>>>>>>> a038b0f2 (.)
+=======
+      mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS <nome progetto>_data_test;"
+      mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS <nome progetto>_user_test;"
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+      mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS laravelpizza_data_test;"
+      mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS laravelpizza_user_test;"
+>>>>>>> a038b0f2 (.)
+=======
+      mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS <nome progetto>_data_test;"
+      mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS <nome progetto>_user_test;"
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+      mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS laravelpizza_data_test;"
+      mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS laravelpizza_user_test;"
+>>>>>>> a038b0f2 (.)
+=======
+      mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS <nome progetto>_data_test;"
+      mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS <nome progetto>_user_test;"
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+
+  - name: Setup Environment
+    working-directory: laravel
+    run: |
+      cp .env.testing .env
+      php artisan key:generate --force
+
+  - name: Run Migrations (NEVER migrate:fresh)
+    working-directory: laravel
+    env:
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      DB_DATABASE: <nome progetto>_data_test
+      DB_DATABASE_USER: <nome progetto>_user_test
+=======
+      DB_DATABASE: laravelpizza_data_test
+      DB_DATABASE_USER: laravelpizza_user_test
+>>>>>>> a038b0f2 (.)
+=======
+      DB_DATABASE: <nome progetto>_data_test
+      DB_DATABASE_USER: <nome progetto>_user_test
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+      DB_DATABASE: laravelpizza_data_test
+      DB_DATABASE_USER: laravelpizza_user_test
+>>>>>>> a038b0f2 (.)
+=======
+      DB_DATABASE: <nome progetto>_data_test
+      DB_DATABASE_USER: <nome progetto>_user_test
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+      DB_DATABASE: laravelpizza_data_test
+      DB_DATABASE_USER: laravelpizza_user_test
+>>>>>>> a038b0f2 (.)
+=======
+      DB_DATABASE: <nome progetto>_data_test
+      DB_DATABASE_USER: <nome progetto>_user_test
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+      DB_USERNAME: root
+      DB_PASSWORD: password
+    run: php artisan migrate --env=testing --force
+
+  - name: Run Pest with Coverage
+    working-directory: laravel
+    run: |
+      ./vendor/bin/pest \
+        --compact \
+        --coverage \
+        --coverage-clover=coverage.xml \
+        --coverage-html=coverage-html
+```
+
+### Coverage driver: PCOV (not Xdebug)
+
+```yaml
+- name: Setup PHP with PCOV
+  uses: shivammathur/setup-php@v2
+  with:
+    php-version: '8.3'
+    extensions: mbstring, intl, pdo_mysql, pcov
+    coverage: pcov
+```
+
+PCOV is 10x faster than Xdebug for coverage collection. Use `pcov` in CI, not `xdebug`.
+
+### Never `migrate:fresh` — absolute rule
+
+```bash
+# FORBIDDEN in tests and CI
+php artisan migrate:fresh --env=testing --force
+
+# CORRECT — run once before the suite
+php artisan migrate --env=testing --force
+```
+
+`migrate:fresh` drops ALL tables in the shared test database, causing cascading failures across all modules. See `.cursor/rules/no-refresh-database-in-tests.md`.
+
+## Correzione nota: MySQL, non SQLite
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+Questo progetto usa **MySQL** per i test (non SQLite in-memory), per garantire parità con la produzione. Il file `.env.testing` configura `DB_CONNECTION=mysql` con `DB_DATABASE=<nome progetto>_data_test`. I TestCase dei moduli usano `DatabaseTransactions` per isolare senza distruggere il DB.
+=======
+Questo progetto usa **MySQL** per i test (non SQLite in-memory), per garantire parità con la produzione. Il file `.env.testing` configura `DB_CONNECTION=mysql` con `DB_DATABASE=laravelpizza_data_test`. I TestCase dei moduli usano `DatabaseTransactions` per isolare senza distruggere il DB.
+>>>>>>> a038b0f2 (.)
+=======
+Questo progetto usa **MySQL** per i test (non SQLite in-memory), per garantire parità con la produzione. Il file `.env.testing` configura `DB_CONNECTION=mysql` con `DB_DATABASE=<nome progetto>_data_test`. I TestCase dei moduli usano `DatabaseTransactions` per isolare senza distruggere il DB.
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+Questo progetto usa **MySQL** per i test (non SQLite in-memory), per garantire parità con la produzione. Il file `.env.testing` configura `DB_CONNECTION=mysql` con `DB_DATABASE=laravelpizza_data_test`. I TestCase dei moduli usano `DatabaseTransactions` per isolare senza distruggere il DB.
+>>>>>>> a038b0f2 (.)
+=======
+Questo progetto usa **MySQL** per i test (non SQLite in-memory), per garantire parità con la produzione. Il file `.env.testing` configura `DB_CONNECTION=mysql` con `DB_DATABASE=<nome progetto>_data_test`. I TestCase dei moduli usano `DatabaseTransactions` per isolare senza distruggere il DB.
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+Questo progetto usa **MySQL** per i test (non SQLite in-memory), per garantire parità con la produzione. Il file `.env.testing` configura `DB_CONNECTION=mysql` con `DB_DATABASE=laravelpizza_data_test`. I TestCase dei moduli usano `DatabaseTransactions` per isolare senza distruggere il DB.
+>>>>>>> a038b0f2 (.)
+=======
+Questo progetto usa **MySQL** per i test (non SQLite in-memory), per garantire parità con la produzione. Il file `.env.testing` configura `DB_CONNECTION=mysql` con `DB_DATABASE=<nome progetto>_data_test`. I TestCase dei moduli usano `DatabaseTransactions` per isolare senza distruggere il DB.
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+
+=======
+>>>>>>> e3956292 (.)
+=======
+>>>>>>> .merge_file_CMnzzW
 ## Conclusione
 
 Questa configurazione garantisce che Pest funzioni correttamente con l'architettura modulare di Laraxot, rispettando i principi di modularità e mantenendo la separazione tra i componenti del sistema. Seguendo queste regole, tutti i test saranno conformi all'architettura Laraxot e funzioneranno correttamente.

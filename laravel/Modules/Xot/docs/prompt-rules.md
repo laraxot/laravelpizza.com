@@ -38,7 +38,7 @@ La documentazione dei componenti UI deve essere sempre inserita nella cartella `
 - [Regole del Progetto](./rules.md)
 - [Struttura dei Prompt](./prompts.md)
 - [Collegamenti al Modulo Cms](./cms-link.md)
-- [Collegamenti alla Root](../../../project_docs/prompts.md)
+- [Collegamenti alla Root](../../../../docs/project/prompts.md)
 
 ## Collegamenti tra versioni di PROMPT_RULES.md
 * [PROMPT_RULES.md](../../../xot/project_docs/prompt_rules.md)

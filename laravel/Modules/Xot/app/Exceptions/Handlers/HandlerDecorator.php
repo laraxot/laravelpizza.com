@@ -6,7 +6,6 @@ namespace Modules\Xot\Exceptions\Handlers;
 
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
-use Throwable;
 
 class HandlerDecorator implements ExceptionHandler
 {
@@ -27,7 +26,7 @@ class HandlerDecorator implements ExceptionHandler
         return \call_user_func_array($callable, $parameters);
     }
 
-    public function report(Throwable $e): void
+    public function report(\Throwable $e): void
     {
         foreach ($this->repository->getReportersByException($e) as $reporter) {
             if (is_callable($reporter)) {
@@ -38,7 +37,7 @@ class HandlerDecorator implements ExceptionHandler
         $this->defaultHandler->report($e);
     }
 
-    public function render($request, Throwable $e): SymfonyResponse
+    public function render($request, \Throwable $e): SymfonyResponse
     {
         foreach ($this->repository->getRenderersByException($e) as $renderer) {
             if (is_callable($renderer)) {
@@ -55,7 +54,7 @@ class HandlerDecorator implements ExceptionHandler
     /**
      * @phpstan-ignore-next-line
      */
-    public function renderForConsole($output, Throwable $e): void
+    public function renderForConsole($output, \Throwable $e): void
     {
         foreach ($this->repository->getConsoleRenderersByException($e) as $renderer) {
             if (is_callable($renderer)) {
@@ -63,7 +62,7 @@ class HandlerDecorator implements ExceptionHandler
             }
         }
 
-        /** @phpstan-ignore-next-line */
+        /* @phpstan-ignore-next-line */
         $this->defaultHandler->renderForConsole($output, $e);
     }
 
@@ -82,7 +81,7 @@ class HandlerDecorator implements ExceptionHandler
         return $this->repository->addConsoleRenderer($renderer);
     }
 
-    public function shouldReport(Throwable $e): bool
+    public function shouldReport(\Throwable $e): bool
     {
         return $this->defaultHandler->shouldReport($e);
     }

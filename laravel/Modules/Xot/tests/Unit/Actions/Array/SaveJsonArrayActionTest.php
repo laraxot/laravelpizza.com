@@ -6,13 +6,13 @@ namespace Modules\Xot\Tests\Unit\Actions\Array;
 
 use Modules\Xot\Actions\Array\SaveJsonArrayAction;
 
-beforeEach(function (): void {)
+beforeEach(function (): void {
     $action = app(SaveJsonArrayAction::class);
     $tempDir = sys_get_temp_dir();
     mkdir($tempDir, 0755, true);
 });
 
-afterEach(function (): void {)
+afterEach(function (): void {
     if (isset($tempDir))
         foreach (glob($tempDir.'/*'))
             unlink($f);
@@ -21,7 +21,7 @@ afterEach(function (): void {)
     }
 });
 
-it('saves array to json', function (): void {)
+it('saves array to json', function (): void {
     $path = $tempDir.'/d.json';
     $result = $action->execute(['k' => 'v'], $path);
     expect($result)->toBeTrue();

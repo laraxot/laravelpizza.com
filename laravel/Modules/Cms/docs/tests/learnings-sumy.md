@@ -107,7 +107,6 @@ $email = $this->generateUniqueEmail();
 1. ✅ `registration-widget-test-strategy.md` - Strategia completa implementazione
 2. ✅ `pestphp-best-practices.md` - Pattern PestPHP identificati
 3. ✅ `learnings-summary.md` - Riepilogo completo learnings ← **QUESTO DOCUMENTO**
-4. ✅ `testing.md` - Aggiornato sezione Widget Testing e Helper Functions
 
 ### **Root Documentation**
 5. ✅ `testing-organization.md` - Aggiunta sezione "PestPHP Pattern Identificati"

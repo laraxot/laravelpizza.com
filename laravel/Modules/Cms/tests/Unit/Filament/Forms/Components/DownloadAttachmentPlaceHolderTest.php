@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\Filament\Forms\Components;
 
-uses(Modules\Cms\Tests\TestCase::class);
-
 use Modules\Cms\Filament\Forms\Components\DownloadAttachmentPlaceHolder;
 
 test('DownloadAttachmentPlaceHolder extends XotBasePlaceholder', function () {

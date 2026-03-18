@@ -32,7 +32,10 @@ return new class extends XotBaseMigration {
             $this->updateTimestamps(table: $table, hasSoftDeletes: true);
 
             if ($this->hasColumn('model_id')) {
-                $table->string('model_id', 36)->index()->change();
+                $table->string('model_id', 36)->change();
+                if (! $this->hasIndex('model_id')) {
+                    $table->index('model_id');
+                }
             }
         });
     }

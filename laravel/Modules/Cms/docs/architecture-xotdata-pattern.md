@@ -149,7 +149,7 @@ function createTestUser(array $attributes = []): UserContract
 ## 📖 **Documentazione di Riferimento**
 
 ### **Pattern XotData**
-- [docs/xotdata-architecture-critical-error-fix.md](../../../project_docs/xotdata-architecture-critical-error-fix.md)
+- [docs/xotdata-architecture-critical-error-fix.md](../../../../docs/project/xotdata-architecture-critical-error-fix.md)
 - [laravel/Modules/Xot/project_docs/architecture-violations-and-fixes.md](../../xot/project_docs/architecture-violations-and-fixes.md)
 
 ### **Struttura Testing**

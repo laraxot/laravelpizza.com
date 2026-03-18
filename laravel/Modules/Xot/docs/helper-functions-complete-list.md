@@ -2,8 +2,8 @@
 
 ## 📋 Overview
 
-**File**: `Modules/Xot/Helpers/Helper.php`
-**Autoload**: Via `"files": ["Helpers/Helper.php"]` in `Xot/composer.json`
+**File**: `Modules/Xot/helpers/Helper.php`
+**Autoload**: Via `"files": ["helpers/Helper.php"]` in `Xot/composer.json`
 **Disponibilità**: Globale in tutto il framework Laraxot
 
 **Status**: ✅ PHPStan Level 10 compliant
@@ -300,7 +300,7 @@ if (! function_exists('helperName')) {
    ↓
 2. Autoload PSR-4 + files
    ↓
-3. Xot/Helpers/Helper.php loaded (via "files")
+3. Xot/helpers/Helper.php loaded (via "files")
    ↓
 4. Helper functions disponibili globalmente
    ↓

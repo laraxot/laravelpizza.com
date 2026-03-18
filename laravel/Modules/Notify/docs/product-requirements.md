@@ -9,7 +9,7 @@
 | **
 | **Owner** | Core Team |
 | **Module** | Notify |
-| **Repository** | laraxot/module_notify_fila3 |
+| **Repository** | laraxot/module_notify_fila5 |
 
 ---
 

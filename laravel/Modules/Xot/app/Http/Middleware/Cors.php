@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Http\Middleware;
 
-use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -13,7 +12,7 @@ class Cors
     /**
      * Handle an incoming request.
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, \Closure $next): Response
     {
         $response = $next($request);
 

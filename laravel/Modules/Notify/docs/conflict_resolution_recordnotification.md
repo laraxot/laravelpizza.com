@@ -78,6 +78,6 @@ Verificare che:
 - [Notify Module Documentation](readme.md)
 - [RecordNotification Implementation](notifications/record_notification.md)
 - [SpatieEmail Integration](spatie_email_usage_guide.md)
-- [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
+- [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*

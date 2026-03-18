@@ -7,28 +7,12 @@
 
 ## Obiettivo
 
-<<<<<<< .merge_file_k9YHn2
-Spostare `UserTypeRegistrationsChartWidget` dal modulo User al modulo appropriato (es. healthcare_app). User non può dipendere da moduli business specifici.
-=======
-<<<<<<< HEAD
-Spostare `UserTypeRegistrationsChartWidget` dal modulo User al modulo appropriato (es. ExternalProject). User non può dipendere da moduli business specifici.
-=======
-Spostare `UserTypeRegistrationsChartWidget` dal modulo User al modulo appropriato (es. ModuloEsempio). User non può dipendere da moduli business specifici.
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_hk8a2J
+Spostare `UserTypeRegistrationsChartWidget` dal modulo User al modulo appropriato (es. Quaeris). User non può dipendere da moduli business specifici.
 
 ## Sottotask
 
 - [ ] Identificare widget `UserTypeRegistrationsChartWidget` e sue dipendenze
-<<<<<<< .merge_file_k9YHn2
-- [ ] Analizzare dove collocarlo (healthcare_app o altro modulo)
-=======
-<<<<<<< HEAD
-- [ ] Analizzare dove collocarlo (ExternalProject o altro modulo)
-=======
-- [ ] Analizzare dove collocarlo (ModuloEsempio o altro modulo)
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_hk8a2J
+- [ ] Analizzare dove collocarlo (Quaeris o altro modulo)
 - [ ] Spostare widget e aggiornare namespace
 - [ ] Rimuovere file originale da User
 - [ ] Verificare con script controllo dipendenze

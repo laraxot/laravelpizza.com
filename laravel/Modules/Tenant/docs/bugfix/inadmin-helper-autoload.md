@@ -33,7 +33,7 @@ As a result, calling `inAdmin()` directly can break Composer automation.
 
 ## Solution Details
 
-**Problem**: Helper functions (`getModuleModels()`) are loaded via `"files": ["Helpers/Helper.php"]` in `composer.json`, but during `package:discover`, the autoload order is not guaranteed.
+**Problem**: Helper functions (`getModuleModels()`) are loaded via `"files": ["helpers/Helper.php"]` in `composer.json`, but during `package:discover`, the autoload order is not guaranteed.
 
 **Solution**: Use actions directly instead of helper functions in critical bootstrap paths:
 

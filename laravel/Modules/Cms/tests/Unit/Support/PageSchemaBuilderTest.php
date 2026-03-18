@@ -5,11 +5,8 @@ declare(strict_types=1);
 namespace Modules\Cms\Tests\Unit\Support;
 
 use Modules\Cms\Support\PageSchemaBuilder;
-use Modules\Cms\Tests\TestCase;
 use Modules\User\Models\User;
 use Modules\Xot\Datas\MetatagData;
-
-uses(TestCase::class);
 
 test('it resolves home as webpage', function (): void {
     $builder = new PageSchemaBuilder();

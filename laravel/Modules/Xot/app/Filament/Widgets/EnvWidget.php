@@ -85,10 +85,11 @@ class EnvWidget extends Widget implements HasActions, HasForms
                 ->placeholder('AIzaSyAuB_...')
                 ->helperText('telegram_bot_token'),
         ];
+        $selected = [] === $this->only ? $all : Arr::only($all, $this->only);
 
-        /**
-         * @var array<Component>
-         */
-        return Arr::only($all, $this->only);
+        /** @var array<Component> $components */
+        $components = array_values($selected);
+
+        return $components;
     }
 }

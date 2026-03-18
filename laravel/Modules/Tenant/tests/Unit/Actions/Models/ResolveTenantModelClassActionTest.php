@@ -13,7 +13,7 @@ use Nwidart\Modules\Facades\Module;
 
 uses(TestCase::class);
 
-it('resolves tenant model class from config', function (): void {)
+it('resolves tenant model class from config', function (): void {
     $this->mock(ResolveTenantConfigValueAction::class)
         ->shouldReceive('execute')
         ->with('morph_map.test_model')
@@ -25,7 +25,7 @@ it('resolves tenant model class from config', function (): void {)
     expect($result)->toBe('Modules\Test\Models\TestModel');
 });
 
-it('resolves tenant model class by scanning modules if not in config', function (): void {)
+it('resolves tenant model class by scanning modules if not in config', function (): void {
     $this->mock(ResolveTenantConfigValueAction::class)
         ->shouldReceive('execute')
         ->with('morph_map.event')
@@ -58,7 +58,7 @@ it('resolves tenant model class by scanning modules if not in config', function 
     expect($result)->toBe('Modules\Meetup\Models\Event');
 });
 
-it('throws exception for unknown model', function (): void {)
+it('throws exception for unknown model', function (): void {
     $this->mock(ResolveTenantConfigValueAction::class)
         ->shouldReceive('execute')
         ->andReturn(null);

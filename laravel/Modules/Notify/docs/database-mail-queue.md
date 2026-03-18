@@ -767,7 +767,7 @@ php artisan queue:restart
 ## Vedi Anche
 - [Laravel Queues](https://laravel.com/docs/queues)
 - [Horizon Documentation](https://laravel.com/docs/horizon)
-- [Queue Configuration](../../../project_docs/queue-configuration.md)
+- [Queue Configuration](../../../../docs/project/queue-configuration.md)
 
 - [Laravel Queues](https://laravel.com/project_docs/queues)
 - [Horizon Documentation](https://laravel.com/project_docs/horizon)

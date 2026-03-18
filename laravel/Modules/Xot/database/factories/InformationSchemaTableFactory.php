@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Xot\Models\InformationSchemaTable;
 
 /**
- * InformationSchemaTable Factory
+ * InformationSchemaTable Factory.
  *
  * @extends Factory<InformationSchemaTable>
  */

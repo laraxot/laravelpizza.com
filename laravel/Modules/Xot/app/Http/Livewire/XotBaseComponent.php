@@ -5,8 +5,10 @@ declare(strict_types=1);
 namespace Modules\Xot\Http\Livewire;
 
 // use Illuminate\Support\Carbon;
-use Exception;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Str;
 use Livewire\Component;
 
@@ -33,14 +35,14 @@ abstract class XotBaseComponent extends Component
         $view = str_replace('._', '.', $view);
         // fare distinzione fra inAdmin o no ?
         if (! view()->exists($view)) {
-            throw new Exception('View not Exists['.$view.']');
+            throw new \Exception('View not Exists['.$view.']');
         }
 
         return $view;
     }
 
     /**
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     * @return Application|Factory|View
      */
     /**
      * Render the component.

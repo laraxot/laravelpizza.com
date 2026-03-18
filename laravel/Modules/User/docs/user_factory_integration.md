@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-# UserFactory Integration - Modulo User e ModuloEsempio
+# UserFactory Integration - Modulo User e Quaeris
 
 ## Overview
 
-Questo documento descrive l'integrazione tra la `UserFactory` del modulo ModuloEsempio e la base `BaseUser` del modulo User, evidenziando l'architettura Single Table Inheritance (STI) implementata con Parental.
-=======
-# UserFactory Integration - Modulo User e healthcare_app
-
-## Overview
-
-Questo documento descrive l'integrazione tra la `UserFactory` del modulo healthcare_app e la base `BaseUser` del modulo User, evidenziando l'architettura Single Table Inheritance (STI) implementata con Parental.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Questo documento descrive l'integrazione tra la `UserFactory` del modulo Quaeris e la base `BaseUser` del modulo User, evidenziando l'architettura Single Table Inheritance (STI) implementata con Parental.
 
 ## Architettura STI
 
@@ -18,17 +10,10 @@ Questo documento descrive l'integrazione tra la `UserFactory` del modulo healthc
 
 ```php
 BaseUser (Modules\User\Models\BaseUser)
-<<<<<<< HEAD
-├── User (Modules\ModuloEsempio\Models\User) - Base for STI
-    ├── Patient (Modules\ModuloEsempio\Models\Patient) - uses HasParent
-    ├── Doctor (Modules\ModuloEsempio\Models\Doctor) - uses HasParent  
-    └── Admin (Modules\ModuloEsempio\Models\Admin) - uses HasParent
-=======
-├── User (Modules\healthcare_app\Models\User) - Base for STI
-    ├── Patient (Modules\healthcare_app\Models\Patient) - uses HasParent
-    ├── Doctor (Modules\healthcare_app\Models\Doctor) - uses HasParent  
-    └── Admin (Modules\healthcare_app\Models\Admin) - uses HasParent
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+├── User (Modules\Quaeris\Models\User) - Base for STI
+    ├── Patient (Modules\Quaeris\Models\Patient) - uses HasParent
+    ├── Doctor (Modules\Quaeris\Models\Doctor) - uses HasParent  
+    └── Admin (Modules\Quaeris\Models\Admin) - uses HasParent
 ```
 
 ### Database Connection Strategy
@@ -37,11 +22,7 @@ BaseUser (Modules\User\Models\BaseUser)
 // BaseUser (Modulo User)
 protected $connection = 'user'; // Default connection
 
-<<<<<<< HEAD
-// User (Modulo ModuloEsempio) 
-=======
-// User (Modulo healthcare_app) 
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+// User (Modulo Quaeris)
 protected $connection = 'salute_ora'; // Override for healthcare domain
 ```
 
@@ -60,19 +41,11 @@ use HasRoles;            // Permission management
 use HasAuthenticationLogTrait; // Authentication logging
 ```
 
-<<<<<<< HEAD
-### Modulo ModuloEsempio (User)
+### Modulo Quaeris (User)
 Aggiunge trait specifici per il dominio sanitario:
 
 ```php
-// In ModuloEsempio\Models\User
-=======
-### Modulo healthcare_app (User)
-Aggiunge trait specifici per il dominio sanitario:
-
-```php
-// In healthcare_app\Models\User
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+// In Quaeris\Models\User
 use LogsActivity;        // Spatie Activity Log
 use HasStates;           // Spatie Model States
 use HasGdpr;             // GDPR compliance
@@ -92,38 +65,22 @@ use HasParent;           // Parental STI support
 
 ### Factory Ownership
 
-<<<<<<< HEAD
-La `UserFactory` è implementata **nel modulo ModuloEsempio** perché:
+La `UserFactory` è implementata **nel modulo Quaeris** perché:
 
 1. **Domain Specificity**: I dati sono specifici del dominio sanitario
-2. **Enum Integration**: Usa `UserTypeEnum` e `UserState` del modulo ModuloEsempio
-=======
-La `UserFactory` è implementata **nel modulo healthcare_app** perché:
-
-1. **Domain Specificity**: I dati sono specifici del dominio sanitario
-2. **Enum Integration**: Usa `UserTypeEnum` e `UserState` del modulo healthcare_app
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+2. **Enum Integration**: Usa `UserTypeEnum` e `UserState` del modulo Quaeris
 3. **Business Logic**: Gestisce logica sanitaria (ISEE, pregnancy, certifications)
 4. **Connection Override**: Usa database 'salute_ora'
 
 ### Integration Pattern
 
 ```php
-<<<<<<< HEAD
-// Factory nel modulo ModuloEsempio
-namespace Modules\ModuloEsempio\Database\Factories;
+// Factory nel modulo Quaeris
+namespace Modules\Quaeris\Database\Factories;
 
 class UserFactory extends Factory
 {
-    protected $model = \Modules\ModuloEsempio\Models\User::class;
-=======
-// Factory nel modulo healthcare_app
-namespace Modules\healthcare_app\Database\Factories;
-
-class UserFactory extends Factory
-{
-    protected $model = \Modules\healthcare_app\Models\User::class;
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+    protected $model = \Modules\Quaeris\Models\User::class;
     
     // Genera dati compatibili con tutti i modelli della gerarchia
     public function definition(): array
@@ -134,11 +91,7 @@ class UserFactory extends Factory
             'email' => $this->faker->unique()->safeEmail(),
             'password' => Hash::make('password'),
             
-<<<<<<< HEAD
-            // Campi User ModuloEsempio (specifici dominio)
-=======
-            // Campi User healthcare_app (specifici dominio)
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+// Campi User Quaeris (specifici dominio)
             'type' => UserTypeEnum::PATIENT,
             'state' => Pending::class,
             'is_active' => true,
@@ -217,11 +170,7 @@ public function admin(): static
 
 ### Field Mapping
 
-<<<<<<< HEAD
-| BaseUser (User Module) | ModuloEsempio User | Usage |
-=======
-| BaseUser (User Module) | healthcare_app User | Usage |
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+| BaseUser (User Module) | Quaeris User | Usage |
 |------------------------|----------------|-------|
 | `name` | `name` | Full name compatibility |
 | `email` | `email` | Authentication |
@@ -245,11 +194,7 @@ protected function casts(): array
     ];
 }
 
-<<<<<<< HEAD
-// ModuloEsempio User - Domain-specific casts
-=======
-// healthcare_app User - Domain-specific casts
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+// Quaeris User - Domain-specific casts
 protected function casts(): array
 {
     return array_merge(parent::casts(), [
@@ -312,20 +257,12 @@ expect($user->isActive())->toBeTrue();
 ### 1. Modular Design
 
 - **BaseUser**: Campi generici per autenticazione e autorizzazione
-<<<<<<< HEAD
-- **ModuloEsempio User**: Campi specifici del dominio sanitario
-=======
-- **healthcare_app User**: Campi specifici del dominio sanitario
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+- **Quaeris User**: Campi specifici del dominio sanitario
 - **STI Children**: Campi altamente specializzati per tipo
 
 ### 2. Factory Responsibility
 
-<<<<<<< HEAD
-- **UserFactory in ModuloEsempio**: Genera dati completi per testing del dominio
-=======
-- **UserFactory in healthcare_app**: Genera dati completi per testing del dominio
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+- **UserFactory in Quaeris**: Genera dati completi per testing del dominio
 - **Compatibility**: Rispetta i vincoli del BaseUser del modulo User
 - **Extensibility**: Facilmente estendibile per nuovi tipi di utente
 
@@ -387,44 +324,25 @@ public function test_bulk_sti_creation()
 
 ### 2. Domain Separation
 - Modulo User: Generics per autenticazione/autorizzazione
-<<<<<<< HEAD
-- Modulo ModuloEsempio: Specifics per dominio sanitario
-=======
-- Modulo healthcare_app: Specifics per dominio sanitario
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+- Modulo Quaeris: Specifics per dominio sanitario
 - Clear boundaries e responsibilities
 
 ### 3. Testing Flexibility
 - Test generici nel modulo User
-<<<<<<< HEAD
-- Test specifici sanitari nel modulo ModuloEsempio
-=======
-- Test specifici sanitari nel modulo healthcare_app
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+- Test specifici sanitari nel modulo Quaeris
 - Factory supporta entrambi i livelli
 
 ### 4. Maintenance
 - Changes al BaseUser automaticamente ereditati
-<<<<<<< HEAD
-- Healthcare-specific changes isolati nel modulo ModuloEsempio
-=======
-- Healthcare-specific changes isolati nel modulo healthcare_app
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+- Healthcare-specific changes isolati nel modulo Quaeris
 - Factory evolution indipendente
 
 ## Links to Documentation
 
-<<<<<<< HEAD
-### ModuloEsempio Module
-- [UserFactory Improvements Analysis](../modulo/docs/factories/userfactory-improvements-analysis.md)
-- [Model Architecture](../modulo/docs/model-architecture.md)
-- [STI Implementation](../modulo/docs/model-inheritance.md)
-=======
-### healthcare_app Module
-- [UserFactory Improvements Analysis](../healthcare_app/docs/factories/userfactory-improvements-analysis.md)
-- [Model Architecture](../healthcare_app/docs/model-architecture.md)
-- [STI Implementation](../healthcare_app/docs/model-inheritance.md)
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+### Quaeris Module
+- [UserFactory Improvements Analysis](../Quaeris/docs/factories/userfactory-improvements-analysis.md)
+- [Model Architecture](../Quaeris/docs/model-architecture.md)
+- [STI Implementation](../Quaeris/docs/model-inheritance.md)
 
 ### User Module
 - [BaseUser Documentation](../user/docs/baseuser_conflicts.md)

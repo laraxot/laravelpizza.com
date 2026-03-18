@@ -3,9 +3,7 @@
 ## Procedura Sistematica per la Standardizzazione
 
 Questo documento fornisce una procedura dettagliata per correggere sistematicamente i file di traduzione nel modulo Notify che non rispettano gli standard di <nome progetto>.
-Questo documento fornisce una procedura dettagliata per correggere sistematicamente i file di traduzione nel modulo Notify che non rispettano gli standard di Laraxot.
-Questo documento fornisce una procedura dettagliata per correggere sistematicamente i file di traduzione nel modulo Notify che non rispettano gli standard di healthcare_app.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Questo documento fornisce una procedura dettagliata per correggere sistematicamente i file di traduzione nel modulo Notify che non rispettano gli standard di Quaeris.
 
 ## Passo 1: Analisi del File Esistente
 
@@ -22,9 +20,7 @@ Se il file ha un nome non conforme:
 
 # 1. Creare un nuovo file con il nome corretto
 touch /var/www/html/<nome progetto>/laravel/Modules/Notify/lang/it/nome_corretto.php
-touch /var/www/html/ptvx/laravel/Modules/Notify/lang/it/nome_corretto.php
-touch /var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/nome_corretto.php
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+touch /var/www/html/Quaeris/laravel/Modules/Notify/lang/it/nome_corretto.php
 touch /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Notify/lang/it/nome_corretto.php
 
 # 2. Copiare e correggere il contenuto
@@ -36,15 +32,10 @@ grep -r "nome_errato" /var/www/html/<nome progetto>/laravel/Modules/Notify
 
 # 4. Rimuovere il file con naming errato
 rm /var/www/html/<nome progetto>/laravel/Modules/Notify/lang/it/nome_errato.php
-grep -r "nome_errato" /var/www/html/ptvx/laravel/Modules/Notify
+grep -r "nome_errato" /var/www/html/Quaeris/laravel/Modules/Notify
 
 # 4. Rimuovere il file con naming errato
-rm /var/www/html/ptvx/laravel/Modules/Notify/lang/it/nome_errato.php
-grep -r "nome_errato" /var/www/html/healthcare_app/laravel/Modules/Notify
-
-# 4. Rimuovere il file con naming errato
-rm /var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/nome_errato.php
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+rm /var/www/html/Quaeris/laravel/Modules/Notify/lang/it/nome_errato.php
 grep -r "nome_errato" /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Notify
 
 # 4. Rimuovere il file con naming errato
@@ -96,9 +87,7 @@ Dopo aver corretto un file in italiano, verificare e aggiornare la versione ingl
 
 # 1. Controllare se esiste il file inglese
 ls /var/www/html/<nome progetto>/laravel/Modules/Notify/lang/en/nome_file.php
-ls /var/www/html/ptvx/laravel/Modules/Notify/lang/en/nome_file.php
-ls /var/www/html/healthcare_app/laravel/Modules/Notify/lang/en/nome_file.php
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+ls /var/www/html/Quaeris/laravel/Modules/Notify/lang/en/nome_file.php
 ls /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Notify/lang/en/nome_file.php
 
 # 2. Se esiste, aggiornarlo con la stessa struttura

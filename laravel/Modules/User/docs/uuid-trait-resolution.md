@@ -193,15 +193,7 @@ $token = $user->createToken('test');
 
 ### **Phase 3: System Verification (Next)**
 - [ ] Test LimeSurvey integration with UUIDs
-<<<<<<< .merge_file_LkBkgB
-- [ ] Verify healthcare_app contact token generation
-=======
-<<<<<<< HEAD
-- [ ] Verify ExternalProject contact token generation
-=======
-- [ ] Verify ModuloEsempio contact token generation
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_QSKi47
+- [ ] Verify Quaeris contact token generation
 - [ ] Test all authentication flows
 - [ ] Performance testing
 
@@ -274,15 +266,7 @@ $token = $user->createToken('test');
 - [ ] Users can authenticate across tenants
 - [ ] API authentication works
 - [ ] LimeSurvey integration functional
-<<<<<<< .merge_file_LkBkgB
-- [ ] healthcare_app survey workflows operational
-=======
-<<<<<<< HEAD
-- [ ] ExternalProject survey workflows operational
-=======
-- [ ] ModuloEsempio survey workflows operational
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_QSKi47
+- [ ] Quaeris survey workflows operational
 
 ### **Philosophical Success** (Super Mucca)
 - [ ] Code is DRY (no duplicate UUID logic)

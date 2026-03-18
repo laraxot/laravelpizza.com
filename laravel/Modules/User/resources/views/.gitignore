@@ -9,3 +9,4 @@
 -e 
 # PHPStan documentation
 docs/phpstan/
+_docs/

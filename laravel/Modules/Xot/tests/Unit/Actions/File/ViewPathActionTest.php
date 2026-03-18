@@ -8,7 +8,7 @@ use Modules\Xot\Actions\File\FixPathAction;
 use Modules\Xot\Actions\File\GetViewNameSpacePathAction;
 use Modules\Xot\Actions\File\ViewPathAction;
 
-it('calculates view path correctly', function (): void {)
+it('calculates view path correctly', function (): void {
     $this->mock(GetViewNameSpacePathAction::class)
         ->shouldReceive('execute')
         ->once()

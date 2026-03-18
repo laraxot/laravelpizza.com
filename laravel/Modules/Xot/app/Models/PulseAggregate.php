@@ -9,16 +9,17 @@ use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Database\Factories\PulseAggregateFactory;
 
 /**
- * @property string $id
- * @property int $bucket
- * @property int $period
- * @property string $type
- * @property string $key
+ * @property string      $id
+ * @property int         $bucket
+ * @property int         $period
+ * @property string      $type
+ * @property string      $key
  * @property string|null $key_hash
- * @property string $aggregate
- * @property string $value
- * @property int|null $count
- * @method static PulseAggregateFactory factory($count = null, $state = [])
+ * @property string      $aggregate
+ * @property string      $value
+ * @property int|null    $count
+ *
+ * @method static PulseAggregateFactory          factory($count = null, $state = [])
  * @method static Builder<static>|PulseAggregate newModelQuery()
  * @method static Builder<static>|PulseAggregate newQuery()
  * @method static Builder<static>|PulseAggregate query()
@@ -31,9 +32,11 @@ use Modules\Xot\Database\Factories\PulseAggregateFactory;
  * @method static Builder<static>|PulseAggregate wherePeriod($value)
  * @method static Builder<static>|PulseAggregate whereType($value)
  * @method static Builder<static>|PulseAggregate whereValue($value)
- * @property-read ProfileContract|null $creator
- * @property-read ProfileContract|null $deleter
- * @property-read ProfileContract|null $updater
+ *
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $deleter
+ * @property ProfileContract|null $updater
+ *
  * @mixin \Eloquent
  */
 class PulseAggregate extends BaseModel

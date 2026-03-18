@@ -1,190 +1,33 @@
-# Migrazione da Services ad Actions
+# Actions Over Services
 
-## Architettura Precedente: Services
+Regola architetturale canonica del progetto:
 
-In precedenza, il sistema utilizzava un'architettura basata su Services per incapsulare la logica applicativa. Mentre questo approccio è comune in molti framework PHP, presenta alcune limitazioni:
+- **non usiamo Services**
+- usiamo **Actions**
+- quando un'azione deve essere invocabile, queueable o riusabile come job applicativo, usiamo **`spatie/laravel-queueable-action`**
 
-1. **Accoppiamento elevato**: I Services tendono a crescere in dimensione e ad accumulare logica correlata ma distinta
-2. **Difficoltà di test**: Services complessi sono difficili da testare in isolamento
-3. **Nessun supporto integrato per code**: Eseguire operazioni in background richiedeva codice aggiuntivo
-4. **Responsabilità meno definite**: I Services spesso finiscono per gestire troppe responsabilità
+## Motivazione
 
-## Nuova Architettura: Spatie Laravel Queueable Action
+- riduce la proliferazione di classi generiche `*Service`
+- rende ogni unita' di business piu' piccola, esplicita e testabile
+- si integra bene con container, queue e job orchestration
+- mantiene il codice piu' DRY e piu' KISS del classico service layer indefinito
 
-Abbiamo deciso di migrare verso [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action) per i seguenti vantaggi:
+## Regole operative
 
-1. **Principio di Responsabilità Singola**: Ogni Action si concentra su un'unica operazione
-2. **Facilità di Testing**: Le Actions sono facili da testare in isolamento
-3. **Supporto per Code**: Le Actions possono essere eseguite in modo sincrono o in background senza modificare il codice chiamante
-4. **Dipendency Injection**: Supporto completo per il container di Laravel
-5. **Standardizzazione**: Approccio coerente in tutto il codebase
+- niente nuove cartelle `Services/` per logica applicativa di dominio
+- le vecchie classi in `app/Services` sono debito legacy da convergere
+- la business logic vive in `app/Actions`
+- le action devono avere input/output chiari e testabili
+- se l'azione deve essere dispatchabile o asincrona, preferire `QueueableAction`
 
-## Pattern di Migrazione
+## Impatto sui documenti prodotto
 
-Quando si migra da un Service a una o più Actions:
+- nei PRD non va richiesto un `service layer`
+- roadmap e sprint devono parlare di action, queueable action, contract e test
+- se un documento legacy menziona `Services` come obiettivo, va corretto
 
-1. Identificare le operazioni distinte all'interno del Service
-2. Creare una Action separata per ciascuna operazione
-3. Utilizzare Data Objects (Spatie Laravel Data) per il passaggio dei parametri
-4. Aggiornare i chiamanti per utilizzare le nuove Actions
-5. Rimuovere il Service obsoleto solo dopo aver migrato tutte le funzionalità
+## Riferimenti
 
-## Struttura delle Directories
-
-```
-Modules/
-└── ModuleName/
-    ├── app/
-    │   ├── Actions/             # Queueable Actions
-    │   │   ├── Domain1/         # Organizzazione opzionale per dominio
-    │   │   │   └── ...
-    │   │   └── Domain2/
-    │   │       └── ...
-    │   ├── Datas/               # Data Objects
-    │   └── Services/            # Contiene solo Services legacy non ancora migrati
-    └── ...
-```
-
-## Convenzioni di Naming
-
-- **Action**: Nome del verbo + "Action" (es. `CreateUserAction`)
-- **Data Object**: Nome dell'entità + "Data" (es. `UserData`)
-
-## Esempio di Migrazione
-
-### Service originale (da rimuovere)
-
-```php
-<?php
-
-namespace Modules\User\Services;
-
-class UserService
-{
-    public function createUser(array $data)
-    {
-        // Logica di creazione utente
-    }
-
-    public function updateUser($id, array $data)
-    {
-        // Logica di aggiornamento utente
-    }
-}
-```
-
-### Migrato a Actions
-
-```php
-<?php
-
-namespace Modules\User\Actions;
-
-use Modules\User\Datas\UserData;
-use Modules\User\Models\User;
-use Spatie\QueueableAction\QueueableAction;
-
-class CreateUserAction
-{
-    use QueueableAction;
-
-    public function execute(UserData $data): User
-    {
-        // Logica di creazione utente
-    }
-}
-
-class UpdateUserAction
-{
-    use QueueableAction;
-
-    public function execute(User $user, UserData $data): User
-    {
-        // Logica di aggiornamento utente
-    }
-}
-```
-
-## Uso delle Actions
-
-```php
-// In un controller o altrove
-public function store(Request $request, CreateUserAction $action)
-{
-    $userData = UserData::from($request->validated());
-
-    // Esecuzione sincrona
-    $user = $action->execute($userData);
-
-    // O in background
-    $action->onQueue('users')->execute($userData);
-}
-```
-
-## Caso Speciale: Filament Widgets
-
-Per i Filament Widgets (specialmente Chart Widgets) con dati demo, **NON usare né Services né Actions**.
-
-### Pattern Self-Contained per Widgets
-
-I widget devono essere completamente autonomi:
-
-```php
-<?php
-
-declare(strict_types=1);
-
-<<<<<<< .merge_file_ewN3pk
-namespace Modules\healthcare_app\Filament\Widgets;
-=======
-<<<<<<< HEAD
-namespace Modules\ExternalProject\Filament\Widgets;
-=======
-namespace Modules\ModuloEsempio\Filament\Widgets;
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_2ctWg2
-
-use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
-
-class SimpleChartWidget extends XotBaseChartWidget
-{
-    // Dati come costanti di classe (non in Service)
-    private const DEMO_DATA = [1250, 1380, 1520, 1680];
-    private const LABELS = ['Gen', 'Feb', 'Mar', 'Apr'];
-
-    protected function getData(): array
-    {
-        return [
-            'datasets' => [['data' => self::DEMO_DATA]],
-            'labels' => self::LABELS,
-        ];
-    }
-
-    // Logica helper come metodo privato
-    private function calculateGrowth(float $current, float $previous): float
-    {
-        return $previous > 0 ? (($current - $previous) / $previous) * 100 : 0.0;
-    }
-}
-```
-
-### Perché Self-Contained per Widget?
-
-1. **No costruttori custom** → Evita problemi di hydration Livewire
-2. **Dati immutabili** → Costanti garantiscono coerenza
-3. **Un file, una responsabilità** → Facile da mantenere e testare
-4. **Nessuna dipendenza esterna** → Zero rischi di autowiring
-
-### Riferimenti
-
-<<<<<<< .merge_file_ewN3pk
-- [Chart Widget Best Practices (healthcare_app)](../../../healthcare_app/docs/chart-widget-best-practices.md)
-=======
-<<<<<<< HEAD
-- [Chart Widget Best Practices (ExternalProject)](../../../<nome progetto>/docs/chart-widget-best-practices.md)
-=======
-- [Chart Widget Best Practices (ModuloEsempio)](../../../ptvx/docs/chart-widget-best-practices.md)
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_2ctWg2
-- [Critical No Services Rule](../critical-no-services-rule.md)
-```
+- [product-docs-governance.md](../product-docs-governance.md)
+- [PRODUCT_DOCS_INDEX_2026_03_12.md](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)

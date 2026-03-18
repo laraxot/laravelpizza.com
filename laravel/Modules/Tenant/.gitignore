@@ -160,3 +160,6 @@ test_tenants.sql
 *.fila2
 laravel
 public_html
+lang/lang/
+_docs/
+_docs/

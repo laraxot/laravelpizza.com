@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Services;
 
-use Exception;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Nwidart\Modules\Facades\Module;
-use ReflectionClass;
 use stdClass;
 
 // ----------- Requests ----------
@@ -29,8 +27,8 @@ class ModuleService
      */
     public static function getInstance(): self
     {
-        if (! (self::$_instance instanceof self)) {
-            self::$_instance = new self;
+        if (! self::$_instance instanceof self) {
+            self::$_instance = new self();
         }
 
         return self::$_instance;
@@ -67,7 +65,7 @@ class ModuleService
          * }
          */
         $mod = Module::find($this->name);
-        if (! ($mod instanceof \Nwidart\Modules\Module)) {
+        if (! $mod instanceof \Nwidart\Modules\Module) {
             return [];
         }
 
@@ -82,7 +80,7 @@ class ModuleService
             $ext = '.php';
             // dddx(['ext' => $file->getExtension(), get_class_methods($file)]);
             if (Str::endsWith($filename, $ext)) {
-                $tmp = new stdClass;
+                $tmp = new \stdClass();
 
                 $name = mb_substr($filename, 0, -mb_strlen($ext));
 
@@ -100,11 +98,11 @@ class ModuleService
                 $tmp->name = $name;
 
                 try {
-                    $reflection_class = new ReflectionClass($tmp->class);
+                    $reflection_class = new \ReflectionClass($tmp->class);
                     if (! $reflection_class->isAbstract()) {
                         $data[$tmp->name] = $tmp->class;
                     }
-                } catch (Exception) {
+                } catch (\Exception) {
                     // Ignore reflection errors
                 }
             }

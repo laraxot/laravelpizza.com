@@ -50,7 +50,6 @@ Il componente Timeline visualizza una sequenza di eventi in ordine cronologico, 
 ```blade
 <x-filament::timeline>
     <x-filament::timeline.item
-        title="Stato Aggiornato"
         date="2024-03-15"
     >
         <x-slot name="badge">

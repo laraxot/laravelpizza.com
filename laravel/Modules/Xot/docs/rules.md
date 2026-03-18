@@ -4,6 +4,42 @@
 - Il namespace corretto per Filament è sempre `Modules\<nome modulo>\Filament`, anche se i file risiedono in `app/Filament`.
 - Esempio pratico: vedi la correzione e il ragionamento in [Azioni Organizzativa (Performance)](../../performance/docs/azioni_organizzativa.md).
 
+## 🤖 Regole AI Queueable Actions Pattern
+
+### Regole Fondamentali per il Modulo AI
+- **CRITICAL AI RULE**: Tutte le operazioni AI devono usare Queueable Actions
+- **CRITICAL AI RULE**: MAI creare AI service classes
+- **CRITICAL AI RULE**: AI actions belong in `Modules/Xot/Actions/AI/` o modulo dedicato AI
+- **CRITICAL AI RULE**: Use create-action skill per tutte le operazioni AI-specific
+
+### Pattern di Implementazione per il Modulo AI
+```php
+// ❌ MALE: AI service class
+class OllamaService {
+    public function chat(array $messages) { /* ... */ }
+}
+
+// ✅ BENE: AI Queueable Action
+class ChatOllamaAction extends QueueableAction {
+    public function __construct(
+        protected array $messages,
+        protected string $model = 'qwen2.5-coder:7b'
+    ) {}
+    
+    public function handle(): array {
+        // Logica di business per chat Ollama
+        return $this->processChat();
+    }
+}
+```
+
+### Caratteristiche dei Queueable Actions per il Modulo AI
+- **Single Responsibility**: Ogni azione ha un unico scopo ben definito
+- **Testability**: Tutte le azioni AI sono facilmente testabili con Pest
+- **Reusability**: Azioni AI riutilizzabili in diversi contesti
+- **Queue Support**: Supporto automatico per esecuzione asincrona
+- **Clean Separation**: Separazione netta tra logica AI e altri componenti
+
 ### Collegamenti
 - [Azioni Organizzativa (Performance)](../../performance/docs/azioni_organizzativa.md)
 

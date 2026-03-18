@@ -8,9 +8,6 @@ use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 use Symfony\Component\HttpFoundation\Response;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 function invokeProtected(object $object, string $method, array $args = []): mixed
 {

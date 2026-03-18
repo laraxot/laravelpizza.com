@@ -7,9 +7,6 @@ namespace Modules\Cms\Tests\Unit\Http\Middleware;
 use Illuminate\Http\Request;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Cms\Http\Middleware\SetFolioLocale;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 test('it uses user language with highest priority', function (): void {
     LaravelLocalization::shouldReceive('setLocale')->once()->with('fr');

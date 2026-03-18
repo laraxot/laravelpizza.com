@@ -17,8 +17,10 @@ Documentazione della risoluzione dei conflitti tra contratti e classi Eloquent n
 - `toArray(): array` - Conflitto con signature di Eloquent
 - `forceFill(array $attributes): static` - Conflitto con signature di Eloquent
 - `withoutRelations(): static` - Conflitto con signature di Eloquent
+- `getKey(): mixed` - Rimossa la tipizzazione di ritorno per compatibilità con Eloquent core (che non ha typehint in PHP source)
+- `getRelationValue(string $key): mixed` - Rimossa la tipizzazione per compatibilità con `HasAttributes` trait di Eloquent
 
-**Solution**: Rimossi tutti i metodi che duplicavano funzionalità Eloquent native
+**Solution**: Rimossi tutti i metodi che duplicavano funzionalità Eloquent native o che introducevano incompatibilità di signature.
 
 ### 2. UserContract Simplification
 **Problem**: Il `UserContract` era troppo complesso e conteneva metodi in conflitto
@@ -75,7 +77,7 @@ interface UserContract
 - Proper exception handling for filesystem operations
 
 ### 4. Uso corretto di `dddx()`
-**Contesto**: la funzione `dddx()` è definita nel file `Modules/Xot/Helpers/Helper.php` e viene autocaricata tramite la sezione `files` del `composer.json` del modulo Xot.
+**Contesto**: la funzione `dddx()` è definita nel file `Modules/Xot/helpers/Helper.php` e viene autocaricata tramite la sezione `files` del `composer.json` del modulo Xot.
 **Regola**: quando viene richiamata all'interno di classi namespaced (es. componenti Blade/Filament) va utilizzata come funzione globale (`\dddx()`), evitando `use function` inutili o riferimenti a namespace inesistenti.
 **Esempio**:
 ```php
@@ -97,7 +99,7 @@ Questo garantisce che PHPStan riconosca la funzione già caricata via composer e
 4. ✅ `Modules/Xot/app/Contracts/ProfileContract.php`
 
 ### Helper Fixed
-1. ✅ `Modules/Xot/Helpers/Helper.php` - Complete rewrite
+1. ✅ `Modules/Xot/helpers/Helper.php` - Complete rewrite
 
 ### Components Fixed
 1. ✅ `Modules/Xot/app/View/Components/XDebug.php` - Function import added

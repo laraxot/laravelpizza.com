@@ -6,10 +6,6 @@ namespace Modules\Cms\Tests\Unit;
 
 use function Pest\Laravel\get;
 
-use Tests\TestCase;
-
-uses(TestCase::class);
-
 test('route home redirects to locale-specific page', function (): void {
     // The home route redirects to a locale-specific URL
     get('/')->assertRedirect();

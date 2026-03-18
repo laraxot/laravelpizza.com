@@ -126,7 +126,7 @@ nwidart/laravel-modules (Module facade)
 
 **Order garantito**:
 1. Xot service provider registrato
-2. Xot Helpers/Helper.php autoloaded (via `files` in composer.json)
+2. Xot helpers/Helper.php autoloaded (via `files` in composer.json)
 3. Tenant service provider registrato
 4. Tenant può usare helper functions
 
@@ -139,7 +139,7 @@ Call to undefined function Modules\Tenant\Services\inAdmin()
 at Modules/Tenant/app/Services/TenantService.php:68
 ```
 
-**Causa**: Funzioni `inAdmin()` e `getModuleModels()` non definite in `Xot/Helpers/Helper.php`.
+**Causa**: Funzioni `inAdmin()` e `getModuleModels()` non definite in `Xot/helpers/Helper.php`.
 
 ### Perché Accadeva
 
@@ -152,7 +152,7 @@ Durante `composer dump-autoload`:
 
 ### Fix Applicato
 
-Aggiunte in `Xot/Helpers/Helper.php`:
+Aggiunte in `Xot/helpers/Helper.php`:
 
 ```php
 if (! function_exists('inAdmin')) {

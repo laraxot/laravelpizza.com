@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\Middleware;
 
-uses(Modules\Cms\Tests\TestCase::class);
-
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 
 test('PageSlugMiddleware can be instantiated', function () {

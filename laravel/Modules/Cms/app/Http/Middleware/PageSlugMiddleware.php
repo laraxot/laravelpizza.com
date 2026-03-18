@@ -15,7 +15,8 @@ class PageSlugMiddleware
 
     public function handle(Request $request, \Closure $next): Response
     {
-        $slug = $request->route('slug');
+        // Support both 'slug' and 'slug0' route parameters for generic container routes
+        $slug = $request->route('slug0') ?? $request->route('slug');
 
         // Handle case where slug might be null or not a string
         if (! \is_string($slug)) {

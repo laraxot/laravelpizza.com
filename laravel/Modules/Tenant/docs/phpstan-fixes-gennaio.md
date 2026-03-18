@@ -91,3 +91,4 @@ if (isset($extra_conf['connections'][$default]) && is_array($extra_conf['connect
 - [Architettura Modulo Tenant](./architecture.md)
 - [SushiToJsons Trait](./sushi-to-jsons-trait.md)
 - [Tenant Service](./tenant-service.md)
+

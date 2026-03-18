@@ -10,11 +10,7 @@
 
 ## Panoramica
 
-<<<<<<< HEAD
-Questo documento fornisce un'analisi corretta dell'implementazione attuale del file `logout.blade.php` situato in `Themes/One/resources/views/pages/auth/`, identifica problemi e propone miglioramenti in linea con le convenzioni di Laraxot.
-=======
-Questo documento fornisce un'analisi corretta dell'implementazione attuale del file `logout.blade.php` situato in `Themes/One/resources/views/pages/auth/`, identifica problemi e propone miglioramenti in linea con le convenzioni di healthcare_app.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Questo documento fornisce un'analisi corretta dell'implementazione attuale del file `logout.blade.php` situato in `Themes/One/resources/views/pages/auth/`, identifica problemi e propone miglioramenti in linea con le convenzioni di Quaeris.
 
 ## Analisi dell'Implementazione Attuale
 
@@ -191,11 +187,7 @@ Per il logout , si raccomanda di utilizzare l'approccio Folio con PHP puro, che 
 
 2. **Efficienza**: Il reindirizzamento immediato offre una migliore esperienza utente rispetto a una pagina di conferma.
 
-<<<<<<< HEAD
-3. **Coerenza**: Questo approccio è coerente con le convenzioni di Laraxot per le operazioni semplici.
-=======
-3. **Coerenza**: Questo approccio è coerente con le convenzioni di healthcare_app per le operazioni semplici.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+3. **Coerenza**: Questo approccio è coerente con le convenzioni di Quaeris per le operazioni semplici.
 
 4. **Sicurezza**: Implementa correttamente tutte le misure di sicurezza necessarie (invalidazione sessione, rigenerazione token).
 

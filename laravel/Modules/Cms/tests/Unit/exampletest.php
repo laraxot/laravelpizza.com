@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use Modules\Cms\Models\Module;
-use Modules\Cms\Tests\TestHelper;
 use Modules\Xot\Actions\Filament\GetModulesNavigationItems;
 
 describe('CMS Module', function () {
@@ -41,7 +40,6 @@ describe('CMS Module', function () {
         expect(Module::class)->toBeString()->and(GetModulesNavigationItems::class)->toBeString();
     });
 });
-uses(TestHelper::class);
 
 beforeEach(function (): void {
     $this->super_admin_user = $this->getSuperAdminUser();

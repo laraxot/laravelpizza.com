@@ -108,13 +108,32 @@
 
 ## DOCUMENTATION
 - **MANDATORY**: Always study, update, and improve 'docs' folders BEFORE taking any action
+- **MANDATORY**: Before implementation, write the why, purpose, rationale, policy, vision, and philosophy of the task in the relevant module/theme docs
+- Treat `docs/` as the handoff layer between AI agents working on the same repository
 - Evaluate the creation of GitHub Issues or GitHub Discussions to track decisions and progress
 - Never include specific absolute paths (e.g., base_*_fila5)
 - Document model relationships and field purposes
 - Add PHPDoc blocks to all classes and methods
 - Links in .md files must be relative and filenames lowercase (except README.md)
 
+## SHARED ACTION REUSE
+- Before adding helper methods for cast, normalization, formatting, or small domain transforms, search `Modules/Xot/app/Actions/` first
+- If logic is shared across more than one class, prefer a reusable Xot action over duplicated private/protected helpers
+- If nullable and non-nullable semantics differ, expose both explicitly at the action layer instead of hiding policy in local widget/page methods
+
 ## VALIDATION
 - Run PHPStan level 10 (Zero errors) before finalizing work
+- Run `PHPMD` via standalone `.phar`, not via Composer package installation in the repository
 - Process: 1) Pre-Action Documentation Audit (Study & Update Docs) 2) Implementation 3) Quality Check (PHPStan, PHPMD, PHP Insights)
 - Document all changes and decisions in relevant docs folders
+
+## RUNTIME BUG VERIFICATION
+- If the user reports a bug on a concrete project URL, do not treat source-level assertions as sufficient verification
+- A fix is not complete until Pest or integration coverage reproduces the same runtime shape, or a real browser verification confirms the path
+- Stack traces, Livewire payloads, SQL fragments, and exact URLs are part of the specification and must be turned into tests when feasible
+
+## LIVEWIRE PROP GOVERNANCE
+- Public Livewire/Filament widget properties must stay primitive, scalar-array, or explicitly serializable payloads
+- Do not pass arrays of custom DTOs/models as public properties when a serialized array contract is possible
+- Rehydrate custom DTOs inside the component from serialized payloads
+- For runtime regressions on widgets, require at least one Pest render/mount test of the actual Livewire component, not only source assertions

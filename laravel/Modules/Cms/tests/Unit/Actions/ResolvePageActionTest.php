@@ -8,8 +8,8 @@ use Illuminate\Support\Str;
 use Modules\Cms\Actions\ResolvePageAction;
 use Modules\Cms\Datas\ResolvePageData;
 use Modules\Cms\Models\Page as PageModel;
+use Modules\Cms\Tests\TestCase;
 use Modules\Meetup\Models\Event;
-use Tests\TestCase;
 
 final class ResolvePageActionTest extends TestCase
 {
@@ -18,7 +18,7 @@ final class ResolvePageActionTest extends TestCase
      *
      * @var array<int, string>
      */
-    protected array $connectionsToTransact = ['mysql', 'meetup', 'user', 'tenant'];
+    protected $connectionsToTransact = ['mysql', 'meetup', 'user', 'tenant'];
 
     public function testItResolvesADynamicModelFromKnownMappings(): void
     {

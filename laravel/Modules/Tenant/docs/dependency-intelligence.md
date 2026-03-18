@@ -1,6 +1,5 @@
 # Dependency Intelligence - Module Tenant
 
-Aggiornato da `composer show` il 2026-03-02.
 
 ## Runtime dependencies (`require`)
 

@@ -11,4 +11,6 @@ use Filament\Forms\Components\Field;
  *
  * @method static static make(string $name) Create a new instance of the component
  */
-abstract class XotBaseField extends Field {}
+abstract class XotBaseField extends Field
+{
+}

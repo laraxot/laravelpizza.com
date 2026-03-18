@@ -19,11 +19,11 @@ uses(TestCase::class);
 
 beforeEach(function (): void {
     $user = User::factory()
-            ->create([
-                'type' => UserType::MasterAdmin,
-                'email' => 'admin-'.uniqid().'@example.com',
-                'password' => Hash::make('password123'),
-            ]);
+        ->create([
+            'type' => UserType::MasterAdmin,
+            'email' => 'admin-'.uniqid().'@example.com',
+            'password' => Hash::make('password123'),
+        ]);
 });
 
 test('user resource has correct navigation icon', function (): void {

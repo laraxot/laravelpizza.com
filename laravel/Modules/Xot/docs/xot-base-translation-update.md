@@ -88,5 +88,5 @@ return [
 
 - [Regole Traduzioni Xot](translation_rules.md)
 - [Best Practices Traduzioni](translations-best-practices.md)
-- [Documentazione Principale Traduzioni](../../../project_docs/translation_rules.md)
+- [Documentazione Principale Traduzioni](../../../../docs/project/translation_rules.md)
 

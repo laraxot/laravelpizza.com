@@ -142,7 +142,7 @@ use App\Models\User;
 
 ## 🔗 Collegamenti
 
-- [Analisi Generale PHPStan](../../../project_docs/quality/phpstan-analysis.md)
+- [Analisi Generale PHPStan](../../../../docs/project/quality/phpstan-analysis.md)
 - [PSR-12 Extended Coding Style](https://www.php-fig.org/psr/psr-12/)
 - [CLAUDE.md - Quality Guidelines](../../../claude.md)
 

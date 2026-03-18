@@ -11,7 +11,7 @@ use Modules\Tenant\Tests\TestCase;
 
 uses(TestCase::class);
 
-it('gets localized markdown path if it exists', function (): void {)
+it('gets localized markdown path if it exists', function (): void {
     App::setLocale('it');
 
     // Create a temporary file to simulate existence
@@ -35,7 +35,7 @@ it('gets localized markdown path if it exists', function (): void {)
     unlink($tempFile);
 });
 
-it('gets fallback markdown path if localized does not exist', function (): void {)
+it('gets fallback markdown path if localized does not exist', function (): void {
     App::setLocale('it');
 
     // Create a temporary file to simulate existence
@@ -59,7 +59,7 @@ it('gets fallback markdown path if localized does not exist', function (): void 
     unlink($tempFile);
 });
 
-it('returns hash if no path exists', function (): void {)
+it('returns hash if no path exists', function (): void {
     $this->mock(GetTenantFilePathAction::class)
         ->shouldReceive('execute')
         ->andReturn('/non/existent/path.md');

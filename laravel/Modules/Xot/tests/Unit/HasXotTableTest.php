@@ -4,27 +4,26 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
-use Tests\TestCase;
-use Mockery;
 use Filament\Tables\Table;
 use Modules\Xot\Tests\Unit\Support\DummyTestModel;
 use Modules\Xot\Tests\Unit\Support\HasTableWithoutOptionalMethodsTestClass;
 use Modules\Xot\Tests\Unit\Support\HasTableWithXotTestClass;
+use Tests\TestCase;
 
 uses(TestCase::class);
 
 afterEach(function () {
-    Mockery::close();
+    \Mockery::close();
 });
 
 it('tests table method with all methods implemented', function () {
     // Avoid DB/Schema access inside TableExistsByModelClassActions
-    Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
+    \Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
         ->shouldReceive('execute')
         ->andReturn(true);
 
     // Create partial mock and defer missing to real methods so trait's table() runs
-    $mock = Mockery::mock(HasTableWithXotTestClass::class)->makePartial()->shouldDeferMissing();
+    $mock = \Mockery::mock(HasTableWithXotTestClass::class)->makePartial()->shouldDeferMissing();
 
     // Expect getTableHeaderActions to be called
     $mock->shouldReceive('getTableHeaderActions')->once()->andReturn([]);
@@ -48,7 +47,7 @@ it('tests table method with all methods implemented', function () {
     $mock->shouldReceive('getTableEmptyStateActions')->andReturn([]);
 
     // Create a mock for Table
-    $tableMock = Mockery::mock(Table::class);
+    $tableMock = \Mockery::mock(Table::class);
     $tableMock->shouldReceive('recordTitleAttribute')->andReturnSelf();
     $tableMock->shouldReceive('heading')->andReturnSelf();
     $tableMock->shouldReceive('columns')->andReturnSelf();
@@ -74,12 +73,12 @@ it('tests table method with all methods implemented', function () {
 
 it('tests table method with no optional methods implemented', function () {
     // Avoid DB/Schema access inside TableExistsByModelClassActions
-    Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
+    \Mockery::mock('overload:Modules\\Xot\\Actions\\Model\\TableExistsByModelClassActions')
         ->shouldReceive('execute')
         ->andReturn(true);
 
     // Create partial mock and defer missing to real methods so trait's table() runs
-    $mock = Mockery::mock(HasTableWithoutOptionalMethodsTestClass::class)->makePartial()->shouldDeferMissing();
+    $mock = \Mockery::mock(HasTableWithoutOptionalMethodsTestClass::class)->makePartial()->shouldDeferMissing();
 
     // Other required method stubs
     $mock->shouldReceive('getModelClass')->andReturn(DummyTestModel::class);
@@ -94,7 +93,7 @@ it('tests table method with no optional methods implemented', function () {
     $mock->shouldReceive('getTableEmptyStateActions')->andReturn([]);
 
     // Create a mock for Table
-    $tableMock = Mockery::mock(Table::class);
+    $tableMock = \Mockery::mock(Table::class);
     $tableMock->shouldReceive('recordTitleAttribute')->andReturnSelf();
     $tableMock->shouldReceive('heading')->andReturnSelf();
     $tableMock->shouldReceive('columns')->andReturnSelf();

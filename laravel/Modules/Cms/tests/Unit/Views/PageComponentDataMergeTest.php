@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\Views;
 
-use Modules\Cms\Tests\TestCase;
-
-uses(TestCase::class);
-
 test('page component merges route context into block data', function (): void {
     $block = (object) [
         'view' => 'cms::tests.fixtures.slug-probe',

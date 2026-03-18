@@ -10,13 +10,14 @@ use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecord
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
+use Illuminate\Contracts\Support\Htmlable;
 use Modules\Xot\Filament\Traits\HasXotForm;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Override;
 
 /**
- * ---
+ * ---.
  */
 abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 {
@@ -75,7 +76,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      * Restituisce l'heading della tabella.
      * Override esplicito per compatibilità con Filament 5.2 (Htmlable|string|null).
      */
-    protected function getTableHeading(): \Illuminate\Contracts\Support\Htmlable|string|null
+    protected function getTableHeading(): Htmlable|string|null
     {
         return $this->getTableHeadingFromTrait();
     }
@@ -97,7 +98,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      *
      * @return array<string, TextColumn>
      */
-    #[Override]
+    #[\Override]
     protected function getTableColumns(): array
     {
         return [

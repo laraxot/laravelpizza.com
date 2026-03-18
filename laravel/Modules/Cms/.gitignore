@@ -123,7 +123,6 @@ docs/cache/
 # ==============================================
 # LANGUAGE FILES
 # ==============================================
-lang/lang/
 resources/lang/
 
 # ==============================================
@@ -163,3 +162,6 @@ cms_test_data.sql
 *.fila2
 laravel
 public_html
+lang/lang/
+_docs/
+_docs/

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Xot\Models\Module;
 
 /**
- * Module Factory
+ * Module Factory.
  *
  * @extends Factory<Module>
  */

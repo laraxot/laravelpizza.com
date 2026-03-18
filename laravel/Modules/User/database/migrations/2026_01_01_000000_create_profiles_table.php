@@ -25,12 +25,6 @@ return new class extends XotBaseMigration {
             $table->string('user_name')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
-            $table->date('date_of_birth')->nullable();
-            $table->string('website')->nullable();
-            $table->string('twitter')->nullable();
-            $table->string('facebook')->nullable();
-            $table->string('linkedin')->nullable();
-            $table->string('github')->nullable();
             $table->string('address')->nullable();
             $table->date('birth_date')->nullable();
             $table->string('gender', 1)->nullable();
@@ -56,34 +50,13 @@ return new class extends XotBaseMigration {
                 $table->string('uuid', 36)->index()->nullable()->after('id');
             }
             if (! $this->hasColumn('user_id')) {
-                $table->string('user_id', 36)
-                    ->index()
-                    ->nullable()
-                    ->after('uuid');
+                $table->string('user_id', 36)->index()->nullable()->after('uuid');
             }
             if (! $this->hasColumn('email')) {
                 $table->string('email')->nullable()->after('last_name');
             }
             if (! $this->hasColumn('phone')) {
                 $table->string('phone')->nullable()->after('email');
-            }
-            if (! $this->hasColumn('date_of_birth')) {
-                $table->date('date_of_birth')->nullable()->after('phone');
-            }
-            if (! $this->hasColumn('website')) {
-                $table->string('website')->nullable()->after('date_of_birth');
-            }
-            if (! $this->hasColumn('twitter')) {
-                $table->string('twitter')->nullable()->after('website');
-            }
-            if (! $this->hasColumn('facebook')) {
-                $table->string('facebook')->nullable()->after('twitter');
-            }
-            if (! $this->hasColumn('linkedin')) {
-                $table->string('linkedin')->nullable()->after('facebook');
-            }
-            if (! $this->hasColumn('github')) {
-                $table->string('github')->nullable()->after('linkedin');
             }
             if (! $this->hasColumn('avatar')) {
                 $table->string('avatar')->nullable()->after('bio');

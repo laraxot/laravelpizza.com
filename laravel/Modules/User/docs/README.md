@@ -2,7 +2,7 @@
 
 ## Overview
 
-Il modulo **User** gestisce l'autenticazione, l'autorizzazione e la gestione utenti completa nel sistema Laraxot PTVX.
+Il modulo **User** gestisce l'autenticazione, l'autorizzazione e la gestione utenti completa nel sistema Laraxot Quaeris.
 
 ## Funzionalità Principali
 

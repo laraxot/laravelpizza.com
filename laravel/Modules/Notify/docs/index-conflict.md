@@ -198,7 +198,7 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Il file `lang/it/notify_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10.
 - Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
@@ -231,7 +231,7 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
@@ -243,81 +243,81 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni"
 
 *Ultimo aggiornamento: Gennaio 2025*
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
+- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
+*Ultimo aggiornamento: Gennaio 2025*
+
+- Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
+
+- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
+- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
+*Ultimo aggiornamento: Gennaio 2025*
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
-
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-*Ultimo aggiornamento: Gennaio 2025*
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-*Ultimo aggiornamento: Gennaio 2025*
-
-- Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 

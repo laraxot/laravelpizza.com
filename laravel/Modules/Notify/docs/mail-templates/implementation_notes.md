@@ -29,16 +29,12 @@ L'implementazione corretta degli allegati richiede una struttura specifica. Ecco
    ```php
    $attachments = [
        [
-           'path' => '/var/www/html/ptvx/public_html/images/avatars/default-3.svg',
-           'path' => '/var/www/html/healthcare_app/public_html/images/avatars/default-3.svg',
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+'path' => '/var/www/html/Quaeris/public_html/images/avatars/default-3.svg',
            'as' => 'logo.png',
            'mime' => 'image/png'
        ],
        [
-           'path' => '/var/www/html/ptvx/public_html/images/avatars/default-3.svg',
-           'path' => '/var/www/html/healthcare_app/public_html/images/avatars/default-3.svg',
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+'path' => '/var/www/html/Quaeris/public_html/images/avatars/default-3.svg',
            'as' => 'logo.png',
            'mime' => 'image/png'
        ]

@@ -281,9 +281,7 @@ return [
         'username' => env('SMSHOSTING_USERNAME'),
         'password' => env('SMSHOSTING_PASSWORD'),
         'sender' => env('SMSHOSTING_SENDER', '<nome progetto>'),
-        'sender' => env('SMSHOSTING_SENDER', 'Laraxot'),
-        'sender' => env('SMSHOSTING_SENDER', 'healthcare_app'),
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+'sender' => env('SMSHOSTING_SENDER', 'Quaeris'),
     ],
 ];
 ```
@@ -739,11 +737,8 @@ public function toTwilio($notifiable)
     return (new TwilioSmsMessage())
         ->content("<nome progetto>: Promemoria appuntamento {$this->appointment->formatted_date}. 
         Per annullare rispondere NO. Per info: <nome progetto>.it/privacy");
-        ->content("Laraxot: Promemoria appuntamento {$this->appointment->formatted_date}. 
-        Per annullare rispondere NO. Per info: ptvx.it/privacy");
-        ->content("healthcare_app: Promemoria appuntamento {$this->appointment->formatted_date}. 
-        Per annullare rispondere NO. Per info: healthcare_app.it/privacy");
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+->content("Quaeris: Promemoria appuntamento {$this->appointment->formatted_date}. 
+        Per annullare rispondere NO. Per info: Quaeris.it/privacy");
 }
 ```
 

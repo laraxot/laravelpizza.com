@@ -18,6 +18,18 @@ Nel progetto il frontoffice CMS e i temi pubblici usano Laravel Folio come route
 - `name()` e' utile solo per route che richiedono URL generation stabile.
 - `render()` e' appropriato per arricchire la response o passare dati alla view, non per concentrare business logic o ricostruire a mano il contesto di routing.
 
+## Dynamic Theme Paths
+
+Per supportare l'architettura modulare di Laraxot, il mount point di Folio non deve essere hardcoded. 
+In `FolioServiceProvider`, il percorso viene risolto dinamicamente usando `XotData::make()->pub_theme`:
+
+```php
+$themePath = base_path('Themes/'.$pub_theme.'/resources/views/pages');
+Folio::path($themePath)->middleware([...]);
+```
+
+Questo assicura che il router file-based punti sempre alle pagine del tema attivo (es. `TwentyOne`, `Meetup`, ecc.), evitando `ViewNotFoundException` o caricamenti di temi errati.
+
 ## Testing
 
 - I test devono colpire la URL Folio finale.

@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\View;
 
-uses(Modules\Cms\Tests\TestCase::class);
-
 use Modules\Cms\View\Components\AppLayout;
 use Modules\Cms\View\Components\GuestLayout;
 use Modules\Cms\View\Components\Metatags;

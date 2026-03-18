@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\Models;
 
-uses(Modules\Cms\Tests\TestCase::class);
-
 use Modules\Cms\Models\PageContent;
 
 test('PageContent model can be instantiated', function () {

@@ -58,7 +58,7 @@ Documento completo di ottimizzazioni per il modulo Xot seguendo i principi **SUP
 - `test.txt` (0 bytes, inutile)
 - `CHANGELOG.md.backup` (backup non necessario)
 - `phpstan-baseline.neon` (0 bytes, inutile)
-- `_xot.code-workspace` e `_activity.code-workspace` (workspace specifici)
+- `_activity.code-workspace` (duplicato errato — ogni modulo deve avere UN SOLO file `_<snake_case_module_name>.code-workspace`, ad es. `_xot.code-workspace`)
 
 **Soluzione SUPER DRY + KISS:**
 1. **Eliminare** file vuoti e backup

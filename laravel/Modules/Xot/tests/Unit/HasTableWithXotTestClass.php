@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
-use Mockery;
-use Override;
 use Filament\Tables\Table;
 use Illuminate\Support\Collection;
 use Modules\Xot\Filament\Traits\HasXotTable;
@@ -19,14 +17,14 @@ class HasTableWithXotTestClass
 
     public function getLayoutView(): mixed
     {
-        $mock = Mockery::mock();
+        $mock = \Mockery::mock();
         $mock->shouldReceive('getTableColumns')->andReturn([]);
         $mock->shouldReceive('getTableContentGrid')->andReturn([]);
 
         return $mock;
     }
 
-    #[Override]
+    #[\Override]
     public function getTableColumns(): array
     {
         return [];
@@ -34,10 +32,10 @@ class HasTableWithXotTestClass
 
     public function getTable(): Table
     {
-        return Mockery::mock(Table::class);
+        return \Mockery::mock(Table::class);
     }
 
-    public function getTablePage(): null|int
+    public function getTablePage(): ?int
     {
         return 1;
     }
@@ -47,12 +45,12 @@ class HasTableWithXotTestClass
         return 10;
     }
 
-    public function getTableSortColumn(): null|string
+    public function getTableSortColumn(): ?string
     {
         return null;
     }
 
-    public function getTableSortDirection(): null|string
+    public function getTableSortDirection(): ?string
     {
         return null;
     }
@@ -67,17 +65,17 @@ class HasTableWithXotTestClass
         return null;
     }
 
-    public function getTableFilterState(string $_name): null|array
+    public function getTableFilterState(string $_name): ?array
     {
         return [];
     }
 
-    public function getTableGrouping(): null|string
+    public function getTableGrouping(): ?string
     {
         return null;
     }
 
-    public function getTableSearchIndicator(): null|string
+    public function getTableSearchIndicator(): ?string
     {
         return null;
     }
@@ -152,7 +150,7 @@ class HasTableWithXotTestClass
         return null;
     }
 
-    public function getMountedTableAction(): null|string
+    public function getMountedTableAction(): ?string
     {
         return null;
     }
@@ -172,7 +170,7 @@ class HasTableWithXotTestClass
         return null;
     }
 
-    public function getMountedTableBulkAction(): null|string
+    public function getMountedTableBulkAction(): ?string
     {
         return null;
     }
@@ -182,7 +180,7 @@ class HasTableWithXotTestClass
         return null;
     }
 
-    public function getActiveTableLocale(): null|string
+    public function getActiveTableLocale(): ?string
     {
         return null;
     }

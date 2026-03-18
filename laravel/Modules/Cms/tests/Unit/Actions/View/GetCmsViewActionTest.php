@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\Actions\View;
 
-uses(Modules\Cms\Tests\TestCase::class);
-
 use Illuminate\Support\Facades\View;
 use Modules\Cms\Actions\View\GetCmsViewAction;
 

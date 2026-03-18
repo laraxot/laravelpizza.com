@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Filament\Actions;
 
-use Filament\Actions\Action;
 use Modules\Xot\Actions\ModelClass\CopyFromLastYearAction as ModelCopyAction;
 use Modules\Xot\Filament\Actions\XotBaseAction;
 use Spatie\QueueableAction\QueueableAction;
@@ -29,25 +28,25 @@ class CopyFromLastYearAction extends XotBaseAction
             ->requiresConfirmation()
             ->modalHeading('Copy Data from Last Year')
             ->modalDescription('Are you sure you want to copy data from the previous year?')
-            ->action(function (array $arguments, array $data): void {
-                // Implementation for copying from last year logic
-                $this->execute($arguments, $data);
+            ->action(function (array $arguments, array $data) use ($action): void {
+                $action->execute($arguments, $data);
             });
     }
 
-    /**
-     * Execute the copy from last year action.
-     */
     public function execute(array $arguments, array $data): void
     {
-        // Get model class from arguments
         $modelClass = $arguments['model_class'] ?? null;
         $fieldName = $arguments['field_name'] ?? null;
         $year = $arguments['year'] ?? null;
 
-        if ($modelClass && $fieldName) {
-            // Use the model copy action to handle the actual copying
-            app(ModelCopyAction::class)->execute($modelClass, $fieldName, $year);
+        if (! is_string($modelClass) || ! is_string($fieldName)) {
+            return;
         }
+
+        if (! is_string($year) && null !== $year) {
+            return;
+        }
+
+        app(ModelCopyAction::class)->execute($modelClass, $fieldName, $year);
     }
 }

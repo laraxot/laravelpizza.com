@@ -12,7 +12,7 @@ use Modules\Xot\Actions\Arr\SaveArrayAction;
 
 uses(TestCase::class);
 
-it('saves tenant config by merging with existing data', function (): void {)
+it('saves tenant config by merging with existing data', function (): void {
     $this->mock(GetTenantFilePathAction::class)
         ->shouldReceive('execute')
         ->with('database.php')
@@ -39,7 +39,7 @@ it('saves tenant config by merging with existing data', function (): void {)
     $action->execute('database', ['connections' => ['mysql' => ['database' => 'test_db']]]);
 });
 
-it('saves tenant config when file does not exist', function (): void {)
+it('saves tenant config when file does not exist', function (): void {
     $this->mock(GetTenantFilePathAction::class)
         ->shouldReceive('execute')
         ->with('app.php')

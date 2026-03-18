@@ -23,9 +23,7 @@ interface TelegramProviderActionInterface
 1. **Coerenza con Laravel**: Il framework Laravel utilizza il suffisso `Contract` per le sue interfacce (es. `Illuminate\Contracts\Auth\Authenticatable`).
 2. **Chiarezza semantica**: Il termine "Contract" esprime meglio il concetto di un "contratto" che le classi implementatrici devono rispettare.
 3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli .
-3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli Laraxot.
-3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli healthcare_app.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+3. **Standardizzazione**: Questa convenzione è applicata in modo coerente in tutti i moduli Quaeris.
 4. **Integrazione con tooling**: Gli strumenti di analisi statica e generazione di codice sono configurati per questa convenzione.
 
 ## Implementazione
@@ -47,15 +45,10 @@ grep -r "interface.*Interface" --include="*.php" /var/www/html/_bases/base_techp
 
 # Cerca interfacce con naming corretto
 grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules
-grep -r "interface.*Interface" --include="*.php" /var/www/html/ptvx/laravel/Modules
+grep -r "interface.*Interface" --include="*.php" /var/www/html/Quaeris/laravel/Modules
 
 # Cerca interfacce con naming corretto
-grep -r "interface.*Contract" --include="*.php" /var/www/html/ptvx/laravel/Modules
-grep -r "interface.*Interface" --include="*.php" /var/www/html/healthcare_app/laravel/Modules
-
-# Cerca interfacce con naming corretto
-grep -r "interface.*Contract" --include="*.php" /var/www/html/healthcare_app/laravel/Modules
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+grep -r "interface.*Contract" --include="*.php" /var/www/html/Quaeris/laravel/Modules
 grep -r "interface.*Interface" --include="*.php" /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules
 
 # Cerca interfacce con naming corretto
@@ -67,17 +60,10 @@ grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techpl
 - [Laravel Contracts Documentation](https://laravel.com/docs/contracts)
 - [PTVX Code Quality Guidelines](/var/www/html/_bases/base_ptvx_fila5_mono/laravel/docs/code-quality.md)
 - [Modulo Xot Contracts](/var/www/html/_bases/base_ptvx_fila5_mono/laravel/Modules/Xot/app/Contracts/)
-- [Laraxot Code Quality Guidelines](/var/www/html/ptvx/laravel/docs/code-quality.md)
+- [Quaeris Code Quality Guidelines](/var/www/html/Quaeris/laravel/docs/code-quality.md)
 - [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
-- [Laraxot Code Quality Guidelines](/var/www/html/ptvx/laravel/project_docs/code-quality.md)
-- [Modulo Xot Contracts](/var/www/html/ptvx/laravel/Modules/Xot/app/Contracts/)
-- [Laraxot Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/docs/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
-- [Laraxot Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/project_docs/code-quality.md)
-- [healthcare_app Code Quality Guidelines](/var/www/html/healthcare_app/laravel/docs/code-quality.md)
-- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
-- [healthcare_app Code Quality Guidelines](/var/www/html/healthcare_app/laravel/project_docs/code-quality.md)
-- [Modulo Xot Contracts](/var/www/html/healthcare_app/laravel/Modules/Xot/app/Contracts/)
-- [healthcare_app Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/docs/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
-- [healthcare_app Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/project_docs/code-quality.md)
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+- [Quaeris Code Quality Guidelines](/var/www/html/Quaeris/laravel/project_docs/code-quality.md)
+- [Modulo Xot Contracts](/var/www/html/Quaeris/laravel/Modules/Xot/app/Contracts/)
+- [Quaeris Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/docs/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [Quaeris Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/project_docs/code-quality.md)
 - [Modulo Xot Contracts](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Xot/app/Contracts/)

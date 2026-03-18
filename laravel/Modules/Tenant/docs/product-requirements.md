@@ -9,7 +9,7 @@
 | **
 | **Owner** | Core Team |
 | **Module** | Tenant |
-| **Repository** | laraxot/module_tenant_fila3 |
+| **Repository** | laraxot/module_tenant_fila5 |
 
 ---
 

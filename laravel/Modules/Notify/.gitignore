@@ -161,3 +161,6 @@ test_notifications.sql
 *.old
 laravel
 public_html
+lang/lang/
+_docs/
+_docs/

@@ -12,23 +12,47 @@ namespace Modules\Cms\View\Components;
 class Section extends Component
 {
     public string $slug;
-    public ?string $view = null;
-    public array $data = [];
+    public string $tpl = 'v1';
 
-    public function __construct(string $slug, ?string $view = null, array $data = [])
+    public function __construct(string $slug, ?string $tpl = null)
     {
         $this->slug = $slug;
-        $this->view = $view;
-        $this->data = $data;
+        if (is_string($tpl)) {
+            $this->tpl = $tpl;
+        }
     }
 
     public function render()
     {
-        $section = SectionModel::where('slug', $this->slug)->first();
-        // ...
+        return view('pub_theme::components.sections.'.$this->slug.'.'.$this->tpl, [
+            'blocks' => SectionModel::getBlocksBySlug($this->slug),
+        ]);
     }
 }
 ```
+
+## Contratto runtime reale
+
+Con il contratto attuale del componente, questa chiamata:
+
+```blade
+<x-section slug="header" />
+```
+
+non cerca `components/sections/header.blade.php`, ma:
+
+```text
+pub_theme::components.sections.header.v1
+```
+
+Quindi ogni tema che usa `<x-section slug="..."/>` deve fornire almeno:
+
+- `resources/views/components/sections/header/v1.blade.php`
+- `resources/views/components/sections/footer/v1.blade.php`
+
+oppure deve passare un `tpl` esplicito compatibile.
+
+Questo e' un vincolo importante: se il tema ha solo `header.blade.php` o `footer.blade.php`, la pagina va in `500` con `View [components.sections.<slug>.v1] not found`.
 
 ### View di Default
 ```blade

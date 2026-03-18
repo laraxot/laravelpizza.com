@@ -4,10 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests;
 
+use Illuminate\Database\DatabaseManager;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Translation\ArrayLoader;
+use Illuminate\Translation\Translator;
+use Modules\Tenant\Models\Tenant;
+use Modules\UI\Models\Asset;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
+use Modules\Xot\Models\Module;
 use Modules\Xot\Providers\XotServiceProvider;
 
 /**
@@ -21,7 +29,7 @@ abstract class XotBaseTestCase extends BaseTestCase
     use CreatesApplication;
 
     /**
-     * @return array<int, class-string<\Illuminate\Support\ServiceProvider>>
+     * @return array<int, class-string<ServiceProvider>>
      */
     protected function getPackageProviders($app): array
     {
@@ -42,8 +50,8 @@ abstract class XotBaseTestCase extends BaseTestCase
         // This ensures the application is in a consistent state for unit tests.
         if (! $this->app->bound('translator')) {
             $this->app->singleton('translator', function ($app) {
-                return new \Illuminate\Translation\Translator(
-                    new \Illuminate\Translation\ArrayLoader(),
+                return new Translator(
+                    new ArrayLoader(),
                     'en'
                 );
             });
@@ -55,7 +63,7 @@ abstract class XotBaseTestCase extends BaseTestCase
         // Prevent connection accumulation across a long multi-connection suite.
         try {
             if (isset($this->app)) {
-                /** @var \Illuminate\Database\DatabaseManager $db */
+                /** @var DatabaseManager $db */
                 $db = $this->app->make('db');
 
                 /** @var array<string, mixed> $connections */
@@ -85,7 +93,7 @@ abstract class XotBaseTestCase extends BaseTestCase
     /**
      * Get the user class from XotData.
      *
-     * @return class-string<\Illuminate\Database\Eloquent\Model&UserContract>
+     * @return class-string<Model&UserContract>
      */
     protected static function getUserClass(): string
     {
@@ -109,9 +117,9 @@ abstract class XotBaseTestCase extends BaseTestCase
      *
      * @param array<string, mixed> $attributes
      */
-    protected static function createTestTenant(array $attributes = []): \Modules\Tenant\Models\Tenant
+    protected static function createTestTenant(array $attributes = []): Tenant
     {
-        return \Modules\Tenant\Models\Tenant::factory()->create($attributes);
+        return Tenant::factory()->create($attributes);
     }
 
     /**
@@ -119,9 +127,9 @@ abstract class XotBaseTestCase extends BaseTestCase
      *
      * @param array<string, mixed> $attributes
      */
-    protected static function createTestModule(array $attributes = []): \Modules\Xot\Models\Module
+    protected static function createTestModule(array $attributes = []): Module
     {
-        return \Modules\Xot\Models\Module::factory()->create($attributes);
+        return Module::factory()->create($attributes);
     }
 
     /**
@@ -129,8 +137,8 @@ abstract class XotBaseTestCase extends BaseTestCase
      *
      * @param array<string, mixed> $attributes
      */
-    protected static function createTestAsset(array $attributes = []): \Modules\UI\Models\Asset
+    protected static function createTestAsset(array $attributes = []): Asset
     {
-        return \Modules\UI\Models\Asset::factory()->create($attributes);
+        return Asset::factory()->create($attributes);
     }
 }

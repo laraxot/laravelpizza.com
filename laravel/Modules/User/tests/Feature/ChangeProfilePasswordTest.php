@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Tests\Feature;
 
 use Filament\Facades\Filament;
+use Filament\Schemas\SchemasServiceProvider;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Livewire;
 use Modules\User\Filament\Pages\MyProfilePage;
@@ -18,7 +19,7 @@ uses(TestCase::class);
 
 beforeEach(function (): void {
     $this->app->register(AdminPanelProvider::class);
-    $this->app->register(\Filament\Schemas\SchemasServiceProvider::class);
+    $this->app->register(SchemasServiceProvider::class);
     Filament::setCurrentPanel(Filament::getPanel('user::admin'));
 });
 

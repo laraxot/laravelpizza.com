@@ -10,13 +10,12 @@ use Filament\Forms\Components\Toggle;
 use Filament\Resources\Pages\Page;
 use Illuminate\Support\Str;
 use Modules\Xot\Models\Module;
-use Override;
 
 class ModuleResource extends XotBaseResource
 {
     protected static ?string $model = Module::class;
 
-    #[Override]
+    #[\Override]
     public static function getFormSchema(): array
     {
         return [
@@ -28,13 +27,13 @@ class ModuleResource extends XotBaseResource
         ];
     }
 
-    #[Override]
+    #[\Override]
     public static function getRelations(): array
     {
         return [];
     }
 
-    #[Override]
+    #[\Override]
     public static function getPages(): array
     {
         $prefix = static::class.'\\Pages\\';

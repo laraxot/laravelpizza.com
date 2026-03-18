@@ -22,13 +22,13 @@
 
 ## Cross-reference
 - [Update migrazioni Performance](../../performance/project_docs/migration_update_rules.md)
-- [Root MODULE_NAMESPACE_RULES.md](../../../project_docs/module_namespace_rules.md)
+- [Root MODULE_NAMESPACE_RULES.md](../../../../docs/project/module_namespace_rules.md)
 
 ---
 
 ## Backlink
 - [Regole update migrazioni Performance](../../performance/project_docs/migration_update_rules.md) ← questa doc è sempre aggiornata
-- [Ripresa lavoro migrazioni in root](../../../project_docs/module_namespace_rules.md)
+- [Ripresa lavoro migrazioni in root](../../../../docs/project/module_namespace_rules.md)
 
 
 ---
@@ -69,7 +69,7 @@
 - **Memoria storica**: rollback della regola il [DATE], documentato in Performance/project_docs/organizzativa-models.md e qui. Precedente regola ([DATE]) annullata per esigenze di override e compatibilità.
 - Ogni violazione va documentata e corretta anche nella root docs.
 - Vedi dettaglio e memoria storica in [Modules/Performance/project_docs/organizzativa-models.md](../../Performance/project_docs/organizzativa-models.md#organizzativatotvalutatoreid-regola-di-estensione)
-- [docs/links.md root](../../../project_docs/links.md)
+- [docs/links.md root](../../../../docs/project/links.md)
 
 > ⚠️ **Warning**: Estendere Xot\BaseModel può causare override indesiderati, perdita di flessibilità e problemi di compatibilità con logiche locali. Seguire sempre la regola sopra per tutti i modelli di totali/aggregati in Performance.
 

@@ -72,6 +72,7 @@ final class ResolvePageAction
         // Mappature note (Priority 1)
         $knownMappings = [
             'events' => 'Modules\\Meetup\\Models\\Event',
+            'predicts' => 'Modules\\Predict\\Models\\Predict',
         ];
 
         if (isset($knownMappings[$container0])) {

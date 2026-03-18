@@ -725,8 +725,8 @@ class SecurityAlertService
 
 - [Spatie Permission Documentation](https://spatie.be/project_docs/laravel-permission)
 - [Laravel Authentication](https://laravel.com/project_docs/authentication)
-- [Multi-tenancy Best Practices](../../../project_docs/multi-tenancy-best-practices.md)
-- [Security Guidelines](../../../project_docs/security-guidelines.md)
+- [Multi-tenancy Best Practices](../../../../docs/project/multi-tenancy-best-practices.md)
+- [Security Guidelines](../../../../docs/project/security-guidelines.md)
 
 ---
 

@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-uses(Modules\Cms\Tests\TestCase::class);
 use Modules\Cms\Models\BaseModelLang;
 use Modules\Cms\Models\Page;
 use Modules\Tenant\Models\Traits\SushiToJsons;

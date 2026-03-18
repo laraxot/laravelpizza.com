@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\Datas;
 
-uses(Modules\Cms\Tests\TestCase::class);
-
 use Modules\Cms\Datas\HeadernavData;
 
 test('HeadernavData can be instantiated', function (): void {

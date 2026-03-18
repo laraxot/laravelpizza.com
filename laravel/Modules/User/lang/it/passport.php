@@ -102,4 +102,16 @@ return [
         'present' => 'Presente',
         'missing' => 'Mancante',
     ],
+    'stats' => [
+        'clients_total' => 'Client totali',
+        'clients_description' => 'Client OAuth registrati',
+        'tokens_total' => 'Token totali',
+        'tokens_description' => 'Token di accesso emessi',
+        'tokens_valid' => 'Token validi',
+        'tokens_valid_description' => 'Token attivi e non scaduti',
+        'tokens_revoked' => 'Token revocati',
+        'tokens_revoked_description' => 'Token revocati',
+        'refresh_tokens_total' => 'Refresh token',
+        'refresh_tokens_description' => 'Token di refresh',
+    ],
 ];

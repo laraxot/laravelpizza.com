@@ -7,6 +7,7 @@ namespace Modules\Xot\Contracts;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Query\Builder;
 use Staudenmeir\LaravelAdjacencyList\Eloquent\Builder as AdjacencyBuilder;
 use Staudenmeir\LaravelAdjacencyList\Eloquent\Collection;
 use Staudenmeir\LaravelAdjacencyList\Eloquent\Relations\Ancestors;
@@ -19,25 +20,25 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\Relations\Siblings;
 /**
  * Modules\Xot\Contracts\HasRecursiveRelationshipsContract.
  *
- * @property int $id
- * @property string $name
- * @property int $depth
+ * @property int               $id
+ * @property string            $name
+ * @property int               $depth
  * @property Collection<Model> $children
- * @property int|null $children_count
- * @property Collection<Model> $ancestors The model's recursive parents.
- * @property int|null $ancestors_count
- * @property Collection<Model> $ancestorsAndSelf The model's recursive parents and itself.
- * @property int|null $ancestors_and_self_count
- * @property Collection<Model> $bloodline The model's ancestors, descendants and itself.
- * @property int|null $bloodline_count
- * @property Collection<Model> $childrenAndSelf The model's direct children and itself.
- * @property int|null $children_and_self_count
- * @property Collection<Model> $descendants The model's recursive children.
- * @property int|null $descendants_count
- * @property Collection<Model> $descendantsAndSelf The model's recursive children and itself.
- * @property int|null $descendants_and_self_count
- * @property Collection<Model> $parentAndSelf The model's direct parent and itself.
- * @property int|null $parent_and_self_count
+ * @property int|null          $children_count
+ * @property Collection<Model> $ancestors                  The model's recursive parents.
+ * @property int|null          $ancestors_count
+ * @property Collection<Model> $ancestorsAndSelf           The model's recursive parents and itself.
+ * @property int|null          $ancestors_and_self_count
+ * @property Collection<Model> $bloodline                  The model's ancestors, descendants and itself.
+ * @property int|null          $bloodline_count
+ * @property Collection<Model> $childrenAndSelf            The model's direct children and itself.
+ * @property int|null          $children_and_self_count
+ * @property Collection<Model> $descendants                The model's recursive children.
+ * @property int|null          $descendants_count
+ * @property Collection<Model> $descendantsAndSelf         The model's recursive children and itself.
+ * @property int|null          $descendants_and_self_count
+ * @property Collection<Model> $parentAndSelf              The model's direct parent and itself.
+ * @property int|null          $parent_and_self_count
  *
  * @phpstan-require-extends Model
  *
@@ -228,7 +229,8 @@ interface HasRecursiveRelationshipsContract
     /**
      * Create a new Eloquent query builder for the model.
      *
-     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param Builder $query
+     *
      * @return AdjacencyBuilder
      */
     public function newEloquentBuilder($query);
@@ -236,7 +238,8 @@ interface HasRecursiveRelationshipsContract
     /**
      * Create a new Eloquent Collection instance.
      *
-     * @param  list<static>  $models
+     * @param list<static> $models
+     *
      * @return Collection
      */
     public function newCollection(array $models = []);

@@ -16,9 +16,7 @@
 
 ### Directory Fisiche (path su disco)
 ```
-/var/www/html/ptvx/laravel/Modules/Notify/
-/var/www/html/healthcare_app/laravel/Modules/Notify/
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+/var/www/html/Quaeris/laravel/Modules/Notify/
 ├── app/                           # Directory fisica con app minuscolo
 │   ├── Actions/                  
 │   │   ├── Email/                # Azioni per email

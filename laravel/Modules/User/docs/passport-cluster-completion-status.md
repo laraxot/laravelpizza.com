@@ -57,6 +57,12 @@ Tutte le 5 risorse OAuth sono state spostate in `Clusters/Passport/Resources/`:
    - Pages: List, Create, Edit, View
    - Namespace: `Modules\User\Filament\Clusters\Passport\Resources`
 
+6. ✅ **OauthDeviceCodeResource** (aggiunta 2025-03)
+   - Path: `Clusters/Passport/Resources/OauthDeviceCodeResource.php`
+   - Pages: List, View
+   - Namespace: `Modules\User\Filament\Clusters\Passport\Resources`
+   - RFC8628 Device Authorization Grant
+
 ### 3. Correzioni Applicate dall'Altro Agente
 
 #### Import Puliti
@@ -69,7 +75,14 @@ Tutte le 5 risorse OAuth sono state spostate in `Clusters/Passport/Resources/`:
 - ✅ Corretto `null === $state` → `$state === null` (Yoda style → normale)
 - ✅ Aggiunta riga vuota dopo `$cluster` per leggibilità
 
-### 4. Vecchie Risorse Eliminate
+### 4. Implementazioni Aggiuntive (2025-03)
+
+- ✅ **TokensRelationManager** su `OauthClientResource`: mostra i token OAuth del client nella View, con azioni Visualizza/Revoca/Delete e filtri revocato/scaduto/valido.
+- ✅ **PassportStatsWidget**: widget statistiche nella dashboard Passport (client totali, token totali/validi/revocati, refresh token) con link alle risorse.
+- ✅ **Filtri tabelle**: filtri revocato/scaduto/valido aggiunti a `OauthRefreshTokenResource`, `OauthAuthCodeResource`, `OauthDeviceCodeResource` (OauthAccessTokenResource li aveva già).
+- ✅ **Pulizia risorse duplicate**: eliminate le risorse OAuth duplicate in `Modules/User/app/Filament/Resources/` (OauthClientResource, OauthAccessTokenResource, OauthRefreshTokenResource, OauthAuthCodeResource, OauthPersonalAccessClientResource e relative Pages).
+
+### 5. Vecchie Risorse Eliminate
 
 - ✅ Eliminato `Modules/User/app/Filament/Resources/OauthClientResource.php`
 - ✅ Eliminato `Modules/User/app/Filament/Resources/OauthAccessTokenResource.php`
@@ -85,8 +98,14 @@ Tutte le 5 risorse OAuth sono state spostate in `Clusters/Passport/Resources/`:
 ```
 Modules/User/app/Filament/Clusters/Passport/
 ├── Passport.php (Cluster minimale)
+├── Pages/
+│   └── PassportDashboard.php (con PassportStatsWidget in header)
+├── Widgets/
+│   └── PassportStatsWidget.php
 └── Resources/
     ├── OauthClientResource.php
+    │   ├── RelationManagers/
+    │   │   └── TokensRelationManager.php
     │   └── Pages/
     │       ├── ListOauthClients.php
     │       ├── CreateOauthClient.php
@@ -105,15 +124,19 @@ Modules/User/app/Filament/Clusters/Passport/
     │   └── Pages/
     │       ├── ListOauthAuthCodes.php
     │       └── ViewOauthAuthCode.php
-    └── OauthPersonalAccessClientResource.php
+    ├── OauthPersonalAccessClientResource.php
+    │   └── Pages/
+    │       ├── ListOauthPersonalAccessClients.php
+    │       ├── CreateOauthPersonalAccessClient.php
+    │       ├── EditOauthPersonalAccessClient.php
+    │       └── ViewOauthPersonalAccessClient.php
+    └── OauthDeviceCodeResource.php
         └── Pages/
-            ├── ListOauthPersonalAccessClients.php
-            ├── CreateOauthPersonalAccessClient.php
-            ├── EditOauthPersonalAccessClient.php
-            └── ViewOauthPersonalAccessClient.php
+            ├── ListOauthDeviceCodes.php
+            └── ViewOauthDeviceCode.php
 ```
 
-**Totale**: 20 file PHP (1 cluster + 5 risorse + 14 pages)
+**Totale**: 23 file PHP (1 cluster + 6 risorse + 16 pages)
 
 ---
 

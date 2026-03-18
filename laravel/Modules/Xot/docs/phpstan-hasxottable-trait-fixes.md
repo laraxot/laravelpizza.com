@@ -1,7 +1,7 @@
 # PHPStan HasXotTable Trait Type Safety Fixes - February 2026
 
 ## Data
-[DATE]
+2026-02-05
 
 ## Problema
 

@@ -11,13 +11,13 @@ use Modules\Xot\Actions\File\FixPathAction;
 use Modules\Xot\Actions\File\GetModulePathAction;
 use Nwidart\Modules\Facades\Module;
 
-it('handles absolute urls in AssetAction', function (): void {)
+it('handles absolute urls in AssetAction', function (): void {
     $action = app(AssetAction::class);
     $url = 'https://example.com/asset.js';
     expect($action->execute($url))->toBe($url);
 });
 
-it('returns path if asset already exists in public folder', function (): void {)
+it('returns path if asset already exists in public folder', function (): void {
     $path = 'css/app.css';
     File::shouldReceive('exists')->with(public_path($path))->andReturn(true);
 
@@ -25,7 +25,7 @@ it('returns path if asset already exists in public folder', function (): void {)
     expect($action->execute($path))->toBe($path);
 });
 
-it('resolves module assets correctly in AssetAction', function (): void {)
+it('resolves module assets correctly in AssetAction', function (): void {
     $path = 'Xot::css/style.css';
     $modulePath = '/var/www/Modules/Xot';
     $from = $modulePath.'/resources/css/style.css';
@@ -51,7 +51,7 @@ it('resolves module assets correctly in AssetAction', function (): void {)
     expect($result)->toContain('assets/Xot/css/style.css');
 });
 
-it('calculates asset path correctly in AssetPathAction', function (): void {)
+it('calculates asset path correctly in AssetPathAction', function (): void {
     Module::shouldReceive('getModulePath')
         ->once()
         ->with('User')

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Unit\Models;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(\Modules\User\Tests\TestCase::class);
 
 use Modules\User\Models\Authentication;
 use Modules\User\Models\AuthenticationLog;
@@ -14,7 +14,6 @@ use Modules\User\Models\DeviceUser;
 use Modules\User\Models\Extra;
 use Modules\User\Models\Feature;
 use Modules\User\Models\Notification;
-use Modules\User\Models\OauthAccessToken;
 use Modules\User\Models\OauthAuthCode;
 use Modules\User\Models\OauthClient;
 use Modules\User\Models\OauthDeviceCode;
@@ -33,11 +32,14 @@ test('Notification model can be instantiated', function () {
     expect($model)->toBeInstanceOf(Notification::class);
 });
 
-test('OauthAccessToken model can be instantiated', function () {
-    $model = new OauthAccessToken();
-    expect($model)->toBeInstanceOf(OauthAccessToken::class);
+<<<<<<< Updated upstream
+test('OauthToken model can be instantiated', function () {
+    $model = new OauthToken();
+    expect($model)->toBeInstanceOf(OauthToken::class);
 });
 
+=======
+>>>>>>> Stashed changes
 test('OauthClient model can be instantiated', function () {
     $model = new OauthClient();
     expect($model)->toBeInstanceOf(OauthClient::class);
@@ -56,11 +58,6 @@ test('OauthRefreshToken model can be instantiated', function () {
 test('OauthPersonalAccessClient model can be instantiated', function () {
     $model = new OauthPersonalAccessClient();
     expect($model)->toBeInstanceOf(OauthPersonalAccessClient::class);
-});
-
-test('OauthToken model can be instantiated', function () {
-    $model = new OauthToken();
-    expect($model)->toBeInstanceOf(OauthToken::class);
 });
 
 test('OauthDeviceCode model can be instantiated', function () {

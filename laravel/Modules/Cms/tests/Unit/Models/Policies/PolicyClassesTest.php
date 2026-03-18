@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\Models\Policies;
 
-uses(Modules\Cms\Tests\TestCase::class);
-
 use Modules\Cms\Models\Policies\CmsBasePolicy;
 use Modules\Cms\Models\Policies\ConfPolicy;
 use Modules\Cms\Models\Policies\MenuPolicy;

@@ -11,7 +11,7 @@ use Modules\Tenant\Tests\TestCase;
 
 uses(TestCase::class);
 
-it('resolves tenant config value by merging with tenant overrides', function (): void {)
+it('resolves tenant config value by merging with tenant overrides', function (): void {
     $this->mock(GetTenantNameAction::class)
         ->shouldReceive('execute')
         ->andReturn('test-tenant');
@@ -36,12 +36,12 @@ it('resolves tenant config value by merging with tenant overrides', function ():
     expect($result)->toBe('UTC');
 });
 
-it('throws exception for empty config key', function (): void {)
+it('throws exception for empty config key', function (): void {
     $action = app(ResolveTenantConfigValueAction::class);
     $action->execute('');
 })->throws(\Exception::class);
 
-it('returns default value if config not found', function (): void {)
+it('returns default value if config not found', function (): void {
     $this->mock(GetTenantNameAction::class)
         ->shouldReceive('execute')
         ->andReturn('test-tenant');

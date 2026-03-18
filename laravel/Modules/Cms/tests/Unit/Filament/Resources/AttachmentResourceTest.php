@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\Filament\Resources;
 
-uses(Modules\Cms\Tests\TestCase::class);
-
 use Modules\Cms\Filament\Resources\AttachmentResource;
 use Modules\Cms\Models\Attachment;
 

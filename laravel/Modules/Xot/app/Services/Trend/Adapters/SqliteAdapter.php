@@ -4,12 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Services\Trend\Adapters;
 
-use Error;
-use Override;
-
 class SqliteAdapter extends AbstractAdapter
 {
-    #[Override]
+    #[\Override]
     public function format(string $column, string $interval): string
     {
         $format = match ($interval) {
@@ -18,7 +15,7 @@ class SqliteAdapter extends AbstractAdapter
             'day' => '%Y-%m-%d',
             'month' => '%Y-%m',
             'year' => '%Y',
-            default => throw new Error('Invalid interval.'),
+            default => throw new \Error('Invalid interval.'),
         };
 
         return sprintf("strftime('%s', %s)", $format, $column);

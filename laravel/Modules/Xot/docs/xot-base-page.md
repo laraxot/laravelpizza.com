@@ -101,6 +101,6 @@ Verifica se l'utente ha l'accesso alla pagina.
 
 ## Link Correlati
 
-- [Documentazione Filament](../../../project_docs/filament/index.md)
-- [Best Practices](../../../project_docs/best-practices.md)
-- [Guida Traduzioni](../../../project_docs/translations.md)
+- [Documentazione Filament](../../../../docs/project/filament/index.md)
+- [Best Practices](../../../../docs/project/best-practices.md)
+- [Guida Traduzioni](../../../../docs/project/translations.md)

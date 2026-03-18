@@ -7,8 +7,6 @@ namespace Modules\Cms\Tests\Unit\Http\Volt\Password;
 use Livewire\Volt\Component as VoltComponent;
 use Modules\Cms\Http\Volt\Password\ConfirmComponent;
 
-uses(\Modules\Cms\Tests\TestCase::class);
-
 describe('Password ConfirmComponent', function (): void {
     test('confirm component extends volt component', function (): void {
         $component = new ConfirmComponent();

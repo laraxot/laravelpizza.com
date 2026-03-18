@@ -9,7 +9,7 @@ use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 use Modules\Xot\Actions\File\GetComponentsAction;
 use Modules\Xot\Datas\ComponentFileData;
 
-it('registers blade components correctly', function (): void {)
+it('registers blade components correctly', function (): void {
     $path = 'some/path';
     $namespace = 'Some\\Namespace';
     $prefix = 'prefix';
@@ -36,7 +36,7 @@ it('registers blade components correctly', function (): void {)
     $action->execute($path, $namespace, $prefix);
 });
 
-it('does nothing if no components found', function (): void {)
+it('does nothing if no components found', function (): void {
     $path = 'empty/path';
     $namespace = 'Empty\\Namespace';
 

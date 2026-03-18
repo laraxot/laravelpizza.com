@@ -70,7 +70,7 @@ patterns.md~4241492
     "Modules\\Xot\\": "app/",
     "Coolsam\\FilamentModules\\": "packages/coolsam/panel-modules/src/"
   },
-  "files": ["Helpers/Helper.php"]
+  "files": ["helpers/Helper.php"]
 }
 ```
 - mixing namespace esterni in modulo core

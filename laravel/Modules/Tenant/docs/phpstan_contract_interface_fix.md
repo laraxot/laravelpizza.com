@@ -54,7 +54,7 @@ interface SushiToJsonsContract
 
 ### 2. Fix Function Namespace Issue
 
-Rimosso l'import errato di `authId` poiché la funzione è definita nello scope globale in `Modules/Xot/Helpers/Helper.php`:
+Rimosso l'import errato di `authId` poiché la funzione è definita nello scope globale in `Modules/Xot/helpers/Helper.php`:
 
 ```php
 // ❌ WRONG - La funzione non è nel namespace Modules\Xot\Helpers

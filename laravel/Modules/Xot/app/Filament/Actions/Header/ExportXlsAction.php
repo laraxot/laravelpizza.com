@@ -10,7 +10,6 @@ namespace Modules\Xot\Filament\Actions\Header;
 
 // Header actions must be an instance of Filament\Actions\Action, or Filament\Actions\ActionGroup.
 // use Filament\Actions\Action;
-use Exception;
 use Filament\Actions\Action;
 use Filament\Resources\Pages\ListRecords;
 use Modules\Xot\Actions\Export\ExportXlsByCollection;
@@ -35,8 +34,8 @@ class ExportXlsAction extends Action
                 $transKey = app(GetTransKeyAction::class)->execute($livewire::class);
                 $transKey .= '.fields';
                 $query = $livewire->getFilteredTableQuery();
-                if ($query === null) {
-                    throw new Exception('Query is null');
+                if (null === $query) {
+                    throw new \Exception('Query is null');
                 }
                 $rows = $query->get();
 
@@ -48,9 +47,6 @@ class ExportXlsAction extends Action
                     $rawFields = $resource::getXlsFields($livewire->tableFilters);
                     if (is_array($rawFields)) {
                         $fields = array_map(
-                            /**
-                             * @param  mixed  $field
-                             */
                             static function ($field): string {
                                 // Handle objects with __toString method
                                 if (is_object($field) && method_exists($field, '__toString')) {

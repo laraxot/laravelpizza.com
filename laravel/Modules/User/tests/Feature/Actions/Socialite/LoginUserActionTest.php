@@ -121,6 +121,10 @@ describe('LoginUserAction', function (): void {
         $response = app(LoginUserAction::class)->execute($socialiteUser);
 
         expect($response)->toBeInstanceOf(RedirectResponse::class);
+<<<<<<< HEAD
+        expect($response->getTargetUrl())->toContain('<nome progetto>');
+=======
+>>>>>>> 8c01c903 (.)
     });
 
     test('handles null user assertion gracefully', function (): void {

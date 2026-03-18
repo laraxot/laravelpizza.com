@@ -57,7 +57,7 @@ class Show extends Component
     protected function fetchPageContent(): array
     {
         try {
-            $page = Page::where('slug', $this->slug)->first();
+            $page = Page::findUniqueBySlug($this->slug);
 
             if (! $page instanceof Page) {
                 return ['error' => 'Page not found', 'slug' => $this->slug];

@@ -56,12 +56,7 @@ The Notify module provides comprehensive notification and communication function
 
 ## Integration with Other Modules
 - **User**: Communication with system users
-<<<<<<< .merge_file_7ad5Y8
-- **healthcare_app**: Survey participant notifications
-- **ExternalProject**: Survey participant notifications
-- **ModuloEsempio**: Survey participant notifications
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_I9QAZv
+- **Quaeris**: Survey participant notifications
 - **Limesurvey**: Survey response notifications
 - **Xot**: Base notification infrastructure
 - **Filament**: Management interface

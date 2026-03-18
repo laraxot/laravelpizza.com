@@ -5,7 +5,7 @@ Documentazione della risoluzione dei conflitti Git nel modulo Xot che bloccavano
 
 ## File Interessati
 
-### 1. Helpers/Helper.php
+### 1. helpers/Helper.php
 **Problema**: Marker di conflitto  causavano ParseError
 **Risoluzione**: Selezione della "current change" per tutti i conflitti
 
@@ -76,7 +76,7 @@ Documentazione della risoluzione dei conflitti Git nel modulo Xot che bloccavano
 
 ## File Interessati
 
-### 1. Helpers/Helper.php
+### 1. helpers/Helper.php
 **Problema**: Marker di conflitto  causavano ParseError
 **Risoluzione**: Selezione della "current change" per tutti i conflitti
 

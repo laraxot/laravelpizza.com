@@ -8,10 +8,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Exceptions;
 
-use Exception;
 use Illuminate\Http\Response;
 use Illuminate\Support\Str;
-use Override;
 
 class ModelDeletionException extends ApplicationException
 {
@@ -24,24 +22,24 @@ class ModelDeletionException extends ApplicationException
         $this->model = Str::afterLast($model, '\\');
     }
 
-    #[Override]
+    #[\Override]
     public function status(): int
     {
         return Response::HTTP_BAD_REQUEST;
     }
 
-    #[Override]
+    #[\Override]
     public function help(): string
     {
         $res = trans('exception.model_not_deleted.help');
         if (! \is_string($res)) {
-            throw new Exception('['.__LINE__.']['.class_basename($this).']');
+            throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         }
 
         return $res;
     }
 
-    #[Override]
+    #[\Override]
     public function error(): string
     {
         $res = trans('exception.model_not_deleted.error', [
@@ -49,7 +47,7 @@ class ModelDeletionException extends ApplicationException
             'model' => $this->model,
         ]);
         if (! \is_string($res)) {
-            throw new Exception('['.__LINE__.']['.class_basename($this).']');
+            throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         }
 
         return $res;

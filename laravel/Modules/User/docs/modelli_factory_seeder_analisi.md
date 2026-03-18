@@ -182,11 +182,7 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [Jetstream Integration](./jetstream_integration.md)
 
 ### Moduli Collegati
-<<<<<<< HEAD
-- [ModuloEsempio Module](../../modulo/docs/modelli_factory_seeder_analisi.md)
-=======
-- [healthcare_app Module](../../healthcare_app/docs/modelli_factory_seeder_analisi.md)
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+- [Quaeris Module](../../Quaeris/docs/modelli_factory_seeder_analisi.md)
 - [Tenant Module](../../tenant/docs/modelli_factory_seeder_analisi.md)
 - [Notify Module](../../notify/docs/modelli_factory_seeder_analisi.md)
 

@@ -23,7 +23,6 @@ use Illuminate\Support\Facades\View;
 use Modules\Xot\Console\Commands\GenerateFilamentResources;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\View\Composers\XotComposer;
-use Override;
 use Webmozart\Assert\Assert;
 
 /**
@@ -37,7 +36,7 @@ class XotServiceProvider extends XotBaseServiceProvider
 
     protected string $module_ns = __NAMESPACE__;
 
-    #[Override]
+    #[\Override]
     public function boot(): void
     {
         parent::boot();
@@ -51,7 +50,7 @@ class XotServiceProvider extends XotBaseServiceProvider
         $this->registerProviders();
     }
 
-    #[Override]
+    #[\Override]
     public function register(): void
     {
         parent::register();
@@ -133,7 +132,7 @@ class XotServiceProvider extends XotBaseServiceProvider
      * }
      */
 
-    #[Override]
+    #[\Override]
     public function registerConfig(): void
     {
         // $config_file = realpath(__DIR__.'/../config/metatag.php');
@@ -144,12 +143,12 @@ class XotServiceProvider extends XotBaseServiceProvider
     {
         $files = File::files($path);
         foreach ($files as $file) {
-            if ($file->getExtension() !== 'php') {
+            if ('php' !== $file->getExtension()) {
                 continue;
             }
 
             $realPath = $file->getRealPath();
-            if ($realPath === false) {
+            if (false === $realPath) {
                 continue;
             }
 

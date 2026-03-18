@@ -107,7 +107,7 @@
       "Modules\\Xot\\Tests\\": "tests/"
     },
     "files": [
-      "Helpers/Helper.php"
+      "helpers/Helper.php"
     ]
   },
   "autoload-dev": {

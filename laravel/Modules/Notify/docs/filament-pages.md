@@ -68,8 +68,8 @@ class EditNotificationTemplate extends XotBaseEditRecord
 ## Collegamenti Bidirezionali
 
 ### Collegamenti nella Root
-- [Architettura Filament](../../../../project_docs/architecture/filament.md)
-- [Gestione Pagine](../../../../project_docs/architecture/pages.md)
+- [Architettura Filament](../../../../../docs/project/architecture/filament.md)
+- [Gestione Pagine](../../../../../docs/project/architecture/pages.md)
 
 ### Collegamenti ai Moduli
 - [XotBaseListRecords](../../Xot/project_docs/filament-pages.md#XotBaseListRecords)

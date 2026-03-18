@@ -12,9 +12,6 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 use Modules\Cms\Http\View\Composers\XotComposer;
 use Modules\Xot\Contracts\UserContract;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 test('compose returns early when no authenticated user', function (): void {
     Auth::shouldReceive('user')->once()->andReturn(null);

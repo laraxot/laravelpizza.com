@@ -24,8 +24,8 @@ class BelongsToManyAction
          * 'relation' => $relation, ]);
          */
         if (
-            \in_array('to', array_keys($relationDTO->data), false) ||
-                \in_array('from', array_keys($relationDTO->data), false)
+            \in_array('to', array_keys($relationDTO->data), false)
+                || \in_array('from', array_keys($relationDTO->data), false)
         ) {
             // $this->saveMultiselectTwoSides($row, $relation->name, $relation->data);
             Assert::isArray($to = $relationDTO->data['to'] ?? []);

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Traits;
 
+use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 use Modules\Xot\Tests\Fixtures\Enums\TestEnum;
@@ -39,7 +40,7 @@ it('gets form schema', function (): void {
     $schema = TestEnum::getFormSchema();
     expect($schema)->toBeArray()
         ->and($schema)->toHaveCount(2)
-        ->and($schema['alpha'])->toBeInstanceOf(\Filament\Forms\Components\TextInput::class);
+        ->and($schema['alpha'])->toBeInstanceOf(TextInput::class);
 });
 
 it('adds columns to blueprint in create context', function (): void {

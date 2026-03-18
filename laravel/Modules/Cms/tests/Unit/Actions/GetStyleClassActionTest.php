@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\Actions;
 
-uses(Modules\Cms\Tests\TestCase::class);
-
 use Illuminate\Support\Facades\Config;
 use Modules\Cms\Actions\GetStyleClassAction;
 

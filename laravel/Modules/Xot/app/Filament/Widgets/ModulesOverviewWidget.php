@@ -8,8 +8,6 @@ use Filament\Widgets\Widget;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Modules\Xot\Actions\Filament\GetModulesNavigationItems;
-use ReflectionMethod;
-use Throwable;
 
 /**
  * Widget per mostrare una panoramica dei moduli disponibili.
@@ -48,10 +46,10 @@ class ModulesOverviewWidget extends Widget
                 }
                 try {
                     // Usa reflection per evitare errori di linting
-                    $reflection = new ReflectionMethod($user, 'hasRole');
+                    $reflection = new \ReflectionMethod($user, 'hasRole');
 
                     return (bool) $reflection->invoke($user, $role);
-                } catch (Throwable $e) {
+                } catch (\Throwable $e) {
                     return false;
                 }
             };
@@ -72,7 +70,7 @@ class ModulesOverviewWidget extends Widget
             }
 
             return $modules;
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             Log::error('Errore nel caricamento moduli per widget: '.$e->getMessage());
 
             return $this->getDefaultModules();
@@ -115,7 +113,8 @@ class ModulesOverviewWidget extends Widget
     /**
      * Ottiene la descrizione per un modulo.
      *
-     * @param  string  $module  Nome del modulo
+     * @param string $module Nome del modulo
+     *
      * @return string Descrizione del modulo
      */
     private function getModuleDescription(string $module): string

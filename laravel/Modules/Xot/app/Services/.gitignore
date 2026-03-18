@@ -7,3 +7,4 @@ package-lock.json
 -e 
 # PHPStan documentation
 docs/phpstan/
+_docs/

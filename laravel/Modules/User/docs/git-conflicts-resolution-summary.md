@@ -101,7 +101,7 @@ Funzionalità team includono:
 
 ## Collegamenti
 
-- [Documentazione Root User](../../../project_docs/modules/user.md)
+- [Documentazione Root User](../../../../docs/project/modules/user.md)
 - [BaseUser Documentation](./baseuser.md)
 - [Registration Widget](./registration-widget.md)
 - [PHPStan Fixes](./phpstan_fixes.md)

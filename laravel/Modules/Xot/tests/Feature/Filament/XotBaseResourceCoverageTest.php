@@ -9,13 +9,17 @@ use Illuminate\Support\HtmlString;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
 use Modules\Xot\Actions\GetTransKeyAction;
 use Modules\Xot\Actions\ModelClass\CountAction;
+use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Tests\Fixtures\Filament\Resources\ProbeResource;
+use Modules\Xot\Tests\Fixtures\Models\Probe;
+use Modules\Xot\Tests\Fixtures\Models\ProbeBadAttachments;
+use Modules\Xot\Tests\Fixtures\Models\ProbeGoodAttachments;
 
 it('covers model resolution and model cache', function (): void {
     ProbeResource::resetModelCache();
 
-    expect(ProbeResource::getModel())->toBe(\Modules\Xot\Tests\Fixtures\Models\Probe::class)
-        ->and(ProbeResource::getModel())->toBe(\Modules\Xot\Tests\Fixtures\Models\Probe::class);
+    expect(ProbeResource::getModel())->toBe(Probe::class)
+        ->and(ProbeResource::getModel())->toBe(Probe::class);
 });
 
 it('covers default relation discovery with missing relation manager classes', function (): void {
@@ -122,8 +126,8 @@ it('covers navigation badge success and fallback', function (): void {
 });
 
 it('covers get attachments schema branches', function (): void {
-    $resourceNoAttachments = new class extends \Modules\Xot\Filament\Resources\XotBaseResource {
-        protected static ?string $model = \Modules\Xot\Tests\Fixtures\Models\Probe::class;
+    $resourceNoAttachments = new class extends XotBaseResource {
+        protected static ?string $model = Probe::class;
 
         public static function getFormSchema(): array
         {
@@ -137,8 +141,8 @@ it('covers get attachments schema branches', function (): void {
         eval(' class ProbeBadAttachments extends \\Illuminate\\Database\\Eloquent\\Model { public static function getAttachments(): string { return "invalid"; } }');
     }
 
-    $resourceBadAttachments = new class extends \Modules\Xot\Filament\Resources\XotBaseResource {
-        protected static ?string $model = \Modules\Xot\Tests\Fixtures\Models\ProbeBadAttachments::class;
+    $resourceBadAttachments = new class extends XotBaseResource {
+        protected static ?string $model = ProbeBadAttachments::class;
 
         public static function getFormSchema(): array
         {
@@ -163,8 +167,8 @@ it('covers get attachments schema branches', function (): void {
         }
     });
 
-    $resourceGoodAttachments = new class extends \Modules\Xot\Filament\Resources\XotBaseResource {
-        protected static ?string $model = \Modules\Xot\Tests\Fixtures\Models\ProbeGoodAttachments::class;
+    $resourceGoodAttachments = new class extends XotBaseResource {
+        protected static ?string $model = ProbeGoodAttachments::class;
 
         public static function getFormSchema(): array
         {

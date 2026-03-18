@@ -49,7 +49,7 @@ class ResolveTenantConfigValueAction
             $extraConf = [];
         }
 
-        $mergeConf = collect($originalConf)->merge($extraConf)->all();
+        $mergeConf = array_replace_recursive($originalConf, $extraConf);
 
         Config::set($group, $mergeConf);
 

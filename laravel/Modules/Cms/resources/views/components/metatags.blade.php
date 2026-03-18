@@ -48,7 +48,8 @@
     --}}
 
     @if(isset($pageSchema) && is_array($pageSchema) && $pageSchema !== [])
-        <script type="application/ld+json">{!! json_encode($pageSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+        @php $jsonFlags = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE; @endphp
+        <script type="application/ld+json">{!! json_encode($pageSchema, $jsonFlags) !!}</script>
     @endif
 
     {{ $slot }}

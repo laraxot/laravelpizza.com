@@ -31,11 +31,7 @@ APP_URL=http://localhost
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-<<<<<<< .merge_file_N748rE
 DB_DATABASE=healthcare_app_data_test
-=======
-DB_DATABASE=ptvx_data_test
->>>>>>> .merge_file_u4Ych8
 DB_USERNAME=your_username
 DB_PASSWORD=your_password
 
@@ -140,6 +136,53 @@ abstract class TestCase extends BaseTestCase
 
 ## Important Rules
 
+<<<<<<< .merge_file_P1YYmS
+<<<<<<< HEAD
+### Never Use `migrate:fresh` in Tests (CRITICAL)
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+`migrate:fresh` **drops ALL tables** in the target database. In a shared test database (like `<nome progetto>_data_test`) this destroys data for ALL modules and causes cascading failures across the entire test suite.
+=======
+`migrate:fresh` **drops ALL tables** in the target database. In a shared test database (like `laravelpizza_data_test`) this destroys data for ALL modules and causes cascading failures across the entire test suite.
+>>>>>>> a038b0f2 (.)
+=======
+`migrate:fresh` **drops ALL tables** in the target database. In a shared test database (like `<nome progetto>_data_test`) this destroys data for ALL modules and causes cascading failures across the entire test suite.
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+`migrate:fresh` **drops ALL tables** in the target database. In a shared test database (like `laravelpizza_data_test`) this destroys data for ALL modules and causes cascading failures across the entire test suite.
+>>>>>>> a038b0f2 (.)
+=======
+`migrate:fresh` **drops ALL tables** in the target database. In a shared test database (like `<nome progetto>_data_test`) this destroys data for ALL modules and causes cascading failures across the entire test suite.
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+`migrate:fresh` **drops ALL tables** in the target database. In a shared test database (like `laravelpizza_data_test`) this destroys data for ALL modules and causes cascading failures across the entire test suite.
+>>>>>>> a038b0f2 (.)
+=======
+`migrate:fresh` **drops ALL tables** in the target database. In a shared test database (like `<nome progetto>_data_test`) this destroys data for ALL modules and causes cascading failures across the entire test suite.
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+
+**Rule**: Never call `artisan('migrate:fresh', ...)` inside a test. If a test does this, mark it with `$this->markTestSkipped(...)`.
+
+**To set up test DB**: Run once externally before the suite:
+```bash
+php artisan migrate --env=testing --force
+```
+
+**If the DB is corrupted** (as a one-time emergency fix only):
+```bash
+php artisan migrate:fresh --env=testing --force
+```
+Then never repeat it again in the suite.
+
+=======
+>>>>>>> e3956292 (.)
+=======
+>>>>>>> .merge_file_HAqIxO
 ### Never Use RefreshDatabase
 
 The project uses `DatabaseTransactions` instead of `RefreshDatabase` because:

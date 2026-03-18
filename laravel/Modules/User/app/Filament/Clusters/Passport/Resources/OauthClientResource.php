@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Clusters\Passport\Resources;
 
+use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
 use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -23,8 +25,6 @@ use Webmozart\Assert\Assert;
 class OauthClientResource extends XotBaseResource
 {
     protected static ?string $cluster = Passport::class;
-
-    // use HasResourceFormComponents;
 
     /**
      * Get the form schema for the resource (XotBaseResource pattern).
@@ -62,12 +62,26 @@ class OauthClientResource extends XotBaseResource
                 TextColumn::make('name')
                     ->formatStateUsing(fn (string $state): string => Str::headline($state))
                     ->searchable(),
-                TextColumn::make('owner.name')
-                    ->searchable(),
+                TextColumn::make('user.name')
+                    ->searchable()
+                    ->label('Owner'),
+                TextColumn::make('personal_access_client')
+                    ->boolean()
+                    ->label('Personal'),
+                TextColumn::make('password_client')
+                    ->boolean()
+                    ->label('Password'),
+                TextColumn::make('revoked')
+                    ->boolean()
+                    ->label('Active'),
                 TextColumn::make('created_at')
                     ->dateTime(),
                 TextColumn::make('updated_at')
                     ->dateTime(),
+            ])
+            ->actions([
+                EditAction::make(),
+                DeleteAction::make(),
             ])
             ->toolbarActions([
                 DeleteBulkAction::make(),

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Feature;
 
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 use Modules\Xot\Services\ModuleService;
 
 describe('ModuleService Integration', function () {
@@ -208,7 +208,7 @@ describe('ModuleService Integration', function () {
     it('handles concurrent access correctly', function () {
         // Test multiple simultaneous calls
         $results = [];
-        for ($i = 0; $i < 3; $i++) {
+        for ($i = 0; $i < 3; ++$i) {
             $service = new ModuleService('Xot');
             $results[] = $service->getModels();
         }

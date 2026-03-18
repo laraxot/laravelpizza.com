@@ -14,7 +14,7 @@ Il modulo Notify implementa un sistema avanzato di gestione delle email template
 ➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../../docs/errori_gravi/missing-mail-template-patterns.md)
 ➡️ **Documentazione completa**: [SaluteOra: Missing Mail Template Error](../../SaluteOra/docs/errori/missing-mail-template-spatiemail.md)  
 ➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../../docs/errori_gravi/missing-mail-template-patterns.md)➡️ **Documentazione completa**: [SaluteOra: Missing Mail Template Error](../../SaluteOra/project_docs/errori/missing-mail-template-spatiemail.md)  
-➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../project_docs/errori_gravi/missing-mail-template-patterns.md)
+➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../../docs/project/errori_gravi/missing-mail-template-patterns.md)
 
 ### Fix Immediato
 
@@ -315,13 +315,13 @@ php artisan tinker
 - [Configurazione Email](../../../../docs/email-configuration.md)
 - [SaluteOra: Missing Mail Template Error](../../SaluteOra/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
 - [Configurazione Email](../../../../docs/email-configuration.md)- [SaluteOra: Missing Mail Template Error](../../SaluteOra/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
-- [Missing Mail Template Patterns](../../../project_docs/errori_gravi/missing-mail-template-patterns.md) - Pattern globali
-- [Array to String Conversion](../../../project_docs/errori_gravi/array-to-string-conversion-patterns.md) - Errore correlato
+- [Missing Mail Template Patterns](../../../../docs/project/errori_gravi/missing-mail-template-patterns.md) - Pattern globali
+- [Array to String Conversion](../../../../docs/project/errori_gravi/array-to-string-conversion-patterns.md) - Errore correlato
 
 ### **Documentazione Tecnica**
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
 - [Gestione Traduzioni](../Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
-- [Configurazione Email](../../../project_docs/email-configuration.md)
+- [Configurazione Email](../../../../docs/project/email-configuration.md)
 - [Documentazione Traduzioni](./translations.md)
 - [Proposta Slug Template](./EMAIL_TEMPLATE_SLUG_PROPOSAL.md)
 - [Notify Module Index](./INDEX.md)

@@ -5,9 +5,7 @@
 , le interfacce per le azioni SMS seguono questa struttura:
 
 ```
-/var/www/html/ptvx/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
-/var/www/html/healthcare_app/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+/var/www/html/Quaeris/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
 ```
 
 Con il namespace corrispondente:

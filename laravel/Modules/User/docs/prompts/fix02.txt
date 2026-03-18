@@ -1,0 +1,20 @@
+[COMPLETATO] OauthAccessToken rimosso, consolidato su OauthToken.
+
+[COMPLETATO] OauthClient: Authorizable + HasRoles (ref aurmich/sample_passport), user() con XotData, test OauthClientTest.
+
+Laravel\Passport\AccessToken non è un modello Eloquent (è un DTO).
+OauthAccessToken.php rinominato in OauthAccessToken.php.old.
+Tutti i riferimenti aggiornati a OauthToken.
+Policy rinominata OauthAccessTokenPolicy → OauthTokenPolicy.
+Vedi docs/oauth-access-token-removal.md
+
+
+controlla tutti i modelli dentro laravel/vendor/laravel/passport/src  che abbiamo una classe dentro laravel/Modules/User/app/Models  che abbia lo stesso nome con il suffisso Oauth  che estenda la classe di passport, percio' che abbia anche le policy , e tutto il corredo di filament (resources, widget, relationmanager etc etc ), 
+
+usare config('auth.providers.users.model') e' una cagata ! dobbiamo usare XotData::make()->getUserClass() !
+
+no  @property \Illuminate\Database\Eloquent\Model|null $user
+si @property UserContract $user
+
+
+come sempre ragiona ! studia aggiorna e migliora le cartelle docs dentro i moduli e dentro i temi, aggiorna le tue rules, le tue memories, le tue skills, le github issue e le github discussion, ricorda anche che questo identico task lo do a piu' agenti ai percio' comportati di conseguenza e cerca di unire le forze con gli altri agenti ai

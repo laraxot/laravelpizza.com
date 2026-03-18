@@ -10,7 +10,7 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class)->in(__DIR__);
 
 it('can create a user with basic attributes', function () {
-    $user = User::factory()->create([)
+    $user = User::factory()->create([
         'name' => 'John Doe',
         'email' => 'john@example.com',
         'password' => bcrypt('password123'),
@@ -23,7 +23,7 @@ it('can create a user with basic attributes', function () {
 });
 
 it('can create a user with profile', function () {
-    $user = User::factory()->withProfile()->create([)
+    $user = User::factory()->withProfile()->create([
         'name' => 'Jane Smith',
         'email' => 'jane@example.com',
     ]);
@@ -33,7 +33,7 @@ it('can create a user with profile', function () {
 });
 
 it('can authenticate a user', function () {
-    $user = User::factory()->create([)
+    $user = User::factory()->create([
         'email' => 'auth@example.com',
         'password' => bcrypt('secret123'),
     ]);
@@ -45,7 +45,7 @@ it('can authenticate a user', function () {
 });
 
 it('can create a user role', function () {
-    $role = \Modules\User\Models\Role::factory()->create([)
+    $role = \Modules\User\Models\Role::factory()->create([
         'name' => 'admin',
         'guard_name' => 'web',
     ]);
@@ -55,7 +55,7 @@ it('can create a user role', function () {
 });
 
 it('can create a user permission', function () {
-    $permission = \Modules\User\Models\Permission::factory()->create([)
+    $permission = \Modules\User\Models\Permission::factory()->create([
         'name' => 'edit_posts',
         'guard_name' => 'web',
     ]);
@@ -66,7 +66,7 @@ it('can create a user permission', function () {
 
 it('can assign role to user', function () {
     $user = User::factory()->create();
-    $role = \Modules\User\Models\Role::factory()->create([)
+    $role = \Modules\User\Models\Role::factory()->create([
         'name' => 'editor',
         'guard_name' => 'web',
     ]);
@@ -78,7 +78,7 @@ it('can assign role to user', function () {
 
 it('can attach permission to user', function () {
     $user = User::factory()->create();
-    $permission = \Modules\User\Models\Permission::factory()->create([)
+    $permission = \Modules\User\Models\Permission::factory()->create([
         'name' => 'delete_users',
         'guard_name' => 'web',
     ]);
@@ -89,12 +89,12 @@ it('can attach permission to user', function () {
 });
 
 it('can create a tenant user', function () {
-    $tenant = \Modules\Tenant\Models\Tenant::factory()->create([)
+    $tenant = \Modules\Tenant\Models\Tenant::factory()->create([
         'name' => 'Test Tenant',
         'domain' => 'tenant.example.com',
     ]);
 
-    $user = User::factory()->forTenant($tenant)->create([)
+    $user = User::factory()->forTenant($tenant)->create([
         'name' => 'Tenant User',
         'email' => 'tenant@example.com',
     ]);
@@ -104,12 +104,12 @@ it('can create a tenant user', function () {
 });
 
 it('can create a user with socialite data', function () {
-    $user = User::factory()->create([)
+    $user = User::factory()->create([
         'name' => 'Social User',
         'email' => 'social@example.com',
     ]);
 
-    $user->socialite()->create([)
+    $user->socialite()->create([
         'provider' => 'google',
         'provider_id' => 'google_12345',
         'token' => 'google_token',

@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-uses(Modules\Cms\Tests\TestCase::class);
-
 use Modules\Cms\Filament\Blocks\ActionsBlock;
 use Modules\Cms\Filament\Blocks\ContactBlock;
 use Modules\Cms\Filament\Blocks\CtaBlock;

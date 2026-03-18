@@ -64,7 +64,7 @@ return [
 
 ## Collegamenti
 - [Widget Translation Rules](widget-translation-rules.md)
-- [Root Translation Guidelines](../../../../project_docs/translation-standards.md)
+- [Root Translation Guidelines](../../../../../docs/project/translation-standards.md)
 ### 2. Struttura Completa delle Traduzioni
 Ogni file `messages.php` include categorie complete di messaggi:
 

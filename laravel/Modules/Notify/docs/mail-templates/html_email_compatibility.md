@@ -2,9 +2,7 @@
 
 ## Introduzione
 
-Questo documento fornisce linee guida dettagliate per garantire la massima compatibilità dei template email utilizzati nel modulo Notify di Laraxot con i diversi client email.
-Questo documento fornisce linee guida dettagliate per garantire la massima compatibilità dei template email utilizzati nel modulo Notify di healthcare_app con i diversi client email.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Questo documento fornisce linee guida dettagliate per garantire la massima compatibilità dei template email utilizzati nel modulo Notify di Quaeris con i diversi client email.
 
 ## Compatibilità Client Email
 

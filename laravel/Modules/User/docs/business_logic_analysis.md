@@ -1,15 +1,7 @@
 # User Module - Business Logic Analysis
 
 ## Overview
-<<<<<<< .merge_file_cAS1vG
-The User module provides comprehensive user management, authentication, authorization, and team-based access control for the healthcare_app platform. It serves as the foundation for all user-related operations across the entire application.
-=======
-<<<<<<< HEAD
-The User module provides comprehensive user management, authentication, authorization, and team-based access control for the ExternalProject platform. It serves as the foundation for all user-related operations across the entire application.
-=======
-The User module provides comprehensive user management, authentication, authorization, and team-based access control for the ModuloEsempio platform. It serves as the foundation for all user-related operations across the entire application.
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> .merge_file_NlG0kD
+The User module provides comprehensive user management, authentication, authorization, and team-based access control for the Quaeris platform. It serves as the foundation for all user-related operations across the entire application.
 
 ## Business Purpose
 - **Authentication**: Secure user authentication with multiple options

@@ -239,13 +239,13 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni"
 
 *Ultimo aggiornamento: Gennaio 2025*
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/readme.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/readme.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/readme.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-- Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/readme.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/readme.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*

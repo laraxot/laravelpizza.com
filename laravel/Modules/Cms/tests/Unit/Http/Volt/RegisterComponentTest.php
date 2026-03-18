@@ -7,8 +7,6 @@ namespace Modules\Cms\Tests\Unit\Http\Volt;
 use Livewire\Volt\Component as VoltComponent;
 use Modules\Cms\Http\Volt\RegisterComponent;
 
-uses(\Modules\Cms\Tests\TestCase::class);
-
 describe('RegisterComponent', function (): void {
     test('register component extends volt component', function (): void {
         $component = new RegisterComponent();

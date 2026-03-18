@@ -1,8 +1,6 @@
 # Convenzioni di Naming per Filament 
 
-Questo documento definisce le convenzioni di naming standardizzate per i componenti Filament nel sistema Laraxot, con particolare attenzione alle pagine e alle risorse.
-Questo documento definisce le convenzioni di naming standardizzate per i componenti Filament nel sistema healthcare_app, con particolare attenzione alle pagine e alle risorse.
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+Questo documento definisce le convenzioni di naming standardizzate per i componenti Filament nel sistema Quaeris, con particolare attenzione alle pagine e alle risorse.
 
 ## Convenzioni di Naming per Pagine Filament
 

@@ -31,11 +31,11 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        config(['xra.pub_theme' => 'Meetup']);
+        config(['xra.pub_theme' => 'TwentyOne']);
         config(['xra.main_module' => 'User']);
 
         \Modules\Xot\Datas\XotData::make()->update([
-            'pub_theme' => 'Meetup',
+            'pub_theme' => 'TwentyOne',
             'main_module' => 'User',
         ]);
 

@@ -10,7 +10,6 @@ use Modules\Xot\Filament\Resources\CacheLockResource\Pages\CreateCacheLock;
 use Modules\Xot\Filament\Resources\CacheLockResource\Pages\EditCacheLock;
 use Modules\Xot\Filament\Resources\CacheLockResource\Pages\ListCacheLocks;
 use Modules\Xot\Models\CacheLock;
-use Override;
 
 class CacheLockResource extends XotBaseResource
 {
@@ -21,7 +20,7 @@ class CacheLockResource extends XotBaseResource
      *
      * @return array<string, Component>
      */
-    #[Override]
+    #[\Override]
     public static function getFormSchema(): array
     {
         return [
@@ -31,13 +30,13 @@ class CacheLockResource extends XotBaseResource
         ];
     }
 
-    #[Override]
+    #[\Override]
     public static function getRelations(): array
     {
         return [];
     }
 
-    #[Override]
+    #[\Override]
     public static function getPages(): array
     {
         return [

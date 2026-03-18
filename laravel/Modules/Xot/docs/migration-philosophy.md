@@ -1,5 +1,18 @@
 # Laraxot Migration Architecture Philosophy
 
+## 🚨 ABSOLUTE RULE: NEVER USE DESTRUCTIVE MIGRATION COMMANDS
+
+**FORBIDDEN - NEVER USE THESE COMMANDS:**
+- `php artisan migrate:fresh`
+- `php artisan migrate --force` 
+- `php artisan migrate:refresh`
+- `php artisan migrate:fresh --seed`
+- Any variation of destructive migration commands
+
+**REASON**: These commands destroy data, drop tables, or recreate databases without safeguards. They are dangerous in production, shared environments, or when data integrity matters.
+
+**ALTERNATIVE**: Use proper migration updates following Laraxot philosophy - one migration per table, modify existing migrations with timestamp updates, never drop or recreate.
+
 ## Core Migration Principles
 
 ### The Single Source of Truth Principle

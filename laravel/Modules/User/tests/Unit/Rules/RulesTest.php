@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Unit\Rules;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(\Modules\User\Tests\TestCase::class);
 
 use Modules\User\Rules\CheckOtpExpiredRule;
 

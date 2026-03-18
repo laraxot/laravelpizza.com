@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\Http\Volt;
 
-uses(Modules\Cms\Tests\TestCase::class);
-
 use Modules\Cms\Http\Volt\LoginComponent;
 
 describe('LoginComponent', function (): void {
