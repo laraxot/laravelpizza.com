@@ -1,4 +1,5 @@
 Activity Module - Code Coverage Report
+=====================================
 
 Summary:
 --------

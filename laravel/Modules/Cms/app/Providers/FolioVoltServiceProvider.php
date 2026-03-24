@@ -11,6 +11,7 @@ use Illuminate\Support\ServiceProvider;
 use Laravel\Folio\Folio;
 use Livewire\Volt\Volt;
 use Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter;
+use Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes;
 use Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect;
 use Modules\Cms\Http\Middleware\SetFolioLocale;
 use Modules\Tenant\Services\TenantService;
@@ -71,7 +72,7 @@ class FolioVoltServiceProvider extends ServiceProvider
             $base_middleware = [];
         }
 
-        // $base_middleware[]=\Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class;
+        $base_middleware[] = LaravelLocalizationRoutes::class;
         $base_middleware[] = LocaleSessionRedirect::class;
         $base_middleware[] = LaravelLocalizationRedirectFilter::class;
         // $base_middleware[]=\Mcamara\LaravelLocalization\Middleware\LocaleCookieRedirect::class;

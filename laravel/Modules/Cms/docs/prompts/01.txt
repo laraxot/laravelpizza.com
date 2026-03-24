@@ -1,0 +1,36 @@
+studia a fondo
+https://www.berger.team/it/website/kinetisches-webdesign-bewegung-als-zentrales-designelement/
+https://www.flaviobiscaldi.it/servizi/siti-web/siti-web-dinamici#:~:text=sito%20web%20dinamico-,Cosa%20sono%20i%20siti%20web%20dinamici,per%20la%20memorizzazione%20di%20dati.
+https://www.evoluzioneinformatica.it/2026/02/web-design-immersivo-nel-2026-cose-e-perche-sta-cambiando-il-modo-di-progettare-i-siti/
+https://www.visibilia.net/2025/01/a-cosa-servono-le-animazioni-web/
+https://www.sparkinweb.com/post/micro-interazioni-sul-sito-quanto-sono-importanti/
+https://hotel-webdesign.com/it/il-ruolo-dellanimazione-nel-web-design-5/
+https://it.siteground.com/kb/sito-web-statico-vs-dinamico/
+https://www.daimonart.it/differenza-tra-sito-statico-e-sito-dinamico/
+https://gruppominelli.it/it/blog/come-riconoscere-un-sito-internet-fatto-bene-le-cose-da-tenere-in-considerazione-30
+https://www.shellrent.com/blog/sito-web-dinamico-per-una-presenza-online-flessibile-e-interattiva/
+https://interactiveanddesign.com/articolo/design-emozionale-tecniche-di-web-design-per-creare-connessione-e-fiducia
+https://www.ed-vision.it/website-seo/le-10-caratteristiche-che-un-buon-sito-internet-deve-avere/
+https://www.marcoloprete.it/accessibilita-per-i-siti-web-perche-e-importante-e-come-implementarla/
+https://it.site123.com/learn/tendenze-di-progettazione-di-siti-web-che-devi-conoscere
+https://www.gung.it/blog/accessibilita-web-cose-come-rendere-sito-conforme/
+https://rispondoxte.it/guida-definitiva-su-come-creare-un-sito-web-efficace/
+https://legalblink.it/post/legge-accessibilita-domande-e-risposte.html
+https://www.veronicagentili.com/blog/le-5-regole-per-avere-un-sito-web-efficace-ed-attrattivo/
+https://www.argemonya.it/lo-sviluppo-di-un-sito-internet-nella-tua-strategia-digitale/
+https://www.inputcomm.it/regole-sito-web-efficace/
+https://trepuntozero.pro/caratteristiche-sito-web-moderno-performante/
+https://www.infobasic.it/differenza-tra-sito-web-statico-e-dinamico/
+https://www.webnode.com/it/blog/cosa-si-intende-con-buon-web-design/
+https://www.annafranchin.it/come-usare-lo-storytelling-visivo-per-valorizzare-il-tuo-sito-web/
+https://shop.acconsento.click/accessibilita-digitale-una-guida-pratica-per-web-designer/
+https://blog.insidecomunicazione.it/quali-caratteristiche-deve-avere-un-sito-web-oggi
+https://sayagency.com/accessibilita-web-il-tuo-sito-rispetta-la-nuova-normativa/
+https://www.gruppodigi.it/cms/it/servizi/articoli-seo/1008-sviluppo-siti-web-dinamici-come-ottimizzare-la-velocita-e-lindicizzazione
+https://www.webheroes.it/blog/il-sito-web-non-e-un-mobile-perche-deve-evolversi-insieme-alla-tua-azienda/
+
+
+creati una checklist con i requisiti e mettiamoli come obbligatori per tutte le pagine del front office, inizia a controllare la nostra homepage 
+
+  aggiorna studia e migliora le tue docs, le tue rules, le tue memories, le tue skills, ricorda che dopo aver modificato un file devi controllarlo con phpstan,phpmd, phpinsights e pest, ricorda che questo task lo diamo a piu' agenti ai, percio' comportati di conseguenza e cerca di unire le forze con gli altri agenti ai 
+

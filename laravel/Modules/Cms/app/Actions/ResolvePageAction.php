@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Cms\Actions;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\Cms\Datas\ResolvePageData;
 use Modules\Cms\Models\Page as PageModel;
 use Spatie\QueueableAction\QueueableAction;
@@ -122,19 +123,66 @@ final class ResolvePageAction
             ]));
 
             foreach ($candidateKeys as $key) {
+                foreach ($this->buildCandidateQueries($model) as $query) {
+                    try {
+                        $item = $query->where($key, $identifier)->first();
+                    } catch (\Throwable) {
+                        continue;
+                    }
+
+                    if (null !== $item) {
+                        return $item;
+                    }
+                }
+            }
+
+            foreach ($candidateKeys as $key) {
                 try {
-                    $item = $model->newQuery()->where($key, $identifier)->first();
+                    $row = $model->getConnection()
+                        ->table($model->getTable())
+                        ->where($key, $identifier)
+                        ->first();
                 } catch (\Throwable) {
                     continue;
                 }
 
-                if (null !== $item) {
-                    return $item;
+                if (null !== $row) {
+                    /** @var array<string, mixed> $attributes */
+                    $attributes = (array) $row;
+
+                    return $model->newFromBuilder($attributes);
                 }
             }
         }
 
         return null;
+    }
+
+    /**
+     * @return array<int, \Illuminate\Database\Eloquent\Builder<Model>>
+     */
+    private function buildCandidateQueries(Model $model): array
+    {
+        $queries = [$model->newQuery()];
+
+        try {
+            $queries[] = $model->newQueryWithoutScopes();
+        } catch (\Throwable) {
+        }
+
+        $usesSoftDeletes = in_array(SoftDeletes::class, class_uses_recursive($model), true);
+
+        if ($usesSoftDeletes) {
+            foreach ($queries as $index => $query) {
+                try {
+                    $queries[] = (clone $query)->withTrashed();
+                } catch (\Throwable) {
+                    unset($queries[$index]);
+                }
+            }
+        }
+
+        return array_values($queries);
     }
 
     private function resolvePublicProfileItem(string $identifier): ?object

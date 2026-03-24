@@ -125,6 +125,7 @@ docs/cache/
 # ==============================================
 # LANGUAGE FILES
 # ==============================================
+lang/lang/
 resources/lang/
 
 # ==============================================
@@ -160,6 +161,3 @@ test_activity_logs.sql
 laravel
 public_html
 tests/coverage
-lang/lang/
-_docs/
-_docs/

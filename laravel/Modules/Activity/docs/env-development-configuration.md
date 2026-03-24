@@ -2,7 +2,11 @@
 
 ## Panoramica
 
-Il file `.env.development` è la configurazione di sviluppo standard per l'ambiente locale di Quaeris Fila5 Mono. Questa configurazione è ottimizzata per lo sviluppo rapido e zero-setup, differenziandosi significativamente dalla configurazione di produzione.
+<<<<<<< .merge_file_3gYfCl
+Il file `.env.development` è la configurazione di sviluppo standard per l'ambiente locale di healthcare_app Fila5 Mono. Questa configurazione è ottimizzata per lo sviluppo rapido e zero-setup, differenziandosi significativamente dalla configurazione di produzione.
+=======
+Il file `.env.development` è la configurazione di sviluppo standard per l'ambiente locale di ModuloEsempio Fila5 Mono. Questa configurazione è ottimizzata per lo sviluppo rapido e zero-setup, differenziandosi significativamente dalla configurazione di produzione.
+>>>>>>> .merge_file_XeTHXM
 
 ## Differenze Chiave con .env.example
 
@@ -229,7 +233,11 @@ DB_DATABASE=$PROJECT_ROOT/database/database.sqlite
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=Quaeris_data
+<<<<<<< .merge_file_3gYfCl
+DB_DATABASE=healthcare_app_data
+=======
+DB_DATABASE=ptvx_data
+>>>>>>> .merge_file_XeTHXM
 DB_USERNAME=marco
 DB_PASSWORD=marco
 ```
@@ -262,4 +270,8 @@ SESSION_DOMAIN=null
 
 ## Conclusione
 
-Il file `.env.development` rappresenta la configurazione ottimale per lo sviluppo rapido e efficiente di Quaeris Fila5 Mono. La sua struttura differenzia significativamente dalla produzione per favorire setup zero-setup, performance ottimizzate e debugging più semplice. Questa configurazione è essenziale per mantenere un ambiente di sviluppo fluido e produttivo.
+<<<<<<< .merge_file_3gYfCl
+Il file `.env.development` rappresenta la configurazione ottimale per lo sviluppo rapido e efficiente di healthcare_app Fila5 Mono. La sua struttura differenzia significativamente dalla produzione per favorire setup zero-setup, performance ottimizzate e debugging più semplice. Questa configurazione è essenziale per mantenere un ambiente di sviluppo fluido e produttivo.
+=======
+Il file `.env.development` rappresenta la configurazione ottimale per lo sviluppo rapido e efficiente di ModuloEsempio Fila5 Mono. La sua struttura differenzia significativamente dalla produzione per favorire setup zero-setup, performance ottimizzate e debugging più semplice. Questa configurazione è essenziale per mantenere un ambiente di sviluppo fluido e produttivo.
+>>>>>>> .merge_file_XeTHXM

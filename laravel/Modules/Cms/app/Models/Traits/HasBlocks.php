@@ -24,15 +24,28 @@ trait HasBlocks
      */
     public function getBlocks(?string $side = null): array
     {
-        $field = 'blocks';
-        if ($side) {
-            $field = $side.'_blocks';
-        }
-        $blocks = $this->{$field};
+        $field = $side ? $side.'_blocks' : 'blocks';
 
-        if (! is_array($blocks)) {
-            $primary_lang = XotData::make()->primary_lang;
-            $blocks = $this->getTranslation($field, $primary_lang);
+        // Use spatie/laravel-translatable when available and the field is translatable.
+        // Direct property access ($this->{$field}) may return the locale-keyed array
+        // (e.g. ['it' => [...blocks...]]) when casts conflict with translatable, so we
+        // explicitly call getTranslation() to extract the correct locale's blocks.
+        $translatable = property_exists($this, 'translatable') ? (array) $this->translatable : [];
+        if (method_exists($this, 'getTranslation') && in_array($field, $translatable, true)) {
+            $locale = app()->getLocale();
+            $blocks = $this->getTranslation($field, $locale, true);
+            if (! is_array($blocks)) {
+                $primary_lang = XotData::make()->primary_lang;
+                $blocks = $this->getTranslation($field, $primary_lang, true);
+            }
+        } else {
+            $blocks = $this->{$field};
+            if (! is_array($blocks)) {
+                $primary_lang = XotData::make()->primary_lang;
+                if (method_exists($this, 'getTranslation')) {
+                    $blocks = $this->getTranslation($field, $primary_lang);
+                }
+            }
         }
 
         if (! is_array($blocks)) {

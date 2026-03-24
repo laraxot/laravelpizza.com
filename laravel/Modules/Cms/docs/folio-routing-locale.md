@@ -9,14 +9,21 @@
 ## Middleware
 
 - **LocaleSessionRedirect**: salva il locale in session quando è presente in URL; se manca, redirect con locale (da session o Accept-Language).
-- **LaravelLocalizationRedirectFilter**: se `hideDefaultLocaleInURL` è true, redirect da `/it/...` a `/...` per la lingua di default.
+- **LaravelLocalizationRedirectFilter**: in questo progetto `hideDefaultLocaleInURL` deve restare **false**, quindi `/it/...` non va mai compresso a `/...`.
 - Inline: **`app()->setLocale($locale)`** per ogni request Folio.
 
 ## Implicazioni per i moduli e il tema
 
-1. **Link**: tutti i link verso pagine pubbliche (home, events, community, login, register, ecc.) devono usare **`LaravelLocalization::localizeUrl($path)`**. Non usare `url('/events')` o `url(app()->getLocale() . '/events')`.
+1. **Link**: tutti i link verso pagine pubbliche (home, events, community, login, register, predicts, ecc.) devono usare **`LaravelLocalization::localizeUrl($path)`**. Non usare `url('/events')` o `url(app()->getLocale() . '/events')`.
 2. **Form**: le action di form (login, register, submit) devono essere localizzate con **`LaravelLocalization::localizeUrl('/login')`** ecc., altrimenti POST diventa GET dopo redirect.
 3. **Componenti**: header, footer, nav, blocchi CTA, auth buttons: ovunque ci sia un `<a href="...">` o `action="..."` verso una pagina localizzata, usare gli helper di mcamara (vedi [laravel-localization-mcamara.mdc](../../../../.cursor/rules/laravel-localization-mcamara.mdc)).
+
+## Regola operativa per i blocchi CMS
+
+- I JSON CMS possono conservare path pubblici relativi come `"/predicts"` o `"/register"`.
+- Il renderer centrale `<x-page />` deve localizzarli automaticamente prima del rendering del blocco.
+- In questo modo il dato resta riusabile e il front office non genera più URL errati come `/predicts` invece di `/it/predicts`.
+- Anche la lingua di default deve restare visibile in URL: `/it`, `/it/predicts`, `/it/predicts/{slug}`.
 
 ## Dove sono definite le rotte
 

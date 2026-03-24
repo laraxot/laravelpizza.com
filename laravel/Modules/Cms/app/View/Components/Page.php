@@ -53,6 +53,7 @@ final class Page extends Component
 
         $this->slug = $slug;
 
+        // BlockData construction handles URL localization automatically via LocalizeBlockDataAction
         $this->blocks = PageModel::getBlocksBySlug($this->slug, $this->side);
     }
 
@@ -69,6 +70,7 @@ final class Page extends Component
             'slug' => $this->slug,
             'data' => $this->data,
         ];
+
         // @phpstan-ignore-next-line
         if (! view()->exists($view)) {
             throw new \Exception('view not found: '.$view);

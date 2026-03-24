@@ -497,7 +497,11 @@ class User extends BaseUser
     }
 }
 
-// Integration with Quaeris module
+<<<<<<< .merge_file_I3bOxx
+// Integration with healthcare_app module
+=======
+// Integration with ModuloEsempio module
+>>>>>>> .merge_file_nx26e4
 class Survey extends BaseModel
 {
     public function publish()

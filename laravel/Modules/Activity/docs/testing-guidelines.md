@@ -6,40 +6,9 @@
 All tests MUST use `.env.testing` configuration:
 ```env
 APP_ENV=testing
-<<<<<<< .merge_file_u0UIz0
-<<<<<<< HEAD
-DB_CONNECTION=mysql
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 DB_CONNECTION=sqlite
->>>>>>> e3956292 (.)
 DB_DATABASE=<nome progetto>_data_test
 DB_DATABASE=<nome progetto>_data_test
-<<<<<<< HEAD
-DB_DATABASE_USER=<nome progetto>_user_test
->>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
-=======
-DB_DATABASE=laravelpizza_data_test
-DB_DATABASE_USER=laravelpizza_user_test
->>>>>>> a038b0f2 (.)
-=======
-=======
-DB_CONNECTION=sqlite
->>>>>>> .merge_file_Ia7BDy
-DB_DATABASE=<nome progetto>_data_test
-DB_DATABASE=<nome progetto>_data_test
-<<<<<<< .merge_file_u0UIz0
-DB_DATABASE_USER=<nome progetto>_user_test
->>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
-=======
->>>>>>> e3956292 (.)
-=======
->>>>>>> .merge_file_Ia7BDy
 ```
 
 ### Pest Framework Usage

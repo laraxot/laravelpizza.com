@@ -11,7 +11,6 @@ use Illuminate\Support\Collection;
 use Modules\Activity\Database\Factories\ActivityFactory;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Spatie\Activitylog\Models\Activity as SpatieActivity;
-use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
 
 /**
  * Class Activity.
@@ -106,7 +105,6 @@ class Activity extends SpatieActivity
 {
     use HasXotFactory;
 
-    /** @laravel/Modules/UI/docs/bugfix-awstest-undefined-variable.md string */
     protected $connection = 'activity';
 
     /** @var list<string> */
@@ -121,18 +119,6 @@ class Activity extends SpatieActivity
         'causer_id',   // Added
         'properties', // Added
     ];
-
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'properties' => SchemalessAttributes::class,
-        ];
-    }
 
     // NOTE
     // ----

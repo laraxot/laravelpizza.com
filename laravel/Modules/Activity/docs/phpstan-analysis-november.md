@@ -2,9 +2,9 @@
 
 ## Risultato Analisi
 
-**Data Analisi:** 6 Novembre 2025  
-**PHPStan Level:** 10 (Massimo)  
-**File Analizzati:** 102  
+**Data Analisi:** 24 Novembre 2025
+**PHPStan Level:** 10 (Massimo)
+**File Analizzati:** 106
 **Errori Trovati:** 0 ✅
 
 ## Status
@@ -25,12 +25,12 @@ Il modulo Activity è completamente conforme all'analisi PHPStan livello 10, dim
 
 Prima dell'analisi PHPStan, sono stati risolti conflitti Git nei seguenti moduli che bloccavano l'analisi:
 
-1. **Modules/Quaeris/app/Filament/Pages/AutoPage.php** - Risolti 4 conflitti
-2. **Modules/Quaeris/app/Filament/Pages/DashboardV2.php** - Risolti 4 conflitti
-3. **Modules/Quaeris/app/Filament/Widgets/BaseTableWidget.php** - Risolto 1 conflitto
-4. **Modules/Quaeris/app/Filament/Widgets/ContactWidget.php** - Risolto 1 conflitto
-5. **Modules/Quaeris/app/Datas/DashboardFilterData.php** - Risolto 1 conflitto
-6. **Modules/Quaeris/app/Datas/AlertDashboardFilterData.php** - Risolto 1 conflitto
+1. **Modules/<nome progetto>/app/Filament/Pages/AutoPage.php** - Risolti 4 conflitti
+2. **Modules/<nome progetto>/app/Filament/Pages/DashboardV2.php** - Risolti 4 conflitti
+3. **Modules/<nome progetto>/app/Filament/Widgets/BaseTableWidget.php** - Risolto 1 conflitto
+4. **Modules/<nome progetto>/app/Filament/Widgets/ContactWidget.php** - Risolto 1 conflitto
+5. **Modules/<nome progetto>/app/Datas/DashboardFilterData.php** - Risolto 1 conflitto
+6. **Modules/<nome progetto>/app/Datas/AlertDashboardFilterData.php** - Risolto 1 conflitto
 7. **Modules/Xot/app/Actions/Filament/GetModulesNavigationItems.php** - Risolto 1 conflitto
 8. **Modules/Xot/app/Actions/Factory/GetPropertiesFromMethodsByModelAction.php** - Risolto 1 conflitto
 9. **Modules/Xot/tests/Unit/metatagdatatest.php** - Risolto 1 conflitto

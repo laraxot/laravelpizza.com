@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Illuminate\View\FileViewFinder;
 use Livewire\Wireable;
 use Modules\Cms\Actions\ResolveBlockQueryAction;
+use Modules\Cms\Actions\ResolveLocalizedBlockDataAction;
 
 use function Safe\fclose;
 use function Safe\fopen;
@@ -49,6 +51,7 @@ class BlockData extends Data implements Wireable
             $data = array_merge($data, $dynamicData);
         }
 
+        $data = app(ResolveLocalizedBlockDataAction::class)->execute($data);
         $this->data = $data;
         Assert::string($view = Arr::get($data, 'view', 'ui::empty'), '['.__LINE__.']['.__FILE__.']');
 
@@ -92,7 +95,7 @@ class BlockData extends Data implements Wireable
         }
 
         // Usa un approccio più performante per recuperare il path della view
-        /** @var \Illuminate\View\FileViewFinder $finder */
+        /** @var FileViewFinder $finder */
         $finder = view()->getFinder();
         $path = $finder->find($view);
 

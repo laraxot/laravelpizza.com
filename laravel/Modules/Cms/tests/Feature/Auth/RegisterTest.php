@@ -14,6 +14,6 @@ uses(TestCase::class);
 describe('Register Page', function () {
     test('register page placeholder', function () {
         // Placeholder - actual tests require theme components
-        expect(true)->toBeTrue());
+        expect(true)->toBeTrue();
     });
 });
