@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Models;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Notify\Models\BaseModel;
+use Modules\Notify\Tests\TestCase;
 
 beforeEach(function () {
     $this->baseModel = new class extends BaseModel

@@ -18,11 +18,7 @@
 
 ```php
 // ❌ VIETATO - Non creare mai classi Service
-<<<<<<< .merge_file_0Wakv6
 namespace Modules\healthcare_app\Services\Charts;
-=======
-namespace Modules\ModuloEsempio\Services\Charts;
->>>>>>> .merge_file_63Afae
 
 class ChartService
 {
@@ -65,11 +61,7 @@ class UserService
 
 ```php
 // ✅ CORRETTO - Usa sempre Actions
-<<<<<<< .merge_file_0Wakv6
 namespace Modules\healthcare_app\Actions\Chart;
-=======
-namespace Modules\ModuloEsempio\Actions\Chart;
->>>>>>> .merge_file_63Afae
 
 use Spatie\QueueableAction\QueueableAction;
 
@@ -169,11 +161,7 @@ class [ActionName]Action
 
 **❌ PRIMA (Service)**:
 ```php
-<<<<<<< .merge_file_0Wakv6
 namespace Modules\healthcare_app\Services\Charts;
-=======
-namespace Modules\ModuloEsempio\Services\Charts;
->>>>>>> .merge_file_63Afae
 
 class ChartService
 {
@@ -194,21 +182,12 @@ class ChartService
 
 **✅ DOPO (Actions)**:
 ```php
-<<<<<<< .merge_file_0Wakv6
 // Modules/healthcare_app/Actions/Chart/GenerateChartAction.php
 namespace Modules\healthcare_app\Actions\Chart;
 
 use Spatie\QueueableAction\QueueableAction;
 use Modules\healthcare_app\Models\Chart;
 use Modules\healthcare_app\Actions\Chart\ProcessChartAction;
-=======
-// Modules/ModuloEsempio/Actions/Chart/GenerateChartAction.php
-namespace Modules\ModuloEsempio\Actions\Chart;
-
-use Spatie\QueueableAction\QueueableAction;
-use Modules\ModuloEsempio\Models\Chart;
-use Modules\ModuloEsempio\Actions\Chart\ProcessChartAction;
->>>>>>> .merge_file_63Afae
 
 class GenerateChartAction
 {
@@ -222,19 +201,11 @@ class GenerateChartAction
     }
 }
 
-<<<<<<< .merge_file_0Wakv6
 // Modules/healthcare_app/Actions/Chart/ProcessChartAction.php
 namespace Modules\healthcare_app\Actions\Chart;
 
 use Spatie\QueueableAction\QueueableAction;
 use Modules\healthcare_app\Models\Chart;
-=======
-// Modules/ModuloEsempio/Actions/Chart/ProcessChartAction.php
-namespace Modules\ModuloEsempio\Actions\Chart;
-
-use Spatie\QueueableAction\QueueableAction;
-use Modules\ModuloEsempio\Models\Chart;
->>>>>>> .merge_file_63Afae
 
 class ProcessChartAction
 {
@@ -283,11 +254,7 @@ I Chart Widgets sperimentali spesso usano dati demo statici. **NON creare Servic
 
 ```php
 // ❌ MAI FARE - ChartService per dati demo
-<<<<<<< .merge_file_0Wakv6
 namespace Modules\healthcare_app\Services;
-=======
-namespace Modules\ModuloEsempio\Services;
->>>>>>> .merge_file_63Afae
 
 class ChartService
 {
@@ -316,11 +283,7 @@ class Simple02ChartWidget extends XotBaseChartWidget
 
 ```php
 // ✅ CORRETTO - Widget completamente self-contained
-<<<<<<< .merge_file_0Wakv6
 namespace Modules\healthcare_app\Filament\Widgets;
-=======
-namespace Modules\ModuloEsempio\Filament\Widgets;
->>>>>>> .merge_file_63Afae
 
 use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
 
@@ -360,11 +323,7 @@ class Simple02ChartWidget extends XotBaseChartWidget
 
 ### 28 Gennaio 2026 - ChartService Eliminato
 
-<<<<<<< .merge_file_0Wakv6
 **Problema**: `Modules\healthcare_app\Services\ChartService` causava errori "Cannot call constructor" nei widget Simple05, Simple06, Simple11, Simple13, Simple20.
-=======
-**Problema**: `Modules\ModuloEsempio\Services\ChartService` causava errori "Cannot call constructor" nei widget Simple05, Simple06, Simple11, Simple13, Simple20.
->>>>>>> .merge_file_63Afae
 
 **Causa**:
 - Il Service non era correttamente autoloadato da Composer

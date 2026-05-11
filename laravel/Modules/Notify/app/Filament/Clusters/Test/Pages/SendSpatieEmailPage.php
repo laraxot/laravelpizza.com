@@ -28,7 +28,7 @@ use Override;
 use Webmozart\Assert\Assert;
 
 /**
- * @property \Filament\Schemas\Schema $emailForm
+ * @property Schema $emailForm
  */
 class SendSpatieEmailPage extends XotBasePage
 {
@@ -66,7 +66,7 @@ class SendSpatieEmailPage extends XotBasePage
     }
 
     /**
-     * @return array<string, \Filament\Forms\Components\TextInput|\Filament\Forms\Components\Select|\Filament\Forms\Components\RichEditor>
+     * @return array<string, TextInput|Select|RichEditor>
      */
     public function getEmailFormSchema(): array
     {

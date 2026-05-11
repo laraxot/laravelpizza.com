@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Tests\Unit\Datas;
 
 use Modules\Notify\Datas\SmtpData;
+use Spatie\LaravelData\Data;
 
 describe('SmtpData', function () {
     it('can be referenced via reflection without instantiation', function () {
@@ -20,7 +21,7 @@ describe('SmtpData', function () {
     it('extends Spatie Data', function () {
         $reflection = new \ReflectionClass(SmtpData::class);
 
-        expect($reflection->isSubclassOf(\Spatie\LaravelData\Data::class))->toBeTrue();
+        expect($reflection->isSubclassOf(Data::class))->toBeTrue();
     });
 
     it('has required properties', function () {

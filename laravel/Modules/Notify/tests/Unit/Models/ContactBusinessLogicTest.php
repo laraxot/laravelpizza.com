@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Models;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Notify\Models\BaseModel;
 use Modules\Notify\Models\Contact;
+use Modules\Notify\Tests\TestCase;
 
 describe('Contact Business Logic', function () {
     test('contact extends base model', function () {

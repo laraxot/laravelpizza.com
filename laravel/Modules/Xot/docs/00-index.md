@@ -23,7 +23,6 @@
 - [Code Quality Workflow](./code-quality-tools-guide.md)
 - [TDD Laravel Pest Complete Guide](./tdd-laravel-pestd-complete-guide.md) ⭐ NEW
 - [Testing Best Practices](./testing-best-practices.md)
-- [Kinetic UX Checklist](./kinetic-ux-checklist.md) — Motion/micro‑interazioni: regole, accessibilità e performance
 
 ### Memory & Performance
 - [Filament Memory Optimization](./memory-optimization.md)

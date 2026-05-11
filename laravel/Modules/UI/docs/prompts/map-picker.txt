@@ -1,0 +1,24 @@
+bmad-create-story Devi creare un campo personalizzato per Filament v5 chiamato MapPicker da usare nelle Resource che
+   gestisce una mappa interattiva basata su Leaflet incapsulata in un Web Component Lit riutilizzabile. Il campo deve
+   integrarsi con Livewire e Alpine già presenti nel progetto Laravel e deve lavorare con due colonne reali del
+   database chiamate latitude e longitude senza usare JSON. Il componente deve mostrare una mappa con marker draggable
+   e aggiornare in tempo reale i valori di latitudine e longitudine sia negli input visibili sia nei campi Livewire
+   tramite entangle separato per latitude e longitude. Se i valori iniziali di latitude e longitude sono null il
+   componente deve automaticamente usare la geolocalizzazione del browser per centrare la mappa e posizionare il
+   marker. Quando l’utente sposta il marker la posizione deve aggiornare Alpine state, gli input e Livewire senza loop
+   o desincronizzazioni. Il Web Component Lit deve essere completamente isolato e gestire la logica della mappa,
+   inclusa inizializzazione Leaflet, marker draggable e dispatch di eventi custom coords-changed verso Alpine. Il
+   componente deve supportare fullscreen toggle che espande la mappa a schermo intero e deve gestire correttamente il
+   resize di Leaflet con invalidateSize. Deve includere anche layer base mappa stradale e layer satellitare o
+   equivalente tramite tile provider compatibile con Leaflet con possibilità di switch tra layer. Alpine deve fungere
+   da orchestratore tra Livewire e Web Component usando @entangle live su latitude e longitude e watcher per
+   sincronizzare i valori verso il Web Component. Il campo Filament deve essere riutilizzabile nelle Resource con
+   sintassi MapPicker::make senza campo JSON ma collegandosi esplicitamente a latitude e longitude tramite metodi
+   dedicati latitude() e longitude() nel componente custom. Il sistema deve essere progettato in modo modulare e
+   inserito nel modulo GEO dell’applicazione, rispettando l’architettura a moduli del progetto, senza contaminare altri
+   domini. Il lavoro non è considerato completo finché tutto il codice non passa senza errori e senza warning
+   attraverso PHPStan, PHP Mess Detector (PHPMD), PHP Insights e Pest con test automatizzati. Deve essere inclusa una
+   validazione visiva dei dati nel frontend: si consiglia l’uso di indicatori di stato inline (input validation
+   colorata con error state), feedback immediato sullo stato delle coordinate e opzionalmente reverse geocoding per
+   mostrare un indirizzo leggibile quando le coordinate cambiano, usando servizi basati su OpenStreetMap come Nominatim
+   o Photon.

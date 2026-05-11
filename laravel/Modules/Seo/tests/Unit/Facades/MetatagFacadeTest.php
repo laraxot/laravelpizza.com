@@ -19,4 +19,3 @@ it('resolves metatag service through facade accessor', function (): void {
     expect($service->get()->getTitle())->toBe('Facade Title')
         ->and($service->get()->getDescription())->toBe('Facade Description');
 });
-

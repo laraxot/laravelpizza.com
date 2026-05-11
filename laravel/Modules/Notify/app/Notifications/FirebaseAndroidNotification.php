@@ -124,9 +124,6 @@ class FirebaseAndroidNotification extends Notification implements MobilePushNoti
             }
         }
 
-        /** @var CloudMessage $message */
-        $message = CloudMessage::new()->withHighestPossiblePriority()->withData($data);
-
-        return $message;
+        return CloudMessage::new()->withHighestPossiblePriority()->withData($data);
     }
 }

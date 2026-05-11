@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit\Models;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Activity\Models\Snapshot;
+use Modules\Activity\Tests\TestCase;
+use Spatie\EventSourcing\Snapshots\EloquentSnapshot;
 
 test('Snapshot model can be instantiated', function () {
     $reflection = new \ReflectionClass(Snapshot::class);
@@ -14,7 +16,7 @@ test('Snapshot model can be instantiated', function () {
 
     expect($snapshot)->toBeObject();
     // Verifichiamo che estenda il modello corretto da Spatie
-    expect($snapshot)->toBeInstanceOf(\Spatie\EventSourcing\Snapshots\EloquentSnapshot::class);
+    expect($snapshot)->toBeInstanceOf(EloquentSnapshot::class);
 });
 
 test('Snapshot model has correct connection', function () {

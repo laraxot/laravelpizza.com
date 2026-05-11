@@ -13,20 +13,20 @@ use Modules\Geo\Datas\AddressData;
 use Modules\Geo\Exceptions\GoogleMaps\GoogleMapsApiException;
 
 beforeEach(function () {
-    $action = new GetAddressFromGoogleMapsAction();
+    $this->action = new GetAddressFromGoogleMapsAction();
 });
 
 it('throws exception when api key is not configured', function (): void {
     config(['services.google.maps_api_key' => null]);
 
-    expect(fn () => $action->execute('Milano, Italia'))
+    expect(fn () => $this->action->execute('Milano, Italia'))
         ->toThrow(GoogleMapsApiException::class, 'API key non configurata');
 });
 
 it('throws exception when api key is empty', function (): void {
     config(['services.google.maps_api_key' => '']);
 
-    expect(fn () => $action->execute('Milano, Italia'))
+    expect(fn () => $this->action->execute('Milano, Italia'))
         ->toThrow(GoogleMapsApiException::class);
 });
 
@@ -37,28 +37,28 @@ it('throws exception when api response is not successful', function (): void {
         '*' => Http::response(['statusCode' => 500], 500),
     ]);
 
-    expect(fn () => $action->execute('Milano, Italia'))
+    expect(fn () => $this->action->execute('Milano, Italia'))
         ->toThrow(GoogleMapsApiException::class, 'Richiesta fallita');
 });
 
 it('throws exception when no results found', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    Http::fake([)
-        '*' => Http::response([)
+    Http::fake([
+        '*' => Http::response([
             'results' => [],
         ], 200),
     ]);
 
-    expect(fn () => $action->execute('NonExistentPlace123'))
+    expect(fn () => $this->action->execute('NonExistentPlace123'))
         ->toThrow(GoogleMapsApiException::class, 'Nessun risultato');
 });
 
 it('returns address data for valid address', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    Http::fake([)
-        '*' => Http::response([)
+    Http::fake([
+        '*' => Http::response([
             'results' => [[
                 'geometry' => [
                     'location' => [
@@ -81,7 +81,7 @@ it('returns address data for valid address', function (): void {
         ], 200),
     ]);
 
-    $result = $action->execute('Via Roma 1, Milano, Italia');
+    $result = $this->action->execute('Via Roma 1, Milano, Italia');
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)
@@ -101,8 +101,8 @@ it('returns address data for valid address', function (): void {
 it('handles missing optional address components', function (): void {
     config(['services.google.maps_api_key' => 'test_key']);
 
-    Http::fake([)
-        '*' => Http::response([)
+    Http::fake([
+        '*' => Http::response([
             'results' => [[
                 'geometry' => [
                     'location' => [
@@ -117,7 +117,7 @@ it('handles missing optional address components', function (): void {
         ], 200),
     ]);
 
-    $result = $action->execute('Italia');
+    $result = $this->action->execute('Italia');
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)

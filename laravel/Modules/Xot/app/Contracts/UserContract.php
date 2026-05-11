@@ -12,10 +12,10 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Support\Carbon;
 use Laravel\Passport\Contracts\OAuthenticatable;
+use Laravel\Passport\Contracts\ScopeAuthorizable;
 use Laravel\Passport\PersonalAccessTokenResult;
-use Laravel\Passport\Token;
-use Laravel\Passport\TransientToken;
 use Modules\User\Contracts\TeamContract;
 use Modules\User\Models\Role as UserRole;
 use Modules\User\Models\Team;
@@ -30,6 +30,7 @@ use Spatie\Permission\Exceptions\PermissionDoesNotExist;
  *
  * @property string|null               $id
  * @property string|null               $email
+ * @property Carbon|null               $email_verified_at
  * @property string|null               $first_name
  * @property string|null               $last_name
  * @property string|null               $full_name
@@ -59,10 +60,8 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
 
     /**
      * Get the access token currently associated with the user.
-     *
-     * @return Token|TransientToken|null
      */
-    public function token();
+    public function token(): ?ScopeAuthorizable;
 
     /**
      * Create a new personal access token for the user.
@@ -74,7 +73,6 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
     /**
      * Passport API tokens support.
      */
-    // @phpstan-ignore-next-line interface should extend this contract
 
     /**
      * Determine if the model has (one of) the given role(s).
@@ -128,11 +126,9 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
     /**
      * Revoke the given role from the model.
      *
-     * @param string|int|array|UserRole|Collection|\BackedEnum ...$role
-     *
      * @return $this
      */
-    public function removeRole(...$role);
+    public function removeRole(string|int|array|UserRole|Collection|\BackedEnum ...$role);
 
     /**
      * Determine if the user owns the given team.

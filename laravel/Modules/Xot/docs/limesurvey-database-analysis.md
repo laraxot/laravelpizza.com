@@ -1,23 +1,12 @@
-<<<<<<< .merge_file_rkpgF3
 # Limesurvey Database Analysis - healthcare_app_survey
 
 ## Overview
 The `healthcare_app_survey` database (identified as `txaesfry_healthcare_app_survey` in the code) is a Limesurvey database used by the system for handling survey data, questions, answers, and responses.
-=======
-# Limesurvey Database Analysis - ptvx_survey
-
-## Overview
-The `ptvx_survey` database (identified as `txaesfry_ptvx_survey` in the code) is a Limesurvey database used by the system for handling survey data, questions, answers, and responses.
->>>>>>> .merge_file_7vHSTM
 
 ## Database Schema Analysis
 
 ### Connection Configuration
-<<<<<<< .merge_file_rkpgF3
 - Database: `txaesfry_healthcare_app_survey`
-=======
-- Database: `txaesfry_ptvx_survey`
->>>>>>> .merge_file_7vHSTM
 - Connection name: `limesurvey` (configured in config files)
 - Access through: `DB::connection('limesurvey')`
 
@@ -55,30 +44,18 @@ The `ptvx_survey` database (identified as `txaesfry_ptvx_survey` in the code) is
 - Key fields: `aid`, `answer`
 - Links to lime_answers via aid
 
-<<<<<<< .merge_file_rkpgF3
 ### Integration with healthcare_app
 - The system connects to the survey database to extract answers and generate reports
 - Uses LimeSurvey Remote Control API pattern (though direct DB access is also implemented)
 - Maps survey responses to question structures for analysis
 - Links survey data with healthcare_app survey_pdf records
-=======
-### Integration with ModuloEsempio
-- The system connects to the survey database to extract answers and generate reports
-- Uses LimeSurvey Remote Control API pattern (though direct DB access is also implemented)
-- Maps survey responses to question structures for analysis
-- Links survey data with ModuloEsempio survey_pdf records
->>>>>>> .merge_file_7vHSTM
 
 ### Survey Data Flow
 1. Survey structure defined in `lime_questions` and `lime_question_l10ns`
 2. Participant responses stored in `lime_survey_{sid}`
 3. Token management in `lime_tokens_{sid}`
 4. Analysis performed by joining tables and aggregating responses
-<<<<<<< .merge_file_rkpgF3
 5. Results integrated with healthcare_app data for comprehensive reporting
-=======
-5. Results integrated with ModuloEsempio data for comprehensive reporting
->>>>>>> .merge_file_7vHSTM
 
 ### Key Methods in LimeSurveyKK
 - `get_all_answers()`: Retrieves all answers for a given survey
@@ -95,17 +72,9 @@ From the code, it's evident that Limesurvey follows the standard schema where:
 - Translation tables use `_l10ns` suffix (localization)
 
 ## Usage in Application
-<<<<<<< .merge_file_rkpgF3
 The healthcare_app_survey database is used primarily for:
 - Survey response analysis
 - Question/answer extraction
 - Response aggregation by time periods
 - Integration with healthcare_app reporting features
-=======
-The ptvx_survey database is used primarily for:
-- Survey response analysis
-- Question/answer extraction
-- Response aggregation by time periods
-- Integration with ModuloEsempio reporting features
->>>>>>> .merge_file_7vHSTM
 - Participant management and tracking

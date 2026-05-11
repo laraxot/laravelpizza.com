@@ -1,0 +1,617 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "title": "Segnalazione 2 - Milano",
+        "status": "risolto",
+        "address": "Corso Buenos Aires 17, Milano",
+        "category": "spazzatura",
+        "description": "Problema segnalato in Corso Buenos Aires a Milano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.188127029829982,
+          45.46403884282083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "title": "Segnalazione 3 - Milano",
+        "status": "in_corso",
+        "address": "Via Roma 4, Milano",
+        "category": "spazzatura",
+        "description": "Problema segnalato in Via Roma a Milano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.188817001257936,
+          45.46294538183712
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "title": "Segnalazione 4 - Milano",
+        "status": "in_corso",
+        "address": "Via Dante 43, Milano",
+        "category": "illuminazione",
+        "description": "Problema segnalato in Via Dante a Milano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.189932145556593,
+          45.46273578143324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "title": "Segnalazione 5 - Milano",
+        "status": "risolto",
+        "address": "Via Dante 13, Milano",
+        "category": "strade",
+        "description": "Problema segnalato in Via Dante a Milano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.188262186634997,
+          45.46663057627449
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "title": "Segnalazione 6 - Milano",
+        "status": "risolto",
+        "address": "Corso Buenos Aires 38, Milano",
+        "category": "illuminazione",
+        "description": "Problema segnalato in Corso Buenos Aires a Milano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.190379287305818,
+          45.46320545562108
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "title": "Segnalazione 7 - Milano",
+        "status": "in_corso",
+        "address": "Piazza Duomo 34, Milano",
+        "category": "verde",
+        "description": "Problema segnalato in Piazza Duomo a Milano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.16847445308126,
+          45.450861932791796
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "title": "Segnalazione 8 - Milano",
+        "status": "risolto",
+        "address": "Corso Buenos Aires 51, Milano",
+        "category": "segnaletica",
+        "description": "Problema segnalato in Corso Buenos Aires a Milano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.191552459675526,
+          45.46123910126169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "title": "Segnalazione 9 - Milano",
+        "status": "in_attesa",
+        "address": "Via Napoli 12, Milano",
+        "category": "illuminazione",
+        "description": "Far 테니까o in Via Napoli"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.19287653592676,
+          45.46012345678901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "title": "Segnalazione 10 - Roma",
+        "status": "in_corso",
+        "address": "Via del Corso 123, Roma",
+        "category": "strade",
+        "description": "Buche nella Via del Corso"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.49636545345,
+          41.90278912345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "title": "Segnalazione 11 - Roma",
+        "status": "risolto",
+        "address": "Via Nazionale 45, Roma",
+        "category": "illuminazione",
+        "description": "Lampione guasto in Via Nazionale"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.48567454321,
+          41.89567456789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "title": "Segnalazione 12 - Roma",
+        "status": "risolto",
+        "address": "Via Appia 78, Roma",
+        "category": "verde",
+        "description": "Albero caduto in Via Appia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.47654321234,
+          41.88987654321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "title": "Segnalazione 13 - Napoli",
+        "status": "in_corso",
+        "address": "Via Toledo 45, Napoli",
+        "category": "spazzatura",
+        "description": "Rifiuti non raccolti in Via Toledo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.24567891234,
+          40.85123456789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 13,
+        "title": "Segnalazione 14 - Napoli",
+        "status": "risolto",
+        "address": "Corso Garibaldi 12, Napoli",
+        "category": "segnaletica",
+        "description": "Segnale stradale mancante in Corso Garibaldi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.25678923456,
+          40.85234567891
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 14,
+        "title": "Segnalazione 15 - Napoli",
+        "status": "in_attesa",
+        "address": "Piazza Plebiscito 1, Napoli",
+        "category": "strade",
+        "description": "Buche in Piazza Plebiscito"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.26789012345,
+          40.84567891234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 15,
+        "title": "Segnalazione 16 - Torino",
+        "status": "in_corso",
+        "address": "Via Roma 1, Torino",
+        "category": "illuminazione",
+        "description": "Lampione guasto in Via Roma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.68654321234,
+          45.0587654321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 16,
+        "title": "Segnalazione 17 - Torino",
+        "status": "risolto",
+        "address": "Corso Vittorio 2, Torino",
+        "category": "spazzatura",
+        "description": "Rifiuti non raccolti in Corso Vittorio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.67567898765,
+          44.98765432101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 17,
+        "title": "Segnalazione 18 - Torino",
+        "status": "in_attesa",
+        "address": "Via Po 34, Torino",
+        "category": "strade",
+        "description": "Buche in Via Po"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.69876543212,
+          44.96789012345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 18,
+        "title": "Segnalazione 19 - Palermo",
+        "status": "in_corso",
+        "address": "Via Maqueda 12, Palermo",
+        "category": "illuminazione",
+        "description": "Lampione guasto in Via Maqueda"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.35678923456,
+          38.11987654321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 20,
+        "title": "Segnalazione 21 - Palermo",
+        "status": "risolto",
+        "address": "Corso Vittorio 34, Palermo",
+        "category": "verde",
+        "description": "Albero caduto in Corso Vittorio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.36789012345,
+          38.12876543211
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 21,
+        "title": "Segnalazione 22 - Milano",
+        "status": "risolto",
+        "address": "Via Napoli 5, Milano",
+        "category": "strade",
+        "description": "Ritiro strada in Via Napoli"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.19345678901,
+          45.46789123456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 23,
+        "title": "Segnalazione 23 - Milano",
+        "status": "in_corso",
+        "address": "Via Dante 56, Milano",
+        "category": "illuminazione",
+        "description": "Lampione guasto in Via Dante"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.18876543213,
+          45.46543212345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 24,
+        "title": "Segnalazione 24 - Milano",
+        "status": "in_attesa",
+        "address": "Corso Buenos Aires 67, Milano",
+        "category": "spazzatura",
+        "description": "Rifiuti non raccolti in Corso Buenos Aires"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.19123456789,
+          45.45987654321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 25,
+        "title": "Segnalazione 25 - Roma",
+        "status": "in_corso",
+        "address": "Piazza Venezia 12, Roma",
+        "category": "segnaletica",
+        "description": "Segnale mancante in Piazza Venezia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.47654321233,
+          41.89123432145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 26,
+        "title": "Segnalazione 27 - Roma",
+        "status": "risolto",
+        "address": "Via Appia 90, Roma",
+        "category": "strade",
+        "description": "Buche in Via Appia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.46543212345,
+          41.88987654321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 27,
+        "title": "Segnalazione 28 - Napoli",
+        "status": "in_attesa",
+        "address": "Via Foria 123, Napoli",
+        "category": "spazzatura",
+        "description": "Rifiuti non raccolti in Via Foria"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.24789012345,
+          40.84567891234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 29,
+        "title": "Segnalazione 30 - Napoli",
+        "status": "risolto",
+        "address": "Via Chiaia 45, Napoli",
+        "category": "illuminazione",
+        "description": "Lampione guasto in Via Chiaia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.25567891234,
+          40.85234567891
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 31,
+        "title": "Segnalazione 31 - Torino",
+        "status": "in_corso",
+        "address": "Via Po 90, Torino",
+        "category": "strade",
+        "description": "Buche in Via Po"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.70123456789,
+          44.95678912345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 32,
+        "title": "Segnalazione 33 - Torino",
+        "status": "risolto",
+        "address": "Via Roma 12, Torino",
+        "category": "verde",
+        "description": "Albero caduto in Via Roma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.69234567891,
+          45.06789123456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 33,
+        "title": "Segnalazione 34 - Palermo",
+        "status": "in_attesa",
+        "address": "Via Ruggero 12, Palermo",
+        "category": "segnaletica",
+        "description": "Segnale mancante in Via Ruggero"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.37543212345,
+          38.13765432109
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 34,
+        "title": "Segnalazione 35 - Milano",
+        "status": "in_corso",
+        "address": "Via Ippocrate 34, Milano",
+        "category": "illuminazione",
+        "description": "Lampione guasto in Via Ippocrate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.19456789123,
+          45.46456789123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 36,
+        "title": "Segnalazione 37 - Milano",
+        "status": "risolto",
+        "address": "Via Melzi 12, Milano",
+        "category": "spazzatura",
+        "description": "Rifiuti non raccolti in Via Melzi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.19678901234,
+          45.46234567891
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 38,
+        "title": "Segnalazione 39 - Roma",
+        "status": "in_attesa",
+        "address": "Via del Corso 98, Roma",
+        "category": "illuminazione",
+        "description": "Lampione guasto in Via del Corso"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.48234567891,
+          41.89678912345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 39,
+        "title": "Segnalazione 40 - Napoli",
+        "status": "in_corso",
+        "address": "Via San Gregorio Armeno 12, Napoli",
+        "category": "strade",
+        "description": "Buche in Via San Gregorio Armeno"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.19456789012,
+          40.85432198765
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 41,
+        "title": "Segnalazione 42 - Milano",
+        "status": "in_corso",
+        "address": "ViaCavour 12, Milano",
+        "category": "segnaletica",
+        "description": "Segnale stradale mancante in Via Cavour"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.19789123456,
+          45.46123456789
+        ]
+      }
+    }
+  ]
+}

@@ -29,7 +29,7 @@ class HandlerDecorator implements ExceptionHandler
     public function report(\Throwable $e): void
     {
         foreach ($this->repository->getReportersByException($e) as $reporter) {
-            if (is_callable($reporter)) {
+            if (\is_callable($reporter)) {
                 $reporter($e);
             }
         }
@@ -40,7 +40,7 @@ class HandlerDecorator implements ExceptionHandler
     public function render($request, \Throwable $e): SymfonyResponse
     {
         foreach ($this->repository->getRenderersByException($e) as $renderer) {
-            if (is_callable($renderer)) {
+            if (\is_callable($renderer)) {
                 $response = $renderer($e, $request);
                 if ($response instanceof SymfonyResponse) {
                     return $response;
@@ -51,18 +51,15 @@ class HandlerDecorator implements ExceptionHandler
         return $this->defaultHandler->render($request, $e);
     }
 
-    /**
-     * @phpstan-ignore-next-line
-     */
     public function renderForConsole($output, \Throwable $e): void
     {
         foreach ($this->repository->getConsoleRenderersByException($e) as $renderer) {
-            if (is_callable($renderer)) {
+            if (\is_callable($renderer)) {
                 $renderer($e, $output);
             }
         }
 
-        /* @phpstan-ignore-next-line */
+        /* @phpstan-ignore method.internal */
         $this->defaultHandler->renderForConsole($output, $e);
     }
 

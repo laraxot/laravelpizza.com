@@ -75,7 +75,7 @@ interface UserContract
 - Proper exception handling for filesystem operations
 
 ### 4. Uso corretto di `dddx()`
-**Contesto**: la funzione `dddx()` è definita nel file `Modules/Xot/helpers/Helper.php` e viene autocaricata tramite la sezione `files` del `composer.json` del modulo Xot.
+**Contesto**: la funzione `dddx()` è definita nel file `Modules/Xot/Helpers/Helper.php` e viene autocaricata tramite la sezione `files` del `composer.json` del modulo Xot.
 **Regola**: quando viene richiamata all'interno di classi namespaced (es. componenti Blade/Filament) va utilizzata come funzione globale (`\dddx()`), evitando `use function` inutili o riferimenti a namespace inesistenti.
 **Esempio**:
 ```php
@@ -97,7 +97,7 @@ Questo garantisce che PHPStan riconosca la funzione già caricata via composer e
 4. ✅ `Modules/Xot/app/Contracts/ProfileContract.php`
 
 ### Helper Fixed
-1. ✅ `Modules/Xot/helpers/Helper.php` - Complete rewrite
+1. ✅ `Modules/Xot/Helpers/Helper.php` - Complete rewrite
 
 ### Components Fixed
 1. ✅ `Modules/Xot/app/View/Components/XDebug.php` - Function import added

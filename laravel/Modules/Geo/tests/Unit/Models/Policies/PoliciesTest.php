@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Models\Policies;
 
-uses(\Modules\Geo\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Geo\Models\Policies\CountyPolicy;
 use Modules\Geo\Models\Policies\GeoNamesCapPolicy;
@@ -12,6 +12,7 @@ use Modules\Geo\Models\Policies\LocalityPolicy;
 use Modules\Geo\Models\Policies\PlacePolicy;
 use Modules\Geo\Models\Policies\PlaceTypePolicy;
 use Modules\Geo\Models\Policies\StatePolicy;
+use Modules\Geo\Tests\TestCase;
 
 test('StatePolicy can be instantiated', function () {
     $policy = new StatePolicy();

@@ -11,7 +11,7 @@ use Modules\Xot\Contracts\UserContract;
 uses(TestCase::class);
 
 test('mail template policy denies view any', function () {
-    $policy = new MailTemplatePolicy();
+    $policy = new MailTemplatePolicy;
     $user = \Mockery::mock(UserContract::class);
 
     expect($policy->viewAny($user))->toBeFalse();

@@ -17,7 +17,7 @@ class ExecuteArtisanCommandAction
     use QueueableAction;
 
     /**
-     * Lista dei comandi consentiti per motivi di sicurezza (match esatto).
+     * Lista dei comandi consentiti per motivi di sicurezza.
      *
      * @var array<int, string>
      */
@@ -30,16 +30,7 @@ class ExecuteArtisanCommandAction
         'route:cache',
         'event:cache',
         'queue:restart',
-    ];
-
-    /**
-     * Prefissi di comandi consentiti (es. passport:install, passport:keys).
-     * Un comando che inizia con uno di questi prefissi è consentito (con opzioni).
-     *
-     * @var array<int, string>
-     */
-    private array $allowedCommandPrefixes = [
-        'passport:install',
+        'passport:install --uuids',
         'passport:keys',
         'passport:purge',
         'passport:hash',
@@ -148,16 +139,6 @@ class ExecuteArtisanCommandAction
     {
         Assert::stringNotEmpty($command, 'Il comando non può essere vuoto');
 
-        if (in_array($command, $this->allowedCommands, true)) {
-            return true;
-        }
-
-        foreach ($this->allowedCommandPrefixes as $prefix) {
-            if (str_starts_with($command, $prefix)) {
-                return true;
-            }
-        }
-
-        return false;
+        return in_array($command, $this->allowedCommands, true);
     }
 }

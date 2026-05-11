@@ -36,7 +36,11 @@ class CoolModulesServiceProvider extends PackageServiceProvider
         $this->app->register(LaravelModulesServiceProvider::class);
 
         $this->app->afterResolving('filament', function (): void {
-            $panels = Filament::getPanels();
+            try {
+                $panels = Filament::getPanels();
+            } catch (\Exception $e) {
+                return; // Skip if panels are not available
+            }
 
             foreach ($panels as $panel) {
                 $id = Str::of($panel->getId());

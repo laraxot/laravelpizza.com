@@ -465,7 +465,7 @@ fi
 ### Documentazione Ufficiale
 - [Testing Strategy](../../xot/docs/testing-strategy.md) - **Strategia testing approvata**
 - [Testing Best Practices](../../xot/docs/testing-best-practices.md)
-- [Real Data vs Mock Testing](../../xot/docs/archive/testing/real-data-vs-mock-testing-strategy.md)
+- [Real Data vs Mock Testing](../../xot/docs/archived/testing/real-data-vs-mock-testing-strategy.md)
 
 ### Test Esempi
 - [SnapshotBusinessLogicTest](../tests/Feature/SnapshotBusinessLogicTest.php) - Esempio corretto

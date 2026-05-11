@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit\Providers;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Activity\Providers\ActivityServiceProvider;
 use Modules\Activity\Providers\EventServiceProvider;
 use Modules\Activity\Providers\RouteServiceProvider;
+use Modules\Activity\Tests\TestCase;
+use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
 test('ActivityServiceProvider extends XotBaseServiceProvider', function (): void {
@@ -24,7 +26,7 @@ test('ActivityServiceProvider has correct name', function (): void {
 test('ActivityServiceProvider registers migrations', function (): void {
     $provider = new ActivityServiceProvider(app());
     $provider->boot();
-    
+
     expect(true)->toBeTrue();
 });
 
@@ -45,7 +47,7 @@ test('RouteServiceProvider has correct properties', function (): void {
 
 test('RouteServiceProvider extends XotBaseRouteServiceProvider', function (): void {
     $reflection = new ReflectionClass(RouteServiceProvider::class);
-    expect($reflection->isSubclassOf(\Modules\Xot\Providers\XotBaseRouteServiceProvider::class))->toBeTrue();
+    expect($reflection->isSubclassOf(XotBaseRouteServiceProvider::class))->toBeTrue();
 });
 
 test('ActivityServiceProvider has boot method', function (): void {

@@ -27,6 +27,9 @@ abstract class XotBaseMigration extends LaravelMigration
     /** @var class-string<Model>|null */
     protected ?string $model_class = null;
 
+    /** @var array<string, int> */
+    protected array $uuidToBigintIdMapping = [];
+
     public function __construct()
     {
         $this->model_class ??= $this->getModelClass();
@@ -70,11 +73,11 @@ abstract class XotBaseMigration extends LaravelMigration
 
         Assert::stringNotEmpty($modelClass);
         Assert::classExists($modelClass);
+        Assert::subclassOf($modelClass, Model::class);
 
-        /* @var class-string<Model> $modelClass */
         $this->model_class = $modelClass;
 
-        return $modelClass;
+        return $this->model_class;
     }
 
     public function getTable(): string
@@ -271,21 +274,6 @@ abstract class XotBaseMigration extends LaravelMigration
         $this->getConn()->table($tableName, $next);
     }
 
-    protected function extractPrimaryKeyCount(mixed $result): int
-    {
-        if (is_array($result)) {
-            return isset($result['count']) ? (int) $result['count'] : 0;
-        }
-
-        if (is_object($result)) {
-            $resultAsArray = (array) $result;
-
-            return isset($resultAsArray['count']) ? (int) $resultAsArray['count'] : 0;
-        }
-
-        return 0;
-    }
-
     public function timestamps(Blueprint $table, bool $hasSoftDeletes = false): void
     {
         $xot = XotData::make();
@@ -400,14 +388,6 @@ abstract class XotBaseMigration extends LaravelMigration
     }
 
     /**
-     * Get the database connection driver.
-     */
-    protected function driver(): string
-    {
-        return DB::connection($this->getConnection())->getDriverName();
-    }
-
-    /**
      * Determine if the migration should run.
      * This method provides a hook for conditional migration execution.
      * Returns true by default to maintain backward compatibility.
@@ -415,6 +395,29 @@ abstract class XotBaseMigration extends LaravelMigration
     public function shouldRun(): bool
     {
         return true;
+    }
+
+    protected function extractPrimaryKeyCount(mixed $result): int
+    {
+        if (is_array($result)) {
+            return isset($result['count']) ? (int) $result['count'] : 0;
+        }
+
+        if (is_object($result)) {
+            $resultAsArray = (array) $result;
+
+            return isset($resultAsArray['count']) ? (int) $resultAsArray['count'] : 0;
+        }
+
+        return 0;
+    }
+
+    /**
+     * Get the database connection driver.
+     */
+    protected function driver(): string
+    {
+        return DB::connection($this->getConnection())->getDriverName();
     }
 
     /**
@@ -470,9 +473,6 @@ abstract class XotBaseMigration extends LaravelMigration
             }
         });
     }
-
-    /** @var array<string, int> */
-    protected array $uuidToBigintIdMapping = [];
 
     /**
      * @param \Closure(Blueprint): void                                                    $createNewTableSchema

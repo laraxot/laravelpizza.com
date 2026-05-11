@@ -21,8 +21,6 @@ class OptimizeFilamentMemoryCommand extends Command
 {
     /**
      * The name and signature of the console command.
-     *
-     * @var string
      */
     protected $signature = 'filament:optimize-memory 
                             {--clear-cache : Clear all caches before optimization}
@@ -31,8 +29,6 @@ class OptimizeFilamentMemoryCommand extends Command
 
     /**
      * The console command description.
-     *
-     * @var string
      */
     protected $description = 'Optimize Filament admin panels for better memory usage';
 

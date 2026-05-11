@@ -4,9 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit\Models;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Activity\Models\Activity;
+use Modules\Activity\Tests\TestCase;
+
+beforeEach(function () {
+    // Skip if database not available
+    try {
+        \DB::connection()->getPdo();
+    } catch (\Exception $e) {
+        $this->markTestSkipped('Database not available: '.$e->getMessage());
+    }
+});
 
 test('activity model can be created', function () {
     $activity = Activity::factory()->make();

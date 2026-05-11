@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Support\Carbon;
+use Modules\Media\Models\Media;
+use Modules\Xot\Contracts\ProfileContract;
+use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 
 /**
  * @property string|null $template_id
@@ -18,23 +22,26 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @property string|null $status_message
  * @property array<string, mixed>|null $data
  * @property array<string, mixed>|null $metadata
+ *
  * @method static Builder<static> where(string $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
  * @method static static|null find(mixed $id, array|string $columns = ['*'])
+ *
  * @property string $id
  * @property string $title
  * @property string $content
  * @property string $channels
- * @property \Illuminate\Support\Carbon $sent_at
+ * @property Carbon $sent_at
  * @property string|null $error
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
- * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Modules\Media\Models\Media> $media
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $deleter
+ * @property-read MediaCollection<int, Media> $media
  * @property-read int|null $media_count
  * @property-read Model|\Eloquent $notifiable
- * @property-read \Modules\Notify\Models\NotificationTemplate|null $template
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ * @property-read NotificationTemplate|null $template
+ * @property-read ProfileContract|null $updater
+ *
  * @method static \Modules\Notify\Database\Factories\NotificationLogFactory factory($count = null, $state = [])
  * @method static Builder<static>|NotificationLog forChannel(string $channel)
  * @method static Builder<static>|NotificationLog forNotifiable(\Illuminate\Database\Eloquent\Model $notifiable)
@@ -54,16 +61,23 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @method static Builder<static>|NotificationLog whereTitle($value)
  * @method static Builder<static>|NotificationLog whereUpdatedAt($value)
  * @method static Builder<static>|NotificationLog withStatus(string $status)
+ *
  * @mixin \Eloquent
  */
 class NotificationLog extends BaseModel
 {
     public const STATUS_PENDING = 'pending';
+
     public const STATUS_PROCESSING = 'processing';
+
     public const STATUS_SENT = 'sent';
+
     public const STATUS_DELIVERED = 'delivered';
+
     public const STATUS_FAILED = 'failed';
+
     public const STATUS_OPENED = 'opened';
+
     public const STATUS_CLICKED = 'clicked';
 
     protected $table = 'notification_logs';
@@ -85,19 +99,6 @@ class NotificationLog extends BaseModel
         'tenant_id',
     ];
 
-    protected function casts(): array
-    {
-        return array_merge(parent::casts(), [
-            'data' => 'array',
-            'metadata' => 'array',
-            'sent_at' => 'datetime',
-            'delivered_at' => 'datetime',
-            'failed_at' => 'datetime',
-            'opened_at' => 'datetime',
-            'clicked_at' => 'datetime',
-        ]);
-    }
-
     public function notifiable(): MorphTo
     {
         return $this->morphTo();
@@ -105,10 +106,7 @@ class NotificationLog extends BaseModel
 
     public function template(): BelongsTo
     {
-        /** @var BelongsTo<Model, static> $relation */
-        $relation = $this->belongsTo(NotificationTemplate::class, 'template_id');
-
-        return $relation;
+        return $this->belongsTo(NotificationTemplate::class, 'template_id');
     }
 
     public function scopeWithStatus(Builder $query, string $status): Builder
@@ -146,5 +144,18 @@ class NotificationLog extends BaseModel
         ]);
 
         return $this;
+    }
+
+    protected function casts(): array
+    {
+        return array_merge(parent::casts(), [
+            'data' => 'array',
+            'metadata' => 'array',
+            'sent_at' => 'datetime',
+            'delivered_at' => 'datetime',
+            'failed_at' => 'datetime',
+            'opened_at' => 'datetime',
+            'clicked_at' => 'datetime',
+        ]);
     }
 }

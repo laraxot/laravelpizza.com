@@ -39,7 +39,7 @@ class WhatsAppChannel
      *
      * @throws Exception Se la notifica non ha il metodo toWhatsApp o il driver non è supportato
      */
-    public function send($notifiable, Notification $notification)
+    public function send(mixed $notifiable, Notification $notification): ?array
     {
         if (! method_exists($notification, 'toWhatsApp')) {
             throw new Exception('Notification does not have toWhatsApp method');

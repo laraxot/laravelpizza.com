@@ -339,11 +339,7 @@ The command discovered these categories:
 **Module Packages**:
 - Xot → XotServiceProvider + AdminPanelProvider
 - User → UserServiceProvider + AdminPanelProvider + PassportServiceProvider
-<<<<<<< .merge_file_ZLSyIM
 - Activity, Tenant, UI, Geo, Media, Notify, Chart, Lang, Cms, Job, Gdpr, DbForge, CloudStorage, Limesurvey, healthcare_app
-=======
-- Activity, Tenant, UI, Geo, Media, Notify, Chart, Lang, Cms, Job, Gdpr, DbForge, CloudStorage, Limesurvey, ModuloEsempio
->>>>>>> .merge_file_oXZ4ZA
 
 **Supporting Libraries**:
 - Blade icons, Carbon, Excel, Debugbar, IDE Helper, PHPInsights

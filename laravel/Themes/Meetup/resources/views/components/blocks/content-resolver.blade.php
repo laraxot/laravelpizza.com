@@ -26,8 +26,9 @@
 @else
     <div class="max-w-7xl mx-auto px-4 py-12">
         <div class="bg-yellow-100 border border-yellow-400 text-yellow-700 p-4 rounded-lg">
-            <h2 class="text-lg font-bold mb-2">{{ __('pub_theme::events.messages.no_events_found.label') }}</h2>
-            <p>{{ __('pub_theme::events.messages.check_back_later.label') }}</p>
+            <h2 class="text-lg font-bold mb-2">Content not found</h2>
+            <p>Container: {{ $container0 }}</p>
+            <p>Slug: {{ $slug0 }}</p>
         </div>
     </div>
 @endif

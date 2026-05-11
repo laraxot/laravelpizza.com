@@ -1,0 +1,29 @@
+bmad-create-story
+
+studia a fondo 
+https://dev.to/bradisrad83/browser-location-with-laravel-livewire-54bd#:~:text=function%20getLocation()%20%7B%20navigator.geolocation,but%20anyways%20here%20it%20is:
+https://laracasts.com/discuss/channels/livewire/livewire-not-updating-the-value-of-the-input-field
+https://stackoverflow.com/questions/61365187/laravel-livewire-how-to-pass-geo-coordinates-of-user-to-livewire-component
+https://filamentphp.com/docs/5.x/schemas/wizards
+https://github.com/barryvdh/laravel-ide-helper
+https://laracasts.com/discuss/channels/livewire/livewire-not-updating-the-value-of-the-input-field
+https://dev.to/bradisrad83/browser-location-with-laravel-livewire-54bd
+https://stackoverflow.com/questions/77630149/laravel-livewire-input-fields-not-passing-using-postal-code-address-search-api
+https://fly.io/laravel-bytes/map-livewire/
+https://medium.com/@Orpheric_Codeur/how-to-create-a-real-time-search-filter-with-laravel-livewire-f566d36fabad
+https://forum.laravel-livewire.com/t/how-to-render-google-maps-api-in-livewire/4564
+https://laracasts.com/discuss/channels/livewire/implementing-g-maps-place-javascript-api-into-component
+https://filamentphp.com/docs/5.x/forms/overview
+https://filamentphp.com/docs/5.x/forms/custom-fields
+https://laracasts.com/discuss/channels/filament/filamentphp-livewire-entangle-error-livewire-property-cannot-be-found-on-component
+https://stackoverflow.com/questions/79289526/laravelfilamentphplivewire-on-custom-field-what-goes-where-to-handle-state
+https://filamentapps.com/blog/embedding-livewire-components-in-filament-4-schemas
+https://filamentphp.com/plugins/cheesegrits-google-maps
+https://github.com/filamentphp/filament/discussions/13095
+https://www.answeroverflow.com/m/1160135754798858271
+https://laracasts.com/discuss/channels/filament/filament-custom-field-livewire-still-updating-despite-wireignore
+
+poi individua quali componenti potresti fare ad Esempio AddressInput con "use current location" , AddessSection che mostra via, civico etc separati, LatitudeLongitudeMapInput in cui mostra la mappa e salva le coordinate, individua i componenti che potresti andare a fare , 
+
+cerca di capire il perche', la regola, la visione, lo scopo, la filosofia, la religione, la politica, lo zen
+installati e configurati tutto quello che vuoi per completare questo task, cerca anche in internet aiuto, poi aggiorna, studia e migliora le cartelle docs dentro i moduli e dentro i temi, le tue rules, le tue memories, le tue skills, aggiorna utilizzando indici e quello che vuoi per cercare piu' velocemente quello che ti serve e per prevenire files doppi e rindondanze 

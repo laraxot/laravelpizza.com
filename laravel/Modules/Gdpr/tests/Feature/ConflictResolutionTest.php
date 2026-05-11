@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-uses(Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
-uses(Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Gdpr\Models\Profile;
 use Modules\Gdpr\Models\Treatment;
+use Modules\Gdpr\Tests\TestCase;
 
 it('verifica che le classi corrette siano istanziabili', function (): void {
     expect(new Treatment())->toBeInstanceOf(Treatment::class);

@@ -10,7 +10,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 
 class EditActivity extends XotBaseEditRecord
 {
-    protected static string $resource = ActivityResource::class;
+    public static string $resource = ActivityResource::class;
 
     protected function getHeaderActions(): array
     {

@@ -1,0 +1,426 @@
+import { LitElement, html } from 'lit';
+import L from 'leaflet';
+// Fundamental for Leaflet plugins in ESM bundles
+window.L = L;
+
+import 'leaflet/dist/leaflet.css';
+import 'leaflet.markercluster'; 
+import 'leaflet.markercluster/dist/MarkerCluster.css';
+import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
+import 'leaflet.heat';
+
+import { renderControls, switchLayer, toggleFullscreen, zoomIn, zoomOut, requestGeolocation } from './map-picker-controls.js';
+import { renderSearch } from './map-picker-search.js';
+import { buildMapLayers } from './map-picker-layers.js';
+import { mapPickerStylesText } from './map-picker-styles.js';
+import { createGeoMapLeafletIcon } from './map-marker-config.js';
+import { geoIcon } from './geo-heroicons.js';
+
+const DEFAULT_TICKETS_JSON_URL = '/data/tickets.json';
+const DEFAULT_CENTER = [41.9028, 12.4964];
+const DEFAULT_ZOOM = 6;
+
+class GeoMapLit extends LitElement {
+    static properties = {
+        filterType:        { type: String },
+        activeLayer:       { type: String },
+        isFullscreen:      { type: Boolean, state: true },
+        height:            { type: String },
+        _searchOpen:       { type: Boolean, state: true },
+        labels:            { type: Object },
+        dataUrl:           { type: String, attribute: 'data-url' },
+        searchQuery:       { type: String,  state: true },
+        searchResults:     { type: Array,   state: true },
+        showSearchResults: { type: Boolean, state: true },
+        isSearching:       { type: Boolean, state: true },
+        isLocating:        { type: Boolean, state: true },
+        _mapStatus:        { type: String, state: true },
+        _mapStatusMessage: { type: String, state: true },
+    };
+
+    createRenderRoot() { return this; }
+
+    constructor() {
+        super();
+        this.filterType = null;
+        this.activeLayer = 'markers';
+        this.isFullscreen = false;
+        this._searchOpen = false;
+        this.searchQuery = '';
+        this.searchResults = [];
+        this.showSearchResults = false;
+        this.isSearching = false;
+        this.isLocating = false;
+        this._previousBodyOverflow = '';
+        this._previousHtmlOverflow = '';
+        this.labels = {
+            fullscreen: 'Schermo intero',
+            close_fullscreen: 'Esci da schermo intero',
+            use_location: 'Usa la mia posizione',
+            switch_layer: 'Cambia layer',
+            zoom_in: 'Aumenta zoom',
+            zoom_out: 'Diminuisci zoom',
+            search: 'Cerca',
+            search_placeholder: 'Cerca indirizzo...',
+        };
+        this.height = '450px';
+        this.dataUrl = DEFAULT_TICKETS_JSON_URL;
+        this._currentLayer = 'street';
+        this._allFeatures = [];
+        this._allMarkers = [];
+        this._layers = {};
+        this._mapStatus = 'idle';
+        this._mapStatusMessage = '';
+    }
+
+    render() {
+        return html`
+            <style>
+                ${mapPickerStylesText}
+                geo-map-lit { display: block; width: 100%; min-height: 320px; }
+                .geo-map-leaflet { width: 100%; height: 100%; min-height: 320px; }
+                .geo-map-marker-wrapper svg { display: block; }
+                .leaflet-div-icon { background: transparent !important; border: none !important; }
+                
+                /* farmshops.eu / direktvermarkter.js cluster styles */
+                .geo-cluster-circle { 
+                    background: #fff; border: 2.5px solid #0066cc; border-radius: 50%;
+                    width: 80px; height: 80px; display: flex; flex-direction: column; align-items: center;
+                    justify-content: center; font-weight: 700; font-size: 15px; box-shadow: 0 2px 8px rgba(0,0,0,.35);
+                    text-align: center; line-height: 1.1; box-sizing: border-box; color: #17324d; 
+                    font-family: sans-serif; overflow: hidden;
+                }
+                .geo-cluster-type-icons { 
+                    display: flex; gap: 3px; justify-content: center; flex-wrap: wrap; 
+                    max-width: 58px; margin-top: 2px; 
+                }
+
+                .geo-address-search { position: absolute !important; top: 1rem !important; right: 1rem !important; z-index: 3001 !important; display: flex !important; flex-wrap: wrap !important; gap: 0.4rem !important; background: rgba(255,255,255,0.95) !important; padding: 0.4rem !important; border-radius: 0.75rem !important; box-shadow: 0 4px 14px rgba(0,0,0,.15) !important; max-width: 280px !important; width: min(280px, calc(100% - 5rem)) !important; align-items: center !important; backdrop-filter: blur(6px) !important; }
+                .geo-address-search .map-picker-search-input { flex: 1 !important; border: 1px solid #d1d5db !important; border-radius: 0.5rem !important; padding: 0.4rem 0.6rem !important; font-size: 0.85rem !important; min-width: 0 !important; outline: none !important; color: #17324d !important; background: #fff !important; height: auto !important; box-shadow: none !important; }
+                .geo-address-search .ctrl-btn { flex: 0 0 2.5rem !important; width: 2.5rem !important; height: 2.5rem !important; min-width: 2.5rem !important; }
+                .geo-address-search-results { position: absolute !important; top: 100% !important; left: 0 !important; right: 0 !important; max-height: 12rem !important; margin: 0.25rem 0 0 !important; padding: 0.25rem 0 !important; overflow: auto !important; list-style: none !important; border: 1px solid #d1d5db !important; border-radius: 0.75rem !important; background: #fff !important; color: #17324d !important; box-shadow: 0 10px 24px rgba(23,50,77,.16) !important; z-index: 3002 !important; }
+                .geo-address-search-results li { padding: 0.5rem 0.75rem !important; cursor: pointer !important; font-size: 0.8125rem !important; line-height: 1.25 !important; list-style: none !important; }
+                .geo-address-search-results li:hover { background: #eef6ff !important; color: #0050a4 !important; }
+                
+                .geo-popup { padding: 2px 0; }
+                .geo-popup-title { display: block; font-size: 14px; margin-bottom: 4px; color: #17324d; font-weight: 700; }
+                .geo-popup-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; color: #fff; margin-bottom: 6px; font-weight: 600; }
+                .geo-popup-description { font-size: 12.5px; line-height: 1.4; color: #4b5563; margin-top: 4px; }
+                .geo-map-status {
+                    position: absolute; left: 0.75rem; bottom: 0.75rem; z-index: 3002;
+                    background: rgba(255,255,255,0.95); color: #17324d; border-radius: 0.5rem;
+                    padding: 0.4rem 0.6rem; font-size: 12px; line-height: 1.2;
+                    box-shadow: 0 3px 10px rgba(0,0,0,.12); max-width: min(90%, 420px);
+                }
+                .geo-map-status.error { border-left: 3px solid #b91c1c; }
+                .geo-map-status.empty { border-left: 3px solid #b45309; }
+                
+                html.geo-map-fullscreen-active, html.geo-map-fullscreen-active body { overflow: hidden !important; }
+            </style>
+            <div class="map-container ${this.isFullscreen ? 'is-fullscreen' : ''}"
+                 style="position:relative;--map-height:${this.height || '450px'};">
+                <div class="geo-map-leaflet" style="width:100%;height:100%;"></div>
+                ${renderControls(this)}
+                ${this._searchOpen ? renderSearch(this) : ''}
+                ${(this._mapStatus === 'empty' || this._mapStatus === 'error') ? html`
+                    <div class="geo-map-status ${this._mapStatus}">
+                        ${this._mapStatusMessage}
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    _toggleSearch() {
+        this._searchOpen = !this._searchOpen;
+        this.requestUpdate();
+    }
+
+    _toggleFullscreen() { void toggleFullscreen(this); }
+    _switchLayer() { switchLayer(this); }
+    _zoomIn() { zoomIn(this); }
+    _zoomOut() { zoomOut(this); }
+    _requestGeolocation() { requestGeolocation(this); }
+
+    firstUpdated() {
+        super.firstUpdated();
+        this._initMap();
+    }
+
+    _initMap() {
+        const container = this.renderRoot.querySelector ? this.renderRoot.querySelector('.geo-map-leaflet') : null;
+        if (!container) return;
+        
+        this._map = L.map(container, {
+            center: DEFAULT_CENTER,
+            zoom: DEFAULT_ZOOM,
+            minZoom: 3,
+            maxZoom: 19,
+            zoomControl: false,
+        });
+
+        this._layers = buildMapLayers(L);
+        this._layers[this._currentLayer].addTo(this._map);
+
+        // Robust check for markerClusterGroup
+        const clusterFactory = L.markerClusterGroup || window.L?.markerClusterGroup;
+        
+        if (typeof clusterFactory === 'function') {
+            this._markersLayer = clusterFactory({
+                maxClusterRadius: (z) => z < 12 ? 80 : 45,
+                minimumClusterSize: 2,
+                chunkedLoading: true,
+                spiderfyOnMaxZoom: true,
+                showCoverageOnHover: false,
+                zoomToBoundsOnClick: true,
+                removeOutsideVisibleBounds: true,
+                iconCreateFunction: (cluster) => this._createClusterIcon(cluster),
+            });
+            this._map.addLayer(this._markersLayer);
+        } else {
+            console.error('[geo-map-lit] MarkerClusterGroup not found in L', L);
+            this._markersLayer = L.layerGroup().addTo(this._map);
+        }
+
+        this._map.on('popupopen', (e) => {
+            const mapH = this._map.getContainer().clientHeight;
+            const mapW = this._map.getContainer().clientWidth;
+            e.popup.options.maxHeight = Math.floor(mapH * 0.4);
+            e.popup.options.maxWidth  = Math.floor(mapW * 0.9);
+            e.popup.update();
+        });
+
+        this._map.on('zoomend', () => {
+            if (this._markersLayer && typeof this._markersLayer.refreshClusters === 'function') {
+                this._markersLayer.refreshClusters();
+            }
+        });
+
+        this._setupMutationObserver();
+        this._loadGeoJson();
+    }
+
+    _refreshMapSize(delays = [0]) {
+        delays.forEach((delay) => {
+            setTimeout(() => this._map?.invalidateSize(), delay);
+        });
+    }
+
+    _handleMapInteraction(lat, lng) {
+        if (!this._map) return;
+        this._map.setView([lat, lng], Math.max(this._map.getZoom(), 16));
+        this._refreshMapSize([0, 120]);
+    }
+
+    _setupMutationObserver() {
+        this._mutationObserver = new MutationObserver(() => {
+            if (this.offsetParent !== null && this._map) {
+                [0, 80, 180, 350, 700, 1200].forEach(d => setTimeout(() => this._map?.invalidateSize(), d));
+            }
+        });
+        let parent = this.parentElement;
+        for (let i = 0; i < 12 && parent; i++) {
+            this._mutationObserver.observe(parent, { attributes: true, attributeFilter: ['class', 'style', 'hidden'] });
+            parent = parent.parentElement;
+        }
+    }
+
+    _createClusterIcon(cluster) {
+        const markers = cluster.getAllChildMarkers();
+        const count = markers.length;
+        const zoom = this._map ? this._map.getZoom() : 0;
+
+        if (zoom >= 8) {
+            const typesPresent = {};
+            markers.forEach(m => {
+                const t = m.options.typeValue;
+                if (t && !typesPresent[t]) {
+                    typesPresent[t] = m.options.typeColor || '#607d8b';
+                }
+            });
+            const icons = Object.entries(typesPresent)
+                .map(([, color]) =>
+                    `<svg style="display:inline-block;flex:0 0 auto;" viewBox="0 0 14 14" width="14" height="14">` +
+                    `<circle cx="7" cy="7" r="6" fill="${color}" stroke="#fff" stroke-width="1.5"/></svg>`
+                ).join('');
+            
+            return L.divIcon({
+                html: `<div class="geo-cluster-circle"><strong>${count}</strong><div class="geo-cluster-type-icons">${icons}</div></div>`,
+                className: 'geo-cluster-wrapper',
+                iconSize: L.point(80, 80),
+            });
+        }
+
+        return L.divIcon({
+            html: `<div class="geo-cluster-circle"><strong>${count}</strong></div>`,
+            className: 'geo-cluster-wrapper',
+            iconSize: L.point(80, 80),
+        });
+    }
+
+    async _loadGeoJson() {
+        const requestedUrl = this.dataset?.url || this.dataUrl || DEFAULT_TICKETS_JSON_URL;
+        const fallbackUrls = [requestedUrl, DEFAULT_TICKETS_JSON_URL]
+            .filter((u, index, arr) => Boolean(u) && arr.indexOf(u) === index);
+
+        this._mapStatus = 'loading';
+        this._mapStatusMessage = '';
+
+        try {
+            const payload = await this._fetchFirstValidGeoJson(fallbackUrls);
+            const normalized = this._normalizeGeoJson(payload?.data);
+            this._allFeatures = normalized.features;
+                this._allMarkers = [];
+                
+                if (this._markersLayer) {
+                    this._markersLayer.clearLayers();
+                }
+
+                this._geojsonLayer = L.geoJson(normalized, {
+                    pointToLayer: (feature, latlng) => {
+                        const color = feature.properties?.type_color || '#0066cc';
+                        const marker = L.marker(latlng, {
+                            icon: createGeoMapLeafletIcon(L, color),
+                            typeValue: feature.properties?.type,
+                            typeColor: color,
+                            typeLabel: feature.properties?.type_label || feature.properties?.type,
+                        });
+                        this._allMarkers.push(marker);
+                        return marker;
+                    },
+                    onEachFeature: (feature, layer) => {
+                        const p = feature.properties || {};
+                        const color = p.type_color || '#0066cc';
+                        
+                        layer.bindPopup(`
+                            <div class="geo-popup">
+                                <strong class="geo-popup-title">${p.title || ''}</strong>
+                                <span class="geo-popup-badge" style="background:${color}">${p.type_label || ''}</span>
+                                <br><small class="text-muted">${p.address || ''}</small>
+                            </div>
+                        `, { maxWidth: 260 });
+
+                        if (p.id) {
+                            layer.once('click', () => {
+                                fetch(`/api/ticket-details/${p.id}`)
+                                    .then(res => res.ok ? res.json() : null)
+                                    .then(detail => {
+                                        if (!detail) return;
+                                        const popupContent = `
+                                            <div class="geo-popup">
+                                                <strong class="geo-popup-title">${detail.title || p.title || ''}</strong>
+                                                <span class="geo-popup-badge" style="background:${color}">${p.type_label || ''}</span>
+                                                <p class="geo-popup-description">${detail.description || ''}</p>
+                                                ${detail.address ? `<small class="text-muted d-block mb-1">${detail.address}</small>` : ''}
+                                                ${detail.images && detail.images.length > 0 ? `<div class="geo-popup-gallery" style="display:grid;grid-template-columns:1fr;gap:4px;margin-top:8px;">${detail.images.map(img => `<img src="${img}" style="width:100%;height:100px;object-fit:cover;border-radius:4px;">`).join('')}</div>` : ''}
+                                            </div>
+                                        `;
+                                        layer.getPopup().setContent(popupContent);
+                                    })
+                                    .catch(() => {});
+                            });
+                        }
+                    },
+                });
+
+                if (this._markersLayer) {
+                    this._markersLayer.addLayers(this._allMarkers);
+                }
+
+                if (this._allMarkers.length === 0) {
+                    this._mapStatus = 'empty';
+                    this._mapStatusMessage = 'Nessuna segnalazione valida trovata nel dataset mappa.';
+                } else {
+                    this._mapStatus = 'ready';
+                    this._mapStatusMessage = '';
+                }
+
+                try {
+                    const bounds = this._geojsonLayer.getBounds();
+                    if (bounds && bounds.isValid()) {
+                        this._map.fitBounds(bounds, { padding: [40, 40], maxZoom: 11 });
+                    }
+                } catch (e) {
+                    console.warn('[geo-map-lit] fitBounds skipped:', e.message);
+                }
+
+                this.dispatchEvent(new CustomEvent('geo-map-loaded', {
+                    detail: {
+                        count: this._allFeatures.length,
+                        url: payload.url,
+                        types: [...new Set(this._allFeatures.map(f => f.properties?.type).filter(Boolean))],
+                    },
+                    bubbles: true,
+                    composed: true,
+                }));
+        } catch (err) {
+            this._mapStatus = 'error';
+            this._mapStatusMessage = 'Errore nel caricamento della mappa. Controlla il dataset GeoJSON.';
+            console.error('[geo-map-lit] Error loading GeoJSON:', err);
+        }
+    }
+
+    async _fetchFirstValidGeoJson(urls) {
+        let lastError = null;
+        for (const url of urls) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status} on ${url}`);
+                }
+                const data = await response.json();
+                return { url, data };
+            } catch (error) {
+                lastError = error;
+                console.warn('[geo-map-lit] GeoJSON source failed:', url, error);
+            }
+        }
+        throw lastError ?? new Error('No valid GeoJSON source found');
+    }
+
+    _normalizeGeoJson(rawData) {
+        const rawFeatures = Array.isArray(rawData?.features) ? rawData.features : [];
+        const features = rawFeatures
+            .filter((feature) => feature?.geometry?.type === 'Point')
+            .filter((feature) => Array.isArray(feature?.geometry?.coordinates))
+            .filter((feature) => {
+                const [lng, lat] = feature.geometry.coordinates;
+                return Number.isFinite(Number(lng)) && Number.isFinite(Number(lat));
+            })
+            .map((feature) => {
+                const [lng, lat] = feature.geometry.coordinates;
+                return {
+                    ...feature,
+                    geometry: {
+                        ...feature.geometry,
+                        coordinates: [Number(lng), Number(lat)],
+                    },
+                };
+            });
+
+        return {
+            type: 'FeatureCollection',
+            features,
+        };
+    }
+
+    filterByType(type) {
+        if (!this._markersLayer) return;
+        this._markersLayer.clearLayers();
+        const filtered = type ? this._allMarkers.filter(m => m.options.typeValue === type) : this._allMarkers;
+        this._markersLayer.addLayers(filtered);
+    }
+
+    disconnectedCallback() {
+        super.disconnectedCallback();
+        this._mutationObserver?.disconnect();
+        if (this._map) {
+            this._map.remove();
+            this._map = null;
+        }
+    }
+}
+
+if (!customElements.get('geo-map-lit')) {
+    customElements.define('geo-map-lit', GeoMapLit);
+}

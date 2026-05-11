@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Providers;
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Gdpr\Providers\GdprServiceProvider;
+use Modules\Gdpr\Tests\TestCase;
 
 test('gdpr_service_provider_extends_xot_base_service_provider', function () {
     $provider = new GdprServiceProvider(app());

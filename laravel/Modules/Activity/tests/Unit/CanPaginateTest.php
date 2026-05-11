@@ -43,10 +43,11 @@ class CanPaginateTest extends TestCase
     public function default_pagination_options_return_array(): void
     {
         // Test the default pagination options via reflection
-        $trait = new class {
+        $trait = new class
+        {
             use CanPaginate;
 
-            public function testGetRecordsPerPageSelectOptions(): array
+            public function test_get_records_per_page_select_options(): array
             {
                 return $this->getRecordsPerPageSelectOptions();
             }

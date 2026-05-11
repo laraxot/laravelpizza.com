@@ -13,6 +13,5 @@ use Spatie\Activitylog\Models\Activity as SpatieActivity;
  */
 abstract class BaseActivity extends SpatieActivity
 {
-    /** @var string */
     protected $connection = 'activity';
 }

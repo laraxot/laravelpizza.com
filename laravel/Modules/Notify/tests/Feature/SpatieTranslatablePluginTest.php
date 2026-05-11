@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Feature;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Filament\Facades\Filament;
 use LaraZeus\SpatieTranslatable\SpatieTranslatablePlugin;
 use Livewire\Livewire;
 use Modules\Notify\Filament\Resources\MailTemplateResource\Pages\ListMailTemplates;
 use Modules\Notify\Models\MailTemplate;
+use Modules\Notify\Tests\TestCase;
 use Modules\Xot\Datas\XotData;
 
 use function Pest\Laravel\actingAs;

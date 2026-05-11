@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit\Actions;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Activity\Actions\LogModelUpdatedAction;
+use Modules\Activity\Tests\TestCase;
 use Modules\User\Models\User;
 
 test('LogModelUpdatedAction can be instantiated', function () {

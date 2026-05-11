@@ -64,14 +64,8 @@ try {
 
 ## Module-Specific Considerations
 
-<<<<<<< .merge_file_LR0Vbe
 ### healthcare_app Module
-=======
-<<<<<<< HEAD
 ### ExternalProject Module
-=======
-### ModuloEsempio Module
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_g7dRzx
 - Optimize survey contact imports
 - Implement JSON payload persistence

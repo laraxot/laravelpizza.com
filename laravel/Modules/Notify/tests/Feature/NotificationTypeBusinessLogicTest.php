@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Feature;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Notify\Models\NotificationType;
+use Modules\Notify\Tests\TestCase;
 
 describe('Notification Type Business Logic', function () {
     it('can create notification type with basic information', function () {

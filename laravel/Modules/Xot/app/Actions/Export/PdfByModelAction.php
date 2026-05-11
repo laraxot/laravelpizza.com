@@ -35,6 +35,7 @@ class PdfByModelAction
             'row' => $model,
             'transKey' => $module_low.'::'.Str::plural($model_name_low).'.fields',
         ];
+
         $view = view($view_name, $view_params);
 
         $html = $view->render();

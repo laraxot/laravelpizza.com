@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Models;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Notify\Enums\NotificationTypeEnum;
 use Modules\Notify\Models\NotificationTemplate;
+use Modules\Notify\Tests\TestCase;
 
 /**
  * Unit tests must not bootstrap the application container.

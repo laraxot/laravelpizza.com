@@ -9,7 +9,6 @@ use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Collection;
 // use Maatwebsite\Excel\Concerns\FromCollection;
 use Illuminate\Support\LazyCollection;
-use Iterator;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\FromIterator;
 use Maatwebsite\Excel\Concerns\WithHeadings;
@@ -55,7 +54,7 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
         }
 
         return collect($this->fields)
-            ->mapWithKeys(function (string $key) use ($rowArray): array {
+            ->mapWithKeys(static function (string $key) use ($rowArray): array {
                 return [$key => $rowArray[$key] ?? null];
             })
             ->toArray();
@@ -98,8 +97,9 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
      */
     public function iterator(): \Iterator
     {
-        /* @phpstan-ignore return.type */
-        return $this->collection->getIterator();
+        $iterator = $this->collection->getIterator();
+
+        return $iterator instanceof \Iterator ? $iterator : new \IteratorIterator($iterator);
     }
 
     /**
@@ -116,7 +116,7 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
             return $row->toArray();
         }
 
-        if (is_array($row)) {
+        if (\is_array($row)) {
             /* @var array<int|string, mixed> */
             return $row;
         }

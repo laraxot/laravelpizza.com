@@ -2,11 +2,9 @@
 
 ## 🎯 Module Purpose
 
-<<<<<<< .merge_file_xrffml
 The Activity module provides comprehensive audit trail and event sourcing capabilities for the healthcare_app Fila5 Mono application. It ensures complete traceability of all user actions and system events for compliance, debugging, and analytics purposes.
-=======
-The Activity module provides comprehensive audit trail and event sourcing capabilities for the ModuloEsempio Fila5 Mono application. It ensures complete traceability of all user actions and system events for compliance, debugging, and analytics purposes.
->>>>>>> .merge_file_PmJDlE
+The Activity module provides comprehensive audit trail and event sourcing capabilities for the Quaeris Fila5 Mono application. It ensures complete traceability of all user actions and system events for compliance, debugging, and analytics purposes.
+The Activity module provides comprehensive audit trail and event sourcing capabilities for the healthcare_app Fila5 Mono application. It ensures complete traceability of all user actions and system events for compliance, debugging, and analytics purposes.
 
 ## 📋 Current Status
 

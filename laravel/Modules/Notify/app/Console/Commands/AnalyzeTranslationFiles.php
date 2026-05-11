@@ -13,15 +13,11 @@ class AnalyzeTranslationFiles extends Command
 {
     /**
      * The name and signature of the console command.
-     *
-     * @var string
      */
     protected $signature = 'notify:analyze-translations';
 
     /**
      * The console command description.
-     *
-     * @var string
      */
     protected $description = 'Analyze translation files in the Notify module to identify inconsistencies';
 

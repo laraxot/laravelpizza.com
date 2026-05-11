@@ -16,15 +16,11 @@ class GenerateModelByModelClassCommand extends Command
 {
     /**
      * The name and signature of the console command.
-     *
-     * @var string
      */
     protected $signature = 'xot:generate-model {model_class}';
 
     /**
      * The console command description.
-     *
-     * @var string
      */
     protected $description = 'generate a model from model_class';
 

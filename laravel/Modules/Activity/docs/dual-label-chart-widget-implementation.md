@@ -763,21 +763,15 @@ protected function getData(): array
 ### PHPStan Level 10 Compliance
 ```bash
 # ✅ Zero errori dopo refactoring
-<<<<<<< .merge_file_fJ7NCR
+./vendor/bin/phpstan analyse Modules/Quaeris/app/Filament/Widgets/SimpleChartWidget.php --memory-limit=-1 --level=10
 ./vendor/bin/phpstan analyse Modules/healthcare_app/app/Filament/Widgets/SimpleChartWidget.php --memory-limit=-1 --level=10
-=======
-./vendor/bin/phpstan analyse Modules/ModuloEsempio/app/Filament/Widgets/SimpleChartWidget.php --memory-limit=-1 --level=10
->>>>>>> .merge_file_OCqe2D
 ```
 
 ### Testing Coverage
 ```bash
 # ✅ 100% coverage per metodi principali
-<<<<<<< .merge_file_fJ7NCR
+./vendor/bin/phpunit --coverage-html=coverage Modules/Quaeris/tests/Unit/SimpleChartWidgetTest.php
 ./vendor/bin/phpunit --coverage-html=coverage Modules/healthcare_app/tests/Unit/SimpleChartWidgetTest.php
-=======
-./vendor/bin/phpunit --coverage-html=coverage Modules/ModuloEsempio/tests/Unit/SimpleChartWidgetTest.php
->>>>>>> .merge_file_OCqe2D
 ```
 
 ### Performance Metrics

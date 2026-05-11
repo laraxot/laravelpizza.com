@@ -6,11 +6,11 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Filament\Forms\Components;
 
-use Filament\Forms\Components\Field;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
+use Modules\Xot\Filament\Forms\Components\XotBaseField;
 
-class TranslationEditor extends Field
+class TranslationEditor extends XotBaseField
 {
     protected string $view = 'lang::filament.forms.components.translation-editor';
 

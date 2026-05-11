@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit;
 
 use Modules\Activity\Models\Policies\StoredEventPolicy;
+use Modules\User\Models\Policies\UserBasePolicy;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -17,7 +18,7 @@ class StoredEventPolicyTest extends TestCase
         $this->assertTrue(
             is_subclass_of(
                 StoredEventPolicy::class,
-                \Modules\User\Models\Policies\UserBasePolicy::class
+                UserBasePolicy::class
             )
         );
     }

@@ -15,7 +15,6 @@ use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Modules\Xot\Filament\Traits\HasXotTable;
-use Override;
 
 /**
  * Classe base per la gestione delle relazioni nelle risorse Filament.
@@ -54,16 +53,6 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
         $formSchema = $this->getFormSchema();
 
         return $schema->components($formSchema);
-    }
-
-    /**
-     * Restituisce lo schema del form per i record correlati.
-     *
-     * @return array<Component>
-     */
-    protected function getFormSchema(): array
-    {
-        return [];
     }
 
     /**
@@ -197,5 +186,15 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
             ->title()
             ->prepend($titleString.' - ')
             ->toString();
+    }
+
+    /**
+     * Restituisce lo schema del form per i record correlati.
+     *
+     * @return array<Component>
+     */
+    protected function getFormSchema(): array
+    {
+        return [];
     }
 }

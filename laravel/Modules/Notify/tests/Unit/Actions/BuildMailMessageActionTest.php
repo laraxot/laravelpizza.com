@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Actions;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Messages\MailMessage;
 use Modules\Notify\Actions\BuildMailMessageAction;
-use Modules\Notify\Actions\NotifyTheme\Get;
-use Modules\Notify\Datas\AttachmentData;
-use Spatie\LaravelData\DataCollection;
 use Spatie\QueueableAction\QueueableAction;
 
 describe('BuildMailMessageAction', function () {

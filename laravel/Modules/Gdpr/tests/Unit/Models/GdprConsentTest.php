@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Models;
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Gdpr\Models\GdprConsent;
+use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Models\User;
 
 test('gdpr consent can be created', function () {

@@ -489,14 +489,8 @@ class MyTableWidget extends XotBaseTableWidget
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_L1QutG
 namespace Modules\healthcare_app\Filament\Widgets;
-=======
-<<<<<<< HEAD
 namespace Modules\Chart\Filament\Widgets;
-=======
-namespace Modules\ExternalProject\Filament\Widgets;
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 >>>>>>> .merge_file_E8WnLK
 
 use Filament\Forms\Components\DatePicker;
@@ -553,14 +547,8 @@ class QuestionChartFilterWidget extends XotBaseWidget
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_L1QutG
 namespace Modules\healthcare_app\Filament\Widgets;
-=======
-<<<<<<< HEAD
 namespace Modules\Chart\Filament\Widgets;
-=======
-namespace Modules\ExternalProject\Filament\Widgets;
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 >>>>>>> .merge_file_E8WnLK
 
 use Filament\Tables\Columns\TextColumn;
@@ -638,14 +626,8 @@ class QuestionChartDataWidget extends XotBaseTableWidget
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_L1QutG
 namespace Modules\healthcare_app\Filament\Widgets;
-=======
-<<<<<<< HEAD
 namespace Modules\Chart\Filament\Widgets;
-=======
-namespace Modules\ExternalProject\Filament\Widgets;
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 >>>>>>> .merge_file_E8WnLK
 
 use Filament\Widgets\ChartWidget;

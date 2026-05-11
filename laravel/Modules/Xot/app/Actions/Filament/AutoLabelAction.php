@@ -44,7 +44,7 @@ class AutoLabelAction
             $class = $component::class;
         }
 
-        if (is_object($class)) {
+        if (\is_object($class)) {
             $class = $class::class;
         }
 
@@ -66,7 +66,7 @@ class AutoLabelAction
         $label_key = $trans_key.'.fields.'.$componentName.'.label';
         $label = trans($label_key);
 
-        if (is_string($label)) {
+        if (\is_string($label)) {
             if ($label_key === $label) {
                 // Se la traduzione non esiste, creiamone una utilizzando il nome del componente
                 $label_value = $componentName;
@@ -75,7 +75,7 @@ class AutoLabelAction
                 $label_key1 = $trans_key.'.fields.'.$componentName;
                 $label1 = trans($label_key1);
 
-                if ($label_key1 !== $label1 && is_string($label1)) {
+                if ($label_key1 !== $label1 && \is_string($label1)) {
                     $label_value = $label1;
                 }
 
@@ -107,14 +107,13 @@ class AutoLabelAction
         if (method_exists($component, 'getName')) {
             $name = $component->getName();
 
-            return is_string($name) ? $name : ((string) $name);
+            return \is_string($name) ? $name : ((string) $name);
         }
 
         // Per i componenti generali di Filament
         // PHPStan rileva che questo controllo è sempre vero per Component
         // ma lo manteniamo per chiarezza e per gestire eventuali cambiamenti futuri in Filament
-        // @phpstan-ignore function.alreadyNarrowedType
-        if (method_exists($component, 'getStatePath')) {
+        if (method_exists($component, 'getStatePath')) { // @phpstan-ignore function.alreadyNarrowedType
             $statePath = $component->getStatePath();
 
             return $statePath ?? class_basename($component);

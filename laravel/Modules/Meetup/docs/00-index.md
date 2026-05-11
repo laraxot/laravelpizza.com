@@ -4,7 +4,6 @@
 
 - [Composer Packages Study](../../../../docs/architecture/composer-packages-study.md) - Analisi completa pacchetti e blast radius runtime.
 - [Riferimento pacchetti](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - `saade/filament-fullcalendar` per calendario eventi
-- [Kinetic UX Screenshot Analysis](kinetic-ux-screenshot-analysis.md) - Evidenze e link alla verifica visiva nel tema
 - [belongsToManyX Relationship Rule](belongstomanyx-relationship-rule.md) - Convenzione canonica per relazioni many-to-many del dominio Meetup
 - [Schema.org Page Type Governance](schema-org-page-type-governance.md) - Distinzione tra entita' di dominio e tipo pagina (`WebPage`, `ProfilePage`, `ItemPage`, `CollectionPage`)
 - [Profile Contract PHPDoc Rule](profile-contract-phpdoc-rule.md) - `creator`, `updater`, `deleter` devono puntare a `ProfileContract`, non a model concreti.

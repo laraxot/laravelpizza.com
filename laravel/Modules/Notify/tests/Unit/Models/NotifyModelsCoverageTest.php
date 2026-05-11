@@ -69,7 +69,7 @@ test('base morph pivot and base pivot use notify connection and default casts', 
 });
 
 test('contact model has expected fillable and casts', function () {
-    $contact = new Contact();
+    $contact = new Contact;
 
     expect($contact->getConnectionName())->toBe('notify')
         ->and($contact->getFillable())->toContain('model_id')
@@ -79,7 +79,7 @@ test('contact model has expected fillable and casts', function () {
 });
 
 test('mail template has slug options and expected casts', function () {
-    $mailTemplate = new MailTemplate();
+    $mailTemplate = new MailTemplate;
 
     expect($mailTemplate->getConnectionName())->toBe('notify')
         ->and($mailTemplate->getFillable())->toContain('slug')
@@ -91,7 +91,7 @@ test('mail template has slug options and expected casts', function () {
 });
 
 test('notification model has array and datetime casts', function () {
-    $notification = new Notification();
+    $notification = new Notification;
 
     expect($notification->getFillable())->toContain('message')
         ->and($notification->getFillable())->toContain('channels')
@@ -123,7 +123,7 @@ test('notification template compile and helper methods return expected structure
 });
 
 test('notify theme exposes logo accessor and morph relation', function () {
-    $theme = new NotifyTheme();
+    $theme = new NotifyTheme;
     $theme->logo_width = 300;
     $theme->logo_height = 120;
 

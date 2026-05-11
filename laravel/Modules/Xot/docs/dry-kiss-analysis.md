@@ -189,7 +189,7 @@ abstract class XotBaseModel extends Model
 **Analisi Necessaria:**
 ```bash
 find docs/ -name "*.md" -type f | xargs grep -l "DEPRECATED\|OLD\|OBSOLETE"
-find docs/archive/ -type f  # Verificare cosa è in archive
+find docs/archived/ -type f  # Verificare cosa è in archive
 ```
 
 **Raccomandazione:**

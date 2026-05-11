@@ -103,6 +103,6 @@ All resources must be tested to ensure:
 
 ### Related Documentation
 
-- [XotBaseResource Documentation](../../xot/docs/filament/resources/xot-base-resource.md)
-- [Filament Best Practices](../../xot/docs/filament-best-practices.md)
-- [Laraxot Extension Patterns](../../xot/docs/base-classes.md)
+- [XotBaseResource Documentation](../../Xot/docs/filament/resources/xot-base-resource.md)
+- [Filament Best Practices](../../Xot/docs/filament-best-practices.md)
+- [Laraxot Extension Patterns](../../Xot/docs/base-classes.md)

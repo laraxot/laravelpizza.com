@@ -9,5 +9,5 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 
 class CreateSnapshot extends XotBaseCreateRecord
 {
-    protected static string $resource = SnapshotResource::class;
+    public static string $resource = SnapshotResource::class;
 }

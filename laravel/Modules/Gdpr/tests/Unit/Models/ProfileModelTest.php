@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Models;
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Gdpr\Models\Profile;
+use Modules\Gdpr\Tests\TestCase;
 
 test('profile_extends_base_profile', function () {
     $profile = new Profile();

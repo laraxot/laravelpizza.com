@@ -5,14 +5,7 @@
  * e <x-filament::icon icon="meetup-{nome}" />. Vedi Modules/Meetup/docs/svg-icons-no-hardcoded-blade.md
  */
 --}}
-<nav
-    x-data="{ mobileMenuOpen: false }"
-    @keydown.escape.window="mobileMenuOpen = false"
-    class="bg-slate-900/95 backdrop-blur-md border-b border-slate-700 sticky top-0 z-50"
-    role="navigation"
-    aria-label="{{ __('pub_theme::navigation.main') }}"
-    id="main-navigation"
->
+<nav class="bg-slate-900/95 backdrop-blur-md border-b border-slate-700 sticky top-0 z-50" role="navigation" aria-label="{{ __('pub_theme::navigation.main') }}" id="main-navigation">
     @php
         $loginLabel = __('pub_theme::navigation.auth.login');
         $registerLabel = __('pub_theme::navigation.auth.register');
@@ -64,27 +57,17 @@
             </div>
 
             <!-- Mobile menu button -->
-            <button
-                    id="mobile-menu-button"
-                    type="button"
+            <button id="mobile-menu-button" 
                     @click="mobileMenuOpen = !mobileMenuOpen"
-                    class="md:hidden text-slate-100 hover:text-white p-2 rounded-lg hover:bg-slate-700/50 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900"
-                    :aria-expanded="mobileMenuOpen.toString()"
-                    aria-controls="mobile-menu"
-                    aria-label="{{ __('pub_theme::navigation.toggle_mobile_menu') }}"
-            >
+                    x-data="{ mobileMenuOpen: false }"
+                    class="md:hidden text-slate-100 hover:text-white p-2 rounded-lg hover:bg-slate-700/50 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" 
+                    aria-expanded="false" aria-controls="mobile-menu" aria-label="{{ __('Toggle mobile menu') }}">
                 <x-filament::icon icon="meetup-icon-menu" class="w-6 h-6" aria-hidden="true" />
             </button>
         </div>
 
         <!-- Mobile menu -->
-        <div
-            id="mobile-menu"
-            x-show="mobileMenuOpen"
-            x-cloak
-            x-transition.opacity.duration.150ms
-            class="md:hidden pb-6"
-        >
+        <div id="mobile-menu" class="hidden md:hidden pb-6">
             <div class="flex flex-col space-y-2 pt-4 border-t border-slate-700/50">
                 <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium" data-nav-link>{{ __('pub_theme::navigation.home') }}</a>
                 <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors flex items-center gap-3 font-medium" data-nav-link>

@@ -34,7 +34,7 @@ class UpdateClientCoordinatesBulkAction
         $successCount = 0;
         $errorMessages = [];
 
-        DB::transaction(function () use ($addresses, &$successCount, &$errorMessages) {
+        DB::transaction(function () use ($addresses, &$successCount, &$errorMessages): void {
             foreach ($addresses as $address) {
                 $fullAddress = is_string($address->full_address) ? $address->full_address : '';
                 $addressData = $this->getAddressDataFromFullAddressAction->execute($fullAddress);

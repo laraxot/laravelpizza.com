@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Models;
 
-uses(\Modules\Geo\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Illuminate\Database\Eloquent\Builder;
 use Modules\Geo\Enums\AddressTypeEnum;
 use Modules\Geo\Models\Address;
 use Modules\Geo\Models\BaseModel;
+use Modules\Geo\Tests\TestCase;
 
 describe('Address Business Logic', function () {
     test('address extends base model', function () {

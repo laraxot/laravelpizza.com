@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Feature;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Notify\Models\MailTemplate;
+use Modules\Notify\Tests\TestCase;
 
 use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\assertDatabaseMissing;

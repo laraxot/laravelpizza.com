@@ -15,8 +15,8 @@ beforeEach(function () {
     $this->testOutputDir = storage_path('tests/docs');
 
     // Create test directory if it doesn't exist
-    if (! File::exists(dirname($this->testSchemaPath))) {
-        File::makeDirectory(dirname($this->testSchemaPath), 0o755, true);
+    if (! File::exists(\dirname($this->testSchemaPath))) {
+        File::makeDirectory(\dirname($this->testSchemaPath), 0o755, true);
     }
 
     // Create a test schema file

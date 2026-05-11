@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Traits;
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Gdpr\Models\Traits\HasGdpr;
+use Modules\Gdpr\Tests\TestCase;
 
 test('has_gdpr_trait_is_trait', function () {
     expect(trait_exists(HasGdpr::class))->toBeTrue();

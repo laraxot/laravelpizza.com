@@ -48,6 +48,5 @@ use Spatie\Health\Models\HealthCheckResultHistoryItem as BaseHealthCheckResultHi
  */
 class HealthCheckResultHistoryItem extends BaseHealthCheckResultHistoryItem
 {
-    /** @var string */
     protected $connection = 'xot';
 }

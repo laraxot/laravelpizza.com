@@ -25,7 +25,7 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 use Override;
 
 /**
- * @property \Filament\Schemas\Schema $pushForm
+ * @property Schema $pushForm
  */
 class SendFirebasePushNotificationPage extends XotBasePage
 {
@@ -60,7 +60,7 @@ class SendFirebasePushNotificationPage extends XotBasePage
     }
 
     /**
-     * @return array<string, \Filament\Forms\Components\TextInput|\Filament\Forms\Components\Textarea|\Filament\Forms\Components\Select|\Filament\Forms\Components\Toggle|\Filament\Forms\Components\KeyValue>
+     * @return array<string, TextInput|Textarea|Select|Toggle|KeyValue>
      */
     public function getPushFormSchema(): array
     {

@@ -15,17 +15,11 @@ use Modules\Xot\Models\XotBaseModel;
  * - Updater trait
  * - Standard casts (published_at, timestamps, audit fields)
  *
- * @see \Modules\Xot\Models\XotBaseModel
+ * @see XotBaseModel
  */
 abstract class BaseModel extends XotBaseModel
 {
-    /**
-     * The connection name for the model.
-     *
-     * This is the ONLY property specific to Activity module.
-     *
-     * @var string
-     */
+    /** @laravel/Modules/UI/docs/bugfix-awstest-undefined-variable.md string|null */
     protected $connection = 'activity';
 
     /**

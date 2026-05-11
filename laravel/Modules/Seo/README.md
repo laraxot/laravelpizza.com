@@ -1,30 +1,144 @@
-# SEO Module
+---
+title: Seo
+module: seo
+related: Xot
+status: production
+---
 
-The SEO module provides enterprise-grade Search Engine Optimization capabilities including meta management, sitemap generation, structured data, analytics integration, and social sharing for Laraxot applications.
+# Seo Module
 
-## 🎯 Core Features
-- 🏷️ **Meta Tag Management**: Dynamic tag generation for titles, descriptions, and keywords.
-- 🗺️ **Sitemap Generation**: Automated XML sitemap creation with index support.
-- 📱 **OpenGraph & Social**: Standardized social media sharing infrastructure and preview tags.
-- 📊 **Schema.org Markup**: JSON-LD structured data integration.
-- 📉 **SEO Analytics**: Score calculation and performance tracking.
-
-## 🏗️ Architecture
-The module follows the Laraxot modular architecture:
-- **Actions**: Domain logic encapsulated in Spatie Queueable Actions.
-- **Widgets**: Reusable Filament components for backoffice integration.
-- **Models**: Robust Eloquent models for SEO metadata.
-
-## 🚀 Getting Started
-Refer to the `docs/` folder for detailed documentation:
-- [00-index.md](./docs/00-index.md) - Documentation Index
-- [roadmap.md](./docs/roadmap.md) - Development Roadmap
-- [social-sharing-component.md](./docs/social-sharing-component.md) - Social Sharing Guide
-
-## 🛠️ Requirements
-- PHP 8.3+
-- Laravel 11.x/12
-- Filament 4.x
+**Module**: `seo`
+**Namespace**: `Modules\Seo\`
+**Status**: ✅ Production
 
 ---
-*Developed by Google DeepMind team - Laraxot methodology*
+
+## Overview
+
+TODO: Add overview for Seo module
+
+### Key Features
+
+- Feature 1
+- Feature 2
+- Feature 3
+
+### Module Dependencies
+
+- [Xot](../Xot/README.md) (required)
+
+---
+
+## Quick Start
+
+### Installation
+
+```bash
+# Already included in main project
+# No additional setup required
+```
+
+### Basic Usage
+
+```php
+use Modules\Seo\Models\YourModel;
+
+$item = YourModel::first();
+```
+
+### Configuration
+
+Configuration file: `config/seo.php`
+
+Key settings:
+- `setting1` - Description
+- `setting2` - Description
+
+---
+
+## Architecture
+
+### Directory Structure
+
+```
+Seo/
+├── src/
+│   ├── Models/
+│   ├── Controllers/
+│   ├── Resources/
+│   ├── Actions/
+│   └── Traits/
+├── routes/
+│   ├── api.php
+│   └── web.php
+├── database/
+│   ├── migrations/
+│   └── seeders/
+├── tests/
+│   ├── Unit/
+│   └── Feature/
+├── config/
+│   └── seo.php
+├── docs/
+│   └── README.md
+└── composer.json
+```
+
+### Key Components
+
+
+
+---
+
+## API Reference
+
+Reference
+
+---
+
+## Usage Examples
+
+### Common Tasks
+
+#### Task 1: Description
+
+```php
+// Code example
+```
+
+---
+
+## Testing
+
+### Running Tests
+
+```bash
+# Run all module tests
+composer test -- Modules/Seo
+```
+
+---
+
+## Troubleshooting
+
+### Common Issues
+
+#### Issue: Problem description
+
+**Solution**: How to fix this issue
+
+---
+
+## Related Modules
+
+### Dependencies
+
+- [Xot](../Xot/README.md) - Required module
+
+### Dependents
+
+- [Blog](../Blog/README.md) - Depends on this module
+
+---
+
+Navigation: [Project Home](../../docs/INDEX.md) | [Modules](../../docs/modules/README.md)

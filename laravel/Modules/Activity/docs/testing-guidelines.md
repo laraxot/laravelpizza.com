@@ -6,9 +6,13 @@
 All tests MUST use `.env.testing` configuration:
 ```env
 APP_ENV=testing
-DB_CONNECTION=sqlite
+DB_CONNECTION=mysql
 DB_DATABASE=<nome progetto>_data_test
 DB_DATABASE=<nome progetto>_data_test
+DB_DATABASE_USER=<nome progetto>_user_test
+DB_DATABASE=<nome progetto>_data_test
+DB_DATABASE=<nome progetto>_data_test
+DB_DATABASE_USER=<nome progetto>_user_test
 ```
 
 ### Pest Framework Usage

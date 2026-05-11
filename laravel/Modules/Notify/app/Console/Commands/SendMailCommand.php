@@ -13,15 +13,11 @@ class SendMailCommand extends Command
 {
     /**
      * The name and signature of the console command.
-     *
-     * @var string
      */
     protected $signature = 'notify:send-mail';
 
     /**
      * The console command description.
-     *
-     * @var string
      */
     protected $description = 'Send an email using user-provided details';
 

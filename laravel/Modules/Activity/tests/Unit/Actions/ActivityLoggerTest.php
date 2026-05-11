@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit\Actions;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Activity\Actions\ActivityLogger;
 use Modules\Activity\Models\Activity;
+use Modules\Activity\Tests\TestCase;
 use Modules\User\Models\User;
 
 test('ActivityLogger can log basic activity', function () {
@@ -147,8 +148,8 @@ test('ActivityLogger can get model activities', function () {
 
     $modelActivities = $logger->getModelActivities($subjectActivity, 10);
 
-    expect($modelActivities)->toHaveCount(1)
-        ->and($modelActivities->first()->subject_id)->toBe($subjectActivity->id);
+    expect($modelActivities)->toHaveCount(1);
+    expect((string) $modelActivities->first()->subject_id)->toBe((string) $subjectActivity->id);
 });
 
 test('ActivityLogger can get activities by type', function () {

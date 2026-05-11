@@ -10,7 +10,7 @@ use Modules\Notify\Tests\TestCase;
 uses(TestCase::class);
 
 test('telegram webhook command has expected signature and handle returns void', function () {
-    $command = new TelegramWebhook();
+    $command = new TelegramWebhook;
 
     expect($command->getName())->toBe('telegram:set-webhook');
 

@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Feature;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Modules\Notify\Models\MailTemplate;
 use Modules\Notify\Models\MailTemplateLog;
+use Modules\Notify\Tests\TestCase;
 
 describe('Mail Template Log Business Logic', function () {
     it('can create mail template log with basic information', function () {

@@ -19,39 +19,7 @@ This document outlines our testing strategy that uses MySQL as the test database
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-<<<<<<< .merge_file_57RPKK
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-DB_DATABASE=<nome progetto>_data_test
-=======
-DB_DATABASE=laravelpizza_data_test
->>>>>>> a038b0f2 (.)
-=======
-DB_DATABASE=<nome progetto>_data_test
->>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
-=======
-DB_DATABASE=laravelpizza_data_test
->>>>>>> a038b0f2 (.)
-=======
-DB_DATABASE=<nome progetto>_data_test
->>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
-=======
-DB_DATABASE=laravelpizza_data_test
->>>>>>> a038b0f2 (.)
-=======
-DB_DATABASE=<nome progetto>_data_test
->>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
-=======
 DB_DATABASE=test_database
->>>>>>> e3956292 (.)
-=======
-DB_DATABASE=test_database
->>>>>>> .merge_file_ZcqZdj
 DB_USERNAME=root
 DB_PASSWORD=
 ```

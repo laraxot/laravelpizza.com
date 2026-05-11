@@ -1,0 +1,11 @@
+stai facendo errori con le traduzioni percio' studia a fondo
+https://spatie.be/docs/laravel-translatable/v6/introduction
+https://github.com/spatie/laravel-translatable
+https://github.com/lara-zeus/spatie-translatable
+https://spatie.be/docs/laravel-translatable/v6/basic-usage/querying-translations
+https://github.com/spatie/nova-translatable
+https://github.com/mcamara/laravel-localization
+e correggi tutti gli errori che trovi nel codice, non lasciare nulla di intentato !
+
+
+  aggiorna studia e migliora le tue docs, le tue rules, le tue memories, le tue skills, ricorda che dopo aver modificato un file devi controllarlo con phpstan,phpmd, phpinsights e pest, ricorda che questo task lo diamo a piu' agenti ai, percio' comportati di conseguenza e cerca di unire le forze con gli altri agenti ai 

@@ -148,8 +148,6 @@ class ImportCsvAction
      * @return array<ColumnData>
      *
      * @deprecated this method is currently unused but kept for future expansion
-     *
-     * @phpstan-ignore method.unused
      */
     private function transformColumnsToColumnData(array $columns): array
     {

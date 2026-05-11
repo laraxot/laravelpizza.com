@@ -43,7 +43,7 @@ class SaveGdprConsentsAction
             if ($treatment) {
                 Consent::create([
                     'user_id' => $user->id,
-                    'user_type' => get_class($user),
+                    'user_type' => $user::class,
                     'treatment_id' => $treatment->id,
                     'type' => $treatmentName,
                     'accepted_at' => $isAccepted ? now() : null,

@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit\Models;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Activity\Models\StoredEvent;
+use Modules\Activity\Tests\TestCase;
+use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent;
 
 test('StoredEvent model can be instantiated', function () {
     $reflection = new \ReflectionClass(StoredEvent::class);
@@ -14,7 +16,7 @@ test('StoredEvent model can be instantiated', function () {
 
     expect($storedEvent)->toBeObject();
     // Verifichiamo che estenda il modello corretto da Spatie
-    expect($storedEvent)->toBeInstanceOf(\Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent::class);
+    expect($storedEvent)->toBeInstanceOf(EloquentStoredEvent::class);
 });
 
 test('StoredEvent model has correct connection', function () {

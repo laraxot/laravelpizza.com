@@ -26,7 +26,7 @@ use Override;
 use Webmozart\Assert\Assert;
 
 /**
- * @property \Filament\Schemas\Schema $smsForm
+ * @property Schema $smsForm
  */
 class SendSmsPage extends XotBasePage
 {
@@ -71,7 +71,7 @@ class SendSmsPage extends XotBasePage
     }
 
     /**
-     * @return array<string, \Filament\Forms\Components\TextInput|\Filament\Forms\Components\Select>
+     * @return array<string, TextInput|Select>
      */
     public function getSmsFormSchema(): array
     {

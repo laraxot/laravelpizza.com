@@ -19,20 +19,6 @@ class RouteDynService
 {
     private static string $namespace_start = '';
 
-    // Commentato: La proprietà $curr non viene mai letta, quindi potrebbe essere rimossa
-    // private static ?string $curr = null;
-
-    /**
-     * @param array<string, mixed> $v
-     */
-    private static function requireStringValue(array $v, string $key): string
-    {
-        Assert::keyExists($v, $key);
-        Assert::string($value = $v[$key], __FILE__.':'.__LINE__.' - '.class_basename(self::class));
-
-        return $value;
-    }
-
     /**
      * @param array<string, mixed> $v
      *
@@ -217,10 +203,7 @@ class RouteDynService
      */
     public static function getUri(array $v, ?string $_namespace): string
     {
-        $name = self::requireStringValue($v, 'name');
-
-        // return mb_strtolower(is_string($v) ? $v : (string) $v['name);
-        return $name;
+        return self::requireStringValue($v, 'name');
     }
 
     /**
@@ -329,8 +312,12 @@ class RouteDynService
         $sub_namespace = self::getNamespace($v, $namespace);
         $curr = null === $curr ? $sub_namespace : $curr;
         Assert::isArray($subs = $v['subs']);
-        /* @var array<int, array<string, mixed>> $subs */
-        self::dynamic_route($subs, $sub_namespace, null, $curr);
+        $typedSubs = array_values(array_filter(
+            $subs,
+            static fn (mixed $sub): bool => is_array($sub),
+        ));
+        /* @var array<int, array<string, mixed>> $typedSubs */
+        self::dynamic_route($typedSubs, $sub_namespace, null, $curr);
     }
 
     /**
@@ -374,6 +361,20 @@ class RouteDynService
             'update' => $prefix.'.update',
             'destroy' => $prefix.'.destroy',
         ];
+    }
+
+    // Commentato: La proprietà $curr non viene mai letta, quindi potrebbe essere rimossa
+    // private static ?string $curr = null;
+
+    /**
+     * @param array<string, mixed> $v
+     */
+    private static function requireStringValue(array $v, string $key): string
+    {
+        Assert::keyExists($v, $key);
+        Assert::string($value = $v[$key], __FILE__.':'.__LINE__.' - '.class_basename(self::class));
+
+        return $value;
     }
 
     // --------------------------------------------------

@@ -78,16 +78,13 @@ class GeoDataValidator
      *
      * @param array $data Dati da validare
      *
-     * @return array<string, array<int, string>>
+     * @return array<string, array<string>>
      */
     public function getErrors(array $data): array
     {
         $validator = Validator::make($data, self::VALIDATION_RULES, self::CUSTOM_MESSAGES);
 
-        /** @var array<string, array<int, string>> $errors */
-        $errors = $validator->errors()->toArray();
-
-        return $errors;
+        return $validator->errors()->toArray();
     }
 
     /**

@@ -5,21 +5,20 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit\Actions;
 
 use Modules\Activity\Actions\LogModelCreatedAction;
-use Modules\Activity\Actions\LogModelUpdatedAction;
 use Modules\Activity\Actions\LogModelDeletedAction;
+use Modules\Activity\Actions\LogModelUpdatedAction;
 use Modules\Activity\Actions\LogUserLogoutAction;
-use Modules\Activity\Models\Activity;
 use Modules\User\Models\User;
 use Tests\TestCase;
 
 uses(TestCase::class);
 
 describe('Activity Lifecycle Actions', function () {
-    
+
     it('can log model creation via LogModelCreatedAction', function () {
         $user = User::factory()->create(['name' => 'New User']);
         $action = app(LogModelCreatedAction::class);
-        
+
         $activity = $action->execute($user);
 
         expect($activity->log_name)->toBe('created');
@@ -32,8 +31,8 @@ describe('Activity Lifecycle Actions', function () {
         $user = User::factory()->create(['name' => 'Old Name']);
         $user->name = 'New Name';
         // Note: in memory changes only for this test, as LogModelUpdatedAction uses getChanges()
-        $user->syncChanges(); 
-        
+        $user->syncChanges();
+
         $action = app(LogModelUpdatedAction::class);
         $activity = $action->execute($user);
 
@@ -45,7 +44,7 @@ describe('Activity Lifecycle Actions', function () {
     it('can log model deletion via LogModelDeletedAction', function () {
         $user = User::factory()->create();
         $action = app(LogModelDeletedAction::class);
-        
+
         $activity = $action->execute($user);
 
         expect($activity->log_name)->toBe('deleted');
@@ -56,8 +55,8 @@ describe('Activity Lifecycle Actions', function () {
     it('can log user logout via LogUserLogoutAction', function () {
         // First refactor LogUserLogoutAction
         $user = User::factory()->create(['name' => 'Logged Out User']);
-        $action = app(\Modules\Activity\Actions\LogUserLogoutAction::class);
-        
+        $action = app(LogUserLogoutAction::class);
+
         $activity = $action->execute($user);
 
         expect($activity->log_name)->toBe('logout');

@@ -14,8 +14,7 @@ use Modules\Lang\Models\Translation;
 
 class TranslatorService extends LaravelTranslator
 {
-    /** @var Dispatcher */
-    protected $events;
+    protected Dispatcher $events;
 
     /**
      * Get the translation for the given key.

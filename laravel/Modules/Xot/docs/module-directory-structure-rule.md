@@ -159,7 +159,7 @@ Tutti i moduli devono avere la stessa struttura per:
 
 ### 4. Helpers nella Root
 
-**Violazione**: `Modules/Xot/helpers/Helper.php` o `Modules/Xot/helpers/Helper.php`
+**Violazione**: `Modules/Xot/Helpers/Helper.php` o `Modules/Xot/helpers/Helper.php`
 
 **Fix**: Se sono helper moderni, spostare in `Modules/Xot/app/Helpers/`. Se sono legacy, rimuovere.
 

@@ -235,9 +235,9 @@ database/seeders
 docs
 docs/.github
 docs/.github/workflows
-docs/archived
-docs/archived/.github
-docs/archived/.github/workflows
+docs/archivedd
+docs/archivedd/.github
+docs/archivedd/.github/workflows
 docs/database
 docs/phpstan
 lang

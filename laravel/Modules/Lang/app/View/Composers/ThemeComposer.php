@@ -141,7 +141,7 @@ class ThemeComposer
         if (! is_string($routeName)) {
             return '#';
         }
-        $routeParameters = array_merge(getRouteParameters(), ['lang' => $locale]);
+        $routeParameters = array_merge(Route::current()?->parameters() ?? [], ['lang' => $locale]);
         $queryParameters = request()->all();
 
         $url = route($routeName, $routeParameters);

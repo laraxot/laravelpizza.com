@@ -275,7 +275,7 @@ class MetatagData extends Data implements Wireable
 
         // Convert Filament color arrays to simple string format
         foreach ($filamentColors as $key => $colorArray) {
-            if (is_array($colorArray) && ! empty($colorArray)) {
+            if (\is_array($colorArray) && ! empty($colorArray)) {
                 // Use the first color in the array as the default
                 $defaults[$key] = (string) $colorArray[0];
             }
@@ -421,7 +421,7 @@ class MetatagData extends Data implements Wireable
 
         // Convert custom color format to Filament color format
         foreach ($this->colors as $key => $value) {
-            if (is_array($value) && Arr::has($value, 'color')) {
+            if (\is_array($value) && Arr::has($value, 'color')) {
                 // Convert single color value to array format for Filament compatibility
                 $colorValue = (string) $value['color'];
                 $customColors[$key] = [$colorValue];
@@ -698,7 +698,7 @@ class MetatagData extends Data implements Wireable
      */
     private function getMimeTypeFromPath(string $filePath): string
     {
-        $extension = \strtolower(\pathinfo($filePath, PATHINFO_EXTENSION));
+        $extension = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
 
         return match ($extension) {
             'png' => 'image/png',

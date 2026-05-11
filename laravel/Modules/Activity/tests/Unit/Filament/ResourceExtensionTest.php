@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit\Filament;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Activity\Filament\Resources\ActivityResource;
 use Modules\Activity\Filament\Resources\SnapshotResource;
 use Modules\Activity\Filament\Resources\StoredEventResource;
+use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 
 test('activity resources extend xot base resource', function () {

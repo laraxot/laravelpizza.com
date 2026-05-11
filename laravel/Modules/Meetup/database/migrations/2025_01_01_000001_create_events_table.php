@@ -16,7 +16,7 @@ return new class extends XotBaseMigration
             $this->tableCreate(function (Blueprint $table) {
                 $table->id();
                 $table->string('title')->index();
-                $table->string('slug')->unique();
+                $table->string('slug')->unique()->after('title');
                 $table->string('alternate_name')->nullable();
                 $table->text('description')->nullable();
                 $table->string('in_language', 10)->default('it');

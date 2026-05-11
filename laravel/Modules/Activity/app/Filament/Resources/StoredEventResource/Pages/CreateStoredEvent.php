@@ -9,5 +9,5 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 
 class CreateStoredEvent extends XotBaseCreateRecord
 {
-    protected static string $resource = StoredEventResource::class;
+    public static string $resource = StoredEventResource::class;
 }

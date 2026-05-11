@@ -498,11 +498,26 @@ return [
             'tooltip' => '',
         ],
         'address' => [
-            'label' => 'address',
+            'label' => 'address2',
             'placeholder' => 'address',
             'helper_text' => 'address',
             'description' => 'address',
             'tooltip' => '',
+        ],
+        'display_name' => [
+            'label' => 'display_name',
+        ],
+        'location' => [
+            'label' => 'location',
+            'placeholder' => 'location',
+            'helper_text' => 'location',
+            'description' => 'location',
+        ],
+        'coordinates' => [
+            'label' => 'coordinates',
+            'placeholder' => 'coordinates',
+            'helper_text' => 'coordinates',
+            'description' => 'coordinates',
         ],
     ],
     'actions' => [
@@ -585,5 +600,10 @@ return [
         'label' => 'Txt',
         'sort' => 1,
         'icon' => 'heroicon-o-collection',
+    ],
+    'steps' => [
+        'test' => [
+            'label' => 'test',
+        ],
     ],
 ];

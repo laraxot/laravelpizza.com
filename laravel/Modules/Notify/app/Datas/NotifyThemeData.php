@@ -16,5 +16,8 @@ class NotifyThemeData extends Data
 
     public string $body_html;
 
-    public array $view_params;
+    /**
+     * @var array<string, mixed>
+     */
+    public array $view_params = [];
 }

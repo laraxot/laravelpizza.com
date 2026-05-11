@@ -296,3 +296,5 @@ Common issues and solutions:
 - Privacy policy version management
 - Hardcoded strings in multilingual sites
 - Translation key inconsistencies
+
+- [Conflict Resolution](conflict-resolution.md)

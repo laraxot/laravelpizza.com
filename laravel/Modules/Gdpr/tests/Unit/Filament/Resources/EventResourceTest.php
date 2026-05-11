@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Filament\Resources;
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Gdpr\Filament\Resources\EventResource;
 use Modules\Gdpr\Models\Event;
+use Modules\Gdpr\Tests\TestCase;
 
 test('event_resource_extends_xot_base_resource', function () {
     expect(is_subclass_of(EventResource::class, Modules\Xot\Filament\Resources\XotBaseResource::class))->toBeTrue();

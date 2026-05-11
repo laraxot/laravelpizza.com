@@ -67,7 +67,7 @@ composer format        # Formatta il codice
 ## Configurazione
 ### File di Configurazione
 - Configurazioni in `config/`
-- Helpers in `helpers/Helper.php`
+- Helpers in `Helpers/Helper.php`
 - Supporto per Redis/Predis
 
 ## Best Practices

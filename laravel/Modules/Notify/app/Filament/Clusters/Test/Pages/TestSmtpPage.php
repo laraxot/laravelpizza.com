@@ -24,7 +24,7 @@ use Override;
 use Webmozart\Assert\Assert;
 
 /**
- * @property \Filament\Schemas\Schema $emailForm
+ * @property Schema $emailForm
  */
 class TestSmtpPage extends XotBasePage
 {

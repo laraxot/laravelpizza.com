@@ -6,6 +6,7 @@ namespace Modules\Activity\Tests\Unit;
 
 use Modules\Activity\Models\Policies\ActivityPolicy;
 use Modules\Activity\Tests\TestCase;
+use Modules\User\Models\Policies\UserBasePolicy;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Attributes\Test;
 
@@ -17,7 +18,7 @@ class ActivityPolicyTest extends TestCase
         $this->assertTrue(
             is_subclass_of(
                 ActivityPolicy::class,
-                \Modules\User\Models\Policies\UserBasePolicy::class
+                UserBasePolicy::class
             )
         );
     }
@@ -65,7 +66,7 @@ class ActivityPolicyTest extends TestCase
         $user = $this->createMock(User::class);
         $user->method('hasPermissionTo')->with('activity.view')->willReturn(true);
 
-        $policy = new ActivityPolicy();
+        $policy = new ActivityPolicy;
         $result = $policy->view($user);
 
         $this->assertTrue($result);
@@ -78,7 +79,7 @@ class ActivityPolicyTest extends TestCase
         $user = $this->createMock(User::class);
         $user->method('hasPermissionTo')->with('activity.view')->willReturn(false);
 
-        $policy = new ActivityPolicy();
+        $policy = new ActivityPolicy;
         $result = $policy->view($user);
 
         $this->assertFalse($result);

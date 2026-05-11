@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Actions;
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Gdpr\Actions\SaveGdprConsentsAction;
+use Modules\Gdpr\Tests\TestCase;
 
 test('SaveGdprConsentsAction can be instantiated', function () {
     $action = new SaveGdprConsentsAction();

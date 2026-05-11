@@ -7,8 +7,9 @@ namespace Modules\Activity\Tests\Feature\Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Activity\Filament\Actions\ListLogActivitiesAction;
+use Modules\Activity\Tests\TestCase;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('action has correct default name', function (): void {
     expect(ListLogActivitiesAction::getDefaultName())->toBe('list_log_activities');

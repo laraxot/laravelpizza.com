@@ -100,7 +100,7 @@ class NotificationTemplateVersionBusinessLogicTest extends TestCase
             'template_id' => 99999, // Template inesistente
         ]);
 
-        $this->expectException(\RuntimeException::class);
+        $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage('Template not found for version '.$version->id);
 
         $version->restore();

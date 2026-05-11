@@ -7,6 +7,7 @@ namespace Modules\Notify\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 use Modules\Notify\Database\Factories\ContactFactory;
+use Modules\Xot\Contracts\ProfileContract;
 use Override;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
@@ -53,6 +54,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @property string|null $sms_status_txt
  * @property int|null $duplicate_count
  * @property int|null $order_column
+ *
  * @method static ContactFactory factory($count = null, $state = [])
  * @method static Builder|Contact newModelQuery()
  * @method static Builder|Contact newQuery()
@@ -79,9 +81,12 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @method static Builder|Contact whereUserId($value)
  * @method static Builder|Contact whereValue($value)
  * @method static Builder|Contact whereVerifiedAt($value)
+ *
  * @mixin Eloquent
+ *
  * @property string|null $email
  * @property string|null $mobile_phone
+ *
  * @method static Builder|Contact whereAttribute1($value)
  * @method static Builder|Contact whereAttribute10($value)
  * @method static Builder|Contact whereAttribute11($value)
@@ -100,16 +105,21 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @method static Builder|Contact whereEmail($value)
  * @method static Builder|Contact whereFirstName($value)
  * @method static Builder|Contact whereUsesleft($value)
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $updater
  * @property MediaCollection<int, Media> $media
  * @property int|null $media_count
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
+ *
  * @method static Builder<static>|Contact whereDeletedAt($value)
  * @method static Builder<static>|Contact whereDeletedBy($value)
+ *
  * @mixin IdeHelperContact
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ *
+ * @property-read ProfileContract|null $deleter
+ *
  * @mixin \Eloquent
  */
 class Contact extends BaseModel

@@ -38,7 +38,7 @@ class SmsDriverEnumTest extends TestCase
     /** @test */
     public function it_has_trans_trait(): void
     {
-        $reflection = new \ReflectionClass(SmsDriverEnum::class);
+        $reflection = new ReflectionClass(SmsDriverEnum::class);
         $traits = $reflection->getTraitNames();
 
         $this->assertContains('Modules\Xot\Filament\Traits\TransTrait', $traits);

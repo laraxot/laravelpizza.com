@@ -7,7 +7,7 @@ parameters:
         - .
     checkOctaneCompatibility: true
     checkModelProperties: true
-    checkMissingIterableValueType: false
     excludePaths:
         - ./vendor/*
         - ./docs/*
+        - ./tests/Unit/Traits/*

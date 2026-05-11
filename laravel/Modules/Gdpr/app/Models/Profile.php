@@ -109,6 +109,5 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  */
 class Profile extends BaseProfile
 {
-    /** @var string */
     protected $connection = 'gdpr';
 }

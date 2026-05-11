@@ -36,14 +36,14 @@ The Gdpr module's MCP configuration enables AI assistants to interact with:
     },
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_<nome progetto>/laravel"],
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", ". progetto>/laravel"],
       "description": "Access to Gdpr module files"
     },
     "database": {
       "command": "npx",
       "args": ["-y", "@bytebase/dbhub"],
       "env": {
-        "DATABASE_URL": "sqlite:///var/www/_bases/base_<nome progetto>/laravel/database/database.sqlite"
+        "DATABASE_URL": "sqlite://. progetto>/laravel/database/database.sqlite"
       },
       "description": "SQLite database queries"
     }

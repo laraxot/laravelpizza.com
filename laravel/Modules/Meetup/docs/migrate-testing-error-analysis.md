@@ -59,13 +59,3 @@ php artisan migrate --env=testing -vvv
 
 Esito atteso:
 - superamento migration `2025_01_01_000008_create_event_user_table` senza `42S21`.
-
-## Applicazione linea guida (2026-04-16)
-
-Modifiche applicate alle migration Meetup:
-
-- `2025_01_01_000008_create_event_user_table.php`: mantiene `user_id` come colonna di dominio, usa `tableCreate()` senza guard esterno, aggiunge `created_by`/`updated_by` tramite `foreignIdFor($userClass, ...)` e usa `updateTimestamps()` nel ramo di update.
-- `2026_03_05_000001_create_event_user_table.php`: rimossa perché duplicava la creazione della stessa tabella `event_user`. La fonte di verità resta la migration 2025.
-- `2026_03_08_102952_CreateMeetupFeedbacksTable.php`: mantiene `user_id` come colonna di dominio, usa audit columns tramite `foreignIdFor($userClass, ...)`, `softDeletes()` e `updateTimestamps(..., hasSoftDeletes: true)` nel ramo di update.
-
-La correzione segue la regola Laraxot: una sola migration di creazione per tabella e separazione esplicita tra `user_id` di dominio e colonne audit.

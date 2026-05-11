@@ -30,7 +30,8 @@ class SanitizeFieldsHeaderAction extends Action
             ->action(function (ListRecords $livewire): void {
                 $resource = $livewire->getResource();
                 $modelClass = $resource::getModel();
-                // @phpstan-ignore staticMethod.nonObject
+                Assert::string($modelClass);
+                /** @var class-string<Model> $modelClass */
                 $rows = $modelClass::get();
                 if (! is_iterable($rows)) {
                     $rows = [];
@@ -40,7 +41,7 @@ class SanitizeFieldsHeaderAction extends Action
                     Assert::isInstanceOf($row, Model::class);
                     $save = false;
                     foreach ($this->fields as $field) {
-                        $fieldName = is_string($field) ? $field : (string) $field;
+                        $fieldName = \is_string($field) ? $field : (string) $field;
                         $item = $row->{$fieldName};
                         Assert::string($item, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
                         $string = app(SanitizeAction::class)->execute($item);

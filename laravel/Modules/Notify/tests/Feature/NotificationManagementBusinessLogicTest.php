@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Feature;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Notify\Helpers\ConfigHelper;
 use Modules\Notify\Models\Contact;
 use Modules\Notify\Models\Notification;
 use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Models\NotificationType;
+use Modules\Notify\Tests\TestCase;
 
 describe('Notification Management Business Logic', function () {
     it('can create notification with basic information', function () {

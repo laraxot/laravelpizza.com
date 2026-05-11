@@ -175,11 +175,7 @@ protected function createApplication()
     $app = parent::createApplication();
     
     $app['config']->set([
-<<<<<<< .merge_file_2lyvDW
         'database.connections.gdpr.database' => 'healthcare_app_data_test',
-=======
-        'database.connections.gdpr.database' => 'ptvx_data_test',
->>>>>>> .merge_file_y6Fb9B
     ]);
     
     return $app;

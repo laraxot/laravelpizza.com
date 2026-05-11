@@ -21,11 +21,7 @@ class ArrayService
         return false;
     }
 
-    /**
-     * @param array $array1
-     * @param array $array2
-     */
-    public static function diff_assoc_recursive($array1, $array2): array
+    public static function diff_assoc_recursive(array $array1, array $array2): array
     {
         $outputDiff = [];
         foreach ($array1 as $key => $value) {

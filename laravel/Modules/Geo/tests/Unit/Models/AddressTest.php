@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Models;
 
-uses(\Modules\Geo\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\Geo\Models\Address;
 use Modules\Geo\Models\Comune;
 use Modules\Geo\Models\Province;
+use Modules\Geo\Tests\TestCase;
 
 beforeEach(function () {
     $this->address = Address::factory()->create();

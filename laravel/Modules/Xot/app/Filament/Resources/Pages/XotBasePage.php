@@ -50,10 +50,6 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      */
     public function getView(): string
     {
-        if (isset($this->view)) {
-            return $this->view;
-        }
-
         $view = Str::of(static::class)
             ->after('Modules\\')
             ->before('\\Filament\\')
@@ -71,14 +67,14 @@ abstract class XotBasePage extends FilamentPage implements HasForms
 
     public function getViewTest(): string
     {
-        $class = __CLASS__;
+        $class = self::class;
         $module = Str::between($class, 'Modules\\', '\Filament');
 
         $after = explode('\\', Str::after($class, '\Filament\\'));
         $after[1] = Str::before($after[1], 'Resource');
         $after[3] = Str::before($after[3], $after[1]);
 
-        $after = collect($after)->map(function ($item) {
+        $after = collect($after)->map(static function ($item) {
             return Str::kebab($item);
             // return Str::snake($item);
         })->implode('.');
@@ -161,6 +157,18 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     }
 
     /**
+     * Get the resources associated with this page.
+     *
+     * @return Collection<int, string>
+     */
+    public static function getResources(): Collection
+    {
+        /* @var Collection<int, string> $resources */
+        // @phpstan-ignore-next-line
+        return collect([]);
+    }
+
+    /**
      * Get the form model for the page.
      * Filament compatibility method.
      *
@@ -178,19 +186,6 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     protected function getFormContext(): ?string
     {
         return 'edit';
-    }
-
-    /**
-     * Get the resources associated with this page.
-     *
-     * @return Collection<int, string>
-     */
-    public static function getResources(): Collection
-    {
-        /** @var Collection<int, string> $resources */
-        $resources = collect([]);
-
-        return $resources;
     }
 
     /**

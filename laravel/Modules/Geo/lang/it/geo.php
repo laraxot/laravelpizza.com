@@ -135,4 +135,33 @@ return [
             'label' => 'Elimina Geo',
         ],
     ],
+
+    // Coordinate Picker - Map Controls
+    'coordinate-picker' => [
+        'search_placeholder' => 'Cerca un luogo...',
+        'use_my_location' => 'Usa la mia posizione',
+        'locating' => 'Localizzando...',
+        'no_position' => 'Clicca sulla mappa per indicare la posizione',
+        'latitude' => 'Latitudine',
+        'longitude' => 'Longitudine',
+        'city' => 'Città',
+        'fullscreen' => 'Schermo intero',
+        'close_fullscreen' => 'Esci da schermo intero',
+        'zoom_in' => 'Aumenta zoom',
+        'zoom_out' => 'Diminuisci zoom',
+        'layers' => [
+            'street' => 'Stradale (OSM)',
+            'humanitarian' => 'Umanitaria (OSM)',
+            'satellite' => 'Satellitare (Esri)',
+            'terrain' => 'Terreno (Topo)',
+            'topographic' => 'Topografica (Esri)',
+        ],
+        'address_found' => 'Indirizzo trovato',
+        'location_error' => 'Impossibile ottenere la posizione',
+        'location_denied' => 'Permesso posizione negato',
+        'geocode_error' => 'Indirizzo non trovato',
+        'search_results' => 'Risultati ricerca',
+        'no_results' => 'Nessun risultato',
+        'coordinates_set' => 'Coordinate impostate',
+    ],
 ];

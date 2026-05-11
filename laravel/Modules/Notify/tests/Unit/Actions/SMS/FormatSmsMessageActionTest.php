@@ -17,7 +17,7 @@ describe('FormatSmsMessageAction', function () {
     });
 
     it('has execute method with correct signature', function () {
-        $reflection = new \ReflectionClass($this->action);
+        $reflection = new ReflectionClass($this->action);
         $method = $reflection->getMethod('execute');
 
         expect($method->isPublic())->toBeTrue();
@@ -25,7 +25,7 @@ describe('FormatSmsMessageAction', function () {
     });
 
     it('execute accepts string parameter', function () {
-        $reflection = new \ReflectionClass($this->action);
+        $reflection = new ReflectionClass($this->action);
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
@@ -33,7 +33,7 @@ describe('FormatSmsMessageAction', function () {
     });
 
     it('execute returns array', function () {
-        $reflection = new \ReflectionClass($this->action);
+        $reflection = new ReflectionClass($this->action);
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
@@ -41,7 +41,7 @@ describe('FormatSmsMessageAction', function () {
     });
 
     it('uses strict types', function () {
-        $reflection = new \ReflectionClass($this->action);
+        $reflection = new ReflectionClass($this->action);
         $filename = $reflection->getFileName();
 
         expect($filename)->not->toBeNull();
@@ -51,13 +51,13 @@ describe('FormatSmsMessageAction', function () {
     });
 
     it('has correct namespace', function () {
-        $reflection = new \ReflectionClass($this->action);
+        $reflection = new ReflectionClass($this->action);
 
         expect($reflection->getNamespaceName())->toBe('Modules\Notify\Actions\SMS');
     });
 
     it('has required imports', function () {
-        $reflection = new \ReflectionClass($this->action);
+        $reflection = new ReflectionClass($this->action);
         $filename = $reflection->getFileName();
 
         expect($filename)->not->toBeNull();

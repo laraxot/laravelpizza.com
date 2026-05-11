@@ -15,6 +15,14 @@ use Illuminate\Support\Str;
 trait HasUuid
 {
     /**
+     * Initialize the trait.
+     */
+    public function initializeHasUuid(): void
+    {
+        $this->mergeCasts(['uuid' => 'string']);
+    }
+
+    /**
      * Boot the trait.
      */
     protected static function bootHasUuid(): void
@@ -24,13 +32,5 @@ trait HasUuid
                 $model->uuid = (string) Str::uuid();
             }
         });
-    }
-
-    /**
-     * Initialize the trait.
-     */
-    public function initializeHasUuid(): void
-    {
-        $this->mergeCasts(['uuid' => 'string']);
     }
 }

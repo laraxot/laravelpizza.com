@@ -22,7 +22,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Filament\Traits\HasXotTable;
-use stdClass;
 use Webmozart\Assert\Assert;
 
 /**
@@ -95,68 +94,6 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         return $this->getResource()::getFormSchema();
     }
 
-    /**
-     * @return array<int|string, Column|LayoutComponent>
-     */
-    #[\Override]
-    protected function getTableColumns(): array
-    {
-        $index = Arr::get($this->getResource()::getPages(), 'index');
-        if (! $index) {
-            // throw new \Exception('Index page not found');
-            return [];
-        }
-
-        if (! \is_object($index) || ! method_exists($index, 'getPage')) {
-            return [];
-        }
-
-        $index_page = $index->getPage();
-
-        if (! \is_object($index_page) && ! \is_string($index_page)) {
-            return [];
-        }
-
-        if (! method_exists($index_page, 'getTableColumns')) {
-            // throw new \Exception('method  getTableColumns on '.print_r($index_page,true).' not found');
-            return [];
-        }
-
-        $instance = \is_string($index_page) ? app($index_page) : $index_page;
-        if (! \is_object($instance) || ! method_exists($instance, 'getTableColumns')) {
-            return [];
-        }
-
-        $res = $instance->getTableColumns();
-
-        if (! \is_array($res)) {
-            return [];
-        }
-
-        // Ensure string keys always
-        /** @var array<string, Column|LayoutComponent> $assoc */
-        $assoc = [];
-        foreach ($res as $key => $column) {
-            // Verifica che $column sia del tipo corretto
-            if (! ($column instanceof Column) && ! ($column instanceof LayoutComponent)) {
-                continue;
-            }
-
-            if (\is_string($key)) {
-                $assoc[$key] = $column;
-
-                continue;
-            }
-
-            // $column è già verificato come instance di Column|LayoutComponent sopra
-            $name = method_exists($column, 'getName') ? $column->getName() : (string) spl_object_hash($column);
-            $nameStr = \is_string($name) ? $name : (string) $name;
-            $assoc[$nameStr] = $column;
-        }
-
-        return $assoc;
-    }
-
     // */
     /**
      * Get table actions.
@@ -226,7 +163,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     {
         $actions = [];
         $me = $this;
-        // @phpstan-ignore function.alreadyNarrowedType
+        // @phpstan-ignore-next-line
         if (method_exists($me, 'canAttach')) {
             $actions['attach'] = AttachAction::make()
                 ->icon('heroicon-o-link')
@@ -234,7 +171,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
                 ->tooltip(__('user::actions.attach.label'))
                 ->visible(static fn (?Model $_record): bool => $me->canAttach());
         }
-        // @phpstan-ignore function.alreadyNarrowedType
+        // @phpstan-ignore-next-line
         if (method_exists($me, 'canCreate')) {
             $actions['create'] = CreateAction::make()
                 ->icon('heroicon-o-plus')
@@ -280,5 +217,67 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         }
 
         return true;
+    }
+
+    /**
+     * @return array<int|string, Column|LayoutComponent>
+     */
+    #[\Override]
+    protected function getTableColumns(): array
+    {
+        $index = Arr::get($this->getResource()::getPages(), 'index');
+        if (! $index) {
+            // throw new \Exception('Index page not found');
+            return [];
+        }
+
+        if (! \is_object($index) || ! method_exists($index, 'getPage')) {
+            return [];
+        }
+
+        $index_page = $index->getPage();
+
+        if (! \is_object($index_page) && ! \is_string($index_page)) {
+            return [];
+        }
+
+        if (! method_exists($index_page, 'getTableColumns')) {
+            // throw new \Exception('method  getTableColumns on '.print_r($index_page,true).' not found');
+            return [];
+        }
+
+        $instance = \is_string($index_page) ? app($index_page) : $index_page;
+        if (! \is_object($instance) || ! method_exists($instance, 'getTableColumns')) {
+            return [];
+        }
+
+        $res = $instance->getTableColumns();
+
+        if (! \is_array($res)) {
+            return [];
+        }
+
+        // Ensure string keys always
+        /** @var array<string, Column|LayoutComponent> $assoc */
+        $assoc = [];
+        foreach ($res as $key => $column) {
+            // Verifica che $column sia del tipo corretto
+            if (! ($column instanceof Column) && ! ($column instanceof LayoutComponent)) {
+                continue;
+            }
+
+            if (\is_string($key)) {
+                $assoc[$key] = $column;
+
+                continue;
+            }
+
+            // $column è già verificato come instance di Column|LayoutComponent sopra
+            $name = method_exists($column, 'getName') ? $column->getName() : (string) spl_object_hash($column);
+            $nameStr = \is_string($name) ? $name : (string) $name;
+            $assoc[$nameStr] = $column;
+        }
+
+        return $assoc;
     }
 }

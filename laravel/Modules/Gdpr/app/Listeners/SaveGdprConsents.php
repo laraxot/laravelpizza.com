@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Log;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 use Modules\User\Events\UserRegistered;
+use Modules\User\Filament\Widgets\Auth\RegisterWidget;
 
 /**
  * Listener per salvare i consensi GDPR quando un utente si registra.
@@ -20,7 +21,7 @@ use Modules\User\Events\UserRegistered;
  * e questo listener (presente solo se il modulo Gdpr è attivo) salva i consensi.
  *
  * @see UserRegistered
- * @see \Modules\User\Filament\Widgets\Auth\RegisterWidget
+ * @see RegisterWidget
  */
 class SaveGdprConsents
 {
@@ -66,7 +67,7 @@ class SaveGdprConsents
             if ($treatment) {
                 Consent::create([
                     'user_id' => $user->id,
-                    'user_type' => get_class($user),
+                    'user_type' => $user::class,
                     'treatment_id' => $treatment->id,
                     'type' => $treatmentName,
                     'accepted_at' => $isAccepted ? now() : null,

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Datas;
 
-uses(\Modules\Geo\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Geo\Datas\GoogleMaps\GoogleMapAddressComponentData;
 use Modules\Geo\Datas\GoogleMaps\GoogleMapBoundsData;
@@ -13,6 +13,7 @@ use Modules\Geo\Datas\GoogleMaps\GoogleMapGeometryData;
 use Modules\Geo\Datas\GoogleMaps\GoogleMapLocationData;
 use Modules\Geo\Datas\GoogleMaps\GoogleMapResponseData;
 use Modules\Geo\Datas\GoogleMaps\GoogleMapResultData;
+use Modules\Geo\Tests\TestCase;
 
 test('GoogleMapGeometryData can be instantiated', function () {
     expect(class_exists(GoogleMapGeometryData::class))->toBeTrue();

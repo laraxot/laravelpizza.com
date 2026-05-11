@@ -1,0 +1,187 @@
+---
+title: Visual Testing con Playwright e Puppeteer
+type: concept
+sources:
+  - https://playwright.dev/docs/test-snapshots
+  - https://playwright-php.dev/
+  - https://github.com/playwright-php/playwright
+  - https://www.browserstack.com/guide/playwright-vs-puppeteer
+  - https://tillythecoder.com/articles/whats-new-in-pest-v4-for-laravel-12
+confidence: high
+created: 2026-05-04
+updated: 2026-05-04
+tags: [visual-testing, playwright, puppeteer, e2e, screenshot, laravel, livewire, filament]
+related:
+  - map-picker-filament-field
+  - map-picker-locationpicker-architecture
+---
+
+# Visual Testing con Playwright e Puppeteer
+
+## Panoramica
+
+Il testing visivo (visual regression testing) permette di rilevare cambiamenti UI non intenzionali confrontando screenshot di riferimento con screenshot attuali.
+
+## Playwright vs Puppeteer - Quando Usare
+
+| Criterio | Playwright | Puppeteer |
+|----------|-----------|-----------|
+| **Browser** | Chromium, Firefox, WebKit | Chrome/Chromium (principale) |
+| **Linguaggi** | JS/TS, Python, Java, .NET, PHP | JavaScript/TypeScript |
+| **Auto-wait** | Integrato (riduce flakiness) | Manuale (waitFor) |
+| **Velocità** | Leggermente più lento | 15-20% più veloce su Chromium |
+| **Community** | In crescita (64K stars) | Matura (87K stars) |
+| **Laravel Integration** | Pest v4 nativo, playwright-php | puppeteer-laravel-mcp-server |
+
+### Scegli Playwright se:
+- Serve supporto cross-browser (Firefox, Safari)
+- Usi già Pest v4 (integrazione nativa)
+- Preferisci auto-wait automatico
+- Serve supporto multi-linguaggio
+
+### Scegli Puppeteer se:
+- Progetto Chrome/Chromium-centric
+- Serve prestazioni massime su Chromium
+- Ecosistema maturo e molti esempi
+- Team esperto in Chrome DevTools
+
+## Installazione per Laravel
+
+### Playwright (Raccomandato per nuovo progetti)
+
+```bash
+# PHP package per Playwright
+composer require --dev playwright-php/playwright
+
+# Node dependencies
+npm install playwright@latest
+npx playwright install
+
+# Per Pest v4 browser testing
+composer require --dev pestphp/pest-plugin-browser
+```
+
+### Puppeteer
+
+```bash
+npm install puppeteer
+# Oppure per Laravel MCP
+npm install @truefrontier/puppeteer-laravel-mcp-server
+```
+
+## Esempi per Laravel/Livewire
+
+### Playwright PHP (playwright-php)
+
+```php
+<?php
+use Playwright\Playwright;
+
+$browser = Playwright::chromium();
+$page = $browser->newPage();
+
+$page->goto('https://example.com');
+$page->screenshot(__DIR__ . '/screenshot.png');
+
+$browser->close();
+```
+
+### Pest v4 Browser Testing (Playwright)
+
+```php
+it('homepage layout stays consistent', function () {
+    visit('/')->assertScreenshotsMatches();
+});
+
+it('map picker renders correctly', function () {
+    visit('/it/tests/segnalazione-crea')
+        ->assertScreenshotsMatches();
+});
+```
+
+### Puppeteer Node.js
+
+```javascript
+const puppeteer = require('puppeteer');
+
+(async () => {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto('https://example.com');
+    await page.screenshot({ path: 'screenshot.png' });
+    await browser.close();
+})();
+```
+
+## Visual Regression Testing
+
+### Playwright (JavaScript/TypeScript)
+
+```javascript
+import { test, expect } from '@playwright/test';
+
+test('map picker renders correctly', async ({ page }) => {
+    await page.goto('/it/tests/segnalazione-crea');
+    await expect(page).toHaveScreenshot('map-picker.png', {
+        maxDiffPixels: 100
+    });
+});
+```
+
+### Puppeteer con jest-image-snapshot
+
+```javascript
+const { toMatchImageSnapshot } = require('jest-image-snapshot');
+
+it('visual regression test', async () => {
+    const image = await page.screenshot();
+    expect(image).toMatchImageSnapshot({
+        failureThreshold: 0.01,
+        failureThresholdType: 'percent'
+    });
+});
+```
+
+## Testing MapPicker (Geo Module)
+
+Per testare visivamente il MapPicker component:
+
+```php
+// tests/Browser/MapPickerVisualTest.php
+it('map picker shows correctly in wizard', function () {
+    // Naviga al wizard di creazione segnalazione
+    visit('/it/tests/segnalazione-crea');
+    
+    // Aspetta che la mappa sia caricata
+    $this->page->waitForSelector('.leaflet-container');
+    
+    // Screenshot della mappa
+    $this->assertScreenshotsMatches();
+});
+
+it('map picker fullscreen toggle works', function () {
+    visit('/it/tests/segnalazione-crea');
+    
+    // Click fullscreen button
+    $this->page->click('.leaflet-control-fullscreen-button');
+    
+    // Verify fullscreen state
+    $this->assertScreenshotsMatches();
+});
+```
+
+## Best Practices
+
+1. **Atomici**: Fai screenshot di singoli componenti, non pagine intere
+2. **Stabile**: Usa `maxDiffPixels` o `maxDiffPixelRatio` per tolleranza
+3. **CI/CD**: Esegui test visuali in ambiente consistente
+4. **Baseline**: Commit screenshot di riferimento in git
+5. **Update**: Usa `--update-snapshots` quando UI cambia intenzionalmente
+
+## Risorse
+
+- [Playwright Docs](https://playwright.dev/)
+- [playwright-php GitHub](https://github.com/playwright-php/playwright)
+- [Pest v4 Browser Testing](https://tillythecoder.com/articles/whats-new-in-pest-v4-for-laravel-12)
+- [Puppeteer Docs](https://pptr.dev/)
+- [BrowserStack Comparison](https://www.browserstack.com/guide/playwright-vs-puppeteer)

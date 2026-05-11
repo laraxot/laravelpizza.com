@@ -1,0 +1,60 @@
+# Design Comuni Batch CMS Audit
+
+Questo report riassume quali pagine `tests.<slug>` sono pronte per parity visuale e quali sono bloccate a livello di struttura CMS/rendering.
+
+- homepage: json=yes, runtime=ok, overall=38%, gate=BLOCK
+- domande-frequenti: json=yes, runtime=ok, overall=40%, gate=BLOCK
+- risultati-ricerca: json=yes, runtime=ok, overall=42%, gate=BLOCK
+- argomenti: json=yes, runtime=ok, overall=50%, gate=BLOCK
+- argomento: json=yes, runtime=ok, overall=27%, gate=BLOCK
+- lista-risorse: json=yes, runtime=ok, overall=13%, gate=BLOCK
+- lista-categorie: json=yes, runtime=error, overall=0%, gate=BLOCK
+- lista-risorse-categorie: json=yes, runtime=error, overall=0%, gate=BLOCK
+- mappa-sito: json=yes, runtime=ok, overall=27%, gate=BLOCK
+- amministrazione: json=yes, runtime=ok, overall=27%, gate=BLOCK
+- aree-amministrative: json=no, runtime=ok, overall=70%, gate=BLOCK
+- area-amministrativa-dettaglio: json=no, runtime=ok, overall=70%, gate=BLOCK
+- organo: json=no, runtime=ok, overall=70%, gate=BLOCK
+- persona: json=no, runtime=ok, overall=70%, gate=BLOCK
+- persona-dettaglio: json=no, runtime=ok, overall=70%, gate=BLOCK
+- ufficio: json=no, runtime=ok, overall=70%, gate=BLOCK
+- ufficio-dettaglio: json=no, runtime=ok, overall=70%, gate=BLOCK
+- enti-e-fondazioni: json=no, runtime=ok, overall=70%, gate=BLOCK
+- ente-dettaglio: json=no, runtime=ok, overall=70%, gate=BLOCK
+- documenti-dati: json=yes, runtime=error, overall=0%, gate=BLOCK
+- documento-dettaglio: json=no, runtime=ok, overall=70%, gate=BLOCK
+- dataset-dettaglio: json=no, runtime=ok, overall=70%, gate=BLOCK
+- novita: json=yes, runtime=error, overall=0%, gate=BLOCK
+- novita-dettaglio: json=yes, runtime=ok, overall=9%, gate=BLOCK
+- servizi: json=yes, runtime=error, overall=0%, gate=BLOCK
+- servizi-categoria: json=yes, runtime=ok, overall=11%, gate=BLOCK
+- servizio-dettaglio: json=yes, runtime=error, overall=0%, gate=BLOCK
+- eventi: json=yes, runtime=error, overall=0%, gate=BLOCK
+- evento-dettaglio: json=yes, runtime=ok, overall=5%, gate=BLOCK
+- luoghi: json=no, runtime=ok, overall=70%, gate=BLOCK
+- luogo-dettaglio: json=no, runtime=ok, overall=70%, gate=BLOCK
+- contatti: json=no, runtime=ok, overall=70%, gate=BLOCK
+- pagamento: json=no, runtime=ok, overall=70%, gate=BLOCK
+- pagamento-dettaglio: json=no, runtime=ok, overall=70%, gate=BLOCK
+- prenotazione-appuntamento: json=no, runtime=ok, overall=70%, gate=BLOCK
+- appuntamento-01-ufficio: json=yes, runtime=ok, overall=14%, gate=BLOCK
+- appuntamento-01-ufficio-luogo: json=yes, runtime=ok, overall=14%, gate=BLOCK
+- appuntamento-02-data-orario: json=yes, runtime=ok, overall=13%, gate=BLOCK
+- appuntamento-03-dettagli: json=yes, runtime=ok, overall=11%, gate=BLOCK
+- appuntamento-04-richiedente: json=yes, runtime=ok, overall=11%, gate=BLOCK
+- appuntamento-04-richiedente-autenticato: json=yes, runtime=ok, overall=11%, gate=BLOCK
+- appuntamento-05-riepilogo: json=yes, runtime=ok, overall=11%, gate=BLOCK
+- appuntamento-06-conferma: json=yes, runtime=error, overall=0%, gate=BLOCK
+- richiesta-assistenza: json=no, runtime=ok, overall=70%, gate=BLOCK
+- assistenza-01-dati: json=yes, runtime=error, overall=0%, gate=BLOCK
+- assistenza-02-conferma: json=yes, runtime=ok, overall=13%, gate=BLOCK
+- segnalazione-disservizio: json=no, runtime=ok, overall=70%, gate=BLOCK
+- segnalazione-dettaglio: json=yes, runtime=ok, overall=10%, gate=BLOCK
+- segnalazioni-elenco: json=yes, runtime=ok, overall=11%, gate=BLOCK
+- segnalazione-01-privacy: json=yes, runtime=ok, overall=27%, gate=BLOCK
+- segnalazione-02-dati: json=yes, runtime=ok, overall=11%, gate=BLOCK
+- segnalazione-03-riepilogo: json=yes, runtime=ok, overall=11%, gate=BLOCK
+- segnalazione-04-conferma: json=yes, runtime=ok, overall=11%, gate=BLOCK
+- segnalazione-area-personale: json=yes, runtime=ok, overall=6%, gate=BLOCK
+
+- Theme summary: [laravel/Themes/Sixteen/docs/design-comuni/batch-structure-audit-2026-04-03.md](/var/www/_bases/base_fixcity_fila5/laravel/Themes/Sixteen/docs/design-comuni/batch-structure-audit-2026-04-03.md)

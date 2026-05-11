@@ -224,7 +224,7 @@ class FilamentOptimizationServiceProvider extends ServiceProvider
     {
         $maxQueries = config('filament_optimization.development.max_queries_per_request', 100);
 
-        app()->terminating(function () use ($maxQueries) {
+        app()->terminating(function () use ($maxQueries): void {
             $queries = DB::getQueryLog();
             $totalQueries = count($queries);
 

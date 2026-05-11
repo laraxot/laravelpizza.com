@@ -22,7 +22,7 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 
 /**
- * @property \Filament\Schemas\Schema $emailForm
+ * @property Schema $emailForm
  */
 class SendEmail extends XotBasePage
 {

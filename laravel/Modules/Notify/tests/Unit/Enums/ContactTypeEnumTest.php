@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Enums;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Filament\Forms\Components\TextInput;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasLabel;
 use Modules\Notify\Enums\ContactTypeEnum;
+use Modules\Notify\Tests\TestCase;
 
 it('has correct cases', function (): void {
     expect(ContactTypeEnum::cases())->toHaveCount(6);

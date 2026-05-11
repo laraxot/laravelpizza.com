@@ -1,0 +1,365 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "title": "Segnalazione 1 - Roma Centro",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Via del Corso 1, Roma"
+      },
+      "geometry": { "type": "Point", "coordinates": [12.4964, 41.9028] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "title": "Segnalazione 2 - Roma Termini",
+        "type": "feature",
+        "type_label": "Feature",
+        "type_color": "#2a9d8f",
+        "address": "Piazza dei Cinquecento 2, Roma"
+      },
+      "geometry": { "type": "Point", "coordinates": [12.5010, 41.9030] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "title": "Segnalazione 3 - Roma Trastevere",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Piazza di Santa Maria 3, Roma"
+      },
+      "geometry": { "type": "Point", "coordinates": [12.4691, 41.8894] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "title": "Segnalazione 4 - Roma EUR",
+        "type": "improvement",
+        "type_label": "Miglioramento",
+        "type_color": "#e9c46a",
+        "address": "Viale della Civiltà del Lavoro 4, Roma"
+      },
+      "geometry": { "type": "Point", "coordinates": [12.5160, 41.8310] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "title": "Segnalazione 5 - Milano Duomo",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Piazza del Duomo 5, Milano"
+      },
+      "geometry": { "type": "Point", "coordinates": [9.1896, 45.4641] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "title": "Segnalazione 6 - Milano Centrale",
+        "type": "feature",
+        "type_label": "Feature",
+        "type_color": "#2a9d8f",
+        "address": "Piazza Duca d'Aosta 6, Milano"
+      },
+      "geometry": { "type": "Point", "coordinates": [9.2054, 45.4859] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "title": "Segnalazione 7 - Milano Navigli",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Ripa di Porta Ticinese 7, Milano"
+      },
+      "geometry": { "type": "Point", "coordinates": [9.1765, 45.4567] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "title": "Segnalazione 8 - Napoli Centro",
+        "type": "improvement",
+        "type_label": "Miglioramento",
+        "type_color": "#e9c46a",
+        "address": "Via Toledo 8, Napoli"
+      },
+      "geometry": { "type": "Point", "coordinates": [14.2536, 40.8359] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "title": "Segnalazione 9 - Napoli Mergellina",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Via Mergellina 9, Napoli"
+      },
+      "geometry": { "type": "Point", "coordinates": [14.2200, 40.8280] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "title": "Segnalazione 10 - Torino Centro",
+        "type": "feature",
+        "type_label": "Feature",
+        "type_color": "#2a9d8f",
+        "address": "Piazza Castello 10, Torino"
+      },
+      "geometry": { "type": "Point", "coordinates": [7.6864, 45.0742] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "title": "Segnalazione 11 - Torino Lingotto",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Via Nizza 11, Torino"
+      },
+      "geometry": { "type": "Point", "coordinates": [7.6570, 45.0280] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "title": "Segnalazione 12 - Firenze Duomo",
+        "type": "improvement",
+        "type_label": "Miglioramento",
+        "type_color": "#e9c46a",
+        "address": "Piazza del Duomo 12, Firenze"
+      },
+      "geometry": { "type": "Point", "coordinates": [11.2558, 43.7731] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 13,
+        "title": "Segnalazione 13 - Firenze SMN",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Piazza Santa Maria Novella 13, Firenze"
+      },
+      "geometry": { "type": "Point", "coordinates": [11.2486, 43.7769] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 14,
+        "title": "Segnalazione 14 - Bologna Centro",
+        "type": "feature",
+        "type_label": "Feature",
+        "type_color": "#2a9d8f",
+        "address": "Piazza Maggiore 14, Bologna"
+      },
+      "geometry": { "type": "Point", "coordinates": [11.3426, 44.4944] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 15,
+        "title": "Segnalazione 15 - Bologna Due Torri",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Via Rizzoli 15, Bologna"
+      },
+      "geometry": { "type": "Point", "coordinates": [11.3454, 44.4978] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 16,
+        "title": "Segnalazione 16 - Genova Porto",
+        "type": "improvement",
+        "type_label": "Miglioramento",
+        "type_color": "#e9c46a",
+        "address": "Porto di Genova 16, Genova"
+      },
+      "geometry": { "type": "Point", "coordinates": [8.9463, 44.4109] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 17,
+        "title": "Segnalazione 17 - Genova Centro",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Via XX Settembre 17, Genova"
+      },
+      "geometry": { "type": "Point", "coordinates": [8.9480, 44.4140] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 18,
+        "title": "Segnalazione 18 - Palermo Quattro Canti",
+        "type": "feature",
+        "type_label": "Feature",
+        "type_color": "#2a9d8f",
+        "address": "Piazza Vigliena 18, Palermo"
+      },
+      "geometry": { "type": "Point", "coordinates": [13.3615, 38.1157] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 19,
+        "title": "Segnalazione 19 - Palermo Mondello",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Via Mondello 19, Palermo"
+      },
+      "geometry": { "type": "Point", "coordinates": [13.3280, 38.1770] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 20,
+        "title": "Segnalazione 20 - Catania Duomo",
+        "type": "improvement",
+        "type_label": "Miglioramento",
+        "type_color": "#e9c46a",
+        "address": "Piazza Duomo 20, Catania"
+      },
+      "geometry": { "type": "Point", "coordinates": [15.0875, 37.5022] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 21,
+        "title": "Segnalazione 21 - Catania Via Etnea",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Via Etnea 21, Catania"
+      },
+      "geometry": { "type": "Point", "coordinates": [15.0870, 37.5170] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 22,
+        "title": "Segnalazione 22 - Bari Centro",
+        "type": "feature",
+        "type_label": "Feature",
+        "type_color": "#2a9d8f",
+        "address": "Piazza del Ferrarese 22, Bari"
+      },
+      "geometry": { "type": "Point", "coordinates": [16.8719, 41.1255] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 23,
+        "title": "Segnalazione 23 - Bari Murat",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Via Sparano 23, Bari"
+      },
+      "geometry": { "type": "Point", "coordinates": [16.8580, 41.1200] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 24,
+        "title": "Segnalazione 24 - Venezia San Marco",
+        "type": "improvement",
+        "type_label": "Miglioramento",
+        "type_color": "#e9c46a",
+        "address": "Piazza San Marco 24, Venezia"
+      },
+      "geometry": { "type": "Point", "coordinates": [12.3403, 45.4336] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 25,
+        "title": "Segnalazione 25 - Venezia Rialto",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Ponte di Rialto 25, Venezia"
+      },
+      "geometry": { "type": "Point", "coordinates": [12.3364, 45.4404] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 26,
+        "title": "Segnalazione 26 - Verona Arena",
+        "type": "feature",
+        "type_label": "Feature",
+        "type_color": "#2a9d8f",
+        "address": "Piazza Bra 26, Verona"
+      },
+      "geometry": { "type": "Point", "coordinates": [10.9924, 45.4385] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 27,
+        "title": "Segnalazione 27 - Verona Centro",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Via Mazzini 27, Verona"
+      },
+      "geometry": { "type": "Point", "coordinates": [10.9850, 45.4420] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 28,
+      "title": "Segnalazione 28 - Padova Prato",
+        "type": "improvement",
+        "type_label": "Miglioramento",
+        "type_color": "#e9c46a",
+        "address": "Prato della Valle 28, Padova"
+      },
+      "geometry": { "type": "Point", "coordinates": [11.8768, 45.4000] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 29,
+        "title": "Segnalazione 29 - Padova Scrovegni",
+        "type": "bug",
+        "type_label": "Bug",
+        "type_color": "#e63946",
+        "address": "Via Cappella degli Scrovegni 29, Padova"
+      },
+      "geometry": { "type": "Point", "coordinates": [11.8840, 45.4100] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 30,
+        "title": "Segnalazione 30 - Trieste Centro",
+        "type": "feature",
+        "type_label": "Feature",
+        "type_color": "#2a9d8f",
+        "address": "Piazza Unità d'Italia 30, Trieste"
+      },
+      "geometry": { "type": "Point", "coordinates": [13.7700, 45.6495] }
+    }
+  ]
+}

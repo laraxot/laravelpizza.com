@@ -8,40 +8,40 @@ use Modules\Notify\Datas\SMS\TwilioData;
 
 describe('TwilioData', function () {
     it('has default auth type', function () {
-        $data = new TwilioData();
+        $data = new TwilioData;
 
         expect($data->auth_type)->toBe('basic');
     });
 
     it('has default timeout', function () {
-        $data = new TwilioData();
+        $data = new TwilioData;
 
         expect($data->timeout)->toBe(30);
     });
 
     it('can set account sid', function () {
-        $data = new TwilioData();
+        $data = new TwilioData;
         $data->account_sid = 'AC1234567890';
 
         expect($data->account_sid)->toBe('AC1234567890');
     });
 
     it('can set auth token', function () {
-        $data = new TwilioData();
+        $data = new TwilioData;
         $data->auth_token = 'auth_token_123';
 
         expect($data->auth_token)->toBe('auth_token_123');
     });
 
     it('can set base url', function () {
-        $data = new TwilioData();
+        $data = new TwilioData;
         $data->base_url = 'https://custom.twilio.com';
 
         expect($data->base_url)->toBe('https://custom.twilio.com');
     });
 
     it('can get base url with default', function () {
-        $data = new TwilioData();
+        $data = new TwilioData;
 
         $baseUrl = $data->getBaseUrl();
 
@@ -49,7 +49,7 @@ describe('TwilioData', function () {
     });
 
     it('can get custom base url', function () {
-        $data = new TwilioData();
+        $data = new TwilioData;
         $data->base_url = 'https://custom.twilio.com';
 
         $baseUrl = $data->getBaseUrl();
@@ -58,7 +58,7 @@ describe('TwilioData', function () {
     });
 
     it('can get timeout', function () {
-        $data = new TwilioData();
+        $data = new TwilioData;
         $data->timeout = 60;
 
         $timeout = $data->getTimeout();
@@ -67,7 +67,7 @@ describe('TwilioData', function () {
     });
 
     it('can generate auth headers', function () {
-        $data = new TwilioData();
+        $data = new TwilioData;
         $data->account_sid = 'AC1234567890';
         $data->auth_token = 'auth_token_123';
 

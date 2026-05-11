@@ -14,7 +14,7 @@ Il modulo Activity gestisce il logging delle attività utilizzando Spatie Activi
 **Correzioni consigliate:**
 ```bash
 # Rimuovere file duplicati
-rm -rf Modules/Activity/docs/archive/duplicates/
+rm -rf Modules/Activity/docs/archived/duplicates/
 rm -f Modules/Activity/docs/*-duplicate.md
 
 # Pulire directory test duplicata

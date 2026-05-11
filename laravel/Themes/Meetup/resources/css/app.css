@@ -1,28 +1,28 @@
 @import 'tailwindcss';
 
 /* Required by all components */
-@import '../../../../vendor/filament/support/resources/css/index.css';
+@import '../../vendor/filament/support/resources/css/index.css';
 
 /* Required by actions and tables */
-@import '../../../../vendor/filament/actions/resources/css/index.css';
+@import '../../vendor/filament/actions/resources/css/index.css';
 
 /* Required by actions, forms and tables */
-@import '../../../../vendor/filament/forms/resources/css/index.css';
+@import '../../vendor/filament/forms/resources/css/index.css';
 
 /* Required by actions and infolists */
-@import '../../../../vendor/filament/infolists/resources/css/index.css';
+@import '../../vendor/filament/infolists/resources/css/index.css';
 
 /* Required by notifications */
-@import '../../../../vendor/filament/notifications/resources/css/index.css';
+@import '../../vendor/filament/notifications/resources/css/index.css';
 
 /* Required by actions, infolists, forms, schemas and tables */
-@import '../../../../vendor/filament/schemas/resources/css/index.css';
+@import '../../vendor/filament/schemas/resources/css/index.css';
 
 /* Required by tables */
-@import '../../../../vendor/filament/tables/resources/css/index.css';
+@import '../../vendor/filament/tables/resources/css/index.css';
 
 /* Required by widgets */
-@import '../../../../vendor/filament/widgets/resources/css/index.css';
+@import '../../vendor/filament/widgets/resources/css/index.css';
 
 @variant dark (&:where(.dark, .dark *));
 
@@ -204,28 +204,6 @@
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
-    }
-}
-
-/* Kinetic UX utilities (theme) */
-.kinetic-lift {
-    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-    will-change: transform;
-}
-
-.kinetic-lift:hover {
-    transform: translateY(-2px);
-}
-
-.kinetic-lift:active {
-    transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .kinetic-lift,
-    .kinetic-lift:hover,
-    .kinetic-lift:active {
-        transform: none !important;
     }
 }
 

@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Models;
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Gdpr\Models\Event;
+use Modules\Gdpr\Tests\TestCase;
 
 test('event_fillable_attributes', function () {
     $event = new Event();

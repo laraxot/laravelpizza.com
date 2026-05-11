@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use Modules\Notify\Models\MailTemplate;
+use Modules\Notify\Models\Notification;
 use Modules\Notify\Tests\TestCase;
 
 pest()->extend(TestCase::class)->in('Feature', 'Unit');
@@ -17,8 +19,8 @@ pest()->extend(TestCase::class)->in('Feature', 'Unit');
 |
 */
 
-expect()->extend('toBeNotification', fn () => $this->toBeInstanceOf(\Modules\Notify\Models\Notification::class));
-expect()->extend('toBeMailTemplate', fn () => $this->toBeInstanceOf(\Modules\Notify\Models\MailTemplate::class));
+expect()->extend('toBeNotification', fn () => $this->toBeInstanceOf(Notification::class));
+expect()->extend('toBeMailTemplate', fn () => $this->toBeInstanceOf(MailTemplate::class));
 
 /*
 |--------------------------------------------------------------------------
@@ -31,22 +33,22 @@ expect()->extend('toBeMailTemplate', fn () => $this->toBeInstanceOf(\Modules\Not
 |
 */
 
-function createNotification(array $attributes = []): \Modules\Notify\Models\Notification
+function createNotification(array $attributes = []): Notification
 {
-    return \Modules\Notify\Models\Notification::factory()->create($attributes);
+    return Notification::factory()->create($attributes);
 }
 
-function makeNotification(array $attributes = []): \Modules\Notify\Models\Notification
+function makeNotification(array $attributes = []): Notification
 {
-    return \Modules\Notify\Models\Notification::factory()->make($attributes);
+    return Notification::factory()->make($attributes);
 }
 
-function createMailTemplate(array $attributes = []): \Modules\Notify\Models\MailTemplate
+function createMailTemplate(array $attributes = []): MailTemplate
 {
-    return \Modules\Notify\Models\MailTemplate::factory()->create($attributes);
+    return MailTemplate::factory()->create($attributes);
 }
 
-function makeMailTemplate(array $attributes = []): \Modules\Notify\Models\MailTemplate
+function makeMailTemplate(array $attributes = []): MailTemplate
 {
-    return \Modules\Notify\Models\MailTemplate::factory()->make($attributes);
+    return MailTemplate::factory()->make($attributes);
 }

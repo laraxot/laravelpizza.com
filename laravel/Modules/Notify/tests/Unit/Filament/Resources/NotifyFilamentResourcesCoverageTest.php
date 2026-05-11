@@ -12,6 +12,7 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Group;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\View;
 use Filament\Tables\Columns\IconColumn;
@@ -179,7 +180,7 @@ test('mail template resource form schema exposes expected components', function 
 
     expect($schema)->toBeArray()
         ->and($schema)->toHaveKey('mailable_slug_group')
-        ->and($schema['mailable_slug_group'])->toBeInstanceOf(\Filament\Schemas\Components\Group::class)
+        ->and($schema['mailable_slug_group'])->toBeInstanceOf(Group::class)
         ->and($schema)->toHaveKey('subject')
         ->and($schema['subject'])->toBeInstanceOf(TextInput::class)
         ->and($schema)->toHaveKey('html_layout_path')

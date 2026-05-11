@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Feature;
 
-use Illuminate\Support\Facades\File;
 use Modules\Xot\Tests\TestCase;
 
 uses(TestCase::class);

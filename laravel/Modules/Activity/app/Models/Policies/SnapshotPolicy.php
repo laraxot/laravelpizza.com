@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Models\Policies;
 
+use Modules\Fixcity\Models\Ticket;
 use Modules\User\Models\Policies\UserBasePolicy;
 use Modules\Xot\Contracts\UserContract;
 
@@ -20,7 +21,7 @@ class SnapshotPolicy extends UserBasePolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(UserContract $user): bool
+    public function view(UserContract $user, Ticket $ticket): bool
     {
         return $user->hasPermissionTo('snapshot.view');
     }
@@ -36,7 +37,7 @@ class SnapshotPolicy extends UserBasePolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(UserContract $user): bool
+    public function update(UserContract $user, Ticket $ticket): bool
     {
         return $user->hasPermissionTo('snapshot.update');
     }
@@ -44,7 +45,7 @@ class SnapshotPolicy extends UserBasePolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(UserContract $user): bool
+    public function delete(UserContract $user, Ticket $ticket): bool
     {
         return $user->hasPermissionTo('snapshot.delete');
     }

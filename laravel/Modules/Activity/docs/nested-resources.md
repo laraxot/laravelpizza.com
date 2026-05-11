@@ -43,21 +43,15 @@ The Activity module provides comprehensive activity logging and audit trail func
 **Justification:** Organize activity logs by tenant for multi-tenant audit and compliance requirements.
 
 ### 5. Customer Activity Tracking
-<<<<<<< .merge_file_bcLZR7
+**Parent Resource:** CustomerResource (from Quaeris module)
 **Parent Resource:** CustomerResource (from healthcare_app module)
-=======
-**Parent Resource:** CustomerResource (from ModuloEsempio module)
->>>>>>> .merge_file_8MhXh4
 **Child Resource:** ActivityResource
 **Relationship:** Customer (as subject) hasMany Activities
 **Justification:** Track all activities related to customer records for business audit trails.
 
 ### 6. Survey Activity Logs
-<<<<<<< .merge_file_bcLZR7
+**Parent Resource:** SurveyPdfResource (from Quaeris module)
 **Parent Resource:** SurveyPdfResource (from healthcare_app module)
-=======
-**Parent Resource:** SurveyPdfResource (from ModuloEsempio module)
->>>>>>> .merge_file_8MhXh4
 **Child Resource:** ActivityResource
 **Relationship:** SurveyPdf (as subject) hasMany Activities
 **Justification:** Monitor all activities related to specific surveys for compliance and tracking.

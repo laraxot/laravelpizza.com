@@ -4,18 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit\Actions;
 
-uses(\Modules\Lang\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Lang\Actions\TransArrayAction;
+use Modules\Lang\Tests\TestCase;
 
 beforeEach(function () {
-    $action = new TransArrayAction(;
+    $this->action = new TransArrayAction();
 });
 
 describe('TransArrayAction Business Logic', function () {
     test('converts array elements to strings without transKey', function () {
         $input = [1, 2, 3];
-        $result = // Placeholder purged action->execute($input, null;
+        $result = $this->action->execute($input, null);
 
         expect($result)->toBeArray();
         expect($result)->toHaveCount(3);
@@ -23,7 +24,7 @@ describe('TransArrayAction Business Logic', function () {
 
     test('handles array with string keys', function () {
         $input = ['a' => 'value1', 'b' => 'value2'];
-        $result = // Placeholder purged action->execute($input, null;
+        $result = $this->action->execute($input, null);
 
         expect($result)->toBeArray();
         expect($result['a'])->toBe('value1');
@@ -32,7 +33,7 @@ describe('TransArrayAction Business Logic', function () {
 
     test('handles empty array', function () {
         $input = [];
-        $result = // Placeholder purged action->execute($input, null;
+        $result = $this->action->execute($input, null);
 
         expect($result)->toBeArray();
         expect($result)->toBeEmpty();
@@ -41,7 +42,7 @@ describe('TransArrayAction Business Logic', function () {
     test('translates array elements with transKey when translation exists', function () {
         // Setup: add a translation for testing
         $input = ['test_key'];
-        $result = // Placeholder purged action->execute($input, 'test';
+        $result = $this->action->execute($input, 'test');
 
         expect($result)->toBeArray();
         expect($result)->toHaveCount(1);
@@ -49,14 +50,14 @@ describe('TransArrayAction Business Logic', function () {
 
     test('returns original value when translation does not exist', function () {
         $input = ['nonexistent_key'];
-        $result = // Placeholder purged action->execute($input, 'nonexistent';
+        $result = $this->action->execute($input, 'nonexistent');
 
         expect($result)->toBeArray();
     });
 
     test('handles numeric array elements', function () {
         $input = [100, 200, 300];
-        $result = // Placeholder purged action->execute($input, null;
+        $result = $this->action->execute($input, null);
 
         expect($result)->toBeArray();
         expect($result[0])->toBe('100');
@@ -64,7 +65,7 @@ describe('TransArrayAction Business Logic', function () {
 
     test('handles array with mixed types', function () {
         $input = ['string', 123, true, null];
-        $result = // Placeholder purged action->execute($input, null;
+        $result = $this->action->execute($input, null);
 
         expect($result)->toBeArray();
         expect($result)->toHaveCount(4);

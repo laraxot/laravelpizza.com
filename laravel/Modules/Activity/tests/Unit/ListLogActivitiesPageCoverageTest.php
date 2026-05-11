@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit;
 
 use Filament\Notifications\Notification;
+use Filament\Tables\Enums\PaginationMode;
 use Modules\Activity\Filament\Pages\ListLogActivities;
 use Modules\Activity\Filament\Resources\ActivityResource;
 use Modules\Activity\Tests\TestCase;
@@ -31,12 +32,12 @@ class ListLogActivitiesPageCoverageTest extends TestCase
             }
 
             // Expose protected methods for testing
-            public function exposeRestoreSuccess(): \Filament\Notifications\Notification
+            public function exposeRestoreSuccess(): Notification
             {
                 return $this->sendRestoreSuccessNotification();
             }
 
-            public function exposeRestoreFailure(?string $message = null): \Filament\Notifications\Notification
+            public function exposeRestoreFailure(?string $message = null): Notification
             {
                 return $this->sendRestoreFailureNotification($message);
             }
@@ -104,7 +105,7 @@ class ListLogActivitiesPageCoverageTest extends TestCase
     {
         $mode = $page->getPaginationMode();
 
-        $this->assertSame(\Filament\Tables\Enums\PaginationMode::Default, $mode);
+        $this->assertSame(PaginationMode::Default, $mode);
     }
 
     #[Test]

@@ -5,8 +5,7 @@
     aria-hidden="true"
 >
     <canvas 
-        x-ref="canvas"
-        id="particleCanvas"
+        x-ref="canvas" 
         class="w-full h-full"
     ></canvas>
 </div>
@@ -22,10 +21,6 @@ function particles() {
         animationId: null,
         
         init() {
-            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                return;
-            }
-
             this.canvas = this.$refs.canvas;
             this.ctx = this.canvas.getContext('2d');
             
@@ -49,7 +44,6 @@ function particles() {
             const dpr = window.devicePixelRatio || 1;
             this.canvas.width = window.innerWidth * dpr;
             this.canvas.height = window.innerHeight * dpr;
-            this.ctx.setTransform(1, 0, 0, 1, 0, 0);
             this.ctx.scale(dpr, dpr);
             this.canvas.style.width = window.innerWidth + 'px';
             this.canvas.style.height = window.innerHeight + 'px';

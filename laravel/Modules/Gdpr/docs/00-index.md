@@ -26,10 +26,28 @@
 - [Riferimento completo](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md)
 - `statikbe/laravel-cookie-consent` - Banner cookie consent
 
+## 📊 Documenti Product & Development
+
+### Product
+| File | Scopo |
+|------|-------|
+| [PRD.md](./PRD.md) | Product Requirements |
+| [PRODUCT_ROADMAP.md](./PRODUCT_ROADMAP.md) | Roadmap |
+| [PRODUCT_STRATEGY.md](./PRODUCT_STRATEGY.md) | Strategy |
+| [PRODUCT_LAUNCH_PLAN.md](./PRODUCT_LAUNCH_PLAN.md) | Launch Plan |
+
+### Development
+| File | Scopo |
+|------|-------|
+| [GSD_WORKFLOW.md](./GSD_WORKFLOW.md) | GSD Workflow |
+| [SPRINT_PLANNING.md](./SPRINT_PLANNING.md) | Sprint Planning |
+| [USER_RESEARCH.md](./USER_RESEARCH.md) | User Research |
+
 ## 🔗 **Moduli Correlati**
 - [User](../../user/docs/readme.md) - Soggetti dei consensi.
 - [Activity](../../activity/docs/readme.md) - Log di sistema integrato.
 - [Xot](../../xot/docs/readme.md) - Base framework e trait UUID.
+- [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

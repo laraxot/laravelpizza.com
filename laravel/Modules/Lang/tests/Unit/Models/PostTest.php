@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit\Models;
 
-uses(\Modules\Lang\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Lang\Models\Post;
+use Modules\Lang\Tests\TestCase;
 
 describe('Post Model', function () {
     test('extends BaseModel', function () {

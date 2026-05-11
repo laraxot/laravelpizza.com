@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Unit;
 
 use Filament\Tables\Enums\PaginationMode;
+use Illuminate\Contracts\Pagination\CursorPaginator;
+use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Modules\Activity\Filament\Pages\Concerns\CanPaginate;
 use Modules\Activity\Models\Activity;
 use Modules\Activity\Tests\TestCase;
@@ -102,19 +105,19 @@ test('can paginate trait covers default, simple and cursor modes', function (): 
     $defaultHarness->setMode(PaginationMode::Default);
     $defaultPaginator = $defaultHarness->exposePaginateQuery(clone $query);
 
-    expect($defaultPaginator)->toBeInstanceOf(\Illuminate\Pagination\LengthAwarePaginator::class);
+    expect($defaultPaginator)->toBeInstanceOf(LengthAwarePaginator::class);
 
     $simpleHarness = makeCanPaginateHarness();
     $simpleHarness->recordsPerPage = 10;
     $simpleHarness->setMode(PaginationMode::Simple);
     $simplePaginator = $simpleHarness->exposePaginateQuery(clone $query);
 
-    expect($simplePaginator)->toBeInstanceOf(\Illuminate\Contracts\Pagination\Paginator::class);
+    expect($simplePaginator)->toBeInstanceOf(Paginator::class);
 
     $cursorHarness = makeCanPaginateHarness();
     $cursorHarness->recordsPerPage = 10;
     $cursorHarness->setMode(PaginationMode::Cursor);
     $cursorPaginator = $cursorHarness->exposePaginateQuery(clone $query);
 
-    expect($cursorPaginator)->toBeInstanceOf(\Illuminate\Contracts\Pagination\CursorPaginator::class);
+    expect($cursorPaginator)->toBeInstanceOf(CursorPaginator::class);
 });

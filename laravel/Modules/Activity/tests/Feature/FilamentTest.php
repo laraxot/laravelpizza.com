@@ -4,31 +4,35 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Feature;
 
-use Illuminate\Support\Facades\Session;
+use Filament\Actions\Action;
+use Modules\Activity\Events\ActivityEvent;
+use Modules\Activity\Filament\Actions\ListLogActivitiesAction;
+use Modules\Activity\Filament\Pages\Concerns\CanPaginate;
 use Modules\Activity\Filament\Resources\ActivityResource;
 use Modules\Activity\Filament\Resources\ActivityResource\Pages\EditActivity;
 use Modules\Activity\Filament\Resources\ActivityResource\Pages\ListActivities;
 use Modules\Activity\Filament\Resources\SnapshotResource;
 use Modules\Activity\Filament\Resources\SnapshotResource\Pages\ListSnapshots;
 use Modules\Activity\Filament\Resources\StoredEventResource;
+use Modules\Activity\Filament\Resources\StoredEventResource\Pages\ListStoredEvents;
 use Modules\Activity\Models\Activity;
 use Modules\Activity\Models\Snapshot;
 use Modules\Activity\Models\StoredEvent;
 use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Filament\Actions\XotBaseAction;
-use Filament\Tables\Enums\PaginationMode;
+use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 
 uses(TestCase::class);
 
 describe('ActivityEvent', function (): void {
     it('can be instantiated', function (): void {
-        $event = new \Modules\Activity\Events\ActivityEvent();
-        expect($event)->toBeInstanceOf(\Modules\Activity\Events\ActivityEvent::class);
+        $event = new ActivityEvent;
+        expect($event)->toBeInstanceOf(ActivityEvent::class);
     });
 
     it('uses correct traits', function (): void {
-        $event = new \Modules\Activity\Events\ActivityEvent();
-        
+        $event = new ActivityEvent;
+
         // Verify the event has the traits
         $traits = class_uses($event);
         expect($traits)->toHaveKey('Illuminate\Broadcasting\InteractsWithSockets');
@@ -39,7 +43,8 @@ describe('ActivityEvent', function (): void {
 
 describe('ListLogActivitiesAction', function (): void {
     it('extends XotBaseAction', function (): void {
-        $action = new class ('list_log_activities') extends XotBaseAction {
+        $action = new class('list_log_activities') extends XotBaseAction
+        {
             protected function setUp(): void
             {
                 parent::setUp();
@@ -50,31 +55,32 @@ describe('ListLogActivitiesAction', function (): void {
 
     it('has getDefaultName method that returns list_log_activities', function (): void {
         // Use reflection to check the static method
-        $reflection = new \ReflectionClass(\Modules\Activity\Filament\Actions\ListLogActivitiesAction::class);
+        $reflection = new \ReflectionClass(ListLogActivitiesAction::class);
         $method = $reflection->getMethod('getDefaultName');
-        
+
         $result = $method->invoke(null);
         expect($result)->toBe('list_log_activities');
     });
 
     it('is a Filament action', function (): void {
-        $action = new class ('list_log_activities') extends XotBaseAction {
+        $action = new class('list_log_activities') extends XotBaseAction
+        {
             protected function setUp(): void
             {
                 parent::setUp();
                 $this->iconButton();
             }
         };
-        
-        expect($action)->toBeInstanceOf(\Filament\Actions\Action::class);
+
+        expect($action)->toBeInstanceOf(Action::class);
     });
 });
 
 describe('CanPaginate trait', function (): void {
     it('has required methods from trait', function (): void {
         // Check the trait exists and has the expected methods
-        $trait = new \ReflectionClass(\Modules\Activity\Filament\Pages\Concerns\CanPaginate::class);
-        
+        $trait = new \ReflectionClass(CanPaginate::class);
+
         expect($trait->hasMethod('getRecordsPerPage'))->toBeTrue();
         expect($trait->hasMethod('getPaginationPageName'))->toBeTrue();
         expect($trait->hasMethod('getPerPageSessionKey'))->toBeTrue();
@@ -86,27 +92,27 @@ describe('CanPaginate trait', function (): void {
     });
 
     it('trait has recordsPerPage property', function (): void {
-        $trait = new \ReflectionClass(\Modules\Activity\Filament\Pages\Concerns\CanPaginate::class);
-        
+        $trait = new \ReflectionClass(CanPaginate::class);
+
         expect($trait->hasProperty('recordsPerPage'))->toBeTrue();
     });
 
     it('trait has defaultRecordsPerPageSelectOption property', function (): void {
-        $trait = new \ReflectionClass(\Modules\Activity\Filament\Pages\Concerns\CanPaginate::class);
-        
+        $trait = new \ReflectionClass(CanPaginate::class);
+
         expect($trait->hasProperty('defaultRecordsPerPageSelectOption'))->toBeTrue();
     });
 
     it('trait has getRecordsPerPageSelectOptions method', function (): void {
-        $trait = new \ReflectionClass(\Modules\Activity\Filament\Pages\Concerns\CanPaginate::class);
-        
+        $trait = new \ReflectionClass(CanPaginate::class);
+
         expect($trait->hasMethod('getRecordsPerPageSelectOptions'))->toBeTrue();
     });
 });
 
 describe('ActivityResource', function (): void {
     it('can be instantiated', function (): void {
-        $resource = new ActivityResource();
+        $resource = new ActivityResource;
         expect($resource)->toBeInstanceOf(ActivityResource::class);
     });
 
@@ -138,7 +144,7 @@ describe('ActivityResource', function (): void {
 
 describe('EditActivity page', function (): void {
     it('can be instantiated', function (): void {
-        $page = new EditActivity();
+        $page = new EditActivity;
         expect($page)->toBeInstanceOf(EditActivity::class);
     });
 
@@ -147,20 +153,20 @@ describe('EditActivity page', function (): void {
         $reflection = new \ReflectionClass(EditActivity::class);
         $property = $reflection->getProperty('resource');
         $property->setAccessible(true);
-        
+
         $resource = $property->getValue();
         expect($resource)->toBe(ActivityResource::class);
     });
 
     it('extends XotBaseEditRecord', function (): void {
-        $page = new EditActivity();
-        expect($page)->toBeInstanceOf(\Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord::class);
+        $page = new EditActivity;
+        expect($page)->toBeInstanceOf(XotBaseEditRecord::class);
     });
 });
 
 describe('ListActivities page', function (): void {
     it('can be instantiated', function (): void {
-        $page = new ListActivities();
+        $page = new ListActivities;
         expect($page)->toBeInstanceOf(ListActivities::class);
     });
 
@@ -168,13 +174,13 @@ describe('ListActivities page', function (): void {
         $reflection = new \ReflectionClass(ListActivities::class);
         $property = $reflection->getProperty('resource');
         $property->setAccessible(true);
-        
+
         $resource = $property->getValue();
         expect($resource)->toBe(ActivityResource::class);
     });
 
     it('has table columns', function (): void {
-        $page = new ListActivities();
+        $page = new ListActivities;
         $columns = $page->getTableColumns();
 
         expect($columns)->toHaveKey('id');
@@ -189,7 +195,7 @@ describe('ListActivities page', function (): void {
 
 describe('SnapshotResource', function (): void {
     it('can be instantiated', function (): void {
-        $resource = new SnapshotResource();
+        $resource = new SnapshotResource;
         expect($resource)->toBeInstanceOf(SnapshotResource::class);
     });
 
@@ -210,7 +216,7 @@ describe('SnapshotResource', function (): void {
 
 describe('ListSnapshots page', function (): void {
     it('can be instantiated', function (): void {
-        $page = new ListSnapshots();
+        $page = new ListSnapshots;
         expect($page)->toBeInstanceOf(ListSnapshots::class);
     });
 
@@ -218,13 +224,13 @@ describe('ListSnapshots page', function (): void {
         $reflection = new \ReflectionClass(ListSnapshots::class);
         $property = $reflection->getProperty('resource');
         $property->setAccessible(true);
-        
+
         $resource = $property->getValue();
         expect($resource)->toBe(SnapshotResource::class);
     });
 
     it('has table columns', function (): void {
-        $page = new ListSnapshots();
+        $page = new ListSnapshots;
         $columns = $page->getTableColumns();
 
         expect($columns)->toHaveKey('id');
@@ -236,14 +242,14 @@ describe('ListSnapshots page', function (): void {
     });
 
     it('has table filters', function (): void {
-        $page = new ListSnapshots();
+        $page = new ListSnapshots;
         $filters = $page->getTableFilters();
 
         expect($filters)->not->toBeEmpty();
     });
 
     it('has table actions', function (): void {
-        $page = new ListSnapshots();
+        $page = new ListSnapshots;
         $actions = $page->getTableActions();
 
         expect($actions)->toHaveKey('view');
@@ -252,7 +258,7 @@ describe('ListSnapshots page', function (): void {
     });
 
     it('has bulk actions', function (): void {
-        $page = new ListSnapshots();
+        $page = new ListSnapshots;
         $bulkActions = $page->getTableBulkActions();
 
         expect($bulkActions)->not->toBeEmpty();
@@ -261,7 +267,7 @@ describe('ListSnapshots page', function (): void {
 
 describe('StoredEventResource', function (): void {
     it('can be instantiated', function (): void {
-        $resource = new StoredEventResource();
+        $resource = new StoredEventResource;
         expect($resource)->toBeInstanceOf(StoredEventResource::class);
     });
 
@@ -283,21 +289,21 @@ describe('StoredEventResource', function (): void {
 
 describe('ListStoredEvents page', function (): void {
     it('can be instantiated', function (): void {
-        $page = new \Modules\Activity\Filament\Resources\StoredEventResource\Pages\ListStoredEvents();
-        expect($page)->toBeInstanceOf(\Modules\Activity\Filament\Resources\StoredEventResource\Pages\ListStoredEvents::class);
+        $page = new ListStoredEvents;
+        expect($page)->toBeInstanceOf(ListStoredEvents::class);
     });
 
     it('uses correct resource via getResource', function (): void {
-        $reflection = new \ReflectionClass(\Modules\Activity\Filament\Resources\StoredEventResource\Pages\ListStoredEvents::class);
+        $reflection = new \ReflectionClass(ListStoredEvents::class);
         $property = $reflection->getProperty('resource');
         $property->setAccessible(true);
-        
+
         $resource = $property->getValue();
         expect($resource)->toBe(StoredEventResource::class);
     });
 
     it('has table columns', function (): void {
-        $page = new \Modules\Activity\Filament\Resources\StoredEventResource\Pages\ListStoredEvents();
+        $page = new ListStoredEvents;
         $columns = $page->getTableColumns();
 
         expect($columns)->toHaveKey('id');

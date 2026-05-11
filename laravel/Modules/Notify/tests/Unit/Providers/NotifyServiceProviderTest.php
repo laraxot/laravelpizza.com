@@ -6,8 +6,8 @@ namespace Modules\Notify\Tests\Unit\Providers;
 
 use Illuminate\Support\Facades\Mail;
 use Modules\Notify\Providers\NotifyServiceProvider;
-use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
 use Modules\Notify\Tests\TestCase;
+use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
 
 uses(TestCase::class);
 

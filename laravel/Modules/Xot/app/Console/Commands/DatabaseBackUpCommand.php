@@ -20,15 +20,11 @@ class DatabaseBackUpCommand extends Command
 {
     /**
      * The name and signature of the console command.
-     *
-     * @var string
      */
-    protected $signature = 'database:backup';
+    public $signature = 'database:backup';
 
     /**
      * The console command description.
-     *
-     * @var string
      */
     protected $description = 'Dump your Mysql database to a file';
 

@@ -47,8 +47,6 @@ class Region extends BaseModel
 
     /**
      * The data type of the primary key ID.
-     *
-     * @var string
      */
     protected $keyType = 'integer';
 

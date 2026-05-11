@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Models;
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Gdpr\Models\Consent;
+use Modules\Gdpr\Tests\TestCase;
 
 test('consent_fillable_attributes', function () {
     $consent = new Consent();

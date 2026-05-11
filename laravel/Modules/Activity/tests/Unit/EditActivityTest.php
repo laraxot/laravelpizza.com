@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit;
 
+use Modules\Activity\Filament\Resources\ActivityResource;
 use Modules\Activity\Filament\Resources\ActivityResource\Pages\EditActivity;
 use Modules\Activity\Tests\TestCase;
+use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 use PHPUnit\Framework\Attributes\Test;
 
 class EditActivityTest extends TestCase
@@ -16,7 +18,7 @@ class EditActivityTest extends TestCase
         $this->assertTrue(
             is_subclass_of(
                 EditActivity::class,
-                \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord::class
+                XotBaseEditRecord::class
             )
         );
     }
@@ -24,9 +26,9 @@ class EditActivityTest extends TestCase
     #[Test]
     public function edit_activity_has_correct_resource(): void
     {
-        $page = new EditActivity();
+        $page = new EditActivity;
         $this->assertEquals(
-            \Modules\Activity\Filament\Resources\ActivityResource::class,
+            ActivityResource::class,
             $page::getResource()
         );
     }

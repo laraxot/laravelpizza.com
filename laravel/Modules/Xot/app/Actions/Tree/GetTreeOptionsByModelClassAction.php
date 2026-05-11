@@ -27,8 +27,7 @@ class GetTreeOptionsByModelClassAction
         /** @var HasRecursiveRelationshipsContract $model */
         $model = new $class();
 
-        /** @var Collection<int, HasRecursiveRelationshipsContract> $collection */
-        // @phpstan-ignore generics.notSubtype
+        /** @var Collection<int, Model> $collection */
         $collection = $model->newQuery()->get();
         $rows = $collection->toTree();
 

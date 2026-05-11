@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit\Models;
 
-uses(\Modules\Lang\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Lang\Models\BaseModelLang;
+use Modules\Lang\Tests\TestCase;
 
 describe('BaseModelLang', function () {
     test('has correct connection', function () {

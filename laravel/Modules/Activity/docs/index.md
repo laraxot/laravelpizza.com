@@ -2,6 +2,8 @@
 
 ## Overview
 The Activity module provides comprehensive activity logging and tracking functionality for the Laraxot system. It records user actions, system events, and business operations to enable audit trails, analytics, and monitoring.
+**
+**Status**: Active Development
 
 ## Key Features
 - **Activity Logging**: Automatic logging of user and system activities
@@ -68,3 +70,5 @@ Common issues and solutions:
 - Database performance with large activity logs
 - Missing activity entries
 - Configuration issues
+
+- [Conflict Resolution](conflict-resolution.md)

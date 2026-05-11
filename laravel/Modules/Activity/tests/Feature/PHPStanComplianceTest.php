@@ -7,11 +7,21 @@ namespace Modules\Activity\Tests\Feature;
 use Modules\Activity\Filament\Actions\ListLogActivitiesAction;
 use Modules\Activity\Filament\Pages\ListLogActivities;
 use Modules\Activity\Providers\ActivityServiceProvider;
+use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Filament\Actions\XotBaseAction;
 use Modules\Xot\Filament\Resources\Pages\XotBasePage;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
+
+beforeEach(function () {
+    // Skip if database not available
+    try {
+        \DB::connection()->getPdo();
+    } catch (\Exception $e) {
+        $this->markTestSkipped('Database not available: '.$e->getMessage());
+    }
+});
 
 test('phpstan placeholder', function (): void {
     expect(true)->toBeTrue();

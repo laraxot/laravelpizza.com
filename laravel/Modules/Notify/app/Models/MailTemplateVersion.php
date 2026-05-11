@@ -69,7 +69,6 @@ class MailTemplateVersion extends BaseModel
 {
     use SoftDeletes, Updater;
 
-    /** @var string */
     protected $connection = 'notify';
 
     /** @var list<string> */

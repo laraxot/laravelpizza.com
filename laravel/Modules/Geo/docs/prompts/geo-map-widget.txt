@@ -1,0 +1,62 @@
+--- GEO MAP LIT — BMAD Story Prompt & Technical Reference ---
+Last updated: 2026-04-30
+Scope: Modules/Geo — reusable GeoMapWidget + geo-map-lit Web Component
+Audience: Developers implementing or maintaining the map widget
+
+--- ZERO TOLERANCE RULES ---
+1. ZERO CDN — no unpkg, cdnjs, jsdelivr for Leaflet/Lit/markercluster/heat
+2. ZERO labels() in Filament — translations via __() and json_encode
+3. ZERO re-fetch — GeoJSON loaded ONCE, all filtering client-side
+4. ZERO L.Icon.Default — use createGeoMapLeafletIcon(L, color)
+5. ZERO L.control.zoom() / L.control.layers() — use renderControls()
+6. ZERO duplicate module code — use shared ctx-based modules (DRY)
+7. ZERO page-specific CSS selectors — component-scoped only
+8. ZERO inline labels/placeholders in Blade — use __() with translation keys
+9. ZERO show-search attribute — search toggled via _searchOpen internally
+10. RESPONSIVE: verify mobile (390px), tablet (768px), desktop (1280px)
+11. ESM PLUGINS: ALWAYS set window.L = L before importing leaflet plugins
+12. ZERO L.geoJson wrapper — create markers directly, add to cluster group
+
+--- Architecture & Design ---
+Goal: Align /it/tests/segnalazioni-elenco with Design Comuni reference.
+Reference: farmshops.eu direktvermarkter.js
+
+Components:
+- Map: <geo-map-lit> Lit Web Component (Light DOM)
+- Data: Static GeoJSON fetch (/data/tickets.json)
+- Popups: AJAX fetch to /api/ticket-details/{id} on marker click
+
+--- Cluster LOD (farmshops.eu Parity) ---
+- Zoom < 8: Show count circle only (80px diameter)
+- Zoom >= 8: Show count circle with category dots (colored SVG circles)
+- Zoom >= 12: Cluster radius reduces to 45px
+- minimumClusterSize: 2 (no cluster for single markers)
+
+--- Implementation Pattern ---
+```javascript
+// Farmshops.eu pattern: create markers directly
+_loadGeoJson() {
+    fetch(url).then(res => res.json()).then(data => {
+        data.features.forEach(feature => {
+            const coords = feature.geometry?.coordinates;
+            if (!coords || coords.length < 2) return;
+            const latlng = L.latLng(coords[1], coords[0]); // GeoJSON is [lng, lat]
+            const marker = L.marker(latlng, {
+                icon: createGeoMapLeafletIcon(L, feature.properties?.type_color),
+                typeValue: feature.properties?.type,
+            });
+            this._allMarkers.push(marker);
+        });
+        if (this._markersLayer) {
+            this._markersLayer.addLayers(this._allMarkers);
+        }
+    });
+}
+```
+
+--- Documentation Checklist ---
+- [x] laravel/Modules/Geo/docs/wiki/concepts/geo-map-cluster.md
+- [x] laravel/Modules/Fixcity/docs/wiki/concepts/farmshops-clustering-integration.md
+- [x] laravel/Modules/Geo/docs/prompts/geo-map-widget.txt (this file)
+- [ ] Ingest new documents into QMD/Second Brain
+- [ ] Update LLM Wiki index with new entries

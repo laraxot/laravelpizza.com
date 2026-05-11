@@ -30,7 +30,11 @@ class SetDefaultTenantForUrlsMiddleware
             // 'referrer' => url()->previous(),
         ]);
 
-        // @phpstan-ignore return.type
-        return $next($request);
+        $response = $next($request);
+        if (! $response instanceof Response && ! $response instanceof JsonResponse && ! $response instanceof \Symfony\Component\HttpFoundation\Response) {
+            throw new \RuntimeException('SetDefaultTenantForUrlsMiddleware expects a Symfony HTTP response.');
+        }
+
+        return $response;
     }
 }

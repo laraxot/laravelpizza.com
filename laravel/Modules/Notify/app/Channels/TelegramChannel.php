@@ -39,7 +39,7 @@ class TelegramChannel
      *
      * @throws Exception Se la notifica non ha il metodo toTelegram o il driver non è supportato
      */
-    public function send($notifiable, Notification $notification)
+    public function send(mixed $notifiable, Notification $notification): ?array
     {
         if (! method_exists($notification, 'toTelegram')) {
             throw new Exception('Notification does not have toTelegram method');

@@ -14,7 +14,7 @@ it('registers blade components correctly', function (): void {
     $namespace = 'Some\\Namespace';
     $prefix = 'prefix';
 
-    $comp1 = ComponentFileData::from([)
+    $comp1 = ComponentFileData::from([
         'name' => 'test-comp',
         'ns' => 'Some\\Namespace\\View\\Components\\TestComp',
         'class' => 'TestComp',

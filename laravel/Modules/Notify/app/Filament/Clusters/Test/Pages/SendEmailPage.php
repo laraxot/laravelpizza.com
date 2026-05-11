@@ -24,7 +24,7 @@ use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Override;
 
 /**
- * @property \Filament\Schemas\Schema $emailForm
+ * @property Schema $emailForm
  */
 class SendEmailPage extends XotBasePage
 {

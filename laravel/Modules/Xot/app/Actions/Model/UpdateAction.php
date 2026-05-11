@@ -40,9 +40,6 @@ class UpdateAction
             $model = $model->firstOrCreate($where, $data);
         }
 
-        /**
-         * @phpstan-ignore method.notFound (.)
-         */
         $model = tap($model)->update($data);
 
         app(__NAMESPACE__.'\\Update\RelationAction')->execute($model, $data);

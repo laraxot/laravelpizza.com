@@ -9,5 +9,5 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 
 class EditSnapshot extends XotBaseEditRecord
 {
-    protected static string $resource = SnapshotResource::class;
+    public static string $resource = SnapshotResource::class;
 }

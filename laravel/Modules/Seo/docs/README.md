@@ -31,8 +31,6 @@ php artisan module:enable Seo
 php artisan migrate
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ### 🎯 **Meta Tags Management**
 ```php
 // Impostazione meta tags
@@ -281,9 +279,6 @@ php artisan seo:validate-schema
 
 
 =======
-Developers are encouraged to contribute to this documentation to keep it accurate and up-to-date.
->>>>>>> 013c0d2 (.)
-=======
 ## ⚙️ Configuration
 
 Publish the configuration file to set up API keys (e.g., OpenAI) and defaults:
@@ -317,3 +312,17 @@ Please verify all changes with:
 - `phpstan analyse Modules/Seo` (Level 10)
 - `pest` (Test Suite)
 >>>>>>> b33919b (.)
+
+
+## Standard Rules & Workflow
+
+- [[BMAD Method](../../../../docs/wiki/concepts/bmad-method.md)]
+- [[Context Engineering](../../../../docs/wiki/concepts/context-engineering.md)]
+- [[LLM Wiki Governance](../../../../docs/wiki/concepts/llm-wiki-governance.md)]
+
+## Documentation
+
+- [On-Demand Pattern](./ON-DEMAND-PATTERN.md) — Pattern per caricamento efficiente
+- [QMD Setup](./QMD-SETUP.md) — Configurazione ricerca locale
+- [Performance](./PERFORMANCE-OPTIMIZATION.md) — Metriche e best practice
+- [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout

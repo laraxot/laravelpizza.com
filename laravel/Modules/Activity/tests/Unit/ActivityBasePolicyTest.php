@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit;
 
+use Illuminate\Auth\Access\HandlesAuthorization;
 use Modules\Activity\Models\Policies\ActivityBasePolicy;
 use Modules\Activity\Tests\TestCase;
 use Modules\User\Models\User;
@@ -23,7 +24,7 @@ class ActivityBasePolicyTest extends TestCase
     {
         $this->assertTrue(
             in_array(
-                \Illuminate\Auth\Access\HandlesAuthorization::class,
+                HandlesAuthorization::class,
                 class_uses_recursive(ActivityBasePolicy::class)
             )
         );
@@ -43,8 +44,9 @@ class ActivityBasePolicyTest extends TestCase
         $user->method('hasRole')->with('super-admin')->willReturn(true);
 
         // Test the policy
-        $policy = new class extends ActivityBasePolicy {
-            public function testBefore(User $user): ?bool
+        $policy = new class extends ActivityBasePolicy
+        {
+            public function test_before(User $user): ?bool
             {
                 return $this->before($user);
             }

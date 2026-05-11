@@ -1,9 +1,6 @@
 # Cyclomatic Complexity Report - Module: Seo
 
-<<<<<<< HEAD
 **Generated:** 2025-10-01 19:44:11  
-=======
->>>>>>> 724098a (.)
 **Analyzer:** Super Mucca 🐮
 
 ---

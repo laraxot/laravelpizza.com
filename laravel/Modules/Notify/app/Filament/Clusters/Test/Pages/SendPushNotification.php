@@ -27,7 +27,7 @@ use Webmozart\Assert\Assert;
 use function Safe\json_encode;
 
 /**
- * @property \Filament\Schemas\Schema $notificationForm
+ * @property Schema $notificationForm
  */
 class SendPushNotification extends XotBasePage
 {

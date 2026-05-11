@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit;
 
-uses(\Modules\Notify\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Notify\Notifications\GenericNotification;
+use Modules\Notify\Tests\TestCase;
 
 // Basic unit tests focusing on business logic of recipient name resolution
 

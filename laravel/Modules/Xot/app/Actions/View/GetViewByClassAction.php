@@ -24,7 +24,7 @@ class GetViewByClassAction
      *
      * @throws \Exception Se la vista non esiste
      *
-     * @return string Il nome della vista
+     * @return view-string Il nome della vista
      */
     public function execute(string $class, string $suffix = ''): string
     {
@@ -49,16 +49,20 @@ class GetViewByClassAction
                 $value = $this->checkPrev($value, $prevValueStr);
             }
 
-            return Str::of($value)->slug()->toString();
+            return Str::of($value)->kebab()->slug()->toString();
         });
 
-        $implode = implode('.', $mapped);
+        $mappedStrings = array_values(array_filter(
+            $mapped,
+            static fn (mixed $value): bool => is_string($value),
+        ));
+        $implode = implode('.', $mappedStrings);
         $views = [
             'pub_theme::'.$implode.$suffix,
             $module_low.'::'.$implode.$suffix,
         ];
-        $view = Arr::first($views, view()->exists(...));
-        if (null === $view) {
+        $view = Arr::first($views, static fn (string $candidate): bool => view()->exists($candidate));
+        if (! is_string($view) || '' === $view) {
             throw new \Exception('View not found: '.implode(', ', $views));
         }
 

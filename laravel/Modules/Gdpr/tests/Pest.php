@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Illuminate\Testing\TestResponse;
 use Modules\Gdpr\Tests\TestCase;
 
 /*
@@ -23,7 +24,7 @@ uses(TestCase::class)->in(__DIR__);
 */
 
 expect()->extend('toBeRedirectedTo', function ($expected) {
-    return function (Illuminate\Testing\TestResponse $response) use ($expected) {
+    return function (TestResponse $response) use ($expected) {
         return $response->assertRedirect($expected);
     };
 });

@@ -45,7 +45,6 @@ class WhatsAppNotification extends Notification implements ShouldQueue
             $recipient = $config['recipient'] ?? ($config['to'] ?? '');
             $from = $config['from'] ?? null;
 
-            /** @phpstan-ignore-next-line */
             $this->whatsappData = new WhatsAppData(
                 recipient: SafeStringCastAction::cast($recipient),
                 body: $content,

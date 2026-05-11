@@ -150,20 +150,12 @@ class MyAction
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_CTdsXg
 namespace Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
-=======
-namespace Modules\ModuloEsempio\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
->>>>>>> .merge_file_z9DYNn
 
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
-<<<<<<< .merge_file_CTdsXg
 use Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
-=======
-use Modules\ModuloEsempio\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
->>>>>>> .merge_file_z9DYNn
 
 class ViewQuestionChart extends XotBaseViewRecord
 {
@@ -205,11 +197,7 @@ class ViewQuestionChart extends XotBaseViewRecord
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_CTdsXg
 namespace Modules\healthcare_app\Filament\Widgets;
-=======
-namespace Modules\ModuloEsempio\Filament\Widgets;
->>>>>>> .merge_file_z9DYNn
 
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
@@ -265,17 +253,10 @@ class QuestionChartFilterWidget extends XotBaseWidget
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_CTdsXg
 namespace Modules\healthcare_app\Filament\Resources;
 
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\healthcare_app\Models\QuestionChart;
-=======
-namespace Modules\ModuloEsempio\Filament\Resources;
-
-use Modules\Xot\Filament\Resources\XotBaseResource;
-use Modules\ModuloEsempio\Models\QuestionChart;
->>>>>>> .merge_file_z9DYNn
 
 class QuestionChartResource extends XotBaseResource
 {

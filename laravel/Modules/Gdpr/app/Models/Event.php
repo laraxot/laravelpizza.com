@@ -64,8 +64,6 @@ class Event extends BaseModel
 {
     use HasUuids;
 
-    protected $table = 'gdpr_events';
-
     public $fillable = [
         'id',
         'action',
@@ -74,6 +72,8 @@ class Event extends BaseModel
         'subject_id',
         'payload',
     ];
+
+    protected $table = 'gdpr_events';
 
     public function consent(): BelongsTo
     {

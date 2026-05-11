@@ -11,6 +11,5 @@ use Modules\Xot\Models\XotBaseModel;
  */
 abstract class BaseModel extends XotBaseModel
 {
-    /** @var string */
     protected $connection = 'gdpr';
 }

@@ -64,13 +64,8 @@ protected function getTableEmptyStateActions(): array
    - Aggiunta sezione "Errore InteractsWithTable"
    - Aggiornata data ultimo aggiornamento
 
-<<<<<<< .merge_file_4BpdVN
 3. **`Modules/healthcare_app/docs/question-chart-implementation-guide.md`**
    - Aggiunta nota critica sulla visibilità dei metodi `getTable*()`
-=======
-3. **Moduli che implementano nested resources con HasXotTable**
-   - Nota critica sulla visibilità dei metodi `getTable*()`
->>>>>>> .merge_file_PTMbQd
 
 ## Pattern Corretto
 
@@ -124,11 +119,7 @@ Dopo la correzione, l'errore non dovrebbe più verificarsi:
 
 ```bash
 # Test accesso pagina
-<<<<<<< .merge_file_4BpdVN
 curl http://healthcare_app.local/healthcare_app/admin/ats/survey-pdfs/16/question-charts/226
-=======
-curl http://app.local/admin/your-resource/16/related/226
->>>>>>> .merge_file_PTMbQd
 # ✅ Dovrebbe funzionare senza errori
 ```
 

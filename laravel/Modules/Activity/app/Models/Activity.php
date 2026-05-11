@@ -11,6 +11,7 @@ use Illuminate\Support\Collection;
 use Modules\Activity\Database\Factories\ActivityFactory;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Spatie\Activitylog\Models\Activity as SpatieActivity;
+use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
 
 /**
  * Class Activity.
@@ -21,7 +22,7 @@ use Spatie\Activitylog\Models\Activity as SpatieActivity;
  * @property string|null $log_name
  * @property string $description
  * @property string|null $subject_type
- * @property int|null $subject_id
+ * @property string|null $subject_id
  * @property string|null $causer_type
  * @property string|null $causer_id
  * @property array<string, mixed>|Collection<array-key, mixed>|null $properties
@@ -36,6 +37,7 @@ use Spatie\Activitylog\Models\Activity as SpatieActivity;
  * @property-read Model|null $causer
  * @property-read Collection $changes
  * @property-read Model|null $subject
+ *
  * @method static ActivityFactory factory($count = null, $state = [])
  * @method static Builder<static>|Activity forBatch(string $batchUuid)
  * @method static Builder<static>|Activity forEvent(string $event)
@@ -99,13 +101,17 @@ use Spatie\Activitylog\Models\Activity as SpatieActivity;
  * @method static Builder<static>|Activity rightJoin(string $table, string $first, string $operator = null, string $second = null)
  * @method static Builder<static>|Activity crossJoin(string $table)
  * @method static Builder<static>|Activity causedBy(Model $causer)
+ *
  * @mixin \Eloquent
  */
 class Activity extends SpatieActivity
 {
     use HasXotFactory;
 
+    /** @laravel/Modules/UI/docs/bugfix-awstest-undefined-variable.md string */
     protected $connection = 'activity';
+
+    protected $table = 'activity_log';
 
     /** @var list<string> */
     protected $fillable = [
@@ -115,10 +121,35 @@ class Activity extends SpatieActivity
         'subject_type',
         'event',
         'subject_id',
-        'causer_type', // Added
-        'causer_id',   // Added
-        'properties', // Added
+        'causer_type',
+        'causer_id',
+        'properties',
+        'batch_uuid',
     ];
+
+    /**
+     * @param  array<string, mixed>  $attributes
+     */
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+        if (app()->environment('testing')) {
+            $default = config('database.default');
+            $this->connection = is_string($default) ? $default : 'mysql';
+        }
+    }
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'properties' => SchemalessAttributes::class,
+        ];
+    }
 
     // NOTE
     // ----

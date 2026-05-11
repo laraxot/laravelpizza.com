@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Filament\Resources;
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Gdpr\Filament\Resources\TreatmentResource;
+use Modules\Gdpr\Tests\TestCase;
 
 test('treatment_resource_extends_xot_base_resource', function () {
     expect(is_subclass_of(TreatmentResource::class, Modules\Xot\Filament\Resources\XotBaseResource::class))->toBeTrue();

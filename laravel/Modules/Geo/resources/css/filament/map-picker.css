@@ -1,0 +1,80 @@
+@import "leaflet/dist/leaflet.css";
+
+.fi-fo-field-wrp .geo-map-picker-input input::-webkit-outer-spin-button,
+.fi-fo-field-wrp .geo-map-picker-input input::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+
+.fi-fo-field-wrp .geo-map-picker-input input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.fi-fo-field-wrp .geo-map-picker-input .leaflet-container {
+    font-family: inherit;
+}
+
+geo-map-picker {
+    display: block;
+}
+
+geo-map-picker .geo-map-picker-element__shell {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, rgb(148 163 184) 40%, transparent);
+    border-radius: 1rem;
+    background:
+        radial-gradient(circle at top left, rgba(14, 165, 233, 0.12), transparent 32%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.92));
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+geo-map-picker .geo-map-picker-element__toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid color-mix(in srgb, rgb(148 163 184) 24%, transparent);
+}
+
+geo-map-picker .geo-map-picker-element__title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+geo-map-picker .geo-map-picker-element__eyebrow {
+    font: 700 0.7rem/1.1 system-ui, sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgb(14 116 144);
+}
+
+geo-map-picker .geo-map-picker-element__subtitle {
+    font: 500 0.85rem/1.2 system-ui, sans-serif;
+    color: rgb(71 85 105);
+}
+
+geo-map-picker .geo-map-picker-element__fullscreen {
+    border: 0;
+    border-radius: 999px;
+    padding: 0.55rem 0.9rem;
+    background: rgb(15 23 42);
+    color: rgb(255 255 255);
+    cursor: pointer;
+    font: 600 0.78rem/1 system-ui, sans-serif;
+    transition: transform 140ms ease, opacity 140ms ease;
+}
+
+geo-map-picker .geo-map-picker-element__fullscreen:hover {
+    transform: translateY(-1px);
+}
+
+geo-map-picker .geo-map-picker-element__map {
+    min-height: 22rem;
+}
+
+geo-map-picker:fullscreen .geo-map-picker-element__map {
+    min-height: calc(100vh - 4rem);
+}

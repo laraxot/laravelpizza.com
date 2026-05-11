@@ -1,7 +1,7 @@
 # Aggiornamento Importante: ai_init.sh Script
 
 ## Problema Risolto
-Lo script `/var/www/_bases/base_quaeris_fila4_mono/bashscripts/ai/ai_init.sh` non creava correttamente tutti i collegamenti simbolici richiesti. Alcune directory esistevano già come cartelle reali invece di collegamenti simbolici.
+Lo script `./bashscripts/ai/ai_init.sh` non creava correttamente tutti i collegamenti simbolici richiesti. Alcune directory esistevano già come cartelle reali invece di collegamenti simbolici.
 
 ## Situazione Prima della Correzione
 - `.ai` - ✅ Collegamento simbolico presente
@@ -29,7 +29,7 @@ Lo script `ai_init.sh` ha una logica di sicurezza che non sovrascrive directory 
 ## Verifica Corretta
 Per verificare che tutto funzioni correttamente:
 ```bash
-file /var/www/_bases/base_quaeris_fila4_mono/.ai /var/www/_bases/base_quaeris_fila4_mono/.cursor /var/www/_bases/base_quaeris_fila4_mono/.claude /var/www/_bases/base_quaeris_fila4_mono/.windsurf /var/www/_bases/base_quaeris_fila4_mono/.gemini
+file ./.ai ./.cursor ./.claude ./.windsurf ./.gemini
 ```
 
 Tutti dovrebbero mostrare "symbolic link to bashscripts/ai/..."

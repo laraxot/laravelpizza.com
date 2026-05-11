@@ -21,11 +21,9 @@ class SendNotificationAction
     use QueueableAction;
 
     /**
-     * @param array<string, mixed> $data
-     * @param array<int, string> $channels
-     * @param array<string, mixed> $options
-     *
-     * @return NotificationModel|null
+     * @param  array<string, mixed>  $data
+     * @param  array<int, string>  $channels
+     * @param  array<string, mixed>  $options
      *
      * @throws Exception
      */
@@ -72,9 +70,9 @@ class SendNotificationAction
     }
 
     /**
-     * @param array{subject: string, body_html: string|null, body_text: string|null} $compiled
-     * @param array<string, mixed> $data
-     * @param array<string, mixed> $options
+     * @param  array{subject: string, body_html: string|null, body_text: string|null}  $compiled
+     * @param  array<string, mixed>  $data
+     * @param  array<string, mixed>  $options
      *
      * @throws Exception
      */
@@ -85,8 +83,7 @@ class SendNotificationAction
         array $compiled,
         array $data,
         array $options,
-    ): ?NotificationModel
-    {
+    ): ?NotificationModel {
         return match ($channel) {
             'mail' => $this->sendMail($recipient, $compiled, $options),
             'database' => $this->sendDatabase($recipient, $template, $compiled, $data, $options),
@@ -96,8 +93,8 @@ class SendNotificationAction
     }
 
     /**
-     * @param array{subject: string, body_html: string|null, body_text: string|null} $compiled
-     * @param array<string, mixed> $options
+     * @param  array{subject: string, body_html: string|null, body_text: string|null}  $compiled
+     * @param  array<string, mixed>  $options
      *
      * @throws Exception
      */
@@ -131,9 +128,9 @@ class SendNotificationAction
     }
 
     /**
-     * @param array{subject: string, body_html: string|null, body_text: string|null} $compiled
-     * @param array<string, mixed> $data
-     * @param array<string, mixed> $options
+     * @param  array{subject: string, body_html: string|null, body_text: string|null}  $compiled
+     * @param  array<string, mixed>  $data
+     * @param  array<string, mixed>  $options
      */
     protected function sendDatabase(
         Model $recipient,
@@ -141,11 +138,10 @@ class SendNotificationAction
         array $compiled,
         array $data,
         array $options,
-    ): NotificationModel
-    {
+    ): NotificationModel {
         $bodyHtml = $compiled['body_html'];
         $message = $compiled['body_text'] ?? ($bodyHtml !== null ? strip_tags($bodyHtml) : '');
-        $notification = new NotificationModel();
+        $notification = new NotificationModel;
         $notification->forceFill([
             'type' => is_string($template->type) && $template->type !== '' ? $template->type : 'generic',
             'message' => $message,
@@ -171,8 +167,8 @@ class SendNotificationAction
     }
 
     /**
-     * @param array{subject: string, body_html: string|null, body_text: string|null} $compiled
-     * @param array<string, mixed> $options
+     * @param  array{subject: string, body_html: string|null, body_text: string|null}  $compiled
+     * @param  array<string, mixed>  $options
      *
      * @throws Exception
      */

@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Models;
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Gdpr\Models\Treatment;
+use Modules\Gdpr\Tests\TestCase;
 
 test('treatment_fillable_attributes', function () {
     $treatment = new Treatment();

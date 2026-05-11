@@ -24,7 +24,7 @@ Implement a WebSocket-based real-time dashboard that displays live activity feed
 - [ ] Add caching for real-time metrics
 
 ### Frontend Implementation
-- [ ] Build responsive dashboard with Livewire 3
+- [ ] Build responsive dashboard with Livewire 4
 - [ ] Implement WebSocket client integration
 - [ ] Create activity feed component with infinite scroll
 - [ ] Add real-time charts and metrics widgets

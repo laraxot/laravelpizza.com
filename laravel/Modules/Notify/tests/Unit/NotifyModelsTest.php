@@ -4,8 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit;
 
-use Modules\Notify\Tests\TestCase;
+use Carbon\Carbon;
 use Modules\Notify\Models\Notification;
+use Modules\Notify\Models\NotificationAttachment;
+use Modules\Notify\Models\NotificationCampaign;
+use Modules\Notify\Models\NotificationChannel;
+use Modules\Notify\Models\NotificationLog;
+use Modules\Notify\Models\NotificationPreference;
+use Modules\Notify\Models\NotificationRule;
+use Modules\Notify\Models\NotificationTemplate;
+use Modules\Notify\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
 
@@ -31,81 +39,81 @@ it('can create a notification with read status', function () {
         'read_at' => now(),
     ]);
 
-    expect($notification->read_at)->toBeInstanceOf(\Carbon\Carbon::class);
+    expect($notification->read_at)->toBeInstanceOf(Carbon::class);
 });
 
 it('can create a notification template', function () {
-    $template = \Modules\Notify\Models\NotificationTemplate::factory()->create([
+    $template = NotificationTemplate::factory()->create([
         'name' => 'Welcome Email',
         'type' => 'email',
         'subject' => 'Welcome to our platform',
         'body' => 'Welcome {{user.name}}!',
     ]);
 
-    expect($template)->toBeInstanceOf(\Modules\Notify\Models\NotificationTemplate::class);
+    expect($template)->toBeInstanceOf(NotificationTemplate::class);
     expect($template->name)->toBe('Welcome Email');
     expect($template->type)->toBe('email');
 });
 
 it('can create a notification channel', function () {
-    $channel = \Modules\Notify\Models\NotificationChannel::factory()->create([
+    $channel = NotificationChannel::factory()->create([
         'name' => 'SMS',
         'driver' => 'sms',
         'enabled' => true,
     ]);
 
-    expect($channel)->toBeInstanceOf(\Modules\Notify\Models\NotificationChannel::class);
+    expect($channel)->toBeInstanceOf(NotificationChannel::class);
     expect($channel->name)->toBe('SMS');
     expect($channel->driver)->toBe('sms');
 });
 
 it('can create a notification preference', function () {
-    $preference = \Modules\Notify\Models\NotificationPreference::factory()->create([
+    $preference = NotificationPreference::factory()->create([
         'user_id' => 1,
         'channel' => 'email',
         'notification_type' => 'welcome',
         'enabled' => true,
     ]);
 
-    expect($preference)->toBeInstanceOf(\Modules\Notify\Models\NotificationPreference::class);
+    expect($preference)->toBeInstanceOf(NotificationPreference::class);
     expect($preference->user_id)->toBe(1);
     expect($preference->channel)->toBe('email');
 });
 
 it('can create a notification log', function () {
-    $log = \Modules\Notify\Models\NotificationLog::factory()->create([
+    $log = NotificationLog::factory()->create([
         'notification_id' => 1,
         'channel' => 'email',
         'status' => 'sent',
         'message' => 'Notification sent successfully',
     ]);
 
-    expect($log)->toBeInstanceOf(\Modules\Notify\Models\NotificationLog::class);
+    expect($log)->toBeInstanceOf(NotificationLog::class);
     expect($log->status)->toBe('sent');
 });
 
 it('can create a notification rule', function () {
-    $rule = \Modules\Notify\Models\NotificationRule::factory()->create([
+    $rule = NotificationRule::factory()->create([
         'name' => 'Admin Notifications',
         'event' => 'user.registered',
         'channel' => 'email',
         'conditions' => json_encode(['user_type' => 'admin']),
     ]);
 
-    expect($rule)->toBeInstanceOf(\Modules\Notify\Models\NotificationRule::class);
+    expect($rule)->toBeInstanceOf(NotificationRule::class);
     expect($rule->name)->toBe('Admin Notifications');
     expect($rule->event)->toBe('user.registered');
 });
 
 it('can create a notification campaign', function () {
-    $campaign = \Modules\Notify\Models\NotificationCampaign::factory()->create([
+    $campaign = NotificationCampaign::factory()->create([
         'name' => 'Weekly Newsletter',
         'type' => 'email',
         'schedule' => 'weekly',
         'status' => 'scheduled',
     ]);
 
-    expect($campaign)->toBeInstanceOf(\Modules\Notify\Models\NotificationCampaign::class);
+    expect($campaign)->toBeInstanceOf(NotificationCampaign::class);
     expect($campaign->name)->toBe('Weekly Newsletter');
     expect($campaign->status)->toBe('scheduled');
 });
@@ -123,7 +131,7 @@ it('can create a notification with attachments', function () {
         'mime_type' => 'application/pdf',
     ]);
 
-    expect($attachment)->toBeInstanceOf(\Modules\Notify\Models\NotificationAttachment::class);
+    expect($attachment)->toBeInstanceOf(NotificationAttachment::class);
     expect($attachment->file_name)->toBe('document.pdf');
 });
 

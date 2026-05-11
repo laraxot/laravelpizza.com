@@ -100,7 +100,7 @@ test('netfun notifications channel sends and increases counter', function () {
         }
     });
 
-    $channel = new NetfunChannel();
+    $channel = new NetfunChannel;
     $notifiable = makeNetfunChannelNotifiableDummy();
     $notification = makeThemeNotificationDummy();
 
@@ -113,14 +113,14 @@ test('netfun notifications channel sends and increases counter', function () {
 test('telegram notifications channel logs when recipient and method are valid', function () {
     Log::shouldReceive('info')->once();
 
-    $channel = new TelegramChannel();
+    $channel = new TelegramChannel;
     $channel->send(makeTelegramNotifiableDummy(), makeTelegramNotificationDummy());
 
     expect(true)->toBeTrue();
 });
 
 test('telegram notifications channel throws when notification has no toTelegram method', function () {
-    $channel = new TelegramChannel();
+    $channel = new TelegramChannel;
 
     $channel->send(makeTelegramNotifiableDummy(), new class extends Notification {});
 })->throws(\Exception::class);

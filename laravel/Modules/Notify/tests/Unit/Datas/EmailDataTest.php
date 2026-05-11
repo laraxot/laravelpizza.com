@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Notify\Tests\Unit\Datas;
 
 use Modules\Notify\Datas\EmailData;
+use Spatie\LaravelData\Data;
 
 describe('EmailData', function () {
     it('can be instantiated via reflection without constructor', function () {
@@ -35,7 +36,7 @@ describe('EmailData', function () {
     it('extends Spatie Data', function () {
         $reflection = new \ReflectionClass(EmailData::class);
 
-        expect($reflection->isSubclassOf(\Spatie\LaravelData\Data::class))->toBeTrue();
+        expect($reflection->isSubclassOf(Data::class))->toBeTrue();
     });
 
     it('has getFrom method', function () {

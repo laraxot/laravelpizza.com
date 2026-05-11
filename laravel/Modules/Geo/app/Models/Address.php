@@ -166,48 +166,49 @@ class Address extends BaseModel
      */
     public function getRegione(): ?array
     {
-        /** @phpstan-ignore method.unresolvableReturnType */
         $res = Comune::select('regione')
             ->distinct()
             ->orderBy('regione->nome')
             ->where('regione->codice', $this->administrative_area_level_1)
             ->get()
-            /* @phpstan-ignore argument.unresolvableType */
-            ->map(function ($item) {
+            ->map(function ($item): ?array {
                 $regione = $item->regione;
                 if (! is_array($regione) || ! isset($regione['codice'], $regione['nome'])) {
-                    return;
+                    return null;
                 }
 
                 return ['codice' => $regione['codice'], 'nome' => $regione['nome']];
             })
-            ->filter();
+            ->filter(static fn (?array $row): bool => null !== $row);
 
         return $res->first();
     }
 
     public function getProvincia(): ?array
     {
-        /** @phpstan-ignore method.unresolvableReturnType */
         $res = Comune::select('provincia')
             ->distinct()
             ->orderBy('provincia->nome')
             ->where('provincia->codice', $this->administrative_area_level_2)
             ->get()
-            /* @phpstan-ignore argument.unresolvableType */
-            ->map(fn ($item) => [
-                /* @phpstan-ignore offsetAccess.notFound */
-                'codice' => $item->provincia['codice'],
-                /* @phpstan-ignore offsetAccess.notFound */
-                'nome' => $item->provincia['nome'],
-            ]);
+            ->map(function ($item): ?array {
+                $provincia = $item->provincia ?? null;
+                if (! is_array($provincia) || ! isset($provincia['codice'], $provincia['nome'])) {
+                    return null;
+                }
+
+                return [
+                    'codice' => $provincia['codice'],
+                    'nome' => $provincia['nome'],
+                ];
+            })
+            ->filter(static fn (?array $row): bool => null !== $row);
 
         return $res->first();
     }
 
     public function getLocality(): ?array
     {
-        /* @phpstan-ignore-next-line */
         return Comune::where('codice', $this->locality)
             ->distinct()
             ->first()

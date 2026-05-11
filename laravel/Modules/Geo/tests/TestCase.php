@@ -8,6 +8,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Modules\Geo\Providers\GeoServiceProvider;
 use Modules\User\Providers\UserServiceProvider;
+use Modules\Xot\Datas\XotData;
 use Modules\Xot\Providers\XotServiceProvider;
 use Modules\Xot\Tests\CreatesApplication;
 
@@ -34,7 +35,7 @@ abstract class TestCase extends BaseTestCase
         config(['xra.pub_theme' => 'Meetup']);
         config(['xra.main_module' => 'User']);
 
-        \Modules\Xot\Datas\XotData::make()->update([
+        XotData::make()->update([
             'pub_theme' => 'Meetup',
             'main_module' => 'User',
         ]);

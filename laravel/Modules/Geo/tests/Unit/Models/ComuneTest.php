@@ -5,6 +5,7 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\File;
 use Modules\Geo\Models\Comune;
+use Modules\Tenant\Services\TenantService;
 use Tests\TestCase;
 
 uses(TestCase::class);
@@ -40,7 +41,7 @@ beforeEach(function (): void {
     ];
 
     // Use the path that matches the SushiToJson trait's getJsonFile() method
-    $jsonPath = $this->app->make(Modules\Tenant\Services\TenantService::class)->filePath('database/content/comuni.json');
+    $jsonPath = $this->app->make(TenantService::class)->filePath('database/content/comuni.json');
     $directory = dirname($jsonPath);
     if (! File::exists($directory)) {
         File::makeDirectory($directory, 0755, true);
@@ -54,7 +55,7 @@ afterEach(function (): void {
     Cache::forget('sushi_Comune_data');
 
     // Rimuovi il file di test
-    $jsonPath = app(Modules\Tenant\Services\TenantService::class)->filePath('database/content/comuni.json');
+    $jsonPath = app(TenantService::class)->filePath('database/content/comuni.json');
     File::delete($jsonPath);
 });
 

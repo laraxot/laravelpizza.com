@@ -54,7 +54,7 @@ class LangServiceProvider extends XotBaseServiceProvider
             return $component;
         });
         Field::configureUsing(function (Field $component) {
-            $component = app(AutoLabelAction::class)->execute($component);
+            $component = app(AutoLabelAction::class)->execute($component, 'label');
             Assert::isInstanceOf($component, Field::class);
 
             $validationMessages = __('user::validation');
@@ -76,6 +76,10 @@ class LangServiceProvider extends XotBaseServiceProvider
             $component = app(AutoLabelAction::class)->execute($component, 'helperText');
 
             return app(AutoLabelAction::class)->execute($component, 'description');
+        });
+
+        Entry::configureUsing(function (Entry $component) {
+            return app(AutoLabelAction::class)->execute($component, 'label');
         });
 
         Section::configureUsing(function (Section $component) {

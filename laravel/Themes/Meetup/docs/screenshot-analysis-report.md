@@ -8,29 +8,6 @@
 
 ## 🎯 **ANALISI VISIVA COMPARATIVA**
 
-## Kinetic UX — baseline (verifica quick wins)
-
-Questa sezione è dedicata alle modifiche “low‑risk” Kinetic UX (motion + micro‑interazioni + a11y) e alla loro verifica tramite screenshot.
-
-**Report dedicato**: `visual-analysis/kinetic-ux-baseline.md`
-
-**Screenshot aggiornati**:
-- home prod: `docs/screenshots/grafica-confronto/laravelpizza-com-home.png`
-- home local: `docs/screenshots/grafica-confronto/nostra-home.png`
-- events prod: `docs/screenshots/grafica-confronto/laravelpizza-com-events.png`
-- events local: `docs/screenshots/grafica-confronto/nostri-events.png`
-- footer prod: `docs/screenshots/footer-logo-confronto/footer-laravelpizza-com.png`
-- footer local: `docs/screenshots/footer-logo-confronto/footer-locale-it.png`
-
-### Evidenze principali (Kinetic UX)
-- **Micro‑interazioni card**: applicata utility `kinetic-lift` (hover/tap) con fallback `prefers-reduced-motion`.
-- **Particles**: early‑return su `prefers-reduced-motion: reduce`.
-- **Menu mobile**: stato unico gestito da Alpine (rimosso toggle JS duplicato).
-- **Traduzioni**: empty state events non mostra più chiavi raw.
-
-### Anomalia (solo dev)
-- Negli screenshot locali è visibile la debugbar: va disabilitata/occlusa quando facciamo screenshot “puliti” da condividere.
-
 ### **Header e Navigation**
 
 #### ✅ **HEADER FUNZIONANTE**

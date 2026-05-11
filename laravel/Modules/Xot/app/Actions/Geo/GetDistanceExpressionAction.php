@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Geo;
 
-use Illuminate\Contracts\Database\Query\Expression;
-use Illuminate\Support\Facades\DB;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
@@ -25,13 +23,13 @@ class GetDistanceExpressionAction
      * @param float       $longitude Longitudine del punto di riferimento
      * @param string|null $alias     Alias per l'espressione (opzionale)
      *
-     * @return Expression Espressione SQL per il calcolo della distanza
+     * @return string Espressione SQL per il calcolo della distanza
      */
     public function execute(
         float $latitude,
         float $longitude,
         ?string $alias = null,
-    ): Expression {
+    ): string {
         $sql = "
             (6371 * acos(
                 cos(radians({$latitude})) *
@@ -46,6 +44,6 @@ class GetDistanceExpressionAction
             $sql .= " AS {$alias}";
         }
 
-        return DB::raw($sql);
+        return trim($sql);
     }
 }

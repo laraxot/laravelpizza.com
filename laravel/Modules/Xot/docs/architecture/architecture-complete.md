@@ -335,7 +335,7 @@ Defines contracts for modular extensibility:
 
 ### 9. Helper Functions (200+)
 
-**File:** `Modules/Xot/helpers/Helper.php`
+**File:** `Modules/Xot/Helpers/Helper.php`
 
 **Categories:**
 
@@ -830,7 +830,7 @@ $value = $model->getExtra('custom_field');
 - Filament Resource Base: `Modules/Xot/app/Filament/Resources/XotBaseResource.php`
 - Provider Base: `Modules/Xot/app/Providers/XotBaseServiceProvider.php`
 - Central Config: `Modules/Xot/app/Datas/XotData.php`
-- Global Helpers: `Modules/Xot/helpers/Helper.php`
+- Global Helpers: `Modules/Xot/Helpers/Helper.php`
 - Actions: `Modules/Xot/app/Actions/` (150+ classes)
 - Test Base: `Modules/Xot/tests/TestCase.php`
 

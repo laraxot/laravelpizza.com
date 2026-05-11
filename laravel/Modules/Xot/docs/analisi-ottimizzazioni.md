@@ -70,7 +70,7 @@ patterns.md~4241492
     "Modules\\Xot\\": "app/",
     "Coolsam\\FilamentModules\\": "packages/coolsam/panel-modules/src/"
   },
-  "files": ["helpers/Helper.php"]
+  "files": ["Helpers/Helper.php"]
 }
 ```
 - mixing namespace esterni in modulo core
@@ -164,7 +164,7 @@ find docs/ -name "*.md~*" -delete
 # consolidare tutte le cartelle archive
 mkdir -p docs/_archive_consolidated/
 find docs/ -path "*/archive/*" -name "*.md" -exec mv {} docs/_archive_consolidated/ \;
-rmdir docs/archive/ docs/*/archive/ 2>/dev/null
+rmdir docs/archived/ docs/*/archive/ 2>/dev/null
 ```
 
 ### fase 2: ristrutturazione strategica (3 giorni - alta priorità)

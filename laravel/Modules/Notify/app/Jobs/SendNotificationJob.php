@@ -23,17 +23,13 @@ class SendNotificationJob implements ShouldQueue
 
     /**
      * Numero di tentativi massimi.
-     *
-     * @var int
      */
-    public $tries;
+    public int $tries;
 
     /**
      * Timeout del job in secondi.
-     *
-     * @var int
      */
-    public $timeout;
+    public int $timeout;
 
     /**
      * Crea una nuova istanza del job.

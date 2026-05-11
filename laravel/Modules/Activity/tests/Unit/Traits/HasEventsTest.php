@@ -15,7 +15,8 @@ uses(TestCase::class);
 
 function makeHasEventsDummyModel(): Model
 {
-    return new class extends Model {
+    return new class extends Model
+    {
         use HasEvents;
 
         protected $table = 'activity_dummy_models';

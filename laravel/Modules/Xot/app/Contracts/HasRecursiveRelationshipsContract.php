@@ -53,196 +53,142 @@ interface HasRecursiveRelationshipsContract
 
     /**
      * Get the name of the parent key column.
-     *
-     * @return string
      */
-    public function getParentKeyName();
+    public function getParentKeyName(): string;
 
     /**
      * Get the qualified parent key column.
-     *
-     * @return string
      */
-    public function getQualifiedParentKeyName();
+    public function getQualifiedParentKeyName(): string;
 
     /**
      * Get the name of the local key column.
-     *
-     * @return string
      */
-    public function getLocalKeyName();
+    public function getLocalKeyName(): string;
 
     /**
      * Get the qualified local key column.
-     *
-     * @return string
      */
-    public function getQualifiedLocalKeyName();
+    public function getQualifiedLocalKeyName(): string;
 
     /**
      * Get the name of the depth column.
-     *
-     * @return string
      */
-    public function getDepthName();
+    public function getDepthName(): string;
 
     /**
      * Get the name of the path column.
-     *
-     * @return string
      */
-    public function getPathName();
+    public function getPathName(): string;
 
     /**
      * Get the path separator.
-     *
-     * @return string
      */
-    public function getPathSeparator();
+    public function getPathSeparator(): string;
 
     /**
      * Get the additional custom paths.
      *
      * @return array<string>
      */
-    public function getCustomPaths();
+    public function getCustomPaths(): array;
 
     /**
      * Get the name of the common table expression.
-     *
-     * @return string
      */
-    public function getExpressionName();
+    public function getExpressionName(): string;
 
     /**
      * Get the model's ancestors.
-     *
-     * @return Ancestors
      */
-    public function ancestors();
+    public function ancestors(): Ancestors;
 
     /**
      * Get the model's ancestors and itself.
-     *
-     * @return Ancestors
      */
-    public function ancestorsAndSelf();
+    public function ancestorsAndSelf(): Ancestors;
 
     /**
      * Get the model's bloodline.
-     *
-     * @return Bloodline
      */
-    public function bloodline();
+    public function bloodline(): Bloodline;
 
     /**
      * Get the model's children.
-     *
-     * @return HasMany
      */
-    public function children();
+    public function children(): HasMany;
 
     /**
      * Get the model's children and itself.
-     *
-     * @return Descendants
      */
-    public function childrenAndSelf();
+    public function childrenAndSelf(): Descendants;
 
     /**
      * Get the model's descendants.
-     *
-     * @return Descendants
      */
-    public function descendants();
+    public function descendants(): Descendants;
 
     /**
      * Get the model's descendants and itself.
-     *
-     * @return Descendants
      */
-    public function descendantsAndSelf();
+    public function descendantsAndSelf(): Descendants;
 
     /**
      * Get the model's parent.
-     *
-     * @return BelongsTo
      */
-    public function parent();
+    public function parent(): BelongsTo;
 
     /**
      * Get the model's parent and itself.
-     *
-     * @return Ancestors
      */
-    public function parentAndSelf();
+    public function parentAndSelf(): Ancestors;
 
     /**
      * Get the model's root ancestor.
-     *
-     * @return RootAncestor
      */
-    public function rootAncestor();
+    public function rootAncestor(): RootAncestor;
 
     /**
      * Get the model's root ancestor or self.
-     *
-     * @return RootAncestorOrSelf
      */
-    public function rootAncestorOrSelf();
+    public function rootAncestorOrSelf(): RootAncestorOrSelf;
 
     /**
      * Get the model's siblings.
-     *
-     * @return Siblings
      */
-    public function siblings();
+    public function siblings(): Siblings;
 
     /**
      * Get the model's siblings and itself.
-     *
-     * @return Siblings
      */
-    public function siblingsAndSelf();
+    public function siblingsAndSelf(): Siblings;
 
     /**
      * Get the first segment of the model's path.
-     *
-     * @return string
      */
-    public function getFirstPathSegment();
+    public function getFirstPathSegment(): string;
 
     /**
      * Determine whether the model's path is nested.
-     *
-     * @return bool
      */
-    public function hasNestedPath();
+    public function hasNestedPath(): bool;
 
     /**
      * Determine if an attribute is an integer.
-     *
-     * @return bool
      */
-    public function isIntegerAttribute(string $attribute);
+    public function isIntegerAttribute(string $attribute): bool;
 
     /**
      * Create a new Eloquent query builder for the model.
-     *
-     * @param Builder $query
-     *
-     * @return AdjacencyBuilder
      */
-    public function newEloquentBuilder($query);
+    public function newEloquentBuilder(Builder $query): AdjacencyBuilder;
 
     /**
      * Create a new Eloquent Collection instance.
      *
      * @param list<static> $models
-     *
-     * @return Collection
      */
-    public function newCollection(array $models = []);
+    public function newCollection(array $models = []): Collection;
 
     /**
      * added by XOT, viene utilizzato nelle options delle select.

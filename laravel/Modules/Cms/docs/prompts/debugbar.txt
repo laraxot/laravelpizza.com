@@ -1,0 +1,7 @@
+studia a fondo 
+https://github.com/fruitcake/laravel-debugbar
+https://laravelmodules.com/docs/13/getting-started/introduction
+
+come avrai capito il file laravel/composer.json deve essere minimo e fruitcake/laravel-debugbar deve essere installato dentro un modulo, in questo caso dentro il modulo Xot, percio' nel file laravel/Modules/Xot/composer.json
+
+poi cerca di capire come mai non si vede la debugbar dentro l'indirizzo http://127.0.0.1:8000/it/tests/homepage , voglio vedere la debugbar ! trova la soluzione , la documenti, la implementi e controlli 

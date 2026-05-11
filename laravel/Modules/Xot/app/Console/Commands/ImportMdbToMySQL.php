@@ -12,15 +12,11 @@ class ImportMdbToMySQL extends Command
 {
     /**
      * Il nome e la firma del comando.
-     *
-     * @var string
      */
     protected $signature = 'xot:import-mdb-to-mysql';
 
     /**
      * La descrizione del comando.
-     *
-     * @var string
      */
     protected $description = 'Importa un file .mdb in MySQL';
 

@@ -4,17 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Console\Commands;
 
+use Illuminate\Console\Command;
 use Modules\Notify\Console\Commands\AnalyzeTranslationFiles;
 
 describe('AnalyzeTranslationFiles', function () {
     it('has correct signature', function () {
-        $command = new AnalyzeTranslationFiles();
+        $command = new AnalyzeTranslationFiles;
 
         expect($command->getName())->toBe('notify:analyze-translations');
     });
 
     it('has description', function () {
-        $command = new AnalyzeTranslationFiles();
+        $command = new AnalyzeTranslationFiles;
 
         $description = $command->getDescription();
 
@@ -23,49 +24,49 @@ describe('AnalyzeTranslationFiles', function () {
     });
 
     it('extends command', function () {
-        $command = new AnalyzeTranslationFiles();
+        $command = new AnalyzeTranslationFiles;
 
-        expect($command)->toBeInstanceOf(\Illuminate\Console\Command::class);
+        expect($command)->toBeInstanceOf(Command::class);
     });
 
     it('has handle method', function () {
-        $command = new AnalyzeTranslationFiles();
+        $command = new AnalyzeTranslationFiles;
 
         expect(method_exists($command, 'handle'))->toBeTrue();
     });
 
     it('has flatten array method', function () {
-        $command = new AnalyzeTranslationFiles();
+        $command = new AnalyzeTranslationFiles;
 
         expect(method_exists($command, 'flattenArray'))->toBeTrue();
     });
 
     it('has analyze structure patterns method', function () {
-        $command = new AnalyzeTranslationFiles();
+        $command = new AnalyzeTranslationFiles;
 
         expect(method_exists($command, 'analyzeStructurePatterns'))->toBeTrue();
     });
 
     it('has generate consistency report method', function () {
-        $command = new AnalyzeTranslationFiles();
+        $command = new AnalyzeTranslationFiles;
 
         expect(method_exists($command, 'generateConsistencyReport'))->toBeTrue();
     });
 
     it('has generate recommendations method', function () {
-        $command = new AnalyzeTranslationFiles();
+        $command = new AnalyzeTranslationFiles;
 
         expect(method_exists($command, 'generateRecommendations'))->toBeTrue();
     });
 
     it('has analyze navigation structure method', function () {
-        $command = new AnalyzeTranslationFiles();
+        $command = new AnalyzeTranslationFiles;
 
         expect(method_exists($command, 'analyzeNavigationStructure'))->toBeTrue();
     });
 
     it('flatten array handles nested arrays', function () {
-        $command = new AnalyzeTranslationFiles();
+        $command = new AnalyzeTranslationFiles;
 
         $reflection = new \ReflectionClass($command);
         $method = $reflection->getMethod('flattenArray');
@@ -86,7 +87,7 @@ describe('AnalyzeTranslationFiles', function () {
     });
 
     it('flatten array handles empty array', function () {
-        $command = new AnalyzeTranslationFiles();
+        $command = new AnalyzeTranslationFiles;
 
         $reflection = new \ReflectionClass($command);
         $method = $reflection->getMethod('flattenArray');
@@ -98,7 +99,7 @@ describe('AnalyzeTranslationFiles', function () {
     });
 
     it('flatten array handles nested levels', function () {
-        $command = new AnalyzeTranslationFiles();
+        $command = new AnalyzeTranslationFiles;
 
         $reflection = new \ReflectionClass($command);
         $method = $reflection->getMethod('flattenArray');
@@ -119,7 +120,7 @@ describe('AnalyzeTranslationFiles', function () {
     });
 
     it('flatten array handles prefix parameter', function () {
-        $command = new AnalyzeTranslationFiles();
+        $command = new AnalyzeTranslationFiles;
 
         $reflection = new \ReflectionClass($command);
         $method = $reflection->getMethod('flattenArray');

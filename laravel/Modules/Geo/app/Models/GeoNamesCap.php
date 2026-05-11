@@ -28,7 +28,6 @@ class GeoNamesCap extends BaseModel
 {
     // use Searchable;
 
-    /** @var string */
     protected $table = 'geonames_cap';
 
     // protected $connection = 'geo';

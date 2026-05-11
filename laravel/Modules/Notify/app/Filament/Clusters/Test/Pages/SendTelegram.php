@@ -29,7 +29,7 @@ use Telegram\Bot\Laravel\Facades\Telegram;
 use Webmozart\Assert\Assert;
 
 /**
- * @property \Filament\Schemas\Schema $emailForm
+ * @property Schema $emailForm
  */
 class SendTelegram extends XotBasePage
 {

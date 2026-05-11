@@ -759,14 +759,8 @@ class ConnectionManagerService
     public static function getConnectionForModule(string $module): string
     {
         return match($module) {
-<<<<<<< .merge_file_kwG20C
             'healthcare_app' => 'healthcare_app',
-=======
-<<<<<<< HEAD
             'ExternalProject' => '<nome progetto>',
-=======
-            'ModuloEsempio' => 'ptvx',
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_szY6ZB
             'User' => 'user',
             'Notify' => 'notify',
@@ -850,14 +844,8 @@ class ContactValidationService
 **Solution**: Strategy pattern con interfaces
 
 ```php
-<<<<<<< .merge_file_kwG20C
 // Modules/healthcare_app/Contracts/ChartRendererContract.php
-=======
-<<<<<<< HEAD
 // Modules/ExternalProject/Contracts/ChartRendererContract.php
-=======
-// Modules/ModuloEsempio/Contracts/ChartRendererContract.php
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_szY6ZB
 interface ChartRendererContract
 {
@@ -865,14 +853,8 @@ interface ChartRendererContract
     public function render(array $data, array $config): string;
 }
 
-<<<<<<< .merge_file_kwG20C
 // Modules/healthcare_app/Services/Chart/Renderers/PieChartRenderer.php
-=======
-<<<<<<< HEAD
 // Modules/ExternalProject/Services/Chart/Renderers/PieChartRenderer.php
-=======
-// Modules/ModuloEsempio/Services/Chart/Renderers/PieChartRenderer.php
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_szY6ZB
 class PieChartRenderer implements ChartRendererContract
 {
@@ -1039,14 +1021,8 @@ $contacts = Contact::forContext('dashboard')->get(); // Optimized loading
 **Solution**: Chunking e memory management
 
 ```php
-<<<<<<< .merge_file_kwG20C
 // Modules/healthcare_app/Services/BulkProcessingService.php
-=======
-<<<<<<< HEAD
 // Modules/ExternalProject/Services/BulkProcessingService.php
-=======
-// Modules/ModuloEsempio/Services/BulkProcessingService.php
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
 >>>>>>> .merge_file_szY6ZB
 class BulkProcessingService
 {

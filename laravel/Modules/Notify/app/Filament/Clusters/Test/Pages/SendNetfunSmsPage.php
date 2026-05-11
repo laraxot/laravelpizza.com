@@ -24,7 +24,7 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 use Override;
 
 /**
- * @property \Filament\Schemas\Schema $smsForm
+ * @property Schema $smsForm
  */
 class SendNetfunSmsPage extends XotBasePage
 {
@@ -69,7 +69,7 @@ class SendNetfunSmsPage extends XotBasePage
     }
 
     /**
-     * @return array<string, \Filament\Forms\Components\TextInput|\Filament\Forms\Components\Textarea|\Filament\Forms\Components\Select>
+     * @return array<string, TextInput|Textarea|Select>
      */
     public function getSmsFormSchema(): array
     {

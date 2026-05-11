@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit\Models;
 
-uses(\Modules\Lang\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Lang\Models\BaseMorphPivot;
+use Modules\Lang\Tests\TestCase;
 
 describe('BaseMorphPivot Model', function () {
     test('extends MorphPivot', function () {

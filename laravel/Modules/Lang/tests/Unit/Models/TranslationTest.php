@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit\Models;
 
-uses(\Modules\Lang\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Lang\Models\Translation;
+use Modules\Lang\Tests\TestCase;
 
 describe('Translation Model', function () {
     test('has correct fillable attributes', function () {

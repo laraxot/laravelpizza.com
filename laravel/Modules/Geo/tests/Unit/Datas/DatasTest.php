@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Datas;
 
-uses(\Modules\Geo\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Geo\Datas\AddressData;
 use Modules\Geo\Datas\BingMapData;
@@ -22,6 +22,7 @@ use Modules\Geo\Datas\RouteData;
 use Modules\Geo\Datas\TimeZoneData;
 use Modules\Geo\Datas\TravelTimeData;
 use Modules\Geo\Datas\UpdateCoordinatesResult;
+use Modules\Geo\Tests\TestCase;
 
 test('CoordinatesData can be instantiated', function () {
     // Check if class exists and can be instantiated

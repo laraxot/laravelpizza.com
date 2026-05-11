@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Traits;
 
 use Filament\Schemas\Schema;
-use Filament\Tables\Table;
 use Modules\UI\Enums\TableLayoutEnum;
 
 /**

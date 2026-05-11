@@ -1,0 +1,146 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Punto di test 1",
+        "type_label": "Test",
+        "type_color": "#e63946",
+        "type_label_es": "Prueba",
+        "address": "Via Test 1, Roma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4964, 41.9028]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Punto di test 2",
+        "type_label": "Test",
+        "type_color": "#e63946",
+        "type_label_es": "Prueba",
+        "address": "Via Test 2, Napoli"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [14.2056, 40.8526]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Punto di test 3",
+        "type_label": "Evento",
+        "type_color": "#3366ff",
+        "type_label_es": "Evento",
+        "address": "Piazza Duomo, Milano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.1919, 45.4642]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Punto di test 4",
+        "type_label": "Promozione",
+        "type_color": "#4caf50",
+        "type_label_es": "Promocion",
+        "address": "Via Liberty 42, Bologna"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.3498, 44.4952]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Punto di test 5",
+        "type_label": "Contatto",
+        "type_color": "#ff7043",
+        "type_label_es": "Contacto",
+        "address": "Corso Vittorio 10, Torino"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.5967, 44.4376]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Farm 1",
+        "type_label": "Agricoltura",
+        "type_color": "#2e7d32",
+        "type_label_es": "Agricultura",
+        "address": "Strada Agraria 5, Cremona"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.0548, 45.0585]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Market 1",
+        "type_label": "Mercato",
+        "type_color": "#ff9800",
+        "type_label_es": "Mercado",
+        "address": "Piazza Mercato 1, Ferrara"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.6185, 44.8380]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Park 1",
+        "type_label": "Parco",
+        "type_color": "#795548",
+        "type_label_es": "Parque",
+        "address": "Via del Parco 3, Padua"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.3191, 45.4062]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Museum 1",
+        "type_label": "Museo",
+        "type_color": "#607d8b",
+        "type_label_es": "Museo",
+        "address": "Via Museo 2, Venice"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.3155, 45.4337]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stadium 1",
+        "type_label": "Stadio",
+        "type_color": "#e53935",
+        "type_label_es": "Estadio",
+        "address": "Stadio Olimpico, Roma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4964, 41.9028]
+      }
+    }
+    // ... add more test points to populate full map clustering
+  ]
+}

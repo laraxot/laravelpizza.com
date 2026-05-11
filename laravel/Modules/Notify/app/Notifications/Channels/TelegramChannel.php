@@ -12,11 +12,8 @@ class TelegramChannel
 {
     /**
      * Invia la notifica tramite Telegram.
-     *
-     * @param  mixed  $notifiable
-     * @return void
      */
-    public function send($notifiable, Notification $notification)
+    public function send(mixed $notifiable, Notification $notification): void
     {
         if (! method_exists($notification, 'toTelegram')) {
             throw new Exception('Il metodo toTelegram() non è definito nella notifica.');

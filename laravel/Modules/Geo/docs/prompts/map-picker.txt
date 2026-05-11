@@ -1,0 +1,223 @@
+# GEO MAP PICKER PROMPT (CANONICAL) — v2.1.123.ac1
+
+> STACK: TailwindCSS + AlpineJS + Lit + Livewire + Filament v5 + Laraxot
+> PRINCIPLES: DRY + KISS + Clean Code + Single Source of Truth
+> TARGET: mobile-first, responsive, i18n
+> BRANCH: `dev` only
+> REFERENCE: https://italia.github.io/design-comuni-pagine-statiche/sito/segnalazione-02-dati.html
+> REFERENCE MAP: farmshops.eu direktvermarkter.js
+
+---
+
+## 0. Non-Negotiable Guards
+
+### 0.1 Widget Components Persistence
+In `laravel/Modules/Fixcity/app/Filament/Widgets/CreateTicketWizardWidget.php`, the following commented form component alternatives **MUST** remain in place:
+- `CoordinatePicker`, `GeopointPicker`, `LatitudeLongitudeInput`, `LeafletMarkerMapInput`, `LocationPicker`, `MapLocationInput`, `MapPicker`, `MapPositioner`, `PlacePicker`.
+**Never delete them during cleanup or refactor.**
+
+### 0.2 Canonical Web Root
+The Document Root is strictly: `/var/www/_bases/base_fixcity_fila5/public_html`.
+- **NEVER** use `/laravel/public/` for asset deployment or references.
+- All Vite/Mix builds must deploy to `public_html/assets/geo/`.
+
+### 0.3 Git Forward-Only Discipline
+- **NEVER** revert or reset old versions.
+- Study history for context, but **always roll fixes forward** with new commits.
+- This preserves AI context and ensures a linear audit trail.
+
+---
+
+## 1. Business Goal
+
+Standardize Geo Filament fields and visualizers to be stable, reusable, and simple.
+- One canonical state path: `location` (JSON/array).
+- DB Sync: `latitude = location.lat`, `longitude = location.lng` (synced explicitly).
+- Shared logic via `HasCoordinatePicker` trait.
+
+---
+
+## 2. Canonical Data Contract
+
+`CoordinatePicker::make('location')` uses a single composite payload:
+```json
+{
+  "lat": 45.4642,
+  "lng": 9.19,
+  "address": "...",
+  "provider": "nominatim",
+  "street": "...",
+  "street_number": "...",
+  "city": "...",
+  "postcode": "...",
+  "raw": {}
+}
+```
+Rules:
+- Use `lat` / `lng` for UI, Alpine, Lit, and Leaflet.
+- Normalize legacy `latitude` / `longitude` input once at the trait/Alpine boundary.
+
+---
+
+## 3. Architectural Rules
+
+- All fields extend `Modules\Xot\Filament\Forms\Components\XotBaseField`.
+- Sibling components, never deep inheritance.
+- **ESM Plugin Safety**: ALWAYS set `window.L = L` before importing Leaflet plugins (`markercluster`, `heat`).
+- **File Limits**: If a JS file exceeds 200 lines, extract `layers.js`, `controls.js`, `events.js`, `geolocation.js`.
+
+---
+
+## 4. UX & Responsive Requirements
+
+### 4.1 Visualizer Parity (farmshops.eu)
+- **Marker Clustering (LOD)**:
+    - Zoom < 8: Show count circle only.
+    - Zoom >= 8: Show count with category dots (color from `properties.type_color`).
+    - `maxClusterRadius`: 80px (<12) / 45px (>=12).
+- **Rich Popups**: Lazy AJAX fetch to `/api/ticket-details/{id}` on marker click.
+
+### 4.2 Controls & Geolocation
+- Mandatory: Fullscreen, Geolocation, Layer Switcher (4+ layers), Zoom +/-.
+- **Geolocation-First**: Auto-center on user position at map load (zoom 12) if coords are null.
+- Fallback: `fitBounds` on dataset or default center `[41.9028, 12.4964]`.
+
+### 4.3 Responsive
+- Map height: `50dvh` mobile / `60vh` tablet / configurable desktop.
+- Touch targets: at least `44x44`.
+- **Search**: Box above map; always visible on mobile; 500ms debounce.
+
+---
+
+## 5. Performance & Resource Guards
+
+- Update Livewire on `click`, `dragend`, search select only (NEVER on `mousemove` or continuous drag).
+- **MutationObserver**: Depth >= 12 ancestors for Filament 5 wizard x-show detection.
+- `invalidateSize()` with multi-delays: `[0, 80, 180, 350, 700, 1200]`.
+
+---
+
+## 6. i18n & Accessibility
+
+- **ZERO** hardcoded strings. All labels from `geo::map` lang files passed as JSON.
+- ARIA: Explicit labels for all buttons, tab navigation logic, polite live regions.
+- Keyboard: ESC closes search results and fullscreen.
+
+---
+
+## 7. Bad Practices (Zero Tolerance)
+
+| Avoid | Use Instead | Why |
+|---|---|---|
+| `LatitudeLongitudeInput extends CoordinatePicker` | Sibling pattern with shared trait | Deep inheritance breaks DRY/overrides. |
+| `id="map"` | `this.querySelector('.map-container')` | Multiple maps per page cause ID collisions. |
+| Browser-side Nominatim calls | Livewire `searchAddress()` / `reverseGeocode()` | Privacy, ToS compliance, IP protection. |
+| `L.Icon.Default` | `createGeoMapLeafletIcon(L, color)` | Avoid CDN drift and missing PNGs. |
+| Git `revert` / `reset` | Roll-forward commits | Preserves training data for AI agents. |
+| `laravel/public` deployment | `public_html/assets/geo` | Project-specific security architecture. |
+
+---
+
+## 8. Quality Gates
+
+Modified files MUST pass:
+- `phpstan`, `phpmd` (.phar version), `phpinsights`.
+- `pest`, `playwright` (Visual Parity verification).
+- URLs to verify:
+    - `/it/tests/segnalazione-crea`
+    - `/fixcity/admin/tickets/create`
+    - `/it/tests/segnalazioni-elenco` (for `map-lit` visualizer).
+
+---
+
+## 9. Implementation Status & Refactoring Notes
+
+### 9.1 CreateTicketWizardWidget.php — Refactored (10 documented improvements)
+**File**: `laravel/Modules/Fixcity/app/Filament/Widgets/CreateTicketWizardWidget.php`
+**Lines**: 79 → 142 (with documentation)
+
+**10 Documented Improvements:**
+1. **[Extract]** `prepareTicketData()` — dedicated method for data preparation (previously inline in `submit()`).
+2. **[Transaction]** `DB::transaction()` wraps ticket creation for atomicity — ensures rollback on partial failure.
+3. **[Types]** Explicit return type declarations on all methods (`array`, `string`, `void`, `?int`) — static analysis friendly.
+4. **[Resolver]** `resolveOwnerId()` replaces direct `auth()->id()` call — injectable and testable (can be overridden/mocked).
+5. **[ErrorHandling]** Try/catch with user-friendly notification on failure — prevents silent crashes, displays localized error.
+6. **[Debug]** `debugLog()` helper for development tracing (conditional on `app.debug`) — no noise in production.
+7. **[Centralize]** `SafeStringCastAction` used consistently for all slug/string casting — single source of truth for string normalization.
+8. **[Validate]** `validateBlockData()` ensures required blockData keys exist and provides defaults — defensive against missing CMS fields.
+9. **[Testable]** `buildRedirectUrl()` extracted for unit testing — URL construction isolated, mockable, independent of request flow.
+10. **[PHPDoc]** Complete PHPDoc blocks with `@var`, `@param`, `@return` — IDE autocomplete and static analysis support.
+
+### 9.2 Frontend: segnalazioni-elenco.blade.php — Created
+**File**: `laravel/Themes/Sixteen/resources/views/pages/tests/segnalazioni-elenco.blade.php`
+**Purpose**: CMS-driven page for the segnalazioni elenco map visualizer.
+**Implementation**: Extends `pub_theme::layouts.app`, uses `<map-lit>` custom element with `data-url` pointing to `tickets.json`.
+**Route**: Folio page `tests/[slug].blade.php` matches `/it/tests/segnalazioni-elenco` (already existing CMS routing).
+
+### 9.3 map-lit.js — Already Compliant
+**File**: `laravel/Modules/Geo/resources/js/components/map-lit.js` (385 lines)
+**Status**: Already implements:
+- ✅ Farmshops.eu pattern (direktvermarkter.js conversion)
+- ✅ LOD Marker Clustering (80px / 45px radius, category dots at zoom≥8)
+- ✅ Lazy AJAX popup details (`/api/ticket-details/{id}`)
+- ✅ MutationObserver depth=12 for Filament wizard step visibility
+- ✅ Geolocation-first with fallback `fitBounds`
+- ✅ `createGeoMapLeafletIcon()` for local SVG markers (no CDN)
+- ✅ `geoIcon()` from `geo-heroicons.js` for controls
+- ✅ Zero hardcoded SVG, all inline via `geo-heroicons.js` registry
+- ✅ Multi-delay `invalidateSize()` `[0, 80, 180, 350, 700, 1200]`
+- ✅ No `L.Icon.Default`, no CDN, no unpkg
+
+**Next Steps**: Verify Vite build and deploy to `public_html/assets/geo/`.
+
+### 9.4 Static Analysis Verification
+Run on modified PHP file:
+```bash
+phpstan analyse \
+  laravel/Modules/Fixcity/app/Filament/Widgets/CreateTicketWizardWidget.php \
+  --level=max
+
+phpmd \
+  laravel/Modules/Fixcity/app/Filament/Widgets/CreateTicketWizardWidget.php \
+  text \
+  unusedcode,design,codesize
+
+php artisan insights --fix  # if auto-fixes available
+```
+
+### 9.5 URLs to Verify (per Quality Gates)
+1. `http://127.0.0.1:8000/it/tests/segnalazione-crea` — Wizard creation (already exists)
+2. `http://127.0.0.1:8000/fixcity/admin/tickets/create` — Admin panel (Filament)
+3. `http://127.0.0.1:8000/it/tests/segnalazioni-elenco` — **NEW**: Map visualizer page ✅
+
+---
+
+## 10. Deployment Checklist
+
+- [ ] Run `npm run build` in `laravel/Themes/Sixteen/` to bundle `map-lit.js` and dependencies.
+- [ ] Verify `public_html/assets/geo/` contains built assets (or configure Vite manifest path).
+- [ ] Run `php artisan migrate` if any DB changes.
+- [ ] Clear config & view cache: `php artisan optimize:clear`.
+- [ ] Test on staging: all three URLs above (200 OK, map renders, zoom/geolocate work).
+- [ ] Playwright visual parity snapshot for `/it/tests/segnalazioni-elenco`.
+- [ ] Ensure no `unpkg` or `cdn.` references in JS (`grep -r "unpkg" laravel/Modules/Geo/resources/js/` → 0 results).
+- [ ] Confirm `laravel/Modules/Geo/resources/svg/` contains marker SVGs (not in `img/` or `public/`).
+
+---
+
+## 11. References & Cross-Links
+
+- **Wiki**: `laravel/Modules/Geo/docs/wiki/concepts/lit-icons-filament-way.md`
+- **Wiki**: `laravel/Modules/Geo/docs/wiki/concepts/map-interaction-transparency-rule.md`
+- **Wiki**: `laravel/Modules/Geo/docs/wiki/concepts/map-marker-custom-asset.md`
+- **Wiki**: `laravel/Modules/Geo/docs/wiki/concepts/svg-asset-location.md`
+- **Wiki**: `laravel/Modules/Geo/docs/wiki/concepts/leaflet-wizard-invalidate-size.md`
+- **Rules**: `bashscripts/ai/.claude/rules/filament-template-as-dress.md`
+- **Rules**: `bashscripts/ai/.claude/rules/filament5-schemas-section.md`
+- **Rules**: `bashscripts/ai/.claude/rules/filament5-infolist-wizard-summary.md`
+- **Memory**: `~/.claude/projects/.../memory/feedback_lit_icons_filament_way.md`
+- **Memory**: `~/.claude/projects/.../memory/feedback_map_marker_no_cdn.md`
+
+---
+
+*Last updated: 2026-05-01 | Version: 2.1.123.ac1*

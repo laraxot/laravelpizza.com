@@ -13,7 +13,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
  */
 class ListActivities extends XotBaseListRecords
 {
-    protected static string $resource = ActivityResource::class;
+    public static string $resource = ActivityResource::class;
 
     public function getTableColumns(): array
     {

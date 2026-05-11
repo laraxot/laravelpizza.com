@@ -1,0 +1,142 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'fields' => [
+        'latitude' => [
+            'label' => 'Latitude',
+            'placeholder' => 'Enter latitude',
+            'help' => 'Geographic coordinates - latitude',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'longitude' => [
+            'label' => 'Longitude',
+            'placeholder' => 'Enter longitude',
+            'help' => 'Geographic coordinates - longitude',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'altitude' => [
+            'label' => 'Altitude',
+            'placeholder' => 'Enter altitude',
+            'help' => 'Altitude above sea level',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'accuracy' => [
+            'label' => 'Accuracy',
+            'placeholder' => 'Select accuracy',
+            'help' => 'Level of coordinate accuracy',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'coordinate_system' => [
+            'label' => 'Coordinate system',
+            'placeholder' => 'Select system',
+            'help' => 'Coordinate system used',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'datum' => [
+            'label' => 'Datum',
+            'placeholder' => 'Select datum',
+            'help' => 'Reference geodetic datum',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'zone' => [
+            'label' => 'Zone',
+            'placeholder' => 'Enter zone',
+            'help' => 'UTM zone or other system',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'easting' => [
+            'label' => 'Easting',
+            'placeholder' => 'Enter easting coordinate',
+            'help' => 'East coordinate in UTM system',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'northing' => [
+            'label' => 'Northing',
+            'placeholder' => 'Enter northing coordinate',
+            'help' => 'North coordinate in UTM system',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+    ],
+    'validation' => [
+        'latitude_required' => 'Latitude is required',
+        'longitude_required' => 'Longitude is required',
+        'latitude_range' => 'Latitude must be between -90 and 90',
+        'longitude_range' => 'Longitude must be between -180 and 180',
+        'altitude_range' => 'Altitude must be between -10000 and 10000',
+        'coordinates_invalid' => 'Invalid geographic coordinates',
+    ],
+    'messages' => [
+        'coordinates_created' => 'Coordinates created successfully',
+        'coordinates_updated' => 'Coordinates updated successfully',
+        'coordinates_deleted' => 'Coordinates deleted successfully',
+        'coordinates_converted' => 'Coordinates converted successfully',
+        'coordinates_validated' => 'Coordinates validated successfully',
+        'format_changed' => 'Coordinate format changed successfully',
+    ],
+    'coordinate_systems' => [
+        'wgs84' => 'WGS84',
+        'nad83' => 'NAD83',
+        'etrs89' => 'ETRS89',
+        'osgb36' => 'OSGB36',
+        'custom' => 'Custom',
+    ],
+    'accuracy_levels' => [
+        'exact' => 'Exact',
+        'high' => 'High',
+        'medium' => 'Medium',
+        'low' => 'Low',
+        'approximate' => 'Approximate',
+    ],
+    'units' => [
+        'degrees' => 'Degrees',
+        'decimal_degrees' => 'Decimal degrees',
+        'dms' => 'Degrees, minutes, seconds',
+        'meters' => 'Meters',
+        'feet' => 'Feet',
+        'nautical_miles' => 'Nautical miles',
+    ],
+    'label' => 'Coordinates',
+    'plural_label' => 'Coordinates',
+    'navigation' => [
+        'name' => 'Coordinates',
+        'plural' => 'Coordinates',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Coordinates',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'Create Coordinates',
+        ],
+        'edit' => [
+            'label' => 'Edit Coordinates',
+        ],
+        'delete' => [
+            'label' => 'Delete Coordinates',
+        ],
+    ],
+];
