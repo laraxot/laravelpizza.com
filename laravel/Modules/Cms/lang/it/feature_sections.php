@@ -33,8 +33,6 @@ return [
             'tooltip' => '',
         ],
     ],
-    'label' => 'Feature Sections',
-    'plural_label' => 'Feature Sections (Plurale)',
     'navigation' => [
         'name' => 'Feature Sections',
         'plural' => 'Feature Sections',
@@ -46,6 +44,8 @@ return [
         'sort' => 1,
         'icon' => 'heroicon-o-collection',
     ],
+    'label' => 'Feature Sections',
+    'plural_label' => 'Feature Sections (Plurale)',
     'actions' => [
         'create' => [
             'label' => 'Crea Feature Sections',

@@ -2,20 +2,70 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Feature;
 
+=======
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
+use Modules\User\Database\Factories\TeamFactory;
+use Modules\User\Database\Factories\UserFactory;
+>>>>>>> 9fa499be (.)
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
+<<<<<<< HEAD
 it('can create team', function (): void {
     // Arrange
     $name = 'Studio Dentistico Milano '.uniqid();
     $teamData = [
         'name' => $name,
         'description' => 'Studio dentistico specializzato in Milano',
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+function teamMgmtBizUserTableHasColumn(string $table, string $column): bool
+{
+    return Schema::connection('user')->hasColumn($table, $column);
+}
+
+function teamMgmtBizTeamUsersRelationSupported(): bool
+{
+    return teamMgmtBizUserTableHasColumn('team_user', 'permissions');
+}
+
+function teamMgmtBizTeamUsesSoftDeletes(): bool
+{
+    return in_array(SoftDeletes::class, \class_uses_recursive(Team::class), true);
+}
+
+/**
+ * @param array<string, mixed> $attributes
+ */
+function teamMgmtBizCreateUser(array $attributes = []): User
+{
+    /** @var User $user */
+    $user = UserFactory::new()->createOne(array_merge([
+        'email' => 'team-biz-'.uniqid('', true).'@example.com',
+    ], $attributes));
+
+    return $user;
+}
+
+/**
+ * @param array<string, mixed> $attributes
+ */
+function teamMgmtBizCreateTeam(array $attributes = []): Team
+{
+    return TeamFactory::new()->createOne(array_merge([
+        'name' => 'Team-'.uniqid(),
+>>>>>>> 9fa499be (.)
         'personal_team' => false,
     ];
 

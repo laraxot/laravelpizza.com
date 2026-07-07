@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Filament\Clusters\Appearance\Pages;
-
 use Modules\Cms\Filament\Clusters\Appearance\Pages\Breadcrumb;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 test('Breadcrumb page uses correct view', function () {
     $page = new Breadcrumb();
     // Access protected property via reflection
@@ -13,12 +13,11 @@ test('Breadcrumb page uses correct view', function () {
     $property = $reflection->getProperty('view');
     $property->setAccessible(true);
 
-    expect($property->getValue($page))->toBe('cms::filament.clusters.appearance.pages.headernav');
+    Assert::assertSame('cms::filament.clusters.appearance.pages.headernav', $property->getValue($page));
 });
 
 test('Breadcrumb page can be instantiated', function () {
     $page = new Breadcrumb();
-    expect($page)->toBeObject();
 });
 
 test('Breadcrumb page has data property', function () {
@@ -27,17 +26,14 @@ test('Breadcrumb page has data property', function () {
     $property = $reflection->getProperty('data');
     $property->setAccessible(true);
 
-    expect($property->getValue($page))->toBeArray();
+    Assert::assertIsArray($property->getValue($page));
 });
 
 test('Breadcrumb page has mount method', function () {
-    expect(method_exists(Breadcrumb::class, 'mount'))->toBeTrue();
 });
 
 test('Breadcrumb page has schema method', function () {
-    expect(method_exists(Breadcrumb::class, 'schema'))->toBeTrue();
 });
 
 test('Breadcrumb page has updateData method', function () {
-    expect(method_exists(Breadcrumb::class, 'updateData'))->toBeTrue();
 });

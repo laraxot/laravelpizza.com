@@ -1,11 +1,7 @@
 # Helper Functions - Xot Module
 
 **Purpose**: Funzioni helper globali per utilità comuni nel framework Laraxot
-<<<<<<< HEAD
 **Location**: `Modules/Xot/Helpers/Helper.php`
-=======
-**Location**: `Modules/Xot/helpers/Helper.php`
->>>>>>> origin/dev
 **Pattern**: Global functions con `function_exists()` check per evitare collisioni
 
 ---
@@ -309,6 +305,7 @@ function authId(): string|int|null {
 
 ---
 
+**Last Updated**: 2025-01-02
 
 **PHPStan Level**: 10 compliant
 **Status**: ✅ Production Ready

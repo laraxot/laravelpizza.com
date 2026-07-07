@@ -10,8 +10,4 @@ Structure:
 Use qmd to serve or convert these documents (https://github.com/tobi/qmd).
 # LLM Wiki
 
-<<<<<<< HEAD
 Questa cartella contiene pagine curate per l'uso con LLM (wiki). Mettere qui sintesi, convenzioni e pagine curate.
-=======
-Questa cartella contiene pagine curate per l'uso con LLM (wiki). Mettere qui sintesi, convenzioni e pagine curate.
->>>>>>> 40b96bcd6 (.)

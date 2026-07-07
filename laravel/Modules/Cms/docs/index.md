@@ -8,10 +8,18 @@
 - [Modulo User](../../user/docs/readme.md)
 - [Modulo UI](../../ui/docs/readme.md)
 - [Tema One](../../../themes/one/docs/readme.md)
+- [Documentazione Generale <nome progetto>](../../../../docs/README.md)
+- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
+- [Standard di Documentazione](../../../../docs/DOCUMENTATION_STANDARDS.md)
+- [Modulo Xot](../../Xot/docs/README.md)
+- [Modulo User](../../User/docs/README.md)
+- [Modulo UI](../../UI/docs/README.md)
+- [Tema One](../../../Themes/One/docs/README.md)
 
 ## Categorie Principali
 
 ### Architettura e Struttura
+- [README](./README.md) - Panoramica generale del modulo
 - [README](./readme.md) - Panoramica generale del modulo
 - [Architettura](./architecture.md) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
@@ -53,6 +61,7 @@
 - [Storage Contenuti](./content-storage.md) - Archiviazione dei contenuti
 - [Mappatura JSON Contenuti](./content_json_mapping.md) - Mappatura dei contenuti JSON
 - [CMS-Driven Pages](./cms-driven-pages-system.md) - Sistema pagine JSON con container0/slug0
+- [CMS-Driven Pages](./cms-driven-pages-system.md) - Sistema pagine JSON con container0/slug0
 
 ### Volt e Folio
 - [Introduzione Volt](./volt-introduction.md) - Introduzione a Laravel Volt
@@ -92,6 +101,18 @@
 
 ### Frontoffice
 - [Index](./frontoffice/index.md) - Indice della documentazione sul frontoffice
+- [Index](./blocks/INDEX.md) - Indice della documentazione sui blocchi
+
+### Sezioni
+- [Index](./sections/INDEX.md) - Indice della documentazione sulle sezioni
+- [Header](./sections/HEADER_LANGUAGE_USER_DROPDOWN.md) - Documentazione sul dropdown utente e lingua nell'header
+- [Header: Implementazione](./sections/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md) - Implementazione del selettore lingua e avatar
+
+### Componenti
+- [Index](./components/INDEX.md) - Indice della documentazione sui componenti
+
+### Frontoffice
+- [Index](./frontoffice/INDEX.md) - Indice della documentazione sul frontoffice
 
 ## PHPStan e Qualità del Codice
 - [PHPStan](./phpstan.md) - Utilizzo di PHPStan
@@ -104,3 +125,5 @@
 
 ## Note sulla Manutenzione
 Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice del modulo CMS, consultare la documentazione pertinente e aggiornare i documenti correlati.
+Ultimo aggiornamento: 14 Maggio 2025
+- [Tests Pages Block Bridge](./tests-pages-block-bridge.md) - Bridge tema/CMS per le pagine tests.* con view mancanti

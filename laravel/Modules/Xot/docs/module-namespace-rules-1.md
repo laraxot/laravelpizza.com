@@ -22,12 +22,4 @@
 - [docs root](../../../../../docs/actions.md)
 - [docs Lang](../../lang/docs/filament-label.md)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Ultimo aggiornamento: maggio 2025.
-=======
-Ultimo aggiornamento: maggio 2025.
->>>>>>> 40b96bcd6 (.)
-=======
-Ultimo aggiornamento: maggio 2025.
->>>>>>> origin/dev

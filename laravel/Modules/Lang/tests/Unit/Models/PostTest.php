@@ -4,12 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit\Models;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-use Modules\Lang\Models\Post;
-use Modules\Lang\Tests\TestCase;
-=======
 use Modules\Lang\Models\BaseModel;
 use Modules\Lang\Models\Post;
 use Modules\Lang\Tests\TestCase;
@@ -18,7 +12,6 @@ use PHPUnit\Framework\Assert;
 use function Safe\class_uses;
 
 uses(TestCase::class);
->>>>>>> 40b96bcd6 (.)
 
 describe('Post Model', function () {
     test('extends BaseModel', function () {

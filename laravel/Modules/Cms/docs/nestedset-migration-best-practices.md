@@ -1,3 +1,20 @@
+---
+title: "NestedSet Migration Best Practices - CMS Module"
+type: documentation
+tags: [cms, nestedset, recursive-relationships, migrations]
+module: Cms
+created: 2026-06-11
+updated: 2026-06-11
+qmd: "Cms nestedset migration menu recursive relationships vendor trait direct"
+story: STORY-346
+issues:
+  - "https://github.com/laraxot/module_xot_fila5/issues/39"
+discussions:
+  - "https://github.com/laraxot/module_xot_fila5/discussions/40"
+related:
+  - ../../Xot/docs/recursive-relationships-vendor-direct.md
+---
+
 # NestedSet Migration Best Practices - CMS Module
 
 ## Overview
@@ -166,7 +183,7 @@ namespace Modules\Cms\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Kalnoy\Nestedset\NodeTrait;
-use Modules\Xot\Models\Traits\TypedHasRecursiveRelationships;
+use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
 
 class Menu extends BaseTreeModel
 {

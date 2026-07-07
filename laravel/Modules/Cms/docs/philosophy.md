@@ -1,3 +1,20 @@
+---
+title: "Cms philosophy"
+type: documentation
+tags: [cms, philosophy, recursive-relationships, content]
+module: Cms
+created: 2026-06-11
+updated: 2026-06-11
+qmd: "Cms philosophy menu recursive relationships vendor trait direct Xot contract"
+story: STORY-346
+issues:
+  - "https://github.com/laraxot/module_xot_fila5/issues/39"
+discussions:
+  - "https://github.com/laraxot/module_xot_fila5/discussions/40"
+related:
+  - ../../Xot/docs/recursive-relationships-vendor-direct.md
+---
+
 # Modulo Cms - Filosofia, Religione, Politica, Zen
 
 ## 🎯 Panoramica
@@ -22,7 +39,7 @@ La filosofia di Cms si basa sull'idea che il contenuto web debba essere struttur
 La "religione" di Cms si manifesta nella rigorosa aderenza a una gerarchia ben definita dei contenuti, dove ogni elemento ha un ruolo preciso e relazioni chiare con gli altri.
 
 - **Gerarchia Pagine**: `Page` è l'entità principale, contenente `content_blocks`, `sidebar_blocks` e `footer_blocks`.
-- **Menu Gerarchici**: `Menu` utilizza `HasRecursiveRelationshipsContract` e `TypedHasRecursiveRelationships` per gestire strutture ad albero complesse.
+- **Menu Gerarchici**: `Menu` utilizza `HasRecursiveRelationshipsContract` e il trait vendor `HasRecursiveRelationships` per gestire strutture ad albero complesse.
 - **Sezioni e Blocchi**: `Section` contiene `blocks`, che a loro volta sono composti da `BlockData`.
 - **BaseTreeModel**: Modello astratto per entità gerarchiche, garantendo coerenza nell'implementazione delle relazioni ricorsive.
 
@@ -33,11 +50,11 @@ La "religione" di Cms si manifesta nella rigorosa aderenza a una gerarchia ben d
 namespace Modules\Cms\Models;
 
 use Modules\Xot\Contracts\HasRecursiveRelationshipsContract;
-use Modules\Xot\Models\Traits\TypedHasRecursiveRelationships;
+use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
 
 class Menu extends BaseModel implements HasRecursiveRelationshipsContract
 {
-    use \Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
+    use HasRecursiveRelationships;
     
     // Menu può avere parent e children, formando una struttura ad albero
     // Utilizza i metodi del contratto: parent(), children(), ancestors(), descendants()

@@ -90,12 +90,4 @@ return [
 - [Best Practices Traduzioni](translations-best-practices.md)
 - [Documentazione Principale Traduzioni](../../../../docs/translation_rules.md)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 *Ultimo aggiornamento: 27 Gennaio 2025*
-=======
-*Ultimo aggiornamento: 27 Gennaio 2025*
->>>>>>> 40b96bcd6 (.)
-=======
-*Ultimo aggiornamento: 27 Gennaio 2025*
->>>>>>> origin/dev

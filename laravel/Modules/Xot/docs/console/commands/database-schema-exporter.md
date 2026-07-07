@@ -52,5 +52,7 @@ Tabelle trovate: users, migrations, password_resets
 - Ottimizzata la query di estrazione tabelle
 
 ## Collegamenti tra versioni di database-schema-exporter.md
+* [database-schema-exporter.md](../../../Xot/docs/commands/database-schema-exporter.md)
+* [database-schema-exporter.md](../../../Xot/docs/console/commands/database-schema-exporter.md)
 * [database-schema-exporter.md](../../../xot/docs/commands/database-schema-exporter.md)
 * [database-schema-exporter.md](../../../xot/docs/console/commands/database-schema-exporter.md)

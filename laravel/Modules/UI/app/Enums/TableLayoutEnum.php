@@ -10,7 +10,7 @@ use Filament\Support\Contracts\HasLabel;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\ColumnGroup;
 use Filament\Tables\Columns\Layout\Component;
-use Modules\Xot\Filament\Traits\TransTrait;
+use Modules\Xot\Traits\EnumTrait;
 
 /**
  * Enum for managing table layout types in Filament UI components.
@@ -23,7 +23,7 @@ use Modules\Xot\Filament\Traits\TransTrait;
  */
 enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 {
-    use TransTrait;
+    use EnumTrait;
 
     case LIST = 'list';
     case GRID = 'grid';
@@ -31,26 +31,6 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
     public static function init(): self
     {
         return self::LIST;
-    }
-
-    public function getLabel(): string
-    {
-        return $this->transClass(self::class, $this->value.'.label');
-    }
-
-    public function getColor(): string
-    {
-        return $this->transClass(self::class, $this->value.'.color');
-    }
-
-    public function getIcon(): string
-    {
-        return $this->transClass(self::class, $this->value.'.icon');
-    }
-
-    public function getDescription(): string
-    {
-        return $this->transClass(self::class, $this->value.'.description');
     }
 
     public function getTooltip(): string
@@ -110,8 +90,6 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
      *
      * @param array<Column|ColumnGroup|Component> $listColumns Columns for list layout
      * @param array<Column|ColumnGroup|Component> $gridColumns Columns for grid layout
-     * @param array<Column|ColumnGroup|Component> $listColumns Columns for list layout
-     * @param array<Column|ColumnGroup|Component> $gridColumns Columns for grid layout
      *
      * @return array<Column|ColumnGroup|Component>
      */
@@ -120,6 +98,7 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
         return $this->isGridLayout() ? $gridColumns : $listColumns;
     }
 
+    /** @return array<string, string> */
     public static function getOptions(): array
     {
         return [

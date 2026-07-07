@@ -2,38 +2,32 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Actions\Cast;
-
+uses(Modules\Xot\Tests\TestCase::class);
 use Modules\Xot\Actions\Cast\SafeIntCastAction;
+use PHPUnit\Framework\Assert;
 
 it('casts various values to integer correctly', function (): void {
     $action = app(SafeIntCastAction::class);
 
     // Integers
-    expect($action->execute(123))->toBe(123);
-
+    Assert::assertSame(123, $action->execute(123));
     // Floats
-    expect($action->execute(123.9))->toBe(123);
-    expect($action->execute(INF, 5))->toBe(5);
-
+    Assert::assertSame(123, $action->execute(123.9));
+    Assert::assertSame(5, $action->execute(INF, 5));
     // Null
-    expect($action->execute(null, 10))->toBe(10);
-
+    Assert::assertSame(10, $action->execute(null, 10));
     // Strings
-    expect($action->execute('123'))->toBe(123);
-    expect($action->execute('1.234'))->toBe(1234); // Thousands separator
-    expect($action->execute(' +123 '))->toBe(123);
-    expect($action->execute('invalid', 7))->toBe(7);
-    expect($action->execute(''))->toBe(0);
-
+    Assert::assertSame(123, $action->execute('123'));
+    Assert::assertSame(1234, $action->execute('1.234')); // Thousands separator
+    Assert::assertSame(123, $action->execute(' +123 '));
+    Assert::assertSame(7, $action->execute('invalid', 7));
+    Assert::assertSame(0, $action->execute(''));
     // Booleans
-    expect($action->execute(true))->toBe(1);
-    expect($action->execute(false))->toBe(0);
-
+    Assert::assertSame(1, $action->execute(true));
+    Assert::assertSame(0, $action->execute(false));
     // Arrays (single element)
-    expect($action->execute(['15']))->toBe(15);
-    expect($action->execute(['a', 'b'], 2))->toBe(2);
-
+    Assert::assertSame(15, $action->execute(['15']));
+    Assert::assertSame(2, $action->execute(['a', 'b'], 2));
     // Objects with toString
     $obj = new class {
         public function __toString()
@@ -41,27 +35,27 @@ it('casts various values to integer correctly', function (): void {
             return '20';
         }
     };
-    expect($action->execute($obj))->toBe(20);
+    Assert::assertSame(20, $action->execute($obj));
 });
 
 it('clams integer within range correctly', function (): void {
     $action = app(SafeIntCastAction::class);
 
-    expect($action->executeWithRange(50, 0, 100))->toBe(50);
-    expect($action->executeWithRange(-10, 0, 100))->toBe(0);
-    expect($action->executeWithRange(150, 0, 100))->toBe(100);
+    Assert::assertSame(50, $action->executeWithRange(50, 0, 100));
+    Assert::assertSame(0, $action->executeWithRange(-10, 0, 100));
+    Assert::assertSame(100, $action->executeWithRange(150, 0, 100));
 });
 
 it('casts as id correctly', function (): void {
     $action = app(SafeIntCastAction::class);
 
-    expect($action->executeAsId(10))->toBe(10);
-    expect($action->executeAsId(0))->toBe(1);
-    expect($action->executeAsId(-5))->toBe(1);
+    Assert::assertSame(10, $action->executeAsId(10));
+    Assert::assertSame(1, $action->executeAsId(0));
+    Assert::assertSame(1, $action->executeAsId(-5));
 });
 
 it('uses static int cast methods correctly', function (): void {
-    expect(SafeIntCastAction::cast('99'))->toBe(99);
-    expect(SafeIntCastAction::castWithRange(200, 0, 50))->toBe(50);
-    expect(SafeIntCastAction::castAsId(0))->toBe(1);
+    Assert::assertSame(99, SafeIntCastAction::cast('99'));
+    Assert::assertSame(50, SafeIntCastAction::castWithRange(200, 0, 50));
+    Assert::assertSame(1, SafeIntCastAction::castAsId(0));
 });

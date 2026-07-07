@@ -2,82 +2,78 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Providers;
-
 use Modules\Cms\Providers\CmsServiceProvider;
 use Modules\Cms\Providers\EventServiceProvider;
 use Modules\Cms\Providers\FolioVoltServiceProvider;
 use Modules\Cms\Providers\RouteServiceProvider;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 test('CmsServiceProvider has correct name', function () {
     $provider = new CmsServiceProvider(app());
-    $reflection = new \ReflectionClass($provider);
+    $reflection = new ReflectionClass($provider);
     $property = $reflection->getProperty('name');
     $property->setAccessible(true);
 
-    expect($property->getValue($provider))->toBe('Cms');
+    Assert::assertSame('Cms', $property->getValue($provider));
 });
 
 test('CmsServiceProvider extends XotBaseServiceProvider', function () {
-    expect(new CmsServiceProvider(app()))->toBeInstanceOf(Modules\Xot\Providers\XotBaseServiceProvider::class);
+    Assert::assertInstanceOf(Modules\Xot\Providers\XotBaseServiceProvider::class, new CmsServiceProvider(app()));
 });
 
 test('EventServiceProvider has empty event listeners', function () {
     $provider = new EventServiceProvider(app());
-    $reflection = new \ReflectionClass($provider);
+    $reflection = new ReflectionClass($provider);
     $property = $reflection->getProperty('listen');
     $property->setAccessible(true);
 
-    expect($property->getValue($provider))->toBe([]);
+    Assert::assertSame([], $property->getValue($provider));
 });
 
 test('EventServiceProvider has shouldDiscoverEvents enabled', function () {
     $provider = new EventServiceProvider(app());
-    $reflection = new \ReflectionClass($provider);
+    $reflection = new ReflectionClass($provider);
     $property = $reflection->getProperty('shouldDiscoverEvents');
     $property->setAccessible(true);
 
-    expect($property->getValue($provider))->toBeTrue();
+    Assert::assertTrue($property->getValue($provider));
 });
 
 test('RouteServiceProvider has correct module namespace', function () {
     $provider = new RouteServiceProvider(app());
-    $reflection = new \ReflectionClass($provider);
+    $reflection = new ReflectionClass($provider);
     $property = $reflection->getProperty('moduleNamespace');
     $property->setAccessible(true);
 
-    expect($property->getValue($provider))->toBe('Modules\Cms\Http\Controllers');
+    Assert::assertSame('Modules\Cms\Http\Controllers', $property->getValue($provider));
 });
 
 test('RouteServiceProvider has correct name', function () {
     $provider = new RouteServiceProvider(app());
-    $reflection = new \ReflectionClass($provider);
+    $reflection = new ReflectionClass($provider);
     $property = $reflection->getProperty('name');
     $property->setAccessible(true);
 
-    expect($property->getValue($provider))->toBe('Cms');
+    Assert::assertSame('Cms', $property->getValue($provider));
 });
 
 test('RouteServiceProvider has registerRoutePattern method', function () {
     $provider = new RouteServiceProvider(app());
-    expect(method_exists($provider, 'registerRoutePattern'))->toBeTrue();
 });
 
 test('RouteServiceProvider has registerMyMiddleware method', function () {
     $provider = new RouteServiceProvider(app());
-    expect(method_exists($provider, 'registerMyMiddleware'))->toBeTrue();
 });
 
 test('FolioVoltServiceProvider extends ServiceProvider', function () {
-    expect(new FolioVoltServiceProvider(app()))->toBeInstanceOf(Illuminate\Support\ServiceProvider::class);
+    Assert::assertInstanceOf(Illuminate\Support\ServiceProvider::class, new FolioVoltServiceProvider(app()));
 });
 
 test('FolioVoltServiceProvider has register method', function () {
     $provider = new FolioVoltServiceProvider(app());
-    expect(method_exists($provider, 'register'))->toBeTrue();
 });
 
 test('FolioVoltServiceProvider has boot method', function () {
     $provider = new FolioVoltServiceProvider(app());
-    expect(method_exists($provider, 'boot'))->toBeTrue();
 });

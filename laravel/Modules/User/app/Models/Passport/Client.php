@@ -20,7 +20,12 @@ use Laravel\Passport\Client as PassportClient;
  * @property int|null                                                                          $tokens_count
  * @property \Modules\User\Models\User|null                                                    $user
  *
+ * <<<<<<< HEAD
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Client existsIn(array $haystack)
+ *                                                                                                            =======
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Client existsIn(array<int, string> $haystack)
+ *                                                                                                            >>>>>>> 9fa499be (.)
  * @method static \Laravel\Passport\Database\Factories\ClientFactory   factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Client newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Client newQuery()

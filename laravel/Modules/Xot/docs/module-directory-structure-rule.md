@@ -131,6 +131,16 @@ Tutti i moduli devono avere la stessa struttura per:
 
 ---
 
+## PHPStan Memory Management
+
+Per analisi di grandi dimensioni (es. `Modules/`), utilizzare sempre il flag della memoria a livello di interprete PHP per evitare crash dei parallel workers:
+
+```bash
+php -d memory_limit=-1 ./vendor/bin/phpstan analyse [target] --memory-limit=-1
+```
+
+---
+
 ## Violazioni Comuni
 
 ### 1. Datas nella Root
@@ -159,23 +169,27 @@ Tutti i moduli devono avere la stessa struttura per:
 
 ### 4. Helpers nella Root
 
-<<<<<<< HEAD
 **Violazione**: `Modules/Xot/Helpers/Helper.php` o `Modules/Xot/helpers/Helper.php`
-=======
-**Violazione**: `Modules/Xot/helpers/Helper.php` o `Modules/Xot/helpers/Helper.php`
->>>>>>> origin/dev
 
 **Fix**: Se sono helper moderni, spostare in `Modules/Xot/app/Helpers/`. Se sono legacy, rimuovere.
 
 **Stato**: ✅ Risolto (2026-03-13) - entrambe le cartelle `Helpers/` e `helpers/` rimosse
 
-### 5. Actions/Models/Providers nella Root
+### 5. Actions/Application/Events/Listeners/Database nella Root
 
-**Violazione**: `Modules/{Module}/Actions/`, `Modules/{Module}/Models/`, etc.
+**Violazione**: `Modules/{Module}/Actions/`, `Application/`, `Events/`, `Listeners/`, `Database/` (PascalCase)
 
-**Fix**: Tutto deve stare in `app/`
+**Fix**:
 
-**Stato**: ✅ Nessuna violazione trovata
+| Root (vietato) | Destinazione |
+| :--- | :--- |
+| `Actions/` | `app/Actions/` |
+| `Application/` | `app/Application/` |
+| `Events/` | `app/Events/` |
+| `Listeners/` | `app/Listeners/` |
+| `Database/` | `database/` (minuscolo) |
+
+**Stato**: ✅ `Modules/User/` bonificato (2026-06-18). Tutti i moduli conformi.
 
 ---
 
@@ -234,6 +248,10 @@ laravel/Modules/Xot/
 # Trova cartelle "app-like" nella root dei moduli
 find laravel/Modules -maxdepth 2 -type d \( \
     -name "Actions" -o \
+    -name "Application" -o \
+    -name "Database" -o \
+    -name "Events" -o \
+    -name "Listeners" -o \
     -name "Datas" -o \
     -name "Filament" -o \
     -name "Helpers" -o \
@@ -241,7 +259,7 @@ find laravel/Modules -maxdepth 2 -type d \( \
     -name "Models" -o \
     -name "Providers" -o \
     -name "Services" \
-\) ! -path "*/app/*" ! -path "*/tests/*"
+\) ! -path "*/app/*" ! -path "*/tests/*" ! -path "*/database/*"
 ```
 
 **Output atteso**: (vuoto - nessuna violazione)
@@ -268,6 +286,10 @@ Non ci sono eccezioni a questa regola. Tutto il codice sorgente DEVE stare in `a
 Queste cartelle **NON** devono mai stare nella root del modulo:
 
 - `Actions/` → deve essere `app/Actions/`
+- `Application/` → deve essere `app/Application/`
+- `Database/` → deve essere `database/` (minuscolo; mai PascalCase)
+- `Events/` → deve essere `app/Events/`
+- `Listeners/` → deve essere `app/Listeners/`
 - `Datas/` → deve essere `app/Datas/`
 - `Filament/` → deve essere `app/Filament/`
 - `Helpers/` o `helpers/` → deve essere `app/Helpers/` o rimosso se legacy
@@ -303,7 +325,7 @@ Questi file devono essere:
 1. Aggiunti al `.gitignore` (root e modulo)
 2. Eliminati dal filesystem
 
-**Stato**: ✅ Pattern aggiunti ai .gitignore (2026-03-13)
+**Stato**: ✅ Pattern `*.backup` / `*.backup.*` in root, `laravel/`, ogni modulo/tema e `docs/.gitignore` (2026-05-21). Vedi anche [gitignore backup files](../../../../docs/wiki/memories/gitignore-backup-files.md).
 
 ---
 
@@ -324,4 +346,4 @@ Questi file devono essere:
 
 ---
 
-*Ultimo aggiornamento: 2026-03-13*
+*Ultimo aggiornamento: 2026-06-18*

@@ -52,35 +52,19 @@
 
 ## Note Importanti
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 1. La documentazione dei componenti UI deve essere in `Modules/UI/docs/`
-=======
-1. La documentazione dei componenti UI deve essere in `Modules/UI/project_docs/`
->>>>>>> 7eb1087 (.)
-=======
-1. La documentazione dei componenti UI deve essere in `Modules/UI/project_docs/`
-1. La documentazione dei componenti UI deve essere in `Modules/UI/project_docs/`
->>>>>>> laraxot/develop
 2. Mantenere collegamenti bidirezionali aggiornati
 3. Seguire le convenzioni di naming del progetto
 4. Aggiornare la documentazione quando vengono aggiunti nuovi componenti 
 ## Collegamenti tra versioni di filament-components.md
-<<<<<<< HEAD
-<<<<<<< HEAD
 * [filament-components.md](../../User/docs/best-practices/filament-components.md)
 * [filament-components.md](../../Cms/docs/best-practices/filament-components.md)
 * [filament-components.md](../../Cms/docs/filament-components.md)
 * [filament-components.md](../../../docs/rules/filament-components.md)
-=======
-=======
->>>>>>> laraxot/develop
 * [filament-components.md](../../User/project_docs/best-practices/filament-components.md)
 * [filament-components.md](../../Cms/project_docs/best-practices/filament-components.md)
 * [filament-components.md](../../Cms/project_docs/filament-components.md)
 * [filament-components.md](../../../project_docs/rules/filament-components.md)
-<<<<<<< HEAD
->>>>>>> 7eb1087 (.)
-=======
->>>>>>> laraxot/develop
 
+||||||| parent of 9a84589 (.):docs/archived/filament-components-1.md
+* [filament-components.md](../../../docs/rules/filament-components.md)

@@ -3,6 +3,8 @@
 **Status**: ✅ REGOLA ASSOLUTA - NESSUNA ECCEZIONE  
 **Priorità**: MASSIMA
 
+> **Sync operativo:** `./bashscripts/tools/sync-env-testing.sh` — wiki [architecture-env-testing-parity.md](../../../../docs/wiki/bmad/architecture-env-testing-parity.md) · [env-testing-parity-copy-env.md](../wiki/concepts/env-testing-parity-copy-env.md)
+
 ## 🚨 Principio Fondamentale
 
 > **Il file `.env.testing` è la fonte unica di verità per la configurazione dei test.**
@@ -97,15 +99,7 @@ $dbName = 'file:memdb_test_'.Str::random(10).'?mode=memory&cache=shared';
 // ✅ CORRETTO - Usa sempre MySQL da .env.testing
 // Il file .env.testing definisce:
 // DB_CONNECTION=mysql
-<<<<<<< HEAD
 // DB_DATABASE=healthcare_app_data_test  (suffisso "_test" obbligatorio)
-=======
-<<<<<<< .merge_file_5rb7Qb
-// DB_DATABASE=healthcare_app_data_test  (suffisso "_test" obbligatorio)
-=======
-// DB_DATABASE=ptvx_data_test  (suffisso "_test" obbligatorio)
->>>>>>> .merge_file_3atUlv
->>>>>>> origin/dev
 // DB_HOST=127.0.0.1
 // DB_PORT=3306
 
@@ -116,21 +110,9 @@ $dbName = 'file:memdb_test_'.Str::random(10).'?mode=memory&cache=shared';
 ### 3. Pattern Database Test
 ```bash
 # Schema: {nome_database_produzione}_test
-<<<<<<< HEAD
 PRODUZIONE: healthcare_app_data    → TEST: healthcare_app_data_test
 PRODUZIONE: healthcare_app_user    → TEST: healthcare_app_user_test  
 PRODUZIONE: healthcare_app_survey  → TEST: healthcare_app_survey_test
-=======
-<<<<<<< .merge_file_5rb7Qb
-PRODUZIONE: healthcare_app_data    → TEST: healthcare_app_data_test
-PRODUZIONE: healthcare_app_user    → TEST: healthcare_app_user_test  
-PRODUZIONE: healthcare_app_survey  → TEST: healthcare_app_survey_test
-=======
-PRODUZIONE: ptvx_data    → TEST: ptvx_data_test
-PRODUZIONE: ptvx_user    → TEST: ptvx_user_test  
-PRODUZIONE: ptvx_survey  → TEST: ptvx_survey_test
->>>>>>> .merge_file_3atUlv
->>>>>>> origin/dev
 
 # Pattern: {nome}_test - SEMPRE e SOLO _test
 ```
@@ -144,15 +126,7 @@ APP_DEBUG=true
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-<<<<<<< HEAD
 DB_DATABASE=healthcare_app_data_test          # Suffisso "_test" obbligatorio
-=======
-<<<<<<< .merge_file_5rb7Qb
-DB_DATABASE=healthcare_app_data_test          # Suffisso "_test" obbligatorio
-=======
-DB_DATABASE=ptvx_data_test          # Suffisso "_test" obbligatorio
->>>>>>> .merge_file_3atUlv
->>>>>>> origin/dev
 DB_USERNAME=marco
 DB_PASSWORD=marco
 

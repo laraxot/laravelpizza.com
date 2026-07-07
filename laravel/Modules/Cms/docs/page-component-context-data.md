@@ -1,5 +1,7 @@
 # Page component context data
 
+> **SSoT architettura:** [ADR cms-x-page-opaque-data-bag](../../../docs/wiki/decisions/cms-x-page-opaque-data-bag.md) · [wiki x-page-data-bag-only](wiki/concepts/x-page-data-bag-only.md)
+
 The `Page` View Component (`Modules\Cms\View\Components\Page`) renders a CMS-driven page by looking up its blocks from a JSON file and rendering each block with a merged data context.
 
 ## Refactored pattern
@@ -79,11 +81,25 @@ where `$this->data` already contains `['container0' => '...', 'slug0' => '...']`
 ## Incorrect patterns
 
 ```blade
-{{-- wrong: container0/slug0 are no longer accepted as explicit attributes --}}
-<x-page side="content" :slug="$slug" :container0="$c0" :slug0="$s0" />
+{{-- ❌ Vietato: prop esplicite non esistono sul componente --}}
+<x-page
+    side="content"
+    :slug="$slug"
+    :container0="$container0"
+    :slug0="$slug0"
+/>
 ```
 
-Blade would silently ignore unknown attributes, so this would not crash but the values would be lost.
+Blade ignora attributi sconosciuti: **nessun errore**, ma `container0`/`slug0` **non arrivano** ai blocchi.
+
+```blade
+{{-- ✅ Corretto: stesso contesto nel data bag --}}
+<x-page
+    side="content"
+    :slug="$slug"
+    :data="['container0' => $container0, 'slug0' => $slug0]"
+/>
+```
 
 ## Why `...$this->data` in view_params
 

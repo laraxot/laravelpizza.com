@@ -44,6 +44,3 @@ https://www.facebook.com/groups/laravel.italia.devs/posts/4497992223656063/?comm
 Giobi Fasoli
 Browseless o urlbox. Entrambi esterni e a pagamento ma ti risparmiano mesi di sviluppo
 ---------------------------------------------------
-
-
-

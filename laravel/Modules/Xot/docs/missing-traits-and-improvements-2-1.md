@@ -71,13 +71,6 @@ class LimeJsonService
 
 // QuaerisService.php
 class QuaerisService
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 551c768c4 (.)
-=======
->>>>>>> 40b96bcd6 (.)
-=======
->>>>>>> origin/dev
 {
     use SingletonTrait;
     
@@ -552,13 +545,6 @@ class LimeJsonService
 
 // QuaerisService.php
 class QuaerisService
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 551c768c4 (.)
-=======
->>>>>>> 40b96bcd6 (.)
-=======
->>>>>>> origin/dev
 {
     use SingletonTrait;
     

@@ -19,7 +19,7 @@ class Image
                 TextInput::make('url'),
                 Select::make('ratio')
                     ->options(static::getRatios())
-                    ->afterStateHydrated(function (mixed $state, mixed $set) {
+                    ->afterStateHydrated(function (mixed $state, mixed $set): void {
                         if (! $state && is_callable($set)) {
                             $set('ratio', '4-3');
                         }
@@ -30,6 +30,9 @@ class Image
             ->columns('form' === $context ? 2 : 1);
     }
 
+    /**
+     * @return array<string, string>
+     */
     /**
      * @return array<string, string>
      */
@@ -51,6 +54,9 @@ class Image
         };
     }
 
+    /**
+     * @return array<int, \Filament\Schemas\Components\Component>
+     */
     public static function getFormSchema(): array
     {
         return [

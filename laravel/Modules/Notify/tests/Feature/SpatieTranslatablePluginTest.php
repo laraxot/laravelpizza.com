@@ -4,11 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Feature;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-=======
->>>>>>> 40b96bcd6 (.)
 use Filament\Facades\Filament;
 use Illuminate\Contracts\Auth\Authenticatable;
 use LaraZeus\SpatieTranslatable\SpatieTranslatablePlugin;
@@ -17,13 +12,9 @@ use Modules\Notify\Database\Factories\MailTemplateFactory;
 use Modules\Notify\Filament\Resources\MailTemplateResource\Pages\ListMailTemplates;
 use Modules\Notify\Models\MailTemplate;
 use Modules\Notify\Tests\TestCase;
-<<<<<<< HEAD
-use Modules\Xot\Datas\XotData;
-=======
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
->>>>>>> 40b96bcd6 (.)
 
 use function Pest\Laravel\actingAs;
 

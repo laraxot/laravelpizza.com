@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Models\Traits;
 
+=======
+>>>>>>> 9fa499be (.)
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
 use Modules\User\Models\Team;
@@ -11,7 +14,16 @@ use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 use Modules\User\Tests\Unit\Models\Traits\Fixtures\MockUserWithTeams;
 
+<<<<<<< HEAD
 uses(TestCase::class);
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+function traitsHasTeamsMockUser(string $id = 'mock-user-1'): MockUserWithTeams
+{
+    $user = new MockUserWithTeams();
+    $user->forceFill(['id' => $id]);
+>>>>>>> 9fa499be (.)
 
 beforeEach(function () {
     $this->user = \Mockery::mock(MockUserWithTeams::class)->makePartial();
@@ -370,6 +382,7 @@ describe('HasTeams Trait Error Handling', function () {
     });
 });
 
+<<<<<<< HEAD
 describe('HasTeams Trait Performance', function () {
     it('can handle large numbers of team checks efficiently', function () {
         $team2 = new Team();
@@ -424,4 +437,23 @@ describe('HasTeams Trait Performance', function () {
         expect($executionTime)->toBeLessThan(0.1);
         expect($teamNames)->toContain('Team 1', 'Team 5', 'Team 10');
     });
+=======
+test('has teams trait user model exposes teams relation', function (): void {
+    Assert::assertInstanceOf(BelongsToMany::class, (new User())->membershipTeams());
+});
+
+test('has teams trait empty teams collection', function (): void {
+    $user = traitsHasTeamsMockUser();
+    $user->setRelation('teams', collect([]));
+
+    Assert::assertInstanceOf(Collection::class, $user->teams);
+    Assert::assertCount(0, $user->teams);
+    Assert::assertTrue($user->teams->isEmpty());
+});
+
+test('has teams trait belongsToTeams is false without teams', function (): void {
+    $user = UserFactory::new()->createOne(['email' => 'no-teams-'.uniqid('', true).'@example.com']);
+
+    Assert::assertFalse($user->belongsToTeams());
+>>>>>>> 6d3760fe (.)
 });

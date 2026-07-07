@@ -2,10 +2,16 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
+=======
+use Modules\User\Database\Factories\OauthAccessTokenFactory;
+>>>>>>> 9fa499be (.)
 use Modules\User\Database\Factories\OauthAuthCodeFactory;
 use Modules\User\Database\Factories\OauthClientFactory;
 use Modules\User\Database\Factories\OauthRefreshTokenFactory;
 use Modules\User\Database\Factories\OauthTokenFactory;
+
+uses(Modules\User\Tests\TestCase::class);
 
 uses(Modules\User\Tests\TestCase::class);
 

@@ -19,11 +19,7 @@ Documentazione del modulo Cms per il progetto Design Comuni Italia.
 | **Argomenti** | [design-comuni-argomenti.md](./design-comuni-argomenti.md) | Pagina argomenti |
 | **Argomento** | [design-comuni-argomento.md](./design-comuni-argomento.md) | Dettaglio argomento |
 | **Risultati Ricerca** | [design-comuni-risultati-ricerca.md](./design-comuni-risultati-ricerca.md) | Pagina risultati ricerca |
-<<<<<<< HEAD
-| **Segnalazioni Elenco** | [design-comuni-segnalazioni-elenco.md](./design-comuni-segnalazioni-elenco.md) | Pagina segnalazioni elenco |
-=======
 | **Segnalazioni Elenco** | [design-comuni-ticket-list.md](./design-comuni-ticket-list.md) | Pagina segnalazioni elenco |
->>>>>>> 40b96bcd6 (.)
 | **Services Implementation** | [design-comuni-services-implementation.md](./design-comuni-services-implementation.md) | Implementazione servizi |
 | **Page Census** | [design-comuni-page-census.md](./design-comuni-page-census.md) | Censimento pagine |
 

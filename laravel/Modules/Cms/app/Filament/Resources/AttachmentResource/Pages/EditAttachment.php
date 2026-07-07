@@ -10,7 +10,7 @@ use Modules\Lang\Filament\Resources\Pages\LangBaseEditRecord;
 
 class EditAttachment extends LangBaseEditRecord
 {
-    protected static string $resource = AttachmentResource::class;
+    public static string $resource = AttachmentResource::class;
 
     /*
      * protected function mutateFormDataBeforeFill(array $data): array

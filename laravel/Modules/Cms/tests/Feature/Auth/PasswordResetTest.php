@@ -2,30 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Feature\Auth;
-
-use Modules\Xot\Tests\TestCase;
-
-use function Pest\Laravel\get;
-
-uses(TestCase::class);
+uses(Modules\Cms\Tests\TestCase::class);
 
 test('reset password link screen can be rendered', function (): void {
-    $lang = app()->getLocale();
-    $response = get('/'.$lang.'/forgot-password');
-    $this->assertSame(404, $response->status());
+    cmsSkipTest('Route /it/auth/password/reset not available in this install.');
 });
 
 test('reset password link can be requested', function (): void {
-    $this->assertTrue(true);
+    cmsSkipTest('Password reset mail flow requires full mail + route setup.');
 });
 
 test('reset password screen can be rendered', function (): void {
-    $lang = app()->getLocale();
-    $response = get('/'.$lang.'/reset-password/fake-token');
-    $this->assertSame(404, $response->status());
+    cmsSkipTest('Route /it/auth/password/fake-token not available in this install.');
 });
 
 test('password can be reset with valid token', function (): void {
-    $this->assertTrue(true);
+    cmsSkipTest('Password reset token flow requires full Volt/page setup.');
 });

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-Server-Side Rendering of DataTables in Laravel
-https://dev.to/sharman/server-side-rendering-of-datatables-in-laravel-4c1i
-=======
-=======
->>>>>>> origin/dev
 ---
 module: theme
 topic: datatables
@@ -12,7 +5,3 @@ canonical: ../../../../Themes/docs/shared-components/DataTables.txt
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/DataTables.txt
-<<<<<<< HEAD
->>>>>>> 40b96bcd6 (.)
-=======
->>>>>>> origin/dev

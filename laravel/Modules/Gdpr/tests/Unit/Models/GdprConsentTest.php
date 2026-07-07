@@ -4,13 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Models;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-use Modules\Gdpr\Models\GdprConsent;
-use Modules\Gdpr\Tests\TestCase;
-use Modules\User\Models\User;
-=======
 use Modules\Gdpr\Database\Factories\ConsentFactory;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Tests\TestCase;
@@ -22,34 +15,6 @@ beforeEach(function (): void {
     /* @var \Modules\Gdpr\Tests\TestCase $this */
     gdprAssertDatabaseAvailable();
 });
-
-beforeEach(function () {
-    // Skip if database not available
-    try {
-        DB::connection()->getPdo();
-    } catch (Exception $e) {
-        $this->markTestSkipped('Database not available: '.$e->getMessage());
-    }
-});
-
-beforeEach(function () {
-    // Skip if database not available
-    try {
-        DB::connection()->getPdo();
-    } catch (Exception $e) {
-        $this->markTestSkipped('Database not available: '.$e->getMessage());
-    }
-});
-
-beforeEach(function () {
-    // Skip if database not available
-    try {
-        DB::connection()->getPdo();
-    } catch (Exception $e) {
-        $this->markTestSkipped('Database not available: '.$e->getMessage());
-    }
-});
->>>>>>> 40b96bcd6 (.)
 
 test('gdpr consent can be created', function () {
     $consent = ConsentFactory::new()->createOne([

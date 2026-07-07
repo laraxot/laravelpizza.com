@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Datas;
 use Modules\Notify\Datas\EmailAttachmentData;
-<<<<<<< HEAD
-=======
 use PHPUnit\Framework\Assert;
->>>>>>> 40b96bcd6 (.)
 use Spatie\LaravelData\Data;
 
 describe('EmailAttachmentData', function () {
@@ -24,11 +21,7 @@ describe('EmailAttachmentData', function () {
     it('extends Spatie Data', function () {
         $reflection = new \ReflectionClass(EmailAttachmentData::class);
 
-<<<<<<< HEAD
-        expect($reflection->isSubclassOf(Data::class))->toBeTrue();
-=======
         Assert::assertTrue($reflection->isSubclassOf(Data::class));
->>>>>>> 40b96bcd6 (.)
     });
 
     it('has required properties', function () {

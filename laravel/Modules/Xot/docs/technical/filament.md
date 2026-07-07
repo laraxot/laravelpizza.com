@@ -19,7 +19,7 @@ Quando si estende `XotBaseResource`, seguire queste linee guida:
 
 - **Non definire** `navigationIcon` se la classe estende `XotBaseResource`
 - **Rimuovere** `getRelations()` se restituisce array vuoto
-- **Rimuovere** `getPages()` se contiene solo route standard
+- **Omettere** `getPages()` se la Resource espone solo `index` / `create` / `edit` e le Page rispettano `List{plural}`, `Create{name}`, `Edit{name}` — [getpages-redundancy-rule.md](../filament/getpages-redundancy-rule.md)
 - `getFormSchema()` deve restituire array associativo con chiavi stringhe
 
 ### Esempio Corretto
@@ -56,7 +56,7 @@ class PatientResource extends XotBaseResource
         return [];
     }
 
-    public static function getPages(): array
+    public static function getPages(): array  // ❌ ridondante solo se naming Page = convenzione base
     {
         return [
             'index' => Pages\ListPatients::route('/'),
@@ -187,3 +187,11 @@ class PatientResource extends XotBaseResource
 * [filament.md](../../../job/docs/filament.md)
 * [filament.md](../../../activity/docs/filament.md)
 * [filament.md](../../../cms/docs/filament.md)
+* [filament.md](../../../Chart/docs/filament.md)
+* [filament.md](../../../Gdpr/docs/filament.md)
+* [filament.md](../../../Xot/docs/technical/filament.md)
+* [filament.md](../../../Xot/docs/roadmap/integration/filament.md)
+* [filament.md](../../../Lang/docs/filament.md)
+* [filament.md](../../../Job/docs/filament.md)
+* [filament.md](../../../Activity/docs/filament.md)
+* [filament.md](../../../Cms/docs/filament.md)

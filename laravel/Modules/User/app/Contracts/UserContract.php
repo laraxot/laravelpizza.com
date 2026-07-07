@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Contracts;
 
+<<<<<<< HEAD
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -13,11 +14,14 @@ use Laravel\Passport\Token;
 use Laravel\Passport\TransientToken;
 use Spatie\Permission\Contracts\Role;
 
+=======
+>>>>>>> 6d3760fe (.)
 /**
- * User contract interface.
+ * Alias tipizzato verso il contratto utente cross-modulo (SSoT: Xot).
  */
-interface UserContract extends Authenticatable
+interface UserContract extends \Modules\Xot\Contracts\UserContract
 {
+<<<<<<< HEAD
     /**
      * Get the primary key for the model.
      */
@@ -145,4 +149,6 @@ interface UserContract extends Authenticatable
      * Remove a role from the user.
      */
     public function removeRole(string|int|Role $role): static;
+=======
+>>>>>>> 6d3760fe (.)
 }

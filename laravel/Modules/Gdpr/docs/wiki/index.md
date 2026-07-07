@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Gdpr Module LLM Wiki
-
-=======
 ---
 title: "Gdpr Module Wiki Index"
 type: index
@@ -32,7 +28,6 @@ related:
 - [second-brain-local-discipline](./concepts/second-brain-local-discipline.md) → canon Xot
 
 
->>>>>>> 40b96bcd6 (.)
 Indice operativo del wiki Gdpr.
 
 ## Struttura canonica (sacred)

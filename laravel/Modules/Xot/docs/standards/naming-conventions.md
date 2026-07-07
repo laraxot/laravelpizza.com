@@ -128,6 +128,8 @@ Schema::create('patients', function (Blueprint $table) {
 
 ## Collegamenti Correlati
 
+- [Documentazione Xot](../CODE-STANDARDS.md)
+- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 - [Convenzioni](../../../../docs/conventions.md)
 - [Naming Conventions](../../../../docs/naming-conventions.md)
 - [Documentazione Xot](../code-standards.md)

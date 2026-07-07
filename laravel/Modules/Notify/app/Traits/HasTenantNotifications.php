@@ -80,23 +80,16 @@ trait HasTenantNotifications
     public static function bootHasTenantNotifications(): void
     {
         static::creating(function (Model $model): void {
-<<<<<<< HEAD
-=======
             if (! $model instanceof static) {
                 return;
             }
 
->>>>>>> 40b96bcd6 (.)
             if (! isset($model->tenant_id)) {
                 $model->tenant_id = $model->getTenantId();
             }
         });
 
         static::addGlobalScope('tenant', function (Builder $builder): void {
-<<<<<<< HEAD
-            /** @var Model $model */
-=======
->>>>>>> 40b96bcd6 (.)
             $model = $builder->getModel();
 
             if (! $model instanceof static) {

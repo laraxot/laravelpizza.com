@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Actions\String;
-
+uses(Modules\Xot\Tests\TestCase::class);
 use Modules\Xot\Actions\String\GetPronounceablePasswordAction;
+use PHPUnit\Framework\Assert;
 
 it('generates pronounceable password correctly', function (): void {
     $action = app(GetPronounceablePasswordAction::class);
 
     $password = $action->execute(12);
 
-    expect(strlen($password))->toBeGreaterThanOrEqual(8); // min length logic inside
-    expect($password)->toMatch('/[0-9]/'); // contains digit
-    expect($password)->toMatch('/[!#*-_=+:?]/'); // contains special
-    expect($password)->toMatch('/[A-Z]/'); // contains uppercase
+    Assert::assertGreaterThanOrEqual(8, strlen($password)); // min length logic inside
+    Assert::assertMatchesRegularExpression('/[0-9]/', (string) $password); // contains digit
+    Assert::assertMatchesRegularExpression('/[!#*-_=+:?]/', (string) $password); // contains special
+    Assert::assertMatchesRegularExpression('/[A-Z]/', (string) $password); // contains uppercase
 });
 
 it('handles small length correctly', function (): void {
     $action = app(GetPronounceablePasswordAction::class);
     $password = $action->execute(2);
-    expect(strlen($password))->toBeGreaterThanOrEqual(4);
+    Assert::assertGreaterThanOrEqual(4, strlen($password));
 });

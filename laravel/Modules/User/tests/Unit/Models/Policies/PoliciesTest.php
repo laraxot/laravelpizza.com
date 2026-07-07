@@ -2,10 +2,13 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Models\Policies;
 
 uses(\Modules\User\Tests\TestCase::class);
 
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Models\Policies\AuthenticationLogPolicy;
 use Modules\User\Models\Policies\AuthenticationPolicy;
 use Modules\User\Models\Policies\DevicePolicy;
@@ -23,6 +26,8 @@ use Modules\User\Models\Policies\SocialiteUserPolicy;
 use Modules\User\Models\Policies\SocialProviderPolicy;
 use Modules\User\Models\Policies\TeamInvitationPolicy;
 use Modules\User\Models\Policies\TeamPermissionPolicy;
+
+uses(Modules\User\Tests\TestCase::class);
 
 test('OauthClientPolicy can be instantiated', function () {
     $policy = new OauthClientPolicy();

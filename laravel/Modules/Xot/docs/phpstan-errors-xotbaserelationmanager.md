@@ -1,5 +1,6 @@
 # PHPStan Errors - XotBaseRelationManager
 
+**Data**: 2025-12-23
 **File**: `app/Filament/Resources/RelationManagers/XotBaseRelationManager.php`
 **Errori PHPStan**: 3
 

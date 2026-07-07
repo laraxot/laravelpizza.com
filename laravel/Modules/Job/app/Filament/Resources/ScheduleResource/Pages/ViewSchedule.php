@@ -42,6 +42,9 @@ class ViewSchedule extends XotBaseResourcePage implements HasTable
         return [];
     }
 
+    /**
+     * @return array<int, Split>
+     */
     protected function getTableColumns(): array
     {
         $date_format = config('app.date_format');
@@ -69,13 +72,15 @@ class ViewSchedule extends XotBaseResourcePage implements HasTable
                     static fn (string $state): string => (count(explode('<br />', nl2br($state))) - 1).' rows of output',
                 ),
             ]),
-            Panel::make([
-                'output' => TextColumn::make('output')
-                    ->extraAttributes(['class' => '!max-w-max'], true)
-                    ->formatStateUsing(static fn (string $state): HtmlString => new HtmlString(nl2br(
-                        $state,
-                    ))),
-            ])->collapsible(),
+            Split::make([
+                Panel::make([
+                    'output' => TextColumn::make('output')
+                        ->extraAttributes(['class' => '!max-w-max'], true)
+                        ->formatStateUsing(static fn (string $state): HtmlString => new HtmlString(nl2br(
+                            $state,
+                        ))),
+                ])->collapsible(),
+            ]),
             // ->collapsed(config('job::history_collapsed'))
         ];
     }

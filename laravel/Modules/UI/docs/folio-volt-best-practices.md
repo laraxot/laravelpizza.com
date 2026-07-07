@@ -22,9 +22,17 @@ Example of a Volt component in a Folio page:
 ```blade
 <?php
 use App\Models\Event;
-use function Livewire\Volt\{computed, mount};
+use Livewire\Volt\Component;
 
-$events = computed(fn () => Event::upcoming()->get());
+new class extends Component {
+    /** @var list<\App\Models\Event> */
+    public array $events = [];
+
+    public function mount(): void
+    {
+        $this->events = Event::upcoming()->get()->all();
+    }
+};
 ?>
 
 <x-layout>
@@ -53,9 +61,8 @@ $events = computed(fn () => Event::upcoming()->get());
 - Implement a consistent navigation component that can be included across pages
 
 ### 5. Data Handling
-- Use `computed()` for data that should be cached until dependencies change
-- Use `state()` for reactive properties
-- Use `mount()` for initialization logic when component loads
+- In class-based components, keep state in `public` properties and initialize in `mount()`
+- For derived values, prefer methods/getters in the class (functional `computed()` / `state()` is legacy/mantenimento)
 - Sushi package can be used for dummy data in development
 
 ### 6. Middleware Application

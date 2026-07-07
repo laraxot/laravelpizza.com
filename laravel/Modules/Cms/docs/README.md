@@ -1,3 +1,11 @@
+---
+title: "Cms Module Documentation"
+type: documentation
+tags: [module, documentation]
+created: 2026-06-05
+updated: 2026-06-05
+---
+
 # Modulo CMS - Content Management System
 
 ## 🎯 Panoramica
@@ -28,6 +36,8 @@ Modules/Cms/
 - [Processo Build Tema](./theme-build-process.md)
 - [Architettura Frontend](./frontend-architecture/struttura-homepage.md)
 - [Testing Guidelines](./tests/architecture-separation-rules.md)
+- [Page Directory Structure](./page-directory-structure.md) ⭐
+- [Merge Conflict Marker Cleanup](./merge-conflict-marker-cleanup.md)
 
 ### Moduli Correlati
 - [Modulo UI - Blocchi](../../UI/docs/blocks-system.md)
@@ -52,7 +62,7 @@ Modules/Cms/
 - Filosofia: "Non avrai altro path all'infuori del relativo"
 
 ---
-**Ultimo aggiornamento**: Gennaio 2025
+**
 # 🗂️ CMS Module - Content Management System
 
 ## 📋 Quick Reference
@@ -167,9 +177,9 @@ Il modulo CMS gestisce i contenuti e i widget del sistema, fornendo un sistema f
    - [Wizard](ux-wizard-registrazione-paziente.md)
 
 ## Dipendenze Principali
-- Laravel Framework ^11.0
-- Filament ^3.2
-- Livewire ^3.0
+- Laravel Framework ^12.0
+- Filament ^5.0
+- Livewire ^4.0
 - Laravel Folio ^1.0
 - Laravel Volt ^1.0
 - Tailwind CSS ^3.4
@@ -334,3 +344,20 @@ npm run dev
 * [README.md](laravel/Themes/Two/docs/README.md)
 * [README.md](laravel/Themes/One/docs/README.md)
 
+
+## AI Workflows
+- [AI Methodologies](./ai-methodologies.md)
+
+
+## Standard Rules & Workflow
+
+- [[BMAD Method](../../../../docs/wiki/concepts/bmad-method.md)]
+- [[Context Engineering](../../../../docs/wiki/concepts/context-engineering.md)]
+- [[LLM Wiki Governance](../../../../docs/wiki/concepts/llm-wiki-governance.md)]
+
+## Documentation
+
+- [On-Demand Pattern](./ON-DEMAND-PATTERN.md) — Pattern per caricamento efficiente
+- [QMD Setup](./QMD-SETUP.md) — Configurazione ricerca locale
+- [Performance](./PERFORMANCE-OPTIMIZATION.md) — Metriche e best practice
+- [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout

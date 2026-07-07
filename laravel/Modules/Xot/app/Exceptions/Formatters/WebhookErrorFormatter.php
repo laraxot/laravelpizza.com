@@ -6,6 +6,8 @@ namespace Modules\Xot\Exceptions\Formatters;
 
 use Illuminate\Support\Facades\Auth;
 
+use function Safe\json_encode;
+
 class WebhookErrorFormatter
 {
     public function __construct(

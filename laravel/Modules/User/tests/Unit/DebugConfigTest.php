@@ -2,12 +2,17 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit;
 
+=======
+>>>>>>> 9fa499be (.)
 use Illuminate\Support\Facades\DB;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
+
+uses(Modules\User\Tests\TestCase::class);
 
 test('verify database connections config', function () {
     $mysql = config('database.connections.mysql.database');

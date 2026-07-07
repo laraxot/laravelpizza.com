@@ -1,10 +1,7 @@
-# Link alla Documentazione Root
+---
+module: theme
+topic: root_links
+canonical: ../../../Themes/docs/shared-components/root-links.md
+---
 
-- [Documentazione Principale](../../../../docs/project/readme.md)
-- [Documentazione Temi](../../../../docs/project/theme-links.md)
-- [Documentazione Best Practices](../../../../docs/project/best-practices.md)
-- [Documentazione Frontend](../../../../docs/project/frontend.md) 
-## Collegamenti tra versioni di root-links.md
-* [root-links.md](laravel/modules/cms/project_docs/root-links.md)
-* [root-links.md](laravel/themes/one/project_docs/root-links.md)
-
+See canonical documentation: ../../../Themes/docs/shared-components/root-links.md

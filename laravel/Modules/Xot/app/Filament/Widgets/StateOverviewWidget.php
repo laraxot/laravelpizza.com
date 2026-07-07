@@ -16,7 +16,7 @@ use Webmozart\Assert\Assert;
  * Widget per la panoramica degli appuntamenti per stato.
  * Mostra statistiche compatte degli appuntamenti raggruppati per stato.
  */
-class StateOverviewWidget extends XotBaseWidget
+class StateOverviewWidget extends XotBaseSchemaWidget
 {
     /**
      * Titolo del widget.
@@ -49,7 +49,6 @@ class StateOverviewWidget extends XotBaseWidget
      *
      * @return array<int|string, Component>
      */
-    #[\Override]
     public function getFormSchema(): array
     {
         return [];

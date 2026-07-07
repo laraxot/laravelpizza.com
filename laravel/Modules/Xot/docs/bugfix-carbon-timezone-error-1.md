@@ -76,12 +76,4 @@ public function registerTimezone(): void
 - [Root Bugfix Guidelines](../../../../docs/bugfix-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
-<<<<<<< HEAD
-<<<<<<< HEAD
 *Risolto da: Windsurf AI Assistant*
-=======
-*Risolto da: Windsurf AI Assistant*
->>>>>>> 40b96bcd6 (.)
-=======
-*Risolto da: Windsurf AI Assistant*
->>>>>>> origin/dev

@@ -1110,6 +1110,7 @@ class ExampleRelationshipsTest extends XotBaseTestCase
 
 ## 🔗 **Collegamenti e Riferimenti**
 
+- [**README.md**](README.md) - Documentazione principale del modulo
 - [**README.md**](readme.md) - Documentazione principale del modulo
 - [**Best Practices**](best-practices.md) - Best practices per lo sviluppo
 - [**Architettura**](architecture.md) - Architettura del modulo Xot
@@ -1117,3 +1118,4 @@ class ExampleRelationshipsTest extends XotBaseTestCase
 
 ---
 
+*Ultimo aggiornamento: giugno 2025 - Versione 2.0.0*

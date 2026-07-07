@@ -18,15 +18,11 @@ class WorkerCheck extends Command
 {
     /**
      * The name and signature of the console command.
-     *
-     * @var string
      */
     protected $signature = 'worker:check';
 
     /**
      * The console command description.
-     *
-     * @var string
      */
     protected $description = 'Ensure that the queue listener is running.';
 

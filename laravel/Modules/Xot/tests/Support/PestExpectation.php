@@ -118,9 +118,13 @@ final class PestExpectation
         return $this;
     }
 
-    public function toBeEmpty(): self
+    public function toBeEmpty(string $message = ''): self
     {
-        $this->negated ? Assert::assertNotEmpty($this->value) : Assert::assertEmpty($this->value);
+        if ($this->negated) {
+            Assert::assertNotEmpty($this->value, $message);
+        } else {
+            Assert::assertEmpty($this->value, $message);
+        }
 
         return $this;
     }
@@ -286,6 +290,21 @@ final class PestExpectation
         $this->negated
             ? Assert::assertGreaterThan($expected, $this->value)
             : Assert::assertLessThanOrEqual($expected, $this->value);
+
+        return $this;
+    }
+
+    public function toBeBetween(float|int $min, float|int $max): self
+    {
+        if ($this->negated) {
+            Assert::assertTrue(
+                ! is_numeric($this->value) || $this->value < $min || $this->value > $max,
+                'Expected value not to be between '.$min.' and '.$max
+            );
+        } else {
+            Assert::assertGreaterThanOrEqual($min, $this->value);
+            Assert::assertLessThanOrEqual($max, $this->value);
+        }
 
         return $this;
     }

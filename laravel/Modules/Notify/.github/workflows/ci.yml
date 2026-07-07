@@ -164,8 +164,6 @@ jobs:
           chmod -R 777 bootstrap/cache
           composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
-<<<<<<< HEAD
-=======
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -180,7 +178,6 @@ jobs:
           chmod -R 777 bootstrap/cache
           composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
->>>>>>> origin/dev
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Models;
-
 use Modules\Cms\Models\PageContent;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 test('PageContent model can be instantiated', function () {
     $pageContent = new PageContent();
 
-    expect($pageContent)->toBeInstanceOf(PageContent::class);
+    Assert::assertInstanceOf(PageContent::class, $pageContent);
 });
 
 test('PageContent model has expected fillable fields', function () {
@@ -17,21 +17,22 @@ test('PageContent model has expected fillable fields', function () {
 
     $fillable = $pageContent->getFillable();
 
-    expect($fillable)->toContain('name')
-        ->and($fillable)->toContain('slug')
-        ->and($fillable)->toContain('blocks');
+    Assert::assertContains('name', $fillable);
+
+    Assert::assertContains('slug', $fillable);
+
+    Assert::assertContains('blocks', $fillable);
 });
 
 test('PageContent model extends BaseModel', function () {
     $pageContent = new PageContent();
 
-    expect($pageContent)->toBeInstanceOf(Modules\Cms\Models\BaseModel::class);
+    Assert::assertInstanceOf(Modules\Cms\Models\BaseModel::class, $pageContent);
 });
 
 test('PageContent model has translatable fields', function () {
     $pageContent = new PageContent();
 
-    expect(isset($pageContent->translatable))->toBeTrue();
-    expect($pageContent->translatable)->toContain('name')
-        ->and($pageContent->translatable)->toContain('blocks');
+    Assert::assertContains('name', $pageContent->translatable);
+    Assert::assertContains('blocks', $pageContent->translatable);
 });

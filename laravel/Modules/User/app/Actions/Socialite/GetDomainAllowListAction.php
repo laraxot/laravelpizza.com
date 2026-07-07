@@ -25,7 +25,7 @@ class GetDomainAllowListAction
      */
     public function execute(): array
     {
-        $res = config('filament-socialite.domain_allowlist');
+        $res = config('socialite.domain_allowlist', []);
         if (\is_string($res)) {
             return $this->arrHelper->wrap($res);
         }
@@ -34,6 +34,6 @@ class GetDomainAllowListAction
             return $res;
         }
 
-        throw new \Exception('check config filament-socialite.domain_allowlist');
+        return [];
     }
 }

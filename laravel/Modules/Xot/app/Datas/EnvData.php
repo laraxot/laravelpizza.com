@@ -48,6 +48,9 @@ class EnvData extends Data implements Wireable
         return self::$instance;
     }
 
+    /**
+     * @param array<string, mixed> $data
+     */
     public function update(array $data): void
     {
         $env_path = base_path('.env');

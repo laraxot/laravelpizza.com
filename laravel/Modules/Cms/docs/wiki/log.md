@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Cms Wiki Log
-
-=======
 - 2026-06-10: folio-filesystem-routing-no-web-php + troubleshooting folio-route-not-found
 ## [2026-06-05] docs | Folio routing — mount() tipizzato + @volt statico
 
@@ -24,7 +20,6 @@
 
 - **Codice**: `app/View/Composers/ThemeComposer.php` (autoload) vs `resources/views/Composers/ThemeComposer.php` (fantasma quasi gemello) — vedere **[`docs/redundancy-report.md`](../redundancy-report.md)** §5 e hub Xot [`audit-profondo-ridondanze-holistic.md`](../../../Xot/docs/wiki/redundancy/audit-profondo-ridondanze-holistic.md) § analisi nominale.
 
->>>>>>> 40b96bcd6 (.)
 ## [2026-04-21] fix | merge conflict code-quality-analysis.md
 - Rimossa copia integrale duplicata introdotta dal merge (blocco `--- Merged from code-quality-analysis-2025-11-24.md ---`).
 - Preservata unica riga aggiuntiva utile: `**Status:** ❌ CRITICAL - Requires Immediate Fixes`.
@@ -84,11 +79,8 @@
 - **Causa**: frammenti corrotti (commenti inline su concatenazioni/array) lasciati dopo merge.
 - **Fix**: ripristino costruttore (`$slug`, `$class`, `$id`, `$tpl`), `getBlocksBySlug` su `$this->slug`, `render()` con `pub_theme::components.sections.{slug}.{tpl}` e `viewParams` validi (`blocks`, `section`).
 - **Verifica**: `curl http://127.0.0.1:8000/it/tests/segnalazione-crea` -> HTTP 200.
-<<<<<<< HEAD
-=======
 
 ## 2026-06-10 — Folio learnings documentati
 
 - `folio-list-vs-route-list.md`, patch filesystem routing + troubleshooting
 - INDEX concepts ripulito; cross-link User/Sixteen
->>>>>>> 40b96bcd6 (.)

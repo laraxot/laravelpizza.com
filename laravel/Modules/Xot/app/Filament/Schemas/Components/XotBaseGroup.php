@@ -14,7 +14,7 @@ use Filament\Schemas\Components\Group;
  * This ensures consistency with the framework's architecture and provides
  * a foundation for common Group functionality across the application.
  *
- * @method static static make(string|array|null $name = null) Create a new instance of the component
+ * @method static static make(string|array<string, mixed>|null $name = null) Create a new instance of the component
  */
 abstract class XotBaseGroup extends Group
 {

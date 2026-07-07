@@ -51,6 +51,24 @@ Modules\User\Models\Tenant
 
 ## Architectural Rules — Violations Fixed
 
+<<<<<<< HEAD
+=======
+### Module Directory Structure Standard
+In compliance with the [Global Rule](../../../docs/wiki/rules/module-root-php-folders-forbidden.md), all root-level capitalized directories (`Actions/`, `Application/`, `Database/`, `Events/`, `Listeners/`) have been moved into `app/` or renamed to lowercase `database/`. 
+- **app/**: Home for all PHP functional code (mapped via PSR-4).
+- **database/**: Strictly lowercase for migrations/factories/seeders.
+
+### PHPStan Memory Management
+Per evitare crash dei parallel workers su analisi massive, usare sempre:
+`php -d memory_limit=-1 ./vendor/bin/phpstan analyse [target] --memory-limit=-1`
+
+### Profiles migration governance
+- La tabella `profiles` deve avere sia `id` sia `uuid`.
+- Il modulo User usa **una sola migrazione autorevole** per `profiles`: `*_create_profiles_table.php`.
+- Se manca una colonna come `uuid`, si corregge quella migrazione e si aggiorna il timestamp del file; non si crea una migrazione `add_uuid_to_profiles`.
+- Riferimento canonico: [wiki/concepts/profile-migration-uuid-contract.md](./wiki/concepts/profile-migration-uuid-contract.md)
+
+>>>>>>> 6d3760fe (.)
 ### No Log calls in production code
 `Log::info()`, `Log::debug()`, `Log::error()` are forbidden in Actions, Models, Services, and Widgets.
 Found and removed from `RegisterWidget`. Laravel logs unhandled exceptions automatically.

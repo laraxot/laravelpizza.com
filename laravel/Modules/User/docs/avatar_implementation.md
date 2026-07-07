@@ -1,6 +1,8 @@
 # Implementazione degli Avatar 
 
 ## Collegamenti correlati
+- [README modulo User](./README.md)
+- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md)
 - [README modulo User](./readme.md)
 - [Implementazione Header con Selettore Lingua](/laravel/modules/user/docs/header_language_selector_with_flags.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
@@ -117,4 +119,8 @@ Il sistema di avatar può essere esteso in futuro per includere:
 
 - [Documentazione SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
 - [Blade Components Documentation](https://laravel.com/docs/10.x/blade#components)
+<<<<<<< HEAD
 - [Architettura Modulare Quaeris](/docs/architettura-modulare.md)
+=======
+- [Architettura Modulare healthcare_app](/docs/architettura-modulare.md)
+>>>>>>> 6d3760fe (.)

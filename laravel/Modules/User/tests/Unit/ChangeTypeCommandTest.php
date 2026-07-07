@@ -2,16 +2,28 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit;
 
+=======
+>>>>>>> 9fa499be (.)
 use Illuminate\Console\Command;
 use Modules\User\Console\Commands\ChangeTypeCommand;
 use Modules\Xot\Datas\XotData;
 
+<<<<<<< HEAD
 describe('ChangeTypeCommand', function () {
     beforeEach(function () {
         $this->command = new ChangeTypeCommand();
     });
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+function changeTypeCommandInstance(): ChangeTypeCommand
+{
+    return new ChangeTypeCommand();
+}
+>>>>>>> 9fa499be (.)
 
     it('can be instantiated', function () {
         expect($this->command)

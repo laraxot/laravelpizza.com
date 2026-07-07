@@ -18,6 +18,7 @@ class CreateSchedule extends XotBaseCreateRecord
 {
     use NavigationPageLabelTrait;
 
+    /** @var Collection<int, mixed> */
     public Collection $commands;
 
     protected static string $resource = ScheduleResource::class;

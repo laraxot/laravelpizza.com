@@ -26,4 +26,8 @@ This decision ensures the codebase remains maintainable, scalable, and consisten
 
 ## Note on Migration File Path Error
 
+<<<<<<< HEAD
 - An error was made in assuming the path for the migration file related to team ownership (`add_owner_id_to_teams_table.php`). Initially, the path was assumed to be in the main Laravel migrations directory (`/var/www/html/Quaeris/laravel/database/migrations/`), whereas the correct path is within the User module's migrations directory (`/var/www/html/Quaeris/laravel/Modules/User/database/migrations/`). This highlights the importance of verifying module-specific directory structures as per project guidelines to avoid such mistakes in the future.
+=======
+- An error was made in assuming the path for the migration file related to team ownership (`add_owner_id_to_teams_table.php`). Initially, the path was assumed to be in the main Laravel migrations directory (`/var/www/html/healthcare_app/laravel/database/migrations/`), whereas the correct path is within the User module's migrations directory (`/var/www/html/healthcare_app/laravel/Modules/User/database/migrations/`). This highlights the importance of verifying module-specific directory structures as per project guidelines to avoid such mistakes in the future.
+>>>>>>> 6d3760fe (.)

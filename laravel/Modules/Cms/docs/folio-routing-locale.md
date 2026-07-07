@@ -1,3 +1,16 @@
+---
+title: "Folio routing e locale"
+type: concept
+tags: [cms, folio, locale, laravel-localization, routing]
+created: 2026-05-01
+updated: 2026-06-10
+qmd: "folio routing locale FolioVoltServiceProvider uri locale mcamara link strategy"
+related:
+  - wiki/concepts/folio-filesystem-routing-no-web-php.md
+  - wiki/troubleshooting/folio-route-not-found.md
+  - ../Themes/Sixteen/docs/wiki/concepts/fo-folio-links-multilingua.md
+---
+
 # Folio routing e locale (mcamara/laravel-localization)
 
 ## Come funziona
@@ -29,13 +42,33 @@
 
 - Le rotte **non** sono in `routes/web.php` per il frontoffice.
 - Sono definite da **Folio** in base ai file in:
-  - **Tema**: `Themes/Meetup/resources/views/pages/` (path da XotData::getPubThemeViewPath('pages')).
+  - **Tema**: `Themes/Sixteen/resources/views/pages/ (tema da XotData::pub_theme)` (path da XotData::getPubThemeViewPath('pages')).
   - **Moduli**: `Modules/{ModuleName}/resources/views/pages/` (se la cartella esiste).
 - Ogni file Blade in `pages/` diventa una rotta; il prefisso `$locale` è aggiunto da Folio con **`->uri($locale)`**.
+
+
+## Strategia link FO (2026-06-10)
+
+Tre superfici — non mescolarle:
+
+| Sorgente link | Helper | Note |
+|---------------|--------|------|
+| Pagina Folio con `name()` | `route('<folio-name>')` | Nome da `folio:list`, **inglese** (es. `notifications`) |
+| `header.json` / blocchi CMS | `FrontofficeUrl::fromStoredUrl()` | Path relativo nel JSON → mcamara |
+| Path senza `name()` Folio | `LaravelLocalization::localizeUrl($path)` o `FrontofficeUrl::path()` | Es. `/predicts`, `/register` |
+
+`route()` **non** definisce la rotta — punta al file Folio esistente. **Mai** definire rotte FO in `web.php`.
+
+Vedi [folio-filesystem-routing-no-web-php.md](wiki/concepts/folio-filesystem-routing-no-web-php.md) · header: [fo-folio-named-routes-header.md](../../Themes/Sixteen/docs/wiki/concepts/fo-folio-named-routes-header.md).
 
 ## Riferimenti
 
 - [Regola laravel-localization-mcamara](../../../../.cursor/rules/laravel-localization-mcamara.mdc)
 - [Lang: laravel-localization reference](../lang/docs/laravel-localization-mcamara-reference.md)
-- [Meetup localization standard](../meetup/docs/localization-standard.md)
+- [fo-folio-links-multilingua](../Themes/Sixteen/docs/wiki/concepts/fo-folio-links-multilingua.md)
 - [mcamara/laravel-localization README](https://github.com/mcamara/laravel-localization)
+
+## Canon approfondito
+
+- [folio-filesystem-routing-no-web-php.md](wiki/concepts/folio-filesystem-routing-no-web-php.md) — file = rotta, mai web.php FO
+

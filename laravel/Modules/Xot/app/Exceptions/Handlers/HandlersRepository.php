@@ -11,16 +11,22 @@ class HandlersRepository
 {
     /**
      * The custom handlers reporting exceptions.
+     *
+     * @var array<int, callable>
      */
     protected array $reporters = [];
 
     /**
      * The custom handlers rendering exceptions.
+     *
+     * @var array<int, callable>
      */
     protected array $renderers = [];
 
     /**
      * The custom handlers rendering exceptions in console.
+     *
+     * @var array<int, callable>
      */
     protected array $consoleRenderers = [];
 
@@ -50,34 +56,40 @@ class HandlersRepository
 
     /**
      * Retrieve all reporters handling the given exception.
+     *
+     * @return array<int, callable>
      */
     public function getReportersByException(\Throwable $e): array
     {
         return array_filter(
             $this->reporters,
-            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e),
+            fn (callable $handler): bool => $this->handlesException($handler, $e),
         );
     }
 
     /**
      * Retrieve all renderers handling the given exception.
+     *
+     * @return array<int, callable>
      */
     public function getRenderersByException(\Throwable $e): array
     {
         return array_filter(
             $this->renderers,
-            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e),
+            fn (callable $handler): bool => $this->handlesException($handler, $e),
         );
     }
 
     /**
      * Retrieve all console renderers handling the given exception.
+     *
+     * @return array<int, callable>
      */
     public function getConsoleRenderersByException(\Throwable $e): array
     {
         return array_filter(
             $this->consoleRenderers,
-            fn (mixed $handler) => is_callable($handler) && $this->handlesException($handler, $e),
+            fn (callable $handler): bool => $this->handlesException($handler, $e),
         );
     }
 

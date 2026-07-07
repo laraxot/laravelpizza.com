@@ -1,5 +1,6 @@
 # Pattern per Riferimenti User - Laraxot
 
+**Data**: 2025-01-10
 **Obiettivo**: Standardizzare i riferimenti a User nel sistema Laraxot
 **Problema**: PHPStan segnala errori su `App\Models\User` che non esiste
 
@@ -222,3 +223,4 @@ if ($user instanceof UserContract) {
 
 ---
 
+*Ultimo aggiornamento: 2025-01-10*

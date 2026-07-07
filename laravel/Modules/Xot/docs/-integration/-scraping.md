@@ -1,11 +1,7 @@
-# _scraping
+---
+module: theme
+topic: -scraping
+canonical: ../../../../Themes/docs/shared-components/-7.md
+---
 
-<!-- Contenuto migrato da _docs/_scraping.txt -->
-
-
-Using Laravel and Symfony/panther To Scrape Javascript Websites
-https://webmobtuts.com/backend-development/using-laravel-and-symfony-panther-to-scrape-javascript-websites/
-
-
-
-https://github.com/oscarotero/Embed  !!!
+See canonical documentation: ../../../../Themes/docs/shared-components/-7.md

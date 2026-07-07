@@ -4,13 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Models;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-use Modules\Gdpr\Models\GdprConsent;
-use Modules\Gdpr\Tests\TestCase;
-use Modules\User\Models\User;
-=======
 use Modules\Gdpr\Database\Factories\ConsentFactory;
 use Modules\Gdpr\Database\Factories\TreatmentFactory;
 use Modules\Gdpr\Models\Consent;
@@ -20,7 +13,6 @@ use Modules\User\Database\Factories\UserFactory;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
->>>>>>> 40b96bcd6 (.)
 
 describe('GDPR Consent Business Logic', function () {
     beforeEach(function (): void {

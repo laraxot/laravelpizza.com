@@ -16,6 +16,11 @@ uses(TestCase::class);
 
 describe('LoginUserAction', function (): void {
     test('authenticates connected socialite user and dispatches event', function (): void {
+<<<<<<< HEAD
+=======
+        /* @var \Modules\User\Tests\TestCase $this */
+        /* @var TestCase $this */
+>>>>>>> 9fa499be (.)
         Event::fake([SocialiteUserConnected::class]);
 
         $user = User::factory()->create();
@@ -36,6 +41,7 @@ describe('LoginUserAction', function (): void {
     });
 
     test('throws when related user is not authenticatable', function (): void {
+        /** @var TestCase $this */
         $socialiteUser = new SocialiteUser([
             'provider' => 'test-provider',
             'provider_id' => 'provider-id-2',

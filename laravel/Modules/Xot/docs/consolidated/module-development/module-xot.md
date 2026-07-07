@@ -1,10 +1,10 @@
 # Modulo Xot
 
 ## Informazioni Generali
-- **Nome**: `laraxot/module_xot_fila5`
+- **Nome**: `laraxot/module_xot_fila3`
 - **Descrizione**: Modulo core del repository laraxot
 - **Namespace**: `Modules\Xot`
-- **Repository**: https://github.com/laraxot/module_xot_fila5
+- **Repository**: https://github.com/laraxot/module_xot_fila3
 
 ## Service Providers
 1. `Modules\Xot\Providers\XotServiceProvider`
@@ -67,7 +67,7 @@ composer format        # Formatta il codice
 ## Configurazione
 ### File di Configurazione
 - Configurazioni in `config/`
-- Helpers in `helpers/Helper.php`
+- Helpers in `Helpers/Helper.php`
 - Supporto per Redis/Predis
 
 ## Best Practices

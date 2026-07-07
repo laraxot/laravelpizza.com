@@ -154,6 +154,10 @@ performance::admin
 - [XotBasePanelProvider](xotbasepanelprovider.md)
 - [User Role Management](../../user/project_docs/console_commands/readme.md)
 - [Filament Best Practices](../../../project_docs/filament-best-practices.md)
+- [PDND Redirect Loop Fix](../../Pdnd/project_docs/redirect_loop_fix.md)
+- [XotBasePanelProvider](xotbasepanelprovider.md)
+- [User Role Management](../../User/project_docs/console_commands/README.md)
+- [Filament Best Practices](../../../project_docs/FILAMENT-BEST-PRACTICES.md)
 
 ## Aggiornamenti
 
@@ -169,3 +173,4 @@ performance::admin
 - ✅ **Multi-Ruolo**: Supporto mantenuto
 - ✅ **Performance**: Nessun impatto negativo
 
+*Ultimo aggiornamento: 2025-01-27*

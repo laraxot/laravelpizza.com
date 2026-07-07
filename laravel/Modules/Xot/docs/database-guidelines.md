@@ -17,6 +17,7 @@ Questo documento definisce le best practices per la gestione dei database nel fr
 - Chiavi esterne: stesso nome della chiave primaria della tabella referenziata (es. `id_socio`, `id_sezione`)
 - Timestamp standard: `created_at`, `updated_at`, `deleted_at`
 - Booleani: prefisso `is_` o `has_` (es. `is_active`, `has_documents`)
+- Date: suffisso `_at` per datetime, `_date` per date (es. `registration_at`, `birth_date`)
 
 ### 2. Tipi di Dati
 
@@ -265,6 +266,8 @@ return new class extends XotBaseMigration {
 ```
 
 **Collegamenti:**
+- [Regola Performance](../../Performance/project_docs/database_migrations.md)
+- [Regole globali root](../../../project_docs/database_migrations.md)
 - [Regola Performance](../../performance/project_docs/database_migrations.md)
 - [Regole globali root](../../../../docs/project/database_migrations.md)
 

@@ -408,12 +408,4 @@ Se trovi una directory con case errato:
 6. Committa le modifiche
 
 ## Collegamenti tra versioni di module_structure.md
-<<<<<<< HEAD
-<<<<<<< HEAD
 * [module_structure.md](../../../../../docs/error_analysis/module_structure.md)
-=======
-* [module_structure.md](../../../../../docs/error_analysis/module_structure.md)
->>>>>>> 40b96bcd6 (.)
-=======
-* [module_structure.md](../../../../../docs/error_analysis/module_structure.md)
->>>>>>> origin/dev

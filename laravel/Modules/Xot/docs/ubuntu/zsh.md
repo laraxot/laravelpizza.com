@@ -21,5 +21,7 @@ usefull links:
 - https://zsh-prompt-generator.site/
 
 ## Collegamenti tra versioni di zsh.md
+* [zsh.md](../../../Xot/docs/install/zsh.md)
+* [zsh.md](../../../Xot/docs/ubuntu/zsh.md)
 * [zsh.md](../../../xot/docs/install/zsh.md)
 * [zsh.md](../../../xot/docs/ubuntu/zsh.md)

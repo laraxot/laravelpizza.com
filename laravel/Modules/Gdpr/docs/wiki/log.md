@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-# Gdpr Wiki Log
-
-## [2026-04-15] init | wiki bootstrap
-- Struttura wiki/log.md inizializzata.
-- Layer raw: tutti i file in `docs/` (eccetto `wiki/`).
-- Layer wiki: `docs/wiki/` — LLM-maintained, sintesi ad alto riuso.
-- Schema: `docs/.schema/WIKI_SCHEMA.md`
-- Adozione moduli: `docs/project/llm-wiki-module-adoption.md`
-=======
 ## [2026-06-05] docs | HackerNoon harness — tips 001-022 in wiki locale
 
 - Stub/checklist: second-brain → canon Xot, ai-harness, [hackernoon map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md), [llm-wiki.txt](../../../../../bashscripts/tools/prompts/llm-wiki.txt)
@@ -27,4 +17,3 @@ module: "Gdpr"
 - Created module index.md
 - Ready for on-demand loading via QMD
 
->>>>>>> 40b96bcd6 (.)

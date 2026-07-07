@@ -5,20 +5,31 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\File;
 use Modules\Cms\Actions\Module\FixJigSawByModuleAction;
 use Nwidart\Modules\Laravel\Module;
+use PHPUnit\Framework\Assert;
 
+use function Safe\file_put_contents;
+use function Safe\mkdir;
+use function Safe\rmdir;
+use function Safe\unlink;
+
+use Symfony\Component\Finder\SplFileInfo;
+
+uses(Modules\Cms\Tests\TestCase::class);
 test('FixJigSawByModuleAction can be instantiated', function () {
     $action = new FixJigSawByModuleAction();
 
-    expect($action)->toBeInstanceOf(FixJigSawByModuleAction::class);
+    Assert::assertInstanceOf(FixJigSawByModuleAction::class, $action);
 });
 
 test('FixJigSawByModuleAction execute method returns array', function () {
     // Mock a module instance
+    /** @var Module&Mockery\MockInterface $module */
     $module = Mockery::mock(Module::class);
-    $module->shouldReceive('getPath')->andReturn('/tmp/test-module');
-    $module->shouldReceive('getName')->andReturn('TestModule');
+    $module->allows([
+        'getPath' => '/tmp/test-module',
+        'getName' => 'TestModule',
+    ]);
 
-    // Create a temporary stub file for testing
     $stubsDir = '/tmp/test-stubs';
     if (! is_dir($stubsDir)) {
         mkdir($stubsDir, 0755, true);
@@ -29,14 +40,13 @@ test('FixJigSawByModuleAction execute method returns array', function () {
     // Mock File facade to return our test stub file
     File::shouldReceive('allFiles')
         ->with(Mockery::any())
-        ->andReturn([new Symfony\Component\Finder\SplFileInfo($stubsDir.'/test.stub', '', 'test.stub')]);
+        ->andReturn([new SplFileInfo($stubsDir.'/test.stub', '', 'test.stub')]);
 
     $action = new FixJigSawByModuleAction();
+    /** @var array<string, mixed> $result */
     $result = $action->execute($module);
+    Assert::assertArrayHasKey('files', $result);
 
-    expect($result)->toBeArray();
-
-    // Clean up
     unlink($stubsDir.'/test.stub');
     rmdir($stubsDir);
-})->skip('Skipping complex filesystem mock test');
+});

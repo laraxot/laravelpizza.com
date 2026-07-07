@@ -16,6 +16,11 @@ uses(TestCase::class);
 
 describe('LoginUserAction', function (): void {
     test('authenticates connected socialite user and dispatches event', function (): void {
+<<<<<<< HEAD
+=======
+        /* @var \Modules\User\Tests\TestCase $this */
+        /* @var TestCase $this */
+>>>>>>> 9fa499be (.)
         Event::fake([SocialiteUserConnected::class]);
 
         $user = User::factory()->create();
@@ -36,6 +41,7 @@ describe('LoginUserAction', function (): void {
     });
 
     test('throws when related user is not authenticatable', function (): void {
+        /** @var TestCase $this */
         $socialiteUser = new SocialiteUser([
             'provider' => 'test-provider',
             'provider_id' => 'provider-id-2',
@@ -48,7 +54,12 @@ describe('LoginUserAction', function (): void {
     })->throws(LogicException::class, 'User instance must implement Authenticatable.');
 
     test('redirects to intended page when available', function (): void {
+<<<<<<< HEAD
         $user = User::factory()->create();
+=======
+        /** @var TestCase $this */
+        $user = UserFactory::new()->createOne();
+>>>>>>> 9fa499be (.)
 
         $socialiteUser = new SocialiteUser([
             'provider' => 'google',
@@ -84,8 +95,14 @@ describe('LoginUserAction', function (): void {
     });
 
     test('authenticates different users independently', function (): void {
+<<<<<<< HEAD
         $user1 = User::factory()->create(['email' => 'user1@example.com']);
         $user2 = User::factory()->create(['email' => 'user2@example.com']);
+=======
+        /** @var TestCase $this */
+        $user1 = UserFactory::new()->createOne(['email' => 'user1-'.uniqid().'@example.com']);
+        $user2 = UserFactory::new()->createOne(['email' => 'user2-'.uniqid().'@example.com']);
+>>>>>>> 9fa499be (.)
 
         $socialiteUser1 = new SocialiteUser([
             'provider' => 'google',
@@ -128,6 +145,7 @@ describe('LoginUserAction', function (): void {
     });
 
     test('handles null user assertion gracefully', function (): void {
+        /** @var TestCase $this */
         $socialiteUser = new SocialiteUser([
             'provider' => 'test',
             'provider_id' => 'test-null',

@@ -2,11 +2,16 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Rules;
 
 uses(\Modules\User\Tests\TestCase::class);
 
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Rules\CheckOtpExpiredRule;
+
+uses(Modules\User\Tests\TestCase::class);
 
 test('CheckOtpExpiredRule can be instantiated', function () {
     expect(class_exists(CheckOtpExpiredRule::class))->toBeTrue();

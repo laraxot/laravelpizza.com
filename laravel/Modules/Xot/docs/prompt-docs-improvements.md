@@ -1,6 +1,10 @@
 # Miglioramenti al Prompt docs.txt
 
 > **Collegamenti correlati**
+> - [README.md documentazione generale](../../../../docs/README.md)
+> - [Struttura dei Prompt](./prompts.md)
+> - [Regole per i Prompt](./PROMPT_RULES.md)
+> - [README.md toolkit bashscripts](../../../../bashscripts/docs/README.md)
 > - [README.md documentazione generale](../../../../../docs/readme.md)
 > - [Struttura dei Prompt](./prompts.md)
 > - [Regole per i Prompt](./prompt_rules.md)

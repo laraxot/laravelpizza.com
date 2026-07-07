@@ -86,6 +86,9 @@ class ScheduleHistory extends BaseModel
      *
      */
 
+    /**
+     * @return BelongsTo<Schedule, $this>
+     */
     public function command(): BelongsTo
     {
         return $this->belongsTo(Schedule::class, 'schedule_id', 'id');

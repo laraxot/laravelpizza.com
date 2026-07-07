@@ -56,4 +56,4 @@ When running `php artisan` commands from outside the `laravel/` directory using 
 
 - `laravel/bootstrap/cache/` - Cache directory
 - `laravel/modules_statuses.json` - Module enable/disable state
-- `Modules/Gdpr/docs/provider-fix-2026-03-02.md` - Related GdprServiceProvider fix
+- `Modules/Gdpr/docs/provider-fix.md` - Related GdprServiceProvider fix

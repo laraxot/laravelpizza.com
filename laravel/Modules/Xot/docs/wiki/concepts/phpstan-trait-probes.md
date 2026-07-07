@@ -1,62 +1,76 @@
 ---
-title: "PHPStan trait probes (pattern rimosso)"
+title: "PHPStan trait probes"
 type: concept
 module: Xot
-tags: [phpstan, trait, probe, xot, second-brain, deprecated]
+tags: [phpstan, trait, probe, xot, second-brain]
 created: 2026-06-30
-updated: 2026-07-06
-qmd: "phpstan trait probe unused trait deprecated"
+updated: 2026-06-30
+qmd: "phpstan trait probe unused trait xotPhpstanTraitProbeClasses Helper scanFiles"
 related:
   - ./phpstan-fixes-log.md
   - ../memories/phpstan-remediation-swarm.md
   - ../../../User/docs/wiki/concepts/trait-alias-conflict-resolution.md
 ---
 
-# PHPStan trait probes — pattern rimosso (2026-07-06)
+# PHPStan trait probes
 
-## Stato
+## Problema
 
-Il pattern "probe host + registry" descritto in origine in questa nota non è
-mai stato completato: `xotPhpstanTraitProbeClasses()` **non esiste** in
-`Modules/Xot/helpers/Helper.php`, e `phpstan.neon` (`scanFiles`) non registra
-nessun probe. Le classi `*PhpstanProbe`/`*PhpstanTraitProbe` sparse nei moduli
-(Geo, Lang, Tenant) erano quindi codice morto, senza alcun effetto reale su
-PHPStan. Rimosse il 2026-07-06:
+PHPStan segnala `trait.unused` su trait di libreria usati solo nei test o via composizione dinamica (`belongsToManyX`, Spatie, ecc.). Aggiungere i trait ai modelli di produzione può causare collisioni (es. `HasCommonScopes` vs `scopePublished()` su `Blog\Article`).
 
-- `Modules/Geo/tests/Fixtures/Traits/*Probe*.php`
-- `Modules/Lang/app/Providers/TranslatorTraitPhpstanProbe.php`
-- `Modules/Tenant/tests/Fixtures/Traits/*Probe*.php`
+## Soluzione — probe host + registry
 
-Rimossa anche la cartella duplicata non-PSR-4 `Modules/Geo/tests/fixtures/`
-(minuscola): il namespace dichiarato nei file era `Modules\Geo\Tests\Fixtures\Traits`,
-che per PSR-4 deve mappare alla cartella `tests/Fixtures/Traits/` (PascalCase).
+1. **Classe probe** per modulo in `Modules/{Mod}/app/Phpstan/TraitProbes.php` (o file dedicato): estende `XotBaseModel`, `use` del trait da analizzare, `$table` fittizio.
+2. **Registry centralizzato** in `Modules/Xot/helpers/Helper.php` → `xotPhpstanTraitProbeClasses(): list<class-string>`.
+3. **`phpstan.neon`** include `Helper.php` in `scanFiles` (già configurato).
 
-## Come gestire `trait.unused` oggi
+### Esempio probe
 
-Se PHPStan segnala `trait.unused` su un trait usato solo in test o via
-composizione dinamica, preferire in ordine:
+```php
+final class HasCommonScopesPhpstanProbe extends XotPhpstanProbeModel
+{
+    use HasCommonScopes;
+}
+```
 
-1. Un test che richiama il trait direttamente tramite classe anonima:
+### Registry (estratto)
 
-   ```php
-   $instance = new class {
-       use MyTrait;
-   };
-   ```
+```php
+function xotPhpstanTraitProbeClasses(): array
+{
+    return [
+        \Modules\Geo\Phpstan\GeoTraitPhpstanProbe::class,
+        \Modules\Lang\Phpstan\HasStrictTranslationsPhpstanProbe::class,
+        \Modules\Notify\Phpstan\HasContactPhpstanProbe::class,
+        \Modules\Xot\Phpstan\HasCommonScopesPhpstanProbe::class,
+        \Modules\Job\Phpstan\FormatSecondsPhpstanProbe::class,
+        // ...
+    ];
+}
+```
 
-2. Se il trait è usato solo tramite discovery dinamico a runtime (widget
-   Filament, ecc.) e non è testabile altrimenti, chiedere al maintainer
-   un ignore puntuale in `phpstan.neon` (file modificabile solo da lui).
+## Quando aggiungere un probe
 
-Non creare classi "probe" dedicate in `app/Phpstan/`: non vengono scansionate
-da PHPStan a meno che non siano esplicitamente elencate in `scanFiles`, quindi
-restano file morti.
+| Situazione | Azione |
+|------------|--------|
+| `trait.unused` su trait usato solo in test | Probe + registry |
+| Trait su modello produzione causa fatal/collision | **Non** wire su modello — solo probe |
+| Trait già su modello base (es. `RelationX`) | Nessun probe |
 
-## Anti-pattern storici (sessione 2026-06, ancora validi come riferimento)
+## Anti-pattern (revertiti in sessione 2026-06)
 
 - `HasCommonScopes` su `XotBaseModel` → conflitto con scope Blog
-- `TypedHasRecursiveRelationships` — trait rimosso (STORY-346)
-- Probe Rating legacy (`HasRatingsTrait`, `RatingTrait`) → ~54 errori; SSoT = `HasRating`
+- `TypedHasRecursiveRelationships` — trait rimosso (STORY-346); **mai** probe
+- Probe Rating legacy (`HasRatingsTrait`, `RatingTrait`) → ~54 errori; SSoT = `HasRating` + `RatingPhpstanTraitProbe`
+- Probe Notify notification traits (`HasTenantNotifications`, …) → `$tenant_id` / contesto tenant mancante; usare `@phpstan-ignore trait.unused`
+
+### Guard script
+
+```bash
+bash bashscripts/tools/archive-invalid-phpstan-probes.sh
+```
+
+Archivia in-place (`.bak`) probe invalidi sotto `Models/` o probe Xot recursive.
 
 ## Verifica
 
@@ -64,7 +78,17 @@ restano file morti.
 cd laravel
 ./vendor/bin/phpstan clear-result-cache
 ./vendor/bin/phpstan analyse Modules --no-progress
+# atteso: [OK] No errors (app + database + tests, 2026-06-30)
 ```
+
+### Fix correlati (2026-06-30)
+
+| Area | Fix |
+|------|-----|
+| `xotSeedModelOnce` | `GetFactoryAction` istanziato direttamente (no `app()` mixed) + `createOne()` |
+| `XotBaseTestCase` | Bug ricorsivi: `createUnitMock`, `assertDatabase*Row`, `skipTest` → delega PHPUnit |
+| `RatingFactory` (Predict) | `$model = Predict\Models\Rating` (non Rating module base) |
+| Test factory | `fix-test-factory-createone.php` — `create()` → `createOne()` dove N=1 |
 
 ## Collegamenti
 

@@ -1,3 +1,7 @@
+# _inodes
+
+<!-- Contenuto migrato da _docs/_inodes.txt -->
+
 --------------------------------------------------------------
 $ df -i /
 Filesystem      Inodes  IUsed   IFree    IUse% Mounted on
@@ -35,4 +39,3 @@ $ journalctl --vacuum-size=100M
 dove 100M sono le dimensioni in cui il file di log deve stare ossia verranno scartiti tutti i log più vecchi finchè non si raggiunge uno spazio di disco usato da Jorunal di 100M (o meno).
 
 --------------------------------------------------------------
-

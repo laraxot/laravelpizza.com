@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Actions\Cast;
-
 use Modules\Xot\Actions\Cast\SafeObjectCastAction;
+use PHPUnit\Framework\Assert;
+
+uses(Modules\Xot\Tests\TestCase::class);
 
 it('manages object properties safely', function (): void {
-    $obj = new \stdClass();
+    $obj = new stdClass();
     $obj->name = 'Test Object';
     $obj->id = 123;
     $obj->active = true;
@@ -19,62 +20,54 @@ it('manages object properties safely', function (): void {
     $action = app(SafeObjectCastAction::class);
 
     // hasProperty
-    expect($action->hasProperty($obj, 'name'))->toBeTrue();
-    expect($action->hasProperty($obj, 'missing'))->toBeFalse();
-
+    Assert::assertTrue($action->hasProperty($obj, 'name'));
+    Assert::assertFalse($action->hasProperty($obj, 'missing'));
     // hasNonNullProperty
-    expect($action->hasNonNullProperty($obj, 'name'))->toBeTrue();
-    expect($action->hasNonNullProperty($obj, 'nullVal'))->toBeFalse();
-
+    Assert::assertTrue($action->hasNonNullProperty($obj, 'name'));
+    Assert::assertFalse($action->hasNonNullProperty($obj, 'nullVal'));
     // hasNonEmptyProperty
-    expect($action->hasNonEmptyProperty($obj, 'name'))->toBeTrue();
-    expect($action->hasNonEmptyProperty($obj, 'emptyStr'))->toBeFalse();
-
+    Assert::assertTrue($action->hasNonEmptyProperty($obj, 'name'));
+    Assert::assertFalse($action->hasNonEmptyProperty($obj, 'emptyStr'));
     // getStringProperty
-    expect($action->getStringProperty($obj, 'name'))->toBe('Test Object');
-    expect($action->getStringProperty($obj, 'missing', 'fallback'))->toBe('fallback');
-
+    Assert::assertSame('Test Object', $action->getStringProperty($obj, 'name'));
+    Assert::assertSame('fallback', $action->getStringProperty($obj, 'missing', 'fallback'));
     // getIntProperty
-    expect($action->getIntProperty($obj, 'id'))->toBe(123);
-
+    Assert::assertSame(123, $action->getIntProperty($obj, 'id'));
     // getFloatProperty
-    expect($action->getFloatProperty($obj, 'price'))->toBe(10.5);
-
+    Assert::assertSame(10.5, $action->getFloatProperty($obj, 'price'));
     // getBooleanProperty
-    expect($action->getBooleanProperty($obj, 'active'))->toBeTrue();
-
+    Assert::assertTrue($action->getBooleanProperty($obj, 'active'));
     // getArrayProperty
-    expect($action->getArrayProperty($obj, 'tags'))->toBe(['a', 'b']);
-
+    Assert::assertSame(['a', 'b'], $action->getArrayProperty($obj, 'tags'));
     // getTypedProperty
-    expect($action->getTypedProperty($obj, 'name', 'string'))->toBe('Test Object');
-    expect($action->getTypedProperty($obj, 'id', 'int'))->toBe(123);
-
+    Assert::assertSame('Test Object', $action->getTypedProperty($obj, 'name', 'string'));
+    Assert::assertSame(123, $action->getTypedProperty($obj, 'id', 'int'));
     // hasPropertyValue
-    expect($action->hasPropertyValue($obj, 'id', 123))->toBeTrue();
-    expect($action->hasPropertyValue($obj, 'id', '123'))->toBeFalse();
-
+    Assert::assertTrue($action->hasPropertyValue($obj, 'id', 123));
+    Assert::assertFalse($action->hasPropertyValue($obj, 'id', '123'));
     // getValidatedProperty
-    expect($action->getValidatedProperty($obj, 'id', 'int', fn ($v) => $v > 100))->toBe(123);
-    expect($action->getValidatedProperty($obj, 'id', 'int', fn ($v) => $v > 200, 0))->toBe(0);
-
+    Assert::assertSame(123, $action->getValidatedProperty($obj, 'id', 'int', function (mixed $v): bool {
+        return $v > 100;
+    }));
+    Assert::assertSame(0, $action->getValidatedProperty($obj, 'id', 'int', function (mixed $v): bool {
+        return $v > 200;
+    }, 0));
     // Methods
     $complexObj = new class {
-        public function test($p)
+        public function test(mixed $p): mixed
         {
             return $p;
         }
 
-        public function fail()
+        public function fail(): never
         {
-            throw new \Exception('fail');
+            throw new Exception('fail');
         }
     };
 
-    expect($action->hasMethod($complexObj, 'test'))->toBeTrue();
-    expect($action->hasMethod($complexObj, 'missing'))->toBeFalse();
-
-    expect($action->callMethodSafely($complexObj, 'test', ['hello']))->toBe('hello');
-    expect($action->callMethodSafely($complexObj, 'missing', [], 'default'))->toBe('default');
-    expect($action->callMethodSafely($complexObj, 'fail', [], 'error'))->toBe('error');
+    Assert::assertTrue($action->hasMethod($complexObj, 'test'));
+    Assert::assertFalse($action->hasMethod($complexObj, 'missing'));
+    Assert::assertSame('hello', $action->callMethodSafely($complexObj, 'test', ['hello']));
+    Assert::assertSame('default', $action->callMethodSafely($complexObj, 'missing', [], 'default'));
+    Assert::assertSame('error', $action->callMethodSafely($complexObj, 'fail', [], 'error'));
 });

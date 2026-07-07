@@ -1,123 +1,56 @@
-# CMS Module
+# 📄 Cms
 
-[![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
-[![Filament 5.x](https://img.shields.io/badge/Filament-5.x-blue.svg)](https://filamentphp.com/)
+[![Domain-CMS](https://img.shields.io/badge/Domain-CMS%20Folio-00838F.svg)](#)
+[![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
+[![Filament 5](https://img.shields.io/badge/Filament-5-ffab00.svg)](https://filamentphp.com/)
+[![PHP 8.4+](https://img.shields.io/badge/PHP-8.4+-777BB4.svg)](https://php.net/)
 [![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
-[![PHP 8.3+](https://img.shields.io/badge/PHP-8.3+-blue.svg)](https://php.net)
-[![Resources 5](https://img.shields.io/badge/Resources-5-purple.svg)](#filament)
+[![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue.svg)](https://www.php-fig.org/psr/psr-12/)
+[![Strict Types](https://img.shields.io/badge/PHP-strict__types-1-informational.svg)](#)
+[![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
+[![FixCity Platform](https://img.shields.io/badge/Platform-FixCity-008758.svg)](#)
 
-> **Content management a blocchi**: pagine dinamiche con sezioni componibili, menu gerarchici, rendering frontend con Folio/Volt, SEO multi-tenant. Gestione contenuti completa da Filament.
-
----
-
-## Cosa fa
-
-Il modulo CMS gestisce contenuti strutturati: pagine composte da sezioni (blocchi riutilizzabili dal modulo UI), menu di navigazione gerarchici, allegati e configurazioni. Il rendering frontend avviene tramite Laravel Folio e Livewire Volt per interattivita.
-
-```php
-// Pagina composta da sezioni
-$page = Page::with('sections.attachments')->find(1);
-
-// Ogni sezione ha un tipo che determina il rendering
-// (hero, features, cta, blog, newsletter...)
-foreach ($page->sections as $section) {
-    // Renderizza il blocco UI corrispondente
-    echo view("ui::blocks.{$section->type}", $section->data);
-}
-```
+> **Pagine che respirano Design Comuni.** Folio, blocchi CMS, JSON content — il frontoffice non è un afterthought.
 
 ---
 
-## Modelli (7)
+## Perché esiste
 
-| Modello | Funzione |
-|---------|----------|
-| **Page** | Pagina con slug, SEO, stato (draft/published) |
-| **Section** | Sezione/blocco di contenuto con tipo e dati |
-| **Menu** | Menu di navigazione gerarchico |
-| **Module** | Modulo CMS configurabile |
-| **Attachment** | File allegato a pagina/sezione |
-| **PageContent** | Contenuto pagina per lingua |
-| **Conf** | Configurazioni CMS |
+Gestisce contenuti e composizione pagine `/it` senza hardcode in Blade monolitici.
 
----
+## Superpoteri
 
-## Azioni (4)
+- Laravel Folio + blocchi riusabili
+- Content JSON-driven
+- Integrazione tema Sixteen
+- Filament per gestione contenuti
 
-| Action | Funzione |
-|--------|----------|
-| **SaveFooterAction** | Salva configurazione footer |
-| **SaveHeadernavAction** | Salva navigazione header |
-| **GetViewThemeAction** | Risolve tema vista per tenant |
-| **GetStyleClassAction** | Risolve classi CSS per componente |
+## Certificazioni
 
----
+| Certificazione | Stato |
+|----------------|-------|
+| PHPStan livello 10 | Target progetto |
+| `declare(strict_types=1)` | Su nuovo codice PHP |
+| Filament 5 + XotBase | Admin enterprise |
+| Test PHPUnit / Pest | Suite modulo |
+| Documentazione wiki | Cartella `docs/` |
 
-## Filament Integration (5 Resource)
+## Vuoi entrare nel team?
 
-| Resource | Funzione |
-|----------|----------|
-| **PageResource** | CRUD pagine con editor visuale |
-| **SectionResource** | CRUD sezioni/blocchi |
-| **MenuResource** | Gestione menu gerarchici |
-| **AttachmentResource** | Gestione allegati |
-| **PageContentResource** | Contenuto multilingua |
+Costruisci **pagine civiche** modulari — un blocco alla volta.
+
+Stack frontoffice: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — vedi [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
 
 ---
 
-## Rendering Frontend
+## Documentazione
 
-```
-Page (CMS Module)
-    |
-    +-- Sections (blocchi ordinati)
-    |     +-- type: "hero.centered" → x-ui::blocks.hero.centered
-    |     +-- type: "features.grid" → x-ui::blocks.features.grid
-    |     +-- type: "cta.branded"   → x-ui::blocks.cta.branded
-    |
-    v
-Laravel Folio (file-based routing)
-    +-- Livewire Volt (interattivita)
-    +-- Tailwind CSS v4 (styling)
-```
+| Lingua | Link |
+|--------|------|
+| 🇮🇹 Presentazione | Questo file (`README.md`) |
+| 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
+| 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
 
 ---
 
-## Integrazione con altri moduli
-
-```
-Cms ──> UI         (211 blocchi pre-costruiti per sezioni)
-Cms ──> Media      (allegati immagini/documenti)
-Cms ──> Seo        (meta tag per pagine)
-Cms ──> Lang       (contenuto multilingua IT/EN/DE)
-Cms ──> Tenant     (pagine per tenant)
-Cms ──> Activity   (audit trail modifiche contenuto)
-```
-
----
-
-## Quick Start
-
-```bash
-php artisan module:enable Cms
-php artisan migrate
-```
-
----
-
-## Metriche
-
-| Metrica | Valore |
-|---------|--------|
-| **Modelli** | 7 |
-| **Azioni** | 4 |
-| **Resource Filament** | 5 |
-| **PHPStan Level** | 10 |
-
----
-
-**Module Type**: Content Management
-**Architecture**: Block-based pages, Folio routing, Volt interactivity
-**Quality**: PHPStan Level 10
-
-*Contenuti strutturati a blocchi: pagine, sezioni, menu e allegati gestiti da Filament, renderizzati con Folio/Volt.*
+**Modulo** `cms` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5

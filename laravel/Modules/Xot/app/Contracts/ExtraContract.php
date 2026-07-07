@@ -18,10 +18,10 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  *
  * @property SchemalessAttributes $extra_attributes
  *
- * @method static Builder|ExtraContract newModelQuery()
- * @method static Builder|ExtraContract newQuery()
- * @method static Builder|ExtraContract query()
- * @method static Builder|ExtraContract withExtraAttributes()
+ * @method static Builder<Model> newModelQuery()
+ * @method static Builder<Model> newQuery()
+ * @method static Builder<Model> query()
+ * @method static Builder<Model> withExtraAttributes()
  *
  * @property int         $id
  * @property string      $model_type
@@ -33,16 +33,16 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
  *
- * @method static Builder|ExtraContract whereCreatedAt($value)
- * @method static Builder|ExtraContract whereCreatedBy($value)
- * @method static Builder|ExtraContract whereDeletedAt($value)
- * @method static Builder|ExtraContract whereDeletedBy($value)
- * @method static Builder|ExtraContract whereExtraAttributes($value)
- * @method static Builder|ExtraContract whereId($value)
- * @method static Builder|ExtraContract whereModelId($value)
- * @method static Builder|ExtraContract whereModelType($value)
- * @method static Builder|ExtraContract whereUpdatedAt($value)
- * @method static Builder|ExtraContract whereUpdatedBy($value)
+ * @method static Builder<Model> whereCreatedAt($value)
+ * @method static Builder<Model> whereCreatedBy($value)
+ * @method static Builder<Model> whereDeletedAt($value)
+ * @method static Builder<Model> whereDeletedBy($value)
+ * @method static Builder<Model> whereExtraAttributes($value)
+ * @method static Builder<Model> whereId($value)
+ * @method static Builder<Model> whereModelId($value)
+ * @method static Builder<Model> whereModelType($value)
+ * @method static Builder<Model> whereUpdatedAt($value)
+ * @method static Builder<Model> whereUpdatedBy($value)
  *
  * @phpstan-require-extends Model
  *

@@ -39,7 +39,7 @@ class HasOneAction
             sprintf('Expected HasOne relationship, got %s', get_debug_type($relationDTO->rows)),
         );
 
-        /** @var HasOne $relation */
+        /** @var HasOne<Model, Model> $relation */
         $relation = $relationDTO->rows;
 
         // Validate that the relationship data is not empty

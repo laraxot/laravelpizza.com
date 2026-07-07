@@ -10,7 +10,8 @@ use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecord
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
-use Illuminate\Contracts\Support\Htmlable;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+use Modules\Xot\Filament\Traits\HasRelationshipModelClass;
 use Modules\Xot\Filament\Traits\HasXotForm;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
@@ -20,11 +21,12 @@ use Modules\Xot\Filament\Traits\NavigationLabelTrait;
  */
 abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 {
+    use HasRelationshipModelClass;
     use HasXotForm;
-    use HasXotTable;
-    use NavigationLabelTrait {
-        NavigationLabelTrait::trans as traitTrans;
+    use HasXotTable {
+        HasRelationshipModelClass::getModelClass insteadof HasXotTable;
     }
+    use NavigationLabelTrait;
 
     protected static string $recordTitleAttribute = 'name';
 
@@ -42,7 +44,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
     {
         $value = $this->record->{static::$recordTitleAttribute};
 
-        return (string) $value;
+        return SafeStringCastAction::cast($value);
     }
 
     public function schema(Schema $schema): Schema
@@ -56,16 +58,6 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
     public function getFormSchema(): array
     {
         return [];
-    }
-
-    public static function getNavigationLabel(): string
-    {
-        return static::transFunc(__FUNCTION__);
-    }
-
-    protected function getTableHeading(): Htmlable|string|null
-    {
-        return $this->getTableHeadingFromTrait();
     }
 
     /**
@@ -105,11 +97,8 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
         return [];
     }
 
-    private function getTableHeadingFromTrait(): ?string
+    public static function getNavigationLabel(): string
     {
-        $key = static::getKeyTrans('table.heading');
-        $trans = trans($key);
-
-        return is_string($trans) && $trans !== $key ? $trans : null;
+        return static::transFunc(__FUNCTION__);
     }
 }

@@ -11,19 +11,10 @@ use Modules\Lang\Actions\SaveTransAction;
 use Modules\Xot\Actions\GetTransKeyAction;
 
 /**
- * Trait che fornisce solo i metodi transFunc() e getKeyTransFunc().
- *
- * Usato da NavigationLabelTrait per evitare conflitti con il metodo trans()
- * definito in XotBasePage.
- *
- * Questo trait NON include il metodo trans() per evitare conflitti di firma
- * quando NavigationLabelTrait viene usato insieme a XotBasePage.
+ * Subset of TransTrait for navigation labels — avoids trans() collisions when composed with HasXotTable.
  */
 trait TransFuncTrait
 {
-    /**
-     * Get translation key for a given function name.
-     */
     public static function getKeyTransFunc(string $func): string
     {
         $key = Str::of($func)
@@ -31,7 +22,7 @@ trait TransFuncTrait
             ->snake()
             ->replace('_', '.')
             ->toString();
-        /** @var string */
+        /** @var string $transKey */
         $transKey = app(GetTransKeyAction::class)->execute(static::class);
 
         $key = $transKey.'.'.$key;
@@ -41,15 +32,19 @@ trait TransFuncTrait
         return $key;
     }
 
-    /**
-     * Get translation for a given function name.
-     */
-    public static function transFunc(string $func, bool $_exceptionIfNotExist = false): string
+    public static function transFunc(string $func): string
     {
         $key = static::getKeyTransFunc($func);
-        /** @var string|array<int|string, mixed>|Translator|null $trans */
-        $trans = null;
+        $trans = static::resolveTransFuncValue($key);
 
+        return static::formatTransFuncResult($key, $trans);
+    }
+
+    /**
+     * @return string|array<int|string, mixed>|Translator|null
+     */
+    protected static function resolveTransFuncValue(string $key): string|array|Translator|null
+    {
         try {
             /** @var array<string, mixed>|Translator|string $trans */
             $trans = trans($key);
@@ -58,20 +53,39 @@ trait TransFuncTrait
                 'e' => $e,
                 'key' => $key,
             ]);
+
+            return null;
         }
 
-        if ($key === $trans) {
-            $group = Str::of($key)->before('.')->toString();
-            $item = Str::of($key)->after($group.'.')->toString();
-            /** @var array<string, mixed>|Translator|string $group_arr */
-            $group_arr = trans($group);
-            if (is_array($group_arr)) {
-                $transValue = Arr::get($group_arr, $item);
-                if (is_string($transValue) || is_numeric($transValue) || is_array($transValue)) {
-                    $trans = $transValue;
-                }
-            }
+        if ($key !== $trans) {
+            return $trans;
         }
+
+        $group = Str::of($key)->before('.')->toString();
+        $item = Str::of($key)->after($group.'.')->toString();
+        /** @var array<string, mixed>|Translator|string $group_arr */
+        $group_arr = trans($group);
+        if (! is_array($group_arr)) {
+            return $trans;
+        }
+
+        $transValue = Arr::get($group_arr, $item);
+        if (is_string($transValue) || is_numeric($transValue)) {
+            return is_string($transValue) ? $transValue : (string) $transValue;
+        }
+
+        if (is_array($transValue)) {
+            return $transValue;
+        }
+
+        return $trans;
+    }
+
+    /**
+     * @param string|array<int|string, mixed>|Translator|null $trans
+     */
+    protected static function formatTransFuncResult(string $key, string|array|Translator|null $trans): string
+    {
         if (is_numeric($trans)) {
             return strval($trans);
         }
@@ -85,28 +99,27 @@ trait TransFuncTrait
 
         if (is_string($trans)) {
             if ($trans === $key) {
-                $newTrans = Str::of($key)
-                    ->between('::', '.')
-                    ->replace('_', ' ')
-                    ->toString();
-                app(SaveTransAction::class)->execute($key, $newTrans);
-
-                return $newTrans;
+                return static::persistGeneratedTransFuncLabel($key);
             }
 
             return $trans;
         }
 
         if (null === $trans) {
-            $newTrans = Str::of($key)
-                ->between('::', '.')
-                ->replace('_', ' ')
-                ->toString();
-            app(SaveTransAction::class)->execute($key, $newTrans);
-
-            return $newTrans;
+            return static::persistGeneratedTransFuncLabel($key);
         }
 
         return 'fix:'.$key;
+    }
+
+    protected static function persistGeneratedTransFuncLabel(string $key): string
+    {
+        $newTrans = Str::of($key)
+            ->between('::', '.')
+            ->replace('_', ' ')
+            ->toString();
+        app(SaveTransAction::class)->execute($key, $newTrans);
+
+        return $newTrans;
     }
 }

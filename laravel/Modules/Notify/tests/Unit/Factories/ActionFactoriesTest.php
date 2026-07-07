@@ -19,42 +19,21 @@ test('sms action factory creates default smsfactor driver instance', function ()
     config()->set('sms.drivers.smsfactor.token', 'token-123');
 
     $factory = new SmsActionFactory;
-<<<<<<< HEAD
-    $action = $factory->create('netfun');
-=======
     $action = $factory->create();
->>>>>>> 40b96bcd6 (.)
 
     Assert::assertInstanceOf(SmsActionContract::class, $action);
 });
 
 test('sms action factory throws for unsupported driver', function () {
-<<<<<<< HEAD
-    $factory = new SmsActionFactory;
-
-    $factory->create('definitely-unsupported-driver');
-})->throws(\Exception::class);
-=======
     \assertNotifyThrows(
         fn () => (new SmsActionFactory)->create('definitely-unsupported-driver'),
         \Exception::class,
     );
 });
->>>>>>> 40b96bcd6 (.)
 
 test('telegram action factory throws when selected class does not implement interface', function () {
     config()->set('services.telegram.token', 'telegram-token');
 
-<<<<<<< HEAD
-    $factory = new TelegramActionFactory;
-    $factory->create('official');
-})->throws(\Exception::class);
-
-test('telegram action factory throws for unsupported driver', function () {
-    $factory = new TelegramActionFactory;
-    $factory->create('unsupported');
-})->throws(\Exception::class);
-=======
     \assertNotifyThrows(
         fn () => (new TelegramActionFactory)->create('official'),
         \Exception::class,
@@ -67,7 +46,6 @@ test('telegram action factory throws for unsupported driver', function () {
         \Exception::class,
     );
 });
->>>>>>> 40b96bcd6 (.)
 
 test('whatsapp action factory creates twilio driver instance', function () {
     config()->set('services.twilio.account_sid', 'sid-123');
@@ -80,15 +58,8 @@ test('whatsapp action factory creates twilio driver instance', function () {
 });
 
 test('whatsapp action factory throws for unsupported driver', function () {
-<<<<<<< HEAD
-    $factory = new WhatsAppActionFactory;
-
-    $factory->create('unsupported');
-})->throws(\Exception::class);
-=======
     \assertNotifyThrows(
         fn () => (new WhatsAppActionFactory)->create('unsupported'),
         \Exception::class,
     );
 });
->>>>>>> 40b96bcd6 (.)

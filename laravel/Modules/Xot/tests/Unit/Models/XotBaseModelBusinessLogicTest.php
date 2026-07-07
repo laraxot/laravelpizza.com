@@ -2,24 +2,28 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Models;
-
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Models\XotBaseModel;
+use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-describe('XotBaseModel Business Logic', function () {
-    test('xot base model extends eloquent model', function () {
-        expect(XotBaseModel::class)->toBeSubclassOf(Model::class);
+uses(TestCase::class);
+
+describe('XotBaseModel Business Logic', function (): void {
+    test('xot base model extends eloquent model', function (): void {
+        $reflection = new ReflectionClass(XotBaseModel::class);
+
+        Assert::assertTrue($reflection->isSubclassOf(Model::class));
     });
 
-    test('xot base model can be instantiated', function () {
-        $model = new XotBaseModel();
+    test('xot base model cannot be instantiated directly', function (): void {
+        $reflection = new ReflectionClass(XotBaseModel::class);
 
-        expect($model)->toBeInstanceOf(XotBaseModel::class);
-        expect($model)->toBeInstanceOf(Model::class);
+        Assert::assertFalse($reflection->isInstantiable());
+        Assert::assertTrue($reflection->isSubclassOf(Model::class));
     });
 
-    test('xot base model provides foundation for other models', function () {
-        expect(class_exists(XotBaseModel::class))->toBeTrue();
+    test('xot base model provides foundation for other models', function (): void {
+        Assert::assertTrue(class_exists(XotBaseModel::class));
     });
 });

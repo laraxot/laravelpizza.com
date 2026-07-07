@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Str;
 
+use function Safe\file;
 use function Safe\preg_replace;
 
 use Spatie\QueueableAction\QueueableAction;

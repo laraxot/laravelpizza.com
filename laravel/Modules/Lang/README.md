@@ -1,40 +1,3 @@
-<<<<<<< HEAD
----
-title: Lang
-module: lang
-related: Xot
-status: production
----
-
-# Lang Module
-
-**Module**: `lang`
-**Namespace**: `Modules\Lang\`
-**Status**: ✅ Production
-
----
-
-## Overview
-
-Il modulo Lang gestisce il sistema di localizzazione dell'intera applicazione: sincronizza i file di traduzione tra moduli, fornisce un editor visuale in Filament per modificare le traduzioni senza toccare i file, valida la completezza delle traduzioni tramite comandi Artisan, e integra Spatie/Astrotomic Translatable per modelli multilingua.
-
-### Key Features
-
-<<<<<<< HEAD
-- Feature 1
-- Feature 2
-- Feature 3
-=======
-// Sincronizzazione traduzioni
-app(SyncTranslationsAction::class)->execute('Quaeris', ['it', 'en', 'de']);
->>>>>>> 40b96bcd6 (.)
-
-### Module Dependencies
-
-<<<<<<< HEAD
-- [Xot](../Xot/README.md) (required)
-=======
-=======
 # Lang Module
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -67,7 +30,6 @@ $survey->setTranslation('title', 'en', 'Satisfaction Survey');
 $survey->getTranslation('title', 'de'); // 'Zufriedenheitsumfrage'
 ```
 
->>>>>>> origin/dev
 ---
 
 ## Modelli (3)
@@ -171,90 +133,11 @@ Lang ──> Cms        (contenuto pagine multilingua)
 Lang ──> Meetup     (eventi multilingua)
 Lang ──> UI         (componenti con label tradotte)
 ```
-<<<<<<< HEAD
->>>>>>> 40b96bcd6 (.)
-=======
->>>>>>> origin/dev
 
 ---
 
 ## Quick Start
 
-<<<<<<< HEAD
-### Installation
-
-```bash
-# Already included in main project
-# No additional setup required
-```
-
-### Basic Usage
-
-```php
-use Modules\Lang\Models\YourModel;
-
-$item = YourModel::first();
-```
-
-### Configuration
-
-Configuration file: `config/lang.php`
-
-Key settings:
-- `setting1` - Description
-- `setting2` - Description
-
----
-
-## Architecture
-
-### Directory Structure
-
-```
-Lang/
-├── src/
-│   ├── Models/
-│   ├── Controllers/
-│   ├── Resources/
-│   ├── Actions/
-│   └── Traits/
-├── routes/
-│   ├── api.php
-│   └── web.php
-├── database/
-│   ├── migrations/
-│   └── seeders/
-├── tests/
-│   ├── Unit/
-│   └── Feature/
-├── config/
-│   └── lang.php
-├── docs/
-│   └── README.md
-└── composer.json
-```
-
-### Key Components
-
-
-
----
-
-## API Reference
-
-Reference
-
----
-
-## Usage Examples
-
-### Common Tasks
-
-#### Task 1: Description
-
-```php
-// Code example
-=======
 ```bash
 php artisan module:enable Lang
 php artisan migrate
@@ -264,45 +147,10 @@ php artisan lang:validate
 
 # Pubblica traduzioni aggiornate
 php artisan lang:publish
->>>>>>> origin/dev
 ```
 
 ---
 
-<<<<<<< HEAD
-## Testing
-
-### Running Tests
-
-```bash
-# Run all module tests
-composer test -- Modules/Lang
-```
-
----
-
-## Troubleshooting
-
-### Common Issues
-
-#### Issue: Problem description
-
-<<<<<<< HEAD
-**Solution**: How to fix this issue
-
----
-
-## Related Modules
-
-### Dependencies
-
-- [Xot](../Xot/README.md) - Required module
-
----
-
-Navigation: [Project Home](../../docs/INDEX.md) | [Modules](../../docs/modules/README.md)
-=======
-=======
 ## Metriche
 
 | Metrica | Valore |
@@ -340,7 +188,6 @@ Navigation: [Project Home](../../docs/INDEX.md) | [Modules](../../docs/modules/R
 [![Auto-translate](https://img.shields.io/badge/auto--translate-Google%20API-orange.svg)](docs/auto-translate.md)
 [![Management](https://img.shields.io/badge/management-Filament-purple.svg)](docs/management.md)
 
->>>>>>> origin/dev
 <div align="center">
   <img src="https://raw.githubusercontent.com/laraxot/lang/main/docs/assets/lang-banner.png" alt="Lang Banner" width="800">
   <br>
@@ -926,9 +773,4 @@ Stack frontoffice: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filamen
 
 ---
 
-<<<<<<< HEAD
 **Modulo** `lang` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
->>>>>>> 40b96bcd6 (.)
-=======
-**Modulo** `lang` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
->>>>>>> origin/dev

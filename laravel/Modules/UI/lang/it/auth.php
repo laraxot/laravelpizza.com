@@ -29,6 +29,10 @@ return [
         'confirm_password' => 'Conferma Password',
         'save' => 'Salva',
         'update' => 'Aggiorna',
+        'services' => 'I miei servizi',
+        'practices' => 'Le mie pratiche',
+        'notifications' => 'Notifiche',
+        'logout' => 'Esci',
     ],
     'user_dropdown' => [
         'manage_account' => 'Gestione Account',

@@ -4,20 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Actions;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-use Illuminate\Support\Facades\Hash;
-use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
-use Modules\Gdpr\Tests\TestCase;
-=======
 use Illuminate\Support\Facades\Hash;
 use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
 use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
->>>>>>> 40b96bcd6 (.)
 
 test('ValidateUserDataAction returns valid user data', function () {
     $action = new ValidateUserDataAction();

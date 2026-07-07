@@ -139,6 +139,7 @@ php artisan config:cache
 - [xra.php](/laravel/config/localhost/xra.php)
 - [Documentazione Root](/docs/env-config-loading-issue.md)
 
+*Ultimo aggiornamento: 2025-01-06*
 # Problemi di Configurazione Variabili d'Ambiente - Modulo Xot
 
 ## Problema: env() non funziona durante il bootstrap
@@ -280,3 +281,4 @@ php artisan config:cache
 - [xra.php](/laravel/config/localhost/xra.php)
 - [Documentazione Root](/project_docs/env-config-loading-issue.md)
 
+*Ultimo aggiornamento: 2025-01-06*

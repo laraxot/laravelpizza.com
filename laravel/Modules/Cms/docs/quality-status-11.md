@@ -83,6 +83,7 @@ This informs PHPStan that the object has BOTH:
 
 ---
 
+*
 *PHPStan: PASSED*
 *Status: PRODUCTION READY*
 

@@ -188,8 +188,8 @@ return [
             'description' => 'Carica o seleziona un file',
         ],
         'empty' => [
-            'heading' => 'empty',
-            'label' => 'empty',
+            'heading' => 'empty3',
+            'label' => 'empty4',
         ],
     ],
     'empty' => [

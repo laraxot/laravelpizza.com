@@ -26,3 +26,9 @@ cache/
 # PHPStan documentation
 docs/phpstan/
 _docs/
+
+# Backup files
+*.backup
+*.backup.*
+*.backup-*
+*.backup_*agentdb.rvf

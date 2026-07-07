@@ -8,15 +8,8 @@ use Modules\Notify\Models\NotificationType;
 use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Notify\Tests\TestCase::class);
 
-<<<<<<< HEAD
-use Illuminate\Database\Eloquent\Model;
-use Modules\Notify\Models\NotificationType;
-use Modules\Notify\Tests\TestCase;
-
-=======
->>>>>>> 40b96bcd6 (.)
 describe('NotificationType Business Logic', function () {
     test('notification type extends eloquent model', function () {
             });

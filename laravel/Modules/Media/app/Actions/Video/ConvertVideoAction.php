@@ -31,14 +31,9 @@ class ConvertVideoAction
         $format = new X264;
         $format->setKiloBitrate(1000);
 
-        /** @phpstan-ignore-next-line - FFMpeg fluent API */
-        $toDiskMedia = $exportedMedia->toDisk($disk_mp4);
-
-        /** @phpstan-ignore-next-line - FFMpeg fluent API */
-        $formattedMedia = $toDiskMedia->inFormat($format);
-
-        /** @phpstan-ignore-next-line - FFMpeg fluent API */
-        $formattedMedia->save($file_new);
+        $exportedMedia->toDisk($disk_mp4);
+        $exportedMedia->inFormat($format);
+        $exportedMedia->save($file_new);
 
         return Storage::disk($disk_mp4)->url($file_new);
     }

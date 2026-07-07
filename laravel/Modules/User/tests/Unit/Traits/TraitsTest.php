@@ -2,14 +2,25 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Traits;
 
 uses(\Modules\User\Tests\TestCase::class);
 
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Traits\PasswordValidationRules;
 
+<<<<<<< HEAD
 test('PasswordValidationRules trait can be used', function () {
     expect(trait_exists(PasswordValidationRules::class))->toBeTrue();
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+test('PasswordValidationRules trait can be used', function (): void {
+    Assert::assertTrue(trait_exists(PasswordValidationRules::class));
+    $reflection = new ReflectionClass(PasswordValidationRules::class);
+>>>>>>> 9fa499be (.)
 
     try {
         $testClass = new class {

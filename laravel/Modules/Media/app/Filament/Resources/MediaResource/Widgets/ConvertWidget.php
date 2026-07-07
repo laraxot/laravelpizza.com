@@ -12,7 +12,6 @@ use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
-use RuntimeException;
 
 class ConvertWidget extends XotBaseWidget
 {
@@ -24,11 +23,9 @@ class ConvertWidget extends XotBaseWidget
 
     public float $percentage = 0;
 
-    /** @var float */
-    public $remaining;
+    public float $remaining = 0.0;
 
-    /** @var float */
-    public $rate;
+    public float $rate = 0.0;
 
     protected string $view = 'media::filament.widgets.convert';
 
@@ -47,22 +44,13 @@ class ConvertWidget extends XotBaseWidget
         $disk_path = Storage::disk($disk_mp4)->path('/');
         $file_mp4 = Str::after($file_mp4, $disk_path);
 
-        // dddx($file_mp4);
-
         $format = new WebM;
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.'.$extension)->toString();
 
-        /*
-         * -preset ultrafast.
-         */
         $exportedMedia = FFMpeg::fromDisk($disk_mp4)
             ->open($file_mp4)
             ->export();
-        // ->addFilter(function (VideoFilters $filters) {
-        //    $filters->resize(new \FFMpeg\Coordinate\Dimension(640, 480));
-        // })
-        // ->resize(640, 480)
 
         $exportedMedia->onProgress(function (float $percentage, float $remaining, float $rate): void {
             $this->percentage = $percentage;
@@ -76,37 +64,8 @@ class ConvertWidget extends XotBaseWidget
                 ->send();
         });
 
-        /** @phpstan-ignore-next-line - FFMpeg fluent API */
-        $toDiskMedia = $exportedMedia->toDisk($disk_mp4);
-        if ($toDiskMedia === null) {
-            throw new RuntimeException('Failed to export media to disk');
-        }
-
-        /** @phpstan-ignore-next-line - FFMpeg fluent API */
-        $formattedMedia = $toDiskMedia->inFormat($format);
-        if ($formattedMedia === null || ! is_object($formattedMedia)) {
-            throw new RuntimeException('Failed to format media');
-        }
-
-        if (! method_exists($formattedMedia, 'save')) {
-            throw new RuntimeException('Formatted media does not have save method');
-        }
-
-        $formattedMedia->save($file_new);
-
-        while ($this->percentage < 100) {
-            // Stream the current count to the browser...
-            $this->stream(
-                to: 'count',
-                content: $this->start,
-                replace: true,
-            );
-
-            // Pause for 1 second between numbers...
-            // sleep(1);
-
-            $this->start =
-                "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
-        }
+        $exportedMedia->toDisk($disk_mp4);
+        $exportedMedia->inFormat($format);
+        $exportedMedia->save($file_new);
     }
 }

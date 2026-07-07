@@ -16,11 +16,7 @@ class NetfunChannel
     ) {}
 
     /**
-<<<<<<< HEAD
-     * Invia la notifica tramite Netfun SMS
-=======
      * @return array<string, mixed>|null
->>>>>>> 40b96bcd6 (.)
      */
     public function send(mixed $notifiable, Notification $notification): ?array
     {
@@ -47,16 +43,8 @@ class NetfunChannel
             'from' => '',
         ]);
 
-<<<<<<< HEAD
-        // Esegui l'invio tramite la Queueable Action
-        // L'esecuzione avverrà in modo asincrono (in background)
-        $result = $this->sendSMSAction->onQueue('sms')->execute($smsData);
-
-        return is_array($result) ? $result : null;
-=======
         $action = $this->factory->create();
 
         return $action->execute($smsData);
->>>>>>> 40b96bcd6 (.)
     }
 }

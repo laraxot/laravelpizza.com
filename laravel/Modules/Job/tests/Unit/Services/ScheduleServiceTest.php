@@ -3,45 +3,51 @@
 declare(strict_types=1);
 
 namespace Modules\Job\Tests\Unit\Services;
-
 use Modules\Job\Services\ScheduleService;
+use Modules\Job\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+use function Safe\file_get_contents;
+
+uses(\Modules\Job\Tests\TestCase::class);
 
 describe('ScheduleService', function () {
     it('can be instantiated', function () {
-        $reflection = new ReflectionClass(ScheduleService::class);
-        expect($reflection->isInstantiable())->toBeTrue();
+        $reflection = new \ReflectionClass(ScheduleService::class);
+        Assert::assertTrue($reflection->isInstantiable());
     });
 
     it('has getActives method', function () {
-        $reflection = new ReflectionClass(ScheduleService::class);
-        expect($reflection->hasMethod('getActives'))->toBeTrue();
+        $reflection = new \ReflectionClass(ScheduleService::class);
+        Assert::assertTrue($reflection->hasMethod('getActives'));
     });
 
     it('has clearCache method', function () {
-        $reflection = new ReflectionClass(ScheduleService::class);
-        expect($reflection->hasMethod('clearCache'))->toBeTrue();
+        $reflection = new \ReflectionClass(ScheduleService::class);
+        Assert::assertTrue($reflection->hasMethod('clearCache'));
     });
 
     it('has private getFromCache method', function () {
-        $reflection = new ReflectionClass(ScheduleService::class);
-        expect($reflection->hasMethod('getFromCache'))->toBeTrue();
+        $reflection = new \ReflectionClass(ScheduleService::class);
+        Assert::assertTrue($reflection->hasMethod('getFromCache'));
         $method = $reflection->getMethod('getFromCache');
-        expect($method->isPrivate())->toBeTrue();
+        Assert::assertTrue($method->isPrivate());
     });
 
     it('uses strict types', function () {
-        $reflection = new ReflectionClass(ScheduleService::class);
-        $content = file_get_contents($reflection->getFileName());
-        expect($content)->toContain('');
+        $reflection = new \ReflectionClass(ScheduleService::class);
+        $filename = $reflection->getFileName();
+        Assert::assertNotFalse($filename);
+        $content = file_get_contents($filename);
+        Assert::assertStringContainsString('', $content);
     });
 
     it('has correct namespace', function () {
-        $reflection = new ReflectionClass(ScheduleService::class);
-        expect($reflection->getNamespaceName())->toBe('Modules\Job\Services');
+        $reflection = new \ReflectionClass(ScheduleService::class);
+        Assert::assertSame('Modules\Job\Services', $reflection->getNamespaceName());
     });
 
     it('has model property', function () {
-        $reflection = new ReflectionClass(ScheduleService::class);
-        expect($reflection->hasProperty('model'))->toBeTrue();
+        $reflection = new \ReflectionClass(ScheduleService::class);
+        Assert::assertTrue($reflection->hasProperty('model'));
     });
 });

@@ -38,6 +38,7 @@ class DeviceUser extends BasePivot
 ```bash
 commit b8f17d9ef6aa89d79fd898bd01e589e3b55d46d2
 Author: marco76tv <marco.sottana@gmail.com>
+Date:   Tue Oct 21 18:54:38 2025 +0200
 
     .
 
@@ -349,6 +350,7 @@ Aggiungere al pipeline CI:
 - [HasXotFactory Documentation](../traits/hasxotfactory.md)
 - [GetFactoryAction](../actions/get-factory-action.md)
 - [BaseModel](../models/basemodel.md)
+- [BasePivot Documentation](../../User/docs/models/basepivot.md)
 - [BasePivot Documentation](../../user/docs/models/basepivot.md)
 
 ### Commit Rilevanti

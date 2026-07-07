@@ -10,7 +10,7 @@ namespace Modules\User\Listeners;
 
 use Illuminate\Auth\Events\Failed;
 use Illuminate\Http\Request;
-use Modules\User\Contracts\HasAuthentications;
+use Modules\User\Models\BaseUser;
 
 // use Rappasoft\LaravelAuthenticationLog\Notifications\FailedLogin;
 // use Rappasoft\LaravelAuthenticationLog\Traits\AuthenticationLoggable;
@@ -29,7 +29,7 @@ class FailedLoginListener
      */
     public function handle(Failed $event): void
     {
-        if ($event->user && $event->user instanceof HasAuthentications) {
+        if ($event->user instanceof BaseUser) {
             $ip = $this->request->ip();
             $userAgent = $this->request->userAgent();
             // $location = optional(geoip()->getLocation($ip))->toArray();

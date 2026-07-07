@@ -109,4 +109,3 @@ public static function getModel(): null|string
 - **Versione Filament**: 3.x
 - **PHP Version**: 8.3+
 - **Livello PHPStan**: 9+
-

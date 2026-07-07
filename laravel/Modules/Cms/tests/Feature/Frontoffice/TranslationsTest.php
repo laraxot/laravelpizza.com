@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Feature\Frontoffice;
-
 use Modules\Cms\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+use function Safe\file_get_contents;
 
 uses(TestCase::class);
 
@@ -20,80 +21,77 @@ uses(TestCase::class);
  * @see \Modules\Cms\Http\Middleware\SetFolioLocale
  */
 test('auth buttons show correct translation for German locale on login page', function () {
-    /** @phpstan-ignore-next-line property.notFound */
-    $response = $this->get('/de/auth/login');
+    $response = cmsGet('/de/auth/login');
 
     $status = (int) $response->getStatusCode();
 
     if ($status >= 500) {
-        test()->markTestSkipped("Route /de/auth/login returned server error ({$status}).");
+        cmsSkipTest("Route /de/auth/login returned server error ({$status}).");
 
         return;
     }
 
     if (200 !== $status) {
-        test()->markTestSkipped("Route /de/auth/login returned {$status} (redirect). Cannot verify translations.");
+        cmsSkipTest("Route /de/auth/login returned {$status} (redirect). Cannot verify translations.");
 
         return;
     }
 
-    $content = $response->getContent();
+    $content = (string) $response->getContent();
 
     // Assert translations work correctly
-    expect($content)->toContain('Anmelden')
-        ->toContain('Registrieren')
-        ->not->toContain('>Accedi<')
-        ->not->toContain('>Registrati<');
+    Assert::assertStringContainsString('Anmelden', $content);
+    Assert::assertStringContainsString('Registrieren', $content);
+    Assert::assertStringNotContainsString('>Accedi<', $content);
+    Assert::assertStringNotContainsString('>Registrati<', $content);
 });
 
 test('auth buttons show correct translation for Italian locale on login page', function () {
-    /** @phpstan-ignore-next-line property.notFound */
-    $response = $this->get('/it/auth/login');
+    $response = cmsGet('/it/auth/login');
 
     $status = (int) $response->getStatusCode();
 
     if ($status >= 500) {
-        test()->markTestSkipped("Route /it/auth/login returned server error ({$status}).");
+        cmsSkipTest("Route /it/auth/login returned server error ({$status}).");
 
         return;
     }
 
     if (200 !== $status) {
-        test()->markTestSkipped("Route /it/auth/login returned {$status} (redirect). Cannot verify translations.");
+        cmsSkipTest("Route /it/auth/login returned {$status} (redirect). Cannot verify translations.");
 
         return;
     }
 
-    $content = $response->getContent();
+    $content = (string) $response->getContent();
 
-    expect($content)->toContain('>Accedi<')
-        ->toContain('>Registrati<')
-        ->not->toContain('>Anmelden<');
+    Assert::assertStringContainsString('>Accedi<', $content);
+    Assert::assertStringContainsString('>Registrati<', $content);
+    Assert::assertStringNotContainsString('>Anmelden<', $content);
 });
 
 test('auth buttons show correct translation for English locale on login page', function () {
-    /** @phpstan-ignore-next-line property.notFound */
-    $response = $this->get('/en/auth/login');
+    $response = cmsGet('/en/auth/login');
 
     $status = (int) $response->getStatusCode();
 
     if ($status >= 500) {
-        test()->markTestSkipped("Route /en/auth/login returned server error ({$status}).");
+        cmsSkipTest("Route /en/auth/login returned server error ({$status}).");
 
         return;
     }
 
     if (200 !== $status) {
-        test()->markTestSkipped("Route /en/auth/login returned {$status} (redirect). Cannot verify translations.");
+        cmsSkipTest("Route /en/auth/login returned {$status} (redirect). Cannot verify translations.");
 
         return;
     }
 
-    $content = $response->getContent();
+    $content = (string) $response->getContent();
 
-    expect($content)->not->toContain('>Accedi<')
-        ->toContain('>Log in<')
-        ->toContain('>Sign up<');
+    Assert::assertStringNotContainsString('>Accedi<', $content);
+    Assert::assertStringContainsString('>Log in<', $content);
+    Assert::assertStringContainsString('>Sign up<', $content);
 });
 
 test('no hardcoded Italian strings in theme header components', function () {
@@ -106,12 +104,13 @@ test('no hardcoded Italian strings in theme header components', function () {
             continue;
         }
 
-        $content = file_get_contents($path);
+        $raw = file_get_contents($path);
+        Assert::assertNotFalse($raw);
+        $content = $raw;
 
-        expect($content)
-            ->not->toContain("__('Accedi')")
-            ->not->toContain("__('Registrati')")
-            ->not->toContain("'Accedi'")
-            ->not->toContain("'Registrati'");
+        Assert::assertStringNotContainsString("__('Accedi')", $content);
+        Assert::assertStringNotContainsString("__('Registrati')", $content);
+        Assert::assertStringNotContainsString("'Accedi'", $content);
+        Assert::assertStringNotContainsString("'Registrati'", $content);
     }
 });

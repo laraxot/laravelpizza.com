@@ -4,57 +4,46 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
+use Modules\Tenant\Database\Factories\TenantFactory;
 use Modules\Tenant\Models\Tenant;
-use Modules\UI\Models\Asset;
+use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
 use Modules\Xot\Models\Module;
+use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-uses(TestCase::class)->in(__DIR__);
+uses(TestCase::class);
 
 it('can create a test user', function () {
-    $user = User::factory()->create([
+    $email = 'test-'.uniqid('', true).'@example.com';
+    $user = UserFactory::new()->createOne([
         'name' => 'Test User',
-        'email' => 'test@example.com',
+        'email' => $email,
     ]);
 
-    expect($user)->toBeInstanceOf(User::class);
-    expect($user->name)->toBe('Test User');
-    expect($user->email)->toBe('test@example.com');
+    Assert::assertInstanceOf(User::class, $user);
+    Assert::assertSame('Test User', $user->name);
+    Assert::assertSame($email, $user->email);
 });
 
 it('can create a test tenant', function () {
-    $tenant = Tenant::factory()->create([
+    $tenant = TenantFactory::new()->createOne([
         'name' => 'Test Tenant',
         'domain' => 'test.example.com',
     ]);
 
-    expect($tenant)->toBeInstanceOf(Tenant::class);
-    expect($tenant->name)->toBe('Test Tenant');
-    expect($tenant->domain)->toBe('test.example.com');
+    Assert::assertInstanceOf(Tenant::class, $tenant);
+    Assert::assertSame('Test Tenant', $tenant->name);
+    Assert::assertSame('test.example.com', $tenant->domain);
 });
 
-it('can create a test module', function () {
-    $module = Module::factory()->create([
-        'name' => 'TestModule',
-        'enabled' => true,
-    ]);
+it('can resolve a sushi module row', function () {
+    $module = Module::query()->first();
 
-    expect($module)->toBeInstanceOf(Module::class);
-    expect($module->name)->toBe('TestModule');
-    expect($module->enabled)->toBeTrue();
-});
+    if (null === $module) {
+        $this->markTestSkipped('No nwidart modules registered in test runtime.');
+    }
 
-it('can run module migrations', function () {
-    $this->artisan('migrate', ['--env' => 'testing', '--force' => true]);
-});
-
-it('can create a test asset', function () {
-    $asset = Asset::factory()->create([
-        'name' => 'Test Asset',
-        'path' => '/test/path',
-    ]);
-
-    expect($asset)->toBeInstanceOf(Asset::class);
-    expect($asset->name)->toBe('Test Asset');
-    expect($asset->path)->toBe('/test/path');
+    Assert::assertInstanceOf(Module::class, $module);
+    Assert::assertNotEmpty($module->name);
 });

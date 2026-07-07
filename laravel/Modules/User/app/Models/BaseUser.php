@@ -11,6 +11,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -26,7 +27,13 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Laravel\Passport\Contracts\OAuthenticatable;
 use Laravel\Passport\HasApiTokens;
+<<<<<<< HEAD
 use Modules\User\Models\Traits\HasAuthenticationLogTrait;
+=======
+use Modules\User\Contracts\HasAuthentications;
+use Modules\User\Models\Traits\HasAuthenticationLogTrait;
+use Modules\User\Models\Traits\HasDevices;
+>>>>>>> 6d3760fe (.)
 use Modules\User\Models\Traits\HasModules;
 use Modules\User\Models\Traits\HasSpatiePermission;
 use Modules\User\Models\Traits\HasTeams;
@@ -38,6 +45,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 use Parental\HasChildren;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Filament\Models\Contracts\FilamentUser;
 
 /**
  * Base User Model.
@@ -61,8 +69,8 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property ProfileContract|null                                      $profile
  * @property Collection<int, Role>                                     $roles
  * @property int|null                                                  $roles_count
- * @property Collection<int, Team>                                     $teams
- * @property int|null                                                  $teams_count
+ * @property Collection<int, Team>                                     $membershipTeams
+ * @property int|null                                                  $membership_teams_count
  * @property Collection<int, Tenant>                                   $tenants
  * @property int|null                                                  $tenants_count
  * @property Collection<int, OauthToken>                               $tokens
@@ -125,16 +133,36 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  *
  * @mixin \Eloquent
  */
+<<<<<<< HEAD
+<<<<<<< HEAD
 abstract class BaseUser extends Authenticatable implements HasMedia, HasName, HasTenants, MustVerifyEmail, OAuthenticatable, UserContract
+=======
+abstract class BaseUser extends Authenticatable implements HasAuthentications, HasMedia, HasName, HasTenants, MustVerifyEmail, OAuthenticatable, UserContract
+>>>>>>> 6d3760fe (.)
+=======
+abstract class BaseUser extends Authenticatable implements FilamentUser, HasAuthentications, HasMedia, HasName, HasTenants, MustVerifyEmail, OAuthenticatable, UserContract
+>>>>>>> 9fa499be (.)
 {
     use HasApiTokens;
     use HasAuthenticationLogTrait;
     use HasChildren;
     use HasModules;
+<<<<<<< HEAD
     use HasSpatiePermission;
     use HasTeams;
     use HasUuids;
+=======
+    use HasSocialite;
+    use HasSpatiePermission, HasTeams {
+        HasSpatiePermission::teams insteadof HasTeams;
+        HasTeams::teams as membershipTeams;
+    }
+    use HasUuids;
+
+    /** @phpstan-use HasXotFactory<Factory<static>> */
+>>>>>>> 6d3760fe (.)
     use HasXotFactory;
+
     use InteractsWithMedia;
     use Notifiable;
 
@@ -235,12 +263,14 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         return (string) ($this->getAttribute('provider') ?? config('auth.guards.api.provider', 'users'));
     }
 
+    /* 
     public function canAccessFilament(?Panel $panel = null): bool
     {
+         dddx($panel->getId());
         // return $this->role_id === Role::ROLE_ADMINISTRATOR;
         return true;
     }
-
+    */ 
     /**
      * Get the user's name for Filament.
      */
@@ -299,6 +329,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     public function canAccessPanel(Panel $panel): bool
     {
+        
         // $panel->default('admin');
         if ('admin' !== $panel->getId()) {
             $role = $panel->getId();
@@ -323,20 +354,28 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     public function detach(Model $model): void
     {
+<<<<<<< HEAD
         // @phpstan-ignore function.alreadyNarrowedType
         if (method_exists($this, 'teams')) {
             // @phpstan-ignore function.alreadyNarrowedType
             $this->teams()->detach($model);
         }
+=======
+        $this->membershipTeams()->detach($model);
+>>>>>>> 6d3760fe (.)
     }
 
     public function attach(Model $model): void
     {
+<<<<<<< HEAD
         // @phpstan-ignore function.alreadyNarrowedType
         if (method_exists($this, 'teams')) {
             // @phpstan-ignore function.alreadyNarrowedType
             $this->teams()->attach($model);
         }
+=======
+        $this->membershipTeams()->attach($model);
+>>>>>>> 6d3760fe (.)
     }
 
     public function treeLabel(): string
@@ -346,7 +385,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     public function treeSons(): Collection
     {
-        return $this->teams ?? new Collection();
+        return $this->membershipTeams ?? new Collection();
     }
 
     /**

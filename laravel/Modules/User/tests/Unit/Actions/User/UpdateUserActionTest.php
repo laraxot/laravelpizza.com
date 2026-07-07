@@ -2,12 +2,17 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Actions\User;
 
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Actions\User\UpdateUserAction;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
+
+uses(Modules\User\Tests\TestCase::class);
 
 describe('UpdateUserAction', function (): void {
     test('action is accessible via app', function (): void {

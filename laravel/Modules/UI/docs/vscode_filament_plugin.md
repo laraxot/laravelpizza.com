@@ -196,26 +196,8 @@ TextInput::make('full_name')
 ## Collegamenti
 - [Form Components](form-components.md)
 - [Naming Conventions](naming-conventions.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Translation System](../../Lang/docs/translation-system.md)
-=======
-- [Translation System](../../Lang/project_docs/translation-system.md)
->>>>>>> 7eb1087 (.)
-=======
-- [Translation System](../../Lang/project_docs/translation-system.md)
-- [Translation System](../../Lang/project_docs/translation-system.md)
->>>>>>> laraxot/develop
 
 ## Vedi Anche
 - [VSCode PHP Setup](vscode-php-setup.md)
 - [Development Tools](development-tools.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-- [Filament Documentation](https://filamentphp.com/docs) 
->>>>>>> 7eb1087 (.)
-=======
-- [Filament Documentation](https://filamentphp.com/docs) 
-- [Filament Documentation](https://filamentphp.com/docs) 
->>>>>>> laraxot/develop

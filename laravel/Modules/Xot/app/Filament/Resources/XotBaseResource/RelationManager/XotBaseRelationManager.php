@@ -9,6 +9,7 @@ use Filament\Support\Components\Component;
 use Filament\Tables;
 use Illuminate\Support\Str;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Modules\Xot\Filament\Traits\HasRelationshipModelClass;
 use Modules\Xot\Filament\Traits\HasXotTable;
 
 /**
@@ -16,7 +17,10 @@ use Modules\Xot\Filament\Traits\HasXotTable;
  */
 abstract class XotBaseRelationManager extends RelationManager
 {
-    use HasXotTable;
+    use HasRelationshipModelClass;
+    use HasXotTable {
+        HasRelationshipModelClass::getModelClass insteadof HasXotTable;
+    }
 
     protected static string $relationship = '';
 
@@ -51,7 +55,6 @@ abstract class XotBaseRelationManager extends RelationManager
      */
     final public function getFormSchema(): array
     {
-        // @phpstan-ignore-next-line
         return $this->getResource()::getFormSchema();
     }
 
@@ -102,7 +105,7 @@ abstract class XotBaseRelationManager extends RelationManager
     protected function getResource(): string
     {
         // Use static property if available
-        if (isset(static::$resource) && \is_string(static::$resource)) {
+        if (isset(static::$resource) && is_string(static::$resource)) {
             if (is_subclass_of(static::$resource, XotBaseResource::class)) {
                 /* @var class-string<XotBaseResource> */
                 return static::$resource;

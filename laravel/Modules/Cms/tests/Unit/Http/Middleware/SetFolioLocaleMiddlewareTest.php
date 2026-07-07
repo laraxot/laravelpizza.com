@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Http\Middleware;
-
 use Illuminate\Http\Request;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Cms\Http\Middleware\SetFolioLocale;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 test('it uses user language with highest priority', function (): void {
     LaravelLocalization::shouldReceive('setLocale')->once()->with('fr');
 
@@ -16,9 +16,11 @@ test('it uses user language with highest priority', function (): void {
 
     $middleware = new SetFolioLocale();
     $response = $middleware->handle($request, fn (Request $req) => response('ok'));
+    Assert::assertInstanceOf(Symfony\Component\HttpFoundation\Response::class, $response);
 
-    expect($response->getStatusCode())->toBe(200)
-        ->and(app()->getLocale())->toBe('fr');
+    Assert::assertSame(200, $response->getStatusCode());
+
+    Assert::assertSame('fr', app()->getLocale());
 });
 
 test('it uses first url segment when locale is supported', function (): void {
@@ -34,9 +36,11 @@ test('it uses first url segment when locale is supported', function (): void {
 
     $middleware = new SetFolioLocale();
     $response = $middleware->handle($request, fn (Request $req) => response('ok'));
+    Assert::assertInstanceOf(Symfony\Component\HttpFoundation\Response::class, $response);
 
-    expect($response->getStatusCode())->toBe(200)
-        ->and(app()->getLocale())->toBe('de');
+    Assert::assertSame(200, $response->getStatusCode());
+
+    Assert::assertSame('de', app()->getLocale());
 });
 
 test('it falls back to default app locale when url segment is not supported', function (): void {
@@ -54,7 +58,9 @@ test('it falls back to default app locale when url segment is not supported', fu
 
     $middleware = new SetFolioLocale();
     $response = $middleware->handle($request, fn (Request $req) => response('ok'));
+    Assert::assertInstanceOf(Symfony\Component\HttpFoundation\Response::class, $response);
 
-    expect($response->getStatusCode())->toBe(200)
-        ->and(app()->getLocale())->toBe('it');
+    Assert::assertSame(200, $response->getStatusCode());
+
+    Assert::assertSame('it', app()->getLocale());
 });

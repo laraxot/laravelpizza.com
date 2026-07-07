@@ -70,3 +70,10 @@ return [
 * [configuration.md](docs/configuration.md)
 * [configuration.md](../../../xot/docs/configuration.md)
 * [configuration.md](../../../cms/docs/configuration.md)
+- [Gestione Domini](DOMAIN_CONFIGURATION.md)
+- [Struttura del Progetto](PROJECT_STRUCTURE.md)
+- [Documentazione Principale](../README.md)
+## Collegamenti tra versioni di configuration.md
+* [configuration.md](docs/configuration.md)
+* [configuration.md](../../../Xot/docs/configuration.md)
+* [configuration.md](../../../Cms/docs/configuration.md)

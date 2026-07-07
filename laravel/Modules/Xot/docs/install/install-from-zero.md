@@ -111,11 +111,7 @@ edit file composer.json
             "Database\\Seeders\\": "database/seeders/"
         },
         "files": [
-<<<<<<< HEAD
             "Modules/Xot/Helpers/Helper.php"
-=======
-            "Modules/Xot/helpers/Helper.php"
->>>>>>> origin/dev
         ]
     },
     "autoload-dev": {

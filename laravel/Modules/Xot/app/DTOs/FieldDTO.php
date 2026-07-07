@@ -16,7 +16,7 @@ class FieldDTO extends Data
     /**
      * Validation rules for the field.
      *
-     * @var string|array<int, string>|null
+     * @var string|array<int|string, string>|null
      */
     public string|array|null $rules = null;
 

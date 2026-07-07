@@ -4,21 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Models;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-use Modules\Notify\Models\BaseModel;
-use Modules\Notify\Models\Contact;
-use Modules\Notify\Tests\TestCase;
-
-=======
 use Modules\Notify\Models\Contact;
 use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 uses(\Modules\Notify\Tests\TestCase::class);
 
->>>>>>> 40b96bcd6 (.)
 describe('Contact Business Logic', function () {
     test('contact extends base model', function () {});
 

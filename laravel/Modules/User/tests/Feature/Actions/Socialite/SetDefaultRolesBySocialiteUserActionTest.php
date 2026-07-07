@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Feature\Actions\Socialite;
 
+=======
+>>>>>>> 9fa499be (.)
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Actions\Socialite\SetDefaultRolesBySocialiteUserAction;
 use Modules\User\Models\Role;
@@ -11,6 +14,8 @@ use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
+
+uses(Modules\User\Tests\TestCase::class);
 
 describe('SetDefaultRolesBySocialiteUserAction', function (): void {
     $getMockUser = static function (string $email = 'user@example.com'): SocialiteUserContract {

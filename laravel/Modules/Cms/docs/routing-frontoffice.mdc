@@ -1,5 +1,7 @@
-# Routing Frontoffice (Cms)
+---
+module: theme
+topic: routing-frontoffice
+canonical: ../../../Themes/docs/shared-components/routing-frontoffice.md
+---
 
-- Tutte le rotte pubbliche (homepage, pagine, login, prediction markets, ecc.) sono gestite tramite Folio e Volt.
-- Non inserire MAI rotte frontoffice in routes/web.php.
-- Per le regole generali vedere anche ../Xot/docs/routing-best-practices.mdc.
+See canonical documentation: ../../../Themes/docs/shared-components/routing-frontoffice.md

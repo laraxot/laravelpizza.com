@@ -56,7 +56,7 @@ Possibly invalid array key type mixed
 
 **Fix Complexity**: ⭐⭐ (Medium - Requires enum refactoring)
 
-**See**: `Modules/Geo/docs/phpstan-errors-2025-12-16.md`
+**See**: `Modules/Geo/docs/phpstan-errors.md`
 
 ---
 
@@ -82,7 +82,7 @@ Possibly invalid array key type mixed
 
 **Fix Complexity**: ⭐⭐ (Medium - Requires namespace fixes and interface updates)
 
-**See**: `Modules/Cms/docs/phpstan-errors-2025-12-16.md`
+**See**: `Modules/Cms/docs/phpstan-errors.md`
 
 ---
 
@@ -106,7 +106,7 @@ public function snapshots()    // ❌ No return type
 
 **Fix Complexity**: ⭐ (Very Easy - Just add `: HasMany` return types)
 
-**See**: `Modules/Activity/docs/phpstan-errors-2025-12-16.md`
+**See**: `Modules/Activity/docs/phpstan-errors.md`
 
 ---
 
@@ -149,7 +149,7 @@ public static function getModuleName(): string
 }
 ```
 
-**See**: `Modules/Xot/docs/phpstan-transtrait-errors-2025-12-16.md`
+**See**: `Modules/Xot/docs/phpstan-transtrait-errors.md`
 
 ---
 
@@ -251,10 +251,10 @@ jobs:
 
 ### Module-Specific Documentation
 
-- [Geo Module Errors](../../Geo/docs/phpstan-errors-2025-12-16.md)
-- [Cms Module Errors](../../Cms/docs/phpstan-errors-2025-12-16.md)
-- [Activity Module Errors](../../Activity/docs/phpstan-errors-2025-12-16.md)
-- [Xot Module TransTrait Errors](phpstan-transtrait-errors-2025-12-16.md)
+- [Geo Module Errors](../../Geo/docs/phpstan-errors.md)
+- [Cms Module Errors](../../Cms/docs/phpstan-errors.md)
+- [Activity Module Errors](../../Activity/docs/phpstan-errors.md)
+- [Xot Module TransTrait Errors](phpstan-transtrait-errors.md)
 
 ### PHPStan Documentation
 
@@ -326,11 +326,7 @@ jobs:
 Run this command to see all 169 errors in detail:
 
 ```bash
-<<<<<<< HEAD
 cd ./laravel
-=======
-cd /var/www/_bases/base_laravelpizza/laravel
->>>>>>> origin/dev
 ./vendor/bin/phpstan analyse Modules --error-format=table > phpstan-full-report.txt
 ```
 

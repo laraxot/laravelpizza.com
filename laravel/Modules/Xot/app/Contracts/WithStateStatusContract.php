@@ -7,7 +7,7 @@ namespace Modules\Xot\Contracts;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @property object $status
+ * @property object|string|null $status
  *
  * @phpstan-require-extends Model
  */

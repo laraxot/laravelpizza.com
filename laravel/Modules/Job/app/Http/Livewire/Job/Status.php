@@ -24,6 +24,7 @@ use function Safe\putenv;
  */
 class Status extends Component
 {
+    /** @var array<string, mixed> */
     public array $form_data = [];
 
     public string $out = '';

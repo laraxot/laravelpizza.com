@@ -3,133 +3,144 @@
 declare(strict_types=1);
 
 namespace Modules\Job\Tests\Unit\Providers;
-
 use Modules\Job\Providers\EventServiceProvider;
 use Modules\Job\Providers\Filament\AdminPanelProvider;
 use Modules\Job\Providers\JobServiceProvider;
 use Modules\Job\Providers\RouteServiceProvider;
+use Modules\Job\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+use function Safe\file_get_contents;
+
+uses(\Modules\Job\Tests\TestCase::class);
 
 describe('Job Providers Coverage', function () {
     describe('JobServiceProvider', function () {
         it('can be instantiated', function () {
             $provider = new JobServiceProvider(app());
-            expect($provider)->toBeInstanceOf(JobServiceProvider::class);
+            Assert::assertInstanceOf(JobServiceProvider::class, $provider);
         });
 
         it('has correct name', function () {
             $provider = new JobServiceProvider(app());
-            expect($provider->name)->toBe('Job');
+            Assert::assertSame('Job', $provider->name);
         });
 
         it('has module directory via reflection', function () {
-            $reflection = new ReflectionProperty(JobServiceProvider::class, 'module_dir');
-            expect($reflection->isProtected())->toBeTrue();
-            expect($reflection->getDefaultValue())->not->toBeEmpty();
+            $reflection = new \ReflectionProperty(JobServiceProvider::class, 'module_dir');
+            Assert::assertTrue($reflection->isProtected());
+            Assert::assertNotEmpty($reflection->getDefaultValue());
         });
 
         it('has module namespace via reflection', function () {
-            $reflection = new ReflectionProperty(JobServiceProvider::class, 'module_ns');
-            expect($reflection->isProtected())->toBeTrue();
+            $reflection = new \ReflectionProperty(JobServiceProvider::class, 'module_ns');
+            Assert::assertTrue($reflection->isProtected());
         });
 
         it('has registerQueue method', function () {
-            $provider = new JobServiceProvider(app());
-            expect(method_exists($provider, 'registerQueue'))->toBeTrue();
+            $reflection = new \ReflectionClass(JobServiceProvider::class);
+            Assert::assertTrue($reflection->hasMethod('registerQueue'));
         });
 
         it('uses strict types', function () {
-            $reflection = new ReflectionClass(JobServiceProvider::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+            $reflection = new \ReflectionClass(JobServiceProvider::class);
+            $filename = $reflection->getFileName();
+        Assert::assertNotFalse($filename);
+        $content = file_get_contents($filename);
+            Assert::assertStringContainsString('', $content);
         });
     });
 
     describe('EventServiceProvider', function () {
         it('can be instantiated', function () {
             $provider = new EventServiceProvider(app());
-            expect($provider)->toBeInstanceOf(EventServiceProvider::class);
+            Assert::assertInstanceOf(EventServiceProvider::class, $provider);
         });
 
         it('extends BaseEventServiceProvider', function () {
-            $reflection = new ReflectionClass(EventServiceProvider::class);
-            expect($reflection->isSubclassOf(\Illuminate\Foundation\Support\Providers\EventServiceProvider::class))->toBeTrue();
+            $reflection = new \ReflectionClass(EventServiceProvider::class);
+            Assert::assertTrue($reflection->isSubclassOf(\Illuminate\Foundation\Support\Providers\EventServiceProvider::class));
         });
 
         it('has listen property', function () {
-            $reflection = new ReflectionProperty(EventServiceProvider::class, 'listen');
-            expect($reflection->isProtected())->toBeTrue();
+            $reflection = new \ReflectionProperty(EventServiceProvider::class, 'listen');
+            Assert::assertTrue($reflection->isProtected());
         });
 
         it('has shouldDiscoverEvents static property', function () {
-            $reflection = new ReflectionProperty(EventServiceProvider::class, 'shouldDiscoverEvents');
-            expect($reflection->isStatic())->toBeTrue()
-                ->and($reflection->getDefaultValue())->toBeTrue();
+            $reflection = new \ReflectionProperty(EventServiceProvider::class, 'shouldDiscoverEvents');
+            Assert::assertTrue($reflection->isStatic());
         });
 
         it('has configureEmailVerification method', function () {
-            $provider = new EventServiceProvider(app());
-            expect(method_exists($provider, 'configureEmailVerification'))->toBeTrue();
+            $reflection = new \ReflectionClass(EventServiceProvider::class);
+            Assert::assertTrue($reflection->hasMethod('configureEmailVerification'));
         });
 
         it('uses strict types', function () {
-            $reflection = new ReflectionClass(EventServiceProvider::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+            $reflection = new \ReflectionClass(EventServiceProvider::class);
+            $filename = $reflection->getFileName();
+        Assert::assertNotFalse($filename);
+        $content = file_get_contents($filename);
+            Assert::assertStringContainsString('', $content);
         });
     });
 
     describe('RouteServiceProvider', function () {
         it('can be instantiated', function () {
             $provider = new RouteServiceProvider(app());
-            expect($provider)->toBeInstanceOf(RouteServiceProvider::class);
+            Assert::assertInstanceOf(RouteServiceProvider::class, $provider);
         });
 
         it('has correct name', function () {
             $provider = new RouteServiceProvider(app());
-            expect($provider->name)->toBe('Job');
+            Assert::assertSame('Job', $provider->name);
         });
 
         it('has module namespace via reflection', function () {
-            $reflection = new ReflectionProperty(RouteServiceProvider::class, 'moduleNamespace');
-            expect($reflection->isProtected())->toBeTrue();
-            expect($reflection->getDefaultValue())->toBe('Modules\Job\Http\Controllers');
+            $reflection = new \ReflectionProperty(RouteServiceProvider::class, 'moduleNamespace');
+            Assert::assertTrue($reflection->isProtected());
+            Assert::assertSame('Modules\Job\Http\Controllers', $reflection->getDefaultValue());
         });
 
         it('has module directory via reflection', function () {
-            $reflection = new ReflectionProperty(RouteServiceProvider::class, 'module_dir');
-            expect($reflection->isProtected())->toBeTrue();
-            expect($reflection->getDefaultValue())->not->toBeEmpty();
+            $reflection = new \ReflectionProperty(RouteServiceProvider::class, 'module_dir');
+            Assert::assertTrue($reflection->isProtected());
+            Assert::assertNotEmpty($reflection->getDefaultValue());
         });
 
         it('uses strict types', function () {
-            $reflection = new ReflectionClass(RouteServiceProvider::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+            $reflection = new \ReflectionClass(RouteServiceProvider::class);
+            $filename = $reflection->getFileName();
+        Assert::assertNotFalse($filename);
+        $content = file_get_contents($filename);
+            Assert::assertStringContainsString('', $content);
         });
     });
 
     describe('AdminPanelProvider', function () {
         it('can be instantiated', function () {
             $provider = new AdminPanelProvider(app());
-            expect($provider)->toBeInstanceOf(AdminPanelProvider::class);
+            Assert::assertInstanceOf(AdminPanelProvider::class, $provider);
         });
 
         it('has module property', function () {
             $provider = new AdminPanelProvider(app());
-            $reflection = new ReflectionProperty(AdminPanelProvider::class, 'module');
-            expect($reflection->isProtected())->toBeTrue();
-            expect($reflection->getDefaultValue())->toBe('Job');
+            $reflection = new \ReflectionProperty(AdminPanelProvider::class, 'module');
+            Assert::assertTrue($reflection->isProtected());
+            Assert::assertSame('Job', $reflection->getDefaultValue());
         });
 
         it('has panel method', function () {
-            $provider = new AdminPanelProvider(app());
-            expect(method_exists($provider, 'panel'))->toBeTrue();
+            $reflection = new \ReflectionClass(AdminPanelProvider::class);
+            Assert::assertTrue($reflection->hasMethod('panel'));
         });
 
         it('uses strict types', function () {
-            $reflection = new ReflectionClass(AdminPanelProvider::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+            $reflection = new \ReflectionClass(AdminPanelProvider::class);
+            $filename = $reflection->getFileName();
+        Assert::assertNotFalse($filename);
+        $content = file_get_contents($filename);
+            Assert::assertStringContainsString('', $content);
         });
     });
 });

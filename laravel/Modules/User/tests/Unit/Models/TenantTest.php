@@ -11,9 +11,22 @@ class TenantTest extends TestCase
 {
     // DatabaseTransactions is already used in the module TestCase
 
+<<<<<<< HEAD
     public function testCanCreateTenantWithMinimalData(): void
     {
         $tenant = Tenant::factory()->create([
+=======
+beforeEach(function (): void {
+    /* @var \Modules\User\Tests\TestCase $this */
+    /* @var TestCase $this */
+    $this->skipUnlessUserTable('tenants');
+});
+
+describe('Tenant', function (): void {
+    test('can create tenant with minimal data', function (): void {
+        /** @var TestCase $this */
+        $tenant = TenantFactory::new()->createOne([
+>>>>>>> 9fa499be (.)
             'name' => 'Test Tenant',
         ]);
 
@@ -21,7 +34,16 @@ class TenantTest extends TestCase
             'id' => $tenant->id,
             'name' => 'Test Tenant',
         ]);
+<<<<<<< HEAD
     }
+=======
+    });
+
+    test('can create tenant with all fields', function (): void {
+        /* @var TestCase $this */
+        $this->skipUnlessTenantColumn('settings');
+        $this->skipUnlessTenantColumn('trial_ends_at');
+>>>>>>> 9fa499be (.)
 
     public function testCanCreateTenantWithAllFields(): void
     {
@@ -50,12 +72,24 @@ class TenantTest extends TestCase
         static::assertSame(['theme' => 'dark', 'features' => ['chat', 'analytics']], $tenant->settings);
     }
 
+<<<<<<< HEAD
     public function testTenantHasSoftDeletes(): void
     {
         $tenant = Tenant::factory()->create();
         $tenantId = $tenant->id;
 
         $tenant->delete();
+=======
+    test('tenant has soft deletes', function (): void {
+        /* @var TestCase $this */
+        $this->skipTest('Tenant model does not use SoftDeletes.');
+    });
+
+    test('can restore soft deleted tenant', function (): void {
+        /* @var TestCase $this */
+        $this->skipTest('Tenant restore/withTrashed not supported on User Tenant model.');
+    });
+>>>>>>> 9fa499be (.)
 
         $this->assertSoftDeleted('tenants', ['id' => $tenantId]);
         $this->assertDatabaseMissing('tenants', ['id' => $tenantId]);
@@ -143,6 +177,7 @@ class TenantTest extends TestCase
 
         $companyTenants = Tenant::where('name', 'like', '%Company%')->get();
 
+<<<<<<< HEAD
         static::assertCount(1, $companyTenants);
         static::assertTrue($companyTenants->every(fn ($tenant) => str_contains($tenant->name, 'Company')));
     }
@@ -162,6 +197,11 @@ class TenantTest extends TestCase
     public function testCanUpdateTenant(): void
     {
         $tenant = Tenant::factory()->create(['name' => 'Old Name']);
+=======
+    test('can update tenant', function (): void {
+        /** @var TestCase $this */
+        $tenant = TenantFactory::new()->createOne(['name' => 'Old Name']);
+>>>>>>> 9fa499be (.)
 
         $tenant->update(['name' => 'New Name']);
 
@@ -227,8 +267,14 @@ class TenantTest extends TestCase
     {
         $tenant = Tenant::factory()->create();
 
+<<<<<<< HEAD
         static::assertTrue(method_exists($tenant, 'media'));
     }
+=======
+    test('can find tenants by trial status', function (): void {
+        /* @var TestCase $this */
+        $this->skipUnlessTenantColumn('trial_ends_at');
+>>>>>>> 9fa499be (.)
 
     public function testTenantHasFactory(): void
     {
@@ -254,9 +300,20 @@ class TenantTest extends TestCase
         static::assertSame($activeTenant->id, $activeTrials->first()->id);
     }
 
+<<<<<<< HEAD
     public function testCanFindTenantsBySettingsValue(): void
     {
         Tenant::factory()->create([
+=======
+    test('can find tenants by settings value', function (): void {
+        /* @var TestCase $this */
+        $this->skipUnlessTenantColumn('settings');
+
+        $marker = 'settings-theme-'.uniqid();
+
+        TenantFactory::new()->createOne([
+            'name' => $marker.' dark',
+>>>>>>> 9fa499be (.)
             'settings' => ['theme' => 'dark', 'features' => ['chat']],
         ]);
 

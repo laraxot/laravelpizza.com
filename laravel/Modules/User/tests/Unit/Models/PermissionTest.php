@@ -2,12 +2,32 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Models;
 
 use Modules\User\Models\Permission;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
+=======
+use Illuminate\Support\Facades\DB;
+use Modules\User\Database\Factories\PermissionFactory;
+use Modules\User\Models\Permission;
+use PHPUnit\Framework\Assert;
+
+uses(Modules\User\Tests\TestCase::class);
+
+/**
+ * @param array<string, mixed> $attributes
+ */
+function modelsPermissionCreate(array $attributes = []): Permission
+{
+    return PermissionFactory::new()->createOne(array_merge([
+        'name' => 'models-permission-'.uniqid(),
+        'guard_name' => 'web',
+    ], $attributes));
+}
+>>>>>>> 9fa499be (.)
 
 test('can create permission with minimal data', function (): void {
     $permission = Permission::factory()->create([

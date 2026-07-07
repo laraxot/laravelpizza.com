@@ -16,11 +16,15 @@ class ViewDatabaseConfigCommand extends Command
 {
     /**
      * The name and signature of the console command.
+     *
+     * @var string
      */
     protected $signature = 'xot:view-db-config';
 
     /**
      * The console command description.
+     *
+     * @var string
      */
     protected $description = ' esplode';
 

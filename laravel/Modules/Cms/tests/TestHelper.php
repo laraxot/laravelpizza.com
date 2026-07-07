@@ -5,56 +5,72 @@ declare(strict_types=1);
 namespace Modules\Cms\Tests;
 
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Support\Collection;
 use Modules\Cms\Models\Module;
 use Modules\User\Models\User;
 use Modules\Xot\Actions\Filament\GetModulesNavigationItems;
-use Modules\Xot\Tests\CreatesApplication;
 
 abstract class TestHelper extends BaseTestCase
 {
-    // use CreatesApplication;
+    public ?User $super_admin_user = null;
 
-    // in User
-    public function getSuperAdminUser()
+    public ?User $no_super_admin_user = null;
+
+    public function getSuperAdminUser(): ?User
     {
-        return User::role('super-admin')->first();
+        /** @var User|null $user */
+        $user = User::role('super-admin')->first();
+
+        return $user;
     }
 
-    // in User
-    public function getNoSuperAdminUser()
+    public function getNoSuperAdminUser(): ?User
     {
-        return User::all()
-            ->map(function ($item) {
-                if (! $item->hasRole('super-admin')) {
-                    return $item;
-                }
-            })
-            ->first();
+        /** @var User|null $user */
+        $user = User::all()
+            ->first(fn (User $item): bool => ! $item->hasRole('super-admin'));
+
+        return $user;
     }
 
-    // in Tenant o Cms
-    public function getModuleNameLists()
+    /**
+     * @return list<string>
+     */
+    public function getModuleNameLists(): array
     {
-        return collect(app(Module::class)->getRows())->pluck('name')->all();
+        /** @var list<string> $names */
+        $names = collect(app(Module::class)->getRows())->pluck('name')->all();
+
+        return $names;
     }
 
-    // in Tenant o Cms
-    public function getMainAdminNavigationUrlItems()
+    /**
+     * @return Collection<int, string|null>
+     */
+    public function getMainAdminNavigationUrlItems(): Collection
     {
-        return $item_navs = collect(app(GetModulesNavigationItems::class)->execute())
+        return collect(app(GetModulesNavigationItems::class)->execute())
             ->map(fn ($item): ?string => $item->getUrl());
     }
 
-    // in Tenant o Cms
-    public function getUserNavigationItemUrlRoles($user)
+    /**
+     * @return Collection<int, string>
+     */
+    public function getUserNavigationItemUrlRoles(User $user): Collection
     {
-        return $role_names = $user
+        /** @var Collection<int, string> $urls */
+        $urls = $user
             ->getRoleNames()
-            ->map(function ($item) {
-                if ('super-admin' !== $item) {
-                    return '/'.mb_substr($item, 0, -7).'/admin';
+            ->map(function (mixed $item): ?string {
+                if (! is_string($item) || 'super-admin' === $item) {
+                    return null;
                 }
+
+                return '/'.mb_substr($item, 0, -7).'/admin';
             })
-            ->filter(fn ($value): bool => ! is_null($value));
+            ->filter(fn (?string $value): bool => ! is_null($value))
+            ->values();
+
+        return $urls;
     }
 }

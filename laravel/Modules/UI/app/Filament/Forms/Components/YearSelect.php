@@ -13,6 +13,15 @@ class YearSelect extends XotBaseSelect
 
     protected int $futureYears = 0;
 
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->options(fn () => $this->getYearsOptions());
+
+        // Common setup for all XotBaseSelect components can be added here.
+    }
+
     public function past(int $years): static
     {
         $this->pastYears = $years;
@@ -35,6 +44,9 @@ class YearSelect extends XotBaseSelect
         return $this;
     }
 
+    /**
+     * @return array<int, string>
+     */
     protected function getYearsOptions(): array
     {
         $currentYear = Carbon::now()->year;
@@ -53,14 +65,5 @@ class YearSelect extends XotBaseSelect
         }
 
         return $years;
-    }
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->options(fn () => $this->getYearsOptions());
-
-        // Common setup for all XotBaseSelect components can be added here.
     }
 }

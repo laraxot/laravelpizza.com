@@ -6,8 +6,15 @@ namespace Modules\User\Tests\Feature;
 
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Hash;
+<<<<<<< HEAD
 use Illuminate\Validation\ValidationException;
 use Modules\User\Models\Permission;
+=======
+use Modules\User\Database\Factories\PermissionFactory;
+use Modules\User\Database\Factories\ProfileFactory;
+use Modules\User\Database\Factories\RoleFactory;
+use Modules\User\Database\Factories\UserFactory;
+>>>>>>> 6d3760fe (.)
 use Modules\User\Models\Profile;
 use Modules\User\Models\Role;
 use Modules\User\Models\User;
@@ -263,6 +270,7 @@ class UserManagementBusinessLogicTest extends TestCase
         $this->assertTrue($user->isSuperAdmin());
     }
 
+<<<<<<< HEAD
     /** @test */
     public function itCanCheckUserIsAdmin(): void
     {
@@ -311,6 +319,12 @@ class UserManagementBusinessLogicTest extends TestCase
         // Arrange
         $user = User::factory()->create();
         $profile = $user->profile()->create([
+=======
+    test('can update user profile', function (): void {
+        $user = UserFactory::new()->createOne();
+        $createdProfile = ProfileFactory::new()->createOne([
+            'user_id' => $user->id,
+>>>>>>> 6d3760fe (.)
             'phone' => '+39 123 456 7890',
             'address' => 'Via Roma 123, Milano',
         ]);
@@ -333,12 +347,19 @@ class UserManagementBusinessLogicTest extends TestCase
         ]);
     }
 
+<<<<<<< HEAD
     /** @test */
     public function itCanDeleteUserWithProfile(): void
     {
         // Arrange
         $user = User::factory()->create();
         $profile = $user->profile()->create([
+=======
+    test('can delete user with profile', function (): void {
+        $user = UserFactory::new()->createOne();
+        $createdProfile = ProfileFactory::new()->createOne([
+            'user_id' => $user->id,
+>>>>>>> 6d3760fe (.)
             'phone' => '+39 123 456 7890',
         ]);
 
@@ -350,6 +371,7 @@ class UserManagementBusinessLogicTest extends TestCase
         $this->assertDatabaseMissing('profiles', ['id' => $profile->id]);
     }
 
+<<<<<<< HEAD
     /** @test */
     public function itCanSoftDeleteUser(): void
     {
@@ -358,7 +380,19 @@ class UserManagementBusinessLogicTest extends TestCase
 
         // Act
         $user->delete();
+=======
+    test('can soft delete user', function (): void {
+        /* @var TestCase $this */
+        $this->skipTest('User model does not use SoftDeletes.');
+    });
 
+    test('can restore soft deleted user', function (): void {
+        /* @var TestCase $this */
+        $this->skipTest('User model does not use SoftDeletes.');
+    });
+>>>>>>> 9fa499be (.)
+
+<<<<<<< HEAD
         // Assert
         $this->assertSoftDeleted('users', ['id' => $user->id]);
         $this->assertDatabaseHas('users', ['id' => $user->id]);
@@ -385,6 +419,12 @@ class UserManagementBusinessLogicTest extends TestCase
         // Arrange
         $user = User::factory()->create();
         $profile = $user->profile()->create([
+=======
+    test('can force delete user', function (): void {
+        $user = UserFactory::new()->createOne();
+        $createdProfile = ProfileFactory::new()->createOne([
+            'user_id' => $user->id,
+>>>>>>> 6d3760fe (.)
             'phone' => '+39 123 456 7890',
         ]);
 
@@ -503,11 +543,17 @@ class UserManagementBusinessLogicTest extends TestCase
         $this->assertCount(1, $userWithRelations->permissions);
     }
 
+<<<<<<< HEAD
     /** @test */
     public function itCanValidateUserEmailUniqueness(): void
     {
         // Arrange
         User::factory()->create(['email' => 'test@example.com']);
+=======
+    test('can validate user email uniqueness', function (): void {
+        /* @var TestCase $this */
+        UserFactory::new()->createOne(['email' => 'test@example.com']);
+>>>>>>> 9fa499be (.)
 
         // Act & Assert
         $this->expectException(QueryException::class);

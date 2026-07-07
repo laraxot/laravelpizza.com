@@ -2,14 +2,19 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Actions\Socialite\Utils;
 
+=======
+>>>>>>> 9fa499be (.)
 use Illuminate\Support\Facades\Config;
 use Laravel\Socialite\Contracts\User as SocialiteUser;
 use Modules\User\Actions\Socialite\Utils\EmailDomainAnalyzer;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
+
+uses(Modules\User\Tests\TestCase::class);
 
 function createMockSocialiteUser(?string $email): SocialiteUser
 {

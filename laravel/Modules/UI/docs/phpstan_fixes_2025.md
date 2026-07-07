@@ -85,15 +85,7 @@ $safeValue = is_string($mixedValue) ? $mixedValue : (string) $mixedValue;
 
 ```php
 // Pattern per programmazione difensiva
-<<<<<<< HEAD
 if ($record !== null && isset($record->id)) {
-=======
-if ($record !== null && property_exists($record, 'id')) {
-<<<<<<< HEAD
->>>>>>> 7eb1087 (.)
-=======
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
     $id = $record->id;
 } else {
     $id = 'N/A';

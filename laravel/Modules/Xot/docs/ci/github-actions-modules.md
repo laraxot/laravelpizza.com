@@ -10,10 +10,11 @@ Definire il set di GitHub Actions che ogni modulo e ogni tema deve avere nella p
 Modules/<Modulo>/
   .github/
     workflows/
-      semantic-versioning.yml   # Tag automatico su main/dev
-      tag-version.yml          # Semantic-release (main/master)
-      update-changelog.yml     # CHANGELOG su release
-      roadmap-check.yml       # Verifica docs/roadmap.md
+      semantic-release.yml         # npx semantic-release (canonico STORY-131)
+      semantic-versioning.yml      # Tag semver opzionale (github-tag-action)
+      update-changelog.yml         # CHANGELOG su evento release
+      contributor-analytics.yml    # git-fame: LOC per contributor × estensione (STORY-355)
+      roadmap-check.yml            # Verifica docs/roadmap.md (opzionale)
 ```
 
 Per i temi: `Themes/<Tema>/.github/workflows/` con gli stessi file.
@@ -26,12 +27,13 @@ Per i temi: `Themes/<Tema>/.github/workflows/` con gli stessi file.
 
 Usare lo stesso contenuto degli altri moduli (es. Activity, User) per uniformità.
 
-## tag-version.yml
+## semantic-release.yml
 
-- **Trigger**: push su `main` e `master`.
-- **Condizione**: escludere commit con messaggio `[release]`.
-- **Step**: checkout, setup Node 20, npm install semantic-release + plugin, npx semantic-release.
-- **Secrets**: `GH_TOKEN` (o `GITHUB_TOKEN`) per push tag.
+Vedi [semantic-release-template.md](./semantic-release-template.md). Scaffold: `bashscripts/ci/scaffold-module-github-workflows.sh`.
+
+- **Trigger**: push su `main`, `master`, `dev`; `workflow_dispatch`.
+- **Step**: checkout `fetch-depth: 0`, Node 20, install plugin SR, `npx semantic-release`.
+- **Config**: `.releaserc.json` nella root del repo owner (o sottocartella in monorepo reusable).
 
 ## update-changelog.yml
 
@@ -59,9 +61,14 @@ Per attestazioni di build (opzionale):
 
 Vedi skill semantic-versioning per il template completo con attestation.
 
+## Contributor lines report (STORY-131)
+
+Workflow pianificato a livello root: `contributor-lines-report.yml` + `bashscripts/ci/contributor-lines-report.mjs` (cloc + git numstat, grafici HTML artifact). Dettaglio: [STORY-131](../../../../../../docs/stories/STORY-131-github-semantic-release-contributor-analytics.md).
+
 ## Collegamenti
 
 - [docs root – GitHub Actions moduli](../../../../../../docs/github-actions-modules.md)
+- [github-actions-semantic-release-monorepo](../../../../../../docs/wiki/concepts/github-actions-semantic-release-monorepo.md)
 - [Semantic versioning](../../../../../.cursor/skills/semantic-versioning/skill.md)
 - [PHPStan CI](phpstan.md)
 - [Links CI](links.md)

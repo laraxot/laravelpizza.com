@@ -20,55 +20,28 @@ This starter template includes a custom __404 Not Found__ error page, located at
 
     <hr class="block w-full max-w-lg mx-auto my-8 border">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     <p class="text-xl">Need to update this page? See the <a title="404 Page Documentation" href="/docs/404"> documentation here</a>.</p>
-=======
-    <p class="text-xl">Need to update this page? See the <a title="404 Page Documentation" href="/project_docs/404"> documentation here</a>.</p>
->>>>>>> 7eb1087 (.)
-=======
-    <p class="text-xl">Need to update this page? See the <a title="404 Page Documentation" href="/project_docs/404"> documentation here</a>.</p>
-    <p class="text-xl">Need to update this page? See the <a title="404 Page Documentation" href="/project_docs/404"> documentation here</a>.</p>
->>>>>>> laraxot/develop
 </div>
 @endsection
 ```
 
 ---
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Depending on where your site is hosted, you may need to configure your server to use the custom 404 page. For more details, visit the [Jigsaw documentation about configuring a custom 404 page.](https://jigsaw.tighten.co/docs/custom-404-page/)
-=======
-Depending on where your site is hosted, you may need to configure your server to use the custom 404 page. For more details, visit the [Jigsaw documentation about configuring a custom 404 page.](https://jigsaw.tighten.co/project_docs/custom-404-page/)
->>>>>>> 7eb1087 (.)
-=======
-Depending on where your site is hosted, you may need to configure your server to use the custom 404 page. For more details, visit the [Jigsaw documentation about configuring a custom 404 page.](https://jigsaw.tighten.co/project_docs/custom-404-page/)
-Depending on where your site is hosted, you may need to configure your server to use the custom 404 page. For more details, visit the [Jigsaw documentation about configuring a custom 404 page.](https://jigsaw.tighten.co/project_docs/custom-404-page/)
->>>>>>> laraxot/develop
 ### Versione HEAD
 
 
 ## Collegamenti tra versioni di custom-404-page.md
-<<<<<<< HEAD
-<<<<<<< HEAD
 * [custom-404-page.md](../../../Gdpr/docs/custom-404-page.md)
 * [custom-404-page.md](../../../Xot/docs/custom-404-page.md)
 * [custom-404-page.md](../../../UI/docs/custom-404-page.md)
 * [custom-404-page.md](../../../Tenant/docs/it/custom-404-page.md)
 * [custom-404-page.md](../../../Cms/docs/custom-404-page.md)
-=======
-=======
->>>>>>> laraxot/develop
 * [custom-404-page.md](../../../Gdpr/project_docs/custom-404-page.md)
 * [custom-404-page.md](../../../Xot/project_docs/custom-404-page.md)
 * [custom-404-page.md](../../../UI/project_docs/custom-404-page.md)
 * [custom-404-page.md](../../../Tenant/project_docs/it/custom-404-page.md)
 * [custom-404-page.md](../../../Cms/project_docs/custom-404-page.md)
-<<<<<<< HEAD
->>>>>>> 7eb1087 (.)
-=======
->>>>>>> laraxot/develop
 
 
 ### Versione Incoming

@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use SimpleXMLElement;
-use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
 use function Safe\fopen;
@@ -28,6 +27,7 @@ class SubtitleService
 
     public string $field_name = 'txt';
 
+    /** @var array<int, array<string, float|int|string|mixed>> */
     public array $subtitles = [];
 
     public Model $model;
@@ -40,7 +40,7 @@ class SubtitleService
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
-            self::$instance = new self;
+            self::$instance = new self();
         }
 
         return self::$instance;
@@ -100,7 +100,7 @@ class SubtitleService
     }
 
     /**
-     * restituisce i sottotitoli, dal file ..
+     * @return array<int, array<string, float|int|string|mixed>>
      */
     public function get(): array
     {
@@ -109,11 +109,10 @@ class SubtitleService
             return [];
         }
 
-        $func = 'getFrom'.Str::studly($info['extension']);
-
-        Assert::isArray($res = $this->{$func}());
-
-        return $res;
+        return match (Str::lower($info['extension'])) {
+            'xml' => $this->getFromXml(),
+            default => [],
+        };
     }
 
     /**
@@ -158,8 +157,8 @@ class SubtitleService
                     'item_i' => $item_i,
                     'start' => $start,
                     'end' => $end,
-                    'time' => secondsToHms($start).','.secondsToHms($end),
-                    'text' => $item->__toString(),
+                    'time' => $this->secondsToHms($start).','.$this->secondsToHms($end),
+                    'text' => (string) $item,
                 ];
                 $data[] = $tmp;
                 $item_i++;
@@ -169,6 +168,17 @@ class SubtitleService
         }
 
         return $data;
+    }
+
+    private function secondsToHms(int|float $seconds): string
+    {
+        $totalMs = (int) round($seconds * 1000);
+        $hours = intdiv($totalMs, 3_600_000);
+        $minutes = intdiv($totalMs % 3_600_000, 60_000);
+        $secs = intdiv($totalMs % 60_000, 1000);
+        $ms = $totalMs % 1000;
+
+        return sprintf('%02d:%02d:%02d,%03d', $hours, $minutes, $secs, $ms);
     }
 
     /**

@@ -1,13 +1,11 @@
----
-title: "context-overflow-prevention — puntatore"
-type: reference
-updated: 2026-05-21
-related:
-  - "../../../../Xot/docs/wiki/concepts/context-overflow-prevention.md"
----
+## Context Overflow Prevention
 
-# context overflow prevention
+context-mode MCP v1.0.121 comprime il 98% del contesto automaticamente.
 
-Stub **DRY** verso wiki modulo **Xot**. Policy: [docs-deduplication](../../../../../../docs/wiki/how-to/module-docs-deduplication.md).
+- Canonical doc: `docs/wiki/concepts/context-overflow-prevention.md`
+- Rule: `bashscripts/ai/rules/context-compression-discipline.md`
+- Comandi: `ctx doctor`, `ctx stats`, `ctx purge`, `ctx upgrade`
+- Install: `npm install -g context-mode@latest`
+- AGENTS.md deve essere ≤50 righe stub (mai 200KB!)
 
-→ [context-overflow-prevention.md](../../../../Xot/docs/wiki/concepts/context-overflow-prevention.md)
+*Riferimento: contesto >262K tokens causa API Error 400 durante compaction.*

@@ -36,20 +36,8 @@
 - Multi-tenant aware models
 - Social authentication integration
 
-<<<<<<< HEAD
 #### 3. **healthcare_app Module - Business Core**
 #### 3. **ExternalProject Module - Business Core**
-=======
-<<<<<<< .merge_file_CPFULP
-#### 3. **healthcare_app Module - Business Core**
-=======
-<<<<<<< HEAD
-#### 3. **ExternalProject Module - Business Core**
-=======
-#### 3. **ModuloEsempio Module - Business Core**
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> origin/dev
->>>>>>> .merge_file_mjdk5z
 **Role**: Survey management, reporting, analytics
 **Priority**: 0 (Standard priority)
 **Dependencies**: Xot, User, Geo, Media
@@ -241,20 +229,8 @@
 #### 15. **Limesurvey Module - External Integration**
 **Role**: Limesurvey integration, survey synchronization
 **Priority**: 0 (Standard priority)
-<<<<<<< HEAD
 **Dependencies**: Xot, healthcare_app
 **Dependencies**: Xot, ExternalProject
-=======
-<<<<<<< .merge_file_CPFULP
-**Dependencies**: Xot, healthcare_app
-=======
-<<<<<<< HEAD
-**Dependencies**: Xot, ExternalProject
-=======
-**Dependencies**: Xot, ModuloEsempio
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> origin/dev
->>>>>>> .merge_file_mjdk5z
 
 **Key Components**:
 - `LimeSurvey`, `LimeQuestion` models
@@ -302,20 +278,8 @@
 Xot (Foundation)
 ├── User (Security)
 │   └── Tenant (Multi-tenancy)
-<<<<<<< HEAD
 ├── healthcare_app (Business Core)
 ├── ExternalProject (Business Core)
-=======
-<<<<<<< .merge_file_CPFULP
-├── healthcare_app (Business Core)
-=======
-<<<<<<< HEAD
-├── ExternalProject (Business Core)
-=======
-├── ModuloEsempio (Business Core)
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> origin/dev
->>>>>>> .merge_file_mjdk5z
 │   ├── Geo (Locations)
 │   ├── Media (Files)
 │   └── Limesurvey (External Integration)
@@ -424,20 +388,8 @@ public function register(): void
 #### ⚠️ Needs Attention
 - **Cms**: Mixed file structure issues
 - **UI**: Mixed test structure issues
-<<<<<<< HEAD
 - **healthcare_app**: Missing module.json description
 - **ExternalProject**: Missing module.json description
-=======
-<<<<<<< .merge_file_CPFULP
-- **healthcare_app**: Missing module.json description
-=======
-<<<<<<< HEAD
-- **ExternalProject**: Missing module.json description
-=======
-- **ModuloEsempio**: Missing module.json description
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> origin/dev
->>>>>>> .merge_file_mjdk5z
 
 #### 🔧 Technical Debt
 - **Translation consistency**: Some .navigation placeholders
@@ -448,20 +400,8 @@ public function register(): void
 
 #### High-Usage Modules
 - **User**: Authentication checks on every request
-<<<<<<< HEAD
 - **healthcare_app**: Survey processing and reporting
 - **ExternalProject**: Survey processing and reporting
-=======
-<<<<<<< .merge_file_CPFULP
-- **healthcare_app**: Survey processing and reporting
-=======
-<<<<<<< HEAD
-- **ExternalProject**: Survey processing and reporting
-=======
-- **ModuloEsempio**: Survey processing and reporting
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> origin/dev
->>>>>>> .merge_file_mjdk5z
 - **Media**: File uploads and conversions
 - **Job**: Background processing
 
@@ -492,6 +432,7 @@ public function register(): void
 
 ---
 
+**Analysis Date**: 2025-11-17
 **Analysis Date**: [DATE]
 **Architecture Health**: Good with some technical debt
 **Recommendations**: Address file structure inconsistencies, complete documentation, optimize performance-critical modules

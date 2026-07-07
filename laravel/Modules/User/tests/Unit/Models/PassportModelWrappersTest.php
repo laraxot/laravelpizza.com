@@ -2,9 +2,13 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Models;
 
 use Illuminate\Contracts\Auth\Access\Authorizable;
+=======
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> 9fa499be (.)
 use Laravel\Passport\AuthCode;
 use Laravel\Passport\Client;
 use Laravel\Passport\DeviceCode;
@@ -18,7 +22,45 @@ use Modules\User\Models\OauthToken;
 use Modules\User\Tests\TestCase;
 use Spatie\Permission\Traits\HasRoles;
 
+<<<<<<< HEAD
 uses(TestCase::class);
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+/**
+ * @param class-string $wrapperClass
+ */
+function passportWrapperConnectionName(string $wrapperClass): ?string
+{
+    config(['passport.connection' => 'user']);
+
+    $reflection = new ReflectionClass($wrapperClass);
+
+    if ($reflection->hasProperty('connection')) {
+        $property = $reflection->getProperty('connection');
+        $property->setAccessible(true);
+        $connection = $property->getValue($reflection->newInstanceWithoutConstructor());
+
+        if (is_string($connection) && '' !== $connection) {
+            return $connection;
+        }
+    }
+
+    $instance = new $wrapperClass();
+
+    if (! $instance instanceof Model) {
+        return null;
+    }
+
+    /* @var \Illuminate\Database\Eloquent\Model $instance */
+    return $instance->getConnectionName();
+}
+
+beforeEach(function () {
+    /* @var \Modules\User\Tests\TestCase $this */
+    config(['passport.connection' => 'user']);
+});
+>>>>>>> 9fa499be (.)
 
 test('passport eloquent models have oauth wrappers in user module', function (): void {
     $expectedWrappers = [

@@ -77,6 +77,9 @@ class Job extends BaseModel
         return $res;
     }
 
+    /**
+     * @return Attribute<string, never>
+     */
     public function status(): Attribute
     {
         return Attribute::make(get: function (): string {

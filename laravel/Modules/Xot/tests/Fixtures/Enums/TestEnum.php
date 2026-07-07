@@ -14,6 +14,9 @@ enum TestEnum: string
     case ALPHA = 'alpha';
     case BETA = 'beta';
 
+    /**
+     * @return array<string, \Closure>
+     */
     public static function getColumnDefinitions(): array
     {
         return [

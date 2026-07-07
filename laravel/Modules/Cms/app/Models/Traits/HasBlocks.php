@@ -6,7 +6,6 @@ namespace Modules\Cms\Models\Traits;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Database\MultipleRecordsFoundException;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Str;
 use Modules\Cms\Datas\BlockData;
@@ -16,6 +15,9 @@ use Modules\Xot\Datas\XotData;
  * Trait for Models that have blocks.
  *
  * @phpstan-require-extends Model
+ *
+ * @method        mixed                                         getTranslation(string $key, string $locale, bool $useFallbackLocale = true)
+ * @method static \Illuminate\Database\Eloquent\Builder<static> query()
  */
 trait HasBlocks
 {
@@ -24,28 +26,27 @@ trait HasBlocks
      */
     public function getBlocks(?string $side = null): array
     {
-        $field = $side ? $side.'_blocks' : 'blocks';
+        $field = 'blocks';
+        if ($side) {
+            $field = $side.'_blocks';
+        }
+        $blocks = $this->{$field};
 
-        // Use spatie/laravel-translatable when available and the field is translatable.
-        // Direct property access ($this->{$field}) may return the locale-keyed array
-        // (e.g. ['it' => [...blocks...]]) when casts conflict with translatable, so we
-        // explicitly call getTranslation() to extract the correct locale's blocks.
-        $translatable = property_exists($this, 'translatable') ? (array) $this->translatable : [];
-        if (method_exists($this, 'getTranslation') && in_array($field, $translatable, true)) {
-            $locale = app()->getLocale();
-            $blocks = $this->getTranslation($field, $locale, true);
-            if (! is_array($blocks)) {
-                $primary_lang = XotData::make()->primary_lang;
-                $blocks = $this->getTranslation($field, $primary_lang, true);
+        // Handle translatable fields: if blocks is an array with locale keys,
+        // extract the current language's content
+        if (is_array($blocks)) {
+            $primary_lang = XotData::make()->primary_lang;
+            // Check if this looks like a translatable structure (has locale keys)
+            $localeKeys = ['it', 'en', 'fr', 'de', 'es', $primary_lang];
+            $hasLocaleKeys = count(array_intersect(array_keys($blocks), $localeKeys)) > 0;
+            if ($hasLocaleKeys) {
+                $blocks = $this->getTranslation($field, $primary_lang);
             }
-        } else {
-            $blocks = $this->{$field};
-            if (! is_array($blocks)) {
-                $primary_lang = XotData::make()->primary_lang;
-                if (method_exists($this, 'getTranslation')) {
-                    $blocks = $this->getTranslation($field, $primary_lang);
-                }
-            }
+        }
+
+        if (! is_array($blocks)) {
+            $primary_lang = XotData::make()->primary_lang;
+            $blocks = $this->getTranslation($field, $primary_lang);
         }
 
         if (! is_array($blocks)) {
@@ -59,12 +60,16 @@ trait HasBlocks
         // which is needed for dynamic query resolution
         $blockDataInstances = [];
         foreach ($blocks as $key => $block) {
-            /** @var array<string, mixed> $block */
+            if (! is_array($block)) {
+                continue;
+            }
             $type = (string) ($block['type'] ?? 'unknown');
+            /** @var array<string, mixed> $data */
             $data = (array) ($block['data'] ?? []);
             $slug = isset($block['slug']) ? (string) $block['slug'] : null;
+            $active = (bool) ($block['active'] ?? true);
 
-            $blockDataInstances[(string) $key] = new BlockData($type, $data, $slug);
+            $blockDataInstances[(string) $key] = new BlockData($type, $data, $slug, $active);
         }
 
         /* @var array<string, BlockData> $blockDataInstances */
@@ -74,6 +79,8 @@ trait HasBlocks
     }
 
     /**
+     * @param array<int|string, mixed> $blocks
+     *
      * @return array<string, mixed>
      */
     public function compile(array $blocks): array
@@ -99,7 +106,13 @@ trait HasBlocks
     }
 
     /**
-     * Get blocks for a record by slug.
+     * Get blocks by slug for a specific side.
+     *
+     * Cercato il record per slug, itera sui blocchi e filtra per side quando fornito.
+     * Struttura attesa: blocks = [{type, data, slug?, side?}, ...]
+     *
+     * @param string      $slug The section/page slug
+     * @param string|null $side The side to get blocks for (null for all blocks)
      *
      * @return array<string, BlockData>
      */
@@ -109,12 +122,6 @@ trait HasBlocks
             $record = static::query()->where('slug', $slug)->sole();
         } catch (ModelNotFoundException) {
             return [];
-        } catch (MultipleRecordsFoundException) {
-            $record = static::query()
-                ->where('slug', $slug)
-                ->orderByDesc('updated_at')
-                ->orderByDesc('id')
-                ->first();
         }
 
         if (! $record instanceof Model) {

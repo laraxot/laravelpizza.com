@@ -1,21 +1,7 @@
-# MCP Server Consigliati per il Modulo Gdpr
+---
+module: theme
+topic: mcp_server_recommended
+canonical: ../../../Themes/docs/shared-components/mcp-server-recommended-Modules.md
+---
 
-## Scopo del Modulo
-Gestione privacy, consensi e compliance GDPR.
-
-## Server MCP Consigliati
-- `filesystem`: Per archiviazione consensi e log privacy.
-- `memory`: Per gestione temporanea delle sessioni di consenso.
-
-## Configurazione Minima Esempio
-```json
-{
-  "mcpServers": {
-    "filesystem": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-filesystem"] },
-    "memory": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-memory"] }
-  }
-}
-```
-
-## Note
-- Adatta la configurazione a seconda dei requisiti di compliance e audit.
+See canonical documentation: ../../../Themes/docs/shared-components/mcp-server-recommended-Modules.md

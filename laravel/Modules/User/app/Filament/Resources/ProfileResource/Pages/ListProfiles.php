@@ -13,6 +13,9 @@ class ListProfiles extends XotBaseListRecords
     protected static string $resource = ProfileResource::class;
 
     #[\Override]
+    /**
+     * @return array<string, mixed>
+     */
     public function getTableColumns(): array
     {
         return [

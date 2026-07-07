@@ -108,6 +108,19 @@ Per la versione dark:
 - [Architettura Folio + Volt](folio_volt_architecture.md)
 - [Regole per la Case Sensitivity](directory-case-sensitivity.md)
 - [Regole per i Namespace](namespace-rules.md)
+- [Gestione Domini e Configurazioni](DOMAIN_CONFIGURATION.md)
+- [Configurazione Generale](CONFIGURATION.md)
+- [Struttura dei Moduli](MODULE_STRUCTURE.md)
+- [Architettura Folio + Volt](FOLIO_VOLT_ARCHITECTURE.md)
+- [Regole per la Case Sensitivity](DIRECTORY-CASE-SENSITIVITY.md)
+- [Regole per i Namespace](NAMESPACE-RULES.md)
+- [Convenzioni di Naming](naming-conventions.md)
+
+### Collegamenti alla Root del Progetto
+- [Linee Guida per i Loghi](../../../docs/standards/logo_guidelines.md)
+- [Configurazione e Risoluzione dei Loghi](../../../docs/configurazione-logo.md)
+- [Struttura dei Moduli in il progetto](../../../docs/struttura-moduli.md)
+- [Architettura Folio + Volt in il progetto](../../../docs/architettura-folio-volt.md)
 - [Convenzioni di Naming](naming-conventions.md)
 
 ### Collegamenti alla Root del Progetto

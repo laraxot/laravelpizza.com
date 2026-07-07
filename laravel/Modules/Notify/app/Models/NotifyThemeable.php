@@ -40,11 +40,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|NotifyThemeable whereDeletedAt($value)
  * @method static Builder<static>|NotifyThemeable whereDeletedBy($value)
  *
-<<<<<<< HEAD
- * @mixin IdeHelperNotifyThemeable
- *
-=======
->>>>>>> 40b96bcd6 (.)
  * @property-read ProfileContract|null $deleter
  *
  * @mixin \Eloquent

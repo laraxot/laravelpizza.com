@@ -26,11 +26,7 @@ use Webmozart\Assert\Assert;
  */
 class ScheduleForm extends XotBaseResourceForm
 {
-<<<<<<< HEAD
-    /** @var DataCollection<CommandData>|null */
-=======
     /** @var DataCollection<int, CommandData>|null */
->>>>>>> 40b96bcd6 (.)
     protected static ?DataCollection $commands = null;
 
     /**

@@ -33,11 +33,17 @@ class PowerPoint extends ImageGenerator
         return true;
     }
 
+    /**
+     * @return Collection<int, string>
+     */
     public function supportedExtensions(): Collection
     {
         return collect(['ppt', 'pptx']);
     }
 
+    /**
+     * @return Collection<int, string>
+     */
     public function supportedMimeTypes(): Collection
     {
         return collect([

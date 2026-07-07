@@ -1,5 +1,6 @@
 # MCP Server Consigliati per il Modulo User
 
+<<<<<<< HEAD
 ## Scopo del Modulo
 Gestione utenti, autenticazione, profili e permessi.
 
@@ -21,3 +22,6 @@ Gestione utenti, autenticazione, profili e permessi.
 
 ## Note
 - Estendi la configurazione per esigenze di autenticazione avanzata o integrazione esterna.
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/mcp-server-recommended-Modules.md
+>>>>>>> 6d3760fe (.)

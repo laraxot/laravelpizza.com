@@ -2,10 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Actions\Collection;
-
 use Illuminate\Support\Facades\Lang;
 use Modules\Xot\Actions\Collection\TransCollectionAction;
+use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 it('translates collection items correctly', function (): void {
     $collection = collect(['apple', 'banana', 'orange.juice']);
@@ -20,27 +22,30 @@ it('translates collection items correctly', function (): void {
     app()->setLocale('it');
 
     $action = app(TransCollectionAction::class);
+    /** @var Illuminate\Support\Collection<int|string, mixed> $collection */
     $result = $action->execute($collection, $transKey);
 
-    expect($result->all())->toBe([
+    Assert::assertSame([
         'Mela',
         'Banana',
         'Spremuta d\'arancia',
-    ]);
+    ], $result->all());
 });
 
 it('returns original items if transKey is null', function (): void {
+    /** @var Illuminate\Support\Collection<int|string, mixed> $collection */
     $collection = collect(['a', 1, null]);
     $action = app(TransCollectionAction::class);
     $result = $action->execute($collection, null);
 
-    expect($result->all())->toBe(['a', '1', '']);
+    Assert::assertSame(['a', '1', ''], $result->all());
 });
 
 it('returns original item if translation not found', function (): void {
+    /** @var Illuminate\Support\Collection<int|string, mixed> $collection */
     $collection = collect(['unknown']);
     $action = app(TransCollectionAction::class);
     $result = $action->execute($collection, 'missing');
 
-    expect($result->all())->toBe(['unknown']);
+    Assert::assertSame(['unknown'], $result->all());
 });

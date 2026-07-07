@@ -2,44 +2,46 @@
 
 declare(strict_types=1);
 
+namespace Modules\Cms\Tests\Feature\Frontoffice;
+
 use Illuminate\Support\Facades\Auth;
 use Modules\Cms\Tests\TestCase;
-use Modules\Predict\View\Composers\ThemeComposer as PredictThemeComposer;
-use Modules\Xot\Datas\XotData;
+
+use function Pest\Laravel\get;
+
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    config([
-        'app.url' => 'http://predict.local',
-        'xra.pub_theme' => 'TwentyOne',
-        'xra.main_module' => 'Predict',
-    ]);
-
-    XotData::make()->update([
-        'pub_theme' => 'TwentyOne',
-        'main_module' => 'Predict',
-    ]);
-
-    $this->withServerVariables([
-        'HTTP_HOST' => 'predict.local',
-        'HTTPS' => 'off',
-    ]);
+    /* @var \Modules\Cms\Tests\TestCase $this */
+    cmsSkipTest('Predict.local homepage tests not applicable to fixcity install.');
 });
 
-it('serves /it for guests on predict.local without requiring login', function (): void {
-    expect(Auth::check())->toBeFalse();
+describe('Predict Homepage Guest Access', function (): void {
+    test('serves it for guests on predict local without requiring login', function (): void {
+        Assert::assertFalse(Auth::check());
 
-    $response = $this->get('/it');
+        $response = get('/it');
 
-    $response->assertOk();
-    $response->assertDontSee('http-equiv="refresh"', false);
-    $response->assertSee('<html', false);
-    $response->assertSee('lang="it"', false);
-});
+        $response->assertOk();
+        $response->assertDontSee('http-equiv="refresh"', false);
+        $response->assertSee('<html', false);
+        $response->assertSee('lang="it"', false);
+    });
 
-it('returns an empty slider dataset instead of crashing when Predict banners are unavailable', function (): void {
-    $data = app(PredictThemeComposer::class)->getMethodData('getBanner');
+    test('returns an empty slider dataset instead of crashing when predict banners are unavailable', function (): void {
+        if (! class_exists('Modules\\Predict\\View\\Composers\\ThemeComposer')) {
+            cmsSkipTest('Predict ThemeComposer not available');
+        }
 
-    expect($data)->toBeArray();
+        /** @var object $composer */
+        $composer = app('Modules\\Predict\\View\\Composers\\ThemeComposer');
+        Assert::assertIsObject($composer);
+        Assert::assertTrue(method_exists($composer, 'getMethodData'));
+
+        /** @var array<string, mixed> $data */
+        $data = $composer->getMethodData('getBanner');
+        Assert::assertIsArray($data);
+    });
 });

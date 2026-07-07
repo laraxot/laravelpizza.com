@@ -1,7 +1,7 @@
-Risoluzioni completate con successo.
+---
+module: theme
+topic: completato
+canonical: ../../../../Themes/docs/shared-components/completato.md
+---
 
-Integrazione documentazione completata:
-- Documentazione PHPStan integrata nel modulo Xot
-- Documentazione conflitti Git integrata nel modulo Xot
-- Documentazione FFmpeg integrata nel modulo Media
-- Collegamenti bidirezionali creati tra documentazione moduli e principale 
+See canonical documentation: ../../../../Themes/docs/shared-components/completato.md

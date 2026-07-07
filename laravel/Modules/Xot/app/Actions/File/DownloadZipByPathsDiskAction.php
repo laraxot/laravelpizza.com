@@ -15,8 +15,8 @@ class DownloadZipByPathsDiskAction
     /**
      * Crea un file ZIP dai percorsi forniti e lo restituisce come download.
      *
-     * @param array<string> $attachments Array di percorsi file
-     * @param string        $disk        Nome del disco di storage
+     * @param array<int, string> $attachments Array di percorsi file
+     * @param string             $disk        Nome del disco di storage
      *
      * @return BinaryFileResponse|null Risposta di download o null se fallisce
      */

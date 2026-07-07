@@ -74,17 +74,9 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|NotifyTheme whereDeletedAt($value)
  * @method static Builder<static>|NotifyTheme whereDeletedBy($value)
  *
-<<<<<<< HEAD
- * @mixin IdeHelperNotifyTheme
- *
- * @property-read ProfileContract|null $deleter
- *
- * @mixin Eloquent
-=======
  * @property-read ProfileContract|null $deleter
  *
 
->>>>>>> 40b96bcd6 (.)
  */
 class NotifyTheme extends BaseModel
 {

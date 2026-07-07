@@ -26,9 +26,10 @@ class ArtisanCommandsManager extends XotBasePage
 
     /**
      * Livewire event listeners for this component.
-     * Untyped to match HandlesEvents::$listeners.
      *
      * @var array<string, string>
+     *
+     * @phpstan-var array<string, string>
      */
     protected $listeners = [
         'refresh-component' => '$refresh',

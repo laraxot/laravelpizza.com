@@ -2,12 +2,17 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Filament\Widgets;
 
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Filament\Widgets\EditUserWidget;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
+
+uses(Modules\User\Tests\TestCase::class);
 
 describe('EditUserWidget', function (): void {
     test('edit user widget can be instantiated', function (): void {

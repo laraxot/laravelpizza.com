@@ -103,7 +103,7 @@ Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo
 
 ## Errori Identificati
 
-### 1. Errore in helpers/Helper.php
+### 1. Errore in Helpers/Helper.php
 
 ```
 Line 406: Call to function is_array() with array{0?: string, 1?: 'container'|'item', 2?: numeric-string} will always evaluate to true.
@@ -279,7 +279,7 @@ Line 146: Offset 1 on array{list<string>, list<string>} in isset() always exists
 
 ## Soluzioni Implementate
 
-### 1. Correzione in helpers/Helper.php
+### 1. Correzione in Helpers/Helper.php
 
 Il problema è che PHPStan rileva che la chiamata a `is_array($matches)` sarà sempre vera perché `$matches` è già tipizzato come array. Abbiamo modificato il controllo per verificare se l'array non è vuoto invece di verificare se è un array:
 

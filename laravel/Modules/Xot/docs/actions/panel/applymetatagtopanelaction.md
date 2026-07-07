@@ -14,6 +14,7 @@ Applica le configurazioni metatag al pannello Filament.
 - `Panel` - Il pannello configurato
 
 ## Dipendenze
+- [MetatagData](../../datas/MetatagData.md)
 - [MetatagData](../../datas/metatagdata.md)
 
 ## Errori PHPStan Comuni
@@ -37,3 +38,8 @@ La correzione dell'errore PHPStan richiede la modifica del metodo chiamato da `g
 - [PHPStan Common Exceptions](../../phpstan-common-exceptions.md)
 - [Filament Best Practices](../../filament-best-practices.md)
 - [PHPStan Common Exceptions](../../phpstan-common-exceptions.md)
+- [MetatagData](../../datas/MetatagData.md)
+- [Filament Best Practices](../../filament-best-practices.md)
+- [PHPStan Common Exceptions](../../PHPSTAN-COMMON-EXCEPTIONS.md)
+- [Filament Best Practices](../../FILAMENT-BEST-PRACTICES.md)
+- [PHPStan Common Exceptions](../../PHPSTAN-COMMON-EXCEPTIONS.md)

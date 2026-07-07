@@ -31,7 +31,6 @@ Depending on where your site is hosted, you may need to configure your server to
 ### Versione HEAD
 
 ## Collegamenti tra versioni di custom-404-page.md
-<<<<<<<< HEAD:laravel/Modules/Xot/docs/consolidated/archive/custom-404-page.md
 * [custom-404-page.md](../../../Gdpr/project_docs/custom-404-page.md)
 * [custom-404-page.md](../../../Xot/project_docs/custom-404-page.md)
 * [custom-404-page.md](../../../UI/project_docs/custom-404-page.md)
@@ -41,11 +40,8 @@ Depending on where your site is hosted, you may need to configure your server to
 ### Versione Incoming
 
 ---
-========
 * [custom-404-page.md](laravel/Modules/Gdpr/docs/custom-404-page.md)
 * [custom-404-page.md](laravel/Modules/Xot/docs/custom-404-page.md)
 * [custom-404-page.md](laravel/Modules/UI/docs/custom-404-page.md)
 * [custom-404-page.md](laravel/Modules/Tenant/docs/it/custom-404-page.md)
 * [custom-404-page.md](laravel/Modules/Cms/docs/custom-404-page.md)
-
->>>>>>>> c79a39e1e (.):laravel/Modules/Cms/docs/custom-404-page_1.md

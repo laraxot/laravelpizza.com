@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Actions\Debug;
-
+uses(Modules\Xot\Tests\TestCase::class);
 use Modules\Xot\Actions\Debug\MeasureAction;
+use PHPUnit\Framework\Assert;
 
 it('measures performance', function (): void {
     $action = app(MeasureAction::class);
@@ -12,5 +12,5 @@ it('measures performance', function (): void {
         return 'done';
     }, 'Test Measurement');
 
-    expect($result)->toBe('done');
+    Assert::assertSame('done', $result);
 });

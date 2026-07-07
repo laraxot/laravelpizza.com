@@ -21,13 +21,9 @@ describe('FormatSmsMessageAction', function () {
     });
 
     it('has execute method with correct signature', function () {
-<<<<<<< HEAD
-        $reflection = new ReflectionClass($this->action);
-=======
                 $action = new FormatSmsMessageAction;
 
         $reflection = new \ReflectionClass($action);
->>>>>>> 40b96bcd6 (.)
         $method = $reflection->getMethod('execute');
 
         Assert::assertTrue($method->isPublic());
@@ -35,13 +31,9 @@ describe('FormatSmsMessageAction', function () {
     });
 
     it('execute accepts string parameter', function () {
-<<<<<<< HEAD
-        $reflection = new ReflectionClass($this->action);
-=======
                 $action = new FormatSmsMessageAction;
 
         $reflection = new \ReflectionClass($action);
->>>>>>> 40b96bcd6 (.)
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
@@ -49,13 +41,9 @@ describe('FormatSmsMessageAction', function () {
     });
 
     it('execute returns array', function () {
-<<<<<<< HEAD
-        $reflection = new ReflectionClass($this->action);
-=======
                 $action = new FormatSmsMessageAction;
 
         $reflection = new \ReflectionClass($action);
->>>>>>> 40b96bcd6 (.)
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
@@ -63,12 +51,7 @@ describe('FormatSmsMessageAction', function () {
     });
 
     it('uses strict types', function () {
-<<<<<<< HEAD
-        $reflection = new ReflectionClass($this->action);
-        $filename = $reflection->getFileName();
-=======
                 $action = new FormatSmsMessageAction;
->>>>>>> 40b96bcd6 (.)
 
         $reflection = new \ReflectionClass($action);
         $content = \notifyReflectionSource($reflection);
@@ -76,11 +59,7 @@ describe('FormatSmsMessageAction', function () {
     });
 
     it('has correct namespace', function () {
-<<<<<<< HEAD
-        $reflection = new ReflectionClass($this->action);
-=======
                 $action = new FormatSmsMessageAction;
->>>>>>> 40b96bcd6 (.)
 
         $reflection = new \ReflectionClass($action);
 
@@ -88,12 +67,7 @@ describe('FormatSmsMessageAction', function () {
     });
 
     it('has required imports', function () {
-<<<<<<< HEAD
-        $reflection = new ReflectionClass($this->action);
-        $filename = $reflection->getFileName();
-=======
                 $action = new FormatSmsMessageAction;
->>>>>>> 40b96bcd6 (.)
 
         $reflection = new \ReflectionClass($action);
         $content = \notifyReflectionSource($reflection);

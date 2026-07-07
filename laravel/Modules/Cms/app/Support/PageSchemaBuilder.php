@@ -6,7 +6,6 @@ namespace Modules\Cms\Support;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Str;
-use Modules\Cms\Actions\ResolvePageAction;
 use Modules\User\Models\User;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Datas\MetatagData;
@@ -45,26 +44,15 @@ final class PageSchemaBuilder
 
         if (
             'ItemPage' === $pageType
-            && 'container0.view' === $routeName
-            && isset($routeParameters['container0'], $routeParameters['slug0'])
-            && is_string($routeParameters['container0'])
+            && ('container0.view' === $routeName || Str::contains($path, '/events/'))
+            && isset($routeParameters['slug0'])
             && is_string($routeParameters['slug0'])
             && '' !== $routeParameters['slug0']
         ) {
-            $container0 = $routeParameters['container0'];
-            $slug0 = $routeParameters['slug0'];
-
-            if ('events' === $container0 || Str::contains($path, '/events/')) {
-                $schema['mainEntity'] = [
-                    '@type' => 'Event',
-                    'url' => url('/events/'.$slug0),
-                ];
-            } else {
-                $mainEntity = $this->resolvePredictOrGenericMainEntity($container0, $slug0);
-                if (null !== $mainEntity) {
-                    $schema['mainEntity'] = $mainEntity;
-                }
-            }
+            $schema['mainEntity'] = [
+                '@type' => 'Event',
+                'url' => url('/events/'.$routeParameters['slug0']),
+            ];
         }
 
         return $schema;
@@ -102,16 +90,9 @@ final class PageSchemaBuilder
 
         if (
             'container0.view' === $routeName
-            && (($routeParameters['container0'] ?? null) === 'predicts' || Str::contains($path, '/predicts/'))
+            && (($routeParameters['container0'] ?? null) === 'profile' || Str::contains($path, '/profile/'))
         ) {
-            return 'ItemPage';
-        }
-
-        if (
-            'container0.view' === $routeName
-            && (($routeParameters['container0'] ?? null) === 'predicts' || Str::contains($path, '/predicts/'))
-        ) {
-            return 'ItemPage';
+            return 'ProfilePage';
         }
 
         if ('home' === $routeName || '/' === $path || '' === $path) {
@@ -127,7 +108,7 @@ final class PageSchemaBuilder
         }
 
         if (
-            (null !== $routeName && Str::startsWith($routeName, 'auth.'))
+            null !== $routeName && Str::startsWith($routeName, 'auth.')
             || Str::contains($path, '/auth/')
             || Str::contains($path, '/login')
             || Str::contains($path, '/register')
@@ -252,59 +233,5 @@ final class PageSchemaBuilder
         $value = $object->{$property};
 
         return is_string($value) ? trim($value) : '';
-    }
-
-    /**
-     * Resolve mainEntity for predicts or other container0 types.
-     *
-     * @return array<string, mixed>|null
-     */
-    private function resolvePredictOrGenericMainEntity(string $container0, string $slug0): ?array
-    {
-        try {
-            $resolved = app(ResolvePageAction::class)->execute($container0, $slug0);
-            if (null === $resolved->item) {
-                return null;
-            }
-
-            $item = $resolved->item;
-            $title = $this->extractItemTitle($item);
-            $locale = app()->getLocale();
-            $url = url('/'.$locale.'/'.$container0.'/'.$slug0);
-
-            if ('predicts' === $container0) {
-                return [
-                    '@type' => 'Question',
-                    'name' => '' !== $title ? $title : 'Prediction Market',
-                    'url' => $url,
-                ];
-            }
-
-            return [
-                '@type' => 'Thing',
-                'name' => '' !== $title ? $title : 'Item',
-                'url' => $url,
-            ];
-        } catch (\Throwable) {
-            return null;
-        }
-    }
-
-    private function extractItemTitle(object $item): string
-    {
-        $locale = app()->getLocale();
-        $title = $item->title ?? $item->name ?? $item->subject ?? null;
-
-        if (null === $title) {
-            return '';
-        }
-
-        if (is_array($title)) {
-            $val = $title[$locale] ?? $title['en'] ?? $title['it'] ?? reset($title);
-
-            return is_string($val) ? trim($val) : '';
-        }
-
-        return trim((string) $title);
     }
 }

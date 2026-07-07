@@ -8,12 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Modules\Xot\Contracts\ExtraContract;
 
+/**
+ * @property mixed $extra_attributes
+ */
 class ExtraModelTest extends Model implements ExtraContract
 {
     protected $table = 'test_extras';
 
+    /** @var list<string> */
     protected $fillable = ['model_id', 'model_type', 'extra_attributes'];
 
+    /**
+     * @return array<string, string>
+     */
     protected function casts(): array
     {
         return [
@@ -21,6 +28,9 @@ class ExtraModelTest extends Model implements ExtraContract
         ];
     }
 
+    /**
+     * @return MorphTo<Model, $this>
+     */
     public function model(): MorphTo
     {
         return $this->morphTo();

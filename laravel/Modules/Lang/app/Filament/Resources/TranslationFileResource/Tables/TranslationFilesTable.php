@@ -4,34 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Filament\Resources\TranslationFileResource\Tables;
 
-<<<<<<< HEAD
-use Filament\Tables\Columns\Column;
-use Filament\Tables\Columns\TextColumn;
-=======
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Lang\Filament\Actions\LocaleSwitcherRefresh;
->>>>>>> 40b96bcd6 (.)
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class TranslationFilesTable extends XotBaseResourceTable
 {
     /**
-<<<<<<< HEAD
-     * @return array<string, Column>
-     */
-    public static function getTableColumns(): array
-    {
-        return [
-            'id' => TextColumn::make('id')->searchable()->sortable(),
-            'name' => TextColumn::make('name')->searchable()->sortable(),
-            'path' => TextColumn::make('path')->searchable()->sortable(),
-            'key' => TextColumn::make('key')->searchable(),
-            'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
-            'updated_at' => TextColumn::make('updated_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),
-=======
      * @return array<string, Action|ActionGroup>
      */
     public function getTableHeaderActions(): array
@@ -64,7 +46,6 @@ class TranslationFilesTable extends XotBaseResourceTable
             'id' => TextColumn::make('id')->sortable(),
             'name' => TextColumn::make('name')->searchable(),
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
->>>>>>> 40b96bcd6 (.)
         ];
     }
 }

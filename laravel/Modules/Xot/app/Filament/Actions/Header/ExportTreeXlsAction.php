@@ -14,6 +14,7 @@ use Filament\Actions\Action;
 use Filament\Resources\Pages\Page;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Actions\Export\ExportXlsByCollection;
 use Modules\Xot\Actions\GetTransKeyAction;
 use Modules\Xot\Contracts\HasRecursiveRelationshipsContract;
@@ -44,7 +45,9 @@ class ExportTreeXlsAction extends Action
                 // $query = $livewire->getFilteredTableQuery(); // ->getQuery(); // Staudenmeir\LaravelCte\Query\Builder
                 // $rows = $query->get();
                 Assert::implementsInterface($record, HasRecursiveRelationshipsContract::class);
-                $rows = $record->descendantsAndSelf;
+                /** @var Model&HasRecursiveRelationshipsContract $treeRecord */
+                $treeRecord = $record;
+                $rows = $treeRecord->descendantsAndSelf;
                 Assert::isInstanceOf($rows, Collection::class);
                 $resource = $livewire->getResource();
                 $fields = [];
@@ -52,7 +55,7 @@ class ExportTreeXlsAction extends Action
                     $fields = $resource::getXlsFields($tableFilters);
                     // Convertiamo tutti i valori a stringhe
                     $fields = array_values(array_map(
-                        static fn (mixed $field): string => is_string($field) ? $field : (string) $field,
+                        static fn (mixed $field): string => SafeStringCastAction::cast($field),
                         (array) $fields,
                     ));
                 }

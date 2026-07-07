@@ -20,25 +20,25 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\Relations\Siblings;
 /**
  * Modules\Xot\Contracts\HasRecursiveRelationshipsContract.
  *
- * @property int               $id
- * @property string            $name
- * @property int               $depth
- * @property Collection<Model> $children
- * @property int|null          $children_count
- * @property Collection<Model> $ancestors                  The model's recursive parents.
- * @property int|null          $ancestors_count
- * @property Collection<Model> $ancestorsAndSelf           The model's recursive parents and itself.
- * @property int|null          $ancestors_and_self_count
- * @property Collection<Model> $bloodline                  The model's ancestors, descendants and itself.
- * @property int|null          $bloodline_count
- * @property Collection<Model> $childrenAndSelf            The model's direct children and itself.
- * @property int|null          $children_and_self_count
- * @property Collection<Model> $descendants                The model's recursive children.
- * @property int|null          $descendants_count
- * @property Collection<Model> $descendantsAndSelf         The model's recursive children and itself.
- * @property int|null          $descendants_and_self_count
- * @property Collection<Model> $parentAndSelf              The model's direct parent and itself.
- * @property int|null          $parent_and_self_count
+ * @property int                    $id
+ * @property string                 $name
+ * @property int                    $depth
+ * @property Collection<int, Model> $children
+ * @property int|null               $children_count
+ * @property Collection<int, Model> $ancestors                  The model's recursive parents.
+ * @property int|null               $ancestors_count
+ * @property Collection<int, Model> $ancestorsAndSelf           The model's recursive parents and itself.
+ * @property int|null               $ancestors_and_self_count
+ * @property Collection<int, Model> $bloodline                  The model's ancestors, descendants and itself.
+ * @property int|null               $bloodline_count
+ * @property Collection<int, Model> $childrenAndSelf            The model's direct children and itself.
+ * @property int|null               $children_and_self_count
+ * @property Collection<int, Model> $descendants                The model's recursive children.
+ * @property int|null               $descendants_count
+ * @property Collection<int, Model> $descendantsAndSelf         The model's recursive children and itself.
+ * @property int|null               $descendants_and_self_count
+ * @property Collection<int, Model> $parentAndSelf              The model's direct parent and itself.
+ * @property int|null               $parent_and_self_count
  *
  * @phpstan-require-extends Model
  *
@@ -53,142 +53,140 @@ interface HasRecursiveRelationshipsContract
 
     /**
      * Get the name of the parent key column.
+     *
+     * @return string
      */
-    public function getParentKeyName(): string;
+    public function getParentKeyName();
 
     /**
      * Get the qualified parent key column.
+     *
+     * @return string
      */
-    public function getQualifiedParentKeyName(): string;
+    public function getQualifiedParentKeyName();
 
     /**
      * Get the name of the local key column.
+     *
+     * @return string
      */
-    public function getLocalKeyName(): string;
+    public function getLocalKeyName();
 
     /**
      * Get the qualified local key column.
+     *
+     * @return string
      */
-    public function getQualifiedLocalKeyName(): string;
+    public function getQualifiedLocalKeyName();
 
     /**
      * Get the name of the depth column.
+     *
+     * @return string
      */
-    public function getDepthName(): string;
+    public function getDepthName();
 
     /**
      * Get the name of the path column.
+     *
+     * @return string
      */
-    public function getPathName(): string;
+    public function getPathName();
 
     /**
      * Get the path separator.
+     *
+     * @return string
      */
-    public function getPathSeparator(): string;
+    public function getPathSeparator();
 
     /**
      * Get the additional custom paths.
      *
      * @return array<string>
      */
-    public function getCustomPaths(): array;
+    public function getCustomPaths();
 
     /**
      * Get the name of the common table expression.
+     *
+     * @return string
      */
-    public function getExpressionName(): string;
+    public function getExpressionName();
 
-    /**
-     * Get the model's ancestors.
-     */
-    public function ancestors(): Ancestors;
+    /** @return Ancestors<Model, Model> */
+    public function ancestors();
 
-    /**
-     * Get the model's ancestors and itself.
-     */
-    public function ancestorsAndSelf(): Ancestors;
+    /** @return Ancestors<Model, Model> */
+    public function ancestorsAndSelf();
 
-    /**
-     * Get the model's bloodline.
-     */
-    public function bloodline(): Bloodline;
+    /** @return Bloodline<Model, Model> */
+    public function bloodline();
 
-    /**
-     * Get the model's children.
-     */
-    public function children(): HasMany;
+    /** @return HasMany<Model, Model> */
+    public function children();
 
-    /**
-     * Get the model's children and itself.
-     */
-    public function childrenAndSelf(): Descendants;
+    /** @return Descendants<Model, Model> */
+    public function childrenAndSelf();
 
-    /**
-     * Get the model's descendants.
-     */
-    public function descendants(): Descendants;
+    /** @return Descendants<Model, Model> */
+    public function descendants();
 
-    /**
-     * Get the model's descendants and itself.
-     */
-    public function descendantsAndSelf(): Descendants;
+    /** @return Descendants<Model, Model> */
+    public function descendantsAndSelf();
 
-    /**
-     * Get the model's parent.
-     */
-    public function parent(): BelongsTo;
+    /** @return BelongsTo<Model, Model> */
+    public function parent();
 
-    /**
-     * Get the model's parent and itself.
-     */
-    public function parentAndSelf(): Ancestors;
+    /** @return Ancestors<Model, Model> */
+    public function parentAndSelf();
 
-    /**
-     * Get the model's root ancestor.
-     */
-    public function rootAncestor(): RootAncestor;
+    /** @return RootAncestor<Model, Model> */
+    public function rootAncestor();
 
-    /**
-     * Get the model's root ancestor or self.
-     */
-    public function rootAncestorOrSelf(): RootAncestorOrSelf;
+    /** @return RootAncestorOrSelf<Model, Model> */
+    public function rootAncestorOrSelf();
 
-    /**
-     * Get the model's siblings.
-     */
-    public function siblings(): Siblings;
+    /** @return Siblings<Model, Model> */
+    public function siblings();
 
-    /**
-     * Get the model's siblings and itself.
-     */
-    public function siblingsAndSelf(): Siblings;
+    /** @return Siblings<Model, Model> */
+    public function siblingsAndSelf();
 
     /**
      * Get the first segment of the model's path.
+     *
+     * @return string
      */
-    public function getFirstPathSegment(): string;
+    public function getFirstPathSegment();
 
     /**
      * Determine whether the model's path is nested.
+     *
+     * @return bool
      */
-    public function hasNestedPath(): bool;
+    public function hasNestedPath();
 
     /**
      * Determine if an attribute is an integer.
-     */
-    public function isIntegerAttribute(string $attribute): bool;
-
-    /**
-     * Create a new Eloquent query builder for the model.
-     */
-    public function newEloquentBuilder(Builder $query): AdjacencyBuilder;
-
-    /**
-     * Create a new Eloquent Collection instance.
      *
-     * @param list<static> $models
+     * @return bool
      */
-    public function newCollection(array $models = []): Collection;
+    public function isIntegerAttribute(string $attribute);
+
+    /**
+     * @param Builder $query
+     *
+     * @return AdjacencyBuilder<Model>
+     */
+    public function newEloquentBuilder($query);
+
+    /**
+     * @param list<Model> $models
+     *
+     * @return Collection<int, Model>
+     */
+    public function newCollection(array $models = []);
 
     /**
      * added by XOT, viene utilizzato nelle options delle select.

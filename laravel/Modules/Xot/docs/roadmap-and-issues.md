@@ -204,11 +204,7 @@ catch (CannotRegisterIconSet $e) {
 ---
 
 ### 2. Helper Functions - No Caching
-<<<<<<< HEAD
 **File**: `Helpers/Helper.php`
-=======
-**File**: `helpers/Helper.php`
->>>>>>> origin/dev
 
 **Problema**: Chiamate ripetute senza caching
 
@@ -326,6 +322,7 @@ function xot_config(string $key): mixed
 
 ## 🔗 Collegamenti
 
+- [← Xot Module README](./README.md)
 - [← Xot Module README](./readme.md)
 - [← Best Practices](./best-practices.md)
 - [← Troubleshooting](./troubleshooting.md)

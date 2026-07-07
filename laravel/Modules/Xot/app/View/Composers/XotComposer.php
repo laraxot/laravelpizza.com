@@ -98,19 +98,13 @@ class XotComposer
         $metatag = MetatagData::make();
         $fun = 'get'.Str::studly($str);
         if (method_exists($metatag, $fun)) {
-            $resolved = $metatag->{$fun}();
-            if (is_string($resolved) || is_bool($resolved) || null === $resolved) {
-                return $resolved;
-            }
+            $value = $metatag->{$fun}();
 
-            return null;
+            return is_string($value) || is_bool($value) ? $value : null;
         }
 
-        $raw = $metatag->{$str};
-        if (is_string($raw) || is_bool($raw) || null === $raw) {
-            return $raw;
-        }
+        $value = $metatag->{$str} ?? null;
 
-        return null;
+        return is_string($value) || is_bool($value) ? $value : null;
     }
 }

@@ -33,8 +33,6 @@ return [
             'tooltip' => '',
         ],
     ],
-    'label' => 'Cta',
-    'plural_label' => 'Cta (Plurale)',
     'navigation' => [
         'name' => 'Cta',
         'plural' => 'Cta',
@@ -46,6 +44,8 @@ return [
         'sort' => 1,
         'icon' => 'heroicon-o-collection',
     ],
+    'label' => 'Cta',
+    'plural_label' => 'Cta (Plurale)',
     'actions' => [
         'create' => [
             'label' => 'Crea Cta',

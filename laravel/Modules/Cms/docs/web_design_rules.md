@@ -188,13 +188,46 @@
 - Rendere le azioni ovvie e intuitive
 - Testare l'usabilità con utenti reali
 
-## Best Practices per il Web Design
+## 8. Kinetisches Design (Design in Movimento)
 
-### Accessibilità
-- Garantire il contrasto sufficiente per la leggibilità
-- Utilizzare dimensioni dei font adeguate
-- Fornire alternative testuali per le immagini
-- Supportare la navigazione da tastiera
+### Principio
+- Il movimento non è solo decorativo, ma è un elemento centrale del design (Berger+Team).
+- Le animazioni devono guidare l'occhio dell'utente e spiegare la gerarchia della pagina.
+
+### Applicazione con Tailwind CSS
+```html
+<!-- Micro-interazione cinetica su un pulsante -->
+<button class="px-6 py-3 bg-indigo-600 text-white rounded-xl shadow-lg 
+               hover:scale-105 active:scale-95 hover:shadow-indigo-500/50 
+               transition-all duration-300 ease-out">
+    Trade Now
+</button>
+
+<!-- Hover lift su una card -->
+<div class="p-6 bg-white rounded-2xl border border-gray-200 
+            hover:-translate-y-1 hover:shadow-xl transition-all duration-500">
+    <h3 class="text-xl font-bold">Mercato Trending</h3>
+</div>
+```
+
+## 9. Design Immersivo 2026
+
+### Principio
+- Creare esperienze avvolgenti attraverso profondità, livelli e storytelling visivo (Evoluzione Informatica).
+- Ridurre il tasso di abbandono trasformando la navigazione in un'esperienza emotiva.
+
+### Applicazione
+- **Profondità**: Uso di gradienti complessi e ombre stratificate per creare tridimensionalità.
+- **Storytelling Visivo**: La grafica deve comunicare il valore del brand prima ancora della lettura del testo.
+- **Micro-dettagli**: Piccole animazioni di caricamento, feedback di successo e transizioni fluide che "deliziano" l'utente.
+
+## Best Practices per il Web Design 2026
+
+### Accessibilità (WCAG 2.2 + EAA)
+- **European Accessibility Act**: Conformità obbligatoria per le aziende private dal 28 giugno 2025.
+- Garantire il contrasto sufficiente (AAA preferito, AA minimo).
+- Navigazione completa da tastiera (Tab-index e focus states chiari).
+- Uso di `aria-label` e HTML semantico (`role="article"`, `<nav>`, `<main>`).
 
 ### Responsive Design
 - Progettare per tutti i dispositivi

@@ -4,17 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Feature;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-use Modules\Notify\Models\MailTemplate;
-use Modules\Notify\Tests\TestCase;
-=======
 use Modules\Notify\Database\Factories\MailTemplateFactory;
 use Modules\Notify\Models\MailTemplate;
 use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
->>>>>>> 40b96bcd6 (.)
 
 
 

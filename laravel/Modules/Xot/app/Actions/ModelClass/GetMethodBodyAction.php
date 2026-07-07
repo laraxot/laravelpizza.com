@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\ModelClass;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use function Safe\file;
 
 use Spatie\QueueableAction\QueueableAction;
@@ -23,12 +25,12 @@ class GetMethodBodyAction
         $length = $end_line - $start_line;
         Assert::string($file_name = $table_method->getFileName());
         $source = file($file_name);
-        $slice = \array_slice($source, $start_line, $length);
-        $methodLines = array_values(array_filter(
-            $slice,
-            static fn (mixed $line): bool => is_string($line),
-        ));
 
-        return implode('', $methodLines);
+        $body = '';
+        foreach (\array_slice($source, $start_line, $length) as $line) {
+            $body .= SafeStringCastAction::cast($line);
+        }
+
+        return $body;
     }
 }

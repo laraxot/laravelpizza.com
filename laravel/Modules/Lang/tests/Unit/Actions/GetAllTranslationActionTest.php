@@ -4,16 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit\Actions;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-use Modules\Lang\Actions\GetAllTranslationAction;
-use Modules\Lang\Tests\TestCase;
-=======
 use Modules\Lang\Actions\GetAllTranslationAction;
 use Modules\Lang\Tests\TestCase;
 use PHPUnit\Framework\Assert;
->>>>>>> 40b96bcd6 (.)
 
 uses(TestCase::class);
 

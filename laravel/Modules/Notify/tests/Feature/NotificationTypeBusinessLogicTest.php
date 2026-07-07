@@ -4,12 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Feature;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-use Modules\Notify\Models\NotificationType;
-use Modules\Notify\Tests\TestCase;
-=======
 use Modules\Notify\Database\Factories\NotificationTypeFactory;
 use Modules\Notify\Models\NotificationType;
 use Modules\Notify\Tests\TestCase;
@@ -18,7 +12,6 @@ use PHPUnit\Framework\Assert;
 use function Safe\json_encode;
 
 uses(\Modules\Notify\Tests\TestCase::class);
->>>>>>> 40b96bcd6 (.)
 
 describe('Notification Type Business Logic', function () {
     it('can create notification type with basic information', function () {

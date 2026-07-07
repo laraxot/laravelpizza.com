@@ -163,6 +163,8 @@ Il file attuale contiene principalmente etichette generali per l'interfaccia amm
 - [Principi DRY/KISS](/project_docs/dry-kiss-principles.md)
 
 ### Documentazione Moduli Correlati
+- [Geo Module Translations](/Modules/Geo/project_docs/translation-structure-expanded.md)
+- [User Module Translations](/Modules/User/project_docs/translation-guidelines.md)
 - [Geo Module Translations](/modules/geo/project_docs/translation-structure-expanded.md)
 - [User Module Translations](/modules/user/project_docs/translation-guidelines.md)
 
@@ -193,3 +195,4 @@ Il file attuale contiene principalmente etichette generali per l'interfaccia amm
 **Stato**: Documentazione completata, implementazione in corso
 **Priorità**: Media (file già corretto linguisticamente)
 **Responsabile**: Sistema automatico DRY/KISS
+**Data**: 2025-08-08

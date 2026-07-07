@@ -848,36 +848,6 @@ class ContactDashboard extends Dashboard
         return [
             'overview' => [
                 'label' => 'Overview',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                'url' => route('filament.quaeris.dashboard'),
-                'isActive' => request()->routeIs('filament.quaeris.dashboard'),
-            ],
-            'analytics' => [
-                'label' => 'Analytics',
-                'url' => route('filament.quaeris.analytics'),
-                'isActive' => request()->routeIs('filament.quaeris.analytics'),
-            ],
-            'reports' => [
-                'label' => 'Reports',
-                'url' => route('filament.quaeris.reports'),
-                'isActive' => request()->routeIs('filament.quaeris.reports'),
-=======
-                'url' => route('filament.<nome progetto>.dashboard'),
-                'isActive' => request()->routeIs('filament.<nome progetto>.dashboard'),
-            ],
-            'analytics' => [
-                'label' => 'Analytics',
-                'url' => route('filament.<nome progetto>.analytics'),
-                'isActive' => request()->routeIs('filament.<nome progetto>.analytics'),
-            ],
-            'reports' => [
-                'label' => 'Reports',
-                'url' => route('filament.<nome progetto>.reports'),
-                'isActive' => request()->routeIs('filament.<nome progetto>.reports'),
->>>>>>> laraxot/develop
->>>>>>> 551c768c4 (.)
             ],
         ];
     }
@@ -969,14 +939,6 @@ class PerformanceMonitoringMiddleware
 - [ ] Type safety at 95%+
 
 ### Code Quality
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-- [ ] PHPStan Level 9+ compliance
-=======
-- [ ] PHPStan level 10+ compliance
->>>>>>> laraxot/develop
->>>>>>> 551c768c4 (.)
 - [ ] Zero deprecated code usage
 - [ ] Modern patterns consistently applied
 - [ ] Documentation updated

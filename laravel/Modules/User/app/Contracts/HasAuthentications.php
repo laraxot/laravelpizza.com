@@ -4,15 +4,22 @@ declare(strict_types=1);
 
 namespace Modules\User\Contracts;
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+=======
+use Illuminate\Contracts\Auth\Authenticatable;
+>>>>>>> 6d3760fe (.)
 
 /**
- * Interfaccia che definisce i metodi per gestire i log di autenticazione associati a un utente.
+ * Marker: il modello usa {@see \Modules\User\Models\Traits\HasAuthenticationLogTrait}.
  */
-interface HasAuthentications
+interface HasAuthentications extends Authenticatable
 {
+<<<<<<< HEAD
     /**
      * Ottiene tutti i log di autenticazione associati all'utente.
      */
     public function authentications(): MorphMany;
+=======
+>>>>>>> 6d3760fe (.)
 }

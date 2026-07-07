@@ -444,3 +444,8 @@ class Product extends BaseModel
 
 ---
 
+- [Xot Actions Documentation](../actions/README.md)
+
+---
+
+*Ultimo aggiornamento: 2025-01-06*

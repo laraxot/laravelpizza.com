@@ -65,15 +65,7 @@ class XotBaseResourceForm
         return [];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public static function getWizardSteps(): array
-=======
     public static function getSteps(): array
->>>>>>> 40b96bcd6 (.)
-=======
-    public static function getSteps(): array
->>>>>>> origin/dev
     {
         return [];
     }
@@ -95,28 +87,12 @@ class TicketForm extends XotBaseResourceForm
 {
     public static function getFormSchema(): array
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $steps = static::getWizardSteps();
-=======
         $steps = static::getSteps();
->>>>>>> 40b96bcd6 (.)
-=======
-        $steps = static::getSteps();
->>>>>>> origin/dev
         $wizard = Wizard::make($steps)->skippable()->persistStepInQueryString();
         return [$wizard];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public static function getWizardSteps(): array
-=======
     public static function getSteps(): array
->>>>>>> 40b96bcd6 (.)
-=======
-    public static function getSteps(): array
->>>>>>> origin/dev
     {
         return [
             static::getStepByName('privacy'),
@@ -145,15 +121,7 @@ class TicketForm extends XotBaseResourceForm
 
 ### 3. **DRY + KISS (Non-Attachment to Repetition)**
 - Wizard configuration logic lives ONCE in `XotBaseResourceForm`
-<<<<<<< HEAD
-<<<<<<< HEAD
-- All modules reuse: `getWizardSteps()`, `getStepByName()`
-=======
 - All modules reuse: `getSteps()`, `getStepByName()`
->>>>>>> 40b96bcd6 (.)
-=======
-- All modules reuse: `getSteps()`, `getStepByName()`
->>>>>>> origin/dev
 - No copy-paste of wizard boilerplate
 
 ### 4. **LangServiceProvider Integration (Right Speech)**
@@ -171,15 +139,7 @@ class TicketForm extends XotBaseResourceForm
 | Scenario | Pattern |
 |-----------|---------|
 | Simple form (no wizard) | `getFormSchema()` returns array of components |
-<<<<<<< HEAD
-<<<<<<< HEAD
-| Multi-step wizard | `getWizardSteps()` + `getStepByName()` + `get{X}Schema()` |
-=======
 | Multi-step wizard | `getSteps()` + `getStepByName()` + `get{X}Schema()` |
->>>>>>> 40b96bcd6 (.)
-=======
-| Multi-step wizard | `getSteps()` + `getStepByName()` + `get{X}Schema()` |
->>>>>>> origin/dev
 | Resource page form | Extend `XotBaseResourceForm` |
 | Widget form (frontoffice) | Extend `XotBaseResourceForm` (reused!) |
 | Pure Filament demo style | Only if NO module-specific logic needed |

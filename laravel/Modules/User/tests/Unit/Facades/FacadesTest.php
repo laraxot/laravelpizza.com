@@ -2,11 +2,16 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Facades;
 
 uses(\Modules\User\Tests\TestCase::class);
 
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Facades\FilamentShield;
+
+uses(Modules\User\Tests\TestCase::class);
 
 test('FilamentShield facade can be accessed', function () {
     expect(class_exists(FilamentShield::class))->toBeTrue();

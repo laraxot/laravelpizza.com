@@ -10,11 +10,11 @@ use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
 use Modules\Notify\Datas\RecordNotificationData;
 use Modules\Notify\Notifications\RecordNotification;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Contracts\UserContract;
-use Spatie\ModelStates\Transition;
 use Webmozart\Assert\InvalidArgumentException;
 
-abstract class XotBaseTransition extends Transition
+abstract class XotBaseTransition
 {
     public function __construct(
         public Model $record,
@@ -31,8 +31,7 @@ abstract class XotBaseTransition extends Transition
         $stateClassName = Str::of($class)->afterLast('To')->toString();
         $newStateClass = $stateNamespace.'\\'.$stateClassName;
 
-        /* @phpstan-ignore-next-line */
-        $this->record->state = new $newStateClass($this->record);
+        $this->record->setAttribute('state', new $newStateClass($this->record));
         $this->record->save();
 
         return $this->record;
@@ -75,7 +74,7 @@ abstract class XotBaseTransition extends Transition
     public function getNotificationSlug(UserContract $recipient): string
     {
         $typeEnum = $recipient->type;
-        $type = $typeEnum instanceof \BackedEnum ? (string) $typeEnum->value : 'unknown';
+        $type = $typeEnum instanceof \BackedEnum ? SafeStringCastAction::cast($typeEnum->value) : 'unknown';
 
         $slug =
             class_basename($this->record).

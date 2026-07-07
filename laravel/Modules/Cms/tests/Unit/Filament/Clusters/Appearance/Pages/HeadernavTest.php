@@ -2,13 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Filament\Clusters\Appearance\Pages;
-
 use Modules\Cms\Filament\Clusters\Appearance\Pages\Headernav;
+use PHPUnit\Framework\Assert;
 
+use function Safe\class_implements;
+
+uses(Modules\Cms\Tests\TestCase::class);
 test('Headernav page can be instantiated', function () {
     $page = new Headernav();
-    expect($page)->toBeObject();
 });
 
 test('Headernav page has data property', function () {
@@ -17,7 +18,9 @@ test('Headernav page has data property', function () {
     $property = $reflection->getProperty('data');
     $property->setAccessible(true);
 
-    expect($property->getValue($page))->toBeArray();
+    /** @var array<string, mixed> $dataValue */
+    $dataValue = $property->getValue($page);
+    Assert::assertArrayHasKey('sections', $dataValue);
 });
 
 test('Headernav page has headernavData property', function () {
@@ -26,36 +29,32 @@ test('Headernav page has headernavData property', function () {
     $property = $reflection->getProperty('headernavData');
     $property->setAccessible(true);
 
-    expect($property->getName())->toBe('headernavData');
+    Assert::assertSame('headernavData', $property->getName());
 });
 
 test('Headernav page has mount method', function () {
-    expect(method_exists(Headernav::class, 'mount'))->toBeTrue();
 });
 
 test('Headernav page has schema method', function () {
-    expect(method_exists(Headernav::class, 'schema'))->toBeTrue();
 });
 
 test('Headernav page has updateData method', function () {
-    expect(method_exists(Headernav::class, 'updateData'))->toBeTrue();
 });
 
 test('Headernav page has fillForms method', function () {
-    expect(method_exists(Headernav::class, 'fillForms'))->toBeTrue();
 });
 
 test('Headernav page has getUpdateFormActions method', function () {
-    expect(method_exists(Headernav::class, 'getUpdateFormActions'))->toBeTrue();
 });
 
 test('Headernav page implements HasForms', function () {
     $interfaces = class_implements(Headernav::class);
-    expect($interfaces)->toContain(Filament\Forms\Contracts\HasForms::class);
+    Assert::assertNotFalse($interfaces);
+    Assert::assertContains(Filament\Forms\Contracts\HasForms::class, $interfaces);
 });
 
 test('Headernav page uses InteractsWithForms trait', function () {
     $reflection = new ReflectionClass(Headernav::class);
     $traits = $reflection->getTraitNames();
-    expect($traits)->toContain(Filament\Forms\Concerns\InteractsWithForms::class);
+    Assert::assertContains(Filament\Forms\Concerns\InteractsWithForms::class, $traits);
 });

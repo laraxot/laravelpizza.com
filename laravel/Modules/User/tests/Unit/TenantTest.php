@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit;
 
+=======
+>>>>>>> 9fa499be (.)
 use Filament\Models\Contracts\HasAvatar;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
@@ -14,7 +17,20 @@ use Modules\User\Tests\TestCase;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\Sluggable\SlugOptions;
 
+<<<<<<< HEAD
 uses(TestCase::class);
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+/**
+ * @param array<string, mixed> $overrides
+ */
+function createPersistedTenant(array $overrides = []): Tenant
+{
+    $tenant = new Tenant();
+    $tenant->incrementing = false;
+    $tenant->setKeyType('string');
+>>>>>>> 9fa499be (.)
 
 beforeEach(function (): void {
     // Manually create the tenant to ensure incrementing = false is handled

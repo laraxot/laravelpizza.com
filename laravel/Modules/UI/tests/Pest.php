@@ -2,78 +2,45 @@
 
 declare(strict_types=1);
 
-namespace Modules\UI\Tests;
-
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Modules\UI\Models\Asset;
-use Modules\UI\Models\Component;
-use Modules\UI\Models\Theme;
+use Modules\UI\Database\Factories\CategoryFactory;
+use Modules\UI\Database\Factories\CollectionFactory;
+use Modules\UI\Models\Category;
+use Modules\UI\Models\Collection;
 
 /*
- * |--------------------------------------------------------------------------
- * | Test Case
- * |--------------------------------------------------------------------------
- * |
- * | Il TestCase di default per tutti i test del modulo UI.
- * | Estende il TestCase specifico del modulo che fornisce il setup necessario.
- * |
+ * Bootstrap Pest — modulo UI.
+ * Ogni file test dichiara uses(\Modules\UI\Tests\TestCase::class).
+ * Vietato expect()->extend() / uses()->in() qui (PHPStan method.internalClass).
  */
 
-uses(TestCase::class)->uses(DatabaseTransactions::class)->in('Feature', 'Unit');
-
-/*
- * |--------------------------------------------------------------------------
- * | Expectations
- * |--------------------------------------------------------------------------
- * |
- * | Aspettative globali per il modulo UI.
- * | Quando definisci expectation globali, saranno disponibili
- * | in tutti i test del modulo.
- * |
+/**
+ * @param array<string, mixed> $attributes
  */
+function createCategory(array $attributes = []): Category
+{
+    return CategoryFactory::new()->createOne($attributes);
+}
 
-expect()->extend('toBeComponent', fn () => $this->toBeInstanceOf(Component::class));
-
-expect()->extend('toBeTheme', fn () => $this->toBeInstanceOf(Theme::class));
-
-expect()->extend('toBeAsset', fn () => $this->toBeInstanceOf(Asset::class));
-
-/*
- * |--------------------------------------------------------------------------
- * | Functions
- * |--------------------------------------------------------------------------
- * |
- * | Funzioni helper globali per i test del modulo UI.
- * | Queste funzioni saranno disponibili in tutti i test.
- * |
+/**
+ * @param array<string, mixed> $attributes
  */
-
-function createTheme(array $attributes = []): Theme
+function makeCategory(array $attributes = []): Category
 {
-    return Theme::factory()->create($attributes);
+    return CategoryFactory::new()->makeOne($attributes);
 }
 
-function makeTheme(array $attributes = []): Theme
+/**
+ * @param array<string, mixed> $attributes
+ */
+function createCollection(array $attributes = []): Collection
 {
-    return Theme::factory()->make($attributes);
+    return CollectionFactory::new()->createOne($attributes);
 }
 
-function createComponent(array $attributes = []): Component
+/**
+ * @param array<string, mixed> $attributes
+ */
+function makeCollection(array $attributes = []): Collection
 {
-    return Component::factory()->create($attributes);
-}
-
-function makeComponent(array $attributes = []): Component
-{
-    return Component::factory()->make($attributes);
-}
-
-function createAsset(array $attributes = []): Asset
-{
-    return Asset::factory()->create($attributes);
-}
-
-function makeAsset(array $attributes = []): Asset
-{
-    return Asset::factory()->make($attributes);
+    return CollectionFactory::new()->makeOne($attributes);
 }

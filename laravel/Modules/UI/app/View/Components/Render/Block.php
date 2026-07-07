@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\View\Component;
 use Illuminate\View\View;
+use Modules\Cms\Actions\ResolveLocalizedBlockDataAction;
 use Webmozart\Assert\Assert;
 
 /**
@@ -18,6 +19,9 @@ class Block extends Component
 {
     public ?string $view = null;
 
+    /**
+     * @param array<string, mixed> $block
+     */
     public function __construct(
         public array $block,
         public ?Model $model = null,
@@ -47,15 +51,36 @@ class Block extends Component
 
             return view('ui::alert', $view_params);
         }
-        $view_params_raw = $this->block['data'] ?? [];
-        $view_params = is_array($view_params_raw) ? $view_params_raw : [];
-        /** @var array<string, mixed> $view_params */
-        $view_params = (array) $view_params;
+        $view_params = $this->normalizeViewData($this->block['data'] ?? []);
+        $view_params = app(ResolveLocalizedBlockDataAction::class)->execute($view_params);
+        $view_params = $this->normalizeViewData($view_params);
         Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
         if (! view()->exists($view)) {
             throw new \Exception('view not found ['.$view.']');
         }
 
         return view($view, $view_params);
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    private function normalizeViewData(mixed $data): array
+    {
+        if (! is_array($data)) {
+            return [];
+        }
+
+        $viewData = [];
+
+        foreach ($data as $key => $value) {
+            if (! is_string($key)) {
+                throw new \UnexpectedValueException('Block view data must have string keys.');
+            }
+
+            $viewData[$key] = $value;
+        }
+
+        return $viewData;
     }
 }

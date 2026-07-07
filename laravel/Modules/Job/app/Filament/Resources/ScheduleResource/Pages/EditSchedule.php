@@ -17,6 +17,7 @@ class EditSchedule extends XotBaseEditRecord
 {
     // TransTrait è già incluso in XotBaseEditRecord - non ridichiarare
 
+    /** @var Collection<int, mixed> */
     public Collection $commands;
 
     protected static string $resource = ScheduleResource::class;

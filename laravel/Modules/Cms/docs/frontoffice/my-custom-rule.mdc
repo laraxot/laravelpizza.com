@@ -1,5 +1,7 @@
 ---
-description: 
-globs: 
-alwaysApply: false
+module: theme
+topic: my-custom-rule
+canonical: ../../../../Themes/docs/shared-components/my-custom-rule.md
 ---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/my-custom-rule.md

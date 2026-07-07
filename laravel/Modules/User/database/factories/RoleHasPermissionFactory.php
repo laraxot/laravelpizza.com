@@ -18,6 +18,9 @@ class RoleHasPermissionFactory extends Factory
 {
     protected $model = RoleHasPermission::class;
 
+    /**
+     * @return array<string, mixed>
+     */
     public function definition(): array
     {
         return [

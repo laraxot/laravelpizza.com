@@ -535,6 +535,7 @@ Prima di considerare completa una risorsa Filament, verificare:
 - `CreateAppointment.php` - Estende `XotBaseCreateRecord`
 - `EditAppointment.php` - Estende `XotBaseEditRecord`
 
+*Ultimo aggiornamento: gennaio 2025 - Correzioni per campi reali e rimozione label hardcoded*
 1. **ESATTA SEQUENZA** di campi da mantenere:
    - **Dati anagrafici**: titolo_id, nome, cognome, sesso, data_nascita, etc.
    - **Classificazione professionale**: tipologia_cliente_id, stato_id, etc.
@@ -937,6 +938,8 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 ## Riferimenti
 
 - [Documentazione Filament](https://filamentphp.com/docs)
+- [Documentazione XotBaseResource](base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
+- [Best Practices Laraxot](base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
 - [Documentazione XotBaseResource](base_orisbroker_fila5/laravel/modules/xot/docs/resource.md)
 - [Best Practices Laraxot](base_orisbroker_fila5/laravel/modules/xot/docs/best-practices.md)
 
@@ -1010,4 +1013,3 @@ Appointment::where('doctor_id', $doctorId)
 - Un solo punto di verità: nessuna duplicazione, nessun lock-in
 - DRY, KISS, serenità del codice
 - Refactoring sicuro, massima estendibilità
-

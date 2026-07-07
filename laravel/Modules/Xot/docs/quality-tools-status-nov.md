@@ -29,7 +29,7 @@ cd laravel
 ```
 
 ### Documentazione
-- [phpstan-level10-success-nov2025.md](./phpstan-level10-success-nov2025.md)
+- [phpstan-level10-success-nov-archive-1.md](./phpstan-level10-success-nov-archive-1.md)
 
 ## ⚠️ PHPMD - NON INSTALLATO
 
@@ -172,10 +172,10 @@ php -l path/to/modified/file.php
 
 ## 📚 Documentazione Correlata
 
-- [PHPStan Level 10 Success](./phpstan-level10-success-nov2025.md) - Success story
+- [PHPStan Level 10 Success](./phpstan-level10-success-nov-archive-1.md) - Success story
 - [Code Quality Standards](./code-quality-standards.md) - Standard qualità codice
 - [Quality Tools Zen](./quality-tools-zen.md) - Filosofia quality tools
-- [Docs Improvements](./docs-improvements-nov2025.md) - Miglioramenti docs
+- [Docs Improvements](./docs-improvements-nov-archive-1.md) - Miglioramenti docs
 
 ## 🚀 Next Steps
 
@@ -240,7 +240,7 @@ cd laravel
 ```
 
 ### Documentazione
-- [phpstan-level10-success-nov2025.md](./phpstan-level10-success-nov2025.md)
+- [phpstan-level10-success-nov-archive-1.md](./phpstan-level10-success-nov-archive-1.md)
 
 ## ⚠️ PHPMD - NON INSTALLATO
 
@@ -383,10 +383,10 @@ php -l path/to/modified/file.php
 
 ## 📚 Documentazione Correlata
 
-- [PHPStan Level 10 Success](./phpstan-level10-success-nov2025.md) - Success story
+- [PHPStan Level 10 Success](./phpstan-level10-success-nov-archive-1.md) - Success story
 - [Code Quality Standards](./code-quality-standards.md) - Standard qualità codice
 - [Quality Tools Zen](./quality-tools-zen.md) - Filosofia quality tools
-- [Docs Improvements](./docs-improvements-nov2025.md) - Miglioramenti docs
+- [Docs Improvements](./docs-improvements-nov-archive-1.md) - Miglioramenti docs
 
 ## 🚀 Next Steps
 

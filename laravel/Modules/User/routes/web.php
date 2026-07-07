@@ -12,9 +12,18 @@ use Modules\Xot\Datas\XotData;
 
 require 'socialite.php';
 
-if (XotData::make()->register_pub_theme) {
-    // require 'web_tall.php';
-} else {
+try {
+    if (class_exists(XotData::class)) {
+        $xotData = XotData::make();
+        if ($xotData->register_pub_theme) {
+            // require 'web_tall.php';
+        } else {
+            Route::get('/login', static fn () => redirect('/admin/login'))->name('login');
+        }
+    } else {
+        Route::get('/login', static fn () => redirect('/admin/login'))->name('login');
+    }
+} catch (Throwable $e) {
     Route::get('/login', static fn () => redirect('/admin/login'))->name('login');
 }
 

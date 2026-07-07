@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Feature;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Str;
 use Modules\User\Models\Permission;
@@ -16,9 +18,17 @@ use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
+<<<<<<< HEAD
 beforeEach(function () {
     $user = User::factory()->create();
     $admin = User::factory()->create();
+=======
+beforeEach(function (): void {
+    /* @var TestCase $this */
+    $this->user = UserFactory::new()->createOne([
+        'email' => 'user-'.uniqid('', true).'@example.com',
+    ]);
+>>>>>>> 9fa499be (.)
 });
 
 describe('User Model Creation', function () {
@@ -45,16 +55,35 @@ describe('User Model Creation', function () {
             ->is_active->toBe(true);
     });
 
+<<<<<<< HEAD
     it('generates uuid for id', function () {
         expect($user->id); // UUID format
     });
 
     it('uses user database connection', function () {
         expect($user->getConnectionName());
+=======
+    test('generates uuid for id', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        Assert::assertNotEmpty($user->id);
     });
 
+    test('uses user database connection', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        Assert::assertIsString($user->getConnectionName());
+>>>>>>> 9fa499be (.)
+    });
+
+<<<<<<< HEAD
     it('has factory', function () {
         $users = User::factory()->count(3)->create();
+=======
+    test('has factory', function (): void {
+        /** @var Collection<int, User> $users */
+        $users = UserFactory::new()->count(3)->create();
+>>>>>>> 6d3760fe (.)
 
         expect($users)->toHaveCount(3);
         $users->each(function ($user) {
@@ -126,6 +155,7 @@ describe('User Authentication Features', function () {
         expect($user->remember_token)->toBe($token);
     });
 
+<<<<<<< HEAD
     it('can access socialite feature', function () {
         expect($user->canAccessSocialite());
     });
@@ -134,19 +164,43 @@ describe('User Authentication Features', function () {
 describe('User Relationships', function () {
     it('can have teams', function () {
         expect($user->teams());
+=======
+    test('can have teams', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        Assert::assertInstanceOf(BelongsToMany::class, $user->membershipTeams());
+>>>>>>> 6d3760fe (.)
     });
 
+<<<<<<< HEAD
     it('can own teams', function () {
         expect($user->ownedTeams());
     });
 
     it('can have current team', function () {
         $team = Team::factory()->create(['user_id' => $user->id]);
-        $user->update(['current_team_id' => $team->id]);
-
-        expect($user->currentTeam());
+=======
+    test('can own teams', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        Assert::assertInstanceOf(HasMany::class, $user->ownedTeams());
     });
 
+    test('can have current team', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        $team = TeamFactory::new()->createOne(['user_id' => $user->id]);
+>>>>>>> 9fa499be (.)
+        $user->update(['current_team_id' => $team->id]);
+
+<<<<<<< HEAD
+        expect($user->currentTeam());
+=======
+        Assert::assertInstanceOf(BelongsToMany::class, $user->membershipTeams());
+>>>>>>> 6d3760fe (.)
+    });
+
+<<<<<<< HEAD
     it('can have roles', function () {
         expect($user->roles());
     });
@@ -154,12 +208,32 @@ describe('User Relationships', function () {
     it('can have permissions', function () {
         expect($user->permissions())
             ->toBeInstanceOf(BelongsToMany::class);
+=======
+    test('can have roles', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        Assert::assertInstanceOf(BelongsToMany::class, $user->roles());
     });
 
+    test('can have permissions', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        Assert::assertInstanceOf(BelongsToMany::class, $user->permissions());
+>>>>>>> 9fa499be (.)
+    });
+
+<<<<<<< HEAD
     it('can have profile', function () {
         expect($user->profile());
+=======
+    test('can have profile', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        Assert::assertInstanceOf(HasOne::class, $user->profile());
+>>>>>>> 6d3760fe (.)
     });
 
+<<<<<<< HEAD
     it('can have devices', function () {
         expect($user->devices());
     });
@@ -171,16 +245,40 @@ describe('User Relationships', function () {
 
     it('can have oauth clients', function () {
         // clients() may return HasMany or MorphMany depending on implementation
+=======
+    test('can have devices', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        Assert::assertInstanceOf(BelongsToMany::class, $user->devices());
+    });
+
+    test('can have authentication logs', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        Assert::assertInstanceOf(MorphMany::class, $user->authentications());
+    });
+
+    test('can have oauth clients', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+>>>>>>> 9fa499be (.)
         $relation = $user->clients();
         expect($relation)->toBeInstanceOf(Illuminate\Database\Eloquent\Relations\Relation::class);
     });
 
+<<<<<<< HEAD
     it('can have oauth tokens', function () {
         // tokens() may return HasMany or MorphMany depending on implementation
+=======
+    test('can have oauth tokens', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+>>>>>>> 9fa499be (.)
         $relation = $user->tokens();
         expect($relation)->toBeInstanceOf(Illuminate\Database\Eloquent\Relations\Relation::class);
     });
 
+<<<<<<< HEAD
     it('can have notifications', function () {
         expect($user->notifications());
     });
@@ -198,12 +296,32 @@ describe('User Team Management', function () {
         $user->refresh();
 
         expect($user->teams->contains('id', $team->id));
+=======
+    test('can have notifications', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        Assert::assertInstanceOf(MorphMany::class, $user->notifications());
     });
 
+    test('can have socialite users', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        Assert::assertInstanceOf(HasMany::class, $user->socialiteUsers());
+>>>>>>> 9fa499be (.)
+    });
+
+<<<<<<< HEAD
     it('can leave a team', function () {
         $team = Team::factory()->create();
         $user->teams();
         $user->refresh();
+=======
+    test('can join ateam', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        $team = TeamFactory::new()->createOne();
+        $user->membershipTeams()->attach($team);
+>>>>>>> 6d3760fe (.)
 
         expect($user->teams->contains('id', $team->id));
 
@@ -212,15 +330,42 @@ describe('User Team Management', function () {
         expect($user->fresh());
     });
 
+<<<<<<< HEAD
     it('can own multiple teams', function () {
         $teams = Team::factory()->count(3)->create(['user_id' => $user->id]);
+=======
+    test('can leave ateam', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        $team = TeamFactory::new()->createOne();
+        $user->membershipTeams()->attach($team);
+        $user->membershipTeams()->detach($team);
+>>>>>>> 6d3760fe (.)
 
         expect($user->ownedTeams);
     });
 
+<<<<<<< HEAD
     it('can switch current team', function () {
         $team1 = Team::factory()->create(['user_id' => $user->id]);
         $team2 = Team::factory()->create(['user_id' => $user->id]);
+=======
+    test('can own multiple teams', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        TeamFactory::new()->count(3)->create(['user_id' => $user->id]);
+
+        $freshModel3 = $user->fresh();
+        Assert::assertNotNull($freshModel3);
+        Assert::assertCount(3, $freshModel3->ownedTeams);
+    });
+
+    test('can switch current team', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        $team1 = TeamFactory::new()->createOne(['user_id' => $user->id]);
+        $team2 = TeamFactory::new()->createOne(['user_id' => $user->id]);
+>>>>>>> 9fa499be (.)
 
         $user->update(['current_team_id' => $team1->id]);
         expect($user->fresh());
@@ -230,24 +375,56 @@ describe('User Team Management', function () {
     });
 });
 
+<<<<<<< HEAD
 describe('User Permission System', function () {
     it('can have roles assigned', function () {
         $role = Role::factory()->create(['name' => 'assigned role '.uniqid()]);
+=======
+    test('permission skip check', function (): void {
+        /** @var TestCase $this */
+        if (! $this->userTableExists('model_has_permission')) {
+            $this->skipTest('model_has_permission table missing on user connection.');
+        }
+
+        $user = $this->requireUser();
+        $role = RoleFactory::new()->createOne(['name' => 'assigned role '.uniqid()]);
+>>>>>>> 9fa499be (.)
 
         $user->assignRole($role);
 
         expect($user->hasRole($role));
     });
 
+<<<<<<< HEAD
     it('can have direct permissions', function () {
         $permission = Permission::factory()->create(['name' => 'direct permission '.uniqid()]);
+=======
+    test('can have direct permissions', function (): void {
+        /** @var TestCase $this */
+        if (! $this->userTableExists('model_has_permission')) {
+            $this->skipTest('model_has_permission table missing on user connection.');
+        }
+
+        $user = $this->requireUser();
+        $permission = PermissionFactory::new()->createOne(['name' => 'direct permission '.uniqid()]);
+>>>>>>> 9fa499be (.)
 
         $user->givePermissionTo($permission);
 
         expect($user->hasPermissionTo($permission));
     });
 
+<<<<<<< HEAD
     it('can check multiple permissions', function () {
+=======
+    test('can check multiple permissions', function (): void {
+        /** @var TestCase $this */
+        if (! $this->userTableExists('model_has_permission')) {
+            $this->skipTest('model_has_permission table missing on user connection.');
+        }
+
+        $user = $this->requireUser();
+>>>>>>> 9fa499be (.)
         $uid = uniqid();
         $permission1 = Permission::factory()->create(['name' => 'edit posts '.$uid]);
         $permission2 = Permission::factory()->create(['name' => 'delete posts '.$uid]);
@@ -257,7 +434,17 @@ describe('User Permission System', function () {
         expect($user->hasAllPermissions([$permission1, $permission2]));
     });
 
+<<<<<<< HEAD
     it('can check any permission', function () {
+=======
+    test('can check any permission', function (): void {
+        /** @var TestCase $this */
+        if (! $this->userTableExists('model_has_permission')) {
+            $this->skipTest('model_has_permission table missing on user connection.');
+        }
+
+        $user = $this->requireUser();
+>>>>>>> 9fa499be (.)
         $uid = uniqid();
         $permission1 = Permission::factory()->create(['name' => 'edit posts '.$uid]);
         $permission2 = Permission::factory()->create(['name' => 'delete posts '.$uid]);
@@ -273,15 +460,34 @@ describe('User Media Management', function () {
         expect($user);
     });
 
+<<<<<<< HEAD
     it('can have media attached', function () {
         expect($user->media());
+=======
+    test('implements has media interface', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        Assert::assertInstanceOf(User::class, $user);
+>>>>>>> 9fa499be (.)
     });
 });
 
+<<<<<<< HEAD
 describe('User Scopes and Queries', function () {
     it('can filter by active users', function () {
         User::factory()->create(['is_active' => true]);
         User::factory()->create(['is_active' => false]);
+=======
+    test('can have media attached', function (): void {
+        /** @var TestCase $this */
+        $user = $this->requireUser();
+        Assert::assertInstanceOf(MorphMany::class, $user->media());
+    });
+
+    test('can filter by active users', function (): void {
+        UserFactory::new()->createOne(['is_active' => true]);
+        UserFactory::new()->createOne(['is_active' => false]);
+>>>>>>> 9fa499be (.)
 
         $activeUsers = User::where('is_active', true)->get();
         $inactiveUsers = User::where('is_active', false)->get();

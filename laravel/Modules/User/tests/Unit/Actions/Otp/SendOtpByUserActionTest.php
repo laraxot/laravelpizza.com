@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Actions\Otp;
 
+=======
+>>>>>>> 9fa499be (.)
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
@@ -15,6 +18,8 @@ use Modules\User\Notifications\Auth\Otp;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
+
+uses(Modules\User\Tests\TestCase::class);
 
 describe('SendOtpByUserAction', function () {
     it('generates and sends an OTP to the user', function () {

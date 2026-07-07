@@ -7,9 +7,11 @@ namespace Modules\Xot\Contracts;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Collection as SupportCollection;
 use Modules\User\Models\Role;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\Permission\Contracts\Permission;
+use Spatie\Permission\Contracts\Role as RoleContract;
 use Spatie\Permission\Exceptions\PermissionDoesNotExist;
 
 /**
@@ -33,23 +35,28 @@ interface ProfileContract extends HasMedia
     /**
      * Grant the given permission(s) to a role.
      *
+     * @param string|int|array<int|string>|Permission|SupportCollection<int, Permission> $permissions
+     *
      * @return $this
      */
-    public function givePermissionTo(string|int|array|Permission|\Illuminate\Support\Collection $permissions = []);
+    public function givePermissionTo(string|int|array|Permission|SupportCollection $permissions = []): static;
 
     /**
      * Assign the given role to the model.
      *
+     * @param array<int|string>|string|int|RoleContract|SupportCollection<int, RoleContract> $roles
+     *
      * @return $this
      */
-    public function assignRole(array|string|int|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles = [
-    ]);
+    public function assignRole(array|string|int|RoleContract|SupportCollection $roles = []): static;
 
     /**
      * Determine if the model has (one of) the given role(s).
+     *
+     * @param string|int|array<int|string>|RoleContract|SupportCollection<int, RoleContract> $roles
      */
     public function hasRole(
-        string|int|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles,
+        string|int|array|RoleContract|SupportCollection $roles,
         ?string $guard = null,
     ): bool;
 
@@ -57,9 +64,10 @@ interface ProfileContract extends HasMedia
      * Determine if the model has any of the given role(s).
      *
      * Alias to hasRole() but without Guard controls
+     *
+     * @param string|int|array<int|string>|RoleContract|SupportCollection<int, RoleContract> $roles
      */
-    public function hasAnyRole(string|int|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles = [
-    ]): bool;
+    public function hasAnyRole(string|int|array|RoleContract|SupportCollection $roles = []): bool;
 
     /**
      * Determine if the model may perform the given permission.
@@ -68,19 +76,13 @@ interface ProfileContract extends HasMedia
      */
     public function hasPermissionTo(string|int|Permission $permission, ?string $guardName = null): bool;
 
-    /**
-     * Undocumented function.
-     */
     public function toggleSuperAdmin(): void;
 
     /**
-     * ---return BelongsTo<UserContract, self>.
+     * @return BelongsTo<Model&UserContract, Model>
      */
     public function user(): BelongsTo;
 
-    /**
-     * --.
-     */
     public function isSuperAdmin(): bool;
 
     /**

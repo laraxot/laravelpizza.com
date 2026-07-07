@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace Modules\Xot\Exports;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
+use Illuminate\Support\Collection as SupportCollection;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
@@ -17,29 +18,39 @@ use Modules\Xot\Actions\Cast\SafeArrayByModelCastAction;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @implements WithMapping<Model>
+ */
 class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, WithMapping
 {
     use Exportable;
 
-    public Collection $collection;
+    /** @var SupportCollection<int, mixed>|EloquentCollection<int, Model> */
+    public SupportCollection|EloquentCollection $collection;
 
+    /** @var array<int, string> */
     public array $headings;
 
     public ?string $transKey;
 
-    /** @var array<int, string> */
+    /** @var array<int, string>|null */
     public ?array $fields = null;
 
     /**
-     * @param array<int, string> $fields
+     * @param SupportCollection<int, mixed>|EloquentCollection<int, Model> $collection
+     * @param array<int, string>                                           $fields
      */
-    public function __construct(Collection $collection, ?string $transKey = null, array $fields = [])
+    public function __construct(SupportCollection|EloquentCollection $collection, ?string $transKey = null, array $fields = [])
     {
         $this->collection = $collection;
         $this->transKey = $transKey;
         $this->fields = $fields;
+        $this->headings = [];
     }
 
+    /**
+     * @return array<int, string>
+     */
     public function getHead(): array
     {
         if (\is_array($this->fields) && ! empty($this->fields)) {
@@ -52,6 +63,9 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
         return array_keys($head->getAttributes());
     }
 
+    /**
+     * @return array<int|string, string>
+     */
     public function headings(): array
     {
         $headings = $this->getHead();
@@ -60,31 +74,36 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
         return app(TransArrayAction::class)->execute($headings, $transKey);
     }
 
-    public function collection(): Collection
+    /**
+     * @return SupportCollection<int, mixed>|EloquentCollection<int, Model>
+     */
+    public function collection(): SupportCollection|EloquentCollection
     {
         return $this->collection;
     }
 
+    /**
+     * @return array<int|string, mixed>
+     */
     public function map(mixed $row): array
     {
         if (null === $this->fields || empty($this->fields)) {
             Assert::isInstanceOf($row, Model::class);
             $res = app(SafeArrayByModelCastAction::class)->execute($row);
 
-            return Arr::map($res, function ($value, $_key) {
+            return array_values(Arr::map($res, function ($value, $_key): string {
                 if ($value instanceof \BackedEnum) {
                     if (method_exists($value, 'getLabel')) {
-                        return $value->getLabel();
+                        return SafeStringCastAction::cast($value->getLabel());
                     }
 
-                    return $value->value;
+                    return SafeStringCastAction::cast($value->value);
                 }
 
                 return SafeStringCastAction::cast($value);
-            });
+            }));
         }
 
-        // return collect($row)->only($this->fields)->toArray();
         $data = [];
 
         foreach ($this->fields as $field) {
@@ -94,7 +113,7 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
                     $value = $value->getLabel();
                 }
             }
-            $data[$field] = $value;
+            $data[] = SafeStringCastAction::cast($value);
         }
 
         return $data;

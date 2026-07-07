@@ -38,11 +38,13 @@ class EditModule extends XotBaseEditRecord
         }
 
         $config_path = $module->path.'/config/config.php';
-        $data = File::getRequire($config_path);
-        if (! is_array($data)) {
-            $data = [];
-        }
-        $data = array_merge($data, $module->toArray());
+        $loaded = File::getRequire($config_path);
+        $data = $this->normalizeConfigArray(
+            array_merge(
+                is_array($loaded) ? $this->normalizeConfigArray($loaded) : [],
+                $this->normalizeConfigArray($module->toArray()),
+            ),
+        );
         unset($data['path']);
         app(SaveArrayAction::class)->execute($data, $config_path);
 
@@ -69,5 +71,21 @@ class EditModule extends XotBaseEditRecord
          * // Richiama il file di configurazione per essere sicuro che i colori siano caricati
          * Config::set('modules.colors', $colorsConfig);
          */
+    }
+
+    /**
+     * @param array<array-key, mixed> $config
+     *
+     * @return array<string, mixed>
+     */
+    private function normalizeConfigArray(array $config): array
+    {
+        $normalized = [];
+
+        foreach ($config as $key => $value) {
+            $normalized[(string) $key] = $value;
+        }
+
+        return $normalized;
     }
 }

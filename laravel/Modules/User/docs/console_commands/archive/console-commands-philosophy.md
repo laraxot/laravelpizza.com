@@ -456,7 +456,3 @@ private function getPasswordLegacy(): string
 - ✅ **Maintenance Policy**: Versioning, changelog e deprecation
 
 
-
-
-
-

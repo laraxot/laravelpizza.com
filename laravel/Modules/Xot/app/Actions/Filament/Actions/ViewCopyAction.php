@@ -31,10 +31,17 @@ class ViewCopyAction extends XotBaseAction
             ->action(static function (array $arguments, array $data) use ($actionClass): void {
                 /** @var self $service */
                 $service = app($actionClass);
-                $service->execute($arguments, $data);
+                $service->execute(
+                    array_filter($arguments, 'is_string', ARRAY_FILTER_USE_KEY),
+                    array_filter($data, 'is_string', ARRAY_FILTER_USE_KEY),
+                );
             });
     }
 
+    /**
+     * @param array<string, mixed> $arguments
+     * @param array<string, mixed> $data
+     */
     public function execute(array $arguments, array $data): void
     {
         // TODO: Implement view copying logic

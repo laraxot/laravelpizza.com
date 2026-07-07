@@ -115,4 +115,3 @@ echo "  - $DOCS_DIR/archive/historical/"
 echo "  - $DOCS_DIR/archive/duplicates/"
 echo "  - $DOCS_DIR/archive/uppercase/"
 echo ""
-

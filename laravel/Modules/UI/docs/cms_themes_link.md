@@ -11,21 +11,10 @@ Secondo le regole di organizzazione della documentazione:
 
 ## Collegamenti ai Temi nel Modulo Cms
 
-<<<<<<< HEAD
 - [Compilazione dei Temi](../../Cms/docs/theme_compilation.md) - Processo di compilazione e pubblicazione dei temi
 - [Processo di Build del Tema](../../Cms/docs/theme-build-process.md) - Dettagli sul processo di build
 - [Struttura dei Temi](../../Cms/docs/themes/structure.md) - Organizzazione dei file nei temi
 - [Frontoffice](../../Cms/docs/frontoffice.md) - Documentazione completa sul frontend
-=======
-- [Compilazione dei Temi](../../Cms/project_docs/theme_compilation.md) - Processo di compilazione e pubblicazione dei temi
-- [Processo di Build del Tema](../../Cms/project_docs/theme-build-process.md) - Dettagli sul processo di build
-- [Struttura dei Temi](../../Cms/project_docs/themes/structure.md) - Organizzazione dei file nei temi
-- [Frontoffice](../../Cms/project_docs/frontoffice.md) - Documentazione completa sul frontend
-<<<<<<< HEAD
->>>>>>> 7eb1087 (.)
-=======
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
 
 ## Implementazione dei Temi
 
@@ -37,24 +26,11 @@ I componenti UI definiti in questo modulo vengono utilizzati nei temi attraverso
 
 ## Collegamenti ai Temi nella Root
 
-<<<<<<< HEAD
-- [Compilazione Temi](../../../docs/compilazione_temi.md) - Collegamento nella root alla documentazione sulla compilazione dei temi
-- [Theme Links](../../../docs/theme-links.md) - Collegamenti nella root alla documentazione sui temi
+- [Compilazione Temi](../../../../docs/compilazione_temi.md) - Collegamento nella root alla documentazione sulla compilazione dei temi
+- [Theme Links](../../../../docs/theme-links.md) - Collegamenti nella root alla documentazione sui temi
 
 ## Collegamento Bidirezionale
 
 Questo documento è collegato bidirezionalmente con [themes-ui-link.md](../../Cms/docs/themes-ui-link.md) nel modulo Cms.
-=======
-- [Compilazione Temi](../../../project_docs/compilazione_temi.md) - Collegamento nella root alla documentazione sulla compilazione dei temi
-- [Theme Links](../../../project_docs/theme-links.md) - Collegamenti nella root alla documentazione sui temi
-
-## Collegamento Bidirezionale
-
-Questo documento è collegato bidirezionalmente con [themes-ui-link.md](../../Cms/project_docs/themes-ui-link.md) nel modulo Cms.
-<<<<<<< HEAD
->>>>>>> 7eb1087 (.)
-=======
->>>>>>> 1899c5f (.)
->>>>>>> laraxot/develop
 
 > Aggiorna entrambi i riferimenti se modifichi la documentazione dei temi o aggiungi nuove sezioni.

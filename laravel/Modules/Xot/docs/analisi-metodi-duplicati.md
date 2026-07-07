@@ -2,6 +2,8 @@
 
 ## 🐄✨ Riferimenti Principali
 
+📚 **DOCUMENTO MASTER (LEGGERE PRIMA!):** [../../../docs/analisi-metodi-duplicati-MASTER.md](../../../docs/analisi-metodi-duplicati-MASTER.md)
+📖 **Documento Originale:** [../../../docs/analisi-metodi-duplicati.md](../../../docs/analisi-metodi-duplicati.md)
 📚 **DOCUMENTO MASTER (LEGGERE PRIMA!):** [../../../../docs/analisi-metodi-duplicati-MASTER.md](../../../../docs/analisi-metodi-duplicati-master.md)
 📖 **Documento Originale:** [../../../../docs/analisi-metodi-duplicati.md](../../../../docs/analisi-metodi-duplicati.md)
 
@@ -326,6 +328,7 @@ Se l'unificazione viene implementata correttamente:
 
 | Data | Versione | Modifiche |
 |------|----------|-----------|
+| 2025-10-15 | 1.0 | Creazione documento iniziale |
 | [DATE] | 1.0 | Creazione documento iniziale |
 
 ---

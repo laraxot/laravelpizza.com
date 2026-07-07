@@ -105,7 +105,7 @@ return array (
     ),
     'address' => 
     array (
-      'label' => 'address',
+      'label' => 'address1',
       'tooltip' => '',
       'helper_text' => '',
       'description' => '',
@@ -450,7 +450,7 @@ return array (
     'empty' => 
     array (
       'heading' => '',
-      'label' => 'empty',
+      'label' => 'empty2',
     ),
   ),
   'navigation' => 

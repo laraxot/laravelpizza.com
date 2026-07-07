@@ -17,10 +17,16 @@ class LogRegistrationActionTest extends TestCase
         $user = new User(['type' => 'standard']);
         $user->forceFill(['id' => 1]);
 
+<<<<<<< HEAD
         $action = new LogRegistrationAction();
         $action->execute($user);
 
         $this->assertTrue(true);
+=======
+beforeEach(function (): void {
+    if (! userTableExists('activity_log')) {
+        pestSkip('activity_log table missing on sqlite test database.');
+>>>>>>> 6d3760fe (.)
     }
 
     #[Test]

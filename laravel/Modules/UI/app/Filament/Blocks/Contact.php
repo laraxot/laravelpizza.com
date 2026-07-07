@@ -10,6 +10,9 @@ use Modules\Xot\Filament\Blocks\XotBaseBlock;
 
 final class Contact extends XotBaseBlock
 {
+    /**
+     * @return array<int, \Filament\Schemas\Components\Component>
+     */
     public static function getFormSchema(): array
     {
         return [

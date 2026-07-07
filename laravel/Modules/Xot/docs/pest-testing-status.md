@@ -1,5 +1,6 @@
 # Pest Testing - Stato Attuale e Roadmap
 
+**Data**: 9 Gennaio 2026  
 **Framework**: Pest PHP 3.8.4  
 **Status**: 🔄 **IN CORREZIONE**
 

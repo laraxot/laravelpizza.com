@@ -1,39 +1,49 @@
 ---
 type: concept
 module: Xot
-updated: 2026-06-05
-qmd: "xot module model migration factory seeder parity audit cross module"
+updated: 2026-06-30
+qmd: "xot module model migration factory seeder parity audit N equals N"
+related:
+  - ../../../../../../docs/wiki/concepts/module-model-migration-seeder-parity.md
+  - ../../module-directory-structure-rule.md
 ---
 
 # Module model artifact parity
 
-## Scopo
+## Regola N = N = N
 
-Ogni modulo Laraxot deve essere **completo** rispetto ai modelli che possiede: stesso numero di migrazioni `create_*`, factory e seeder entità.
+Per ogni modulo, ogni **modello owner** in `app/Models/`:
 
-## Regola N = N = N = N
+| Artefatto | Quantità | Pattern |
+|-----------|----------|---------|
+| Migrazione | 1 | `database/migrations/*_create_{table}_table.php` |
+| Factory | 1 | `database/factories/{Model}Factory.php` |
+| Seeder | 1 | `database/seeders/{Model}Seeder.php` |
 
-Vedi [architecture-module-model-artifact-parity.md](../../../../../docs/wiki/bmad/architecture-module-model-artifact-parity.md).
+Opzionale: `{Module}DatabaseSeeder` orchestra i `{Model}Seeder`.
 
-## Audit automatico
+Hub progetto: [module-model-migration-seeder-parity.md](../../../../../../docs/wiki/concepts/module-model-migration-seeder-parity.md)
+
+## Audit
 
 ```bash
-bashscripts/tools/audit-module-artifact-parity.sh <ModuleName>
+bash bashscripts/tools/audit-module-artifact-parity.sh Predict
+bash bashscripts/tools/audit-all-modules-artifact-parity.sh
+bash bashscripts/tools/ensure-module-entity-seeders.sh Job   # stub mancanti
 ```
 
-## Struttura attesa
+Gate sessione: `run-session-gate.sh` §1.1c.
 
-```
-Modules/{Module}/
-├── app/Models/           # modelli owner
-├── database/
-│   ├── migrations/       # N × create_{table}_table
-│   ├── factories/        # N × {Model}Factory
-│   └── seeders/          # N × {Model}Seeder + opz. {Module}DatabaseSeeder
-```
+## Esclusi dal conteggio
+
+- `abstract` / `Base*`
+- `*PhpstanTraitProbe`, `TestModel`, `TestSushiModel`
+- Wrapper cross-modulo (es. `Predict\Models\User`)
+
+## Backlog migrazioni
+
+Seeder parity ≠ migration parity: molti moduli hanno `add_*` / duplicati `create_*`. Consolidare nella migrazione canonica — vedi [migration-philosophy-rule.md](../../../../../../docs/project/migration-philosophy-rule.md).
 
 ## Collegamenti
 
-- [module-directory-structure-rule.md](../../module-directory-structure-rule.md)
-- [MIGRATION_PHILOSOPHY.md](../../MIGRATION_PHILOSOPHY.md)
-- [data-sacred](../../../../../../docs/wiki/rules/data-sacred-no-destructive-db.md)
+- [Predict seeder-canonical-orchestrator.md](../../../Predict/docs/wiki/concepts/seeder-canonical-orchestrator.md)

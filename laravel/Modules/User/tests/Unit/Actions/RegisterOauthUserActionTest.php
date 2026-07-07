@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Actions;
 
+=======
+>>>>>>> 9fa499be (.)
 use Illuminate\Contracts\Events\Dispatcher;
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Actions\Socialite\RegisterOauthUserAction;
@@ -13,6 +16,8 @@ use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
+
+uses(Modules\User\Tests\TestCase::class);
 
 describe('RegisterOauthUserAction', function (): void {
     $getMockUser = function (array $attributes = []): SocialiteUserContract {

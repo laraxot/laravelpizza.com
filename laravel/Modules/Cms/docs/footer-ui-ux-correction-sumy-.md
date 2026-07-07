@@ -95,7 +95,7 @@ curl -s http://127.0.0.1:8000/it | grep -B 5 -A 10 "Privacy Policy"
 ```bash
 # Modifica file v1.blade.php
 # Cache clear
-cd /var/www/_bases/base_techplanner_fila5/laravel
+cd ./laravel
 php artisan optimize:clear
 
 # Verifica
@@ -132,6 +132,7 @@ Se vuoi ulteriori miglioramenti:
 - [x] Confermato presenza pulsanti Quick Actions
 - [x] Documentato analisi
 - [x] Documentato fix applicati
+- [x] Aggiornato indici
 - [x] Salvato memories per riferimento futuro
 
 ## ✅ RISULTATO FINALE

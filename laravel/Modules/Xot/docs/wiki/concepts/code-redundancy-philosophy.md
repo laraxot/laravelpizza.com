@@ -71,7 +71,7 @@ Questo documento fissa **come decidere** cosa tenere, cosa fondere e cosa archiv
 |---|-------------|--------|-----------------|
 | 1 | `MailTemplateResource` vs `NotificationTemplateResource` — convergenza futura? | Notify | ADR + product owner |
 | 2 | `Theme_One/` vs `Themes/One/` — alias o copia morta? | Themes | Inventario directory + delete o redirect doc |
-| 3 | Merge Composer: `Themes/*/composer.json` **non** nel merge root | Xot/DevOps | Documentare autoload theme esplicito |
+| 3 | Merge Composer: `Themes/*/composer.json` **non** nel merge root | Xot/DevOps | **Risolto 2026-06-30**: autoload runtime Xot + [theme-psr4-autoload-without-merge.md](./theme-psr4-autoload-without-merge.md) |
 | 4 | Test su `Widgets\LoginWidget` mentre runtime usa `Widgets\Auth\LoginWidget` | User | Allineare test al path canonico |
 | 5 | Risorse `CriteriOptionResource` ×3 (Ptv, Performance, Progressioni) — estrarre base Ptv? | Ptv | Spike refactor o documentare differenze |
 | 6 | 51 file `Notify/docs/*filament*` — quali sono ancora verità? | Notify | Script dedup + `_archive` wiki |

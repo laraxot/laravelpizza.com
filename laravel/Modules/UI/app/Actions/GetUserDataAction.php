@@ -47,12 +47,17 @@ class GetUserDataAction
         $roleValue = is_string($firstRole) ? $firstRole : null;
 
         // Get settings - could be in profile or extra attributes
+        /** @var array<string, mixed> $settingsArray */
         $settingsArray = [];
         if ($user->relationLoaded('profile') && null !== $user->profile) {
             $profile = $user->profile;
             if (is_object($profile) && isset($profile->extra)) {
                 $extra = $profile->extra;
-                $settingsArray = is_array($extra) ? $extra : [];
+                if (is_array($extra)) {
+                    /** @var array<string, mixed> $typedExtra */
+                    $typedExtra = $extra;
+                    $settingsArray = $typedExtra;
+                }
             }
         }
 
@@ -60,7 +65,7 @@ class GetUserDataAction
         // method_exists() è sempre true perché User ha HasPermissions trait
         /** @var Collection<int, Permission> $allPermissions */
         $allPermissions = $user->getAllPermissions();
-        /** @var array<string> $permissions */
+        /** @var array<int, string> $permissions */
         $permissions = $allPermissions->pluck('name')->toArray();
 
         return new UserData(

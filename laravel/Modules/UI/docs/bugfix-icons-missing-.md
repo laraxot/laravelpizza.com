@@ -98,7 +98,6 @@ php artisan config:clear
 
 ---
 
-**Data**: 27 Gennaio 2025
 **Modulo**: UI
 **Tipo**: Bug Fix
 **Priorità**: Alta

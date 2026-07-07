@@ -434,6 +434,8 @@ public function processData(): void
 
 ## 📚 Related Documentation
 
+- [Code Quality Standards](./CODE_QUALITY_STANDARDS.md)
+- [Common Anti-Patterns](./COMMON_ANTI_PATTERNS.md)
 - [Code Quality Standards](./code_quality_standards.md)
 - [Common Anti-Patterns](./common_anti_patterns.md)
 - [Testing Guidelines](./testing-guidelines.md)
@@ -875,6 +877,8 @@ public function processData(): void
 
 ## 📚 Related Documentation
 
+- [Code Quality Standards](./CODE_QUALITY_STANDARDS.md)
+- [Common Anti-Patterns](./COMMON_ANTI_PATTERNS.md)
 - [Code Quality Standards](./code_quality_standards.md)
 - [Common Anti-Patterns](./common_anti_patterns.md)
 - [Testing Guidelines](./testing-guidelines.md)

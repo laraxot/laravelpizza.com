@@ -87,15 +87,7 @@ protected function getTablePollInterval(): ?string
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Widgets;
-=======
-<<<<<<< .merge_file_8zKfC2
-namespace Modules\healthcare_app\Filament\Widgets;
-=======
-namespace Modules\Chart\Filament\Widgets;
->>>>>>> .merge_file_eUPifd
->>>>>>> origin/dev
 
 use Modules\Xot\Filament\Widgets\XotBaseTableWidget;
 
@@ -235,27 +227,21 @@ MyTableWidget::make([
 **⚠️ IMPORTANTE**: Le proprietà `protected` o `private` **NON** vengono inizializzate da `make()`.
 
 Per documentazione completa, vedere:
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_8zKfC2
->>>>>>> origin/dev
 - [Widget Property Initialization Pattern](../../../modules/healthcare_app/docs/widget-property-initialization-pattern.md)
 
 ## Riferimenti
 
 - [HasXotTable Trait](../../../modules/xot/docs/filament/xot-table.md)
 - [No Table Override Rule](../../../modules/xot/docs/filament/no-table-override.md)
-- [Widget Table Method Final Analysis](../../../modules/healthcare_app/docs/widget-table-method-final-analysis.md)
-- [Widget Property Initialization Pattern](../../../modules/healthcare_app/docs/widget-property-initialization-pattern.md)
-<<<<<<< HEAD
-=======
-=======
-- [Widget Table Configuration](widget-table-configuration.md)
+- [Widget Property Initialization Pattern](../../../Modules/Quaeris/docs/widget-property-initialization-pattern.md)
 
 ## Riferimenti
 
-- [HasXotTable Trait](xot-table.md)
-- [No Table Override Rule](no-table-override.md)
->>>>>>> .merge_file_eUPifd
->>>>>>> origin/dev
+- [HasXotTable Trait](../../../Modules/Xot/docs/filament/xot-table.md)
+- [No Table Override Rule](../../../Modules/Xot/docs/filament/no-table-override.md)
+- [Widget Table Method Final Analysis](../../../Modules/Quaeris/docs/widget-table-method-final-analysis.md)
+- [Widget Property Initialization Pattern](../../../Modules/Quaeris/docs/widget-property-initialization-pattern.md)
 
+*Ultimo aggiornamento: 2025-01-27*
+- [Widget Table Method Final Analysis](../../../modules/healthcare_app/docs/widget-table-method-final-analysis.md)
+- [Widget Property Initialization Pattern](../../../modules/healthcare_app/docs/widget-property-initialization-pattern.md)

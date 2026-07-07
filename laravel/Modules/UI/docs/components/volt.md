@@ -3,6 +3,8 @@
 ## Panoramica
 Volt è un framework per la creazione di componenti Livewire in modo dichiarativo. Questa guida spiega come utilizzare Volt nel nostro sistema.
 
+Nel progetto la regola di default per le componenti Volt interattive è la sintassi **class-based** (`new class extends Livewire\Volt\Component`). Gli esempi più sotto usano la sintassi functional solo come **legacy/mantenimento**: per nuovi componenti usa la sezione “Struttura Base” in basso.
+
 ## Collegamenti
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
 - [Livewire](https://livewire.laravel.com)
@@ -17,18 +19,17 @@ Volt è un framework per la creazione di componenti Livewire in modo dichiarativ
 ### Componente Base
 ```php
 <?php
+use Livewire\Volt\Component;
 
-use function Livewire\Volt\{state, mount};
+new class extends Component {
+    public string $name = '';
+    public string $email = '';
 
-state([
-    'name' => '',
-    'email' => '',
-]);
-
-$submit = function() {
-    // logica di submit
+    public function submit(): void
+    {
+        // logica di submit
+    }
 };
-
 ?>
 
 <form wire:submit="submit">

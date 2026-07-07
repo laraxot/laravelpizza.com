@@ -2,11 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-use Modules\Notify\Models\MailTemplate;
-use Modules\Notify\Models\Notification;
-use Modules\Notify\Tests\TestCase;
-=======
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
@@ -18,7 +13,6 @@ use Modules\Notify\Models\Notification;
 use Modules\Notify\Models\NotifyTheme;
 use Modules\Notify\Models\NotifyThemeable;
 use PHPUnit\Framework\Assert;
->>>>>>> 40b96bcd6 (.)
 
 use function Safe\file_get_contents;
 
@@ -28,40 +22,6 @@ use function Safe\file_get_contents;
  * Vietato pest()->extend() e expect()->extend() qui (PHPStan method.internalClass).
  */
 
-<<<<<<< HEAD
-expect()->extend('toBeNotification', fn () => $this->toBeInstanceOf(Notification::class));
-expect()->extend('toBeMailTemplate', fn () => $this->toBeInstanceOf(MailTemplate::class));
-
-/*
-|--------------------------------------------------------------------------
-| Functions
-|--------------------------------------------------------------------------
-|
-| While Pest is very powerful out-of-the-box, you may have some testing code specific to your
-| project that you don't want to repeat in every file. Here you can also expose helpers as
-| global functions to help you to reduce the number of lines of code in your test files.
-|
-*/
-
-function createNotification(array $attributes = []): Notification
-{
-    return Notification::factory()->create($attributes);
-}
-
-function makeNotification(array $attributes = []): Notification
-{
-    return Notification::factory()->make($attributes);
-}
-
-function createMailTemplate(array $attributes = []): MailTemplate
-{
-    return MailTemplate::factory()->create($attributes);
-}
-
-function makeMailTemplate(array $attributes = []): MailTemplate
-{
-    return MailTemplate::factory()->make($attributes);
-=======
 /**
  * @param  array<string, mixed>  $where
  */
@@ -298,5 +258,4 @@ function notifyThemeForThemeable(NotifyThemeable $themeable): NotifyTheme
     Assert::assertInstanceOf(NotifyTheme::class, $theme);
 
     return $theme;
->>>>>>> 40b96bcd6 (.)
 }

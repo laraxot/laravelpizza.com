@@ -59,11 +59,6 @@ use Override;
  * @method static Builder<static>|Notification whereUpdatedAt($value)
  * @method static Builder<static>|Notification whereUpdatedBy($value)
  *
-<<<<<<< HEAD
- * @mixin IdeHelperNotification
- *
-=======
->>>>>>> 40b96bcd6 (.)
  * @property-read ProfileContract|null $deleter
  *
  * @mixin \Eloquent

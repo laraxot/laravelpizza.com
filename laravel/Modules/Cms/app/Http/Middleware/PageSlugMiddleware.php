@@ -15,21 +15,22 @@ class PageSlugMiddleware
 
     public function handle(Request $request, \Closure $next): Response
     {
-        // Support both 'slug' and 'slug0' route parameters for generic container routes
-        $slug = $request->route('slug0') ?? $request->route('slug');
+        $slug = $this->resolveCmsPageSlug($request);
 
-        // Handle case where slug might be null or not a string
-        if (! \is_string($slug)) {
+        if (null === $slug) {
             $response = $next($request);
             if (! $response instanceof Response) {
-                // Middleware chain should always return Response, but if not, wrap it
                 return new Response('Internal Server Error', 500);
             }
 
             return $response;
         }
 
-        $middlewares = Page::getMiddlewareBySlug($slug);
+        try {
+            $middlewares = Page::getMiddlewareBySlug($slug);
+        } catch (\Throwable) {
+            $middlewares = [];
+        }
         // Should return ["auth", "Modules\User\Http\Middleware\EnsureUserHasType:doctor"]
 
         if (empty($middlewares)) {
@@ -45,6 +46,55 @@ class PageSlugMiddleware
 
         // Execute middlewares manually in a chain
         return $this->executeMiddlewareChain($request, $middlewares, $next);
+    }
+
+    /**
+     * Resolve CMS page slug from Folio route (name, container+segment, or single slug).
+     */
+    protected function resolveCmsPageSlug(Request $request): ?string
+    {
+        $route = $request->route();
+        if (null === $route) {
+            return null;
+        }
+
+        /** @var list<string> $candidates */
+        $candidates = [];
+
+        $name = $route->getName();
+        if (\is_string($name) && '' !== $name) {
+            $candidates[] = $name;
+        }
+
+        $container0 = $route->parameter('container0');
+        $slug0 = $route->parameter('slug0');
+        if (\is_string($container0) && '' !== $container0 && \is_string($slug0) && '' !== $slug0) {
+            $candidates[] = $container0.'.'.$slug0;
+        }
+
+        $container = $route->parameter('container');
+        $slug = $route->parameter('slug');
+        if (\is_string($container) && '' !== $container && \is_string($slug) && '' !== $slug) {
+            $candidates[] = $container.'.'.$slug;
+        }
+        if (\is_string($container0) && '' !== $container0 && \is_string($slug) && '' !== $slug) {
+            $candidates[] = $container0.'.'.$slug;
+        }
+
+        foreach (['slug0', 'slug'] as $param) {
+            $value = $route->parameter($param);
+            if (\is_string($value) && '' !== $value) {
+                $candidates[] = $value;
+            }
+        }
+
+        foreach (array_unique($candidates) as $candidate) {
+            if (null !== Page::findUniqueBySlug($candidate)) {
+                return $candidate;
+            }
+        }
+
+        return null;
     }
 
     /**
@@ -70,6 +120,9 @@ class PageSlugMiddleware
 
     /**
      * Execute middleware chain manually.
+     */
+    /**
+     * @param array<int, string> $middlewares
      */
     protected function executeMiddlewareChain(Request $request, array $middlewares, \Closure $finalNext): Response
     {

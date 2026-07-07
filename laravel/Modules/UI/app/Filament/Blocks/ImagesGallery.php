@@ -67,6 +67,9 @@ final class ImagesGallery
             ->columns('form' === $context ? 2 : 1);
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getRatios(): array
     {
         return [

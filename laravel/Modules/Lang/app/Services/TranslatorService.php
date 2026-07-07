@@ -15,14 +15,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 class TranslatorService extends LaravelTranslator
 {
-<<<<<<< HEAD
-    protected Dispatcher $events;
-=======
     use QueueableAction;
 
     /** @var Dispatcher */
     protected $events;
->>>>>>> 40b96bcd6 (.)
 
     /**
      * Get the translation for the given key.

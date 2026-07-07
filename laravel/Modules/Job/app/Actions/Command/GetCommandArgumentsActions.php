@@ -11,6 +11,9 @@ class GetCommandArgumentsActions
 {
     use QueueableAction;
 
+    /**
+     * @return array<int, array{name: string, default: mixed, required: bool}>
+     */
     public function execute(Command $command): array
     {
         $arguments = [];

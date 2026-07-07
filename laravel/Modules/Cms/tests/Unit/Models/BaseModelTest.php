@@ -4,30 +4,41 @@ declare(strict_types=1);
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Cms\Models\BaseModel;
+use PHPUnit\Framework\Assert;
 
-beforeEach(function (): void {
-    $this->baseModel = new class extends BaseModel {
+uses(Modules\Cms\Tests\TestCase::class);
+/**
+ * @return BaseModel&Model
+ */
+function createCmsBaseModelTestDouble(): BaseModel
+{
+    return new class extends BaseModel {
         protected $table = 'test_cms_table';
     };
-});
+}
 
 test('base model extends eloquent model', function (): void {
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
+    $baseModel = createCmsBaseModelTestDouble();
+    Assert::assertInstanceOf(Model::class, $baseModel);
 });
 
 test('base model has correct table name', function (): void {
-    expect($this->baseModel->getTable())->toBe('test_cms_table');
+    $baseModel = createCmsBaseModelTestDouble();
+    Assert::assertSame('test_cms_table', $baseModel->getTable());
 });
 
 test('base model can be instantiated', function (): void {
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
+    $baseModel = createCmsBaseModelTestDouble();
+    Assert::assertInstanceOf(BaseModel::class, $baseModel);
 });
 
 test('base model has proper inheritance chain', function (): void {
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
+    $baseModel = createCmsBaseModelTestDouble();
+    Assert::assertInstanceOf(BaseModel::class, $baseModel);
+    Assert::assertInstanceOf(Model::class, $baseModel);
 });
 
 test('base model has timestamps enabled', function (): void {
-    expect($this->baseModel->usesTimestamps())->toBeTrue();
+    $baseModel = createCmsBaseModelTestDouble();
+    Assert::assertTrue($baseModel->usesTimestamps());
 });

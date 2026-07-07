@@ -3,18 +3,12 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Actions;
-<<<<<<< HEAD
-
-use Illuminate\Notifications\Messages\MailMessage;
-use Modules\Notify\Actions\BuildMailMessageAction;
-=======
 use Modules\Notify\Tests\TestCase;
 use function Safe\file_get_contents;
 use function Safe\class_uses;
 use Illuminate\Notifications\Messages\MailMessage;
 use Modules\Notify\Actions\BuildMailMessageAction;
 use PHPUnit\Framework\Assert;
->>>>>>> 40b96bcd6 (.)
 use Spatie\QueueableAction\QueueableAction;
 
 uses(\Modules\Notify\Tests\TestCase::class);

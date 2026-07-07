@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/dev
-## [2026-07-06] membershipTeams non appartiene a UserContract
-
-- `membershipTeams()` e un alias concreto di `HasTeams::teams()` su `BaseUser`, non una capability cross-module richiesta da `Modules\Xot\Contracts\UserContract`.
-- Non dichiararlo nel contratto Xot: `BelongsToMany` e invariante su `TDeclaringModel` e l interfaccia non puo esprimere correttamente `` come `$this` sul model concreto; sull interfaccia non e dichiarabile senza violare il bound `Model`.
-- Lasciare il tipo preciso sul trait/model User e sulle fixture che lo testano.
-
-<<<<<<< HEAD
->>>>>>> 40b96bcd6 (.)
-=======
->>>>>>> origin/dev
 # PHPStan Fixes Log - Story 8-121
 
 > **Story**: 8-121 - PHPStan Full Compliance (Zero Errors, No Ignoring)
@@ -27,16 +12,6 @@ Class Modules\Xot\States\XotBaseState extends unknown class Spatie\ModelStates\S
 Class Modules\Xot\States\Transitions\XotBaseTransition extends unknown class Spatie\ModelStates\Transition
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-### Root Cause
-Il package `spatie/laravel-model-states` era documentato come parte dell'architettura ma non era incluso in `composer.json`.
-
-### Solution
-1. Aggiunto `
-=======
-=======
->>>>>>> origin/dev
 ### Root Cause (aggiornato 2026-05-21)
 
 - Dichiarato in `Modules/Xot/composer.json` (`^2.14`) e root `laravel/composer.json`, ma **non installato** (assente da `composer.lock` / `vendor/`).
@@ -146,7 +121,37 @@ Baseline 205 → 0. Batch Contracts/Datas/Traits (14), Actions (43), Models/Fila
 Pattern: `BelongsTo<Model&ProfileContract, $this>`, `array<string, mixed>`, `EnumTrait::toArray()` → `array<int|string, string>`.
 
 Chat: `docs/chat/story-287-xot-phpstan-session.md` · Issues: module_xot #32, base #313
-<<<<<<< HEAD
->>>>>>> 40b96bcd6 (.)
-=======
->>>>>>> origin/dev
+
+## Fix 2026-06-30: fatal trait collision + tail Modules/
+
+### Problema 1 — PHPStan non partiva (fatal)
+
+`BaseUser` usa `HasTeams` e `HasSpatiePermission` (Spatie `HasRoles::teams()`). Collisione su `teams()`.
+
+### Soluzione
+
+```php
+use HasSpatiePermission, HasTeams {
+    HasTeams::teams insteadof HasSpatiePermission;
+    HasSpatiePermission::teams as spatieTeams;
+}
+```
+
+Wiki: [User trait-alias-conflict-resolution](../../../User/docs/wiki/concepts/trait-alias-conflict-resolution.md)
+
+### Problema 2 — `UserContract::teams()` generics
+
+`static(UserContract)` non è sottotipo di `Model` su `BelongsToMany`. Allineato a `BelongsToMany<Model&TeamContract, $this>` + `@phpstan-ignore generics.notSubtype` (stesso pattern di `tenants()`).
+
+### Problema 3 — `Article::scopePublishedUntilToday()`
+
+Return type `EloquentBuilder|QueryBuilder` con classe `QueryBuilder` inesistente nel modulo → solo `EloquentBuilder`.
+
+### Verifica
+
+```bash
+cd laravel && ./vendor/bin/phpstan analyse Modules
+# [OK] No errors — 5357 file
+```
+
+Trait probe registry: [phpstan-trait-probes](./phpstan-trait-probes.md)

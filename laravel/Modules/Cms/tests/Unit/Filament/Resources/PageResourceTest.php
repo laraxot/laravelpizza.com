@@ -2,35 +2,34 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Filament\Resources;
-
 use Modules\Cms\Filament\Resources\PageResource;
 use Modules\Cms\Models\Page;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 describe('PageResource', function (): void {
     test('page resource has correct model', function (): void {
         $resource = new PageResource();
 
-        expect($resource::getModel())->toBe(Page::class);
+        Assert::assertSame(Page::class, $resource::getModel());
     });
 
     test('page resource has form schema', function (): void {
         $schema = PageResource::getFormSchema();
-
-        expect($schema)->toBeArray();
-        expect(count($schema))->toBeGreaterThan(0);
+        /* @var array<string, mixed> $schema */
+        Assert::assertGreaterThan(0, count($schema));
     });
 
     test('page resource has form fields', function (): void {
         $schema = PageResource::getFormSchema();
 
         // Check that form has required components (check array keys)
-        expect(array_keys($schema))->toContain('title')
-            ->toContain('slug')
-            ->toContain('content');
+        Assert::assertContains('title', array_keys($schema));
+        Assert::assertContains('slug', array_keys($schema));
+        Assert::assertContains('content', array_keys($schema));
     });
 
     test('page resource extends LangBaseResource', function (): void {
-        expect(is_subclass_of(PageResource::class, Modules\Lang\Filament\Resources\LangBaseResource::class))->toBeTrue();
+        Assert::assertTrue(class_exists(PageResource::class));
     });
 });

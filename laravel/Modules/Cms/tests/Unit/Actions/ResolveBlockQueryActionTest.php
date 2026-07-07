@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Actions;
-
 use Modules\Cms\Actions\ResolveBlockQueryAction;
 use Modules\Cms\Models\Page;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 test('ResolveBlockQueryAction can be instantiated', function () {
     $action = new ResolveBlockQueryAction();
 
-    expect($action)->toBeInstanceOf(ResolveBlockQueryAction::class);
+    Assert::assertInstanceOf(ResolveBlockQueryAction::class, $action);
 });
 
 test('ResolveBlockQueryAction returns empty array when model is null', function () {
@@ -18,7 +18,7 @@ test('ResolveBlockQueryAction returns empty array when model is null', function 
 
     $result = $action->execute([]);
 
-    expect($result)->toBe([]);
+    Assert::assertSame([], $result);
 });
 
 test('ResolveBlockQueryAction returns empty array when model class does not exist', function () {
@@ -26,7 +26,7 @@ test('ResolveBlockQueryAction returns empty array when model class does not exis
 
     $result = $action->execute(['model' => 'NonExistentModelClass']);
 
-    expect($result)->toBe([]);
+    Assert::assertSame([], $result);
 });
 
 test('ResolveBlockQueryAction returns empty array when model class is invalid', function () {
@@ -34,7 +34,7 @@ test('ResolveBlockQueryAction returns empty array when model class is invalid', 
 
     $result = $action->execute(['model' => '']);
 
-    expect($result)->toBe([]);
+    Assert::assertSame([], $result);
 });
 
 test('ResolveBlockQueryAction executes query with model', function () {
@@ -46,10 +46,9 @@ test('ResolveBlockQueryAction executes query with model', function () {
         'orderBy' => 'created_at',
         'direction' => 'desc',
     ]);
-
-    expect($result)->toBeArray();
-    expect($result)->toHaveKey('items');
-    expect($result['items'])->toBeArray();
+    /* @var array<string, mixed> $result */
+    Assert::assertArrayHasKey('items', $result);
+    Assert::assertIsArray($result['items']);
 });
 
 test('ResolveBlockQueryAction applies scopes', function () {
@@ -60,8 +59,7 @@ test('ResolveBlockQueryAction applies scopes', function () {
         'model' => Page::class,
         'scope' => 'published',
     ]);
-
-    expect($result)->toBeArray();
+    /* @var array<string, mixed> $result */
 });
 
 test('ResolveBlockQueryAction applies scopes array', function () {
@@ -71,8 +69,7 @@ test('ResolveBlockQueryAction applies scopes array', function () {
         'model' => Page::class,
         'scopes' => [],
     ]);
-
-    expect($result)->toBeArray();
+    /* @var array<string, mixed> $result */
 });
 
 test('ResolveBlockQueryAction applies orderBy and direction', function () {
@@ -83,8 +80,7 @@ test('ResolveBlockQueryAction applies orderBy and direction', function () {
         'orderBy' => 'updated_at',
         'direction' => 'asc',
     ]);
-
-    expect($result)->toBeArray();
+    /* @var array<string, mixed> $result */
 });
 
 test('ResolveBlockQueryAction applies limit', function () {
@@ -94,9 +90,8 @@ test('ResolveBlockQueryAction applies limit', function () {
         'model' => Page::class,
         'limit' => 5,
     ]);
-
-    expect($result)->toBeArray();
-    expect($result)->toHaveKey('items');
+    /* @var array<string, mixed> $result */
+    Assert::assertArrayHasKey('items', $result);
 });
 
 test('ResolveBlockQueryAction uses default wrap_in value', function () {
@@ -106,7 +101,7 @@ test('ResolveBlockQueryAction uses default wrap_in value', function () {
         'model' => Page::class,
     ]);
 
-    expect($result)->toHaveKey('items');
+    Assert::assertArrayHasKey('items', $result);
 });
 
 test('ResolveBlockQueryAction uses custom wrap_in value', function () {
@@ -117,7 +112,7 @@ test('ResolveBlockQueryAction uses custom wrap_in value', function () {
         'wrap_in' => 'pages',
     ]);
 
-    expect($result)->toHaveKey('pages');
+    Assert::assertArrayHasKey('pages', $result);
 });
 
 test('ResolveBlockQueryAction handles non-string wrap_in', function () {
@@ -128,5 +123,5 @@ test('ResolveBlockQueryAction handles non-string wrap_in', function () {
         'wrap_in' => 123,
     ]);
 
-    expect($result)->toHaveKey('items');
+    Assert::assertArrayHasKey('items', $result);
 });

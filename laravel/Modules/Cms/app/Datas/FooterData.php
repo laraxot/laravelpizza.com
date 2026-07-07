@@ -23,10 +23,8 @@ class FooterData extends Data implements Wireable
 
     /**
      * The view path.
-     *
-     * @var string
      */
-    public $view = 'cms::components.footer';
+    public string $view = 'cms::components.footer';
 
     public ?string $_tpl = null;
 
@@ -55,6 +53,12 @@ class FooterData extends Data implements Wireable
         return view($this->view, $view_params);
     }
 
+    /**
+     * @return array<string, mixed>
+     */
+    /**
+     * @return array<string, mixed>
+     */
     public static function rules(): array
     {
         return [

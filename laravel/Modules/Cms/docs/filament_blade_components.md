@@ -1,35 +1,7 @@
-# Filament Blade Components Usage (CMS)
+---
+module: theme
+topic: filament_blade_components
+canonical: ../../../Themes/docs/shared-components/filament-blade-components.md
+---
 
-## Collegamenti
-- [Documentazione Root](../../../../../docs/project/collegamenti-documentazione.md) - Indice centrale dei collegamenti
-- [Documentazione in Themes/One](../../../../themes/one/project_docs/filament-blade-components.md) - Contesto del tema principale
-
-Per le best practice di **Filament** (https://filamentphp.com/project_docs/3.x/support/blade-components/overview), utilizziamo sempre i componenti Blade di Filament per elementi interattivi e di navigazione.
-
-## Perché usare `<x-filament::button>`
-- **Stile e coerenza**: rispetta il tema e le varianti predefinite.
-- **Accessibilità e funzionalità**: supporto integrato per attributi come `size`, `color`, `tag`, e altri.
-- **Manutenzione semplificata**: meno markup custom, un’unica API per pulsanti e link.
-
-### Esempio consigliato
-```blade
-<x-filament::button 
-    size="sm" 
-    href="{{ route('register.type', ['type' => $type]) }}" 
-    tag="a"
->
-    {{ ucfirst($type) }}
-</x-filament::button>
-```
-
-### Cosa evitare
-```blade
-<a href="{{ route('register.type', ['type' => $type]) }}">
-    <x-ui.button class="w-full">{{ ucfirst($type) }}</x-ui.button>
-</a>
-```
-
-## Collegamenti tra versioni di filament-blade-components.md
-* [filament-blade-components.md](laravel/modules/cms/project_docs/filament-blade-components.md)
-* [filament-blade-components.md](laravel/themes/one/project_docs/filament-blade-components.md)
-
+See canonical documentation: ../../../Themes/docs/shared-components/filament-blade-components.md

@@ -2,13 +2,44 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Models;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+=======
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+use Modules\User\Database\Factories\DeviceFactory;
+>>>>>>> 9fa499be (.)
 use Modules\User\Models\Device;
 use Modules\User\Tests\TestCase;
 
+<<<<<<< HEAD
 uses(TestCase::class, DatabaseTransactions::class);
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+/**
+ * @param array<string, mixed> $attributes
+ */
+function modelsDeviceCreate(array $attributes = []): Device
+{
+    return DeviceFactory::new()->createOne($attributes);
+}
+
+/**
+ * @param array<string, mixed> $where
+ */
+function modelsDeviceAssertInDatabase(string $id, array $where): void
+{
+    $query = DB::connection('user')->table('devices')->where('id', $id);
+    foreach ($where as $column => $value) {
+        $query->where($column, $value);
+    }
+
+    Assert::assertTrue($query->exists());
+}
+>>>>>>> 9fa499be (.)
 
 test('can create device with minimal data', function (): void {
     $device = Device::factory()->create([

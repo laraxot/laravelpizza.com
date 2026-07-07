@@ -20,3 +20,4 @@ Il file `AutoLabelAction.php` presentava marker di conflitto (``) e duplicazioni
 
 ---
 
+*Ultimo aggiornamento: 2025-04-16*

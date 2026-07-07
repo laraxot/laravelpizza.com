@@ -16,11 +16,5 @@ return [
     'fields' => [
     ],
     'actions' => [
-        'previous' => [
-            'label' => 'Previous',
-        ],
-        'next' => [
-            'label' => 'Next',
-        ],
     ],
 ];

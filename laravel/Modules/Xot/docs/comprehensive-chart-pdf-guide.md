@@ -15,20 +15,8 @@ This guide provides a comprehensive overview of chart generation and PDF integra
 
 ### Key Components
 - **Chart Module**: Contains chart generation and styling logic
-<<<<<<< HEAD
 - **healthcare_app Module**: Handles survey data and PDF generation
 - **ExternalProject Module**: Handles survey data and PDF generation
-=======
-<<<<<<< .merge_file_sCuY6W
-- **healthcare_app Module**: Handles survey data and PDF generation
-=======
-<<<<<<< HEAD
-- **ExternalProject Module**: Handles survey data and PDF generation
-=======
-- **ModuloEsempio Module**: Handles survey data and PDF generation
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> origin/dev
->>>>>>> .merge_file_LxvdoW
 - **Xot Module**: Provides core services including HTML to PDF conversion
 - **JpGraph Library**: Server-side chart generation
 - **Chart.js**: Client-side chart visualization
@@ -440,6 +428,7 @@ class MakePdfAction
 
         // Create filename
         $survey_date_to = $surveyPdf->date_to;
+        if ($survey_date_to === null || $survey_date_to === '0000-00-00') {
         if ($survey_date_to === null || $survey_date_to === '[DATE]') {
             $survey_date_to = date('W / o');
         } else {
@@ -522,15 +511,7 @@ class HtmlService
 PDFs support multi-page layouts with proper headers and footers:
 
 ```blade
-<<<<<<< HEAD
 @include('healthcare_app::pdf.css')
-=======
-<<<<<<< .merge_file_sCuY6W
-@include('healthcare_app::pdf.css')
-=======
-@include('ptvx::pdf.css')
->>>>>>> .merge_file_LxvdoW
->>>>>>> origin/dev
 
 <page backtop="{{ $pdf->backtop }}mm" backbottom="{{ $pdf->backbottom }}mm">
     <page_header>

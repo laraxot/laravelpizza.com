@@ -58,6 +58,7 @@ public function registerTranslations(): void
 - L’uso diretto di `module_path` può portare a divergenze, bug e difficoltà di manutenzione
 - Questa regola va rispettata anche da tutte le classi che estendono il provider
 
+**Backlink:** Vedi anche [CONFLITTI_MERGE_RISOLTI.md](./CONFLITTI_MERGE_RISOLTI.md)
 **Backlink:** Vedi anche [CONFLITTI_MERGE_RISOLTI.md](./conflitti_merge_risolti.md)
 
 ## Esempio di Override Sicuro
@@ -85,5 +86,12 @@ class CustomModuleServiceProvider extends XotBaseServiceProvider
 
 ---
 
+- [COMPONENTI_PERSONALIZZATI.md](./COMPONENTI_PERSONALIZZATI.md) — Regole e path per Blade components modulari
+- [CONFLITTI_MERGE_RISOLTI.md](./CONFLITTI_MERGE_RISOLTI.md) — Tracciamento conflitti risolti su ServiceProvider
+- [FILAMENT_TABLE_COLUMNS.md](./FILAMENT_TABLE_COLUMNS.md) — Standardizzazione metodi colonne Filament
+
+---
+
+**Ultimo aggiornamento:** 2025-05-13
 
 **Nota:** Aggiornare SEMPRE questa documentazione in caso di modifiche architetturali o override nei moduli.

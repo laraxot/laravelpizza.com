@@ -13,8 +13,13 @@ use Illuminate\Database\Schema\ForeignIdColumnDefinition;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
+use Modules\Xot\Actions\Cast\SafeIntCastAction;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Datas\XotData;
 use Nwidart\Modules\Facades\Module;
+
+use function Safe\copy;
+
 use Webmozart\Assert\Assert;
 
 /**
@@ -26,9 +31,6 @@ abstract class XotBaseMigration extends LaravelMigration
 
     /** @var class-string<Model>|null */
     protected ?string $model_class = null;
-
-    /** @var array<string, int> */
-    protected array $uuidToBigintIdMapping = [];
 
     public function __construct()
     {
@@ -75,9 +77,10 @@ abstract class XotBaseMigration extends LaravelMigration
         Assert::classExists($modelClass);
         Assert::subclassOf($modelClass, Model::class);
 
+        /* @var class-string<Model> $modelClass */
         $this->model_class = $modelClass;
 
-        return $this->model_class;
+        return $modelClass;
     }
 
     public function getTable(): string
@@ -90,7 +93,8 @@ abstract class XotBaseMigration extends LaravelMigration
         $connectionName = $this->model->getConnectionName();
         // 如果连接名是 'user' 但数据库不存在，使用默认连接
         if ('user' === $connectionName && ! DB::connection($connectionName)->getDatabaseName()) {
-            $connectionName = 'mysql';
+            $default = config('database.default');
+            $connectionName = is_string($default) ? $default : 'mariadb';
         }
 
         return Schema::connection($connectionName);
@@ -274,19 +278,19 @@ abstract class XotBaseMigration extends LaravelMigration
         $this->getConn()->table($tableName, $next);
     }
 
-    public function timestamps(Blueprint $table, bool $hasSoftDeletes = false): void
+    protected function extractPrimaryKeyCount(mixed $result): int
     {
-        $xot = XotData::make();
-        $userClass = $xot->getUserClass();
-
-        $table->timestamps();
-        $table->foreignIdFor($userClass, 'user_id')->nullable();
-        $table->foreignIdFor($userClass, 'updated_by')->nullable();
-        $table->foreignIdFor($userClass, 'created_by')->nullable();
-
-        if ($hasSoftDeletes) {
-            $table->softDeletes();
+        if (is_array($result)) {
+            return isset($result['count']) ? SafeIntCastAction::cast($result['count']) : 0;
         }
+
+        if (is_object($result)) {
+            $resultAsArray = (array) $result;
+
+            return isset($resultAsArray['count']) ? SafeIntCastAction::cast($resultAsArray['count']) : 0;
+        }
+
+        return 0;
     }
 
     public function updateTimestamps(Blueprint $table, bool $hasSoftDeletes = false): void
@@ -388,6 +392,21 @@ abstract class XotBaseMigration extends LaravelMigration
     }
 
     /**
+     * Get the database connection driver.
+     */
+    protected function driver(): string
+    {
+        return DB::connection($this->getConnection())->getDriverName();
+    }
+
+    protected function isMysqlFamilyDriver(?string $driver = null): bool
+    {
+        $driver ??= $this->driver();
+
+        return in_array($driver, ['mysql', 'mariadb'], true);
+    }
+
+    /**
      * Determine if the migration should run.
      * This method provides a hook for conditional migration execution.
      * Returns true by default to maintain backward compatibility.
@@ -395,29 +414,6 @@ abstract class XotBaseMigration extends LaravelMigration
     public function shouldRun(): bool
     {
         return true;
-    }
-
-    protected function extractPrimaryKeyCount(mixed $result): int
-    {
-        if (is_array($result)) {
-            return isset($result['count']) ? (int) $result['count'] : 0;
-        }
-
-        if (is_object($result)) {
-            $resultAsArray = (array) $result;
-
-            return isset($resultAsArray['count']) ? (int) $resultAsArray['count'] : 0;
-        }
-
-        return 0;
-    }
-
-    /**
-     * Get the database connection driver.
-     */
-    protected function driver(): string
-    {
-        return DB::connection($this->getConnection())->getDriverName();
     }
 
     /**
@@ -474,6 +470,9 @@ abstract class XotBaseMigration extends LaravelMigration
         });
     }
 
+    /** @var array<string, int> */
+    protected array $uuidToBigintIdMapping = [];
+
     /**
      * @param \Closure(Blueprint): void                                                    $createNewTableSchema
      * @param list<string>                                                                 $dataColumns
@@ -492,7 +491,7 @@ abstract class XotBaseMigration extends LaravelMigration
                 $blueprint->uuid('uuid')->nullable()->after('id');
             }, $table);
             $conn->table($table)->update(['uuid' => DB::raw('id')]);
-            if ('mysql' === $conn->getDriverName()) {
+            if ($this->isMysqlFamilyDriver($conn->getDriverName())) {
                 $conn->statement('ALTER TABLE '.$table.' MODIFY uuid CHAR(36) NOT NULL');
             }
         }
@@ -533,7 +532,7 @@ abstract class XotBaseMigration extends LaravelMigration
                     $data[$c] = $row->{$c};
                 }
             }
-            $this->uuidToBigintIdMapping[(string) $row->id] = $newId;
+            $this->uuidToBigintIdMapping[SafeStringCastAction::cast($row->id)] = $newId;
             $conn->table($newTable)->insert($data);
             ++$newId;
         }
@@ -546,15 +545,15 @@ abstract class XotBaseMigration extends LaravelMigration
 
         foreach ($rows as $p) {
             $p = (object) $p;
-            $newId = $this->uuidToBigintIdMapping[(string) $p->id] ?? null;
+            $newId = $this->uuidToBigintIdMapping[SafeStringCastAction::cast($p->id)] ?? null;
             if (null !== $newId) {
                 $conn->table($pivotTable)
                     ->where($fkColumn, $p->id)
-                    ->update([$fkColumn => (string) $newId]);
+                    ->update([$fkColumn => SafeStringCastAction::cast($newId)]);
             }
         }
 
-        if ('mysql' === $conn->getDriverName()) {
+        if ($this->isMysqlFamilyDriver($conn->getDriverName())) {
             $db = $conn->getDatabaseName();
             $constraint = $conn->selectOne(
                 "SELECT CONSTRAINT_NAME FROM information_schema.TABLE_CONSTRAINTS 
@@ -563,7 +562,7 @@ abstract class XotBaseMigration extends LaravelMigration
                 [$db, $pivotTable, '%'.$fkColumn.'%']
             );
             $constraintName = is_object($constraint) && isset($constraint->CONSTRAINT_NAME)
-                ? (string) $constraint->CONSTRAINT_NAME
+                ? SafeStringCastAction::cast($constraint->CONSTRAINT_NAME)
                 : null;
             if (null !== $constraintName) {
                 $conn->statement('ALTER TABLE '.$pivotTable.' DROP INDEX '.$constraintName);

@@ -78,11 +78,7 @@ test('netfun notifications channel sends and increases counter', function () {
     });
 
     $channel = new NetfunChannel;
-<<<<<<< HEAD
-    $notifiable = makeNetfunChannelNotifiableDummy();
-=======
     $notifiable = new NetfunChannelNotifiableDummy;
->>>>>>> 40b96bcd6 (.)
     $notification = makeThemeNotificationDummy();
 
     $channel->send($notifiable, $notification);

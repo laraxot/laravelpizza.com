@@ -10,6 +10,7 @@ namespace Modules\Xot\Services;
 // use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 // use Mpdf\Mpdf;
 use Illuminate\Support\Facades\Storage;
+use Spatie\QueueableAction\QueueableAction;
 use Spipu\Html2Pdf\Exception\ExceptionFormatter;
 use Spipu\Html2Pdf\Exception\Html2PdfException;
 use Spipu\Html2Pdf\Html2Pdf;
@@ -28,6 +29,8 @@ use Spipu\Html2Pdf\Html2Pdf;
  */
 class HtmlService
 {
+    use QueueableAction;
+
     public static function toPdf(
         string $html,
         string $out = 'show',

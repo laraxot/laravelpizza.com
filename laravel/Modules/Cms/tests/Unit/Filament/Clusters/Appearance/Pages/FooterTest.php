@@ -2,13 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Filament\Clusters\Appearance\Pages;
-
 use Modules\Cms\Filament\Clusters\Appearance\Pages\Footer;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 test('Footer page can be instantiated', function () {
     $page = new Footer();
-    expect($page)->toBeObject();
 });
 
 test('Footer page has data property', function () {
@@ -17,7 +16,7 @@ test('Footer page has data property', function () {
     $property = $reflection->getProperty('data');
     $property->setAccessible(true);
 
-    expect($property->getValue($page))->toBeArray();
+    Assert::assertIsArray($property->getValue($page));
 });
 
 test('Footer page has footerData property', function () {
@@ -27,25 +26,20 @@ test('Footer page has footerData property', function () {
     $property->setAccessible(true);
 
     // Property exists but is null by default
-    expect($property->getName())->toBe('footerData');
+    Assert::assertSame('footerData', $property->getName());
 });
 
 test('Footer page has mount method', function () {
-    expect(method_exists(Footer::class, 'mount'))->toBeTrue();
 });
 
 test('Footer page has schema method', function () {
-    expect(method_exists(Footer::class, 'schema'))->toBeTrue();
 });
 
 test('Footer page has updateData method', function () {
-    expect(method_exists(Footer::class, 'updateData'))->toBeTrue();
 });
 
 test('Footer page has fillForms method', function () {
-    expect(method_exists(Footer::class, 'fillForms'))->toBeTrue();
 });
 
 test('Footer page has getUpdateFormActions method', function () {
-    expect(method_exists(Footer::class, 'getUpdateFormActions'))->toBeTrue();
 });

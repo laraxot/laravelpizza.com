@@ -7,9 +7,9 @@ namespace Modules\UI\Filament\Widgets;
 use Filament\Schemas\Components\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cookie;
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Modules\Xot\Filament\Widgets\XotBaseSchemaWidget;
 
-final class DarkModeSwitcherWidget extends XotBaseWidget
+final class DarkModeSwitcherWidget extends XotBaseSchemaWidget
 {
     public ?array $data = [];
 
@@ -38,7 +38,6 @@ final class DarkModeSwitcherWidget extends XotBaseWidget
      *
      * @return array<int, Component>
      */
-    #[\Override]
     public function getFormSchema(): array
     {
         return [];

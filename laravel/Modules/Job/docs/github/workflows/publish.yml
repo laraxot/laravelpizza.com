@@ -1,44 +1,3 @@
-<<<<<<< HEAD
-name: Publish
-
-on:
-  push:
-    branches:
-      - master
-
-permissions:
-  contents: write
-
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout
-      uses: actions/checkout@master
-
-    - name: Validate composer.json and composer.lock
-      run: composer validate
-
-    - name: Composer
-      run: composer install --no-progress --no-suggest
-
-    - name: Node
-      run: npm install
-
-    - name: Production
-      run: npm run prod
-
-    - name: CNAME
-      run: echo "laraxot.github.io/doc_extrafield" > ./build_production/CNAME
-
-    - name: gh-pages
-      uses: JamesIves/github-pages-deploy-action@latest
-      with:
-        branch: gh-pages
-        folder: build_production
-=======
 ---
 module: theme
 topic: publish
@@ -46,4 +5,3 @@ canonical: ../../../../../Themes/docs/shared-components/publish-Modules.yml
 ---
 
 See canonical documentation: ../../../../../Themes/docs/shared-components/publish-Modules.yml
->>>>>>> origin/dev

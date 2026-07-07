@@ -60,13 +60,7 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|NotificationTemplate whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
  * @method static Builder<static>|NotificationTemplate whereJsonContainsLocales(string $column, array<int, string> $locales, ?mixed $value, string $operand = '=')
  * @method static Builder<static>|NotificationTemplate whereLocale(string $column, string $locale)
-<<<<<<< HEAD
- * @method static Builder<static>|NotificationTemplate whereLocales(string $column, array $locales)
- *
- * @mixin IdeHelperNotificationTemplate
-=======
  * @method static Builder<static>|NotificationTemplate whereLocales(string $column, array<int, string> $locales)
->>>>>>> 40b96bcd6 (.)
  *
  * @property-read ProfileContract|null $deleter
  * @property string|null $updated_by
@@ -233,13 +227,10 @@ class NotificationTemplate extends BaseModel implements HasMedia
     /**
      * Scope a query to only include active templates.
      */
-<<<<<<< HEAD
-=======
     /**
      * @param  Builder<static>  $query
      * @return Builder<static>
      */
->>>>>>> 40b96bcd6 (.)
     public function scopeActive(Builder $query): Builder
     {
         return $query->where('is_active', true);
@@ -248,13 +239,10 @@ class NotificationTemplate extends BaseModel implements HasMedia
     /**
      * Scope a query to only include templates for a specific channel.
      */
-<<<<<<< HEAD
-=======
     /**
      * @param  Builder<static>  $query
      * @return Builder<static>
      */
->>>>>>> 40b96bcd6 (.)
     public function scopeForChannel(Builder $query, string $channel): Builder
     {
         return $query->whereJsonContains('channels', $channel);
@@ -263,13 +251,10 @@ class NotificationTemplate extends BaseModel implements HasMedia
     /**
      * Scope a query to only include templates for a specific category.
      */
-<<<<<<< HEAD
-=======
     /**
      * @param  Builder<static>  $query
      * @return Builder<static>
      */
->>>>>>> 40b96bcd6 (.)
     public function scopeForCategory(Builder $query, string $category): Builder
     {
         return $query->where('category', $category);

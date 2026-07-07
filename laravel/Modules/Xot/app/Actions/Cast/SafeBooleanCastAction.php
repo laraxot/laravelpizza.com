@@ -89,10 +89,10 @@ class SafeBooleanCastAction
     /**
      * Converte un valore in boolean con validazione di valori specifici.
      *
-     * @param mixed     $value       Il valore da convertire
-     * @param array     $trueValues  Array di valori che rappresentano true
-     * @param array     $falseValues Array di valori che rappresentano false
-     * @param bool|null $default     Valore di default se la conversione fallisce
+     * @param mixed        $value       Il valore da convertire
+     * @param array<mixed> $trueValues  Array di valori che rappresentano true
+     * @param array<mixed> $falseValues Array di valori che rappresentano false
+     * @param bool|null    $default     Valore di default se la conversione fallisce
      *
      * @return bool Il valore convertito
      */
@@ -188,10 +188,10 @@ class SafeBooleanCastAction
     /**
      * Metodo statico per cast con valori personalizzati.
      *
-     * @param mixed     $value       Il valore da convertire
-     * @param array     $trueValues  Array di valori che rappresentano true
-     * @param array     $falseValues Array di valori che rappresentano false
-     * @param bool|null $default     Valore di default se la conversione fallisce
+     * @param mixed        $value       Il valore da convertire
+     * @param array<mixed> $trueValues  Array di valori che rappresentano true
+     * @param array<mixed> $falseValues Array di valori che rappresentano false
+     * @param bool|null    $default     Valore di default se la conversione fallisce
      *
      * @return bool Il valore convertito
      */

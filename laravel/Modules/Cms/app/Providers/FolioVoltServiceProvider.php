@@ -124,6 +124,16 @@ class FolioVoltServiceProvider extends ServiceProvider
             if (! File::exists($path) || ! File::isDirectory($path)) {
                 continue;
             }
+
+            $apiPath = $path.'/api';
+            if (File::exists($apiPath) && File::isDirectory($apiPath)) {
+                Folio::path($apiPath)
+                    ->uri('/api')
+                    ->middleware([
+                        '*' => ['web'],
+                    ]);
+            }
+
             $paths[] = $path;
             foreach ($supportedLocales as $locale) {
                 Folio::path($path)

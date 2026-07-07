@@ -28,9 +28,13 @@ https://blog.insidecomunicazione.it/quali-caratteristiche-deve-avere-un-sito-web
 https://sayagency.com/accessibilita-web-il-tuo-sito-rispetta-la-nuova-normativa/
 https://www.gruppodigi.it/cms/it/servizi/articoli-seo/1008-sviluppo-siti-web-dinamici-come-ottimizzare-la-velocita-e-lindicizzazione
 https://www.webheroes.it/blog/il-sito-web-non-e-un-mobile-perche-deve-evolversi-insieme-alla-tua-azienda/
+https://maintainablecss.com/chapters/semantics/
+https://www.w3schools.com/Html/html5_semantic_elements.asp
+https://css-tricks.com/semantic-class-names/
+https://robdodson.me/posts/css-semantics/
 
+studia e aggiorna utilizzando gli indici e controllando la ridondanza e che non ci siano file duplicati nelle cartelle docs dentro i moduli e dentro i temi, le tue rules, le tue memories, le tue skills; utilizza BMAD e GSD
 
-creati una checklist con i requisiti e mettiamoli come obbligatori per tutte le pagine del front office, inizia a controllare la nostra homepage 
+creati una checklist con i requisiti e mettiamoli come obbligatori per tutte le pagine del front office, inizia a controllare la nostra homepage
 
-  aggiorna studia e migliora le tue docs, le tue rules, le tue memories, le tue skills, ricorda che dopo aver modificato un file devi controllarlo con phpstan,phpmd, phpinsights e pest, ricorda che questo task lo diamo a piu' agenti ai, percio' comportati di conseguenza e cerca di unire le forze con gli altri agenti ai 
-
+aggiorna, studia e migliora le tue docs, le tue rules, le tue memories, le tue skills; ricorda che dopo aver modificato un file devi controllarlo con phpstan, phpmd, phpinsights e pest; ricorda che questo task lo diamo a piu' agenti AI, percio' comportati di conseguenza e cerca di unire le forze con gli altri agenti AI; utilizza BMAD e GSD

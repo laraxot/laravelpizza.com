@@ -2,14 +2,19 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Filament\Widgets;
 
+=======
+>>>>>>> 9fa499be (.)
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Modules\User\Filament\Widgets\LoginWidget;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
+
+uses(Modules\User\Tests\TestCase::class);
 
 describe('LoginWidget', function (): void {
     test('login widget can be instantiated', function (): void {

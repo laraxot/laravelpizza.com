@@ -4,23 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Feature;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-=======
->>>>>>> 40b96bcd6 (.)
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Modules\Notify\Database\Factories\NotifyThemeableFactory;
 use Modules\Notify\Database\Factories\NotifyThemeFactory;
 use Modules\Notify\Models\NotifyTheme;
 use Modules\Notify\Models\NotifyThemeable;
 use Modules\Notify\Tests\TestCase;
-<<<<<<< HEAD
-=======
 use PHPUnit\Framework\Assert;
 
 uses(\Modules\Notify\Tests\TestCase::class);
->>>>>>> 40b96bcd6 (.)
 
 describe('Notify Themeable Business Logic', function () {
     it('can create notify themeable with basic information', function () {

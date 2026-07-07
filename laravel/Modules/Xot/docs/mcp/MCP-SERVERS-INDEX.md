@@ -1,22 +1,9 @@
 # MCP Servers Configuration - Master Index
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-**Ultimo aggiornamento**: 2026-04-09  
-**Config file**: `laravel/.mcp.json`  
-**Memory Bank**: `.memory-bank/`  
-**Totale Server**: 9 MCP servers configurati
-=======
-=======
->>>>>>> origin/dev
 **Ultimo aggiornamento**: 2026-06-04  
 **Config file**: `laravel/.mcp.json`  
 **Memory Bank**: `.memory-bank/`  
 **Totale Server**: 9+ MCP (validation gate in [STORY-137](../../../../docs/stories/STORY-137-mcp-validation-mauve-pagespeed-gsc.md))
-<<<<<<< HEAD
->>>>>>> 40b96bcd6 (.)
-=======
->>>>>>> origin/dev
 
 ## 📋 Server Installati
 
@@ -155,11 +142,6 @@ echo "CONTEXT7_API_KEY=xxx" >> .env
 - [ ] File `systemPatterns.md` da creare
 - [ ] File `techContext.md` da creare
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/dev
 ## Validation gate (pianificato — STORY-137)
 
 | Server | Package | Env |
@@ -172,10 +154,6 @@ Hub: [mcp-validation-quality-gate.md](../../../../docs/wiki/mcp-validation-quali
 
 ---
 
-<<<<<<< HEAD
->>>>>>> 40b96bcd6 (.)
-=======
->>>>>>> origin/dev
 ## Related Docs
 
 - [MCP Development Skill](../../../docs/MCP-DEVELOPMENT.md)

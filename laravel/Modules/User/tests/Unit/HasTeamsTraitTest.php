@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit;
 
+=======
+>>>>>>> 9fa499be (.)
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
 use Modules\User\Contracts\TeamContract;
@@ -13,6 +16,7 @@ use Modules\User\Models\TeamUser;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
+<<<<<<< HEAD
 /*
  * Test per il trait HasTeams corretto secondo filosofia Jetstream + Laraxot.
  *
@@ -23,6 +27,14 @@ use Modules\User\Tests\TestCase;
  * - teams() usa belongsToManyX
  * - Tipizzazione rigorosa
  * - Metodi non-Jetstream rimossi
+=======
+use function Safe\json_encode;
+
+uses(Modules\User\Tests\TestCase::class);
+
+/**
+ * @param array<string, mixed> $attributes
+>>>>>>> 9fa499be (.)
  */
 uses(TestCase::class);
 
@@ -82,8 +94,12 @@ test('it uses belongs to many x for teams relationship', function (): void {
     $relation = $this->user->teams();
     expect($relation)->toBeInstanceOf(BelongsToMany::class);
 
+<<<<<<< HEAD
     // Verifica che il pivot model sia TeamUser
     expect($relation->getTable())->toBe('team_user');
+=======
+    Assert::assertInstanceOf(BelongsToMany::class, $user->membershipTeams());
+>>>>>>> 6d3760fe (.)
 });
 
 test('it correctly manages current team', function (): void {

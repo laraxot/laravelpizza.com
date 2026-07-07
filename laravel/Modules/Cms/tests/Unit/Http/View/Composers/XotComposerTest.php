@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Http\View\Composers;
-
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Routing\Route as IlluminateRoute;
@@ -12,56 +10,65 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 use Modules\Cms\Http\View\Composers\XotComposer;
 use Modules\Xot\Contracts\UserContract;
+use PHPUnit\Framework\Assert;
 
 test('compose returns early when no authenticated user', function (): void {
     Auth::shouldReceive('user')->once()->andReturn(null);
 
-    $view = \Mockery::mock(View::class);
-    $view->shouldNotReceive('with');
+    $view = cmsCreateMock(View::class);
 
     $composer = new XotComposer();
     $composer->compose($view);
-
-    expect(true)->toBeTrue();
 });
 
 test('compose returns early when authenticated user is not user contract', function (): void {
-    $authUser = \Mockery::mock(Authenticatable::class);
+    $authUser = cmsCreateMock(Authenticatable::class);
     Auth::shouldReceive('user')->once()->andReturn($authUser);
 
-    $view = \Mockery::mock(View::class);
-    $view->shouldNotReceive('with');
+    $view = cmsCreateMock(View::class);
 
     $composer = new XotComposer();
     $composer->compose($view);
-
-    expect(true)->toBeTrue();
 });
 
 test('compose shares params lang and profile when user contract is authenticated', function (): void {
     app()->setLocale('it');
 
     $profile = (object) ['id' => 123];
+    $testCase = cmsTest();
 
-    $profileRelation = \Mockery::mock(HasOne::class);
-    $profileRelation->shouldReceive('first')->once()->andReturn($profile);
+    $profileRelation = $testCase->createPHPUnitMock(HasOne::class);
+    $profileRelation->method('first')->willReturn($profile);
 
-    $user = \Mockery::mock(UserContract::class);
-    $user->shouldReceive('profile')->once()->andReturn($profileRelation);
+    $user = $testCase->createPHPUnitMock(UserContract::class);
+    $user->method('profile')->willReturn($profileRelation);
 
     Auth::shouldReceive('user')->once()->andReturn($user);
 
-    $route = \Mockery::mock(IlluminateRoute::class);
-    $route->shouldReceive('parameters')->once()->andReturn(['slug' => 'about']);
+    $route = $testCase->createPHPUnitMock(IlluminateRoute::class);
+    $route->method('parameters')->willReturn(['slug' => 'about']);
     Route::shouldReceive('current')->once()->andReturn($route);
 
-    $view = \Mockery::mock(View::class);
-    $view->shouldReceive('with')->once()->with('params', ['slug' => 'about']);
-    $view->shouldReceive('with')->once()->with('lang', 'it');
-    $view->shouldReceive('with')->once()->with('profile', $profile);
+    $view = $testCase->createPHPUnitMock(View::class);
+    $calls = 0;
+    $view->method('with')->willReturnCallback(
+        static function (string $key, mixed $value) use ($view, $profile, &$calls): View {
+            $calls = (int) $calls + 1;
+            if (1 === $calls) {
+                Assert::assertSame('params', $key);
+                Assert::assertSame(['slug' => 'about'], $value);
+            } elseif (2 === $calls) {
+                Assert::assertSame('lang', $key);
+                Assert::assertSame('it', $value);
+            } else {
+                Assert::assertSame('profile', $key);
+                Assert::assertSame($profile, $value);
+            }
+
+            return $view;
+        }
+    );
 
     $composer = new XotComposer();
     $composer->compose($view);
-
-    expect(true)->toBeTrue();
 });

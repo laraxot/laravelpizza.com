@@ -2,16 +2,26 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Actions;
 
 use Jenssegers\Agent\Agent;
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\Device;
 use Modules\User\Tests\TestCase;
 
+<<<<<<< HEAD
 /*
  * @property \Modules\User\Actions\GetCurrentDeviceAction $action
  * @property \Mockery\MockInterface|\Jenssegers\Agent\Agent $mockAgent
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+/**
+ * @param array<string, mixed> $expected
+>>>>>>> 9fa499be (.)
  */
 uses(TestCase::class);
 

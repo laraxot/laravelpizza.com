@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Actions\Array;
-
+uses(Modules\Xot\Tests\TestCase::class);
 use Modules\Xot\Actions\Array\DiffAssocRecursiveAction;
+use PHPUnit\Framework\Assert;
 
 test('diff assoc recursive action works correctly', function () {
     $arr1 = [
@@ -18,9 +18,9 @@ test('diff assoc recursive action works correctly', function () {
     $action = app(DiffAssocRecursiveAction::class);
     $result = $action->execute($arr1, $arr2);
 
-    expect($result)->toHaveCount(1)
-        ->and($result)->toHaveKey('b')
-        ->and($result['b'])->toBe(['id' => 2, 'name' => 'Test 2']);
+    Assert::assertSame(['id' => 2, 'name' => 'Test 2'], $result);
+
+    Assert::assertArrayHasKey('b', $result);
 });
 
 test('diff assoc recursive action handles numeric strings', function () {
@@ -35,5 +35,5 @@ test('diff assoc recursive action handles numeric strings', function () {
     $result = $action->execute($arr1, $arr2);
 
     // fixType converts '1' to 1, so they should be equal and diff should be empty
-    expect($result)->toBeEmpty();
+    Assert::assertEmpty($result);
 });

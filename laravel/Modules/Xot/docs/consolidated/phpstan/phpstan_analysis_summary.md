@@ -19,11 +19,7 @@ Based on the latest analysis:
 ### Common Error Types
 
 #### 1. Class Not Found Errors (15%)
-<<<<<<< HEAD
 - Missing classes from Modules\ModuloEsempio\Models namespace
-=======
-- Missing classes from Modules\healthcare_app\Models namespace
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - Missing traits (EnumTrait from Modules\Core\Traits)
 - Undefined classes in factories
 
@@ -70,11 +66,7 @@ Based on the latest analysis:
 
 ### Notify Module
 **Key Issues**:
-<<<<<<< HEAD
 - Missing ModuloEsempio model classes
-=======
-- Missing healthcare_app model classes
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - String function parameter type issues
 - Method not found errors on models
 
@@ -97,11 +89,7 @@ Based on the latest analysis:
 **Solution**:
 ```php
 // Use class_exists checks before referencing
-<<<<<<< HEAD
 if (!class_exists('Modules\\ModuloEsempio\\Models\\Appointment')) {
-=======
-if (!class_exists('Modules\\healthcare_app\\Models\\Appointment')) {
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
     // Handle missing class gracefully
     throw new \Exception('Required class not available');
 }
@@ -197,11 +185,7 @@ vendor/bin/phpstan analyse --generate-baseline
 ## Remaining Issues Requiring Manual Intervention
 
 ### High Priority
-<<<<<<< HEAD
 1. **Missing ModuloEsempio Models**: Classes referenced but not available
-=======
-1. **Missing healthcare_app Models**: Classes referenced but not available
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 2. **Cross-Module Dependencies**: Tight coupling between modules
 3. **Factory Configuration**: Incorrect model references in factories
 

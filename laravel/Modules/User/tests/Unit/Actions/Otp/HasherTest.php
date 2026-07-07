@@ -2,12 +2,17 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Actions\Otp;
 
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Actions\Otp\Hasher;
 use Tests\TestCase;
 
 uses(TestCase::class);
+
+uses(Modules\User\Tests\TestCase::class);
 
 it('makes hashed value', function (): void {
     $hasher = app(Hasher::class);

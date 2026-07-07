@@ -23,6 +23,7 @@ La classe `MetatagData` gestisce i metadati del sito, inclusi loghi, colori e co
 - `generator`: Generatore del sito
 
 ### Colori
+- Palette Filament PA: `PaDesignColors` → [filament-pa-design-colors.md](../wiki/concepts/filament-pa-design-colors.md)
 - `color_primary`: Colore primario
 - `color_title`: Colore del titolo
 - `color_megamenu`: Colore del megamenu

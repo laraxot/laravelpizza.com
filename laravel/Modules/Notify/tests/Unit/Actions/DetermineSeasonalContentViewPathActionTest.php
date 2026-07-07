@@ -3,12 +3,8 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Actions;
-<<<<<<< HEAD
-
-=======
 use Modules\Notify\Tests\TestCase;
 use function Safe\file_get_contents;
->>>>>>> 40b96bcd6 (.)
 use Modules\Notify\Actions\DetermineSeasonalContentViewPathAction;
 use PHPUnit\Framework\Assert;
 use Spatie\QueueableAction\QueueableAction;

@@ -1,4 +1,5 @@
 # Filament v4 Migration Guide - Modulo Xot
+**Data**: 10 Dicembre 2025
 **Modulo**: Xot (Core Framework)
 **Versione**: 4.0
 **Stato**: Ready for Implementation

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-# Media Wiki Log
-
-## [2026-04-15] init | wiki bootstrap
-- Struttura wiki/log.md inizializzata.
-- Layer raw: tutti i file in `docs/` (eccetto `wiki/`).
-- Layer wiki: `docs/wiki/` — LLM-maintained, sintesi ad alto riuso.
-- Schema: `docs/.schema/WIKI_SCHEMA.md`
-- Adozione moduli: `docs/project/llm-wiki-module-adoption.md`
-=======
 ---
 title: "Media Wiki Activity Log"
 module: "Media"
@@ -33,4 +23,3 @@ module: "Media"
 - Created module index.md
 - Ready for on-demand loading via QMD
 
->>>>>>> 40b96bcd6 (.)

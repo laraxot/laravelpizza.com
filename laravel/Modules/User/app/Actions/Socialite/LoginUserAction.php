@@ -37,10 +37,9 @@ class LoginUserAction
         /** @var Authenticatable $authenticatableUser */
         $authenticatableUser = $user;
         Filament::auth()->login($authenticatableUser);
+        session()->regenerate();
         app(Dispatcher::class)->dispatch(new SocialiteUserConnected($socialiteUser));
-        // session()->regenerate();
 
-        // return redirect()->intended(Filament::getUrl());
-        return redirect()->intended('/');
+        return redirect()->intended('/'.app()->getLocale());
     }
 }

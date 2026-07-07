@@ -18,6 +18,18 @@ Il progetto Laravel Pizza è una conversione e miglioramento di https://<nome pr
 - **Docs prima del codice**: Prima si aggiorna/legge `docs/`, poi si scrive codice. Se manca, crealo seguendo lo Zen.
 - **Zero compromessi**: Approccio "fix, don't ignore" - tutti gli errori vanno corretti, nessuno ignorato.
 - **Strict Typing**: Ogni file deve avere `declare(strict_types=1);` e tipi espliciti ovunque.
+- **Conversione e Miglioramento**: Non è una semplice copia, ma un'evoluzione del sito originale
+- **Architettura Modulare**: Moduli indipendenti (`Modules/*`) e temi separati (`Themes/*`)
+- **Frontoffice con Folio + Volt**: Nessun controller tradizionale, solo routing file-based
+- **Qualità Maniacale**: PHPStan livello 10 obbligatorio
+
+## 🧘‍♂️ Filosofia (Philosophy)
+
+- **DRY + KISS estremi**: Niente complicazioni inutili, ma anche niente "scorciatoie sporche"
+- **Una tabella = una migrazione**: Ogni tabella deve avere una sola migrazione responsabile della sua creazione
+- **Frontoffice = Folio + Volt**: Pattern: `Request → Folio → Blade Page → Volt Component → Action → Service/Model`
+- **Docs prima del codice**: Prima si aggiorna/legge `docs/`, poi si scrive codice
+- **Zero compromessi**: Approccio "fix, don't ignore" - tutti gli errori vanno corretti, nessuno ignorato
 
 ## 🕌 Religione (Religion)
 

@@ -2,8 +2,12 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit;
 
+=======
+use Illuminate\Database\Eloquent\Factories\Factory;
+>>>>>>> 6d3760fe (.)
 use Illuminate\Validation\Rules\Password;
 use Modules\User\Datas\PasswordData;
 use Modules\User\Events\AddingTeam;
@@ -13,6 +17,12 @@ use Modules\User\Events\SocialiteUserConnected;
 use Modules\User\Models\SocialiteUser;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
+<<<<<<< HEAD
+
+uses(TestCase::class);
+=======
+use PHPUnit\Framework\Assert;
+>>>>>>> 6d3760fe (.)
 
 uses(TestCase::class);
 
@@ -105,6 +115,7 @@ it('password data get form components returns array', function (): void {
 });
 
 it('events can be instantiated', function (): void {
+<<<<<<< HEAD
     $userFactory = User::factory();
     \assert($userFactory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $owner = $userFactory->create();
@@ -113,6 +124,20 @@ it('events can be instantiated', function (): void {
     $socialiteFactory = SocialiteUser::factory();
     \assert($socialiteFactory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $socialiteUser = $socialiteFactory->create();
+=======
+    $userFactory = UserFactory::new();
+    \assert($userFactory instanceof Factory);
+    $owner = $userFactory->createOne();
+    \assert($owner instanceof User);
+
+    $socialiteFactory = SocialiteUserFactory::new();
+    \assert($socialiteFactory instanceof Factory);
+    $socialiteUser = $socialiteFactory->createOne([
+        'user_id' => (string) $owner->getKey(),
+        'provider' => 'github',
+        'provider_id' => 'provider-'.uniqid(),
+    ]);
+>>>>>>> 6d3760fe (.)
     \assert($socialiteUser instanceof SocialiteUser);
 
     $addingTeam = new AddingTeam($owner);
@@ -127,6 +152,7 @@ it('events can be instantiated', function (): void {
 });
 
 it('events have dispatchable trait', function (): void {
+<<<<<<< HEAD
     $userFactory = User::factory();
     \assert($userFactory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $owner = $userFactory->create();
@@ -135,6 +161,20 @@ it('events have dispatchable trait', function (): void {
     $socialiteFactory = SocialiteUser::factory();
     \assert($socialiteFactory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $socialiteUser = $socialiteFactory->create();
+=======
+    $userFactory = UserFactory::new();
+    \assert($userFactory instanceof Factory);
+    $owner = $userFactory->createOne();
+    \assert($owner instanceof User);
+
+    $socialiteFactory = SocialiteUserFactory::new();
+    \assert($socialiteFactory instanceof Factory);
+    $socialiteUser = $socialiteFactory->createOne([
+        'user_id' => (string) $owner->getKey(),
+        'provider' => 'github',
+        'provider_id' => 'provider-'.uniqid(),
+    ]);
+>>>>>>> 6d3760fe (.)
     \assert($socialiteUser instanceof SocialiteUser);
 
     // Smoke: calling dispatch should not error.

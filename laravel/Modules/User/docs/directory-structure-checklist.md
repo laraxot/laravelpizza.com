@@ -46,6 +46,10 @@ Questo documento fornisce una checklist per verificare la corretta struttura del
 
 - ❌ `Modules/User/Resources/views/auth/login.blade.php` (case errata!)
 - ❌ `Modules/User/Actions/DeleteUserAction.php` (manca app/)
+- ❌ `Modules/User/Application/UseCases/...` (manca app/)
+- ❌ `Modules/User/Database/Migrations/...` (PascalCase — usare `database/migrations/`)
+- ❌ `Modules/User/Events/UserRegistered.php` (manca app/)
+- ❌ `Modules/User/Listeners/AssignFreeCreditsListener.php` (manca app/)
 - ❌ `Modules/User/Http/Controllers/UserController.php` (manca app/)
 - ❌ `Modules/User/App/Http/Controllers/UserController.php` (App maiuscolo errato!)
 - ❌ Migration custom fuori dalla cartella del modulo (es: in laravel/database/migrations)
@@ -69,4 +73,6 @@ find Modules/User -type d -name "Resources" -o -name "Lang" -o -name "Config" -o
 ```
 
 ## Per saperne di più
-Consultare il documento completo: `/Modules/Xot/docs/DIRECTORY-STRUCTURE-GUIDE.md`
+- [module-root-folder-violations.md](./wiki/concepts/module-root-folder-violations.md) — violazioni attuali nel modulo User
+- [module-root-php-folders-forbidden.md](../../../../docs/wiki/rules/module-root-php-folders-forbidden.md) — regola wiki canonica
+- Consultare: `laravel/Modules/Xot/docs/module-directory-structure-rule.md`

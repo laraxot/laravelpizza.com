@@ -34,9 +34,9 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|PageContent whereCreatedBy($value)
  * @method static Builder<static>|PageContent whereId($value)
  * @method static Builder<static>|PageContent whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
- * @method static Builder<static>|PageContent whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static Builder<static>|PageContent whereJsonContainsLocales(string $column, array<int, string> $locales, ?mixed $value, string $operand = '=')
  * @method static Builder<static>|PageContent whereLocale(string $column, string $locale)
- * @method static Builder<static>|PageContent whereLocales(string $column, array $locales)
+ * @method static Builder<static>|PageContent whereLocales(string $column, array<int, string> $locales)
  * @method static Builder<static>|PageContent whereName($value)
  * @method static Builder<static>|PageContent whereSlug($value)
  * @method static Builder<static>|PageContent whereUpdatedAt($value)
@@ -45,7 +45,8 @@ use Spatie\Translatable\HasTranslations;
  *
  * @property ProfileContract|null $deleter
  *
- * @method static PageContentFactory factory($count = null, $state = [])
+ * @method static PageContentFactory               factory($count = null, $state = [])
+ * @method        array<int, array<string, mixed>> getSushiRows()
  *
  * @mixin \Eloquent
  */
@@ -54,8 +55,8 @@ class PageContent extends BaseModel
     use HasTranslations;
     use SushiToJsons;
 
-    /** @var array<int, string> */
-    public $translatable = [
+    /** @var list<string> */
+    public array $translatable = [
         'name',
         'blocks',
     ];
@@ -67,7 +68,8 @@ class PageContent extends BaseModel
         'blocks',
     ];
 
-    protected array $schema = [
+    /** @var array<string, string> */
+    protected $schema = [
         'id' => 'integer',
         'name' => 'json',
         'slug' => 'string',
@@ -78,9 +80,6 @@ class PageContent extends BaseModel
         'updated_by' => 'string',
     ];
 
-    /**
-     * @return array<string, mixed>
-     */
     /**
      * @return array<int, array<string, mixed>>
      */

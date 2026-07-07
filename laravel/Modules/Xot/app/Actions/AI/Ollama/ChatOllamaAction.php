@@ -7,6 +7,7 @@ namespace Modules\Xot\Actions\AI\Ollama;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
+use Modules\Xot\Actions\Cast\SafeIntCastAction;
 use Safe\Exceptions\JsonException;
 
 use function Safe\json_decode;
@@ -87,14 +88,14 @@ class ChatOllamaAction
                 'thinking' => is_string($messageData['thinking'] ?? null) ? $messageData['thinking'] : null,
                 'done' => (bool) ($data['done'] ?? false),
                 'tokens' => [
-                    'prompt' => (int) ($data['prompt_eval_count'] ?? 0),
-                    'generated' => (int) ($data['eval_count'] ?? 0),
-                    'total' => (int) ($data['prompt_eval_count'] ?? 0) + (int) ($data['eval_count'] ?? 0),
+                    'prompt' => SafeIntCastAction::cast($data['prompt_eval_count'] ?? 0),
+                    'generated' => SafeIntCastAction::cast($data['eval_count'] ?? 0),
+                    'total' => SafeIntCastAction::cast($data['prompt_eval_count'] ?? 0) + SafeIntCastAction::cast($data['eval_count'] ?? 0),
                 ],
                 'duration' => [
-                    'total' => (int) ($data['total_duration'] ?? 0),
-                    'prompt' => (int) ($data['prompt_eval_duration'] ?? 0),
-                    'generation' => (int) ($data['eval_duration'] ?? 0),
+                    'total' => SafeIntCastAction::cast($data['total_duration'] ?? 0),
+                    'prompt' => SafeIntCastAction::cast($data['prompt_eval_duration'] ?? 0),
+                    'generation' => SafeIntCastAction::cast($data['eval_duration'] ?? 0),
                 ],
             ];
         } catch (GuzzleException|JsonException $e) {
@@ -103,6 +104,15 @@ class ChatOllamaAction
         }
     }
 
+    /**
+     * @return array{
+     *     content: string,
+     *     thinking: string|null,
+     *     done: bool,
+     *     tokens: array{prompt: int, generated: int, total: int},
+     *     duration: array{total: int, prompt: int, generation: int}
+     * }
+     */
     public function executeOptimized(string $message): array
     {
         return $this->execute($message, [
@@ -117,6 +127,15 @@ class ChatOllamaAction
         ]);
     }
 
+    /**
+     * @return array{
+     *     content: string,
+     *     thinking: string|null,
+     *     done: bool,
+     *     tokens: array{prompt: int, generated: int, total: int},
+     *     duration: array{total: int, prompt: int, generation: int}
+     * }
+     */
     public function executeMinimal(string $message): array
     {
         return $this->execute($message, [

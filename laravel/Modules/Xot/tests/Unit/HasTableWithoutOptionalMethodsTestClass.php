@@ -16,9 +16,14 @@ class HasTableWithoutOptionalMethodsTestClass
 
     public function getLayoutView(): mixed
     {
+        /** @var \Mockery\MockInterface&\Mockery\LegacyMockInterface $mock */
         $mock = \Mockery::mock();
-        $mock->shouldReceive('getTableColumns')->andReturn([]);
-        $mock->shouldReceive('getTableContentGrid')->andReturn([]);
+        /** @var \Mockery\Expectation $e1 */
+        $e1 = $mock->shouldReceive('getTableColumns');
+        $e1->andReturn([]);
+        /** @var \Mockery\Expectation $e2 */
+        $e2 = $mock->shouldReceive('getTableContentGrid');
+        $e2->andReturn([]);
 
         return $mock;
     }
@@ -31,7 +36,10 @@ class HasTableWithoutOptionalMethodsTestClass
 
     public function getTable(): Table
     {
-        return \Mockery::mock(Table::class);
+        /** @var Table $mock */
+        $mock = \Mockery::mock(Table::class);
+
+        return $mock;
     }
 
     public function getTablePage(): ?int
@@ -54,6 +62,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
+    /** @return array<mixed> */
     public function getTableFilters(): array
     {
         return [];
@@ -64,6 +73,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
+    /** @return array<mixed>|null */
     public function getTableFilterState(string $_name): ?array
     {
         return [];
@@ -79,6 +89,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
+    /** @return array<mixed> */
     public function getTableColumnSearchIndicators(): array
     {
         return [];
@@ -89,6 +100,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
+    /** @return array<mixed> */
     public function getTableRecords(): array
     {
         return [];
@@ -104,6 +116,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
+    /** @return array<mixed> */
     public function getSelectedTableRecords(): array
     {
         return [];
@@ -119,6 +132,7 @@ class HasTableWithoutOptionalMethodsTestClass
         return 0;
     }
 
+    /** @return array<mixed> */
     public function getAllSelectableTableRecordKeys(): array
     {
         return [];

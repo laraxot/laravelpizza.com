@@ -44,15 +44,7 @@ related:
 1. **LangServiceProvider integration** - auto-label (NO `->label()` calls)
 2. **Security policy** - `queryStepOverrideAllowed()` 
 3. **Theme switching** - `->view('pub_theme::components.wizard')`
-<<<<<<< HEAD
-<<<<<<< HEAD
-4. **Xot pattern** - `getWizardSteps()`, `getStepByName()`
-=======
 4. **Xot pattern** - `getSteps()`, `getStepByName()`
->>>>>>> 40b96bcd6 (.)
-=======
-4. **Xot pattern** - `getSteps()`, `getStepByName()`
->>>>>>> origin/dev
 
 ## Key Insight (Zen)
 

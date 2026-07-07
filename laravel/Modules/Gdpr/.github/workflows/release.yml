@@ -1,36 +1,34 @@
-name: Release & Changelog
+name: Release
+
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: write # to push tags/releases
+  issues: write # to comment on released issues
+  pull-requests: write # to comment on released PRs
+
 jobs:
-  build:
+  release:
+    name: Semantic Release
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          php-version: '8.1'
-          extensions: mbstring, intl
-      - name: Setup Node
-        uses: actions/setup-node@v3
+          fetch-depth: 0 # Required for commit analysis
+          token: ${{ secrets.GH_TOKEN }} # using standard GH_TOKEN for semantic-release
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
-      - name: Install dependencies
-        run: composer install --no-interaction --prefer-dist
-      - name: Install Node dependencies
-        run: npm install
-      - name: Run tests
-        run: vendor/bin/phpunit --coverage-text
-      - name: Generate changelog
-        uses: github-changelog-generator/github-changelog-generator-action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          owner: ${{ github.owner }}
-          repo: ${{ github.repo }}
-      - name: Create release
-        uses: softprops/action-gh-release@v1
-        with:
-          generate_release_notes: true
+          node-version: 20
+
+      - name: Semantic Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npx semantic-release

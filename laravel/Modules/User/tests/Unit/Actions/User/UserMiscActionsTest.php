@@ -2,14 +2,19 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Actions\User;
 
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Actions\Activity\LogRegistrationAction;
 use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Actions\Otp\SendOtpByUserAction;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
+
+uses(Modules\User\Tests\TestCase::class);
 
 describe('User Misc Actions Coverage', function (): void {
     test('GetCurrentDeviceAction is accessible', function (): void {

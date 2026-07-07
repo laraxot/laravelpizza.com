@@ -155,20 +155,6 @@ test('mail template resource form schema exposes expected components', function 
 
     $schema = \assertNotifyArray(MailTemplateResource::getFormSchema());
 
-<<<<<<< HEAD
-    expect($schema)->toBeArray()
-        ->and($schema)->toHaveKey('mailable_slug_group')
-        ->and($schema['mailable_slug_group'])->toBeInstanceOf(Group::class)
-        ->and($schema)->toHaveKey('subject')
-        ->and($schema['subject'])->toBeInstanceOf(TextInput::class)
-        ->and($schema)->toHaveKey('html_layout_path')
-        ->and($schema)->toHaveKey('html_template')
-        ->and($schema['html_template'])->toBeInstanceOf(RichEditor::class)
-        ->and($schema)->toHaveKey('params_display')
-        ->and($schema['params_display'])->toBeInstanceOf(View::class)
-        ->and($schema)->toHaveKey('text_template')
-        ->and($schema['text_template'])->toBeInstanceOf(Textarea::class);
-=======
     Assert::assertArrayHasKey('mailable_slug_group', $schema);
     Assert::assertInstanceOf(Group::class, $schema['mailable_slug_group']);
     Assert::assertArrayHasKey('subject', $schema);
@@ -179,7 +165,6 @@ test('mail template resource form schema exposes expected components', function 
     Assert::assertArrayHasKey('params_display', $schema);
     Assert::assertArrayHasKey('text_template', $schema);
     Assert::assertInstanceOf(Textarea::class, $schema['text_template']);
->>>>>>> 40b96bcd6 (.)
 });
 
 test('notification resource form schema exposes expected components', function (): void {

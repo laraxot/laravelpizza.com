@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Models;
-
 use Modules\Cms\Models\Menu;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 test('Menu model can be instantiated', function () {
     $menu = new Menu();
 
-    expect($menu)->toBeInstanceOf(Menu::class);
+    Assert::assertInstanceOf(Menu::class, $menu);
 });
 
 test('Menu model has expected fillable fields', function () {
@@ -17,20 +17,21 @@ test('Menu model has expected fillable fields', function () {
 
     $fillable = $menu->getFillable();
 
-    expect($fillable)->toContain('title')
-        ->and($fillable)->toContain('parent_id');
+    Assert::assertContains('title', $fillable);
+
+    Assert::assertContains('parent_id', $fillable);
 });
 
 test('Menu model implements HasRecursiveRelationships', function () {
     $reflection = new ReflectionClass(Menu::class);
     $traits = $reflection->getTraitNames();
 
-    expect(in_array(Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships::class, $traits))->toBeTrue();
+    Assert::assertTrue(in_array(Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships::class, $traits));
 });
 
 test('Menu model uses SushiToJsons trait', function () {
     $reflection = new ReflectionClass(Menu::class);
     $traits = $reflection->getTraitNames();
 
-    expect(in_array(Modules\Tenant\Models\Traits\SushiToJsons::class, $traits))->toBeTrue();
+    Assert::assertTrue(in_array(Modules\Tenant\Models\Traits\SushiToJsons::class, $traits));
 });

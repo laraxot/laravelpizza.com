@@ -2,12 +2,24 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit;
 
+=======
+>>>>>>> 9fa499be (.)
 use Carbon\Carbon;
 use Modules\User\Tests\TestCase;
 
+<<<<<<< HEAD
 uses(TestCase::class);
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+function authBizSuspiciousLogin(): bool
+{
+    return false;
+}
+>>>>>>> 9fa499be (.)
 
 describe('Authentication Business Logic', function () {
     beforeEach(function () {

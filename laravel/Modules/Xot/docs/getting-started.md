@@ -375,6 +375,16 @@ npm run dev
 * [getting-started.md](../../../ui/docs/getting-started.md)
 * [getting-started.md](../../../tenant/docs/it/getting-started.md)
 * [getting-started.md](../../../cms/docs/getting-started.md)
+* [getting-started.md](../../../Gdpr/project_docs/getting-started.md)
+* [getting-started.md](../../../Xot/project_docs/getting-started.md)
+* [getting-started.md](../../../UI/project_docs/getting-started.md)
+* [getting-started.md](../../../Tenant/project_docs/it/getting-started.md)
+* [getting-started.md](../../../Cms/project_docs/getting-started.md)
+* [getting-started.md](../../../Gdpr/docs/getting-started.md)
+* [getting-started.md](../../../Xot/docs/getting-started.md)
+* [getting-started.md](../../../UI/docs/getting-started.md)
+* [getting-started.md](../../../Tenant/docs/it/getting-started.md)
+* [getting-started.md](../../../Cms/docs/getting-started.md)
 
 ### Versione Incoming
 
@@ -464,6 +474,11 @@ npm run dev
 * [getting-started.md](../../../ui/project_docs/getting-started.md)
 * [getting-started.md](../../../tenant/project_docs/it/getting-started.md)
 * [getting-started.md](../../../cms/project_docs/getting-started.md)
+* [getting-started.md](../../../Gdpr/project_docs/getting-started.md)
+* [getting-started.md](../../../Xot/project_docs/getting-started.md)
+* [getting-started.md](../../../UI/project_docs/getting-started.md)
+* [getting-started.md](../../../Tenant/project_docs/it/getting-started.md)
+* [getting-started.md](../../../Cms/project_docs/getting-started.md)
 
 ### Versione Incoming
 

@@ -2,8 +2,12 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Actions\Passport;
 
+=======
+use Mockery;
+>>>>>>> 9fa499be (.)
 use Modules\User\Actions\Passport\CreateGenericClientAction;
 use Modules\User\Actions\Passport\CreatePasswordClientAction;
 use Modules\User\Actions\Passport\CreatePersonalAccessClientAction;
@@ -11,6 +15,8 @@ use Modules\User\Models\OauthClient;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
+
+uses(Modules\User\Tests\TestCase::class);
 
 describe('Create specific passport client actions', function (): void {
     it('delegates password client creation to generic action', function (): void {

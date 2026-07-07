@@ -27,6 +27,7 @@ Verificare che tutti i modelli nei moduli estendano le classi base corrette (`Ba
 #### User
 - **Stato**: ✅ **CORRETTO** (15 Ottobre 2025)
 - **Modelli corretti**: 7 (Tenant, TeamUser, TeamInvitation, TeamPermission, Authentication, SsoProvider, OauthClient)
+- **Documentazione**: [MODEL_INHERITANCE_FIXES.md](../../User/docs/MODEL_INHERITANCE_FIXES.md)
 - **Documentazione**: [MODEL_INHERITANCE_FIXES.md](../../user/docs/model_inheritance_fixes.md)
 
 ---
@@ -147,20 +148,8 @@ class TemporaryUpload extends BaseModel implements HasMedia  // ✅
 
 ---
 
-<<<<<<< HEAD
 #### healthcare_app
 #### ModuloEsempio
-=======
-<<<<<<< .merge_file_a0qsiM
-#### healthcare_app
-=======
-<<<<<<< HEAD
-#### ModuloEsempio
-=======
-#### ExternalProject
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> origin/dev
->>>>>>> .merge_file_7g3Jt6
 **BaseModel**: ❌ Estende direttamente `Model` invece di `XotBaseModel`
 
 **Modelli da correggere**:
@@ -217,20 +206,8 @@ class TestSushiModel extends BaseModel  // ✅
 - ❌ Cms
 - ❌ Chart
 - ❌ Geo
-<<<<<<< HEAD
 - ❌ healthcare_app
 - ❌ ModuloEsempio
-=======
-<<<<<<< .merge_file_a0qsiM
-- ❌ healthcare_app
-=======
-<<<<<<< HEAD
-- ❌ ModuloEsempio
-=======
-- ❌ ExternalProject
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> origin/dev
->>>>>>> .merge_file_7g3Jt6
 
 **Totale**: 4/13 moduli (31%)
 
@@ -246,25 +223,10 @@ class TestSushiModel extends BaseModel  // ✅
 | Job | `TaskComment.php` | Estende `Model` invece di `BaseModel` |
 | Lang | `BaseModelLang.php` | Estende `Model` invece di `BaseModel` |
 | Media | `TemporaryUpload.php` | Estende `Model` invece di `BaseModel` |
-<<<<<<< HEAD
 | healthcare_app | `BaseModel.php` | Estende `Model` invece di `XotBaseModel` |
 | healthcare_app | `ContactSimple.php` | Estende `Model` invece di `BaseModel` |
 | ModuloEsempio | `BaseModel.php` | Estende `Model` invece di `XotBaseModel` |
 | ModuloEsempio | `ContactSimple.php` | Estende `Model` invece di `BaseModel` |
-=======
-<<<<<<< .merge_file_a0qsiM
-| healthcare_app | `BaseModel.php` | Estende `Model` invece di `XotBaseModel` |
-| healthcare_app | `ContactSimple.php` | Estende `Model` invece di `BaseModel` |
-=======
-<<<<<<< HEAD
-| ModuloEsempio | `BaseModel.php` | Estende `Model` invece di `XotBaseModel` |
-| ModuloEsempio | `ContactSimple.php` | Estende `Model` invece di `BaseModel` |
-=======
-| ExternalProject | `BaseModel.php` | Estende `Model` invece di `XotBaseModel` |
-| ExternalProject | `ContactSimple.php` | Estende `Model` invece di `BaseModel` |
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> origin/dev
->>>>>>> .merge_file_7g3Jt6
 | Tenant | `TestSushiModel.php` | Estende `Model` invece di `BaseModel` |
 
 **Totale**: 11 file da correggere
@@ -280,20 +242,8 @@ class TestSushiModel extends BaseModel  // ✅
 
 ### 🔴 Alta Priorità
 1. **Cms** - BaseModel e Conf (modulo core per contenuti)
-<<<<<<< HEAD
 2. **healthcare_app** - BaseModel e ContactSimple (modulo specifico del progetto)
 2. **ModuloEsempio** - BaseModel e ContactSimple (modulo specifico del progetto)
-=======
-<<<<<<< .merge_file_a0qsiM
-2. **healthcare_app** - BaseModel e ContactSimple (modulo specifico del progetto)
-=======
-<<<<<<< HEAD
-2. **ModuloEsempio** - BaseModel e ContactSimple (modulo specifico del progetto)
-=======
-2. **ExternalProject** - BaseModel e ContactSimple (modulo specifico del progetto)
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> origin/dev
->>>>>>> .merge_file_7g3Jt6
 
 ### 🟡 Media Priorità
 3. **Chart** - BaseModel
@@ -328,20 +278,8 @@ done
 
 1. ✅ **User** - Completato (15 Ottobre 2025)
 2. ⏳ **Cms** - Da correggere (BaseModel + Conf)
-<<<<<<< HEAD
 3. ⏳ **healthcare_app** - Da correggere (BaseModel + ContactSimple)
 3. ⏳ **ModuloEsempio** - Da correggere (BaseModel + ContactSimple)
-=======
-<<<<<<< .merge_file_a0qsiM
-3. ⏳ **healthcare_app** - Da correggere (BaseModel + ContactSimple)
-=======
-<<<<<<< HEAD
-3. ⏳ **ModuloEsempio** - Da correggere (BaseModel + ContactSimple)
-=======
-3. ⏳ **ExternalProject** - Da correggere (BaseModel + ContactSimple)
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> origin/dev
->>>>>>> .merge_file_7g3Jt6
 4. ⏳ **Chart** - Da correggere (BaseModel)
 5. ⏳ **Geo** - Da correggere (BaseModel + GeoNamesCap)
 6. ⏳ **Job** - Da correggere (TaskComment)
@@ -363,20 +301,8 @@ done
 Questi modelli possono comunque estendere `BaseModel` senza problemi.
 
 #### Modelli con HasMedia
-<<<<<<< HEAD
 - `healthcare_app/BaseModel.php` - Implementa `HasMedia`
 - `ModuloEsempio/BaseModel.php` - Implementa `HasMedia`
-=======
-<<<<<<< .merge_file_a0qsiM
-- `healthcare_app/BaseModel.php` - Implementa `HasMedia`
-=======
-<<<<<<< HEAD
-- `ModuloEsempio/BaseModel.php` - Implementa `HasMedia`
-=======
-- `ExternalProject/BaseModel.php` - Implementa `HasMedia`
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> origin/dev
->>>>>>> .merge_file_7g3Jt6
 - `Media/TemporaryUpload.php` - Implementa `HasMedia`
 
 `XotBaseModel` è compatibile con `HasMedia` di Spatie.
@@ -394,6 +320,10 @@ Dovrebbe estendere `BaseModel` del modulo Lang.
 - [DRY/KISS Refactoring](./dry_kiss_refactoring.md) - **Guida rapida refactoring**
 - [User Module Fixes](../../user/docs/model_inheritance_fixes.md)
 - [User Module Analysis](../../user/docs/model_inheritance_analysis.md)
+- [DRY/KISS Analysis](../../../../DRY_KISS_ANALYSIS.md) - **Analisi completa duplicazioni e piano refactoring**
+- [DRY/KISS Refactoring](./DRY_KISS_REFACTORING.md) - **Guida rapida refactoring**
+- [User Module Fixes](../../User/docs/MODEL_INHERITANCE_FIXES.md)
+- [User Module Analysis](../../User/docs/MODEL_INHERITANCE_ANALYSIS.md)
 - [Code Quality Rules](../../../.windsurf/rules/code-quality.md)
 - [XotBaseModel](../app/Models/XotBaseModel.php)
 - [XotBasePivot](../app/Models/XotBasePivot.php)
@@ -427,6 +357,7 @@ Verificare che tutti i modelli nei moduli estendano le classi base corrette (`Ba
 #### User
 - **Stato**: ✅ **CORRETTO** (15 Ottobre 2025)
 - **Modelli corretti**: 7 (Tenant, TeamUser, TeamInvitation, TeamPermission, Authentication, SsoProvider, OauthClient)
+- **Documentazione**: [MODEL_INHERITANCE_FIXES.md](../../User/docs/MODEL_INHERITANCE_FIXES.md)
 - **Documentazione**: [MODEL_INHERITANCE_FIXES.md](../../user/docs/model_inheritance_fixes.md)
 
 ---
@@ -547,20 +478,8 @@ class TemporaryUpload extends BaseModel implements HasMedia  // ✅
 
 ---
 
-<<<<<<< HEAD
 #### healthcare_app
 #### ModuloEsempio
-=======
-<<<<<<< .merge_file_a0qsiM
-#### healthcare_app
-=======
-<<<<<<< HEAD
-#### ModuloEsempio
-=======
-#### ExternalProject
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> origin/dev
->>>>>>> .merge_file_7g3Jt6
 **BaseModel**: ❌ Estende direttamente `Model` invece di `XotBaseModel`
 
 **Modelli da correggere**:
@@ -617,20 +536,8 @@ class TestSushiModel extends BaseModel  // ✅
 - ❌ Cms
 - ❌ Chart
 - ❌ Geo
-<<<<<<< HEAD
 - ❌ healthcare_app
 - ❌ ModuloEsempio
-=======
-<<<<<<< .merge_file_a0qsiM
-- ❌ healthcare_app
-=======
-<<<<<<< HEAD
-- ❌ ModuloEsempio
-=======
-- ❌ ExternalProject
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> origin/dev
->>>>>>> .merge_file_7g3Jt6
 
 **Totale**: 4/13 moduli (31%)
 
@@ -646,25 +553,10 @@ class TestSushiModel extends BaseModel  // ✅
 | Job | `TaskComment.php` | Estende `Model` invece di `BaseModel` |
 | Lang | `BaseModelLang.php` | Estende `Model` invece di `BaseModel` |
 | Media | `TemporaryUpload.php` | Estende `Model` invece di `BaseModel` |
-<<<<<<< HEAD
 | healthcare_app | `BaseModel.php` | Estende `Model` invece di `XotBaseModel` |
 | healthcare_app | `ContactSimple.php` | Estende `Model` invece di `BaseModel` |
 | ModuloEsempio | `BaseModel.php` | Estende `Model` invece di `XotBaseModel` |
 | ModuloEsempio | `ContactSimple.php` | Estende `Model` invece di `BaseModel` |
-=======
-<<<<<<< .merge_file_a0qsiM
-| healthcare_app | `BaseModel.php` | Estende `Model` invece di `XotBaseModel` |
-| healthcare_app | `ContactSimple.php` | Estende `Model` invece di `BaseModel` |
-=======
-<<<<<<< HEAD
-| ModuloEsempio | `BaseModel.php` | Estende `Model` invece di `XotBaseModel` |
-| ModuloEsempio | `ContactSimple.php` | Estende `Model` invece di `BaseModel` |
-=======
-| ExternalProject | `BaseModel.php` | Estende `Model` invece di `XotBaseModel` |
-| ExternalProject | `ContactSimple.php` | Estende `Model` invece di `BaseModel` |
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> origin/dev
->>>>>>> .merge_file_7g3Jt6
 | Tenant | `TestSushiModel.php` | Estende `Model` invece di `BaseModel` |
 
 **Totale**: 11 file da correggere
@@ -680,20 +572,8 @@ class TestSushiModel extends BaseModel  // ✅
 
 ### 🔴 Alta Priorità
 1. **Cms** - BaseModel e Conf (modulo core per contenuti)
-<<<<<<< HEAD
 2. **healthcare_app** - BaseModel e ContactSimple (modulo specifico del progetto)
 2. **ModuloEsempio** - BaseModel e ContactSimple (modulo specifico del progetto)
-=======
-<<<<<<< .merge_file_a0qsiM
-2. **healthcare_app** - BaseModel e ContactSimple (modulo specifico del progetto)
-=======
-<<<<<<< HEAD
-2. **ModuloEsempio** - BaseModel e ContactSimple (modulo specifico del progetto)
-=======
-2. **ExternalProject** - BaseModel e ContactSimple (modulo specifico del progetto)
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> origin/dev
->>>>>>> .merge_file_7g3Jt6
 
 ### 🟡 Media Priorità
 3. **Chart** - BaseModel
@@ -728,20 +608,8 @@ done
 
 1. ✅ **User** - Completato (15 Ottobre 2025)
 2. ⏳ **Cms** - Da correggere (BaseModel + Conf)
-<<<<<<< HEAD
 3. ⏳ **healthcare_app** - Da correggere (BaseModel + ContactSimple)
 3. ⏳ **ModuloEsempio** - Da correggere (BaseModel + ContactSimple)
-=======
-<<<<<<< .merge_file_a0qsiM
-3. ⏳ **healthcare_app** - Da correggere (BaseModel + ContactSimple)
-=======
-<<<<<<< HEAD
-3. ⏳ **ModuloEsempio** - Da correggere (BaseModel + ContactSimple)
-=======
-3. ⏳ **ExternalProject** - Da correggere (BaseModel + ContactSimple)
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> origin/dev
->>>>>>> .merge_file_7g3Jt6
 4. ⏳ **Chart** - Da correggere (BaseModel)
 5. ⏳ **Geo** - Da correggere (BaseModel + GeoNamesCap)
 6. ⏳ **Job** - Da correggere (TaskComment)
@@ -763,20 +631,8 @@ done
 Questi modelli possono comunque estendere `BaseModel` senza problemi.
 
 #### Modelli con HasMedia
-<<<<<<< HEAD
 - `healthcare_app/BaseModel.php` - Implementa `HasMedia`
 - `ModuloEsempio/BaseModel.php` - Implementa `HasMedia`
-=======
-<<<<<<< .merge_file_a0qsiM
-- `healthcare_app/BaseModel.php` - Implementa `HasMedia`
-=======
-<<<<<<< HEAD
-- `ModuloEsempio/BaseModel.php` - Implementa `HasMedia`
-=======
-- `ExternalProject/BaseModel.php` - Implementa `HasMedia`
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> origin/dev
->>>>>>> .merge_file_7g3Jt6
 - `Media/TemporaryUpload.php` - Implementa `HasMedia`
 
 `XotBaseModel` è compatibile con `HasMedia` di Spatie.
@@ -794,6 +650,10 @@ Dovrebbe estendere `BaseModel` del modulo Lang.
 - [DRY/KISS Refactoring](./dry_kiss_refactoring.md) - **Guida rapida refactoring**
 - [User Module Fixes](../../user/docs/model_inheritance_fixes.md)
 - [User Module Analysis](../../user/docs/model_inheritance_analysis.md)
+- [DRY/KISS Analysis](../../../../DRY_KISS_ANALYSIS.md) - **Analisi completa duplicazioni e piano refactoring**
+- [DRY/KISS Refactoring](./DRY_KISS_REFACTORING.md) - **Guida rapida refactoring**
+- [User Module Fixes](../../User/docs/MODEL_INHERITANCE_FIXES.md)
+- [User Module Analysis](../../User/docs/MODEL_INHERITANCE_ANALYSIS.md)
 - [Code Quality Rules](../../../.windsurf/rules/code-quality.md)
 - [XotBaseModel](../app/Models/XotBaseModel.php)
 - [XotBasePivot](../app/Models/XotBasePivot.php)

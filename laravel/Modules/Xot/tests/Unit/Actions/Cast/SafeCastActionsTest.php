@@ -2,113 +2,106 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Actions\Cast;
-
+uses(Modules\Xot\Tests\TestCase::class);
 use Modules\Xot\Actions\Cast\SafeArrayCastAction;
 use Modules\Xot\Actions\Cast\SafeBooleanCastAction;
 use Modules\Xot\Actions\Cast\SafeIntCastAction;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
+use PHPUnit\Framework\Assert;
 
-test('safe array cast action works', function () {
+test('safe array cast action works', function (): void {
     $action = app(SafeArrayCastAction::class);
 
-    expect($action->execute(['a' => 1]))->toBe(['a' => 1])
-        ->and($action->execute(null, ['def']))->toBe(['def'])
-        ->and($action->execute(collect(['b' => 2])))->toBe(['b' => 2])
-        ->and($action->execute((object) ['c' => 3]))->toBe(['c' => 3])
-        ->and($action->execute('scalar'))->toBe(['scalar'])
-        ->and($action->execute(new class {
-            public $d = 4;
-        }))->toBe(['d' => 4])
-        ->and($action->execute(new class {
-            public function toArray()
-            {
-                return ['e' => 5];
-            }
-        }))->toBe(['e' => 5])
-        ->and($action->execute(new class {
-            public function __toArray()
-            {
-                return ['f' => 6];
-            }
-        }))->toBe(['f' => 6]);
+    Assert::assertSame(['a' => 1], $action->execute(['a' => 1]));
+    Assert::assertSame(['def'], $action->execute(null, ['def']));
+    Assert::assertSame(['b' => 2], $action->execute(collect(['b' => 2])));
+    Assert::assertSame(['c' => 3], $action->execute((object) ['c' => 3]));
+    Assert::assertSame(['scalar'], $action->execute('scalar'));
+    Assert::assertSame(['d' => 4], $action->execute(new class {
+        public int $d = 4;
+    }));
+    Assert::assertSame(['e' => 5], $action->execute(new class {
+        /** @return array<string, int> */
+        public function toArray(): array
+        {
+            return ['e' => 5];
+        }
+    }));
+    Assert::assertSame(['f' => 6], $action->execute(new class {
+        /** @return array<string, int> */
+        public function __toArray(): array
+        {
+            return ['f' => 6];
+        }
+    }));
 
-    expect($action->executeWithKeys(['a' => 1, 'b' => 2], ['a', 'b']))->toBe(['a' => 1, 'b' => 2])
-        ->and($action->executeWithKeys(['a' => 1], ['a', 'b'], ['def']))->toBe(['def']);
-
-    expect($action->executeWithFilter(['a' => 1, 'b' => 2, 'c' => 3], ['a', 'c']))->toBe(['a' => 1, 'c' => 3]);
-
-    expect($action->executeWithValueType(['1', '2'], 'int'))->toBe([1, 2])
-        ->and($action->executeWithValueType([1, 0], 'bool'))->toBe([true, false])
-        ->and($action->executeWithValueType([1.1, 2.2], 'string'))->toBe(['1.1', '2.2']);
-
-    expect($action->canCast([]))->toBeTrue();
-    expect(SafeArrayCastAction::cast(null))->toBe([]);
+    Assert::assertSame(['def'], $action->executeWithKeys(['a' => 1], ['a', 'b'], ['def']));
+    Assert::assertSame(['a' => 1, 'b' => 2], $action->executeWithKeys(['a' => 1, 'b' => 2], ['a', 'b']));
+    Assert::assertSame(['a' => 1, 'c' => 3], $action->executeWithFilter(['a' => 1, 'b' => 2, 'c' => 3], ['a', 'c']));
+    Assert::assertSame([true, false], $action->executeWithValueType([1, 0], 'bool'));
+    Assert::assertSame(['1.1', '2.2'], $action->executeWithValueType([1.1, 2.2], 'string'));
+    Assert::assertSame([1, 2], $action->executeWithValueType(['1', '2'], 'int'));
+    Assert::assertTrue($action->canCast([]));
+    Assert::assertSame([], SafeArrayCastAction::cast(null));
 });
 
-test('safe string cast action works', function () {
+test('safe string cast action works', function (): void {
     $action = app(SafeStringCastAction::class);
 
-    expect($action->execute('test'))->toBe('test')
-        ->and($action->execute(null))->toBe('')
-        ->and($action->execute(true))->toBe('1')
-        ->and($action->execute(false))->toBe('0')
-        ->and($action->execute(123))->toBe('123')
-        ->and($action->execute([]))->toBe('');
-
-    expect(SafeStringCastAction::cast(456))->toBe('456');
+    Assert::assertSame('test', $action->execute('test'));
+    Assert::assertSame('', $action->execute(null));
+    Assert::assertSame('1', $action->execute(true));
+    Assert::assertSame('0', $action->execute(false));
+    Assert::assertSame('123', $action->execute(123));
+    Assert::assertSame('', $action->execute([]));
+    Assert::assertSame('456', SafeStringCastAction::cast(456));
 });
 
-test('safe int cast action works', function () {
+test('safe int cast action works', function (): void {
     $action = app(SafeIntCastAction::class);
 
-    expect($action->execute(123))->toBe(123)
-        ->and($action->execute(123.9))->toBe(123)
-        ->and($action->execute(null, 5))->toBe(5)
-        ->and($action->execute('1.234,56'))->toBe(123456)
-        ->and($action->execute(' +123 '))->toBe(123)
-        ->and($action->execute(true))->toBe(1)
-        ->and($action->execute(['789']))->toBe(789)
-        ->and($action->execute(new class {
-            public function __toString()
-            {
-                return '1011';
-            }
-        }))->toBe(1011)
-        ->and($action->execute('invalid'))->toBe(0);
+    Assert::assertSame(123, $action->execute(123));
+    Assert::assertSame(123, $action->execute(123.9));
+    Assert::assertSame(5, $action->execute(null, 5));
+    Assert::assertSame(123456, $action->execute('1.234,56'));
+    Assert::assertSame(123, $action->execute(' +123 '));
+    Assert::assertSame(1, $action->execute(true));
+    Assert::assertSame(789, $action->execute(['789']));
+    Assert::assertSame(1011, $action->execute(new class {
+        public function __toString(): string
+        {
+            return '1011';
+        }
+    }));
+    Assert::assertSame(0, $action->execute('invalid'));
 
-    expect($action->executeWithRange(50, 0, 100))->toBe(50)
-        ->and($action->executeWithRange(150, 0, 100))->toBe(100)
-        ->and($action->executeWithRange(-50, 0, 100))->toBe(0);
-
-    expect($action->executeAsId(0))->toBe(1)
-        ->and($action->executeAsId(10))->toBe(10);
-
-    expect(SafeIntCastAction::cast('99'))->toBe(99);
+    Assert::assertSame(100, $action->executeWithRange(150, 0, 100));
+    Assert::assertSame(0, $action->executeWithRange(-50, 0, 100));
+    Assert::assertSame(50, $action->executeWithRange(50, 0, 100));
+    Assert::assertSame(10, $action->executeAsId(10));
+    Assert::assertSame(0, $action->executeAsId(0));
+    Assert::assertSame(99, SafeIntCastAction::cast('99'));
 });
 
-test('safe boolean cast action works', function () {
+test('safe boolean cast action works', function (): void {
     $action = app(SafeBooleanCastAction::class);
 
-    expect($action->execute(true))->toBeTrue()
-        ->and($action->execute(null, true))->toBeTrue()
-        ->and($action->execute(1))->toBeTrue()
-        ->and($action->execute(0))->toBeFalse()
-        ->and($action->execute(1.1))->toBeTrue()
-        ->and($action->execute(0.0))->toBeFalse()
-        ->and($action->execute('yes'))->toBeTrue()
-        ->and($action->execute('no'))->toBeFalse()
-        ->and($action->execute(['a']))->toBeTrue()
-        ->and($action->execute([]))->toBeFalse()
-        ->and($action->execute((object) ['a' => 1]))->toBeTrue()
-        ->and($action->execute((object) []))->toBeFalse();
-
-    expect($action->executeWithCustomValues('Y', ['y'], ['n']))->toBeTrue()
-        ->and($action->executeWithCustomValues('N', ['y'], ['n']))->toBeFalse();
-
-    expect($action->executeWithThreshold(10, 5))->toBeTrue()
-        ->and($action->executeWithThreshold(3, 5))->toBeFalse();
-
-    expect($action->canCast(true))->toBeTrue();
-    expect(SafeBooleanCastAction::cast('on'))->toBeTrue();
+    Assert::assertTrue($action->execute(true));
+    Assert::assertTrue($action->execute(null, true));
+    Assert::assertTrue($action->execute(1));
+    Assert::assertFalse($action->execute(0));
+    Assert::assertTrue($action->execute(1.1));
+    Assert::assertFalse($action->execute(0.0));
+    Assert::assertTrue($action->execute('yes'));
+    Assert::assertFalse($action->execute('no'));
+    Assert::assertTrue($action->execute(['a']));
+    Assert::assertFalse($action->execute([]));
+    Assert::assertTrue($action->execute((object) ['a' => 1]));
+    Assert::assertFalse($action->execute((object) []));
+    Assert::assertTrue($action->executeWithCustomValues('Y', ['y'], ['n']));
+    Assert::assertFalse($action->executeWithCustomValues('N', ['y'], ['n']));
+    Assert::assertTrue($action->executeWithThreshold(10, 5));
+    Assert::assertFalse($action->executeWithThreshold(3, 5));
+    Assert::assertTrue($action->canCast(true));
+    Assert::assertTrue(SafeBooleanCastAction::cast('on'));
 });

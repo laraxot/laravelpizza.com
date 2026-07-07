@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Debug;
 
+use Closure;
 use Filament\Notifications\Notification;
 
 /**

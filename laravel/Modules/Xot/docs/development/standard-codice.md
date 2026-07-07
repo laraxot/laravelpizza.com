@@ -97,6 +97,7 @@ class PatientData
         return new self(
             firstName: $data['first_name'],
             lastName: $data['last_name'],
+            birthDate: isset($data['birth_date']) ? new DateTime($data['birth_date']) : null,
             isActive: $data['is_active'] ?? true,
         );
     }
@@ -156,4 +157,5 @@ class MyResource extends XotBaseResource
 
 ## Collegamenti tra versioni di standard-codice.md
 * [standard-codice.md](docs/standard-codice.md)
+* [standard-codice.md](../../../Xot/docs/development/standard-codice.md)
 * [standard-codice.md](../../../xot/docs/development/standard-codice.md)

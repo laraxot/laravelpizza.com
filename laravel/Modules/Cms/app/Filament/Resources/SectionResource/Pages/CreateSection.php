@@ -9,5 +9,5 @@ use Modules\Lang\Filament\Resources\Pages\LangBaseCreateRecord;
 
 class CreateSection extends LangBaseCreateRecord
 {
-    protected static string $resource = SectionResource::class;
+    public static string $resource = SectionResource::class;
 }

@@ -1,7 +1,5 @@
 # Homepage Parity Notes
 
-<<<<<<< HEAD
-=======
 ## Produzione locale `/it` (STORY-054)
 
 - **URL:** `http://127.0.0.1:8000/it` — Folio `slug="home"`.
@@ -11,7 +9,6 @@
 
 ## Sandbox Design Comuni
 
->>>>>>> 40b96bcd6 (.)
 La route `tests.homepage` continua a essere alimentata dal JSON CMS:
 - [tests.homepage.json](/var/www/_bases/base_fixcity_fila5/laravel/config/local/fixcity/database/content/pages/tests.homepage.json)
 

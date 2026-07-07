@@ -1,5 +1,7 @@
 # Page Context Data Bag
 
+> **SSoT:** [ADR](../../../docs/wiki/decisions/cms-x-page-opaque-data-bag.md) · duplicare qui solo esempi operativi.
+
 ## Sintesi
 
 `Modules\Cms\View\Components\Page` non deve conoscere una lista chiusa di parametri come `container0` e `slug0`.

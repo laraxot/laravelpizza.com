@@ -15,6 +15,14 @@ Questo documento descrive i file con conflitti git identificati nel progetto e l
 
 ### Modulo Job
 - [Documentazione dettagliata del modulo Job](../../job/docs/conflict_resolution.md)
+- [Documentazione dettagliata del modulo Media](../../Media/docs/CONFLITTI_MERGE_RISOLTI.md)
+- [Azioni delle tabelle Filament](../../Media/docs/filament_table_actions_conflict_resolution.md)
+
+### Modulo Tenant
+- [Documentazione dettagliata del modulo Tenant](../../Tenant/docs/risoluzione_conflitti.md)
+
+### Modulo Job
+- [Documentazione dettagliata del modulo Job](../../Job/docs/conflict_resolution.md)
 
 ## File con Conflitti
 
@@ -96,6 +104,9 @@ I file modificati sono stati documentati sia nel loro specifico modulo che in qu
 
 ## Collegamenti Bidirezionali
 
+- [PHPStan Report](../../Media/docs/phpstan_report.md)
+- [Test Report](test_report.md)
+- [Documentazione Conflitti Job](../../Job/docs/conflict_resolution.md)
 - [PHPStan Report](../../media/docs/phpstan_report.md)
 - [Test Report](test_report.md)
 - [Documentazione Conflitti Job](../../job/docs/conflict_resolution.md)

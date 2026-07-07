@@ -154,6 +154,7 @@ use Modules\User\Models\User; // Namespace corretto
 
 - [Architettura Modulo Xot](../core/architecture.md)
 - [Convenzioni di Naming](../core/naming-conventions.md)
+**Ultimo aggiornamento:** Gennaio 2025
 - [Best Practices Sistema](../../../../docs/core/best-practices.md)
 
 ---

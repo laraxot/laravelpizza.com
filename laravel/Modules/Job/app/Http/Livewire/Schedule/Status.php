@@ -16,6 +16,7 @@ use Modules\Xot\Actions\GetViewAction;
  */
 class Status extends Component
 {
+    /** @var array<string, mixed> */
     public array $form_data = [];
 
     public string $out = '';
@@ -77,15 +78,24 @@ class Status extends Component
         $this->out .= '<hr/>';
     }
 
+    /**
+     * @return Collection<int, \Illuminate\Console\Scheduling\Event>
+     */
     public function getScheduledJobs(): Collection
     {
         if (app()->runningInConsole()) {
-            return collect([]);
+            /** @var Collection<int, \Illuminate\Console\Scheduling\Event> $empty */
+            $empty = collect([]);
+
+            return $empty;
         }
         // Kernel removed in laravel 11
         // new Kernel(app(), new Dispatcher);
         $schedule = app(Schedule::class);
 
-        return collect($schedule->events());
+        /** @var Collection<int, \Illuminate\Console\Scheduling\Event> $events */
+        $events = collect($schedule->events())->values();
+
+        return $events;
     }
 }

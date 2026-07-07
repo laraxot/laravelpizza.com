@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Datas;
 use Modules\Notify\Datas\EmailData;
-<<<<<<< HEAD
-=======
 use PHPUnit\Framework\Assert;
->>>>>>> 40b96bcd6 (.)
 use Spatie\LaravelData\Data;
 
 describe('EmailData', function () {
@@ -36,11 +33,7 @@ describe('EmailData', function () {
     it('extends Spatie Data', function () {
         $reflection = new \ReflectionClass(EmailData::class);
 
-<<<<<<< HEAD
-        expect($reflection->isSubclassOf(Data::class))->toBeTrue();
-=======
         Assert::assertTrue($reflection->isSubclassOf(Data::class));
->>>>>>> 40b96bcd6 (.)
     });
 
     it('has getFrom method', function () {

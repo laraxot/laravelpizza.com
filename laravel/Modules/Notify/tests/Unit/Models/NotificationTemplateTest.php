@@ -3,21 +3,12 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Models;
-<<<<<<< HEAD
-
-uses(TestCase::class);
-
-use Modules\Notify\Enums\NotificationTypeEnum;
-use Modules\Notify\Models\NotificationTemplate;
-use Modules\Notify\Tests\TestCase;
-=======
 use Modules\Notify\Enums\NotificationTypeEnum;
 use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 uses(\Modules\Notify\Tests\TestCase::class);
->>>>>>> 40b96bcd6 (.)
 
 /**
  * Unit tests must not bootstrap the application container.

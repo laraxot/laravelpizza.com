@@ -2,97 +2,93 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Actions\Cast;
-
+uses(Modules\Xot\Tests\TestCase::class);
 use Illuminate\Support\Collection;
 use Modules\Xot\Actions\Cast\SafeArrayCastAction;
+use PHPUnit\Framework\Assert;
+
+use function Safe\fopen;
 
 it('casts various values to array correctly', function (): void {
     $action = app(SafeArrayCastAction::class);
 
     // Already array
-    expect($action->execute(['a' => 1]))->toBe(['a' => 1]);
-
+    Assert::assertSame(['a' => 1], $action->execute(['a' => 1]));
     // Null
-    expect($action->execute(null, ['default']))->toBe(['default']);
-
+    Assert::assertSame(['default'], $action->execute(null, ['default']));
     // Collection
-    expect($action->execute(collect(['b' => 2])))->toBe(['b' => 2]);
-
+    Assert::assertSame(['b' => 2], $action->execute(collect(['b' => 2])));
     // stdClass
-    $obj = new \stdClass();
+    $obj = new stdClass();
     $obj->c = 3;
-    expect($action->execute($obj))->toBe(['c' => 3]);
-
+    Assert::assertSame(['c' => 3], $action->execute($obj));
     // Object with toArray
     $objToArray = new class {
-        public function toArray()
+        /** @return array<string, int> */
+        public function toArray(): array
         {
             return ['d' => 4];
         }
     };
-    expect($action->execute($objToArray))->toBe(['d' => 4]);
-
+    Assert::assertSame(['d' => 4], $action->execute($objToArray));
     // Object with __toArray
     $objUnderscoreToArray = new class {
-        public function __toArray()
+        /** @return array<string, int> */
+        public function __toArray(): array
         {
             return ['e' => 5];
         }
     };
-    expect($action->execute($objUnderscoreToArray))->toBe(['e' => 5]);
-
+    Assert::assertSame(['e' => 5], $action->execute($objUnderscoreToArray));
     // Regular object (public properties)
     $regObj = new class {
-        public $f = 6;
+        public int $f = 6;
     };
-    expect($action->execute($regObj))->toBe(['f' => 6]);
-
+    Assert::assertSame(['f' => 6], $action->execute($regObj));
     // Scalar
-    expect($action->execute('test'))->toBe(['test']);
-    expect($action->execute(123))->toBe([123]);
-
+    Assert::assertSame(['test'], $action->execute('test'));
+    Assert::assertSame([123], $action->execute(123));
     // Fallback
-    expect($action->execute(fopen('php://memory', 'r'), ['fallback']))->toBe(['fallback']);
+    Assert::assertSame(['fallback'], $action->execute(fopen('php://memory', 'r'), ['fallback']));
 });
 
 it('validates required keys correctly', function (): void {
     $action = app(SafeArrayCastAction::class);
     $data = ['a' => 1, 'b' => 2];
 
-    expect($action->executeWithKeys($data, ['a', 'b']))->toBe($data);
-    expect($action->executeWithKeys($data, ['a', 'c'], ['error' => true]))->toBe(['error' => true]);
+    Assert::assertSame($data, $action->executeWithKeys($data, ['a', 'b']));
+    Assert::assertSame(['error' => true], $action->executeWithKeys($data, ['a', 'c'], ['error' => true]));
 });
 
 it('filters keys correctly', function (): void {
     $action = app(SafeArrayCastAction::class);
     $data = ['a' => 1, 'b' => 2, 'c' => 3];
 
-    expect($action->executeWithFilter($data, ['a', 'c']))->toBe(['a' => 1, 'c' => 3]);
+    Assert::assertSame(['a' => 1, 'c' => 3], $action->executeWithFilter($data, ['a', 'c']));
 });
 
 it('casts values to specific type correctly', function (): void {
     $action = app(SafeArrayCastAction::class);
     $data = ['1', '2', '3'];
 
-    expect($action->executeWithValueType($data, 'int'))->toBe([1, 2, 3]);
-    expect($action->executeWithValueType([1, 0, true], 'bool'))->toBe([true, false, true]);
-    expect($action->executeWithValueType([1.1, 2.2], 'string'))->toBe(['1.1', '2.2']);
-    expect($action->executeWithValueType(['1.1', '2.2'], 'float'))->toBe([1.1, 2.2]);
-    expect($action->executeWithValueType(['a', 'b'], 'invalid'))->toBe(['a', 'b']);
+    Assert::assertSame([1, 2, 3], $action->executeWithValueType($data, 'int'));
+    Assert::assertSame([true, false, true], $action->executeWithValueType([1, 0, true], 'bool'));
+    Assert::assertSame(['1.1', '2.2'], $action->executeWithValueType([1.1, 2.2], 'string'));
+    Assert::assertSame([1.1, 2.2], $action->executeWithValueType(['1.1', '2.2'], 'float'));
+    Assert::assertSame(['a', 'b'], $action->executeWithValueType(['a', 'b'], 'invalid'));
 });
 
 it('checks if value can be cast', function (): void {
     $action = app(SafeArrayCastAction::class);
-    expect($action->canCast([]))->toBeTrue();
-    expect($action->canCast(null))->toBeTrue();
-    expect($action->canCast('str'))->toBeTrue();
-    expect($action->canCast(new \stdClass()))->toBeTrue();
+    Assert::assertTrue($action->canCast([]));
+    Assert::assertTrue($action->canCast(null));
+    Assert::assertTrue($action->canCast('str'));
+    Assert::assertTrue($action->canCast(new stdClass()));
 });
 
 it('uses static cast method correctly', function (): void {
-    expect(SafeArrayCastAction::cast(['foo' => 'bar']))->toBe(['foo' => 'bar']);
-    expect(SafeArrayCastAction::castWithKeys(['a' => 1], ['a']))->toBe(['a' => 1]);
-    expect(SafeArrayCastAction::castWithFilter(['a' => 1, 'b' => 2], ['a']))->toBe(['a' => 1]);
-    expect(SafeArrayCastAction::castWithValueType(['1'], 'int'))->toBe([1]);
+    Assert::assertSame(['foo' => 'bar'], SafeArrayCastAction::cast(['foo' => 'bar']));
+    Assert::assertSame(['a' => 1], SafeArrayCastAction::castWithKeys(['a' => 1], ['a']));
+    Assert::assertSame(['a' => 1], SafeArrayCastAction::castWithFilter(['a' => 1, 'b' => 2], ['a']));
+    Assert::assertSame([1], SafeArrayCastAction::castWithValueType(['1'], 'int'));
 });

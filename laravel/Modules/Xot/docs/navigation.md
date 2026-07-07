@@ -1,47 +1,17 @@
 ---
-title: Navigation
-description: Building a navigation menu for your site
-extends: _layouts.documentation
-section: content
----
-
-# Navigation {#navigation}
-
-The navigation menu in the left-hand sidebar is defined using an array in `navigation.php`. Nested pages can be added by using the `children` associative array.
-
-```php
-<?php
-// navigation.php
-
-return [
-    'Getting Started' => [
-        'url' => 'docs/getting-started',
-        'children' => [
-            'Customizing Your Site' => 'docs/customizing-your-site',
-            'Navigation' => 'docs/navigation',
-            'Algolia DocSearch' => 'docs/algolia-docsearch',
-            'Custom 404 Page' => 'docs/custom-404-page',
-        ],
-    ],
-    'Jigsaw Docs' => 'https://jigsaw.tighten.co/docs/installation',
-];
-
-// config.php
-'navigation' => require_once('navigation.php'),
-
-// blade files
-$page->navigation
-```
-### Versione HEAD
-
-## Collegamenti tra versioni di navigation.md
-* [navigation.md](../../../gdpr/docs/navigation.md)
-* [navigation.md](../../../xot/docs/navigation.md)
-* [navigation.md](../../../ui/docs/navigation.md)
-* [navigation.md](../../../cms/docs/blocks/navigation.md)
-* [navigation.md](../../../cms/docs/navigation.md)
-* [navigation.md](../../../cms/docs/components/navigation.md)
+* [navigation.md](../../../Gdpr/docs/navigation.md)
+* [navigation.md](../../../Xot/docs/navigation.md)
+* [navigation.md](../../../UI/docs/navigation.md)
+* [navigation.md](../../../Cms/docs/blocks/navigation.md)
+* [navigation.md](../../../Cms/docs/navigation.md)
+* [navigation.md](../../../Cms/docs/components/navigation.md)
 
 ### Versione Incoming
 
 ---
+module: theme
+topic: navigation
+canonical: ../../../Themes/docs/shared-components/navigation.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/navigation.md

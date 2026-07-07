@@ -3,24 +3,15 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Enums;
-<<<<<<< HEAD
-
-uses(TestCase::class);
-
-=======
->>>>>>> 40b96bcd6 (.)
 use Filament\Forms\Components\TextInput;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasLabel;
 use Modules\Notify\Enums\ContactTypeEnum;
 use Modules\Notify\Tests\TestCase;
-<<<<<<< HEAD
-=======
 use PHPUnit\Framework\Assert;
 
 uses(\Modules\Notify\Tests\TestCase::class);
->>>>>>> 40b96bcd6 (.)
 
 it('has correct cases', function (): void {
     Assert::assertCount(6, ContactTypeEnum::cases());

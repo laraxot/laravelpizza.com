@@ -32,11 +32,7 @@ TenantService.php
   → usa inAdmin()
   → usa getModuleModels()
     ↓
-<<<<<<< HEAD
 Xot/Helpers/Helper.php
-=======
-Xot/helpers/Helper.php
->>>>>>> origin/dev
   → DOVREBBE definire queste funzioni
   → MA erano mancanti!
 ```
@@ -52,11 +48,7 @@ Xot/helpers/Helper.php
 5. **TenantService** usa `inAdmin()` nel metodo `config()`
 6. **CRASH**: Funzione non esiste
 
-<<<<<<< HEAD
 **Causa Root**: Le funzioni helper `inAdmin()` e `getModuleModels()` non erano definite in `Xot/Helpers/Helper.php`.
-=======
-**Causa Root**: Le funzioni helper `inAdmin()` e `getModuleModels()` non erano definite in `Xot/helpers/Helper.php`.
->>>>>>> origin/dev
 
 ## 🎯 Business Logic delle Funzioni
 
@@ -127,11 +119,7 @@ function getModuleModels(string $moduleName): array
 
 ### 1. Aggiunte Funzioni Helper
 
-<<<<<<< HEAD
 **File**: `Modules/Xot/Helpers/Helper.php`
-=======
-**File**: `Modules/Xot/helpers/Helper.php`
->>>>>>> origin/dev
 
 ```php
 /**
@@ -354,11 +342,7 @@ echo 'User models count: ' . count(getModuleModels('User')) . PHP_EOL;
 
 ### File Aggiornati
 
-<<<<<<< HEAD
 1. ✅ `Modules/Xot/Helpers/Helper.php`
-=======
-1. ✅ `Modules/Xot/helpers/Helper.php`
->>>>>>> origin/dev
    - Aggiunte funzioni `inAdmin()` e `getModuleModels()`
    - Type hints completi per PHPStan Level 10
    - PHPDoc dettagliato
@@ -373,6 +357,7 @@ echo 'User models count: ' . count(getModuleModels('User')) . PHP_EOL;
 - [nwidart/laravel-modules GitHub](https://github.com/nWidart/laravel-modules)
 - [wikimedia/composer-merge-plugin GitHub](https://github.com/wikimedia/composer-merge-plugin)
 - [Xot Helpers Documentation](./helpers.md)
+- [Tenant Helper Dependency](../../Tenant/docs/helper-functions-dependency.md)
 - [Tenant Helper Dependency](../../tenant/docs/helper-functions-dependency.md)
 - [RouteService Implementation](../app/Services/RouteService.php)
 - [GetAllModelsByModuleNameAction](../app/Actions/Model/GetAllModelsByModuleNameAction.php)
@@ -383,11 +368,7 @@ echo 'User models count: ' . count(getModuleModels('User')) . PHP_EOL;
 - [x] Studiato wikimedia/composer-merge-plugin
 - [x] Compreso business logic di inAdmin()
 - [x] Compreso business logic di getModuleModels()
-<<<<<<< HEAD
 - [x] Implementate funzioni in Xot/Helpers/Helper.php
-=======
-- [x] Implementate funzioni in Xot/helpers/Helper.php
->>>>>>> origin/dev
 - [x] Creato file traduzione metatag.php EN
 - [x] Documentato architettura in Xot/docs/
 - [x] Documentato dipendenze in Tenant/docs/
@@ -401,11 +382,7 @@ echo 'User models count: ' . count(getModuleModels('User')) . PHP_EOL;
 
 Helper functions devono essere disponibili **prima** del boot dei service providers.
 
-<<<<<<< HEAD
 **Soluzione**: Autoload via `"files": ["Helpers/Helper.php"]` in `composer.json`.
-=======
-**Soluzione**: Autoload via `"files": ["helpers/Helper.php"]` in `composer.json`.
->>>>>>> origin/dev
 
 ### 2. Module Interdependencies
 
@@ -454,11 +431,7 @@ Questo fix segue la regola **"Git - Mai Tornare Indietro"**:
 fix: aggiunte helper functions inAdmin() e getModuleModels()
 
 Problema: composer dump-autoload falliva con "undefined function inAdmin()"
-<<<<<<< HEAD
 Causa: funzioni helper mancanti in Xot/Helpers/Helper.php
-=======
-Causa: funzioni helper mancanti in Xot/helpers/Helper.php
->>>>>>> origin/dev
 Fix: aggiunte entrambe le funzioni come wrapper per Services/Actions
 Test: composer dump-autoload completa con successo
 Docs: aggiornata documentazione Xot e Tenant
@@ -468,13 +441,10 @@ Docs: aggiornata documentazione Xot e Tenant
 
 ## 🔄 Fix Aggiuntivo: getModuleModels() durante package:discover
 
+**Data**: Gennaio 2025
 **Problema**: Anche dopo aver aggiunto le helper functions, `getModuleModels()` causava ancora errori durante `package:discover`.
 
-<<<<<<< HEAD
 **Causa**: Le helper functions sono caricate tramite `"files": ["Helpers/Helper.php"]` in `composer.json`, ma durante `package:discover` l'ordine di autoload non è garantito.
-=======
-**Causa**: Le helper functions sono caricate tramite `"files": ["helpers/Helper.php"]` in `composer.json`, ma durante `package:discover` l'ordine di autoload non è garantito.
->>>>>>> origin/dev
 
 **Soluzione**: Nei percorsi critici del bootstrap (service providers, config resolvers), usare direttamente le actions invece delle helper functions:
 

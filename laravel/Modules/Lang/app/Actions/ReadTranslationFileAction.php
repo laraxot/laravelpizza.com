@@ -12,19 +12,6 @@ class ReadTranslationFileAction
     use QueueableAction;
 
     /**
-     * @param array<mixed, mixed> $value
-     *
-     * @return array<string, mixed>
-     */
-    private function assertStringKeyedArray(array $value): array
-    {
-        Assert::allString(array_keys($value), 'Translation array must have string keys.');
-
-        /* @var array<string, mixed> $value */
-        return $value;
-    }
-
-    /**
      * Legge il contenuto di un file di traduzione.
      *
      * @param string $filePath Percorso del file di traduzione
@@ -50,9 +37,6 @@ class ReadTranslationFileAction
             throw new \Exception("File di traduzione non valido: {$filePath}");
         }
 
-<<<<<<< HEAD
-        return $this->assertStringKeyedArray($translations);
-=======
         Assert::isArray($translations);
 
         foreach (array_keys($translations) as $translationKey) {
@@ -63,7 +47,6 @@ class ReadTranslationFileAction
         $result = $translations;
 
         return $result;
->>>>>>> 40b96bcd6 (.)
     }
 
     /**
@@ -96,14 +79,15 @@ class ReadTranslationFileAction
         $indentStr = str_repeat('    ', $indent);
 
         foreach ($array as $key => $value) {
-            $content .= $indentStr."'".addslashes((string) $key)."' => ";
+            $content .= $indentStr."'".addslashes($key)."' => ";
 
             if (is_array($value)) {
-                $value = $this->assertStringKeyedArray($value);
                 $content .= "[\n";
+                /** @phpstan-ignore argument.type */
                 $content .= $this->arrayToPhp($value, $indent + 1);
                 $content .= $indentStr."],\n";
             } else {
+                /** @phpstan-ignore-next-line */
                 $content .= "'".addslashes((string) $value)."',\n";
             }
         }

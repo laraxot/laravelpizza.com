@@ -28,11 +28,7 @@ jobs:
           fetch-tags: true
 
       - name: Setup Node.js
-<<<<<<< HEAD
-        uses: actions/setup-node@v4
-=======
         uses: actions/setup-node@v5
->>>>>>> origin/dev
         with:
           node-version: 20
 

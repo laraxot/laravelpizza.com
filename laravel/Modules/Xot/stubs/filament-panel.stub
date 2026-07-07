@@ -1,0 +1,21 @@
+<?php
+
+namespace Filament;
+
+/**
+ * Stub per PHPStan per i metodi aggiunti da PanelMixin.
+ * Questi metodi vengono iniettati a runtime e non sono visibili nell'analisi statica.
+ * @see Modules\Xot\app\Mixins\PanelMixin
+ */
+class Panel
+{
+    public function getNavigationLabel(): string { return '; }
+
+    public function getNavigationIcon(): string { return '; }
+
+    public function getNavigationSort(): int { return 0; }
+
+    public function getId(): string { return '; }
+
+    public function getPath(): string { return '; }
+}

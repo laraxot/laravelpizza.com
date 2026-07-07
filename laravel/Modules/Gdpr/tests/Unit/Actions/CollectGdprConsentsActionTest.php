@@ -4,18 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Actions;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-use Modules\Gdpr\Actions\Consent\CollectGdprConsentsAction;
-use Modules\Gdpr\Tests\TestCase;
-=======
 use Modules\Gdpr\Actions\Consent\CollectGdprConsentsAction;
 use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
->>>>>>> 40b96bcd6 (.)
 
 test('CollectGdprConsentsAction returns correct array', function () {
     $action = new CollectGdprConsentsAction();

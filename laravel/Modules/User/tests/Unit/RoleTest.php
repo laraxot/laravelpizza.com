@@ -2,13 +2,34 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit;
 
+=======
+use Modules\User\Database\Factories\PermissionFactory;
+use Modules\User\Database\Factories\RoleFactory;
+use Modules\User\Database\Factories\TeamFactory;
+>>>>>>> 9fa499be (.)
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
 use Modules\User\Tests\TestCase;
 
+<<<<<<< HEAD
 uses(TestCase::class);
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+/**
+ * @param array<string, mixed> $attributes
+ */
+function createTestRole(array $attributes = []): Role
+{
+    return RoleFactory::new()->createOne(array_merge([
+        'name' => 'test-role-'.uniqid(),
+        'guard_name' => 'web',
+    ], $attributes));
+}
+>>>>>>> 9fa499be (.)
 
 beforeEach(function (): void {
     $this->role = Role::factory()->create([

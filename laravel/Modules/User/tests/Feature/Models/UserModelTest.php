@@ -12,6 +12,14 @@ use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
+<<<<<<< HEAD
+=======
+beforeEach(function (): void {
+    /* @var TestCase $this */
+    $this->skipUnlessUsersTableReady();
+});
+
+>>>>>>> 9fa499be (.)
 describe('User Model', function (): void {
     test('can create user with factory', function (): void {
         $user = User::factory()->create();
@@ -73,8 +81,16 @@ describe('User Model', function (): void {
     });
 
     test('user can have permissions', function (): void {
+<<<<<<< HEAD
         $user = User::factory()->create();
         $permission = Permission::factory()->create(['guard_name' => 'web', 'name' => 'permission-'.uniqid()]);
+=======
+        /* @var TestCase $this */
+        $this->skipUnlessDirectPermissionSupported();
+
+        $user = UserFactory::new()->createOne();
+        $permission = PermissionFactory::new()->createOne(['guard_name' => 'web', 'name' => 'permission-'.uniqid()]);
+>>>>>>> 9fa499be (.)
 
         $user->givePermissionTo($permission);
 
@@ -92,8 +108,16 @@ describe('User Model', function (): void {
     });
 
     test('user can check if has permission', function (): void {
+<<<<<<< HEAD
         $user = User::factory()->create();
         $permission = Permission::factory()->create(['name' => 'perm-'.uniqid(), 'guard_name' => 'web']);
+=======
+        /* @var TestCase $this */
+        $this->skipUnlessDirectPermissionSupported();
+
+        $user = UserFactory::new()->createOne();
+        $permission = PermissionFactory::new()->createOne(['name' => 'perm-'.uniqid(), 'guard_name' => 'web']);
+>>>>>>> 9fa499be (.)
 
         $user->givePermissionTo($permission);
 
@@ -221,7 +245,14 @@ describe('User Model', function (): void {
     });
 
     test('user can be deleted', function (): void {
+<<<<<<< HEAD
         $user = User::factory()->create();
+=======
+        /* @var TestCase $this */
+        $this->skipUnlessDirectPermissionSupported();
+
+        $user = UserFactory::new()->createOne();
+>>>>>>> 9fa499be (.)
         $userId = $user->id;
 
         $user->delete();

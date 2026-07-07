@@ -32,7 +32,6 @@ use Modules\Xot\Filament\Traits\TransTrait;
  *
  * @property ?string              $model Il modello associato alla pagina
  * @property array<string, mixed> $data  I dati del form
- * @property Schema               $form  Schema form gestito da Filament tramite InteractsWithForms
  *
  * @see \Modules\Xot\docs\xotbasepage_implementation.md Documentazione completa
  */
@@ -80,7 +79,7 @@ abstract class XotBasePage extends Page implements HasForms
         $moduleName = Str::between($namespace, 'Modules\\', '\\Filament');
 
         if ('' === $moduleName) {
-            throw new \LogicException(\sprintf('Cannot extract module name from class %s', static::class));
+            throw new \LogicException(sprintf('Cannot extract module name from class %s', static::class));
         }
 
         return $moduleName;
@@ -134,7 +133,7 @@ abstract class XotBasePage extends Page implements HasForms
             ->toString();
 
         if ('' === $modelName) {
-            throw new \LogicException(\sprintf('Cannot determine model name from class %s', static::class));
+            throw new \LogicException(sprintf('Cannot determine model name from class %s', static::class));
         }
 
         $modelNamespace = 'Modules\\'.$moduleName.'\\Models\\'.$modelName;
@@ -248,11 +247,7 @@ abstract class XotBasePage extends Page implements HasForms
     {
         $user = $this->getUser();
 
-        // if (! method_exists($user, 'hasPermissionTo')) {
-        //    throw new \RuntimeException('Il modello utente deve implementare il metodo hasPermissionTo');
-        // }
-
-        // Use method_exists to safely call hasPermissionTo
+        // ponytail: $user is Authenticatable&Model, hasPermissionTo is always available via Spatie traits
         return $user->hasPermissionTo($permission);
     }
 
@@ -308,6 +303,7 @@ abstract class XotBasePage extends Page implements HasForms
         // Per ora lasciamo vuoto, può essere implementato nelle classi figlie
     }
 
+    /** @return list<Action> */
     protected function getFormActions(): array
     {
         return [

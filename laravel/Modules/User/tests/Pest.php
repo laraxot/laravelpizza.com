@@ -2,11 +2,14 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Modules\User\Models\Profile;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
+=======
+>>>>>>> 6d3760fe (.)
 /*
  * |--------------------------------------------------------------------------
  * | Test Case
@@ -18,6 +21,7 @@ use Modules\User\Tests\TestCase;
  * |
  */
 
+<<<<<<< HEAD
 pest()->extend(TestCase::class)->in('Feature', 'Unit');
 
 /*
@@ -67,3 +71,6 @@ function createProfile(array $attributes = []): Profile
 {
     return Profile::factory()->create($attributes);
 }
+=======
+// Vietato expect()->extend() qui (PHPStan method.internalClass su PestExpectation).
+>>>>>>> 6d3760fe (.)

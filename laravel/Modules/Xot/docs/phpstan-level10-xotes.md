@@ -142,9 +142,7 @@ protected static function newFactory(): Factory
 
 **Pattern applicato**: Rimozione nullable per rispettare covarianza con parent class.
 
-### 5. TypedHasRecursiveRelationships.php
 
-**File**: `app/Models/Traits/TypedHasRecursiveRelationships.php`  
 **Errori risolti**: 2
 
 #### Problema

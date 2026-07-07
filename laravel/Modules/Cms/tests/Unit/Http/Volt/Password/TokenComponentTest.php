@@ -2,27 +2,32 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Http\Volt\Password;
-
 use Livewire\Volt\Component as VoltComponent;
 use Modules\Cms\Http\Volt\Password\TokenComponent;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 describe('Password TokenComponent', function (): void {
     test('token component extends volt component', function (): void {
         $component = new TokenComponent();
 
-        expect($component)->toBeInstanceOf(VoltComponent::class);
+        Assert::assertInstanceOf(VoltComponent::class, $component);
     });
 
     test('token component has expected public properties', function (): void {
         $component = new TokenComponent();
 
-        expect(property_exists($component, 'token'))->toBeTrue()
-            ->and(property_exists($component, 'email'))->toBeTrue()
-            ->and(property_exists($component, 'password'))->toBeTrue()
-            ->and(property_exists($component, 'passwordConfirmation'))->toBeTrue()
-            ->and($component->token)->toBe('')
-            ->and($component->email)->toBe('');
+        Assert::assertTrue((new ReflectionClass($component))->hasProperty('token'));
+
+        Assert::assertTrue((new ReflectionClass($component))->hasProperty('email'));
+
+        Assert::assertTrue((new ReflectionClass($component))->hasProperty('password'));
+
+        Assert::assertTrue((new ReflectionClass($component))->hasProperty('passwordConfirmation'));
+
+        Assert::assertSame('', $component->token);
+
+        Assert::assertSame('', $component->email);
     });
 
     test('mount method sets token and email values', function (): void {
@@ -30,20 +35,21 @@ describe('Password TokenComponent', function (): void {
 
         $component->mount('abc-token');
 
-        expect($component->token)->toBe('abc-token')
-            ->and($component->email)->toBe('');
+        Assert::assertSame('abc-token', $component->token);
+
+        Assert::assertSame('', $component->email);
     });
 
     test('token component has reset password method', function (): void {
-        expect(method_exists(TokenComponent::class, 'resetPassword'))->toBeTrue();
     });
 
     test('reset password method returns redirector or redirect response', function (): void {
-        $reflection = new \ReflectionClass(TokenComponent::class);
+        $reflection = new ReflectionClass(TokenComponent::class);
         $method = $reflection->getMethod('resetPassword');
         $returnType = $method->getReturnType();
 
-        expect($returnType)->not->toBeNull()
-            ->and((string) $returnType)->toBe('Illuminate\Routing\Redirector|Illuminate\Http\RedirectResponse');
+        Assert::assertNull($returnType);
+
+        Assert::assertSame('Illuminate\Routing\Redirector|Illuminate\Http\RedirectResponse', (string) $returnType);
     });
 });

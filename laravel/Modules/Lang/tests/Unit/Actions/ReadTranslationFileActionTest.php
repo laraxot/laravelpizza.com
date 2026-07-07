@@ -2,18 +2,11 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-use Modules\Lang\Actions\ReadTranslationFileAction;
-use Modules\Lang\Tests\TestCase;
-=======
 namespace Modules\Lang\Tests\Unit\Actions;
 
 use Modules\Lang\Actions\ReadTranslationFileAction;
 use Modules\Lang\Tests\TestCase;
 use PHPUnit\Framework\Assert;
->>>>>>> 40b96bcd6 (.)
 
 use function Safe\chmod;
 use function Safe\file_put_contents;

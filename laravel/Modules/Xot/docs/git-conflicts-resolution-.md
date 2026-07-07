@@ -228,6 +228,13 @@ php artisan lang:check
 
 ### Modulo Xot
 - [Git Conflicts Resolution](laravel/modules/xot/project_docs/git-conflicts-resolution-2025-01-06.md)
+- [Conflict Resolution](laravel/Modules/Geo/project_docs/conflict-resolution.md)
+
+### Modulo User
+- [Theme Translation Conflicts](laravel/Modules/User/project_docs/theme-translation-conflicts-resolution.md)
+
+### Modulo Xot
+- [Git Conflicts Resolution](laravel/Modules/Xot/project_docs/git-conflicts-resolution-2025-01-06.md)
 
 ## Best Practices Applicate
 
@@ -282,6 +289,8 @@ php artisan lang:check
 ## Collegamenti Correlati
 
 ### Documentazione Moduli
+- [Geo Conflict Resolution](laravel/Modules/Geo/project_docs/conflict-resolution.md)
+- [User Theme Conflicts](laravel/Modules/User/project_docs/theme-translation-conflicts-resolution.md)
 - [Geo Conflict Resolution](laravel/modules/geo/project_docs/conflict-resolution.md)
 - [User Theme Conflicts](laravel/modules/user/project_docs/theme-translation-conflicts-resolution.md)
 

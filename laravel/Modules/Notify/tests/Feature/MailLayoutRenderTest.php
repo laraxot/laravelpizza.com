@@ -7,13 +7,10 @@ namespace Modules\Notify\Tests\Feature;
 use Illuminate\Support\Facades\Config;
 use Modules\Notify\Actions\Mail\GetMailLayoutAction;
 use Modules\Notify\Tests\TestCase;
-<<<<<<< HEAD
-=======
 use Modules\Xot\Actions\Theme\GetThemeContextAction;
 use PHPUnit\Framework\Assert;
->>>>>>> 40b96bcd6 (.)
 
-uses(TestCase::class);
+uses(\Modules\Notify\Tests\TestCase::class);
 
 it('resolves christmas professional layout when context is christmas', function (): void {
     Config::set('xra.pub_theme', 'TwentyOne');

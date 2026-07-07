@@ -2,12 +2,17 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Passport;
 
+=======
+>>>>>>> 9fa499be (.)
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Passport\Passport;
 
 uses(\Modules\User\Tests\TestCase::class);
+
+uses(Modules\User\Tests\TestCase::class);
 
 test('every eloquent passport model has a local oauth wrapper', function (): void {
     /** @var array<int, string>|false $files */

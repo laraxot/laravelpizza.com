@@ -213,12 +213,4 @@ app()->instance(\Modules\Xot\Datas\XotData::class, $mock);
 **Status**: ✅ Best Practices Validate
 **Enforcement**: Obbligatorio per tutti i test
 **Version**: 1.0 - Gold Standard
-<<<<<<< HEAD
-<<<<<<< HEAD
 **Last Update**: Dicembre 2024
-=======
-**Last Update**: Dicembre 2024
->>>>>>> 40b96bcd6 (.)
-=======
-**Last Update**: Dicembre 2024
->>>>>>> origin/dev

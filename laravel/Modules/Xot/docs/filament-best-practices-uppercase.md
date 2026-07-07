@@ -628,6 +628,10 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 ## Riferimenti
 
 - [Documentazione Filament](https://filamentphp.com/docs)
+- [Documentazione XotBaseResource](base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
+- [Best Practices Laraxot](base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
+- [Documentazione XotBaseResource](base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
+- [Best Practices Laraxot](base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
 - [Documentazione XotBaseResource](base_orisbroker_fila5/laravel/modules/xot/docs/resource.md)
 - [Best Practices Laraxot](base_orisbroker_fila5/laravel/modules/xot/docs/best-practices.md)
 - [Documentazione XotBaseResource](base_orisbroker_fila5/laravel/modules/xot/docs/resource.md)
@@ -1262,5 +1266,7 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 ## Riferimenti
 
 - [Documentazione Filament](https://filamentphp.com/docs)
+- [Documentazione XotBaseResource](base_orisbroker_fila3/laravel/Modules/Xot/project_docs/resource.md)
+- [Best Practices Laraxot](base_orisbroker_fila3/laravel/Modules/Xot/project_docs/best-practices.md)
 - [Documentazione XotBaseResource](base_orisbroker_fila5/laravel/modules/xot/project_docs/resource.md)
 - [Best Practices Laraxot](base_orisbroker_fila5/laravel/modules/xot/project_docs/best-practices.md)

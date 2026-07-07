@@ -1,5 +1,6 @@
 # Xot Module - Core Foundation
 
+**Last Update**: 2025-12-05
 **Last Update**: [DATE]
 **Status**: ✅ Production Ready
 **PHPStan Level**: 10
@@ -633,6 +634,7 @@ Located in `bashscripts/`:
 
 ### Quality & Tools
 - [Code Quality Tools](./code-quality-tools.md) - PHPStan, Pint, PHPInsights
+- [Automation Scripts](./bashscripts/README.md) - Available automation scripts
 - [Automation Scripts](./bashscripts/readme.md) - Available automation scripts
 - [PHPStan Patterns](./phpstan-pattern-soluzioni.md) - Common PHPStan solutions
 
@@ -651,6 +653,7 @@ Located in `bashscripts/`:
 
 ## 🔄 Recent Updates
 
+### v3.0.0 - 2025-12-05
 ### v3.0.0 - [DATE]
 - **Added**: Laravel 12 support
 - **Added**: Filament 4 support
@@ -659,12 +662,14 @@ Located in `bashscripts/`:
 - **Changed**: Improved XotData caching mechanism
 - **Fixed**: Git merge conflict resolution improvements
 
+### v2.9.0 - 2025-11-18
 ### v2.9.0 - [DATE]
 - **Added**: New XotBaseChartWidget
 - **Fixed**: HasXotTable duplicate if statements
 - **Fixed**: Mass syntax errors across modules
 - **Improved**: PHP Insights score (Code: 52.6%, Complexity: 93.1%)
 
+See [CHANGELOG.md](./CHANGELOG.md) for full history.
 See [CHANGELOG.md](./changelog.md) for full history.
 
 ---
@@ -682,6 +687,7 @@ See [CHANGELOG.md](./changelog.md) for full history.
 - Real-time update support for widgets
 - Advanced caching strategies
 
+See [ROADMAP.md](./ROADMAP.md) for details.
 See [ROADMAP.md](./roadmap.md) for details.
 
 ---
@@ -698,6 +704,15 @@ See [ROADMAP.md](./roadmap.md) for details.
 ### Project Documentation
 - [CLAUDE.md](../../../claude.md) - Project architecture and development rules
 - [Project README](../../../readme.md) - Main project documentation
+- [User Module](../User/docs/README.md) - User management and authentication
+- [UI Module](../UI/docs/README.md) - UI components and design system
+- [Tenant Module](../Tenant/docs/README.md) - Multi-tenancy support
+- [Lang Module](../Lang/docs/README.md) - Translation and localization
+- [Geo Module](../Geo/docs/README.md) - Geographic data services
+
+### Project Documentation
+- [CLAUDE.md](../../../CLAUDE.md) - Project architecture and development rules
+- [Project README](../../../README.md) - Main project documentation
 
 ### External Resources
 - [Laravel 12 Documentation](https://laravel.com/docs/12.x)
@@ -718,6 +733,7 @@ Contributions to the Xot module should follow strict guidelines as it's the foun
 3. Update documentation
 4. Follow architectural patterns
 
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines.
 See [CONTRIBUTING.md](./contributing.md) for detailed guidelines.
 
 ---
@@ -729,6 +745,7 @@ Part of the Laraxot PTVX ecosystem.
 ---
 
 **Module**: Xot (Core Foundation)
+**Version**: 3.0.0
 **Framework**: Laravel 12 + Filament 4 + PHP 8.3
 **PHPStan**: Level 10 ✅
 **Test Coverage**: 85%+ ✅

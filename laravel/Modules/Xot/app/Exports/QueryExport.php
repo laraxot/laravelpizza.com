@@ -7,6 +7,7 @@ namespace Modules\Xot\Exports;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Support\Collection;
@@ -17,12 +18,14 @@ use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use Modules\Lang\Actions\TransCollectionAction;
 
-// use Staudenmeir\LaravelCte\Query\Builder as CteBuilder;
-
+/**
+ * @implements WithMapping<mixed>
+ */
 class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadings, WithMapping
 {
     use Exportable;
 
+    /** @var array<int, string> */
     public array $headings = [];
 
     /** @var array<int, int|string> */
@@ -30,33 +33,19 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
 
     public ?string $transKey = null;
 
+    /** @var QueryBuilder|EloquentBuilder<Model> */
+    /** @var QueryBuilder|EloquentBuilder<Model> */
     public QueryBuilder|EloquentBuilder $query;
 
     /**
-     * @param array<int, int|string> $fields
+     * @param QueryBuilder|EloquentBuilder<Model> $query
+     * @param array<int, int|string>              $fields
      */
     public function __construct(QueryBuilder|EloquentBuilder $query, ?string $transKey = null, array $fields = [])
     {
         $this->query = $query;
         $this->transKey = $transKey;
         $this->fields = $fields;
-
-        /*
-         * $this->headings = collect($query->first())
-         * ->keys()
-         * ->map(
-         * function ($item) use ($transKey) {
-         * $t = $transKey.'.'.$item;
-         * $trans = trans($t);
-         * if ($trans != $t) {
-         * return $trans;
-         * }
-         *
-         * return $item;
-         * }
-         * )
-         * ->toArray();
-         */
     }
 
     /**
@@ -70,9 +59,7 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
                     static fn (mixed $heading): int|string => \is_int($heading) ? $heading : (string) $heading
                 );
         }
-        /**
-         * @var Arrayable<(int|string), mixed>|iterable<(int|string), mixed>|null
-         */
+
         $first = $this->query->first();
         if (null === $first) {
             /** @var Collection<int, int|string> $emptyCollection */
@@ -90,6 +77,9 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
         return $result;
     }
 
+    /**
+     * @return array<int|string, string>
+     */
     public function headings(): array
     {
         /** @var Collection<int|string, mixed> $headingsWithKeys */
@@ -105,17 +95,23 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
 
         $translated = app(TransCollectionAction::class)->execute($headingsWithKeys, $this->transKey);
 
-        return $translated->toArray();
+        $result = [];
+        foreach ($translated->all() as $key => $value) {
+            if (! is_string($value)) {
+                continue;
+            }
+            $result[is_int($key) ? $key : (string) $key] = $value;
+        }
+
+        return $result;
     }
 
     /**
-     * se si usa scout aggiungere |ScoutBuilder.
+     * @return QueryBuilder|Relation<Model, Model, mixed>|EloquentBuilder<Model>
      */
     public function query(): QueryBuilder|EloquentBuilder|Relation
     {
         return $this->query;
-
-        // ->orderBy('id');
     }
 
     public function chunkSize(): int
@@ -153,17 +149,14 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
         }
 
         if ($row instanceof Arrayable) {
-            /* @var array<int|string, mixed> */
             return $row->toArray();
         }
 
         if (\is_array($row)) {
-            /* @var array<int|string, mixed> */
             return $row;
         }
 
         if ($row instanceof \Traversable) {
-            /* @var array<int|string, mixed> */
             return iterator_to_array($row);
         }
 

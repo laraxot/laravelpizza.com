@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Wiki Locale Index
-
-=======
 ---
 title: "Cms Module Wiki Index"
 type: index
@@ -38,7 +34,6 @@ related:
 - [x-page-data-bag-only](./concepts/x-page-data-bag-only.md)
 - Sixteen: [folio-page-pattern](../../../../Themes/Sixteen/docs/folio-page-pattern.md)
 
->>>>>>> 40b96bcd6 (.)
 ## Karpathy LLM Wiki Standard
 
 - [forbidden-folders-rule](../../../../docs/wiki/concepts/forbidden-folders.md): Strict structural constraints.
@@ -56,13 +51,10 @@ related:
 |--------|------|-----------|
 | [composer-lessons-learned](./concepts/composer-lessons-learned.md) | concept | Blocks constructor syntax error, View Composer criticality, firstOrCreate guards |
 
-<<<<<<< HEAD
-=======
 ## Folio / x-page
 - [folio-page-shell-pattern](./concepts/folio-page-shell-pattern.md) — mount + data bag + `@volt` statico
 - [x-page-data-bag-only](./concepts/x-page-data-bag-only.md)
 
->>>>>>> 40b96bcd6 (.)
 ## Sacred Hierarchy
 
 - [concepts/](./concepts/): Architectural patterns and methodologies.
@@ -78,14 +70,8 @@ related:
  
 | Page | Type | Source | Updated |
 |------|------|--------|---------|
-<<<<<<< HEAD
-| [.gitkeep](./concepts/.gitkeep) | Concept | - | 2026-04-21 |
-| [composer-lessons-learned](./concepts/composer-lessons-learned.md) | Concept | ThemeComposer syntax error fix + view composer criticality | 2026-04-23 |
-| [header-section-component](./concepts/header-section-component.md) | Concept | **NUOVO**: Section.php component architecture, Blade SSoT, JSON config, Filament Builder | 2026-05-04 |
-=======
 | [x-page-data-bag-only](./concepts/x-page-data-bag-only.md) | Concept | STORY-136 — `<x-page>` solo side/slug/data | 2026-06-04 |
 | [cms-page-shell-data-bag](../../../../docs/wiki/architecture/cms-page-shell-data-bag.md) | Architecture (root wiki) | Folio→Volt→data bag — link progetto | 2026-06-04 |
 | [.gitkeep](./concepts/.gitkeep) | Concept | - | 2026-04-21 |
 | [composer-lessons-learned](./concepts/composer-lessons-learned.md) | Concept | ThemeComposer syntax error fix + view composer criticality | 2026-04-23 |
 | [header-section-component](./concepts/header-section-component.md) | Concept | **NUOVO**: Section.php component architecture, Blade SSoT, JSON config, Filament Builder | 2026-05-04 |
->>>>>>> 40b96bcd6 (.)

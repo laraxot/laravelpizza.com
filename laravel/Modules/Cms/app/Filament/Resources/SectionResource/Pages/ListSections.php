@@ -10,7 +10,7 @@ use Modules\Lang\Filament\Resources\Pages\LangBaseListRecords;
 
 class ListSections extends LangBaseListRecords
 {
-    protected static string $resource = SectionResource::class;
+    public static string $resource = SectionResource::class;
 
     /**
      * @return array<string, mixed>

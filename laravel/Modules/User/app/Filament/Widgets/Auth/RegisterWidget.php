@@ -6,8 +6,13 @@ namespace Modules\User\Filament\Widgets\Auth;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
+<<<<<<< HEAD
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
+=======
+use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+>>>>>>> 6d3760fe (.)
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -117,6 +122,7 @@ class RegisterWidget extends XotBaseWidget
      */
     protected function validateForm(): array
     {
+<<<<<<< HEAD
         $data = $this->form->getState();
 
         return [
@@ -156,6 +162,9 @@ class RegisterWidget extends XotBaseWidget
     protected function handleSuccessfulRegistration(User $user): void
     {
         if (config('auth.must_verify_email')) {
+=======
+        if (config('auth.must_verify_email') && $user instanceof MustVerifyEmail) {
+>>>>>>> 6d3760fe (.)
             $user->sendEmailVerificationNotification();
         }
 

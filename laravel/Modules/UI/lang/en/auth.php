@@ -43,6 +43,10 @@ return [
         'confirm_password' => 'Confirm Password',
         'save' => 'Save',
         'update' => 'Update',
+        'services' => 'My Services',
+        'practices' => 'My Practices',
+        'notifications' => 'Notifications',
+        'logout' => 'Log Out',
     ],
     'user_dropdown' => [
         'manage_account' => 'Account Management',

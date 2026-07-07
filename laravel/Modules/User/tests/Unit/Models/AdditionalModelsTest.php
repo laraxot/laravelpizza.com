@@ -2,10 +2,13 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Models;
 
 uses(\Modules\User\Tests\TestCase::class);
 
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Models\Authentication;
 use Modules\User\Models\AuthenticationLog;
 use Modules\User\Models\Device;
@@ -26,6 +29,8 @@ use Modules\User\Models\SocialProvider;
 use Modules\User\Models\SsoProvider;
 use Modules\User\Models\TeamInvitation;
 use Modules\User\Models\TeamPermission;
+
+uses(Modules\User\Tests\TestCase::class);
 
 test('Notification model can be instantiated', function () {
     $model = new Notification();

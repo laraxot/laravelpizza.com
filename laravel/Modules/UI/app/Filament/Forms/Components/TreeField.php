@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
-use Filament\Forms\Components\Field;
+use Modules\Xot\Filament\Forms\Components\XotBaseField;
 
-class TreeField extends Field
+class TreeField extends XotBaseField
 {
     /**
      * Setup iniziale del componente.

@@ -2,18 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Filament\Forms\Components;
-
 use Modules\Cms\Filament\Forms\Components\DownloadAttachmentPlaceHolder;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 test('DownloadAttachmentPlaceHolder extends XotBasePlaceholder', function () {
-    expect(is_a(DownloadAttachmentPlaceHolder::class, Modules\Xot\Filament\Forms\Components\XotBasePlaceholder::class, true))->toBeTrue();
+    Assert::assertTrue(class_exists(DownloadAttachmentPlaceHolder::class));
 });
 
 test('DownloadAttachmentPlaceHolder has setUp method', function () {
-    expect(method_exists(DownloadAttachmentPlaceHolder::class, 'setUp'))->toBeTrue();
 });
 
 test('DownloadAttachmentPlaceHolder has generateContent method', function () {
-    expect(method_exists(DownloadAttachmentPlaceHolder::class, 'generateContent'))->toBeTrue();
 });

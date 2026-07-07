@@ -14,12 +14,8 @@ uses(\Modules\Notify\Tests\TestCase::class);
 
 test('mail template policy denies view any', function () {
     $policy = new MailTemplatePolicy;
-<<<<<<< HEAD
-    $user = \Mockery::mock(UserContract::class);
-=======
     $user = UserFactory::new()->createOne();
     Assert::assertInstanceOf(UserContract::class, $user);
->>>>>>> 40b96bcd6 (.)
 
     Assert::assertFalse($policy->viewAny($user));
 });

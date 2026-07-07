@@ -7,38 +7,51 @@ namespace Modules\Xot\Tests\Unit\Actions\Config;
 use Illuminate\Support\Facades\File;
 use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Modules\Xot\Actions\Config\GetTenantConfigArrayAction;
+use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-it('gets tenant config array correctly', function (): void {
-    $configName = 'test_config';
-    $tempPath = tempnam(sys_get_temp_dir(), 'test_config_').'.php';
-    $configData = ['key' => 'value'];
+use function Safe\tempnam;
 
-    File::put($tempPath, 'return '.var_export($configData, true).';');
+uses(TestCase::class);
 
-    $this->mock(GetTenantFilePathAction::class)
-        ->shouldReceive('execute')
-        ->once()
-        ->with($configName.'.php')
-        ->andReturn($tempPath);
+describe('Get Tenant Config Actions', function (): void {
+    test('gets tenant config array correctly', function (): void {
+        /** @var TestCase $this */
+        $configName = 'test_config';
+        $tempPath = tempnam(sys_get_temp_dir(), 'test_config_').'.php';
+        $configData = ['key' => 'value'];
 
-    $action = app(GetTenantConfigArrayAction::class);
-    $result = $action->execute($configName);
+        File::put($tempPath, 'return '.var_export($configData, true).';');
 
-    expect($result)->toBe($configData);
+        $mock = $this->createUnitMock(GetTenantFilePathAction::class);
+        $mock->expects($this->expectsAtLeastOnce())
+            ->method('execute')
+            ->with($configName.'.php')
+            ->willReturn($tempPath);
 
-    File::delete($tempPath);
-});
+        app()->instance(GetTenantFilePathAction::class, $mock);
 
-it('returns empty array if tenant config file does not exist', function (): void {
-    $configName = 'non_existent';
+        $action = app(GetTenantConfigArrayAction::class);
+        $result = $action->execute($configName);
 
-    $this->mock(GetTenantFilePathAction::class)
-        ->shouldReceive('execute')
-        ->once()
-        ->andReturn('/path/to/nothing.php');
+        Assert::assertSame($configData, $result);
+        File::delete($tempPath);
+    });
 
-    $action = app(GetTenantConfigArrayAction::class);
-    $result = $action->execute($configName);
+    test('returns empty array if tenant config file does not exist', function (): void {
+        /** @var TestCase $this */
+        $configName = 'non_existent';
 
-    expect($result)->toBe([]);
+        $mock = $this->createUnitMock(GetTenantFilePathAction::class);
+        $mock->expects($this->expectsAtLeastOnce())
+            ->method('execute')
+            ->willReturn('/path/to/nothing.php');
+
+        app()->instance(GetTenantFilePathAction::class, $mock);
+
+        $action = app(GetTenantConfigArrayAction::class);
+        $result = $action->execute($configName);
+
+        Assert::assertSame([], $result);
+    });
 });

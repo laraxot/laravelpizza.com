@@ -403,34 +403,17 @@ cd laravel/
 
 ### 5.2 Coverage Configuration
 
-Create `phpunit.xml` in module root:
+**Non** creare `phpunit.xml` nel modulo. SSoT monorepo: `laravel/phpunit.xml`.
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
-         bootstrap="../../vendor/autoload.php"
-         colors="true"
-         failOnRisky="true"
-         failOnWarning="true">
-    <testsuites>
-        <testsuite name="User Module Test Suite">
-            <directory suffix="Test.php">./tests</directory>
-        </testsuite>
-    </testsuites>
-    <source>
-        <include>
-            <directory suffix=".php">./app</directory>
-        </include>
-    </source>
-    <coverage>
-        <report>
-            <html outputDirectory="./coverage"/>
-            <text outputFile="php://stdout"/>
-        </report>
-    </coverage>
-</phpunit>
+```bash
+cd laravel
+./vendor/bin/pest Modules/User/tests/ \
+  --configuration phpunit.xml \
+  --coverage --coverage-filter=Modules/User/app \
+  --only-summary-for-coverage-text
 ```
+
+Canon: `docs/wiki/bmad/architecture-phpunit-central-config.md`
 
 ## 6. Continuous TDD Workflow
 

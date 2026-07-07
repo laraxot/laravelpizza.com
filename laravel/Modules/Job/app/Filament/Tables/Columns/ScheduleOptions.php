@@ -18,6 +18,9 @@ class ScheduleOptions extends TextColumn
         return $this;
     }
 
+    /**
+     * @return array<int|string, string>
+     */
     public function getTags(): array
     {
         if ($this->record === null) {

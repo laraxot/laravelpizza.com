@@ -5,13 +5,9 @@ declare(strict_types=1);
 namespace Modules\Notify\Tests\Unit\Models;
 use Modules\Notify\Models\Notification;
 use Modules\Notify\Tests\TestCase;
-<<<<<<< HEAD
-use Modules\Xot\Models\BaseModel;
-=======
 use PHPUnit\Framework\Assert;
->>>>>>> 40b96bcd6 (.)
 
-uses(TestCase::class);
+uses(\Modules\Notify\Tests\TestCase::class);
 
 describe('Notification Business Logic', function () {
     test('notification extends xot base model', function () {

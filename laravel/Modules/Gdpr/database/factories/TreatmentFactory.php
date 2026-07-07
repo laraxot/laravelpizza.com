@@ -12,12 +12,6 @@ use Modules\Gdpr\Models\Treatment;
  */
 class TreatmentFactory extends Factory
 {
-<<<<<<< HEAD
-    /**
-     * The name of the factory's corresponding model.
-     */
-=======
->>>>>>> 40b96bcd6 (.)
     protected $model = Treatment::class;
 
     /**

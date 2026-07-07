@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:194406b15477c4507c817927193758bf05feabd86c2a8309aabd225410053c82
-size 1795
-=======
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <!-- Cerchio base del contatto -->
@@ -73,4 +68,3 @@ size 1795
         fill="freeze"
     />
 </svg>
->>>>>>> origin/dev

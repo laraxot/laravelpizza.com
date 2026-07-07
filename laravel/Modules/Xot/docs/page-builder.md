@@ -21,4 +21,3 @@ https://codecanyon.net/item/drag-drop-email-builder/19423355
 
 
 https://github.com/HansSchouten/Laravel-Pagebuilder
-

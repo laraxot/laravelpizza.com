@@ -1,3 +1,4 @@
+**Ultimo aggiornamento**: 2025-01-10
 # GitHub Workflows Standard - base_<nome progetto>
 
 **Ultimo aggiornamento**: [DATE]

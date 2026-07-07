@@ -100,24 +100,14 @@ TextInput::make('full_name')
 
 ## Collegamenti Correlati
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Documentazione Filament Forms](https://filamentphp.com/docs/3.x/forms/fields/text-input)
 - [Best Practices Database](../../../docs/database/best-practices.md)
 - [Convenzioni API](../../../docs/api/convenzioni.md) 
+||||||| parent of 9a84589 (.):docs/convenzioni-naming-campi-1.md
+- [Best Practices Database](../../../docs/database/best-practices.md)
+- [Convenzioni API](../../../docs/api/convenzioni.md)
 ## Collegamenti tra versioni di convenzioni-naming-campi.md
 * [convenzioni-naming-campi.md](../../../../docs/convenzioni-naming-campi.md)
-=======
-- [Documentazione Filament Forms](https://filamentphp.com/project_docs/3.x/forms/fields/text-input)
-- [Best Practices Database](../../../project_docs/database/best-practices.md)
-- [Convenzioni API](../../../project_docs/api/convenzioni.md) 
-## Collegamenti tra versioni di convenzioni-naming-campi.md
-* [convenzioni-naming-campi.md](../../../../project_docs/convenzioni-naming-campi.md)
->>>>>>> 7eb1087 (.)
-=======
-- [Documentazione Filament Forms](https://filamentphp.com/project_docs/3.x/forms/fields/text-input)
-- [Best Practices Database](../../../project_docs/database/best-practices.md)
-- [Convenzioni API](../../../project_docs/api/convenzioni.md) 
 
->>>>>>> laraxot/develop
-
+||||||| parent of 9a84589 (.):docs/convenzioni-naming-campi-1.md
+* [convenzioni-naming-campi.md](../../../../docs/convenzioni-naming-campi.md)

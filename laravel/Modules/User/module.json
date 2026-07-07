@@ -12,7 +12,7 @@
     ],
     "migration": {
         "seeds": [
-            "Modules\\User\\Database\\Seeders\\RolesSeeder"
+            "Modules\\User\\Database\\Seeders\\RoleSeeder"
         ]
     },
     "files": []

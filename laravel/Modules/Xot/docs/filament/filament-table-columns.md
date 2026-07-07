@@ -13,6 +13,9 @@ Questa pagina raccoglie la regola e i collegamenti per l’adozione del metodo `
 - Facilità di upgrade e adozione di nuove versioni
 
 ## Collegamenti Specifici
+- [Regola Generale - Modulo Xot](../laravel/Modules/Xot/docs/FILAMENT_TABLE_COLUMNS.md)
+- [Regola e Applicazione - Modulo Performance](../laravel/Modules/Performance/docs/filament-resources.md)
+- [Esempio e Applicazione - Modulo User](../laravel/Modules/User/docs/filament/FILAMENT_TABLE_COLUMNS.md)
 - [Regola Generale - Modulo Xot](../laravel/modules/xot/docs/filament_table_columns.md)
 - [Regola e Applicazione - Modulo Performance](../laravel/modules/performance/docs/filament-resources.md)
 - [Esempio e Applicazione - Modulo User](../laravel/modules/user/docs/filament/filament_table_columns.md)
@@ -25,5 +28,6 @@ Questa pagina raccoglie la regola e i collegamenti per l’adozione del metodo `
 
 ---
 
+**Ultimo aggiornamento:** 2025-05-13
 
 **Link bidirezionale:** Aggiornare anche le docs dei moduli coinvolti.

@@ -11,38 +11,38 @@ use Modules\Cms\Models\Page as PageModel;
 use Spatie\LaravelData\DataCollection;
 
 /**
+ * CMS page shell: blocks loaded by slug. Route/context keys live only in {@see $data}.
+ *
  * @SuppressWarnings("PHPMD.StaticAccess")
  */
 final class Page extends Component
 {
     public string $side;
 
-    public string $slug;
+    public string $slug = '';
 
-    /** @var DataCollection<BlockData>|array */
+    /** @var DataCollection<int, BlockData>|array<string, BlockData> */
     public DataCollection|array $blocks;
 
     /** @var array<string, mixed> */
     public array $data = [];
 
     /**
-     * @param array<string, mixed> $data
+     * @param array<string, mixed> $data Opaque context bag (container0, slug0, models, …)
      */
     public function __construct(
-        array $data = [],
         string $side = 'content',
         ?string $slug = null,
         ?string $type = null,
+        array $data = [],
     ) {
         $this->side = $side;
         $this->data = $data;
 
-        // Resolve slug from data if not passed explicitly
         if (null === $slug && isset($data['slug'])) {
             $slug = (string) $data['slug'];
         }
 
-        // Fallback or composition
         if (null === $slug) {
             $slug = '';
         }
@@ -53,29 +53,16 @@ final class Page extends Component
 
         $this->slug = $slug;
 
-        // BlockData construction handles URL localization automatically via LocalizeBlockDataAction
         $this->blocks = PageModel::getBlocksBySlug($this->slug, $this->side);
     }
 
-    /**
-     * Get the view / contents that represents the component.
-     */
     public function render(): ViewContract
     {
-        $view = 'cms::components.page';
-        $viewParams = [
-            ...$this->data,
+        return view('cms::components.page', array_merge($this->data, [
             'blocks' => $this->blocks,
             'side' => $this->side,
             'slug' => $this->slug,
             'data' => $this->data,
-        ];
-
-        // @phpstan-ignore-next-line
-        if (! view()->exists($view)) {
-            throw new \Exception('view not found: '.$view);
-        }
-
-        return view($view, $viewParams);
+        ]));
     }
 }

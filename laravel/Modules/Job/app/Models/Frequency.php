@@ -59,11 +59,17 @@ class Frequency extends BaseModel
         'interval',
     ];
 
+    /**
+     * @return BelongsTo<Task, $this>
+     */
     public function task(): BelongsTo
     {
         return $this->belongsTo(Task::class);
     }
 
+    /**
+     * @return HasMany<Parameter, $this>
+     */
     public function parameters(): HasMany
     {
         return $this->hasMany(Parameter::class);

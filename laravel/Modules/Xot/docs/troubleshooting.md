@@ -668,6 +668,7 @@ dd(DB::getQueryLog());
 
 ## 🔗 **Collegamenti e Riferimenti**
 
+- [**README.md**](README.md) - Documentazione principale del modulo
 - [**README.md**](readme.md) - Documentazione principale del modulo
 - [**Best Practices**](best-practices.md) - Best practices per evitare problemi
 - [**Architettura**](architecture.md) - Architettura del modulo Xot
@@ -675,3 +676,4 @@ dd(DB::getQueryLog());
 
 ---
 
+*Ultimo aggiornamento: giugno 2025 - Versione 2.0.0*

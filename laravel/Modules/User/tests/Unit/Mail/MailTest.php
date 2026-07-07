@@ -2,11 +2,16 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Mail;
 
 uses(\Modules\User\Tests\TestCase::class);
 
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Mail\TeamInvitation;
+
+uses(Modules\User\Tests\TestCase::class);
 
 test('TeamInvitation mail can be instantiated', function () {
     expect(class_exists(TeamInvitation::class))->toBeTrue();

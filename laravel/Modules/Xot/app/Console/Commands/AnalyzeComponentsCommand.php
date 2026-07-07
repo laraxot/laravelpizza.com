@@ -6,16 +6,21 @@ namespace Modules\Xot\Console\Commands;
 
 use Illuminate\Console\Command;
 use Modules\Xot\Actions\File\GetComponentsAction;
+use Modules\Xot\Datas\ComponentFileData;
 
 class AnalyzeComponentsCommand extends Command
 {
     /**
      * The name and signature of the console command.
+     *
+     * @var string
      */
     protected $signature = 'xot:analyze-components {--module=} {--type=} {--prefix=} {--force}';
 
     /**
      * The console command description.
+     *
+     * @var string
      */
     protected $description = 'Analizza i componenti del sistema';
 
@@ -42,17 +47,12 @@ class AnalyzeComponentsCommand extends Command
 
         $this->table(
             ['Componente', 'Tipo', 'Modulo', 'Path'],
-            collect($components)->map(function ($component) {
-                // Type-safe component access
-                if (! is_array($component)) {
-                    return ['Invalid component', 'N/A', 'N/A', 'N/A'];
-                }
-
+            collect($components)->map(static function (ComponentFileData $component): array {
                 return [
-                    $component['comp_name'] ?? 'N/A',
-                    $component['type'] ?? 'N/A',
-                    $component['module'] ?? 'N/A',
-                    $component['path'] ?? 'N/A',
+                    $component->name,
+                    $component->class,
+                    $component->module ?? 'N/A',
+                    $component->path ?? 'N/A',
                 ];
             })
         );

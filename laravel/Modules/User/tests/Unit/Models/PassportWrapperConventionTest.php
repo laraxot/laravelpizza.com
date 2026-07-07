@@ -2,12 +2,19 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Models;
+=======
+use Illuminate\Database\Eloquent\Model;
+use PHPUnit\Framework\Assert;
+>>>>>>> 9fa499be (.)
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
+
+uses(Modules\User\Tests\TestCase::class);
 
 test('every vendor passport eloquent model has a local oauth wrapper', function (): void {
     $passportSrc = base_path('vendor/laravel/passport/src');

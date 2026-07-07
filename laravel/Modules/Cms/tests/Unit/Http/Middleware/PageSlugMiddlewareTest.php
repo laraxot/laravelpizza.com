@@ -2,16 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Http\Middleware;
-
+use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
+use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpFoundation\Response;
 
+uses(Modules\Cms\Tests\TestCase::class);
+/**
+ * @param array<int, mixed> $args
+ */
 function invokeProtected(object $object, string $method, array $args = []): mixed
 {
-    $reflection = new \ReflectionClass($object);
+    $reflection = new ReflectionClass($object);
     $target = $reflection->getMethod($method);
     $target->setAccessible(true);
 
@@ -20,20 +24,53 @@ function invokeProtected(object $object, string $method, array $args = []): mixe
 
 function setProtected(object $object, string $property, mixed $value): void
 {
-    $reflection = new \ReflectionClass($object);
+    $reflection = new ReflectionClass($object);
     $target = $reflection->getProperty($property);
     $target->setAccessible(true);
     $target->setValue($object, $value);
 }
 
-test('handle returns next response when slug is not a string', function (): void {
+test('handle returns next response when cms page slug cannot be resolved', function (): void {
     $request = Request::create('/test', 'GET');
     $middleware = new PageSlugMiddleware();
 
     $response = $middleware->handle($request, fn (Request $req): Response => new Response('ok', 200));
 
-    expect($response->getStatusCode())->toBe(200)
-        ->and($response->getContent())->toBe('ok');
+    Assert::assertSame(200, $response->getStatusCode());
+
+    Assert::assertSame('ok', $response->getContent());
+});
+
+test('resolveCmsPageSlug prefers folio route name when it matches a cms page', function (): void {
+    $middleware = new PageSlugMiddleware();
+    $request = Request::create('/it/tickets/create', 'GET');
+    $request->setRouteResolver(static function () use ($request) {
+        return new Illuminate\Routing\Route(['GET'], '/it/tickets/create', static fn (): string => 'ok')
+            ->name('tickets.create')
+            ->bind($request);
+    });
+
+    $resolved = invokeProtected($middleware, 'resolveCmsPageSlug', [$request]);
+
+    Assert::assertSame('tickets.create', $resolved);
+});
+
+test('resolveCmsPageSlug builds container0.slug0 for nested folio pages', function (): void {
+    $middleware = new PageSlugMiddleware();
+    $request = Request::create('/it/tickets/foo', 'GET');
+    $request->setRouteResolver(static function () use ($request) {
+        $route = new Illuminate\Routing\Route(['GET'], '/it/{container0}/{slug0}', static fn (): string => 'ok');
+        $route->name('container0.view');
+        $route->bind($request);
+        $route->setParameter('container0', 'tickets');
+        $route->setParameter('slug0', 'view');
+
+        return $route;
+    });
+
+    $resolved = invokeProtected($middleware, 'resolveCmsPageSlug', [$request]);
+
+    Assert::assertSame('tickets.view', $resolved);
 });
 
 test('handle wraps non-response next value into 500 response when slug is not a string', function (): void {
@@ -42,8 +79,9 @@ test('handle wraps non-response next value into 500 response when slug is not a 
 
     $response = $middleware->handle($request, fn (Request $req) => 'not-a-response');
 
-    expect($response->getStatusCode())->toBe(500)
-        ->and($response->getContent())->toBe('Internal Server Error');
+    Assert::assertSame(500, $response->getStatusCode());
+
+    Assert::assertSame('Internal Server Error', $response->getContent());
 });
 
 test('parseMiddleware splits name and parameters', function (): void {
@@ -52,22 +90,24 @@ test('parseMiddleware splits name and parameters', function (): void {
     /** @var array{0:string,1:array<string>} $parsed */
     $parsed = invokeProtected($middleware, 'parseMiddleware', ['throttle:60,1']);
 
-    expect($parsed[0])->toBe('throttle')
-        ->and($parsed[1])->toBe(['60', '1']);
+    Assert::assertSame('throttle', $parsed[0]);
+
+    Assert::assertSame(['60', '1'], $parsed[1]);
 });
 
 test('resolveMiddlewareClass returns mapped class for alias', function (): void {
     $middleware = new PageSlugMiddleware();
-    $kernel = \Mockery::mock(Kernel::class);
-    $kernel->shouldReceive('getRouteMiddleware')
-        ->once()
-        ->andReturn(['auth' => \Illuminate\Auth\Middleware\Authenticate::class]);
+    /** @var Kernel&Mockery\MockInterface $kernel */
+    $kernel = Mockery::mock(Kernel::class);
+    $kernel->allows([
+        'getRouteMiddleware' => ['auth' => Authenticate::class],
+    ]);
 
     setProtected($middleware, 'kernel', $kernel);
 
     $resolved = invokeProtected($middleware, 'resolveMiddlewareClass', ['auth']);
 
-    expect($resolved)->toBe(\Illuminate\Auth\Middleware\Authenticate::class);
+    Assert::assertSame(Authenticate::class, $resolved);
 });
 
 test('executeMiddlewareChain returns 500 when final closure does not return response', function (): void {
@@ -81,6 +121,7 @@ test('executeMiddlewareChain returns 500 when final closure does not return resp
         fn (Request $req) => 'not-a-response',
     ]);
 
-    expect($response->getStatusCode())->toBe(500)
-        ->and($response->getContent())->toBe('Internal Server Error');
+    Assert::assertSame(500, $response->getStatusCode());
+
+    Assert::assertSame('Internal Server Error', $response->getContent());
 });

@@ -86,12 +86,4 @@ echo $tenants->count(); // ✅ Output: 1
 
 ---
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 *Fix implementato e verificato - Sistema multi-tenant completamente funzionante*
-=======
-*Fix implementato e verificato - Sistema multi-tenant completamente funzionante*
->>>>>>> 40b96bcd6 (.)
-=======
-*Fix implementato e verificato - Sistema multi-tenant completamente funzionante*
->>>>>>> origin/dev

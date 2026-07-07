@@ -1,145 +1,4 @@
-# Standard di Traduzione - Documentazione Root
-
-## Panoramica
-
-Questo documento definisce gli standard globali per la gestione delle traduzioni in Laraxot/PTVX.
-
-## Principi Fondamentali
-
-### 1. Struttura Espansa Obbligatoria
-- **TUTTI** i file di traduzione devono utilizzare la struttura espansa
-- **MAI** utilizzare struttura semplice (`'field' => 'Label'`)
-- **SEMPRE** utilizzare struttura espansa (`'field' => ['label' => 'Label']`)
-
-### 2. Posizionamento Standard
-```
-Modules/{ModuleName}/lang/{locale}/
-```
-
-### 3. Naming Convention
-- **File**: lowercase con underscore (es. `nome_risorsa.php`)
-- **Chiavi**: snake_case (es. `nome_campo`)
-- **Namespace**: lowercase del modulo (es. `progressioni::`)
-
-## Struttura Standard
-
-### Campi (Fields)
-```php
-'fields' => [
-    'nome_campo' => [
-        'label' => 'Etichetta Campo',
-        'placeholder' => 'Testo placeholder',
-        'help' => 'Testo di aiuto',
-    ],
-],
-```
-
-### Azioni (Actions)
-```php
-'actions' => [
-    'nome_azione' => [
-        'label' => 'Etichetta Azione',
-        'success' => 'Messaggio di successo',
-        'error' => 'Messaggio di errore',
-        'confirmation' => 'Messaggio di conferma',
-        'fields' => [
-            'campo_azione' => [
-                'label' => 'Etichetta Campo Azione',
-                'placeholder' => 'Placeholder campo azione',
-                'help' => 'Aiuto campo azione',
-            ],
-        ],
-    ],
-],
-```
-
-### Navigazione (Navigation)
-```php
-'navigation' => [
-    'name' => 'Nome Singolare',
-    'plural' => 'Nome Plurale',
-    'group' => [
-        'name' => 'Nome Gruppo',
-        'description' => 'Descrizione del gruppo',
-    ],
-    'sort' => 10,
-    'icon' => 'heroicon-o-icon-name',
-    'label' => 'Etichetta Navigazione',
-],
-```
-
-### Tab e Schede
-```php
-'tabs' => [
-    'index' => [
-        'label' => 'Lista',
-        'description' => 'Visualizza tutti gli elementi',
-    ],
-    'create' => [
-        'label' => 'Aggiungi',
-        'description' => 'Crea un nuovo elemento',
-    ],
-    'edit' => [
-        'label' => 'Modifica',
-        'description' => 'Modifica l\'elemento selezionato',
-    ],
-],
-```
-
-### Messaggi
-```php
-'messages' => [
-    'created' => 'Elemento creato con successo',
-    'updated' => 'Elemento aggiornato con successo',
-    'deleted' => 'Elemento eliminato con successo',
-    'import_success' => 'Importazione completata con successo',
-    'export_success' => 'Esportazione completata con successo',
-],
-```
-
-## Sintassi Moderna
-
-### Dichiarazione Strict Types
-```php
-<?php
-
-declare(strict_types=1);
-
-/**
- * Traduzioni per [descrizione]
- *
- * @package Modules\{ModuleName}\Resources
- */
-
-return [
-    // Traduzioni...
-];
-```
-
-### Sintassi Array Breve
-```php
-// ✅ CORRETTO
-return [
-    'field' => [
-        'label' => 'Etichetta',
-    ],
-];
-
-// ❌ ERRATO
-return array(
-    'field' => array(
-        'label' => 'Etichetta',
-    ),
-);
-```
-
-## Moduli Standardizzati
-
-### ✅ Modulo Progressioni (Completato)
-- **File standardizzati**: 15 file principali
-- **Problemi risolti**: Riferimenti circolari, sintassi obsoleta
-- **Miglioramenti**: Struttura espansa completa, traduzioni specifiche
-- **Documentazione**: [Progressioni Translation System](../../laravel/modules/progressioni/docs/translation-system.md)
+- **Documentazione**: [Progressioni Translation System](../../laravel/Modules/Progressioni/docs/translation-system.md)
 
 #### File Completati
 1. `progressioni.php` - Traduzioni principali
@@ -254,8 +113,8 @@ return [
 
 ## Collegamenti
 
-- [Progressioni Translation System](../../laravel/modules/progressioni/docs/translation-system.md)
-- [Xot Best Practices](../../laravel/modules/xot/docs/translations-best-practices.md)
+- [Progressioni Translation System](../../laravel/Modules/Progressioni/docs/translation-system.md)
+- [Xot Best Practices](../../laravel/Modules/Xot/docs/translations-best-practices.md)
 - [Laraxot Conventions](laraxot-conventions.md)
 
 ## Note Tecniche
@@ -272,3 +131,11 @@ return [
 3. **Organizzazione**: Struttura gerarchica coerente
 4. **Naming**: Convenzioni standardizzate
 
+*Ultimo aggiornamento: Giugno 2025*
+---
+module: theme
+topic: translation-standards
+canonical: ../../../../Themes/docs/shared-components/translation-standards-Modules.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/translation-standards-Modules.md

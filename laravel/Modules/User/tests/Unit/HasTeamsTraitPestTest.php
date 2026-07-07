@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit;
 
+=======
+>>>>>>> 9fa499be (.)
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
 use Modules\User\Contracts\TeamContract;
@@ -14,11 +17,36 @@ use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
+<<<<<<< HEAD
 beforeEach(function () {
     $this->user = User::factory()->create();
     $this->team = Team::factory()->create();
     $this->personalTeam = Team::factory()->create([
         'user_id' => $this->user->id,
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+/**
+ * @param array<string, mixed> $attributes
+ */
+function pestHasTeamsCreateTestUser(array $attributes = []): User
+{
+    return UserFactory::new()->createOne(array_merge([
+        'email' => 'test-'.uniqid('', true).'@example.com',
+    ], $attributes));
+}
+
+/**
+ * @return array{user: User, team: Team, personalTeam: Team}
+ */
+function pestHasTeamsBootstrapFixture(): array
+{
+    $user = pestHasTeamsCreateTestUser();
+    $team = TeamFactory::new()->createOne(['name' => 'shared-'.uniqid()]);
+    $personalTeam = TeamFactory::new()->createOne([
+        'user_id' => $user->id,
+        'name' => 'personal-'.uniqid(),
+>>>>>>> 9fa499be (.)
         'personal_team' => true,
     ]);
 });
@@ -58,12 +86,16 @@ test('it correctly checks team ownership', function () {
     // Test: Owned team
     expect($this->user->ownsTeam($this->personalTeam))->toBeTrue();
 
+<<<<<<< HEAD
     // Test: Non-owned team
     expect($this->user->ownsTeam($this->team))->toBeFalse();
 
     // Test: Member team (not owner)
     $this->user->teams()->attach($this->team->id, ['role' => 'member']);
     expect($this->user->ownsTeam($this->team))->toBeFalse();
+=======
+    Assert::assertInstanceOf(BelongsToMany::class, $user->membershipTeams());
+>>>>>>> 6d3760fe (.)
 });
 
 test('it uses belongs to many x for teams relationship', function () {

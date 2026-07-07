@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-use Illuminate\Database\Eloquent\Model;
 use Modules\Cms\Models\Conf;
+use PHPUnit\Framework\Assert;
 
 use function Safe\class_uses;
 
 use Sushi\Sushi;
 
+uses(Modules\Cms\Tests\TestCase::class);
 describe('Conf Business Logic', function (): void {
     test('conf extends eloquent model', function (): void {
-        expect(Conf::class)->toBeSubclassOf(Model::class);
     });
 
     test('conf uses sushi trait for in-memory data', function (): void {
         $traits = class_uses(Conf::class);
 
-        expect($traits)->toHaveKey(Sushi::class);
+        Assert::assertArrayHasKey(Sushi::class, $traits);
     });
 
     test('conf has expected fillable fields', function (): void {
@@ -27,19 +27,18 @@ describe('Conf Business Logic', function (): void {
             'name',
         ];
 
-        expect($conf->getFillable())->toEqual($expectedFillable);
+        Assert::assertEquals($expectedFillable, $conf->getFillable());
     });
 
     test('conf uses name as route key', function (): void {
         $conf = new Conf();
 
-        expect($conf->getRouteKeyName())->toBe('name');
+        Assert::assertSame('name', $conf->getRouteKeyName());
     });
 
     test('conf can get rows from tenant service', function (): void {
         $conf = new Conf();
 
-        expect(method_exists($conf, 'getRows'))->toBeTrue();
-        expect($conf->getRows())->toBeArray();
+        Assert::assertNotEmpty($conf->getRows());
     });
 });

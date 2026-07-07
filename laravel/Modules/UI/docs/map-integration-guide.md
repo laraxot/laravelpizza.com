@@ -43,7 +43,7 @@ Modules/UI/
 │   │   │   ├── map-markers.js
 │   │   │   └── map-popup.js
 │   │   └── components/
-│   │       ├── location-picker.js
+│   │       ├── location-picker-lit.js
 │   │       └── address-autocomplete.js
 │   ├── css/
 │   │   ├── map/

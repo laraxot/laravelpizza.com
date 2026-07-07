@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Filament\Pages;
 
-use Filament\Widgets\WidgetConfiguration;
 use Modules\Notify\Filament\Pages\SettingPage;
 use Modules\Notify\Tests\TestCase;
 

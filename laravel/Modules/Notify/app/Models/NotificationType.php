@@ -8,21 +8,13 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
-<<<<<<< HEAD
-=======
 use Override;
->>>>>>> 40b96bcd6 (.)
 
 /**
  * @method static Builder<static>|NotificationType newModelQuery()
  * @method static Builder<static>|NotificationType newQuery()
  * @method static Builder<static>|NotificationType query()
  *
-<<<<<<< HEAD
- * @mixin IdeHelperNotificationType
- *
-=======
->>>>>>> 40b96bcd6 (.)
  * @property int $id
  * @property string $name
  * @property string|null $slug

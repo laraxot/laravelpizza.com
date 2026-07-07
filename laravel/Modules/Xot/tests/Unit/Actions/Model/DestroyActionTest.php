@@ -7,28 +7,27 @@ namespace Modules\Xot\Tests\Unit\Actions\Model;
 use Illuminate\Support\Facades\Session;
 use Modules\Xot\Actions\Model\DestroyAction;
 use Modules\Xot\Models\BaseModel;
+use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-beforeEach(function (): void {
-    $action = app(DestroyAction::class);
-});
+uses(TestCase::class);
 
 it('deletes model and returns it', function (): void {
-    // Create a mock model that tracks delete calls
     $mockModel = new class extends BaseModel {
         public bool $deleted = false;
 
         public function delete(): bool
         {
-            $deleted = true;
+            $this->deleted = true;
 
             return true;
         }
     };
 
-    $result = $action->execute($mockModel, [], []);
+    $result = app(DestroyAction::class)->execute($mockModel, [], []);
 
-    expect($result)->toBe($mockModel)
-        ->and($mockModel->deleted)->toBeTrue();
+    Assert::assertSame($mockModel, $result);
+    Assert::assertTrue($mockModel->deleted);
 });
 
 it('flashes status message on successful delete', function (): void {
@@ -39,9 +38,9 @@ it('flashes status message on successful delete', function (): void {
         }
     };
 
-    $action->execute($mockModel, [], []);
+    app(DestroyAction::class)->execute($mockModel, [], []);
 
-    expect(Session::get('status'))->toBe('eliminato');
+    Assert::assertSame('eliminato', Session::get('status'));
 });
 
 it('flashes failure message when delete returns false', function (): void {
@@ -52,7 +51,7 @@ it('flashes failure message when delete returns false', function (): void {
         }
     };
 
-    $action->execute($mockModel, [], []);
+    app(DestroyAction::class)->execute($mockModel, [], []);
 
-    expect(Session::get('status'))->toBe('NON eliminato');
+    Assert::assertSame('NON eliminato', Session::get('status'));
 });

@@ -1,6 +1,7 @@
 # PHPStan Livello 10 - Audit Completo Progetto
 
 ## Data Audit
+2025-01-27
 [DATE]
 
 ## Risultati Generali
@@ -59,6 +60,7 @@
 - **File**: `../UI/app/Filament/Forms/Components/LocationSelector.php`
 - **Errori**: 32 errori PHPStan livello 10
 - **Causa**: Classe `Modules\Geo\Models\Comune` non esiste
+- **Status**: Documentato in [phpstan-errors-locationselector.md](../UI/docs/phpstan-errors-locationselector.md)
 - **Status**: Documentato in [phpstan-errors-locationselector.md](../ui/docs/phpstan-errors-locationselector.md)
 - **Soluzione Proposta**: Creare modulo Geo con modello Comune (refactoring architetturale)
 
@@ -71,6 +73,7 @@
   - Aggiunti cast espliciti `(int)` per tutti i `count()`
   - Sostituito `mapWithKeys()` con loop `foreach` per evitare problemi con `stdClass`
   - Aggiunta annotazione PHPDoc `@var array<string, int>`
+- **Documentazione**: [phpstan-errors-activitylogger.md](../Activity/docs/phpstan-errors-activitylogger.md)
 - **Documentazione**: [phpstan-errors-activitylogger.md](../activity/docs/phpstan-errors-activitylogger.md)
 
 ### 2. Ptv Module
@@ -80,6 +83,7 @@
   - Rimosso `Select::make()` errato
   - Usato `$this->options()` per configurare il componente
   - Rimosso codice debug e commentato
+- **Documentazione**: [phpstan-errors-valutatorefield.md](../Ptv/docs/phpstan-errors-valutatorefield.md)
 - **Documentazione**: [phpstan-errors-valutatorefield.md](../ptv/docs/phpstan-errors-valutatorefield.md)
 
 ### 3. IndennitaResponsabilita Module
@@ -88,6 +92,7 @@
 - **Correzioni**:
   - Sostituito `getRatingsWhere()` con query diretta `wherePivot()`
   - Aggiunta annotazione `@phpstan-ignore-next-line` per `withExtraAttributes()` (Spatie Schemaless)
+- **Documentazione**: [phpstan-errors-compilaindennita.md](../IndennitaResponsabilita/docs/phpstan-errors-compilaindennita.md)
 - **Documentazione**: [phpstan-errors-compilaindennita.md](../indennitaresponsabilita/docs/phpstan-errors-compilaindennita.md)
 
 ### 4. Notify Module
@@ -150,4 +155,4 @@
 - Qualità codice complessiva: **Eccellente** (97% conformità)
 - Tutte le correzioni seguono le regole Laraxot e metodologia "Super Mucca"
 
-
+*Ultimo aggiornamento: 2025-01-27*

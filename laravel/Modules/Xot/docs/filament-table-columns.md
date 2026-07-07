@@ -29,6 +29,11 @@ public function getTableColumns(): array
 
 ## Collegamenti
 - [Esempio e Applicazione - Modulo User](../../../user/docs/filament/filament_table_columns.md)
+**Nota:** Nei moduli come Performance, la logica tabellare (colonne, filtri, azioni) va sempre nelle pagine (che estendono `Modules\Xot\Filament\Resources\Pages\XotBaseListRecords`), non nelle Resource. Vedi esempio e motivazione nella [documentazione Performance](../../Performance/docs/filament-resources.md).
+
+## Collegamenti
+- [Esempio e Applicazione - Modulo User](../../../User/docs/filament/FILAMENT_TABLE_COLUMNS.md)
+- [Regola Globale - Root Docs](../../../../docs/filament-table-columns.md)
 - [Regola Globale - Root Docs](../../../../../docs/filament-table-columns.md)
 
 ## Nota storica: correzione XotBaseManageRelatedRecords
@@ -43,5 +48,6 @@ public function getTableColumns(): array
 
 ---
 
+**Ultimo aggiornamento:** 2025-05-13
 
 **Link bidirezionale:** Aggiornare anche la root docs e la docs dei moduli coinvolti.

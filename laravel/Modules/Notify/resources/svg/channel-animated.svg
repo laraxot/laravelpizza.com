@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:f54fb466b6e11ec9031b8d89fced1dc1fa4918880b11e06ee790010b48c0b2d7
-size 1124
-=======
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <style>
@@ -34,4 +29,3 @@ size 1124
     <path class="wave" d="M18 12h4"/>
     <path class="wave" d="M8 12h8"/>
 </svg>
->>>>>>> origin/dev

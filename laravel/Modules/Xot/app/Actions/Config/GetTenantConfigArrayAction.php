@@ -11,6 +11,9 @@ class GetTenantConfigArrayAction
 {
     use QueueableAction;
 
+    /**
+     * @return array<string, mixed>
+     */
     public function execute(string $name): array
     {
         $path = app(GetTenantConfigPathAction::class)->execute($name);
@@ -25,6 +28,13 @@ class GetTenantConfigArrayAction
             return [];
         }
 
-        return $content;
+        $result = [];
+        foreach ($content as $key => $value) {
+            if (is_string($key)) {
+                $result[$key] = $value;
+            }
+        }
+
+        return $result;
     }
 }

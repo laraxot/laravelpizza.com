@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\String;
 
+use function Safe\preg_replace;
+
 class SanitizeAction
 {
     public function execute(string $str): string

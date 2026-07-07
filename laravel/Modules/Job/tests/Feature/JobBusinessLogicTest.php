@@ -2,62 +2,60 @@
 
 declare(strict_types=1);
 
-uses(\Modules\Job\Tests\TestCase::class);
-
 use Modules\Job\Models\Job;
-
-use function Safe\json_encode;
+use Modules\Job\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+uses(TestCase::class);
 
 describe('Job Business Logic', function () {
     it('can instantiate job with basic attributes', function () {
         $job = new Job([
             'queue' => 'default',
-            'payload' => json_encode(['displayName' => 'App\Jobs\ProcessUserJob']),
+            'payload' => ['displayName' => 'App\Jobs\ProcessUserJob'],
             'attempts' => 0,
             'available_at' => now()->timestamp,
         ]);
 
-        expect($job)
-            ->toBeInstanceOf(Job::class)
-            ->and($job->queue)->toBe('default')
-            ->and($job->attempts)->toBe(0);
+        Assert::assertSame('default', $job->queue);
+        Assert::assertSame(0, $job->attempts);
+        Assert::assertInstanceOf(Job::class, $job);
     });
 
     it('returns waiting status when not reserved', function () {
         $job = new Job([
             'queue' => 'high',
-            'payload' => json_encode(['displayName' => 'TestJob']),
+            'payload' => ['displayName' => 'TestJob'],
             'attempts' => 0,
             'available_at' => now()->timestamp,
         ]);
 
-        expect($job->status)->toBe('waiting');
+        Assert::assertSame('waiting', $job->status);
     });
 
     it('returns running status when reserved', function () {
         $job = new Job([
             'queue' => 'high',
-            'payload' => json_encode(['displayName' => 'TestJob']),
+            'payload' => ['displayName' => 'TestJob'],
             'attempts' => 1,
             'reserved_at' => now()->timestamp,
             'available_at' => now()->timestamp,
         ]);
 
-        expect($job->status)->toBe('running');
+        Assert::assertSame('running', $job->status);
     });
 
     it('extracts display name from payload', function () {
         $job = new Job([
             'queue' => 'notifications',
-            'payload' => json_encode([
+            'payload' => [
                 'displayName' => 'App\Jobs\SendNotificationJob',
                 'job' => 'Illuminate\Queue\CallQueuedHandler@call',
-            ]),
+            ],
             'attempts' => 0,
             'available_at' => now()->timestamp,
         ]);
 
-        expect($job->display_name)->toBe('App\Jobs\SendNotificationJob');
+        Assert::assertSame('App\Jobs\SendNotificationJob', $job->display_name);
     });
 
     it('handles complex payload structures', function () {
@@ -73,13 +71,13 @@ describe('Job Business Logic', function () {
 
         $job = new Job([
             'queue' => 'processing',
-            'payload' => json_encode($complexPayload),
+            'payload' => $complexPayload,
             'attempts' => 0,
             'available_at' => now()->timestamp,
         ]);
 
-        expect($job->display_name)->toBe('App\Jobs\ComplexProcessingJob')
-            ->and($job->queue)->toBe('processing');
+        Assert::assertSame('processing', $job->queue);
+        Assert::assertSame('App\Jobs\ComplexProcessingJob', $job->display_name);
     });
 
     it('handles job with future available_at', function () {
@@ -87,23 +85,23 @@ describe('Job Business Logic', function () {
 
         $job = new Job([
             'queue' => 'scheduled',
-            'payload' => json_encode(['displayName' => 'ScheduledJob']),
+            'payload' => ['displayName' => 'ScheduledJob'],
             'attempts' => 0,
             'available_at' => $futureTime->timestamp,
         ]);
 
-        expect($job->available_at)->toBeGreaterThan(now()->timestamp)
-            ->and($job->status)->toBe('waiting');
+        Assert::assertSame('waiting', $job->status);
+        Assert::assertGreaterThan(now()->timestamp, $job->available_at);
     });
 
     it('handles different queue names', function () {
-        $highPriorityJob = new Job(['queue' => 'high', 'payload' => '{}', 'attempts' => 0, 'available_at' => now()->timestamp]);
-        $lowPriorityJob = new Job(['queue' => 'low', 'payload' => '{}', 'attempts' => 0, 'available_at' => now()->timestamp]);
-        $defaultJob = new Job(['queue' => 'default', 'payload' => '{}', 'attempts' => 0, 'available_at' => now()->timestamp]);
+        $highPriorityJob = new Job(['queue' => 'high', 'payload' => [], 'attempts' => 0, 'available_at' => now()->timestamp]);
+        $lowPriorityJob = new Job(['queue' => 'low', 'payload' => [], 'attempts' => 0, 'available_at' => now()->timestamp]);
+        $defaultJob = new Job(['queue' => 'default', 'payload' => [], 'attempts' => 0, 'available_at' => now()->timestamp]);
 
-        expect($highPriorityJob->queue)->toBe('high')
-            ->and($lowPriorityJob->queue)->toBe('low')
-            ->and($defaultJob->queue)->toBe('default');
+        Assert::assertSame('high', $highPriorityJob->queue);
+        Assert::assertSame('low', $lowPriorityJob->queue);
+        Assert::assertSame('default', $defaultJob->queue);
     });
 
     it('returns null for invalid payload', function () {
@@ -114,16 +112,16 @@ describe('Job Business Logic', function () {
             'available_at' => now()->timestamp,
         ]);
 
-        expect($job->display_name)->toBeNull();
+        Assert::assertNull($job->display_name);
     });
 
     it('model has correct fillable attributes', function () {
         $job = new Job;
         $fillable = $job->getFillable();
 
-        expect($fillable)->toContain('queue')
-            ->and($fillable)->toContain('payload')
-            ->and($fillable)->toContain('attempts')
-            ->and($fillable)->toContain('available_at');
+        Assert::assertContains('queue', $fillable);
+        Assert::assertContains('payload', $fillable);
+        Assert::assertContains('attempts', $fillable);
+        Assert::assertContains('available_at', $fillable);
     });
 });

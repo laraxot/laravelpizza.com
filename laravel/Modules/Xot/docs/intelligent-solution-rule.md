@@ -1,5 +1,6 @@
 # Regola Critica: Soluzione Intelligente e Professionale
 
+**Data**: 2025-01-22
 **Status**: ✅ Regola Critica OBBLIGATORIA
 **Integrazione**: Metodologia Super Mucca
 
@@ -272,6 +273,7 @@ Questa regola si integra perfettamente con la [Metodologia Super Mucca](./super-
 
 ---
 
+**Ultimo aggiornamento**: 2025-01-22
 **Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: ✅ Regola Critica OBBLIGATORIA

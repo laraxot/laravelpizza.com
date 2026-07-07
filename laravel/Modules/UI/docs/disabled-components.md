@@ -36,9 +36,9 @@ use Modules\Geo\Services\MapService;
 - `GeocodingService::getSuggestions()` — Autocomplete address suggestions
 
 #### Restoration Steps
-Do not reactivate this component inside `UI`.
-If map features are needed, create the component in `Modules/Geo` and let `Geo`
-depend on generic UI primitives.
+If `Modules/Geo` is installed:
+1. Rename `InteractiveMap.php.old` → `InteractiveMap.php`
+2. Verify Geo module exports the required services
 3. Test geocoding and export functionality
 
 ### 2. Cms Action Dependency
@@ -106,8 +106,7 @@ When UI module needs features from optional modules:
 
 ## Future Work
 
-- [ ] Keep geographic components out of `UI`
-- [ ] Create `Modules/Geo` only when geographic features are needed
+- [ ] Create `Modules/Geo` when geographic features are needed
 - [ ] Merge CMS localization pattern into Xot base
 - [ ] Document pattern for optional module dependencies in wiki
 

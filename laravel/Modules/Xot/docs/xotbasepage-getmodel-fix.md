@@ -110,3 +110,4 @@ public static function getModel(): null|string
 - **PHP Version**: 8.3+
 - **Livello PHPStan**: 9+
 
+*Ultimo aggiornamento: gennaio 2025*

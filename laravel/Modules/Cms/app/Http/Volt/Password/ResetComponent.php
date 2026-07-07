@@ -21,6 +21,7 @@ class ResetComponent extends Component
     /**
      * Summary of emailSentMessage.
      */
+    /** @var array<string, mixed>|bool|string */
     public bool|string|array $emailSentMessage = false;
 
     public function sendResetPasswordLink(): void
@@ -32,7 +33,10 @@ class ResetComponent extends Component
         if (Password::RESET_LINK_SENT === $response) {
             $message = trans($response);
             if (is_array($message)) {
-                $this->emailSentMessage = implode(' ', $message);
+                $this->emailSentMessage = implode(' ', array_map(
+                    static fn (mixed $item): string => is_scalar($item) ? (string) $item : '',
+                    $message
+                ));
             } else {
                 $this->emailSentMessage = is_string($message) ? $message : (string) $message;
             }

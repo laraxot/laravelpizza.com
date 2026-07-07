@@ -5,11 +5,7 @@ Documentazione della risoluzione dei conflitti Git nel modulo Xot che bloccavano
 
 ## File Interessati
 
-<<<<<<< HEAD
 ### 1. Helpers/Helper.php
-=======
-### 1. helpers/Helper.php
->>>>>>> origin/dev
 **Problema**: Marker di conflitto  causavano ParseError
 **Risoluzione**: Selezione della "current change" per tutti i conflitti
 
@@ -73,6 +69,7 @@ Documentazione della risoluzione dei conflitti Git nel modulo Xot che bloccavano
 - [Script Risoluzione Conflitti](../../../bashscripts/docs/conflict_resolution_script_improvements.md)
 - [Report Completo PHPStan Fixes](../../../bashscripts/docs/phpstan_fixes_comprehensive_report.md)
 
+*Ultimo aggiornamento: Dicembre 2024*
 # Risoluzione Conflitti Git - Modulo Xot
 
 ## Panoramica
@@ -80,11 +77,7 @@ Documentazione della risoluzione dei conflitti Git nel modulo Xot che bloccavano
 
 ## File Interessati
 
-<<<<<<< HEAD
 ### 1. Helpers/Helper.php
-=======
-### 1. helpers/Helper.php
->>>>>>> origin/dev
 **Problema**: Marker di conflitto  causavano ParseError
 **Risoluzione**: Selezione della "current change" per tutti i conflitti
 
@@ -148,3 +141,4 @@ Documentazione della risoluzione dei conflitti Git nel modulo Xot che bloccavano
 - [Script Risoluzione Conflitti](../../../bashscripts/docs/conflict_resolution_script_improvements.md)
 - [Report Completo PHPStan Fixes](../../../bashscripts/docs/phpstan_fixes_comprehensive_report.md)
 
+*Ultimo aggiornamento: Dicembre 2024*

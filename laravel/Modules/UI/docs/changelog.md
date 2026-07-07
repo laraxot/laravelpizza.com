@@ -1,5 +1,7 @@
-# Changelog
+---
+module: theme
+topic: changelog
+canonical: ../../../Themes/docs/shared-components/CHANGELOG.md
+---
 
-All notable changes to this project will be documented in this file.
-
-## [Unreleased]
+See canonical documentation: ../../../Themes/docs/shared-components/CHANGELOG.md

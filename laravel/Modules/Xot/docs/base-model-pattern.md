@@ -70,6 +70,7 @@ abstract class XotBaseModel extends Model
 Each module has its own BaseModel that extends XotBaseModel:
 
 ```php
+// Example from Quaeris module
 abstract class BaseModel extends XotBaseModel implements HasMedia, ModelContract
 {
     use Cachable;
@@ -104,6 +105,7 @@ class SurveyPdf extends XotBaseModel // Never do this!
 
 ✅ **CORRECT:**
 ```php
+// In Quaeris module
 class SurveyPdf extends BaseModel // Extends module's BaseModel
 ```
 

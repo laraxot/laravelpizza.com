@@ -2,15 +2,38 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit;
 
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
+=======
+use Modules\User\Database\Factories\PermissionFactory;
+use Modules\User\Database\Factories\ProfileFactory;
+use Modules\User\Database\Factories\RoleFactory;
+use Modules\User\Database\Factories\SocialiteUserFactory;
+use Modules\User\Database\Factories\TenantFactory;
+use Modules\User\Models\Permission;
+use Modules\User\Models\Profile;
+use Modules\User\Models\Role;
+use Modules\User\Models\SocialiteUser;
+use Modules\User\Models\Tenant;
+use Modules\User\Models\User;
+use Modules\User\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+>>>>>>> 6d3760fe (.)
+
+uses(TestCase::class);
 
 it('can create a user with basic attributes', function () {
+<<<<<<< HEAD
     $user = User::factory()->create([
+=======
+    $email = 'john-'.uniqid('', true).'@example.com';
+    $user = createTestUser([
+>>>>>>> 6d3760fe (.)
         'name' => 'John Doe',
         'email' => 'john@example.com',
         'password' => bcrypt('password123'),
@@ -23,7 +46,16 @@ it('can create a user with basic attributes', function () {
 });
 
 it('can create a user with profile', function () {
+<<<<<<< HEAD
     $user = User::factory()->withProfile()->create([
+=======
+    skipUnlessUserTable('profiles', 'profiles table missing on user connection.');
+    skipUnlessUserColumn('profiles', 'user_id', 'profiles.user_id column missing on user connection.');
+    skipUnlessUserColumn('profiles', 'uuid', 'profiles.uuid column missing on user connection.');
+
+    $email = 'jane-'.uniqid('', true).'@example.com';
+    $user = createTestUser([
+>>>>>>> 6d3760fe (.)
         'name' => 'Jane Smith',
         'email' => 'jane@example.com',
     ]);
@@ -33,8 +65,14 @@ it('can create a user with profile', function () {
 });
 
 it('can authenticate a user', function () {
+<<<<<<< HEAD
     $user = User::factory()->create([
         'email' => 'auth@example.com',
+=======
+    $email = 'auth-'.uniqid('', true).'@example.com';
+    $user = createTestUser([
+        'email' => $email,
+>>>>>>> 6d3760fe (.)
         'password' => bcrypt('secret123'),
     ]);
 
@@ -45,8 +83,14 @@ it('can authenticate a user', function () {
 });
 
 it('can create a user role', function () {
+<<<<<<< HEAD
     $role = \Modules\User\Models\Role::factory()->create([
         'name' => 'admin',
+=======
+    $roleName = 'admin-'.uniqid();
+    $role = RoleFactory::new()->createOne([
+        'name' => $roleName,
+>>>>>>> 6d3760fe (.)
         'guard_name' => 'web',
     ]);
 
@@ -55,8 +99,14 @@ it('can create a user role', function () {
 });
 
 it('can create a user permission', function () {
+<<<<<<< HEAD
     $permission = \Modules\User\Models\Permission::factory()->create([
         'name' => 'edit_posts',
+=======
+    $permissionName = 'edit_posts_'.uniqid();
+    $permission = PermissionFactory::new()->createOne([
+        'name' => $permissionName,
+>>>>>>> 6d3760fe (.)
         'guard_name' => 'web',
     ]);
 
@@ -65,9 +115,18 @@ it('can create a user permission', function () {
 });
 
 it('can assign role to user', function () {
+<<<<<<< HEAD
     $user = User::factory()->create();
     $role = \Modules\User\Models\Role::factory()->create([
         'name' => 'editor',
+=======
+    skipUnlessRoleAssignmentSupported();
+
+    $user = createTestUser();
+    $roleName = 'editor-'.uniqid();
+    $role = RoleFactory::new()->createOne([
+        'name' => $roleName,
+>>>>>>> 6d3760fe (.)
         'guard_name' => 'web',
     ]);
 
@@ -77,9 +136,18 @@ it('can assign role to user', function () {
 });
 
 it('can attach permission to user', function () {
+<<<<<<< HEAD
     $user = User::factory()->create();
     $permission = \Modules\User\Models\Permission::factory()->create([
         'name' => 'delete_users',
+=======
+    skipUnlessDirectPermissionSupported();
+
+    $user = createTestUser();
+    $permissionName = 'delete_users_'.uniqid();
+    $permission = PermissionFactory::new()->createOne([
+        'name' => $permissionName,
+>>>>>>> 6d3760fe (.)
         'guard_name' => 'web',
     ]);
 
@@ -89,9 +157,17 @@ it('can attach permission to user', function () {
 });
 
 it('can create a tenant user', function () {
+<<<<<<< HEAD
     $tenant = \Modules\Tenant\Models\Tenant::factory()->create([
         'name' => 'Test Tenant',
         'domain' => 'tenant.example.com',
+=======
+    skipUnlessUserColumn('users', 'tenant_id', 'users.tenant_id column missing on user connection.');
+
+    $tenant = TenantFactory::new()->createOne([
+        'name' => 'Test Tenant '.uniqid(),
+        'domain' => 'tenant-'.uniqid().'.example.com',
+>>>>>>> 6d3760fe (.)
     ]);
 
     $user = User::factory()->forTenant($tenant)->create([
@@ -104,7 +180,12 @@ it('can create a tenant user', function () {
 });
 
 it('can create a user with socialite data', function () {
+<<<<<<< HEAD
     $user = User::factory()->create([
+=======
+    $email = 'social-'.uniqid('', true).'@example.com';
+    $user = createTestUser([
+>>>>>>> 6d3760fe (.)
         'name' => 'Social User',
         'email' => 'social@example.com',
     ]);

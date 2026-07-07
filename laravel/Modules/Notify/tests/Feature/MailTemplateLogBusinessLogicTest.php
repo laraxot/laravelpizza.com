@@ -4,14 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Feature;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Modules\Notify\Models\MailTemplate;
-use Modules\Notify\Models\MailTemplateLog;
-use Modules\Notify\Tests\TestCase;
-=======
 use Modules\Notify\Database\Factories\MailTemplateFactory;
 use Modules\Notify\Database\Factories\MailTemplateLogFactory;
 use Modules\Notify\Models\MailTemplate;
@@ -22,7 +14,6 @@ use PHPUnit\Framework\Assert;
 use function Safe\json_encode;
 
 uses(\Modules\Notify\Tests\TestCase::class);
->>>>>>> 40b96bcd6 (.)
 
 describe('Mail Template Log Business Logic', function () {
     it('can create mail template log with basic information', function () {

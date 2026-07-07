@@ -11,7 +11,7 @@ use Modules\Lang\Filament\Resources\Pages\LangBaseListRecords;
 
 class ListPages extends LangBaseListRecords
 {
-    protected static string $resource = PageResource::class;
+    public static string $resource = PageResource::class;
 
     /**
      * @return array<string, Column>

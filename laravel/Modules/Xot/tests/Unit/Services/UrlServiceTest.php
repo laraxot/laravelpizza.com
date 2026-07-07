@@ -2,35 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Services;
-
-use Modules\Xot\Services\UrlService;
-
-it('can be instantiated', function (): void {
-    $service = new UrlService();
-    expect($service)->toBeInstanceOf(UrlService::class);
-});
-
-it('can get instance via getInstance', function (): void {
-    $service = UrlService::getInstance();
-    expect($service)->toBeInstanceOf(UrlService::class);
-});
-
-it('can get instance via make', function (): void {
-    $service = UrlService::make();
-    expect($service)->toBeInstanceOf(UrlService::class);
-});
+uses(Modules\Xot\Tests\TestCase::class);
+use Modules\Xot\Actions\Url\IsValidUrlAction;
+use PHPUnit\Framework\Assert;
 
 it('validates correct urls', function (): void {
-    $service = UrlService::make();
-    expect($service->checkValidUrl('https://google.com'))->toBeTrue()
-        ->and($service->checkValidUrl('http://localhost'))->toBeTrue()
-        ->and($service->checkValidUrl('ftp://server.com'))->toBeTrue();
+    $action = app(IsValidUrlAction::class);
+    Assert::assertTrue($action->execute('https://google.com'));
+    Assert::assertTrue($action->execute('http://localhost'));
+    Assert::assertTrue($action->execute('ftp://server.com'));
 });
 
 it('invalidates incorrect urls', function (): void {
-    $service = UrlService::make();
-    expect($service->checkValidUrl('not-a-url'))->toBeFalse()
-        ->and($service->checkValidUrl('http:///double-slash'))->toBeFalse()
-        ->and($service->checkValidUrl(''))->toBeFalse();
+    $action = app(IsValidUrlAction::class);
+    Assert::assertFalse($action->execute('not-a-url'));
+    Assert::assertFalse($action->execute('http:///double-slash'));
+    Assert::assertFalse($action->execute(''));
 });

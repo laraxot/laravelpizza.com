@@ -1,5 +1,4 @@
-# Correzione Completa PHPStan - XotBaseRelationManager ✅
-
+**Data**: 2025-12-23
 **File**: `app/Filament/Resources/RelationManagers/XotBaseRelationManager.php`
 **Status**: ✅ COMPLETATO - TUTTI GLI ERRORI CORRETTI
 
@@ -137,3 +136,10 @@ public function canDeleteBulk(Model|\stdClass|null $record): bool
 **Tutti gli errori PHPStan corretti!** ✅
 
 Il file passa PHPStan livello max senza errori, mantenendo backward compatibility, funzionalità esistente, e allineamento con pattern del codebase (XotBaseResource).
+---
+module: theme
+topic: phpstan-fix-completo-xotbaserelationmanager
+canonical: ../../../Themes/docs/shared-components/phpstan-completo-xotbaserelationmanager.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-completo-xotbaserelationmanager.md

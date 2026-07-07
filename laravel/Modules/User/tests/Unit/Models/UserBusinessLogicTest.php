@@ -2,14 +2,19 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Models;
 
+=======
+>>>>>>> 9fa499be (.)
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Models\BaseUser;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
+
+uses(Modules\User\Tests\TestCase::class);
 
 describe('User Business Logic', function () {
     test('user extends base user', function () {

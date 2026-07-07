@@ -30,6 +30,9 @@ class PermissionRoleFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    /**
+     * @return array<string, mixed>
+     */
     public function definition(): array
     {
         return [

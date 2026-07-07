@@ -40,3 +40,8 @@ return new class extends XotBaseMigration
 - [Code Quality](../code_quality.md)
 - [Root Documentation](../../../../project_docs/collegamenti-documentazione.md)
 - [Database Guidelines](../database_guidelines.md)
+- [User Module Database Errors](../../User/project_docs/DATABASE_ERRORS.md)
+- [Xot Base Classes](../XOT_BASE_CLASSES.md)
+- [Code Quality](../CODE_QUALITY.md)
+- [Root Documentation](../../../../project_docs/collegamenti-documentazione.md)
+- [Database Guidelines](../DATABASE_GUIDELINES.md)

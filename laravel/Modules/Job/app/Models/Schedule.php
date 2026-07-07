@@ -134,6 +134,8 @@ class Schedule extends BaseModel
 
     /**
      * Get available environments.
+     *
+     * @return Collection<int|string, mixed>
      */
     public static function getEnvironments(): Collection
     {
@@ -142,6 +144,8 @@ class Schedule extends BaseModel
 
     /**
      * Get the related histories.
+     *
+     * @return HasMany<ScheduleHistory, $this>
      */
     public function histories(): HasMany
     {
@@ -150,6 +154,9 @@ class Schedule extends BaseModel
 
     /**
      * Scope a query to only include inactive schedules.
+     *
+     * @param  Builder<static>  $query
+     * @return Builder<static>
      */
     public function scopeInactive(Builder $query): Builder
     {
@@ -158,6 +165,9 @@ class Schedule extends BaseModel
 
     /**
      * Scope a query to only include active schedules.
+     *
+     * @param  Builder<static>  $query
+     * @return Builder<static>
      */
     public function scopeActive(Builder $query): Builder
     {
@@ -166,6 +176,8 @@ class Schedule extends BaseModel
 
     /**
      * Get arguments from params.
+     *
+     * @return array<string, string>
      */
     public function getArguments(): array
     {
@@ -187,7 +199,7 @@ class Schedule extends BaseModel
             if (isset($safeValue['type']) && $safeValue['type'] === 'function') {
                 // PHPStan Level 10: Ensure string for evaluateFunction
                 $functionString = isset($safeValue['value']) && is_string($safeValue['value']) ? $safeValue['value'] : '';
-                $arguments[$argument] = $this->evaluateFunction($functionString);
+                $arguments[$argument] = $this->evaluateFunction($functionString) ?? '';
             } else {
                 $name = isset($safeValue['name']) && is_string($safeValue['name'])
                     ? $safeValue['name']
@@ -199,11 +211,16 @@ class Schedule extends BaseModel
             }
         }
 
-        return $arguments;
+        /** @var array<string, string> $result */
+        $result = $arguments;
+
+        return $result;
     }
 
     /**
      * Get options as array.
+     *
+     * @return array<int|string, string>
      */
     public function getOptions(): array
     {
@@ -214,24 +231,23 @@ class Schedule extends BaseModel
             $options = $options->merge($optionsWithValues);
         }
 
-        return $options
-            ->map(
-                static function ($value, $key): string {
-                    if (is_array($value)) {
-                        $name = $value['name'] ?? null;
-                        $fallbackKey = (string) $key;
-                        $optionName = is_string($name) ? $name : $fallbackKey;
-                        $optionValue = $value['value'] ?? null;
+        $result = [];
+        foreach ($options as $key => $value) {
+            $normalizedKey = is_int($key) || is_string($key) ? $key : (string) $key;
+            if (is_array($value)) {
+                $name = $value['name'] ?? null;
+                $fallbackKey = (string) $normalizedKey;
+                $optionName = is_string($name) ? $name : $fallbackKey;
+                $optionValue = $value['value'] ?? null;
+                $result[$normalizedKey] = '--'.$optionName.'='.(string) $optionValue;
 
-                        return '--'.$optionName.'='.(string) $optionValue;
-                    }
+                continue;
+            }
 
-                    $strValue = (string) $value;
+            $result[$normalizedKey] = '--'.(string) $value;
+        }
 
-                    return "--{$strValue}";
-                },
-            )
-            ->toArray();
+        return $result;
     }
 
     /** @return array<string, string> */

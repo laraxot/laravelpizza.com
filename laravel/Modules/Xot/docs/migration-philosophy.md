@@ -61,6 +61,7 @@ $this->tableUpdate(function (Blueprint $table) {
 
 ### Migration Types and Their Purpose
 
+#### 1. Table Creation Migrations
 #### 1. Table Creation Migrations (UNICA per tabella)
 - **Pattern**: `{timestamp}_create_{table}_table.php`
 - **Purpose**: Define the base table schema
@@ -76,6 +77,16 @@ $this->tableUpdate(function (Blueprint $table) {
 #### 3. Data Migration Migrations (solo per trasformazioni dati)
 - **Pattern**: `{timestamp}_migrate_{purpose}.php`
 - **Purpose**: Transform or seed data (NON modifiche schema)
+#### 2. Schema Evolution Migrations
+- **Pattern**: `{timestamp}_{action}_{table}.php`
+- **Purpose**: Modify existing table schema
+- **Examples**:
+  - `2024_06_15_add_email_to_users.php`
+  - `2024_07_20_remove_old_column_from_posts.php`
+
+#### 3. Data Migration Migrations
+- **Pattern**: `{timestamp}_migrate_{purpose}.php`
+- **Purpose**: Transform or seed data
 - **Examples**:
   - `2024_08_10_migrate_user_roles.php`
   - `2024_09_15_seed_default_permissions.php`
@@ -114,6 +125,9 @@ Modules/User/database/migrations/
 
 **NON** creare `add_team_id_to_roles.php` separata: modificare `create_roles_table.php` e aggiornare il timestamp.
 
+└── 2024_06_15_143000_add_team_id_to_roles.php    # Schema evolution
+```
+
 #### Schema Evolution Approach
 
 When you need to modify a table:
@@ -123,6 +137,8 @@ When you need to modify a table:
 3. **ALWAYS** modificare la **stessa** migrazione esistente
 4. **ALWAYS** aggiornare il timestamp nel nome del file
 5. **USE** `XotBaseMigration::tableUpdate()` per aggiunte sicure
+2. **ALWAYS** create a schema evolution migration
+3. **USE** `XotBaseMigration::tableUpdate()` for safe modifications
 
 ### XotBaseMigration Best Practices
 
@@ -199,6 +215,204 @@ Per tabelle che devono essere compatibili con applicazioni Android e Postgres, u
 ### Screenshots and Docs Location
 
 **REGOLA**: Gli screenshot e la documentazione visuale devono essere salvati nelle cartelle `docs/` dentro i moduli e i temi, MAI in `/tmp` o altre posizioni.
+
+```bash
+# ✅ CORRETTO
+laravel/Modules/User/docs/screenshots/login-widget.png
+laravel/Themes/Two/docs/fix/login-alpine.png
+
+# ❌ SBAGLIATO
+/tmp/screenshot.png
+/home/user/screenshots.png
+```
+
+---
+
+## Alpine.js and Livewire in Themes
+
+**REGOLA FONDAMENTALE**: Alpine.js è fornito automaticamente da Livewire/Filament. **NON** includere Alpine.js nel bundle del tema.
+
+### Perché
+
+- Livewire inietta automaticamente Alpine.js nel bundle
+- Includere una seconda versione (bundle o CDN) causa errori critici:
+  - `Detected multiple instances of Alpine running`
+  - `$wire is not defined` nei form Filament
+  - Form che non funzionano
+
+### Come Configurare
+
+#### 1. package.json - NON includere alpinejs
+
+```json
+{
+  "dependencies": {
+    "daisyui": "^5.5.18"
+    "alpinejs": "NON INCLUDERE"
+  },
+  "devDependencies": {
+    "@alpinejs/focus": "^3.14.9"  // Focus plugin, ma solo se necessario
+  }
+}
+```
+
+#### 2. app.js - NON importare alpine
+
+```javascript
+// ❌ SBAGLIATO
+import Alpine from 'alpinejs'
+import AlpineFocus from '@alpinejs/focus'
+
+// ✅ CORRETTO - Lascia che Livewire gestisca Alpine
+// app.js può rimanere vuoto
+```
+
+#### 3. Layout del tema
+
+```blade
+<!-- themes/Two/resources/views/components/layouts/main.blade.php -->
+<body>
+    ...
+    {{-- Livewire fornisce automaticamente Alpine.js --}}
+    @livewireScripts
+    @filamentScripts
+    
+    {{-- Il bundle JS del tema (se necessario) --}}
+    @vite(['resources/js/app.js'], 'themes/Two')
+</body>
+```
+
+#### 4. Se serve Alpine dal CDN (emergenze)
+
+```blade
+{{-- Solo in caso di emergenza se Livewire non funziona --}}
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+```
+
+### Errori Comuni e Soluzioni
+
+| Errore | Causa | Soluzione |
+|--------|-------|-----------|
+| `$wire is not defined` | Doppio Alpine | Rimuovere import da app.js |
+| `Detected multiple instances` | Due versioni Alpine | Usare solo quella di Livewire |
+| Form non submit | Alpine non caricato | Verificare @livewireScripts |
+
+---
+
+## Filament Widgets in Blade Views
+
+**REGOLA**: I form devono essere gestiti SEMPRE tramite Filament Widget, NON con form HTML tradizionali.
+
+### Perché
+
+- Validazione automatica
+- CSRF gestito da Livewire
+- UI consistente con Filament
+- Facilmente estendibile
+
+### Come Usare un Filament Widget
+
+#### 1. Creare il Widget
+
+```php
+// Modules/User/app/Filament/Widgets/Auth/LoginWidget.php
+class LoginWidget extends XotBaseWidget
+{
+    protected string $view = 'user::filament.widgets.auth.login';
+
+    public function getFormSchema(): array
+    {
+        return [
+            'email' => TextInput::make('email')
+                ->email()
+                ->required()
+                ->autofocus(),
+            'password' => TextInput::make('password')
+                ->password()
+                ->required(),
+            'remember' => Checkbox::make('remember'),
+        ];
+    }
+
+    public function save(): void
+    {
+        // Logica di login
+    }
+}
+```
+
+#### 2. Creare la View del Widget
+
+```blade
+{{-- Modules/User/resources/views/filament/widgets/auth/login.blade.php --}}
+<div class="filament-widget-login">
+    <form wire:submit.prevent="save" class="space-y-5">
+        {{ $this->form }}
+        
+        <button type="submit" class="...">
+            {{ __('user::auth.login.submit') }}
+        </button>
+    </form>
+</div>
+```
+
+#### 3. Usare nella Blade Page
+
+```blade
+{{-- themes/Two/resources/views/pages/auth/login.blade.php --}}
+@livewire(\Modules\User\Filament\Widgets\Auth\LoginWidget::class)
+```
+
+### Traduzioni nei Widget
+
+**REGOLA**: MAI usare `->label()` o `->placeholder()` nei componenti Filament. Le traduzioni sono gestite tramite LangServiceProvider.
+
+```php
+// ❌ SBAGLIATO
+TextInput::make('email')
+    ->label('Email')
+    ->placeholder('Inserisci email')
+
+// ✅ CORRETTO - Label gestita dalla view
+TextInput::make('email')
+```
+
+```blade
+<!-- Nella view del widget -->
+<div>
+    <label for="email">{{ __('user::auth.login.email') }}</label>
+    <input type="email" wire:model="email" id="email">
+</div>
+```
+
+### Registrazione Widget nel ServiceProvider
+
+Per rendere disponibile un widget con alias stringa (opzionale):
+
+```php
+// Modules/User/app/Providers/UserServiceProvider.php
+use Livewire\Livewire;
+use Modules\User\Filament\Widgets\Auth\LoginWidget;
+
+protected function registerLivewireAuthWidgets(): void
+{
+    $widgets = [
+        'user::filament.widgets.auth.login-widget' => LoginWidget::class,
+    ];
+    
+    foreach ($widgets as $name => $class) {
+        Livewire::component($name, $class);
+    }
+}
+```
+
+### Errori Comuni
+
+| Problema | Causa | Soluzione |
+|----------|-------|-----------|
+| `ComponentNotFoundException` | Widget non registrato | Usare classe invece di alias, o verificare ServiceProvider |
+| Form non funziona | `$wire` non definito | Verificare Alpine.js (vedi sezione precedente) |
+| Labels in inglese | Traduzioni mancanti | Aggiungere in lang/xx/ |
 
 ### Alpine.js and Livewire in Themes
 

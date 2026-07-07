@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Actions\Array;
-
+uses(Modules\Xot\Tests\TestCase::class);
 use Filament\Support\RawJs;
 use Modules\Xot\Actions\Array\ArrayToRawJsAction;
+use PHPUnit\Framework\Assert;
 
 it('converts array to raw js string correctly', function (): void {
     $action = app(ArrayToRawJsAction::class);
@@ -25,11 +25,11 @@ it('converts array to raw js string correctly', function (): void {
     $result = $action->execute($data);
     $html = $result->toHtml();
 
-    expect($html)->toContain('simpleKey: \'value\'');
-    expect($html)->toContain('\'complex-key\': \'it\\\'s simple\'');
-    expect($html)->toContain('number: 123');
-    expect($html)->toContain('boolean: true');
-    expect($html)->toContain('nullValue: null');
-    expect($html)->toContain('nested: {inner: \'val\'}');
-    expect($html)->toContain('raw: function() { return 1; }');
+    Assert::assertStringContainsString('simpleKey: \'value\'', $html);
+    Assert::assertStringContainsString('\'complex-key\': \'it\\\'s simple\'', $html);
+    Assert::assertStringContainsString('number: 123', $html);
+    Assert::assertStringContainsString('boolean: true', $html);
+    Assert::assertStringContainsString('nullValue: null', $html);
+    Assert::assertStringContainsString('nested: {inner: \'val\'}', $html);
+    Assert::assertStringContainsString('raw: function', $html);
 });

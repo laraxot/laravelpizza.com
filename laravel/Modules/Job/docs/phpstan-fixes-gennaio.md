@@ -203,7 +203,4 @@ public function __construct(string $output)
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/dev

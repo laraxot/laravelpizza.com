@@ -31,30 +31,39 @@ use function Safe\preg_match;
  */
 abstract class XotBaseMorphPivot extends EloquentMorphPivot
 {
+    /** @phpstan-use HasXotFactory<\Illuminate\Database\Eloquent\Factories\Factory<static>> */
     use HasXotFactory;
     use Updater;
 
+    /** @var bool */
     public $incrementing = true;
 
+    /** @var bool */
     public $timestamps = true;
 
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
      * @see https://laravel-news.com/6-eloquent-secrets
+     *
+     * @var bool
      */
     public static $snakeAttributes = true;
 
     /**
      * The number of models to return for pagination.
+     *
+     * @var int
      */
     protected $perPage = 30;
 
     /** @var list<string> */
     protected $appends = [];
 
+    /** @var string */
     protected $primaryKey = 'id';
 
+    /** @var string */
     protected $keyType = 'string';
 
     /** @var list<string> */

@@ -21,10 +21,10 @@ class CopyFromLastYearAction
         $currentYear = (int) $year;
         $lastYear = $currentYear - 1;
 
-        /** @var Collection $rows_year */
+        /** @var Collection<int, Model> $rows_year */
         $rows_year = $modelClass::where($fieldName, $currentYear)->get();
 
-        /** @var Collection $rows_last_year */
+        /** @var Collection<int, Model> $rows_last_year */
         $rows_last_year = $modelClass::where($fieldName, $lastYear)->get();
 
         if ($rows_year->count() > 0) {

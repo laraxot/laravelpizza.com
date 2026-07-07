@@ -46,7 +46,6 @@ class Conf extends BaseModel
      */
     public function getRows(): array
     {
-        /* @var array<int, array{id: int, name: string}> $configNames */
         return app(GetTenantConfigNamesAction::class)->execute();
     }
 

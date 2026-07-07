@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Model;
 
+use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Schema\AbstractSchemaManager;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Spatie\QueueableAction\QueueableAction;
@@ -18,7 +19,7 @@ class GetSchemaManagerByModelClassAction
      *
      * @param string $modelClass La classe del modello
      *
-     * @return AbstractSchemaManager Lo schema manager di Doctrine
+     * @return AbstractSchemaManager<AbstractPlatform> Lo schema manager di Doctrine
      */
     public function execute(string $modelClass): AbstractSchemaManager
     {

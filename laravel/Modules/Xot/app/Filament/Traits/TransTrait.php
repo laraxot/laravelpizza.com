@@ -9,12 +9,13 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
-use Modules\Lang\Actions\SaveTransAction;
-use Modules\Xot\Actions\GetTransKeyAction;
 use Webmozart\Assert\Assert;
 
 trait TransTrait
 {
+    use TransFuncTrait;
+    use TransKeyTrait;
+
     /**
      * Get translation for a given key.
      *
@@ -26,6 +27,7 @@ trait TransTrait
     {
         $tmp = static::getKeyTrans($key);
         /** @var array<string, mixed>|Translator|string $res */
+        // @phpstan-ignore argument.type (trans() $replace param: already typed correctly at method signature)
         $res = trans($tmp, $params);
 
         if (is_string($res)) {
@@ -44,46 +46,6 @@ trait TransTrait
         }
 
         return 'fix:'.$tmp;
-    }
-
-    /**
-     * Get translation key for a given key.
-     */
-    public static function getKeyTrans(string $key): string
-    {
-        /** @var string */
-        $transKey = app(GetTransKeyAction::class)->execute(static::class);
-
-        $key = $transKey.'.'.$key;
-        $key = Str::of($key)->replace('.cluster.pages.', '.')->toString();
-        if (Str::startsWith($key, 'edit_')) {
-            $key = Str::after($key, 'edit_');
-        }
-        if (Str::endsWith($key, '_widget')) {
-            $key = Str::beforeLast($key, '_widget');
-        }
-
-        return $key;
-    }
-
-    /**
-     * Get translation key for a given function name.
-     */
-    public static function getKeyTransFunc(string $func): string
-    {
-        $key = Str::of($func)
-            ->after('get')
-            ->snake()
-            ->replace('_', '.')
-            ->toString();
-        /** @var string */
-        $transKey = app(GetTransKeyAction::class)->execute(static::class);
-
-        $key = $transKey.'.'.$key;
-        $key = Str::of($key)->replace('.cluster.pages.', '.')->toString();
-        $key = Str::of($key)->replace('::edit_', '::')->toString();
-
-        return $key;
     }
 
     /**
@@ -117,76 +79,22 @@ trait TransTrait
         /** @var array<string, mixed>|Translator|string $result */
         $result = trans($key_full);
 
-        return is_string($result) ? $result : $key_full;
-    }
-
-    /**
-     * Get translation for a given function name.
-     */
-    public static function transFunc(string $func, bool $_exceptionIfNotExist = false): string
-    {
-        $key = static::getKeyTransFunc($func);
-        /** @var string|array<int|string, mixed>|Translator|null $trans */
-        $trans = null;
-
-        try {
-            /** @var array<string, mixed>|Translator|string $trans */
-            $trans = trans($key);
-        } catch (\TypeError $e) {
-            dddx([
-                'e' => $e,
-                'key' => $key,
-            ]);
-        }
-
-        if ($key === $trans) {
-            $group = Str::of($key)->before('.')->toString();
-            $item = Str::of($key)->after($group.'.')->toString();
+        if ($key_full === $result) {
+            $group = Str::of($key_full)->before('.')->toString();
+            $item = Str::of($key_full)->after($group.'.')->toString();
             /** @var array<string, mixed>|Translator|string $group_arr */
             $group_arr = trans($group);
             if (is_array($group_arr)) {
                 $transValue = Arr::get($group_arr, $item);
-                if (is_string($transValue) || is_numeric($transValue) || is_array($transValue)) {
-                    $trans = $transValue;
+                if (is_string($transValue) || is_numeric($transValue)) {
+                    return is_string($transValue) ? $transValue : (string) $transValue;
                 }
             }
-        }
-        if (is_numeric($trans)) {
-            return strval($trans);
-        }
 
-        if (is_array($trans)) {
-            $first = current($trans);
-            if (is_string($first) || is_numeric($first)) {
-                return is_string($first) ? $first : ((string) $first);
-            }
+            return 'fix:'.$key_full;
         }
 
-        if (is_string($trans)) {
-            if ($trans === $key) {
-                $newTrans = Str::of($key)
-                    ->between('::', '.')
-                    ->replace('_', ' ')
-                    ->toString();
-                app(SaveTransAction::class)->execute($key, $newTrans);
-
-                return $newTrans;
-            }
-
-            return $trans;
-        }
-
-        if (null === $trans) {
-            $newTrans = Str::of($key)
-                ->between('::', '.')
-                ->replace('_', ' ')
-                ->toString();
-            app(SaveTransAction::class)->execute($key, $newTrans);
-
-            return $newTrans;
-        }
-
-        return 'fix:'.$key;
+        return is_string($result) ? $result : 'fix:'.$key_full;
     }
 
     /**
@@ -213,6 +121,7 @@ trait TransTrait
         $slug = collect($p_arr)->map(Str::kebab(...))->implode('.');
 
         $translationKey = $moduleNameLow.'::'.$slug.'.'.$key;
+        // @phpstan-ignore argument.type (__() $replace param: already typed correctly at method signature)
         $translation = __($translationKey, $replace, $locale);
 
         if ($translation === $translationKey && App::environment('local', 'development', 'testing')) {

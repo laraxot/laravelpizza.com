@@ -52,6 +52,9 @@ class Parameter extends BaseModel
         'value',
     ];
 
+    /**
+     * @return BelongsTo<Frequency, $this>
+     */
     public function task(): BelongsTo
     {
         return $this->belongsTo(Frequency::class);

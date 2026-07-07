@@ -2,15 +2,24 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Enums;
 
 uses(\Modules\User\Tests\TestCase::class);
 
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Enums\SocialProviderEnum;
 use Modules\User\Enums\SystemRole;
 use Modules\User\Enums\UserType;
 
+<<<<<<< HEAD
 test('UserType enum has all cases', function () {
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+test('UserType enum has all cases', function (): void {
+>>>>>>> 9fa499be (.)
     $cases = UserType::cases();
 
     expect($cases)->toHaveCount(5)

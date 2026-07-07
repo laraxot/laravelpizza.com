@@ -33,6 +33,21 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
  * @property int                    $depth
  * @property string                 $path
  * @property Collection<int, Menu>  $ancestors      The model's recursive parents.
+ * @property string                 $id
+ * @property string|null            $title
+ * @property int|null               $parent_id
+ * @property string|null            $created_at
+ * @property string|null            $updated_at
+ * @property string|null            $created_by
+ * @property string|null            $updated_by
+ * @property Collection<int, Menu>  $children
+ * @property int|null               $children_count
+ * @property ProfileContract|null   $creator
+ * @property Menu|null              $parent
+ * @property ProfileContract|null   $updater
+ * @property int                    $depth
+ * @property string                 $path
+ * @property Collection<int, Menu>  $ancestors      The model's recursive parents.
  * @property-read int|null $ancestors_count
  * @property-read Collection<int, Menu> $ancestorsAndSelf The model's recursive parents and itself.
  * @property-read int|null $ancestors_and_self_count
@@ -76,19 +91,19 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
  * @method static Builder<static>|Menu    whereUpdatedAt($value)
  * @method static Builder<static>|Menu    whereUpdatedBy($value)
  * @method static Builder<static>|Menu    whereDepth($operator, $value = null)
- * @method static Builder<static>|Menu    withGlobalScopes(array $scopes)
+ * @method static Builder<static>|Menu    withGlobalScopes(array<string, mixed> $scopes)
  * @method static Builder<static>|Menu    withRelationshipExpression($direction, callable $constraint, $initialDepth, $from = null, $maxDepth = null)
- * @method static static                  firstOrCreate(array $attributes, array $values = [])
- * @method static static                  create(array $attributes = [])
- * @method static static                  updateOrCreate(array $attributes, array $values = [])
+ * @method static static                  firstOrCreate(array<string, mixed> $attributes, array<string, mixed> $values = [])
+ * @method static static                  create(array<string, mixed> $attributes = [])
+ * @method static static                  updateOrCreate(array<string, mixed> $attributes, array<string, mixed> $values = [])
  * @method static Builder<static>|Menu    delete()
  * @method static Builder<static>|Menu    where($column, $operator = null, $value = null, $boolean = 'and')
  * @method static Builder<static>|Menu    whereIn($column, $values, $boolean = 'and', $not = false)
  * @method static Builder<static>|Menu    whereNotIn($column, $values, $boolean = 'and')
  * @method static Builder<static>|Menu    whereNull($columns, $boolean = 'and', $not = false)
  * @method static Builder<static>|Menu    whereNotNull($columns, $boolean = 'and')
- * @method static Builder<static>|Menu    whereBetween($column, array $values, $boolean = 'and', $not = false)
- * @method static Builder<static>|Menu    whereNotBetween($column, array $values, $boolean = 'and', $not = false)
+ * @method static Builder<static>|Menu    whereBetween($column, array<int, mixed> $values, $boolean = 'and', $not = false)
+ * @method static Builder<static>|Menu    whereNotBetween($column, array<int, mixed> $values, $boolean = 'and', $not = false)
  * @method static Builder<static>|Menu    whereDate($column, string $operator, string $value, $boolean = 'and')
  * @method static Builder<static>|Menu    whereMonth($column, string $operator, string $value, $boolean = 'and')
  * @method static Builder<static>|Menu    whereDay($column, string $operator, string $value, $boolean = 'and')
@@ -145,7 +160,8 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
  *
  * @property ProfileContract|null $deleter
  *
- * @method static MenuFactory factory($count = null, $state = [])
+ * @method static MenuFactory                      factory($count = null, $state = [])
+ * @method        array<int, array<string, mixed>> getSushiRows()
  *
  * @mixin \Eloquent
  */
@@ -161,7 +177,8 @@ class Menu extends BaseModel implements HasRecursiveRelationshipsContract
         'parent_id',
     ];
 
-    protected array $schema = [
+    /** @var array<string, string> */
+    protected $schema = [
         'id' => 'integer',
         'title' => 'string',
         'parent_id' => 'integer',
@@ -182,6 +199,9 @@ class Menu extends BaseModel implements HasRecursiveRelationshipsContract
         return app(GetTreeOptionsByModelClassAction::class)->execute($className);
     }
 
+    /**
+     * @return array<int, array<string, mixed>>
+     */
     public function getRows(): array
     {
         return $this->getSushiRows();

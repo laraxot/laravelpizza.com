@@ -997,11 +997,7 @@ tests_old
             "Coolsam\\FilamentModules\\": "packages/coolsam/panel-modules/src/"
         },
         "files": [
-<<<<<<< HEAD
             "Helpers/Helper.php"
-=======
-            "helpers/Helper.php"
->>>>>>> origin/dev
         ]
     },
     "scripts": {
@@ -1049,6 +1045,21 @@ tests_old
 * [structure.md](../../../cms/project_docs/structure.md)
 * [structure.md](../../../cms/project_docs/themes/structure.md)
 * [structure.md](../../../cms/project_docs/components/structure.md)
+* [structure.md](../../../Gdpr/project_docs/structure.md)
+* [structure.md](../../../Notify/project_docs/structure.md)
+* [structure.md](../../../Xot/project_docs/structure.md)
+* [structure.md](../../../Xot/project_docs/base/structure.md)
+* [structure.md](../../../Xot/project_docs/config/structure.md)
+* [structure.md](../../../User/project_docs/structure.md)
+* [structure.md](../../../UI/project_docs/structure.md)
+* [structure.md](../../../Lang/project_docs/structure.md)
+* [structure.md](../../../Job/project_docs/structure.md)
+* [structure.md](../../../Media/project_docs/structure.md)
+* [structure.md](../../../Tenant/project_docs/structure.md)
+* [structure.md](../../../Activity/project_docs/structure.md)
+* [structure.md](../../../Cms/project_docs/structure.md)
+* [structure.md](../../../Cms/project_docs/themes/structure.md)
+* [structure.md](../../../Cms/project_docs/components/structure.md)
 
 ---
 

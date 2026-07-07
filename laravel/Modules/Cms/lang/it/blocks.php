@@ -28,6 +28,21 @@ return [
             'orientation' => 'Orientamento',
         ],
     ],
+    'header_nav' => [
+        'label' => 'Navigazione Header',
+        'fields' => [
+            'label' => 'Etichetta',
+            'url' => 'URL',
+            'data_element' => 'Data Element',
+            'nav_group' => 'Gruppo Navigazione',
+            'type' => 'Tipo',
+            'order' => 'Ordine',
+            'enabled' => 'Abilitato',
+            'visible' => 'Visibile',
+            'active_patterns' => 'Pattern Active',
+            'children' => 'Sottomenu',
+        ],
+    ],
     'actions' => [
         'label' => 'Azioni',
         'fields' => [

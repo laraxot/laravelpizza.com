@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Cms\View\Components;
 
+use Illuminate\Contracts\View\Factory as ViewFactory;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\View\Component;
+use Modules\Cms\Datas\BlockData;
 use Modules\Cms\Models\Section as SectionModel;
 use Spatie\LaravelData\DataCollection;
 
@@ -14,14 +16,13 @@ use Spatie\LaravelData\DataCollection;
  *
  * Renders a reusable section of the site using the Section model.
  *
- * @property string      $slug The unique identifier for the section
- * @property string|null $view Custom view path for rendering
- * @property array       $data Additional data to pass to the view
+ * @property string $slug The unique identifier for the section
  */
 class Section extends Component
 {
     public string $slug;
 
+    /** @var DataCollection<int, BlockData>|array<int|string, mixed> */
     public DataCollection|array $blocks;
 
     public ?string $name = null;
@@ -33,8 +34,6 @@ class Section extends Component
     public string $tpl = 'v1';
 
     /**
-     * Create a new component instance.
-     *
      * @param string      $slug  Unique identifier for the section
      * @param string|null $class Additional CSS classes
      * @param string|null $id    Custom ID for the section
@@ -48,24 +47,24 @@ class Section extends Component
         $this->slug = $slug;
         $this->class = $class;
         $this->id = $id;
-        if (is_string($tpl)) {
+        if (is_string($tpl) && '' !== $tpl) {
             $this->tpl = $tpl;
         }
-        $blocksResult = SectionModel::getBlocksBySlug($this->slug);
-        $this->blocks = $blocksResult;
+
+        $this->blocks = SectionModel::getBlocksBySlug($this->slug);
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     */
     public function render(): ViewContract
     {
         $view = 'pub_theme::components.sections.'.$this->slug.'.'.$this->tpl;
-        $view_params = [
+        $viewParams = [
             'blocks' => $this->blocks,
+            'section' => $this,
         ];
 
-        /* @phpstan-ignore argument.type */
-        return view($view, $view_params);
+        /** @var ViewFactory $viewFactory */
+        $viewFactory = app('view');
+
+        return $viewFactory->make($view, $viewParams);
     }
 }

@@ -3,22 +3,13 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Models;
-<<<<<<< HEAD
-
-uses(TestCase::class);
-
-=======
->>>>>>> 40b96bcd6 (.)
 use Modules\Notify\Models\BaseModel;
 use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Models\NotificationTemplateVersion;
 use Modules\Notify\Tests\TestCase;
-<<<<<<< HEAD
-=======
 use PHPUnit\Framework\Assert;
 
 uses(\Modules\Notify\Tests\TestCase::class);
->>>>>>> 40b96bcd6 (.)
 
 it('extends base model', function (): void {
     $reflection = new \ReflectionClass(NotificationTemplateVersion::class);

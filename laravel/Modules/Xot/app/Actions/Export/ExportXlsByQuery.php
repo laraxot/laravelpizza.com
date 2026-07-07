@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Actions\Export;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Maatwebsite\Excel\Facades\Excel;
 use Modules\Xot\Exports\QueryExport;
 use Spatie\QueueableAction\QueueableAction;
@@ -18,7 +19,7 @@ class ExportXlsByQuery
     /**
      * Esporta i risultati di una query in Excel.
      *
-     * @param Builder            $query    Query da esportare
+     * @param Builder<Model>     $query    Query da esportare
      * @param string             $filename Nome del file Excel
      * @param array<int, string> $fields   Campi da includere nell'export
      * @param int|null           $limit    Limite di righe da esportare

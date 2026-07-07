@@ -22,27 +22,37 @@ Warning: Ambiguous class resolution, "Modules\Cms\Database\Seeders\CmsDatabaseSe
 - **Factories**: `PageFactory.php`, `ConfFactory.php`, `ModuleFactory.php`, etc.
 
 ## Correct File Structure Patterns
-
 ### ✅ Option 1: Traditional Laravel Structure (Recommended)
 
 ```
 Modules/{ModuleName}/
 ├── database/
 │   ├── factories/
-│   │   ├── PageFactory.php
-│   │   ├── ConfFactory.php
-│   │   └── ...
 │   ├── migrations/
-│   │   ├── 2024_01_01_000000_create_pages_table.php
-│   │   └── ...
 │   └── seeders/
-│       └── CmsDatabaseSeeder.php
 └── app/
+    ├── Actions/
+    ├── Application/
+    ├── Events/
+    ├── Listeners/
     ├── Models/
     ├── Filament/
     └── ...
 ```
 
+### ❌ WRONG: Root-Level Capitalized Directories
+
+```
+Modules/{ModuleName}/
+├── Actions/        # ❌ SHOULD BE IN app/
+├── Application/    # ❌ SHOULD BE IN app/
+├── Database/       # ❌ SHOULD BE lowercase database/
+├── Events/         # ❌ SHOULD BE IN app/
+├── Listeners/      # ❌ SHOULD BE IN app/
+└── ...
+```
+
+## Why This Matters
 ### ✅ Option 2: App-Centric Structure
 
 ```
@@ -167,20 +177,8 @@ Modules/
 │   │   ├── migrations/
 │   │   └── seeders/
 │   └── app/
-<<<<<<< HEAD
 └── healthcare_app/
 └── ExternalProject/
-=======
-<<<<<<< .merge_file_mXG7e7
-└── healthcare_app/
-=======
-<<<<<<< HEAD
-└── ExternalProject/
-=======
-└── ModuloEsempio/
->>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
->>>>>>> origin/dev
->>>>>>> .merge_file_WGxfyj
     ├── database/
     │   ├── factories/
     │   ├── migrations/

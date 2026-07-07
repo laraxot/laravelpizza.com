@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Modules\User\Actions\Socialite;
 
 use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
 
 class IsRegistrationEnabledAction
 {
@@ -20,8 +19,6 @@ class IsRegistrationEnabledAction
      */
     public function execute(): bool
     {
-        Assert::boolean($res = config('filament-socialite.registration'));
-
-        return $res;
+        return (bool) config('socialite.registration', true);
     }
 }

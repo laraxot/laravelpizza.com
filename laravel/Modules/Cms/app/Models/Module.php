@@ -41,6 +41,9 @@ class Module extends BaseModel
         'name',
     ];
 
+    /**
+     * @return array<int, array<string, mixed>>
+     */
     public function getRows(): array
     {
         $modules = NwModule::getByStatus(1);

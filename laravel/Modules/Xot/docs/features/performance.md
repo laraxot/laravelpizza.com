@@ -2,54 +2,22 @@
 
 ## Caching
 ```txt
-<<<<<<< HEAD
 ${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/cache.txt}
-=======
-<<<<<<< .merge_file_LIbdU1
-${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/cache.txt}
-=======
-${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/cache.txt}
->>>>>>> .merge_file_mUmJod
->>>>>>> origin/dev
 ```
 
 ## Speed Optimization
 ```txt
-<<<<<<< HEAD
 ${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/speed_up.txt}
-=======
-<<<<<<< .merge_file_LIbdU1
-${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/speed_up.txt}
-=======
-${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/speed_up.txt}
->>>>>>> .merge_file_mUmJod
->>>>>>> origin/dev
 ```
 
 ## Lazy Loading
 ```txt
-<<<<<<< HEAD
 ${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/_lazy.txt}
-=======
-<<<<<<< .merge_file_LIbdU1
-${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/_lazy.txt}
-=======
-${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/_lazy.txt}
->>>>>>> .merge_file_mUmJod
->>>>>>> origin/dev
 ```
 
 ## Performance Tips
 ```txt
-<<<<<<< HEAD
 ${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/_performance.txt}
-=======
-<<<<<<< .merge_file_LIbdU1
-${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/_performance.txt}
-=======
-${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/_performance.txt}
->>>>>>> .merge_file_mUmJod
->>>>>>> origin/dev
 ```
 ### Versione HEAD
 
@@ -62,6 +30,13 @@ ${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/_performance.txt}
 * [performance.md](../../../lang/docs/packages/performance.md)
 * [performance.md](../../../job/docs/packages/performance.md)
 * [performance.md](../../../cms/docs/frontoffice/performance.md)
+* [performance.md](../../../Xot/docs/features/performance.md)
+* [performance.md](../../../Xot/docs/packages/performance.md)
+* [performance.md](../../../Xot/docs/roadmap/architecture/performance.md)
+* [performance.md](../../../UI/docs/standards/performance.md)
+* [performance.md](../../../Lang/docs/packages/performance.md)
+* [performance.md](../../../Job/docs/packages/performance.md)
+* [performance.md](../../../Cms/docs/frontoffice/performance.md)
 
 ### Versione Incoming
 

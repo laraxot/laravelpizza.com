@@ -673,20 +673,8 @@ class DashboardPage extends XotBasePage
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Widgets;
 namespace Modules\Chart\Filament\Widgets;
-=======
-<<<<<<< .merge_file_hVYHud
-namespace Modules\healthcare_app\Filament\Widgets;
-=======
-<<<<<<< HEAD
-namespace Modules\Chart\Filament\Widgets;
-=======
-namespace Modules\ExternalProject\Filament\Widgets;
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> origin/dev
->>>>>>> .merge_file_5mnOIz
 
 use Modules\Xot\Filament\Widgets\XotBaseTableWidget;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
@@ -836,6 +824,8 @@ Prima di creare una nuova classe Filament:
 
 ## 🔗 Collegamenti Utili
 
+- [XotBaseResource Documentation](../../laravel/Modules/Xot/docs/consolidated/filament/resources/xot-base-resource.md)
+- [Base Classes Documentation](../../laravel/Modules/Xot/docs/consolidated/base-classes.md)
 - [XotBaseResource Documentation](../../laravel/modules/xot/docs/consolidated/filament/resources/xot-base-resource.md)
 - [Base Classes Documentation](../../laravel/modules/xot/docs/consolidated/base-classes.md)
 - [Spatie Queueable Actions](https://github.com/spatie/laravel-queueable-action)

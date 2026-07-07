@@ -2,13 +2,63 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Models;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+=======
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+>>>>>>> 9fa499be (.)
 use Modules\User\Models\Profile;
 use Modules\User\Tests\TestCase;
 
+<<<<<<< HEAD
 uses(TestCase::class, DatabaseTransactions::class);
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+/**
+ * @param array<string, mixed> $attributes
+ */
+function modelsProfileCreate(array $attributes = []): Profile
+{
+    $payload = array_merge([
+        'id' => (string) Str::uuid(),
+        'email' => 'profile-'.uniqid('', true).'@example.com',
+        'user_name' => 'user-'.uniqid(),
+        'first_name' => 'Test',
+        'last_name' => 'User',
+        'status' => 'active',
+    ], $attributes);
+
+    /** @var Profile $created */
+    $created = Profile::withoutEvents(static function () use ($payload): Profile {
+        $profile = new Profile();
+        $profile->forceFill($payload);
+        $profile->save();
+
+        $reloaded = $profile->fresh();
+
+        return $reloaded instanceof Profile ? $reloaded : $profile;
+    });
+
+    return $created;
+}
+
+/**
+ * @param array<string, mixed> $where
+ */
+function modelsProfileAssertInDatabase(array $where): void
+{
+    $query = DB::connection('user')->table('profiles');
+    foreach ($where as $column => $value) {
+        $query->where($column, $value);
+    }
+
+    Assert::assertTrue($query->exists());
+}
+>>>>>>> 9fa499be (.)
 
 test('can create profile with minimal data', function (): void {
     $profile = Profile::factory()->create([

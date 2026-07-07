@@ -16,5 +16,10 @@ Route::namespace('Socialite')
             // 'LoginController@redirectToProvider',
             'RedirectToProviderController',
         )->name('oauth.redirect');
+        // Route pubblica FO cittadini (senza prefisso /admin)
+        Route::get(
+            '/auth/social/{provider}',
+            'RedirectToProviderController',
+        )->name('oauth.fo.redirect');
         Route::get('/sso/{provider}/callback', 'ProcessCallbackController')->name('oauth.callback');
     });

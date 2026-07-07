@@ -14,6 +14,7 @@ use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
 use Filament\Widgets\Widget;
+use Illuminate\Support\Arr;
 use Modules\Xot\Datas\EnvData;
 
 /**
@@ -66,7 +67,7 @@ class EnvWidget extends Widget implements HasActions, HasForms
     }
 
     /**
-     * @return array<string, Component>
+     * @return array<Component>
      */
     public function getFormSchema(): array
     {
@@ -85,24 +86,11 @@ class EnvWidget extends Widget implements HasActions, HasForms
                 ->placeholder('AIzaSyAuB_...')
                 ->helperText('telegram_bot_token'),
         ];
+        $selected = [] === $this->only ? $all : Arr::only($all, $this->only);
 
-        if ([] === $this->only) {
-            return $all;
-        }
+        /** @var array<Component> $components */
+        $components = array_values($selected);
 
-        /** @var array<string, Component> */
-        $selected = [];
-        foreach ($this->only as $key) {
-            if (! is_string($key)) {
-                continue;
-            }
-
-            $component = $all[$key] ?? null;
-            if ($component instanceof Component) {
-                $selected[$key] = $component;
-            }
-        }
-
-        return $selected;
+        return $components;
     }
 }

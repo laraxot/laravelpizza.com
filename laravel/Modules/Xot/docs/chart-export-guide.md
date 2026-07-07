@@ -1034,6 +1034,7 @@ $schedule->call(function () {
 
 ---
 
+**Ultimo aggiornamento:** Dicembre 2025
 **Framework:** Laraxot/PTVX
 **Filament:** 4.x
 **Chart.js:** 4.x

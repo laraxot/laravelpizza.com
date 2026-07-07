@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Traits;
 
+/** @phpstan-ignore trait.unused */
 trait HasDynamicFillable
 {
     /**
@@ -20,12 +21,7 @@ trait HasDynamicFillable
     {
         $fillable = array_values(parent::getFillable());
 
-        $dynamicFillableEnums = $this->dynamicFillableEnums ?? null;
-
-        // Ensure the property is an array
-        if (! is_array($dynamicFillableEnums)) {
-            return $fillable;
-        }
+        $dynamicFillableEnums = $this->getDynamicFillableEnums();
 
         foreach ($dynamicFillableEnums as $enumClass) {
             if (! is_string($enumClass) || '' === $enumClass) {

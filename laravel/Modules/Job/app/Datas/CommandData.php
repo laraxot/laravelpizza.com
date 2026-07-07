@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Job\Datas;
 
-use Illuminate\Database\Eloquent\Collection as EloquentCollection;
-use Illuminate\Support\Collection;
 use Spatie\LaravelData\Data;
-use Spatie\LaravelData\DataCollection;
 
 class CommandData extends Data
 {
+    /**
+     * @param  array<int, array<string, mixed>>  $arguments
+     * @param  array<string, mixed>  $options
+     */
     public function __construct(
         public string $name,
         public string $description,
@@ -19,9 +20,4 @@ class CommandData extends Data
         public array $arguments,
         public array $options,
     ) {}
-
-    public static function collection(EloquentCollection|Collection|array $data): DataCollection
-    {
-        return self::collect($data, DataCollection::class);
-    }
 }

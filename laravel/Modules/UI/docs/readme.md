@@ -248,7 +248,7 @@ php artisan ui:test-components
 
 ### 🎨 **Filament Integration**
 - [Filament Components](filament-components.md) - Componenti Filament
-- [Widget System](widgets.md) - Sistema widget personalizzati
+- [Widget System](widget-optimization.md) - Sistema widget personalizzati
 - [TableLayoutEnum](table-layout-enum-complete-guide.md) - Guida completa enum layout
 - [File Upload Components](filament-fileupload.md) - Componenti upload file
 

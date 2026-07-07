@@ -2,19 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Feature\Frontoffice;
-
 use Modules\Cms\Tests\TestCase;
 
 uses(TestCase::class);
-
 it('renders localized auth labels and links on localized homepages', function (): void {
-    $response = $this->get('/it');
+    $response = cmsGet('/it');
 
     $status = $response->getStatusCode();
 
     if ($status >= 500) {
-        test()->markTestSkipped('Italian homepage returned server error in this install.');
+        cmsSkipTest('Italian homepage returned server error in this install.');
 
         return;
     }
@@ -25,11 +22,11 @@ it('renders localized auth labels and links on localized homepages', function ()
     $response->assertSee('/it/auth/login');
     $response->assertSee('/it/auth/register');
 
-    $response = $this->get('/de');
+    $response = cmsGet('/de');
     $status = $response->getStatusCode();
 
     if ($status >= 500) {
-        test()->markTestSkipped('German homepage returned server error in this install.');
+        cmsSkipTest('German homepage returned server error in this install.');
 
         return;
     }

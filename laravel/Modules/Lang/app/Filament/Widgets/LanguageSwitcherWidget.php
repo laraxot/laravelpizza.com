@@ -52,7 +52,7 @@ class LanguageSwitcherWidget extends XotBaseSchemaWidget
     /**
      * Ottiene le lingue disponibili nel sistema.
      *
-     * @return Collection Collection of available locales with keys: code, name, native_name, flag
+     * @return Collection<int, array{code: string, name: string, native_name: string, flag: string|null}>
      */
     public function getAvailableLocales(): Collection
     {

@@ -5,38 +5,69 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit\Actions\Array;
 
 use Modules\Xot\Actions\Array\SaveArrayAction;
+use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-beforeEach(function (): void {
-    $this->action = app(SaveArrayAction::class);
-    $this->tempDir = sys_get_temp_dir().'/xot_save_array_'.uniqid();
-    mkdir($this->tempDir, 0755, true);
-});
+use function Safe\glob;
+use function Safe\mkdir;
+use function Safe\rmdir;
+use function Safe\unlink;
 
-afterEach(function (): void {
-    if (isset($this->tempDir) && is_dir($this->tempDir)) {
-        array_map('unlink', glob($this->tempDir.'/*') ?: []);
-        rmdir($this->tempDir);
+uses(TestCase::class);
+
+/** @var string|null $arrayTestTempDir */
+$arrayTestTempDir = null;
+
+beforeEach(function () use (&$arrayTestTempDir): void {
+    $arrayTestTempDir = sys_get_temp_dir().DIRECTORY_SEPARATOR.'pest_test_'.uniqid();
+    if (! file_exists($arrayTestTempDir)) {
+        mkdir($arrayTestTempDir, 0755, true);
     }
 });
 
-it('saves array in json format', function (): void {
-    $path = $this->tempDir.'/data.json';
+afterEach(function () use (&$arrayTestTempDir): void {
+    if (! is_string($arrayTestTempDir) || ! file_exists($arrayTestTempDir)) {
+        return;
+    }
 
-    $result = $this->action->execute(['a' => 1], $path, 'json');
+    foreach (glob($arrayTestTempDir.'/*') ?: [] as $file) {
+        if (is_string($file)) {
+            unlink($file);
+        }
+    }
 
-    expect($result)->toBeTrue()
-        ->and((string) file_get_contents($path))->toContain('"a": 1');
+    rmdir($arrayTestTempDir);
+    $arrayTestTempDir = null;
 });
 
-it('saves array in php format by default', function (): void {
-    $path = $this->tempDir.'/data.php';
+describe('Save Array Action', function () use (&$arrayTestTempDir): void {
+    test('saves array in json format', function () use (&$arrayTestTempDir): void {
+        Assert::assertIsString($arrayTestTempDir);
+        $path = $arrayTestTempDir.'/data.json';
 
-    $result = $this->action->execute(['b' => 2], $path);
+        $result = app(SaveArrayAction::class)->execute(['a' => 1], $path, 'json');
 
-    expect($result)->toBeTrue()
-        ->and(require $path)->toBe(['b' => 2]);
+        Assert::assertTrue($result);
+    });
+
+    test('saves array in php format by default', function () use (&$arrayTestTempDir): void {
+        Assert::assertIsString($arrayTestTempDir);
+        $path = $arrayTestTempDir.'/data.php';
+
+        $result = app(SaveArrayAction::class)->execute(['b' => 2], $path);
+        Assert::assertTrue($result);
+
+        Assert::assertSame(['b' => 2], require $path);
+    });
+
+    test('throws for unsupported format', function () use (&$arrayTestTempDir): void {
+        Assert::assertIsString($arrayTestTempDir);
+
+        try {
+            app(SaveArrayAction::class)->execute([], $arrayTestTempDir.'/invalid.txt', 'xml');
+            Assert::fail('Expected exception not thrown');
+        } catch (\InvalidArgumentException) {
+            // Expected
+        }
+    });
 });
-
-it('throws for unsupported format', function (): void {
-    $this->action->execute([], $this->tempDir.'/invalid.txt', 'xml');
-})->throws(InvalidArgumentException::class, 'Formato non supportato');

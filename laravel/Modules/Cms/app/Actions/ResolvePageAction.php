@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Actions;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\Cms\Datas\ResolvePageData;
@@ -25,7 +26,6 @@ final class ResolvePageAction
 
     public function execute(string $container0, string $slug0): ResolvePageData
     {
-        // 1. Tenta il caricamento di un modello dinamico
         $item = $this->loadDynamicModel($container0, $slug0);
 
         if (null !== $item) {
@@ -36,7 +36,6 @@ final class ResolvePageAction
             );
         }
 
-        // 2. Verifica se esiste una pagina CMS con slug esatto
         $fullSlug = $container0.'.'.$slug0;
         if (PageModel::where('slug', $fullSlug)->exists()) {
             return new ResolvePageData(
@@ -46,7 +45,6 @@ final class ResolvePageAction
             );
         }
 
-        // 3. Fallback a container.view
         $viewSlug = $container0.'.view';
         if (PageModel::where('slug', $viewSlug)->exists()) {
             return new ResolvePageData(
@@ -56,7 +54,6 @@ final class ResolvePageAction
             );
         }
 
-        // 4. Fallback finale allo slug completo (mostrerà 404 o placeholder nel componente x-page)
         return new ResolvePageData(
             renderMode: 'cms',
             item: null,
@@ -70,10 +67,8 @@ final class ResolvePageAction
             return $this->resolvePublicProfileItem($slug0);
         }
 
-        // Mappature note (Priority 1)
         $knownMappings = [
             'events' => 'Modules\\Meetup\\Models\\Event',
-            'predicts' => 'Modules\\Predict\\Models\\Predict',
         ];
 
         if (isset($knownMappings[$container0])) {
@@ -82,7 +77,6 @@ final class ResolvePageAction
             return $this->queryModel($modelClass, $slug0);
         }
 
-        // Mappature da config (Priority 2)
         $modelMap = config('xra.container0_model_map', []);
         if (is_array($modelMap) && isset($modelMap[$container0])) {
             $modelClass = $modelMap[$container0];
@@ -91,7 +85,6 @@ final class ResolvePageAction
             }
         }
 
-        // Convenzioni (Priority 3)
         $singular = rtrim($container0, 's');
         $possibleModels = [
             'Modules\\'.ucfirst($container0).'\\Models\\'.ucfirst($singular),
@@ -159,10 +152,11 @@ final class ResolvePageAction
     }
 
     /**
-     * @return array<int, \Illuminate\Database\Eloquent\Builder<Model>>
+     * @return array<int, Builder<Model>>
      */
     private function buildCandidateQueries(Model $model): array
     {
+        /** @var array<int, Builder<Model>> $queries */
         $queries = [$model->newQuery()];
 
         try {
@@ -170,19 +164,12 @@ final class ResolvePageAction
         } catch (\Throwable) {
         }
 
-        $usesSoftDeletes = in_array(SoftDeletes::class, class_uses_recursive($model), true);
-
-        if ($usesSoftDeletes) {
-            foreach ($queries as $index => $query) {
-                try {
-                    $queries[] = (clone $query)->withTrashed();
-                } catch (\Throwable) {
-                    unset($queries[$index]);
-                }
-            }
+        if (in_array(SoftDeletes::class, class_uses_recursive($model), true)) {
+            // Soft deleted records are already covered by the fallback DB query branch.
+            return $queries;
         }
 
-        return array_values($queries);
+        return $queries;
     }
 
     private function resolvePublicProfileItem(string $identifier): ?object

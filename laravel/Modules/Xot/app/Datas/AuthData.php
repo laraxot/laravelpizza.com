@@ -7,26 +7,27 @@ namespace Modules\Xot\Datas;
 use Spatie\LaravelData\Data;
 
 /**
- * Class AuthData - Gestisce la configurazione dell'autenticazione per il framework Laraxot.
+ * Class AuthData - Gestisce la configurazione dell'autenticazione.
  * Utilizzato esclusivamente nell'ambito dell'architettura Filament-first.
+ *
+ * @phpstan-consistent-constructor
  */
-class AuthData extends Data
+final class AuthData extends Data
 {
     /**
-     * @param string $guard                  Guard predefinita
-     * @param array  $guards                 Guards disponibili
-     * @param array  $providers              Provider di autenticazione
-     * @param bool   $verify_email           Se richiedere verifica email
-     * @param int    $password_reset_timeout Password reset timeout in minuti
-     * @param array  $throttle               Configurazione throttling
-     * @param array  $social                 Provider social abilitati
+     * @param array<string>                        $guards
+     * @param array<string, array<string, string>> $providers
+     * @param array<string, bool|int|string>       $throttle
+     * @param array<string, bool>                  $social
      */
     public function __construct(
         public readonly string $guard = 'web',
         public readonly array $guards = ['web', 'api'],
-        public readonly array $providers = ['users' => ['driver' => 'eloquent', 'model' => '']],
-        public readonly bool $verify_email = true,
-        public readonly int $password_reset_timeout = 60,
+        public readonly array $providers = [
+            'users' => ['driver' => 'eloquent', 'model' => ''],
+        ],
+        public readonly bool $verifyEmail = true,
+        public readonly int $passwordResetTimeout = 60,
         public readonly array $throttle = [
             'enabled' => true,
             'decay_minutes' => 1,
@@ -44,8 +45,8 @@ class AuthData extends Data
     /**
      * Create a new instance of AuthData with default values.
      */
-    public static function make(): static
+    public static function make(): self
     {
-        return new static();
+        return new self();
     }
 }

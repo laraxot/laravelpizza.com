@@ -1,5 +1,6 @@
 # Testing Rules & Strategy
 
+<<<<<<< HEAD
 ## Strict Guidelines (Super Mucca / Laraxot)
 
 1.  **Framework**: All tests MUST be written in **Pest**. 
@@ -38,3 +39,6 @@ From the `laravel/` directory:
 ## Troubleshooting
 *   **Missing Features in Tests**: Check if the test is outdated. Do not implement new features just to satisfy a broken test.
 *   **Autoloading Issues**: If classes are not found, check `composer.json` (ensure `Modules\\` is NOT in `autoload-dev` if using merge-plugin) and run `composer dump-autoload`.
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/testing_rules.md
+>>>>>>> 6d3760fe (.)

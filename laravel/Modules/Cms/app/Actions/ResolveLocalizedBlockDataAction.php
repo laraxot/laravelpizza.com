@@ -17,18 +17,22 @@ final class ResolveLocalizedBlockDataAction
      */
     public function execute(array $data): array
     {
-        /** @var array<string, mixed> $resolved */
-        $resolved = $this->walk($data);
+        /** @var array<string, mixed> $res */
+        $res = $this->walkArray($data);
 
-        return $resolved;
+        return $res;
     }
 
-    private function walk(mixed $value): mixed
+    /**
+     * @template TKey of array-key
+     *
+     * @param array<TKey, mixed> $value
+     *
+     * @return array<TKey, mixed>
+     */
+    private function walkArray(array $value): array
     {
-        if (! is_array($value)) {
-            return $value;
-        }
-
+        /** @var array<TKey, mixed> $resolved */
         $resolved = [];
 
         foreach ($value as $key => $item) {
@@ -39,7 +43,14 @@ final class ResolveLocalizedBlockDataAction
                 continue;
             }
 
-            $resolved[$key] = $this->walk($item);
+            if (is_array($item)) {
+                /* @var array<array-key, mixed> $item */
+                $resolved[$key] = $this->walkArray($item);
+
+                continue;
+            }
+
+            $resolved[$key] = $item;
         }
 
         return $resolved;
@@ -47,6 +58,7 @@ final class ResolveLocalizedBlockDataAction
 
     private function isPublicUrlKey(string $key): bool
     {
+        /** @var list<string> $urlKeys */
         static $urlKeys = [
             'url',
             'link',

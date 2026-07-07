@@ -2,18 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Feature\Frontoffice\FolioRoutes;
-
+use Illuminate\Http\Response;
+use Illuminate\Testing\TestResponse;
 use Modules\Cms\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
-
 it('GET /it/auth/logout_fixed acceptable', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
-    $res = $this->get('/it/auth/logout_fixed');
-    /** @var Illuminate\Testing\TestResponse $res */
+    /** @var TestResponse<Response> $res */
+    $res = cmsGet('/it/auth/logout_fixed');
     $status = (int) $res->getStatusCode();
-    $this->assertTrue(
+    Assert::assertTrue(
         in_array($status, [200, 204, 301, 302, 303, 307, 308, 401, 403, 404], true),
         'Unexpected status for /it/auth/logout_fixed: '.$status,
     );

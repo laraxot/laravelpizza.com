@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\View\Components;
-
 use Modules\Cms\View\Components\Page;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 /*
+
  * Pure unit tests for Modules\Cms\View\Components\Page (the Blade VIEW component).
  *
  * Uses only reflection — no database required.
@@ -21,87 +22,87 @@ use Modules\Cms\View\Components\Page;
 
 describe('Page component contract — constructor signature', function () {
     test('has exactly four constructor params: side, slug, type, data', function () {
-        $reflection = new \ReflectionMethod(Page::class, '__construct');
+        $reflection = new ReflectionMethod(Page::class, '__construct');
         $paramNames = array_map(fn ($p) => $p->getName(), $reflection->getParameters());
 
-        expect($paramNames)->toBe(['side', 'slug', 'type', 'data']);
-        expect($reflection->getParameters())->toHaveCount(4);
+        Assert::assertSame(['side', 'slug', 'type', 'data'], $paramNames);
+        Assert::assertCount(4, $reflection->getParameters());
     });
 
     test('does not have container0 as constructor param', function () {
-        $reflection = new \ReflectionMethod(Page::class, '__construct');
+        $reflection = new ReflectionMethod(Page::class, '__construct');
         $paramNames = array_map(fn ($p) => $p->getName(), $reflection->getParameters());
 
-        expect($paramNames)->not->toContain('container0');
+        Assert::assertNotContains('container0', $paramNames);
     });
 
     test('does not have slug0 as constructor param', function () {
-        $reflection = new \ReflectionMethod(Page::class, '__construct');
+        $reflection = new ReflectionMethod(Page::class, '__construct');
         $paramNames = array_map(fn ($p) => $p->getName(), $reflection->getParameters());
 
-        expect($paramNames)->not->toContain('slug0');
+        Assert::assertNotContains('slug0', $paramNames);
     });
 
     test('type param is nullable (optional)', function () {
-        $reflection = new \ReflectionMethod(Page::class, '__construct');
+        $reflection = new ReflectionMethod(Page::class, '__construct');
         $params = $reflection->getParameters();
         $typeParam = $params[2]; // third param = type
 
-        expect($typeParam->getName())->toBe('type');
-        expect($typeParam->allowsNull())->toBeTrue();
+        Assert::assertSame('type', $typeParam->getName());
+        Assert::assertTrue($typeParam->allowsNull());
     });
 
     test('data param defaults to empty array', function () {
-        $reflection = new \ReflectionMethod(Page::class, '__construct');
+        $reflection = new ReflectionMethod(Page::class, '__construct');
         $params = $reflection->getParameters();
         $dataParam = $params[3]; // fourth param = data
 
-        expect($dataParam->getName())->toBe('data');
-        expect($dataParam->isDefaultValueAvailable())->toBeTrue();
-        expect($dataParam->getDefaultValue())->toBe([]);
+        Assert::assertSame('data', $dataParam->getName());
+        Assert::assertTrue($dataParam->isDefaultValueAvailable());
+        Assert::assertSame([], $dataParam->getDefaultValue());
     });
 });
 
 describe('Page component contract — public properties', function () {
     test('has public property: side', function () {
-        $reflection = new \ReflectionClass(Page::class);
+        $reflection = new ReflectionClass(Page::class);
 
-        expect($reflection->hasProperty('side'))->toBeTrue();
-        expect($reflection->getProperty('side')->isPublic())->toBeTrue();
+        Assert::assertTrue($reflection->hasProperty('side'));
+        Assert::assertTrue($reflection->getProperty('side')->isPublic());
     });
 
     test('has public property: slug', function () {
-        $reflection = new \ReflectionClass(Page::class);
+        $reflection = new ReflectionClass(Page::class);
 
-        expect($reflection->hasProperty('slug'))->toBeTrue();
-        expect($reflection->getProperty('slug')->isPublic())->toBeTrue();
+        Assert::assertTrue($reflection->hasProperty('slug'));
+        Assert::assertTrue($reflection->getProperty('slug')->isPublic());
     });
 
     test('has public property: data (the context carrier)', function () {
-        $reflection = new \ReflectionClass(Page::class);
+        $reflection = new ReflectionClass(Page::class);
 
-        expect($reflection->hasProperty('data'))->toBeTrue();
-        expect($reflection->getProperty('data')->isPublic())->toBeTrue();
+        Assert::assertTrue($reflection->hasProperty('data'));
+        Assert::assertTrue($reflection->getProperty('data')->isPublic());
     });
 
     test('data property defaults to empty array', function () {
-        $reflection = new \ReflectionClass(Page::class);
+        $reflection = new ReflectionClass(Page::class);
         $defaults = $reflection->getDefaultProperties();
 
-        expect($defaults['data'])->toBe([]);
+        Assert::assertSame([], $defaults['data']);
     });
 
     test('does NOT have public property container0', function () {
-        expect(property_exists(Page::class, 'container0'))->toBeFalse();
+        Assert::assertFalse(property_exists(Page::class, 'container0'));
     });
 
     test('does NOT have public property slug0', function () {
-        expect(property_exists(Page::class, 'slug0'))->toBeFalse();
+        Assert::assertFalse(property_exists(Page::class, 'slug0'));
     });
 });
 
 describe('Page component contract — removed methods', function () {
     test('resolveContext() has been removed', function () {
-        expect(method_exists(Page::class, 'resolveContext'))->toBeFalse();
+        Assert::assertFalse((new ReflectionClass(Page::class))->hasMethod('resolveContext'));
     });
 });

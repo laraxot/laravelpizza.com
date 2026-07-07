@@ -77,4 +77,12 @@ return $response; // Scarica il file Excel
 - [Spatie Queueable Action](../traits/queueable-action.md)
 - [Performance Guidelines](../performance-guidelines.md)
 - [Actions Overview](./readme.md)
+- Link bidirezionale: [Vai a PHPSTAN-FIXES-SUMMARY.md](../../../../docs/PHPSTAN-FIXES-SUMMARY.md)
+
+## Collegamenti
+- [Laravel Excel Documentation](https://docs.laravel-excel.com)
+- [Spatie Queueable Action](../traits/QUEUEABLE-ACTION.md)
+- [Performance Guidelines](../PERFORMANCE-GUIDELINES.md)
+- [Actions Overview](./README.md)
+- [PHPStan Fixes Summary](../../../../docs/PHPSTAN-FIXES-SUMMARY.md)
 - [PHPStan Fixes Summary](../../../../../docs/phpstan-fixes-summary.md)

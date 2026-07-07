@@ -1,5 +1,6 @@
 # Testing Fixes Roadmap - Correzione Test Falliti
 
+**Data**: 2025-01-22
 **Status**: In Progress
 **Principio Fondamentale**: Il sito funziona, quindi se un test fallisce è il test che sbaglia
 
@@ -115,6 +116,9 @@ $currentTeam = $user->currentTeam;
 ## 📚 Documentazione di Riferimento
 
 - [Testing Best Practices](testing-best-practices.md)
+- [Testing Priority Rule](../Geo/docs/testing-priority-rule.md)
+- [No RefreshDatabase Policy](../Activity/docs/testing/no-refresh-database-policy.md)
+- [Test Fix Philosophy](../UI/docs/test-fix-philosophy.md)
 - [Testing Priority Rule](../geo/docs/testing-priority-rule.md)
 - [No RefreshDatabase Policy](../activity/docs/testing/no-refresh-database-policy.md)
 - [Test Fix Philosophy](../ui/docs/test-fix-philosophy.md)
@@ -131,5 +135,6 @@ $currentTeam = $user->currentTeam;
 
 ---
 
+**Ultimo aggiornamento**: 2025-01-22
 **Ultimo aggiornamento**: [DATE]
 **Prossimo step**: Correggere ArtisanServiceTest.php

@@ -20,6 +20,7 @@ Questa non è una raccomandazione, è una **legge del progetto**.
 ## ✅ Cosa è OBBLIGATORIO
 
 - Nuovi commit per correggere errori
+- `git revert` per annullare modifiche (crea nuovo commit di revert)
 - Progressione forward-only
 - Storia preservata SEMPRE
 - Tracciabilità totale

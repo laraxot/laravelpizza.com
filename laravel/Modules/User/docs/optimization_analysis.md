@@ -1,5 +1,6 @@
 # user module documentation optimization analysis
 
+<<<<<<< HEAD
 ## current state analysis
 - **total md files**: 390
 - **extreme duplication**: multiple files for same topics with underscore/hyphen variations
@@ -95,3 +96,6 @@ docs/
 - **navigation**: logical grouping and clear hierarchy
 - **performance**: faster search and access
 - **consistency**: uniform documentation standards
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/optimization_analysis.md
+>>>>>>> 6d3760fe (.)

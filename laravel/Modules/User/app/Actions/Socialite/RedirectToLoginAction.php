@@ -23,9 +23,13 @@ class RedirectToLoginAction
         // Assert::string($route_name = config('filament-socialite.login_page_route', 'filament.admin.auth.login'));
         // Route [filament.auth.login] not defined.
         $routeName = 'login';
-        Assert::string($message = __('user::'.$message));
+        $translated = __('user::'.$message);
+        if (is_array($translated)) {
+            $translated = $translated['text'] ?? $message;
+        }
+        Assert::string($translated);
         Notification::make()
-            ->title($message)
+            ->title($translated)
             ->danger()
             ->persistent()
             ->send();
@@ -34,9 +38,7 @@ class RedirectToLoginAction
         return redirect()
             ->route($routeName)
             ->withErrors([
-                'email' => [
-                    __($message),
-                ],
+                'email' => [$translated],
             ]);
     }
 }

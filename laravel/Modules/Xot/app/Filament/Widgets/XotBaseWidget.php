@@ -7,13 +7,17 @@ namespace Modules\Xot\Filament\Widgets;
 use Filament\Actions\Action;
 use Filament\Actions\Concerns\InteractsWithActions;
 use Filament\Actions\Contracts\HasActions;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Forms\Contracts\HasForms;
 use Filament\Schemas\Components\Component;
-use Filament\Schemas\Concerns\InteractsWithSchemas;
-use Filament\Schemas\Contracts\HasSchemas;
+use Filament\Schemas\Components\Wizard\Step;
 use Filament\Schemas\Schema;
 use Filament\Widgets\Widget as FilamentWidget;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Actions\View\GetViewByClassAction;
 use Modules\Xot\Filament\Traits\TransTrait;
 use Webmozart\Assert\Assert;
@@ -28,12 +32,10 @@ use Webmozart\Assert\Assert;
  * @property array<string, mixed>|null $data         Dati del form
  * @property Schema                    $form
  */
-abstract class XotBaseWidget extends FilamentWidget implements HasActions, /* HasForms, */ HasSchemas
+abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasForms
 {
     use InteractsWithActions;
-
-    // use InteractsWithForms;
-    use InteractsWithSchemas;
+    use InteractsWithForms;
     use TransTrait;
 
     public string $title = '';
@@ -46,13 +48,6 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, /* Ha
      * @var array<string, string>
      */
     public array $listener = [];
-
-    /**
-     * Dati del form.
-     *
-     * @var array<string, mixed>
-     */
-    public ?array $data = [];
 
     /**
      * Vista predefinita per widget che estendono XotBaseWidget.
@@ -104,6 +99,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, /* Ha
         return $schema;
     }
 
+    /** @return array<string, mixed> */
     public function getFormFill(): array
     {
         $model = $this->getFormModel();
@@ -130,13 +126,16 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, /* Ha
 
                         return $value;
                     });
-                    $res = $merge1;
+                    $res = [];
+                    foreach ($merge1 as $key => $value) {
+                        $res[(string) $key] = $value;
+                    }
                 }
 
-                return $res;
+                return self::normalizeFormFill($res);
             } catch (\Exception $e) {
                 // Se toArray() fallisce (problemi con enum), usa getAttributes()
-                return $model->getAttributes();
+                return self::normalizeFormFill($model->getAttributes());
             }
         }
 
@@ -146,11 +145,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, /* Ha
         $attributes = $model->attributesToArray();
 
         $fields = array_merge($fillable, $appends);
-        $fields = array_values(array_filter(
-            $fields,
-            static fn (mixed $field): bool => is_string($field) || is_int($field),
-        ));
-        $fields = array_fill_keys($fields, null);
+        $fields = array_fill_keys(array_map(static fn (mixed $f): string => SafeStringCastAction::cast($f), $fields), null);
         $fields = array_merge($fields, $attributes);
         if (method_exists($model, 'getDataDefaults')) {
             /** @var array<string, mixed> $defaults */
@@ -158,7 +153,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, /* Ha
             $fields = array_merge($fields, $defaults);
         }
 
-        return $fields;
+        return self::normalizeFormFill($fields);
     }
 
     /**
@@ -175,15 +170,33 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, /* Ha
         return static::transFunc(__FUNCTION__);
     }
 
+    public function getWizardSubmitAction(): Action
+    {
+        /** @var view-string $submit_view */
+        $submit_view = 'pub_theme::filament.wizard.submit-button';
+
+        if (! view()->exists($submit_view)) {
+            throw new \Exception("View {$submit_view} does not exist");
+        }
+
+        return Action::make('submit')
+            ->label(__('filament-panels::resources/edit-record.form.actions.save.label'))
+            ->submit('save')
+            ->view((string) $submit_view);
+    }
+
     /**
-     * Azioni form opzionali per viste che chiamano `$this->getFormActions()` (es. layout custom, footer azioni).
-     * I widget che non le usano restano con array vuoto.
+     * Ottiene le azioni del form.
      *
      * @return array<int|string, Action>
      */
     protected function getFormActions(): array
     {
-        return [];
+        return [
+            Action::make('save')
+                ->label(__('filament-panels::resources/edit-record.form.actions.save.label'))
+                ->submit('save'),
+        ];
     }
 
     /**
@@ -195,12 +208,26 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, /* Ha
         return null;
     }
 
+    protected function getStepByName(string $name): Step
+    {
+        $schema = Str::of($name)
+            ->snake()
+            ->studly()
+            ->prepend('get')
+            ->append('Schema')
+            ->toString();
+
+        /** @var array<Htmlable|string> $schemaComponents */
+        $schemaComponents = $this->$schema();
+
+        return Step::make($name)->schema($schemaComponents);
+    }
+
     private function resolveView(): void
     {
         $defaultView = 'xot::filament.widgets.base';
-        $hadCustomViewRequested = $this->view !== $defaultView;
 
-        if ($hadCustomViewRequested && view()->exists($this->view)) {
+        if ($this->view !== $defaultView && view()->exists($this->view)) {
             return;
         }
 
@@ -210,9 +237,24 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, /* Ha
                 $this->view = $view;
             }
         } catch (\Exception $e) {
-            if (! $hadCustomViewRequested) {
+            if (! view()->exists($this->view)) {
                 throw $e;
             }
         }
+    }
+
+    /**
+     * @param array<int|string, mixed> $data
+     *
+     * @return array<string, mixed>
+     */
+    protected static function normalizeFormFill(array $data): array
+    {
+        $normalized = [];
+        foreach ($data as $key => $value) {
+            $normalized[(string) $key] = $value;
+        }
+
+        return $normalized;
     }
 }

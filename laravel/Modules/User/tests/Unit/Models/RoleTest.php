@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Models;
 
 use Modules\User\Models\Role;
@@ -9,6 +10,26 @@ use Modules\User\Models\Team;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
+=======
+use Illuminate\Support\Facades\DB;
+use Modules\User\Database\Factories\RoleFactory;
+use Modules\User\Database\Factories\TeamFactory;
+use Modules\User\Models\Role;
+use PHPUnit\Framework\Assert;
+
+uses(Modules\User\Tests\TestCase::class);
+
+/**
+ * @param array<string, mixed> $attributes
+ */
+function modelsRoleCreate(array $attributes = []): Role
+{
+    return RoleFactory::new()->createOne(array_merge([
+        'name' => 'models-role-'.uniqid(),
+        'guard_name' => 'web',
+    ], $attributes));
+}
+>>>>>>> 9fa499be (.)
 
 test('can create role with minimal data', function (): void {
     $role = Role::factory()->create([

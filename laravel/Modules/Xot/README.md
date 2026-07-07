@@ -1,185 +1,10 @@
-<<<<<<< HEAD
----
-title: Xot
-module: xot
-related: 
-status: production
----
-
-# Xot Module
-
-**Module**: `xot`
-**Namespace**: `Modules\Xot\`
-**Status**: ✅ Production
-
----
-
-## Overview
-
-TODO: Add overview for Xot module
-
-### Key Features
-
-- Feature 1
-- Feature 2
-- Feature 3
-
-### Module Dependencies
-
-- None
-
----
-
-## Quick Start
-
-### Installation
-
-```bash
-# Already included in main project
-# No additional setup required
-```
-
-### Basic Usage
-
-```php
-use Modules\Xot\Models\YourModel;
-
-$item = YourModel::first();
-```
-
-### Configuration
-
-Configuration file: `config/xot.php`
-
-Key settings:
-- `setting1` - Description
-- `setting2` - Description
-
----
-
-## Architecture
-
-### Directory Structure
-
-```
-Xot/
-├── src/
-│   ├── Models/
-│   ├── Controllers/
-│   ├── Resources/
-│   ├── Actions/
-│   └── Traits/
-├── routes/
-│   ├── api.php
-│   └── web.php
-├── database/
-│   ├── migrations/
-│   └── seeders/
-├── tests/
-│   ├── Unit/
-│   └── Feature/
-├── config/
-│   └── xot.php
-├── docs/
-│   └── README.md
-└── composer.json
-```
-
-### Key Components
-
-
-
----
-
-## API Reference
-
-Reference
-
----
-
-## Usage Examples
-
-### Common Tasks
-
-#### Task 1: Description
-
-```php
-// Code example
-```
-
----
-
-## Testing
-
-### Running Tests
-
-```bash
-# Run all module tests
-composer test -- Modules/Xot
-```
-
----
-
-## Troubleshooting
-
-### Common Issues
-
-#### Issue: Problem description
-
-**Solution**: How to fix this issue
-
----
-
-## Related Modules
-
-### Dependents
-
-- [AI](../AI/README.md) - Depends on this module
-- [Activity](../Activity/README.md) - Depends on this module
-- [Blog](../Blog/README.md) - Depends on this module
-- [Cms](../Cms/README.md) - Depends on this module
-- [Comment](../Comment/README.md) - Depends on this module
-- [Fixcity](../Fixcity/README.md) - Depends on this module
-- [Gdpr](../Gdpr/README.md) - Depends on this module
-- [Geo](../Geo/README.md) - Depends on this module
-- [Job](../Job/README.md) - Depends on this module
-- [Lang](../Lang/README.md) - Depends on this module
-- [Media](../Media/README.md) - Depends on this module
-- [Notify](../Notify/README.md) - Depends on this module
-- [Rating](../Rating/README.md) - Depends on this module
-- [Seo](../Seo/README.md) - Depends on this module
-- [Tenant](../Tenant/README.md) - Depends on this module
-- [UI](../UI/README.md) - Depends on this module
-- [User](../User/README.md) - Depends on this module
-
----
-
-Navigation: [Project Home](../../docs/INDEX.md) | [Modules](../../docs/modules/README.md)
-=======
-# Modulo Xot - Framework Base
-
-[![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
-[![Filament 5.x](https://img.shields.io/badge/Filament-5.x-blue.svg)](https://filamentphp.com/)
-[![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
-[![PHP 8.3+](https://img.shields.io/badge/PHP-8.3+-blue.svg)](https://php.net)
-
-> **Version**: 3.0 - DRY + KISS Documentation Refactor  
-> **Status**: ✅ Core Framework Module  
+> **Version**: 3.0 - DRY + KISS Documentation Refactor
+> **Status**: ✅ Core Framework Module
 > **Last Updated**: December 2025
 
 ## 📋 Overview
 
-Il modulo **Xot** è il cuore del framework Laraxot: nessun altro modulo funziona senza di lui. Fornisce le classi base (XotBaseResource, XotBaseModel, XotBaseServiceProvider, ecc.), i service provider e le convenzioni che abilitano tutti i moduli del sistema.
-
-> **🔴 Obbligatorio:** tutti i moduli Laraxot estendono le classi Xot, mai quelle di Filament o Laravel direttamente. **[Perché →](docs/readme.md)** · **[Base classes →](docs/filament/readme.md)**
-
-### ⚡ Estendi in 2 minuti
-
-```bash
-php artisan module:list | grep Xot   # Verifica che sia attivo
-```
-
-Poi nelle tue classi: `extends XotBaseResource`, `extends XotBaseModel`, `extends XotBaseServiceProvider`. **[Guida estensione →](docs/development/readme.md)**
+Il modulo **Xot** è il cuore del framework Laraxot, fornendo le classi base, i service provider e le funzionalità fondamentali che abilitano tutti gli altri moduli del sistema.
 
 ## 🏗️ Architecture
 
@@ -242,9 +67,9 @@ php artisan xot:status
 
 ## 🔗 Related Documentation
 
-- [Laraxot Main Docs](../../../docs/ai-guidelines.md) - Documentazione generale
-- [Architecture Rules](../../../docs/fundamentals/architecture-rules.md) - Regole critiche
-- [Module Structure](../../../docs/fundamentals/module-structure.md) - Come strutturare moduli
+- [Laraxot Main Docs](../../docs/AI-GUIDELINES.md) - Documentazione generale
+- [Architecture Rules](../../docs/fundamentals/architecture-rules.md) - Regole critiche
+- [Module Structure](../../docs/fundamentals/module-structure.md) - Come strutturare moduli
 
 ## 📞 Support
 
@@ -553,7 +378,7 @@ php artisan test --filter=XotBaseResourceTest
 ## 📚 Documentazione COMPLETA
 
 ### 🎯 **Guide Principali**
-- [📖 Documentazione Completa](docs/readme.md)
+- [📖 Documentazione Completa](docs/README.md)
 - [🏗️ Base Classes](docs/base-classes.md)
 - [🔧 Service Providers](docs/service-providers.md)
 - [🎨 Filament Integration](docs/filament-integration.md)
@@ -625,4 +450,59 @@ Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICE
   <br>
   <em>Costruito con ❤️ per la comunità Laravel</em>
 </div>
->>>>>>> origin/dev
+# ⚡ Xot
+
+[![Core](https://img.shields.io/badge/Role-Platform%20Core-6A1B9A.svg)](#)
+[![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
+[![Filament 5](https://img.shields.io/badge/Filament-5-ffab00.svg)](https://filamentphp.com/)
+[![PHP 8.4+](https://img.shields.io/badge/PHP-8.4+-777BB4.svg)](https://php.net/)
+[![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
+[![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue.svg)](https://www.php-fig.org/psr/psr-12/)
+[![Strict Types](https://img.shields.io/badge/PHP-strict__types-1-informational.svg)](#)
+[![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
+[![FixCity Platform](https://img.shields.io/badge/Platform-FixCity-008758.svg)](#)
+
+> **Il DNA Laraxot.** BaseModel, XotBaseServiceProvider, Filament base, convenzioni che tengono 20 moduli allineati.
+
+---
+
+## Perché esiste
+
+Senza Xot non c’è FixCity: è il framework interno che evita duplicazioni e drift architetturale.
+
+## Superpoteri
+
+- XotBaseResource / Widget / ServiceProvider
+- LangServiceProvider e traduzioni strutturate
+- Pattern Actions, DTO Spatie, PHPStan 10
+- Documentazione e standard condivisi
+
+## Certificazioni
+
+| Certificazione | Stato |
+|----------------|-------|
+| PHPStan livello 10 | Target progetto |
+| `declare(strict_types=1)` | Su nuovo codice PHP |
+| Filament 5 + XotBase | Admin enterprise |
+| Test PHPUnit / Pest | Suite modulo |
+| Documentazione wiki | Cartella `docs/` |
+
+## Vuoi entrare nel team?
+
+Vuoi scrivere **piattaforma**, non solo feature? Xot è il posto giusto.
+
+Stack frontoffice: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — vedi [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
+
+---
+
+## Documentazione
+
+| Lingua | Link |
+|--------|------|
+| 🇮🇹 Presentazione | Questo file (`README.md`) |
+| 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
+| 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
+
+---
+
+**Modulo** `xot` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5

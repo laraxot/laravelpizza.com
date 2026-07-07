@@ -12,11 +12,9 @@ use Filament\Schemas\Components\Utilities\Get;
 use Filament\Tables\Columns\IconColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Contracts\StateContract as XotStateContract;
-use Spatie\ModelStates\HasStatesContract;
-use Spatie\ModelStates\State;
 
 class IconStateColumn extends IconColumn
 {
@@ -42,10 +40,13 @@ class IconStateColumn extends IconColumn
             Action::make('change-state')
                 ->schema([
                     Select::make('state')
-                        ->options(function (Model&HasStatesContract $record, string $_state): array {
+                        ->options(function (Model $record, string $_state): array {
                             $name = $this->getName();
                             $state = $record->getAttribute($name);
                             if (null === $state) {
+                                if (! method_exists($record, 'getDefaultStateFor')) {
+                                    return [];
+                                }
                                 $defaultStates = Arr::wrap($record->getDefaultStateFor($name));
 
                                 /** @var array<string, string> $options */
@@ -60,7 +61,7 @@ class IconStateColumn extends IconColumn
 
                                 return $options;
                             }
-                            if (! $state instanceof State) {
+                            if (! is_object($state) || ! method_exists($state, 'transitionableStates')) {
                                 return [];
                             }
 
@@ -68,20 +69,28 @@ class IconStateColumn extends IconColumn
                                 /** @var array<int|string, mixed> $statesArray */
                                 $statesArray = $state->transitionableStates();
                             } catch (\Exception $e) {
-                                /** @var array<int|string, mixed> $statesArray */
-                                $statesArray = $record->getStatesFor($name)->toArray();
+                                if (! method_exists($record, 'getStatesFor')) {
+                                    return [];
+                                }
+                                $fetchedStates = $record->getStatesFor($name);
+                                $statesArray = \is_object($fetchedStates) && method_exists($fetchedStates, 'toArray')
+                                    ? $fetchedStates->toArray()
+                                    : [];
                             }
 
-                            /* @var array<int|string, mixed> $states */
-                            return Arr::mapWithKeys($statesArray, function ($state) use ($record) {
-                                if (! is_string($state)) {
+                            if (! is_array($statesArray)) {
+                                return [];
+                            }
+
+                            return Arr::mapWithKeys($statesArray, function (mixed $stateItem) use ($record): array {
+                                if (! is_string($stateItem)) {
                                     return [];
                                 }
                                 $model = Str::of(class_basename($record))->slug()->toString();
                                 /** @var string $label */
-                                $label = __('pub_theme::'.$model.'_states.'.$state.'.label');
+                                $label = __('pub_theme::'.$model.'_states.'.$stateItem.'.label');
 
-                                return [$state => $label];
+                                return [$stateItem => $label];
                             });
                         })
                         ->required()
@@ -90,17 +99,19 @@ class IconStateColumn extends IconColumn
                         $newState = $get('state');
                         $name = $this->getName();
                         $state = $record->getAttribute($name);
-                        if (! $state instanceof State) {
+                        if (! is_object($state) || ! method_exists($state, 'getStateMapping')) {
                             return false;
                         }
 
-                        /** @var Collection<string, class-string<State>> $states */
                         $states = $state::getStateMapping();
-                        /** @var array<string, class-string<State>> $statesArray */
-                        $statesArray = $states->toArray();
+                        $statesArray = \is_object($states) && method_exists($states, 'toArray')
+                            ? $states->toArray()
+                            : [];
+                        if (! is_array($statesArray)) {
+                            return false;
+                        }
 
-                        /** @var class-string<State>|null $newStateClass */
-                        $newStateClass = Arr::get($statesArray, (string) $newState);
+                        $newStateClass = Arr::get($statesArray, SafeStringCastAction::cast($newState));
                         if (! is_string($newStateClass) || ! class_exists($newStateClass)) {
                             return false;
                         }
@@ -113,10 +124,9 @@ class IconStateColumn extends IconColumn
                     }),
                 ])
                 ->fillForm(function (Model $record): array {
-                    /** @var Model&HasStatesContract $record */
                     $name = $this->getName();
                     $state = $record->getAttribute($name);
-                    if (! $state instanceof State) {
+                    if (! is_object($state)) {
                         return [];
                     }
                     /** @var string $stateName */
@@ -129,7 +139,7 @@ class IconStateColumn extends IconColumn
                         'state' => $stateName,
                     ];
                 })
-                ->action(function ($record, $data) {
+                ->action(function ($record, $data): void {
                     /** @var array<string, mixed> $data */
                     if (! isset($data['state']) || ! is_string($data['state'])) {
                         throw new \Exception('State is required and must be a string');
@@ -143,9 +153,8 @@ class IconStateColumn extends IconColumn
                     /** @var string $label */
                     $label = __('pub_theme::'.$model.'_states.'.$state.'.label');
 
-                    /** @var Model&HasStatesContract $record */
                     $currentState = $record->getAttribute($this->getName());
-                    if (! $currentState instanceof State) {
+                    if (! is_object($currentState) || ! method_exists($currentState, 'transitionTo')) {
                         throw new \Exception('Current state is not a valid State instance');
                     }
 

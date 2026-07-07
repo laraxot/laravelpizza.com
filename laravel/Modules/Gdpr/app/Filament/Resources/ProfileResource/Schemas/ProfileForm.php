@@ -6,20 +6,12 @@ namespace Modules\Gdpr\Filament\Resources\ProfileResource\Schemas;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
-<<<<<<< HEAD
-use Filament\Schemas\Components\Component as SchemaComponent;
-=======
->>>>>>> 40b96bcd6 (.)
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 class ProfileForm extends XotBaseResourceForm
 {
     /**
-<<<<<<< HEAD
-     * @return array<int|string, SchemaComponent>
-=======
      * @return array<int|string, \Filament\Schemas\Components\Component>
->>>>>>> 40b96bcd6 (.)
      */
     public static function getFormSchema(): array
     {

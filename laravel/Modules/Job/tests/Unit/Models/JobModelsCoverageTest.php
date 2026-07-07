@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 namespace Modules\Job\Tests\Unit\Models;
-
+use function Safe\class_uses;
 use Modules\Job\Models\BaseModel;
 use Modules\Job\Models\Export;
 use Modules\Job\Models\FailedJob;
@@ -14,215 +14,238 @@ use Modules\Job\Models\JobManager;
 use Modules\Job\Models\Result;
 use Modules\Job\Models\Schedule;
 use Modules\Job\Models\Task;
+use Modules\Job\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+use function Safe\file_get_contents;
+
+uses(\Modules\Job\Tests\TestCase::class);
 
 describe('Job Models Coverage', function () {
     describe('Task Model', function () {
         it('can be instantiated', function () {
             $task = new Task;
-            expect($task)->toBeInstanceOf(Task::class);
+            Assert::assertInstanceOf(Task::class, $task);
         });
 
         it('uses HasXotFactory trait', function () {
-            expect(in_array('Modules\Xot\Models\Traits\HasXotFactory', class_uses(Task::class)))->toBeTrue();
+            Assert::assertTrue(in_array('Modules\Xot\Models\Traits\HasXotFactory', class_uses(Task::class)));
         });
 
         it('uses FrontendSortable trait', function () {
-            expect(in_array('Modules\Job\Models\Traits\FrontendSortable', class_uses(Task::class)))->toBeTrue();
+            Assert::assertTrue(in_array('Modules\Job\Models\Traits\FrontendSortable', class_uses(Task::class)));
         });
 
         it('uses Notifiable trait', function () {
-            expect(in_array('Illuminate\Notifications\Notifiable', class_uses(Task::class)))->toBeTrue();
+            Assert::assertTrue(in_array('Illuminate\Notifications\Notifiable', class_uses(Task::class)));
         });
 
         it('has fillable fields defined', function () {
             $task = new Task;
-            expect($task->getFillable())->toContain('command');
-            expect($task->getFillable())->toContain('description');
-            expect($task->getFillable())->toContain('expression');
+            Assert::assertContains('command', $task->getFillable());
+            Assert::assertContains('description', $task->getFillable());
+            Assert::assertContains('expression', $task->getFillable());
         });
 
         it('has appends defined', function () {
             $task = new Task;
-            expect($task->getAppends())->toContain('activated');
-            expect($task->getAppends())->toContain('upcoming');
-            expect($task->getAppends())->toContain('average_runtime');
+            Assert::assertContains('activated', $task->getAppends());
+            Assert::assertContains('upcoming', $task->getAppends());
+            Assert::assertContains('average_runtime', $task->getAppends());
         });
 
         it('has frequencies relationship', function () {
-            $task = new Task;
-            expect(method_exists($task, 'frequencies'))->toBeTrue();
+            $reflection = new \ReflectionClass(Task::class);
+            Assert::assertTrue($reflection->hasMethod('frequencies'));
         });
 
         it('has results relationship', function () {
-            $task = new Task;
-            expect(method_exists($task, 'results'))->toBeTrue();
+            $reflection = new \ReflectionClass(Task::class);
+            Assert::assertTrue($reflection->hasMethod('results'));
         });
 
         it('has compileParameters method', function () {
-            $task = new Task;
-            expect(method_exists($task, 'compileParameters'))->toBeTrue();
+            $reflection = new \ReflectionClass(Task::class);
+            Assert::assertTrue($reflection->hasMethod('compileParameters'));
         });
 
         it('has autoCleanup method', function () {
-            $task = new Task;
-            expect(method_exists($task, 'autoCleanup'))->toBeTrue();
+            $reflection = new \ReflectionClass(Task::class);
+            Assert::assertTrue($reflection->hasMethod('autoCleanup'));
         });
 
         it('has notification routing methods', function () {
-            $task = new Task;
-            expect(method_exists($task, 'routeNotificationForMail'))->toBeTrue();
-            expect(method_exists($task, 'routeNotificationForNexmo'))->toBeTrue();
-            expect(method_exists($task, 'routeNotificationForSlack'))->toBeTrue();
+            $reflection = new \ReflectionClass(Task::class);
+            Assert::assertTrue($reflection->hasMethod('routeNotificationForMail'));
+            Assert::assertTrue($reflection->hasMethod('routeNotificationForNexmo'));
+            Assert::assertTrue($reflection->hasMethod('routeNotificationForSlack'));
         });
 
         it('uses strict types', function () {
-            $reflection = new ReflectionClass(Task::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+            $reflection = new \ReflectionClass(Task::class);
+            $filename = $reflection->getFileName();
+        Assert::assertNotFalse($filename);
+        $content = file_get_contents($filename);
+            Assert::assertStringContainsString('', $content);
         });
     });
 
     describe('Frequency Model', function () {
         it('can be instantiated', function () {
             $model = new Frequency;
-            expect($model)->toBeInstanceOf(Frequency::class);
+            Assert::assertInstanceOf(Frequency::class, $model);
         });
 
         it('extends BaseModel', function () {
-            $reflection = new ReflectionClass(Frequency::class);
-            expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
+            $reflection = new \ReflectionClass(Frequency::class);
+            Assert::assertTrue($reflection->isSubclassOf(BaseModel::class));
         });
 
         it('uses strict types', function () {
-            $reflection = new ReflectionClass(Frequency::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+            $reflection = new \ReflectionClass(Frequency::class);
+            $filename = $reflection->getFileName();
+        Assert::assertNotFalse($filename);
+        $content = file_get_contents($filename);
+            Assert::assertStringContainsString('', $content);
         });
     });
 
     describe('Result Model', function () {
         it('can be instantiated', function () {
             $model = new Result;
-            expect($model)->toBeInstanceOf(Result::class);
+            Assert::assertInstanceOf(Result::class, $model);
         });
 
         it('extends BaseModel', function () {
-            $reflection = new ReflectionClass(Result::class);
-            expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
+            $reflection = new \ReflectionClass(Result::class);
+            Assert::assertTrue($reflection->isSubclassOf(BaseModel::class));
         });
 
         it('uses strict types', function () {
-            $reflection = new ReflectionClass(Result::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+            $reflection = new \ReflectionClass(Result::class);
+            $filename = $reflection->getFileName();
+        Assert::assertNotFalse($filename);
+        $content = file_get_contents($filename);
+            Assert::assertStringContainsString('', $content);
         });
     });
 
     describe('Schedule Model', function () {
         it('can be instantiated', function () {
             $model = new Schedule;
-            expect($model)->toBeInstanceOf(Schedule::class);
+            Assert::assertInstanceOf(Schedule::class, $model);
         });
 
         it('extends BaseModel', function () {
-            $reflection = new ReflectionClass(Schedule::class);
-            expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
+            $reflection = new \ReflectionClass(Schedule::class);
+            Assert::assertTrue($reflection->isSubclassOf(BaseModel::class));
         });
 
         it('uses strict types', function () {
-            $reflection = new ReflectionClass(Schedule::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+            $reflection = new \ReflectionClass(Schedule::class);
+            $filename = $reflection->getFileName();
+        Assert::assertNotFalse($filename);
+        $content = file_get_contents($filename);
+            Assert::assertStringContainsString('', $content);
         });
     });
 
     describe('Import Model', function () {
         it('can be instantiated', function () {
             $model = new Import;
-            expect($model)->toBeInstanceOf(Import::class);
+            Assert::assertInstanceOf(Import::class, $model);
         });
 
         it('extends BaseModel', function () {
-            $reflection = new ReflectionClass(Import::class);
-            expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
+            $reflection = new \ReflectionClass(Import::class);
+            Assert::assertTrue($reflection->isSubclassOf(BaseModel::class));
         });
 
         it('uses strict types', function () {
-            $reflection = new ReflectionClass(Import::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+            $reflection = new \ReflectionClass(Import::class);
+            $filename = $reflection->getFileName();
+        Assert::assertNotFalse($filename);
+        $content = file_get_contents($filename);
+            Assert::assertStringContainsString('', $content);
         });
     });
 
     describe('Export Model', function () {
         it('can be instantiated', function () {
             $model = new Export;
-            expect($model)->toBeInstanceOf(Export::class);
+            Assert::assertInstanceOf(Export::class, $model);
         });
 
         it('extends Filament Export', function () {
-            $reflection = new ReflectionClass(Export::class);
-            expect($reflection->isSubclassOf(\Filament\Actions\Exports\Models\Export::class))->toBeTrue();
+            $reflection = new \ReflectionClass(Export::class);
+            Assert::assertTrue($reflection->isSubclassOf(\Filament\Actions\Exports\Models\Export::class));
         });
 
         it('uses strict types', function () {
-            $reflection = new ReflectionClass(Export::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+            $reflection = new \ReflectionClass(Export::class);
+            $filename = $reflection->getFileName();
+        Assert::assertNotFalse($filename);
+        $content = file_get_contents($filename);
+            Assert::assertStringContainsString('', $content);
         });
     });
 
     describe('JobBatch Model', function () {
         it('can be instantiated', function () {
             $model = new JobBatch;
-            expect($model)->toBeInstanceOf(JobBatch::class);
+            Assert::assertInstanceOf(JobBatch::class, $model);
         });
 
         it('extends BaseModel', function () {
-            $reflection = new ReflectionClass(JobBatch::class);
-            expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
+            $reflection = new \ReflectionClass(JobBatch::class);
+            Assert::assertTrue($reflection->isSubclassOf(BaseModel::class));
         });
 
         it('uses strict types', function () {
-            $reflection = new ReflectionClass(JobBatch::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+            $reflection = new \ReflectionClass(JobBatch::class);
+            $filename = $reflection->getFileName();
+        Assert::assertNotFalse($filename);
+        $content = file_get_contents($filename);
+            Assert::assertStringContainsString('', $content);
         });
     });
 
     describe('JobManager Model', function () {
         it('can be instantiated', function () {
             $model = new JobManager;
-            expect($model)->toBeInstanceOf(JobManager::class);
+            Assert::assertInstanceOf(JobManager::class, $model);
         });
 
         it('extends BaseModel', function () {
-            $reflection = new ReflectionClass(JobManager::class);
-            expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
+            $reflection = new \ReflectionClass(JobManager::class);
+            Assert::assertTrue($reflection->isSubclassOf(BaseModel::class));
         });
 
         it('uses strict types', function () {
-            $reflection = new ReflectionClass(JobManager::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+            $reflection = new \ReflectionClass(JobManager::class);
+            $filename = $reflection->getFileName();
+        Assert::assertNotFalse($filename);
+        $content = file_get_contents($filename);
+            Assert::assertStringContainsString('', $content);
         });
     });
 
     describe('FailedJob Model', function () {
         it('can be instantiated', function () {
             $model = new FailedJob;
-            expect($model)->toBeInstanceOf(FailedJob::class);
+            Assert::assertInstanceOf(FailedJob::class, $model);
         });
 
         it('extends BaseModel', function () {
-            $reflection = new ReflectionClass(FailedJob::class);
-            expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
+            $reflection = new \ReflectionClass(FailedJob::class);
+            Assert::assertTrue($reflection->isSubclassOf(BaseModel::class));
         });
 
         it('uses strict types', function () {
-            $reflection = new ReflectionClass(FailedJob::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+            $reflection = new \ReflectionClass(FailedJob::class);
+            $filename = $reflection->getFileName();
+        Assert::assertNotFalse($filename);
+        $content = file_get_contents($filename);
+            Assert::assertStringContainsString('', $content);
         });
     });
 });

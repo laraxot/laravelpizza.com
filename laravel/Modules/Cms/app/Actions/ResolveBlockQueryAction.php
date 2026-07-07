@@ -7,7 +7,6 @@ namespace Modules\Cms\Actions;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
 
 class ResolveBlockQueryAction
 {
@@ -51,10 +50,12 @@ class ResolveBlockQueryAction
         }
 
         // Apply ordering
-        $orderBy = (string) data_get($queryConfig, 'orderBy', 'created_at');
+        $orderByValue = data_get($queryConfig, 'orderBy', 'created_at');
+        $orderBy = is_string($orderByValue) ? $orderByValue : 'created_at';
         // Assert::string($orderBy, '['.__LINE__.']['.__FILE__.']');
-        $direction = (string) data_get($queryConfig, 'direction', 'desc');
-        // Assert::string($direction, '['.__LINE__.']['.__FILE__.']');
+        $directionValue = data_get($queryConfig, 'direction', 'desc');
+        $direction = in_array($directionValue, ['asc', 'desc'], true) ? (string) $directionValue : 'desc';
+        /* @var 'asc'|'desc' $direction */
         $query->orderBy($orderBy, $direction);
 
         // Apply limit
@@ -67,9 +68,12 @@ class ResolveBlockQueryAction
         // Transform results if model has toBlockArray
         $transformedItems = $results->map(function (Model $item): array {
             if (method_exists($item, 'toBlockArray')) {
-                /** @var array<string, mixed> $res */
                 $res = $item->toBlockArray();
+                if (! is_array($res)) {
+                    return $item->toArray();
+                }
 
+                /* @var array<string, mixed> $res */
                 return $res;
             }
 

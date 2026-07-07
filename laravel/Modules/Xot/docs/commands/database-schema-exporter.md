@@ -54,3 +54,9 @@ Il file JSON generato contiene:
 ## Collegamenti tra versioni di database-schema-exporter.md
 * [database-schema-exporter.md](../../../xot/docs/commands/database-schema-exporter.md)
 * [database-schema-exporter.md](../../../xot/docs/console/commands/database-schema-exporter.md)
+- [Database Guidelines](../DATABASE-GUIDELINES.md)
+- [Schema Documentation](../DIRECTORY-STRUCTURE-GUIDE.md)
+- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)
+## Collegamenti tra versioni di database-schema-exporter.md
+* [database-schema-exporter.md](../../../Xot/docs/commands/database-schema-exporter.md)
+* [database-schema-exporter.md](../../../Xot/docs/console/commands/database-schema-exporter.md)

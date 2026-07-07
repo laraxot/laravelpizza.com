@@ -3,65 +3,73 @@
 declare(strict_types=1);
 
 namespace Modules\Job\Tests\Unit\Events;
-
+use function Safe\class_uses;
 use Illuminate\Broadcasting\PrivateChannel;
 use Modules\Job\Events\BroadcastingEvent;
 use Modules\Job\Events\TaskEvent;
+use Modules\Job\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+use function Safe\file_get_contents;
+
+uses(\Modules\Job\Tests\TestCase::class);
 
 describe('BroadcastingEvent', function () {
     it('extends TaskEvent', function () {
-        expect(is_a(BroadcastingEvent::class, TaskEvent::class, true))->toBeTrue();
+        Assert::assertTrue((new \ReflectionClass(BroadcastingEvent::class))->isSubclassOf(TaskEvent::class));
     });
 
     it('implements ShouldBroadcast', function () {
-        $interfaces = (new ReflectionClass(BroadcastingEvent::class))->getInterfaceNames();
+        $interfaces = (new \ReflectionClass(BroadcastingEvent::class))->getInterfaceNames();
 
-        expect($interfaces)->toContain('Illuminate\Contracts\Broadcasting\ShouldBroadcast');
+        Assert::assertContains('Illuminate\Contracts\Broadcasting\ShouldBroadcast', $interfaces);
     });
 
     it('uses InteractsWithSockets trait', function () {
         $traits = class_uses(BroadcastingEvent::class);
 
-        expect($traits)->toContain('Illuminate\Broadcasting\InteractsWithSockets');
+        Assert::assertContains('Illuminate\Broadcasting\InteractsWithSockets', $traits);
     });
 
     it('has broadcastOn method returning PrivateChannel', function () {
-        $reflection = new ReflectionClass(BroadcastingEvent::class);
+        $reflection = new \ReflectionClass(BroadcastingEvent::class);
         $method = $reflection->getMethod('broadcastOn');
 
-        expect($method->isPublic())->toBeTrue()
-            ->and($method->getReturnType()?->getName())->toBe(PrivateChannel::class);
+        Assert::assertTrue($method->isPublic());
+        Assert::assertInstanceOf(\ReflectionNamedType::class, $returnType = $method->getReturnType());
+        Assert::assertSame(PrivateChannel::class, $returnType->getName());
     });
 
     it('has broadcastWhen method', function () {
-        $reflection = new ReflectionClass(BroadcastingEvent::class);
+        $reflection = new \ReflectionClass(BroadcastingEvent::class);
         $method = $reflection->getMethod('broadcastWhen');
 
-        expect($method->isPublic())->toBeTrue()
-            ->and($method->getReturnType()?->getName())->toBe('bool');
+        Assert::assertTrue($method->isPublic());
+        Assert::assertInstanceOf(\ReflectionNamedType::class, $returnType = $method->getReturnType());
+        Assert::assertSame('bool', $returnType->getName());
     });
 
     it('has correct namespace', function () {
-        $reflection = new ReflectionClass(BroadcastingEvent::class);
+        $reflection = new \ReflectionClass(BroadcastingEvent::class);
 
-        expect($reflection->getNamespaceName())->toBe('Modules\Job\Events');
+        Assert::assertSame('Modules\Job\Events', $reflection->getNamespaceName());
     });
 
     it('uses strict types', function () {
-        $reflection = new ReflectionClass(BroadcastingEvent::class);
+        $reflection = new \ReflectionClass(BroadcastingEvent::class);
         $filename = $reflection->getFileName();
 
-        expect($filename)->not->toBeNull();
+        Assert::assertNotFalse($filename);
         $content = file_get_contents($filename);
-        expect($content)->toContain('');
+        Assert::assertStringContainsString('declare(strict_types=1)', $content);
     });
 
     it('has required imports', function () {
-        $filename = (new ReflectionClass(BroadcastingEvent::class))->getFileName();
+        $filename = (new \ReflectionClass(BroadcastingEvent::class))->getFileName();
+        Assert::assertNotFalse($filename);
         $content = file_get_contents($filename);
 
-        expect($content)->toContain('use Illuminate\Broadcasting\InteractsWithSockets;')
-            ->and($content)->toContain('use Illuminate\Broadcasting\PrivateChannel;')
-            ->and($content)->toContain('use Illuminate\Contracts\Broadcasting\ShouldBroadcast;');
+        Assert::assertStringContainsString('use Illuminate\Broadcasting\InteractsWithSockets;', $content);
+        Assert::assertStringContainsString('', $content);
+        Assert::assertStringContainsString('use Illuminate\Contracts\Broadcasting\ShouldBroadcast;', $content);
     });
 });

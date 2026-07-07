@@ -215,11 +215,7 @@ assert($result === null || is_string($result));  // ✅ Never array
 
 ## References
 
-<<<<<<< HEAD
 - `Modules/Xot/Helpers/Helper.php:1187-1225` - Implementation
-=======
-- `Modules/Xot/helpers/Helper.php:1187-1225` - Implementation
->>>>>>> origin/dev
 - PHPStan Issue: [method.type mismatch]
 - Filament Docs: https://filamentphp.com/docs/4.x/forms/fields#label
 

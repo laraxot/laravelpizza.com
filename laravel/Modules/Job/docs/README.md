@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Job Module Documentation"
 type: documentation
@@ -8,7 +6,6 @@ created: 2026-06-05
 updated: 2026-06-05
 ---
 
->>>>>>> origin/dev
 # Modulo Job
 
 ## Overview
@@ -54,8 +51,4 @@ Job\Services\QueueManager
 ## Backlinks
 
 - [Queue Config](./queue/)
-<<<<<<< HEAD
 - [Failed Jobs](./failed/)
-=======
-- [Failed Jobs](./failed/)
->>>>>>> origin/dev

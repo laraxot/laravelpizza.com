@@ -1,5 +1,6 @@
 # Pest Testing - Guida Esecuzione dalla Cartella Laravel
 
+**Data**: 9 Gennaio 2026  
 **Framework**: Pest PHP 3.8.4  
 **Architettura**: Laravel Modules (nwidart/laravel-modules)
 

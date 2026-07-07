@@ -9,11 +9,17 @@
    - **Stato**: Eliminato con successo
 
 2. ✅ **`Modules/UI/docs/bugfix-table-layout-action-[DATE].md`**
+1. ✅ **`Modules/UI/docs/bugfix-icons-missing-2025-01-27.md`**
+   - **Motivo**: Duplicato identico di `bugfix-icons-missing.md`
+   - **Stato**: Eliminato con successo
+
+2. ✅ **`Modules/UI/docs/bugfix-table-layout-action-2025-01-27.md`**
    - **Motivo**: Duplicato identico di `bugfix-table-layout-action.md`
    - **Stato**: Eliminato con successo
 
 ### File Rinominati (Rimozione Date)
 
+1. ✅ **`translation-refactor-complete-summary-2025-08-08.md` → `translation-refactor-complete-summary.md`**
 1. ✅ **`translation-refactor-complete-summary-[DATE].md` → `translation-refactor-complete-summary.md`**
    - **Modulo**: Lang
    - **Motivo**: File attivo con data nel nome
@@ -65,8 +71,8 @@
 - Altri file con pattern `bugfix-*-2025-*.md`
 
 ### Modulo Lang
-- `riepilogo-correzioni-traduzioni-2025.md` (verificare se esiste `riepilogo-correzioni-traduzioni.md`)
-- `translation-errors-correction-2025.md` (verificare duplicati)
+- `riepilogo-correzioni-traduzioni.md` (verificare se esiste `riepilogo-correzioni-traduzioni.md`)
+- `translation-errors-correction.md` (verificare duplicati)
 
 ### Modulo Xot
 - File in cartella `archive/` (valutare se mantenere date per storico)
@@ -102,6 +108,13 @@
 
 ## Riferimenti
 
+- [Processo Normalizzazione](../Xot/docs/docs-normalization-process.md)
+- [Regole Naming File](../Xot/docs/file-naming-rules.md)
+- [Filosofia DRY + KISS](../../docs/philosophy-guide.md)
+
+---
+
+**Data**: Gennaio 2025
 - [Processo Normalizzazione](../xot/docs/docs-normalization-process.md)
 - [Regole Naming File](../xot/docs/file-naming-rules.md)
 - [Filosofia DRY + KISS](../../../docs/philosophy-guide.md)

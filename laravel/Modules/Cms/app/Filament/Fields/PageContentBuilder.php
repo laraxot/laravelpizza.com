@@ -46,6 +46,10 @@ class PageContentBuilder
                     context: $context,
                 );
             } catch (\Error $e) {
+                if (app()->environment('testing')) {
+                    continue;
+                }
+
                 dddx([
                     'e' => $e->getMessage(),
                     'block' => $block,

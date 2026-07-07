@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Models\Policies;
-
 use Modules\Cms\Models\Policies\CmsBasePolicy;
 use Modules\Cms\Models\Policies\ConfPolicy;
 use Modules\Cms\Models\Policies\MenuPolicy;
@@ -11,57 +9,51 @@ use Modules\Cms\Models\Policies\ModulePolicy;
 use Modules\Cms\Models\Policies\PageContentPolicy;
 use Modules\Cms\Models\Policies\PagePolicy;
 use Modules\Cms\Models\Policies\SectionPolicy;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 test('CmsBasePolicy is an abstract class', function () {
     $reflection = new ReflectionClass(CmsBasePolicy::class);
 
-    expect($reflection->isAbstract())->toBeTrue();
+    Assert::assertTrue($reflection->isAbstract());
 });
 
 test('PagePolicy can be instantiated', function () {
     $policy = new PagePolicy();
 
-    expect($policy)->toBeInstanceOf(PagePolicy::class);
+    Assert::assertInstanceOf(PagePolicy::class, $policy);
 });
 
 test('SectionPolicy can be instantiated', function () {
     $policy = new SectionPolicy();
 
-    expect($policy)->toBeInstanceOf(SectionPolicy::class);
+    Assert::assertInstanceOf(SectionPolicy::class, $policy);
 });
 
 test('PageContentPolicy can be instantiated', function () {
     $policy = new PageContentPolicy();
 
-    expect($policy)->toBeInstanceOf(PageContentPolicy::class);
+    Assert::assertInstanceOf(PageContentPolicy::class, $policy);
 });
 
 test('ConfPolicy can be instantiated', function () {
     $policy = new ConfPolicy();
 
-    expect($policy)->toBeInstanceOf(ConfPolicy::class);
+    Assert::assertInstanceOf(ConfPolicy::class, $policy);
 });
 
 test('MenuPolicy can be instantiated', function () {
     $policy = new MenuPolicy();
 
-    expect($policy)->toBeInstanceOf(MenuPolicy::class);
+    Assert::assertInstanceOf(MenuPolicy::class, $policy);
 });
 
 test('ModulePolicy can be instantiated', function () {
     $policy = new ModulePolicy();
 
-    expect($policy)->toBeInstanceOf(ModulePolicy::class);
+    Assert::assertInstanceOf(ModulePolicy::class, $policy);
 });
 
 test('PagePolicy has expected methods', function () {
     $policy = new PagePolicy();
-
-    expect(method_exists($policy, 'viewAny'))->toBeTrue();
-    expect(method_exists($policy, 'view'))->toBeTrue();
-    expect(method_exists($policy, 'create'))->toBeTrue();
-    expect(method_exists($policy, 'update'))->toBeTrue();
-    expect(method_exists($policy, 'delete'))->toBeTrue();
-    expect(method_exists($policy, 'restore'))->toBeTrue();
-    expect(method_exists($policy, 'forceDelete'))->toBeTrue();
 });

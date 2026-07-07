@@ -94,6 +94,13 @@ $package->state->transitionTo(Archived::class);
 * [performance.md](../../../lang/docs/packages/performance.md)
 * [performance.md](../../../job/docs/packages/performance.md)
 * [performance.md](../../../cms/docs/frontoffice/performance.md)
+* [performance.md](../../../Xot/docs/features/performance.md)
+* [performance.md](../../../Xot/docs/packages/performance.md)
+* [performance.md](../../../Xot/docs/roadmap/architecture/performance.md)
+* [performance.md](../../../UI/docs/standards/performance.md)
+* [performance.md](../../../Lang/docs/packages/performance.md)
+* [performance.md](../../../Job/docs/packages/performance.md)
+* [performance.md](../../../Cms/docs/frontoffice/performance.md)
 
 ### Versione Incoming
 

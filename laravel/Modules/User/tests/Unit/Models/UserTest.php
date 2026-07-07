@@ -2,14 +2,32 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Models;
 
+=======
+use Illuminate\Support\Facades\DB;
+>>>>>>> 9fa499be (.)
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Enums\UserType;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
+<<<<<<< HEAD
 // Import per le funzioni Safe
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+/**
+ * @param array<string, mixed> $attributes
+ */
+function modelsUserCreate(array $attributes = []): User
+{
+    return UserFactory::new()->createOne(array_merge([
+        'email' => 'test-'.uniqid('', true).'@example.com',
+    ], $attributes));
+}
+>>>>>>> 9fa499be (.)
 
 uses(TestCase::class);
 

@@ -25,6 +25,9 @@ class ListSessions extends XotBaseListRecords
     }
 
     #[\Override]
+    /**
+     * @return array<string, mixed>
+     */
     public function getTableColumns(): array
     {
         return [

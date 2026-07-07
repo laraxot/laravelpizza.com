@@ -1,1 +1,7 @@
-https://github.com/HichemTab-tech/LaravelFS
+---
+module: theme
+topic: nwidart_to_study
+canonical: ../../../Themes/docs/shared-components/nwidart-to-study.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/nwidart-to-study.md

@@ -1,5 +1,3 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
-
-## [Unreleased]
+Tutte le variazioni importanti di UI saranno generate automaticamente da semantic-release.

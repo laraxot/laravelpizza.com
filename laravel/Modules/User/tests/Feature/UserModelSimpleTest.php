@@ -13,6 +13,7 @@ uses(TestCase::class);
 test('user model can be instantiated', function () {
     $user = new User();
 
+<<<<<<< HEAD
     expect($user)->toBeInstanceOf(User::class);
 });
 
@@ -45,4 +46,29 @@ test('user model can create basic record', function () {
 
     // Clean up
     $user->delete();
+=======
+        Assert::assertInstanceOf(User::class, $user);
+    });
+
+    test('user model can access connection', function (): void {
+        $user = new User();
+
+        Assert::assertSame('user', $user->getConnectionName());
+    });
+
+    test('user model can create basic record', function (): void {
+        /* @var TestCase $this */
+        $this->skipUnlessUsersTableReady();
+
+        $user = createTestUser([
+            'name' => 'Test User',
+            'first_name' => 'Test',
+            'last_name' => 'User',
+            'lang' => 'it',
+            'is_active' => true,
+        ]);
+
+        Assert::assertInstanceOf(User::class, $user);
+    });
+>>>>>>> 9fa499be (.)
 });

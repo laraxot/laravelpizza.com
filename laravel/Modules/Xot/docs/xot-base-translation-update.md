@@ -1,6 +1,7 @@
 # Aggiornamento File di Traduzione xot_base.php
 
 ## Data Aggiornamento
+2025-01-27
 [DATE]
 
 ## File Modificato
@@ -88,5 +89,5 @@ return [
 
 - [Regole Traduzioni Xot](translation_rules.md)
 - [Best Practices Traduzioni](translations-best-practices.md)
+*Ultimo aggiornamento: 27 Gennaio 2025*
 - [Documentazione Principale Traduzioni](../../../../docs/project/translation_rules.md)
-

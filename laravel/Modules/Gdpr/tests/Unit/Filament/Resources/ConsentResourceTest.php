@@ -4,19 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Filament\Resources;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-use Modules\Gdpr\Filament\Resources\ConsentResource;
-use Modules\Gdpr\Models\Consent;
-use Modules\Gdpr\Tests\TestCase;
-=======
 use Modules\Gdpr\Filament\Resources\ConsentResource;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Tests\TestCase;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use PHPUnit\Framework\Assert;
->>>>>>> 40b96bcd6 (.)
 
 uses(TestCase::class);
 

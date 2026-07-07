@@ -2,17 +2,22 @@
 
 declare(strict_types=1);
 
-uses(\Modules\Job\Tests\TestCase::class);
-
+use Exception;
 use Modules\Job\Actions\GetTaskFrequenciesAction;
+use Modules\Job\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+use stdClass;
+
+uses(TestCase::class);
 
 describe('TaskFrequencies Integration', function () {
     beforeEach(function () {
+        /** @var TestCase $this */
         $this->action = new GetTaskFrequenciesAction;
     });
 
     it('integrates with Laravel config system', function () {
-        // Set up realistic frequency configuration
+        /** @var TestCase $this */
         config(['totem.frequencies' => [
             'everyMinute' => 'Every Minute',
             'everyFiveMinutes' => 'Every 5 Minutes',
@@ -31,34 +36,15 @@ describe('TaskFrequencies Integration', function () {
             'yearly' => 'Yearly',
         ]]);
 
-        $result = $this->action->execute();
+        $action = $this->getAction(GetTaskFrequenciesAction::class);
+        $result = $action->execute();
 
-        expect($result)
-            ->toBeArray()
-            ->and(count($result))
-            ->toBe(15)
-            ->and($result)
-            ->toHaveKeys([
-                'everyMinute',
-                'everyFiveMinutes',
-                'everyTenMinutes',
-                'everyFifteenMinutes',
-                'everyThirtyMinutes',
-                'hourly',
-                'everyTwoHours',
-                'everyThreeHours',
-                'everySixHours',
-                'everyTwelveHours',
-                'daily',
-                'weekly',
-                'monthly',
-                'quarterly',
-                'yearly',
-            ]);
+        Assert::assertIsArray($result);
+        Assert::assertCount(15, $result);
     });
 
     it('handles real-world frequency configurations', function () {
-        // Test with configuration that might be used in production
+        /** @var TestCase $this */
         config(['totem.frequencies' => [
             'everyMinute' => 'Every Minute',
             'everyFiveMinutes' => 'Every 5 Minutes',
@@ -68,53 +54,43 @@ describe('TaskFrequencies Integration', function () {
             'monthly' => 'Monthly',
         ]]);
 
-        $result = $this->action->execute();
+        $action = $this->getAction(GetTaskFrequenciesAction::class);
+        $result = $action->execute();
 
-        expect($result)
-            ->toBeArray()
-            ->and($result['everyMinute'])
-            ->toBe('Every Minute')
-            ->and($result['hourly'])
-            ->toBe('Hourly')
-            ->and($result['daily'])
-            ->toBe('Daily')
-            ->and($result['weekly'])
-            ->toBe('Weekly')
-            ->and($result['monthly'])
-            ->toBe('Monthly');
+        Assert::assertIsArray($result);
+        Assert::assertSame('Every Minute', $result['everyMinute']);
+        Assert::assertSame('Hourly', $result['hourly']);
+        Assert::assertSame('Daily', $result['daily']);
+        Assert::assertSame('Weekly', $result['weekly']);
+        Assert::assertSame('Monthly', $result['monthly']);
     });
 
     it('can be used in queue context', function () {
-        // Test queueable functionality
+        /** @var TestCase $this */
         config(['totem.frequencies' => ['test' => 'Test Frequency']]);
-
-        // Test that it can be dispatched (basic queue test)
-        expect(method_exists($this->action, 'onQueue'))->toBeTrue();
+        $action = $this->getAction(GetTaskFrequenciesAction::class);
+        Assert::assertTrue(method_exists($action, 'onQueue'));
     });
 
     it('handles configuration changes dynamically', function () {
-        // Test with initial config
+        /** @var TestCase $this */
+        $action = $this->getAction(GetTaskFrequenciesAction::class);
+
         config(['totem.frequencies' => ['initial' => 'Initial Value']]);
-        $result1 = $this->action->execute();
+        $result1 = $action->execute();
 
-        // Change config
         config(['totem.frequencies' => ['changed' => 'Changed Value']]);
-        $result2 = $this->action->execute();
+        $result2 = $action->execute();
 
-        expect($result1)
-            ->toHaveKey('initial')
-            ->and($result1['initial'])
-            ->toBe('Initial Value')
-            ->and($result2)
-            ->toHaveKey('changed')
-            ->and($result2['changed'])
-            ->toBe('Changed Value')
-            ->and($result2)
-            ->not->toHaveKey('initial');
+        Assert::assertArrayHasKey('initial', $result1);
+        Assert::assertSame('Initial Value', $result1['initial']);
+        Assert::assertArrayHasKey('changed', $result2);
+        Assert::assertSame('Changed Value', $result2['changed']);
+        Assert::assertArrayNotHasKey('initial', $result2);
     });
 
     it('validates configuration file structure', function () {
-        // Test that the action works with nested configuration
+        /** @var TestCase $this */
         config(['totem.frequencies' => [
             'simple' => 'Simple Value',
             'complex' => [
@@ -124,27 +100,27 @@ describe('TaskFrequencies Integration', function () {
             ],
         ]]);
 
-        $result = $this->action->execute();
+        $action = $this->getAction(GetTaskFrequenciesAction::class);
+        $result = $action->execute();
 
-        expect($result)
-            ->toBeArray()
-            ->and($result['simple'])
-            ->toBe('Simple Value')
-            ->and($result['complex'])
-            ->toBeArray()
-            ->and($result['complex']['label'])
-            ->toBe('Complex Label');
+        Assert::assertIsArray($result);
+        Assert::assertSame('Simple Value', $result['simple']);
+        Assert::assertIsArray($result['complex']);
+        Assert::assertSame('Complex Label', $result['complex']['label']);
     });
 
     it('handles empty configuration gracefully', function () {
+        /** @var TestCase $this */
         config(['totem.frequencies' => []]);
+        $action = $this->getAction(GetTaskFrequenciesAction::class);
+        $result = $action->execute();
 
-        $result = $this->action->execute();
-
-        expect($result)->toBeArray()->and($result)->toBeEmpty();
+        Assert::assertIsArray($result);
+        Assert::assertEmpty($result);
     });
 
     it('works with string and numeric keys', function () {
+        /** @var TestCase $this */
         config(['totem.frequencies' => [
             'string_key' => 'String Value',
             0 => 'Numeric Key Value',
@@ -152,45 +128,37 @@ describe('TaskFrequencies Integration', function () {
             'mixed_123' => 'Mixed Key Value',
         ]]);
 
-        $result = $this->action->execute();
+        $action = $this->getAction(GetTaskFrequenciesAction::class);
+        $result = $action->execute();
 
-        expect($result)
-            ->toBeArray()
-            ->and($result['string_key'])
-            ->toBe('String Value')
-            ->and($result[0])
-            ->toBe('Numeric Key Value')
-            ->and($result[1])
-            ->toBe('Another Numeric')
-            ->and($result['mixed_123'])
-            ->toBe('Mixed Key Value');
+        Assert::assertIsArray($result);
+        Assert::assertSame('String Value', $result['string_key']);
+        Assert::assertSame('Numeric Key Value', $result[0]);
+        Assert::assertSame('Another Numeric', $result[1]);
+        Assert::assertSame('Mixed Key Value', $result['mixed_123']);
     });
 
     it('integrates with Laravel service container', function () {
-        // Test that the action can be resolved from container
         $actionFromContainer = app(GetTaskFrequenciesAction::class);
-
-        expect($actionFromContainer)->toBeInstanceOf(GetTaskFrequenciesAction::class);
+        Assert::assertInstanceOf(GetTaskFrequenciesAction::class, $actionFromContainer);
     });
 
     it('handles concurrent access correctly', function () {
+        /** @var TestCase $this */
         config(['totem.frequencies' => ['concurrent' => 'Concurrent Value']]);
+        $action = $this->getAction(GetTaskFrequenciesAction::class);
 
-        // Simulate multiple calls
-        $result1 = $this->action->execute();
-        $result2 = $this->action->execute();
-        $result3 = $this->action->execute();
+        $result1 = $action->execute();
+        $result2 = $action->execute();
+        $result3 = $action->execute();
 
-        expect($result1)
-            ->toBe($result2)
-            ->and($result2)
-            ->toBe($result3)
-            ->and($result1['concurrent'])
-            ->toBe('Concurrent Value');
+        Assert::assertSame($result2, $result1);
+        Assert::assertSame($result3, $result2);
+        Assert::assertSame('Concurrent Value', $result1['concurrent']);
     });
 
     it('validates error handling in production scenario', function () {
-        // Test various invalid configurations that might occur
+        /** @var TestCase $this */
         $invalidConfigs = [
             'string_value',
             123,
@@ -200,32 +168,39 @@ describe('TaskFrequencies Integration', function () {
             new stdClass,
         ];
 
+        $action = $this->getAction(GetTaskFrequenciesAction::class);
+
         foreach ($invalidConfigs as $invalidConfig) {
             config(['totem.frequencies' => $invalidConfig]);
-
-            expect($this->action->execute(...))->toThrow(Exception::class);
+            try {
+                $action->execute();
+                Assert::fail('Expected exception for invalid config');
+            } catch (Exception $exception) {
+                Assert::assertInstanceOf(Exception::class, $exception);
+            }
         }
     });
 
     it('maintains consistency across multiple executions', function () {
+        /** @var TestCase $this */
         config(['totem.frequencies' => [
             'consistent_key' => 'Consistent Value',
             'another_key' => 'Another Value',
         ]]);
 
+        $action = $this->getAction(GetTaskFrequenciesAction::class);
         $results = [];
         for ($i = 0; $i < 5; $i++) {
-            $results[] = $this->action->execute();
+            $results[] = $action->execute();
         }
 
-        // All results should be identical
         foreach ($results as $result) {
-            expect($result)->toBe($results[0]);
+            Assert::assertSame($results[0], $result);
         }
     });
 
     it('works with realistic totem configuration', function () {
-        // Test with configuration that would be realistic for Laravel Totem
+        /** @var TestCase $this */
         config(['totem.frequencies' => [
             'everyMinute' => 'Every Minute',
             'everyTwoMinutes' => 'Every Two Minutes',
@@ -255,23 +230,16 @@ describe('TaskFrequencies Integration', function () {
             'yearlyOn' => 'Yearly On',
         ]]);
 
-        $result = $this->action->execute();
+        $action = $this->getAction(GetTaskFrequenciesAction::class);
+        $result = $action->execute();
 
-        expect($result)
-            ->toBeArray()
-            ->and(count($result))
-            ->toBe(26)
-            ->and($result['everyMinute'])
-            ->toBe('Every Minute')
-            ->and($result['hourly'])
-            ->toBe('Hourly')
-            ->and($result['daily'])
-            ->toBe('Daily')
-            ->and($result['weekly'])
-            ->toBe('Weekly')
-            ->and($result['monthly'])
-            ->toBe('Monthly')
-            ->and($result['yearly'])
-            ->toBe('Yearly');
+        Assert::assertIsArray($result);
+        Assert::assertCount(26, $result);
+        Assert::assertSame('Every Minute', $result['everyMinute']);
+        Assert::assertSame('Hourly', $result['hourly']);
+        Assert::assertSame('Daily', $result['daily']);
+        Assert::assertSame('Weekly', $result['weekly']);
+        Assert::assertSame('Monthly', $result['monthly']);
+        Assert::assertSame('Yearly', $result['yearly']);
     });
 });

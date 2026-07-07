@@ -1,5 +1,6 @@
 # Regole per i componenti Livewire in Windsurf/Xot
 
+<<<<<<< HEAD
 ## Namespace corretto
 
 I namespace dei componenti Livewire **NON DEVONO MAI** includere il segmento `app` anche se i file sono fisicamente posizionati nella directory app:
@@ -84,3 +85,6 @@ La risoluzione manuale è sempre da preferire per questi file, assicurandosi di 
 - Assicurarsi che la rigenerazione del token CSRF avvenga sempre dopo il logout
 - Verificare che i percorsi di reindirizzamento siano coerenti con l'architettura dell'applicazione
 - Preferire le facade come `Auth` agli helper come `auth()` per maggiore testabilità
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/livewire-namespace.md
+>>>>>>> 6d3760fe (.)

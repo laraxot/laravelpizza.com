@@ -22,6 +22,7 @@ test('password data labels are translated', function (): void {
     $passwordComponent = $passwordData->getPasswordFormComponent('password');
     $confirmationComponent = $passwordData->getPasswordConfirmationFormComponent();
 
+<<<<<<< HEAD
     // Assert
     expect($passwordComponent->getLabel())->toBe('Password');
     expect($confirmationComponent->getLabel())->toBe('Conferma Password');
@@ -55,4 +56,14 @@ test('login form labels are translated', function (): void {
 
     expect($remember)->not->toBeNull();
     expect($remember->getLabel())->toBe('Ricordami');
+=======
+        Assert::assertSame('Parola d\'ordine', $passwordComponent->getLabel());
+        Assert::assertSame('Conferma Password', $confirmationComponent->getLabel());
+    });
+
+    test('login form labels are translated', function (): void {
+        /* @var TestCase $this */
+        $this->skipTest('Login Livewire form labels — coperto da widget Filament LoginWidgetTest');
+    });
+>>>>>>> 9fa499be (.)
 });

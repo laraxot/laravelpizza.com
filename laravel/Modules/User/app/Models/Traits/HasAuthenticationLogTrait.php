@@ -20,10 +20,6 @@ use Modules\User\Models\AuthenticationLog;
  * @property MorphOne<AuthenticationLog, $this>  $latestAuthentication The most recent authentication log entry.
  * @property string|null                         $login_at             The timestamp of the last login.
  * @property string|null                         $ip_address           The IP address of the last login.
- * @property MorphMany<AuthenticationLog>        $authentications
- * @property MorphOne<AuthenticationLog>         $latestAuthentication
- * @property Carbon|null                         $login_at
- * @property string|null                         $ip_address
  */
 trait HasAuthenticationLogTrait
 {

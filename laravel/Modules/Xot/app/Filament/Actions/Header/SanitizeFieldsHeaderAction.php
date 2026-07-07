@@ -19,6 +19,7 @@ use Webmozart\Assert\Assert;
 
 class SanitizeFieldsHeaderAction extends Action
 {
+    /** @var list<string> */
     public array $fields = [];
 
     protected function setUp(): void
@@ -30,9 +31,9 @@ class SanitizeFieldsHeaderAction extends Action
             ->action(function (ListRecords $livewire): void {
                 $resource = $livewire->getResource();
                 $modelClass = $resource::getModel();
-                Assert::string($modelClass);
+                Assert::subclassOf($modelClass, Model::class);
                 /** @var class-string<Model> $modelClass */
-                $rows = $modelClass::get();
+                $rows = $modelClass::query()->get();
                 if (! is_iterable($rows)) {
                     $rows = [];
                 }
@@ -41,7 +42,7 @@ class SanitizeFieldsHeaderAction extends Action
                     Assert::isInstanceOf($row, Model::class);
                     $save = false;
                     foreach ($this->fields as $field) {
-                        $fieldName = \is_string($field) ? $field : (string) $field;
+                        $fieldName = is_string($field) ? $field : (string) $field;
                         $item = $row->{$fieldName};
                         Assert::string($item, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
                         $string = app(SanitizeAction::class)->execute($item);
@@ -62,6 +63,9 @@ class SanitizeFieldsHeaderAction extends Action
             });
     }
 
+    /**
+     * @param list<string> $fields
+     */
     public function setFields(array $fields): self
     {
         $this->fields = $fields;

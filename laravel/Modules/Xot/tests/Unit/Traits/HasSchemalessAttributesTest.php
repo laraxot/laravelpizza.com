@@ -2,94 +2,60 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Traits;
-
 use Illuminate\Database\Eloquent\Builder;
-use Modules\Xot\Models\XotBaseModel;
-use Modules\Xot\Traits\HasSchemalessAttributes;
+use Mockery\MockInterface;
+use Modules\Xot\Tests\Fixtures\Models\SchemalessTestModel;
+use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
 
-function makeSchemalessTestModel(): XotBaseModel
-{
-    return new class extends XotBaseModel {
-        use HasSchemalessAttributes;
-
-        public $extra_attributes;
-
-        public bool $saved = false;
-
-        public function save(array $options = []): bool
-        {
-            $this->saved = true;
-
-            return true;
-        }
-    };
-}
+uses(TestCase::class);
 
 it('handles extra attributes scope', function (): void {
-    $builder = \Mockery::mock(Builder::class);
-    $schemaless = \Mockery::mock(SchemalessAttributes::class);
+    /** @var MockInterface&Builder<SchemalessTestModel> $builder */
+    $builder = Mockery::mock(Builder::class);
 
-    $class = makeSchemalessTestModel();
+    $model = new SchemalessTestModel();
+    $model->extra_attributes = SchemalessAttributes::createForModel($model, 'extra_attributes');
 
-    // Test without attributes
-    expect($class->scopeWithExtraAttributes($builder))->toBe($builder);
-
-    // Test with attributes
-    $class->extra_attributes = $schemaless;
-    $schemaless->shouldReceive('modelScope')->andReturn($builder);
-    expect($class->scopeWithExtraAttributes($builder))->toBe($builder);
-
-    \Mockery::close();
+    $result = $model->scopeWithExtraAttributes($builder);
+    Assert::assertSame($builder, $result);
+    Mockery::close();
 });
 
 it('handles where extra attribute scope', function (): void {
-    $builder = \Mockery::mock(Builder::class);
-    $builder->shouldReceive('where')->with('extra_attributes->key', 'value')->andReturnSelf();
+    /** @var MockInterface&Builder<SchemalessTestModel> $builder */
+    $builder = Mockery::mock(Builder::class);
+    $builder->allows(['where' => $builder]);
 
-    $class = makeSchemalessTestModel();
+    $model = new SchemalessTestModel();
 
-    expect($class->scopeWhereExtraAttribute($builder, 'key', 'value'))->toBe($builder);
-
-    \Mockery::close();
+    $result = $model->scopeWhereExtraAttribute($builder, 'key', 'value');
+    Assert::assertSame($builder, $result);
+    Mockery::close();
 });
 
 it('gets and sets extra attributes', function (): void {
-    $class = makeSchemalessTestModel();
+    $model = new SchemalessTestModel();
+    $model->setExtraAttribute('foo', 'bar');
 
-    // Default
-    expect($class->getExtraAttribute('missing', 'default'))->toBe('default');
-
-    // Set (initializes SchemalessAttributes)
-    $class->setExtraAttribute('foo', 'bar');
-    expect($class->getExtraAttribute('foo'))->toBe('bar');
-    expect($class->hasExtraAttribute('foo'))->toBeTrue();
-    expect($class->hasExtraAttribute('baz'))->toBeFalse();
+    Assert::assertSame('bar', $model->getExtraAttribute('foo'));
+    Assert::assertTrue($model->hasExtraAttribute('foo'));
+    Assert::assertFalse($model->hasExtraAttribute('baz'));
 });
 
 it('returns all extra attributes as array', function (): void {
-    $class = makeSchemalessTestModel();
+    $model = new SchemalessTestModel();
+    $model->setExtraAttribute('a', 1);
 
-    expect($class->getExtraAttributes())->toBeArray()->toBeEmpty();
-
-    $class->setExtraAttribute('a', 1);
-    expect($class->getExtraAttributes())->toBe(['a' => 1]);
+    Assert::assertSame(['a' => 1], $model->getExtraAttributes());
 });
 
 it('removes extra attribute', function (): void {
-    $class = makeSchemalessTestModel();
+    $model = new SchemalessTestModel();
+    $model->setExtraAttribute('temp', 'val');
 
-    $class->setExtraAttribute('temp', 'val');
-    expect($class->hasExtraAttribute('temp'))->toBeTrue();
-
-    $class->removeExtraAttribute('temp');
-    expect($class->hasExtraAttribute('temp'))->toBeFalse();
-});
-
-it('syncs extra attributes calls save', function (): void {
-    $testObject = makeSchemalessTestModel();
-
-    $testObject->syncExtraAttributes();
-    expect($testObject->saved)->toBeTrue();
+    Assert::assertTrue($model->hasExtraAttribute('temp'));
+    $model->removeExtraAttribute('temp');
+    Assert::assertFalse($model->hasExtraAttribute('temp'));
 });

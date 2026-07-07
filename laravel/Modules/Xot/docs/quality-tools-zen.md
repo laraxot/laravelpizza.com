@@ -1,5 +1,6 @@
 # Lo Zen degli Strumenti di Qualità PHP - La Grande Unificazione
 
+**Data**: 2025-01-05
 **Filosofia**: Type Safety, Fail Fast, Zero Tolerance
 
 ## 🎯 La Visione Complessiva

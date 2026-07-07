@@ -11,7 +11,7 @@ return [
         'github' => 'GitHub',
         'with_google' => 'Continua con Google',
         'with_github' => 'Continua con GitHub',
-        'or_continue_with' => 'oppure continua con email e password',
+        'or_continue_with' => 'oppure',
         'email' => 'Email',
         'email_placeholder' => 'esempio@email.com',
         'password' => 'Password',

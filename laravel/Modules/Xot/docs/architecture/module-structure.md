@@ -127,3 +127,10 @@ Tutti i moduli devono seguire i principi DDD:
 ## Collegamenti tra versioni di module-structure.md
 * [module-structure.md](../../../xot/docs/laraxot/module-structure.md)
 * [module-structure.md](../../../xot/docs/architecture/module-structure.md)
+- [Best Practices](../BEST-PRACTICES.md)
+- [Testing](../testing/README.md)
+- [Documentazione](../documentation-rules.md)
+
+## Collegamenti tra versioni di module-structure.md
+* [module-structure.md](../../../Xot/docs/laraxot/module-structure.md)
+* [module-structure.md](../../../Xot/docs/architecture/module-structure.md)

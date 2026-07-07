@@ -54,6 +54,9 @@ class Result extends BaseModel
         'task_id',
     ];
 
+    /**
+     * @return BelongsTo<Task, $this>
+     */
     public function task(): BelongsTo
     {
         return $this->belongsTo(Task::class);

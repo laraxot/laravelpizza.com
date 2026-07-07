@@ -87,3 +87,7 @@ $repository->addConsoleRenderer(function (\Throwable $e, $output) {
 - [Error Formatters](../formatters/readme.md)
 - [PHPStan Level 9 Guide](../../phpstan-level9-guide.md)
 - [Handlers Overview](./readme.md)
+- [Exception Handling Guide](../EXCEPTION-HANDLING-GUIDE.md)
+- [Error Formatters](../formatters/README.md)
+- [PHPStan Level 9 Guide](../../PHPSTAN-LEVEL9-GUIDE.md)
+- [Handlers Overview](./README.md)

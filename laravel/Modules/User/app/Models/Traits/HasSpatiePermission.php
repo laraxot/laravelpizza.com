@@ -7,19 +7,11 @@ namespace Modules\User\Models\Traits;
 use Spatie\Permission\Traits\HasPermissions;
 use Spatie\Permission\Traits\HasRoles;
 
+/**
+ * Spatie Permission — standard rigido: {@see HasRoles::teams()} resta pubblico come da package.
+ */
 trait HasSpatiePermission
 {
     use HasPermissions;
     use HasRoles;
-    /*
-        public function roles(): BelongsToMany
-        {
-            return $this->belongsToManyX(Role::class)->using(ModelHasRole::class);
-        }
-
-        public function permissions(): BelongsToMany
-        {
-            return $this->belongsToManyX(Permission::class);
-        }
-        */
 }

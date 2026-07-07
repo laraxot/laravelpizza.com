@@ -5,97 +5,144 @@ declare(strict_types=1);
 namespace Modules\Cms\Tests\Unit\Support;
 
 use Modules\Cms\Support\PageSchemaBuilder;
+use Modules\Cms\Tests\TestCase;
 use Modules\User\Models\User;
 use Modules\Xot\Datas\MetatagData;
+use PHPUnit\Framework\Assert;
 
-test('it resolves home as webpage', function (): void {
-    $builder = new PageSchemaBuilder();
-    $schema = $builder->build(
-        meta: MetatagData::make(),
-        routeName: 'home',
-        path: '/',
-    );
+uses(TestCase::class);
 
-    expect($schema)->toHaveKey('@type', 'WebPage');
-});
+/**
+ * @param array<string, mixed> $schema
+ *
+ * @return array<string, mixed>
+ */
+function pageSchemaMainEntity(array $schema): array
+{
+    $mainEntity = $schema['mainEntity'] ?? null;
+    if (! is_array($mainEntity)) {
+        Assert::fail('Expected mainEntity array in schema');
+    }
 
-test('it resolves events index as collection page', function (): void {
-    $builder = new PageSchemaBuilder();
-    $schema = $builder->build(
-        meta: MetatagData::make(),
-        routeName: 'container0.index',
-        path: 'it/events',
-        routeParameters: ['container0' => 'events'],
-    );
+    $result = [];
+    foreach ($mainEntity as $key => $value) {
+        if (! is_string($key)) {
+            continue;
+        }
 
-    expect($schema)->toHaveKey('@type', 'CollectionPage');
-});
+        $result[$key] = $value;
+    }
 
-test('it resolves event detail as item page with main entity', function (): void {
-    $builder = new PageSchemaBuilder();
-    $schema = $builder->build(
-        meta: MetatagData::make(),
-        routeName: 'container0.view',
-        path: 'it/events/test-event-slug',
-        routeParameters: [
-            'container0' => 'events',
-            'slug0' => 'test-event-slug',
-        ],
-    );
+    return $result;
+}
 
-    expect($schema)->toHaveKey('@type', 'ItemPage')
-        ->and($schema)->toHaveKey('mainEntity')
-        ->and($schema['mainEntity'])->toHaveKey('@type', 'Event')
-        ->and($schema['mainEntity']['url'])->toContain('/events/test-event-slug');
-});
+describe('Page Schema Builder', function (): void {
+    test('it resolves home as webpage', function (): void {
+        $builder = new PageSchemaBuilder();
+        $schema = $builder->build(
+            meta: MetatagData::make(),
+            routeName: 'home',
+            path: '/',
+        );
 
-test('it resolves profile route as profile page with person main entity', function (): void {
-    $builder = new PageSchemaBuilder();
-    $user = new User([
-        'first_name' => 'Mario',
-        'last_name' => 'Rossi',
-        'name' => 'Mario Rossi',
-    ]);
+        Assert::assertArrayHasKey('@type', $schema);
+        Assert::assertSame('WebPage', $schema['@type']);
+    });
 
-    $schema = $builder->build(
-        meta: MetatagData::make(),
-        routeName: 'profile.edit',
-        path: 'profile/edit',
-        user: $user,
-    );
+    test('it resolves events index as collection page', function (): void {
+        $builder = new PageSchemaBuilder();
+        $schema = $builder->build(
+            meta: MetatagData::make(),
+            routeName: 'container0.index',
+            path: 'it/events',
+            routeParameters: ['container0' => 'events'],
+        );
 
-    expect($schema)->toHaveKey('@type', 'ProfilePage')
-        ->and($schema)->toHaveKey('mainEntity')
-        ->and($schema['mainEntity'])->toHaveKey('@type', 'Person')
-        ->and($schema['mainEntity'])->toHaveKey('name', 'Mario Rossi');
-});
+        Assert::assertArrayHasKey('@type', $schema);
+        Assert::assertSame('CollectionPage', $schema['@type']);
+    });
 
-test('it resolves public profile detail route as profile page with person identifier', function (): void {
-    $builder = new PageSchemaBuilder();
+    test('it resolves event detail as item page with main entity', function (): void {
+        $builder = new PageSchemaBuilder();
+        $schema = $builder->build(
+            meta: MetatagData::make(),
+            routeName: 'container0.view',
+            path: 'it/events/test-event-slug',
+            routeParameters: [
+                'container0' => 'events',
+                'slug0' => 'test-event-slug',
+            ],
+        );
 
-    $schema = $builder->build(
-        meta: MetatagData::make(),
-        routeName: 'container0.view',
-        path: 'it/profile/019cca1b-1f72-700a-ba0b-0bb414ca0c88',
-        routeParameters: [
-            'container0' => 'profile',
-            'slug0' => '019cca1b-1f72-700a-ba0b-0bb414ca0c88',
-        ],
-    );
+        Assert::assertArrayHasKey('@type', $schema);
+        Assert::assertSame('ItemPage', $schema['@type']);
+        Assert::assertArrayHasKey('mainEntity', $schema);
 
-    expect($schema)->toHaveKey('@type', 'ProfilePage')
-        ->and($schema)->toHaveKey('mainEntity')
-        ->and($schema['mainEntity'])->toHaveKey('@type', 'Person')
-        ->and($schema['mainEntity'])->toHaveKey('identifier', '019cca1b-1f72-700a-ba0b-0bb414ca0c88');
-});
+        $mainEntity = pageSchemaMainEntity($schema);
+        Assert::assertArrayHasKey('@type', $mainEntity);
+        Assert::assertSame('Event', $mainEntity['@type']);
+        Assert::assertStringContainsString('/events/test-event-slug', (string) ($mainEntity['url'] ?? ''));
+    });
 
-test('it keeps auth routes as generic webpage', function (): void {
-    $builder = new PageSchemaBuilder();
-    $schema = $builder->build(
-        meta: MetatagData::make(),
-        routeName: 'auth.login',
-        path: 'auth/login',
-    );
+    test('it resolves profile route as profile page with person main entity', function (): void {
+        $builder = new PageSchemaBuilder();
+        $user = new User([
+            'first_name' => 'Mario',
+            'last_name' => 'Rossi',
+            'name' => 'Mario Rossi',
+        ]);
 
-    expect($schema)->toHaveKey('@type', 'WebPage');
+        $schema = $builder->build(
+            meta: MetatagData::make(),
+            routeName: 'profile.edit',
+            path: 'profile/edit',
+            user: $user,
+        );
+
+        Assert::assertArrayHasKey('@type', $schema);
+        Assert::assertSame('ProfilePage', $schema['@type']);
+        Assert::assertArrayHasKey('mainEntity', $schema);
+
+        $mainEntity = pageSchemaMainEntity($schema);
+        Assert::assertArrayHasKey('@type', $mainEntity);
+        Assert::assertSame('Person', $mainEntity['@type']);
+        Assert::assertArrayHasKey('name', $mainEntity);
+        Assert::assertSame('Mario Rossi', $mainEntity['name']);
+    });
+
+    test('it resolves public profile detail route as profile page with person identifier', function (): void {
+        $builder = new PageSchemaBuilder();
+
+        $schema = $builder->build(
+            meta: MetatagData::make(),
+            routeName: 'container0.view',
+            path: 'it/profile/019cca1b-1f72-700a-ba0b-0bb414ca0c88',
+            routeParameters: [
+                'container0' => 'profile',
+                'slug0' => '019cca1b-1f72-700a-ba0b-0bb414ca0c88',
+            ],
+        );
+
+        Assert::assertArrayHasKey('@type', $schema);
+        Assert::assertSame('ProfilePage', $schema['@type']);
+        Assert::assertArrayHasKey('mainEntity', $schema);
+
+        $mainEntity = pageSchemaMainEntity($schema);
+        Assert::assertArrayHasKey('@type', $mainEntity);
+        Assert::assertSame('Person', $mainEntity['@type']);
+        Assert::assertArrayHasKey('identifier', $mainEntity);
+        Assert::assertSame('019cca1b-1f72-700a-ba0b-0bb414ca0c88', $mainEntity['identifier']);
+    });
+
+    test('it keeps auth routes as generic webpage', function (): void {
+        $builder = new PageSchemaBuilder();
+        $schema = $builder->build(
+            meta: MetatagData::make(),
+            routeName: 'auth.login',
+            path: 'auth/login',
+        );
+
+        Assert::assertArrayHasKey('@type', $schema);
+        Assert::assertSame('WebPage', $schema['@type']);
+    });
 });

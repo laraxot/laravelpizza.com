@@ -4,11 +4,26 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Feature;
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\View;
 use Modules\User\Models\User;
+=======
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Str;
+use Modules\User\Database\Factories\UserFactory;
+use Modules\User\Models\Profile;
+use Modules\User\Models\User;
+<<<<<<< HEAD
+use Throwable;
+>>>>>>> 6d3760fe (.)
+=======
+>>>>>>> 9fa499be (.)
 
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\get;
+
+uses(\Modules\User\Tests\TestCase::class);
 
 describe('Auth Components Tests', function (): void {
     test('auth components exist and work correctly', function (): void {
@@ -27,14 +42,20 @@ describe('Auth Components Tests', function (): void {
     test('login page loads correctly', function (): void {
         // Test that login page loads correctly
         $response = get('/it/auth/login');
+<<<<<<< HEAD
         /* @phpstan-ignore-next-line method.nonObject */
+=======
+>>>>>>> 6d3760fe (.)
         $response->assertStatus(200);
     });
 
     test('register page loads correctly', function (): void {
         // Test that register page loads correctly
         $response = get('/it/auth/register');
+<<<<<<< HEAD
         /* @phpstan-ignore-next-line method.nonObject */
+=======
+>>>>>>> 6d3760fe (.)
         $response->assertStatus(200);
     });
 
@@ -50,7 +71,15 @@ describe('Auth Components Tests', function (): void {
         // Test the auth header component that exists
         expect(View::exists('components.auth-header'))->toBeTrue();
 
+<<<<<<< HEAD
+<<<<<<< HEAD
         $html = view('components.auth-header', [
+=======
+        $html = view('user::components.auth-header', [
+>>>>>>> 6d3760fe (.)
+=======
+        $html = View::make('components.auth-header', [
+>>>>>>> 9fa499be (.)
             'title' => 'Login Test',
             'description' => 'Test description',
         ])->render();
@@ -64,6 +93,8 @@ describe('Authentication Flow with Reorganized Components', function (): void {
     test('login form components work after reorganization', function (): void {
         // Visit login page and ensure all reorganized components render
         $response = get('/it/auth/login');
+<<<<<<< HEAD
+<<<<<<< HEAD
 
         // Accept either 200 (page loads) or 500 (misconfigured route in test env)
         // The important thing is the route exists and responds
@@ -97,6 +128,27 @@ describe('User Profile Components Tests', function (): void {
         if (class_exists(Modules\User\Models\Profile::class)) {
             // Skip if profiles table doesn't have uuid column
             $hasUuid = Illuminate\Support\Facades\Schema::connection('user')->hasColumn('profiles', 'uuid');
+=======
+=======
+        $response->assertStatus(200);
+>>>>>>> 9fa499be (.)
+    });
+});
+
+describe('User Profile Components Tests', function (): void {
+    test('profile pages use reorganized components correctly', function (): void {
+        $user = UserFactory::new()->create();
+        \assert($user instanceof User);
+
+        if (class_exists(Profile::class)) {
+            // Skip if profiles table doesn't have uuid column
+<<<<<<< HEAD
+            $hasUuid = Schema::connection('user')->hasColumn('profiles', 'uuid');
+>>>>>>> 6d3760fe (.)
+=======
+            $hasUuid = Schema::connection('user')
+                ->hasColumn('profiles', 'uuid');
+>>>>>>> 9fa499be (.)
             $profileData = [
                 'id' => $user->id,
                 'user_id' => $user->id,
@@ -108,17 +160,28 @@ describe('User Profile Components Tests', function (): void {
                 $profileData['uuid'] = (string) Illuminate\Support\Str::uuid();
             }
             try {
+<<<<<<< HEAD
                 Modules\User\Models\Profile::create($profileData);
             } catch (Throwable) {
                 // Profile creation may fail in test env; continue with user only
+=======
+                Profile::create($profileData);
+            } catch (\Throwable $e) {
+                expect($e->getMessage())->not->toBe('');
+>>>>>>> 9fa499be (.)
             }
         }
 
         /* @var Illuminate\Contracts\Auth\Authenticatable $user */
         try {
+<<<<<<< HEAD
             $response = actingAs($user, 'web')->get('/it/profile/edit');
+=======
+            actingAs($user, 'web');
+            $response = get('/it/profile/edit');
+>>>>>>> 6d3760fe (.)
             $response->assertStatus(200);
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             expect($e->getMessage())->not->toBe('');
         }
     });

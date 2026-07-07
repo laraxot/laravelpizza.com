@@ -1,7 +1,16 @@
 # PHPStan Level 10 Compliance Status
 
+<<<<<<< HEAD
 **Last Updated**: 2026-03-10
 **Status**: ✅ FULLY COMPLIANT (0 errors)
+=======
+**Last Updated**: 2026-07-06
+**Status**: ✅ `Modules/User` fully compliant including `tests/` (0 errors, level max).
+
+Baseline STORY-288: 234 → 0. Pattern: social-providers env in ServiceProvider, Contracts Model generics, AuthenticationLogQuery typed.
+>>>>>>> 9fa499be (.)
+
+Baseline sessione 2026-07-06: 48 → 0 (chiude il debito Pest residuo). Fix principali: `Role`/`Permission::factory()->create()` sostituiti con `RoleFactory::new()->createOne()`/`PermissionFactory::new()->createOne()` (tipizzati, `::factory()` restituiva `mixed`); nullable narrowing con `\assert($user instanceof User)` dopo `expect(...)->not->toBeNull()`; `UserMigrationSyntaxTest.php` e `RegisterWidgetTest.php` mancavano `uses(TestCase::class)`/chiamavano `$this->assertDatabaseHas()` (protetto) invece del wrapper pubblico `assertDatabaseHasRow()` di `XotBaseTestCase`; `UserContract::membershipTeams()` disallineato (generics non covarianti, `$this` al posto di `Model` nel secondo parametro di `BelongsToMany`) rispetto a `HasTeams::teams()`.
 
 ## Summary
 On 2026-03-10 the User module was re-verified and brought back to a clean PHPStan state after a Passport/OAuth recovery batch.
@@ -92,3 +101,13 @@ To maintain PHPStan compliance:
 - [Authentication Patterns](authentication-patterns.md)
 - [Role and Permissions](role-permissions.md)
 - [Team Management](team-management.md)
+
+## Aggiornamento 2026-07-06
+
+`UserContract::membershipTeams()` e la covarianza di
+`HasTeams::teams()`/`belongsToManyX()` sono state oggetto di piu' iterazioni
+in una sessione multi-agente (vedi `docs/chat/phpstan-modules-zero-final-2026-07-06.md`
+nella root del repo). Stato finale stabile: interfaccia con
+`@phpstan-ignore generics.notSubtype` (stesso pattern di `tenants()`),
+trait con `// @phpstan-ignore return.type` sulla riga di `return` in
+`HasTeams::teams()`. Ri-verificato a zero errori su tutto `Modules/`.

@@ -18,6 +18,7 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 
 uses(TestCase::class);
 
+<<<<<<< HEAD
 /*
  * Test per il Cluster Appearance e le sue Pages.
  *
@@ -110,4 +111,91 @@ test('cluster pages are accessible', function () {
         expect(class_exists($pageClass))
             ->toBeTrue("Page {$pageClass} deve esistere");
     }
+=======
+describe('Appearance Cluster', function (): void {
+    test('appearance cluster extends xot base cluster', function (): void {
+        Assert::assertSame(XotBaseCluster::class, get_parent_class(Appearance::class));
+    });
+
+    test('all cluster pages extend xot base page', function (): void {
+        $pages = [
+            Alignment::class,
+            Background::class,
+            Colors::class,
+            CustomCss::class,
+            Favicon::class,
+            Logo::class,
+        ];
+
+        foreach ($pages as $pageClass) {
+            Assert::assertSame(XotBasePage::class, get_parent_class($pageClass));
+        }
+    });
+
+    test('all cluster pages have cluster property set', function (): void {
+        $pages = [
+            Alignment::class,
+            Background::class,
+            Colors::class,
+            CustomCss::class,
+            Favicon::class,
+            Logo::class,
+        ];
+
+        foreach ($pages as $pageClass) {
+            $reflection = new \ReflectionClass($pageClass);
+            $property = $reflection->getProperty('cluster');
+            $defaultValue = $property->getDefaultValue();
+
+            Assert::assertSame(Appearance::class, $defaultValue);
+        }
+    });
+
+    test('cluster pages do not extend filament classes directly', function (): void {
+        /** @var TestCase $this */
+        $files = glob(base_path('Modules/User/app/Filament/Clusters/Appearance/Pages/*.php'));
+
+        if ([] === $files) {
+            $this->skipTest('Appearance cluster pages directory not found.');
+        }
+
+        foreach ($files as $file) {
+            $filePath = (string) $file;
+            $content = (string) file_get_contents($filePath);
+            Assert::assertStringContainsString('extends XotBasePage', $content, basename($filePath));
+            Assert::assertStringNotContainsString('extends Page', $content, basename($filePath));
+        }
+    });
+
+    test('cluster does not extend filament directly', function (): void {
+        $file = base_path('Modules/User/app/Filament/Clusters/Appearance.php');
+        $content = (string) file_get_contents($file);
+
+        Assert::assertStringNotContainsString('extends Cluster', $content);
+        Assert::assertStringNotContainsString('use Filament\\Clusters\\Cluster;', $content);
+        Assert::assertStringContainsString('extends XotBaseCluster', $content);
+    });
+
+    test('cluster pages are accessible', function (): void {
+        $user = UserFactory::new()->createOne([
+            'name' => 'Cluster Test User',
+            'email' => 'cluster-'.uniqid('', true).'@example.com',
+        ]);
+
+        actingAs($user);
+
+        $pages = [
+            Alignment::class,
+            Background::class,
+            Colors::class,
+            CustomCss::class,
+            Favicon::class,
+            Logo::class,
+        ];
+
+        foreach ($pages as $pageClass) {
+            Assert::assertTrue(class_exists($pageClass));
+        }
+    });
+>>>>>>> 9fa499be (.)
 });

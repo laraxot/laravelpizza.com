@@ -3,10 +3,6 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Console\Commands;
-<<<<<<< HEAD
-
-=======
->>>>>>> 40b96bcd6 (.)
 use Illuminate\Console\Command;
 use Modules\Notify\Console\Commands\AnalyzeTranslationFiles;
 use Modules\Notify\Tests\TestCase;
@@ -30,69 +26,41 @@ describe('AnalyzeTranslationFiles', function () {
     it('extends command', function () {
         $command = new AnalyzeTranslationFiles;
 
-<<<<<<< HEAD
-        expect($command)->toBeInstanceOf(Command::class);
-    });
-
-    it('has handle method', function () {
-        $command = new AnalyzeTranslationFiles;
-=======
         Assert::assertInstanceOf(Command::class, $command);
     });
 
     it('has handle method', function () {
         $reflection = new \ReflectionClass(AnalyzeTranslationFiles::class);
->>>>>>> 40b96bcd6 (.)
 
         Assert::assertTrue($reflection->hasMethod('handle'));
     });
 
     it('has flatten array method', function () {
-<<<<<<< HEAD
-        $command = new AnalyzeTranslationFiles;
-=======
         $reflection = new \ReflectionClass(AnalyzeTranslationFiles::class);
->>>>>>> 40b96bcd6 (.)
 
         Assert::assertTrue($reflection->hasMethod('flattenArray'));
     });
 
     it('has analyze structure patterns method', function () {
-<<<<<<< HEAD
-        $command = new AnalyzeTranslationFiles;
-=======
         $reflection = new \ReflectionClass(AnalyzeTranslationFiles::class);
->>>>>>> 40b96bcd6 (.)
 
         Assert::assertTrue($reflection->hasMethod('analyzeStructurePatterns'));
     });
 
     it('has generate consistency report method', function () {
-<<<<<<< HEAD
-        $command = new AnalyzeTranslationFiles;
-=======
         $reflection = new \ReflectionClass(AnalyzeTranslationFiles::class);
->>>>>>> 40b96bcd6 (.)
 
         Assert::assertTrue($reflection->hasMethod('generateConsistencyReport'));
     });
 
     it('has generate recommendations method', function () {
-<<<<<<< HEAD
-        $command = new AnalyzeTranslationFiles;
-=======
         $reflection = new \ReflectionClass(AnalyzeTranslationFiles::class);
->>>>>>> 40b96bcd6 (.)
 
         Assert::assertTrue($reflection->hasMethod('generateRecommendations'));
     });
 
     it('has analyze navigation structure method', function () {
-<<<<<<< HEAD
-        $command = new AnalyzeTranslationFiles;
-=======
         $reflection = new \ReflectionClass(AnalyzeTranslationFiles::class);
->>>>>>> 40b96bcd6 (.)
 
         Assert::assertTrue($reflection->hasMethod('analyzeNavigationStructure'));
     });

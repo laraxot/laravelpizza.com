@@ -41,7 +41,6 @@ class ConvertVideoByMediaConvertAction
         // Instanziamo il formato prima di usarlo
         $formatInstance = new $format;
 
-        // @phpstan-ignore method.notFound
         FFMpeg::fromDisk($data->disk)
             ->open($data->file)
             ->export()

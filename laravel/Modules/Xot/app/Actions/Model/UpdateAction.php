@@ -19,6 +19,7 @@ class UpdateAction
 
     /**
      * @param array<string, mixed> $data
+     * @param array<string, mixed> $rules
      */
     public function execute(Model $model, array $data, array $rules): Model
     {
@@ -40,7 +41,7 @@ class UpdateAction
             $model = $model->firstOrCreate($where, $data);
         }
 
-        $model = tap($model)->update($data);
+        $model->update($data);
 
         app(__NAMESPACE__.'\\Update\RelationAction')->execute($model, $data);
 

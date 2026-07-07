@@ -16,8 +16,9 @@ Su filesystem case-sensitive questi due path non sono equivalenti.
 
 ## Scelta applicata
 
-- helper attivo: `Modules/Xot/helpers/Helper.php`
-- bridge compatibilita': `Modules/Xot/helpers/Helper.php`
+- helper attivo: `Modules/Xot/helpers/Helper.php` (path Composer `files`, **minuscolo**)
+- archivio legacy maiuscolo: `Modules/Xot/Helpers.bak/` (solo consultazione)
+- PHPStan `scanFiles`: `./Modules/Xot/helpers/Helper.php`
 
 ## Perche'
 

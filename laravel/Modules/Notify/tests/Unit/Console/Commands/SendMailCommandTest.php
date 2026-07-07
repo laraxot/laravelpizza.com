@@ -26,11 +26,7 @@ describe('SendMailCommand', function () {
     it('extends command', function () {
         $command = new SendMailCommand;
 
-<<<<<<< HEAD
-        expect($command)->toBeInstanceOf(Command::class);
-=======
         Assert::assertInstanceOf(Command::class, $command);
->>>>>>> 40b96bcd6 (.)
     });
 
     it('has handle method', function () {

@@ -18,8 +18,7 @@ use function Safe\fopen;
 
 class QueueListenWidget extends Widget
 {
-    /** @var string */
-    public $time = '---';
+    public string $time = '---';
 
     public bool $run = false;
 

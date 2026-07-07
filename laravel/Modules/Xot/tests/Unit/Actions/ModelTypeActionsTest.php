@@ -2,27 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Actions;
-
+uses(Modules\Xot\Tests\TestCase::class);
 use Illuminate\Support\Facades\Config;
 use Modules\Xot\Actions\GetModelClassByModelTypeAction;
 use Modules\Xot\Actions\GetModelTypeByModelAction;
 use Modules\Xot\Contracts\ModelContract;
 use Modules\Xot\Models\Log;
+use PHPUnit\Framework\Assert;
 
 it('resolves model types correctly', function (): void {
     Config::set('morph_map', ['log' => Log::class]);
 
     $classAction = app(GetModelClassByModelTypeAction::class);
-    expect($classAction->execute('log'))->toBe(Log::class);
+    Assert::assertSame(Log::class, $classAction->execute('log'));
 
-    // Test GetModelTypeByModelAction with Mock
     $typeAction = app(GetModelTypeByModelAction::class);
-    $mock = \Mockery::mock(ModelContract::class);
-
-    // class_basename of mock is something like "Mockery_0_Modules_Xot_Contracts_ModelContract"
-    $result = $typeAction->execute($mock);
-    expect($result)->toBeString();
-
-    \Mockery::close();
+    $result = $typeAction->execute(new class extends Log implements ModelContract {
+    });
+    Assert::assertIsString($result);
 });

@@ -50,8 +50,10 @@ return new class extends XotBaseMigration {
                     $table->id()->first();
                 }
 
-                // Impostiamo la nuova PRIMARY KEY su id
-                $this->query('ALTER TABLE `'.$this->table_name.'` ADD PRIMARY KEY (`id`)');
+                // Impostiamo la nuova PRIMARY KEY su id (MySQL only — SQLite defines PK at creation)
+                if ($this->isMysqlFamilyDriver()) {
+                    $this->query('ALTER TABLE `'.$this->table_name.'` ADD PRIMARY KEY (`id`)');
+                }
             }
 
             // Aggiorniamo i timestamp e soft deletes

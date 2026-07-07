@@ -1,5 +1,6 @@
 # Code Quality Audit Completo - Gennaio 2025
 
+**Data**: 2025-01-22
 **PHPStan Level**: 10
 **Status Generale**: ✅ **0 ERRORI**
 
@@ -23,6 +24,7 @@ Tutti i moduli sono stati analizzati e risultano conformi a PHPStan livello 10.
 ## 📋 Moduli con Documentazione Qualità
 
 ### ✅ Completati
+- **Rating**: [code-quality-analysis.md](../Rating/docs/code-quality-analysis.md)
 - **Rating**: [code-quality-analysis.md](../rating/docs/code-quality-analysis.md)
   - PHPStan: 0 errori
   - PHPDoc: Completo
@@ -91,3 +93,4 @@ Ogni modulo dovrebbe avere:
 - La documentazione viene aggiornata costantemente durante l'analisi
 - Le regole e best practices sono in `.cursor/rules/` e `.windsurf/rules/`
 
+*Ultimo aggiornamento: 2025-01-22*

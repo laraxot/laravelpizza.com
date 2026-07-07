@@ -91,51 +91,6 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
-<<<<<<< HEAD
-        'test_date' => [
-            'label' => 'test_date',
-            'placeholder' => 'test_date',
-            'helper_text' => 'test_date',
-            'description' => 'test_date',
-            'tooltip' => '',
-        ],
-        'test' => [
-            'label' => 'test',
-            'placeholder' => 'test',
-            'helper_text' => 'test',
-            'description' => 'test',
-            'tooltip' => '',
-        ],
-        'view' => [
-            'label' => 'view',
-            'placeholder' => 'view',
-            'helper_text' => 'view',
-            'description' => 'view',
-            'tooltip' => '',
-        ],
-        'address' => [
-            'label' => 'address2',
-            'placeholder' => 'address',
-            'helper_text' => 'address',
-            'description' => 'address',
-            'tooltip' => '',
-        ],
-        'display_name' => [
-            'label' => 'display_name',
-        ],
-        'location' => [
-            'label' => 'location',
-            'placeholder' => 'location',
-            'helper_text' => 'location',
-            'description' => 'location',
-        ],
-        'coordinates' => [
-            'label' => 'coordinates',
-            'placeholder' => 'coordinates',
-            'helper_text' => 'coordinates',
-            'description' => 'coordinates',
-        ],
-=======
         'test_date' => ['label' => 'test_date', 'placeholder' => 'test_date', 'helper_text' => 'test_date', 'description' => 'test_date', 'tooltip' => ''],
         'test' => ['label' => 'test', 'placeholder' => 'test', 'helper_text' => 'test', 'description' => 'test', 'tooltip' => ''],
         'view' => ['label' => 'view', 'placeholder' => 'view', 'helper_text' => 'view', 'description' => 'view', 'tooltip' => ''],
@@ -151,7 +106,6 @@ return [
         'updated_at' => ['label' => 'updated_at'],
         'appointment_date' => ['label' => 'appointment_date', 'placeholder' => 'appointment_date', 'helper_text' => 'appointment_date', 'description' => 'appointment_date'],
         'contact' => ['label' => 'contact'],
->>>>>>> 40b96bcd6 (.)
     ],
     'actions' => [
         'authenticate' => ['label' => 'Autentica', 'tooltip' => 'Effettua il login nel sistema', 'icon' => 'ui-login', 'color' => 'primary'],
@@ -187,12 +141,6 @@ return [
         'icon' => 'heroicon-o-collection',
     ],
     'steps' => [
-<<<<<<< HEAD
-        'test' => [
-            'label' => 'test',
-        ],
-=======
         'test' => ['label' => 'test'],
->>>>>>> 40b96bcd6 (.)
     ],
 ];

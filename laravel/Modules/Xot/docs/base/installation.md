@@ -139,6 +139,13 @@ se il branch di un modulo vuole essere pubblicato, eseguire nel modulo
 * [installation.md](../../../lang/docs/installation.md)
 * [installation.md](../../../cms/docs/installation.md)
 * [installation.md](../../../../themes/one/docs/installation.md)
+* [installation.md](../../../Xot/docs/filament/installation.md)
+* [installation.md](../../../Xot/docs/installation.md)
+* [installation.md](../../../Xot/docs/base/installation.md)
+* [installation.md](../../../User/docs/installation.md)
+* [installation.md](../../../Lang/docs/installation.md)
+* [installation.md](../../../Cms/docs/installation.md)
+* [installation.md](../../../../Themes/One/docs/installation.md)
 
 ### Versione Incoming
 

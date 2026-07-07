@@ -2,17 +2,27 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Enums;
 
 uses(\Modules\User\Tests\TestCase::class);
 
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Enums\LanguageEnum;
 use Modules\User\Enums\SocialProviderEnum;
 use Modules\User\Enums\SystemRole;
 use Modules\User\Enums\UserType;
 
+<<<<<<< HEAD
 test('UserType enum has expected cases', function () {
     expect(class_exists(UserType::class))->toBeTrue();
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+test('UserType enum has expected cases', function (): void {
+    $values = array_map(static fn ($case) => $case->value, UserType::cases());
+>>>>>>> 9fa499be (.)
 
     try {
         $cases = UserType::cases();

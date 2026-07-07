@@ -2,16 +2,23 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Events;
 
 uses(\Modules\User\Tests\TestCase::class);
 
+=======
+use Laravel\Socialite\Contracts\User as SocialiteUserContract;
+use Mockery\MockInterface;
+>>>>>>> 9fa499be (.)
 use Modules\User\Events\Login;
 use Modules\User\Events\Registered;
 use Modules\User\Events\TeamCreated;
 use Modules\User\Events\TeamMemberAdded;
 use Modules\User\Events\TwoFactorAuthenticationEnabled;
 use Modules\User\Events\UserNotAllowed;
+
+uses(Modules\User\Tests\TestCase::class);
 
 test('Login event can be instantiated', function () {
     expect(class_exists(Login::class))->toBeTrue();

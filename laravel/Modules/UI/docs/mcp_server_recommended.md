@@ -1,23 +1,7 @@
-# MCP Server Consigliati per il Modulo UI
+---
+module: theme
+topic: mcp_server_recommended
+canonical: ../../../Themes/docs/shared-components/mcp-server-recommended-Modules.md
+---
 
-## Scopo del Modulo
-Gestione interfaccia utente, componenti, asset e frontend.
-
-## Server MCP Consigliati
-- `filesystem`: Per gestione asset, immagini, file statici.
-- `fetch`: Per recupero dati dinamici da API.
-- `memory`: Per stato temporaneo dell'interfaccia (es. wizard, step form).
-
-## Configurazione Minima Esempio
-```json
-{
-  "mcpServers": {
-    "filesystem": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-filesystem"] },
-    "fetch": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-fetch"] },
-    "memory": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-memory"] }
-  }
-}
-```
-
-## Note
-- Personalizza la configurazione per esigenze di frontend avanzato.
+See canonical documentation: ../../../Themes/docs/shared-components/mcp-server-recommended-Modules.md

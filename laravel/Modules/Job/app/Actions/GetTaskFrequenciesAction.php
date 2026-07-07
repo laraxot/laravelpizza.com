@@ -12,13 +12,13 @@ class GetTaskFrequenciesAction
     use QueueableAction;
 
     /**
-     * @return array<string, mixed>
+     * @return array<int|string, mixed>
      */
     public function execute(): array
     {
         $res = config('totem.frequencies');
         if (\is_array($res)) {
-            /** @var array<string, mixed> */
+            /** @var array<int|string, mixed> */
             return $res;
         }
 

@@ -15,7 +15,7 @@ class GetCommandsAction
     /**
      * Execute the action.
      *
-     * @return DataCollection<CommandData>
+     * @return DataCollection<int, CommandData>
      */
     public function execute(): DataCollection
     {
@@ -53,12 +53,15 @@ class GetCommandsAction
                     )
                     ->values();
 
+                /** @var array<int, array<string, mixed>> $argumentsArray */
+                $argumentsArray = $arguments->values()->all();
+
                 return new CommandData(
                     name: $name,
                     description: $description,
                     signature: $signature,
                     full_name: $name.' - '.$description,
-                    arguments: $arguments->toArray(),
+                    arguments: $argumentsArray,
                     options: [
                         'withValue' => $options->toArray(),
                     ],

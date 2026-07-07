@@ -25,7 +25,7 @@ use Modules\Xot\Datas\XotData;
  *
  * @property TeamContract                  $currentTeam
  * @property int|null                      $current_team_id
- * @property Collection<int, TeamContract> $teams
+ * @property Collection<int, TeamContract> $membershipTeams
  * @property Collection<int, TeamContract> $ownedTeams
  * @property Collection<int, TeamUser>     $teamUsers
  * @property XotUserContract|null          $owner
@@ -54,7 +54,14 @@ trait HasTeams
      */
     public function allTeams(): Collection
     {
+<<<<<<< HEAD
         return $this->ownedTeams->merge($this->teams)->sortBy('name');
+=======
+        /** @var Collection<int, TeamContract> $teams */
+        $teams = $this->ownedTeams->merge($this->membershipTeams)->sortBy('name');
+
+        return $teams;
+>>>>>>> 6d3760fe (.)
     }
 
     /**
@@ -74,7 +81,7 @@ trait HasTeams
             return false;
         }
 
-        return $this->ownsTeam($team) || $this->teams->contains('id', (string) $team->id);
+        return $this->ownsTeam($team) || $this->membershipTeams->contains('id', (string) $team->id);
     }
 
     /**
@@ -178,12 +185,29 @@ trait HasTeams
      *
      * @return Collection<int, User>
      */
+<<<<<<< HEAD
     public function allTeamUsers(): Collection
     {
         // Ensure we have fresh data for the teams and their users
         return $this->teams->load('users')->flatMap(function ($team) {
             return $team->users;
         })->unique('id');
+=======
+    public function allTeamUsers(): Collection // @phpstan-ignore return.type
+    {/** @var Collection<int, mixed> $teams */
+                        $teams = $this->membershipTeams; // @phpstan-ignore property.nonObject
+        /** @var Collection<int, User> $result */
+        $result = $teams->flatMap( // @phpstan-ignore argument.type
+            /** @param mixed $team @return array<int,User>|Collection<int,User> */
+            static function (mixed $team): array { // @phpstan-ignore return.type
+                /** @var array<int,User> $users */
+                $users = (array) ($team->users ?? []); // @phpstan-ignore property.nonObject
+
+                return $users;
+            })->unique('id');
+
+        return $result;
+>>>>>>> 6d3760fe (.)
     }
 
     /**
@@ -455,16 +479,26 @@ trait HasTeams
     }
 
     /**
+<<<<<<< HEAD
      * Get all of the teams the user belongs to.
      *
      * @return BelongsToMany<Model&TeamContract, $this, TeamUser, 'pivot'>
+=======
+     * Laraxot team membership (Jetstream-style pivot).
+     * Su {@see BaseUser} esposto come {@see membershipTeams()} — {@see HasRoles::teams()} resta Spatie.
+     *
+     * @return BelongsToMany<Model&TeamContract, $this, Pivot, 'pivot'>
+>>>>>>> 6d3760fe (.)
      */
     public function teams(): BelongsToMany
     {
         $xot = XotData::make();
         $teamClass = $xot->getTeamClass();
 
-        return $this->belongsToManyX($teamClass);
+        /** @var BelongsToMany<Model&TeamContract, $this, Pivot, 'pivot'> $relation */
+        $relation = $this->belongsToManyX($teamClass);
+
+        return $relation;
     }
 
     /**

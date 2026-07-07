@@ -44,6 +44,11 @@ return [
             'description' => '',
         ],
     ],
+    'infolist' => [
+        'record_not_available' => [
+            'label' => 'Contenuto non disponibile o non visibile.',
+        ],
+    ],
     'actions' => [
         'create' => [
             'label' => 'Crea Widgets',

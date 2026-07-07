@@ -2,13 +2,39 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Models;
 
+=======
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
+use Modules\User\Database\Factories\TeamFactory;
+use Modules\User\Database\Factories\UserFactory;
+>>>>>>> 9fa499be (.)
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
+<<<<<<< HEAD
 uses(TestCase::class);
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+/**
+ * @param array<string, mixed> $attributes
+ */
+function modelsTeamCreateUser(array $attributes = []): User
+{
+    return UserFactory::new()->createOne(array_merge([
+        'email' => 'test-'.uniqid('', true).'@example.com',
+    ], $attributes));
+}
+
+function modelsTeamTableHasColumn(string $column): bool
+{
+    return Schema::connection('user')->hasColumn('teams', $column);
+}
+>>>>>>> 9fa499be (.)
 
 test('can create team with minimal data', function (): void {
     $user = User::factory()->create();

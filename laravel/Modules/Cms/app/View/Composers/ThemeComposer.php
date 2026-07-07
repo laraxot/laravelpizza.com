@@ -37,6 +37,9 @@ class ThemeComposer
         return $normalized;
     }
 
+    /**
+     * @param array<string, mixed> $menu
+     */
     public function getMenuUrl(array $menu): string
     {
         if ([] === $menu) {
@@ -131,9 +134,11 @@ class ThemeComposer
         return $blocksComponent->render();
     }
     */
+    /**
+     * @return Collection<int, Page>
+     */
     public function getPages(): Collection
     {
-        /* @var Collection<int, Page> $pages */
         return Page::all();
     }
 

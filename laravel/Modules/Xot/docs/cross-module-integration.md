@@ -193,6 +193,8 @@ Il modulo Progressioni integra il modello `Integparam` del modulo Sigma per gest
 - **Traduzioni**: `Modules\Progressioni\lang\it\integparam.php`
 
 ## Collegamenti
+- [Modulo Sigma](/laravel/Modules/Sigma/docs/README.md)
+- [Modulo Progressioni](/laravel/Modules/Progressioni/docs/README.md)
 - [Modulo Sigma](/laravel/modules/sigma/docs/readme.md)
 - [Modulo Progressioni](/laravel/modules/progressioni/docs/readme.md)
 ```
@@ -223,3 +225,9 @@ Il modulo Progressioni integra il modello `Integparam` del modulo Sigma per gest
 - [Filament Resources Best Practices](/docs/filament-best-practices.md)
 - [Translation Standards](/docs/translation-standards.md)
 
+- [Modulo Sigma](/laravel/Modules/Sigma/docs/README.md)
+- [Modulo Progressioni](/laravel/Modules/Progressioni/docs/README.md)
+- [Filament Resources Best Practices](/docs/filament-best-practices.md)
+- [Translation Standards](/docs/translation-standards.md)
+
+*Ultimo aggiornamento: 5 giugno 2025*

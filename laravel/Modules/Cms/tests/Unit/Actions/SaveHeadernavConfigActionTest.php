@@ -2,18 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Actions;
-
 use Modules\Cms\Actions\SaveHeadernavConfigAction;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 test('SaveHeadernavConfigAction can be instantiated', function () {
     $action = new SaveHeadernavConfigAction();
 
-    expect($action)->toBeInstanceOf(SaveHeadernavConfigAction::class);
+    Assert::assertInstanceOf(SaveHeadernavConfigAction::class, $action);
 });
 
 test('SaveHeadernavConfigAction execute method exists', function () {
     $action = new SaveHeadernavConfigAction();
-
-    expect(method_exists($action, 'execute'))->toBeTrue();
 });

@@ -11,6 +11,9 @@ class GetCommandOptionsActions
 {
     use QueueableAction;
 
+    /**
+     * @return array{withValue: array<int, object>, withoutValue: array<int, string>}
+     */
     public function execute(Command $command): array
     {
         $options = [

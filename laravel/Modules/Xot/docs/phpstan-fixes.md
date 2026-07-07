@@ -1,4 +1,35 @@
-<<<<<<< HEAD
+*Ultimo aggiornamento: 6 Gennaio 2025*
+*Ultimo aggiornamento: 6 Gennaio 2025*
+# PHPStan Analysis Report for Xot Module
+
+**Date:** December 23, 2025
+
+**Outcome (Initial Scan):**
+The `Xot` module was initially analyzed with PHPStan individually, and **no errors were found**. This indicated adherence to the project's PHPStan configuration and coding standards at that time.
+
+**New Findings (Full Modules Scan):**
+A subsequent comprehensive PHPStan scan across all `Modules` revealed 4 errors specifically within `Xot/app/Filament/Resources/RelationManagers/XotBaseRelationManager.php`. These errors require immediate attention.
+
+**Detailed Errors in `Xot/app/Filament/Resources/RelationManagers/XotBaseRelationManager.php`:**
+
+1.  **Line 77: `argument.type`**
+    *   **Error:** `Parameter #1 $components of method Filament\Schemas\Schema::components() expects array<Illuminate\Contracts\Support\Htmlable|string>|Closure|Illuminate\Contracts\Support\Htmlable|string, array given.`
+    *   **Plan:** Ensure that the array passed to `Schema::components()` contains elements that are correctly typed as `Htmlable|string` or that the input itself is a `Closure`, `Htmlable`, or `string`. This likely involves explicit casting or ensuring factory methods generate the correct types.
+
+2.  **Line 139: `return.type`**
+    *   **Error:** `Method Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager::getTableColumns() should return array<Filament\Tables\Columns\Column|Filament\Tables\Columns\Layout\Component> but returns array<string, mixed>.`
+    *   **Plan:** Explicitly type the return array for `getTableColumns()` to contain instances of `Filament\Tables\Columns\Column` or `Filament\Tables\Columns\Layout\Component`. This may involve ensuring all items added to the array are correctly instantiated Filament components.
+
+3.  **Line 186: `method.notFound`**
+    *   **Error:** `Call to an undefined method Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager::canDeleteBulk().`
+    *   **Plan:** Investigate the source of `canDeleteBulk()`. If it's inherited from a trait or base class, ensure the trait is correctly used and PHPStan can resolve it. If it's a dynamic method, add an appropriate `@method` PHPDoc tag. Alternatively, if it's meant to be a local method, define it.
+
+4.  **Line 199: `method.notFound`**
+    *   **Error:** `Call to an undefined method Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager::canDetachBulk().`
+    *   **Plan:** Similar to `canDeleteBulk()`, determine the source of this method and ensure it's properly resolved by PHPStan (e.g., via trait, base class, or `@method` PHPDoc).
+
+**Next Steps:**
+These errors will be addressed systematically. After each fix, `phpstan`, `phpmd`, and `phpinsights` will be run on the modified file to ensure compliance with all code quality standards.
 # PHPStan Fixes - 2026-02-26
 
 Documentazione completa dei fix PHPStan applicati durante l'analisi di tutti i moduli.
@@ -376,104 +407,3 @@ find Modules -name "*.php" -exec php -l {} \; | grep -v "No syntax errors"
 - **Zen**: Codice pulito = mente serena
 
 *Ultimo aggiornamento: 2026-02-26*
-=======
-# Correzioni PHPStan - 6 Gennaio 2025
-
-## Errori Risolti
-
-### 1. Chart/app/Datas/AnswersChartData.php
-
-**Problema**: Errori `argument.type` e `offsetAccess.nonOffsetAccessible`
-- Linee 208, 254: `count()` su mixed
-- Linee 450, 460, 492, 496: Accesso offset su mixed
-
-**Soluzione**:
-- Aggiunto controllo `\is_array()` prima di `count()`
-- Aggiunto controllo esistenza `$options['plugins']` prima dell'accesso
-- Utilizzato variabile intermedia per evitare chiamate multiple
-
-### 2. Chart/app/Models/Chart.php
-
-**Problema**: Linea 187 - Tipo di ritorno errato
-- Metodo `getSettings()` doveva restituire `array<string, mixed>` ma restituiva `array<int, array<mixed>>`
-
-**Soluzione**:
-- Corretto tipo di ritorno a `array<string, array<string, mixed>>`
-- Aggiunto cast esplicito con `@var` per il risultato
-
-### 3. Job/app/Actions/GetTaskFrequenciesAction.php
-
-**Problema**: Linea 21 - Tipo di ritorno errato
-- Metodo doveva restituire `array<string, mixed>` ma restituiva `array<mixed, mixed>`
-
-**Soluzione**:
-- Aggiunto cast esplicito `@var array<string, mixed>` al risultato
-
-### 4. SaluteOra/app/States/Appointment/ReportPending.php
-
-**Problema**: Linea 27 - Tipo di ritorno errato
-- Metodo doveva restituire `array<string, Component>` ma restituiva `array<int|string, Component>`
-
-**Soluzione**:
-- Aggiunto PHPDoc con tipo di ritorno corretto
-- Aggiunto cast esplicito al risultato
-
-### 5. User/app/Console/Commands/ChangeTypeCommand.php
-
-**Problema**: Linea 80 - Accesso proprietà su mixed
-- `$item->value` e `$item->getLabel()` su mixed
-
-**Soluzione**:
-- Aggiunto controllo `is_object($item) && method_exists($item, 'getLabel')`
-- Gestito caso fallback per valori sconosciuti
-
-### 6. Xot/app/Models/Traits/HasExtraTrait.php
-
-**Problema**: Linea 62 - Tipo di ritorno errato
-- Metodo doveva restituire tipo specifico ma restituiva `array<mixed, mixed>`
-
-**Soluzione**:
-- Aggiunto tipo di ritorno esplicito al metodo
-- Aggiunto cast esplicito con `@var` al risultato
-
-### 7. Xot/app/Services/ModuleService.php
-
-**Problema**: Linea 112 - Tipo di ritorno errato
-- Metodo doveva restituire `array<int, string>` ma restituiva `array<string, class-string>`
-
-**Soluzione**:
-- Corretto tipo di ritorno PHPDoc a `array<string, class-string>`
-
-### 8. Xot/app/States/Transitions/XotBaseTransition.php
-
-**Problema**: Linea 39 - Tipo parametro errato
-- `sendRecipientNotification()` aspettava `UserContract|null` ma riceveva `Model|null`
-
-**Soluzione**:
-- Separato controllo per `UserContract` e `null`
-- Chiamate esplicite per ogni tipo
-
-## Pattern Comuni Identificati
-
-1. **Array Types**: Sempre specificare tipi degli array con `array<key, value>`
-2. **Mixed Handling**: Controllare tipi prima dell'uso con `is_array()`, `is_object()`
-3. **Offset Access**: Verificare esistenza chiavi prima dell'accesso
-4. **Return Types**: Usare cast espliciti `@var` quando necessario
-5. **Union Types**: Separare logica per ogni tipo possibile
-
-## Regole Applicate
-
-- **REGOLA ASSOLUTA**: Non modificare `phpstan.neon`
-- Specificare sempre tipi degli array: `array<string, mixed>` per associativi
-- Utilizzare controlli di tipo prima dell'uso
-- Aggiungere PHPDoc completi per tutti i metodi
-- Cast espliciti quando necessario per compatibilità PHPStan
-
-## Collegamenti
-
-- [PHPStan Critical Rules](./phpstan-critical-rules.md)
-- [Array Types Fixes](./phpstan-array-types-fixes.md)
-- [PHPStan Level 10 Guidelines](./phpstan-level10-guidelines.md)
-
-*Ultimo aggiornamento: 6 Gennaio 2025*
->>>>>>> origin/dev

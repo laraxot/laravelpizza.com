@@ -2,16 +2,27 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Datas;
 
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Datas\PasswordData;
 use Modules\User\Tests\TestCase;
 use Spatie\LaravelData\Data;
 
+<<<<<<< HEAD
 uses(TestCase::class);
 
 beforeEach(function (): void {
     $this->passwordData = new PasswordData(
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+function samplePasswordData(): PasswordData
+{
+    return new PasswordData(
+>>>>>>> 9fa499be (.)
         otp_expiration_minutes: 10,
         otp_length: 8,
         expires_in: 120,

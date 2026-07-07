@@ -19,11 +19,6 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 
     public $timestamps = true;
 
-<<<<<<< HEAD
-    protected $perPage = 30;
-
-=======
->>>>>>> 40b96bcd6 (.)
     protected $connection = 'notify';
 
     /** @var list<string> */
@@ -31,26 +26,11 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 
     protected $primaryKey = 'id';
 
+    /** @var string */
     protected $keyType = 'string';
 
     /** @var list<string> */
-<<<<<<< HEAD
-    protected $hidden = [
-        // 'password'
-    ];
-
-    /**
-     * Create a new factory instance for the model.
-     *
-     * @return Factory<static>
-     */
-    protected static function newFactory(): Factory
-    {
-        return app(GetFactoryAction::class)->execute(static::class);
-    }
-=======
     protected $hidden = [];
->>>>>>> 40b96bcd6 (.)
 
     /** @return array<string, string> */
     protected function casts(): array

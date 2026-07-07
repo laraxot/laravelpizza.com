@@ -10,11 +10,4 @@ return [
         'enabled' => true,
         'sort' => 100,
     ],
-    'routes' => [
-        'enabled' => true,
-        'middleware' => ['web', 'auth'],
-    ],
-    'providers' => [
-        'Modules\\User\\Providers\\UserServiceProvider',
-    ],
 ];

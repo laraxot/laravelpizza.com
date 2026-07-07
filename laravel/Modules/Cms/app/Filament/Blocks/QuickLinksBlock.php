@@ -33,6 +33,6 @@ final class QuickLinksBlock extends XotBaseBlock
 
     public static function getBlockLabel(): string
     {
-        return \trans_string('cms::blocks.quick_links.label') ?? 'Quick Links';
+        return \trans_string('cms::blocks.quick_links.label');
     }
 }

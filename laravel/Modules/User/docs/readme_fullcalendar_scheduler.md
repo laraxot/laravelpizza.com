@@ -220,8 +220,12 @@ Log::info('FullCalendar configured', [
 
 ---
 
+<<<<<<< HEAD
 **Creato**: Gennaio 2025  
 **Ultima modifica**: Gennaio 2025  
 **Versione FullCalendar**: v6.1.17  
 **Versione Filament**: v3.x  
 **Progetto**: Quaeris Multi-Tenant Healthcare Platform
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/readme_fullcalendar_scheduler.md
+>>>>>>> 6d3760fe (.)

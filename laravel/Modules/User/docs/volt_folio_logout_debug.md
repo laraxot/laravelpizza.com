@@ -67,7 +67,11 @@ Se vuoi mostrare una conferma, usa un pulsante con `wire:click="logout"` che ric
 
 ---
 
+<<<<<<< HEAD
 **In sintesi:**
 - Il logout non funziona perché il codice PHP non viene eseguito come azione Volt.
 - Serve una vera Volt Page o un componente Livewire che esegua il logout su mount o su evento.
 - Aggiorna la pagina Blade per richiamare il componente Livewire/Volt.
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/volt_folio_logout_debug.md
+>>>>>>> 6d3760fe (.)

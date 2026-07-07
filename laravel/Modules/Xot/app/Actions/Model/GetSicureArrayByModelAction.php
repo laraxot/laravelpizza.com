@@ -17,15 +17,16 @@ class GetSicureArrayByModelAction
     public function execute(Model $model): array
     {
         try {
-            return $model->attributesToArray();
-            // @phpstan-ignore-next-line
-        } catch (\Throwable $e) {
+            /** @var array<string, mixed> $res */
+            $res = $model->attributesToArray(); // "" is not a valid backing value for enum Modules\<main module>\Enums\OccurrenceFrequencyEnum
+
+            return $res;
+        } catch (\ValueError|\Error $e) {
             $data = [];
             foreach ($model->getAttributes() as $key => $value) {
                 try {
-                    $data[$key] = $model->$key;
-                    // @phpstan-ignore-next-line
-                } catch (\Throwable $e) {
+                    $data[(string) $key] = $model->getAttribute((string) $key);
+                } catch (\ValueError) {
                 }
             }
 

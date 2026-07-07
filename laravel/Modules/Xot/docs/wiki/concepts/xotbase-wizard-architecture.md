@@ -70,29 +70,12 @@ use Filament\Resources\Pages\Concerns\HasWizard; // For Pages (CreateRecord, Edi
 
 ```php
 abstract class XotBaseWizardWidget extends XotBaseWidget {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // ✅ Already has:
-    // - makeWizard() - wraps Wizard::make() with our defaults
-    // - getWizardSteps() - abstract, implemented by child
-    // - initWizardState() - handles ?step= query
-    // - configureWizardNextAction() - hook for "Avanti" button
-    // - normalizeWizardFormState() - handles array key conversion
-    
-    // ❌ DO NOT reimplement these - they already exist!
-=======
-=======
->>>>>>> origin/dev
     // ✅ Vedere codice corrente: HasWizard (alias `getParentWizardComponent`),
     // `final getWizardComponent()` (vista tema + persistStepInQueryString),
     // `abstract getSteps()`.
     // Submit nel dominio: `$this->form->getState()` — niente helper sulla base che riscrive l’intero payload.
 
     // ❌ NON reinventare quel wiring senza ADR.
-<<<<<<< HEAD
->>>>>>> 40b96bcd6 (.)
-=======
->>>>>>> origin/dev
 }
 ```
 
@@ -181,15 +164,7 @@ CreateTicketWizardWidget (Modules/Fixcity - concrete widget)
 
 - [ ] Standard Filament wizard rendering
 - [ ] No theme overrides needed (uses vendor Blade directly)
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [ ] Same `TicketForm::getWizardSteps()` logic
-=======
 - [ ] Same `TicketForm::getSteps()` logic
->>>>>>> 40b96bcd6 (.)
-=======
-- [ ] Same `TicketForm::getSteps()` logic
->>>>>>> origin/dev
 - [ ] Different visual presentation (admin panel vs frontoffice)
 
 ## Quality Gates (MANDATORY After Every Change)

@@ -4,17 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Models;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-use Modules\Gdpr\Models\Consent;
-use Modules\Gdpr\Tests\TestCase;
-=======
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
->>>>>>> 40b96bcd6 (.)
 
 uses(TestCase::class);
 

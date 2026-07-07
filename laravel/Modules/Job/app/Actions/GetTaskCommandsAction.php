@@ -14,6 +14,9 @@ class GetTaskCommandsAction
 {
     use QueueableAction;
 
+    /**
+     * @return Collection<int, Command>
+     */
     public function execute(): Collection
     {
         $all_commands = collect(Artisan::all());
@@ -35,7 +38,8 @@ class GetTaskCommandsAction
          * });
          * }
          */
-        return $all_commands->sortBy(static function ($command) {
+        /** @var Collection<int, Command> $sorted */
+        $sorted = $all_commands->sortBy(static function ($command) {
             /** @var Command $command */
             $name = $command->getName();
             Assert::string($name, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
@@ -45,5 +49,7 @@ class GetTaskCommandsAction
 
             return $name;
         });
+
+        return $sorted->values();
     }
 }

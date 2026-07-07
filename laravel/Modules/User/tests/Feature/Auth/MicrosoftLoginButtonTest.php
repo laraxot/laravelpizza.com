@@ -2,15 +2,25 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Feature\Auth;
 
+=======
+>>>>>>> 9fa499be (.)
 use Modules\User\Filament\Widgets\Auth\SocialLoginWidget;
 use Modules\Xot\Tests\TestCase;
 
+<<<<<<< HEAD
 uses(TestCase::class);
 
 describe('Microsoft Login Button', function () {
     test('social login widget renders correctly when microsoft is configured', function () {
+=======
+uses(Modules\User\Tests\TestCase::class);
+
+describe('Social Login Widget', function () {
+    test('widget renders correctly when microsoft is configured', function () {
+>>>>>>> 9fa499be (.)
         config(['services.microsoft.client_id' => 'test-client-id']);
 
         $widget = new SocialLoginWidget();

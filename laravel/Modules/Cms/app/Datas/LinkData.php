@@ -8,7 +8,7 @@ use Spatie\LaravelData\Data;
 
 class LinkData extends Data
 {
-    public string $title;
+    public string $title = '';
 
     public string $icon;
 

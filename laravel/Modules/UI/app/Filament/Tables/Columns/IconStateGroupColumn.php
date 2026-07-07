@@ -17,7 +17,12 @@ class IconStateGroupColumn extends ColumnGroup
 
     public string $modelClass = '';
 
-    public array $data = [];
+    /**
+     * Form data holder.
+     *
+     * @var array<string, mixed>
+     */
+    public ?array $data = [];
 
     protected function setUp(): void
     {
@@ -107,8 +112,7 @@ class IconStateGroupColumn extends ColumnGroup
                     })
             );
 
-            $visibleValue = $this->data[$visibleKey] ?? false;
-            $column->visible($visibleValue);
+            $column->visible((bool) ($this->data[$visibleKey] ?? false));
             $columns[] = $column;
         }
 

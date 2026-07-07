@@ -1,5 +1,6 @@
 # Array Keys in Filament Methods - Regole Obbligatorie
 
+**Data**: 2025-01-18
 **Status**: ✅ Regola consolidata
 **Priorità**: CRITICA
 

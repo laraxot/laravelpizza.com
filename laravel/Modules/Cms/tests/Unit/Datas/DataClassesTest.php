@@ -2,43 +2,43 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Datas;
-
 use Modules\Cms\Datas\BlockData;
 use Modules\Cms\Datas\FooterData;
 use Modules\Cms\Datas\HeadernavData;
 use Modules\Cms\Datas\LinkData;
 use Modules\Cms\Datas\NavbarMenuData;
 use Modules\Cms\Datas\ThemeData;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 test('BlockData can be instantiated', function () {
     // BlockData might not have a simple constructor, so just check if class exists
-    expect(class_exists(BlockData::class))->toBeTrue();
+    Assert::assertTrue(class_exists(BlockData::class));
 });
 
 test('FooterData can be instantiated', function () {
     $footerData = FooterData::from([]);
 
-    expect($footerData)->toBeInstanceOf(FooterData::class);
+    Assert::assertInstanceOf(FooterData::class, $footerData);
 });
 
 test('HeadernavData can be instantiated', function () {
     $headernavData = HeadernavData::from([]);
 
-    expect($headernavData)->toBeInstanceOf(HeadernavData::class);
+    Assert::assertInstanceOf(HeadernavData::class, $headernavData);
 });
 
 test('LinkData can be instantiated', function () {
     // Check if LinkData class exists
-    expect(class_exists(LinkData::class))->toBeTrue();
+    Assert::assertTrue(class_exists(LinkData::class));
 });
 
 test('NavbarMenuData can be instantiated', function () {
     // Check if NavbarMenuData class exists
-    expect(class_exists(NavbarMenuData::class))->toBeTrue();
+    Assert::assertTrue(class_exists(NavbarMenuData::class));
 });
 
 test('ThemeData can be instantiated', function () {
     // Check if ThemeData class exists
-    expect(class_exists(ThemeData::class))->toBeTrue();
+    Assert::assertTrue(class_exists(ThemeData::class));
 });

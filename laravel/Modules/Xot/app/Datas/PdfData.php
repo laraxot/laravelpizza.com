@@ -44,6 +44,7 @@ class PdfData extends Data
 
     public string $encoding = 'UTF-8';
 
+    /** @var array{0: int, 1: int, 2: int, 3: int} */
     public array $margins = [5, 5, 5, 8];
 
     public bool $pdfa = false;

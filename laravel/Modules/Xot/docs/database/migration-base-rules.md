@@ -70,12 +70,18 @@ return new class extends XotBaseMigration
 - [ ] Aggiorna sempre la doc
 
 ## Cross-reference
+- [Update migrazioni Performance](../../Performance/project_docs/migration_update_rules.md)
+- [Root MODULE_NAMESPACE_RULES.md](../../../project_docs/MODULE_NAMESPACE_RULES.md)
 - [Update migrazioni Performance](../../performance/project_docs/migration_update_rules.md)
 - [Root MODULE_NAMESPACE_RULES.md](../../../project_docs/module_namespace_rules.md)
 
 ---
 
 ## Backlink
+- [Regole update migrazioni Performance](../../Performance/project_docs/migration_update_rules.md) ← questa doc è sempre aggiornata
+- [Ripresa lavoro migrazioni in root](../../../project_docs/MODULE_NAMESPACE_RULES.md)
+
+Ultimo aggiornamento: 2025-05-13
 - [Regole update migrazioni Performance](../../performance/project_docs/migration_update_rules.md) ← questa doc è sempre aggiornata
 - [Ripresa lavoro migrazioni in root](../../../project_docs/module_namespace_rules.md)
 
@@ -90,6 +96,7 @@ return new class extends XotBaseMigration
 ---
 
 **Backlink modulo Performance:**
+- [Modules/Performance/project_docs/azioni_organizzativa.md](../../Performance/project_docs/azioni_organizzativa.md)
 - [Modules/Performance/project_docs/azioni_organizzativa.md](../../performance/project_docs/azioni_organizzativa.md)
 
 ---

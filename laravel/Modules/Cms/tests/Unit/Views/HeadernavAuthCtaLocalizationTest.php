@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Views;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 test('headernav auth ctas use theme localization keys and not legacy auth keys', function (): void {
     $paths = [
         base_path('Modules/Cms/resources/views/components/headernav/simple.blade.php'),
@@ -11,19 +12,13 @@ test('headernav auth ctas use theme localization keys and not legacy auth keys',
     ];
 
     foreach ($paths as $path) {
-        $content = file_get_contents($path);
+        $content = cmsReadFile($path);
 
-        expect($content)->not->toBeFalse();
-        if (! is_string($content)) {
-            continue;
-        }
-
-        expect($content)
-            ->toContain("@include('pub_theme::components.ui.auth-buttons'")
-            ->not->toContain("__('user::auth.login-in')")
-            ->not->toContain("__('user::auth.sign-up')")
-            ->not->toContain("localizeUrl('/auth/login')")
-            ->not->toContain("localizeUrl('/auth/register')");
+        Assert::assertStringContainsString("@include('pub_theme::components.ui.auth-buttons'", $content);
+        Assert::assertStringNotContainsString("__('user::auth.login-in')", $content);
+        Assert::assertStringNotContainsString("__('user::auth.sign-up')", $content);
+        Assert::assertStringNotContainsString("localizeUrl('/auth/login')", $content);
+        Assert::assertStringNotContainsString("localizeUrl('/auth/register')", $content);
     }
 });
 
@@ -34,14 +29,8 @@ test('headernav auth ctas delegate rendering to theme auth-buttons partial', fun
     ];
 
     foreach ($paths as $path) {
-        $content = file_get_contents($path);
+        $content = cmsReadFile($path);
 
-        expect($content)->not->toBeFalse();
-        if (! is_string($content)) {
-            continue;
-        }
-
-        expect($content)
-            ->toContain("@include('pub_theme::components.ui.auth-buttons', ['showLabels' => true, 'size' => 'md'])");
+        Assert::assertStringContainsString("@include('pub_theme::components.ui.auth-buttons', ['showLabels' => true, 'size' => 'md'])", $content);
     }
 });

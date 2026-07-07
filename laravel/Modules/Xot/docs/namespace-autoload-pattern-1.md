@@ -83,12 +83,4 @@ namespace Modules\ModuleName\App\Console\Commands;
 ## Collegamenti
 
 - [Convenzioni di Namespace](../xot/docs/namespace_conventions.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Struttura Moduli](../xot/docs/module_structure.md)
-=======
-- [Struttura Moduli](../xot/docs/module_structure.md)
->>>>>>> 40b96bcd6 (.)
-=======
-- [Struttura Moduli](../xot/docs/module_structure.md)
->>>>>>> origin/dev

@@ -39,8 +39,6 @@ use Spatie\SecurityAdvisoriesHealthCheck\SecurityAdvisoriesCheck;
 class HealthPage extends XotBasePage
 {
     /**
-     * Untyped to match HandlesEvents::$listeners.
-     *
      * @var array<string, string>
      */
     protected $listeners = ['refresh-component' => '$refresh'];
@@ -83,7 +81,8 @@ class HealthPage extends XotBasePage
          * PHPStan Level 10: CpuLoadCheck, SecurityAdvisoriesCheck, and SmtpCheck
          * all extend Check, but their types are not recognized due to dynamic loading.
          * We suppress this specific error as the runtime type is guaranteed to be correct.
-         * @phpstan-ignore-next-line
+         *
+         * @phpstan-ignore-next-line argument.type
          */
         Health::checks($checks);
         Artisan::call(RunHealthChecksCommand::class);

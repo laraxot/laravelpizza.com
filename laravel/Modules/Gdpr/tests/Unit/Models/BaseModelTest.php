@@ -4,17 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Models;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
 use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\BaseModel;
 use Modules\Gdpr\Tests\TestCase;
-=======
-use Modules\Gdpr\Models\BaseModel;
-use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
->>>>>>> 40b96bcd6 (.)
 
 uses(TestCase::class);
 

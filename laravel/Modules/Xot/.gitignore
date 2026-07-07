@@ -103,6 +103,8 @@ Thumbs.db
 *.old2
 *.backup
 *.backup.*
+*.backup-*
+*.backup_*
 *.bak
 *.bakcup
 *.new
@@ -121,6 +123,8 @@ Thumbs.db
 # ==============================================
 docs/phpstan/
 docs/cache/
+docs/archive/
+docs/archive/**
 
 # ==============================================
 # OLD DIRECTORIES (LEGACY CLEANUP)
@@ -158,7 +162,13 @@ packages/temp/
 lang/lang/
 _docs/
 _docs/
-<<<<<<< HEAD
 *.pest.php
-=======
->>>>>>> origin/dev
+
+# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
+*~HEAD
+*~BASE
+*~LOCAL
+*~REMOTE
+*.orig
+*.rej
+*~headagentdb.rvf

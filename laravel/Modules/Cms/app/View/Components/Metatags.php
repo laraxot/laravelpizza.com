@@ -20,7 +20,7 @@ class Metatags extends Component
         $metatag = MetatagData::make();
         $view = app(GetViewAction::class)->execute();
         $route = request()->route();
-        $routeName = $route?->getName();
+        $routeName = $route ? $route->getName() : null;
         /** @var array<string, mixed> $routeParameters */
         $routeParameters = [];
         if (is_object($route)) {
@@ -40,7 +40,6 @@ class Metatags extends Component
                 user: auth()->user(),
             ),
         ];
-        // @phpstan-ignore-next-line
         if (! view()->exists($view)) {
             throw new \Exception('view not found: '.$view);
         }

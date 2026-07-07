@@ -2,16 +2,7 @@
 
 ## Overview
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 Questi componenti Filament sono stati creati per supportare la selezione geografica e la gestione degli studi odontoiatrici nel widget `FindDoctorAndAppointmentWidget` del modulo SaluteOra.
-=======
-Questi componenti Filament sono stati creati per supportare la selezione geografica e la gestione degli studi odontoiatrici nel widget `FindDoctorAndAppointmentWidget` del modulo <nome progetto>.
->>>>>>> 7eb1087 (.)
-=======
-Questi componenti Filament sono stati creati per supportare la selezione geografica e la gestione degli studi odontoiatrici nel widget `FindDoctorAndAppointmentWidget` del modulo <nome progetto>.
-Questi componenti Filament sono stati creati per supportare la selezione geografica e la gestione degli studi odontoiatrici nel widget `FindDoctorAndAppointmentWidget` del modulo <nome progetto>.
->>>>>>> laraxot/develop
 
 ## Componenti Implementati
 
@@ -95,16 +86,7 @@ protected function getStudioStepSchema(): array
 {
     return [
         // Titolo step
-<<<<<<< HEAD
-<<<<<<< HEAD
         View::make('saluteora::filament.widgets.studio-step-header')
-=======
-        View::make('<nome progetto>::filament.widgets.studio-step-header')
->>>>>>> 7eb1087 (.)
-=======
-        View::make('<nome progetto>::filament.widgets.studio-step-header')
-        View::make('<nome progetto>::filament.widgets.studio-step-header')
->>>>>>> laraxot/develop
             ->viewData([
                 'studiosCount' => $this->getStudiosCount(),
                 'geographicArea' => $this->getGeographicAreaName(),
@@ -112,16 +94,7 @@ protected function getStudioStepSchema(): array
             ->visible(fn (): bool => $this->hasValidGeographicSelection()),
 
         // Pulsanti selezione studio
-<<<<<<< HEAD
-<<<<<<< HEAD
         View::make('saluteora::filament.widgets.studio-selector')
-=======
-        View::make('<nome progetto>::filament.widgets.studio-selector')
->>>>>>> 7eb1087 (.)
-=======
-        View::make('<nome progetto>::filament.widgets.studio-selector')
-        View::make('<nome progetto>::filament.widgets.studio-selector')
->>>>>>> laraxot/develop
             ->viewData([
                 'studios' => $this->getStudiosForSelectedArea(),
                 'selectedStudio' => $this->data['selected_studio'] ?? null,
@@ -130,20 +103,8 @@ protected function getStudioStepSchema(): array
 
         // TextInput per mostrare studio selezionato
         TextInput::make('selected_studio_name')
-<<<<<<< HEAD
-<<<<<<< HEAD
             ->label(__('saluteora::widgets.find_doctor.fields.selected_studio.label'))
             ->placeholder(__('saluteora::widgets.find_doctor.fields.selected_studio.placeholder'))
-=======
-            ->label(__('<nome progetto>::widgets.find_doctor.fields.selected_studio.label'))
-            ->placeholder(__('<nome progetto>::widgets.find_doctor.fields.selected_studio.placeholder'))
->>>>>>> 7eb1087 (.)
-=======
-            ->label(__('<nome progetto>::widgets.find_doctor.fields.selected_studio.label'))
-            ->placeholder(__('<nome progetto>::widgets.find_doctor.fields.selected_studio.placeholder'))
-            ->label(__('<nome progetto>::widgets.find_doctor.fields.selected_studio.label'))
-            ->placeholder(__('<nome progetto>::widgets.find_doctor.fields.selected_studio.placeholder'))
->>>>>>> laraxot/develop
             ->readonly()
             ->visible(fn (): bool => !empty($this->data['selected_studio']))
             ->suffixIcon('heroicon-o-check-circle')
@@ -282,8 +243,4 @@ class FindDoctorWidgetStep2Test extends TestCase
 **Creato**: 26 Giugno 2025  
 **Versione**: 2.0 - Semplificato  
 **Stato**: Implementation Ready  
-<<<<<<< HEAD
 **Approccio**: Pulsanti + TextInput (semplice e diretto) 
-=======
-**Approccio**: Pulsanti + TextInput (semplice e diretto) 
->>>>>>> laraxot/develop

@@ -10,6 +10,7 @@ use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
+<<<<<<< HEAD
 describe('HasTeams Trait CurrentTeam', function () {
     it('currentTeam does not crash when user has no teams', function () {
         // Arrange: Crea un utente senza team
@@ -17,6 +18,13 @@ describe('HasTeams Trait CurrentTeam', function () {
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+=======
+beforeEach(function (): void {
+    /* @var \Modules\User\Tests\TestCase $this */
+    /* @var TestCase $this */
+    $this->skipUnlessUsersTableReady();
+});
+>>>>>>> 9fa499be (.)
 
         // Act: Accedi a currentTeam (non dovrebbe crashare)
         $currentTeam = $user->currentTeam;
@@ -100,12 +108,20 @@ describe('HasTeams Trait CurrentTeam', function () {
         expect($currentTeam)->not->toBeNull();
     });
 
+<<<<<<< HEAD
     it('switchTeam can change current team', function () {
         // Arrange: Crea un utente con due team
         $user = User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+=======
+    test('has teams switch team can change current team', function (): void {
+        /** @var TestCase $this */
+        $user = hasTeamsCurrentCreateUser();
+        $team1 = hasTeamsCurrentCreateTeam($user, ['name' => 'Team 1', 'personal_team' => false]);
+        $team2 = hasTeamsCurrentCreateTeam($user, ['name' => 'Team 2', 'personal_team' => true]);
+>>>>>>> 9fa499be (.)
 
         $team1 = Team::factory()->create([
             'user_id' => $user->id,

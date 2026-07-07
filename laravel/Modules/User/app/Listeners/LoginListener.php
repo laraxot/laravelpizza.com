@@ -8,7 +8,7 @@ use Illuminate\Auth\Events\Login;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
 use Modules\User\Actions\GetCurrentDeviceAction;
-use Modules\User\Contracts\HasAuthentications;
+use Modules\User\Models\BaseUser;
 use Modules\User\Models\DeviceUser;
 
 class LoginListener
@@ -50,7 +50,7 @@ class LoginListener
         }
 
         // -----
-        if ($user && $user instanceof HasAuthentications) {
+        if ($user instanceof BaseUser) {
             $ip = $this->request->ip();
             $userAgent = $this->request->userAgent();
             // $location = optional(geoip()->getLocation($ip))->toArray();

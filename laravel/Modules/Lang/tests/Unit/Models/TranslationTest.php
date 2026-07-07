@@ -4,19 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit\Models;
 
-<<<<<<< HEAD
-uses(TestCase::class);
-
-use Modules\Lang\Models\Translation;
-use Modules\Lang\Tests\TestCase;
-=======
 use Illuminate\Database\Eloquent\Builder;
 use Modules\Lang\Models\Translation;
 use Modules\Lang\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
->>>>>>> 40b96bcd6 (.)
 
 describe('Translation Model', function () {
     test('has correct fillable attributes', function () {

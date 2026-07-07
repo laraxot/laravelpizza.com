@@ -15,7 +15,6 @@ use Filament\Support\Colors\Color;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
-use Webmozart\Assert\Assert;
 
 /**
  * @property Schema $form
@@ -32,11 +31,20 @@ class MetatagPage extends XotBasePage
 
     public function mount(): void
     {
-        /** @var array<string, mixed> $data */
-        $data = config('metatag');
-        Assert::isArray($data);
+        $config = config('metatag');
+        if (! is_array($config)) {
+            $config = [];
+        }
 
-        $this->form->fill($data);
+        $state = [];
+        foreach ($config as $key => $value) {
+            if (! is_string($key)) {
+                continue;
+            }
+            $state[$key] = $value;
+        }
+
+        $this->form->fill($state);
     }
 
     public function schema(Schema $schema): Schema
@@ -84,6 +92,7 @@ class MetatagPage extends XotBasePage
             ->send();
     }
 
+    /** @return list<Action> */
     protected function getFormActions(): array
     {
         return [

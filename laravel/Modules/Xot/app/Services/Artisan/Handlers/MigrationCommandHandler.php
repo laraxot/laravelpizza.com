@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Services\Artisan\Handlers;
 
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use Modules\Xot\Services\Artisan\Contracts\CommandHandlerInterface;
 use Modules\Xot\Services\ArtisanService;
@@ -15,8 +16,10 @@ class MigrationCommandHandler implements CommandHandlerInterface
 {
     public function handle(string $moduleName = ''): string
     {
-        DB::purge('mysql');
-        DB::reconnect('mysql');
+        $defaultConn = Config::get('database.default');
+        $purgeConn = \is_string($defaultConn) && '' !== $defaultConn ? $defaultConn : 'mysql';
+        DB::purge($purgeConn);
+        DB::reconnect($purgeConn);
 
         if ('' !== $moduleName) {
             echo '<h3>Module '.$moduleName.'</h3>';

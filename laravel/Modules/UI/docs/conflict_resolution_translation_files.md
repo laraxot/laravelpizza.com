@@ -132,12 +132,7 @@ Applicare la stessa logica a tutti i file di traduzione con conflitti simili:
 
 ## Collegamenti Correlati
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Translation Standards](../../../docs/translation-standards.md)
-=======
-- [Translation Standards](../../../project_docs/translation-standards.md)
->>>>>>> 7eb1087 (.)
 - [PHP Strict Types](./strict_types_implementation.md)
 - [UI Module Structure](./structure.md)
 - [Best Practices](./best-practices.md)
@@ -156,5 +151,3 @@ Applicare la stessa logica a tutti i file di traduzione con conflitti simili:
 - **File**: Multipli file di traduzione
 - **Tipo Conflitto**: Dichiarazione PHP e sintassi array
 - **Scelta**: Versione HEAD (con strict types e sintassi moderna)
-=======
->>>>>>> laraxot/develop

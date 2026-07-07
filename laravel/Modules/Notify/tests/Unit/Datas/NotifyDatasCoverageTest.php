@@ -11,13 +11,6 @@ use Modules\Notify\Datas\NetfunSmsMessage;
 use Modules\Notify\Datas\NetfunSmsRequestData;
 use Modules\Notify\Datas\NetfunSmsResponseData;
 use Modules\Notify\Datas\SendNotificationBulkResultData;
-<<<<<<< HEAD
-use Modules\Notify\Datas\SMS\AgiletelecomData;
-use Modules\Notify\Datas\SMS\GammuData;
-use Modules\Notify\Datas\SMS\NexmoData;
-use Modules\Notify\Datas\SMS\PlivoData;
-=======
->>>>>>> 40b96bcd6 (.)
 use Modules\Notify\Datas\SMS\SmsFactorData;
 use Modules\Notify\Datas\SmsMessageData;
 use Modules\Notify\Datas\TelegramData;

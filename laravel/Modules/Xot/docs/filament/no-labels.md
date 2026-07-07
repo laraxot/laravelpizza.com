@@ -107,3 +107,8 @@ Se trovi codice che viola questa regola:
 - [Esempio pratico nel TeamsRelationManager](/laravel/modules/user/docs/filament/teams_relation_manager.md)
 - [Regole per RelationManager](/docs/filament/relation_managers.md)
 
+- [Documentazione sulla struttura delle traduzioni](/laravel/Modules/Xot/docs/translation_rules.md)
+- [Esempio pratico nel TeamsRelationManager](/laravel/Modules/User/docs/filament/teams_relation_manager.md)
+- [Regole per RelationManager](/docs/filament/relation_managers.md)
+
+*Ultimo aggiornamento: 3 Giugno 2025*

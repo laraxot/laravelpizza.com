@@ -18,6 +18,9 @@ class OauthAuthCodeFactory extends Factory
 {
     protected $model = OauthAuthCode::class;
 
+    /**
+     * @return array<string, mixed>
+     */
     public function definition(): array
     {
         return [

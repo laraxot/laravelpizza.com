@@ -6,7 +6,7 @@ Ripulire il modulo UI da file di backup, duplicati e file temporanei che creano 
 ## 🚨 Problemi Identificati
 - File con estensione `.bak`, `.old`, `.disabled`, `.to_geo`.
 - File che differiscono solo per il case (es. `TimeclockWidget.php` vs `TimeClockWidget.php`).
-- Documentazione duplicata o obsoleta in `docs/archive/`.
+- Documentazione duplicata o obsoleta in `docs/archived/`.
 
 ## ✅ Checklist
 - [ ] Identificare tutti i file `.bak`, `.old`, `.disabled`, `.to_geo` nel modulo UI.

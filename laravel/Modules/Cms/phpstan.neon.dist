@@ -8,15 +8,15 @@ parameters:
 
     excludePaths:
         - app/Filament/Pages (?)
-        - app/Filament/Resources/*/Pages/List*.php
-        - Filament/Resources/*/Pages/List*.php
-        - Filament/Resources/PageContentResource.php
-        - Filament/Resources/PageResource.php
+        - app/Filament/Resources/*/Pages/List*.php (?)
+        - Filament/Resources/*/Pages/List*.php (?)
+        - Filament/Resources/PageContentResource.php (?)
+        - Filament/Resources/PageResource.php (?)
         - build (?)
         - vendor (?)
         - Tests (?)
-        - rector.php
-        - Providers/CmsServiceProvider.php
+        - rector.php (?)
+        - Providers/CmsServiceProvider.php (?)
 
     ignoreErrors:
         - '#Access to an undefined property#'

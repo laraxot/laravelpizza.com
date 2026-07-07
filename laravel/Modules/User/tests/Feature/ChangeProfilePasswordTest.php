@@ -18,8 +18,17 @@ use function Pest\Laravel\actingAs;
 uses(TestCase::class);
 
 beforeEach(function (): void {
+<<<<<<< HEAD
     $this->app->register(AdminPanelProvider::class);
     $this->app->register(SchemasServiceProvider::class);
+=======
+    /* @var TestCase $this */
+    $this->skipUnlessUsersTableReady();
+    $this->skipUnlessUserColumn('profiles', 'uuid', 'profiles.uuid column is not available in the test database.');
+
+    app()->register(AdminPanelProvider::class);
+    app()->register(SchemasServiceProvider::class);
+>>>>>>> 9fa499be (.)
     Filament::setCurrentPanel(Filament::getPanel('user::admin'));
 });
 

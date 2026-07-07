@@ -112,7 +112,7 @@ architecture-overview.md
 # ❌ SBAGLIATO
 MY_DOCUMENT.md              # UPPERCASE
 my_document.md              # underscore
-analysis-2025-11-04.md      # date in name (use CHANGELOG.md)
+analysis.md      # date in name (use CHANGELOG.md)
 ```
 
 ### 8. DRY Principle

@@ -78,7 +78,7 @@ class SafeAttributeCastAction
             return $default ?? '';
         }
 
-        return (string) $value;
+        return SafeStringCastAction::cast($value);
     }
 
     /**
@@ -150,11 +150,11 @@ class SafeAttributeCastAction
     /**
      * Ottiene un attributo con cast sicuro a array.
      *
-     * @param Model      $model     Il modello Eloquent
-     * @param string     $attribute Il nome dell'attributo
-     * @param array|null $default   Valore di default se l'attributo non esiste o è null
+     * @param Model                         $model     Il modello Eloquent
+     * @param string                        $attribute Il nome dell'attributo
+     * @param array<int|string, mixed>|null $default   Valore di default se l'attributo non esiste o è null
      *
-     * @return array Il valore dell'attributo convertito in array
+     * @return array<int|string, mixed> Il valore dell'attributo convertito in array
      */
     public function getArrayAttribute(Model $model, string $attribute, ?array $default = []): array
     {
@@ -163,7 +163,7 @@ class SafeAttributeCastAction
         $value = $model->getAttribute($attribute);
 
         if (null === $value) {
-            return $default ?? [];
+            return app(SafeArrayCastAction::class)->execute([], $default);
         }
 
         return app(SafeArrayCastAction::class)->execute($value, $default);
@@ -189,7 +189,11 @@ class SafeAttributeCastAction
             'int' => $this->getIntAttribute($model, $attribute, is_int($default) ? $default : null),
             'float' => $this->getFloatAttribute($model, $attribute, is_float($default) ? $default : null),
             'bool' => $this->getBooleanAttribute($model, $attribute, is_bool($default) ? $default : null),
-            'array' => $this->getArrayAttribute($model, $attribute, is_array($default) ? $default : null),
+            'array' => $this->getArrayAttribute(
+                $model,
+                $attribute,
+                is_array($default) ? app(SafeArrayCastAction::class)->execute($default) : null,
+            ),
             default => throw new \InvalidArgumentException("Tipo non supportato: {$type}"),
         };
     }

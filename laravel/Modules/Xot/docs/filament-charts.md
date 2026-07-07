@@ -936,20 +936,8 @@ class BlogPostsChartTest extends TestCase
 
 ## 🎯 Standard 2026: Professional Charts & PDF
 
-<<<<<<< HEAD
 Per garantire un look "Premium" e la possibilità di esportare PDF perfetti in ambito healthcare_app/PTVX:
 Per garantire un look "Premium" e la possibilità di esportare PDF perfetti in ambito Laraxot:
-=======
-<<<<<<< .merge_file_hi2xyZ
-Per garantire un look "Premium" e la possibilità di esportare PDF perfetti in ambito healthcare_app/PTVX:
-=======
-<<<<<<< HEAD
-Per garantire un look "Premium" e la possibilità di esportare PDF perfetti in ambito Laraxot:
-=======
-Per garantire un look "Premium" e la possibilità di esportare PDF perfetti in ambito ExternalProject/PTVX:
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> origin/dev
->>>>>>> .merge_file_PV5RFq
 
 ### 1. Configurazione Professionale
 Consultare la guida **[LimeSurvey Professional Charts Guide](../../../limesurvey/docs/professional-charts-and-pdfs.md)**.
@@ -965,4 +953,3 @@ Pattern:
 3.  Impostare `animation: false` nelle opzioni Chart.js per la stampa.
 
 Vedi: **[Dashboard Best Practices](../../../limesurvey/docs/dashboard-best-practices.md)**.
-

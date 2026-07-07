@@ -278,12 +278,4 @@ Per implementare queste linee guida:
 
 - [Markdown Guide](https://www.markdownguide.org/)
 - [Documentazione Laravel](https://laravel.com/docs)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Documentazione PHPDoc](https://docs.phpdoc.org/)
-=======
-- [Documentazione PHPDoc](https://docs.phpdoc.org/)
->>>>>>> 40b96bcd6 (.)
-=======
-- [Documentazione PHPDoc](https://docs.phpdoc.org/)
->>>>>>> origin/dev

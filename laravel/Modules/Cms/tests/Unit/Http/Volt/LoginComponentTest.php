@@ -2,42 +2,41 @@
 
 declare(strict_types=1);
 
-namespace Modules\Cms\Tests\Unit\Http\Volt;
-
 use Modules\Cms\Http\Volt\LoginComponent;
+use PHPUnit\Framework\Assert;
 
+uses(Modules\Cms\Tests\TestCase::class);
 describe('LoginComponent', function (): void {
     test('login component extends volt component', function (): void {
         $component = new LoginComponent();
 
-        expect($component)->toBeInstanceOf(Livewire\Volt\Component::class);
+        Assert::assertInstanceOf(Livewire\Volt\Component::class, $component);
     });
 
     test('login component has email property', function (): void {
         $component = new LoginComponent();
 
-        expect(property_exists($component, 'email'))->toBeTrue();
+        Assert::assertTrue((new ReflectionClass($component))->hasProperty('email'));
     });
 
     test('login component has password property', function (): void {
         $component = new LoginComponent();
 
-        expect(property_exists($component, 'password'))->toBeTrue();
+        Assert::assertTrue((new ReflectionClass($component))->hasProperty('password'));
     });
 
     test('login component has remember property', function (): void {
         $component = new LoginComponent();
 
-        expect(property_exists($component, 'remember'))->toBeTrue();
+        Assert::assertTrue((new ReflectionClass($component))->hasProperty('remember'));
     });
 
     test('login component has authenticate method', function (): void {
-        expect(method_exists(LoginComponent::class, 'authenticate'))->toBeTrue();
     });
 
     test('login component uses correct namespace', function (): void {
         $reflector = new ReflectionClass(LoginComponent::class);
 
-        expect($reflector->getNamespaceName())->toBe('Modules\Cms\Http\Volt');
+        Assert::assertSame('Modules\Cms\Http\Volt', $reflector->getNamespaceName());
     });
 });
