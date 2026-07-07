@@ -1,1 +1,0 @@
-phpstan-usage.md
