@@ -11,13 +11,16 @@ use Modules\Notify\Channels\WhatsAppChannel;
 use Modules\Notify\Enums\ChannelEnum;
 use Modules\Notify\Tests\TestCase;
 use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
+use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+use function Safe\preg_replace;
+
+uses(\Modules\Notify\Tests\TestCase::class);
 
 test('notification channel mapping is correct', function () {
-    expect(ChannelEnum::Mail->getNotificationChannel())->toBe('mail')
-        ->and(ChannelEnum::Sms->getNotificationChannel())->toBe(SmsChannel::class)
-        ->and(ChannelEnum::WhatsApp->getNotificationChannel())->toBe(WhatsAppChannel::class);
+    Assert::assertSame('mail', ChannelEnum::Mail->getNotificationChannel());
+    Assert::assertSame(SmsChannel::class, ChannelEnum::Sms->getNotificationChannel());
+    Assert::assertSame(WhatsAppChannel::class, ChannelEnum::WhatsApp->getNotificationChannel());
 });
 
 test('mail recipient is resolved only for valid email', function () {
@@ -43,8 +46,8 @@ test('mail recipient is resolved only for valid email', function () {
     };
     $invalid->setAttribute('email', 'not-an-email');
 
-    expect(ChannelEnum::Mail->getRecipient($valid))->toBe('notify@example.test')
-        ->and(ChannelEnum::Mail->getRecipient($invalid))->toBeNull();
+    Assert::assertSame('notify@example.test', ChannelEnum::Mail->getRecipient($valid));
+    Assert::assertNull(ChannelEnum::Mail->getRecipient($invalid));
 });
 
 test('sms and whatsapp recipients are normalized', function () {
@@ -73,6 +76,6 @@ test('sms and whatsapp recipients are normalized', function () {
     $record->setAttribute('phone', ' 333-12-34-567 ');
     $record->setAttribute('whatsapp', ' 388 99 77 66 ');
 
-    expect(ChannelEnum::Sms->getRecipient($record))->toBe('+393331234567')
-        ->and(ChannelEnum::WhatsApp->getRecipient($record))->toBe('+39388997766');
+    Assert::assertSame('+393331234567', ChannelEnum::Sms->getRecipient($record));
+    Assert::assertSame('+39388997766', ChannelEnum::WhatsApp->getRecipient($record));
 });

@@ -32,6 +32,9 @@ class TranslationEditor extends XotBaseField
         }
 
         foreach ($state as $key => $value) {
+            if (! is_string($key) && ! is_int($key)) {
+                continue;
+            }
             $keyStr = (string) $key;
             if (is_array($value)) {
                 $components[] = Section::make($keyStr)->schema([

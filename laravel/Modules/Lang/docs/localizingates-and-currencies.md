@@ -163,4 +163,8 @@ Di seguito elenco i file che modificherei e le modifiche specifiche che apporter
      ```ini
      extension=intl
      ```
+<<<<<<< HEAD
    - **Ragionamento**: `NumberFormatter` richiede l'estensione `intl` per funzionare. Senza di essa, la formattazione delle valute fallirà. Verificare questa configurazione nel ambiente di sviluppo e produzione di `ptvx` è essenziale per evitare errori runtime, specialmente per funzionalità di pagamento o fatturazione.
+=======
+   - **Ragionamento**: `NumberFormatter` richiede l'estensione `intl` per funzionare. Senza di essa, la formattazione delle valute fallirà. Verificare questa configurazione nel ambiente di sviluppo e produzione di `ptvx` è essenziale per evitare errori runtime, specialmente per funzionalità di pagamento o fatturazione.
+>>>>>>> 40b96bcd6 (.)

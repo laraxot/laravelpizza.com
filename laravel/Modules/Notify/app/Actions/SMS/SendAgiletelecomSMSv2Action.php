@@ -17,6 +17,9 @@ use Override;
  */
 class SendAgiletelecomSMSv2Action implements SmsActionContract
 {
+    /**
+     * @return array<string, mixed>
+     */
     #[Override]
     public function execute(SmsData $data): array
     {

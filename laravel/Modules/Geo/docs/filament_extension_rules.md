@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Filament Class Extension Rules
 
 **Fundamental Principle**: Never extend Filament classes directly - always use XotBase classes.
@@ -235,3 +236,12 @@ app(CreateUserAction::class)->execute($data);
 ---
 
 **Philosophy**: DRY + KISS - Do not duplicate, do not complicate, always use base classes.
+=======
+---
+module: theme
+topic: filament_extension_rules
+canonical: ../../../Themes/docs/shared-components/filament-extension-rules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/filament-extension-rules.md
+>>>>>>> 40b96bcd6 (.)

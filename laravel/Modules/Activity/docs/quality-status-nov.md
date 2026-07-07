@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Activity Module - Quality Status (November 2025)
 
 ## 🎯 Overview
@@ -156,3 +157,12 @@ public function withCustomProperties(array $attributes): static
 *Last Updated: November 15, 2025*
 *PHPStan Version: Latest*
 *PHPMD Version: Latest*
+=======
+---
+module: theme
+topic: quality-status-nov
+canonical: ../../../Themes/docs/shared-components/quality-status-2025-11.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/quality-status-2025-11.md
+>>>>>>> 40b96bcd6 (.)

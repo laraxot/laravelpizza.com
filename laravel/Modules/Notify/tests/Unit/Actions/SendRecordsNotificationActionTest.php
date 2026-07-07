@@ -8,37 +8,29 @@ use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Notify\Actions\SendRecordNotificationAction;
 use Modules\Notify\Actions\SendRecordsNotificationAction;
+use Modules\Notify\Tests\Fixtures\SendRecordNotificationFailStub;
+use Modules\Notify\Tests\Fixtures\SendRecordNotificationNoopStub;
+use Modules\Notify\Tests\Fixtures\SendRecordNotificationThrowStub;
+use Modules\Notify\Tests\Fixtures\SendRecordsNotificationRecordDummy;
+use Modules\Notify\Tests\Fixtures\SendRecordsSafeEloquentCastEmptyStub;
+use Modules\Notify\Tests\Fixtures\SendRecordsSafeEloquentCastStub;
 use Modules\Notify\Tests\TestCase;
 use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
+use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Notify\Tests\TestCase::class);
 
+/**
+ * @param  array<string, mixed>  $attributes
+ */
 function makeDummyBulkNotifyRecord(array $attributes = []): Model
 {
-    return new class($attributes) extends Model
-    {
-        protected $guarded = [];
-    };
+    return new SendRecordsNotificationRecordDummy($attributes);
 }
 
 test('send records notification action counts successful sends', function (): void {
-    app()->instance(SafeEloquentCastAction::class, new class
-    {
-        public function getStringAttribute(Model $record, string $attribute, string $default = ''): string
-        {
-            $value = $record->getAttribute($attribute);
-
-            return is_string($value) ? $value : $default;
-        }
-    });
-
-    app()->instance(SendRecordNotificationAction::class, new class
-    {
-        public function execute(Model $record, string $templateSlug, array $channels): void
-        {
-            // No-op: simulate successful delivery for each record.
-        }
-    });
+    app()->instance(SafeEloquentCastAction::class, new SendRecordsSafeEloquentCastStub);
+    app()->instance(SendRecordNotificationAction::class, new SendRecordNotificationNoopStub);
 
     $records = new EloquentCollection([
         makeDummyBulkNotifyRecord(['id' => 1, 'name' => 'Alpha']),
@@ -51,32 +43,15 @@ test('send records notification action counts successful sends', function (): vo
         channels: ['mail', 'sms'],
     );
 
-    expect($result->successCount)->toBe(4)
-        ->and($result->errorCount)->toBe(0)
-        ->and($result->errors->count())->toBe(0)
-        ->and($result->totalProcessed)->toBe(4);
+    Assert::assertSame(4, $result->successCount);
+    Assert::assertSame(0, $result->errorCount);
+    Assert::assertSame(0, $result->errors->count());
+    Assert::assertSame(4, $result->totalProcessed);
 });
 
 test('send records notification action accumulates errors per channel', function (): void {
-    app()->instance(SafeEloquentCastAction::class, new class
-    {
-        public function getStringAttribute(Model $record, string $attribute, string $default = ''): string
-        {
-            $value = $record->getAttribute($attribute);
-
-            return is_string($value) ? $value : $default;
-        }
-    });
-
-    app()->instance(SendRecordNotificationAction::class, new class
-    {
-        public function execute(Model $record, string $templateSlug, array $channels): void
-        {
-            if ((bool) $record->getAttribute('should_fail')) {
-                throw new \Exception('bulk failure');
-            }
-        }
-    });
+    app()->instance(SafeEloquentCastAction::class, new SendRecordsSafeEloquentCastStub);
+    app()->instance(SendRecordNotificationAction::class, new SendRecordNotificationFailStub);
 
     $records = new EloquentCollection([
         makeDummyBulkNotifyRecord(['id' => 1, 'name' => 'Ok Record', 'should_fail' => false]),
@@ -89,29 +64,16 @@ test('send records notification action accumulates errors per channel', function
         channels: ['mail', 'sms'],
     );
 
-    expect($result->successCount)->toBe(2)
-        ->and($result->errorCount)->toBe(2)
-        ->and($result->errors->count())->toBe(2)
-        ->and($result->errors->first()['record'])->toBe('Fail Record')
-        ->and($result->totalProcessed)->toBe(4);
+    Assert::assertSame(2, $result->successCount);
+    Assert::assertSame(2, $result->errorCount);
+    Assert::assertSame(2, $result->errors->count());
+    Assert::assertSame('Fail Record', $result->errors->first()['record'] ?? null);
+    Assert::assertSame(4, $result->totalProcessed);
 });
 
 test('send records notification action falls back to record key when name is missing', function (): void {
-    app()->instance(SafeEloquentCastAction::class, new class
-    {
-        public function getStringAttribute(Model $record, string $attribute, string $default = ''): string
-        {
-            return '';
-        }
-    });
-
-    app()->instance(SendRecordNotificationAction::class, new class
-    {
-        public function execute(Model $record, string $templateSlug, array $channels): void
-        {
-            throw new \Exception('forced error');
-        }
-    });
+    app()->instance(SafeEloquentCastAction::class, new SendRecordsSafeEloquentCastEmptyStub);
+    app()->instance(SendRecordNotificationAction::class, new SendRecordNotificationThrowStub);
 
     $record = makeDummyBulkNotifyRecord(['id' => 99, 'should_fail' => true]);
     $records = new EloquentCollection([$record]);
@@ -122,6 +84,7 @@ test('send records notification action falls back to record key when name is mis
         channels: ['mail'],
     );
 
-    expect($result->errorCount)->toBe(1)
-        ->and($result->errors->first()['record'])->toBe('99');
+    Assert::assertSame(0, $result->successCount);
+    Assert::assertSame(1, $result->errorCount);
+    Assert::assertSame('99', $result->errors->first()['record'] ?? null);
 });

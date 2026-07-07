@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BaseUser Refactoring - Completato
 
 **Data**: 15 Ottobre 2025
@@ -342,3 +343,12 @@ Il refactoring di `BaseUser` è stato un **successo completo**:
 **Status**: ✅ PRODUCTION READY
 **Risk Level**: 🟢 LOW
 **Confidence**: 💯 HIGH
+=======
+---
+module: theme
+topic: baseuser-refactoring-completed-2
+canonical: ../../../Themes/docs/shared-components/baseuser-refactoring-completed-.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/baseuser-refactoring-completed-.md
+>>>>>>> 40b96bcd6 (.)

@@ -26,6 +26,9 @@ Durante l'analisi del codice è emerso che numerosi file di traduzione nel modul
 - [Regole di Naming per i File di Traduzione](../../Notify/docs/TRANSLATION_FILE_NAMING_RULES.md)
 - [Guida alla Struttura dei File di Traduzione](../../Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md)
 - [Progresso della Standardizzazione](../../Notify/docs/TRANSLATION_STANDARDS_PROGRESS.md)
+- [Regole di Naming per i File di Traduzione](../../Notify/docs/TRANSLATION_FILE_NAMING_RULES.md)
+- [Guida alla Struttura dei File di Traduzione](../../Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md)
+- [Progresso della Standardizzazione](../../Notify/docs/TRANSLATION_STANDARDS_PROGRESS.md)
 
 ### Struttura Standard Richiesta
 
@@ -103,6 +106,9 @@ La corretta implementazione degli standard di traduzione garantisce:
 - [Regole Generali per le Traduzioni](./TRANSLATION_KEYS_RULES.md)
 - [Best Practices per le Traduzioni](./TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Convenzioni di Traduzione nel Modulo Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
+- [Regole Generali per le Traduzioni](./TRANSLATION_KEYS_RULES.md)
+- [Best Practices per le Traduzioni](./TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
 # Standardizzazione Traduzioni Modulo Notify
 
 ## Panoramica delle Problematiche
@@ -128,6 +134,9 @@ Durante l'analisi del codice è emerso che numerosi file di traduzione nel modul
 ## Standardizzazione Implementata
 
 ### Documenti di Riferimento
+- [Regole di Naming per i File di Traduzione](../../Notify/docs/TRANSLATION_FILE_NAMING_RULES.md)
+- [Guida alla Struttura dei File di Traduzione](../../Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md)
+- [Progresso della Standardizzazione](../../Notify/docs/TRANSLATION_STANDARDS_PROGRESS.md)
 - [Regole di Naming per i File di Traduzione](../../Notify/docs/TRANSLATION_FILE_NAMING_RULES.md)
 - [Guida alla Struttura dei File di Traduzione](../../Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md)
 - [Progresso della Standardizzazione](../../Notify/docs/TRANSLATION_STANDARDS_PROGRESS.md)
@@ -205,6 +214,9 @@ La corretta implementazione degli standard di traduzione garantisce:
 
 ## Collegamenti alla Documentazione
 
+- [Regole Generali per le Traduzioni](./TRANSLATION_KEYS_RULES.md)
+- [Best Practices per le Traduzioni](./TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
 - [Regole Generali per le Traduzioni](./TRANSLATION_KEYS_RULES.md)
 - [Best Practices per le Traduzioni](./TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Convenzioni di Traduzione nel Modulo Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)

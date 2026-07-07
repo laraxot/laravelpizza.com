@@ -78,13 +78,20 @@ class Translation extends BaseModel
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
     /**
-     * Undocumented function.
+     * @param EloquentBuilder<Translation> $query
+     *
+     * @return EloquentBuilder<Translation>|QueryBuilder
      */
     public function scopeOfTranslatedGroup(EloquentBuilder $query, string $group): QueryBuilder|EloquentBuilder
     {
         return $query->where('group', $group)->whereNotNull('value');
     }
 
+    /**
+     * @param EloquentBuilder<Translation> $query
+     *
+     * @return EloquentBuilder<Translation>
+     */
     public function scopeOrderByGroupKeys(EloquentBuilder $query, bool $ordered): EloquentBuilder
     {
         if ($ordered) {
@@ -94,6 +101,11 @@ class Translation extends BaseModel
         return $query;
     }
 
+    /**
+     * @param EloquentBuilder<Translation> $query
+     *
+     * @return EloquentBuilder<Translation>|QueryBuilder
+     */
     public function scopeSelectDistinctGroup(EloquentBuilder $query): EloquentBuilder|QueryBuilder
     {
         $select = match (\DB::getDriverName()) {

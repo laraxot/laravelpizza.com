@@ -281,4 +281,8 @@ Eseguire PHPStan su tutti i moduli, comprendere logica, politica, business logic
 
 ---
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: 2026-01-22*
+=======
+*Ultimo aggiornamento: 2026-01-22*
+>>>>>>> 40b96bcd6 (.)

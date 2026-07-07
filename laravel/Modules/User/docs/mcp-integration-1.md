@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Integrazione dei Server MCP con il Modulo User
 
 ## Panoramica
@@ -351,3 +352,12 @@ class EditUser extends EditRecord
 ## Conclusione
 
 L'integrazione dei server MCP con il modulo User consente di migliorare significativamente le funzionalità del modulo, fornendo memorizzazione efficiente delle preferenze degli utenti, interazione con API esterne per la verifica dei dati, operazioni complesse sul database e gestione avanzata della cache. Seguendo le linee guida e gli esempi forniti in questo documento, è possibile implementare queste funzionalità in modo conforme alle regole di sviluppo stabilite per i progetti base_<nome progetto>_fila5_mono.
+=======
+---
+module: theme
+topic: mcp-integration-1
+canonical: ../../../Themes/docs/shared-components/mcp-integration-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/mcp-integration-Modules.md
+>>>>>>> 40b96bcd6 (.)

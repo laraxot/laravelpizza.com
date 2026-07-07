@@ -7,9 +7,15 @@ namespace Modules\Notify\Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Notify\Models\MailTemplate;
 
+/**
+ * @extends Factory<MailTemplate>
+ */
 class MailTemplateFactory extends Factory
 {
     protected $model = MailTemplate::class;
+    /**
+     * @return array<string, mixed>
+     */
 
     public function definition(): array
     {

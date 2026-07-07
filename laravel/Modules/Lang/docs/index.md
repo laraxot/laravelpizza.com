@@ -22,6 +22,19 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 1. [API_REFERENCE.md](api_reference.md) - Riferimento API completo
 2. [EXAMPLES.md](examples.md) - Esempi di integrazione
 3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
+1. [README.md](README.md) - Documentazione principale e panoramica
+2. [config/lang.php](../config/lang.php) - Configurazione centralizzata
+3. [EXAMPLES.md](EXAMPLES.md) - Esempi pratici e casi d'uso
+
+### **Per Amministratori**
+1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
+2. [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Guida troubleshooting
+3. [config/lang.php](../config/lang.php) - Configurazione e ottimizzazioni
+
+### **Per Integratori**
+1. [API_REFERENCE.md](API_REFERENCE.md) - Riferimento API completo
+2. [EXAMPLES.md](EXAMPLES.md) - Esempi di integrazione
+3. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Pattern di implementazione
 
 ---
 
@@ -36,6 +49,7 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 - **Setup Iniziale**: [README.md](README.md#installazione)
 - **Configurazione**: [README.md](README.md#configurazione)
 - **Utilizzo Base**: [README.md](README.md#utilizzo)
+- **Esempi Pratici**: [EXAMPLES.md](EXAMPLES.md)
 - **Esempi Pratici**: [EXAMPLES.md](examples.md)
 
 ### **🎨 Integrazione Filament**
@@ -73,6 +87,7 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 - **Rollback**: [BEST_PRACTICES.md](BEST_PRACTICES.md#rollback-e-recovery)
 - **Backup**: [TROUBLESHOOTING.md](TROUBLESHOOTING.md#emergenze-e-rollback)
 - **Repository Composer Path**: [bugfix/composer-path-repository-priority.md](bugfix/composer-path-repository-priority.md)
+- **Repository Composer Path**: [bugfix/composer-path-repository-priority.md](bugfix/composer-path-repository-priority.md)
 
 ---
 
@@ -85,6 +100,8 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 - Utilizzo helper `__()` e `trans()`
 
 **Documenti da Leggere**
+1. [README.md](README.md) - Sezioni: Panoramica, Installazione, Utilizzo
+2. [EXAMPLES.md](EXAMPLES.md) - Sezioni: Struttura File Base
 1. [README.md](readme.md) - Sezioni: Panoramica, Installazione, Utilizzo
 2. [EXAMPLES.md](examples.md) - Sezioni: Struttura File Base
 3. [config/lang.php](../config/lang.php) - Configurazioni base
@@ -101,6 +118,9 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 - Validazione e controllo qualità
 
 **Documenti da Leggere**
+1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Tutte le sezioni
+2. [EXAMPLES.md](EXAMPLES.md) - Integrazione Filament e Testing
+3. [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Problemi comuni
 1. [BEST_PRACTICES.md](best_practices.md) - Tutte le sezioni
 2. [EXAMPLES.md](examples.md) - Integrazione Filament e Testing
 3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi comuni
@@ -117,6 +137,9 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 - Estensioni e plugin
 
 **Documenti da Leggere**
+1. [API_REFERENCE.md](API_REFERENCE.md) - Tutte le sezioni
+2. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Pattern avanzati
+3. [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Problemi complessi
 1. [API_REFERENCE.md](api_reference.md) - Tutte le sezioni
 2. [BEST_PRACTICES.md](best_practices.md) - Pattern avanzati
 3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi complessi
@@ -273,3 +296,5 @@ php artisan lang:debug [--log-missing] [--log-performance]
 **Versione**: 2.0.0
 **Autore**: Team Laraxot
 **Mantenuto da**: Community Laraxot
+
+- [Conflict Resolution](conflict-resolution.md)

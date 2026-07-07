@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Risoluzione Merge Conflicts Massivi - 2025-11-04
 
 ## 🔥 Problema Iniziale
@@ -280,3 +281,12 @@ Questi possono essere corretti in un secondo momento se necessario.
 - [Laraxot Architecture Rules](./laraxot-architecture-rules.md)
 - [Code Quality Standards](./code-quality-standards.md)
 - [File Locking Pattern](./file-locking-pattern.md) ← DA CREARE
+=======
+---
+module: theme
+topic: merge-conflict-resolution-2
+canonical: ../../../Themes/docs/shared-components/merge-conflict-resolution-.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/merge-conflict-resolution-.md
+>>>>>>> 40b96bcd6 (.)

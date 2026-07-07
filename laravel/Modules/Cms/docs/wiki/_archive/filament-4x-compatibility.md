@@ -61,4 +61,7 @@ public static function getNavigationIcon(): null|string
 - [Guida Ufficiale Filament 4.x](https://filamentphp.com/docs/4.x/upgrade-guide)
 
 *Ultimo aggiornamento: 2025-01-27*
+<<<<<<< HEAD
 *
+=======
+>>>>>>> 40b96bcd6 (.)

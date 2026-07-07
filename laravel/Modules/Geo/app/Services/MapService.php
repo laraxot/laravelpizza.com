@@ -4,11 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Services;
 
+<<<<<<< HEAD
+=======
+use Spatie\QueueableAction\QueueableAction;
+
+>>>>>>> 40b96bcd6 (.)
 /**
  * Service per la gestione dei marker e delle statistiche della mappa.
  */
 class MapService
 {
+<<<<<<< HEAD
+=======
+    use QueueableAction;
+
+>>>>>>> 40b96bcd6 (.)
     /**
      * Ottiene i marker in base ai filtri.
      *
@@ -44,4 +54,11 @@ class MapService
     {
         return [];
     }
+<<<<<<< HEAD
+=======
+
+    public function execute(): void
+    {
+    }
+>>>>>>> 40b96bcd6 (.)
 }

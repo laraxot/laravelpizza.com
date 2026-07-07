@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Analisi del File Logout.blade.php
 
 ## Analisi Attuale
@@ -222,3 +223,12 @@ $logout = function () {
 - [Best Practices di Sicurezza](./security_best_practices.md)
 - [Gestione Sessione](./session_management.md)
 - [Tema One Documentation](../../themes/one/docs/readme.md) 
+=======
+---
+module: theme
+topic: logout-analysis-1
+canonical: ../../../Themes/docs/shared-components/logout-analysis.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/logout-analysis.md
+>>>>>>> 40b96bcd6 (.)

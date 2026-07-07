@@ -217,7 +217,11 @@ Possibly invalid array key type mixed
 
 **Fix Complexity**: ⭐⭐ (Medium - Requires enum refactoring)
 
+<<<<<<< HEAD
 **See**: `Modules/Geo/docs/phpstan-errors-2025-12-16.md`
+=======
+**See**: `Modules/Geo/docs/phpstan-errors.md`
+>>>>>>> 40b96bcd6 (.)
 
 ---
 
@@ -243,7 +247,11 @@ Possibly invalid array key type mixed
 
 **Fix Complexity**: ⭐⭐ (Medium - Requires namespace fixes and interface updates)
 
+<<<<<<< HEAD
 **See**: `Modules/Cms/docs/phpstan-errors-2025-12-16.md`
+=======
+**See**: `Modules/Cms/docs/phpstan-errors.md`
+>>>>>>> 40b96bcd6 (.)
 
 ---
 
@@ -267,7 +275,11 @@ public function snapshots()    // ❌ No return type
 
 **Fix Complexity**: ⭐ (Very Easy - Just add `: HasMany` return types)
 
+<<<<<<< HEAD
 **See**: `Modules/Activity/docs/phpstan-errors-2025-12-16.md`
+=======
+**See**: `Modules/Activity/docs/phpstan-errors.md`
+>>>>>>> 40b96bcd6 (.)
 
 ---
 
@@ -310,7 +322,11 @@ public static function getModuleName(): string
 }
 ```
 
+<<<<<<< HEAD
 **See**: `Modules/Xot/docs/phpstan-transtrait-errors-2025-12-16.md`
+=======
+**See**: `Modules/Xot/docs/phpstan-transtrait-errors.md`
+>>>>>>> 40b96bcd6 (.)
 
 ---
 
@@ -412,10 +428,17 @@ jobs:
 
 ### Module-Specific Documentation
 
+<<<<<<< HEAD
 - [Geo Module Errors](../../geo/docs/phpstan-errors-2025-12-16.md)
 - [Cms Module Errors](../../cms/docs/phpstan-errors-2025-12-16.md)
 - [Activity Module Errors](../../activity/docs/phpstan-errors-2025-12-16.md)
 - [Xot Module TransTrait Errors](phpstan-transtrait-errors-2025-12-16.md)
+=======
+- [Geo Module Errors](../../geo/docs/phpstan-errors.md)
+- [Cms Module Errors](../../cms/docs/phpstan-errors.md)
+- [Activity Module Errors](../../activity/docs/phpstan-errors.md)
+- [Xot Module TransTrait Errors](phpstan-transtrait-errors.md)
+>>>>>>> 40b96bcd6 (.)
 
 ### PHPStan Documentation
 
@@ -813,7 +836,11 @@ test('it can create and manage tenants', function (): void {
 4. ✅ `Pest.php` - Fix TenantUser rimossi, funzioni helper tipizzate
 5. ✅ `TestCase.php` - Fix CreatesApplication, rimosso loadLaravelMigrations()
 6. ✅ `CreatesApplication.php` - Creato trait mancante in `Modules/Xot/tests/`
+<<<<<<< HEAD
 7. ✅ `phpstan-analysis-2025-01-27.md` - Documentazione aggiornata
+=======
+7. ✅ `phpstan-analysis.md` - Documentazione aggiornata
+>>>>>>> 40b96bcd6 (.)
 
 ### Errori Rimanenti: 289
 

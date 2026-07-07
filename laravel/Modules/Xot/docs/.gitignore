@@ -1,0 +1,9 @@
+---
+module: theme
+topic: .gitignore
+canonical: ../../../Themes/docs/shared-components/.gitignore-Modules
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/.gitignore-Modules
+consolidated
+agentdb.rvf

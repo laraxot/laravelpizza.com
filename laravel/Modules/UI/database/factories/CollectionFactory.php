@@ -7,6 +7,12 @@ namespace Modules\UI\Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\UI\Models\Collection;
 
+<<<<<<< HEAD
+=======
+/**
+ * @extends Factory<Collection>
+ */
+>>>>>>> 40b96bcd6 (.)
 class CollectionFactory extends Factory
 {
     /**
@@ -21,6 +27,16 @@ class CollectionFactory extends Factory
      */
     public function definition(): array
     {
+<<<<<<< HEAD
         return [];
+=======
+        return [
+            'name' => fake()->words(2, true),
+            'type' => 'block',
+            'theme_id' => 1,
+            'is_active' => true,
+            'order' => 0,
+        ];
+>>>>>>> 40b96bcd6 (.)
     }
 }

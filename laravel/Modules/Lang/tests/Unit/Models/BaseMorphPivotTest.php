@@ -4,10 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit\Models;
 
+<<<<<<< HEAD
 uses(TestCase::class);
 
 use Modules\Lang\Models\BaseMorphPivot;
 use Modules\Lang\Tests\TestCase;
+=======
+use Illuminate\Database\Eloquent\Relations\MorphPivot;
+use Modules\Lang\Models\BaseMorphPivot;
+use Modules\Lang\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
+>>>>>>> 40b96bcd6 (.)
 
 describe('BaseMorphPivot Model', function () {
     test('extends MorphPivot', function () {
@@ -15,7 +24,7 @@ describe('BaseMorphPivot Model', function () {
             protected $table = 'test';
         };
 
-        expect($model)->toBeInstanceOf(Illuminate\Database\Eloquent\Relations\MorphPivot::class);
+        Assert::assertInstanceOf(MorphPivot::class, $model);
     });
 
     test('has correct connection', function () {
@@ -23,11 +32,11 @@ describe('BaseMorphPivot Model', function () {
             protected $table = 'test';
         };
 
-        expect($model->getConnectionName())->toBe('lang');
+        Assert::assertSame('lang', $model->getConnectionName());
     });
 
     test('has snake attributes enabled', function () {
-        expect(BaseMorphPivot::$snakeAttributes)->toBeTrue();
+        Assert::assertTrue(BaseMorphPivot::$snakeAttributes);
     });
 
     test('has timestamps enabled', function () {
@@ -35,7 +44,7 @@ describe('BaseMorphPivot Model', function () {
             protected $table = 'test';
         };
 
-        expect($model->timestamps)->toBeTrue();
+        Assert::assertTrue($model->timestamps);
     });
 
     test('has incrementing enabled', function () {
@@ -43,7 +52,7 @@ describe('BaseMorphPivot Model', function () {
             protected $table = 'test';
         };
 
-        expect($model->incrementing)->toBeTrue();
+        Assert::assertTrue($model->incrementing);
     });
 
     test('has default perPage', function () {
@@ -51,7 +60,7 @@ describe('BaseMorphPivot Model', function () {
             protected $table = 'test';
         };
 
-        expect($model->getPerPage())->toBe(30);
+        Assert::assertSame(30, $model->getPerPage());
     });
 
     test('has correct fillable attributes', function () {
@@ -60,12 +69,12 @@ describe('BaseMorphPivot Model', function () {
         };
         $fillable = $model->getFillable();
 
-        expect($fillable)->toContain('id');
-        expect($fillable)->toContain('post_id');
-        expect($fillable)->toContain('post_type');
-        expect($fillable)->toContain('related_type');
-        expect($fillable)->toContain('user_id');
-        expect($fillable)->toContain('note');
+        Assert::assertContains('id', $fillable);
+        Assert::assertContains('post_id', $fillable);
+        Assert::assertContains('post_type', $fillable);
+        Assert::assertContains('related_type', $fillable);
+        Assert::assertContains('user_id', $fillable);
+        Assert::assertContains('note', $fillable);
     });
 
     test('casts id as string', function () {
@@ -74,7 +83,7 @@ describe('BaseMorphPivot Model', function () {
         };
 
         $casts = $model->getCasts();
-        expect($casts['id'])->toBe('string');
+        Assert::assertSame('string', $casts['id']);
     });
 
     test('casts datetime fields', function () {
@@ -83,8 +92,8 @@ describe('BaseMorphPivot Model', function () {
         };
 
         $casts = $model->getCasts();
-        expect($casts['created_at'])->toBe('datetime');
-        expect($casts['updated_at'])->toBe('datetime');
-        expect($casts['deleted_at'])->toBe('datetime');
+        Assert::assertSame('datetime', $casts['created_at']);
+        Assert::assertSame('datetime', $casts['updated_at']);
+        Assert::assertSame('datetime', $casts['deleted_at']);
     });
 });

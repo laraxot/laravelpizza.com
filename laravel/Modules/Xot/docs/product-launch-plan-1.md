@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Xot Module - Product Launch Plan
 
 **Module:** Xot  
@@ -81,3 +82,12 @@
 ---
 
 *Last Updated: March 12, 2026*
+=======
+---
+module: theme
+topic: product-launch-plan-1
+canonical: ../../../Themes/docs/shared-components/PRODUCT_LAUNCH_PLAN-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/PRODUCT_LAUNCH_PLAN-Modules.md
+>>>>>>> 40b96bcd6 (.)

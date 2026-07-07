@@ -19,6 +19,7 @@ class UpdateGdprConsentsAction
 
     /**
      * @param array<string, bool> $consents
+     * @param array<string, bool> $consents
      */
     public function execute(User $user, array $consents, ?string $ipAddress = null, ?string $userAgent = null): void
     {

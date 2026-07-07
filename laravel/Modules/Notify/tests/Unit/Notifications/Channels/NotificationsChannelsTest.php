@@ -4,53 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Notifications\Channels;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\Log;
-use Modules\Notify\Actions\NetfunSendAction;
 use Modules\Notify\Contracts\CanThemeNotificationContract;
-use Modules\Notify\Datas\NotificationData;
+use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SmsData;
+use Modules\Notify\Factories\SmsActionFactory;
 use Modules\Notify\Notifications\Channels\NetfunChannel;
 use Modules\Notify\Notifications\Channels\TelegramChannel;
 use Modules\Notify\Notifications\ThemeNotification;
+use Modules\Notify\Tests\Fixtures\NetfunChannelNotifiableDummy;
 use Modules\Notify\Tests\TestCase;
+use Mockery;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
-
-function makeNetfunChannelNotifiableDummy(): CanThemeNotificationContract
-{
-    return new class extends Model implements CanThemeNotificationContract
-    {
-        protected $guarded = [];
-
-        public array $increased = [];
-
-        public function getNotificationData(string $name, array $view_params = []): NotificationData
-        {
-            return NotificationData::from([
-                'from' => 'Xot',
-                'recipient' => 'dummy@example.test',
-                'body' => 'body',
-                'channels' => ['sms'],
-            ]);
-        }
-
-        public function getModel(): Model
-        {
-            return $this;
-        }
-
-        public function sendEmailCallback() {}
-
-        public function sendSmsCallback() {}
-
-        public function increase(string $what, array $data): void
-        {
-            $this->increased[$what] = $data;
-        }
-    };
-}
 
 function makeThemeNotificationDummy(): ThemeNotification
 {
@@ -71,6 +39,7 @@ function makeTelegramNotificationDummy(): Notification
 {
     return new class extends Notification
     {
+        /** @return array{text: string} */
         public function toTelegram(object $notifiable): array
         {
             return ['text' => 'hello'];
@@ -90,24 +59,36 @@ function makeTelegramNotifiableDummy(): object
 }
 
 test('netfun notifications channel sends and increases counter', function () {
-    app()->instance(NetfunSendAction::class, new class extends NetfunSendAction
-    {
-        public function __construct() {}
+    config()->set('sms.default', 'smsfactor');
+    config()->set('sms.drivers.smsfactor.token', 'token-123');
 
-        public function execute(SmsData $smsData): array
+    app()->instance(SmsActionFactory::class, new class extends SmsActionFactory
+    {
+        public function create(?string $driver = null): SmsActionContract
         {
-            return ['status_code' => 200, 'status_txt' => 'ok'];
+            return new class implements SmsActionContract
+            {
+                /** @return array{status_code: int, status_txt: string} */
+                public function execute(SmsData $smsData): array
+                {
+                    return ['status_code' => 200, 'status_txt' => 'ok'];
+                }
+            };
         }
     });
 
     $channel = new NetfunChannel;
+<<<<<<< HEAD
     $notifiable = makeNetfunChannelNotifiableDummy();
+=======
+    $notifiable = new NetfunChannelNotifiableDummy;
+>>>>>>> 40b96bcd6 (.)
     $notification = makeThemeNotificationDummy();
 
     $channel->send($notifiable, $notification);
 
-    expect($notifiable->increased)->toHaveKey('sms')
-        ->and($notifiable->increased['sms']['status_code'])->toBe(200);
+    Assert::assertArrayHasKey('sms', $notifiable->increased);
+    Assert::assertSame(200, \notifyArrayGet($notifiable->increased, 'sms', 'status_code'));
 });
 
 test('telegram notifications channel logs when recipient and method are valid', function () {
@@ -115,12 +96,13 @@ test('telegram notifications channel logs when recipient and method are valid', 
 
     $channel = new TelegramChannel;
     $channel->send(makeTelegramNotifiableDummy(), makeTelegramNotificationDummy());
-
-    expect(true)->toBeTrue();
 });
 
 test('telegram notifications channel throws when notification has no toTelegram method', function () {
     $channel = new TelegramChannel;
 
-    $channel->send(makeTelegramNotifiableDummy(), new class extends Notification {});
-})->throws(\Exception::class);
+    \assertNotifyThrows(
+        fn () => $channel->send(makeTelegramNotifiableDummy(), new class extends Notification {}),
+        \Exception::class,
+    );
+});

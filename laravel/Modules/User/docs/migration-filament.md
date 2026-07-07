@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # User Module - Migrazione a Filament 4
 
 ## Panoramica User Module
@@ -739,3 +740,12 @@ class UserAnalyticsService
 - **PRIORITÀ**: **System stability > New features**
 
 **Final recommendation**: **ULTIMO MODULO DA MIGRARE** dopo aver perfezionato il processo su moduli meno critici.
+=======
+---
+module: theme
+topic: migration-filament
+canonical: ../../../Themes/docs/shared-components/migrazione-filament-4.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/migrazione-filament-4.md
+>>>>>>> 40b96bcd6 (.)

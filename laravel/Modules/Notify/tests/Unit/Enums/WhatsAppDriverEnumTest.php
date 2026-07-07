@@ -5,101 +5,77 @@ declare(strict_types=1);
 namespace Modules\Notify\Tests\Unit\Enums;
 
 use Modules\Notify\Enums\WhatsAppDriverEnum;
-use PHPUnit\Framework\TestCase;
+use Modules\Notify\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-class WhatsAppDriverEnumTest extends TestCase
-{
-    /** @test */
-    public function it_has_correct_cases(): void
-    {
-        $this->assertCount(4, WhatsAppDriverEnum::cases());
+uses(\Modules\Notify\Tests\TestCase::class);
 
-        $this->assertEquals('twilio', WhatsAppDriverEnum::TWILIO->value);
-        $this->assertEquals('messagebird', WhatsAppDriverEnum::MESSAGEBIRD->value);
-        $this->assertEquals('vonage', WhatsAppDriverEnum::VONAGE->value);
-        $this->assertEquals('infobip', WhatsAppDriverEnum::INFOBIP->value);
+it('has correct cases', function (): void {
+    Assert::assertCount(4, WhatsAppDriverEnum::cases());
+
+    Assert::assertSame('twilio', WhatsAppDriverEnum::TWILIO->value);
+    Assert::assertSame('messagebird', WhatsAppDriverEnum::MESSAGEBIRD->value);
+    Assert::assertSame('vonage', WhatsAppDriverEnum::VONAGE->value);
+    Assert::assertSame('infobip', WhatsAppDriverEnum::INFOBIP->value);
+});
+
+it('options returns correct array', function (): void {
+    $options = WhatsAppDriverEnum::options();
+    Assert::assertCount(4, $options);
+    Assert::assertSame('Twilio', $options['twilio']);
+    Assert::assertSame('MessageBird', $options['messagebird']);
+    Assert::assertSame('Vonage', $options['vonage']);
+    Assert::assertSame('Infobip', $options['infobip']);
+});
+
+it('labels returns localized array', function (): void {
+    $labels = WhatsAppDriverEnum::labels();
+    Assert::assertCount(4, $labels);
+    Assert::assertArrayHasKey('twilio', $labels);
+    Assert::assertArrayHasKey('messagebird', $labels);
+    Assert::assertArrayHasKey('vonage', $labels);
+    Assert::assertArrayHasKey('infobip', $labels);
+});
+
+it('is supported returns true for valid drivers', function (): void {
+    Assert::assertTrue(WhatsAppDriverEnum::isSupported('twilio'));
+    Assert::assertTrue(WhatsAppDriverEnum::isSupported('messagebird'));
+    Assert::assertTrue(WhatsAppDriverEnum::isSupported('vonage'));
+    Assert::assertTrue(WhatsAppDriverEnum::isSupported('infobip'));
+});
+
+it('is supported returns false for invalid drivers', function (): void {
+    Assert::assertFalse(WhatsAppDriverEnum::isSupported('invalid'));
+    Assert::assertFalse(WhatsAppDriverEnum::isSupported(''));
+    Assert::assertFalse(WhatsAppDriverEnum::isSupported('TWILIO'));
+    Assert::assertFalse(WhatsAppDriverEnum::isSupported('Twilio'));
+});
+
+it('get default returns default driver', function (): void {
+    $default = WhatsAppDriverEnum::getDefault();
+
+    Assert::assertInstanceOf(WhatsAppDriverEnum::class, $default);
+    Assert::assertContains($default, WhatsAppDriverEnum::cases());
+});
+
+it('each case has unique value', function (): void {
+    $values = array_map(static fn ($case) => $case->value, WhatsAppDriverEnum::cases());
+    $uniqueValues = array_unique($values);
+
+    Assert::assertCount(count($values), $uniqueValues, 'All enum cases should have unique values');
+});
+
+it('cases returns all enum instances', function (): void {
+    $cases = WhatsAppDriverEnum::cases();
+    Assert::assertCount(4, $cases);
+
+    foreach ($cases as $case) {
+        Assert::assertInstanceOf(WhatsAppDriverEnum::class, $case);
     }
+});
 
-    /** @test */
-    public function options_returns_correct_array(): void
-    {
-        $options = WhatsAppDriverEnum::options();
-
-        $this->assertIsArray($options);
-        $this->assertCount(4, $options);
-        $this->assertEquals('Twilio', $options['twilio']);
-        $this->assertEquals('MessageBird', $options['messagebird']);
-        $this->assertEquals('Vonage', $options['vonage']);
-        $this->assertEquals('Infobip', $options['infobip']);
+it('all cases expose non empty description', function (): void {
+    foreach (WhatsAppDriverEnum::cases() as $case) {
+        Assert::assertNotEmpty($case->getDescription());
     }
-
-    /** @test */
-    public function labels_returns_localized_array(): void
-    {
-        $labels = WhatsAppDriverEnum::labels();
-
-        $this->assertIsArray($labels);
-        $this->assertCount(4, $labels);
-        $this->assertArrayHasKey('twilio', $labels);
-        $this->assertArrayHasKey('messagebird', $labels);
-        $this->assertArrayHasKey('vonage', $labels);
-        $this->assertArrayHasKey('infobip', $labels);
-    }
-
-    /** @test */
-    public function is_supported_returns_true_for_valid_drivers(): void
-    {
-        $this->assertTrue(WhatsAppDriverEnum::isSupported('twilio'));
-        $this->assertTrue(WhatsAppDriverEnum::isSupported('messagebird'));
-        $this->assertTrue(WhatsAppDriverEnum::isSupported('vonage'));
-        $this->assertTrue(WhatsAppDriverEnum::isSupported('infobip'));
-    }
-
-    /** @test */
-    public function is_supported_returns_false_for_invalid_drivers(): void
-    {
-        $this->assertFalse(WhatsAppDriverEnum::isSupported('invalid'));
-        $this->assertFalse(WhatsAppDriverEnum::isSupported(''));
-        $this->assertFalse(WhatsAppDriverEnum::isSupported('TWILIO'));
-        $this->assertFalse(WhatsAppDriverEnum::isSupported('Twilio'));
-    }
-
-    /** @test */
-    public function get_default_returns_default_driver(): void
-    {
-        $default = WhatsAppDriverEnum::getDefault();
-
-        $this->assertInstanceOf(WhatsAppDriverEnum::class, $default);
-        $this->assertContains($default, WhatsAppDriverEnum::cases());
-    }
-
-    /** @test */
-    public function each_case_has_unique_value(): void
-    {
-        $values = array_map(fn ($case) => $case->value, WhatsAppDriverEnum::cases());
-        $uniqueValues = array_unique($values);
-
-        $this->assertCount(count($values), $uniqueValues, 'All enum cases should have unique values');
-    }
-
-    /** @test */
-    public function cases_returns_all_enum_instances(): void
-    {
-        $cases = WhatsAppDriverEnum::cases();
-
-        $this->assertIsArray($cases);
-        $this->assertCount(4, $cases);
-
-        foreach ($cases as $case) {
-            $this->assertInstanceOf(WhatsAppDriverEnum::class, $case);
-        }
-    }
-
-    /** @test */
-    public function all_cases_have_required_methods(): void
-    {
-        foreach (WhatsAppDriverEnum::cases() as $case) {
-            $this->assertIsString($case->value);
-        }
-    }
-}
+});

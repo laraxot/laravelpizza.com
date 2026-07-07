@@ -62,6 +62,12 @@ Verificare che:
 - Altri file di test SMS abbiano import simili per coerenza
 
 ## Collegamenti
+- [Notify Module Documentation](README.md)
+- [SMS Testing Guide](sms/testing.md)
+- [MailTemplate Integration](mail_templates_structure.md)
+- [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
+
+*Ultimo aggiornamento: giugno 2025*
 - [Notify Module Documentation](readme.md)
 - [SMS Testing Guide](sms/testing.md)
 - [MailTemplate Integration](mail_templates_structure.md)

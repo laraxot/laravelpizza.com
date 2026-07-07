@@ -33,4 +33,4 @@ Implementato pattern corretto per factory riutilizzabili con namespace dinamico.
 - **Type safety** migliorata per configurazioni
 
 *Ultimo aggiornamento: gennaio 2025*
-
+*Ultimo aggiornamento: gennaio 2025*

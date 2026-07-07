@@ -9,14 +9,13 @@ declare(strict_types=1);
 namespace Modules\Tenant\Models\Traits;
 
 use Exception;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
-use InvalidArgumentException;
 use Modules\Tenant\Services\TenantService;
-use Sushi\Sushi;
-
+use ReflectionObject;
 use function Safe\json_encode;
 use function Safe\unlink;
+use Sushi\Sushi;
+use Webmozart\Assert\Assert;
 
 trait SushiToJsons
 {
@@ -24,42 +23,27 @@ trait SushiToJsons
 
     /**
      * @return array<int, array<string, mixed>>
+     *
+     * @phpstan-return array<int, array<string, mixed>>
+     */
+    public function getRows(): array
+    {
+        return $this->getSushiRows();
+    }
+
+    /**
+     * @return array<int, array<string, mixed>>
+     *
+     * @phpstan-return array<int, array<string, mixed>>
      */
     public function getSushiRows(): array
     {
         $tbl = $this->getTable();
-        $path = TenantService::filePath('database/content/'.$tbl);
-
-        $files = File::glob($path.'/*.json');
-
-        /** @var array<int, array<string, mixed>> $rows */
-        $rows = [];
-
-        foreach ($files as $id => $file) {
-            if (! is_string($file)) {
-                continue;
-            }
-
-            $json = File::json($file);
-
-            /** @var array<string, mixed> $item */
-            $item = [];
-
-            // Ensure schema is an array
-            $schema = $this->schema ?? [];
-
-            /** @var array<string, mixed> $schema */
-            foreach ($schema as $name => $type) {
-                $value = $json[$name] ?? null;
-                if (is_array($value)) {
-                    $value = json_encode($value, JSON_PRETTY_PRINT);
-                }
-                $item[$name] = $value;
-            }
-            $rows[] = $item;
+        if (! is_string($tbl)) {
+            return [];
         }
 
-        return $rows;
+        return $this->collectRowsFromJsonFiles($tbl);
     }
 
     public function getJsonFile(): string
@@ -70,115 +54,170 @@ trait SushiToJsons
         $stringId = is_string($id) || is_numeric($id) ? (string) $id : 'unknown';
         $stringTbl = is_string($tbl) ? $tbl : 'unknown';
 
-        $filename = 'database/content/'.$stringTbl.'/'.$stringId.'.json';
-
-        return TenantService::filePath($filename);
+        return TenantService::filePath('database/content/'.$stringTbl.'/'.$stringId.'.json');
     }
 
-    /**
-     * @return ?string
-     */
-    public function getConnectionName()
-    {
-        return parent::getConnectionName();
-    }
-
-    /**
-     * bootUpdater function.
-     */
     protected static function bootSushiToJsons(): void
     {
-        /*
-         * During a model create Eloquent will also update the updated_at field so
-         * need to have the updated_by field here as well.
-         */
-        static::creating(function ($model): void {
-            /** @var static $model */
-            if (! $model instanceof Model) {
-                throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
-            }
-
-            // PHPStan Level 10: Type-safe max() call
-            $maxId = $model->max('id');
-            $newId = is_numeric($maxId) ? (int) $maxId + 1 : 1;
-
-            // PHPStan Level 10: Use setAttribute for type safety
-            $model->setAttribute('id', $newId);
-            $model->setAttribute('updated_at', now());
-            $model->setAttribute('updated_by', authId());
-            $model->setAttribute('created_at', now());
-            $model->setAttribute('created_by', authId());
-
-            /** @var array<string, mixed> $data */
-            $data = $model->toArray();
-            $item = [];
-
-            // PHPStan Level 10: Type-safe schema access
-            if (! isset($model->schema) || ! is_iterable($model->schema)) {
-                throw new Exception('Schema property must be iterable');
-            }
-
-            /** @var iterable<string, mixed> $schema */
-            $schema = $model->schema;
-            foreach ($schema as $name => $type) {
-                $value = $data[$name] ?? null;
-                $item[$name] = $value;
-            }
-
-            $content = json_encode($item, JSON_PRETTY_PRINT);
-
-            $file = $model->getJsonFile();
-            if (is_string($file)) {
-                $dir = \dirname($file);
-
-                if (! File::exists($dir)) {
-                    File::makeDirectory($dir, 0o755, true, true);
-                }
-                File::put($file, $content);
-            }
-        });
-        /*
-         * updating.
-         */
-        static::updating(function ($model): void {
-            /** @var static $model */
-            if (! $model instanceof Model) {
-                throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
-            }
-
-            $file = $model->getJsonFile();
-            if (is_string($file)) {
-                // PHPStan Level 10: Use setAttribute for type safety
-                $model->setAttribute('updated_at', now());
-                $model->setAttribute('updated_by', authId());
-
-                $content = $model->toJson(JSON_PRETTY_PRINT);
-
-                File::put($file, $content);
-            }
-        });
-        // -------------------------------------------------------------------------------------
-        /*
-         * Deleting a model is slightly different than creating or deleting.
-         * For deletes we need to save the model first with the deleted_by field
-         */
-
-        static::deleting(function ($model): void {
-            /** @var static $model */
-            if (! $model instanceof Model) {
-                throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
-            }
-
-            $file = $model->getJsonFile();
-            if (is_string($file)) {
-                unlink($file);
-            }
+        static::creating(static function ($model): void {
+            Assert::isInstanceOf($model, static::class);
+            self::handleJsonCreating($model);
         });
 
-        // ----------------------
+        static::updating(static function ($model): void {
+            Assert::isInstanceOf($model, static::class);
+            self::handleJsonUpdating($model);
+        });
+
+        static::deleting(static function ($model): void {
+            Assert::isInstanceOf($model, static::class);
+            self::handleJsonDeleting($model);
+        });
     }
 
-    // end function boot
-}
+    /**
+     * @return array<string, mixed>
+     *
+     * @phpstan-return array<string, mixed>
+     */
+    protected function resolveSchema(): array
+    {
+        $reflection = new ReflectionObject($this);
+        if (! $reflection->hasProperty('schema')) {
+            return [];
+        }
 
-// end trait Updater
+        $property = $reflection->getProperty('schema');
+        $property->setAccessible(true);
+        $schemaValue = $property->getValue($this);
+
+        if (! is_array($schemaValue)) {
+            return [];
+        }
+
+        /** @var array<string, mixed> $schemaValue */
+        return $schemaValue;
+    }
+
+    /**
+     * @return array<int, array<string, mixed>>
+     */
+    private function collectRowsFromJsonFiles(string $tbl): array
+    {
+        $files = File::glob(TenantService::filePath('database/content/'.$tbl).'/*.json');
+        if ($files === false) {
+            return [];
+        }
+
+        /** @var array<int, array<string, mixed>> $rows */
+        $rows = [];
+
+        foreach ($files as $file) {
+            if (! is_string($file)) {
+                continue;
+            }
+
+            $row = $this->mapJsonFileToRow($file);
+            if ($row !== null) {
+                $rows[] = $row;
+            }
+        }
+
+        return $rows;
+    }
+
+    /**
+     * @return array<string, mixed>|null
+     */
+    private function mapJsonFileToRow(string $file): ?array
+    {
+        $json = File::json($file);
+        if (! is_array($json)) {
+            return null;
+        }
+
+        $schema = $this->resolveSchema();
+        if ($schema === []) {
+            return null;
+        }
+
+        return $this->buildRowFromSchema($schema, $json);
+    }
+
+    /**
+     * @param  array<string, mixed>  $schema
+     * @param  array<mixed, mixed>  $json
+     *
+     * @return array<string, mixed>
+     */
+    private function buildRowFromSchema(array $schema, array $json): array
+    {
+        /** @var array<string, mixed> $item */
+        $item = [];
+
+        foreach (array_keys($schema) as $name) {
+            $value = $json[$name] ?? null;
+            if (is_array($value)) {
+                $value = json_encode($value, JSON_PRETTY_PRINT);
+            }
+            $item[$name] = $value;
+        }
+
+        return $item;
+    }
+
+    private static function handleJsonCreating(self $model): void
+    {
+        self::assignCreatingMetadata($model);
+        self::writeCreatingJsonFile($model);
+    }
+
+    private static function assignCreatingMetadata(self $model): void
+    {
+        $maxId = $model->max('id');
+        $newId = is_numeric($maxId) ? (int) $maxId + 1 : 1;
+
+        $model->setAttribute('id', $newId);
+        $model->setAttribute('updated_at', now());
+        $model->setAttribute('updated_by', authId());
+        $model->setAttribute('created_at', now());
+        $model->setAttribute('created_by', authId());
+    }
+
+    private static function writeCreatingJsonFile(self $model): void
+    {
+        /** @var array<string, mixed> $data */
+        $data = $model->toArray();
+        $schema = $model->resolveSchema();
+        if ($schema === []) {
+            throw new Exception('Schema property must be iterable');
+        }
+
+        $item = [];
+        foreach (array_keys($schema) as $name) {
+            $item[$name] = $data[$name] ?? null;
+        }
+
+        $file = $model->getJsonFile();
+        $dir = \dirname($file);
+
+        if (! File::exists($dir)) {
+            File::makeDirectory($dir, 0o755, true, true);
+        }
+
+        File::put($file, json_encode($item, JSON_PRETTY_PRINT));
+    }
+
+    private static function handleJsonUpdating(self $model): void
+    {
+        $model->setAttribute('updated_at', now());
+        $model->setAttribute('updated_by', authId());
+
+        File::put($model->getJsonFile(), $model->toJson(JSON_PRETTY_PRINT));
+    }
+
+    private static function handleJsonDeleting(self $model): void
+    {
+        unlink($model->getJsonFile());
+    }
+}

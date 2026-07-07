@@ -1,5 +1,6 @@
 ---
 title: "Skills Index"
+<<<<<<< HEAD
 type: index
 created: 2026-05-11
 updated: 2026-05-11
@@ -43,3 +44,29 @@ Le Skills progettuali vivono qui, nel wiki del Module **Activity**, e vengono ca
 3. Aggiorna questo indice se la Skills e' ricorrente
 4. Committa: `docs: add skills <nome>`
 
+=======
+type: "index"
+tags: [skills, activity, filament, xotbase, phpstan, pest]
+module: "Activity"
+updated: 2026-06-10
+---
+
+# Skills — Activity Module Wiki
+
+> Skill on-demand rilevanti per il modulo Activity.
+
+## Available Skills
+
+- [filament-page-creation](../../../../Xot/docs/wiki/skills/filament-page-creation.md) — skill condivisa Xot per creare page Filament coerenti con XotBase
+- [phpstan-pest-remediation](../../../../../docs/wiki/skills/phpstan-pest-remediation.md) — remediation PHPStan su test Pest senza conversione a PHPUnit
+
+## Usage
+
+```bash
+qmd search "Activity module skill filament xotbase" --limit 5
+```
+
+---
+
+**Upstream:** [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+>>>>>>> 40b96bcd6 (.)

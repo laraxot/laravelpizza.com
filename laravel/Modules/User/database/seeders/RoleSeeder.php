@@ -1,0 +1,48 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\User\Database\Seeders;
+
+use Illuminate\Console\Command;
+use Illuminate\Database\Seeder;
+use Modules\User\Models\Role;
+
+/** Seeder canonico modello Role (ex RolesSeeder). */
+final class RoleSeeder extends Seeder
+{
+    /** @var array<int, string> */
+    private static array $OUTPUT_TABLE_HEADERS = ['#', 'Name', 'Guard'];
+
+    public function run(): void
+    {
+        $roles = [
+            ['name' => 'super-admin', 'guard_name' => 'web'],
+            ['name' => 'admin', 'guard_name' => 'web'],
+            ['name' => 'moderator', 'guard_name' => 'web'],
+            ['name' => 'editor', 'guard_name' => 'web'],
+            ['name' => 'user', 'guard_name' => 'web'],
+            ['name' => 'guest', 'guard_name' => 'web'],
+        ];
+
+        $createdRoles = [];
+        foreach ($roles as $roleData) {
+            $createdRoles[] = Role::firstOrCreate($roleData);
+        }
+
+        $command = $this->command;
+        if ($command instanceof Command) {
+            $command->info('Roles seeded successfully:');
+            $command->table(
+                self::$OUTPUT_TABLE_HEADERS,
+                collect($createdRoles)
+                    ->map(static fn (Role $role, int $index) => [
+                        $index + 1,
+                        $role->name,
+                        $role->guard_name,
+                    ])
+                    ->toArray(),
+            );
+        }
+    }
+}

@@ -1,0 +1,115 @@
+# Report contributor: righe per estensione + grafici (git-fame).
+# Per repo owner modulo/tema standalone (root = package).
+name: Contributor Analytics
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+    inputs:
+      since:
+        description: Data inizio (YYYY-MM-DD), vuoto = ultimi 90 giorni
+        required: false
+        type: string
+  release:
+    types: [released]
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - '.github/workflows/contributor-analytics.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contributor-analytics
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install git-fame
+        run: pip install git-fame matplotlib
+
+      - name: Compute date range
+        id: range
+        run: |
+          SINCE="${{ github.event.inputs.since }}"
+          if [ -z "$SINCE" ]; then
+            SINCE=$(date -u -d '90 days ago' +%Y-%m-%d 2>/dev/null || date -u -v-90d +%Y-%m-%d)
+          fi
+          echo "since=$SINCE" >> "$GITHUB_OUTPUT"
+          echo "📅 Analisi dal $SINCE"
+
+      - name: Generate reports
+        run: |
+          set -euo pipefail
+          OUT="docs/outputs/contributor-analytics"
+          mkdir -p "$OUT/charts"
+          SINCE="${{ steps.range.outputs.since }}"
+          GEN_AT=$(date -u +"%Y-%m-%dT%H:%MZ")
+          PKG="${{ github.repository }}"
+
+          cat > "$OUT/README.md" << HDR
+          # Contributor analytics
+
+          Package: \`$PKG\`
+
+          Generato da [\`contributor-analytics.yml\`](../../.github/workflows/contributor-analytics.yml) con [git-fame](https://github.com/casperdcl/git-fame).
+
+          - **Generato:** $GEN_AT
+          - **Periodo:** commit dal \`$SINCE\`
+          - **Metrica LOC:** surviving (righe attribuite via blame)
+
+          ## Per estensione file (contributor × tipo)
+
+          HDR
+
+          git fame . \
+            --since "$SINCE" \
+            --loc surviving \
+            --bytype \
+            --format markdown \
+            > "$OUT/by-extension.md" 2>/dev/null || echo "_Nessun dato_" > "$OUT/by-extension.md"
+
+          head -n 120 "$OUT/by-extension.md" >> "$OUT/README.md"
+
+          git fame . \
+            --since "$SINCE" \
+            --loc surviving \
+            --format svg \
+            > "$OUT/charts/contributors.svg" 2>/dev/null || true
+
+          echo "" >> "$OUT/README.md"
+          echo "## Grafico contributor (LOC)" >> "$OUT/README.md"
+          echo "" >> "$OUT/README.md"
+          echo "![contributors](charts/contributors.svg)" >> "$OUT/README.md"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: contributor-analytics
+          path: docs/outputs/contributor-analytics/
+          retention-days: 90
+
+      - name: Commit report (main only)
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/outputs/contributor-analytics/
+          git diff --staged --quiet || git commit -m "docs(ci): contributor analytics report [skip ci]"
+          git push || true

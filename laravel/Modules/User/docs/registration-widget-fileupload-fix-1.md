@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # RegistrationWidget FileUpload Fix
 
 ## Problema Risolto
@@ -220,3 +221,12 @@ Per evitare simili problemi in futuro:
 - [Registration Widget base: registration-widget.md](./registration-widget.md)
 
 *Ultimo aggiornamento: 2025-01-03*
+=======
+---
+module: theme
+topic: registration-widget-fileupload-fix-1
+canonical: ../../../Themes/docs/shared-components/registration-widget-fileupload-fix-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/registration-widget-fileupload-fix-1.md
+>>>>>>> 40b96bcd6 (.)

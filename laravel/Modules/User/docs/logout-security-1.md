@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sicurezza nel Processo di Logout
 
 ## Analisi della Sicurezza
@@ -174,3 +175,12 @@ Log::channel('auth')->info('Logout effettuato', [
 - [Gestione Sessione](./session_management.md)
 - [Documentazione Volt](./volt_blade_implementation.md)
 - [Tema One Documentation](../../themes/one/docs/readme.md) 
+=======
+---
+module: theme
+topic: logout-security-1
+canonical: ../../../Themes/docs/shared-components/logout-security.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/logout-security.md
+>>>>>>> 40b96bcd6 (.)

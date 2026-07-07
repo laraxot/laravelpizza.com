@@ -1,0 +1,107 @@
+# Site settings
+title: "BMAD Method for Claude Code"
+description: "A complete agile development methodology converted to Claude Code native skills, commands, and workflows. Transform Claude Code into a full-featured agile development environment."
+baseurl: "/claude-code-bmad-skills"
+url: "https://aj-geddes.github.io"
+
+# SEO and social
+twitter:
+  username: bmadmethod
+  card: summary_large_image
+
+social:
+  name: BMAD Method for Claude Code
+  links:
+    - https://github.com/aj-geddes/claude-code-bmad-skills
+    - https://github.com/bmad-code-org/BMAD-METHOD
+
+# Author
+author:
+  name: "BMAD Method Community"
+  url: "https://github.com/bmad-code-org/BMAD-METHOD"
+
+# Build settings
+markdown: kramdown
+theme: minima
+highlighter: rouge
+
+# Header navigation - limit pages shown in navbar
+header_pages:
+  - getting-started.md
+  - skills/index.md
+  - commands/index.md
+  - subagent-patterns.md
+  - examples/index.md
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Collections
+collections:
+  skills:
+    output: true
+    permalink: /skills/:name/
+  commands:
+    output: true
+    permalink: /commands/:name/
+  examples:
+    output: true
+    permalink: /examples/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "skills"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "commands"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "examples"
+    values:
+      layout: "default"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# SEO defaults
+lang: en_US
+logo: /assets/images/bmad-logo.png
+
+# Google Analytics (optional - add your tracking ID)
+# google_analytics: UA-XXXXXXXX-X
+
+# Keywords for SEO
+keywords:
+  - Claude Code
+  - BMAD Method
+  - agile development
+  - AI-assisted development
+  - Claude Code skills
+  - Claude Code commands
+  - product requirements
+  - system architecture
+  - sprint planning
+  - AI pair programming
+  - software development methodology
+  - parallel subagents
+  - Claude subagent architecture
+  - AI agent orchestration
+  - 200K token context

@@ -5,32 +5,36 @@ declare(strict_types=1);
 namespace Modules\Tenant\Tests\Unit\Actions\Markdown;
 
 use Illuminate\Support\Facades\App;
+use Mockery\MockInterface;
 use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Modules\Tenant\Actions\Markdown\GetLocalizedMarkdownPathAction;
 use Modules\Tenant\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+use function Safe\file_put_contents;
+use function Safe\unlink;
 
 uses(TestCase::class);
 
 it('gets localized markdown path if it exists', function (): void {
     App::setLocale('it');
 
-    // Create a temporary file to simulate existence
     $tempDir = sys_get_temp_dir();
     $tempFile = $tempDir.'/test.md';
     file_put_contents($tempFile, 'test');
 
-    $this->mock(GetTenantFilePathAction::class)
-        ->shouldReceive('execute')
-        ->with('lang/it/test.md')
-        ->andReturn($tempFile)
-        ->shouldReceive('execute')
-        ->with('test.md')
-        ->andReturn('/non/existent/path.md');
+    /** @var TestCase $this */
+    $this->mockService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($tempFile): void {
+        $mock->allows([
+            'execute' => static function (string $path) use ($tempFile): string {
+                return $path === 'lang/it/test.md' ? $tempFile : '/non/existent/path.md';
+            },
+        ]);
+    });
 
-    $action = app(GetLocalizedMarkdownPathAction::class);
-    $result = $action->execute('test.md');
+    $result = app(GetLocalizedMarkdownPathAction::class)->execute('test.md');
 
-    expect($result)->toBe($tempFile);
+    Assert::assertSame($tempFile, $result);
 
     unlink($tempFile);
 });
@@ -38,34 +42,33 @@ it('gets localized markdown path if it exists', function (): void {
 it('gets fallback markdown path if localized does not exist', function (): void {
     App::setLocale('it');
 
-    // Create a temporary file to simulate existence
     $tempDir = sys_get_temp_dir();
     $tempFile = $tempDir.'/fallback.md';
     file_put_contents($tempFile, 'test');
 
-    $this->mock(GetTenantFilePathAction::class)
-        ->shouldReceive('execute')
-        ->with('lang/it/fallback.md')
-        ->andReturn('/non/existent/path.md')
-        ->shouldReceive('execute')
-        ->with('fallback.md')
-        ->andReturn($tempFile);
+    /** @var TestCase $this */
+    $this->mockService(GetTenantFilePathAction::class, static function (MockInterface $mock) use ($tempFile): void {
+        $mock->allows([
+            'execute' => static function (string $path) use ($tempFile): string {
+                return $path === 'fallback.md' ? $tempFile : '/non/existent/path.md';
+            },
+        ]);
+    });
 
-    $action = app(GetLocalizedMarkdownPathAction::class);
-    $result = $action->execute('fallback.md');
+    $result = app(GetLocalizedMarkdownPathAction::class)->execute('fallback.md');
 
-    expect($result)->toBe($tempFile);
+    Assert::assertSame($tempFile, $result);
 
     unlink($tempFile);
 });
 
 it('returns hash if no path exists', function (): void {
-    $this->mock(GetTenantFilePathAction::class)
-        ->shouldReceive('execute')
-        ->andReturn('/non/existent/path.md');
+    /** @var TestCase $this */
+    $this->mockService(GetTenantFilePathAction::class, static function (MockInterface $mock): void {
+        $mock->allows(['execute' => '/non/existent/path.md']);
+    });
 
-    $action = app(GetLocalizedMarkdownPathAction::class);
-    $result = $action->execute('none.md');
+    $result = app(GetLocalizedMarkdownPathAction::class)->execute('none.md');
 
-    expect($result)->toBe('#');
+    Assert::assertSame('#', $result);
 });

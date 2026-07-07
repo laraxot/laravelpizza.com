@@ -70,4 +70,10 @@ public function send($notifiable, Notification $notification)
 
 ---
 
+- [Documentazione Netfun SMS Channel](./SMS_NETFUN_CHANNEL.md)
+- [Requisiti di Configurazione Netfun](./NETFUN_CONFIG_REQUIREMENTS.md)
+
+---
+
+*Ultimo aggiornamento: 2025-05-12*
 *Ultimo aggiornamento: 2025-05-12*

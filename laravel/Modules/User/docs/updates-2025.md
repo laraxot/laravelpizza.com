@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # User Module Updates - December 2025
 
 ## Refactoring Translations
@@ -14,3 +15,12 @@
 This module adheres to the **Super Cow Methodology**:
 - **Filament Rules**: Extends `XotBase` classes (e.g., `XotBaseLogin`, `XotBasePage`).
 - **Documentation**: Referenced core architecture rules in `Modules/Xot/docs/`.
+=======
+---
+module: theme
+topic: updates-2025
+canonical: ../../../Themes/docs/shared-components/updates-12-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/updates-12-Modules.md
+>>>>>>> 40b96bcd6 (.)

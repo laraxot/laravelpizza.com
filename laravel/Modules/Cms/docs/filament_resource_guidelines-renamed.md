@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cms Module Filament Resource Guidelines
 
 ## Extension Patterns
@@ -138,3 +139,12 @@ All Cms resources must be tested to ensure:
 - [LangBaseResource Documentation](../../lang/docs/filament/lang-base-resource.md)
 - [Multilingual Best Practices](../../lang/docs/translation-best-practices.md)
 - [Filament Resource Guidelines](../../xot/docs/filament-resource-rules.md)
+=======
+---
+module: theme
+topic: filament_resource_guidelines-renamed
+canonical: ../../../Themes/docs/shared-components/filament-resource-guidelines.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/filament-resource-guidelines.md
+>>>>>>> 40b96bcd6 (.)

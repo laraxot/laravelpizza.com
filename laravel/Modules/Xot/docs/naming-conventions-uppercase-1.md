@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Convenzioni di Nomenclatura in <nome progetto>
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto <nome progetto>.
@@ -142,3 +143,12 @@ Descrizione dettagliata se necessaria
 ```
 
 Tipi: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
+=======
+---
+module: theme
+topic: naming-conventions-uppercase-1
+canonical: ../../../Themes/docs/shared-components/naming-conventions-uppercase-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/naming-conventions-uppercase-1.md
+>>>>>>> 40b96bcd6 (.)

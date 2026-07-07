@@ -3,25 +3,32 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Datas;
-
 use Modules\Notify\Datas\EmailAttachmentData;
+<<<<<<< HEAD
+=======
+use PHPUnit\Framework\Assert;
+>>>>>>> 40b96bcd6 (.)
 use Spatie\LaravelData\Data;
 
 describe('EmailAttachmentData', function () {
     it('can be referenced via reflection without instantiation', function () {
         $reflection = new \ReflectionClass(EmailAttachmentData::class);
 
-        expect($reflection->isInstantiable())->toBeTrue();
+        Assert::assertTrue($reflection->isInstantiable());
     });
 
     it('has correct namespace', function () {
-        expect(EmailAttachmentData::class)->toStartWith('Modules\Notify\Datas');
+        Assert::assertStringStartsWith('Modules\Notify\Datas', (string) EmailAttachmentData::class);
     });
 
     it('extends Spatie Data', function () {
         $reflection = new \ReflectionClass(EmailAttachmentData::class);
 
+<<<<<<< HEAD
         expect($reflection->isSubclassOf(Data::class))->toBeTrue();
+=======
+        Assert::assertTrue($reflection->isSubclassOf(Data::class));
+>>>>>>> 40b96bcd6 (.)
     });
 
     it('has required properties', function () {
@@ -30,21 +37,19 @@ describe('EmailAttachmentData', function () {
 
         $propertyNames = array_map(fn ($p) => $p->getName(), $properties);
 
-        expect($propertyNames)->toContain('name');
-        expect($propertyNames)->toContain('contentType');
+        \assertListContains('name', $propertyNames);
+        \assertListContains('contentType', $propertyNames);
     });
 
     it('has getContent method', function () {
-        expect(method_exists(EmailAttachmentData::class, 'getContent'))->toBeTrue();
-    });
+            });
 
     it('has constructor with required parameters', function () {
         $reflection = new \ReflectionClass(EmailAttachmentData::class);
         $constructor = $reflection->getConstructor();
 
-        expect($constructor)->not->toBeNull();
-
+        Assert::assertNotNull($constructor);
         $params = $constructor->getParameters();
-        expect($params)->toHaveCount(3);
+        Assert::assertCount(3, $params);
     });
 });

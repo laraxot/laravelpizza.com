@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests;
 
+<<<<<<< HEAD
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Modules\Cms\Providers\CmsServiceProvider;
 use Modules\Tenant\Providers\TenantServiceProvider;
@@ -26,4 +27,11 @@ abstract class UnitTestCase extends BaseTestCase
             CmsServiceProvider::class,
         ];
     }
+=======
+/**
+ * Lightweight TestCase alias for pure unit tests in the Cms module.
+ */
+abstract class UnitTestCase extends TestCase
+{
+>>>>>>> 40b96bcd6 (.)
 }

@@ -113,3 +113,4 @@ Questa regola si applica a:
 - [Convenzioni Filament](filament-best-practices.md)
 
 *Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: 2025-01-06*

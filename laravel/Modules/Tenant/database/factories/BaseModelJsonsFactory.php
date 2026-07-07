@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Database\Factories;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Tenant\Models\BaseModelJsons;
 
@@ -27,8 +28,8 @@ class BaseModelJsonsFactory extends Factory
     public function definition(): array
     {
         return [
-            'created_at' => \Carbon\Carbon::now()->subDays(random_int(1, 365)),
-            'updated_at' => \Carbon\Carbon::now()->subDays(random_int(0, 30)),
+            'created_at' => Carbon::now()->subDays(random_int(1, 365)),
+            'updated_at' => Carbon::now()->subDays(random_int(0, 30)),
             'created_by' => (string) random_int(1000000000000000, 9999999999999999),
             'updated_by' => (string) random_int(1000000000000000, 9999999999999999),
         ];

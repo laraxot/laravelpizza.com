@@ -6,7 +6,11 @@ file: Modules/Geo/resources/js/components/geo-map-lit.js
 created: 2026-04-29
 stories:
   - 8-76-geo-map-lit-component
+<<<<<<< HEAD
   - 8-78-segnalazioni-elenco-polish
+=======
+  - 8-78-ticket-list-polish
+>>>>>>> 40b96bcd6 (.)
   - 8-79-geo-map-controls-unification
   - 8-80-geo-map-lit-shared-modules
   - 8-81-geo-map-lit-farmshops-parity
@@ -18,14 +22,22 @@ status: COMPLETED — 13/13 Playwright tests pass
 
 ## Scopo
 
+<<<<<<< HEAD
 Web Component Lit per la visualizzazione **read-only** delle segnalazioni pubbliche. Usato in `segnalazioni-elenco`. Non raccoglie input utente — solo visualizza marker da un GeoJSON statico.
+=======
+Web Component Lit per la visualizzazione **read-only** delle segnalazioni pubbliche. Usato in `ticket-list`. Non raccoglie input utente — solo visualizza marker da un GeoJSON statico.
+>>>>>>> 40b96bcd6 (.)
 
 ## Differenze da `coordinate-picker-lit`
 
 |                     | `geo-map-lit`                                      | `coordinate-picker-lit`                     |
 |---------------------|----------------------------------------------------|--------------------------------------------|
 | **Scopo**           | Visualizzazione pubblica read-only                 | Picker input lat/lng in form               |
+<<<<<<< HEAD
 | **Pagina**          | `/tests/segnalazioni-elenco`                       | `/tests/segnalazione-crea` (wizard)        |
+=======
+| **Pagina**          | `/tests/ticket-list`                       | `/tests/segnalazione-crea` (wizard)        |
+>>>>>>> 40b96bcd6 (.)
 | **Input**           | `data-url` (fetch GeoJSON)                         | `state`, `:lat`, `:lng` (Livewire)         |
 | **Cluster**         | ✅ MarkerClusterGroup                              | ❌ singolo marker                         |
 | **Heatmap**         | ✅ toggle heat layer                               | ❌ assente                                 |

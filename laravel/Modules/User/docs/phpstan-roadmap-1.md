@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PHPStan Roadmap: User Module
 
 **Date**: 2026-01-12
@@ -33,3 +34,12 @@
 1. Fix PHPDoc Namespace issues (Role, HasTeams).
 2. Fix API Resource properties.
 3. Fix Filament Resource typing.
+=======
+---
+module: theme
+topic: phpstan-roadmap-1
+canonical: ../../../Themes/docs/shared-components/phpstan_roadmap.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan_roadmap.md
+>>>>>>> 40b96bcd6 (.)

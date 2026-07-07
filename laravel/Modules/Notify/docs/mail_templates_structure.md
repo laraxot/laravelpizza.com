@@ -122,6 +122,8 @@ $attachments = [
 - [Documentazione MailPace](https://github.com/mailpace/templates)
 - [Best Practices Email HTML](./EMAIL_HTML_BEST_PRACTICES.md)
 - [Guida Testing](./EMAIL_TESTING.md)
+- [Best Practices Email HTML](./EMAIL_HTML_BEST_PRACTICES.md)
+- [Guida Testing](./EMAIL_TESTING.md)
 
 ## Supporto
 

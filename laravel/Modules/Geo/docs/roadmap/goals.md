@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Goals - Geo
 
 ## Short Term
@@ -16,3 +17,12 @@
 
 1. Stabilita sotto fault randomizzati (chaos testing).
 2. Manutenibilita alta con onboarding rapido.
+=======
+---
+module: theme
+topic: goals
+canonical: ../../../../Themes/docs/shared-components/02-goals-Modules.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/02-goals-Modules.md
+>>>>>>> 40b96bcd6 (.)

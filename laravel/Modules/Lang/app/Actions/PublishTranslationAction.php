@@ -37,8 +37,11 @@ class PublishTranslationAction
         $updatedData = $data;
         Arr::set($updatedData, $translationData->item, $translationData->value);
         if ($data !== $updatedData) {
+            /** @var array<string, mixed> $saveData */
+            $saveData = $updatedData;
+
             app(SaveArrayAction::class)->execute(
-                data: $updatedData,
+                data: $saveData,
                 filename: $filename,
             );
         }

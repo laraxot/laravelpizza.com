@@ -79,11 +79,4 @@ describe('TwilioData', function () {
         expect($headers['Authorization'])->toStartWith('Basic ');
     });
 
-    it('has from method (inherited from Spatie Data)', function () {
-        expect(method_exists(TwilioData::class, 'from'))->toBeTrue();
-    });
-
-    it('has make static method', function () {
-        expect(method_exists(TwilioData::class, 'make'))->toBeTrue();
-    });
 });

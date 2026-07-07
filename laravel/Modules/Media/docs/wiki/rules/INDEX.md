@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Rules Index"
 type: index
@@ -43,3 +44,24 @@ Le Rules progettuali vivono qui, nel wiki del Module **Media**, e vengono carica
 3. Aggiorna questo indice se la Rules e' ricorrente
 4. Committa: `docs: add rules <nome>`
 
+=======
+# Media Module - rules Index
+
+## Purpose
+Index for Media module rules.
+
+## On-Demand Loading
+
+```bash
+qmd search "Media rules" --limit 5
+```
+
+## See Also
+- [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+- [Root Wiki](../../../docs/wiki/)
+
+---
+*Updated: 2026-05-11*
+
+- [context-overflow-prevention](../../../../../docs/wiki/rules/context-overflow-prevention.md) — prevenzione 262K token overflow; file vietati; tool output compression
+>>>>>>> 40b96bcd6 (.)

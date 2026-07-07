@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Geo Module - Sprint Planning
 
 **Module:** Geo  
@@ -63,3 +64,12 @@ Implement core geolocation services with IP detection and basic restrictions.
 
 ---
 
+=======
+---
+module: theme
+topic: sprint-planning
+canonical: ../../../Themes/docs/shared-components/SPRINT_PLANNING-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/SPRINT_PLANNING-Modules.md
+>>>>>>> 40b96bcd6 (.)

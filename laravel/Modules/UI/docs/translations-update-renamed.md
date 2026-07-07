@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Aggiornamento Traduzioni Modulo UI - Gennaio 2026
 
 ## Data Intervento
@@ -146,3 +147,12 @@ Tutte le traduzioni seguono la struttura espansa:
 
 *Intervento completato il: 2026-01-22*
 *Conforme alle regole DRY + KISS*
+=======
+---
+module: theme
+topic: translations-update-renamed
+canonical: ../../../Themes/docs/shared-components/translations-update-january.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/translations-update-january.md
+>>>>>>> 40b96bcd6 (.)

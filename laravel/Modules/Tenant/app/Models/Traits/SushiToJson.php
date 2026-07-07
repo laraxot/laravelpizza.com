@@ -8,9 +8,11 @@ use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use InvalidArgumentException;
+use Modules\Tenant\Services\Config\ConfigStringKeyFilter;
 use Modules\Tenant\Services\TenantService;
 use Sushi\Sushi;
 use Throwable;
+use Webmozart\Assert\Assert;
 
 use function Safe\file_get_contents;
 use function Safe\json_decode;
@@ -67,7 +69,6 @@ trait SushiToJson
     public function getSushiRows(): array
     {
         $path = $this->getJsonFile();
-        $form = $this->getSchema();
         if (! File::exists($path)) {
             return [];
         }
@@ -77,49 +78,21 @@ trait SushiToJson
             throw new Exception('Data is not array ['.$path.']');
         }
 
-        // Normalize nested arrays/objects into JSON strings for Sushi
-        /** @var array<int, array<string, mixed>> $normalizedData */
-        $normalizedData = [];
-        foreach ($data as $item) {
-            if (! \is_array($item)) {
+        /** @var array<int, array<string, mixed>> $typedData */
+        $typedData = [];
+        foreach (array_values($data) as $item) {
+            if (! is_array($item)) {
                 continue;
             }
 
-            /** @var array<string, mixed> $normalizedItem */
-            $normalizedItem = [];
-            foreach ($item as $key => $value) {
-                $stringKey = is_string($key) ? $key : (string) $key;
-                if (\is_array($value) || \is_object($value)) {
-                    $value = json_encode($value);
-                }
-                $normalizedItem[$stringKey] = $value;
-            }
-
-            $normalizedData[] = $normalizedItem;
+            $typedData[] = ConfigStringKeyFilter::onlyStringKeys($item);
         }
 
-        /** @var array<string, mixed> $safeForm */
-        $safeForm = $form;
+        $normalizedData = $this->normalizeJsonItems($typedData);
+        $schema = $this->getSchema();
+        $form = $this->normalizeSchemaFields(is_array($schema) ? $schema : []);
 
-        /** @var array<int, array<string, mixed>> $completedData */
-        $completedData = array_map(
-            static function (array $item) use ($safeForm): array {
-                foreach ($safeForm as $key => $_type) {
-                    $safeKey = is_string($key) ? $key : (string) $key;
-
-                    if (! array_key_exists($safeKey, $item)) {
-                        $item[$safeKey] = null;
-                    }
-                }
-
-                ksort($item);
-
-                return $item;
-            },
-            $normalizedData,
-        );
-
-        return array_values($completedData);
+        return $this->completeSchemaFields($normalizedData, $form);
     }
 
     /**
@@ -171,27 +144,8 @@ trait SushiToJson
     {
         try {
             $file = $this->getJsonFile();
-            $directory = dirname($file);
-
-            if (! File::exists($directory)) {
-                File::makeDirectory($directory, 0o755, true, true);
-            }
-
-            // Validate data structure
-            $validatedData = [];
-            foreach ($data as $item) {
-                if (is_array($item)) {
-                    $validatedItem = [];
-                    foreach ($item as $key => $value) {
-                        $stringKey = is_string($key) ? $key : (string) $key;
-                        $validatedItem[$stringKey] = $value;
-                    }
-                    $validatedData[] = $validatedItem;
-                }
-            }
-
-            $content = json_encode($validatedData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-            File::put($file, $content);
+            $this->ensureDirectoryExists(dirname($file));
+            File::put($file, json_encode($this->normalizeJsonRecords($data), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
             return true;
         } catch (Exception $e) {
@@ -210,18 +164,23 @@ trait SushiToJson
     {
         $existingData = $this->loadExistingData();
 
-        if (empty($existingData)) {
+        if ($existingData === []) {
             return 1;
         }
 
-        $keys = array_keys($existingData);
-        if (empty($keys)) {
-            return 1;
+        $maxId = 0;
+
+        foreach ($existingData as $row) {
+            if (! \is_array($row)) {
+                continue;
+            }
+
+            $rawId = $row['id'] ?? 0;
+            $id = \is_numeric($rawId) ? (int) $rawId : 0;
+            $maxId = max($maxId, $id);
         }
 
-        $maxId = max($keys);
-
-        return is_numeric($maxId) ? ((int) $maxId) + 1 : 1;
+        return $maxId + 1;
     }
 
     /**
@@ -231,97 +190,19 @@ trait SushiToJson
      */
     protected static function bootSushiToJson(): void
     {
-        static::creating(function ($model): void {
-            /** @var static $modelWithTrait */
-            $modelWithTrait = $model;
-            $file = $modelWithTrait->getJsonFile();
-
-            // Load existing data and compute next ID
-            $existingData = $modelWithTrait->loadExistingData();
-            $rows = $existingData;
-            $maxIdFromFile = 0;
-            foreach ($rows as $r) {
-                if (! \is_array($r)) {
-                    continue;
-                }
-                $rawId = $r['id'] ?? 0;
-                $id = \is_numeric($rawId) ? ((int) $rawId) : 0;
-                $maxIdFromFile = max($maxIdFromFile, $id);
-            }
-            // Safely read current max id from table (Sushi in-memory)
-            $maxIdFromDb = 0;
-            try {
-                /** @var int|null $dbMax */
-                $dbMax = static::query()->max('id');
-                if (\is_int($dbMax)) {
-                    $maxIdFromDb = $dbMax;
-                }
-            } catch (Throwable) {
-                // ignore if table not initialized yet
-            }
-
-            $nextId = max($maxIdFromFile, $maxIdFromDb) + 1;
-            $modelWithTrait->setAttribute('id', $nextId);
-            $modelWithTrait->setAttribute('updated_at', now());
-            $modelWithTrait->setAttribute('created_at', now());
-
-            // Set audit fields if available via helper
-            $authId = $modelWithTrait->authId();
-            if ($authId !== null) {
-                $modelWithTrait->setAttribute('updated_by', $authId);
-                $modelWithTrait->setAttribute('created_by', $authId);
-            }
-
-            // Add new record to existing data
-            $existingData[] = $modelWithTrait->getAttributes();
-
-            // Ensure directory exists and save
-            $modelWithTrait->ensureDirectoryExists($file);
-            $modelWithTrait->saveToJson($existingData);
+        static::creating(static function ($model): void {
+            Assert::isInstanceOf($model, static::class);
+            self::handleSingleJsonCreating($model);
         });
 
-        static::updating(function ($model): void {
-            /** @var static $modelWithTrait */
-            $modelWithTrait = $model;
-            $modelWithTrait->setAttribute('updated_at', now());
-
-            // Set audit fields if available via helper
-            $authId = $modelWithTrait->authId();
-            if ($authId !== null) {
-                $modelWithTrait->setAttribute('updated_by', $authId);
-            }
-
-            // Update existing record
-            $existingData = $modelWithTrait->loadExistingData();
-            $id = (int) ($modelWithTrait->getAttribute('id') ?? 0);
-
-            if ($id > 0) {
-                $index = $modelWithTrait->findRowIndexById($existingData, $id);
-                if ($index !== null) {
-                    /** @var array<string, mixed> $modelArray */
-                    $modelArray = $modelWithTrait->toArray();
-                    $existingData[$index] = $modelArray;
-
-                    $modelWithTrait->saveToJson($existingData);
-                }
-            }
+        static::updating(static function ($model): void {
+            Assert::isInstanceOf($model, static::class);
+            self::handleSingleJsonUpdating($model);
         });
 
-        static::deleting(function ($model): void {
-            /** @var static $modelWithTrait */
-            $modelWithTrait = $model;
-            $id = (int) ($modelWithTrait->getAttribute('id') ?? 0);
-
-            if ($id > 0) {
-                $existingData = $modelWithTrait->loadExistingData();
-                $index = $modelWithTrait->findRowIndexById($existingData, $id);
-
-                if ($index !== null) {
-                    unset($existingData[$index]);
-                    $existingData = array_values($existingData);
-                    $modelWithTrait->saveToJson($existingData);
-                }
-            }
+        static::deleting(static function ($model): void {
+            Assert::isInstanceOf($model, static::class);
+            self::handleSingleJsonDeleting($model);
         });
     }
 
@@ -368,5 +249,205 @@ trait SushiToJson
         if (! File::exists($directory)) {
             File::makeDirectory($directory, 0o755, true, true);
         }
+    }
+
+    /**
+     * @param  array<int, array<string, mixed>>  $data
+     * @return array<int, array<string, mixed>>
+     */
+    private function normalizeJsonRecords(array $data): array
+    {
+        $validatedData = [];
+
+        foreach ($data as $item) {
+            if (! is_array($item)) {
+                continue;
+            }
+
+            $validatedItem = [];
+            foreach ($item as $key => $value) {
+                $validatedItem[is_string($key) ? $key : (string) $key] = $value;
+            }
+            $validatedData[] = $validatedItem;
+        }
+
+        return $validatedData;
+    }
+
+    private static function handleSingleJsonCreating(self $model): void
+    {
+        $file = $model->getJsonFile();
+        $existingData = $model->loadExistingData();
+        $nextId = self::resolveNextRecordId($existingData);
+
+        $model->setAttribute('id', $nextId);
+        $model->setAttribute('updated_at', now());
+        $model->setAttribute('created_at', now());
+        self::applyAuditFields($model);
+
+        $existingData[] = $model->getAttributes();
+        $model->ensureDirectoryExists($file);
+        $model->saveToJson($existingData);
+    }
+
+    /**
+     * @param  array<int, array<string, mixed>>  $existingData
+     */
+    private static function resolveNextRecordId(array $existingData): int
+    {
+        return max(self::maxIdFromRows($existingData), self::maxIdFromDatabase()) + 1;
+    }
+
+    /**
+     * @param  array<int, array<string, mixed>>  $rows
+     */
+    private static function maxIdFromRows(array $rows): int
+    {
+        $maxId = 0;
+
+        foreach ($rows as $row) {
+            if (! \is_array($row)) {
+                continue;
+            }
+
+            $rawId = $row['id'] ?? 0;
+            $id = \is_numeric($rawId) ? (int) $rawId : 0;
+            $maxId = max($maxId, $id);
+        }
+
+        return $maxId;
+    }
+
+    private static function maxIdFromDatabase(): int
+    {
+        try {
+            /** @var int|null $dbMax */
+            $dbMax = static::query()->max('id');
+
+            return \is_int($dbMax) ? $dbMax : 0;
+        } catch (Throwable) {
+            return 0;
+        }
+    }
+
+    private static function applyAuditFields(self $model): void
+    {
+        $authId = $model->authId();
+        if ($authId === null) {
+            return;
+        }
+
+        $model->setAttribute('updated_by', $authId);
+        $model->setAttribute('created_by', $authId);
+    }
+
+    private static function handleSingleJsonUpdating(self $model): void
+    {
+        $model->setAttribute('updated_at', now());
+        self::applyUpdatingAuditField($model);
+
+        $existingData = $model->loadExistingData();
+        $id = (int) ($model->getAttribute('id') ?? 0);
+        if ($id <= 0) {
+            return;
+        }
+
+        $index = $model->findRowIndexById($existingData, $id);
+        if ($index === null) {
+            return;
+        }
+
+        /** @var array<string, mixed> $modelArray */
+        $modelArray = $model->toArray();
+        $existingData[$index] = $modelArray;
+        $model->saveToJson($existingData);
+    }
+
+    private static function applyUpdatingAuditField(self $model): void
+    {
+        $authId = $model->authId();
+        if ($authId !== null) {
+            $model->setAttribute('updated_by', $authId);
+        }
+    }
+
+    private static function handleSingleJsonDeleting(self $model): void
+    {
+        $id = (int) ($model->getAttribute('id') ?? 0);
+        if ($id <= 0) {
+            return;
+        }
+
+        $existingData = $model->loadExistingData();
+        $index = $model->findRowIndexById($existingData, $id);
+        if ($index === null) {
+            return;
+        }
+
+        unset($existingData[$index]);
+        $model->saveToJson(array_values($existingData));
+    }
+
+    /**
+     * @param  array<int, array<string, mixed>>  $data
+     * @return array<int, array<string, mixed>>
+     */
+    protected function normalizeJsonItems(array $data): array
+    {
+        /** @var array<int, array<string, mixed>> $normalizedData */
+        $normalizedData = [];
+
+        foreach ($data as $item) {
+            if (! \is_array($item)) {
+                continue;
+            }
+
+            /** @var array<string, mixed> $normalizedItem */
+            $normalizedItem = [];
+            foreach ($item as $key => $value) {
+                $stringKey = is_string($key) ? $key : (string) $key;
+                if (\is_array($value) || \is_object($value)) {
+                    $value = json_encode($value);
+                }
+                $normalizedItem[$stringKey] = $value;
+            }
+
+            $normalizedData[] = ConfigStringKeyFilter::onlyStringKeys($normalizedItem);
+        }
+
+        return $normalizedData;
+    }
+
+    /**
+     * @param  array<mixed, mixed>  $schema
+     * @return array<string, mixed>
+     */
+    protected function normalizeSchemaFields(array $schema): array
+    {
+        return ConfigStringKeyFilter::onlyStringKeys($schema);
+    }
+
+    /**
+     * @param  array<int, array<string, mixed>>  $normalizedData
+     * @param  array<string, mixed>  $form
+     * @return array<int, array<string, mixed>>
+     */
+    protected function completeSchemaFields(array $normalizedData, array $form): array
+    {
+        /** @var array<int, array<string, mixed>> $completedData */
+        $completedData = [];
+
+        foreach ($normalizedData as $item) {
+            foreach (array_keys($form) as $safeKey) {
+                if (! array_key_exists($safeKey, $item)) {
+                    $item[$safeKey] = null;
+                }
+            }
+
+            ksort($item);
+            $completedData[] = $item;
+        }
+
+        return array_values($completedData);
     }
 }

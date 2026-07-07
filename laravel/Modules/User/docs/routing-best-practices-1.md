@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Best Practices per il Routing in Architettura Volt + Folio + Filament
 
 ## Il Principio Fondamentale
@@ -467,3 +468,12 @@ public function logout()
 - [Documentazione Volt](./volt_logout.md)
 - [Struttura Directory](./directory_structure_checklist.md)
 - [Gestione Errori](./error_handling.md) 
+=======
+---
+module: theme
+topic: routing-best-practices-1
+canonical: ../../../Themes/docs/shared-components/routing-best-practices.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/routing-best-practices.md
+>>>>>>> 40b96bcd6 (.)

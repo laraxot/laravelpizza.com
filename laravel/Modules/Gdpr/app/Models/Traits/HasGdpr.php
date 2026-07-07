@@ -19,6 +19,8 @@ use Modules\Gdpr\Models\Treatment;
  *
  * @property Collection<int, Consent> $consents
  * @property Collection<int, Consent> $activeConsents
+ *
+ * @see \Modules\Gdpr\Tests\Unit\Traits\HasGdprTraitTest
  */
 trait HasGdpr
 {
@@ -89,6 +91,7 @@ trait HasGdpr
      * Give consent for a specific type.
      *
      * @param array<string, mixed> $metadata
+     * @param array<string, mixed> $metadata
      */
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent
     {
@@ -136,12 +139,18 @@ trait HasGdpr
      *
      * @return array<string>
      */
+    /** @return array<string> */
     public function getMissingRequiredConsents(): array
     {
         $givenConsents = $this->activeConsents()->pluck('type')->toArray();
 
-        /* @var array<string> */
-        return array_diff(ConsentType::getRequiredConsentTypes(), $givenConsents);
+        /** @var array<string> $consentTypes */
+        $consentTypes = ConsentType::getRequiredConsentTypes();
+
+        /** @var array<string> $given */
+        $given = $givenConsents;
+
+        return array_diff($consentTypes, $given);
     }
 
     /**

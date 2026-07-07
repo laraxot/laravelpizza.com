@@ -154,4 +154,10 @@ $retryDelay = $config['drivers'][$driver]['retry_delay'] ?? $config['retry']['de
 
 ---
 
+- [Configurazione Netfun](./NETFUN_CONFIG_REQUIREMENTS.md)
+- [Provider SMS Supportati](./notifications/SMS_PROVIDER_CONFIGURATION.md)
+
+---
+
+*Ultimo aggiornamento: 2025-05-12*
 *Ultimo aggiornamento: 2025-05-12*

@@ -17,6 +17,8 @@ class GetAllTranslationAction
 
     /**
      * Restituisce il path completo del file di traduzione dato un key.
+     *
+     * @return array<int, array<string, mixed>>
      */
     public function execute(): array
     {
@@ -29,8 +31,9 @@ class GetAllTranslationAction
         $path = base_path('Modules/*/lang/'.$lang.'/*.php');
         $files = glob($path);
 
-        return Arr::map($files, function ($file) {
-            $fileStr = is_string($file) ? $file : (string) $file;
+        /** @var array<int, array<string, mixed>> $result */
+        $result = Arr::map($files, function (string $file) {
+            $fileStr = $file;
             $moduleLower = Str::of($fileStr)
                 ->between('Modules/', '/lang/')
                 ->lower()
@@ -41,5 +44,7 @@ class GetAllTranslationAction
                 'path' => $fileStr,
             ];
         });
+
+        return $result;
     }
 }

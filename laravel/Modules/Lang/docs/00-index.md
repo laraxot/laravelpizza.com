@@ -31,6 +31,30 @@
 ## 🧹 **Manutenzione**
 - 🗑️ **[Cleanup Plan](./docs-naming-convention-fix.md)** - Rimozione dei 260+ file obsoleti.
 
+## 🔗 **Moduli Correlati**
+- [Xot](../../xot/docs/readme.md) - Base framework e classi `XotBaseChartWidget`.
+- [UI](../../ui/docs/readme.md) - Componenti Blade e Filament che consumano le traduzioni.
+
+---
+*Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
+# Documentation Index
+## 📋 **Documenti Prodotto & Sviluppo**
+
+### Product
+| File | Scopo |
+|------|-------|
+| PRD.md | Product Requirements |
+| PRODUCT_ROADMAP.md | Roadmap |
+| PRODUCT_STRATEGY.md | Strategy |
+| PRODUCT_LAUNCH_PLAN.md | Launch Plan |
+
+### Development
+| File | Scopo |
+|------|-------|
+| GSD_WORKFLOW.md | GSD Workflow |
+| SPRINT_PLANNING.md | Sprint Planning |
+| USER_RESEARCH.md | User Research |
+
 ## 📦 **Pacchetti Composer**
 - [Riferimento completo](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md)
 - [Package Dependency Chaos Map](./package-dependency-chaos-map.md)
@@ -42,10 +66,10 @@
 ## 🔗 **Moduli Correlati**
 - [Xot](../../Xot/docs/README.md) - Base framework e classi `XotBaseChartWidget`.
 - [UI](../../UI/docs/README.md) - Componenti Blade e Filament che consumano le traduzioni.
+- [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
-# Documentation Index
 
 ## Dependency Intelligence
 

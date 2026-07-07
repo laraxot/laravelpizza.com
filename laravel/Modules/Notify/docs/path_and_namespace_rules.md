@@ -133,6 +133,14 @@ Per le regole generali e condivise tra tutti i moduli, consulta anche:
 - [Regole Generali per i Namespace](/laravel/modules/xot/docs/namespace-rules.md)
 - [Convenzioni di Codice](/laravel/modules/xot/docs/code-conventions.md)
 - [Struttura dei Moduli](/laravel/modules/xot/docs/module-structure.md)
+- [Regole generali per i namespace (Xot)](../../Xot/docs/NAMESPACE-RULES.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
+
+## Collegamenti
+
+- [Regole Generali per i Namespace](/laravel/Modules/Xot/docs/NAMESPACE-RULES.md)
+- [Convenzioni di Codice](/laravel/Modules/Xot/docs/CODE-CONVENTIONS.md)
+- [Struttura dei Moduli](/laravel/Modules/Xot/docs/MODULE-STRUCTURE.md)
+- [Collegamento Bidirezionale: Documentazione Root](../../../../docs/links.md)
 - [Collegamento Bidirezionale: Documentazione Root](../../../../../docs/links.md)
 
 ### Esempio 5: Console Command
@@ -156,4 +164,5 @@ namespace Modules\Notify\App\Console\Commands;
 
 ---
 
+*Ultimo aggiornamento: 2025-05-12*
 *Ultimo aggiornamento: 2025-05-12*

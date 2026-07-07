@@ -24,24 +24,27 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string $domain
  * @property string $database
  * @property string $slug
- * @property array|null $settings
+ * @property array<string, mixed>|null $settings
  * @property bool $is_active
  * @property string|null $logo
  * @property \Carbon\Carbon|null $last_activity_at
+ *
  * @property-read string $url
  * @property-read Collection<int, User> $users
  * @property-read int|null $users_count
+ *
  * @method static TenantFactory factory($count = null, $state = [])
  * @method static Builder<static>|Tenant newModelQuery()
  * @method static Builder<static>|Tenant newQuery()
  * @method static Builder<static>|Tenant query()
  * @method static Tenant|null first()
  * @method static Collection<int, Tenant> get()
- * @method static Tenant create(array $attributes = [])
- * @method static Tenant firstOrCreate(array $attributes = [], array $values = [])
+ * @method static Tenant create(array<string, mixed> $attributes = [])
+ * @method static Tenant firstOrCreate(array<string, mixed> $attributes = [], array<string, mixed> $values = [])
  * @method static Builder<static>|Tenant where((string|Closure) $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
  * @method static Builder<static>|Tenant whereNotNull((string|Expression) $columns)
  * @method static int count(string $columns = '*')
+ *
  * @property string $id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
@@ -49,6 +52,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  * @property ProfileContract|null $deleter
+ *
  * @method static Builder<static>|Tenant whereCreatedAt($value)
  * @method static Builder<static>|Tenant whereDatabase($value)
  * @method static Builder<static>|Tenant whereDeletedAt($value)
@@ -59,14 +63,13 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Tenant whereSlug($value)
  * @method static Builder<static>|Tenant whereUpdatedAt($value)
  * @method static Builder<static>|Tenant whereSettings($value)
+ *
  * @mixin \Eloquent
  */
 class Tenant extends BaseModel
 {
     /**
      * Gli attributi che sono mass assignable.
-     *
-     * @var list<string>
      */
     protected $fillable = [
         'name',
@@ -90,6 +93,8 @@ class Tenant extends BaseModel
 
     /**
      * Relazione con gli utenti associati al tenant.
+     *
+     * @return HasMany<User, $this>
      */
     public function users(): HasMany
     {
@@ -130,7 +135,8 @@ class Tenant extends BaseModel
     {
         $this->attributes['name'] = $value;
 
-        if (empty($this->attributes['slug'])) {
+        $slug = $this->attributes['slug'] ?? null;
+        if (! is_string($slug) || $slug === '') {
             $this->attributes['slug'] = Str::slug($value);
         }
     }

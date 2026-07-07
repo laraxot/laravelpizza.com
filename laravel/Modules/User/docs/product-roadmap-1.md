@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # User Module - Product Roadmap
 
 **Module:** User  
@@ -108,3 +109,12 @@ To build a **comprehensive user management system** that provides secure authent
 ---
 
 *Last Updated: March 12, 2026*
+=======
+---
+module: theme
+topic: product-roadmap-1
+canonical: ../../../Themes/docs/shared-components/PRODUCT_ROADMAP-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/PRODUCT_ROADMAP-Modules.md
+>>>>>>> 40b96bcd6 (.)

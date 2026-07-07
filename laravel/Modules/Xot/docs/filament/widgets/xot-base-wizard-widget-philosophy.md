@@ -29,7 +29,11 @@ Senza `XotBaseWizardWidget`, ogni modulo reinventa:
 - Come leggere `?step=` dalla query string
 - Come validare che lo step sia nel range 1..N
 - Come permettere/negare l'override di `?step=` in produzione
+<<<<<<< HEAD
 - Come appiattire lo stato annidato del form (`data['wizard']['address']` → `data['address']`)
+=======
+- Come allineare stato form e attributi model senza helper post-`getState()` sulla base
+>>>>>>> 40b96bcd6 (.)
 - Come gestire la navigazione Avanti/Indietro
 - Come renderizzare il pulsante Submit correttamente
 
@@ -37,13 +41,18 @@ Senza `XotBaseWizardWidget`, ogni modulo reinventa:
 
 **La soluzione**: UNA sola base class che gestisce il **protocollo**, il dominio gestisce il **contenuto**.
 
+<<<<<<< HEAD
 Il contratto esplicito sulla base è `abstract public function getWizardSteps(): array` (ordine degli step); `getFormSchema()` consuma solo API definite, così static analysis e IDE non inferiscono metodi fantasma.
+=======
+Il contratto esplicito sulla base è `abstract public function getSteps(): array` (ordine degli step); `getFormSchema()` consuma solo API definite, così static analysis e IDE non inferiscono metodi fantasma.
+>>>>>>> 40b96bcd6 (.)
 
 ---
 
 #### 2. DRY + KISS
 
 **DRY (Don't Repeat Yourself)**:
+<<<<<<< HEAD
 - Logica `?step=` scritta UNA volta in `resolveInitialStepFromQuery()`
 - Normalizzazione stato scritta UNA volta in `normalizeWizardFormState()`
 - Policy sicurezza scritta UNA volta in `queryStepOverrideAllowed()`
@@ -52,6 +61,14 @@ Il contratto esplicito sulla base è `abstract public function getWizardSteps():
 - Il widget dominio chiama metodi ereditati, non reinventa logica
 - Override solo per comportamento domain-specific (campi, validazione, redirect)
 - Nessun boilerplate ripetuto in ogni modulo
+=======
+- Logica wizard condivisa vive in `XotBaseWizardWidget` (**HasWizard**, view tema, persist `step` dove abilitato)
+- Il contratto dati per `create`/`update` resta **`$this->form->getState()`** + regole schema — niente “normalizzatori” duplicati sulla base
+
+**KISS (Keep It Simple, Stupid)**:
+- Il widget dominio non aggiunge middleware arbitrari sullo stato: correggere struttura allo **schema** quando il modello non accetta l’annidamento
+- Override solo per comportamento domain-specific (redirect, merge campi auth, notifiche)
+>>>>>>> 40b96bcd6 (.)
 
 ---
 

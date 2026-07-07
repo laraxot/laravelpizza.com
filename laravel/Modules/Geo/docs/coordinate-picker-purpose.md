@@ -251,4 +251,8 @@ $table->geometry('location_point', 'POINT')->nullable(); // PostGIS
 
 **Ultimo aggiornamento**: 2026-04-27
 **Autore**: System
+<<<<<<< HEAD
 **Scopo**: Documentazione architetturale per AI agents e developers
+=======
+**Scopo**: Documentazione architetturale per AI agents e developers
+>>>>>>> 40b96bcd6 (.)

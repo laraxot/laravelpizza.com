@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Task 001: Improve Core Framework and Base Classes
 
 ## Description
@@ -264,3 +265,12 @@ The Xot module is the foundation of the entire Laraxot architecture. It needs co
 
 **Status**: Pending
 **Assignee**: TBD
+=======
+---
+module: theme
+topic: core-framework-improvements
+canonical: ../../../../Themes/docs/shared-components/001-core-framework-improvements.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/001-core-framework-improvements.md
+>>>>>>> 40b96bcd6 (.)

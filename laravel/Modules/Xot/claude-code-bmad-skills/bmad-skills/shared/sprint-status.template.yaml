@@ -1,0 +1,77 @@
+# BMAD Sprint Status
+# Tracks sprint progress and story completion
+
+project:
+  name: "{{project_name}}"
+  level: {{project_level}}
+
+sprint:
+  number: {{sprint_number}}
+  start_date: "{{sprint_start}}"
+  end_date: "{{sprint_end}}"
+  goal: "{{sprint_goal}}"
+  capacity_points: {{capacity_points}}
+  committed_points: {{committed_points}}
+
+velocity:
+  current_sprint: 0
+  rolling_average: 0  # 3-sprint average
+  history:
+    # - sprint: 1
+    #   completed_points: 0
+    #   committed_points: 0
+
+epics:
+  # Epic structure
+  # - id: "EPIC-001"
+  #   name: "Epic Name"
+  #   status: "in_progress"  # not_started, in_progress, completed
+  #   stories:
+  #     total: 0
+  #     completed: 0
+  #     in_progress: 0
+  #     not_started: 0
+  #   points:
+  #     total: 0
+  #     completed: 0
+
+stories:
+  # Story structure
+  # - id: "STORY-001"
+  #   epic_id: "EPIC-001"
+  #   title: "Story Title"
+  #   status: "not_started"  # not_started, in_progress, completed, blocked
+  #   points: 3
+  #   priority: "must_have"  # must_have, should_have, could_have
+  #   assignee: null
+  #   started_at: null
+  #   completed_at: null
+  #   file_path: null
+  #   dependencies: []
+  #   blockers: []
+
+burndown:
+  # Daily burndown tracking
+  # - date: "2025-01-01"
+  #   remaining_points: 40
+  #   completed_points: 0
+  #   ideal_remaining: 40
+
+metrics:
+  total_stories: 0
+  completed_stories: 0
+  in_progress_stories: 0
+  blocked_stories: 0
+  total_points: 0
+  completed_points: 0
+  completion_percentage: 0
+
+subagent_tracking:
+  # Track parallel story implementation
+  active_agents: []
+  # - agent_id: "abc123"
+  #   story_id: "STORY-001"
+  #   started_at: "timestamp"
+  #   status: "running"  # running, completed, failed
+
+last_updated: "{{timestamp}}"

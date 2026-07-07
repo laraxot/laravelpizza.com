@@ -171,6 +171,7 @@ public function sendEmail(): void
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Best Practices Laravel](https://laravel.com/project_docs/best-practices)
 - [Convenzioni Laraxot](../Xot/project_docs/laraxot-conventions.md)
+- [Convenzioni Laraxot](../Xot/project_docs/laraxot-conventions.md)
 
 ## 📋 Checklist
 

@@ -161,3 +161,6 @@ public function toMail(object $notifiable): \Illuminate\Mail\Mailable
 - [ATTACHMENTS_USAGE.md](../email-sending/ATTACHMENTS_USAGE.md)
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
 - [EMAIL_TROUBLESHOOTING.md](../email-sending/EMAIL_TROUBLESHOOTING.md)
+- [ATTACHMENTS_USAGE.md](../email-sending/ATTACHMENTS_USAGE.md)
+- [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
+- [EMAIL_TROUBLESHOOTING.md](../email-sending/EMAIL_TROUBLESHOOTING.md)

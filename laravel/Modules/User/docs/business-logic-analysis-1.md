@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # User Module - Business Logic Analysis
 
 ## Overview
@@ -473,3 +474,12 @@ class ApiRateLimitingMiddleware
 - User satisfaction scores
 - Security incident reduction
 - Team collaboration effectiveness
+=======
+---
+module: theme
+topic: business-logic-analysis-1
+canonical: ../../../Themes/docs/shared-components/BUSINESS_LOGIC_ANALYSIS-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/BUSINESS_LOGIC_ANALYSIS-Modules.md
+>>>>>>> 40b96bcd6 (.)

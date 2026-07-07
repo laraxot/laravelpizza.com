@@ -89,7 +89,11 @@ picker.invalidateSize()
 │ Props: latitude, longitude, zoom, height, showSearch       │
 │ Events: location-changed                                   │
 │ API: applyExternalLocation(), invalidateSize()             │
+<<<<<<< HEAD
 │ Styles: Shadow DOM (map-picker-styles.js)                  │
+=======
+│ Styles: Shadow DOM (map/styles.js)                  │
+>>>>>>> 40b96bcd6 (.)
 └────────────────────┬────────────────────────────────────────┘
                      │
                      │ L.map(), L.marker(), L.tileLayer()
@@ -248,16 +252,28 @@ x-data="{
 **Motivazione**:
 - Lit official docs: https://lit.dev/docs/components/styles/
 - Shadow DOM previene leakage CSS da/to Filament global styles
+<<<<<<< HEAD
 - CSS in file separato (`map-picker-styles.js`) = tree-shaking, riuso, manutenzione
 - `static styles = mapPickerStyles` pattern ufficiale Lit
+=======
+- CSS in file separato (`map/styles.js`) = tree-shaking, riuso, manutenzione
+- `static styles = mapStyles` pattern ufficiale Lit
+>>>>>>> 40b96bcd6 (.)
 
 **Implementazione**:
 
 ```javascript
+<<<<<<< HEAD
 // map-picker-styles.js
 import { css } from '@theme-lit';
 
 export const mapPickerStyles = css`
+=======
+// map/styles.js
+import { css } from '@theme-lit';
+
+export const mapStyles = css`
+>>>>>>> 40b96bcd6 (.)
   :host { display: block; }
   .map-container { position: relative; height: var(--map-height); }
   .map-picker-leaflet-pane { width: 100%; height: 100%; }
@@ -265,10 +281,17 @@ export const mapPickerStyles = css`
 `;
 
 // map-picker-lit.js
+<<<<<<< HEAD
 import { mapPickerStyles } from './map-picker-styles.js';
 
 export class MapPickerLit extends LitElement {
   static styles = mapPickerStyles;
+=======
+import { mapStyles } from './map/styles.js';
+
+export class MapPickerLit extends LitElement {
+  static styles = mapStyles;
+>>>>>>> 40b96bcd6 (.)
   // ...
 }
 ```
@@ -351,7 +374,11 @@ _handleResize() {
 | **LocationPicker.php** | `Modules/Geo/app/Filament/Forms/Components/LocationPicker.php` | Alias (classe vuota, stesso view) |
 | **map-picker.blade.php** | `Modules/Geo/resources/views/filament/forms/components/map-picker.blade.php` | Blade view con Alpine adapter |
 | **map-picker-lit.js** | `Modules/Geo/resources/js/components/map-picker-lit.js` | Lit Web Component (400 righe) |
+<<<<<<< HEAD
 | **map-picker-styles.js** | `Modules/Geo/resources/js/components/map-picker-styles.js` | CSS in Shadow DOM |
+=======
+| **map/styles.js** | `Modules/Geo/resources/js/components/map/styles.js` | CSS in Shadow DOM |
+>>>>>>> 40b96bcd6 (.)
 | **map-picker-marker-config.js** | `Modules/Geo/resources/js/components/map-picker-marker-config.js` | Configurazione marker SVG |
 | **MapPickerTest.php** | `Modules/Geo/tests/Unit/Filament/Forms/Components/MapPickerTest.php` | Pest test suite |
 

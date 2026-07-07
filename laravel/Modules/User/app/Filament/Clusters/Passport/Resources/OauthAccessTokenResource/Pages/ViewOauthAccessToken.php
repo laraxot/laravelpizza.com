@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Clusters\Passport\Resources\OauthAccessTokenResource\Pages;
 
+<<<<<<< HEAD
 use Filament\Infolists\Components\IconEntry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Component;
@@ -12,6 +13,11 @@ use Filament\Schemas\Components\Section;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthAccessTokenResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 use Modules\Xot\Filament\Schemas\Components\XotBaseSection;
+=======
+use Filament\Schemas\Components\Component;
+use Modules\User\Filament\Clusters\Passport\Resources\OauthAccessTokenResource;
+use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+>>>>>>> 40b96bcd6 (.)
 
 class ViewOauthAccessToken extends XotBaseViewRecord
 {
@@ -23,6 +29,7 @@ class ViewOauthAccessToken extends XotBaseViewRecord
     #[\Override]
     protected function getInfolistSchema(): array
     {
+<<<<<<< HEAD
         return [
             'token_information' => XotBaseSection::make('Token Information')
                 ->schema([
@@ -54,5 +61,8 @@ class ViewOauthAccessToken extends XotBaseViewRecord
                         ]),
                 ])->columns(1),
         ];
+=======
+        return [];
+>>>>>>> 40b96bcd6 (.)
     }
 }

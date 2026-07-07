@@ -3,7 +3,11 @@ title: "Context Compression and Retrieval"
 module: "Xot"
 type: source
 created: "2026-04-29T00:00:00Z"
+<<<<<<< HEAD
 updated: "2026-04-29T00:00:00Z"
+=======
+updated: "2026-05-12T10:32:00Z"
+>>>>>>> 40b96bcd6 (.)
 related:
   - "[[Xot Architecture Guardrails]]"
 ---
@@ -21,6 +25,11 @@ related:
 - repository policy keeps managed indexing disabled until the team intentionally selects a local or cloud indexing path
 - local indexing prerequisites now exist in-repo as Ollama `nomic-embed-text` plus local Qdrant, so Xot can later opt into indexing without new system setup
 - final activation of Kilo indexing is still treated as a client-side confirmation step, not yet as a pure repo config contract
+<<<<<<< HEAD
+=======
+- OpenCode now has a repository-level `opencode.json` at the git root with explicit compaction (`auto`, `prune`, `reserved=40000`)
+- global OpenCode config also loads `@tarquinen/opencode-dcp@latest`, so long Xot sessions have an extra pruning layer before provider overflow
+>>>>>>> 40b96bcd6 (.)
 
 ## Why Xot Cares
 
@@ -29,7 +38,12 @@ Xot raw docs are among the largest in the repository. The recommended path is:
 1. query Xot wiki first
 2. open only the specific raw cluster needed
 3. rely on token optimization for repeated tooling output
+<<<<<<< HEAD
 4. if using Kilo, compact between major topic shifts instead of carrying one giant session through unrelated Xot areas
+=======
+4. if using Kilo/OpenCode, compact between major topic shifts instead of carrying one giant session through unrelated Xot areas
+5. prefer wiki/QMD retrieval over full raw Xot doc dumps even after the DCP fix; compression helps, but DRY retrieval is still the first control
+>>>>>>> 40b96bcd6 (.)
 
 ## References
 

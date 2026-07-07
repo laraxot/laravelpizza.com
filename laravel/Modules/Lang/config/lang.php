@@ -13,8 +13,8 @@ return [
      * |
      */
 
-    'default_locale' => env('APP_LOCALE', 'it'),
-    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
+    'default_locale' => 'it',
+    'fallback_locale' => 'en',
     'available_locales' => ['it', 'en', 'de'],
     /*
      * |--------------------------------------------------------------------------
@@ -26,10 +26,10 @@ return [
      */
 
     'cache' => [
-        'enabled' => env('LANG_CACHE_ENABLED', true),
-        'ttl' => env('LANG_CACHE_TTL', 3600), // 1 ora
+        'enabled' => true,
+        'ttl' => 3600, // 1 ora
         'prefix' => 'lang_translations',
-        'compression' => env('LANG_CACHE_COMPRESSION', true),
+        'compression' => true,
     ],
     /*
      * |--------------------------------------------------------------------------
@@ -41,11 +41,11 @@ return [
      */
 
     'validation' => [
-        'enabled' => env('LANG_VALIDATION_ENABLED', true),
-        'strict_mode' => env('LANG_STRICT_MODE', false),
-        'auto_fix' => env('LANG_AUTO_FIX', false),
-        'report_missing_keys' => env('LANG_REPORT_MISSING', true),
-        'quality_threshold' => env('LANG_QUALITY_THRESHOLD', 95), // %
+        'enabled' => true,
+        'strict_mode' => false,
+        'auto_fix' => false,
+        'report_missing_keys' => true,
+        'quality_threshold' => 95, // %
     ],
     /*
      * |--------------------------------------------------------------------------
@@ -57,15 +57,15 @@ return [
      */
 
     'auto_translate' => [
-        'enabled' => env('LANG_AUTO_TRANSLATE', false),
-        'provider' => env('LANG_TRANSLATION_PROVIDER', 'google'),
-        'api_key' => env('LANG_TRANSLATION_API_KEY'),
+        'enabled' => false,
+        'provider' => 'google',
+        'api_key' => null,
         'fallback_chain' => [
             'it' => ['en', 'de'],
             'de' => ['en', 'it'],
             'en' => ['it', 'de'],
         ],
-        'quality_check' => env('LANG_AUTO_QUALITY_CHECK', true),
+        'quality_check' => true,
     ],
     /*
      * |--------------------------------------------------------------------------
@@ -77,11 +77,11 @@ return [
      */
 
     'filament' => [
-        'auto_labels' => env('LANG_FILAMENT_AUTO_LABELS', true),
-        'auto_placeholders' => env('LANG_FILAMENT_AUTO_PLACEHOLDERS', true),
-        'auto_help_text' => env('LANG_FILAMENT_AUTO_HELP', true),
-        'component_prefix' => env('LANG_FILAMENT_PREFIX', ''),
-        'fallback_to_key' => env('LANG_FILAMENT_FALLBACK_KEY', false),
+        'auto_labels' => true,
+        'auto_placeholders' => true,
+        'auto_help_text' => true,
+        'component_prefix' => '',
+        'fallback_to_key' => false,
     ],
     /*
      * |--------------------------------------------------------------------------
@@ -119,11 +119,11 @@ return [
      */
 
     'debug' => [
-        'enabled' => env('LANG_DEBUG', false),
-        'log_missing_keys' => env('LANG_LOG_MISSING', true),
-        'log_performance' => env('LANG_LOG_PERFORMANCE', false),
-        'log_channel' => env('LANG_LOG_CHANNEL', 'translations'),
-        'show_keys_in_production' => env('LANG_SHOW_KEYS_PROD', false),
+        'enabled' => false,
+        'log_missing_keys' => true,
+        'log_performance' => false,
+        'log_channel' => 'translations',
+        'show_keys_in_production' => false,
     ],
     /*
      * |--------------------------------------------------------------------------
@@ -135,11 +135,11 @@ return [
      */
 
     'performance' => [
-        'lazy_loading' => env('LANG_LAZY_LOADING', true),
-        'memory_optimization' => env('LANG_MEMORY_OPT', true),
-        'batch_loading' => env('LANG_BATCH_LOADING', true),
-        'preload_common_keys' => env('LANG_PRELOAD_COMMON', true),
-        'compression_level' => env('LANG_COMPRESSION_LEVEL', 6),
+        'lazy_loading' => true,
+        'memory_optimization' => true,
+        'batch_loading' => true,
+        'preload_common_keys' => true,
+        'compression_level' => 6,
     ],
     /*
      * |--------------------------------------------------------------------------
@@ -151,11 +151,11 @@ return [
      */
 
     'security' => [
-        'validate_file_integrity' => env('LANG_VALIDATE_INTEGRITY', true),
-        'max_file_size' => env('LANG_MAX_FILE_SIZE', 1024 * 1024), // 1MB
+        'validate_file_integrity' => true,
+        'max_file_size' => 1024 * 1024, // 1MB
         'allowed_extensions' => ['php'],
-        'scan_for_malicious_code' => env('LANG_SCAN_MALICIOUS', true),
-        'rate_limiting' => env('LANG_RATE_LIMITING', true),
+        'scan_for_malicious_code' => true,
+        'rate_limiting' => true,
     ],
     /*
      * |--------------------------------------------------------------------------

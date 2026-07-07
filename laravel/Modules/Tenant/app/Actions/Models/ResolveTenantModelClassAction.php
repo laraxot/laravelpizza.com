@@ -10,6 +10,7 @@ use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
 use Modules\Tenant\Actions\Config\SaveTenantConfigAction;
 use Modules\Xot\Actions\Model\GetAllModelsByModuleNameAction;
 use Nwidart\Modules\Facades\Module;
+use Nwidart\Modules\Laravel\Module as LaravelModule;
 use Spatie\QueueableAction\QueueableAction;
 
 class ResolveTenantModelClassAction
@@ -18,25 +19,13 @@ class ResolveTenantModelClassAction
 
     public function execute(string $name): string
     {
-        $name = Str::singular($name);
-        $name = Str::snake($name);
+        $name = Str::snake(Str::singular($name));
 
         /** @var mixed $class */
         $class = app(ResolveTenantConfigValueAction::class)->execute('morph_map.'.$name);
 
         if ($class === null) {
-            $models = $this->getAllModulesModels();
-            if (! array_key_exists($name, $models)) {
-                throw new Exception('model unknown ['.$name.']['.__LINE__.']['.basename(__FILE__).']');
-            }
-
-            $class = $models[$name];
-            $data = [];
-            $data[$name] = $class;
-
-            // Persist morph_map for future calls
-            // We purposely avoid calling TenantService here to keep Action self-contained.
-            app(SaveTenantConfigAction::class)->execute('morph_map', $data);
+            $class = $this->resolveAndPersistModelClass($name);
         }
 
         if (! \is_string($class)) {
@@ -44,6 +33,18 @@ class ResolveTenantModelClassAction
         }
 
         return $class;
+    }
+
+    private function resolveAndPersistModelClass(string $name): string
+    {
+        $models = $this->getAllModulesModels();
+        if (! array_key_exists($name, $models)) {
+            throw new Exception('model unknown ['.$name.']['.__LINE__.']['.basename(__FILE__).']');
+        }
+
+        app(SaveTenantConfigAction::class)->execute('morph_map', [$name => $models[$name]]);
+
+        return $models[$name];
     }
 
     /**
@@ -55,34 +56,48 @@ class ResolveTenantModelClassAction
         $models = [];
 
         foreach (Module::allEnabled() as $module) {
-            if (! is_object($module) || ! method_exists($module, 'getName')) {
+            if (! $module instanceof LaravelModule) {
                 continue;
             }
 
-            /** @var mixed $moduleName */
-            $moduleName = $module->getName();
-            if (! \is_string($moduleName)) {
+            $models = array_merge($models, $this->modelsFromModule($module));
+        }
+
+        return $models;
+    }
+
+    /**
+     * @return array<string, class-string>
+     */
+    private function modelsFromModule(LaravelModule $module): array
+    {
+        $moduleName = $module->getName();
+
+        /** @var GetAllModelsByModuleNameAction $action */
+        $action = app(GetAllModelsByModuleNameAction::class);
+        /** @var array<string, class-string> $moduleModels */
+        $moduleModels = $action->execute($moduleName);
+
+        return $this->filterValidModelClasses($moduleModels);
+    }
+
+    /**
+     * @param  array<mixed, mixed>  $moduleModels
+     * @return array<string, class-string>
+     */
+    private function filterValidModelClasses(array $moduleModels): array
+    {
+        /** @var array<string, class-string> $models */
+        $models = [];
+
+        foreach ($moduleModels as $key => $fqcn) {
+            if (! \is_string($key) || ! \is_string($fqcn) || ! class_exists($fqcn)) {
                 continue;
             }
 
-            // Use action directly instead of helper function to avoid autoload issues during package:discover
-            /** @var GetAllModelsByModuleNameAction $action */
-            $action = app(GetAllModelsByModuleNameAction::class);
-            $moduleModels = $action->execute($moduleName);
-
-            foreach ($moduleModels as $key => $fqcn) {
-                if (! \is_string($key) || ! \is_string($fqcn)) {
-                    continue;
-                }
-
-                if (! class_exists($fqcn)) {
-                    continue;
-                }
-
-                /** @var class-string $fqcnClass */
-                $fqcnClass = $fqcn;
-                $models[$key] = $fqcnClass;
-            }
+            /** @var class-string $fqcnClass */
+            $fqcnClass = $fqcn;
+            $models[$key] = $fqcnClass;
         }
 
         return $models;

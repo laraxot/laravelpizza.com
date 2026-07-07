@@ -4,10 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit\Models;
 
+<<<<<<< HEAD
 uses(TestCase::class);
 
 use Modules\Lang\Models\BaseModelLang;
 use Modules\Lang\Tests\TestCase;
+=======
+use Modules\Lang\Models\BaseModelLang;
+use Modules\Lang\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
+>>>>>>> 40b96bcd6 (.)
 
 describe('BaseModelLang', function () {
     test('has correct connection', function () {
@@ -15,21 +23,19 @@ describe('BaseModelLang', function () {
             protected $table = 'test';
         };
 
-        expect($model->getConnectionName())->toBe('lang');
+        Assert::assertSame('lang', $model->getConnectionName());
     });
 
     test('has LinkedTrait in traits list', function () {
-        // Check if BaseModelLang uses the LinkedTrait
-        $reflection = new ReflectionClass(BaseModelLang::class);
+        $reflection = new \ReflectionClass(BaseModelLang::class);
         $traits = $reflection->getTraitNames();
 
-        // Check if any trait contains 'Linked' in its name
         $hasLinked = count(array_filter($traits, fn ($t) => str_contains($t, 'Linked'))) > 0;
-        expect($hasLinked)->toBeTrue();
+        Assert::assertTrue($hasLinked);
     });
 
     test('has snake attributes enabled', function () {
-        expect(BaseModelLang::$snakeAttributes)->toBeTrue();
+        Assert::assertTrue(BaseModelLang::$snakeAttributes);
     });
 
     test('has timestamps enabled', function () {
@@ -37,7 +43,7 @@ describe('BaseModelLang', function () {
             protected $table = 'test';
         };
 
-        expect($model->timestamps)->toBeTrue();
+        Assert::assertTrue($model->timestamps);
     });
 
     test('has incrementing set from property', function () {
@@ -45,7 +51,7 @@ describe('BaseModelLang', function () {
             protected $table = 'test';
         };
 
-        expect($model->incrementing)->toBeTrue();
+        Assert::assertTrue($model->incrementing);
     });
 
     test('has default perPage', function () {
@@ -53,7 +59,7 @@ describe('BaseModelLang', function () {
             protected $table = 'test';
         };
 
-        expect($model->getPerPage())->toBe(30);
+        Assert::assertSame(30, $model->getPerPage());
     });
 
     test('casts id as string', function () {
@@ -62,7 +68,7 @@ describe('BaseModelLang', function () {
         };
 
         $casts = $model->getCasts();
-        expect($casts['id'])->toBe('string');
+        Assert::assertSame('string', $casts['id']);
     });
 
     test('casts datetime fields', function () {
@@ -71,8 +77,8 @@ describe('BaseModelLang', function () {
         };
 
         $casts = $model->getCasts();
-        expect($casts['published_at'])->toBe('datetime');
-        expect($casts['created_at'])->toBe('datetime');
-        expect($casts['updated_at'])->toBe('datetime');
+        Assert::assertSame('datetime', $casts['published_at']);
+        Assert::assertSame('datetime', $casts['created_at']);
+        Assert::assertSame('datetime', $casts['updated_at']);
     });
 });

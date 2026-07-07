@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Il Grande Dibattito Furioso: PHPStan Level 10 - La Verità Assoluta
 
 **Data**: 2025-01-22
@@ -170,3 +171,12 @@ Ogni modulo corretto è un traguardo.
 *"La type safety non è un optional - è un REQUISITO. Ogni errore PHPStan è un bug potenziale. Correggiamoli tutti, uno alla volta, con pazienza e determinazione."*
 
 **Il Purista ha vinto. La type safety è sacra. Non profanarla mai.**
+=======
+---
+module: theme
+topic: phpstan-furious-debate-1
+canonical: ../../../Themes/docs/shared-components/phpstan-furious-debate-.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-furious-debate-.md
+>>>>>>> 40b96bcd6 (.)

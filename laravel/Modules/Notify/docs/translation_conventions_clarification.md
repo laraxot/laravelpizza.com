@@ -81,6 +81,9 @@ return [
 
 ## Conclusione
 
+- [Convenzioni Generali di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
+- [Convenzioni Specifiche del Modulo Notify](./TRANSLATION_CONVENTIONS.md)
+- [Regole per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono correttamente le convenzioni specifiche del modulo. Non è necessario modificare questi file per conformarsi alle convenzioni generali di Quaeris, poiché rappresentano un'eccezione documentata.
 
 ## Riferimenti

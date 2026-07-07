@@ -158,3 +158,9 @@ php artisan migrate
 **Quality**: PHPStan Level 10
 
 *Isolamento dati trasparente: ogni tenant ha il suo dominio, le sue config e i suoi dati, senza query extra.*
+
+
+## Documentazione tecnica
+
+- [Indice docs](./docs/README.md) — mappa knowledge base locale (wiki, audit, regole)
+

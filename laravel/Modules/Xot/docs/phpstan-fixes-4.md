@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Correzioni PHPStan - Modulo Xot
 
 Questo documento traccia gli errori PHPStan identificati nel modulo Xot e le relative soluzioni implementate.
@@ -414,3 +415,12 @@ Use null coalescing operator.
 - [Array Types Fixes](./phpstan-array-types-fixes.md)
 - [PHPStan Level 10 Guidelines](./phpstan-level10-guidelines.md)
 
+=======
+---
+module: theme
+topic: phpstan-fixes-4
+canonical: ../../../Themes/docs/shared-components/phpstan-fixes-.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixes-.md
+>>>>>>> 40b96bcd6 (.)

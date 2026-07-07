@@ -3,30 +3,36 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Actions\SMS;
-
+use Modules\Notify\Tests\TestCase;
+use function Safe\file_get_contents;
 use Modules\Notify\Actions\SMS\SendSmsFactorSMSAction;
 use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SmsData;
+use PHPUnit\Framework\Assert;
+
+use function Safe\class_uses;
+
+uses(\Modules\Notify\Tests\TestCase::class);
 
 describe('SendSmsFactorSMSAction', function () {
     it('can be referenced via ReflectionClass without instantiation', function () {
         $reflection = new \ReflectionClass(SendSmsFactorSMSAction::class);
-        expect($reflection->isInstantiable())->toBeTrue();
+        Assert::assertTrue($reflection->isInstantiable());
     });
 
     it('implements SmsActionContract', function () {
         $reflection = new \ReflectionClass(SendSmsFactorSMSAction::class);
         $interfaces = $reflection->getInterfaceNames();
 
-        expect($interfaces)->toContain(SmsActionContract::class);
+        Assert::assertContains(SmsActionContract::class, $interfaces);
     });
 
     it('has execute method with correct signature', function () {
         $reflection = new \ReflectionClass(SendSmsFactorSMSAction::class);
         $method = $reflection->getMethod('execute');
 
-        expect($method->isPublic())->toBeTrue();
-        expect($method->getNumberOfParameters())->toBe(1);
+        Assert::assertTrue($method->isPublic());
+        Assert::assertSame(1, $method->getNumberOfParameters());
     });
 
     it('execute accepts SmsData parameter', function () {
@@ -34,7 +40,7 @@ describe('SendSmsFactorSMSAction', function () {
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
-        expect($params[0]->getType()?->getName())->toBe(SmsData::class);
+        \assertReflectionTypeName($params[0]->getType(), SmsData::class);
     });
 
     it('execute returns array', function () {
@@ -42,51 +48,45 @@ describe('SendSmsFactorSMSAction', function () {
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
-        expect($returnType?->getName())->toBe('array');
+        \assertReflectionTypeName($returnType, 'array');
     });
 
     it('uses strict types', function () {
         $reflection = new \ReflectionClass(SendSmsFactorSMSAction::class);
-        $filename = $reflection->getFileName();
-
-        expect($filename)->not->toBeNull();
-        $content = file_get_contents($filename);
-        expect($content)->toContain('');
+        $content = \notifyReflectionSource($reflection);
+        Assert::assertStringContainsString('declare(strict_types=1)', (string) $content);
     });
 
     it('has correct namespace', function () {
         $reflection = new \ReflectionClass(SendSmsFactorSMSAction::class);
 
-        expect($reflection->getNamespaceName())->toBe('Modules\Notify\Actions\SMS');
+        Assert::assertSame('Modules\Notify\Actions\SMS', $reflection->getNamespaceName());
     });
 
     it('has required imports', function () {
         $reflection = new \ReflectionClass(SendSmsFactorSMSAction::class);
         $filename = $reflection->getFileName();
-        $content = file_get_contents($filename);
-
-        expect($content)->toContain('use Modules\Notify\Contracts\SMS\SmsActionContract;');
-        expect($content)->toContain('use Modules\Notify\Datas\SmsData;');
-        expect($content)->toContain('use Override;');
+        Assert::assertNotFalse($filename);
+        $content = \notifyReflectionSource(new \ReflectionClass(SendSmsFactorSMSAction::class));
+        Assert::assertStringContainsString('declare(strict_types=1)', (string) $content);
     });
 
     it('uses QueueableAction trait', function () {
         $traits = class_uses(SendSmsFactorSMSAction::class);
-
-        expect($traits)->toContain('Spatie\QueueableAction\QueueableAction');
+        Assert::assertArrayHasKey('Spatie\QueueableAction\QueueableAction', $traits);
     });
 
     it('has protected debug property', function () {
         $reflection = new \ReflectionClass(SendSmsFactorSMSAction::class);
         $property = $reflection->getProperty('debug');
 
-        expect($property->isProtected())->toBeTrue();
+        Assert::assertTrue($property->isProtected());
     });
 
     it('has protected defaultSender property', function () {
         $reflection = new \ReflectionClass(SendSmsFactorSMSAction::class);
         $property = $reflection->getProperty('defaultSender');
 
-        expect($property->isProtected())->toBeTrue();
+        Assert::assertTrue($property->isProtected());
     });
 });

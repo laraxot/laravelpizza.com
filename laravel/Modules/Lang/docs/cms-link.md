@@ -9,6 +9,7 @@ Il modulo Lang fornisce il sistema di traduzione utilizzato dal modulo Cms nei s
 ## Convenzioni di Namespace e Struttura
 
 Il modulo Cms segue specifiche convenzioni di namespace documentate in [Convenzioni Namespace Filament](../../Cms/project_docs/convenzioni-namespace-filament.md) che si integrano con il sistema di traduzioni di questo modulo.
+Il modulo Cms segue specifiche convenzioni di namespace documentate in [Convenzioni Namespace Filament](../../Cms/project_docs/convenzioni-namespace-filament.md) che si integrano con il sistema di traduzioni di questo modulo.
 
 ## Punti di Integrazione
 
@@ -18,6 +19,8 @@ Il modulo Cms segue specifiche convenzioni di namespace documentate in [Convenzi
 
 ## Collegamenti Bidirezionali
 
+- [Convenzioni Namespace Filament](../../Cms/project_docs/convenzioni-namespace-filament.md)
+- [Lang Link nel modulo Cms](../../Cms/project_docs/lang-link.md)
 - [Convenzioni Namespace Filament](../../Cms/project_docs/convenzioni-namespace-filament.md)
 - [Lang Link nel modulo Cms](../../Cms/project_docs/lang-link.md)
 
@@ -45,6 +48,7 @@ Il modulo Lang fornisce il sistema di traduzione utilizzato dal modulo Cms nei s
 ## Convenzioni di Namespace e Struttura
 
 Il modulo Cms segue specifiche convenzioni di namespace documentate in [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md) che si integrano con il sistema di traduzioni di questo modulo.
+Il modulo Cms segue specifiche convenzioni di namespace documentate in [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md) che si integrano con il sistema di traduzioni di questo modulo.
 
 ## Punti di Integrazione
 
@@ -54,6 +58,8 @@ Il modulo Cms segue specifiche convenzioni di namespace documentate in [Convenzi
 
 ## Collegamenti Bidirezionali
 
+- [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md)
+- [Lang Link nel modulo Cms](../../Cms/docs/lang-link.md)
 - [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md)
 - [Lang Link nel modulo Cms](../../Cms/docs/lang-link.md)
 

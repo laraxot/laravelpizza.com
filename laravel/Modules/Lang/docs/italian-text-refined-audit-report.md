@@ -1,5 +1,6 @@
 # Refined Italian Text Audit Report
 
+**Data**: 2025-08-08 11:20:44
 **Scope**: Identificazione di VERI testi italiani in file non italiani (escludendo falsi positivi)
 
 ## ✅ Risultato Audit

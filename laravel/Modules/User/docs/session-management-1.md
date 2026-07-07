@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Gestione delle Sessioni
 
 ## Panoramica
@@ -75,3 +76,12 @@ Questo documento fornisce linee guida per la gestione delle sessioni utente all'
 - [Best Practices di Sicurezza](./security_best_practices.md)
 - [Documentazione Volt](./volt_blade_implementation.md)
 - [Tema One Documentation](../../themes/one/docs/readme.md) 
+=======
+---
+module: theme
+topic: session-management-1
+canonical: ../../../Themes/docs/shared-components/session-management.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/session-management.md
+>>>>>>> 40b96bcd6 (.)

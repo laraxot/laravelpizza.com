@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FullCalendar Scheduler Documentation - README
 
 ## 🎯 Obiettivo
@@ -225,3 +226,12 @@ Log::info('FullCalendar configured', [
 **Versione FullCalendar**: v6.1.17
 **Versione Filament**: v3.x
 **Progetto**: <nome progetto> Multi-Tenant Healthcare Platform
+=======
+---
+module: theme
+topic: readme-fullcalendar-scheduler-1
+canonical: ../../../Themes/docs/shared-components/readme-fullcalendar-scheduler-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/readme-fullcalendar-scheduler-1.md
+>>>>>>> 40b96bcd6 (.)

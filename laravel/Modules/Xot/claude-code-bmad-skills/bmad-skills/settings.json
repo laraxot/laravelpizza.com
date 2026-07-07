@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "_comment": "BMAD Skills reference settings. Copy the 'hooks' section to ~/.claude/settings.json and replace ~/.claude/skills/bmad-skills with your actual install path.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "bash ~/.claude/skills/bmad-skills/hooks/bmad-session-start.sh"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/skills/bmad-skills/hooks/bmad-pre-tool.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/skills/bmad-skills/hooks/bmad-post-tool.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "bmad-orchestrator": {
+      "path": "./bmad-orchestrator",
+      "description": "Core BMAD workflow orchestrator"
+    },
+    "business-analyst": {
+      "path": "./business-analyst",
+      "description": "Phase 1 - Product discovery and analysis"
+    },
+    "product-manager": {
+      "path": "./product-manager",
+      "description": "Phase 2 - Requirements and planning"
+    },
+    "system-architect": {
+      "path": "./system-architect",
+      "description": "Phase 3 - System architecture design"
+    },
+    "scrum-master": {
+      "path": "./scrum-master",
+      "description": "Phase 4 - Sprint planning"
+    },
+    "developer": {
+      "path": "./developer",
+      "description": "Phase 4 - Story implementation"
+    },
+    "ux-designer": {
+      "path": "./ux-designer",
+      "description": "Cross-phase UX design"
+    },
+    "creative-intelligence": {
+      "path": "./creative-intelligence",
+      "description": "Cross-phase brainstorming and research"
+    },
+    "builder": {
+      "path": "./builder",
+      "description": "Create custom BMAD skills"
+    }
+  }
+}

@@ -22,64 +22,84 @@ class GetTenantNameAction
      */
     public function execute(): string
     {
+        $default = $this->resolveDefaultHost();
+
+        /** @var Collection<int, string> $parts */
+        $parts = $this->buildServerParts($default);
+
+        return $this->resolveFromParts($parts)
+            ?? $this->resolveFromDefaultHost($default)
+            ?? 'localhost';
+    }
+
+    private function resolveDefaultHost(): string
+    {
         $default = config('app.url');
 
         if (! \is_string($default)) {
             $default = 'localhost';
         }
 
-        $default = Str::after($default, '//');
-
-        $server_name = $this->getServerName($default);
-        $server_name = Str::of($server_name)->replace('www.', '')->toString();
-
-        /** @var Collection<int, string> $parts */
-        $parts = collect(explode('.', $server_name))
-            ->map(fn (string $part): string => Str::slug($part))
-            ->reverse()
-            ->values();
-
-        // Prova il percorso completo
-        $config_file = $this->buildConfigPath($parts);
-        if (file_exists($config_file)) {
-            return $parts->implode('/');
-        }
-
-        // Prova il percorso senza l'ultimo segmento se ci sono più di 2 parti
-        if ($parts->count() > 2) {
-            /** @var Collection<int, string> $shortened_parts */
-            $shortened_parts = $parts->slice(0, -1);
-            $config_file = $this->buildConfigPath($shortened_parts);
-            if (file_exists($config_file)) {
-                return $shortened_parts->implode('/');
-            }
-        }
-
-        // Fallback al default
-        $part = explode('.', $default);
-        $inverted = array_reverse($part);
-        $default_path = implode('/', $inverted);
-        if ($default_path !== '' && file_exists(base_path('config/'.$default_path))) {
-            return $default_path;
-        }
-
-        return 'localhost';
+        return Str::after($default, '//');
     }
 
     /**
-     * Ottiene il nome del server con fallback al default.
+     * @return Collection<int, string>
+     */
+    private function buildServerParts(string $default): Collection
+    {
+        $serverName = Str::of($this->getServerName($default))->replace('www.', '')->toString();
+
+        return collect(explode('.', $serverName))
+            ->map(static fn (string $part): string => Str::slug($part))
+            ->reverse()
+            ->values();
+    }
+
+    /**
+     * @param  Collection<int, string>  $parts
+     */
+    private function resolveFromParts(Collection $parts): ?string
+    {
+        if (file_exists($this->buildConfigPath($parts))) {
+            return $parts->implode('/');
+        }
+
+        if ($parts->count() <= 2) {
+            return null;
+        }
+
+        /** @var Collection<int, string> $shortenedParts */
+        $shortenedParts = $parts->slice(0, -1);
+
+        if (file_exists($this->buildConfigPath($shortenedParts))) {
+            return $shortenedParts->implode('/');
+        }
+
+        return null;
+    }
+
+    private function resolveFromDefaultHost(string $default): ?string
+    {
+        $defaultPath = implode('/', array_reverse(explode('.', $default)));
+
+        if ($defaultPath === '' || ! file_exists(base_path('config/'.$defaultPath))) {
+            return null;
+        }
+
+        return $defaultPath;
+    }
+
+    /**
+     * Durante LoadConfiguration le facade non sono ancora disponibili — usare getenv.
      *
      * @param  string  $default  Il valore di default da usare
-     * @return string Il nome del server
      */
     private function getServerName(string $default): string
     {
-        if (
-            isset($_SERVER['SERVER_NAME']) &&
-                $_SERVER['SERVER_NAME'] !== '127.0.0.1' &&
-                is_string($_SERVER['SERVER_NAME'])
-        ) {
-            return $_SERVER['SERVER_NAME'];
+        $serverName = getenv('SERVER_NAME');
+        if (is_string($serverName) && $serverName !== '' && $serverName !== '127.0.0.1') {
+            return $serverName;
         }
 
         return $default;
@@ -89,6 +109,7 @@ class GetTenantNameAction
      * Costruisce il percorso di configurazione.
      *
      * @param  Collection<int, string>  $parts  Le parti del percorso
+     *
      * @return string Il percorso completo
      */
     private function buildConfigPath(Collection $parts): string

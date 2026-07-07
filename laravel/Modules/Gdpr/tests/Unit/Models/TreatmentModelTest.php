@@ -4,40 +4,52 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Models;
 
+<<<<<<< HEAD
 uses(TestCase::class);
 
 use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
+=======
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Modules\Gdpr\Models\BaseModel;
+use Modules\Gdpr\Models\Treatment;
+use Modules\Gdpr\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+>>>>>>> 40b96bcd6 (.)
 
-test('treatment_fillable_attributes', function () {
+uses(TestCase::class);
+
+test('treatment_fillable_attributes', function (): void {
     $treatment = new Treatment();
     $fillable = $treatment->getFillable();
 
-    expect($fillable)->toContain('id');
-    expect($fillable)->toContain('active');
-    expect($fillable)->toContain('required');
-    expect($fillable)->toContain('name');
-    expect($fillable)->toContain('description');
-    expect($fillable)->toContain('documentVersion');
-    expect($fillable)->toContain('documentUrl');
-    expect($fillable)->toContain('weight');
+    assertFillableContains([
+        'id',
+        'active',
+        'required',
+        'name',
+        'description',
+        'documentVersion',
+        'documentUrl',
+        'weight',
+    ], $fillable);
 });
 
-test('treatment_is_not_incrementing', function () {
+test('treatment_is_not_incrementing', function (): void {
     $treatment = new Treatment();
 
-    expect($treatment->getIncrementing())->toBeFalse();
+    Assert::assertFalse($treatment->getIncrementing());
 });
 
-test('treatment_is_uuid', function () {
+test('treatment_is_uuid', function (): void {
     $treatment = new Treatment();
     $traits = class_uses_recursive($treatment);
 
-    expect($traits)->toHaveKey('Illuminate\Database\Eloquent\Concerns\HasUuids');
+    Assert::assertArrayHasKey(HasUuids::class, $traits);
 });
 
-test('treatment_extends_base_model', function () {
+test('treatment_extends_base_model', function (): void {
     $treatment = new Treatment();
 
-    expect($treatment)->toBeInstanceOf(Modules\Gdpr\Models\BaseModel::class);
+    Assert::assertInstanceOf(BaseModel::class, $treatment);
 });

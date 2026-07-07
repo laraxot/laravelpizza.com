@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Task 001: Implement User Management and Authentication System
 
 ## Description
@@ -242,3 +243,12 @@ The User module is critical for the entire system. It needs robust user manageme
 
 **Status**: Pending
 **Assignee**: TBD
+=======
+---
+module: theme
+topic: user-management-system
+canonical: ../../../../Themes/docs/shared-components/001-user-management-system.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/001-user-management-system.md
+>>>>>>> 40b96bcd6 (.)

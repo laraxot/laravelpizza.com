@@ -23,6 +23,7 @@
 - [x] Basic templates
 - [x] API endpoints
 - [x] Cache system
+- [x] Compliance con la filosofia Xot: **nessuna registrazione manuale dei comandi console** nei provider (vedi [lang-service-provider.md](./lang-service-provider.md), [PHILOSOPHY.md](./PHILOSOPHY.md))
 - [x] Compliance con la filosofia Xot: **nessuna registrazione manuale dei comandi console** nei provider (vedi [lang-service-provider.md](./lang-service-provider.md), [PHILOSOPHY.md](./philosophy.md))
 
 ### In Progress (50%)
@@ -328,6 +329,7 @@ Secondo le "Regole Windsurf per base_<nome progetto>_fila5_mono", gli obiettivi 
 
 ### Collegamenti Interni
 - [Bottlenecks](bottlenecks.md)
+- [Best Practices](BEST-PRACTICES.md)
 - [Best Practices](best-practices.md)
 - [Testing](testing.md)
 
@@ -352,5 +354,19 @@ Secondo le "Regole Windsurf per base_<nome progetto>_fila5_mono", gli obiettivi 
 * [roadmap.md](../../../patient/docs/roadmap.md)
 * [roadmap.md](../../../cms/docs/roadmap.md)
 * [roadmap.md](../../../../themes/one/docs/roadmap.md)
+* [roadmap.md](../../../Gdpr/docs/roadmap.md)
+* [roadmap.md](../../../Notify/docs/roadmap.md)
+* [roadmap.md](../../../Xot/docs/roadmap.md)
+* [roadmap.md](../../../Dental/docs/roadmap.md)
+* [roadmap.md](../../../User/docs/roadmap.md)
+* [roadmap.md](../../../UI/docs/roadmap.md)
+* [roadmap.md](../../../Lang/docs/roadmap.md)
+* [roadmap.md](../../../Job/docs/roadmap.md)
+* [roadmap.md](../../../Media/docs/roadmap.md)
+* [roadmap.md](../../../Tenant/docs/roadmap.md)
+* [roadmap.md](../../../Activity/docs/roadmap.md)
+* [roadmap.md](../../../Patient/docs/roadmap.md)
+* [roadmap.md](../../../Cms/docs/roadmap.md)
+* [roadmap.md](../../../../Themes/One/docs/roadmap.md)
 
 ---

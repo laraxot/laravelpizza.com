@@ -4,26 +4,38 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Filament\Resources;
 
+<<<<<<< HEAD
 uses(TestCase::class);
 
 use Modules\Gdpr\Filament\Resources\TreatmentResource;
 use Modules\Gdpr\Tests\TestCase;
+=======
+use Modules\Gdpr\Filament\Resources\TreatmentResource;
+use Modules\Gdpr\Models\Treatment;
+use Modules\Gdpr\Tests\TestCase;
+use Modules\Xot\Filament\Resources\XotBaseResource;
+use PHPUnit\Framework\Assert;
+>>>>>>> 40b96bcd6 (.)
 
-test('treatment_resource_extends_xot_base_resource', function () {
-    expect(is_subclass_of(TreatmentResource::class, Modules\Xot\Filament\Resources\XotBaseResource::class))->toBeTrue();
+uses(TestCase::class);
+
+test('treatment_resource_extends_xot_base_resource', function (): void {
+    Assert::assertInstanceOf(XotBaseResource::class, new TreatmentResource());
 });
 
-test('treatment_resource_model_is_treatment', function () {
+test('treatment_resource_model_is_treatment', function (): void {
     $resource = new TreatmentResource();
-    expect($resource->getModel())->toBe(Modules\Gdpr\Models\Treatment::class);
+
+    Assert::assertSame(Treatment::class, $resource->getModel());
 });
 
-test('treatment_resource_has_form_schema', function () {
-    expect(method_exists(TreatmentResource::class, 'getFormSchema'))->toBeTrue();
+test('treatment_resource_has_form_schema', function (): void {
+    Assert::assertTrue((new \ReflectionClass(TreatmentResource::class))->hasMethod('getFormSchema'));
 });
 
-test('treatment_resource_has_pages', function () {
-    expect(method_exists(TreatmentResource::class, 'getPages'))->toBeTrue();
+test('treatment_resource_has_pages', function (): void {
+    Assert::assertTrue((new \ReflectionClass(TreatmentResource::class))->hasMethod('getPages'));
     $pages = TreatmentResource::getPages();
-    expect($pages)->toBeArray();
+
+    Assert::assertNotEmpty($pages);
 });

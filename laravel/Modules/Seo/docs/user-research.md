@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Seo Module - User Research
 
 **Module:** Seo  
@@ -84,3 +85,12 @@ Long-tail keywords drive qualified traffic.
 
 ---
 
+=======
+---
+module: theme
+topic: user-research
+canonical: ../../../Themes/docs/shared-components/USER_RESEARCH.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/USER_RESEARCH.md
+>>>>>>> 40b96bcd6 (.)

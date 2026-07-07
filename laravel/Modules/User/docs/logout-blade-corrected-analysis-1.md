@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Analisi Corretta del File logout.blade.php
 
 ## Collegamenti correlati
@@ -226,3 +227,12 @@ return redirect()->to('/' . $locale);
 - [Documentazione Laravel Authentication](https://laravel.com/docs/10.x/authentication)
 - [Documentazione Folio](https://laravel.com/docs/10.x/folio)
 - [Documentazione Filament](https://filamentphp.com/docs)
+=======
+---
+module: theme
+topic: logout-blade-corrected-analysis-1
+canonical: ../../../Themes/docs/shared-components/logout-blade-corrected-analysis-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/logout-blade-corrected-analysis-1.md
+>>>>>>> 40b96bcd6 (.)

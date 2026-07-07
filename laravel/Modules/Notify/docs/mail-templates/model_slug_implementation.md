@@ -174,4 +174,7 @@ echo $uniqueSlug;
 - [Struttura della Migrazione](./MIGRATION_STRUCTURE.md)
 - [Implementazione Campo Slug nella Migrazione](./SLUG_FIELD_IMPLEMENTATION.md)
 - [Guida alla Migrazione MailTemplate](../MAIL_TEMPLATE_MIGRATION_GUIDE.md)
+- [Struttura della Migrazione](./MIGRATION_STRUCTURE.md)
+- [Implementazione Campo Slug nella Migrazione](./SLUG_FIELD_IMPLEMENTATION.md)
+- [Guida alla Migrazione MailTemplate](../MAIL_TEMPLATE_MIGRATION_GUIDE.md)
 - [Documentazione Spatie Sluggable](https://github.com/spatie/laravel-sluggable)

@@ -120,6 +120,7 @@ return [
 ## Documentazione Aggiornata
 
 - [Chart Module - Translation Syntax Errors](../../laravel/Modules/Chart/project_docs/translation_syntax_errors.md)
+- [Chart Module - Translation Syntax Errors](../../laravel/Modules/Chart/project_docs/translation_syntax_errors.md)
 - [Translation Best Practices](translation-best-practices.md)
 - [PHPStan Configuration](phpstan-configuration.md)
 
@@ -152,6 +153,7 @@ return [
 ## Collegamenti
 
 - [Chart Module Documentation](../../laravel/Modules/Chart/project_docs/translation_syntax_errors.md)
+- [Chart Module Documentation](../../laravel/Modules/Chart/project_docs/translation_syntax_errors.md)
 - [FormBuilder Module Documentation](../../laravel/Modules/FormBuilder/project_docs/)
 - [Job Module Documentation](../../laravel/Modules/Job/project_docs/)
 - [Lang Module Documentation](../../laravel/Modules/Lang/project_docs/)
@@ -159,6 +161,7 @@ return [
 - [UI Module Documentation](../../laravel/Modules/UI/project_docs/)
 
 ## Ultimo Aggiornamento
+2025-01-06 - Correzione completa errori sintassi file traduzione ✅ COMPLETATO
 2025-01-06 - Correzione completa errori sintassi file traduzione ✅ COMPLETATO
 # Correzione Errori di Sintassi nei File di Traduzione
 
@@ -282,6 +285,7 @@ return [
 ## Documentazione Aggiornata
 
 - [Chart Module - Translation Syntax Errors](../../laravel/Modules/Chart/docs/translation_syntax_errors.md)
+- [Chart Module - Translation Syntax Errors](../../laravel/Modules/Chart/docs/translation_syntax_errors.md)
 - [Translation Best Practices](translation-best-practices.md)
 - [PHPStan Configuration](phpstan-configuration.md)
 
@@ -314,6 +318,7 @@ return [
 ## Collegamenti
 
 - [Chart Module Documentation](../../laravel/Modules/Chart/docs/translation_syntax_errors.md)
+- [Chart Module Documentation](../../laravel/Modules/Chart/docs/translation_syntax_errors.md)
 - [FormBuilder Module Documentation](../../laravel/Modules/FormBuilder/docs/)
 - [Job Module Documentation](../../laravel/Modules/Job/docs/)
 - [Lang Module Documentation](../../laravel/Modules/Lang/docs/)
@@ -321,4 +326,5 @@ return [
 - [UI Module Documentation](../../laravel/Modules/UI/docs/)
 
 ## Ultimo Aggiornamento
+2025-01-06 - Correzione completa errori sintassi file traduzione ✅ COMPLETATO
 2025-01-06 - Correzione completa errori sintassi file traduzione ✅ COMPLETATO

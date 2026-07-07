@@ -24,7 +24,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property array<string, mixed>|null $metadata
  *
  * @method static Builder<static> where(string $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+<<<<<<< HEAD
  * @method static static|null find(mixed $id, array|string $columns = ['*'])
+=======
+ * @method static static|null find(mixed $id, array<int, string>|string $columns = ['*'])
+>>>>>>> 40b96bcd6 (.)
  *
  * @property string $id
  * @property string $title
@@ -99,26 +103,43 @@ class NotificationLog extends BaseModel
         'tenant_id',
     ];
 
+<<<<<<< HEAD
+=======
+    /** @return MorphTo<Model, $this> */
+>>>>>>> 40b96bcd6 (.)
     public function notifiable(): MorphTo
     {
         return $this->morphTo();
     }
 
+    /** @return BelongsTo<NotificationTemplate, $this> */
     public function template(): BelongsTo
     {
         return $this->belongsTo(NotificationTemplate::class, 'template_id');
     }
 
+    /**
+     * @param  Builder<static>  $query
+     * @return Builder<static>
+     */
     public function scopeWithStatus(Builder $query, string $status): Builder
     {
         return $query->where('status', $status);
     }
 
+    /**
+     * @param  Builder<static>  $query
+     * @return Builder<static>
+     */
     public function scopeForChannel(Builder $query, string $channel): Builder
     {
         return $query->where('channel', $channel);
     }
 
+    /**
+     * @param  Builder<static>  $query
+     * @return Builder<static>
+     */
     public function scopeForNotifiable(Builder $query, Model $notifiable): Builder
     {
         return $query

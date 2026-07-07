@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Profile Management in Laravel Modules
 
 ## Overview
@@ -69,3 +70,12 @@ This document outlines the best practices for managing user profiles within a La
 - [Authentication Pages Implementation](./auth_pages_implementation.md)
 - [Routing Best Practices](./routing_best_practices.md)
 - [Session Management](./session_management.md)
+=======
+---
+module: theme
+topic: profile-management-1
+canonical: ../../../Themes/docs/shared-components/profile_management.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/profile_management.md
+>>>>>>> 40b96bcd6 (.)

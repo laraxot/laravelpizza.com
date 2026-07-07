@@ -8,13 +8,22 @@ use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Event;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
-use Modules\User\Models\User;
+use Modules\User\Database\Factories\UserFactory;
+use PHPUnit\Framework\Assert;
+
+use function Safe\json_decode;
+use function Safe\json_encode;
 
 uses(TestCase::class);
 
+beforeEach(function (): void {
+    /* @var \Modules\Gdpr\Tests\TestCase $this */
+    gdprAssertDatabaseAvailable();
+});
+
 it('can create and manage gdpr consents', function (): void {
     // Arrange
-    $user = User::factory()->create();
+    $user = UserFactory::new()->createOne();
 
     // Act - Create consent with fields that exist in the actual table
     $consent = Consent::create([
@@ -23,12 +32,12 @@ it('can create and manage gdpr consents', function (): void {
     ]);
 
     // Assert
-    $this->assertDatabaseHas('consents', [
+    assertGdprTableHas('consents', [
         'id' => $consent->id,
         'subject_id' => $user->id,
     ]);
 
-    expect($consent->subject_id)->toBe($user->id);
+    Assert::assertSame($user->id, $consent->subject_id);
 });
 
 it('can work with gdpr treatments', function (): void {
@@ -42,20 +51,20 @@ it('can work with gdpr treatments', function (): void {
     ]);
 
     // Assert
-    $this->assertDatabaseHas('treatments', [
+    assertGdprTableHas('treatments', [
         'id' => $treatment->id,
         'name' => 'Email Marketing',
         'active' => true,
     ]);
 
-    expect($treatment->name)->toBe('Email Marketing');
-    expect($treatment->active)->toBeTrue();
-    expect($treatment->required)->toBeFalse();
+    Assert::assertSame('Email Marketing', $treatment->name);
+    Assert::assertTrue($treatment->active);
+    Assert::assertFalse($treatment->required);
 });
 
 it('can link consents to treatments', function (): void {
     // Arrange
-    $user = User::factory()->create();
+    $user = UserFactory::new()->createOne();
     $treatment = Treatment::create([
         'name' => 'Data Analytics',
         'description' => 'Processing data for analytics',
@@ -71,19 +80,19 @@ it('can link consents to treatments', function (): void {
     ]);
 
     // Assert
-    $this->assertDatabaseHas('consents', [
+    assertGdprTableHas('consents', [
         'id' => $consent->id,
         'treatment_id' => $treatment->id,
         'subject_id' => $user->id,
     ]);
 
-    expect($consent->treatment_id)->toBe($treatment->id);
-    expect($consent->subject_id)->toBe($user->id);
+    Assert::assertSame($treatment->id, $consent->treatment_id);
+    Assert::assertSame($user->id, $consent->subject_id);
 });
 
 it('can manage gdpr events', function (): void {
     // Arrange
-    $user = User::factory()->create();
+    $user = UserFactory::new()->createOne();
 
     // Act
     $event = Event::create([
@@ -97,21 +106,21 @@ it('can manage gdpr events', function (): void {
     ]);
 
     // Assert
-    $this->assertDatabaseHas('gdpr_events', [
+    assertGdprTableHas('gdpr_events', [
         'id' => $event->id,
         'subject_id' => $user->id,
         'action' => 'consent_given',
         'ip' => '192.168.1.1',
     ]);
 
-    expect($event->subject_id)->toBe($user->id);
-    expect($event->action)->toBe('consent_given');
-    expect($event->ip)->toBe('192.168.1.1');
+    Assert::assertSame($user->id, $event->subject_id);
+    Assert::assertSame('consent_given', $event->action);
+    Assert::assertSame('192.168.1.1', $event->ip);
 });
 
 it('can track gdpr audit trail', function (): void {
     // Arrange
-    $user = User::factory()->create();
+    $user = UserFactory::new()->createOne();
 
     // Act - Create multiple consents
     $consent1 = Consent::create([
@@ -143,8 +152,8 @@ it('can track gdpr audit trail', function (): void {
     $userConsents = Consent::where('subject_id', $user->id)->get();
     $userEvents = Event::where('subject_id', $user->id)->get();
 
-    expect($userConsents)->toHaveCount(2);
-    expect($userEvents)->toHaveCount(2);
+    Assert::assertCount(2, $userConsents);
+    Assert::assertCount(2, $userEvents);
 });
 
 it('can handle different treatment types', function (): void {
@@ -174,14 +183,12 @@ it('can handle different treatment types', function (): void {
     ]);
 
     // Assert
-    expect($treatment1->name)->toBe('Marketing Communications');
-    expect($treatment1->required)->toBeFalse();
-
-    expect($treatment2->name)->toBe('Service Delivery');
-    expect($treatment2->required)->toBeTrue();
-
-    expect($treatment3->name)->toBe('Analytics');
-    expect($treatment3->active)->toBeFalse();
+    Assert::assertSame('Marketing Communications', $treatment1->name);
+    Assert::assertFalse($treatment1->required);
+    Assert::assertSame('Service Delivery', $treatment2->name);
+    Assert::assertTrue($treatment2->required);
+    Assert::assertSame('Analytics', $treatment3->name);
+    Assert::assertFalse($treatment3->active);
 });
 
 it('can manage treatment weights', function (): void {
@@ -203,18 +210,21 @@ it('can manage treatment weights', function (): void {
     ]);
 
     // Assert
-    expect($treatmentLow->weight)->toBe(1);
-    expect($treatmentHigh->weight)->toBe(100);
-
+    Assert::assertSame(1, $treatmentLow->weight);
+    Assert::assertSame(100, $treatmentHigh->weight);
     // Check ordering by weight
     $treatments = Treatment::orderBy('weight', 'asc')->get();
-    expect($treatments->first()->name)->toBe('Low Priority');
-    expect($treatments->last()->name)->toBe('High Priority');
+    $first = $treatments->first();
+    $last = $treatments->last();
+    Assert::assertNotNull($first);
+    Assert::assertNotNull($last);
+    Assert::assertSame('Low Priority', $first->name);
+    Assert::assertSame('High Priority', $last->name);
 });
 
 it('can manage consent with treatment relationships', function (): void {
     // Arrange
-    $user = User::factory()->create();
+    $user = UserFactory::new()->createOne();
     $treatment = Treatment::create([
         'name' => 'Email Consent',
         'description' => 'Consent for email communications',
@@ -230,19 +240,19 @@ it('can manage consent with treatment relationships', function (): void {
     ]);
 
     // Assert
-    $this->assertDatabaseHas('consents', [
+    assertGdprTableHas('consents', [
         'id' => $consent->id,
         'subject_id' => $user->id,
         'treatment_id' => $treatment->id,
     ]);
 
-    expect($consent->subject_id)->toBe($user->id);
-    expect($consent->treatment_id)->toBe($treatment->id);
+    Assert::assertSame($user->id, $consent->subject_id);
+    Assert::assertSame($treatment->id, $consent->treatment_id);
 });
 
 it('can manage multiple consents per subject', function (): void {
     // Arrange
-    $user = User::factory()->create();
+    $user = UserFactory::new()->createOne();
     $treatment1 = Treatment::create([
         'name' => 'Treatment 1',
         'description' => 'First treatment',
@@ -273,16 +283,15 @@ it('can manage multiple consents per subject', function (): void {
 
     // Assert
     $userConsents = Consent::where('subject_id', $user->id)->get();
-    expect($userConsents)->toHaveCount(2);
-
-    $consentTreatmentIds = $userConsents->pluck('treatment_id')->toArray();
-    expect($consentTreatmentIds)->toContain($treatment1->id);
-    expect($consentTreatmentIds)->toContain($treatment2->id);
+    Assert::assertCount(2, $userConsents);
+    $consentTreatmentIds = $userConsents->pluck('treatment_id')->all();
+    Assert::assertContains($treatment1->id, $consentTreatmentIds);
+    Assert::assertContains($treatment2->id, $consentTreatmentIds);
 });
 
 it('can create events with detailed payloads', function (): void {
     // Arrange
-    $user = User::factory()->create();
+    $user = UserFactory::new()->createOne();
 
     // Act
     $event = Event::create([
@@ -299,16 +308,19 @@ it('can create events with detailed payloads', function (): void {
     ]);
 
     // Assert
-    $this->assertDatabaseHas('gdpr_events', [
+    assertGdprTableHas('gdpr_events', [
         'id' => $event->id,
         'subject_id' => $user->id,
         'action' => 'data_access_request',
         'ip' => '203.0.113.1',
     ]);
 
-    $payload = json_decode($event->payload, true);
-    expect($payload['request_type'])->toBe('access');
-    expect($payload['data_categories'])->toContain('personal');
+    $payload = json_decode((string) $event->payload, true);
+    Assert::assertIsArray($payload);
+    Assert::assertSame('access', $payload['request_type']);
+    $categories = $payload['data_categories'];
+    Assert::assertIsArray($categories);
+    Assert::assertContains('personal', $categories);
 });
 
 it('can handle treatment document references', function (): void {
@@ -334,11 +346,10 @@ it('can handle treatment document references', function (): void {
     ]);
 
     // Assert
-    expect($treatmentWithDoc->documentVersion)->toBe('2.1');
-    expect($treatmentWithDoc->documentUrl)->toBe('/docs/privacy-policy-v2.1.pdf');
-
-    expect($treatmentWithoutDoc->documentVersion)->toBeNull();
-    expect($treatmentWithoutDoc->documentUrl)->toBeNull();
+    Assert::assertSame('2.1', $treatmentWithDoc->documentVersion);
+    Assert::assertSame('/docs/privacy-policy-v2.1.pdf', $treatmentWithDoc->documentUrl);
+    Assert::assertNull($treatmentWithoutDoc->documentVersion);
+    Assert::assertNull($treatmentWithoutDoc->documentUrl);
 });
 
 it('can manage treatment active status', function (): void {
@@ -360,17 +371,16 @@ it('can manage treatment active status', function (): void {
     ]);
 
     // Assert
-    expect($activeTreatment->active)->toBeTrue();
-    expect($inactiveTreatment->active)->toBeFalse();
-
+    Assert::assertTrue($activeTreatment->active);
+    Assert::assertFalse($inactiveTreatment->active);
     $activeTreatments = Treatment::where('active', true)->get();
-    expect($activeTreatments)->toContain($activeTreatment);
-    expect($activeTreatments)->not->toContain($inactiveTreatment);
+    Assert::assertTrue($activeTreatments->contains('id', $activeTreatment->id));
+    Assert::assertFalse($activeTreatments->contains('id', $inactiveTreatment->id));
 });
 
 it('can manage consent timestamps', function (): void {
     // Arrange
-    $user = User::factory()->create();
+    $user = UserFactory::new()->createOne();
 
     // Act
     $consent = Consent::create([
@@ -379,10 +389,9 @@ it('can manage consent timestamps', function (): void {
     ]);
 
     // Assert
-    expect($consent->created_at)->not->toBeNull();
-    expect($consent->updated_at)->not->toBeNull();
-
+    Assert::assertNotNull($consent->created_at);
+    Assert::assertNotNull($consent->updated_at);
     // Created and updated should be close to now
     $now = now();
-    expect($consent->created_at->between($now->subMinute(), $now->addMinute()))->toBeTrue();
+    Assert::assertTrue($consent->created_at->between($now->subMinute(), $now->addMinute()));
 });

@@ -46,7 +46,8 @@ Link: https://github.com/simplepleb/laravel-email-templates
 Link: https://github.com/spatie/laravel-database-mail-templates
 - **Database**: tabella `mail_templates` con campi `key`, `subject`, `html`, `locale`
 - **ServiceProvider**: pubblica migrazioni e configura il renderer
-- **Filament**: si integra con un `Filamentesources	emplateResource`
+- **Filament**: si integra con un `Filament
+esources	emplateResource`
 
 ```php
 $template = Template::where('key', 'welcome')->first();
@@ -111,4 +112,5 @@ Tutte le operazioni asincrone (invio email, anteprima, azioni Filament) utilizza
 Vedi [Queueable Actions con Spatie](queueable-actions.md) per definizione delle azioni, dispatch sincrono/asincrono e testing.
 
 ---
+*Documento generato il 2025-05-05T21:45:20+02:00*
 *Documento generato il 2025-05-05T21:45:20+02:00*

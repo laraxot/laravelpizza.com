@@ -86,4 +86,8 @@ npm run dev
 
 ### Versione Incoming
 
+<<<<<<< HEAD
 ---
+=======
+---
+>>>>>>> 40b96bcd6 (.)

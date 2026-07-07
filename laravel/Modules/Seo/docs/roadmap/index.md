@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Seo Module - Roadmap
 
 > Gestione SEO automatizzata: meta tags, sitemap, social sharing.
@@ -24,3 +25,12 @@
 ## Collegamenti
 
 - [00-index modulo](../00-index.md)
+=======
+---
+module: theme
+topic: index
+canonical: ../../../../Themes/docs/shared-components/00-index.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/00-index.md
+>>>>>>> 40b96bcd6 (.)

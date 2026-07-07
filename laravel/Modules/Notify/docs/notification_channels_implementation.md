@@ -153,4 +153,8 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 - [Modelli di Email](./email_templates.md)
 - [Implementazione SMS](./sms_implementation.md)
 - [Risoluzione dei Problemi](./troubleshooting.md)
-
+- [Modulo di Notifica](./INDEX.md)
+- [Panoramica dell'Architettura](./ARCHITECTURE.md)
+- [Modelli di Email](./EMAIL_TEMPLATES.md)
+- [Implementazione SMS](./SMS_IMPLEMENTATION.md)
+- [Risoluzione dei Problemi](./TROUBLESHOOTING.md)

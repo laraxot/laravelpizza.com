@@ -4,12 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Resources\ProfileResource\Tables;
 
+<<<<<<< HEAD
 use Filament\Tables\Columns\IconColumn;
+=======
+>>>>>>> 40b96bcd6 (.)
 use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class ProfilesTable extends XotBaseResourceTable
 {
+<<<<<<< HEAD
     public static function getTableColumns(): array
     {
         return [
@@ -36,6 +40,17 @@ class ProfilesTable extends XotBaseResourceTable
                 ->toggleable(isToggledHiddenByDefault: true),
             'deleted_by' => TextColumn::make('deleted_by')->searchable(),
             'is_active' => IconColumn::make('is_active')->boolean(),
+=======
+    public function getTableColumns(): array
+    {
+        /*
+         * @return array<int|string, \Filament\Tables\Columns\Column>
+         */
+        return [
+            'id' => TextColumn::make('id')->searchable()->sortable(),
+            'created_at' => TextColumn::make('created_at')->dateTime(),
+            'updated_at' => TextColumn::make('updated_at')->dateTime(),
+>>>>>>> 40b96bcd6 (.)
         ];
     }
 }

@@ -4,6 +4,22 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Feature;
 
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
+use Modules\Gdpr\Actions\Consent\CollectGdprConsentsAction;
+use Modules\Gdpr\Actions\SaveGdprConsentsAction;
+use Modules\Gdpr\Actions\Validation\ValidateGdprConsentAction;
+use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
+use Modules\Gdpr\Models\Consent;
+use Modules\Gdpr\Models\Treatment;
+use Modules\Gdpr\Tests\TestCase;
+use Modules\User\Actions\User\CreateUserAction;
+use Modules\User\Database\Factories\UserFactory;
+use Modules\User\Models\User;
+use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
+
 /*
  * Registration Flow Integration Tests.
  *
@@ -18,21 +34,6 @@ namespace Modules\Gdpr\Tests\Feature;
  * 4. CollectGdprConsentsAction  — collects consent booleans into array
  * 5. SaveGdprConsentsAction     — creates Consent records linked to Treatment records
  */
-
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\ValidationException;
-use Modules\Gdpr\Actions\Consent\CollectGdprConsentsAction;
-use Modules\Gdpr\Actions\SaveGdprConsentsAction;
-use Modules\Gdpr\Actions\Validation\ValidateGdprConsentAction;
-use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
-use Modules\Gdpr\Models\Consent;
-use Modules\Gdpr\Models\Treatment;
-use Modules\Gdpr\Tests\TestCase;
-use Modules\User\Actions\User\CreateUserAction;
-use Modules\User\Models\User;
-
-uses(TestCase::class);
-
 // ---------------------------------------------------------------------------
 // Happy path: full registration pipeline
 // ---------------------------------------------------------------------------
@@ -50,24 +51,22 @@ it('completes full registration with privacy and terms accepted', function (): v
     ];
     $validatedData = app(ValidateUserDataAction::class)->execute($formData);
 
-    expect($validatedData['type'])->toBe('customer_user');
-    expect($validatedData['state'])->toBe('active');
-    expect(Hash::check('SecureP@ssw0rd!', $validatedData['password']))->toBeTrue();
-
+    Assert::assertSame('customer_user', $validatedData['type']);
+    Assert::assertSame('active', $validatedData['state']);
+    $hashed = is_string($validatedData['password'] ?? null) ? $validatedData['password'] : '';
+    Assert::assertTrue(Hash::check('SecureP@ssw0rd!', $hashed));
     // 3. Create user
     $user = app(CreateUserAction::class)->execute($validatedData);
-    expect($user)->toBeInstanceOf(User::class);
-    expect($user->first_name)->toBe('Mario');
-    expect($user->type)->toBe('customer_user');
-
+    Assert::assertInstanceOf(User::class, $user);
+    Assert::assertSame('Mario', $user->first_name);
+    Assert::assertSame('customer_user', $user->type);
     // 4. Collect consents
     $consents = app(CollectGdprConsentsAction::class)->execute(true, true, false);
-    expect($consents)->toBe([
+    Assert::assertSame([
         'privacy_accepted' => true,
         'terms_accepted' => true,
         'marketing_consent' => false,
-    ]);
-
+    ], $consents);
     // 5. Ensure treatments exist and save consents
     Treatment::firstOrCreate(
         ['name' => 'privacy_policy'],
@@ -85,7 +84,7 @@ it('completes full registration with privacy and terms accepted', function (): v
     app(SaveGdprConsentsAction::class)->execute($user, $consents, '127.0.0.1', 'PestTest/1.0');
 
     // Verify user in DB
-    $this->assertDatabaseHas('users', [
+    assertGdprTableHas('users', [
         'id' => $user->id,
         'email' => $formData['email'],
         'type' => 'customer_user',
@@ -93,16 +92,14 @@ it('completes full registration with privacy and terms accepted', function (): v
 
     // Verify consents saved
     $savedConsents = Consent::where('subject_id', $user->id)->get();
-    expect($savedConsents->count())->toBe(3);
-
+    Assert::assertSame(3, $savedConsents->count());
     // Privacy and terms should be accepted
     $acceptedConsents = $savedConsents->whereNotNull('accepted_at');
-    expect($acceptedConsents->count())->toBe(2);
-
+    Assert::assertSame(2, $acceptedConsents->count());
     // Marketing should be declined
     $marketingConsent = $savedConsents->where('type', 'marketing_consent')->first();
-    expect($marketingConsent)->not->toBeNull();
-    expect($marketingConsent->accepted_at)->toBeNull();
+    Assert::assertNotNull($marketingConsent);
+    Assert::assertNull($marketingConsent->accepted_at);
 });
 
 it('completes registration with all consents including marketing', function (): void {
@@ -135,8 +132,8 @@ it('completes registration with all consents including marketing', function (): 
 
     // All 3 consents should be accepted
     $savedConsents = Consent::where('subject_id', $user->id)->get();
-    expect($savedConsents->count())->toBe(3);
-    expect($savedConsents->whereNotNull('accepted_at')->count())->toBe(3);
+    Assert::assertSame(3, $savedConsents->count());
+    Assert::assertSame(3, $savedConsents->whereNotNull('accepted_at')->count());
 });
 
 // ---------------------------------------------------------------------------
@@ -144,16 +141,16 @@ it('completes registration with all consents including marketing', function (): 
 // ---------------------------------------------------------------------------
 
 it('fails registration when privacy not accepted', function (): void {
-    app(ValidateGdprConsentAction::class)->execute(false, true);
-})->throws(ValidationException::class);
+    gdprAssertThrows(ValidationException::class, fn () => app(ValidateGdprConsentAction::class)->execute(false, true));
+});
 
 it('fails registration when terms not accepted', function (): void {
-    app(ValidateGdprConsentAction::class)->execute(true, false);
-})->throws(ValidationException::class);
+    gdprAssertThrows(ValidationException::class, fn () => app(ValidateGdprConsentAction::class)->execute(true, false));
+});
 
 it('fails registration when both consents not accepted', function (): void {
-    app(ValidateGdprConsentAction::class)->execute(false, false);
-})->throws(ValidationException::class);
+    gdprAssertThrows(ValidationException::class, fn () => app(ValidateGdprConsentAction::class)->execute(false, false));
+});
 
 // ---------------------------------------------------------------------------
 // User data validation
@@ -170,9 +167,9 @@ it('always sets customer_user type regardless of input', function (): void {
     $result = app(ValidateUserDataAction::class)->execute($formData);
 
     // Type must be customer_user — cannot be overridden
-    expect($result['type'])->toBe('customer_user');
-    expect($result['state'])->toBe('active');
-    expect($result['email_verified_at'])->not->toBeNull();
+    Assert::assertSame('customer_user', $result['type']);
+    Assert::assertSame('active', $result['state']);
+    Assert::assertNotNull($result['email_verified_at']);
 });
 
 it('hashes password during validation', function (): void {
@@ -186,8 +183,9 @@ it('hashes password during validation', function (): void {
     $result = app(ValidateUserDataAction::class)->execute($formData);
 
     // Password must be hashed
-    expect($result['password'])->not->toBe('MyP@ssword123!');
-    expect(Hash::check('MyP@ssword123!', $result['password']))->toBeTrue();
+    Assert::assertNotSame('MyP@ssword123!', $result['password']);
+    $hashed = is_string($result['password'] ?? null) ? $result['password'] : '';
+    Assert::assertTrue(Hash::check('MyP@ssword123!', $hashed));
 });
 
 // ---------------------------------------------------------------------------
@@ -195,7 +193,7 @@ it('hashes password during validation', function (): void {
 // ---------------------------------------------------------------------------
 
 it('saves consent with correct IP and user agent', function (): void {
-    $user = User::factory()->create(['type' => 'customer_user']);
+    $user = UserFactory::new()->createOne(['type' => 'customer_user']);
 
     Treatment::firstOrCreate(
         ['name' => 'privacy_policy'],
@@ -219,11 +217,11 @@ it('saves consent with correct IP and user agent', function (): void {
     app(SaveGdprConsentsAction::class)->execute($user, $consents, '192.168.1.42', 'TestBrowser/2.0');
 
     $savedConsents = Consent::where('subject_id', $user->id)->get();
-    expect($savedConsents->count())->toBeGreaterThanOrEqual(2);
+    Assert::assertGreaterThanOrEqual(2, $savedConsents->count());
 });
 
 it('does not create consents when treatments do not exist', function (): void {
-    $user = User::factory()->create(['type' => 'customer_user']);
+    $user = UserFactory::new()->createOne(['type' => 'customer_user']);
 
     // Ensure no treatments for a unique name
     Treatment::where('name', 'nonexistent_treatment')->delete();
@@ -241,7 +239,7 @@ it('does not create consents when treatments do not exist', function (): void {
     $countAfter = Consent::where('subject_id', $user->id)->count();
 
     // At minimum, consents are created for the treatments that exist in the DB
-    expect($countAfter)->toBeGreaterThanOrEqual($countBefore);
+    Assert::assertGreaterThanOrEqual($countBefore, $countAfter);
 });
 
 // ---------------------------------------------------------------------------
@@ -270,6 +268,5 @@ it('prevents duplicate user registration with same email', function (): void {
     ];
     $validatedData2 = app(ValidateUserDataAction::class)->execute($formData2);
 
-    expect(fn () => app(CreateUserAction::class)->execute($validatedData2))
-        ->toThrow(Exception::class);
+    gdprAssertThrows(\Exception::class, static fn () => app(CreateUserAction::class)->execute($validatedData2));
 });

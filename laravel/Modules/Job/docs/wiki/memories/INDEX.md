@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Memories Index"
 type: index
@@ -43,3 +44,22 @@ Le Memories progettuali vivono qui, nel wiki del Module **Job**, e vengono caric
 3. Aggiorna questo indice se la Memories e' ricorrente
 4. Committa: `docs: add memories <nome>`
 
+=======
+# Job Module - memories Index
+
+## Purpose
+Index for Job module memories.
+
+## On-Demand Loading
+
+```bash
+qmd search "Job memories" --limit 5
+```
+
+## See Also
+- [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+- [Root Wiki](../../../docs/wiki/)
+
+---
+*Updated: 2026-05-11*
+>>>>>>> 40b96bcd6 (.)

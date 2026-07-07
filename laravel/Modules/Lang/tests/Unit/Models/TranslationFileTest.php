@@ -4,51 +4,61 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit\Models;
 
+<<<<<<< HEAD
 uses(TestCase::class);
 
 use Modules\Lang\Models\TranslationFile;
 use Modules\Lang\Tests\TestCase;
+=======
+use Modules\Lang\Models\TranslationFile;
+use Modules\Lang\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+use function Safe\class_uses;
+
+uses(TestCase::class);
+>>>>>>> 40b96bcd6 (.)
 
 describe('TranslationFile Model', function () {
     test('uses Sushi trait', function () {
         $model = new TranslationFile();
 
-        expect(class_uses($model))->toHaveKey('Sushi\Sushi');
+        Assert::assertArrayHasKey('Sushi\Sushi', class_uses($model));
     });
 
     test('has correct fillable attributes', function () {
         $model = new TranslationFile();
         $fillable = $model->getFillable();
 
-        expect($fillable)->toContain('id');
-        expect($fillable)->toContain('name');
-        expect($fillable)->toContain('path');
-        expect($fillable)->toContain('content');
+        Assert::assertContains('id', $fillable);
+        Assert::assertContains('name', $fillable);
+        Assert::assertContains('path', $fillable);
+        Assert::assertContains('content', $fillable);
     });
 
     test('has form property accessible via reflection', function () {
         $model = new TranslationFile();
-        $reflection = new ReflectionClass($model);
+        $reflection = new \ReflectionClass($model);
         $property = $reflection->getProperty('form');
         $property->setAccessible(true);
         $form = $property->getValue($model);
 
-        expect($form)->toBeArray();
-        expect($form['key'])->toBe('string');
-        expect($form['path'])->toBe('string');
-        expect($form['content'])->toBe('json');
+        Assert::assertIsArray($form);
+        Assert::assertSame('string', $form['key']);
+        Assert::assertSame('string', $form['path']);
+        Assert::assertSame('json', $form['content']);
     });
 
     test('casts content as array', function () {
         $model = new TranslationFile();
         $casts = $model->getCasts();
 
-        expect($casts['content'])->toBe('array');
+        Assert::assertSame('array', $casts['content']);
     });
 
     test('has getRows method', function () {
         $model = new TranslationFile();
 
-        expect(method_exists($model, 'getRows'))->toBeTrue();
+        Assert::assertTrue(is_callable([$model, 'getRows']));
     });
 });

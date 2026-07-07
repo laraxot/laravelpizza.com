@@ -36,17 +36,30 @@ export function renderSearch(ctx) {
                     ? html`<svg class="animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" opacity=".25"/><path d="M4 12a8 8 0 018-8" opacity=".75"/></svg>`
                     : geoIcon('magnifying-glass')
                 }
+<<<<<<< HEAD
                 <span class="ctrl-fallback" aria-hidden="true">&#x2715;</span>
+=======
+                <span class="ctrl-fallback" aria-hidden="true">S</span>
+>>>>>>> 40b96bcd6 (.)
             </button>
             <button
                 class="ctrl-btn geo-search-close"
                 type="button"
+<<<<<<< HEAD
                 aria-label="Chiudi ricerca"
                 title="Chiudi ricerca"
                 @click="${() => closeSearch(ctx)}"
             >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" style="display:block;margin:auto;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                 <span class="ctrl-fallback" aria-hidden="true">&#x2715;</span>
+=======
+                aria-label="${labels.close_search || 'Chiudi ricerca'}"
+                title="${labels.close_search || 'Chiudi ricerca'}"
+                @click="${() => closeSearch(ctx)}"
+            >
+                ${geoIcon('x-mark')}
+                <span class="ctrl-fallback" aria-hidden="true">x</span>
+>>>>>>> 40b96bcd6 (.)
             </button>
 
             ${showResults ? html`
@@ -149,13 +162,21 @@ export function selectSearchResult(ctx, result) {
     }
 
     const address = result.display_name || `${lat}, ${lng}`;
+<<<<<<< HEAD
+=======
+    const payload = buildLocationPayload(result, lat, lng, address);
+>>>>>>> 40b96bcd6 (.)
 
     ctx.searchQuery = address;
     ctx.searchResults = [];
     ctx.showSearchResults = false;
 
     if (typeof ctx._handleSearchSelection === 'function') {
+<<<<<<< HEAD
         ctx._handleSearchSelection(result, lat, lng);
+=======
+        ctx._handleSearchSelection(result, lat, lng, payload);
+>>>>>>> 40b96bcd6 (.)
     } else if (typeof ctx._handleMapInteraction === 'function') {
         ctx._handleMapInteraction(lat, lng, 'search');
     } else if (ctx._map) {
@@ -170,6 +191,10 @@ export function selectSearchResult(ctx, result) {
             lng,
             latitude: lat,
             longitude: lng,
+<<<<<<< HEAD
+=======
+            payload,
+>>>>>>> 40b96bcd6 (.)
         },
         bubbles: true,
         composed: true,
@@ -178,6 +203,62 @@ export function selectSearchResult(ctx, result) {
     ctx.requestUpdate?.();
 }
 
+<<<<<<< HEAD
+=======
+/**
+ * Flatten a Nominatim search result into the canonical `location` JSON shape.
+ * Keeps the full Nominatim object under `raw` for forensic / future use.
+ * Display layer uses lat / lng / address only.
+ *
+ * @param {Object} result - Nominatim search hit (or compatible payload).
+ * @returns {Object}
+ */
+export function buildLocationPayload(result, lat, lng, address) {
+    const details = (result && typeof result.address === 'object' && result.address !== null)
+        ? result.address
+        : {};
+
+    const firstString = (...candidates) => {
+        for (const value of candidates) {
+            if (typeof value === 'string' && value.trim() !== '') {
+                return value;
+            }
+        }
+        return null;
+    };
+
+    return {
+        lat,
+        lng,
+        latitude: lat,
+        longitude: lng,
+        address,
+        display_name: result?.display_name ?? address,
+        provider: 'nominatim',
+        place_id: result?.place_id ?? null,
+        osm_type: result?.osm_type ?? null,
+        osm_id: result?.osm_id ?? null,
+        licence: result?.licence ?? null,
+        importance: typeof result?.importance === 'number' ? result.importance : null,
+        type: result?.type ?? null,
+        class: result?.class ?? null,
+        boundingbox: Array.isArray(result?.boundingbox) ? result.boundingbox : null,
+        street: firstString(details.road, details.pedestrian, details.footway, details.path, details.residential, details.highway),
+        street_number: firstString(details.house_number),
+        zip: firstString(details.postcode),
+        postcode: firstString(details.postcode),
+        city: firstString(details.city, details.town, details.village, details.municipality, details.hamlet, details.county),
+        suburb: firstString(details.suburb, details.neighbourhood, details.quarter, details.city_district),
+        province: firstString(details.province, details.county, details.state_district),
+        state: firstString(details.state, details.region),
+        country: firstString(details.country),
+        country_code: firstString(details.country_code),
+        address_details: details,
+        raw: result,
+    };
+}
+
+>>>>>>> 40b96bcd6 (.)
 async function resolveAddressResults(ctx, query) {
     if (typeof ctx.searchAddress === 'function') {
         return ctx.searchAddress(query);

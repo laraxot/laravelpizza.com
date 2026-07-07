@@ -2,11 +2,16 @@
 type: concept
 module: User
 confidence: high
+<<<<<<< HEAD
 updated: 2026-04-20
+=======
+updated: 2026-06-05
+>>>>>>> 40b96bcd6 (.)
 ---
 
 # Profile Migration UUID Contract
 
+<<<<<<< HEAD
 ## Regola
 
 La tabella `profiles` deve rispettare il contratto Laraxot:
@@ -25,6 +30,26 @@ Per `profiles` esiste una sola migrazione autorevole:
 
 La manutenzione schema non si fa con nuove migrazioni `add_*` o `fix_*`.
 Si modifica la migrazione canonica, poi si aggiorna il timestamp del file per far rieseguire l'`up()` idempotente.
+=======
+## Regola (runtime User)
+
+`BaseProfile` genera `uuid` in `creating`. Il contratto richiede colonna `uuid` nella tabella `profiles` del DB usato dal modello concreto.
+
+## Owner schema in Fixcity (questo progetto)
+
+Per connessione `fixcity`, **owner migrazione = modulo Fixcity** (non User):
+
+- `laravel/Modules/Fixcity/database/migrations/2026_06_10_123000_create_profiles_table.php`
+
+Le migrazioni `create_profiles_table` in User/Blog sono state archiviate in `_bak/*.merged` per rispettare 1 modello = 1 migrazione owner.
+
+Vedi [profiles-ownership-boundary-rule](./profiles-ownership-boundary-rule.md) e [Fixcity profiles-uuid-contract](../../../Fixcity/docs/wiki/concepts/profiles-uuid-contract.md).
+
+## One table = one migration
+
+- niente `add_*` / `repair_*` su `profiles`
+- evoluzione: edit file owner Fixcity + **bump timestamp** nel nome file
+>>>>>>> 40b96bcd6 (.)
 
 ## Fix 2026-04-20
 
@@ -57,5 +82,10 @@ La prima domanda corretta e':
 ## Riferimenti
 
 - `laravel/Modules/User/app/Models/BaseProfile.php`
+<<<<<<< HEAD
 - `laravel/Modules/User/database/migrations/2026_04_28_120000_create_profiles_table.php`
+=======
+- `laravel/Modules/Fixcity/database/migrations/2026_06_10_123000_create_profiles_table.php`
+- [architecture-one-migration-per-model](../../../../../docs/wiki/bmad/architecture-one-migration-per-model.md)
+>>>>>>> 40b96bcd6 (.)
 - `laravel/Modules/Xot/docs/database/migration-base-rules.md`

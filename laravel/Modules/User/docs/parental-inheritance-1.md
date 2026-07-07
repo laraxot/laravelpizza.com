@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Parental: Ereditarietà a Tabella Singola in <nome progetto>
 
 ## Indice
@@ -323,3 +324,12 @@ $typeValue = is_object($user->type) && method_exists($user->type, 'value')
 - [<nome progetto> - Implementazione STI](../../<nome progetto>/docs/user-types.md)
 
 *Ultimo aggiornamento: Dicembre 2024*
+=======
+---
+module: theme
+topic: parental-inheritance-1
+canonical: ../../../Themes/docs/shared-components/parental-inheritance-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/parental-inheritance-1.md
+>>>>>>> 40b96bcd6 (.)

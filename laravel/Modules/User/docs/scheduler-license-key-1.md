@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FullCalendar Scheduler License Key
 
 ## Overview
@@ -29,3 +30,12 @@ var calendar = new Calendar(calendarEl, {
 
 ## Additional Information
 For further assistance or to renew your license, visit [FullCalendar Pricing](https://fullcalendar.io/pricing) or contact their support team.
+=======
+---
+module: theme
+topic: scheduler-license-key-1
+canonical: ../../../Themes/docs/shared-components/scheduler-license-key.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/scheduler-license-key.md
+>>>>>>> 40b96bcd6 (.)

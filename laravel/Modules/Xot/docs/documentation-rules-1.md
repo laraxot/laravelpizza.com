@@ -216,4 +216,8 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - La documentazione è una parte fondamentale del progetto
 - Una buona documentazione riduce il tempo di onboarding
 - La documentazione deve evolversi insieme al codice
+<<<<<<< HEAD
 - I collegamenti bidirezionali sono essenziali per la navigabilità
+=======
+- I collegamenti bidirezionali sono essenziali per la navigabilità
+>>>>>>> 40b96bcd6 (.)

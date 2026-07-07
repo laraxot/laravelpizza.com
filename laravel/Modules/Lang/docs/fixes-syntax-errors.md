@@ -167,3 +167,4 @@ grep -r "'label' => '[a-z_]\+'" Modules/*/lang/it/ --include="*.php"
 - [Best practices traduzioni](./translation_rules.md)
 
 *Ultimo aggiornamento: 6 Gennaio 2025*
+*Ultimo aggiornamento: 6 Gennaio 2025*

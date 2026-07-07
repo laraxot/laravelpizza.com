@@ -28,6 +28,9 @@ class ConsentResource extends XotBaseResource
         ];
     }
 
+    /**
+     * @return array<int|string, TextColumn>
+     */
     public function getTableColumns(): array
     {
         return [

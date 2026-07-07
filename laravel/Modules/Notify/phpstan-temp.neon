@@ -1,0 +1,8 @@
+includes:
+    - laravel/vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: 10
+    paths:
+        - laravel/Modules/Geo/app/Filament/Forms/Components/MapPicker.php
+    treatPhpDocTypesAsCertain: false

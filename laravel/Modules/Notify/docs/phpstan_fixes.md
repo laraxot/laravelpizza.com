@@ -62,3 +62,4 @@ $decodedData = base64_decode($encodedData);
 - [Script Risoluzione Conflitti](../../../bashscripts/docs/conflict_resolution_script_improvements.md)
 
 *Ultimo aggiornamento: Dicembre 2024*
+*Ultimo aggiornamento: Dicembre 2024*

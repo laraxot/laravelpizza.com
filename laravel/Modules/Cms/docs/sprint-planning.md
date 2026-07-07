@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cms Module - Sprint Planning
 
 **Module:** Cms  
@@ -64,3 +65,12 @@ Launch core CMS page builder with content creation and publishing capabilities.
 
 ---
 
+=======
+---
+module: theme
+topic: sprint-planning
+canonical: ../../../Themes/docs/shared-components/SPRINT_PLANNING-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/SPRINT_PLANNING-Modules.md
+>>>>>>> 40b96bcd6 (.)

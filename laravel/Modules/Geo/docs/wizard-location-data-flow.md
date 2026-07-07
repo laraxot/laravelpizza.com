@@ -202,4 +202,8 @@ CoordinatePicker::make('location')
 
 **Data**: 2026-04-27
 **Severity**: 🔴 Critical (blocca salvataggio ticket)
+<<<<<<< HEAD
 **Status**: ✅ Fixed & Documented
+=======
+**Status**: ✅ Fixed & Documented
+>>>>>>> 40b96bcd6 (.)

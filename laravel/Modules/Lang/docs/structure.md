@@ -1,6 +1,7 @@
 # Modulo Lang
 
 Data: 2025-04-23 19:09:56
+Data: 2025-04-23 19:09:56
 
 ## Informazioni generali
 
@@ -494,4 +495,5 @@ tests/Unit
 
 - Tutti i comandi console sono autoregistrati tramite la struttura di XotBaseServiceProvider.
 - Non aggiungere mai manualmente $this->commands([...]) nei provider.
+- Perché? Vedi [lang-service-provider.md](./lang-service-provider.md) e [PHILOSOPHY.md](./PHILOSOPHY.md)
 - Perché? Vedi [lang-service-provider.md](./lang-service-provider.md) e [PHILOSOPHY.md](./PHILOSOPHY.md)

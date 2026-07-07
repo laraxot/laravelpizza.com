@@ -132,7 +132,11 @@ php artisan lang:check
 - [Theme Translation Conflicts](laravel/Modules/User/project_docs/theme-translation-conflicts-resolution.md)
 
 ### Modulo Xot
+<<<<<<< HEAD
 - [Git Conflicts Resolution](laravel/Modules/Xot/project_docs/git-conflicts-resolution-2025-01-06.md)
+=======
+- [Git Conflicts Resolution](laravel/Modules/Xot/project_docs/git-conflicts-resolution.md)
+>>>>>>> 40b96bcd6 (.)
 
 ## Best Practices Applicate
 

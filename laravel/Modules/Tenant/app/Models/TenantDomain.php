@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\Tenant\Actions\Domains\GetDomainsArrayAction;
-use Modules\Tenant\Database\Factories\DomainFactory;
+use Modules\Tenant\Database\Factories\TenantDomainFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Sushi\Sushi;
 
@@ -18,7 +19,8 @@ use Sushi\Sushi;
  * @property bool|null $is_primary
  * @property string|null $status
  * @property string|null $verification_token
- * @property \Carbon\Carbon|null $verified_at
+ * @property Carbon|null $verified_at
+ *
  * @method static Builder|TenantDomain newModelQuery()
  * @method static Builder|TenantDomain newQuery()
  * @method static Builder|TenantDomain query()
@@ -29,10 +31,13 @@ use Sushi\Sushi;
  * @method static Builder|TenantDomain whereStatus($value)
  * @method static Builder|TenantDomain whereVerificationToken($value)
  * @method static Builder|TenantDomain whereVerifiedAt($value)
+ *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  * @property ProfileContract|null $deleter
- * @method static DomainFactory factory($count = null, $state = [])
+ *
+ * @method static TenantDomainFactory factory($count = null, $state = [])
+ *
  * @mixin \Eloquent
  */
 class TenantDomain extends BaseModel
@@ -51,6 +56,8 @@ class TenantDomain extends BaseModel
 
     /**
      * Model Rows.
+     *
+     * @return array<int, array<string, string>>
      */
     public function getRows(): array
     {

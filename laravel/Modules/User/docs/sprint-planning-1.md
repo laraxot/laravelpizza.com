@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # User Module - Sprint Planning
 
 **Module:** User  
@@ -69,3 +70,12 @@ Implement core user authentication system with registration, login, and basic pr
 ---
 
 *Last Updated: March 12, 2026*
+=======
+---
+module: theme
+topic: sprint-planning-1
+canonical: ../../../Themes/docs/shared-components/SPRINT_PLANNING-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/SPRINT_PLANNING-Modules.md
+>>>>>>> 40b96bcd6 (.)

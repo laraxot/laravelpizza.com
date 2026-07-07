@@ -50,7 +50,11 @@ Questo pattern replica l'idea chiave di `farmshops.eu`: performance stabili con 
 - `phpinsights` via `.phar` workflow del progetto
 - `pest` per dataset support object e widget config
 
+<<<<<<< HEAD
 ## Pattern `geo-map-lit` (segnalazioni-elenco pubblico)
+=======
+## Pattern `geo-map-lit` (ticket-list pubblico)
+>>>>>>> 40b96bcd6 (.)
 
 Variante del pattern per pagine pubbliche (non Filament admin):
 
@@ -83,4 +87,8 @@ $outputPath = base_path('public_html/data/tickets.json');
 
 - [geo-map-controls-unification-rule](./geo-map-controls-unification-rule.md) — controlli mappa devono essere unificati tra `geo-map-lit` e `coordinate-picker-lit`
 - [geo-vite-build-contract](./geo-vite-build-contract.md)
+<<<<<<< HEAD
 - [geo-map-lit entity](../entities/geo-map-lit.md)
+=======
+- [geo-map-lit entity](../entities/geo-map-lit.md)
+>>>>>>> 40b96bcd6 (.)

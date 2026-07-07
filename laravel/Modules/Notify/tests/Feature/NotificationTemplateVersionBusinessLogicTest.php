@@ -4,101 +4,92 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Feature;
 
+use Modules\Notify\Database\Factories\NotificationTemplateFactory;
+use Modules\Notify\Database\Factories\NotificationTemplateVersionFactory;
 use Modules\Notify\Models\NotificationTemplate;
-use Modules\Notify\Models\NotificationTemplateVersion;
 use Modules\Notify\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 use RuntimeException;
 
-class NotificationTemplateVersionBusinessLogicTest extends TestCase
-{
-    // DatabaseTransactions is already used in the module TestCase
+uses(TestCase::class);
 
-    /** @test */
-    public function it_can_create_template_version_with_basic_information(): void
-    {
-        $template = NotificationTemplate::factory()->create();
+describe('Notification Template Version Business Logic', function (): void {
+    test('_can_create_template_version_with_basic_information', function (): void {
+        /** @var TestCase $this */
+        $template = NotificationTemplateFactory::new()->createOne();
 
-        $versionData = [
+        $version = NotificationTemplateVersionFactory::new()->createOne([
             'template_id' => $template->id,
-            'subject' => 'Versione 2.0 - Conferma Appuntamento',
-            'body_html' => '<h1>Conferma Appuntamento</h1><p>Gentile {{patient_name}}, il suo appuntamento è confermato.</p>',
-            'body_text' => 'Conferma Appuntamento\n\nGentile {{patient_name}}, il suo appuntamento è confermato.',
-            'channels' => ['email', 'sms'],
-            'variables' => ['patient_name', 'appointment_date', 'doctor_name'],
+            'subject' => 'Versione 2 - Conferma Appuntamento',
+            'body_html' => '<p>Gentile {{patient_name}}</p>',
+            'body_text' => 'Gentile {{patient_name}}',
+            'channels' => ['mail'],
+            'variables' => ['patient_name', 'appointment_date'],
             'conditions' => ['is_confirmed' => true],
-            'version' => '2.0',
-            'change_notes' => 'Aggiornamento design e aggiunta variabile doctor_name',
-        ];
-
-        $version = NotificationTemplateVersion::create($versionData);
-
-        $this->assertDatabaseHas('notification_template_versions', [
+            'version' => 2,
+            'change_notes' => 'Aggiornamento copy',
+        ]);
+        \assertNotifyTableHas('notification_template_versions', [
             'id' => $version->id,
             'template_id' => $template->id,
-            'subject' => 'Versione 2.0 - Conferma Appuntamento',
-            'version' => '2.0',
-            'change_notes' => 'Aggiornamento design e aggiunta variabile doctor_name',
+            'subject' => 'Versione 2 - Conferma Appuntamento',
+            'version' => 2,
         ]);
 
-        $this->assertEquals('2.0', $version->version);
-        $this->assertEquals(['email', 'sms'], $version->channels);
-        $this->assertEquals(['patient_name', 'appointment_date', 'doctor_name'], $version->variables);
-        $this->assertEquals(['is_confirmed' => true], $version->conditions);
-    }
+        Assert::assertSame(2, $version->version);
+        Assert::assertSame(['mail'], $version->channels);
+        Assert::assertSame(['patient_name', 'appointment_date'], $version->variables);
+        Assert::assertSame(['is_confirmed' => true], $version->conditions);
+    });
 
-    /** @test */
-    public function it_can_manage_template_version_relationships(): void
-    {
-        $template = NotificationTemplate::factory()->create();
-        $version = NotificationTemplateVersion::factory()->create([
+    test('_can_manage_template_version_relationships', function (): void {
+        $template = NotificationTemplateFactory::new()->createOne();
+        $version = NotificationTemplateVersionFactory::new()->createOne([
             'template_id' => $template->id,
         ]);
 
-        $this->assertInstanceOf(NotificationTemplate::class, $version->template);
-        $this->assertEquals($template->id, $version->template->id);
-    }
+        Assert::assertInstanceOf(NotificationTemplate::class, $version->template);
+        Assert::assertSame($template->id, $version->template->id);
+    });
 
-    /** @test */
-    public function it_can_restore_template_from_version(): void
-    {
-        $template = NotificationTemplate::factory()->create([
+    test('_can_restore_template_from_version', function (): void {
+        $template = NotificationTemplateFactory::new()->createOne([
             'subject' => 'Versione Originale',
             'body_html' => '<p>Contenuto originale</p>',
         ]);
 
-        $version = NotificationTemplateVersion::factory()->create([
+        $version = NotificationTemplateVersionFactory::new()->createOne([
             'template_id' => $template->id,
             'subject' => 'Versione Precedente',
             'body_html' => '<p>Contenuto versione precedente</p>',
             'body_text' => 'Contenuto versione precedente',
-            'channels' => ['email'],
+            'channels' => ['mail'],
             'variables' => ['patient_name'],
             'conditions' => ['is_active' => true],
+            'version' => 1,
         ]);
 
-        // Aggiorna il template corrente
         $template->update([
             'subject' => 'Versione Corrente',
             'body_html' => '<p>Contenuto corrente</p>',
         ]);
 
-        // Restaura dalla versione
-        $restoredTemplate = $version->restore();
+        $restoredTemplate = $version->restoreTemplate();
 
-        $this->assertEquals('Versione Precedente', $restoredTemplate->subject);
-        $this->assertEquals('<p>Contenuto versione precedente</p>', $restoredTemplate->body_html);
-        $this->assertEquals('Contenuto versione precedente', $restoredTemplate->body_text);
-        $this->assertEquals(['email'], $restoredTemplate->channels);
-        $this->assertEquals(['patient_name'], $restoredTemplate->variables);
-        $this->assertEquals(['is_active' => true], $restoredTemplate->conditions);
-    }
+        Assert::assertSame('Versione Precedente', $restoredTemplate->subject);
+        Assert::assertSame('<p>Contenuto versione precedente</p>', $restoredTemplate->body_html);
+        Assert::assertSame('Contenuto versione precedente', $restoredTemplate->body_text);
+        Assert::assertSame(['mail'], $restoredTemplate->channels);
+        Assert::assertSame(['patient_name'], $restoredTemplate->variables);
+        Assert::assertSame(['is_active' => true], $restoredTemplate->conditions);
+    });
 
-    /** @test */
-    public function it_throws_exception_when_restoring_without_template(): void
-    {
-        $version = NotificationTemplateVersion::factory()->create([
-            'template_id' => 99999, // Template inesistente
+    test('_throws_exception_when_restoring_without_template', function (): void {
+        /** @var TestCase $this */
+        $version = NotificationTemplateVersionFactory::new()->createOne([
+            'template_id' => 999999,
         ]);
+<<<<<<< HEAD
 
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage('Template not found for version '.$version->id);
@@ -311,3 +302,9 @@ class NotificationTemplateVersionBusinessLogicTest extends TestCase
         $this->assertNull($version->change_notes);
     }
 }
+=======
+        $this->expectApplicationException(RuntimeException::class);
+        $version->restoreTemplate();
+    });
+});
+>>>>>>> 40b96bcd6 (.)

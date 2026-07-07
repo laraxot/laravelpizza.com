@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cms Module - User Research
 
 **Module:** Cms  
@@ -84,3 +85,12 @@ Non-technical users need onboarding.
 
 ---
 
+=======
+---
+module: theme
+topic: user-research
+canonical: ../../../Themes/docs/shared-components/USER_RESEARCH-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/USER_RESEARCH-Modules.md
+>>>>>>> 40b96bcd6 (.)

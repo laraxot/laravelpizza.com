@@ -214,7 +214,11 @@ abstract class XotBaseResourceForm
     /**
      * Helper for wizard steps (optional override).
      */
+<<<<<<< HEAD
     public static function getWizardSteps(): array
+=======
+    public static function getSteps(): array
+>>>>>>> 40b96bcd6 (.)
     {
         return [];
     }
@@ -243,6 +247,14 @@ abstract class XotBaseResourceTable
 }
 ```
 
+<<<<<<< HEAD
+=======
+### PHPStan-safe configure() on abstract table bases
+
+Do not instantiate abstract table bases with `new static()` inside static methods.
+Use container resolution plus an explicit base-class guard and type assertion, so `configure()` remains safe for concrete table classes and PHPStan level max.
+
+>>>>>>> 40b96bcd6 (.)
 ### XotBaseResourceInfolist (Updated)
 
 ```php
@@ -395,13 +407,21 @@ class TicketForm extends XotBaseResourceForm
     {
         return $schema
             ->components([
+<<<<<<< HEAD
                 Wizard::make(static::getWizardSteps())
+=======
+                Wizard::make(static::getSteps())
+>>>>>>> 40b96bcd6 (.)
                     ->skippable()
                     ->persistStepInQueryString(),
             ]);
     }
     
+<<<<<<< HEAD
     public static function getWizardSteps(): array
+=======
+    public static function getSteps(): array
+>>>>>>> 40b96bcd6 (.)
     {
         return [
             Step::make('privacy')

@@ -1,6 +1,7 @@
 # Code Coverage: Lang
 
 **Date:** 2026-01-17
+**Date:** 2026-01-17
 **Lines Coverage:** N/A (Failed to parse)
 **Test Exit Code:** 2
 
@@ -46,8 +47,8 @@
   ──────────────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\Lang\tests\Unit\Actions\ReadTranslationFileActionTest > `ReadTransl…   
   Failed asserting that exception of type "Error" matches expected exception "Exception". Message was: "Call to undefined method Illuminate\Container\Container::storagePath()" at
-/var/www/_bases/base_<nome progetto>_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php:933
-/var/www/_bases/base_<nome progetto>_fila5_mono/laravel/Modules/Lang/tests/Unit/Actions/ReadTranslationFileActionTest.php:58
+. progetto>_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php:933
+. progetto>_fila5_mono/laravel/Modules/Lang/tests/Unit/Actions/ReadTranslationFileActionTest.php:58
 .
 
   ──────────────────────────────────────────────────────────────────────────────────────  

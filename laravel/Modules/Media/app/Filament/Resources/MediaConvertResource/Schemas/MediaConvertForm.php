@@ -6,13 +6,20 @@ namespace Modules\Media\Filament\Resources\MediaConvertResource\Schemas;
 
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
+<<<<<<< HEAD
 use Filament\Schemas\Components\Component as SchemaComponent;
+=======
+>>>>>>> 40b96bcd6 (.)
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 class MediaConvertForm extends XotBaseResourceForm
 {
     /**
+<<<<<<< HEAD
      * @return array<int|string, SchemaComponent>
+=======
+     * @return array<string, \Filament\Schemas\Components\Component>
+>>>>>>> 40b96bcd6 (.)
      */
     public static function getFormSchema(): array
     {

@@ -30,6 +30,7 @@ class SpatieEmail extends TemplateMailable
 {
     public string $slug;
 
+    /** @var array<string, mixed> */
     public array $data = [];
 
     // use our custom mail template model
@@ -106,6 +107,9 @@ class SpatieEmail extends TemplateMailable
         return $this;
     }
 
+    /**
+     * @param  array<string, mixed>  $data
+     */
     public function mergeData(array $data): self
     {
         $this->data = array_merge($this->data, $data);
@@ -159,7 +163,7 @@ class SpatieEmail extends TemplateMailable
     }
 
     /**
-     * @param  array{path: string, as?: string, mime?: string}  $attachment
+     * @param  array<string, string>  $attachment
      */
     public function getAttachmentFromPath(array $attachment): Attachment
     {
@@ -179,6 +183,9 @@ class SpatieEmail extends TemplateMailable
         return $res->as($filename)->withMime($mime);
     }
 
+    /**
+     * @param  array<string, mixed>  $attachment
+     */
     public function getAttachmentFromData(array $attachment): Attachment
     {
         $res = Attachment::fromData(static fn () => $attachment['data']);
@@ -216,8 +223,15 @@ class SpatieEmail extends TemplateMailable
 
         foreach ($attachments as $item) {
             $attachment = null;
-            if (isset($item['path']) && file_exists($item['path'])) {
-                $attachment = $this->getAttachmentFromPath($item);
+            $path = $item['path'] ?? null;
+            if (is_string($path) && $path !== '' && file_exists($path)) {
+                /** @var array{path: string, as?: string, mime?: string} $pathAttachment */
+                $pathAttachment = [
+                    'path' => $path,
+                    'as' => $item['as'] ?? null,
+                    'mime' => $item['mime'] ?? null,
+                ];
+                $attachment = $this->getAttachmentFromPath($pathAttachment);
             }
 
             if ($attachment === null && isset($item['data'])) {

@@ -14,7 +14,11 @@ use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 class StoredEventForm extends XotBaseResourceForm
 {
     /**
+<<<<<<< HEAD
      * @return array<int|string, Component>
+=======
+     * @return array<string, Component>
+>>>>>>> 40b96bcd6 (.)
      */
     public static function getFormSchema(): array
     {

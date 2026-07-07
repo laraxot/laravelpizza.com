@@ -4,11 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Filament\Forms;
 
+<<<<<<< HEAD
 uses(TestCase::class);
 
 use Modules\Geo\Filament\Forms\Components\LatitudeLongitudeInput;
 use Modules\Geo\Tests\TestCase;
 
+=======
+use Modules\Geo\Filament\Forms\Components\LatitudeLongitudeInput;
+use Modules\Geo\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
+>>>>>>> 40b96bcd6 (.)
 /*
  * Test LatitudeLongitudeInput component for story 8-10:
  * - Bidirectional sync between map marker and coordinate inputs
@@ -19,12 +27,17 @@ use Modules\Geo\Tests\TestCase;
 test('LatitudeLongitudeInput can be instantiated', function () {
     $field = LatitudeLongitudeInput::make('location');
 
+<<<<<<< HEAD
     expect($field)->toBeObject();
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput supports fluent interface for defaults', function () {
     $field = LatitudeLongitudeInput::make('location')
+<<<<<<< HEAD
         ->defaultCenter(41.9028, 12.4964)
         ->defaultZoom(13)
         ->mapHeight('340px')
@@ -32,11 +45,20 @@ test('LatitudeLongitudeInput supports fluent interface for defaults', function (
 
     expect($field)->toBeObject();
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+        ->center(41.9028, 12.4964)
+        ->zoom(13)
+        ->height('340px')
+        ->showSearch(true);
+
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput fluent methods return self', function () {
     $field = LatitudeLongitudeInput::make('location');
 
+<<<<<<< HEAD
     $result1 = $field->defaultCenter(41.9028, 12.4964);
     expect($result1)->toBe($field);
 
@@ -48,10 +70,24 @@ test('LatitudeLongitudeInput fluent methods return self', function () {
 
     $result4 = $field->showMap(false);
     expect($result4)->toBe($field);
+=======
+    $result1 = $field->center(41.9028, 12.4964);
+    Assert::assertSame($field, $result1);
+
+    $result2 = $field->zoom(13);
+    Assert::assertSame($field, $result2);
+
+    $result3 = $field->height('400px');
+    Assert::assertSame($field, $result3);
+
+    $result4 = $field->showSearch(false);
+    Assert::assertSame($field, $result4);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput renders with wire:model.change (non-destructive sync)', function () {
     $field = LatitudeLongitudeInput::make('location')
+<<<<<<< HEAD
         ->defaultCenter(41.9028, 12.4964)
         ->defaultZoom(13)
         ->mapHeight('340px');
@@ -59,6 +95,15 @@ test('LatitudeLongitudeInput renders with wire:model.change (non-destructive syn
     // Render the field as Blade template
     $view = $field->getView();
     expect($view)->toBe('geo::filament.forms.components.latitude-longitude-input');
+=======
+        ->center(41.9028, 12.4964)
+        ->zoom(13)
+        ->height('340px');
+
+    // Render the field as Blade template
+    $view = $field->getView();
+    Assert::assertSame('geo::filament.forms.components.latitude-longitude-input', $view);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput has no wire:model.live to prevent aggressive re-renders', function () {
@@ -73,7 +118,11 @@ test('LatitudeLongitudeInput has no wire:model.live to prevent aggressive re-ren
     // NOT wire:model.live to avoid frequent Livewire updates during rapid DOM changes
 
     $field = LatitudeLongitudeInput::make('location');
+<<<<<<< HEAD
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput protects map shell with wire:ignore', function () {
@@ -88,7 +137,11 @@ test('LatitudeLongitudeInput protects map shell with wire:ignore', function () {
     // </div>
 
     $field = LatitudeLongitudeInput::make('location');
+<<<<<<< HEAD
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput initializes with coordinate priority', function () {
@@ -103,10 +156,15 @@ test('LatitudeLongitudeInput initializes with coordinate priority', function () 
     // 4. Only commits to Livewire if using defaults (usedDefaults = true)
 
     $field = LatitudeLongitudeInput::make('location')
+<<<<<<< HEAD
         ->defaultCenter(41.9028, 12.4964)
         ->defaultZoom(13);
 
     expect($field)->toBeObject();
+=======
+        ->center(41.9028, 12.4964)
+        ->zoom(13);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput supports all three map layers', function () {
@@ -119,7 +177,11 @@ test('LatitudeLongitudeInput supports all three map layers', function () {
     // - Terrain (OpenTopoMap)
 
     $field = LatitudeLongitudeInput::make('location');
+<<<<<<< HEAD
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput provides geolocation support', function () {
@@ -130,7 +192,11 @@ test('LatitudeLongitudeInput provides geolocation support', function () {
     // - Calls commitCoordinates() to sync with Livewire
 
     $field = LatitudeLongitudeInput::make('location');
+<<<<<<< HEAD
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput provides fullscreen support', function () {
@@ -141,7 +207,11 @@ test('LatitudeLongitudeInput provides fullscreen support', function () {
     // - Dispatches map-fullscreen-change event for UI state tracking
 
     $field = LatitudeLongitudeInput::make('location');
+<<<<<<< HEAD
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput throttles drag updates', function () {
@@ -156,7 +226,11 @@ test('LatitudeLongitudeInput throttles drag updates', function () {
     // This prevents rapid wire:model.change events that would cause Livewire churn.
 
     $field = LatitudeLongitudeInput::make('location');
+<<<<<<< HEAD
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput commits coordinates on dragend', function () {
@@ -169,7 +243,11 @@ test('LatitudeLongitudeInput commits coordinates on dragend', function () {
     // This ensures proper Livewire sync without aggressive re-renders.
 
     $field = LatitudeLongitudeInput::make('location');
+<<<<<<< HEAD
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput syncs input changes to map with debounce', function () {
@@ -181,7 +259,11 @@ test('LatitudeLongitudeInput syncs input changes to map with debounce', function
     // and persistent sync on blur/change.
 
     $field = LatitudeLongitudeInput::make('location');
+<<<<<<< HEAD
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput uses isProgrammaticInputUpdate flag to prevent circular sync', function () {
@@ -193,7 +275,11 @@ test('LatitudeLongitudeInput uses isProgrammaticInputUpdate flag to prevent circ
     // This ensures marker→input sync doesn't trigger input→marker sync immediately.
 
     $field = LatitudeLongitudeInput::make('location');
+<<<<<<< HEAD
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput uses global instances registry for idempotence', function () {
@@ -209,7 +295,11 @@ test('LatitudeLongitudeInput uses global instances registry for idempotence', fu
     // This ensures that if the component re-initializes, it reuses the existing Leaflet instance.
 
     $field = LatitudeLongitudeInput::make('location');
+<<<<<<< HEAD
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput validates coordinate ranges', function () {
@@ -222,7 +312,11 @@ test('LatitudeLongitudeInput validates coordinate ranges', function () {
     // If validation fails, the sync is skipped silently (no error thrown).
 
     $field = LatitudeLongitudeInput::make('location');
+<<<<<<< HEAD
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput handles map click sync', function () {
@@ -235,7 +329,11 @@ test('LatitudeLongitudeInput handles map click sync', function () {
     // This syncs map click immediately to marker and Livewire.
 
     $field = LatitudeLongitudeInput::make('location');
+<<<<<<< HEAD
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('LatitudeLongitudeInput invalidates map size on intersection', function () {
@@ -245,5 +343,9 @@ test('LatitudeLongitudeInput invalidates map size on intersection', function () 
     // This prevents hidden/collapsed map state from breaking drag/click functionality.
 
     $field = LatitudeLongitudeInput::make('location');
+<<<<<<< HEAD
     expect($field)->toBeInstanceOf(LatitudeLongitudeInput::class);
+=======
+    Assert::assertInstanceOf(LatitudeLongitudeInput::class, $field);
+>>>>>>> 40b96bcd6 (.)
 });

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DRY & KISS Refactoring - Modelli Base
 
 ## Data: 15 Ottobre 2025
@@ -118,3 +119,12 @@ abstract class Base[Model|Pivot|MorphPivot] extends XotBase[Model|Pivot|MorphPiv
 - [XotBaseModel](../app/Models/XotBaseModel.php)
 - [XotBasePivot](../app/Models/XotBasePivot.php)
 - [XotBaseMorphPivot](../app/Models/XotBaseMorphPivot.php)
+=======
+---
+module: theme
+topic: dry-kiss-refactoring-1
+canonical: ../../../Themes/docs/shared-components/DRY_KISS_REFACTORING.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/DRY_KISS_REFACTORING.md
+>>>>>>> 40b96bcd6 (.)

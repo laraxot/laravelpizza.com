@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Geo Module - Product Roadmap
 
 **Module:** Geo  
@@ -99,3 +100,12 @@ To provide **comprehensive geographic capabilities** that enable location-based 
 
 ---
 
+=======
+---
+module: theme
+topic: product-roadmap
+canonical: ../../../Themes/docs/shared-components/PRODUCT_ROADMAP.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/PRODUCT_ROADMAP.md
+>>>>>>> 40b96bcd6 (.)

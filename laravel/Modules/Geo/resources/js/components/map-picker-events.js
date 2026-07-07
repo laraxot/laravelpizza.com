@@ -21,7 +21,18 @@ export function handleMapInteraction(ctx, lat, lng, source = 'manual') {
         return;
     }
 
+<<<<<<< HEAD
     ctx.state = { ...(ctx.state || {}), lat: normalized.lat, lng: normalized.lng };
+=======
+    ctx.state = {
+        ...(ctx.state || {}),
+        lat: normalized.lat,
+        lng: normalized.lng,
+        latitude: normalized.lat,
+        longitude: normalized.lng,
+    };
+    ctx._shouldRecenterAfterResize = true;
+>>>>>>> 40b96bcd6 (.)
     ctx._updateMarker(normalized.lat, normalized.lng);
 
     ctx.dispatchEvent(new CustomEvent('coords-changed', {
@@ -68,6 +79,10 @@ export function syncMarkerToProperties(ctx) {
     const lat = ctx._lat;
     const lng = ctx._lng;
     updateMarker(ctx, lat, lng);
+<<<<<<< HEAD
+=======
+    ctx._shouldRecenterAfterResize = true;
+>>>>>>> 40b96bcd6 (.)
     ctx._map.setView([lat, lng], Math.max(ctx._map.getZoom(), ctx.zoom));
     refreshMapSize(ctx);
 }
@@ -82,8 +97,14 @@ export function initMap(ctx) {
     ctx._layers = ctx._layers ?? {};
     ctx._currentLayer = ctx._currentLayer ?? 'street';
 
+<<<<<<< HEAD
     const centerLat = ctx._lat ?? 41.9028;
     const centerLng = ctx._lng ?? 12.4964;
+=======
+    const hasStateCoordinates = ctx._lat != null && ctx._lng != null;
+    const centerLat = hasStateCoordinates ? ctx._lat : 41.9028;
+    const centerLng = hasStateCoordinates ? ctx._lng : 12.4964;
+>>>>>>> 40b96bcd6 (.)
 
     ctx._map = L.map(el, {
         center: [centerLat, centerLng],
@@ -97,10 +118,21 @@ export function initMap(ctx) {
 
     ctx._map.on('click', (e) => handleMapInteraction(ctx, e.latlng.lat, e.latlng.lng, 'click'));
 
+<<<<<<< HEAD
     if (ctx._lat != null && ctx._lng != null) {
         syncMarkerToProperties(ctx);
     } else if (ctx.geolocateWhenEmpty || (ctx._lat === null && ctx._lng === null)) {
         void requestGeolocation(ctx, { showLoading: false });
+=======
+    if (hasStateCoordinates) {
+        syncMarkerToProperties(ctx);
+    } else {
+        window.setTimeout(() => {
+            if (ctx._lat == null && ctx._lng == null) {
+                void requestGeolocation(ctx, { showLoading: true });
+            }
+        }, 300);
+>>>>>>> 40b96bcd6 (.)
     }
 
     refreshMapSize(ctx);

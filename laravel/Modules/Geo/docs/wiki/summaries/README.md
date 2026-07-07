@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # $(basename "$d")
 
 This directory is part of the Geo module LLM wiki.
@@ -10,3 +11,12 @@ This directory is part of the Geo module LLM wiki.
 - troubleshooting: operational runbooks and troubleshooting guides.
 - _archive: historical content (not used for ingestion).
 - _templates: templates & skeletons for wiki pages.
+=======
+---
+module: theme
+topic: README
+canonical: ../../../../../Themes/docs/shared-components/README-Modules.md
+---
+
+See canonical documentation: ../../../../../Themes/docs/shared-components/README-Modules.md
+>>>>>>> 40b96bcd6 (.)

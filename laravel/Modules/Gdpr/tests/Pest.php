@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Illuminate\Testing\TestResponse;
 use Modules\Gdpr\Tests\TestCase;
 
@@ -43,3 +44,10 @@ beforeEach(function () {
 afterEach(function () {
     // DatabaseTransactions trait handles rollback automatically
 });
+=======
+/*
+ * Bootstrap Pest — modulo Gdpr.
+ * Ogni file test dichiara uses(\Modules\Gdpr\Tests\TestCase::class).
+ * Vietato pest()->extend() / expect()->extend() / uses()->in() qui (PHPStan method.internalClass).
+ */
+>>>>>>> 40b96bcd6 (.)

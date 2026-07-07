@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
     'actions' => [
         'submit' => [
             'label' => 'Invia',
@@ -14,6 +15,8 @@ return [
             'label' => 'Successivo',
         ],
     ],
+=======
+>>>>>>> 40b96bcd6 (.)
     'steps' => [
         'privacy' => [
             'label' => 'privacy',
@@ -24,6 +27,7 @@ return [
         'summary' => [
             'label' => 'summary',
         ],
+<<<<<<< HEAD
         'Riepilogo' => [
             'label' => 'Riepilogo',
         ],
@@ -55,5 +59,7 @@ return [
         'Privacy' => [
             'label' => 'Privacy',
         ],
+=======
+>>>>>>> 40b96bcd6 (.)
     ],
 ];

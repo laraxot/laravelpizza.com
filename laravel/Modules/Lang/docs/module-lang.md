@@ -288,6 +288,8 @@ public function testTranslations()
 
 - [Modulo Patient](../../Patient/docs/translations.md) - Esempio di implementazione delle traduzioni
 - [Regole Generali Traduzioni](../../Xot/docs/translations.md)
+- [Modulo Patient](../../Patient/docs/translations.md) - Esempio di implementazione delle traduzioni
+- [Regole Generali Traduzioni](../../Xot/docs/translations.md)
 
 ## Esempi
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Xot Module - Sprint Planning
 
 **Module:** Xot  
@@ -68,3 +69,12 @@ Implement core extension framework with API, hooks, and event bus.
 ---
 
 *Last Updated: March 12, 2026*
+=======
+---
+module: theme
+topic: sprint-planning-1
+canonical: ../../../Themes/docs/shared-components/SPRINT_PLANNING-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/SPRINT_PLANNING-Modules.md
+>>>>>>> 40b96bcd6 (.)

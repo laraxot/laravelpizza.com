@@ -1,0 +1,93 @@
+# BMAD Workflow Status
+# Tracks progress through all 4 phases
+
+project:
+  name: "{{project_name}}"
+  level: {{project_level}}
+  initialized: "{{timestamp}}"
+  last_updated: "{{timestamp}}"
+
+current_phase: 1
+current_workflow: null
+
+phases:
+  phase_1_analysis:
+    name: "Analysis"
+    status: "not_started"  # not_started, in_progress, completed, skipped
+    workflows:
+      product_brief:
+        status: "{{product_brief_status}}"  # required, recommended, optional
+        completed: false
+        output_file: null
+        completed_at: null
+      research:
+        status: "optional"
+        completed: false
+        output_file: null
+        completed_at: null
+      brainstorm:
+        status: "optional"
+        completed: false
+        output_file: null
+        completed_at: null
+
+  phase_2_planning:
+    name: "Planning"
+    status: "not_started"
+    workflows:
+      prd:
+        status: "{{prd_status}}"
+        completed: false
+        output_file: null
+        completed_at: null
+      tech_spec:
+        status: "{{tech_spec_status}}"
+        completed: false
+        output_file: null
+        completed_at: null
+      ux_design:
+        status: "recommended"
+        completed: false
+        output_file: null
+        completed_at: null
+
+  phase_3_solutioning:
+    name: "Solutioning"
+    status: "not_started"
+    workflows:
+      architecture:
+        status: "{{architecture_status}}"
+        completed: false
+        output_file: null
+        completed_at: null
+      gate_check:
+        status: "recommended"
+        completed: false
+        passed: null
+        completed_at: null
+
+  phase_4_implementation:
+    name: "Implementation"
+    status: "not_started"
+    workflows:
+      sprint_planning:
+        status: "required"
+        completed: false
+        output_file: null
+        completed_at: null
+      stories:
+        total: 0
+        completed: 0
+        in_progress: 0
+        story_list: []
+
+metrics:
+  total_workflows: 0
+  completed_workflows: 0
+  progress_percentage: 0
+  estimated_stories: 0
+  completed_stories: 0
+
+subagent_history:
+  total_launched: 0
+  sessions: []

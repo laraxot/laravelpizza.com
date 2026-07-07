@@ -5,98 +5,70 @@ declare(strict_types=1);
 namespace Modules\Notify\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Modules\Notify\Models\BaseMorphPivot;
-use Modules\Notify\Models\BasePivot;
 use Modules\Notify\Models\Contact;
 use Modules\Notify\Models\MailTemplate;
 use Modules\Notify\Models\Notification;
-use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Models\NotifyTheme;
+use Modules\Notify\Tests\Fixtures\NotifyBaseMorphPivotProxy;
+use Modules\Notify\Tests\Fixtures\NotifyBasePivotProxy;
+use Modules\Notify\Tests\Fixtures\NotifyNotificationTemplateProxy;
 use Modules\Notify\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Notify\Tests\TestCase::class);
 
-function makeNotifyBaseMorphPivotProxy(): BaseMorphPivot
+function makeNotifyBaseMorphPivotProxy(): NotifyBaseMorphPivotProxy
 {
-    return new class extends BaseMorphPivot
-    {
-        protected $table = 'notify_base_morph_pivot_proxy';
-
-        public function exposedCasts(): array
-        {
-            return $this->casts();
-        }
-    };
+    return new NotifyBaseMorphPivotProxy;
 }
 
-function makeNotifyBasePivotProxy(): BasePivot
+function makeNotifyBasePivotProxy(): NotifyBasePivotProxy
 {
-    return new class extends BasePivot
-    {
-        protected $table = 'notify_base_pivot_proxy';
-
-        public function exposedCasts(): array
-        {
-            return $this->casts();
-        }
-    };
+    return new NotifyBasePivotProxy;
 }
 
-function makeNotifyNotificationTemplateProxy(): NotificationTemplate
+function makeNotifyNotificationTemplateProxy(): NotifyNotificationTemplateProxy
 {
-    return new class extends NotificationTemplate
-    {
-        public function exposedCompileString(?string $template, array $data): ?string
-        {
-            return $this->compileString($template, $data);
-        }
-
-        public function exposedCasts(): array
-        {
-            return $this->casts();
-        }
-    };
+    return new NotifyNotificationTemplateProxy;
 }
 
 test('base morph pivot and base pivot use notify connection and default casts', function () {
     $morphPivot = makeNotifyBaseMorphPivotProxy();
     $pivot = makeNotifyBasePivotProxy();
 
-    expect($morphPivot->getConnectionName())->toBe('notify')
-        ->and($pivot->getConnectionName())->toBe('notify')
-        ->and($morphPivot->exposedCasts())->toHaveKey('created_at')
-        ->and($pivot->exposedCasts())->toHaveKey('updated_at');
+    Assert::assertSame('notify', $morphPivot->getConnectionName());
+    Assert::assertSame('notify', $pivot->getConnectionName());
+    Assert::assertArrayHasKey('created_at', $morphPivot->exposedCasts());
+    Assert::assertArrayHasKey('updated_at', $pivot->exposedCasts());
 });
 
 test('contact model has expected fillable and casts', function () {
     $contact = new Contact;
 
-    expect($contact->getConnectionName())->toBe('notify')
-        ->and($contact->getFillable())->toContain('model_id')
-        ->and($contact->getFillable())->toContain('contact_type')
-        ->and($contact->getCasts())->toHaveKey('model_id')
-        ->and($contact->getCasts())->toHaveKey('user_id');
+    Assert::assertSame('notify', $contact->getConnectionName());
+    Assert::assertContains('model_id', $contact->getFillable());
+    Assert::assertContains('contact_type', $contact->getFillable());
+    Assert::assertArrayHasKey('model_id', $contact->getCasts());
+    Assert::assertArrayHasKey('user_id', $contact->getCasts());
 });
 
 test('mail template has slug options and expected casts', function () {
     $mailTemplate = new MailTemplate;
 
-    expect($mailTemplate->getConnectionName())->toBe('notify')
-        ->and($mailTemplate->getFillable())->toContain('slug')
-        ->and($mailTemplate->getFillable())->toContain('html_layout_path')
-        ->and($mailTemplate->getCasts())->toHaveKey('created_at');
-
-    $slugOptions = $mailTemplate->getSlugOptions();
-    expect($slugOptions)->not->toBeNull();
+    Assert::assertSame('notify', $mailTemplate->getConnectionName());
+    Assert::assertContains('slug', $mailTemplate->getFillable());
+    Assert::assertContains('html_layout_path', $mailTemplate->getFillable());
+    Assert::assertArrayHasKey('created_at', $mailTemplate->getCasts());
+    Assert::assertSame('slug', $mailTemplate->getSlugOptions()->generateSlugFrom);
 });
 
 test('notification model has array and datetime casts', function () {
     $notification = new Notification;
 
-    expect($notification->getFillable())->toContain('message')
-        ->and($notification->getFillable())->toContain('channels')
-        ->and($notification->getCasts())->toHaveKey('data')
-        ->and($notification->getCasts())->toHaveKey('read_at');
+    Assert::assertContains('message', $notification->getFillable());
+    Assert::assertContains('channels', $notification->getFillable());
+    Assert::assertArrayHasKey('data', $notification->getCasts());
+    Assert::assertArrayHasKey('read_at', $notification->getCasts());
 });
 
 test('notification template compile and helper methods return expected structures', function () {
@@ -111,15 +83,19 @@ test('notification template compile and helper methods return expected structure
     $compiled = $template->compile(['name' => 'Luigi']);
     $preview = $template->preview();
 
-    expect($template->getFillable())->toContain('grapesjs_data')
-        ->and($template->exposedCasts())->toHaveKey('channels')
-        ->and($compiled)->toHaveKeys(['subject', 'body_html', 'body_text'])
-        ->and($preview)->toHaveKeys(['subject', 'body_html', 'body_text'])
-        ->and($template->shouldSend(['foo' => 'bar']))->toBeTrue();
+    Assert::assertContains('grapesjs_data', $template->getFillable());
+    Assert::assertArrayHasKey('channels', $template->exposedCasts());
+    Assert::assertArrayHasKey('subject', $compiled);
+    Assert::assertArrayHasKey('body_html', $compiled);
+    Assert::assertArrayHasKey('body_text', $compiled);
+    Assert::assertArrayHasKey('subject', $preview);
+    Assert::assertArrayHasKey('body_html', $preview);
+    Assert::assertArrayHasKey('body_text', $preview);
+    Assert::assertTrue($template->shouldSend(['foo' => 'bar']));
 
     $template->conditions = ['foo' => 'bar'];
-    expect($template->shouldSend(['foo' => 'bar']))->toBeTrue()
-        ->and($template->shouldSend(['foo' => 'baz']))->toBeFalse();
+    Assert::assertTrue($template->shouldSend(['foo' => 'bar']));
+    Assert::assertFalse($template->shouldSend(['foo' => 'baz']));
 });
 
 test('notify theme exposes logo accessor and morph relation', function () {
@@ -130,11 +106,11 @@ test('notify theme exposes logo accessor and morph relation', function () {
     $logo = $theme->getLogoAttribute(null);
     $relation = $theme->linkable();
 
-    expect($theme->getConnectionName())->toBe('notify')
-        ->and($theme->getFillable())->toContain('logo_src')
-        ->and($theme->getFillable())->toContain('view_params')
-        ->and($theme->getCasts())->toHaveKey('view_params')
-        ->and($logo['width'])->toBe(300)
-        ->and($logo['height'])->toBe(120)
-        ->and($relation)->toBeInstanceOf(MorphTo::class);
+    Assert::assertSame('notify', $theme->getConnectionName());
+    Assert::assertContains('logo_src', $theme->getFillable());
+    Assert::assertContains('view_params', $theme->getFillable());
+    Assert::assertArrayHasKey('view_params', $theme->getCasts());
+    Assert::assertSame(300, $logo['width']);
+    Assert::assertSame(120, $logo['height']);
+    Assert::assertInstanceOf(MorphTo::class, $relation);
 });

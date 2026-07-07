@@ -3,66 +3,98 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Console\Commands;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 40b96bcd6 (.)
 use Illuminate\Console\Command;
 use Modules\Notify\Console\Commands\AnalyzeTranslationFiles;
+use Modules\Notify\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+uses(\Modules\Notify\Tests\TestCase::class);
 
 describe('AnalyzeTranslationFiles', function () {
     it('has correct signature', function () {
         $command = new AnalyzeTranslationFiles;
 
-        expect($command->getName())->toBe('notify:analyze-translations');
+        Assert::assertSame('notify:analyze-translations', $command->getName());
     });
 
     it('has description', function () {
         $command = new AnalyzeTranslationFiles;
 
-        $description = $command->getDescription();
-
-        expect($description)->not->toBeEmpty();
-        expect($description)->toBeString();
+        Assert::assertNotEmpty($command->getDescription());
     });
 
     it('extends command', function () {
         $command = new AnalyzeTranslationFiles;
 
+<<<<<<< HEAD
         expect($command)->toBeInstanceOf(Command::class);
     });
 
     it('has handle method', function () {
         $command = new AnalyzeTranslationFiles;
+=======
+        Assert::assertInstanceOf(Command::class, $command);
+    });
 
-        expect(method_exists($command, 'handle'))->toBeTrue();
+    it('has handle method', function () {
+        $reflection = new \ReflectionClass(AnalyzeTranslationFiles::class);
+>>>>>>> 40b96bcd6 (.)
+
+        Assert::assertTrue($reflection->hasMethod('handle'));
     });
 
     it('has flatten array method', function () {
+<<<<<<< HEAD
         $command = new AnalyzeTranslationFiles;
+=======
+        $reflection = new \ReflectionClass(AnalyzeTranslationFiles::class);
+>>>>>>> 40b96bcd6 (.)
 
-        expect(method_exists($command, 'flattenArray'))->toBeTrue();
+        Assert::assertTrue($reflection->hasMethod('flattenArray'));
     });
 
     it('has analyze structure patterns method', function () {
+<<<<<<< HEAD
         $command = new AnalyzeTranslationFiles;
+=======
+        $reflection = new \ReflectionClass(AnalyzeTranslationFiles::class);
+>>>>>>> 40b96bcd6 (.)
 
-        expect(method_exists($command, 'analyzeStructurePatterns'))->toBeTrue();
+        Assert::assertTrue($reflection->hasMethod('analyzeStructurePatterns'));
     });
 
     it('has generate consistency report method', function () {
+<<<<<<< HEAD
         $command = new AnalyzeTranslationFiles;
+=======
+        $reflection = new \ReflectionClass(AnalyzeTranslationFiles::class);
+>>>>>>> 40b96bcd6 (.)
 
-        expect(method_exists($command, 'generateConsistencyReport'))->toBeTrue();
+        Assert::assertTrue($reflection->hasMethod('generateConsistencyReport'));
     });
 
     it('has generate recommendations method', function () {
+<<<<<<< HEAD
         $command = new AnalyzeTranslationFiles;
+=======
+        $reflection = new \ReflectionClass(AnalyzeTranslationFiles::class);
+>>>>>>> 40b96bcd6 (.)
 
-        expect(method_exists($command, 'generateRecommendations'))->toBeTrue();
+        Assert::assertTrue($reflection->hasMethod('generateRecommendations'));
     });
 
     it('has analyze navigation structure method', function () {
+<<<<<<< HEAD
         $command = new AnalyzeTranslationFiles;
+=======
+        $reflection = new \ReflectionClass(AnalyzeTranslationFiles::class);
+>>>>>>> 40b96bcd6 (.)
 
-        expect(method_exists($command, 'analyzeNavigationStructure'))->toBeTrue();
+        Assert::assertTrue($reflection->hasMethod('analyzeNavigationStructure'));
     });
 
     it('flatten array handles nested arrays', function () {
@@ -79,11 +111,11 @@ describe('AnalyzeTranslationFiles', function () {
             ],
         ];
 
-        $result = $method->invoke($command, $input);
+        $result = \assertNotifyArray($method->invoke($command, $input));
 
-        expect($result)->toHaveKey('parent.child1');
-        expect($result)->toHaveKey('parent.child2');
-        expect($result['parent.child1'])->toBe('value1');
+        Assert::assertArrayHasKey('parent.child1', $result);
+        Assert::assertArrayHasKey('parent.child2', $result);
+        Assert::assertSame('value1', $result['parent.child1']);
     });
 
     it('flatten array handles empty array', function () {
@@ -93,9 +125,9 @@ describe('AnalyzeTranslationFiles', function () {
         $method = $reflection->getMethod('flattenArray');
         $method->setAccessible(true);
 
-        $result = $method->invoke($command, []);
+        $result = \assertNotifyArray($method->invoke($command, []));
 
-        expect($result)->toBeEmpty();
+        Assert::assertEmpty($result);
     });
 
     it('flatten array handles nested levels', function () {
@@ -113,10 +145,10 @@ describe('AnalyzeTranslationFiles', function () {
             ],
         ];
 
-        $result = $method->invoke($command, $input);
+        $result = \assertNotifyArray($method->invoke($command, $input));
 
-        expect($result)->toHaveKey('level1.level2.level3');
-        expect($result['level1.level2.level3'])->toBe('deep value');
+        Assert::assertArrayHasKey('level1.level2.level3', $result);
+        Assert::assertSame('deep value', $result['level1.level2.level3']);
     });
 
     it('flatten array handles prefix parameter', function () {
@@ -128,8 +160,8 @@ describe('AnalyzeTranslationFiles', function () {
 
         $input = ['key' => 'value'];
 
-        $result = $method->invoke($command, $input, 'prefix');
+        $result = \assertNotifyArray($method->invoke($command, $input, 'prefix'));
 
-        expect($result)->toHaveKey('prefix.key');
+        Assert::assertArrayHasKey('prefix.key', $result);
     });
 });

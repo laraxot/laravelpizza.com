@@ -5,7 +5,11 @@ component: geo-map-lit
 created: 2026-04-30
 updated: 2026-04-30
 stories:
+<<<<<<< HEAD
   - 8-78-segnalazioni-elenco-polish
+=======
+  - 8-78-ticket-list-polish
+>>>>>>> 40b96bcd6 (.)
   - 8-79-geo-map-controls-unification
   - 8-80-geo-map-lit-shared-modules
 ---
@@ -20,12 +24,20 @@ Il componente `<geo-map-lit>` riutilizza i moduli condivisi del MapPicker per ga
 
 Tutti i moduli condivisi si trovano in `Modules/Geo/resources/js/components/`.
 
+<<<<<<< HEAD
 ### 1. `map-picker-controls.js`
+=======
+### 1. `map-controls.js`
+>>>>>>> 40b96bcd6 (.)
 
 Renderizza la barra dei controlli e fornisce funzioni di manipolazione mappa.
 
 ```javascript
+<<<<<<< HEAD
 import { renderControls, toggleFullscreen, zoomIn, zoomOut, switchLayer, requestGeolocation } from './map-picker-controls.js';
+=======
+import { renderControls, toggleFullscreen, zoomIn, zoomOut, switchLayer, requestGeolocation } from './map-controls.js';
+>>>>>>> 40b96bcd6 (.)
 ```
 
 **API Esposta:**
@@ -98,12 +110,20 @@ this._layers = buildMapLayers(L);
 this._layers[this._currentLayer].addTo(this._map);
 ```
 
+<<<<<<< HEAD
 ### 4. `map-picker-styles.js`
+=======
+### 4. `map/styles.js`
+>>>>>>> 40b96bcd6 (.)
 
 Template literal CSS condiviso.
 
 ```javascript
+<<<<<<< HEAD
 import { mapPickerStylesText } from './map-picker-styles.js';
+=======
+import { mapStylesText } from './map/styles.js';
+>>>>>>> 40b96bcd6 (.)
 ```
 
 **Uso nel template Lit:**
@@ -111,7 +131,11 @@ import { mapPickerStylesText } from './map-picker-styles.js';
 ```javascript
 render() {
     return html`
+<<<<<<< HEAD
         <style>${mapPickerStylesText}</style>
+=======
+        <style>${mapStylesText}</style>
+>>>>>>> 40b96bcd6 (.)
         <!-- contenuto -->
     `;
 }
@@ -125,17 +149,28 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
+<<<<<<< HEAD
 import { renderControls, toggleFullscreen, zoomIn, zoomOut, switchLayer, requestGeolocation } from './map-picker-controls.js';
 import { renderSearch } from './map-picker-search.js';
 import { buildMapLayers } from './map-picker-layers.js';
 import { mapPickerStylesText } from './map-picker-styles.js';
+=======
+import { renderControls, toggleFullscreen, zoomIn, zoomOut, switchLayer, requestGeolocation } from './map-controls.js';
+import { renderSearch } from './map-picker-search.js';
+import { buildMapLayers } from './map-picker-layers.js';
+import { mapStylesText } from './map/styles.js';
+>>>>>>> 40b96bcd6 (.)
 
 class GeoMapLit extends LitElement {
     // ... proprietà ...
 
     render() {
         return html`
+<<<<<<< HEAD
             <style>${mapPickerStylesText}</style>
+=======
+            <style>${mapStylesText}</style>
+>>>>>>> 40b96bcd6 (.)
             <div class="map-container">
                 <div class="geo-map-leaflet"></div>
                 ${renderControls(this)}
@@ -198,7 +233,11 @@ L'import di `renderControls` **deve** avvenire dopo l'inizializzazione di Leafle
 ```javascript
 import L from 'leaflet';
 // ... plugin leaflet ...
+<<<<<<< HEAD
 import { renderControls } from './map-picker-controls.js';
+=======
+import { renderControls } from './map-controls.js';
+>>>>>>> 40b96bcd6 (.)
 ```
 
 ### Contesto Completo
@@ -211,7 +250,11 @@ switchLayer(this);         // → this._switchLayer()
 ```
 
 ### Styling CSS
+<<<<<<< HEAD
 Il CSS condiviso (`mapPickerStylesText`) include stile per:
+=======
+Il CSS condiviso (`mapStylesText`) include stile per:
+>>>>>>> 40b96bcd6 (.)
 - `.ctrl-btn` (bottoni controllo)
 - `.layer-controls-overlay` (pannello layer)
 - `.search-container` (barra ricerca)
@@ -228,14 +271,23 @@ playwright test geo-map-lit.spec.js   # specifico
 
 ### Verifica Parity
 ```bash
+<<<<<<< HEAD
 # 1. Apri segnalazioni-elenco
 curl http://127.0.0.1:8000/it/tests/segnalazioni-elenco | grep 'data-url'
+=======
+# 1. Apri ticket-list
+curl http://127.0.0.1:8000/it/tests/ticket-list | grep 'data-url'
+>>>>>>> 40b96bcd6 (.)
 
 # 2. Controlla presenza controlli
 grep -r 'ctrl-btn' laravel/Modules/Geo/resources/js/components/
 
 # 3. Verifica bundle condiviso
+<<<<<<< HEAD
 grep -r 'map-picker-controls' laravel/Modules/Geo/resources/js/
+=======
+grep -r 'map-controls' laravel/Modules/Geo/resources/js/
+>>>>>>> 40b96bcd6 (.)
 ```
 
 ## Troubleshooting
@@ -246,7 +298,11 @@ grep -r 'map-picker-controls' laravel/Modules/Geo/resources/js/
 
 ### Problema: Stile diverso da coordinate-picker-lit
 **Causa:** CSS non importato o sovrascritto.
+<<<<<<< HEAD
 **Fix:** Verificare `mapPickerStylesText` importato e che non ci sia CSS globale in conflitto.
+=======
+**Fix:** Verificare `mapStylesText` importato e che non ci sia CSS globale in conflitto.
+>>>>>>> 40b96bcd6 (.)
 
 ### Problema: `this` undefined nei handler
 **Causa:** Contesto perso nel template Lit.
@@ -262,7 +318,11 @@ grep -r 'map-picker-controls' laravel/Modules/Geo/resources/js/
 ## Best Practice
 
 1. **Non modificare** direttamente i moduli condivisi senza aggiornare entrambi i componenti
+<<<<<<< HEAD
 2. **Verificare** su entrambe le pagine (`segnalazioni-elenco` e `segnalazione-crea`)
+=======
+2. **Verificare** su entrambe le pagine (`ticket-list` e `segnalazione-crea`)
+>>>>>>> 40b96bcd6 (.)
 3. **Mantenere** lo stesso order di import per coerenza
 4. **Aggiornare** la documentazione in caso di cambiamenti API
 
@@ -271,7 +331,11 @@ grep -r 'map-picker-controls' laravel/Modules/Geo/resources/js/
 - [geo-map-lit](./entities/geo-map-lit.md) — Entità componente
 - [geo-map-controls-unification-rule](./concepts/geo-map-controls-unification-rule.md) — Regola parity
 - [coordinate-picker-lit](./entities/coordinate-picker-lit.md) — Componente input form
+<<<<<<< HEAD
 - [map-picker-controls](./concepts/map-picker-controls.md) — Dettagli moduli condivisi
+=======
+- [map-controls](./concepts/map-controls.md) — Dettagli moduli condivisi
+>>>>>>> 40b96bcd6 (.)
 
 ## Changelog
 

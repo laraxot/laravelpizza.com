@@ -1,16 +1,7 @@
-https://github.com/whitecube/laravel-cookie-consent
+---
+module: theme
+topic: cookie_consent
+canonical: ../../../Themes/docs/shared-components/cookie-consent.md
+---
 
-https://devpeel.com/how-to-add-gdpr-cookie-consent-in-laravel/#google_vignette
-
-https://codebrisk.com/blog/make-your-laravel-app-compliant-with-the-eu-gdpr-cookie-law
-
-https://github.com/statikbe/laravel-cookie-consent
-
-https://github.com/scify/laravel-cookies-consent
-
-
-
-
-
-
-
+See canonical documentation: ../../../Themes/docs/shared-components/cookie-consent.md

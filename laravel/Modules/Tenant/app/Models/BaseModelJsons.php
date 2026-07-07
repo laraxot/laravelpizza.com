@@ -9,7 +9,8 @@ use Modules\Tenant\Models\Traits\SushiToJsons;
 /**
  * Class BaseModelJsons.
  *
- * @property array $form
+ * @property array<string, mixed> $form
+ * @property array<string, mixed> $schema
  */
 abstract class BaseModelJsons extends BaseModel
 {

@@ -5,70 +5,69 @@ declare(strict_types=1);
 namespace Modules\Notify\Tests\Unit\Actions;
 
 use Modules\Notify\Actions\NormalizePhoneNumberAction;
+use Modules\Notify\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 use Spatie\QueueableAction\QueueableAction;
 
-describe('NormalizePhoneNumberAction', function () {
-    beforeEach(function () {
-        $action = new NormalizePhoneNumberAction;
-    });
+use function Safe\class_uses;
 
+uses(TestCase::class);
+
+describe('NormalizePhoneNumberAction', function () {
     it('can be instantiated', function () {
-        expect($action);
+        Assert::assertTrue(class_exists(NormalizePhoneNumberAction::class));
     });
 
     it('uses QueueableAction trait', function () {
-        $traits = class_uses($action);
-        expect($traits)->toContain(QueueableAction::class);
+        $traits = class_uses(NormalizePhoneNumberAction::class);
+        Assert::assertArrayHasKey(QueueableAction::class, $traits);
     });
 
     it('has execute method with correct signature', function () {
-        $reflection = new \ReflectionClass($action);
+        $reflection = new \ReflectionClass(NormalizePhoneNumberAction::class);
         $method = $reflection->getMethod('execute');
 
-        expect($method->isPublic())->toBeTrue();
-        expect($method->getNumberOfParameters())->toBe(1);
+        Assert::assertTrue($method->isPublic());
+        Assert::assertSame(1, $method->getNumberOfParameters());
     });
 
     it('execute accepts nullable string parameter', function () {
-        $reflection = new \ReflectionClass($action);
+        $reflection = new \ReflectionClass(NormalizePhoneNumberAction::class);
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
-        expect((string) $params[0]->getType())->toContain('string');
+        Assert::assertStringContainsString((string) 'string', (string) $params[0]->getType());
     });
 
     it('execute returns string', function () {
-        $reflection = new \ReflectionClass($action);
+        $reflection = new \ReflectionClass(NormalizePhoneNumberAction::class);
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
-        expect($returnType?->getName())->toBe('string');
+        \assertReflectionTypeName($returnType, 'string');
     });
 
     it('uses strict types', function () {
-        $reflection = new \ReflectionClass($action);
-        $filename = $reflection->getFileName();
-
-        expect($filename)->not->toBeNull();
-        $content = file_get_contents($filename);
-        expect($content)->toContain('declare(strict_types=1));');
+        $reflection = new \ReflectionClass(NormalizePhoneNumberAction::class);
+        $content = \notifyReflectionSource($reflection);
+        Assert::assertStringContainsString('declare(strict_types=1)', $content);
     });
 
     it('has correct namespace', function () {
-        $reflection = new \ReflectionClass($action);
+        $reflection = new \ReflectionClass(NormalizePhoneNumberAction::class);
 
-        expect($reflection->getNamespaceName())->toBe('Modules\Notify\Actions');
+        Assert::assertSame('Modules\Notify\Actions', $reflection->getNamespaceName());
     });
 
     it('has required imports', function () {
-        $filename = (new \ReflectionClass($action));
-        $content = file_get_contents($filename);
+        $content = \notifyReflectionSource(new \ReflectionClass(NormalizePhoneNumberAction::class));
 
-        expect($content)->toContain('use Modules\Xot\Actions\Cast\SafeStringCastAction);');
-        expect($content)->toContain('use Spatie\QueueableAction\QueueableAction);');
+        Assert::assertStringContainsString('use Modules\Xot\Actions\Cast\SafeStringCastAction', $content);
+        Assert::assertStringContainsString('use Spatie\QueueableAction\QueueableAction', $content);
     });
 
     it('implements queueable functionality', function () {
-        expect(method_exists($action, 'onQueue'));
+        $reflection = new \ReflectionClass(NormalizePhoneNumberAction::class);
+        Assert::assertTrue($reflection->hasMethod('onQueue'));
     });
 });

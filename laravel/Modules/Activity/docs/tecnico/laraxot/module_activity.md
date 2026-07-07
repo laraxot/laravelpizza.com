@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Modulo Activity
 
 ## Overview
@@ -145,3 +146,12 @@ class ActivityTest extends TestCase
    - Pulizia periodica dei log
    - Backup dei dati di attività
    - Monitoraggio delle performance 
+=======
+---
+module: theme
+topic: module_activity
+canonical: ../../../../../Themes/docs/shared-components/module-activity.md
+---
+
+See canonical documentation: ../../../../../Themes/docs/shared-components/module-activity.md
+>>>>>>> 40b96bcd6 (.)

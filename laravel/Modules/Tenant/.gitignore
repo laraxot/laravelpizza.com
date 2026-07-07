@@ -163,3 +163,19 @@ public_html
 lang/lang/
 _docs/
 _docs/
+Tests/
+
+# -----------------------------------------------------------------------------
+# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
+# -----------------------------------------------------------------------------
+*~HEAD
+*~BASE
+*~LOCAL
+*~REMOTE
+*.orig
+*.rej
+*~head
+
+
+# Second brain: no-docs-archive (wiki) — non tracciare albero legacy docs/archive/
+docs/archive/agentdb.rvf

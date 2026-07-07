@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Directory Structure Rules - No Duplications (DRY)
 
 ## Regola Fondamentale
@@ -72,3 +73,12 @@ find laravel/Modules -path "*/lang/lang" -type d
 - `/var/www/_bases/base_laravelpizza/laravel/Modules/Xot/lang/`
 
 Entrambi hanno struttura corretta senza duplicazioni.
+=======
+---
+module: theme
+topic: directory-structure-rules-1
+canonical: ../../../Themes/docs/shared-components/DIRECTORY_STRUCTURE_RULES.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/DIRECTORY_STRUCTURE_RULES.md
+>>>>>>> 40b96bcd6 (.)

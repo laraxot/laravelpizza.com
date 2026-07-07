@@ -7,11 +7,12 @@ namespace Modules\Notify\Tests\Unit\Console\Commands;
 use Illuminate\Console\Command;
 use Modules\Notify\Console\Commands\SendMailCommand;
 
+use PHPUnit\Framework\Assert;
 describe('SendMailCommand', function () {
     it('has correct signature', function () {
         $command = new SendMailCommand;
 
-        expect($command->getName())->toBe('notify:send-mail');
+        Assert::assertSame('notify:send-mail', $command->getName());
     });
 
     it('has description', function () {
@@ -19,19 +20,21 @@ describe('SendMailCommand', function () {
 
         $description = $command->getDescription();
 
-        expect($description)->not->toBeEmpty();
-        expect($description)->toBeString();
+        Assert::assertNotEmpty($description);
     });
 
     it('extends command', function () {
         $command = new SendMailCommand;
 
+<<<<<<< HEAD
         expect($command)->toBeInstanceOf(Command::class);
+=======
+        Assert::assertInstanceOf(Command::class, $command);
+>>>>>>> 40b96bcd6 (.)
     });
 
     it('has handle method', function () {
         $command = new SendMailCommand;
 
-        expect(method_exists($command, 'handle'))->toBeTrue();
-    });
+            });
 });

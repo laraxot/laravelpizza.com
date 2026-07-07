@@ -162,3 +162,6 @@ return [
 - [Regole di Naming per i File di Traduzione](./TRANSLATION_FILE_NAMING_RULES.md)
 - [Guida alla Struttura dei File di Traduzione](./TRANSLATION_FILE_STRUCTURE_GUIDE.md)
 - [Progresso della Standardizzazione](./TRANSLATION_STANDARDS_PROGRESS.md)
+- [Regole di Naming per i File di Traduzione](./TRANSLATION_FILE_NAMING_RULES.md)
+- [Guida alla Struttura dei File di Traduzione](./TRANSLATION_FILE_STRUCTURE_GUIDE.md)
+- [Progresso della Standardizzazione](./TRANSLATION_STANDARDS_PROGRESS.md)

@@ -439,4 +439,3 @@ Dopo aver applicato le correzioni:
 - [Root PHPStan Rules](../../../../docs/phpstan_rules.md)
 - [Lang Module Structure](./readme.md)
 - [Xot Safe Casting Actions](../../xot/docs/safe-casting-actions.md)
-

@@ -44,6 +44,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  */
 class TestSushiModel extends BaseModel
 {
+    /** @phpstan-use HasXotFactory<TestSushiModelFactory> */
     use HasXotFactory;
     use SushiToJson;
 
@@ -52,7 +53,7 @@ class TestSushiModel extends BaseModel
      *
      * @var array<string, string>
      */
-    protected $form = [
+    protected array $schema = [
         'id' => 'integer',
         'name' => 'string',
         'description' => 'string',
@@ -76,8 +77,6 @@ class TestSushiModel extends BaseModel
 
     /**
      * Gli attributi che sono assegnabili in massa.
-     *
-     * @var list<string>
      */
     protected $fillable = [
         'name',

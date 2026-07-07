@@ -75,6 +75,7 @@ Le azioni di provider devono sempre:
        sender: $smsData->from,
        reference: null,
        scheduledDate: null
+       scheduledDate: null
    );
    ```
 

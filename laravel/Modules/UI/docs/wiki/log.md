@@ -1,5 +1,21 @@
+<<<<<<< HEAD
 # UI Wiki Log
 
+=======
+## [2026-06-05] docs | HackerNoon harness — tips 001-022 in wiki locale
+
+- Stub/checklist: second-brain → canon Xot, ai-harness, [hackernoon map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md), [llm-wiki.txt](../../../../../bashscripts/tools/prompts/llm-wiki.txt)
+- GitHub: [#272](https://github.com/laraxot/base_fixcity_fila5/issues/272) / [D#273](https://github.com/laraxot/base_fixcity_fila5/discussions/273)
+
+# UI Wiki Log
+
+## [2026-05-21] bugfix | auth register focus perso per overlay header mobile
+- Nuova pagina: `concepts/auth-register-focus-loss-overlay.md`.
+- Root cause identificata in `x-ui.marketing.header`: container mobile fullscreen `fixed` che intercettava i click anche a menu chiuso.
+- Fix: `x-show="mobileMenuOpen"` + `style="display:none"` + `pointer-events-none` da chiuso / `pointer-events-auto` da aperto.
+- Verifica manuale: su `/it/auth/register` focus input stabile e digitazione ripristinata.
+
+>>>>>>> 40b96bcd6 (.)
 ## [2026-05-06] phpstan | Dynamic array normalization
 - Nuova pagina: `concepts/phpstan-dynamic-array-normalization.md`.
 - Documentato pattern per convertire output dinamici action/Livewire in array tipizzati senza `@var` inline, ignore o baseline.

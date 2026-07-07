@@ -19,7 +19,7 @@ class ThemeComposer
      *
      * @throws \Exception if supportedLocales config is not an array
      *
-     * @return DataCollection<LangData>
+     * @return DataCollection<int, LangData>
      */
     public function languages(): DataCollection
     {
@@ -87,7 +87,7 @@ class ThemeComposer
     /**
      * Get all languages except the current one.
      *
-     * @return DataCollection<LangData>
+     * @return DataCollection<int, LangData>
      */
     public function otherLanguages(): DataCollection
     {

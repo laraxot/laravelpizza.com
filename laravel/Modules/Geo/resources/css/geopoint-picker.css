@@ -79,13 +79,21 @@
     opacity: 1 !important;
 }
 
+<<<<<<< HEAD
 /* Search box */
+=======
+/* Search box — nascosta di default, si mostra solo dopo click sulla lente */
+>>>>>>> 40b96bcd6 (.)
 .search-box {
     position: absolute;
     top: 1rem;
     right: 1rem;
     z-index: 1000;
+<<<<<<< HEAD
     display: flex;
+=======
+    display: none;
+>>>>>>> 40b96bcd6 (.)
     gap: 0.5rem;
     background: rgba(255, 255, 255, 0.95);
     padding: 0.5rem;
@@ -94,6 +102,14 @@
     max-width: 280px;
 }
 
+<<<<<<< HEAD
+=======
+/* Mostra solo quando aperta dal toggle (classe aggiunta da renderSearch / toggleSearch) */
+.search-box.geo-search-expanded {
+    display: flex;
+}
+
+>>>>>>> 40b96bcd6 (.)
 .search-box input {
     border: 1px solid #d1d5db;
     border-radius: 0.375rem;

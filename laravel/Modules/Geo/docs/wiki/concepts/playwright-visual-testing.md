@@ -61,4 +61,8 @@ test('map renders with markers', async ({ page }) => {
 ---
 *Vedi anche:*
 - [Visual Control Mastery](../../../../../docs/wiki/concepts/visual-control-mastery.md)
+<<<<<<< HEAD
 - [Coordinate Picker Rule](./coordinate-picker-lit-wizard-fullscreen-rule.md)
+=======
+- [Coordinate Picker Rule](./coordinate-picker-lit-wizard-fullscreen-rule.md)
+>>>>>>> 40b96bcd6 (.)

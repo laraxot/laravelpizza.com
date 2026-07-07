@@ -30,6 +30,7 @@ class SendTelegramPage extends XotBasePage
 {
     // use NavigationLabelTrait;
 
+    /** @var array<string, mixed>|null */
     public ?array $telegramData = [];
 
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-paper-airplane';
@@ -134,10 +135,11 @@ class SendTelegramPage extends XotBasePage
         ];
     }
 
+    /** @return array<string, \Filament\Actions\Action> */
     protected function getTelegramFormActions(): array
     {
         return [
-            Action::make('telegramFormActions')->submit('telegramFormActions'),
+            'submit' => Action::make('telegramFormActions')->submit('telegramFormActions'),
         ];
     }
 

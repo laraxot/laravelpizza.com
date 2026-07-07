@@ -41,6 +41,7 @@
 ## Risultato finale
 ✅ **0 errori PHPStan**  
 ✅ **Type safety migliorato**  
+<<<<<<< HEAD
 ✅ **Codice più robusto**
 
 ## aggiornamento successivo
@@ -61,3 +62,6 @@
 ### risultato verifica
 
 - `./vendor/bin/phpstan analyse Modules/Activity --level=max --no-progress` -> **0 errori**
+=======
+✅ **Codice più robusto**
+>>>>>>> 40b96bcd6 (.)

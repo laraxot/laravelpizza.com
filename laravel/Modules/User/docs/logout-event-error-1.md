@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Analisi dell'Errore negli Eventi di Logout
 
 ## Collegamenti correlati
@@ -143,3 +144,12 @@ Si raccomanda di implementare l'**Opzione 1** perché:
 3. Garantisce che gli eventi di logout abbiano sempre accesso all'utente che si è disconnesso
 
 Questa modifica risolverà l'errore `Call to a member function getAuthIdentifier() on null` e garantirà un corretto funzionamento del processo di logout.
+=======
+---
+module: theme
+topic: logout-event-error-1
+canonical: ../../../Themes/docs/shared-components/logout-event-error-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/logout-event-error-1.md
+>>>>>>> 40b96bcd6 (.)

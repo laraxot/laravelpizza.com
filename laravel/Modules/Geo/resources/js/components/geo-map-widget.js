@@ -96,12 +96,32 @@ export class GeoMapWidget extends LitElement {
 
         this._clusterGroup.addLayer(geoJsonLayer);
         this._map.addLayer(this._clusterGroup);
+<<<<<<< HEAD
         
+=======
+
+        const initialRadius = this.calculateRadius(this._map.getZoom());
+        this._clusterGroup.setMaxClusterRadius(initialRadius);
+        this._map.on('zoomend', this._onZoomEnd.bind(this));
+
+>>>>>>> 40b96bcd6 (.)
         if (geoJson.features?.length > 0) {
             this._map.fitBounds(this._clusterGroup.getBounds());
         }
     }
 
+<<<<<<< HEAD
+=======
+    calculateRadius(zoom) {
+        return zoom < 12 ? 80 : 45;
+    }
+
+    _onZoomEnd() {
+        const radius = this.calculateRadius(this._map.getZoom());
+        this._clusterGroup.setMaxClusterRadius(radius);
+    }
+
+>>>>>>> 40b96bcd6 (.)
     disconnectedCallback() {
         if (this._map) {
             this._map.remove();

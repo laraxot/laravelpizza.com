@@ -7,7 +7,7 @@ namespace Modules\Gdpr\Enums;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasLabel;
-use Modules\Xot\Filament\Traits\TransTrait;
+use Modules\Xot\Traits\EnumTrait;
 
 /**
  * Enum ConsentType.
@@ -17,7 +17,7 @@ use Modules\Xot\Filament\Traits\TransTrait;
  */
 enum ConsentType: string implements HasColor, HasIcon, HasLabel
 {
-    use TransTrait;
+    use EnumTrait;
 
     // Marketing communications
     case MARKETING_EMAIL = 'marketing_email';
@@ -42,26 +42,6 @@ enum ConsentType: string implements HasColor, HasIcon, HasLabel
     case RESEARCH = 'research';
     case PROFILING = 'profiling';
     case AUTOMATED_DECISION_MAKING = 'automated_decision_making';
-
-    public function getLabel(): string
-    {
-        return $this->transClass(self::class, $this->value.'.label');
-    }
-
-    public function getColor(): string
-    {
-        return $this->transClass(self::class, $this->value.'.color');
-    }
-
-    public function getIcon(): string
-    {
-        return $this->transClass(self::class, $this->value.'.icon');
-    }
-
-    public function getDescription(): string
-    {
-        return $this->transClass(self::class, $this->value.'.description');
-    }
 
     /**
      * Check if this consent type is required for using the service.

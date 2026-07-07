@@ -4,28 +4,37 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Providers;
 
+<<<<<<< HEAD
 uses(TestCase::class);
 
 use Modules\Gdpr\Providers\Filament\AdminPanelProvider;
 use Modules\Gdpr\Tests\TestCase;
+=======
+use Modules\Gdpr\Providers\Filament\AdminPanelProvider;
+use Modules\Gdpr\Tests\TestCase;
+use Modules\Xot\Providers\Filament\XotBasePanelProvider;
+use PHPUnit\Framework\Assert;
+>>>>>>> 40b96bcd6 (.)
 
-test('admin_panel_provider_extends_xot_base_panel_provider', function () {
+uses(TestCase::class);
+
+test('admin_panel_provider_extends_xot_base_panel_provider', function (): void {
     $provider = new AdminPanelProvider(app());
 
-    expect($provider)->toBeInstanceOf(Modules\Xot\Providers\Filament\XotBasePanelProvider::class);
+    Assert::assertInstanceOf(XotBasePanelProvider::class, $provider);
 });
 
-test('admin_panel_provider_has_module_property', function () {
+test('admin_panel_provider_has_module_property', function (): void {
     $provider = new AdminPanelProvider(app());
-    $reflection = new ReflectionClass($provider);
+    $reflection = new \ReflectionClass($provider);
     $property = $reflection->getProperty('module');
     $property->setAccessible(true);
 
-    expect($property->getValue($provider))->toBe('Gdpr');
+    Assert::assertSame('Gdpr', $property->getValue($provider));
 });
 
-test('admin_panel_provider_has_panel_method', function () {
+test('admin_panel_provider_has_panel_method', function (): void {
     $provider = new AdminPanelProvider(app());
 
-    expect(method_exists($provider, 'panel'))->toBeTrue();
+    Assert::assertTrue((new \ReflectionClass($provider))->hasMethod('panel'));
 });

@@ -24,4 +24,5 @@ In <nome progetto>, la **prima scelta per i componenti Blade** sono SEMPRE i [co
 ## Collegamenti
 - [Documentazione Filament Blade Components](https://filamentphp.com/project_docs/3.x/support/blade-components/overview)
 - [README Notify](README.md)
+- [README Notify](README.md)
 - [queueable-action.md](queueable-action.md)

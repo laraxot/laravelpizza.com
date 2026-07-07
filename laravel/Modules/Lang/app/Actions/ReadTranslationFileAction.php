@@ -50,7 +50,20 @@ class ReadTranslationFileAction
             throw new \Exception("File di traduzione non valido: {$filePath}");
         }
 
+<<<<<<< HEAD
         return $this->assertStringKeyedArray($translations);
+=======
+        Assert::isArray($translations);
+
+        foreach (array_keys($translations) as $translationKey) {
+            Assert::string($translationKey);
+        }
+
+        /** @var array<string, mixed> $result */
+        $result = $translations;
+
+        return $result;
+>>>>>>> 40b96bcd6 (.)
     }
 
     /**

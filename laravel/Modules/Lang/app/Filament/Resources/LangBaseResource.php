@@ -18,6 +18,9 @@ abstract class LangBaseResource extends XotBaseResource
         return Config::string('app.locale', 'it');
     }
 
+    /**
+     * @return array<int, string>
+     */
     public static function getTranslatableLocales(): array
     {
         return ['it', 'en'];

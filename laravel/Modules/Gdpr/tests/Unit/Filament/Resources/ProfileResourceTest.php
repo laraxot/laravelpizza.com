@@ -4,26 +4,38 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Unit\Filament\Resources;
 
+<<<<<<< HEAD
 uses(TestCase::class);
 
 use Modules\Gdpr\Filament\Resources\ProfileResource;
 use Modules\Gdpr\Tests\TestCase;
+=======
+use Modules\Gdpr\Filament\Resources\ProfileResource;
+use Modules\Gdpr\Models\Profile;
+use Modules\Gdpr\Tests\TestCase;
+use Modules\Xot\Filament\Resources\XotBaseResource;
+use PHPUnit\Framework\Assert;
+>>>>>>> 40b96bcd6 (.)
 
-test('profile_resource_extends_xot_base_resource', function () {
-    expect(is_subclass_of(ProfileResource::class, Modules\Xot\Filament\Resources\XotBaseResource::class))->toBeTrue();
+uses(TestCase::class);
+
+test('profile_resource_extends_xot_base_resource', function (): void {
+    Assert::assertInstanceOf(XotBaseResource::class, new ProfileResource());
 });
 
-test('profile_resource_model_is_profile', function () {
+test('profile_resource_model_is_profile', function (): void {
     $resource = new ProfileResource();
-    expect($resource->getModel())->toBe(Modules\Gdpr\Models\Profile::class);
+
+    Assert::assertSame(Profile::class, $resource->getModel());
 });
 
-test('profile_resource_has_form_schema', function () {
-    expect(method_exists(ProfileResource::class, 'getFormSchema'))->toBeTrue();
+test('profile_resource_has_form_schema', function (): void {
+    Assert::assertTrue((new \ReflectionClass(ProfileResource::class))->hasMethod('getFormSchema'));
 });
 
-test('profile_resource_has_pages', function () {
-    expect(method_exists(ProfileResource::class, 'getPages'))->toBeTrue();
+test('profile_resource_has_pages', function (): void {
+    Assert::assertTrue((new \ReflectionClass(ProfileResource::class))->hasMethod('getPages'));
     $pages = ProfileResource::getPages();
-    expect($pages)->toBeArray();
+
+    Assert::assertNotEmpty($pages);
 });

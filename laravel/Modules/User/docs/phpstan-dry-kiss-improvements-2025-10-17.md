@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PHPStan Level 10 + DRY/KISS Improvements - User Module
 
 ## Summary
@@ -234,3 +235,12 @@ When creating new models in User module:
 
 *Last Updated: 17 October 2025*
 *Status: ✅ PHPStan Level 10 Compliant*
+=======
+---
+module: theme
+topic: phpstan-dry-kiss-improvements-2025-10-17
+canonical: ../../../Themes/docs/shared-components/phpstan-dry-kiss-improvements-.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-dry-kiss-improvements-.md
+>>>>>>> 40b96bcd6 (.)

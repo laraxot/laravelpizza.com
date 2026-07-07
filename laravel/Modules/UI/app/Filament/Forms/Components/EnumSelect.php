@@ -104,6 +104,12 @@ final class EnumSelect extends Select
         return $enum instanceof \BackedEnum ? $enum : null;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @return array<int|string, string>
+     */
+>>>>>>> 40b96bcd6 (.)
     protected function generateOptions(): array
     {
         $enumClass = $this->evaluate($this->enumClass);

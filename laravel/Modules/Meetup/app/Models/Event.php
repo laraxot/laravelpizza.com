@@ -263,6 +263,62 @@ class Event extends BaseModel
     }
 
     /**
+     * Scope: only published events.
+     *
+     * @param  Builder<Event>  $query
+     * @return Builder<Event>
+     */
+    public function scopePublished(Builder $query): Builder
+    {
+        return $query->where('status', 'published');
+    }
+
+    /**
+     * Scope: events visible to a specific user.
+     * Published events are visible to all.
+     * Pending events are visible only to their owner.
+     *
+     * @param  Builder<Event>  $query
+     * @param  User|null  $user
+     * @return Builder<Event>
+     */
+    public function scopeVisibleTo(Builder $query, ?User $user): Builder
+    {
+        return $query->where(function (Builder $q) use ($user): void {
+            $q->where('status', 'published');
+
+            if ($user !== null) {
+                $q->orWhere(function (Builder $sub) use ($user): void {
+                    $sub->where('status', 'pending')
+                        ->where('user_id', $user->id);
+                });
+            }
+        });
+    }
+
+    /**
+     * Scope: filter events visible to a user.
+     *
+     * @param  Builder<Event>  $query
+     * @param  User|null  $user
+     * @return Builder<Event>
+     */
+    public function scopeVisibleTo(Builder $query, ?User $user = null): Builder
+    {
+        if ($user !== null && $user->hasRole('super-admin')) {
+            return $query;
+        }
+
+        return $query->where(function (Builder $q) use ($user): void {
+            $q->where('status', 'published');
+
+            if ($user !== null) {
+                $q->orWhere('user_id', $user->id);
+            }
+        });
+    }
+
+    /**
      * Scope: only upcoming events (start_date >= now).
      *
      * @param  Builder<Event>  $query
@@ -324,13 +380,14 @@ class Event extends BaseModel
     {
         $startDate = $this->start_date ?? Carbon::now();
         $endDate = $this->end_date ?? $startDate;
-        $status = $startDate->isFuture() ? 'upcoming' : 'past';
+        $timingStatus = $startDate->isFuture() ? 'upcoming' : 'past';
 
         return [
             'id' => $this->id,
             'slug' => $this->slug,
-            'status' => $status,
-            'status_label' => ucfirst($status),
+            'timing_status' => $timingStatus,
+            'status' => $this->status, // draft, pending, published
+            'status_label' => ucfirst($this->status),
             'title' => $this->title,
             'description' => $this->description,
             'date' => $startDate->format('F j, Y'),

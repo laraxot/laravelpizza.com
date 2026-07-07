@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Commands Index"
 type: index
@@ -43,3 +44,22 @@ Le Commands progettuali vivono qui, nel wiki del Module **Media**, e vengono car
 3. Aggiorna questo indice se la Commands e' ricorrente
 4. Committa: `docs: add commands <nome>`
 
+=======
+# Media Module - commands Index
+
+## Purpose
+Index for Media module commands.
+
+## On-Demand Loading
+
+```bash
+qmd search "Media commands" --limit 5
+```
+
+## See Also
+- [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+- [Root Wiki](../../../docs/wiki/)
+
+---
+*Updated: 2026-05-11*
+>>>>>>> 40b96bcd6 (.)

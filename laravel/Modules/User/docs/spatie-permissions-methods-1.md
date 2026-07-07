@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # User Module - Spatie Permission Methods Reference
 
 ## Overview
@@ -487,3 +488,12 @@ $user->assignRole(Role::findByName('admin', 'web'));
 **Autore**: Claude Code
 **Data**: 2025-10-15
 **Versione**: 1.0.0
+=======
+---
+module: theme
+topic: spatie-permissions-methods-1
+canonical: ../../../Themes/docs/shared-components/spatie_permissions_methods.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/spatie_permissions_methods.md
+>>>>>>> 40b96bcd6 (.)

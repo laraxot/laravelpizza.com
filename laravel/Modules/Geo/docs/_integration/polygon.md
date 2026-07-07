@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # poligon
 
 <!-- Contenuto migrato da _docs/poligon.txt -->
@@ -105,3 +106,12 @@ https://laraveldaily.com/laravel-find-addresses-with-coordinates-via-google-maps
 https://css-tricks.com/lets-make-a-form-that-puts-current-location-to-use-in-a-map/
 
 
+=======
+---
+module: theme
+topic: polygon
+canonical: ../../../../Themes/docs/shared-components/poligon.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/poligon.md
+>>>>>>> 40b96bcd6 (.)

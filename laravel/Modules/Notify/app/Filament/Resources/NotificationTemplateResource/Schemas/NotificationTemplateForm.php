@@ -34,7 +34,11 @@ class NotificationTemplateForm extends XotBaseResourceForm
                 ->translateLabel(),
             'type' => Select::make('type')
                 ->options(collect(NotificationTypeEnum::cases())
+<<<<<<< HEAD
                     ->mapWithKeys(fn ($type) => [$type->value => $type->label()]))
+=======
+                    ->mapWithKeys(fn (NotificationTypeEnum $type): array => [$type->value => $type->getLabel()]))
+>>>>>>> 40b96bcd6 (.)
                 ->required()
                 ->default(NotificationTypeEnum::EMAIL->value)
                 ->helperText(__('notify::template.form.type.helper'))

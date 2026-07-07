@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Filament\Resources\AddressResource\Schemas;
 
+<<<<<<< HEAD
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -13,16 +14,25 @@ use Filament\Schemas\Components\Utilities\Set;
 use Modules\Geo\Models\Locality;
 use Modules\Geo\Models\Province;
 use Modules\Geo\Models\Region;
+=======
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
+>>>>>>> 40b96bcd6 (.)
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 class AddressForm extends XotBaseResourceForm
 {
     /**
+<<<<<<< HEAD
      * @return array<int|string, SchemaComponent>
+=======
+     * @return array<int|string, Component>
+>>>>>>> 40b96bcd6 (.)
      */
     public static function getFormSchema(): array
     {
         return [
+<<<<<<< HEAD
             'name' => TextInput::make('name')->maxLength(255),
             'country' => TextInput::make('country') // Nazione
                 ->maxLength(255)
@@ -73,6 +83,9 @@ class AddressForm extends XotBaseResourceForm
             'route' => TextInput::make('route')->required()->maxLength(255),
             'street_number' => TextInput::make('street_number')->maxLength(20),
             'is_primary' => Toggle::make('is_primary')->default(false),
+=======
+            'main' => TextInput::make('name'),
+>>>>>>> 40b96bcd6 (.)
         ];
     }
 }

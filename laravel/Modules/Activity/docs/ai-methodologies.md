@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI Methodologies Handbook
 
 This file is a DRY local index for AI workflows in this module or theme.
@@ -19,3 +20,12 @@ This file is a DRY local index for AI workflows in this module or theme.
 ## OpenViking Rule
 
 Do not duplicate installation or runtime setup here. Keep operational details only in the canonical guide and use this file as a local routing document.
+=======
+---
+module: theme
+topic: ai-methodologies
+canonical: ../../../Themes/docs/shared-components/ai-methodologies.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/ai-methodologies.md
+>>>>>>> 40b96bcd6 (.)

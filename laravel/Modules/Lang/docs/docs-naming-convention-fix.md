@@ -1,6 +1,7 @@
 # Correzione Convenzione Naming Cartelle Docs - Gennaio 2025
 
 ## Data Aggiornamento
+2025-01-27
 [DATE]
 
 ## Problema Identificato
@@ -80,6 +81,7 @@ Tutti i file e le sottocartelle nelle cartelle `docs` ora rispettano la convenzi
 # Correzione Convenzione Naming Cartelle Docs - Gennaio 2025
 
 ## Data Aggiornamento
+2025-01-27
 [DATE]
 
 ## Problema Identificato

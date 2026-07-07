@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sessione Super Mucca - 2025-01-22
 
 **Data**: 2025-01-22
@@ -179,3 +180,12 @@ Dopo aver studiato tutto, la domanda: **Cosa implementare ORA?**
 **Versione**: 1.0.0
 **Status**: Sessione completata con successo
 **Metodologia**: Super Mucca ✅
+=======
+---
+module: theme
+topic: super-mucca-session-1
+canonical: ../../../Themes/docs/shared-components/super-mucca-session-.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/super-mucca-session-.md
+>>>>>>> 40b96bcd6 (.)

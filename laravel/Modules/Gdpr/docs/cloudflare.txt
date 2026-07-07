@@ -1,3 +1,7 @@
-https://coderflex.com/blog/mastering-filament-turnstile-enhancing-web-security-with-cloudflare-integration
-https://github.com/coderflexx/filament-turnstile
+---
+module: theme
+topic: cloudflare
+canonical: ../../../Themes/docs/shared-components/cloudflare.md
+---
 
+See canonical documentation: ../../../Themes/docs/shared-components/cloudflare.md

@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Str;
+use Modules\Tenant\Services\Config\ConfigStringKeyFilter;
 use Modules\Tenant\Services\Config\Contracts\ConfigResolverInterface;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Actions\Model\GetAllModelsByModuleNameAction;
@@ -33,27 +34,49 @@ class MorphMapConfigResolver implements ConfigResolverInterface
             throw new Exception('Invalid module name from request segment');
         }
 
-        // Use action directly instead of helper function to avoid autoload issues during package:discover
         /** @var GetAllModelsByModuleNameAction $action */
         $action = app(GetAllModelsByModuleNameAction::class);
         /** @var array<string, class-string> $models */
         $models = $action->execute($moduleName);
-        $originalConf = $this->getOriginalConfig();
-        $tenantConf = $this->getTenantConfig();
 
-        // Use array_merge to avoid PHPStan type issues with Collection::merge()
         /** @var array<string, mixed> $mergedConf */
-        $mergedConf = array_merge($models, $originalConf, $tenantConf);
+        $mergedConf = array_merge($models, $this->getOriginalConfig(), $this->getTenantConfig());
 
         Config::set('morph_map', $mergedConf);
 
-        $result = config($key);
+        $result = $this->fetchValidatedMorphMap($key);
 
-        if (! is_numeric($result) && ! is_string($result) && ! is_array($result)) {
-            throw new Exception('Invalid morph_map configuration type');
+        if ($result === null) {
+            return $default;
         }
 
         return $result;
+    }
+
+    /**
+     * @return float|int|string|array<mixed>|null
+     */
+    private function fetchValidatedMorphMap(string $key): float|int|string|array|null
+    {
+        $result = config($key);
+
+        if ($result === null) {
+            return null;
+        }
+
+        if (is_array($result)) {
+            return $result;
+        }
+
+        if (is_numeric($result)) {
+            return $result;
+        }
+
+        if (is_string($result)) {
+            return $result;
+        }
+
+        return null;
     }
 
     /**
@@ -62,19 +85,8 @@ class MorphMapConfigResolver implements ConfigResolverInterface
     private function getOriginalConfig(): array
     {
         $config = config('morph_map');
-        if (! is_array($config)) {
-            return [];
-        }
 
-        /** @var array<string, mixed> $result */
-        $result = [];
-        foreach ($config as $key => $value) {
-            if (is_string($key)) {
-                $result[$key] = $value;
-            }
-        }
-
-        return $result;
+        return is_array($config) ? ConfigStringKeyFilter::onlyStringKeys($config) : [];
     }
 
     /**
@@ -89,18 +101,7 @@ class MorphMapConfigResolver implements ConfigResolverInterface
         }
 
         $config = File::getRequire($path);
-        if (! is_array($config)) {
-            return [];
-        }
 
-        /** @var array<string, mixed> $result */
-        $result = [];
-        foreach ($config as $key => $value) {
-            if (is_string($key)) {
-                $result[$key] = $value;
-            }
-        }
-
-        return $result;
+        return is_array($config) ? ConfigStringKeyFilter::onlyStringKeys($config) : [];
     }
 }

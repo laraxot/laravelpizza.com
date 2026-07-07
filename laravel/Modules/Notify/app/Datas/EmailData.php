@@ -23,8 +23,12 @@ class EmailData extends Data
 
     public string $body = '';
 
+    /** @var list<string> */
     public array $attachments = [];
 
+    /**
+     * @param  list<string>  $attachments
+     */
     public function __construct(
         string $recipient,
         string $subject,

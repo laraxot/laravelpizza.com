@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # User {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** User
@@ -138,3 +139,12 @@ Related:
 - [Project Wiki Integration](../../docs/wiki/README.md)
 - [Project Wiki Agent Instructions](../../docs/wiki/AGENTS.md)
 - [Module Documentation](../README.md)
+=======
+---
+module: theme
+topic: AGENTS
+canonical: ../../../../Themes/docs/shared-components/AGENTS-Modules.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/AGENTS-Modules.md
+>>>>>>> 40b96bcd6 (.)

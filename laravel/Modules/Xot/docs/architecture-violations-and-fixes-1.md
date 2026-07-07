@@ -343,4 +343,8 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 
 **Ultimo Aggiornamento**: Gennaio 2025
 **Stato**: ✅ Pattern Documentato e Implementato
+<<<<<<< HEAD
 **Responsabile**: Team Architettura Laraxot
+=======
+**Responsabile**: Team Architettura Laraxot
+>>>>>>> 40b96bcd6 (.)

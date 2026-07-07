@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Geo Module - User Research
 
 **Module:** Geo  
@@ -84,3 +85,12 @@ Users want location data control.
 
 ---
 
+=======
+---
+module: theme
+topic: user-research
+canonical: ../../../Themes/docs/shared-components/USER_RESEARCH-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/USER_RESEARCH-Modules.md
+>>>>>>> 40b96bcd6 (.)

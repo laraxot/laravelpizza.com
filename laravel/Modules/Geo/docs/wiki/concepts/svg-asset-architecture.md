@@ -58,4 +58,8 @@ laravel/Modules/User/resources/svg/user-profile.svg
 
 - `bashscripts/ai/.claude/rules/svg-asset-location.md`
 - `geo-heroicons.js` — registry icone Lit
+<<<<<<< HEAD
 - `map-picker-styles.js` — stili e controlli mappa
+=======
+- `map/styles.js` — stili e controlli mappa
+>>>>>>> 40b96bcd6 (.)

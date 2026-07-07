@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Merge Conflict Files List
 
 This file contains a comprehensive list of files with merge conflict markers (`<<<< HEAD` or `<<<< .merge_file`) that need to be resolved.
@@ -80,3 +81,12 @@ This file contains a comprehensive list of files with merge conflict markers (`<
 *Generated on: $(date)
 *Total files: 96
 *Status: Pending resolution*
+=======
+---
+module: theme
+topic: merge-conflict-files-list
+canonical: ../../../Themes/docs/shared-components/merge-conflict-files-list.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/merge-conflict-files-list.md
+>>>>>>> 40b96bcd6 (.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Modulo User
 
 ## Informazioni Generali
@@ -148,3 +149,12 @@ Le modifiche vengono tracciate nel repository GitHub.
 Le modifiche vengono tracciate nel repository GitHub.
 
 ---
+=======
+---
+module: theme
+topic: module-user-1
+canonical: ../../../Themes/docs/shared-components/module-user-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/module-user-1.md
+>>>>>>> 40b96bcd6 (.)

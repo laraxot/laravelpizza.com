@@ -415,4 +415,8 @@ try {
 **Data Analisi**: 2025-01-06
 **Analista**: AI Code Review System
 **Priorità**: CRITICA - Richiede intervento immediato
+<<<<<<< HEAD
 **Stima Effort**: 40-60 ore di refactoring
+=======
+**Stima Effort**: 40-60 ore di refactoring
+>>>>>>> 40b96bcd6 (.)

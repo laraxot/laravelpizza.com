@@ -10,4 +10,8 @@
   - [ ] La documentazione delle transizioni specifica i parametri richiesti
 - **Collegamenti**:
   - [Errori comuni nelle transizioni custom (<nome progetto>)](../../<nome progetto>/docs/model-states-errors.md)
+<<<<<<< HEAD
   - [README.md centrale](../../../../docs/readme.md)
+=======
+  - [README.md centrale](../../../../docs/readme.md)
+>>>>>>> 40b96bcd6 (.)

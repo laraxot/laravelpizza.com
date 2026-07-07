@@ -42,7 +42,10 @@
   "autoload-dev": {
     "psr-4": {
       "Modules\\Notify\\Tests\\": "tests/"
-    }
+    },
+    "files": [
+      "tests/Support/helpers.php"
+    ]
   },
   "require": {
     "aws/aws-sdk-php": "*",

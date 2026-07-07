@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Filament\Resources;
-
 use Filament\Actions\Action;
+use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\RichEditor;
@@ -14,57 +14,42 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Group;
 use Filament\Schemas\Components\Section;
-use Filament\Schemas\Components\View;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Notify\Filament\Resources\ContactResource;
-use Modules\Notify\Filament\Resources\ContactResource\Pages\EditContact;
 use Modules\Notify\Filament\Resources\ContactResource\Pages\ListContacts;
 use Modules\Notify\Filament\Resources\MailTemplateResource;
 use Modules\Notify\Filament\Resources\MailTemplateResource\Pages\ListMailTemplates;
-use Modules\Notify\Filament\Resources\MailTemplateResource\Pages\PreviewMailTemplate;
 use Modules\Notify\Filament\Resources\NotificationResource;
 use Modules\Notify\Filament\Resources\NotificationResource\Pages\ListNotifications;
-use Modules\Notify\Filament\Resources\NotificationResource\Pages\ViewNotification;
 use Modules\Notify\Filament\Resources\NotificationTemplateResource;
 use Modules\Notify\Filament\Resources\NotificationTemplateResource\Pages\PreviewNotificationTemplate;
+use Modules\Notify\Tests\Fixtures\EditContactTestProxy;
+use Modules\Notify\Tests\Fixtures\PreviewMailTemplateTestProxy;
+use Modules\Notify\Tests\Fixtures\ViewNotificationTestProxy;
 use Modules\Notify\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+use function Safe\file_put_contents;
+use function Safe\mkdir;
 
-function makeEditContactTestProxy(): EditContact
+uses(\Modules\Notify\Tests\TestCase::class);
+
+function makeEditContactTestProxy(): EditContactTestProxy
 {
-    return new class extends EditContact
-    {
-        public function exposedHeaderActions(): array
-        {
-            return $this->getHeaderActions();
-        }
-    };
+    return new EditContactTestProxy();
 }
 
-function makePreviewMailTemplateTestProxy(): PreviewMailTemplate
+function makePreviewMailTemplateTestProxy(): PreviewMailTemplateTestProxy
 {
-    return new class extends PreviewMailTemplate
-    {
-        public function exposedHeaderActions(): array
-        {
-            return $this->getHeaderActions();
-        }
-    };
+    return new PreviewMailTemplateTestProxy();
 }
 
-function makeViewNotificationTestProxy(): ViewNotification
+function makeViewNotificationTestProxy(): ViewNotificationTestProxy
 {
-    return new class extends ViewNotification
-    {
-        public function exposedInfolistSchema(): array
-        {
-            return $this->getInfolistSchema();
-        }
-    };
+    return new ViewNotificationTestProxy();
 }
 
 function makePreviewNotificationTemplateTestProxy(): PreviewNotificationTemplate
@@ -73,97 +58,89 @@ function makePreviewNotificationTemplateTestProxy(): PreviewNotificationTemplate
 }
 
 test('contact resource form schema exposes expected fields', function (): void {
-    $schema = ContactResource::getFormSchema();
+    $schema = \assertNotifyArray(ContactResource::getFormSchema());
 
-    expect($schema)->toBeArray()
-        ->and($schema)->toHaveKey('name')
-        ->and($schema)->toHaveKey('email')
-        ->and($schema)->toHaveKey('phone');
+    Assert::assertArrayHasKey('name', $schema);
+    Assert::assertArrayHasKey('email', $schema);
+    Assert::assertArrayHasKey('phone', $schema);
 });
 
 test('edit contact page exposes delete header action', function (): void {
     $page = makeEditContactTestProxy();
-    $actions = $page->exposedHeaderActions();
+    $actions = \assertNotifyArray($page->exposedHeaderActions());
 
-    expect($actions)->toBeArray()
-        ->and($actions)->toHaveKey('delete')
-        ->and($actions['delete'])->toBeInstanceOf(DeleteAction::class);
+    Assert::assertArrayHasKey('delete', $actions);
+    Assert::assertInstanceOf(DeleteAction::class, $actions['delete']);
 });
 
 test('list contacts page exposes expected table columns and filters', function (): void {
     $page = new ListContacts;
 
-    $columns = $page->getTableColumns();
-    $filters = $page->getTableFilters();
+    $columns = \assertNotifyArray($page->getTableColumns());
+    $filters = \assertNotifyArray($page->getTableFilters());
 
-    expect($columns)->toBeArray()
-        ->and($columns)->toHaveKey('id')
-        ->and($columns['id'])->toBeInstanceOf(TextColumn::class)
-        ->and($columns)->toHaveKey('is_read')
-        ->and($columns['is_read'])->toBeInstanceOf(IconColumn::class)
-        ->and($filters)->toBeArray()
-        ->and($filters)->toHaveKey('active')
-        ->and($filters['active'])->toBeInstanceOf(Filter::class)
-        ->and($filters)->toHaveKey('inactive')
-        ->and($filters['inactive'])->toBeInstanceOf(Filter::class);
+    Assert::assertArrayHasKey('id', $columns);
+    Assert::assertInstanceOf(TextColumn::class, $columns['id']);
+    Assert::assertArrayHasKey('is_read', $columns);
+    Assert::assertInstanceOf(IconColumn::class, $columns['is_read']);
+    Assert::assertArrayHasKey('active', $filters);
+    Assert::assertInstanceOf(Filter::class, $filters['active']);
+    Assert::assertArrayHasKey('inactive', $filters);
+    Assert::assertInstanceOf(Filter::class, $filters['inactive']);
 });
 
 test('list mail templates page exposes expected table columns', function (): void {
     $page = new ListMailTemplates;
-    $columns = $page->getTableColumns();
+    $columns = \assertNotifyArray($page->getTableColumns());
 
-    expect($columns)->toBeArray()
-        ->and($columns)->toHaveKey('slug')
-        ->and($columns['slug'])->toBeInstanceOf(TextColumn::class)
-        ->and($columns)->toHaveKey('subject')
-        ->and($columns['subject'])->toBeInstanceOf(TextColumn::class)
-        ->and($columns)->toHaveKey('counter')
-        ->and($columns['counter'])->toBeInstanceOf(TextColumn::class);
+    Assert::assertArrayHasKey('slug', $columns);
+    Assert::assertInstanceOf(TextColumn::class, $columns['slug']);
+    Assert::assertArrayHasKey('subject', $columns);
+    Assert::assertInstanceOf(TextColumn::class, $columns['subject']);
+    Assert::assertArrayHasKey('counter', $columns);
+    Assert::assertInstanceOf(TextColumn::class, $columns['counter']);
 });
 
 test('preview mail template page title and header actions are configured', function (): void {
     $page = makePreviewMailTemplateTestProxy();
     $actions = $page->exposedHeaderActions();
 
-    expect($page->getTitle())->toBeString()
-        ->and($actions)->toBeArray()
-        ->and($actions)->toHaveCount(1)
-        ->and($actions[0])->toBeInstanceOf(Action::class);
+    $actions = array_values(\assertNotifyArray($actions));
+    Assert::assertCount(1, $actions);
+    Assert::assertInstanceOf(Action::class, $actions[0]);
 });
 
 test('list notifications page exposes expected columns and filters', function (): void {
     $page = new ListNotifications;
 
-    $columns = $page->getTableColumns();
-    $filters = $page->getTableFilters();
+    $columns = \assertNotifyArray($page->getTableColumns());
+    $filters = \assertNotifyArray($page->getTableFilters());
 
-    expect($columns)->toBeArray()
-        ->and($columns)->toHaveKey('id')
-        ->and($columns['id'])->toBeInstanceOf(TextColumn::class)
-        ->and($columns)->toHaveKey('type')
-        ->and($columns['type'])->toBeInstanceOf(TextColumn::class)
-        ->and($filters)->toBeArray()
-        ->and($filters)->toHaveKey('read')
-        ->and($filters['read'])->toBeInstanceOf(Filter::class)
-        ->and($filters)->toHaveKey('unread')
-        ->and($filters['unread'])->toBeInstanceOf(Filter::class)
-        ->and($filters)->toHaveKey('type')
-        ->and($filters['type'])->toBeInstanceOf(SelectFilter::class);
+    Assert::assertArrayHasKey('id', $columns);
+    Assert::assertInstanceOf(TextColumn::class, $columns['id']);
+    Assert::assertArrayHasKey('type', $columns);
+    Assert::assertInstanceOf(TextColumn::class, $columns['type']);
+    Assert::assertArrayHasKey('read', $filters);
+    Assert::assertInstanceOf(Filter::class, $filters['read']);
+    Assert::assertArrayHasKey('unread', $filters);
+    Assert::assertInstanceOf(Filter::class, $filters['unread']);
+    Assert::assertArrayHasKey('type', $filters);
+    Assert::assertInstanceOf(SelectFilter::class, $filters['type']);
 });
 
 test('view notification page infolist schema contains section with text entries', function (): void {
     $page = makeViewNotificationTestProxy();
     $schema = $page->exposedInfolistSchema();
 
-    expect($schema)->toBeArray()
-        ->and($schema[0])->toBeInstanceOf(Section::class);
+    Assert::assertCount(1, $schema);
+    Assert::assertInstanceOf(Section::class, $schema[0]);
 
     $reflection = new \ReflectionClass($schema[0]);
     $prop = $reflection->getProperty('childComponents');
     $prop->setAccessible(true);
-    $components = $prop->getValue($schema[0]);
-    expect($components)->toBeArray()
-        ->and($components)->not->toBeEmpty();
+    $components = \assertNotifyArray($prop->getValue($schema[0]));
+
+    Assert::assertNotEmpty($components);
 });
 
 test('mail template resource form schema exposes expected components', function (): void {
@@ -176,8 +153,9 @@ test('mail template resource form schema exposes expected components', function 
         file_put_contents($fixture, '<html><body>layout</body></html>');
     }
 
-    $schema = MailTemplateResource::getFormSchema();
+    $schema = \assertNotifyArray(MailTemplateResource::getFormSchema());
 
+<<<<<<< HEAD
     expect($schema)->toBeArray()
         ->and($schema)->toHaveKey('mailable_slug_group')
         ->and($schema['mailable_slug_group'])->toBeInstanceOf(Group::class)
@@ -190,38 +168,48 @@ test('mail template resource form schema exposes expected components', function 
         ->and($schema['params_display'])->toBeInstanceOf(View::class)
         ->and($schema)->toHaveKey('text_template')
         ->and($schema['text_template'])->toBeInstanceOf(Textarea::class);
+=======
+    Assert::assertArrayHasKey('mailable_slug_group', $schema);
+    Assert::assertInstanceOf(Group::class, $schema['mailable_slug_group']);
+    Assert::assertArrayHasKey('subject', $schema);
+    Assert::assertInstanceOf(TextInput::class, $schema['subject']);
+    Assert::assertArrayHasKey('html_layout_path', $schema);
+    Assert::assertArrayHasKey('html_template', $schema);
+    Assert::assertInstanceOf(RichEditor::class, $schema['html_template']);
+    Assert::assertArrayHasKey('params_display', $schema);
+    Assert::assertArrayHasKey('text_template', $schema);
+    Assert::assertInstanceOf(Textarea::class, $schema['text_template']);
+>>>>>>> 40b96bcd6 (.)
 });
 
 test('notification resource form schema exposes expected components', function (): void {
-    $schema = NotificationResource::getFormSchema();
+    $schema = \assertNotifyArray(NotificationResource::getFormSchema());
 
-    expect($schema)->toBeArray()
-        ->and($schema)->toHaveKey('type')
-        ->and($schema['type'])->toBeInstanceOf(TextInput::class)
-        ->and($schema)->toHaveKey('data')
-        ->and($schema['data'])->toBeInstanceOf(Textarea::class)
-        ->and($schema)->toHaveKey('read_at')
-        ->and($schema['read_at'])->toBeInstanceOf(DateTimePicker::class);
+    Assert::assertArrayHasKey('type', $schema);
+    Assert::assertInstanceOf(TextInput::class, $schema['type']);
+    Assert::assertArrayHasKey('data', $schema);
+    Assert::assertInstanceOf(Textarea::class, $schema['data']);
+    Assert::assertArrayHasKey('read_at', $schema);
+    Assert::assertInstanceOf(DateTimePicker::class, $schema['read_at']);
 });
 
 test('notification template resource form schema and pages are configured', function (): void {
-    $schema = NotificationTemplateResource::getFormSchema();
-    $pages = NotificationTemplateResource::getPages();
+    $schema = \assertNotifyArray(NotificationTemplateResource::getFormSchema());
+    $pages = \assertNotifyArray(NotificationTemplateResource::getPages());
 
-    expect($schema)->toBeArray()
-        ->and($schema)->toHaveKey('name')
-        ->and($schema['name'])->toBeInstanceOf(TextInput::class)
-        ->and($schema)->toHaveKey('type')
-        ->and($schema['type'])->toBeInstanceOf(Select::class)
-        ->and($schema)->toHaveKey('attachments')
-        ->and($schema['attachments'])->toBeInstanceOf(SpatieMediaLibraryFileUpload::class)
-        ->and($pages)->toBeArray()
-        ->and($pages)->toHaveKey('preview');
+    Assert::assertArrayHasKey('name', $schema);
+    Assert::assertInstanceOf(TextInput::class, $schema['name']);
+    Assert::assertArrayHasKey('type', $schema);
+    Assert::assertInstanceOf(Select::class, $schema['type']);
+    Assert::assertArrayHasKey('attachments', $schema);
+    Assert::assertInstanceOf(SpatieMediaLibraryFileUpload::class, $schema['attachments']);
+    Assert::assertArrayHasKey('preview', $pages);
 });
 
 test('preview notification template page exposes title and subheading', function (): void {
     $page = makePreviewNotificationTemplateTestProxy();
 
-    expect($page->getTitle())->toBeString()
-        ->and($page->getSubheading())->toBeString();
+    Assert::assertNotSame('', $page->getTitle());
+    Assert::assertNotSame('', $page->getSubheading());
 });
+

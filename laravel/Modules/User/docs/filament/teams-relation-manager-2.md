@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TeamsRelationManager in User Module
 
 ## Panoramica
@@ -184,3 +185,12 @@ public function getTableActions(): array
 - [HasXotTable Trait](/laravel/modules/xot/docs/filament/xot_table.md)
 - [Regole di Traduzione per Filament](/laravel/modules/xot/docs/translation_rules.md)
 
+=======
+---
+module: theme
+topic: teams-relation-manager-2
+canonical: ../../../../Themes/docs/shared-components/teams-relation-manager-1.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/teams-relation-manager-1.md
+>>>>>>> 40b96bcd6 (.)

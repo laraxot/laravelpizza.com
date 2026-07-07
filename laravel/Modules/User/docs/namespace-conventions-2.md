@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Convenzioni di Namespace nel Modulo User
 
 ## Principi Fondamentali
@@ -195,3 +196,12 @@ Se l'override del tema non funziona:
 
 *Documento creato: Dicembre 2024*
 
+=======
+---
+module: theme
+topic: namespace-conventions-2
+canonical: ../../../Themes/docs/shared-components/namespace_conventions.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/namespace_conventions.md
+>>>>>>> 40b96bcd6 (.)

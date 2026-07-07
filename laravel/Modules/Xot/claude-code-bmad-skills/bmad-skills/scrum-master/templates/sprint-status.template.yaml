@@ -1,0 +1,387 @@
+# Sprint Status Template
+# Store in: .bmad/sprint-status.yaml
+# This file tracks sprint progress, velocity, and story status
+
+project: {project-name}
+project_level: {0|1|2|3|4}
+current_sprint: {N}
+
+# Sprint Configuration
+sprint_config:
+  duration_weeks: {2}  # Typical sprint length
+  team_size: {X}       # Number of developers
+  points_per_dev_day: {2.5}  # Estimated (for capacity planning)
+
+# Velocity History
+velocity_history:
+  - sprint: 1
+    planned: {40}
+    completed: {35}
+    completion_rate: {87.5}
+    notes: "First sprint, establishing baseline"
+
+  - sprint: 2
+    planned: {35}
+    completed: {38}
+    completion_rate: {108.6}
+    notes: "Over-delivered, team adjusted well"
+
+  - sprint: 3
+    planned: {40}
+    completed: {36}
+    completion_rate: {90}
+    notes: "Holiday week, reduced capacity"
+
+# Current Velocity Metrics
+velocity_metrics:
+  three_sprint_average: {36.3}
+  trend: {stable|increasing|decreasing}
+  recommended_capacity: {36}
+
+# Current Sprint
+sprints:
+  - number: {N}
+    status: {not_started|in_progress|completed}
+    start_date: {YYYY-MM-DD}
+    end_date: {YYYY-MM-DD}
+    sprint_goal: "{Clear objective statement}"
+    capacity: {40}
+
+    # Capacity breakdown
+    capacity_breakdown:
+      base_capacity: {50}
+      adjustments:
+        - reason: "Holiday (1 dev-day)"
+          impact: -2.5
+        - reason: "Team meeting time (10%)"
+          impact: -5
+        - reason: "Tech debt allocation (15%)"
+          impact: -2.5
+      final_capacity: {40}
+
+    # Stories in this sprint
+    stories:
+      - id: "STORY-001"
+        title: "User registration API"
+        epic: "User Authentication"
+        priority: "Must Have"
+        points: 5
+        status: "completed"
+        started_date: "2025-12-01"
+        completed_date: "2025-12-03"
+        dependencies: []
+        blocked_by: null
+        notes: "Completed ahead of schedule"
+
+      - id: "STORY-002"
+        title: "User login with JWT"
+        epic: "User Authentication"
+        priority: "Must Have"
+        points: 3
+        status: "in_progress"
+        started_date: "2025-12-03"
+        completed_date: null
+        dependencies: ["STORY-001"]
+        blocked_by: null
+        notes: "In code review"
+
+      - id: "STORY-003"
+        title: "Password reset flow"
+        epic: "User Authentication"
+        priority: "Should Have"
+        points: 5
+        status: "not_started"
+        started_date: null
+        completed_date: null
+        dependencies: ["STORY-002"]
+        blocked_by: null
+        notes: ""
+
+      - id: "STORY-004"
+        title: "Email verification"
+        epic: "User Authentication"
+        priority: "Should Have"
+        points: 3
+        status: "not_started"
+        started_date: null
+        completed_date: null
+        dependencies: ["STORY-001"]
+        blocked_by: null
+        notes: ""
+
+      - id: "STORY-005"
+        title: "Product listing API"
+        epic: "Product Catalog"
+        priority: "Must Have"
+        points: 5
+        status: "not_started"
+        started_date: null
+        completed_date: null
+        dependencies: []
+        blocked_by: null
+        notes: ""
+
+    # Sprint metrics
+    metrics:
+      total_stories: {5}
+      total_points: {21}
+      completed_stories: {1}
+      completed_points: {5}
+      in_progress_stories: {1}
+      in_progress_points: {3}
+      remaining_stories: {3}
+      remaining_points: {13}
+      completion_percentage: {23.8}
+
+    # Burndown tracking (update daily or every few days)
+    burndown:
+      - date: "2025-12-01"
+        completed_points: 0
+        remaining_points: 21
+        ideal_remaining: 21
+        notes: "Sprint started"
+
+      - date: "2025-12-03"
+        completed_points: 5
+        remaining_points: 16
+        ideal_remaining: 17
+        notes: "STORY-001 completed, ahead of schedule"
+
+      - date: "2025-12-06"
+        completed_points: 5
+        remaining_points: 16
+        ideal_remaining: 11
+        notes: "STORY-002 in review, delayed"
+
+    # Risks and blockers
+    risks:
+      - description: "Email service integration delayed"
+        impact: "high"
+        status: "active"
+        mitigation: "Working with DevOps team, ETA 2 days"
+
+      - description: "Designer availability reduced this sprint"
+        impact: "medium"
+        status: "mitigated"
+        mitigation: "Got mockups ahead of time"
+
+    blockers:
+      - story_id: null
+        description: "No active blockers"
+        reported_date: null
+        resolved_date: null
+
+    # Sprint health indicators
+    health:
+      velocity_on_track: {true|false}
+      burndown_on_track: {true|false}
+      blockers_count: {0}
+      risks_count: {2}
+      team_morale: {high|medium|low}
+      notes: "{Any concerns or positive indicators}"
+
+# Backlog (next sprint stories)
+backlog:
+  - id: "STORY-006"
+    title: "Product detail API"
+    epic: "Product Catalog"
+    priority: "Must Have"
+    points: 3
+    status: "not_started"
+    sprint_planned: {N+1}
+
+  - id: "STORY-007"
+    title: "Product listing page"
+    epic: "Product Catalog"
+    priority: "Must Have"
+    points: 8
+    status: "not_started"
+    sprint_planned: {N+1}
+
+# Epic Progress
+epics:
+  - name: "User Authentication"
+    total_stories: {5}
+    total_points: {18}
+    completed_stories: {1}
+    completed_points: {5}
+    progress_percentage: {27.8}
+    target_sprint: {N}
+
+  - name: "Product Catalog"
+    total_stories: {8}
+    total_points: {40}
+    completed_stories: {0}
+    completed_points: {0}
+    progress_percentage: {0}
+    target_sprint: {N+1}
+
+# Overall Project Progress
+project_progress:
+  total_epics: {4}
+  completed_epics: {0}
+  total_stories: {35}
+  completed_stories: {1}
+  total_points: {150}
+  completed_points: {5}
+  progress_percentage: {3.3}
+  sprints_completed: {0}
+  sprints_remaining: {3}
+  estimated_completion_date: "2026-02-15"
+
+# Retrospective Notes (completed sprints)
+retrospectives:
+  - sprint: 1
+    date: "2025-11-30"
+    what_went_well:
+      - "Team communication improved"
+      - "Stories were well-sized"
+    what_to_improve:
+      - "Need better test coverage"
+      - "Code review took too long"
+    action_items:
+      - "Set up automated test coverage reporting"
+      - "Establish 24-hour code review SLA"
+
+  - sprint: 2
+    date: "2025-12-14"
+    what_went_well:
+      - "Code review SLA working well"
+      - "Over-delivered on points"
+    what_to_improve:
+      - "Some stories had unclear acceptance criteria"
+      - "Need better sprint planning time estimates"
+    action_items:
+      - "Use story template for all new stories"
+      - "Review reference stories during estimation"
+
+# Metadata
+last_updated: {YYYY-MM-DD HH:MM:SS}
+updated_by: {scrum-master|developer|system}
+
+---
+
+# Sprint Status YAML Usage Guide
+
+## File Location
+Store this file at: `.bmad/sprint-status.yaml`
+
+## Updating Sprint Status
+
+### During Sprint Planning:
+1. Create new sprint entry with stories
+2. Set `status: not_started`
+3. Define sprint goal and capacity
+4. List all stories with estimates
+
+### During Sprint:
+1. Update story statuses as work progresses
+2. Add burndown tracking data points
+3. Update metrics (completed/remaining points)
+4. Log any risks or blockers
+5. Set current sprint: `current_sprint: N`
+
+### After Sprint:
+1. Set `status: completed`
+2. Calculate final velocity
+3. Add to velocity_history
+4. Update 3-sprint average
+5. Record retrospective notes
+6. Plan next sprint
+
+## Story Status Values
+
+- **not_started:** Story is in backlog, not begun
+- **in_progress:** Actively being worked on
+- **in_review:** Code review or testing
+- **blocked:** Work stopped due to blocker
+- **completed:** All acceptance criteria met, deployed
+
+## Priority Values
+
+- **Must Have:** Critical for sprint goal
+- **Should Have:** Important, but not critical
+- **Could Have:** Nice to have, can be deferred
+- **Won't Have:** Explicitly out of scope
+
+## Health Indicators
+
+### velocity_on_track
+- `true` if current completion rate will meet capacity
+- `false` if behind pace (may not complete all stories)
+
+### burndown_on_track
+- `true` if burndown tracking close to ideal line
+- `false` if significantly above/below ideal
+
+### team_morale
+- `high`: Team is energized, productive, collaborative
+- `medium`: Team is functional, some concerns
+- `low`: Team is struggling, burnout risk, needs intervention
+
+## Calculating Metrics
+
+### Completion Percentage
+```
+completion_percentage = (completed_points / total_points) * 100
+```
+
+### Three-Sprint Average
+```
+average = (sprint1 + sprint2 + sprint3) / 3
+```
+
+### Completion Rate
+```
+completion_rate = (completed_points / planned_points) * 100
+```
+
+## Automation Scripts
+
+### Update Velocity
+```bash
+python scripts/calculate-velocity.py .bmad/sprint-status.yaml
+```
+
+### Generate Burndown Data
+```bash
+python scripts/sprint-burndown.py .bmad/sprint-status.yaml
+```
+
+### Generate Next Story ID
+```bash
+bash scripts/generate-story-id.sh project-name
+```
+
+## Best Practices
+
+1. **Update daily:** Refresh metrics and burndown data daily during sprint
+2. **Track blockers immediately:** Don't wait for standup to log blockers
+3. **Be honest about status:** Accurate data enables better planning
+4. **Review velocity trends:** Look for patterns over 3+ sprints
+5. **Capture retrospective notes:** Document learnings while fresh
+6. **Use consistent definitions:** Ensure team agrees on status values
+7. **Backup regularly:** This file is critical project data
+8. **Version control:** Commit changes to track history
+
+## Example Queries
+
+### Current sprint velocity:
+```yaml
+sprints[current_sprint].metrics.completed_points
+```
+
+### Stories blocked:
+```yaml
+sprints[current_sprint].stories[status=blocked]
+```
+
+### Three-sprint average:
+```yaml
+velocity_metrics.three_sprint_average
+```
+
+### Project completion:
+```yaml
+project_progress.progress_percentage
+```

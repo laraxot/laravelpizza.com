@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Code Quality Improvements - Modulo Xot (Gennaio 2025)
 
 ## Riepilogo Analisi
@@ -89,3 +90,12 @@ use TransTrait {
 - [README Modulo Xot](./readme.md)
 - [Code Quality Rules](./code-quality.md)
 - [Best Practices](./best-practices.md)
+=======
+---
+module: theme
+topic: code-quality-improvements-1
+canonical: ../../../Themes/docs/shared-components/code-quality-improvements-01.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/code-quality-improvements-01.md
+>>>>>>> 40b96bcd6 (.)

@@ -16,7 +16,7 @@ return [
             // with a document version and url.
             // This part is optional.
             'documentVersion' => '1.0',
-            'documentUrl' => env('PRIVACY_POLICY'),
+            'documentUrl' => '',
             // Whether this treatment is active or not.
             // The reason why this flag is here is to
             // allow for progressive modifications, so you
@@ -38,7 +38,7 @@ return [
         [
             'name' => 'gdpr.marketing',
             'documentVersion' => '1.0',
-            'documentUrl' => env('PRIVACY_POLICY'),
+            'documentUrl' => '',
             'active' => true,
             'required' => false,
             'description' => 'gdpr.marketing.text',

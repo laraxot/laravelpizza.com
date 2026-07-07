@@ -50,7 +50,11 @@ Questo report riassume quali pagine `tests.<slug>` sono pronte per parity visual
 - assistenza-02-conferma: json=yes, runtime=ok, overall=13%, gate=BLOCK
 - segnalazione-disservizio: json=no, runtime=ok, overall=70%, gate=BLOCK
 - segnalazione-dettaglio: json=yes, runtime=ok, overall=10%, gate=BLOCK
+<<<<<<< HEAD
 - segnalazioni-elenco: json=yes, runtime=ok, overall=11%, gate=BLOCK
+=======
+- ticket-list: json=yes, runtime=ok, overall=11%, gate=BLOCK
+>>>>>>> 40b96bcd6 (.)
 - segnalazione-01-privacy: json=yes, runtime=ok, overall=27%, gate=BLOCK
 - segnalazione-02-dati: json=yes, runtime=ok, overall=11%, gate=BLOCK
 - segnalazione-03-riepilogo: json=yes, runtime=ok, overall=11%, gate=BLOCK

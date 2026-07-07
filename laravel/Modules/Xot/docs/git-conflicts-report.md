@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Global Git Conflict Report
 
 Generated on: Wed Apr 22 14:04:36 CEST 2026
@@ -85,3 +86,12 @@ Generated on: Wed Apr 22 14:04:36 CEST 2026
 * ./Themes/Sixteen/docs/merge-conflicts-list.md
 * ./Themes/Sixteen/docs/screenshots/homepage/reference-full-2026-04-07.png
 * ./Themes/Sixteen/docs/screenshots/homepage/reference-viewport-2026-04-07.png
+=======
+---
+module: theme
+topic: git-conflicts-report
+canonical: ../../../Themes/docs/shared-components/git-conflicts-report.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/git-conflicts-report.md
+>>>>>>> 40b96bcd6 (.)

@@ -4,17 +4,26 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Feature;
 
+<<<<<<< HEAD
 uses(TestCase::class);
 
 use Modules\Notify\Models\MailTemplate;
 use Modules\Notify\Tests\TestCase;
+=======
+use Modules\Notify\Database\Factories\MailTemplateFactory;
+use Modules\Notify\Models\MailTemplate;
+use Modules\Notify\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+>>>>>>> 40b96bcd6 (.)
 
-use function Pest\Laravel\assertDatabaseHas;
-use function Pest\Laravel\assertDatabaseMissing;
+
+
+
+uses(\Modules\Notify\Tests\TestCase::class);
 
 describe('MailTemplate Model Tests', function () {
     it('can create a mail template', function () {
-        $template = MailTemplate::create([
+        $template = MailTemplateFactory::new()->createOne([
             'name' => 'Test Template',
             'mailable' => 'App\Mail\TestMail',
             'slug' => 'test-template',
@@ -23,12 +32,11 @@ describe('MailTemplate Model Tests', function () {
             'text_template' => ['en' => 'Test Text'],
         ]);
 
-        expect($template)
-            ->toBeInstanceOf(MailTemplate::class)
-            ->and($template->name)
-            ->toBe('Test Template');
+        Assert::assertInstanceOf(MailTemplate::class, $template);
 
-        assertDatabaseHas('mail_templates', [
+        Assert::assertSame('Test Template', $template->name);
+
+        \assertNotifyTableHas('mail_templates', [
             'id' => $template->id,
             'name' => 'Test Template',
             'slug' => $template->slug,
@@ -36,7 +44,7 @@ describe('MailTemplate Model Tests', function () {
     });
 
     it('can update a mail template', function () {
-        $template = MailTemplate::create([
+        $template = MailTemplateFactory::new()->createOne([
             'name' => 'Test Template 2',
             'mailable' => 'App\Mail\TestMail2',
             'slug' => 'test-template-2',
@@ -46,11 +54,11 @@ describe('MailTemplate Model Tests', function () {
 
         $template->update(['name' => 'Updated Template']);
 
-        expect($template->fresh()->name)->toBe('Updated Template');
+        Assert::assertSame('Updated Template', \assertFreshModel($template, MailTemplate::class)->name);
     });
 
     it('can delete a mail template', function () {
-        $template = MailTemplate::create([
+        $template = MailTemplateFactory::new()->createOne([
             'name' => 'Delete Me',
             'mailable' => 'App\Mail\DeleteMail',
             'slug' => 'delete-me',
@@ -61,7 +69,7 @@ describe('MailTemplate Model Tests', function () {
         $templateId = $template->id;
         $template->delete();
 
-        assertDatabaseMissing('mail_templates', [
+        \assertNotifyTableMissing('mail_templates', [
             'id' => $templateId,
         ]);
     });

@@ -28,6 +28,7 @@ use Override;
  */
 class SendWhatsAppPage extends XotBasePage
 {
+    /** @var array<string, mixed>|null */
     public ?array $whatsappData = [];
 
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-chat-bubble-left-right';
@@ -134,10 +135,11 @@ class SendWhatsAppPage extends XotBasePage
         }
     }
 
+    /** @return array<string, \Filament\Actions\Action> */
     protected function getWhatsAppFormActions(): array
     {
         return [
-            Action::make('whatsappFormActions')->submit('whatsappFormActions'),
+            'submit' => Action::make('whatsappFormActions')->submit('whatsappFormActions'),
         ];
     }
 

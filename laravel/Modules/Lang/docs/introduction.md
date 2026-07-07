@@ -26,6 +26,8 @@ quando viene utilizzata in Francia, verrà visualizzato il testo tradotto in fra
 * [introduction.md](laravel/vendor/spatie/laravel-data/docs/validation/introduction.md)
 * [introduction.md](../../../Lang/docs/introduction.md)
 * [introduction.md](../../../Cms/docs/introduction.md)
+* [introduction.md](../../../Lang/docs/introduction.md)
+* [introduction.md](../../../Cms/docs/introduction.md)
 
 ### Versione Incoming
 

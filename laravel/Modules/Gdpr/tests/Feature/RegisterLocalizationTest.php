@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Feature;
 
+use Modules\Gdpr\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
+
 /*
  * Localization Tests for Registration Page.
  *
@@ -15,11 +20,6 @@ namespace Modules\Gdpr\Tests\Feature;
  * - French (fr) - France/EU
  * - Russian (ru) - CIS/Eastern Europe
  */
-
-use Modules\Gdpr\Tests\TestCase;
-
-uses(TestCase::class);
-
 // ---------------------------------------------------------------------------
 // All Locales Have Required Keys
 // ---------------------------------------------------------------------------
@@ -54,7 +54,7 @@ it('has all required keys in Italian locale', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        expect($translated)->not->toBe($key, "Italian translation [{$key}] missing");
+        Assert::assertNotSame($key, "Italian translation [{$key}] missing", $translated);
     }
 });
 
@@ -88,7 +88,7 @@ it('has all required keys in English locale', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        expect($translated)->not->toBe($key, "English translation [{$key}] missing");
+        Assert::assertNotSame($key, "English translation [{$key}] missing", $translated);
     }
 });
 
@@ -109,7 +109,7 @@ it('has all required keys in Spanish locale', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        expect($translated)->not->toBe($key, "Spanish translation [{$key}] missing");
+        Assert::assertNotSame($key, "Spanish translation [{$key}] missing", $translated);
     }
 });
 
@@ -130,7 +130,7 @@ it('has all required keys in German locale', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        expect($translated)->not->toBe($key, "German translation [{$key}] missing");
+        Assert::assertNotSame($key, "German translation [{$key}] missing", $translated);
     }
 });
 
@@ -151,7 +151,7 @@ it('has all required keys in French locale', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        expect($translated)->not->toBe($key, "French translation [{$key}] missing");
+        Assert::assertNotSame($key, "French translation [{$key}] missing", $translated);
     }
 });
 
@@ -172,7 +172,7 @@ it('has all required keys in Russian locale', function (): void {
 
     foreach ($requiredKeys as $key) {
         $translated = __($key);
-        expect($translated)->not->toBe($key, "Russian translation [{$key}] missing");
+        Assert::assertNotSame($key, "Russian translation [{$key}] missing", $translated);
     }
 });
 
@@ -181,37 +181,37 @@ it('has all required keys in Russian locale', function (): void {
 // ---------------------------------------------------------------------------
 
 it('detects Italian locale from URL', function (): void {
-    $response = $this->get('/it/auth/register');
+    $response = gdprGet('/it/auth/register');
     $response->assertSee('lang="it"', false);
     $response->assertStatus(200);
 });
 
 it('detects English locale from URL', function (): void {
-    $response = $this->get('/en/auth/register');
+    $response = gdprGet('/en/auth/register');
     $response->assertSee('lang="en"', false);
     $response->assertStatus(200);
 });
 
 it('detects Spanish locale from URL', function (): void {
-    $response = $this->get('/es/auth/register');
+    $response = gdprGet('/es/auth/register');
     $response->assertSee('lang="es"', false);
     $response->assertStatus(200);
 });
 
 it('detects German locale from URL', function (): void {
-    $response = $this->get('/de/auth/register');
+    $response = gdprGet('/de/auth/register');
     $response->assertSee('lang="de"', false);
     $response->assertStatus(200);
 });
 
 it('detects French locale from URL', function (): void {
-    $response = $this->get('/fr/auth/register');
+    $response = gdprGet('/fr/auth/register');
     $response->assertSee('lang="fr"', false);
     $response->assertStatus(200);
 });
 
 it('detects Russian locale from URL', function (): void {
-    $response = $this->get('/ru/auth/register');
+    $response = gdprGet('/ru/auth/register');
     $response->assertSee('lang="ru"', false);
     $response->assertStatus(200);
 });
@@ -223,23 +223,23 @@ it('detects Russian locale from URL', function (): void {
 it('Italian title contains pizza reference', function (): void {
     app()->setLocale('it');
     $title = __('gdpr::register.title');
-    expect($title)->toContain('Pizza');
+    Assert::assertStringContainsString((string) 'Pizza', (string) $title);
 });
 
 it('English title contains pizza reference', function (): void {
     app()->setLocale('en');
     $title = __('gdpr::register.title');
-    expect($title)->toContain('Pizza');
+    Assert::assertStringContainsString((string) 'Pizza', (string) $title);
 });
 
 it('Italian CTA is action-oriented', function (): void {
     app()->setLocale('it');
     $cta = __('gdpr::register.form.cta_title');
-    expect($cta)->toContain('gratuito');
+    Assert::assertStringContainsString((string) 'gratuito', (string) $cta);
 });
 
 it('English CTA is action-oriented', function (): void {
     app()->setLocale('en');
     $cta = __('gdpr::register.form.cta_title');
-    expect($cta)->toContain('FREE');
+    Assert::assertStringContainsString((string) 'FREE', (string) $cta);
 });

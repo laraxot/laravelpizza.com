@@ -1,0 +1,759 @@
+Note: Using configuration file /var/www/_bases/base_fixcity_fila5/laravel/phpstan.neon.
+    0/5109 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[1G[2K   20/5109 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[1G[2K  120/5109 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   2%[1G[2K  160/5109 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   3%[1G[2K  200/5109 [▓░░░░░░░░░░░░░░░░░░░░░░░░░░░]   3%[1G[2K  240/5109 [▓░░░░░░░░░░░░░░░░░░░░░░░░░░░]   4%[1G[2K  280/5109 [▓░░░░░░░░░░░░░░░░░░░░░░░░░░░]   5%[1G[2K  320/5109 [▓░░░░░░░░░░░░░░░░░░░░░░░░░░░]   6%[1G[2K  400/5109 [▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░]   7%[1G[2K  520/5109 [▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░]  10%[1G[2K  700/5109 [▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]  13%[1G[2K  840/5109 [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░]  16%[1G[2K  960/5109 [▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░]  18%[1G[2K 1040/5109 [▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░]  20%[1G[2K 1160/5109 [▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░]  22%[1G[2K 1200/5109 [▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░]  23%[1G[2K 1300/5109 [▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░]  25%[1G[2K 1440/5109 [▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░]  28%[1G[2K 1540/5109 [▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░]  30%[1G[2K 1700/5109 [▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░]  33%[1G[2K 1760/5109 [▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░]  34%[1G[2K 1860/5109 [▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░]  36%[1G[2K 1900/5109 [▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░]  37%[1G[2K 5109/5109 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Blog/app/Models/Transaction.php                                       
+ ------ ---------------------------------------------------------------------- 
+  74     PHPDoc tag @method for method                                         
+         Modules\Blog\Models\Transaction::factory() return type contains       
+         unknown class Modules\Blog\Database\Factories\TransactionFactory.     
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  Blog/app/Models/Transaction.php                                   
+ ------ ---------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------- 
+  Line   Blog/app/View/Composers/ThemeComposer.php                            
+ ------ --------------------------------------------------------------------- 
+  174    Missing parameter $view (string) in call to                          
+         Modules\UI\View\Components\Render\Blocks constructor.                
+         🪪  argument.missing                                                 
+         ✏️  Blog/app/View/Composers/ThemeComposer.php                        
+  174    Parameter $blocks of class Modules\UI\View\Components\Render\Blocks  
+         constructor expects array<int|string, mixed>, array|null given.      
+         🪪  argument.type                                                    
+         ✏️  Blog/app/View/Composers/ThemeComposer.php                        
+ ------ --------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------- 
+  Line   Cms/app/Http/Middleware/PageSlugMiddleware.php     
+ ------ --------------------------------------------------- 
+  32     Call to an undefined static method                 
+         Modules\Cms\Models\Page::getMiddlewareBySlug().    
+         🪪  staticMethod.notFound                          
+         ✏️  Cms/app/Http/Middleware/PageSlugMiddleware.php  
+ ------ --------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Cms/app/Models/Page.php                                               
+ ------ ---------------------------------------------------------------------- 
+  195    PHPDoc tag @method for method                                         
+         Modules\Cms\Models\Page::getBlocksBySlug() return type contains       
+         unknown class Modules\Cms\Models\BlockData.                           
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  Cms/app/Models/Page.php                                           
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Cms/app/View/Components/Page.php                                       
+ ------ ----------------------------------------------------------------------- 
+  39     Call to an undefined static method                                     
+         Modules\Cms\Models\Page::getBlocksBySlug().                            
+         🪪  staticMethod.notFound                                              
+         ✏️  Cms/app/View/Components/Page.php                                   
+  40     Property Modules\Cms\View\Components\Page::$blocks (array<string, Mod  
+         ules\Cms\Datas\BlockData>) does not accept array.                      
+         🪪  assign.propertyType                                                
+         ✏️  Cms/app/View/Components/Page.php                                   
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Cms/app/View/Components/Section.php                                    
+ ------ ----------------------------------------------------------------------- 
+  25     Property Modules\Cms\View\Components\Section::$blocks has unknown      
+         class Modules\Cms\View\Components\BlockData as its type.               
+         🪪  class.notFound                                                     
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols   
+         ✏️  Cms/app/View/Components/Section.php                                
+  55     Call to an undefined static method                                     
+         Modules\Cms\Models\Section::getBlocksBySlug().                         
+         🪪  staticMethod.notFound                                              
+         ✏️  Cms/app/View/Components/Section.php                                
+  56     Property Modules\Cms\View\Components\Section::$blocks (array<string,   
+         Modules\Cms\View\Components\BlockData>) does not accept array.         
+         🪪  assign.propertyType                                                
+         ✏️  Cms/app/View/Components/Section.php                                
+ ------ ----------------------------------------------------------------------- 
+
+ ------ --------------------------------------------- 
+  Line   Fixcity/app/Actions/ChangeStatus.php         
+ ------ --------------------------------------------- 
+  22     Call to an undefined method                  
+         Modules\Fixcity\Models\Ticket::setStatus().  
+         🪪  method.notFound                          
+         ✏️  Fixcity/app/Actions/ChangeStatus.php     
+ ------ --------------------------------------------- 
+
+ ------ -------------------------------------------------------------------- 
+  Line   Fixcity/app/Actions/GenerateTicketsAction.php                       
+ ------ -------------------------------------------------------------------- 
+  30     Anonymous function should return Modules\Fixcity\Models\Ticket but  
+         returns mixed.                                                      
+         🪪  return.type                                                     
+         ✏️  Fixcity/app/Actions/GenerateTicketsAction.php                   
+  31     Cannot call method create() on mixed.                               
+         🪪  method.nonObject                                                
+         ✏️  Fixcity/app/Actions/GenerateTicketsAction.php                   
+  31     Cannot call method open() on mixed.                                 
+         🪪  method.nonObject                                                
+         ✏️  Fixcity/app/Actions/GenerateTicketsAction.php                   
+  32     Cannot call method create() on mixed.                               
+         🪪  method.nonObject                                                
+         ✏️  Fixcity/app/Actions/GenerateTicketsAction.php                   
+  32     Cannot call method urgent() on mixed.                               
+         🪪  method.nonObject                                                
+         ✏️  Fixcity/app/Actions/GenerateTicketsAction.php                   
+  33     Cannot call method create() on mixed.                               
+         🪪  method.nonObject                                                
+         ✏️  Fixcity/app/Actions/GenerateTicketsAction.php                   
+  33     Cannot call method resolved() on mixed.                             
+         🪪  method.nonObject                                                
+         ✏️  Fixcity/app/Actions/GenerateTicketsAction.php                   
+  34     Cannot call method create() on mixed.                               
+         🪪  method.nonObject                                                
+         ✏️  Fixcity/app/Actions/GenerateTicketsAction.php                   
+ ------ -------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Fixcity/app/Filament/Widgets/CreateTicketWidget.php                    
+ ------ ----------------------------------------------------------------------- 
+  81     Parameter #1 $components of method                                     
+         Filament\Schemas\Components\Component::schema() expects array<Illumin  
+         ate\Contracts\Support\Htmlable|string>|Closure, non-empty-array given  
+         .                                                                      
+         🪪  argument.type                                                      
+         ✏️  Fixcity/app/Filament/Widgets/CreateTicketWidget.php                
+  114    Parameter #1 $components of method                                     
+         Filament\Schemas\Schema::components() expects array<Illuminate\Contra  
+         cts\Support\Htmlable|string>|Closure|Illuminate\Contracts\Support\Htm  
+         lable|string, array given.                                             
+         🪪  argument.type                                                      
+         ✏️  Fixcity/app/Filament/Widgets/CreateTicketWidget.php                
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Fixcity/app/Livewire/Auth/Login.php                                   
+ ------ ---------------------------------------------------------------------- 
+  43     Parameter #1 $credentials of static method                            
+         Illuminate\Support\Facades\Auth::attempt() expects array, array|null  
+         given.                                                                
+         🪪  argument.type                                                     
+         ✏️  Fixcity/app/Livewire/Auth/Login.php                               
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Fixcity/app/Livewire/TicketList.php                                   
+ ------ ---------------------------------------------------------------------- 
+  39     Call to method when() on an unknown class                             
+         Modules\Fixcity\Models\Builder.                                       
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  Fixcity/app/Livewire/TicketList.php                               
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Fixcity/app/Models/Ticket.php                                          
+ ------ ----------------------------------------------------------------------- 
+  481    Parameter #1 $related of method                                        
+         Illuminate\Database\Eloquent\Model::belongsTo() expects class-string<  
+         Illuminate\Database\Eloquent\Model>, mixed given.                      
+         🪪  argument.type                                                      
+         ✏️  Fixcity/app/Models/Ticket.php                                      
+  481    Unable to resolve the template type TRelatedModel in call to method    
+         Illuminate\Database\Eloquent\Model::belongsTo()                        
+         🪪  argument.templateType                                              
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-error-unable-to-resolve-temp  
+         late-type                                                              
+         ✏️  Fixcity/app/Models/Ticket.php                                      
+  491    Parameter #1 $related of method                                        
+         Illuminate\Database\Eloquent\Model::belongsToMany() expects            
+         class-string<Illuminate\Database\Eloquent\Model>, mixed given.         
+         🪪  argument.type                                                      
+         ✏️  Fixcity/app/Models/Ticket.php                                      
+  491    Unable to resolve the template type TRelatedModel in call to method    
+         Illuminate\Database\Eloquent\Model::belongsToMany()                    
+         🪪  argument.templateType                                              
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-error-unable-to-resolve-temp  
+         late-type                                                              
+         ✏️  Fixcity/app/Models/Ticket.php                                      
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Fixcity/app/Models/TicketActivity.php                                  
+ ------ ----------------------------------------------------------------------- 
+  64     Call to an undefined method                                            
+         Illuminate\Database\Eloquent\Relations\BelongsTo<Modules\Fixcity\Mode  
+         ls\Ticket, $this(Modules\Fixcity\Models\TicketActivity)>::withTrashed  
+         ().                                                                    
+         🪪  method.notFound                                                    
+         ✏️  Fixcity/app/Models/TicketActivity.php                              
+  64     Method Modules\Fixcity\Models\TicketActivity::ticket() should return   
+         Illuminate\Database\Eloquent\Relations\BelongsTo but returns mixed.    
+         🪪  return.type                                                        
+         ✏️  Fixcity/app/Models/TicketActivity.php                              
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Fixcity/app/Rules/FilterCoordinatesInRadius.php                        
+ ------ ----------------------------------------------------------------------- 
+  31     Parameter #3 $coordinates of method                                    
+         Modules\Geo\Actions\FilterCoordinatesInRadiusAction::execute()         
+         expects array<array{latitude: string, longitude: string}>, array<mixe  
+         d> given.                                                              
+         🪪  argument.type                                                      
+         ✏️  Fixcity/app/Rules/FilterCoordinatesInRadius.php                    
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Fixcity/app/Services/NotificationService.php                           
+ ------ ----------------------------------------------------------------------- 
+  209    Access to an undefined property                                        
+         Modules\Fixcity\Models\Ticket::$assignee.                              
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Fixcity/app/Services/NotificationService.php                       
+  215    Parameter #1 $items of method                                          
+         Illuminate\Support\Collection<(int|string),mixed>::merge() expects     
+         Illuminate\Contracts\Support\Arrayable<(int|string),                   
+         mixed>|iterable<(int|string), mixed>,                                  
+         Modules\Fixcity\Models\Collection<int, Modules\Fixcity\Models\User> g  
+         iven.                                                                  
+         🪪  argument.type                                                      
+         ✏️  Fixcity/app/Services/NotificationService.php                       
+  219    Method                                                                 
+         Modules\Fixcity\Services\NotificationService::getUsersToNotify()       
+         should return Illuminate\Support\Collection<int, Modules\User\Models\  
+         User> but returns Illuminate\Support\Collection<(int|string), mixed>.  
+         🪪  return.type                                                        
+         ✏️  Fixcity/app/Services/NotificationService.php                       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ -------------------------------------------- 
+  Line   Fixcity/app/Services/TicketService.php      
+ ------ -------------------------------------------- 
+  171    Call to an undefined method                 
+         Modules\Fixcity\Models\Ticket::comments().  
+         🪪  method.notFound                         
+         ✏️  Fixcity/app/Services/TicketService.php  
+  171    Cannot call method create() on mixed.       
+         🪪  method.nonObject                        
+         ✏️  Fixcity/app/Services/TicketService.php  
+ ------ -------------------------------------------- 
+
+ ------ ---------------------------------------------- 
+  Line   Fixcity/app/Services/WorkflowService.php      
+ ------ ---------------------------------------------- 
+  220    Call to an undefined method                   
+         Modules\Fixcity\Models\Ticket::activities().  
+         🪪  method.notFound                           
+         ✏️  Fixcity/app/Services/WorkflowService.php  
+  220    Cannot call method get() on mixed.            
+         🪪  method.nonObject                          
+         ✏️  Fixcity/app/Services/WorkflowService.php  
+  220    Cannot call method orderBy() on mixed.        
+         🪪  method.nonObject                          
+         ✏️  Fixcity/app/Services/WorkflowService.php  
+ ------ ---------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Fixcity/app/View/Components/Blocks/TicketList.php                     
+ ------ ---------------------------------------------------------------------- 
+  12     Property Modules\Fixcity\View\Components\Blocks\TicketList::$tickets  
+         has no type specified.                                                
+         🪪  missingType.property                                              
+         ✏️  Fixcity/app/View/Components/Blocks/TicketList.php                 
+  30     Call to method latest() on an unknown class                           
+         Modules\Fixcity\Models\Builder.                                       
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  Fixcity/app/View/Components/Blocks/TicketList.php                 
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------- 
+  Line   Fixcity/app/View/Components/Blocks/TicketList/Agid.php     
+ ------ ----------------------------------------------------------- 
+  59     Possibly invalid array key type mixed.                     
+         🪪  array.invalidKey                                       
+         ✏️  Fixcity/app/View/Components/Blocks/TicketList/Agid.php  
+ ------ ----------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Fixcity/database/factories/ReportFactory.php                           
+ ------ ----------------------------------------------------------------------- 
+  13     Class Modules\Fixcity\Models\Report not found.                         
+         🪪  class.notFound                                                     
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols   
+         ✏️  Fixcity/database/factories/ReportFactory.php                       
+  13     Property Modules\Fixcity\Database\Factories\ReportFactory::$model      
+         (class-string<Illuminate\Database\Eloquent\Model>) does not accept de  
+         fault value of type string.                                            
+         🪪  property.defaultValue                                              
+         ✏️  Fixcity/database/factories/ReportFactory.php                       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Fixcity/database/factories/TicketFactory.php                          
+ ------ ---------------------------------------------------------------------- 
+  21     Call to static method factory() on an unknown class                   
+         Modules\Category\Models\Category.                                     
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  Fixcity/database/factories/TicketFactory.php                      
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------- 
+  Line   Fixcity/database/seeders/ReportContentSeeder.php     
+ ------ ----------------------------------------------------- 
+  67     Cannot access offset 'title' on mixed.               
+         🪪  offsetAccess.nonOffsetAccessible                 
+         ✏️  Fixcity/database/seeders/ReportContentSeeder.php  
+  68     Cannot access offset 'description' on mixed.         
+         🪪  offsetAccess.nonOffsetAccessible                 
+         ✏️  Fixcity/database/seeders/ReportContentSeeder.php  
+  69     Cannot access offset 'location' on mixed.            
+         🪪  offsetAccess.nonOffsetAccessible                 
+         ✏️  Fixcity/database/seeders/ReportContentSeeder.php  
+  70     Cannot access offset 'address' on mixed.             
+         🪪  offsetAccess.nonOffsetAccessible                 
+         ✏️  Fixcity/database/seeders/ReportContentSeeder.php  
+  71     Cannot access offset 'category' on mixed.            
+         🪪  offsetAccess.nonOffsetAccessible                 
+         ✏️  Fixcity/database/seeders/ReportContentSeeder.php  
+  72     Cannot access offset 'status' on mixed.              
+         🪪  offsetAccess.nonOffsetAccessible                 
+         ✏️  Fixcity/database/seeders/ReportContentSeeder.php  
+  74     Cannot access offset 'priority' on mixed.            
+         🪪  offsetAccess.nonOffsetAccessible                 
+         ✏️  Fixcity/database/seeders/ReportContentSeeder.php  
+ ------ ----------------------------------------------------- 
+
+ ------ ------------------------------------------------------ 
+  Line   Fixcity/database/seeders/TicketDatabaseSeeder.php     
+ ------ ------------------------------------------------------ 
+  51     Cannot access offset 'name' on mixed.                 
+         🪪  offsetAccess.nonOffsetAccessible                  
+         ✏️  Fixcity/database/seeders/TicketDatabaseSeeder.php  
+  52     Cannot access offset 'content' on mixed.              
+         🪪  offsetAccess.nonOffsetAccessible                  
+         ✏️  Fixcity/database/seeders/TicketDatabaseSeeder.php  
+  53     Cannot access offset 'status' on mixed.               
+         🪪  offsetAccess.nonOffsetAccessible                  
+         ✏️  Fixcity/database/seeders/TicketDatabaseSeeder.php  
+  54     Cannot access offset 'priority' on mixed.             
+         🪪  offsetAccess.nonOffsetAccessible                  
+         ✏️  Fixcity/database/seeders/TicketDatabaseSeeder.php  
+  56     Cannot access offset 'name' on mixed.                 
+         🪪  offsetAccess.nonOffsetAccessible                  
+         ✏️  Fixcity/database/seeders/TicketDatabaseSeeder.php  
+ ------ ------------------------------------------------------ 
+
+ ------ ------------------------------------------------------ 
+  Line   Geo/app/Filament/Resources/AddressResource.php        
+ ------ ------------------------------------------------------ 
+  50     Call to an undefined static method                    
+         Modules\Geo\Models\Region::getOptions().              
+         🪪  staticMethod.notFound                             
+         ✏️  Geo/app/Filament/Resources/AddressResource.php    
+  61     Call to an undefined static method                    
+         Modules\Geo\Models\Province::getOptions().            
+         🪪  staticMethod.notFound                             
+         ✏️  Geo/app/Filament/Resources/AddressResource.php    
+  73     Call to an undefined static method                    
+         Modules\Geo\Models\Locality::getOptions().            
+         🪪  staticMethod.notFound                             
+         ✏️  Geo/app/Filament/Resources/AddressResource.php    
+  84     Call to an undefined static method                    
+         Modules\Geo\Models\Locality::getPostalCodeOptions().  
+         🪪  staticMethod.notFound                             
+         ✏️  Geo/app/Filament/Resources/AddressResource.php    
+  100    Call to an undefined static method                    
+         Modules\Geo\Models\Region::getOptions().              
+         🪪  staticMethod.notFound                             
+         ✏️  Geo/app/Filament/Resources/AddressResource.php    
+  111    Call to an undefined static method                    
+         Modules\Geo\Models\Province::getOptions().            
+         🪪  staticMethod.notFound                             
+         ✏️  Geo/app/Filament/Resources/AddressResource.php    
+  126    Call to an undefined static method                    
+         Modules\Geo\Models\Locality::getOptions().            
+         🪪  staticMethod.notFound                             
+         ✏️  Geo/app/Filament/Resources/AddressResource.php    
+  136    Call to an undefined static method                    
+         Modules\Geo\Models\Locality::getPostalCodeOptions().  
+         🪪  staticMethod.notFound                             
+         ✏️  Geo/app/Filament/Resources/AddressResource.php    
+ ------ ------------------------------------------------------ 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Geo/app/Models/Address.php                                             
+ ------ ----------------------------------------------------------------------- 
+  176    Return type of call to method Illuminate\Database\Eloquent\Collection  
+         <int,Modules\Geo\Models\Comune>::map() contains unresolvable type.     
+         🪪  method.unresolvableReturnType                                      
+         ✏️  Geo/app/Models/Address.php                                         
+  198    Return type of call to method Illuminate\Database\Eloquent\Collection  
+         <int,Modules\Geo\Models\Comune>::map() contains unresolvable type.     
+         🪪  method.unresolvableReturnType                                      
+         ✏️  Geo/app/Models/Address.php                                         
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Notify/app/Notifications/FirebaseAndroidNotification.php              
+ ------ ---------------------------------------------------------------------- 
+  47     Class NotificationChannels\Fcm\FcmChannel not found.                  
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  Notify/app/Notifications/FirebaseAndroidNotification.php          
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Rating/app/Models/Traits/HasRating.php (in context of class            
+         Modules\Blog\Models\Article)                                           
+ ------ ----------------------------------------------------------------------- 
+  24     Method Modules\Blog\Models\Article::ratings() should return            
+         Illuminate\Database\Eloquent\Relations\MorphToMany<Modules\Rating\Mod  
+         els\Rating, Illuminate\Database\Eloquent\Model,                        
+         Illuminate\Database\Eloquent\Relations\MorphPivot, 'pivot'> but retur  
+         ns Illuminate\Database\Eloquent\Relations\MorphToMany<Modules\Rating\  
+         Models\Rating, $this(Modules\Blog\Models\Article),                     
+         Illuminate\Database\Eloquent\Relations\MorphPivot, 'pivot'>.           
+         🪪  return.type                                                        
+         💡  Template type TDeclaringModel on class                             
+         Illuminate\Database\Eloquent\Relations\MorphToMany is not covariant.   
+         Learn more: https://phpstan.org/blog/whats-up-with-template-covariant  
+         ✏️  Rating/app/Models/Traits/HasRating.php                             
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Tenant/app/Models/Traits/SushiToJson.php (in context of class          
+         Modules\Geo\Models\Comune)                                             
+ ------ ----------------------------------------------------------------------- 
+  239    Call to an undefined method Modules\Geo\Models\Comune::getJsonFile().  
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  242    Call to an undefined method                                            
+         Modules\Geo\Models\Comune::loadExistingData().                         
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  245    Argument of an invalid type mixed supplied for foreach, only           
+         iterables are supported.                                               
+         🪪  foreach.nonIterable                                                
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  271    Call to an undefined method Modules\Geo\Models\Comune::authId().       
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  278    Cannot access an offset on mixed.                                      
+         🪪  offsetAccess.nonOffsetAccessible                                   
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  281    Call to an undefined method                                            
+         Modules\Geo\Models\Comune::ensureDirectoryExists().                    
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  282    Call to an undefined method Modules\Geo\Models\Comune::saveToJson().   
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  291    Call to an undefined method Modules\Geo\Models\Comune::authId().       
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  297    Call to an undefined method                                            
+         Modules\Geo\Models\Comune::loadExistingData().                         
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  301    Call to an undefined method                                            
+         Modules\Geo\Models\Comune::findRowIndexById().                         
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  305    Cannot access offset mixed on mixed.                                   
+         🪪  offsetAccess.nonOffsetAccessible                                   
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  307    Call to an undefined method Modules\Geo\Models\Comune::saveToJson().   
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  318    Call to an undefined method                                            
+         Modules\Geo\Models\Comune::loadExistingData().                         
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  319    Call to an undefined method                                            
+         Modules\Geo\Models\Comune::findRowIndexById().                         
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  322    Cannot access offset mixed on mixed.                                   
+         🪪  offsetAccess.nonOffsetAccessible                                   
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  323    Parameter #1 $array of function array_values expects array<T>, mixed   
+         given.                                                                 
+         🪪  argument.type                                                      
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  324    Call to an undefined method Modules\Geo\Models\Comune::saveToJson().   
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Tenant/app/Models/Traits/SushiToJson.php (in context of class          
+         Modules\Tenant\Models\TestSushiModel)                                  
+ ------ ----------------------------------------------------------------------- 
+  239    Call to an undefined method                                            
+         Modules\Tenant\Models\TestSushiModel::getJsonFile().                   
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  242    Call to an undefined method                                            
+         Modules\Tenant\Models\TestSushiModel::loadExistingData().              
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  245    Argument of an invalid type mixed supplied for foreach, only           
+         iterables are supported.                                               
+         🪪  foreach.nonIterable                                                
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  271    Call to an undefined method                                            
+         Modules\Tenant\Models\TestSushiModel::authId().                        
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  278    Cannot access an offset on mixed.                                      
+         🪪  offsetAccess.nonOffsetAccessible                                   
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  281    Call to an undefined method                                            
+         Modules\Tenant\Models\TestSushiModel::ensureDirectoryExists().         
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  282    Call to an undefined method                                            
+         Modules\Tenant\Models\TestSushiModel::saveToJson().                    
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  291    Call to an undefined method                                            
+         Modules\Tenant\Models\TestSushiModel::authId().                        
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  297    Call to an undefined method                                            
+         Modules\Tenant\Models\TestSushiModel::loadExistingData().              
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  301    Call to an undefined method                                            
+         Modules\Tenant\Models\TestSushiModel::findRowIndexById().              
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  305    Cannot access offset mixed on mixed.                                   
+         🪪  offsetAccess.nonOffsetAccessible                                   
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  307    Call to an undefined method                                            
+         Modules\Tenant\Models\TestSushiModel::saveToJson().                    
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  318    Call to an undefined method                                            
+         Modules\Tenant\Models\TestSushiModel::loadExistingData().              
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  319    Call to an undefined method                                            
+         Modules\Tenant\Models\TestSushiModel::findRowIndexById().              
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  322    Cannot access offset mixed on mixed.                                   
+         🪪  offsetAccess.nonOffsetAccessible                                   
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  323    Parameter #1 $array of function array_values expects array<T>, mixed   
+         given.                                                                 
+         🪪  argument.type                                                      
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  324    Call to an undefined method                                            
+         Modules\Tenant\Models\TestSushiModel::saveToJson().                    
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Tenant/app/Models/Traits/SushiToJson.php (in context of class          
+         Modules\Xot\Models\InformationSchemaTable)                             
+ ------ ----------------------------------------------------------------------- 
+  239    Call to an undefined method                                            
+         Modules\Xot\Models\InformationSchemaTable::getJsonFile().              
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  242    Call to an undefined method                                            
+         Modules\Xot\Models\InformationSchemaTable::loadExistingData().         
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  245    Argument of an invalid type mixed supplied for foreach, only           
+         iterables are supported.                                               
+         🪪  foreach.nonIterable                                                
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  271    Call to an undefined method                                            
+         Modules\Xot\Models\InformationSchemaTable::authId().                   
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  278    Cannot access an offset on mixed.                                      
+         🪪  offsetAccess.nonOffsetAccessible                                   
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  281    Call to an undefined method                                            
+         Modules\Xot\Models\InformationSchemaTable::ensureDirectoryExists().    
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  282    Call to an undefined method                                            
+         Modules\Xot\Models\InformationSchemaTable::saveToJson().               
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  291    Call to an undefined method                                            
+         Modules\Xot\Models\InformationSchemaTable::authId().                   
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  297    Call to an undefined method                                            
+         Modules\Xot\Models\InformationSchemaTable::loadExistingData().         
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  301    Call to an undefined method                                            
+         Modules\Xot\Models\InformationSchemaTable::findRowIndexById().         
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  305    Cannot access offset mixed on mixed.                                   
+         🪪  offsetAccess.nonOffsetAccessible                                   
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  307    Call to an undefined method                                            
+         Modules\Xot\Models\InformationSchemaTable::saveToJson().               
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  318    Call to an undefined method                                            
+         Modules\Xot\Models\InformationSchemaTable::loadExistingData().         
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  319    Call to an undefined method                                            
+         Modules\Xot\Models\InformationSchemaTable::findRowIndexById().         
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  322    Cannot access offset mixed on mixed.                                   
+         🪪  offsetAccess.nonOffsetAccessible                                   
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  323    Parameter #1 $array of function array_values expects array<T>, mixed   
+         given.                                                                 
+         🪪  argument.type                                                      
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+  324    Call to an undefined method                                            
+         Modules\Xot\Models\InformationSchemaTable::saveToJson().               
+         🪪  method.notFound                                                    
+         ✏️  Tenant/app/Models/Traits/SushiToJson.php                           
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------- 
+  Line   Tenant/app/Models/Traits/SushiToJsons.php (in context of class  
+         Modules\Cms\Models\Attachment)                                  
+ ------ ---------------------------------------------------------------- 
+  131    Call to an undefined method                                     
+         static(Modules\Cms\Models\Attachment)::getJsonFile().           
+         🪪  method.notFound                                             
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                   
+  150    Call to an undefined method                                     
+         Modules\Cms\Models\Attachment::getJsonFile().                   
+         🪪  method.notFound                                             
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                   
+  173    Call to an undefined method                                     
+         Modules\Cms\Models\Attachment::getJsonFile().                   
+         🪪  method.notFound                                             
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                   
+ ------ ---------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------- 
+  Line   Tenant/app/Models/Traits/SushiToJsons.php (in context of class       
+         Modules\Cms\Models\Menu)                                             
+ ------ --------------------------------------------------------------------- 
+  131    Call to an undefined method                                          
+         static(Modules\Cms\Models\Menu)::getJsonFile().                      
+         🪪  method.notFound                                                  
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                        
+  150    Call to an undefined method Modules\Cms\Models\Menu::getJsonFile().  
+         🪪  method.notFound                                                  
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                        
+  173    Call to an undefined method Modules\Cms\Models\Menu::getJsonFile().  
+         🪪  method.notFound                                                  
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                        
+ ------ --------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------- 
+  Line   Tenant/app/Models/Traits/SushiToJsons.php (in context of class       
+         Modules\Cms\Models\Page)                                             
+ ------ --------------------------------------------------------------------- 
+  131    Call to an undefined method                                          
+         static(Modules\Cms\Models\Page)::getJsonFile().                      
+         🪪  method.notFound                                                  
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                        
+  150    Call to an undefined method Modules\Cms\Models\Page::getJsonFile().  
+         🪪  method.notFound                                                  
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                        
+  173    Call to an undefined method Modules\Cms\Models\Page::getJsonFile().  
+         🪪  method.notFound                                                  
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                        
+ ------ --------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------- 
+  Line   Tenant/app/Models/Traits/SushiToJsons.php (in context of class  
+         Modules\Cms\Models\PageContent)                                 
+ ------ ---------------------------------------------------------------- 
+  131    Call to an undefined method                                     
+         static(Modules\Cms\Models\PageContent)::getJsonFile().          
+         🪪  method.notFound                                             
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                   
+  150    Call to an undefined method                                     
+         Modules\Cms\Models\PageContent::getJsonFile().                  
+         🪪  method.notFound                                             
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                   
+  173    Call to an undefined method                                     
+         Modules\Cms\Models\PageContent::getJsonFile().                  
+         🪪  method.notFound                                             
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                   
+ ------ ---------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------- 
+  Line   Tenant/app/Models/Traits/SushiToJsons.php (in context of class  
+         Modules\Cms\Models\Section)                                     
+ ------ ---------------------------------------------------------------- 
+  131    Call to an undefined method                                     
+         static(Modules\Cms\Models\Section)::getJsonFile().              
+         🪪  method.notFound                                             
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                   
+  150    Call to an undefined method                                     
+         Modules\Cms\Models\Section::getJsonFile().                      
+         🪪  method.notFound                                             
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                   
+  173    Call to an undefined method                                     
+         Modules\Cms\Models\Section::getJsonFile().                      
+         🪪  method.notFound                                             
+         ✏️  Tenant/app/Models/Traits/SushiToJsons.php                   
+ ------ ---------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------- 
+  Line   Xot/app/Actions/ModelClass/CountAction.php                           
+ ------ --------------------------------------------------------------------- 
+  29     Call to an undefined static method                                   
+         Modules\Xot\Models\InformationSchemaTable::getModelCount().          
+         🪪  staticMethod.notFound                                            
+         ✏️  Xot/app/Actions/ModelClass/CountAction.php                       
+  29     Method Modules\Xot\Actions\ModelClass\CountAction::execute() should  
+         return int but returns mixed.                                        
+         🪪  return.type                                                      
+         ✏️  Xot/app/Actions/ModelClass/CountAction.php                       
+ ------ --------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------- 
+  Line   Xot/app/Actions/ModelClass/UpdateCountAction.php                
+ ------ ---------------------------------------------------------------- 
+  25     Call to an undefined static method                              
+         Modules\Xot\Models\InformationSchemaTable::updateModelCount().  
+         🪪  staticMethod.notFound                                       
+         ✏️  Xot/app/Actions/ModelClass/UpdateCountAction.php            
+ ------ ---------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Xot/app/Filament/Resources/Pages/XotBaseEditRecord.php                 
+ ------ ----------------------------------------------------------------------- 
+  95     Parameter #1 $components of method                                     
+         Filament\Schemas\Schema::components() expects array<Illuminate\Contra  
+         cts\Support\Htmlable|string>|Closure|Illuminate\Contracts\Support\Htm  
+         lable|string, array<int|string, Filament\Support\Components\Component  
+         > given.                                                               
+         🪪  argument.type                                                      
+         ✏️  Xot/app/Filament/Resources/Pages/XotBaseEditRecord.php             
+ ------ ----------------------------------------------------------------------- 
+
+ [ERROR] Found 138 errors                                                       
+

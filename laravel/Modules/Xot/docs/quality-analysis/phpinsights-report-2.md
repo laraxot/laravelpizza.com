@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PHP Insights Analysis Report - Xot Module
 
 **Module:** Xot (Core Module)
@@ -202,3 +203,12 @@ protected $fillable;
 
 **Next Review:** After Phase 1 completion
 **Last Updated:** 2025-11-12 08:15 UTC
+=======
+---
+module: theme
+topic: phpinsights-report-2
+canonical: ../../../../Themes/docs/shared-components/phpinsights-report-.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/phpinsights-report-.md
+>>>>>>> 40b96bcd6 (.)

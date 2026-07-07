@@ -41,6 +41,16 @@ TextEntry::make('review_title')
 
 ---
 
+<<<<<<< HEAD
+=======
+## Implementazione modulo Fixcity (riferimento)
+
+- Classe aggregatrice degli entry sul wizard ticket: [`TicketFormReviewInfolist`](../../../Fixcity/app/Filament/Resources/TicketResource/Schemas/TicketFormReviewInfolist.php)
+- Guida operativa modulo: [`filament-summary-infolist-guidance.md`](../../../Fixcity/docs/filament-summary-infolist-guidance.md)
+
+---
+
+>>>>>>> 40b96bcd6 (.)
 ## Cosa NON Concludere
 
 Questa regola **non** significa:
@@ -103,7 +113,11 @@ Se e input: `Forms`.
 
 ## Riferimenti
 
+<<<<<<< HEAD
 - [docs/schemas-unified-religion.md](/var/www/_bases/base_fixcity_fila5/docs/schemas-unified-religion.md)
+=======
+- [docs/schemas-unified-religion.md](../../../../../../docs/schemas-unified-religion.md)
+>>>>>>> 40b96bcd6 (.)
 - https://filamentphp.com/docs/5.x/schemas/overview
 - https://filamentphp.com/docs/5.x/infolists/overview
 - https://filamentphp.com/docs/5.x/schemas/primes

@@ -112,7 +112,11 @@ architecture-overview.md
 # ❌ SBAGLIATO
 MY_DOCUMENT.md              # UPPERCASE
 my_document.md              # underscore
+<<<<<<< HEAD
 analysis-2025-11-04.md      # date in name (use CHANGELOG.md)
+=======
+analysis.md      # date in name (use CHANGELOG.md)
+>>>>>>> 40b96bcd6 (.)
 ```
 
 ### 8. DRY Principle
@@ -178,8 +182,11 @@ if (!$condition) {
 }
 
 // ❌ LASCIARE MARKER GIT
+<<<<<<< HEAD
 =======
 >>>>>>> commit-hash
+=======
+>>>>>>> 40b96bcd6 (.)
 ```
 
 ### ❌ Import Duplicati

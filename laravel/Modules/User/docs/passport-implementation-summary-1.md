@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Laravel Passport Implementation Summary - User Module
 
 ## Overview
@@ -96,3 +97,12 @@ The implementation supports:
 
 ## Conclusion
 The User module now provides a complete, production-ready OAuth2 implementation using Laravel Passport that integrates seamlessly with the modular architecture while maintaining security and performance best practices.
+=======
+---
+module: theme
+topic: passport-implementation-summary-1
+canonical: ../../../Themes/docs/shared-components/passport-implementation-summary.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/passport-implementation-summary.md
+>>>>>>> 40b96bcd6 (.)

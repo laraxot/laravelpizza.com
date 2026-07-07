@@ -33,6 +33,9 @@ class SmsFactorData extends Data
         return self::$instance;
     }
 
+    /**
+     * @return array<string, string>
+     */
     public function getAuthHeaders(): array
     {
         switch ($this->auth_type) {

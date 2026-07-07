@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Underscore Directories Rule - No _docs/
 
 ## Regola Fondamentale
@@ -96,3 +97,12 @@ find laravel/Modules -name ".gitignore" -exec grep "_docs/" {} \;
 - Git Convention: Underscore prefix = temporary
 - Laravel Convention: Use `docs/`, not `_docs/`
 - Clean Code: No temporary files in repository
+=======
+---
+module: theme
+topic: underscore-docs-rule
+canonical: ../../../Themes/docs/shared-components/UNDERSCORE_DOCS_RULE.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/UNDERSCORE_DOCS_RULE.md
+>>>>>>> 40b96bcd6 (.)

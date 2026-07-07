@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📚 **Indice Documentazione Modulo User**
 
 **Status**: ✅ PHPStan Level 10 Compliant
@@ -55,3 +56,12 @@
 ## Dependency Intelligence
 
 - [Dependency intelligence](dependency-intelligence.md)
+=======
+---
+module: theme
+topic: index-2
+canonical: ../../../Themes/docs/shared-components/00-index-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/00-index-Modules.md
+>>>>>>> 40b96bcd6 (.)

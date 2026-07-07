@@ -3,43 +3,41 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Channels;
-
+use function Safe\file_get_contents;
 use Modules\Notify\Channels\TelegramChannel;
 
+use PHPUnit\Framework\Assert;
 describe('TelegramChannel', function () {
     it('can be instantiated', function () {
         // TelegramChannel requires TelegramActionFactory in constructor
         // but we can test structure via reflection
         $reflection = new \ReflectionClass(TelegramChannel::class);
-        expect($reflection->isInstantiable())->toBeTrue();
+        Assert::assertTrue($reflection->isInstantiable());
     });
 
     it('has send method', function () {
         $reflection = new \ReflectionClass(TelegramChannel::class);
         $method = $reflection->getMethod('send');
 
-        expect($method->isPublic())->toBeTrue();
+        Assert::assertTrue($method->isPublic());
     });
 
     it('has correct namespace', function () {
         $reflection = new \ReflectionClass(TelegramChannel::class);
 
-        expect($reflection->getNamespaceName())->toBe('Modules\Notify\Channels');
+        Assert::assertSame('Modules\Notify\Channels', $reflection->getNamespaceName());
     });
 
     it('uses strict types', function () {
         $reflection = new \ReflectionClass(TelegramChannel::class);
-        $filename = $reflection->getFileName();
-
-        expect($filename)->not->toBeNull();
-        $content = file_get_contents($filename);
-        expect($content)->toContain('');
+        $content = \notifyReflectionSource($reflection);
+        Assert::assertStringContainsString('declare(strict_types=1)', $content);
     });
 
     it('has private factory property', function () {
         $reflection = new \ReflectionClass(TelegramChannel::class);
         $property = $reflection->getProperty('factory');
 
-        expect($property->isPrivate())->toBeTrue();
+        Assert::assertTrue($property->isPrivate());
     });
 });

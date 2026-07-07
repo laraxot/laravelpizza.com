@@ -4,8 +4,13 @@ The `XotBaseWizardWidget` provides a standardized base for creating multi-step f
 
 ## Features
 
+<<<<<<< HEAD
 - **Filament v5 Native**: Built on `Filament\Resources\Pages\Concerns\HasWizard`.
 - **Schema Integration**: Seamlessly integrates with the `XotBaseWidget` schema-driven architecture.
+=======
+- **Filament v5 Wizard + `HasWizard`**: `Modules\Xot\Filament\Widgets\XotBaseWizardWidget` include `Filament\Resources\Pages\Concerns\HasWizard` con `parent::form()` su `XotBaseWidget`; **nessun** `normalizeWizardFormState()` sulla base — il dominio usa `$this->form->getState()`; Blade helper opzionale **`DelegatesFilamentWizardSchemaMethods`** dove ancora incluso nel progetto.
+- **Schema Integration**: Extends `XotBaseWidget` and `InteractsWithSchemas` conventions.
+>>>>>>> 40b96bcd6 (.)
 - **Customizable Actions**: Methods to configure Next, Previous, and Submit actions.
 - **Theme Support**: Automatically switches to the theme-level wizard component for front-office views.
 - **State Persistence**: Optional support for step persistence in the query string.

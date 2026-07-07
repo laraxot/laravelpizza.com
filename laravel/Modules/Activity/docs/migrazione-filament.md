@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Activity Module - Migrazione a Filament 4
 
 ## Panoramica Filament 4
@@ -289,3 +290,12 @@ La migrazione ad Filament 4 per il modulo Activity offre benefici sostanziali in
 - Pressioni di timeline immediate
 - Risorse limitate
 - Sistema stabile e performante attualmente
+=======
+---
+module: theme
+topic: migrazione-filament
+canonical: ../../../Themes/docs/shared-components/migrazione-filament-4-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/migrazione-filament-4-Modules.md
+>>>>>>> 40b96bcd6 (.)

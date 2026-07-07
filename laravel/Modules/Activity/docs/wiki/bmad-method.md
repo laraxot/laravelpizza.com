@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BMAD Method v6.3 operativo nel progetto
 
 ## Regola pratica
@@ -32,3 +33,12 @@ BMAD non e' un generatore casuale di codice: e' il processo di delivery. Prima s
 - Raw ufficiale BMAD: `docs/raw/bmad/llms-full.txt`.
 - Sintesi progetto: `docs/wiki/bmad-method-v63.md`.
 - Ogni modulo/tema mantiene questa nota in `docs/wiki/bmad-method.md` come promemoria operativo.
+=======
+---
+module: theme
+topic: bmad-method
+canonical: ../../../../Themes/docs/shared-components/bmad-method.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/bmad-method.md
+>>>>>>> 40b96bcd6 (.)

@@ -113,4 +113,8 @@ Vedi Best Practice #1.
 - [[coordinate-picker-state-binding-rule]]
 - [[coordinate-picker-field]]
 - [[filament5-custom-field-entangle-contract]]
+<<<<<<< HEAD
 - [[map-picker-family-architecture]]
+=======
+- [[map-picker-family-architecture]]
+>>>>>>> 40b96bcd6 (.)

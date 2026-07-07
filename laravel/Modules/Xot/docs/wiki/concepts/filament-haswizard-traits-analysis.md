@@ -74,7 +74,11 @@ The `Wizard` component already handles 90% of what `XotBaseWizardWidget` does ma
 1. **Security policy** - `queryStepOverrideAllowed()` 
 2. **LangServiceProvider** - auto-label integration
 3. **Theme switching** - `->view('pub_theme::components.wizard')`
+<<<<<<< HEAD
 4. **XotBaseResourceForm pattern** - `getWizardSteps()`, `getStepByName()`
+=======
+4. **XotBaseResourceForm pattern** - `getSteps()`, `getStepByName()`
+>>>>>>> 40b96bcd6 (.)
 
 ## Philosophy / Zen
 - **Don't reinvent** - `Wizard` component is battle-tested

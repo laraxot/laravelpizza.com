@@ -34,6 +34,146 @@ use function Safe\json_encode;
  * @property Carbon|null          $deleted_at
  * @property string|null          $deleted_by
  * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
+ * @property string               $id
+ * @property string|null          $treatment_id
+ * @property string|null          $consent_id
+ * @property string               $subject_id
+ * @property string               $ip
+ * @property string               $action
+ * @property string               $payload
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property Consent|null         $consent
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *
@@ -70,11 +210,29 @@ class Event extends BaseModel
         'treatment_id',
         'consent_id',
         'subject_id',
+        'ip',
         'payload',
     ];
 
+<<<<<<< HEAD
     protected $table = 'gdpr_events';
 
+=======
+    protected static function booted(): void
+    {
+        static::creating(function (Event $event): void {
+            if (blank($event->ip)) {
+                $event->ip = '127.0.0.1';
+            }
+        });
+    }
+
+    protected $table = 'gdpr_events';
+
+    /**
+     * @return BelongsTo<Consent, $this>
+     */
+>>>>>>> 40b96bcd6 (.)
     public function consent(): BelongsTo
     {
         return $this->belongsTo(Consent::class);

@@ -1,5 +1,12 @@
-# RegisterWidget Fix - 13 Febbraio 2026
+---
+module: theme
+topic: register-widget-fix
+canonical: ../../../Themes/docs/shared-components/register-widget-fix-.md
+---
 
+<<<<<<< HEAD
+See canonical documentation: ../../../Themes/docs/shared-components/register-widget-fix-.md
+=======
 ## Problema Risolto
 
 La pagina di registrazione `/it/auth/register` non funzionava correttamente:
@@ -261,3 +268,4 @@ Quando si sovrascrive un metodo dalla classe padre, mantenere sempre lo stesso a
 - Widget: `/laravel/Modules/Gdpr/app/Filament/Widgets/Auth/RegisterWidget.php`
 - View: `/laravel/Themes/Meetup/resources/views/filament/widgets/auth/register.blade.php`
 - Page: `/laravel/Themes/Meetup/resources/views/pages/auth/register.blade.php`
+>>>>>>> f73be4c (.)

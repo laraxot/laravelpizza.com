@@ -4,11 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Services;
 
+<<<<<<< HEAD
+=======
+use Spatie\QueueableAction\QueueableAction;
+
+>>>>>>> 40b96bcd6 (.)
 /**
  * Service per geocoding e reverse geocoding.
  */
 class GeocodingService
 {
+<<<<<<< HEAD
+=======
+    use QueueableAction;
+
+>>>>>>> 40b96bcd6 (.)
     /**
      * Geocodifica un indirizzo.
      *
@@ -30,4 +40,11 @@ class GeocodingService
     {
         return [];
     }
+<<<<<<< HEAD
+=======
+
+    public function execute(): void
+    {
+    }
+>>>>>>> 40b96bcd6 (.)
 }

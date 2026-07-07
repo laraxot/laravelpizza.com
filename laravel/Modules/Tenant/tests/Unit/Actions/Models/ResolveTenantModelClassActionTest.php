@@ -4,34 +4,34 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Tests\Unit\Actions\Models;
 
+use Mockery\MockInterface;
 use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
 use Modules\Tenant\Actions\Config\SaveTenantConfigAction;
 use Modules\Tenant\Actions\Models\ResolveTenantModelClassAction;
 use Modules\Tenant\Tests\TestCase;
 use Modules\Xot\Actions\Model\GetAllModelsByModuleNameAction;
 use Nwidart\Modules\Facades\Module;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
 it('resolves tenant model class from config', function (): void {
-    $this->mock(ResolveTenantConfigValueAction::class)
-        ->shouldReceive('execute')
-        ->with('morph_map.test_model')
-        ->andReturn('Modules\Test\Models\TestModel');
+    /** @var TestCase $this */
+    $this->mockService(ResolveTenantConfigValueAction::class, static function (MockInterface $mock): void {
+        $mock->allows(['execute' => 'Modules\Test\Models\TestModel']);
+    });
 
-    $action = app(ResolveTenantModelClassAction::class);
-    $result = $action->execute('test_model');
+    $result = app(ResolveTenantModelClassAction::class)->execute('test_model');
 
-    expect($result)->toBe('Modules\Test\Models\TestModel');
+    Assert::assertSame('Modules\Test\Models\TestModel', $result);
 });
 
 it('resolves tenant model class by scanning modules if not in config', function (): void {
-    $this->mock(ResolveTenantConfigValueAction::class)
-        ->shouldReceive('execute')
-        ->with('morph_map.event')
-        ->andReturn(null);
+    /** @var TestCase $this */
+    $this->mockService(ResolveTenantConfigValueAction::class, static function (MockInterface $mock): void {
+        $mock->allows(['execute' => null]);
+    });
 
-    // Mock Module::allEnabled() with a lightweight module stub
     $module = new class
     {
         public function getName(): string
@@ -42,29 +42,29 @@ it('resolves tenant model class by scanning modules if not in config', function 
 
     Module::shouldReceive('allEnabled')->andReturn([$module]);
 
-    $this->mock(GetAllModelsByModuleNameAction::class)
-        ->shouldReceive('execute')
-        ->with('Meetup')
-        ->andReturn(['event' => 'Modules\Meetup\Models\Event']);
+    $this->mockService(GetAllModelsByModuleNameAction::class, static function (MockInterface $mock): void {
+        $mock->allows(['execute' => ['event' => 'Modules\Meetup\Models\Event']]);
+    });
 
-    $this->mock(SaveTenantConfigAction::class)
-        ->shouldReceive('execute')
-        ->with('morph_map', ['event' => 'Modules\Meetup\Models\Event'])
-        ->once();
+    $this->mockService(SaveTenantConfigAction::class, static function (MockInterface $mock): void {
+        $mock->allows(['execute' => true]);
+    });
 
-    $action = app(ResolveTenantModelClassAction::class);
-    $result = $action->execute('event');
+    $result = app(ResolveTenantModelClassAction::class)->execute('event');
 
-    expect($result)->toBe('Modules\Meetup\Models\Event');
+    Assert::assertSame('Modules\Meetup\Models\Event', $result);
 });
 
 it('throws exception for unknown model', function (): void {
-    $this->mock(ResolveTenantConfigValueAction::class)
-        ->shouldReceive('execute')
-        ->andReturn(null);
+    /** @var TestCase $this */
+    $this->mockService(ResolveTenantConfigValueAction::class, static function (MockInterface $mock): void {
+        $mock->allows(['execute' => null]);
+    });
 
     Module::shouldReceive('allEnabled')->andReturn([]);
 
-    $action = app(ResolveTenantModelClassAction::class);
-    $action->execute('unknown_model');
-})->throws(\Exception::class);
+    assertTenantThrows(
+        fn (): string => app(ResolveTenantModelClassAction::class)->execute('unknown_model'),
+        \Exception::class,
+    );
+});

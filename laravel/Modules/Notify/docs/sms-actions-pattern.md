@@ -252,3 +252,7 @@ Seguire questo pattern garantisce:
 ---
 
 *Ultimo aggiornamento: [DATE]*
+
+## PHPStan sui test reflection delle azioni SMS
+
+Per i test strutturali delle action SMS non istanziare classi che leggono `config()` nel costruttore: usa `ReflectionClass` sulla class-string. Verifica la firma pubblica `execute(SmsData): array` con `ReflectionNamedType` prima di chiamare `getName()`. Evita `expect()`, `class_uses()` e `file_get_contents()` nei test analizzati da PHPStan: preferisci `PHPUnit\Framework\Assert`, `ReflectionClass::getTraitNames()` e controlli reflection diretti.

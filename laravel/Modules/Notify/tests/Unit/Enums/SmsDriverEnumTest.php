@@ -8,32 +8,58 @@ use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasLabel;
 use Modules\Notify\Enums\SmsDriverEnum;
-use PHPUnit\Framework\TestCase;
-use ReflectionClass;
+use Modules\Notify\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-class SmsDriverEnumTest extends TestCase
-{
-    /** @test */
-    public function it_has_correct_cases(): void
-    {
-        $this->assertCount(7, SmsDriverEnum::cases());
+uses(TestCase::class);
 
-        $this->assertEquals('smsfactor', SmsDriverEnum::SMSFACTOR->value);
-        $this->assertEquals('twilio', SmsDriverEnum::TWILIO->value);
-        $this->assertEquals('nexmo', SmsDriverEnum::NEXMO->value);
-        $this->assertEquals('plivo', SmsDriverEnum::PLIVO->value);
-        $this->assertEquals('gammu', SmsDriverEnum::GAMMU->value);
-        $this->assertEquals('netfun', SmsDriverEnum::NETFUN->value);
-        $this->assertEquals('agiletelecom', SmsDriverEnum::AGILETELECOM->value);
+it('has correct cases', function (): void {
+    Assert::assertCount(1, SmsDriverEnum::cases());
+
+    Assert::assertSame('smsfactor', SmsDriverEnum::SMSFACTOR->value);
+});
+
+it('implements filament contracts', function (): void {
+    Assert::assertInstanceOf(HasLabel::class, SmsDriverEnum::SMSFACTOR);
+    Assert::assertInstanceOf(HasIcon::class, SmsDriverEnum::SMSFACTOR);
+    Assert::assertInstanceOf(HasColor::class, SmsDriverEnum::SMSFACTOR);
+});
+
+it('has enum trait', function (): void {
+    $reflection = new \ReflectionClass(SmsDriverEnum::class);
+    $traits = $reflection->getTraitNames();
+
+    Assert::assertContains('Modules\\Xot\\Traits\\EnumTrait', $traits);
+});
+
+it('get default returns default driver', function (): void {
+    $default = SmsDriverEnum::getDefault();
+
+    Assert::assertInstanceOf(SmsDriverEnum::class, $default);
+    Assert::assertContains($default, SmsDriverEnum::cases());
+});
+
+it('each case has unique value', function (): void {
+    $values = array_map(static fn ($case) => $case->value, SmsDriverEnum::cases());
+    $uniqueValues = array_unique($values);
+
+    Assert::assertCount(count($values), $uniqueValues, 'All enum cases should have unique values');
+});
+
+it('cases returns all enum instances', function (): void {
+    $cases = SmsDriverEnum::cases();
+    Assert::assertCount(1, $cases);
+
+    foreach ($cases as $case) {
+        Assert::assertInstanceOf(SmsDriverEnum::class, $case);
     }
+});
 
-    /** @test */
-    public function it_implements_filament_contracts(): void
-    {
-        $this->assertInstanceOf(HasLabel::class, SmsDriverEnum::SMSFACTOR);
-        $this->assertInstanceOf(HasIcon::class, SmsDriverEnum::SMSFACTOR);
-        $this->assertInstanceOf(HasColor::class, SmsDriverEnum::SMSFACTOR);
+it('all cases expose non empty description', function (): void {
+    foreach (SmsDriverEnum::cases() as $case) {
+        Assert::assertNotEmpty($case->getDescription());
     }
+<<<<<<< HEAD
 
     /** @test */
     public function it_has_trans_trait(): void
@@ -96,3 +122,6 @@ class SmsDriverEnumTest extends TestCase
         }
     }
 }
+=======
+});
+>>>>>>> 40b96bcd6 (.)

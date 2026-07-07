@@ -126,7 +126,11 @@ Modified files MUST pass:
 - URLs to verify:
     - `/it/tests/segnalazione-crea`
     - `/fixcity/admin/tickets/create`
+<<<<<<< HEAD
     - `/it/tests/segnalazioni-elenco` (for `map-lit` visualizer).
+=======
+    - `/it/tests/ticket-list` (for `map-lit` visualizer).
+>>>>>>> 40b96bcd6 (.)
 
 ---
 
@@ -148,11 +152,19 @@ Modified files MUST pass:
 9. **[Testable]** `buildRedirectUrl()` extracted for unit testing — URL construction isolated, mockable, independent of request flow.
 10. **[PHPDoc]** Complete PHPDoc blocks with `@var`, `@param`, `@return` — IDE autocomplete and static analysis support.
 
+<<<<<<< HEAD
 ### 9.2 Frontend: segnalazioni-elenco.blade.php — Created
 **File**: `laravel/Themes/Sixteen/resources/views/pages/tests/segnalazioni-elenco.blade.php`
 **Purpose**: CMS-driven page for the segnalazioni elenco map visualizer.
 **Implementation**: Extends `pub_theme::layouts.app`, uses `<map-lit>` custom element with `data-url` pointing to `tickets.json`.
 **Route**: Folio page `tests/[slug].blade.php` matches `/it/tests/segnalazioni-elenco` (already existing CMS routing).
+=======
+### 9.2 Frontend: ticket-list.blade.php — Created
+**File**: `laravel/Themes/Sixteen/resources/views/pages/tests/ticket-list.blade.php`
+**Purpose**: CMS-driven page for the segnalazioni elenco map visualizer.
+**Implementation**: Extends `pub_theme::layouts.app`, uses `<map-lit>` custom element with `data-url` pointing to `tickets.json`.
+**Route**: Folio page `tests/[slug].blade.php` matches `/it/tests/ticket-list` (already existing CMS routing).
+>>>>>>> 40b96bcd6 (.)
 
 ### 9.3 map-lit.js — Already Compliant
 **File**: `laravel/Modules/Geo/resources/js/components/map-lit.js` (385 lines)
@@ -188,7 +200,11 @@ php artisan insights --fix  # if auto-fixes available
 ### 9.5 URLs to Verify (per Quality Gates)
 1. `http://127.0.0.1:8000/it/tests/segnalazione-crea` — Wizard creation (already exists)
 2. `http://127.0.0.1:8000/fixcity/admin/tickets/create` — Admin panel (Filament)
+<<<<<<< HEAD
 3. `http://127.0.0.1:8000/it/tests/segnalazioni-elenco` — **NEW**: Map visualizer page ✅
+=======
+3. `http://127.0.0.1:8000/it/tests/ticket-list` — **NEW**: Map visualizer page ✅
+>>>>>>> 40b96bcd6 (.)
 
 ---
 
@@ -199,7 +215,11 @@ php artisan insights --fix  # if auto-fixes available
 - [ ] Run `php artisan migrate` if any DB changes.
 - [ ] Clear config & view cache: `php artisan optimize:clear`.
 - [ ] Test on staging: all three URLs above (200 OK, map renders, zoom/geolocate work).
+<<<<<<< HEAD
 - [ ] Playwright visual parity snapshot for `/it/tests/segnalazioni-elenco`.
+=======
+- [ ] Playwright visual parity snapshot for `/it/tests/ticket-list`.
+>>>>>>> 40b96bcd6 (.)
 - [ ] Ensure no `unpkg` or `cdn.` references in JS (`grep -r "unpkg" laravel/Modules/Geo/resources/js/` → 0 results).
 - [ ] Confirm `laravel/Modules/Geo/resources/svg/` contains marker SVGs (not in `img/` or `public/`).
 

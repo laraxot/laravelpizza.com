@@ -28,6 +28,7 @@ use Override;
  */
 class SendAwsEmailPage extends XotBasePage
 {
+    /** @var array<string, mixed>|null */
     public ?array $emailData = [];
 
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-envelope';
@@ -138,10 +139,11 @@ class SendAwsEmailPage extends XotBasePage
         }
     }
 
+    /** @return array<string, \Filament\Actions\Action> */
     protected function getEmailFormActions(): array
     {
         return [
-            Action::make('sendEmail')->label(__('notify::email.actions.send'))->submit('sendEmail'),
+            'submit' => Action::make('sendEmail')->label(__('notify::email.actions.send'))->submit('sendEmail'),
         ];
     }
 

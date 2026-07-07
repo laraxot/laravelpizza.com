@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Best Practices per le Traduzioni
 
 ## Principi Generali
@@ -143,3 +144,12 @@ Seguire queste best practices aiuta a mantenere un sistema di traduzioni efficie
 - [Documentazione Laravel Localization](https://laravel.com/docs/localization)
 - [Best Practices di Codice](./code_best_practices.md)
 - [Struttura Moduli](./module_structure.md) 
+=======
+---
+module: theme
+topic: translation-best-practices-1
+canonical: ../../../Themes/docs/shared-components/translation-best-practices.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/translation-best-practices.md
+>>>>>>> 40b96bcd6 (.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Migrazione da ThemeComposer a Componenti Blade
 
 ## Panoramica
@@ -242,3 +243,12 @@ git checkout -- Themes/*/resources/views/pages/
 ---
 @see Themes/One/resources/views/pages/index.blade.php
 @see Modules/Cms/View/Composers/ThemeComposer.php
+=======
+---
+module: theme
+topic: theme-to-components
+canonical: ../../../../Themes/docs/shared-components/01-theme-to-components.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/01-theme-to-components.md
+>>>>>>> 40b96bcd6 (.)

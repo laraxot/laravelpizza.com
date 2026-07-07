@@ -4,18 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Actions;
 
+use InvalidArgumentException;
 use Illuminate\Notifications\AnonymousNotifiable;
 use Illuminate\Notifications\Notification as IlluminateNotification;
 use Illuminate\Support\Facades\Notification;
 use Modules\Notify\Actions\SendNotificationToRecipientAction;
 use Modules\Notify\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Notify\Tests\TestCase::class);
 
 function makeDummyNotificationForRecipient(): IlluminateNotification
 {
     return new class extends IlluminateNotification
     {
+        /** @return list<string> */
         public function via(object $notifiable): array
         {
             return ['mail'];
@@ -32,8 +35,7 @@ test('send notification to recipient returns true and routes mail', function () 
         $notification,
     );
 
-    expect($result)->toBeTrue();
-
+    Assert::assertTrue($result);
     Notification::assertSentOnDemand(
         $notification::class,
         static function (IlluminateNotification $notification, array $channels, AnonymousNotifiable $notifiable): bool {
@@ -43,8 +45,11 @@ test('send notification to recipient returns true and routes mail', function () 
 });
 
 test('send notification to recipient throws for invalid email', function () {
-    app(SendNotificationToRecipientAction::class)->execute(
-        'invalid-email',
-        makeDummyNotificationForRecipient(),
+    \assertNotifyThrows(
+        fn () => app(SendNotificationToRecipientAction::class)->execute(
+            'invalid-email',
+            makeDummyNotificationForRecipient(),
+        ),
+        \InvalidArgumentException::class,
     );
-})->throws(\InvalidArgumentException::class);
+});

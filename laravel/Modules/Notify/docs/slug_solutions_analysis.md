@@ -177,6 +177,7 @@ TextInput::make('slug')
 - [Articolo Laravel News](https://laravel-news.com/generating-slugs-from-a-title-in-filament)
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Best Practices UI/UX](./BEST-PRACTICES.md)
+- [Best Practices UI/UX](./BEST-PRACTICES.md)
 
 ## Note Importanti
 

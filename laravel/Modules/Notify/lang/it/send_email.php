@@ -39,7 +39,7 @@ return [
         ],
         'empty' => [
             'heading' => '',
-            'label' => 'empty',
+            'label' => 'empty12',
         ],
     ],
     'fields' => [

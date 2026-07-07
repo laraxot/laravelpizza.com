@@ -15,6 +15,21 @@ use Override;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 
 /**
+ * @property int|string $id
+ * @property int|null $template_id
+ * @property string|null $mailable_type
+ * @property int|string|null $mailable_id
+ * @property string|null $status
+ * @property string|null $status_message
+ * @property array<string, mixed> $data
+ * @property array<string, mixed> $metadata
+ * @property \Illuminate\Support\Carbon|null $sent_at
+ * @property \Illuminate\Support\Carbon|null $delivered_at
+ * @property \Illuminate\Support\Carbon|null $failed_at
+ * @property \Illuminate\Support\Carbon|null $opened_at
+ * @property \Illuminate\Support\Carbon|null $clicked_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read ProfileContract|null $creator
  * @property-read Model|\Eloquent $mailable
  * @property-read MediaCollection<int, Media> $media
@@ -26,8 +41,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|MailTemplateLog newModelQuery()
  * @method static Builder<static>|MailTemplateLog newQuery()
  * @method static Builder<static>|MailTemplateLog query()
- *
- * @mixin IdeHelperMailTemplateLog
  *
  * @property-read ProfileContract|null $deleter
  *
@@ -50,11 +63,13 @@ class MailTemplateLog extends BaseModel
         'clicked_at',
     ];
 
+    /** @return BelongsTo<MailTemplate, $this> */
     public function template(): BelongsTo
     {
         return $this->belongsTo(MailTemplate::class, 'template_id');
     }
 
+    /** @return MorphTo<Model, $this> */
     public function mailable(): MorphTo
     {
         return $this->morphTo();

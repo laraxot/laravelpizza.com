@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "_leaflet-src-BUYAHFr5.css": {
     "file": "assets/leaflet-src-BUYAHFr5.css",
     "src": "_leaflet-src-BUYAHFr5.css"
@@ -50,10 +51,28 @@
     "names": [
       "app.css"
     ],
+=======
+  "../../node_modules/leaflet/dist/images/layers-2x.png": {
+    "file": "assets/layers-2x.png",
+    "src": "../../node_modules/leaflet/dist/images/layers-2x.png"
+  },
+  "../../node_modules/leaflet/dist/images/layers.png": {
+    "file": "assets/layers.png",
+    "src": "../../node_modules/leaflet/dist/images/layers.png"
+  },
+  "../../node_modules/leaflet/dist/images/marker-icon.png": {
+    "file": "assets/marker-icon.png",
+    "src": "../../node_modules/leaflet/dist/images/marker-icon.png"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app.js",
+    "name": "app",
+>>>>>>> 40b96bcd6 (.)
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/components/coordinate-picker-lit.js": {
+<<<<<<< HEAD
     "file": "assets/coordinate-picker-lit-DP627Mtd.js",
     "name": "coordinate-picker-lit",
     "src": "resources/js/components/coordinate-picker-lit.js",
@@ -100,5 +119,19 @@
   "resources/svg/map-picker-marker-fallback.svg": {
     "file": "assets/map-picker-marker-fallback-Bu_stv-I.svg",
     "src": "resources/svg/map-picker-marker-fallback.svg"
+=======
+    "file": "assets/coordinate-picker-lit.js",
+    "name": "coordinate-picker-lit",
+    "src": "resources/js/components/coordinate-picker-lit.js",
+    "isEntry": true,
+    "css": [
+      "assets/coordinate-picker-lit.css"
+    ],
+    "assets": [
+      "assets/layers.png",
+      "assets/layers-2x.png",
+      "assets/marker-icon.png"
+    ]
+>>>>>>> 40b96bcd6 (.)
   }
 }

@@ -23,6 +23,10 @@ Nel modulo Geo il second brain serve a non perdere:
 
 ## Best practices
 
+<<<<<<< HEAD
+=======
+- rispettare [bem-modifier-dom-contract.md](../rules/bem-modifier-dom-contract.md) per ui js (popup, marker): modifier sul block, dom coerente con lo stato
+>>>>>>> 40b96bcd6 (.)
 - una pagina per ogni contratto riusabile
 - una pagina per ogni bug che cambia una regola futura
 - link dal root wiki alle regole Geo che diventano cross-project

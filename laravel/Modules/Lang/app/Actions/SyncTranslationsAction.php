@@ -87,8 +87,11 @@ class SyncTranslationsAction
         $translationsAdded = 0;
 
         foreach ($sourceFiles as $sourceFile) {
-            $fileName = basename((string) $sourceFile);
-            $sourceTranslations = $this->loadTranslations((string) $sourceFile);
+            if (! is_string($sourceFile)) {
+                continue;
+            }
+            $fileName = basename($sourceFile);
+            $sourceTranslations = $this->loadTranslations($sourceFile);
 
             if (empty($sourceTranslations)) {
                 continue;
@@ -141,7 +144,7 @@ class SyncTranslationsAction
         $directories = File::directories($modulesPath);
 
         foreach ($directories as $directory) {
-            $directoryStr = (string) $directory;
+            $directoryStr = is_string($directory) ? $directory : '';
             $moduleName = basename($directoryStr);
             if (File::exists("{$directoryStr}/lang")) {
                 $modules[] = $moduleName;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Script Placement Rules
 
 ## Rule: Standalone Operational Scripts Location
@@ -63,3 +64,12 @@ ModuleName/
 
 - 2026-03-12: Rule established after discovering misplaced scripts causing PHPStan errors
 - Files moved: `generate_test_data.php`, `populate_database_comprehensive.php`
+=======
+---
+module: theme
+topic: script-placement-rules
+canonical: ../../../Themes/docs/shared-components/SCRIPT_PLACEMENT_RULES.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/SCRIPT_PLACEMENT_RULES.md
+>>>>>>> 40b96bcd6 (.)

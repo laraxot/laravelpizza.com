@@ -34,6 +34,7 @@ class SendPushNotificationPage extends XotBasePage
 {
     // use NavigationLabelTrait;
 
+    /** @var array<string, mixed>|null */
     public ?array $notificationData = [];
 
     // protected static ?string $navigationIcon = 'heroicon-o-envelope';
@@ -213,10 +214,11 @@ class SendPushNotificationPage extends XotBasePage
         ];
     }
 
+    /** @return array<string, \Filament\Actions\Action> */
     protected function getNotificationFormActions(): array
     {
         return [
-            Action::make('notificationFormActions')
+            'submit' => Action::make('notificationFormActions')
 
                 ->submit('notificationFormActions'),
         ];

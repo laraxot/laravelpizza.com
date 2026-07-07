@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Geo Module - Product Strategy
 
 **Module:** Geo  
@@ -87,3 +88,12 @@ Respect location privacy.
 
 ---
 
+=======
+---
+module: theme
+topic: product_strategy
+canonical: ../../../Themes/docs/shared-components/PRODUCT_STRATEGY.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/PRODUCT_STRATEGY.md
+>>>>>>> 40b96bcd6 (.)

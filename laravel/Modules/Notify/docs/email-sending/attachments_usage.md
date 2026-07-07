@@ -209,6 +209,7 @@ Ogni allegato può utilizzare **due formati** a seconda della fonte:
 ### Esempio: Email con PDF di Scheda Valutazione
 
 Vedi [Email PDF Attachments](../../../Ptv/docs/email-pdf-attachments.md) per un esempio completo di generazione e invio PDF come allegato email.
+Vedi [Email PDF Attachments](../../../Ptv/docs/email-pdf-attachments.md) per un esempio completo di generazione e invio PDF come allegato email.
 
 ## Esempi Completi
 

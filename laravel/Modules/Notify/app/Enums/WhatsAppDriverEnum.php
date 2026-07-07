@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Enums;
 
+use Modules\Xot\Traits\EnumTrait;
+
 /**
  * Enum per i driver WhatsApp supportati
  *
@@ -12,6 +14,8 @@ namespace Modules\Notify\Enums;
  */
 enum WhatsAppDriverEnum: string
 {
+    use EnumTrait;
+
     case TWILIO = 'twilio';
     case MESSAGEBIRD = 'messagebird';
     case VONAGE = 'vonage';

@@ -72,7 +72,10 @@ class MyTableWidget extends XotBaseTableWidget
 declare(strict_types=1);
 
 namespace Modules\Quaeris\Filament\Widgets;
+<<<<<<< HEAD
 >>>>>>> 551c768c4 (.)
+=======
+>>>>>>> 40b96bcd6 (.)
 
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
@@ -129,7 +132,10 @@ class QuestionChartFilterWidget extends XotBaseWidget
 declare(strict_types=1);
 
 namespace Modules\Quaeris\Filament\Widgets;
+<<<<<<< HEAD
 >>>>>>> 551c768c4 (.)
+=======
+>>>>>>> 40b96bcd6 (.)
 
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -207,7 +213,10 @@ class QuestionChartDataWidget extends XotBaseTableWidget
 declare(strict_types=1);
 
 namespace Modules\Quaeris\Filament\Widgets;
+<<<<<<< HEAD
 >>>>>>> 551c768c4 (.)
+=======
+>>>>>>> 40b96bcd6 (.)
 
 use Filament\Widgets\ChartWidget;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;

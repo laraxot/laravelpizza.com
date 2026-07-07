@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PHPStan Error Resolution Roadmap - User Module
 
 ## Executive Summary
@@ -136,3 +137,12 @@ file_put_contents($path, $content);
 - [ ] User management features remain functional
 - [ ] Passport and Socialite integrations work properly
 - [ ] No security vulnerabilities introduced
+=======
+---
+module: theme
+topic: phpstan-fix-roadmap
+canonical: ../../../Themes/docs/shared-components/phpstan-fix-roadmap.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fix-roadmap.md
+>>>>>>> 40b96bcd6 (.)

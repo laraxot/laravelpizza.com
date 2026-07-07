@@ -65,7 +65,11 @@ class XotBaseResourceForm
         return [];
     }
 
+<<<<<<< HEAD
     public static function getWizardSteps(): array
+=======
+    public static function getSteps(): array
+>>>>>>> 40b96bcd6 (.)
     {
         return [];
     }
@@ -87,12 +91,20 @@ class TicketForm extends XotBaseResourceForm
 {
     public static function getFormSchema(): array
     {
+<<<<<<< HEAD
         $steps = static::getWizardSteps();
+=======
+        $steps = static::getSteps();
+>>>>>>> 40b96bcd6 (.)
         $wizard = Wizard::make($steps)->skippable()->persistStepInQueryString();
         return [$wizard];
     }
 
+<<<<<<< HEAD
     public static function getWizardSteps(): array
+=======
+    public static function getSteps(): array
+>>>>>>> 40b96bcd6 (.)
     {
         return [
             static::getStepByName('privacy'),
@@ -121,7 +133,11 @@ class TicketForm extends XotBaseResourceForm
 
 ### 3. **DRY + KISS (Non-Attachment to Repetition)**
 - Wizard configuration logic lives ONCE in `XotBaseResourceForm`
+<<<<<<< HEAD
 - All modules reuse: `getWizardSteps()`, `getStepByName()`
+=======
+- All modules reuse: `getSteps()`, `getStepByName()`
+>>>>>>> 40b96bcd6 (.)
 - No copy-paste of wizard boilerplate
 
 ### 4. **LangServiceProvider Integration (Right Speech)**
@@ -139,7 +155,11 @@ class TicketForm extends XotBaseResourceForm
 | Scenario | Pattern |
 |-----------|---------|
 | Simple form (no wizard) | `getFormSchema()` returns array of components |
+<<<<<<< HEAD
 | Multi-step wizard | `getWizardSteps()` + `getStepByName()` + `get{X}Schema()` |
+=======
+| Multi-step wizard | `getSteps()` + `getStepByName()` + `get{X}Schema()` |
+>>>>>>> 40b96bcd6 (.)
 | Resource page form | Extend `XotBaseResourceForm` |
 | Widget form (frontoffice) | Extend `XotBaseResourceForm` (reused!) |
 | Pure Filament demo style | Only if NO module-specific logic needed |

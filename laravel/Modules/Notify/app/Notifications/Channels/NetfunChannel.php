@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Notifications\Channels;
 
-use Modules\Notify\Actions\NetfunSendAction;
 use Modules\Notify\Contracts\CanThemeNotificationContract;
+use Modules\Notify\Contracts\SMS\SmsActionContract;
+use Modules\Notify\Factories\SmsActionFactory;
 use Modules\Notify\Notifications\ThemeNotification;
 use Webmozart\Assert\Assert;
-
-// use Modules\Xot\Contracts\ModelContactContract;
 
 class NetfunChannel
 {
@@ -20,21 +19,12 @@ class NetfunChannel
     {
         $smsData = $themeNotification->toSms($notifiable);
 
-        // Otteniamo l'istanza dell'action e verifichiamo che sia del tipo corretto
-        $netfunSendAction = app(NetfunSendAction::class);
-        Assert::isInstanceOf($netfunSendAction, NetfunSendAction::class);
+        $action = app(SmsActionFactory::class)->create();
+        Assert::isInstanceOf($action, SmsActionContract::class);
 
-        // Eseguiamo l'action - restituisce sempre un array
         /** @var array<string, mixed> $data */
-        $data = $netfunSendAction->execute($smsData);
+        $data = $action->execute($smsData);
 
-        // Incrementiamo il contatore SMS
         $notifiable->increase('sms', $data);
-
-        /*
-         * $data['sms_sent_at'] = now();
-         * $data['sms_count'] = (int) $notifiable->sms_count + 1;
-         * $notifiable->update($data);
-         */
     }
 }

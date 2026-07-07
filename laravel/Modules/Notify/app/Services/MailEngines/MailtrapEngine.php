@@ -33,7 +33,7 @@ class MailtrapEngine
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
-            self::$instance = new self;
+            self::$instance = new self();
         }
 
         return self::$instance;
@@ -44,6 +44,9 @@ class MailtrapEngine
         return static::getInstance();
     }
 
+    /**
+     * @param  array<string, mixed>  $vars
+     */
     public function setLocalVars(array $vars): self
     {
         foreach ($vars as $k => $v) {

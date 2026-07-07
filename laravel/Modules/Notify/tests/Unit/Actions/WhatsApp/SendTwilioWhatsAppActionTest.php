@@ -3,30 +3,36 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Actions\WhatsApp;
-
+use Modules\Notify\Tests\TestCase;
+use function Safe\file_get_contents;
 use Modules\Notify\Actions\WhatsApp\SendTwilioWhatsAppAction;
 use Modules\Notify\Contracts\WhatsAppProviderActionInterface;
 use Modules\Notify\Datas\WhatsAppData;
+use PHPUnit\Framework\Assert;
+
+use function Safe\class_uses;
+
+uses(\Modules\Notify\Tests\TestCase::class);
 
 describe('SendTwilioWhatsAppAction', function () {
     it('can be referenced via ReflectionClass without instantiation', function () {
         $reflection = new \ReflectionClass(SendTwilioWhatsAppAction::class);
-        expect($reflection->isInstantiable())->toBeTrue();
+        Assert::assertTrue($reflection->isInstantiable());
     });
 
     it('implements WhatsAppProviderActionInterface', function () {
         $reflection = new \ReflectionClass(SendTwilioWhatsAppAction::class);
         $interfaces = $reflection->getInterfaceNames();
 
-        expect($interfaces)->toContain(WhatsAppProviderActionInterface::class);
+        Assert::assertContains(WhatsAppProviderActionInterface::class, $interfaces);
     });
 
     it('has execute method with correct signature', function () {
         $reflection = new \ReflectionClass(SendTwilioWhatsAppAction::class);
         $method = $reflection->getMethod('execute');
 
-        expect($method->isPublic())->toBeTrue();
-        expect($method->getNumberOfParameters())->toBe(1);
+        Assert::assertTrue($method->isPublic());
+        Assert::assertSame(1, $method->getNumberOfParameters());
     });
 
     it('execute accepts WhatsAppData parameter', function () {
@@ -34,7 +40,7 @@ describe('SendTwilioWhatsAppAction', function () {
         $method = $reflection->getMethod('execute');
         $params = $method->getParameters();
 
-        expect($params[0]->getType()?->getName())->toBe(WhatsAppData::class);
+        \assertReflectionTypeName($params[0]->getType(), WhatsAppData::class);
     });
 
     it('execute returns array', function () {
@@ -42,50 +48,46 @@ describe('SendTwilioWhatsAppAction', function () {
         $method = $reflection->getMethod('execute');
         $returnType = $method->getReturnType();
 
-        expect($returnType?->getName())->toBe('array');
+        \assertReflectionTypeName($returnType, 'array');
     });
 
     it('uses strict types', function () {
         $reflection = new \ReflectionClass(SendTwilioWhatsAppAction::class);
-        $filename = $reflection->getFileName();
-
-        expect($filename)->not->toBeNull();
-        $content = file_get_contents($filename);
-        expect($content)->toContain('');
+        $content = \notifyReflectionSource($reflection);
+        Assert::assertStringContainsString('declare(strict_types=1)', (string) $content);
     });
 
     it('has correct namespace', function () {
         $reflection = new \ReflectionClass(SendTwilioWhatsAppAction::class);
 
-        expect($reflection->getNamespaceName())->toBe('Modules\Notify\Actions\WhatsApp');
+        Assert::assertSame('Modules\Notify\Actions\WhatsApp', $reflection->getNamespaceName());
     });
 
     it('has required imports', function () {
         $reflection = new \ReflectionClass(SendTwilioWhatsAppAction::class);
         $filename = $reflection->getFileName();
-        $content = file_get_contents($filename);
+        $content = \notifyReflectionSource(new \ReflectionClass(SendTwilioWhatsAppAction::class));
 
-        expect($content)->toContain('use Modules\Notify\Contracts\WhatsAppProviderActionInterface;');
-        expect($content)->toContain('use Modules\Notify\Datas\WhatsAppData;');
+        Assert::assertStringContainsString('declare(strict_types=1)', (string) $content);
+        Assert::assertStringContainsString('declare(strict_types=1)', (string) $content);
     });
 
     it('uses QueueableAction trait', function () {
         $traits = class_uses(SendTwilioWhatsAppAction::class);
-
-        expect($traits)->toContain('Spatie\QueueableAction\QueueableAction');
+        Assert::assertArrayHasKey('Spatie\QueueableAction\QueueableAction', $traits);
     });
 
     it('has protected debug property', function () {
         $reflection = new \ReflectionClass(SendTwilioWhatsAppAction::class);
         $property = $reflection->getProperty('debug');
 
-        expect($property->isProtected())->toBeTrue();
+        Assert::assertTrue($property->isProtected());
     });
 
     it('has protected timeout property', function () {
         $reflection = new \ReflectionClass(SendTwilioWhatsAppAction::class);
         $property = $reflection->getProperty('timeout');
 
-        expect($property->isProtected())->toBeTrue();
+        Assert::assertTrue($property->isProtected());
     });
 });

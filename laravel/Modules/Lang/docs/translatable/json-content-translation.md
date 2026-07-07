@@ -81,7 +81,10 @@ Ogni file JSON può contenere sezioni traducibili seguendo questo pattern:
         "en": "Doctor Area - healthcare_app"
         "it": "Area Dottore - ExternalProject",
         "en": "Doctor Area - ExternalProject"
+<<<<<<< HEAD
 >>>>>>> .merge_file_0EDBuW
+=======
+>>>>>>> 40b96bcd6 (.)
     },
     "content_blocks": {
         "it": [

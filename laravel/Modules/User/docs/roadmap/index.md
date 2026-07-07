@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Roadmap Index - User
 
 ## Scope
@@ -16,3 +17,12 @@ Questo piano copre il module **User** e le sue integrazioni principali.
 
 - Tenere il piano aggiornato con cambiamenti architetturali.
 - Inserire date reali e owner quando disponibili.
+=======
+---
+module: theme
+topic: index
+canonical: ../../../../Themes/docs/shared-components/00-index-Modules.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/00-index-Modules.md
+>>>>>>> 40b96bcd6 (.)

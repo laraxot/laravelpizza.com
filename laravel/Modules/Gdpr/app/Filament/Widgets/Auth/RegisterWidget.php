@@ -100,11 +100,17 @@ class RegisterWidget extends XotBaseWidget
         app(HandleSuccessfulRegistrationAction::class)->execute($user, $this);
     }
 
+<<<<<<< HEAD
     protected function getView(): string
     {
         return 'filament.widgets.auth.register';
     }
 
+=======
+    /**
+     * @param array<string, mixed> $formData
+     */
+>>>>>>> 40b96bcd6 (.)
     protected function logRegistrationAttempt(array $formData): void
     {
         $email = app(SafeStringCastAction::class)->execute($formData['email']);

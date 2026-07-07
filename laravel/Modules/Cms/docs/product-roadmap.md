@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cms Module - Product Roadmap
 
 **Module:** Cms  
@@ -100,3 +101,12 @@ To provide a **flexible content management system** that empowers non-technical 
 
 ---
 
+=======
+---
+module: theme
+topic: product-roadmap
+canonical: ../../../Themes/docs/shared-components/PRODUCT_ROADMAP-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/PRODUCT_ROADMAP-Modules.md
+>>>>>>> 40b96bcd6 (.)

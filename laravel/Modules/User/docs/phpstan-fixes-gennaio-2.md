@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🔧 PHPStan Fixes - Modulo User - Gennaio 2025
 
 **Data**: 27 Gennaio 2025
@@ -228,3 +229,12 @@ $subject = Lang::get('user::email.password_reset_subject');
 **🌐 Translation Standards**: IT/EN complete ✅
 **🚀 Performance**: 95/100 score
 **✨ Test Coverage**: 85% ✅
+=======
+---
+module: theme
+topic: phpstan-fixes-gennaio-2
+canonical: ../../../Themes/docs/shared-components/phpstan-fixes-gennaio-2025-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixes-gennaio-2025-Modules.md
+>>>>>>> 40b96bcd6 (.)

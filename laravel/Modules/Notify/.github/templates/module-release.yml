@@ -1,0 +1,157 @@
+name: Module Release
+
+on:
+  workflow_call:
+    inputs:
+      module-name:
+        description: 'Name of the module'
+        required: true
+        type: string
+      tag-prefix:
+        description: 'Tag prefix for this module'
+        required: false
+        type: string
+        default: 'module-'
+  push:
+    branches: [main, master]
+    paths:
+      - '.'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: "${{ github.ref }}-${{ github.workflow }}"
+  cancel-in-progress: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_call' || github.event_name == 'workflow_dispatch' }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Calculate module version
+        id: calculate-version
+        uses: bitshifted/git-auto-semver@v2
+        with:
+          main_branch: ${{ github.ref_name }}
+          create_tag: true
+          initial_version: '1.0.0'
+          tag_prefix: '${{ inputs.tag-prefix }}${{ inputs.module-name }}-'
+
+      - name: Generate module changelog
+        id: build-changelog
+        run: |
+          LAST_TAG=$(git describe --tags --abbrev=0 --match "${{ inputs.tag-prefix }}${{ inputs.module-name }}-*" HEAD~1 2>/dev/null || echo "")
+          
+          if [ -z "$LAST_TAG" ]; then
+            COMMIT_RANGE="HEAD"
+          else
+            COMMIT_RANGE="${LAST_TAG}..HEAD"
+          fi
+          
+          cat > MODULE_CHANGELOG.md << EOF
+          ## 🚀 ${{ inputs.module-name }} v${{ steps.calculate-version.outputs.version-string }}
+          
+          ### 📋 Changes in this release
+          EOF
+          
+          # Get changes
+          git log $COMMIT_RANGE --pretty=format:"%h %s" | while read -r commit; do
+            commit_hash=$(echo "$commit" | cut -d' ' -f1)
+            commit_msg=$(echo "$commit" | cut -d' ' -f2-)
+            
+            if echo "$commit_msg" | grep -q "^feat"; then
+              echo "✨ **$commit_msg**" >> MODULE_CHANGELOG.md
+            elif echo "$commit_msg" | grep -q "^fix"; then
+              echo "🐛 **$commit_msg**" >> MODULE_CHANGELOG.md
+            elif echo "$commit_msg" | grep -q "^BREAKING CHANGE"; then
+              echo "💥 **$commit_msg**" >> MODULE_CHANGELOG.md
+            else
+              echo "🔧 **$commit_msg**" >> MODULE_CHANGELOG.md
+            fi
+          done
+          
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          cat MODULE_CHANGELOG.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create module release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: "${{ inputs.tag-prefix }}${{ inputs.module-name }}-${{ steps.calculate-version.outputs.version-string }}"
+          name: "${{ inputs.module-name }} v${{ steps.calculate-version.outputs.version-string }}"
+          body: ${{ steps.build-changelog.outputs.changelog }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update module version
+        run: |
+          VERSION="${{ steps.calculate-version.outputs.version-string }}"
+          
+          # Update composer.json if exists
+          if [ -f "composer.json" ]; then
+            if grep -q '"version"' "composer.json"; then
+              sed -i "s/\"version\": \"[^\"]*\"/\"version\": \"$VERSION\"/g" "composer.json"
+            else
+              sed -i "1a\    \"version\": \"$VERSION\"," "composer.json"
+            fi
+          fi
+          
+          # Create VERSION file
+          echo "$VERSION" > VERSION
+          
+          # Commit changes
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add composer.json VERSION 2>/dev/null || true
+          git commit -m "chore: update version to $VERSION [skip ci]" || true
+          git push
+
+      - name: Generate roadmap
+        run: |
+          cat > ROADMAP.md << EOF
+          # 🗺️ ${{ inputs.module-name }} Roadmap
+          
+          ## 📊 Current Status
+          - **Current Version**: ${{ steps.calculate-version.outputs.version-string }}
+          - **Last Updated**: $(date +%Y-%m-%d)
+          - **Module Type**: Laravel Module
+          
+          ## 🎯 Planned Features
+          - Performance improvements
+          - Enhanced API endpoints
+          - Better test coverage
+          - Documentation updates
+          
+          ## 🔧 Maintenance Tasks
+          - Dependency updates
+          - Security patches
+          - Code refactoring
+          
+          ---
+          *This roadmap is automatically updated on each release.*
+          EOF
+          
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add ROADMAP.md
+          git commit -m "docs: update roadmap [skip ci]" || true
+          git push

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Seo Module - Product Roadmap
 
 **Module:** Seo  
@@ -104,3 +105,12 @@ To build a **comprehensive SEO optimization system** that drives organic traffic
 
 ---
 
+=======
+---
+module: theme
+topic: product-roadmap
+canonical: ../../../Themes/docs/shared-components/PRODUCT_ROADMAP-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/PRODUCT_ROADMAP-Modules.md
+>>>>>>> 40b96bcd6 (.)

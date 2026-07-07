@@ -2,10 +2,20 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 /**
  * Generate coverage report from merged Clover XML files.
  */
 $coverageFiles = array_map(fn ($i) => __DIR__."/coverage-part{$i}.xml", range(1, 6));
+=======
+use function Safe\filesize;
+use function Safe\simplexml_load_file;
+
+/**
+ * Generate coverage report from merged Clover XML files.
+ */
+$coverageFiles = array_map(static fn (int $i): string => __DIR__."/coverage-part{$i}.xml", range(1, 6));
+>>>>>>> 40b96bcd6 (.)
 
 $allFiles = [];
 $totalStats = [
@@ -23,8 +33,14 @@ foreach ($coverageFiles as $file) {
         continue;
     }
 
+<<<<<<< HEAD
     $xml = simplexml_load_file($file);
     if (! $xml) {
+=======
+    try {
+        $xml = simplexml_load_file($file);
+    } catch (Throwable) {
+>>>>>>> 40b96bcd6 (.)
         echo "Warning: Could not parse {$file}\n";
 
         continue;
@@ -141,9 +157,13 @@ foreach ($sortedFiles as $fileName => $stats) {
         continue;
     }
 
+<<<<<<< HEAD
     $percent = $stats['elements']['total'] > 0
         ? round(($stats['elements']['covered'] / $stats['elements']['total']) * 100, 1)
         : 0;
+=======
+    $percent = round(($stats['elements']['covered'] / $stats['elements']['total']) * 100, 1);
+>>>>>>> 40b96bcd6 (.)
     $shortName = str_replace('/var/www/html/base_ptv_fila5_mono/laravel/', '', $fileName);
 
     printf("%3d. %6.1f%% (%3d elems) - %s\n", ++$counter, $percent, $stats['elements']['total'], $shortName);
@@ -159,9 +179,16 @@ foreach ($sortedFiles as $fileName => $stats) {
     if ($stats['elements']['total'] < 1) {
         continue;
     }
+<<<<<<< HEAD
     $percent = $stats['elements']['total'] > 0
         ? ($stats['elements']['covered'] / $stats['elements']['total']) * 100
         : 0;
+=======
+
+    $covered = $stats['elements']['covered'];
+    $total = $stats['elements']['total'];
+    $percent = ($covered / $total) * 100;
+>>>>>>> 40b96bcd6 (.)
     if ($percent >= 50) {
         continue;
     }

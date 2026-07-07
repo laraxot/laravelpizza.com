@@ -43,6 +43,9 @@ Questa guida risolve in modo definitivo ogni errore di permessi su file lingua g
 
 **Ultimo aggiornamento: maggio 2025 – Windsurf/Laraxot standard**
 
+[Link diretto dalla root docs](../../../docs/lang_service_permessi.md)
+**Ultimo aggiornamento: maggio 2025 – Windsurf/Laraxot standard**
+
 [Link diretto dalla root docs](../../../../docs/lang_service_permessi.md)
 # Troubleshooting definitivo permessi file_put_contents su lang_service.php
 
@@ -87,6 +90,9 @@ Questa guida risolve in modo definitivo ogni errore di permessi su file lingua g
 
 ---
 
+**Ultimo aggiornamento: maggio 2025 – Windsurf/Laraxot standard**
+
+[Link diretto dalla root docs](../../../docs/lang_service_permessi.md)
 **Ultimo aggiornamento: maggio 2025 – Windsurf/Laraxot standard**
 
 [Link diretto dalla root docs](../../../../docs/lang_service_permessi.md)

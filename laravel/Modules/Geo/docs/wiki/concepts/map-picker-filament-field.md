@@ -91,7 +91,11 @@ detail: {
 |----------|-----------------|-----------|
 | Mappa grigia all'avvio | Init su container invisibile | Verificato: `map-picker-lit` ora attende visibilità via `ResizeObserver`. |
 | Loop di aggiornamento | Evento UI → Livewire → Prop Lit → Evento UI | Verificato: `applyExternalLocation` non emette eventi. |
+<<<<<<< HEAD
 | Stili Leaflet rotti | Mancanza di CSS nel Shadow DOM | Assicurarsi che `map-picker-styles.js` importi correttamente gli stili necessari. |
+=======
+| Stili Leaflet rotti | Mancanza di CSS nel Shadow DOM | Assicurarsi che `map/styles.js` importi correttamente gli stili necessari. |
+>>>>>>> 40b96bcd6 (.)
 
 ---
 
@@ -100,7 +104,11 @@ detail: {
 - `laravel/Modules/Geo/app/Filament/Forms/Components/MapPicker.php`
 - `laravel/Modules/Geo/resources/views/filament/forms/components/map-picker.blade.php`
 - `laravel/Modules/Geo/resources/js/components/map-picker-lit.js`
+<<<<<<< HEAD
 - `laravel/Modules/Geo/resources/js/components/map-picker-styles.js`
+=======
+- `laravel/Modules/Geo/resources/js/components/map/styles.js`
+>>>>>>> 40b96bcd6 (.)
 
 ---
 

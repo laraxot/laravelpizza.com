@@ -14,6 +14,8 @@ Inseriti le varie impostazioni, si potrà verificare il funzionamento di una det
 ## Collegamenti tra versioni di test-smtp-page.md
 * [test-smtp-page.md](../../../Notify/project_docs/test-smtp-page.md)
 * [test-smtp-page.md](../../../Cms/project_docs/test-smtp-page.md)
+* [test-smtp-page.md](../../../Notify/project_docs/test-smtp-page.md)
+* [test-smtp-page.md](../../../Cms/project_docs/test-smtp-page.md)
 
 
 ### Versione Incoming
@@ -21,4 +23,3 @@ Inseriti le varie impostazioni, si potrà verificare il funzionamento di una det
 Inseriti le varie impostazioni, si potrà verificare il funzionamento di una determinata configurazione email.
 
 ---
-

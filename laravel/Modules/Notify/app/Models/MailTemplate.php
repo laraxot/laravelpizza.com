@@ -31,7 +31,7 @@ use Spatie\Translatable\HasTranslations;
  * @property string|null $deleted_by
  * @property string $name
  * @property string $slug
- * @property array $variables
+ * @property array<string, mixed> $variables
  * @property mixed $translations
  *
  * @method static Builder<static>|MailTemplate forMailable(Mailable $mailable)
@@ -45,9 +45,9 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|MailTemplate whereHtmlTemplate($value)
  * @method static Builder<static>|MailTemplate whereId($value)
  * @method static Builder<static>|MailTemplate whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
- * @method static Builder<static>|MailTemplate whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
+ * @method static Builder<static>|MailTemplate whereJsonContainsLocales(string $column, array<int, string> $locales, ?mixed $value, string $operand = '=')
  * @method static Builder<static>|MailTemplate whereLocale(string $column, string $locale)
- * @method static Builder<static>|MailTemplate whereLocales(string $column, array $locales)
+ * @method static Builder<static>|MailTemplate whereLocales(string $column, array<int, string> $locales)
  * @method static Builder<static>|MailTemplate whereMailable($value)
  * @method static Builder<static>|MailTemplate whereName($value)
  * @method static Builder<static>|MailTemplate whereSlug($value)
@@ -56,20 +56,32 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|MailTemplate whereUpdatedAt($value)
  * @method static Builder<static>|MailTemplate whereUpdatedBy($value)
  *
+<<<<<<< HEAD
  * @property string|null $params
  *
  * @method static Builder<static>|MailTemplate whereParams($value)
  *
  * @property string|null $sms_template
  * @property string|null $whatsapp_template
+=======
+ * @property array<int, string>|null $params
+ *
+ * @method static Builder<static>|MailTemplate whereParams($value)
+ *
+ * @property array<string, mixed>|null $sms_template
+ * @property array<string, mixed>|null $whatsapp_template
+>>>>>>> 40b96bcd6 (.)
  * @property int $counter
  *
  * @method static Builder<static>|MailTemplate whereCounter($value)
  * @method static Builder<static>|MailTemplate whereSmsTemplate($value)
  * @method static Builder<static>|MailTemplate whereWhatsappTemplate($value)
  *
+<<<<<<< HEAD
  * @mixin IdeHelperMailTemplate
  *
+=======
+>>>>>>> 40b96bcd6 (.)
  * @method static Builder<static>|MailTemplate whereHtmlLayoutPath($value)
  * @method static Builder<static>|MailTemplate whereVersion($value)
  *
@@ -113,6 +125,10 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
             ->saveSlugsTo('slug');
     }
 
+    /**
+     * @param  Builder<static>  $query
+     * @return Builder<static>
+     */
     public function scopeForMailable(Builder $query, Mailable $mailable): Builder
     {
         if (! method_exists($mailable, 'getSlug')) {

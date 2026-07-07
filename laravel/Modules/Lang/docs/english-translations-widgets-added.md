@@ -150,3 +150,4 @@ __('<nome progetto>::widgets.doctor_appointments.empty.description')
 - [Widget DoctorAppointments](../laravel/Modules/<nome progetto>/app/Filament/Widgets/DoctorAppointmentsWidget.php)
 
 *Risoluzione completata: 2025-01-21*
+*Risoluzione completata: 2025-01-21*

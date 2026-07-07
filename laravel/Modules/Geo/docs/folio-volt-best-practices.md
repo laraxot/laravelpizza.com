@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Laravel Folio + Volt - Best Practices and Patterns Analysis
 
 ## Overview
@@ -101,3 +102,12 @@ middleware(['auth', 'verified']);
 
 ## Date
 2025-11-29
+=======
+---
+module: theme
+topic: folio-volt-best-practices
+canonical: ../../../Themes/docs/shared-components/folio-volt-best-practices-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/folio-volt-best-practices-Modules.md
+>>>>>>> 40b96bcd6 (.)

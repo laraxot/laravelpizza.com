@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PHPStan Errori Modulo Xot - 2025-01-22
 
 ## Analisi Completa
@@ -175,3 +176,12 @@ Tutti gli errori seguono lo stesso pattern:
 - [PHPStan Fixes Summary](../phpstan-fixes-summary_2.md)
 - [Code Quality Standards](../code-quality-standards.md)
 - [Best Practices](../best-practices.md)
+=======
+---
+module: theme
+topic: phpstan-errors-1
+canonical: ../../../Themes/docs/shared-components/phpstan-errors-.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-errors-.md
+>>>>>>> 40b96bcd6 (.)

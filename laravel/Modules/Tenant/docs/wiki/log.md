@@ -9,7 +9,23 @@ module: "Tenant"
 
 ## Log Entries
 
+<<<<<<< HEAD
 _No activity yet. Start by ingesting raw documents._
+=======
+## [2026-07-01] [INGEST] Database factories — rimossa `Factories_/`
+
+- Regola generica: [database-folder-lowercase-rule.md](../../../../../docs/wiki/concepts/database-folder-lowercase-rule.md)
+- Wiki modulo: [lowercase-database-factories-directory.md](./concepts/lowercase-database-factories-directory.md)
+- `database/Factories_/` era copia stale (gitignore); canonico = `database/factories/`
+- Aggiornati: `method-name-homonyms.md` (path solo minuscolo), `concepts/INDEX.md`, `index.md`
+- Audit: `bash bashscripts/tools/audit-database-folder-lowercase.sh Tenant`
+
+## [2026-06-30] [LINT] Removed duplicate uppercase Tests directory
+
+- Regola: il modulo Tenant usa solo `tests/`.
+- `Tests/` era duplicata rispetto a `tests/` e non deve esistere.
+- Wiki: `docs/wiki/concepts/lowercase-tests-directory.md`.
+>>>>>>> 40b96bcd6 (.)
 
 ### Format
 
@@ -25,5 +41,10 @@ _No activity yet. Start by ingesting raw documents._
 
 ---
 
+<<<<<<< HEAD
 **Last Activity:** None  
 **Total Operations:** 0
+=======
+**Last Activity:** 2026-07-01  
+**Total Operations:** 2
+>>>>>>> 40b96bcd6 (.)

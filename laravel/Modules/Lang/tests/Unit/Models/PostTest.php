@@ -4,106 +4,118 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Tests\Unit\Models;
 
+<<<<<<< HEAD
 uses(TestCase::class);
 
 use Modules\Lang\Models\Post;
 use Modules\Lang\Tests\TestCase;
+=======
+use Modules\Lang\Models\BaseModel;
+use Modules\Lang\Models\Post;
+use Modules\Lang\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+use function Safe\class_uses;
+
+uses(TestCase::class);
+>>>>>>> 40b96bcd6 (.)
 
 describe('Post Model', function () {
     test('extends BaseModel', function () {
         $model = new Post();
 
-        expect($model)->toBeInstanceOf(Modules\Lang\Models\BaseModel::class);
+        Assert::assertInstanceOf(BaseModel::class, $model);
     });
 
     test('uses HasSlug trait', function () {
         $model = new Post();
 
-        expect(class_uses($model))->toHaveKey('Spatie\Sluggable\HasSlug');
+        Assert::assertArrayHasKey('Spatie\Sluggable\HasSlug', class_uses($model));
     });
 
     test('uses HasXotFactory trait', function () {
         $model = new Post();
 
-        expect(class_uses($model))->toHaveKey('Modules\Xot\Models\Traits\HasXotFactory');
+        Assert::assertArrayHasKey('Modules\Xot\Models\Traits\HasXotFactory', class_uses($model));
     });
 
     test('uses Updater trait', function () {
         $model = new Post();
 
-        expect(class_uses($model))->toHaveKey('Modules\Xot\Traits\Updater');
+        Assert::assertArrayHasKey('Modules\Xot\Traits\Updater', class_uses($model));
     });
 
     test('has correct connection', function () {
         $model = new Post();
 
-        expect($model->getConnectionName())->toBe('lang');
+        Assert::assertSame('lang', $model->getConnectionName());
     });
 
     test('has correct searchable fields', function () {
-        expect(Post::SEARCHABLE_FIELDS)->toBe(['title', 'guid', 'txt']);
+        Assert::assertSame(['title', 'guid', 'txt'], Post::SEARCHABLE_FIELDS);
     });
 
     test('has snake attributes enabled', function () {
-        expect(Post::$snakeAttributes)->toBeTrue();
+        Assert::assertTrue(Post::$snakeAttributes);
     });
 
-    test('has incrementing enabled', function () {
+    test('uses string primary key without auto increment', function () {
         $model = new Post();
 
-        expect($model->incrementing)->toBeTrue();
+        Assert::assertFalse($model->incrementing);
+        Assert::assertSame('string', $model->getKeyType());
     });
 
     test('has default perPage', function () {
         $model = new Post();
 
-        expect($model->getPerPage())->toBe(30);
+        Assert::assertSame(30, $model->getPerPage());
     });
 
     test('has correct fillable attributes', function () {
         $model = new Post();
         $fillable = $model->getFillable();
 
-        expect($fillable)->toContain('id');
-        expect($fillable)->toContain('user_id');
-        expect($fillable)->toContain('post_id');
-        expect($fillable)->toContain('lang');
-        expect($fillable)->toContain('title');
+        Assert::assertContains('id', $fillable);
+        Assert::assertContains('user_id', $fillable);
+        Assert::assertContains('post_id', $fillable);
+        Assert::assertContains('lang', $fillable);
+        Assert::assertContains('title', $fillable);
     });
 
     test('has getSlugOptions method', function () {
         $model = new Post();
 
-        expect(method_exists($model, 'getSlugOptions'))->toBeTrue();
+        Assert::assertTrue(is_callable([$model, 'getSlugOptions']));
     });
 
     test('has linkable relationship', function () {
         $model = new Post();
 
-        expect(method_exists($model, 'linkable'))->toBeTrue();
+        Assert::assertTrue(is_callable([$model, 'linkable']));
     });
 
     test('has toSearchableArray method', function () {
         $model = new Post();
 
-        expect(method_exists($model, 'toSearchableArray'))->toBeTrue();
+        Assert::assertTrue(is_callable([$model, 'toSearchableArray']));
     });
 
     test('casts datetime fields', function () {
         $model = new Post();
         $casts = $model->getCasts();
 
-        expect($casts['created_at'])->toBe('datetime');
-        expect($casts['updated_at'])->toBe('datetime');
-        expect($casts['deleted_at'])->toBe('datetime');
-        expect($casts['published_at'])->toBe('datetime');
+        Assert::assertSame('datetime', $casts['created_at']);
+        Assert::assertSame('datetime', $casts['updated_at']);
+        Assert::assertSame('datetime', $casts['deleted_at']);
+        Assert::assertSame('datetime', $casts['published_at']);
     });
 
     test('casts array fields', function () {
         $model = new Post();
         $casts = $model->getCasts();
 
-        expect($casts['image_resize_src'])->toBe('array');
-        expect($casts['url_lang'])->toBe('array');
+        Assert::assertSame('array', $casts['image_resize_src']);
+        Assert::assertSame('array', $casts['url_lang']);
     });
 });

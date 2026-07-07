@@ -287,6 +287,10 @@ All module connections are automatically mapped to the test MySQL connection def
 
 ## Marketing & Conversion
 - [Clickbait Marketing Best Practices](../themes/meetup/docs/clickbait-marketing-best-practices.md) - Ethical clickbait techniques for conversion optimization
+- [User Module](../User/docs/README.md) - User authentication and management
+- [Activity Module](../Activity/docs/index.md) - Activity logging
+- [Notify Module](../Notify/docs/index.md) - Notification system
+- [Xot Module](../Xot/docs/index.md) - Core base classes
 
 ## Troubleshooting
 Common issues and solutions:
@@ -296,5 +300,12 @@ Common issues and solutions:
 - Privacy policy version management
 - Hardcoded strings in multilingual sites
 - Translation key inconsistencies
+<<<<<<< HEAD
 
 - [Conflict Resolution](conflict-resolution.md)
+=======
+- Hardcoded strings in multilingual sites
+- Translation key inconsistencies
+
+- [Conflict Resolution](conflict-resolution.md)
+>>>>>>> 40b96bcd6 (.)

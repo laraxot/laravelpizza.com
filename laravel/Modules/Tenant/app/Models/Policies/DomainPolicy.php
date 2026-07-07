@@ -20,9 +20,9 @@ class DomainPolicy extends TenantBasePolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(UserContract $user, Domain $_domain): bool
+    public function view(UserContract $user, Domain $domain): bool
     {
-        return $user->hasPermissionTo('domain.view');
+        return $domain->exists && $user->hasPermissionTo('domain.view');
     }
 
     /**
@@ -36,25 +36,25 @@ class DomainPolicy extends TenantBasePolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(UserContract $user, Domain $_domain): bool
+    public function update(UserContract $user, Domain $domain): bool
     {
-        return $user->hasPermissionTo('domain.update');
+        return $domain->exists && $user->hasPermissionTo('domain.update');
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(UserContract $user, Domain $_domain): bool
+    public function delete(UserContract $user, Domain $domain): bool
     {
-        return $user->hasPermissionTo('domain.delete');
+        return $domain->exists && $user->hasPermissionTo('domain.delete');
     }
 
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(UserContract $user, Domain $_domain): bool
+    public function restore(UserContract $user, Domain $domain): bool
     {
-        return $user->hasPermissionTo('domain.restore');
+        return $domain->exists && $user->hasPermissionTo('domain.restore');
     }
 
     /**
@@ -62,6 +62,6 @@ class DomainPolicy extends TenantBasePolicy
      */
     public function forceDelete(UserContract $user, Domain $domain): bool
     {
-        return $user->hasPermissionTo('domain.forceDelete');
+        return $domain->exists && $user->hasPermissionTo('domain.forceDelete');
     }
 }

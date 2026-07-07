@@ -51,6 +51,9 @@ class NotifyThemeResource extends XotBaseResource
         ];
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function fieldOptions(string $field): array
     {
         return match ($field) {

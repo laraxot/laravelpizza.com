@@ -6,16 +6,14 @@ namespace Modules\Tenant\Models\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Modules\Xot\Contracts\UserContract;
-use Modules\Xot\Datas\XotData;
 
 abstract class TenantBasePolicy
 {
     use HandlesAuthorization;
 
-    public function before(UserContract $user, string $_ability): ?bool
+    public function before(UserContract $user, string $ability): ?bool
     {
-        $xotData = XotData::make();
-        if ($user->hasRole('super-admin')) {
+        if ($ability !== '' && $user->hasRole('super-admin')) {
             return true;
         }
 

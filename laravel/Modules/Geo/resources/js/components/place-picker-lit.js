@@ -249,4 +249,8 @@ export class PlacePickerField extends LitElement {
 
 if (!customElements.get('place-picker-lit')) {
     customElements.define('place-picker-lit', PlacePickerField);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 40b96bcd6 (.)

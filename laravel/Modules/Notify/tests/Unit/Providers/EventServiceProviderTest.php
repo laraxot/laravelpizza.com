@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Providers;
-
 use Modules\Notify\Providers\EventServiceProvider;
 use Modules\Notify\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Notify\Tests\TestCase::class);
 
 test('event service provider has empty listen map', function () {
     $provider = new EventServiceProvider(app());
@@ -16,7 +16,7 @@ test('event service provider has empty listen map', function () {
     $property = $reflection->getProperty('listen');
     $property->setAccessible(true);
 
-    expect($property->getValue($provider))->toBe([]);
+    Assert::assertSame([], $property->getValue($provider));
 });
 
 test('event discovery is enabled', function () {
@@ -24,5 +24,5 @@ test('event discovery is enabled', function () {
     $property = $reflection->getProperty('shouldDiscoverEvents');
     $property->setAccessible(true);
 
-    expect($property->getValue())->toBeTrue();
+    Assert::assertTrue($property->getValue());
 });

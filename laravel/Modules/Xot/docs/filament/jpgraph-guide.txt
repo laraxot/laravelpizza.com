@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # JpGraph 4.4.2 Guide
 
 ## Overview
@@ -294,3 +295,12 @@ public function testChartInPDF()
 - GitHub repository
 - Community forums
 - Stack Overflow questions
+=======
+---
+module: theme
+topic: jpgraph-guide
+canonical: ../../../../Themes/docs/shared-components/jpgraph-guide.txt
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/jpgraph-guide.txt
+>>>>>>> 40b96bcd6 (.)

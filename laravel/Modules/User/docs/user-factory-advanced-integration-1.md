@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # UserFactory Advanced Integration - Modulo User & <nome progetto>
 
 ## Post Deep-Study Analysis
@@ -293,3 +294,12 @@ public function run(): void
 ### Root Documentation
 - [UserFactory <nome progetto> Integration](../../../../../docs/userfactory_<nome progetto>_integration.md)
 - [Testing Standards](../../../../../docs/testing_standards.md)
+=======
+---
+module: theme
+topic: user-factory-advanced-integration-1
+canonical: ../../../Themes/docs/shared-components/user-factory-advanced-integration-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/user-factory-advanced-integration-1.md
+>>>>>>> 40b96bcd6 (.)

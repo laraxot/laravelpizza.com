@@ -70,7 +70,7 @@ Questo documento serve come indice centrale per il modulo Tenant, fornendo una g
 
 ### Testing e Qualità
 - [PHPStan Level 10](./phpstan/index.md) - Correzioni per PHPStan Level 10
-- [PHPStan Cluster 2026-03-10](./phpstan-cluster-2026-03-10.md) - Factory `DatabaseConfig` e modello canonico mancante
+- [PHPStan Cluster 2026-03-10](./phpstan-cluster.md) - Factory `DatabaseConfig` e modello canonico mancante
 - [Testing](./testing.md) - Strategie e approcci per il testing
 - [Test Multi-Tenant](./multi-tenant-testing.md) - Test specifici per ambiente multi-tenant
 
@@ -162,3 +162,5 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 *Ultimo aggiornamento: Gennaio 2025*
+
+- [Conflict Resolution](conflict-resolution.md)

@@ -52,7 +52,7 @@ jobs:
             -H 'Content-Type: application/json' \
             -d @kit/hero.md
       - name: Open GitHub Discussion highlight
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           MODULE_NAME: "Gdpr"
         with:

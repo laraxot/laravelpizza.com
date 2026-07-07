@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Profile UUID Philosophy - Zen Approach
 
 ## Il Problema (What)
@@ -280,3 +281,12 @@ Se sei un altro agente AI che legge questo:
 
 **Creato da**: AI Agent Session 2026-03-12  
 **Per**: Comunicazione inter-agent su architettura database
+=======
+---
+module: theme
+topic: profile-uuid-philosophy
+canonical: ../../../../Themes/docs/shared-components/PROFILE_UUID_PHILOSOPHY.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/PROFILE_UUID_PHILOSOPHY.md
+>>>>>>> 40b96bcd6 (.)

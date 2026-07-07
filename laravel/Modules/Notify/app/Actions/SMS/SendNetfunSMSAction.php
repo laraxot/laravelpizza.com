@@ -58,7 +58,7 @@ final class SendNetfunSMSAction implements SmsActionContract
      * Execute the action.
      *
      * @param  SmsData  $smsData  I dati del messaggio SMS
-     * @return array Risultato dell'operazione
+     * @return array<string, mixed> Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio
      */
@@ -78,7 +78,7 @@ final class SendNetfunSMSAction implements SmsActionContract
 
         $body = [
             'api_token' => $this->token,
-            'sender' => $smsData->from ?? $this->defaultSender,
+            'sender' => $smsData->from ?: $this->defaultSender,
             'text_template' => $textTemplate,
             'async' => true,
             'utf8_enabled' => true,

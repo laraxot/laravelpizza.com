@@ -1,6 +1,11 @@
 # GeoMapLit — Farmshops.eu Parity Implementation
 
+<<<<<<< HEAD
 **Last updated**: 2026-04-30
+=======
+**Last updated**: 2026-06-03  
+**Ricostruzione completa:** [geo-map-lit-reconstruction-guide.md](./geo-map-lit-reconstruction-guide.md)
+>>>>>>> 40b96bcd6 (.)
 **Story**: 8-81 (COMPLETED ✅)
 **Reference**: https://github.com/CodeforKarlsruhe/farmshops.eu/blob/master/js/direktvermarkter.js
 
@@ -177,3 +182,68 @@ Popup on click → AJAX fetch /api/ticket-details/{id}
 2. Verify cluster rendering at different zoom levels
 3. Test popup content and AJAX detail fetch
 4. Document any remaining issues in Known Issues section
+<<<<<<< HEAD
+=======
+
+---
+
+## Aggiornamento 2026-06 — implementazione corrente
+
+> **Nota:** la sezione `L.geoJson` con `pointToLayer` sopra è il pattern farmshops originale.
+> Su Fixcity (STORY-122+) i marker sono aggiunti **singolarmente** a `markerClusterGroup`
+> per stabilità con `refreshClusters` e filtri `filterByTypes`.
+
+Implementazione attuale in `map-lit.js`:
+
+- `features.forEach` → `L.marker` → `this._markersLayer.addLayer(marker)`
+- Cluster config: vedi [map-lit-it-incidents-2026-06.md](../troubleshooting/map-lit-it-incidents-2026-06.md)
+- Elemento DOM canonico: `<map-lit>` (non `<geo-map-lit>`)
+
+Test Playwright:
+
+- `tests/Playwright/map-lit-cluster-hover-stability.spec.js`
+- `tests/Playwright/map-lit-gps-cluster-stability.spec.js`
+
+### Marker icon-first e popup (2026-06)
+
+Riferimento UX: [farmshops.eu](https://github.com/CodeforKarlsruhe/farmshops.eu) — icona tipologia dominante, contenitore minimo.
+
+| Elemento | Implementazione Fixcity |
+|----------|-------------------------|
+| Marker | `createGeoMapLeafletIcon` — `__inner` 36px stato, `__glyph-pad` 28px, glifo 22px, `__point` 8px ([geo-map-marker-status-background.md](./geo-map-marker-status-background.md)) |
+| Popup click | Leaflet `bindPopup` + block `popup`; header **`<div class="popup__header">`** ([geo-map-popup-bem.md](./geo-map-popup-bem.md)) |
+| UX click | Popup immediato da GeoJSON; arricchimento AJAX se `p.id` |
+
+CSS tema: `07-map-clusters-and-leaflet.css` — glifo marker 22px; no transform su `.leaflet-marker-icon`.
+
+Ricostruzione completa: [geo-map-lit-reconstruction-guide.md](./geo-map-lit-reconstruction-guide.md).
+
+Build tema: `laravel/Themes/Sixteen` → `npm run build` → `map-lit-*.js` in `public_html/themes/Sixteen/assets/`.
+
+---
+
+## Aggiornamento 2026-06-10 (sessione Cursor / STORY-293)
+
+### Marker singolo — ExtraMarkers `shape: square` (ibrido STORY-130)
+
+- `marker-config.js`: corpo **quadrato arrotondato** 40×40px, ancoraggio al **centro** (come farmshops), **senza punta** a goccia.
+- Colore corpo = **stato** workflow (`ticketStatus.color`); glifo bianco = **tipologia** (invariato STORY-130).
+
+### Cluster LOD
+
+- `map-lit.js`: `zoomend` → `refreshClusters()` per aggiornare icone tipologia a zoom ≥ 8 (pattern `direktvermarkter.js`).
+
+### Popup ticket (farmshops `#wrapper`)
+
+- `popup-ticket.js`: griglia indirizzo + link mappe (OSM, OpenRouteService, Google); hero image; headline `h1`; loading con icona tipologia.
+- Build obbligatoria: `cd laravel/Themes/Sixteen && npm run build && npm run copy`.
+
+### Story
+
+- [STORY-293](../../../../docs/stories/STORY-293-map-farmshops-popup-parity.md) — A1–A5 ancora da chiudere; marker/popup base sopra.
+
+### Collegamenti
+
+- [farmshops-cluster-type-icons-study.md](./farmshops-cluster-type-icons-study.md)
+- [architecture-map-farmshops-parity](../../../../docs/wiki/architecture/map-farmshops-parity.md)
+>>>>>>> 40b96bcd6 (.)

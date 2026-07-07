@@ -4,30 +4,32 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Tests\Unit\Actions\Config;
 
+use Mockery\MockInterface;
 use Modules\Tenant\Actions\Config\GetTenantConfigPathAction;
 use Modules\Tenant\Actions\GetTenantNameAction;
 use Modules\Tenant\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
 it('gets tenant config path', function (): void {
-    $this->mock(GetTenantNameAction::class)
-        ->shouldReceive('execute')
-        ->andReturn('test-tenant');
+    /** @var TestCase $this */
+    $this->mockService(GetTenantNameAction::class, static function (MockInterface $mock): void {
+        $mock->allows(['execute' => 'test-tenant']);
+    });
 
-    $action = app(GetTenantConfigPathAction::class);
-    $result = $action->execute('database');
+    $result = app(GetTenantConfigPathAction::class)->execute('database');
 
-    expect($result)->toBe('test-tenant.database');
+    Assert::assertSame('test-tenant.database', $result);
 });
 
 it('gets tenant config path with forward slashes replaced', function (): void {
-    $this->mock(GetTenantNameAction::class)
-        ->shouldReceive('execute')
-        ->andReturn('tenants/test');
+    /** @var TestCase $this */
+    $this->mockService(GetTenantNameAction::class, static function (MockInterface $mock): void {
+        $mock->allows(['execute' => 'tenants/test']);
+    });
 
-    $action = app(GetTenantConfigPathAction::class);
-    $result = $action->execute('app');
+    $result = app(GetTenantConfigPathAction::class)->execute('app');
 
-    expect($result)->toBe('tenants.test.app');
+    Assert::assertSame('tenants.test.app', $result);
 });

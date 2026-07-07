@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PHPStan Corrections Summary - Modulo User
 
 **Data**: 2025-01-22
@@ -152,3 +153,12 @@
 ---
 
 *"Ogni errore corretto è un passo verso la perfezione. Continuiamo con determinazione."*
+=======
+---
+module: theme
+topic: phpstan-corrections-summary-1
+canonical: ../../../Themes/docs/shared-components/phpstan-corrections-summary-.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-corrections-summary-.md
+>>>>>>> 40b96bcd6 (.)

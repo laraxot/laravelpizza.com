@@ -56,7 +56,7 @@ The Notify module provides comprehensive notification and communication function
 
 ## Integration with Other Modules
 - **User**: Communication with system users
-- **Quaeris**: Survey participant notifications
+- **healthcare_app**: Survey participant notifications
 - **Limesurvey**: Survey response notifications
 - **Xot**: Base notification infrastructure
 - **Filament**: Management interface

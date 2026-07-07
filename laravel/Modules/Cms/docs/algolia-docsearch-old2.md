@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: Algolia DocSearch
 description: Configure Algolia DocSearch with the Jigsaw docs starter template
 extends: _layouts.documentation
@@ -76,3 +77,11 @@ For more details, visit the [official Algolia DocSearch documentation.](https://
 * [algolia-docsearch.md](laravel/modules/xot/docs/algolia-docsearch.md)
 * [algolia-docsearch.md](laravel/modules/ui/docs/algolia-docsearch.md)
 * [algolia-docsearch.md](laravel/modules/cms/docs/algolia-docsearch.md)
+=======
+module: theme
+topic: algolia-docsearch-old2
+canonical: ../../../Themes/docs/shared-components/algolia-docsearch-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/algolia-docsearch-1.md
+>>>>>>> 40b96bcd6 (.)

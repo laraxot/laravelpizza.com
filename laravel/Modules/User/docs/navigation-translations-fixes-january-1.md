@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Correzioni Traduzioni Navigation - Gennaio 2026
 
 ## Data Intervento
@@ -197,3 +198,12 @@ Tutte le traduzioni seguono ora la struttura espansa completa:
 
 *Intervento completato il: 2026-01-22*
 *Conforme alle regole DRY + KISS*
+=======
+---
+module: theme
+topic: navigation-translations-fixes-january-1
+canonical: ../../../Themes/docs/shared-components/navigation-translations-fixes-january-2026.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/navigation-translations-fixes-january-2026.md
+>>>>>>> 40b96bcd6 (.)

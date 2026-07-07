@@ -12,6 +12,7 @@ I file PHP sono stati il metodo predefinito per lungo tempo. Le traduzioni sono 
 
 **Esempio**:
 In un file Blade come `resources/views/auth/register.blade.php`, potremmo avere:
+In un file Blade come `resources/views/auth/register.blade.php`, potremmo avere:
 ```php
 <!-- Nome -->
 <div>
@@ -21,6 +22,7 @@ In un file Blade come `resources/views/auth/register.blade.php`, potremmo avere:
 </div>
 ```
 
+La traduzione corrispondente sarebbe in `lang/it/auth.php`:
 La traduzione corrispondente sarebbe in `lang/it/auth.php`:
 ```php
 return [
@@ -56,6 +58,7 @@ I file JSON contengono un elenco unico di traduzioni per ogni lingua, con chiavi
 
 **Esempio**:
 In un file Blade come `resources/views/auth/register.blade.php`, potremmo avere:
+In un file Blade come `resources/views/auth/register.blade.php`, potremmo avere:
 ```php
 <!-- Nome -->
 <div>
@@ -65,6 +68,7 @@ In un file Blade come `resources/views/auth/register.blade.php`, potremmo avere:
 </div>
 ```
 
+La traduzione corrispondente sarebbe in `lang/it.json`:
 La traduzione corrispondente sarebbe in `lang/it.json`:
 ```json
 {
@@ -85,6 +89,7 @@ La traduzione corrispondente sarebbe in `lang/it.json`:
 
 ## Problemi nel Mescolare File PHP e JSON
 
+Mescolare i due approcci può causare problemi se una chiave JSON corrisponde al nome di un file PHP. Ad esempio, se esiste un file `lang/it/auth.php` e una chiave `"Auth": "Autenticazione"` in `lang/it.json`, chiamare `__('Auth')` restituirà il contenuto di `auth.php` invece della traduzione attesa.
 Mescolare i due approcci può causare problemi se una chiave JSON corrisponde al nome di un file PHP. Ad esempio, se esiste un file `lang/it/auth.php` e una chiave `"Auth": "Autenticazione"` in `lang/it.json`, chiamare `__('Auth')` restituirà il contenuto di `auth.php` invece della traduzione attesa.
 
 ## `trans()` vs `__()`: Quale Usare?
@@ -144,6 +149,8 @@ Di seguito elenco i file che modificherei e le modifiche specifiche che apporter
 3. **File JSON per Testi Lunghi**:
    - Creare file JSON per testi lunghi o frasi complete in `lang/it.json` e `lang/en.json`.
    - Esempio per `lang/it.json`:
+   - Creare file JSON per testi lunghi o frasi complete in `lang/it.json` e `lang/en.json`.
+   - Esempio per `lang/it.json`:
      ```json
      {
          "Benvenuto nel sistema di gestione sanitaria": "Benvenuto nel sistema di gestione sanitaria",
@@ -153,6 +160,7 @@ Di seguito elenco i file che modificherei e le modifiche specifiche che apporter
 
 4. **Modifica dei File Blade per Utilizzare le Traduzioni**:
    - Modificare i file Blade per utilizzare la funzione `__()` con chiavi appropriate.
+   - Esempio per `resources/views/auth/login.blade.php`:
    - Esempio per `resources/views/auth/login.blade.php`:
      ```php
      <!-- Email -->
@@ -192,6 +200,8 @@ Di seguito elenco i file che modificherei e le modifiche specifiche che apporter
    - Applicare modifiche simili a tutti i file Blade rilevanti nel progetto.
 
 5. **Integrazione con `mcamara/laravel-localization`**:
+   - Assicurarsi che il pacchetto `mcamara/laravel-localization` sia installato e configurato come descritto nella documentazione `Modules/Lang/project_docs/laravel-localization-complete.md`.
+   - Modificare il file `routes/web.php` per aggiungere il prefisso della lingua:
    - Assicurarsi che il pacchetto `mcamara/laravel-localization` sia installato e configurato come descritto nella documentazione `Modules/Lang/project_docs/laravel-localization-complete.md`.
    - Modificare il file `routes/web.php` per aggiungere il prefisso della lingua:
      ```php

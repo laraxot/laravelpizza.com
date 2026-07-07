@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Guida all'Utilizzo di PHPStan nel Framework Laraxot <nome progetto>
 
 ## Introduzione
@@ -237,3 +238,12 @@ cd /percorso/al/progetto/laravel
 # Analisi con output dettagliato
 ./vendor/bin/phpstan analyse Modules/NomeModulo --level=9 --verbose
 ```
+=======
+---
+module: theme
+topic: phpstan-usage-guide-1
+canonical: ../../../Themes/docs/shared-components/phpstan-usage-guide-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-usage-guide-1.md
+>>>>>>> 40b96bcd6 (.)

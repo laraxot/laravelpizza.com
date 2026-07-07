@@ -35,7 +35,7 @@ class WhatsAppChannel
      *
      * @param  mixed  $notifiable  Entità che riceve la notifica
      * @param  Notification  $notification  Notifica da inviare
-     * @return array|null Risultato dell'operazione o null in caso di errore
+     * @return array<string, mixed>|null Risultato dell'operazione o null in caso di errore
      *
      * @throws Exception Se la notifica non ha il metodo toWhatsApp o il driver non è supportato
      */
@@ -53,6 +53,9 @@ class WhatsAppChannel
 
         $action = $this->factory->create();
 
-        return $action->execute($whatsAppData);
+        /** @var array<string, mixed> $result */
+        $result = $action->execute($whatsAppData);
+
+        return $result;
     }
 }

@@ -47,6 +47,10 @@
 - [User](../../user/docs/readme.md) - Soggetti dei consensi.
 - [Activity](../../activity/docs/readme.md) - Log di sistema integrato.
 - [Xot](../../xot/docs/readme.md) - Base framework e trait UUID.
+<<<<<<< HEAD
+=======
+# Documentation Index
+>>>>>>> 40b96bcd6 (.)
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---

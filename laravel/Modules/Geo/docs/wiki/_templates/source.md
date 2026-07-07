@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Source Title"
 type: source
 sources: ["raw/articles/source-filename.md"]
@@ -46,3 +47,11 @@ _Any additional notes, context, or observations._
 - [ ] Create concept page for: _concept name_
 - [ ] Cross-reference with: _existing page_
 - [ ] Verify claim: _specific claim that needs verification_
+=======
+module: theme
+topic: source
+canonical: ../../../../../Themes/docs/shared-components/source.md
+---
+
+See canonical documentation: ../../../../../Themes/docs/shared-components/source.md
+>>>>>>> 40b96bcd6 (.)

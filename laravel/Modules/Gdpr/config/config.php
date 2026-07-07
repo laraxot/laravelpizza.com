@@ -19,7 +19,7 @@ return [
      * | Configurazioni base per la gestione della privacy e protezione dati
      * |
      */
-    'enabled' => env('GDPR_ENABLED', true),
+    'enabled' => true,
     /*
      * |--------------------------------------------------------------------------
      * | Cookie Policy
@@ -29,7 +29,7 @@ return [
      * |
      */
     'cookie' => [
-        'consent_lifetime' => env('GDPR_COOKIE_LIFETIME', 365), // giorni
+        'consent_lifetime' => 365, // giorni
         'categories' => [
             'necessary' => [
                 'name' => 'Necessari',
@@ -237,8 +237,8 @@ return [
      * |
      */
     'dpo' => [
-        'name' => env('GDPR_DPO_NAME', ''),
-        'email' => env('GDPR_DPO_EMAIL', ''),
-        'phone' => env('GDPR_DPO_PHONE', ''),
+        'name' => '',
+        'email' => '',
+        'phone' => '',
     ],
 ];

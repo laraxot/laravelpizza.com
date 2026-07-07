@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Rules Index"
 type: index
@@ -43,3 +44,22 @@ Le Rules progettuali vivono qui, nel wiki del Module **Gdpr**, e vengono caricat
 3. Aggiorna questo indice se la Rules e' ricorrente
 4. Committa: `docs: add rules <nome>`
 
+=======
+# Gdpr Module - rules Index
+
+## Purpose
+Index for Gdpr module rules.
+
+## On-Demand Loading
+
+```bash
+qmd search "Gdpr rules" --limit 5
+```
+
+## See Also
+- [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+- [Root Wiki](../../../docs/wiki/)
+
+---
+*Updated: 2026-05-11*
+>>>>>>> 40b96bcd6 (.)

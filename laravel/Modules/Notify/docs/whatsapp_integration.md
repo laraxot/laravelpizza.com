@@ -532,6 +532,7 @@ L'integrazione WhatsApp  segue gli stessi pattern e standard utilizzati per l'in
 3. **Estensibilità**: È facile aggiungere nuovi provider WhatsApp
 4. **Testabilità**: Le azioni sono facilmente testabili grazie all'interfaccia comune
 
+*Ultimo aggiornamento: 2023-05-12*
 Seguendo questa architettura, l'integrazione WhatsApp si inserisce perfettamente nell'ecosistema di notifiche di Quaeris, mantenendo la coerenza con le altre modalità di comunicazione.
 
 ---

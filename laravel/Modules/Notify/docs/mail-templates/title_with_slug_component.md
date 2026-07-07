@@ -217,3 +217,6 @@ L'implementazione dovrebbe seguire le convenzioni del progetto, con particolare 
 - [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
 - [Implementazione Risorsa con Slug](./RESOURCE_SLUG_IMPLEMENTATION.md)
 - [Miglioramenti UI/UX](./UI_UX_ENHANCEMENTS.md)
+- [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
+- [Implementazione Risorsa con Slug](./RESOURCE_SLUG_IMPLEMENTATION.md)
+- [Miglioramenti UI/UX](./UI_UX_ENHANCEMENTS.md)

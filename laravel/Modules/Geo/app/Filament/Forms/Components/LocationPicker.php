@@ -17,6 +17,11 @@ class LocationPicker extends XotBaseField
 {
     use HasCoordinatePicker;
 
+<<<<<<< HEAD
+=======
+    protected string $view = 'geo::filament.forms.components.location-picker';
+
+>>>>>>> 40b96bcd6 (.)
     protected function setUp(): void
     {
         parent::setUp();

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Milestones - User
 
 ## M1 Documentation Baseline
@@ -14,3 +15,12 @@
 
 - Test minimi sui flussi critici in esecuzione regolare.
 - Riduzione regressioni ricorrenti.
+=======
+---
+module: theme
+topic: milestones
+canonical: ../../../../Themes/docs/shared-components/04-milestones.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/04-milestones.md
+>>>>>>> 40b96bcd6 (.)

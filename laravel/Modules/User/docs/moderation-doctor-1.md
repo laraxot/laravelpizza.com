@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Moderazione Dentista dal Modulo User
 
 ## Premessa
@@ -84,3 +85,12 @@ class DoctorPolicy {
 ---
 
 **Nota:** Se la complessità della moderazione dovesse aumentare (es. moderazione multi-ruolo, workflow avanzati), valutare la migrazione verso un modulo Moderation dedicato. 
+=======
+---
+module: theme
+topic: moderation-doctor-1
+canonical: ../../../Themes/docs/shared-components/moderation-doctor.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/moderation-doctor.md
+>>>>>>> 40b96bcd6 (.)

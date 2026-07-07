@@ -1,8 +1,23 @@
-# Lang Module - PHPStan Level 7 Fixes - Gennaio 2025
+# Lang Module — PHPStan
 
-## ✅ **Stato Completato**
+## 2026-06-10 — STORY-305 · Level 10 · 0 errori
 
-Il modulo Lang è stato completamente risolto per PHPStan Level 7 con 0 errori rimanenti.
+```bash
+cd laravel && ./vendor/bin/phpstan analyse Modules/Lang
+# [OK] No errors
+```
+
+- Test: `Assert::assert*()`, `uses(TestCase::class)`, helper al posto di `$this` in closure
+- `tests/Pest.php` minimal (no `pest()->extend`)
+- `TestCase::assertDatabaseHasRow()` per DB in Pest
+- Tooling: `laravel/scripts/phpstan/fix-pest-tests.php`
+- Issue [#332](https://github.com/laraxot/base_fixcity_fila5/issues/332) · base D[#333](https://github.com/laraxot/base_fixcity_fila5/discussions/333)
+
+---
+
+## Storico — Level 7 (Gennaio 2025)
+
+Il modulo Lang era a 0 errori Level 7.
 
 ## 🔧 **Correzioni Implementate**
 
@@ -88,5 +103,6 @@ private function castWithAction(mixed $value): string
 - **Method Signatures**: Allineate tutte le signature con le classi base
 
 ---
+*Ultimo aggiornamento: Gennaio 2025*
 *Ultimo aggiornamento: Gennaio 2025*
 *Stato: ✅ Completato - 0 errori PHPStan*

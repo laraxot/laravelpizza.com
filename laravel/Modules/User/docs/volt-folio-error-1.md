@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Errore VoltDirectiveMissingException in Folio
 
 ## Il Problema
@@ -55,3 +56,12 @@ The [@volt] directive is required when using Volt anonymous components in Folio 
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
 - [Documentazione Folio](https://laravel.com/docs/folio)
 - [Best Practices Routing](./routing_best_practices.md) 
+=======
+---
+module: theme
+topic: volt-folio-error-1
+canonical: ../../../Themes/docs/shared-components/volt-folio-error.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/volt-folio-error.md
+>>>>>>> 40b96bcd6 (.)

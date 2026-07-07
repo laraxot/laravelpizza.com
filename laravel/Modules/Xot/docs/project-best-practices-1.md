@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Best Practices Progetto Laraxot PTVX - 2025
 
 > **Documento Master** - Regole fondamentali aggiornate dopo risoluzione massiva merge conflicts
@@ -402,3 +403,12 @@ git push origin feature-branch
 **Versione:** 1.0
 **Autori:** Team Laraxot + AI Claude Process Filosofico
 **Prossimo Review:** Trimestrale o dopo major changes
+=======
+---
+module: theme
+topic: project-best-practices-1
+canonical: ../../../Themes/docs/shared-components/project-best-practices-.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/project-best-practices-.md
+>>>>>>> 40b96bcd6 (.)

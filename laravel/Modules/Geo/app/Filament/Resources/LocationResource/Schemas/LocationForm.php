@@ -5,18 +5,28 @@ declare(strict_types=1);
 namespace Modules\Geo\Filament\Resources\LocationResource\Schemas;
 
 use Filament\Forms\Components\TextInput;
+<<<<<<< HEAD
 use Filament\Schemas\Components\Component as SchemaComponent;
 use Modules\Geo\Models\Location;
+=======
+use Filament\Schemas\Components\Component;
+use Filament\Schemas\Components\Section;
+>>>>>>> 40b96bcd6 (.)
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 class LocationForm extends XotBaseResourceForm
 {
     /**
+<<<<<<< HEAD
      * @return array<int|string, SchemaComponent>
+=======
+     * @return array<int|string, Component>
+>>>>>>> 40b96bcd6 (.)
      */
     public static function getFormSchema(): array
     {
         return [
+<<<<<<< HEAD
             'name' => TextInput::make('name')->required()->maxLength(255),
             'latitude' => TextInput::make('latitude')->required()->numeric(),
             'longitude' => TextInput::make('longitude')->required()->numeric(),
@@ -49,6 +59,12 @@ class LocationForm extends XotBaseResourceForm
             //     ])
             //     ->geolocate()
             //     ->columnSpan(2),
+=======
+            'main' => Section::make()
+                ->schema([
+                    TextInput::make('name'),
+                ]),
+>>>>>>> 40b96bcd6 (.)
         ];
     }
 }

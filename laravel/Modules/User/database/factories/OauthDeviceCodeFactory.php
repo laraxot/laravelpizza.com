@@ -7,6 +7,12 @@ namespace Modules\User\Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\User\Models\OauthDeviceCode;
 
+<<<<<<< HEAD
+=======
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Modules\User\Models\OauthDeviceCode>
+ */
+>>>>>>> 40b96bcd6 (.)
 class OauthDeviceCodeFactory extends Factory
 {
     /**

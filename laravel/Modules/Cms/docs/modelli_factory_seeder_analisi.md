@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Analisi Modelli, Factory e Seeder - Modulo Cms
 
 ## Panoramica
@@ -137,3 +138,12 @@ Tutti i modelli attivi hanno le factory corrispondenti.
 - [Media Module](../../media/docs/modelli_factory_seeder_analisi.md) - Media contenuti
 
 *Analisi completa di 9 modelli, sistema CMS completo*
+=======
+---
+module: theme
+topic: modelli_factory_seeder_analisi
+canonical: ../../../Themes/docs/shared-components/modelli-factory-seeder-analisi-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/modelli-factory-seeder-analisi-Modules.md
+>>>>>>> 40b96bcd6 (.)

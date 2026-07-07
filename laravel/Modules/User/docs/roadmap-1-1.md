@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 👥 USER MODULE - ROADMAP 2025
 
 **Modulo**: User (Authentication & Authorization)  
@@ -480,3 +481,12 @@ User Module
 ---
 
 *Questa roadmap è specifica per il modulo User e viene aggiornata regolarmente in base ai progressi e alle nuove esigenze.*
+=======
+---
+module: theme
+topic: roadmap-1-1
+canonical: ../../../Themes/docs/shared-components/roadmap.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/roadmap.md
+>>>>>>> 40b96bcd6 (.)

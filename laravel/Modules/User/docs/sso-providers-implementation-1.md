@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # User Module - SSO Providers Implementation
 
 ## Overview
@@ -303,3 +304,12 @@ test('can login user via SSO', function () {
 **Data**: 2025-10-15
 **Versione**: 1.0.0
 **Laravel**: 12.34.0
+=======
+---
+module: theme
+topic: sso-providers-implementation-1
+canonical: ../../../Themes/docs/shared-components/sso_providers_implementation.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/sso_providers_implementation.md
+>>>>>>> 40b96bcd6 (.)

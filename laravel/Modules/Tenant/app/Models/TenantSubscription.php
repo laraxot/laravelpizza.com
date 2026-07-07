@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\Tenant\Database\Factories\TenantSubscriptionFactory;
@@ -20,8 +21,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property float|null $current_storage_gb
  * @property string|null $billing_cycle
  * @property float|null $billing_amount
- * @property \Carbon\Carbon|null $next_billing_date
- * @property \Carbon\Carbon|null $expires_at
+ * @property Carbon|null $next_billing_date
+ * @property Carbon|null $expires_at
+ *
  * @method static Builder|TenantSubscription newModelQuery()
  * @method static Builder|TenantSubscription newQuery()
  * @method static Builder|TenantSubscription query()
@@ -37,11 +39,15 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|TenantSubscription whereBillingAmount($value)
  * @method static Builder|TenantSubscription whereNextBillingDate($value)
  * @method static Builder|TenantSubscription whereExpiresAt($value)
+ *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  * @property ProfileContract|null $deleter
+ *
  * @method static TenantSubscriptionFactory factory($count = null, $state = [])
- * @property-read \Modules\Tenant\Models\Tenant|null $tenant
+ *
+ * @property-read Tenant|null $tenant
+ *
  * @mixin \Eloquent
  */
 class TenantSubscription extends BaseModel
@@ -60,6 +66,7 @@ class TenantSubscription extends BaseModel
         'expires_at',
     ];
 
+    /** @return BelongsTo<Tenant, $this> */
     public function tenant(): BelongsTo
     {
         return $this->belongsTo(Tenant::class);
@@ -72,7 +79,7 @@ class TenantSubscription extends BaseModel
      */
     protected function casts(): array
     {
-        return array_merge(parent::casts(), [
+        return array_merge(parent::casts(), [)
             'next_billing_date' => 'datetime',
             'expires_at' => 'datetime',
         ]);

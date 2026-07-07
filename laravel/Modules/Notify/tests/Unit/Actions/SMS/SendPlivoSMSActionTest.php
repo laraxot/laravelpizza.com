@@ -7,86 +7,24 @@ namespace Modules\Notify\Tests\Unit\Actions\SMS;
 use Modules\Notify\Actions\SMS\SendPlivoSMSAction;
 use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SmsData;
+use PHPUnit\Framework\Assert;
+use ReflectionClass;
+use ReflectionNamedType;
+use Spatie\QueueableAction\QueueableAction;
 
-describe('SendPlivoSMSAction', function () {
-    it('can be referenced via ReflectionClass without instantiation', function () {
-        $reflection = new \ReflectionClass(SendPlivoSMSAction::class);
-        expect($reflection->isInstantiable())->toBeTrue();
-    });
+test('plivo sms action has the expected public contract', function (): void {
+    $reflection = new ReflectionClass(SendPlivoSMSAction::class);
+    $method = $reflection->getMethod('execute');
+    $parameters = $method->getParameters();
+    $parameterType = $parameters[0]->getType();
+    $returnType = $method->getReturnType();
 
-    it('implements SmsActionContract', function () {
-        $reflection = new \ReflectionClass(SendPlivoSMSAction::class);
-        $interfaces = $reflection->getInterfaceNames();
-
-        expect($interfaces)->toContain(SmsActionContract::class);
-    });
-
-    it('has execute method with correct signature', function () {
-        $reflection = new \ReflectionClass(SendPlivoSMSAction::class);
-        $method = $reflection->getMethod('execute');
-
-        expect($method->isPublic())->toBeTrue();
-        expect($method->getNumberOfParameters())->toBe(1);
-    });
-
-    it('execute accepts SmsData parameter', function () {
-        $reflection = new \ReflectionClass(SendPlivoSMSAction::class);
-        $method = $reflection->getMethod('execute');
-        $params = $method->getParameters();
-
-        expect($params[0]->getType()?->getName())->toBe(SmsData::class);
-    });
-
-    it('execute returns array', function () {
-        $reflection = new \ReflectionClass(SendPlivoSMSAction::class);
-        $method = $reflection->getMethod('execute');
-        $returnType = $method->getReturnType();
-
-        expect($returnType?->getName())->toBe('array');
-    });
-
-    it('uses strict types', function () {
-        $reflection = new \ReflectionClass(SendPlivoSMSAction::class);
-        $filename = $reflection->getFileName();
-
-        expect($filename)->not->toBeNull();
-        $content = file_get_contents($filename);
-        expect($content)->toContain('');
-    });
-
-    it('has correct namespace', function () {
-        $reflection = new \ReflectionClass(SendPlivoSMSAction::class);
-
-        expect($reflection->getNamespaceName())->toBe('Modules\Notify\Actions\SMS');
-    });
-
-    it('has required imports', function () {
-        $reflection = new \ReflectionClass(SendPlivoSMSAction::class);
-        $filename = $reflection->getFileName();
-        $content = file_get_contents($filename);
-
-        expect($content)->toContain('use Modules\Notify\Contracts\SMS\SmsActionContract;');
-        expect($content)->toContain('use Modules\Notify\Datas\SmsData;');
-        expect($content)->toContain('use Override;');
-    });
-
-    it('uses QueueableAction trait', function () {
-        $traits = class_uses(SendPlivoSMSAction::class);
-
-        expect($traits)->toContain('Spatie\QueueableAction\QueueableAction');
-    });
-
-    it('has protected debug property', function () {
-        $reflection = new \ReflectionClass(SendPlivoSMSAction::class);
-        $property = $reflection->getProperty('debug');
-
-        expect($property->isProtected())->toBeTrue();
-    });
-
-    it('has protected defaultSender property', function () {
-        $reflection = new \ReflectionClass(SendPlivoSMSAction::class);
-        $property = $reflection->getProperty('defaultSender');
-
-        expect($property->isProtected())->toBeTrue();
-    });
+    Assert::assertTrue($reflection->implementsInterface(SmsActionContract::class));
+    Assert::assertContains(QueueableAction::class, $reflection->getTraitNames());
+    Assert::assertTrue($method->isPublic());
+    Assert::assertCount(1, $parameters);
+    Assert::assertInstanceOf(ReflectionNamedType::class, $parameterType);
+    Assert::assertSame(SmsData::class, $parameterType->getName());
+    Assert::assertInstanceOf(ReflectionNamedType::class, $returnType);
+    Assert::assertSame('array', $returnType->getName());
 });

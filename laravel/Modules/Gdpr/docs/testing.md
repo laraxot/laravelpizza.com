@@ -175,7 +175,11 @@ protected function createApplication()
     $app = parent::createApplication();
     
     $app['config']->set([
+<<<<<<< HEAD
         'database.connections.gdpr.database' => 'healthcare_app_data_test',
+=======
+'database.connections.gdpr.database' => 'Quaeris_data_test',
+>>>>>>> 40b96bcd6 (.)
     ]);
     
     return $app;

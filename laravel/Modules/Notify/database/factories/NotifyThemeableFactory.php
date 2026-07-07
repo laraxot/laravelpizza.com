@@ -16,6 +16,9 @@ use Modules\Notify\Models\NotifyThemeable;
 class NotifyThemeableFactory extends Factory
 {
     protected $model = NotifyThemeable::class;
+    /**
+     * @return array<string, mixed>
+     */
 
     public function definition(): array
     {

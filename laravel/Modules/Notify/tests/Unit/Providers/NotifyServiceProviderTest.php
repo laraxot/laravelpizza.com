@@ -9,11 +9,15 @@ use Modules\Notify\Providers\NotifyServiceProvider;
 use Modules\Notify\Tests\TestCase;
 use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
 
-uses(TestCase::class);
+uses(\Modules\Notify\Tests\TestCase::class);
 
 test('notify service provider boot sets fallback recipient when configured', function () {
     app()->instance(ResolveTenantConfigValueAction::class, new class
     {
+        /**
+         * @param  string|int|array<string, mixed>|null  $default
+         * @return array<string, string>
+         */
         public function execute(string $key, string|int|array|null $default = null): array
         {
             return ['fallback_to' => 'fallback@example.test'];
@@ -29,6 +33,10 @@ test('notify service provider boot sets fallback recipient when configured', fun
 test('notify service provider boot skips alwaysTo when fallback is missing', function () {
     app()->instance(ResolveTenantConfigValueAction::class, new class
     {
+        /**
+         * @param  string|int|array<string, mixed>|null  $default
+         * @return array<empty, empty>
+         */
         public function execute(string $key, string|int|array|null $default = null): array
         {
             return [];

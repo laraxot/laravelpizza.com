@@ -7,6 +7,9 @@ namespace Modules\Notify\Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Notify\Models\NotificationTemplateVersion;
 
+/**
+ * @extends Factory<NotificationTemplateVersion>
+ */
 class NotificationTemplateVersionFactory extends Factory
 {
     /**
@@ -16,6 +19,9 @@ class NotificationTemplateVersionFactory extends Factory
 
     /**
      * Define the model's default state.
+     */
+    /**
+     * @return array<string, mixed>
      */
     public function definition(): array
     {

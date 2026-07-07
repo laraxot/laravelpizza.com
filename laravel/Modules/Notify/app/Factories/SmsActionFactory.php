@@ -16,7 +16,7 @@ use Modules\Notify\Contracts\SMS\SmsActionContract;
  * e la creazione dell'azione corrispondente, seguendo il pattern di risoluzione dinamica
  * delle classi basato su convenzioni di naming.
  */
-final class SmsActionFactory
+class SmsActionFactory
 {
     /**
      * Lista dei provider SMS supportati ufficialmente.
@@ -26,27 +26,14 @@ final class SmsActionFactory
      *
      * @var array<string>
      */
+    /** @var list<string> */
     protected array $supportedDrivers = [
         'smsfactor',
-        'twilio',
-        'nexmo',
-        'plivo',
-        'gammu',
-        'netfun',
     ];
 
-    /**
-     * Mappatura di alias ai nomi dei driver effettivi.
-     *
-     * @var array<string, string>
-     */
+    /** @var array<string, string> */
     protected array $driverAliases = [
-        'vonage' => 'nexmo',
         'smsfac' => 'smsfactor',
-        'textmessage' => 'twilio',
-        'clickatell' => 'twilio',
-        'aws' => 'aws',
-        'amazon' => 'aws',
     ];
 
     /**
@@ -61,7 +48,7 @@ final class SmsActionFactory
      */
     public function create(?string $driver = null): SmsActionContract
     {
-        $driver ??= Config::get('sms.default', 'netfun');
+        $driver ??= Config::get('sms.default', 'smsfactor');
 
         // Normalizza il nome del driver e assicura formato camelCase
         $normalizedDriver = $this->normalizeDriverName(is_string($driver) ? $driver : '');

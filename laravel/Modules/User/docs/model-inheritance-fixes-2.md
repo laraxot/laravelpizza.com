@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Correzioni Ereditarietà Modelli - Modulo User
 
 ## Data Implementazione
@@ -192,3 +193,12 @@ cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
 - [BaseModel](../app/Models/BaseModel.php)
 - [BasePivot](../app/Models/BasePivot.php)
 - [BaseMorphPivot](../app/Models/BaseMorphPivot.php)
+=======
+---
+module: theme
+topic: model-inheritance-fixes-2
+canonical: ../../../Themes/docs/shared-components/MODEL_INHERITANCE_FIXES.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/MODEL_INHERITANCE_FIXES.md
+>>>>>>> 40b96bcd6 (.)

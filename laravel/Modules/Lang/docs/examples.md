@@ -915,6 +915,10 @@ class UserResourceTest extends TestCase
 - [BEST_PRACTICES.md](best_practices.md) - Best practices
 - [API_REFERENCE.md](api_reference.md) - Riferimento API
 - [TROUBLESHOOTING.md](troubleshooting.md) - Troubleshooting
+- [README.md](README.md) - Documentazione principale
+- [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices
+- [API_REFERENCE.md](API_REFERENCE.md) - Riferimento API
+- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Troubleshooting
 
 ### **2. Configurazione**
 - [config/lang.php](../config/lang.php) - Configurazione centralizzata

@@ -1,0 +1,79 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-*
+.vim/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+
+# Environment
+.env
+.env.local
+
+# Build artifacts (in case someone tests locally)
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.py[cod]
+node_modules/
+package.json
+package-lock.json
+
+# Jekyll build artifacts
+docs/_site/
+docs/.jekyll-cache/
+docs/Gemfile
+docs/Gemfile.lock
+
+# Test artifacts
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# macOS
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+$RECYCLE.BIN/
+ehthumbs.db
+ehthumbs_vista.db
+
+# Linux
+.directory
+.Trash-*
+
+# IDE
+.project
+.classpath
+.settings/
+.loadpath
+
+# Development/Working Documents
+# (Keep committed: README.md, CONTRIBUTING.md only)
+BMAD-V6-CLAUDE-CODE-TRANSITION-PLAN.md
+BMAD-V6-COMPLETE.md
+PERSONA-REFACTOR-COMPLETE.md
+PHASES-6-8-COMPLETE.md
+PHASE-*-COMPLETE.md
+reference/

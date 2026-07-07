@@ -13,6 +13,7 @@ I seguenti file/directory sono stati eliminati perché violavano le regole:
 ### Directory Structure
 ```
 ✗ Removed: database/Factories/ (entire directory)
+✗ Removed: database/Factories_/ (stale underscore copy)
 ✓ Kept:    database/factories/
 
 ✗ Removed: Tests/ (entire directory)
@@ -33,7 +34,7 @@ I seguenti file/directory sono stati eliminati perché violavano le regole:
   - `database/factories/`
   - `tests/`
 - ❌ **Errato**:
-  - `database/Factories/`, `Database/Factories/`
+  - `database/Factories/`, `database/Factories_/`, `Database/Factories/`
   - `Tests/`
 
 ### Test Files
@@ -51,6 +52,7 @@ Laravel usa le convenzioni lowercase per directory:
 
 ## Update Log
 
+- **[2026-07-01]**: Rimossa `database/Factories_/` (copia stale); confermato solo `database/factories/`. Wiki: `docs/wiki/concepts/lowercase-database-factories-directory.md`
 - **[DATE]**: Major cleanup
   - Removed `database/Factories/` uppercase directory
   - Removed `Tests/` uppercase directory

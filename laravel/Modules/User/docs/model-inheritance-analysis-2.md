@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Analisi Ereditarietà Modelli - Modulo User
 
 ## Regola Fondamentale
@@ -148,3 +149,12 @@ Dopo le modifiche, eseguire:
 - [XotBaseModel](../../Xot/app/Models/XotBaseModel.php)
 - [XotBasePivot](../../Xot/app/Models/XotBasePivot.php)
 - [XotBaseMorphPivot](../../Xot/app/Models/XotBaseMorphPivot.php)
+=======
+---
+module: theme
+topic: model-inheritance-analysis-2
+canonical: ../../../Themes/docs/shared-components/model-inheritance-analysis.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/model-inheritance-analysis.md
+>>>>>>> 40b96bcd6 (.)
