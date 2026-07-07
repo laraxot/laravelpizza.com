@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Download the latest cacert.pem file from
 https://curl.se/docs/caextract.html
 Download the latest cacert.pem file from
@@ -86,6 +87,8 @@ composer clearcache
 composer config --global cafile PATH/TO/cacert.pem
 composer config --global capath PATH/TO/DIRECTORY/WHERE cacert.pem is placed
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: error-curl
@@ -93,4 +96,7 @@ canonical: ../../../Themes/docs/shared-components/error-curl-60.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/error-curl-60.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

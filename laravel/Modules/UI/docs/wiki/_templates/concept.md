@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Untitled Concept"
 type: concept
 sources: ["raw/articles/source-filename.md"]
@@ -39,10 +40,15 @@ _How this concept is implemented in our codebase (with file references)._
 - [[related-concept-2]]
 - [docs/wiki/concepts/project-concept](../../wiki/concepts/project-concept.md)
 =======
+=======
+>>>>>>> origin/dev
 module: theme
 topic: concept
 canonical: ../../../../../Themes/docs/shared-components/concept.md
 ---
 
 See canonical documentation: ../../../../../Themes/docs/shared-components/concept.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

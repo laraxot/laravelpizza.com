@@ -17,20 +17,12 @@ class MapPicker extends XotBaseField
 {
     use HasCoordinatePicker;
 
-<<<<<<< HEAD
-=======
     protected string $view = 'geo::filament.forms.components.map-picker';
 
->>>>>>> 40b96bcd6 (.)
     protected function setUp(): void
     {
         parent::setUp();
         $this->setUpCoordinatePicker();
-<<<<<<< HEAD
-        // Note: dehydrated(false) removed - it blocked saving to latitude/longitude columns.
-        // The trait HasCoordinatePicker handles state via saveRelationshipsUsing() after save.
-=======
         $this->dehydrated(false);
->>>>>>> 40b96bcd6 (.)
     }
 }

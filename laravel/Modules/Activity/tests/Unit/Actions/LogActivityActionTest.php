@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Modules\Activity\Tests\Unit\Actions;
-
-uses(TestCase::class);
-
 use Illuminate\Database\Eloquent\Model;
 use Modules\Activity\Actions\LogActivityAction;
 use Modules\Activity\Tests\TestCase;
-use Modules\User\Models\User;
+use Modules\User\Database\Factories\UserFactory;
+use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 test('LogActivityAction can be instantiated', function () {
     $model = new class extends Model
@@ -18,7 +17,8 @@ test('LogActivityAction can be instantiated', function () {
 
         protected $fillable = ['name'];
     };
-    $user = User::factory()->make();
+    $user = UserFactory::new()->make();
+    assert($user instanceof Model);
 
     $action = new LogActivityAction(
         type: 'test_type',
@@ -28,7 +28,7 @@ test('LogActivityAction can be instantiated', function () {
         description: 'Test Description'
     );
 
-    expect($action)->toBeObject();
+    Assert::assertInstanceOf(LogActivityAction::class, $action);
 });
 
 test('LogActivityAction can execute', function () {
@@ -39,7 +39,8 @@ test('LogActivityAction can execute', function () {
         protected $fillable = ['name'];
     });
     $model = new $modelClass(['name' => 'Test']);
-    $user = User::factory()->create();
+    $user = UserFactory::new()->createOne();
+    assert($user instanceof Model);
 
     $action = new LogActivityAction(
         type: 'test_type',
@@ -49,6 +50,5 @@ test('LogActivityAction can execute', function () {
         description: 'Test Description'
     );
 
-    // Siccome LogActivityAction crea una attività, testiamo che l'execute non generi errori
-    expect($action)->toBeObject();
+    Assert::assertInstanceOf(LogActivityAction::class, $action);
 });

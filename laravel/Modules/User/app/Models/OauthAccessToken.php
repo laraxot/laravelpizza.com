@@ -11,19 +11,6 @@ use Laravel\Passport\Token as PassportToken;
 /**
  * Modules\User\Models\OauthAccessToken.
  *
-<<<<<<< HEAD
- * @property string           $id
- * @property string|null      $user_id
- * @property string           $client_id
- * @property string|null      $name
- * @property array|null       $scopes
- * @property bool             $revoked
- * @property Carbon|null      $created_at
- * @property Carbon|null      $updated_at
- * @property Carbon|null      $expires_at
- * @property OauthClient|null $client
- * @property User|null        $user
-=======
  * @property string            $id
  * @property string|null       $user_id
  * @property string            $client_id
@@ -35,7 +22,6 @@ use Laravel\Passport\Token as PassportToken;
  * @property Carbon|null       $expires_at
  * @property OauthClient|null  $client
  * @property User|null         $user
->>>>>>> 40b96bcd6 (.)
  *
  * @method static Builder|OauthAccessToken newModelQuery()
  * @method static Builder|OauthAccessToken newQuery()
@@ -56,19 +42,6 @@ use Laravel\Passport\Token as PassportToken;
  * @property string|null            $deleted_at
  * @property string|null            $deleted_by
  *
-<<<<<<< HEAD
- * @method static Builder<static>|OauthAccessToken whereCreatedBy($value)
- * @method static Builder<static>|OauthAccessToken whereDeletedAt($value)
- * @method static Builder<static>|OauthAccessToken whereDeletedBy($value)
- * @method static Builder<static>|OauthAccessToken whereUpdatedBy($value)
- * @method static static                           create(array $attributes = [])
- * @method static static                           firstOrCreate(array $attributes, array $values = [])
- * @method static static                           updateOrCreate(array $attributes, array $values = [])
- *
- * @mixin IdeHelperOauthAccessToken
- *
- * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken existsIn(array $haystack)
-=======
  * @method static Builder<static>|OauthAccessToken                               whereCreatedBy($value)
  * @method static Builder<static>|OauthAccessToken                               whereDeletedAt($value)
  * @method static Builder<static>|OauthAccessToken                               whereDeletedBy($value)
@@ -77,7 +50,6 @@ use Laravel\Passport\Token as PassportToken;
  * @method static static                                                         firstOrCreate(array<string, mixed> $attributes, array<string, mixed> $values = [])
  * @method static static                                                         updateOrCreate(array<string, mixed> $attributes, array<string, mixed> $values = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken existsIn(array<int, mixed> $haystack)
->>>>>>> 40b96bcd6 (.)
  *
  * @mixin \Eloquent
  */

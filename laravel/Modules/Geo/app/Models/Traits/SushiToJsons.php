@@ -6,18 +6,25 @@ namespace Modules\Geo\Models\Traits;
 
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\File;
+
+use function Safe\json_decode;
+use function Safe\json_encode;
+
 use Sushi\Sushi;
 
+/** @phpstan-ignore trait.unused */
 trait SushiToJsons
 {
     use Sushi;
 
     /**
      * Carica i dati dal file JSON.
+     *
+     * @return array<int, array<string, mixed>>
      */
     public function getSushiRows(): array
     {
-        return Cache::remember($this->getCacheKey(), $this->getCacheDuration(), $this->loadFromJson(...));
+        return Cache::remember($this->getCacheKey(), $this->getCacheDuration(), fn (): array => $this->loadFromJson());
     }
 
     /**
@@ -30,6 +37,8 @@ trait SushiToJsons
 
     /**
      * Salva i dati nel file JSON.
+     *
+     * @param array<int, array<string, mixed>> $data
      */
     public function saveToJson(array $data): bool
     {
@@ -49,6 +58,8 @@ trait SushiToJsons
 
     /**
      * Crea un nuovo record.
+     *
+     * @param array<string, mixed> $attributes
      */
     public function create(array $attributes = []): static
     {
@@ -68,8 +79,10 @@ trait SushiToJsons
 
     /**
      * Aggiorna un record esistente.
+     *
+     * @param array<string, mixed> $attributes
      */
-    public function update(array $attributes = []): bool
+    public function update(array $attributes = [], array $options = []): bool
     {
         $data = $this->loadFromJson();
         $index = $this->findIndex($this->getKey());
@@ -79,7 +92,12 @@ trait SushiToJsons
         }
 
         $attributes['updated_at'] = now();
-        $data[$index] = array_merge($data[$index], $attributes);
+        $itemData = $data[$index];
+        if (! is_array($itemData)) {
+            return false;
+        }
+        /* @var array<string, mixed> $itemData */
+        $data[$index] = array_merge($itemData, $attributes);
 
         return $this->saveToJson($data);
     }
@@ -103,6 +121,8 @@ trait SushiToJsons
 
     /**
      * Carica i dati dal file JSON.
+     *
+     * @return array<int, array<string, mixed>>
      */
     protected function loadFromJson(): array
     {
@@ -112,13 +132,19 @@ trait SushiToJsons
             return [];
         }
 
-        $data = json_decode(File::get($path), true);
-
-        if (JSON_ERROR_NONE !== json_last_error()) {
-            throw new \RuntimeException('Errore nel parsing del file JSON: '.json_last_error_msg());
+        $content = File::get($path);
+        if (! is_string($content)) {
+            return [];
+        }
+        $data = json_decode($content, true);
+        if (! is_array($data)) {
+            return [];
         }
 
-        return $data;
+        /** @var array<int, array<string, mixed>> $result */
+        $result = $data;
+
+        return $result;
     }
 
     /**
@@ -140,12 +166,13 @@ trait SushiToJsons
     /**
      * Trova l'indice di un record.
      */
-    protected function findIndex($id): ?int
+    protected function findIndex(mixed $id): ?int
     {
         $data = $this->loadFromJson();
 
         foreach ($data as $index => $item) {
-            if ($item['id'] === $id) {
+            if (is_array($item) && array_key_exists('id', $item) && $item['id'] === $id) {
+                /* @var int $index */
                 return $index;
             }
         }

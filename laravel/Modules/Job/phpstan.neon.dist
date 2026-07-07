@@ -32,7 +32,11 @@ parameters:
         - ./phpstan_constants.php
 
     scanFiles:
+<<<<<<< HEAD
     #    - ./Helpers/Helper.php
+=======
+    #    - ./helpers/Helper.php
+>>>>>>> origin/dev
     #   - ./vendor/amenadiel/jpgraph/src/config.inc.php
 
     editorUrl: 'vscode://file/%%file%%:%%line%%'

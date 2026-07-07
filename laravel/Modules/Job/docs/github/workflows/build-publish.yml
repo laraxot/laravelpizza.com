@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Build & Publish
 
 on:
@@ -34,3 +35,12 @@ jobs:
         git subtree split --prefix build_production -b master
         git push -f origin master:master
         git branch -D master
+=======
+---
+module: theme
+topic: build-publish
+canonical: ../../../../../Themes/docs/shared-components/build-publish.yml
+---
+
+See canonical documentation: ../../../../../Themes/docs/shared-components/build-publish.yml
+>>>>>>> origin/dev

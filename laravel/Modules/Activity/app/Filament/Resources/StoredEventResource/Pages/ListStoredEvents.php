@@ -12,7 +12,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 class ListStoredEvents extends XotBaseListRecords
 {
-    public static string $resource = StoredEventResource::class;
+    protected static string $resource = StoredEventResource::class;
 
     /**
      * @return array<Tables\Columns\Column>

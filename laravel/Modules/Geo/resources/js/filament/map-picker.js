@@ -337,18 +337,7 @@ if (!window.customElements.get('geo-map-picker')) {
     window.customElements.define('geo-map-picker', GeoMapPickerElement);
 }
 
-<<<<<<< HEAD
-const registerMapPickerField = () => {
-    if (!window.Alpine || window.__geoMapPickerFieldRegistered === true) {
-        return;
-    }
-
-    window.__geoMapPickerFieldRegistered = true;
-
-    window.Alpine.data('geoMapPickerField', (config) => ({
-=======
 const geoMapPickerFieldFactory = (config) => ({
->>>>>>> 40b96bcd6 (.)
         latitude: roundCoordinate(config.state?.latitude ?? config.latitude),
         longitude: roundCoordinate(config.state?.longitude ?? config.longitude),
         geolocateWhenEmpty: config.geolocateWhenEmpty,
@@ -541,9 +530,6 @@ const geoMapPickerFieldFactory = (config) => ({
 
             return 'bg-success-500';
         },
-<<<<<<< HEAD
-    }));
-=======
 });
 
 const registerMapPickerField = () => {
@@ -554,7 +540,6 @@ const registerMapPickerField = () => {
     window.__geoMapPickerFieldRegistered = true;
 
     window.Alpine.data('geoMapPickerField', geoMapPickerFieldFactory);
->>>>>>> 40b96bcd6 (.)
 };
 
 if (window.Alpine) {
@@ -562,9 +547,6 @@ if (window.Alpine) {
 } else {
     document.addEventListener('alpine:init', registerMapPickerField, { once: true });
 }
-<<<<<<< HEAD
-=======
 
 /** Esporta come funzione globale: markup o chunk legacy possono chiamare geoMapPickerField(...) prima del boot differito del bundle tema. */
 window.geoMapPickerField = geoMapPickerFieldFactory;
->>>>>>> 40b96bcd6 (.)

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Risoluzione Merge Conflicts Massivi - 2025-11-04
 
 ## 🔥 Problema Iniziale
@@ -282,6 +283,8 @@ Questi possono essere corretti in un secondo momento se necessario.
 - [Code Quality Standards](./code-quality-standards.md)
 - [File Locking Pattern](./file-locking-pattern.md) ← DA CREARE
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: merge-conflict-resolution-2
@@ -289,4 +292,7 @@ canonical: ../../../Themes/docs/shared-components/merge-conflict-resolution-.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/merge-conflict-resolution-.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

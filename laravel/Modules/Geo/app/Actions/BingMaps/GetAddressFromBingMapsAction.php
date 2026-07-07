@@ -7,7 +7,7 @@ namespace Modules\Geo\Actions\BingMaps;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
-use Modules\Geo\Datas\AddressData;
+use Modules\Geo\Datas\Geocoding\AddressData;
 
 use function Safe\json_decode;
 

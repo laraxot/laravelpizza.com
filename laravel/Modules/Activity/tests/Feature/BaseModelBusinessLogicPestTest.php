@@ -11,155 +11,149 @@ use Illuminate\Support\Str;
 use Modules\Activity\Models\BaseModel;
 use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Traits\Updater;
-
+use PHPUnit\Framework\Assert;
 use function Safe\class_uses;
 
-uses(TestCase::class);
-
-beforeEach(function (): void {
-    $this->model = new TestActivityModel;
-});
+uses(\Modules\Activity\Tests\TestCase::class);
 
 test('can create base model instance', function (): void {
-    expect($this->model)->toBeInstanceOf(BaseModel::class);
-    expect($this->model)->toBeInstanceOf(Model::class);
+    $model = new TestActivityModel;
+
+    Assert::assertInstanceOf(BaseModel::class, $model);
+    Assert::assertInstanceOf(Model::class, $model);
 });
 
 test('has correct connection setting', function (): void {
-    expect($this->model->getConnectionName())->toBe('activity');
+    $model = new TestActivityModel;
+
+    Assert::assertSame('activity', $model->getConnectionName());
 });
 
 test('has correct primary key setting', function (): void {
-    expect($this->model->getKeyName())->toBe('id');
-    expect($this->model->getKeyType())->toBe('int');
-    expect($this->model->getIncrementing())->toBeTrue();
+    $model = new TestActivityModel;
+
+    Assert::assertSame('id', $model->getKeyName());
+    Assert::assertSame('int', $model->getKeyType());
+    Assert::assertTrue($model->getIncrementing());
 });
 
 test('has correct timestamps setting', function (): void {
-    expect($this->model->usesTimestamps())->toBeTrue();
-    expect($this->model->timestamps)->toBeTrue();
+    $model = new TestActivityModel;
+
+    Assert::assertTrue($model->usesTimestamps());
+    Assert::assertTrue($model->timestamps);
 });
 
 test('has correct per page setting', function (): void {
-    expect($this->model->getPerPage())->toBe(30);
+    $model = new TestActivityModel;
+
+    Assert::assertSame(30, $model->getPerPage());
 });
 
 test('has correct snake attributes setting', function (): void {
-    expect(TestActivityModel::$snakeAttributes)->toBeTrue();
+    Assert::assertTrue(TestActivityModel::$snakeAttributes);
 });
 
 test('has correct casts configuration', function (): void {
-    $casts = $this->model->getCasts();
+    $model = new TestActivityModel;
+    $casts = $model->getCasts();
 
-    // id is cast to string (as defined in XotBaseModel)
-    expect($casts)->toHaveKey('id');
-    expect($casts['id'])->toBe('string');
+    Assert::assertIsArray($casts);
+    Assert::assertArrayHasKey('id', $casts);
+    Assert::assertSame('string', $casts['id']);
 
-    // published_at is cast to datetime (defined in TestActivityModel)
-    expect($casts)->toHaveKey('published_at');
-    expect($casts['published_at'])->toBe('datetime');
-
-    // Verify getCasts returns an array
-    expect($casts)->toBeArray();
+    Assert::assertArrayHasKey('published_at', $casts);
+    Assert::assertSame('datetime', $casts['published_at']);
 });
 
 test('can use factory', function (): void {
-    expect(method_exists($this->model, 'factory'))->toBeTrue();
-    expect(method_exists($this->model, 'newFactory'))->toBeTrue();
+    $factory = TestActivityModel::factory();
+
+    Assert::assertNotNull($factory);
 });
 
 test('has updater trait', function (): void {
-    /** @var TestActivityModel $model */
-    $model = $this->model;
-    $traits = class_uses($model);
-    if (in_array(Updater::class, $traits, true)) {
-        expect($traits)->toContain(Updater::class);
-
-        return;
-    }
-
-    expect(true)->toBeTrue();
+    $model = new TestActivityModel;
+    $traits = class_uses_recursive($model::class);
+    Assert::assertContains(Updater::class, $traits);
 });
 
 test('has has factory trait', function (): void {
-    /** @var TestActivityModel $model */
-    $model = $this->model;
-    $traits = class_uses($model);
-    if (in_array(HasFactory::class, $traits, true)) {
-        expect($traits)->toContain(HasFactory::class);
-
-        return;
-    }
-
-    expect(true)->toBeTrue();
+    $model = new TestActivityModel;
+    $traits = class_uses_recursive($model::class);
+    Assert::assertContains(HasFactory::class, $traits);
 });
 
 test('can handle uuid generation', function (): void {
+    $model = new TestActivityModel;
     $uuid = Str::uuid()->toString();
-    $this->model->uuid = $uuid;
-    $this->model->name = 'Test Model';
+    $model->uuid = $uuid;
+    $model->name = 'Test Model';
 
-    expect($this->model->uuid)->toBe($uuid);
-    expect($this->model->name)->toBe('Test Model');
+    Assert::assertSame($uuid, $model->uuid);
+    Assert::assertSame('Test Model', $model->name);
 });
 
 test('can handle timestamps', function (): void {
+    $model = new TestActivityModel;
     $now = now();
-    $this->model->created_at = $now;
-    $this->model->updated_at = $now;
+    $model->created_at = $now;
+    $model->updated_at = $now;
 
-    expect($this->model->created_at->timestamp)->toBe($now->timestamp);
-    expect($this->model->updated_at->timestamp)->toBe($now->timestamp);
+    Assert::assertSame($now->timestamp, $model->created_at->timestamp);
+    Assert::assertSame($now->timestamp, $model->updated_at->timestamp);
 });
 
 test('can handle soft deletes', function (): void {
+    $model = new TestActivityModel;
     $now = now();
-    $this->model->deleted_at = $now;
+    $model->deleted_at = $now;
 
-    expect($this->model->deleted_at->timestamp)->toBe($now->timestamp);
+    Assert::assertSame($now->timestamp, $model->deleted_at->timestamp);
 });
 
 test('can handle published at timestamp', function (): void {
+    $model = new TestActivityModel;
     $now = now();
-    $this->model->published_at = $now;
+    $model->published_at = $now;
 
-    expect($this->model->published_at->timestamp)->toBe($now->timestamp);
+    Assert::assertSame($now->timestamp, $model->published_at->timestamp);
 });
 
 test('can handle created by tracking', function (): void {
-    $userId = Str::uuid()->toString();
-    $this->model->created_by = $userId;
-    $this->model->updated_by = $userId;
-    $this->model->deleted_by = $userId;
+    $model = new TestActivityModel;
+    $userId = 42;
+    $model->created_by = $userId;
+    $model->updated_by = $userId;
+    $model->deleted_by = $userId;
 
-    expect($this->model->created_by)->toBe($userId);
-    expect($this->model->updated_by)->toBe($userId);
-    expect($this->model->deleted_by)->toBe($userId);
+    Assert::assertSame((string) $userId, $model->created_by);
+    Assert::assertSame((string) $userId, $model->updated_by);
+    Assert::assertSame((string) $userId, $model->deleted_by);
 });
 
 test('has correct fillable configuration', function (): void {
-    $fillable = $this->model->getFillable();
-    expect($fillable)->toBeArray();
-});
-
-test('can access attributes', function (): void {
-    $this->model->name = 'Test Name';
-    expect($this->model->name)->toBe('Test Name');
+    $model = new TestActivityModel;
+    $fillable = $model->getFillable();
+    Assert::assertIsArray($fillable);
 });
 
 test('has correct table name', function (): void {
-    expect($this->model->getTable())->toBe('test_models');
+    $model = new TestActivityModel;
+    Assert::assertSame('test_models', $model->getTable());
 });
 
 test('has timestamps enabled', function (): void {
-    expect($this->model->usesTimestamps())->toBeTrue();
-    expect($this->model->timestamps)->toBeTrue();
-    expect($this->model->getCreatedAtColumn())->toBe('created_at');
-    expect($this->model->getUpdatedAtColumn())->toBe('updated_at');
+    $model = new TestActivityModel;
+    Assert::assertTrue($model->usesTimestamps());
+    Assert::assertTrue($model->timestamps);
+    Assert::assertSame('created_at', $model->getCreatedAtColumn());
+    Assert::assertSame('updated_at', $model->getUpdatedAtColumn());
 });
 
 test('can get connection', function (): void {
-    $connection = $this->model->getConnection();
-    expect($connection)->toBeInstanceOf(ConnectionInterface::class);
-    expect($this->model->getConnectionName())->toBe('activity');
+    $model = new TestActivityModel;
+    $connection = $model->getConnection();
+    Assert::assertInstanceOf(ConnectionInterface::class, $connection);
+    Assert::assertSame('activity', $model->getConnectionName());
 });

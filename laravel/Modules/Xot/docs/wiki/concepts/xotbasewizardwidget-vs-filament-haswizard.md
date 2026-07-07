@@ -62,10 +62,14 @@ abstract class XotBaseWizardWidget extends XotBaseWidget
     public int $wizardStartStep = 1;  // ← Duplicates getWizardStartStep()
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     abstract public function getWizardSteps(): array;  // ← Duplicates getSteps()
 =======
     abstract public function getSteps(): array;  // ← Duplicates getSteps()
 >>>>>>> 40b96bcd6 (.)
+=======
+    abstract public function getSteps(): array;  // ← Duplicates getSteps()
+>>>>>>> origin/dev
     
     protected function wizardMaxStep(): int;  // ← Not in Filament
     
@@ -80,10 +84,14 @@ abstract class XotBaseWizardWidget extends XotBaseWidget
 | Feature | XotBaseWizardWidget | Filament HasWizard (Pages) | HasWizard (Actions) |
 |---------|--------------------|---------------------------|---------------------|
 <<<<<<< HEAD
+<<<<<<< HEAD
 | Step definition | `getWizardSteps()` | `getSteps()` | `steps()` |
 =======
 | Step definition | `getSteps()` | `getSteps()` | `steps()` |
 >>>>>>> 40b96bcd6 (.)
+=======
+| Step definition | `getSteps()` | `getSteps()` | `steps()` |
+>>>>>>> origin/dev
 | Start step | `wizardStartStep` property | `getStartStep()` | `startOnStep()` |
 | Skippable | `hasSkippableWizardSteps()` | `hasSkippableSteps()` | `skippableSteps()` |
 | Max step | `wizardMaxStep()` | N/A | N/A |
@@ -117,10 +125,14 @@ abstract class XotBaseWizardWidget extends XotBaseWidget
         
         // Initialize wizard using HasWizard
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->steps($this->getWizardSteps());
 =======
         $this->steps($this->getSteps());
 >>>>>>> 40b96bcd6 (.)
+=======
+        $this->steps($this->getSteps());
+>>>>>>> origin/dev
         $this->startOnStep($this->wizardStartStep);
     }
 }
@@ -135,10 +147,14 @@ abstract class XotBaseWizardWidget extends XotBaseWidget
 {
     // Rename to match HasWizard (Pages)
 <<<<<<< HEAD
+<<<<<<< HEAD
     abstract public function getSteps(): array;  // Was: getWizardSteps()
 =======
     abstract public function getSteps(): array;
 >>>>>>> 40b96bcd6 (.)
+=======
+    abstract public function getSteps(): array;
+>>>>>>> origin/dev
     
     public function hasSkippableSteps(): bool  // Was: hasSkippableWizardSteps()
     {

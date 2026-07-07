@@ -20,6 +20,9 @@ class LogActivityAction
 {
     use QueueableAction;
 
+    /**
+     * @param  array<string, mixed>|null  $properties
+     */
     public function __construct(
         public string $type,
         public ?Model $user = null,

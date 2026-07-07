@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PHPStan Level 10 Fixes - Modulo Job
 
 ## Data: [DATE]
@@ -186,3 +187,12 @@ if ($someCondition) {
 ---
 
 **Conclusione:** Il modulo Job è ora completamente compliant con PHPStan Level 10, dimostrando eccellenza nella qualità del codice e type safety.
+=======
+---
+module: theme
+topic: phpstan-level-10es
+canonical: ../../../Themes/docs/shared-components/phpstan-level-10-fixes.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level-10-fixes.md
+>>>>>>> origin/dev

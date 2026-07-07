@@ -417,7 +417,11 @@ php artisan xot:test-framework
 - [XotData Current](../Datas/XotData.php)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 *Ultimo aggiornamento: gennaio 2025*
 =======
 *Ultimo aggiornamento: gennaio 2025*
 >>>>>>> 40b96bcd6 (.)
+=======
+*Ultimo aggiornamento: gennaio 2025*
+>>>>>>> origin/dev

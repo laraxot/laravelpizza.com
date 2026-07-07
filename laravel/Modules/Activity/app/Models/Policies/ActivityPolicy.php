@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Models\Policies;
 
-use Modules\Fixcity\Models\Ticket;
 use Modules\User\Models\Policies\UserBasePolicy;
 use Modules\Xot\Contracts\UserContract;
 
@@ -21,7 +20,7 @@ class ActivityPolicy extends UserBasePolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(UserContract $user, Ticket $ticket): bool
+    public function view(UserContract $user): bool
     {
         return $user->hasPermissionTo('activity.view');
     }
@@ -37,7 +36,7 @@ class ActivityPolicy extends UserBasePolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(UserContract $user, Ticket $ticket): bool
+    public function update(UserContract $user): bool
     {
         return $user->hasPermissionTo('activity.update');
     }
@@ -45,7 +44,7 @@ class ActivityPolicy extends UserBasePolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(UserContract $user, Ticket $ticket): bool
+    public function delete(UserContract $user): bool
     {
         return $user->hasPermissionTo('activity.delete');
     }

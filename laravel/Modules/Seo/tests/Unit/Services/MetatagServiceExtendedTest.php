@@ -34,3 +34,4 @@ it('sets all optional seo fields through service', function (): void {
         ->and($meta->getPublishedTime()?->format('c'))->toBe($published->format('c'))
         ->and($meta->getModifiedTime()?->format('c'))->toBe($modified->format('c'));
 });
+

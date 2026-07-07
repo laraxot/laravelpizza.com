@@ -9,22 +9,15 @@ sources:
   - https://github.com/CodeforKarlsruhe/farmshops.eu/blob/master/js/popupcontent.js
   - https://github.com/CodeforKarlsruhe/farmshops.eu/blob/master/update_data.js
 confidence: high
-<<<<<<< HEAD
-updated: 2026-04-17
-=======
 updated: 2026-06-03
 related:
   - ./farmshops-eu-applicability-fixcity.md
->>>>>>> 40b96bcd6 (.)
 ---
 
 # GeoMapWidget Farmshops Pattern
 
-<<<<<<< HEAD
-=======
 > Sintesi applicabilità 2026: [farmshops-eu-applicability-fixcity.md](./farmshops-eu-applicability-fixcity.md) · STORY-064
 
->>>>>>> 40b96bcd6 (.)
 ## Decisione
 
 Per il `GeoMapWidget` del modulo `Geo` il pattern corretto è:
@@ -111,8 +104,6 @@ Questo stato è sufficiente per:
 - dataset spezzato in molte chiamate se il volume resta nell’ordine di ~3000 punti;
 - coupling diretto tra Web Component e query backend.
 
-<<<<<<< HEAD
-=======
 ## UX marker e popup (2026-06)
 
 - **Tipologia** → icona grande nel marker (`TicketTypeEnum` path pubblico).
@@ -120,7 +111,6 @@ Questo stato è sufficiente per:
 - Click marker → **popup Leaflet** ricco (dati locali + opzionale `/api/ticket-details/{id}`); «Scheda completa» apre il modal esistente.
 - Dettaglio implementazione: [geo-map-lit-farmshops-parity.md](./geo-map-lit-farmshops-parity.md#marker-icon-first--popup-card-2026-06-03).
 
->>>>>>> 40b96bcd6 (.)
 ## Implicazioni pratiche per il repo
 
 - il modulo `Geo` può mantenere componenti Lit dedicati alle mappe;

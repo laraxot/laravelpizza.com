@@ -113,7 +113,10 @@ class Locality extends BaseModel
             /** @var array<int, string> $postalCodes */
             $postalCodes = array_values((array) $item['postal_code']);
 
-            return array_combine($postalCodes, $postalCodes);
+            $result = array_combine($postalCodes, $postalCodes);
+
+            /* @var array<string, string> $result */
+            return $result;
         });
 
         return $arr ?? [];

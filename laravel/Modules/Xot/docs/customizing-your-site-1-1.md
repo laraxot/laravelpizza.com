@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: Customizing Your Site
 description: Customizing your Jigsaw docs site
 extends: _layouts.documentation
@@ -91,10 +92,15 @@ class Foo extends bar
 ---
 
 =======
+=======
+>>>>>>> origin/dev
 module: theme
 topic: customizing-your-site-1-1
 canonical: ../../../Themes/docs/shared-components/customizing-your-site_1.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/customizing-your-site_1.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

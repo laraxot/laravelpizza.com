@@ -7,7 +7,7 @@ namespace Modules\Geo\Actions;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
-use Modules\Geo\Datas\AddressData;
+use Modules\Geo\Datas\Geocoding\AddressData;
 use Spatie\QueueableAction\QueueableAction;
 
 /**

@@ -19,11 +19,7 @@ Nella route admin ticket create, la lente di ricerca risultava visivamente tropp
   - `z-index` alto
   - sizing bottoni/icone forzato.
 - `dragend` marker corretto con `e.target.getLatLng()` + guard.
-<<<<<<< HEAD
-- Corretto anche `map-picker-lit` da `mapPickerStyles` a `mapPickerStylesText` nel blocco `<style>`.
-=======
 - Corretto anche `map-picker-lit` da `mapStyles` a `mapStylesText` nel blocco `<style>`.
->>>>>>> 40b96bcd6 (.)
 
 ## Verifica tecnica
 

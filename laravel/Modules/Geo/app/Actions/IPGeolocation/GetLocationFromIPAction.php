@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Actions\IPGeolocation;
 
-use Modules\Geo\Datas\IPLocationData;
+use Modules\Geo\Datas\Location\IPLocationData;
 
 /**
  * Classe per ottenere la posizione da un indirizzo IP.

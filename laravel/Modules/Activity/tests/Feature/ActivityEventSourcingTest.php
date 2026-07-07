@@ -4,29 +4,24 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Feature;
 
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Modules\Activity\Database\Factories\ActivityFactory;
+use Modules\Activity\Database\Factories\StoredEventFactory;
 use Modules\Activity\Models\Activity;
 use Modules\Activity\Models\Snapshot;
 use Modules\Activity\Models\StoredEvent;
 use Modules\Activity\Tests\TestCase;
+use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
+use PHPUnit\Framework\Assert;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
 
 uses(TestCase::class);
 
-beforeEach(function () {
-    // Skip if database not available
-    try {
-        \DB::connection()->getPdo();
-    } catch (\Exception $e) {
-        $this->markTestSkipped('Database not available: '.$e->getMessage());
-    }
-});
-
 test('activity event sourcing lifecycle works correctly', function () {
-    $user = User::factory()->create();
-    $this->assertNotNull($user);
+    $user = UserFactory::new()->createOne();
+    Assert::assertInstanceOf(User::class, $user);
 
     $activityData = [
         'log_name' => 'user_actions',
@@ -40,55 +35,52 @@ test('activity event sourcing lifecycle works correctly', function () {
     ];
 
     $activity = Activity::query()->create($activityData);
-    \assert($activity instanceof Activity);
-    $this->assertNotNull($activity);
-    $this->assertInstanceOf(Activity::class, $activity);
-    $this->assertSame('user_actions', $activity->log_name);
-    $this->assertSame('User performed test action', $activity->description);
-    $this->assertSame(User::class, $activity->subject_type);
-    $this->assertSame($user->id, $activity->subject_id);
-    $this->assertSame(User::class, $activity->causer_type);
-    $this->assertSame($user->id, $activity->causer_id);
-    $this->assertSame('created', $activity->event);
+    Assert::assertNotNull($activity);
+    Assert::assertInstanceOf(Activity::class, $activity);
+    Assert::assertSame('user_actions', $activity->log_name);
+    Assert::assertSame('User performed test action', $activity->description);
+    Assert::assertSame(User::class, $activity->subject_type);
+    Assert::assertSame($user->id, $activity->subject_id);
+    Assert::assertSame(User::class, $activity->causer_type);
+    Assert::assertSame($user->id, $activity->causer_id);
+    Assert::assertSame('created', $activity->event);
 
     $properties = $activity->properties;
-    $this->assertInstanceOf(SchemalessAttributes::class, $properties);
-    $this->assertSame('test', $properties->action);
-    $this->assertSame('success', $properties->result);
+    Assert::assertInstanceOf(SchemalessAttributes::class, $properties);
+    Assert::assertSame('test', $properties->get('action'));
+    Assert::assertSame('success', $properties->get('result'));
 });
 
 test('activity can be queried with complex scopes', function () {
-    $user1 = User::factory()->create();
-    $user2 = User::factory()->create();
-    $this->assertNotNull($user1);
-    $this->assertNotNull($user2);
+    $user1 = UserFactory::new()->createOne();
+    Assert::assertInstanceOf(User::class, $user1);
 
-    $activity1 = Activity::query()->create([
+    $user2 = UserFactory::new()->createOne();
+    Assert::assertInstanceOf(User::class, $user2);
+
+    $activity1 = ActivityFactory::new()->createOne([
         'log_name' => 'security',
-        'description' => 'Login event',
         'event' => 'login',
         'causer_type' => User::class,
         'causer_id' => $user1->id,
     ]);
-    $this->assertNotNull($activity1);
+    Assert::assertInstanceOf(Activity::class, $activity1);
 
-    $activity2 = Activity::query()->create([
+    $activity2 = ActivityFactory::new()->createOne([
         'log_name' => 'security',
-        'description' => 'Logout event',
         'event' => 'logout',
         'causer_type' => User::class,
         'causer_id' => $user2->id,
     ]);
-    $this->assertNotNull($activity2);
+    Assert::assertInstanceOf(Activity::class, $activity2);
 
-    $activity3 = Activity::query()->create([
+    $activity3 = ActivityFactory::new()->createOne([
         'log_name' => 'audit',
-        'description' => 'Update event',
         'event' => 'update',
         'causer_type' => User::class,
         'causer_id' => $user1->id,
     ]);
-    \assert($activity3 instanceof Activity);
+    Assert::assertInstanceOf(Activity::class, $activity3);
 
     $securityActivities = Activity::inLog('security')
         ->whereKey([$activity1->id, $activity2->id])
@@ -96,6 +88,7 @@ test('activity can be queried with complex scopes', function () {
 
     $user1Activities = Activity::query()
         ->where('causer_type', User::class)
+        ->where('causer_id', $user1->id)
         ->whereKey([$activity1->id, $activity3->id])
         ->get();
 
@@ -103,26 +96,16 @@ test('activity can be queried with complex scopes', function () {
         ->whereKey([$activity1->id])
         ->get();
 
-    $this->assertCount(2, $securityActivities);
-    $this->assertCount(2, $user1Activities);
-
-    // causer_id può essere uuid/string o int a seconda dello schema (vedi migration fix_causer_id_to_uuid)
-    // quindi validiamo solo quando comparabile.
-    foreach ($user1Activities as $activity) {
-        \assert($activity instanceof Activity);
-        if ($activity->causer_id === (string) $user1->id || $activity->causer_id === $user1->id) {
-            $this->assertContains($activity->causer_id, [(string) $user1->id, $user1->id]);
-        }
-    }
+    Assert::assertCount(2, $securityActivities);
+    Assert::assertCount(2, $user1Activities);
 
     /** @var Activity|null $firstLoginActivity */
     $firstLoginActivity = $loginActivities->first();
-    $this->assertCount(1, $loginActivities);
-    $this->assertNotNull($firstLoginActivity);
+    Assert::assertCount(1, $loginActivities);
+    Assert::assertNotNull($firstLoginActivity);
 
-    \assert($firstLoginActivity instanceof Activity);
-    $this->assertInstanceOf(Activity::class, $firstLoginActivity);
-    $this->assertSame($activity1->id, $firstLoginActivity->id);
+    Assert::assertInstanceOf(Activity::class, $firstLoginActivity);
+    Assert::assertSame($activity1->id, $firstLoginActivity->id);
 });
 
 test('snapshot creation and retrieval works correctly', function () {
@@ -142,27 +125,25 @@ test('snapshot creation and retrieval works correctly', function () {
     ];
 
     $snapshot = Snapshot::create($snapshotData);
-    \assert($snapshot instanceof Snapshot);
-    $this->assertNotNull($snapshot);
-    $this->assertSame($aggregateUuid, $snapshot->aggregate_uuid);
-    $this->assertSame(5, $snapshot->aggregate_version);
+    Assert::assertInstanceOf(Snapshot::class, $snapshot);
+    Assert::assertSame($aggregateUuid, $snapshot->aggregate_uuid);
+    Assert::assertSame(5, $snapshot->aggregate_version);
 
     $state = $snapshot->state;
-    $this->assertIsArray($state);
-    $this->assertArrayHasKey('balance', $state);
-    $this->assertSame(1000, $state['balance']);
-    $this->assertArrayHasKey('status', $state);
-    $this->assertSame('active', $state['status']);
+    Assert::assertIsArray($state);
+    Assert::assertArrayHasKey('balance', $state);
+    Assert::assertSame(1000, $state['balance']);
+    Assert::assertArrayHasKey('status', $state);
+    Assert::assertSame('active', $state['status']);
 
     $transactions = $state['transactions'] ?? null;
-    $this->assertIsArray($transactions);
-    $this->assertCount(2, $transactions);
+    Assert::assertIsArray($transactions);
+    Assert::assertCount(2, $transactions);
 
     /** @var Snapshot|null $retrievedSnapshot */
     $retrievedSnapshot = Snapshot::uuid($aggregateUuid)->first();
-    \assert($retrievedSnapshot instanceof Snapshot);
-    $this->assertNotNull($retrievedSnapshot);
-    $this->assertSame($snapshot->id, $retrievedSnapshot->id);
+    Assert::assertNotNull($retrievedSnapshot);
+    Assert::assertSame($snapshot->id, $retrievedSnapshot->id);
 });
 
 test('stored event creation and event reconstruction works', function () {
@@ -187,83 +168,61 @@ test('stored event creation and event reconstruction works', function () {
         'meta_data' => ['processed' => true, 'retry_count' => 0],
         'created_at' => now(),
     ]);
-    \assert($storedEvent instanceof StoredEvent);
-    $this->assertNotNull($storedEvent);
-    $this->assertSame($eventClass, $storedEvent->event_class);
-    $this->assertSame($aggregateUuid, $storedEvent->aggregate_uuid);
+    Assert::assertInstanceOf(StoredEvent::class, $storedEvent);
+    Assert::assertSame($eventClass, $storedEvent->event_class);
+    Assert::assertSame($aggregateUuid, $storedEvent->aggregate_uuid);
+
+    /** @var array<string, mixed> $eventProps */
     $eventProps = $storedEvent->event_properties;
-    $this->assertIsArray($eventProps);
-    $this->assertArrayHasKey('user_id', $eventProps);
-    $this->assertSame(1, $eventProps['user_id']);
-    $this->assertArrayHasKey('action', $eventProps);
-    $this->assertSame('test_action', $eventProps['action']);
+    Assert::assertIsArray($eventProps);
+    Assert::assertArrayHasKey('user_id', $eventProps);
+    Assert::assertSame(1, $eventProps['user_id']);
+    Assert::assertArrayHasKey('action', $eventProps);
+    Assert::assertSame('test_action', $eventProps['action']);
 
     $metaData = $storedEvent->meta_data;
-    $this->assertInstanceOf(SchemalessAttributes::class, $metaData);
+    Assert::assertInstanceOf(SchemalessAttributes::class, $metaData);
 
     $metaDataArray = $metaData->toArray();
-    $this->assertIsArray($metaDataArray);
-    $this->assertArrayHasKey('processed', $metaDataArray);
-    $this->assertTrue((bool) $metaDataArray['processed']);
-    $this->assertArrayHasKey('retry_count', $metaDataArray);
-    $this->assertSame(0, (int) $metaDataArray['retry_count']);
+    Assert::assertArrayHasKey('processed', $metaDataArray);
+    Assert::assertTrue((bool) $metaDataArray['processed']);
+    Assert::assertArrayHasKey('retry_count', $metaDataArray);
+    $retryCount = $metaDataArray['retry_count'];
+    Assert::assertSame(0, is_numeric($retryCount) ? (int) $retryCount : 0);
 });
 
 test('activity batch operations work correctly', function () {
     $batchUuid = Str::uuid()->toString();
 
-    $activities = collect([
-        Activity::query()->create([
-            'batch_uuid' => $batchUuid,
-            'log_name' => 'batch_operation',
-            'description' => 'Batch operation step 1',
-            'event' => 'created',
-        ]),
-        Activity::query()->create([
-            'batch_uuid' => $batchUuid,
-            'log_name' => 'batch_operation',
-            'description' => 'Batch operation step 2',
-            'event' => 'created',
-        ]),
-        Activity::query()->create([
-            'batch_uuid' => $batchUuid,
-            'log_name' => 'batch_operation',
-            'description' => 'Batch operation step 3',
-            'event' => 'created',
-        ]),
+    $activities = ActivityFactory::new()->count(3)->create([
+        'batch_uuid' => $batchUuid,
+        'log_name' => 'batch_operation',
     ]);
-    \assert($activities instanceof Collection);
-    $this->assertCount(3, $activities);
+    Assert::assertInstanceOf(Collection::class, $activities);
+    Assert::assertCount(3, $activities);
 
     $batchActivities = Activity::forBatch($batchUuid)->get();
 
-    $this->assertCount(3, $batchActivities);
+    Assert::assertCount(3, $batchActivities);
 
     foreach ($batchActivities as $activity) {
-        \assert($activity instanceof Activity);
-        $this->assertSame($batchUuid, $activity->batch_uuid);
-        $this->assertSame('batch_operation', $activity->log_name);
+        Assert::assertSame($batchUuid, $activity->batch_uuid);
+        Assert::assertSame('batch_operation', $activity->log_name);
     }
 });
 
 test('activity with batch scope returns correct results', function () {
-    $batchUuid = Str::uuid()->toString();
-    $withBatch = Activity::query()->create([
-        'log_name' => 'default',
-        'description' => 'Activity with batch uuid',
-        'event' => 'created',
-        'batch_uuid' => $batchUuid,
-    ]);
-    $this->assertNotNull($withBatch);
+    $withBatch = ActivityFactory::new()->createOne(['batch_uuid' => Str::uuid()->toString()]);
+    Assert::assertInstanceOf(Activity::class, $withBatch);
 
-    // Scope to our test data: hasBatch filters non-null batch_uuid
-    $activitiesWithBatch = Activity::hasBatch()->whereKey($withBatch->id)->get();
+    ActivityFactory::new()->createOne(['batch_uuid' => null]);
+
+    $activitiesWithBatch = Activity::hasBatch()->whereKey([$withBatch->id])->get();
 
     $firstActivity = $activitiesWithBatch->first();
-    $this->assertCount(1, $activitiesWithBatch);
-    \assert($firstActivity instanceof Activity);
-    $this->assertNotNull($firstActivity);
-    $this->assertSame($withBatch->id, $firstActivity->id);
+    Assert::assertCount(1, $activitiesWithBatch);
+    Assert::assertNotNull($firstActivity);
+    Assert::assertSame($withBatch->id, $firstActivity->id);
 });
 
 test('activity properties support complex nested structures', function () {
@@ -299,38 +258,36 @@ test('activity properties support complex nested structures', function () {
         'properties' => $complexProperties,
         'event' => 'created',
     ]);
-    \assert($activity instanceof Activity);
-    $this->assertNotNull($activity);
+    Assert::assertNotNull($activity);
 
     $freshActivity = $activity->fresh();
-    \assert($freshActivity instanceof Activity);
-    $this->assertNotNull($freshActivity);
+    Assert::assertNotNull($freshActivity);
 
     $properties = $freshActivity->properties;
-    $this->assertInstanceOf(SchemalessAttributes::class, $properties);
-    $this->assertTrue(isset($properties->user));
-    $this->assertTrue(isset($properties->action));
-    $this->assertTrue(isset($properties->context));
-    $this->assertTrue(isset($properties->timestamps));
+    Assert::assertInstanceOf(SchemalessAttributes::class, $properties);
+    Assert::assertTrue($properties->has('user'));
+    Assert::assertTrue($properties->has('action'));
+    Assert::assertTrue($properties->has('context'));
+    Assert::assertTrue($properties->has('timestamps'));
 
-    $userData = $properties->user;
-    $contextData = $properties->context;
-    $timestampsData = $properties->timestamps;
+    $userData = $properties->get('user');
+    $contextData = $properties->get('context');
+    $timestampsData = $properties->get('timestamps');
 
-    $this->assertIsArray($userData);
-    $this->assertArrayHasKey('id', $userData);
-    $this->assertArrayHasKey('name', $userData);
-    $this->assertArrayHasKey('roles', $userData);
-    $this->assertArrayHasKey('permissions', $userData);
+    Assert::assertIsArray($userData);
+    Assert::assertArrayHasKey('id', $userData);
+    Assert::assertArrayHasKey('name', $userData);
+    Assert::assertArrayHasKey('roles', $userData);
+    Assert::assertArrayHasKey('permissions', $userData);
 
-    $this->assertIsArray($contextData);
-    $this->assertArrayHasKey('request', $contextData);
-    $this->assertArrayHasKey('response', $contextData);
+    Assert::assertIsArray($contextData);
+    Assert::assertArrayHasKey('request', $contextData);
+    Assert::assertArrayHasKey('response', $contextData);
 
-    $this->assertIsArray($timestampsData);
-    $this->assertArrayHasKey('started_at', $timestampsData);
-    $this->assertArrayHasKey('completed_at', $timestampsData);
-    $this->assertArrayHasKey('duration', $timestampsData);
+    Assert::assertIsArray($timestampsData);
+    Assert::assertArrayHasKey('started_at', $timestampsData);
+    Assert::assertArrayHasKey('completed_at', $timestampsData);
+    Assert::assertArrayHasKey('duration', $timestampsData);
 });
 
 test('snapshot state maintains data integrity with large datasets', function () {
@@ -360,27 +317,24 @@ test('snapshot state maintains data integrity with large datasets', function () 
         'created_at' => now(),
         'updated_at' => now(),
     ]);
-    \assert($snapshot instanceof Snapshot);
-    $this->assertNotNull($snapshot);
+    Assert::assertInstanceOf(Snapshot::class, $snapshot);
 
     $freshSnapshot = $snapshot->fresh();
-    \assert($freshSnapshot instanceof Snapshot);
-    $this->assertNotNull($freshSnapshot);
+    Assert::assertNotNull($freshSnapshot);
 
     $state = $freshSnapshot->state;
-    $this->assertIsArray($state);
-    $this->assertArrayHasKey('users', $state);
-    $this->assertArrayHasKey('metadata', $state);
+    Assert::assertArrayHasKey('users', $state);
+    Assert::assertArrayHasKey('metadata', $state);
 
     $users = $state['users'] ?? null;
     $metadata = $state['metadata'] ?? null;
 
-    $this->assertIsArray($users);
-    $this->assertCount(100, $users);
-    $this->assertIsArray($metadata);
-    $this->assertArrayHasKey('generated_at', $metadata);
-    $this->assertArrayHasKey('version', $metadata);
-    $this->assertArrayHasKey('checksum', $metadata);
+    Assert::assertIsArray($users);
+    Assert::assertCount(100, $users);
+    Assert::assertIsArray($metadata);
+    Assert::assertArrayHasKey('generated_at', $metadata);
+    Assert::assertArrayHasKey('version', $metadata);
+    Assert::assertArrayHasKey('checksum', $metadata);
 });
 
 test('stored event handles complex event properties with nested arrays', function () {
@@ -421,7 +375,7 @@ test('stored event handles complex event properties with nested arrays', functio
         ],
     ];
 
-    $storedEvent = StoredEvent::query()->create([
+    $storedEvent = StoredEventFactory::new()->createOne([
         'aggregate_uuid' => Str::uuid()->toString(),
         'aggregate_version' => 1,
         'event_version' => 1,
@@ -430,41 +384,40 @@ test('stored event handles complex event properties with nested arrays', functio
         'meta_data' => [],
         'created_at' => now(),
     ]);
-    \assert($storedEvent instanceof StoredEvent);
-    $this->assertNotNull($storedEvent);
+    Assert::assertInstanceOf(StoredEvent::class, $storedEvent);
 
     $freshStoredEvent = $storedEvent->fresh();
-    \assert($freshStoredEvent instanceof StoredEvent);
-    $this->assertNotNull($freshStoredEvent);
+    Assert::assertNotNull($freshStoredEvent);
 
+    /** @var array<string, mixed> $eventProperties */
     $eventProperties = $freshStoredEvent->event_properties;
-    $this->assertIsArray($eventProperties);
-    $this->assertArrayHasKey('order', $eventProperties);
-    $this->assertArrayHasKey('customer', $eventProperties);
-    $this->assertArrayHasKey('payment', $eventProperties);
+    Assert::assertIsArray($eventProperties);
+    Assert::assertArrayHasKey('order', $eventProperties);
+    Assert::assertArrayHasKey('customer', $eventProperties);
+    Assert::assertArrayHasKey('payment', $eventProperties);
 
     $order = $eventProperties['order'] ?? null;
     $customer = $eventProperties['customer'] ?? null;
     $payment = $eventProperties['payment'] ?? null;
 
-    $this->assertIsArray($order);
-    $this->assertArrayHasKey('id', $order);
-    $this->assertArrayHasKey('items', $order);
-    $this->assertArrayHasKey('totals', $order);
+    Assert::assertIsArray($order);
+    Assert::assertArrayHasKey('id', $order);
+    Assert::assertArrayHasKey('items', $order);
+    Assert::assertArrayHasKey('totals', $order);
 
-    $this->assertIsArray($customer);
-    $this->assertArrayHasKey('id', $customer);
-    $this->assertArrayHasKey('name', $customer);
-    $this->assertArrayHasKey('email', $customer);
-    $this->assertArrayHasKey('address', $customer);
+    Assert::assertIsArray($customer);
+    Assert::assertArrayHasKey('id', $customer);
+    Assert::assertArrayHasKey('name', $customer);
+    Assert::assertArrayHasKey('email', $customer);
+    Assert::assertArrayHasKey('address', $customer);
 
-    $this->assertIsArray($payment);
-    $this->assertArrayHasKey('method', $payment);
-    $this->assertArrayHasKey('transaction_id', $payment);
-    $this->assertArrayHasKey('status', $payment);
-    $this->assertArrayHasKey('amount', $payment);
+    Assert::assertIsArray($payment);
+    Assert::assertArrayHasKey('method', $payment);
+    Assert::assertArrayHasKey('transaction_id', $payment);
+    Assert::assertArrayHasKey('status', $payment);
+    Assert::assertArrayHasKey('amount', $payment);
 
     $items = $order['items'] ?? null;
-    $this->assertIsArray($items);
-    $this->assertCount(50, $items);
+    Assert::assertIsArray($items);
+    Assert::assertCount(50, $items);
 });

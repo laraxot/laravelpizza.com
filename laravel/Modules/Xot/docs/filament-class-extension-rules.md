@@ -673,8 +673,19 @@ class DashboardPage extends XotBasePage
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Widgets;
 namespace Modules\Chart\Filament\Widgets;
+=======
+<<<<<<< .merge_file_hVYHud
+namespace Modules\healthcare_app\Filament\Widgets;
+=======
+<<<<<<< HEAD
+namespace Modules\Chart\Filament\Widgets;
+=======
+namespace Modules\ExternalProject\Filament\Widgets;
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
+>>>>>>> origin/dev
 >>>>>>> .merge_file_5mnOIz
 
 use Modules\Xot\Filament\Widgets\XotBaseTableWidget;

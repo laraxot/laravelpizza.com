@@ -7,7 +7,7 @@ namespace Modules\Geo\Actions\Nominatim;
 use GuzzleHttp\Promise\PromiseInterface;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
-use Modules\Geo\Datas\AddressData;
+use Modules\Geo\Datas\Geocoding\AddressData;
 
 /**
  * Classe per ottenere i dati dell'indirizzo dal servizio Nominatim.

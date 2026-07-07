@@ -8,6 +8,7 @@ use Filament\Tables\Enums\PaginationMode;
 use Illuminate\Contracts\Pagination\CursorPaginator;
 use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 trait CanPaginate
@@ -25,14 +26,22 @@ trait CanPaginate
         $this->resetLivewirePage();
     }
 
-    public function getRecordsPerPage(): int|string|null
+    public function getRecordsPerPage(): int|string
     {
-        return $this->recordsPerPage;
+        if ($this->recordsPerPage !== null) {
+            return $this->recordsPerPage;
+        }
+
+        return $this->getDefaultRecordsPerPageSelectOption();
     }
 
     public function getTablePage(): int
     {
-        return (int) $this->getPage($this->getPaginationPageName());
+        $page = $this->getPage($this->getPaginationPageName());
+        if (is_numeric($page)) {
+            return (int) $page;
+        }
+        return 1;
     }
 
     public function getDefaultRecordsPerPageSelectOption(): int|string
@@ -44,13 +53,14 @@ trait CanPaginate
 
         $pageOptions = $this->getRecordsPerPageSelectOptions();
 
-        if (is_array($pageOptions) && in_array($option, $pageOptions)) {
+        if (is_numeric($option) && in_array($option, $pageOptions)) {
             return (int) $option;
         }
 
         session()->remove($this->getPerPageSessionKey());
 
-        return (int) ($pageOptions[0] ?? 10);
+        $firstOption = $pageOptions[0] ?? 10;
+        return is_numeric($firstOption) ? (int) $firstOption : 10;
     }
 
     public function getPaginationPageName(): string
@@ -66,7 +76,10 @@ trait CanPaginate
     }
 
     /**
-     * PHPStan Level 10: Include LengthAwarePaginator in return type.
+     * @template TModel of Model
+     *
+     * @param  Builder<TModel>  $query
+     * @return Paginator<int, TModel>|CursorPaginator<int, TModel>|LengthAwarePaginator<int, TModel>
      */
     protected function paginateQuery(Builder $query): Paginator|CursorPaginator|LengthAwarePaginator
     {
@@ -90,7 +103,7 @@ trait CanPaginate
 
         $total = $query->toBase()->getCountForPagination();
 
-        /** @var LengthAwarePaginator $records */
+        /** @var LengthAwarePaginator<int, TModel> $records */
         $records = $query->paginate(
             perPage: $perPage === 'all' ? $total : (int) $perPage,
             pageName: $this->getPaginationPageName(),
@@ -101,9 +114,9 @@ trait CanPaginate
     }
 
     /**
-     * @return array<int|string>|null
+     * @return array<int|string>
      */
-    protected function getRecordsPerPageSelectOptions(): ?array
+    protected function getRecordsPerPageSelectOptions(): array
     {
         return [10, 25, 50];
     }

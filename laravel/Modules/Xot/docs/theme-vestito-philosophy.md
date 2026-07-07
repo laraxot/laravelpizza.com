@@ -52,7 +52,15 @@ Themes/[ThemeName]/
 │   │   ├── components/
 │   │   ├── layouts/
 │   │   └── pages/
+<<<<<<< HEAD
 ├── _healthcare_app_fila5_mono.code-workspace
+=======
+<<<<<<< .merge_file_jyGVlO
+├── _healthcare_app_fila5_mono.code-workspace
+=======
+├── _ptvx_fila5_mono.code-workspace
+>>>>>>> .merge_file_Y2wPxU
+>>>>>>> origin/dev
 ├── package.json
 ├── postcss.config.js
 ├── tailwind.config.js

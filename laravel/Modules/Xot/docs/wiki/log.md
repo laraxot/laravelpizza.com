@@ -1,7 +1,10 @@
 ---
 title: "Activity Log"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/dev
 type: log
 module: Xot
 tags: [xot, phpstan, pest, qmd]
@@ -91,24 +94,34 @@ discussions:
 
 ---
 title: "Activity Log"
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 module: "Xot"
 ---
 
 # Activity Log — Xot
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/dev
 ## [2026-06-05] docs | AI harness canon + stub moduli allineati
 
 - [ai-harness-xot-discipline.md](concepts/ai-harness-xot-discipline.md) — owner harness PHPStan/XotBase
 - Stub second-brain in 9+ moduli puntano a canon Xot + mappa HackerNoon #272
 
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 > **Purpose:** Append-only chronological activity record tracking ingests, queries, and lint passes.
 
 ## Log Entries
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ## [2026-05-05] fix | PHPStan Error Resolution - spatie/browsershot (PACKAGE INSTALLATION)
 
@@ -158,6 +171,8 @@ module: "Xot"
 - allineata la configurazione `.claude/rules` alla documentazione ufficiale Claude Code: le rules specifiche di codice devono avere frontmatter `paths`.
 - obiettivo: ridurre contesto always-on mantenendo attive le regole XotBase/Filament solo sui file pertinenti.
 =======
+=======
+>>>>>>> origin/dev
 ## [2026-05-26] docs | codice nominale pivot / ThemeComposer / ProfileFactory scan
 
 - **Verifica sorgenti + script**: scaffold `Dashboard`/`RouteServiceProvider` per modulo (**atteso** moduli Laravel); divergenza reale famiglia **`BasePivot`** vs **`XotBasePivot`**; **`ProfileFactory`** basename ripetuto con hash diverso (User/Gdpr/Fixcity); **Cms ThemeComposer** duplicato nel path `resources/views/` fuori da PSR-4.
@@ -224,7 +239,10 @@ module: "Xot"
 ## [2026-05-21] docs | checklist PHP 8.4 — prima bozza `composer run go`
 
 - Correzioni intermedie in [`concepts/php84-upgrade-extension-checklist.md`](concepts/php84-upgrade-extension-checklist.md). **Revisione finale** stesso giorno: snippet con `php8.4 … composer update -W` + avviso su `composer run go` distruttivo.
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 
 ## [2026-04-28] dependency | matrice compatibilita' pacchetti Laravel 13 in Xot
 
@@ -263,7 +281,10 @@ module: "Xot"
 - **verifica**: context-mode plugin/MCP connessi; QMD indicizza moduli/temi/root/bashscripts.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/dev
 ## [2026-05-12] ops | opencode compaction overflow hardening
 
 - installato `@tarquinen/opencode-dcp@latest` nel config globale OpenCode.
@@ -271,7 +292,10 @@ module: "Xot"
 - chiarito che il punto operativo corretto e' il git root, non `laravel/opencode.json`.
 - aggiornata la source wiki `sources/context-compression-and-retrieval.md` per riflettere il nuovo setup stabile.
 
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 ## [2026-04-22] governance | Filament wizard summary via Infolists
 
 - **regola root**: `docs/wiki/concepts/filament-summary-infolist-rule.md`
@@ -315,6 +339,7 @@ _No activity yet. Start by ingesting raw documents._
 - UserBasePolicy: Spatie Permission, user-authenticated, RBAC
 - Commit: docs: add cross-reference to policy boundary decision
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ## [2026-05-07] ingest | Array Keys Rule
 - **Created**: [array-keys-rule.md](./array-keys-rule.md)
@@ -324,3 +349,5 @@ _No activity yet. Start by ingesting raw documents._
 - **Commit**: docs: add array-keys-rule for Filament schemas
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

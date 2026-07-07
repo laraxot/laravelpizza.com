@@ -25,7 +25,7 @@ Status: 4 Errors (varTag.variableNotFound)
 1. `./vendor/bin/phpstan analyse Modules/Activity --level=10`
 2. `./vendor/bin/phpmd Modules/Activity text codesize`
 3. `./vendor/bin/phpinsights analyse Modules/Activity`
-4. Update `phpstan-corrections-january-2026.md` with results.
+4. Update `phpstan-corrections-archive-1.md` with results.
 
 ## Zen Note
 "A variable name mismatch is a disconnect between intent and reality. Restoration requires alignment."

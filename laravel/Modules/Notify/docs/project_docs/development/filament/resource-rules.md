@@ -55,10 +55,14 @@ public static function getModelLabel(): string
 // ❌ NON DICHIARARE QUESTI METODI
 public static function table(Table $table): Table
 <<<<<<< HEAD
+<<<<<<< HEAD
 public static function getListTableColumns(): array
 =======
 public static function getTableColumns(): array
 >>>>>>> b8f35c374 (Fix merge conflicts and clean up documentation)
+=======
+public static function getListTableColumns(): array
+>>>>>>> origin/dev
 ```
 
 ## Cosa Dichiarare

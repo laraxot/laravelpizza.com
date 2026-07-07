@@ -1,36 +1,5 @@
 import { LitElement, html } from 'lit';
 import { guard } from 'lit/directives/guard.js';
-<<<<<<< HEAD
-import 'leaflet/dist/leaflet.css';
-import { mapPickerStylesText } from './map-picker-styles.js';
-import { renderControls, switchLayer, toggleFullscreen, zoomIn, zoomOut, requestGeolocation } from './map-picker-controls.js';
-import { renderSearch } from './map-picker-search.js';
-import { initMap, handleMapInteraction, updateMarker, syncMarkerToProperties } from './map-picker-events.js';
-import { refreshMapSize, bindRefreshHandler, cleanupObservers } from './map-picker-resize.js';
-import { resolveStateCoordinates } from './geo-location-utils.js';
-
-/**
- * CoordinatePickerField - Lit component for geographic coordinate selection
- * Uses Leaflet for map rendering. Light DOM for max compatibility.
- * Extracted modules: map-picker-{layers,controls,events,resize,styles,marker-config}.js
- */
-export class CoordinatePickerField extends LitElement {
-    static properties = {
-        state: { type: Object },
-        zoom: { type: Number },
-        height: { type: String },
-        isLocating: { type: Boolean, state: true },
-        isFullscreen: { type: Boolean, state: true },
-        geolocateWhenEmpty: { type: Boolean, attribute: 'geolocate-when-empty' },
-        labels: { type: Object },
-        provider: { type: String },
-        showSearch: { type: Boolean, attribute: 'show-search' },
-        searchQuery: { type: String, state: true },
-        searchResults: { type: Array, state: true },
-        showSearchResults: { type: Boolean, state: true },
-        isSearching: { type: Boolean, state: true },
-        _isProgrammaticUpdate: { type: Boolean, state: true },
-=======
 import { mapStylesText } from './map/styles.js';
 import { renderControls, toggleFullscreen, syncFullscreenState, switchLayer,
     zoomIn, zoomOut, requestGeolocation } from './map/controls.js';
@@ -61,7 +30,6 @@ export class CoordinatePickerField extends LitElement {
         isSearching:    { type: Boolean, state: true },
         _isProgrammaticUpdate: { type: Boolean, state: true },
         _searchOpen:    { type: Boolean, state: true },
->>>>>>> 40b96bcd6 (.)
     };
 
     get _lat() { return resolveStateCoordinates(this.state).lat; }
@@ -85,14 +53,10 @@ export class CoordinatePickerField extends LitElement {
         this.searchResults = [];
         this.showSearchResults = false;
         this.isSearching = false;
-<<<<<<< HEAD
-        this._isProgrammaticUpdate = false;
-=======
         /** Pannello ricerca chiuso di default: si apre con la lente (risparmio spazio mappa). */
         this._searchOpen = false;
         this._isProgrammaticUpdate = false;
         this._reverseGeocodeTimer = null;
->>>>>>> 40b96bcd6 (.)
         this._layers = {};
         this._marker = null;
         this._map = null;
@@ -109,17 +73,6 @@ export class CoordinatePickerField extends LitElement {
         return html`
             <style>
                 coordinate-picker-lit { display: block; width: 100%; height: 100%; min-height: 200px; }
-<<<<<<< HEAD
-                ${mapPickerStylesText}
-                .map-container { min-height: 200px; }
-                .map-container.is-fullscreen { position: fixed !important; inset: 0 !important; width: 100vw !important; height: 100vh !important; border: none !important; border-radius: 0 !important; z-index: 9999 !important; }
-                .map-container.is-fullscreen .map-picker-leaflet-pane { height: 100vh !important; }
-                .layer-controls-overlay { display: flex !important; flex-direction: column !important; gap: 0.5rem !important; }
-            </style>
-            <div class="map-container ${this.isFullscreen ? 'is-fullscreen' : ''}" style="--map-height: ${this.height}">
-                ${guard([], () => html`<div class="map-picker-leaflet-pane" style="height: 100%;"></div>`)}
-                ${this.showSearch ? renderSearch(this) : ''}
-=======
                 ${mapStylesText}
                 .map-container { min-height: 200px; }
                 .map-container.is-fullscreen,
@@ -133,7 +86,6 @@ export class CoordinatePickerField extends LitElement {
                     ${guard([], () => html`<div class="map-picker-leaflet-pane" style="height: 100%;"></div>`)}
                 </div>
                 ${this.showSearch !== false && this._searchOpen ? renderSearch(this, searchUiHandlers) : ''}
->>>>>>> 40b96bcd6 (.)
                 ${renderControls(this)}
                 <div class="loading-overlay ${this.isLocating ? 'active' : ''}">
                     <div class="spinner"></div>
@@ -146,10 +98,6 @@ export class CoordinatePickerField extends LitElement {
         initMap(this);
         this._boundRefreshMapSize = () => refreshMapSize(this);
         bindRefreshHandler(this);
-<<<<<<< HEAD
-        this._handleEscapeKey = (e) => {
-            if (e.key === 'Escape' && this.isFullscreen) this._toggleFullscreen();
-=======
 
         this._handleFullscreenChange = () => {
             console.log('[coordinate-picker] Fullscreen change event detected');
@@ -168,16 +116,12 @@ export class CoordinatePickerField extends LitElement {
             if (this.isFullscreen) {
                 this._toggleFullscreen();
             }
->>>>>>> 40b96bcd6 (.)
         };
         document.addEventListener('keydown', this._handleEscapeKey);
     }
 
     disconnectedCallback() {
         super.disconnectedCallback();
-<<<<<<< HEAD
-        if (this._map) { this._map.remove(); this._map = null; }
-=======
         if (this._reverseGeocodeTimer) {
             clearTimeout(this._reverseGeocodeTimer);
             this._reverseGeocodeTimer = null;
@@ -186,17 +130,13 @@ export class CoordinatePickerField extends LitElement {
             this._map.remove();
             this._map = null;
         }
->>>>>>> 40b96bcd6 (.)
         cleanupObservers(this);
         if (this._handleEscapeKey) {
             document.removeEventListener('keydown', this._handleEscapeKey);
         }
-<<<<<<< HEAD
-=======
         if (this._handleFullscreenChange) {
             document.removeEventListener('fullscreenchange', this._handleFullscreenChange);
         }
->>>>>>> 40b96bcd6 (.)
     }
 
     updated(changed) {
@@ -218,16 +158,6 @@ export class CoordinatePickerField extends LitElement {
     _refreshMapSize() { refreshMapSize(this); }
     _initMap() { initMap(this); }
 
-<<<<<<< HEAD
-    _handleSearchSelection(result, lat, lng) {
-        this.state = {
-            ...(this.state || {}),
-            lat,
-            lng,
-            latitude: lat,
-            longitude: lng,
-            address: result.display_name || this.state?.address || '',
-=======
     _handleSearchSelection(result, lat, lng, payload = null) {
         const enriched = payload && typeof payload === 'object'
             ? payload
@@ -244,7 +174,6 @@ export class CoordinatePickerField extends LitElement {
         this.state = {
             ...(this.state || {}),
             ...enriched,
->>>>>>> 40b96bcd6 (.)
         };
 
         this._handleMapInteraction(lat, lng, 'search');
@@ -257,10 +186,6 @@ export class CoordinatePickerField extends LitElement {
     }
 }
 
-<<<<<<< HEAD
-if (!customElements.get('coordinate-picker-lit')) {
-=======
 if (typeof customElements !== 'undefined' && !customElements.get('coordinate-picker-lit')) {
->>>>>>> 40b96bcd6 (.)
     customElements.define('coordinate-picker-lit', CoordinatePickerField);
 }

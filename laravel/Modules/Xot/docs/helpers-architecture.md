@@ -6,7 +6,11 @@
 
 **Contesto**: Durante `composer dump-autoload` → `package:discover`
 
+<<<<<<< HEAD
 **Causa Root**: Funzioni helper globali mancanti nel file `Xot/Helpers/Helper.php`
+=======
+**Causa Root**: Funzioni helper globali mancanti nel file `Xot/helpers/Helper.php`
+>>>>>>> origin/dev
 
 ## 🏗️ Architettura Modulare Laraxot
 
@@ -51,7 +55,11 @@ Il modulo **Xot** è il cuore del framework Laraxot:
       "Modules\\Xot\\": "app/"
     },
     "files": [
+<<<<<<< HEAD
       "Helpers/Helper.php"  // ✅ File helper caricato globalmente
+=======
+      "helpers/Helper.php"  // ✅ File helper caricato globalmente
+>>>>>>> origin/dev
     ]
   }
 }

@@ -1,6 +1,7 @@
 ---
 title: "Rules Index"
 <<<<<<< HEAD
+<<<<<<< HEAD
 type: index
 created: 2026-05-11
 updated: 2026-05-11
@@ -45,6 +46,8 @@ Le Rules progettuali vivono qui, nel wiki del Module **Lang**, e vengono caricat
 4. Committa: `docs: add rules <nome>`
 
 =======
+=======
+>>>>>>> origin/dev
 type: "index"
 tags: [rules, lang, translations, localization]
 module: "Lang"
@@ -79,4 +82,7 @@ qmd search "Lang module rule translation key" --limit 5
 ---
 
 **Upstream:** [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

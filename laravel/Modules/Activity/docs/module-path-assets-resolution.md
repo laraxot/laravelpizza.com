@@ -1,5 +1,6 @@
 # Activity Module - Path Assets Resolution
 
+**Data Creazione**: 2026-01-02
 **Data Creazione**: [DATE]
 **Status**: ✅ RESOLVED
 **Versione**: 1.0.0
@@ -55,6 +56,8 @@ Il problema è stato risolto a livello di framework (Xot) con:
 
 ## 🔗 Collegamenti
 
+- [Xot Module Path Generation Philosophy](../Xot/docs/module-path-generation-philosophy.md)
+- [Xot Module Path Error Resolution](../Xot/docs/module-path-error-resolution.md)
 - [Xot Module Path Generation Philosophy](../xot/docs/module-path-generation-philosophy.md)
 - [Xot Module Path Error Resolution](../xot/docs/module-path-error-resolution.md)
 - [Activity Philosophy](./philosophy.md)

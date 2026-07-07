@@ -6,7 +6,7 @@ namespace Modules\Geo\Actions\IPGeolocation;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use Modules\Geo\Datas\IPLocationData;
+use Modules\Geo\Datas\Location\IPLocationData;
 
 use function Safe\json_decode;
 

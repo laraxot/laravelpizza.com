@@ -20,10 +20,23 @@ class MyPage extends XotBaseViewRecord
 ### 2. **Struttura Namespace Corretta**
 ```php
 // ✅ CORRETTO
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_iDMD3G
+>>>>>>> origin/dev
 namespace Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
 
 // ❌ SBAGLIATO
 namespace Modules\healthcare_app\App\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+<<<<<<< HEAD
+=======
+=======
+namespace Modules\ModuloEsempio\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+
+// ❌ SBAGLIATO
+namespace Modules\ModuloEsempio\App\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+>>>>>>> .merge_file_YtD04K
+>>>>>>> origin/dev
 namespace Modules\<nome progetto>\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
 
 // ❌ SBAGLIATO
@@ -73,7 +86,15 @@ class MyWidget extends Widget implements HasForms
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+=======
+<<<<<<< .merge_file_iDMD3G
+namespace Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+=======
+namespace Modules\ModuloEsempio\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+>>>>>>> .merge_file_YtD04K
+>>>>>>> origin/dev
 namespace Modules\<nome progetto>\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
 
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
@@ -97,7 +118,15 @@ class ViewQuestionChart extends XotBaseViewRecord
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Widgets;
+=======
+<<<<<<< .merge_file_iDMD3G
+namespace Modules\healthcare_app\Filament\Widgets;
+=======
+namespace Modules\ModuloEsempio\Filament\Widgets;
+>>>>>>> .merge_file_YtD04K
+>>>>>>> origin/dev
 namespace Modules\<nome progetto>\Filament\Widgets;
 
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
@@ -163,10 +192,23 @@ public function getFormSchema(): array
 ### 3. **Namespace Errati**
 ```php
 // ❌ SBAGLIATO
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_iDMD3G
+>>>>>>> origin/dev
 namespace Modules\healthcare_app\App\Filament\Widgets;
 
 // ✅ CORRETTO
 namespace Modules\healthcare_app\Filament\Widgets;
+<<<<<<< HEAD
+=======
+=======
+namespace Modules\ModuloEsempio\App\Filament\Widgets;
+
+// ✅ CORRETTO
+namespace Modules\ModuloEsempio\Filament\Widgets;
+>>>>>>> .merge_file_YtD04K
+>>>>>>> origin/dev
 namespace Modules\<nome progetto>\App\Filament\Widgets;
 
 // ✅ CORRETTO
@@ -181,13 +223,29 @@ namespace Modules\<nome progetto>\Filament\Widgets;
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+=======
+<<<<<<< .merge_file_iDMD3G
+namespace Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+=======
+namespace Modules\ModuloEsempio\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
+>>>>>>> .merge_file_YtD04K
+>>>>>>> origin/dev
 namespace Modules\<nome progetto>\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\Pages;
 
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+<<<<<<< HEAD
 use Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
+=======
+<<<<<<< .merge_file_iDMD3G
+use Modules\healthcare_app\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
+=======
+use Modules\ModuloEsempio\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
+>>>>>>> .merge_file_YtD04K
+>>>>>>> origin/dev
 use Modules\<nome progetto>\Filament\Resources\SurveyPdfResource\Resources\QuestionCharts\QuestionChartResource;
 
 class ViewQuestionChart extends XotBaseViewRecord
@@ -232,7 +290,15 @@ class ViewQuestionChart extends XotBaseViewRecord
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Widgets;
+=======
+<<<<<<< .merge_file_iDMD3G
+namespace Modules\healthcare_app\Filament\Widgets;
+=======
+namespace Modules\ModuloEsempio\Filament\Widgets;
+>>>>>>> .merge_file_YtD04K
+>>>>>>> origin/dev
 namespace Modules\<nome progetto>\Filament\Widgets;
 
 use Filament\Forms\Components\DatePicker;

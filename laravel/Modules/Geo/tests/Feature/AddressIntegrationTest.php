@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Feature;
 
-uses(TestCase::class);
+uses(\Modules\Geo\Tests\TestCase::class);
 
 use Modules\Geo\Enums\AddressTypeEnum;
-use Modules\Geo\Tests\TestCase;
 
 /**
  * In-memory Address tests (no factories / DB / container).

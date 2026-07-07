@@ -167,8 +167,19 @@ Modules/
 │   │   ├── migrations/
 │   │   └── seeders/
 │   └── app/
+<<<<<<< HEAD
 └── healthcare_app/
 └── ExternalProject/
+=======
+<<<<<<< .merge_file_WZbdR7
+└── healthcare_app/
+=======
+<<<<<<< HEAD
+└── ExternalProject/
+=======
+└── ModuloEsempio/
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
+>>>>>>> origin/dev
 >>>>>>> .merge_file_Fnf1T4
     ├── database/
     │   ├── factories/

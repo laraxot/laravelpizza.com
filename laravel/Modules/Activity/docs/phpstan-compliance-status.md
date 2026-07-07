@@ -1,5 +1,6 @@
 # PHPStan Level 10 Compliance Status
 
+**Last Updated**: 2026-06-10
 
 **Status**: ✅ FULLY COMPLIANT (0 errors)
 
@@ -8,8 +9,8 @@ The Activity module is already compliant with PHPStan Level 10 analysis. No erro
 
 ## Compliance Verification
 ```bash
-./vendor/bin/phpstan analyse Modules/Activity --level=10 --memory-limit=-1
-# Result: [OK] No errors
+./vendor/bin/phpstan analyse Modules/Activity
+# Result: [OK] No errors (level max da phpstan.neon)
 ```
 
 ## Module Overview

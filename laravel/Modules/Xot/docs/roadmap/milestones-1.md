@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Milestones - Xot
 
 ## M1 Documentation Baseline
@@ -16,6 +17,8 @@
 - Test minimi sui flussi critici in esecuzione regolare.
 - Riduzione regressioni ricorrenti.
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: milestones-1
@@ -23,4 +26,7 @@ canonical: ../../../../Themes/docs/shared-components/04-milestones-Modules.md
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/04-milestones-Modules.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

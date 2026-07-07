@@ -1,4 +1,8 @@
-# Practical Event Sourcing Examples for Healthcare
+---
+module: theme
+topic: event-sourcing-examples
+canonical: ../../../Themes/docs/shared-components/event-sourcing-examples-duplicate.md
+---
 
 ## Table of Contents
 - [Patient Management](#patient-management)
@@ -277,3 +281,10 @@ These examples demonstrate how event sourcing can be applied to various aspects 
 4. **Understandable**: The business logic is expressed in terms of domain events
 
 Remember to always consider the specific needs of your healthcare application and adjust these patterns accordingly.
+---
+module: theme
+topic: event-sourcing-examples
+canonical: ../../../Themes/docs/shared-components/event-sourcing-examples-duplicate.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/event-sourcing-examples-duplicate.md

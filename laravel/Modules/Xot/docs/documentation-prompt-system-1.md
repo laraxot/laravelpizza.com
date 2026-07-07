@@ -54,7 +54,11 @@ Qualsiasi aggiornamento al sistema di prompt deve essere:
 - [Linee Guida per la Documentazione in Xot](./documentation-guidelines.md)
 - [Percorsi Relativi nella Documentazione](../../../../bashscripts/docs/percorsi_relativi_documentazione.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione del Sistema di Prompt](../../../../bashscripts/docs/prompts_documentation_system.md)
 =======
 - [Documentazione del Sistema di Prompt](../../../../bashscripts/docs/prompts_documentation_system.md)
 >>>>>>> 40b96bcd6 (.)
+=======
+- [Documentazione del Sistema di Prompt](../../../../bashscripts/docs/prompts_documentation_system.md)
+>>>>>>> origin/dev

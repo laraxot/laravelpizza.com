@@ -7,8 +7,8 @@ namespace Modules\Geo\Actions\Bing;
 use GuzzleHttp\Promise\PromiseInterface;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
-use Modules\Geo\Datas\AddressData;
-use Modules\Geo\Datas\BingMapData;
+use Modules\Geo\Datas\Geocoding\AddressData;
+use Modules\Geo\Datas\MapPlatforms\BingMapData;
 use Modules\Geo\Exceptions\InvalidLocationException;
 
 /**

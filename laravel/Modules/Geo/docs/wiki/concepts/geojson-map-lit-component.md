@@ -104,13 +104,7 @@ Regola: `leaflet-class-selector-governance.md` nel wiki Geo.
 
 ## Riferimenti
 
-<<<<<<< HEAD
-- Story: `.planning/stories/8-75-segnalazioni-elenco-map-list.story.md`
-- Wiki Fixcity: `Modules/Fixcity/docs/wiki/concepts/segnalazioni-elenco-map-architecture.md`
-- Wiki Sixteen: `Themes/Sixteen/docs/wiki/concepts/segnalazioni-elenco-map-integration.md`
-=======
 - Story: `.planning/stories/8-75-ticket-list-map-list.story.md`
 - Wiki Fixcity: `Modules/Fixcity/docs/wiki/concepts/ticket-list-map-architecture.md`
 - Wiki Sixteen: `Themes/Sixteen/docs/wiki/concepts/ticket-list-map-integration.md`
->>>>>>> 40b96bcd6 (.)
 - Regola leaflet: `concepts/leaflet-class-selector-governance.md`

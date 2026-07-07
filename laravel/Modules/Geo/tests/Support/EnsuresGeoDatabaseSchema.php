@@ -7,6 +7,7 @@ namespace Modules\Geo\Tests\Support;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+// @phpstan-ignore-next-line
 trait EnsuresGeoDatabaseSchema
 {
     protected static bool $geoSchemaBootstrapped = false;

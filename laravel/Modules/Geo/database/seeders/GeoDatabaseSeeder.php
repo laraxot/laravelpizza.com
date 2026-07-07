@@ -4,21 +4,36 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Database\Seeders;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
 
 /**
- * Class GeoDatabaseSeeder.
+ * Orchestratore Geo — N modelli owner = N {Model}Seeder (regola Laraxot).
  */
 class GeoDatabaseSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        Model::unguard();
+        if (null !== $this->command) {
+            $this->command->info('GeoDatabaseSeeder: entity seeders…');
+        }
 
-        $this->call([]);
+        $this->call([
+            AddressSeeder::class,
+            ComuneSeeder::class,
+            ComuneJsonSeeder::class,
+            CountySeeder::class,
+            GeoNamesCapSeeder::class,
+            LocalitySeeder::class,
+            LocationSeeder::class,
+            PlaceSeeder::class,
+            PlaceTypeSeeder::class,
+            ProvinceSeeder::class,
+            RegionSeeder::class,
+            StateSeeder::class,
+        ]);
+
+        if (null !== $this->command) {
+            $this->command->info('GeoDatabaseSeeder: completato.');
+        }
     }
 }

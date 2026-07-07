@@ -113,6 +113,7 @@ php artisan user:balance {userId}
 
 ## 🤝 Contributi
 
+I contributi sono ben accetti! Si prega di leggere le nostre [linee guida per i contributi](./CONTRIBUTING.md) prima di inviare pull request.
 I contributi sono ben accetti! Si prega di leggere le nostre [linee guida per i contributi](./contributing.md) prima di inviare pull request.
 
 ## 📄 Licenza
@@ -204,6 +205,8 @@ class <nome progetto>ionContract extends Model
 - Come estendere le proiezioni?
 
 ## Collegamenti correlati
+- [README Shop](../shop/README.md)
+- [README Bank](../bank/README.md)
 - [Console Commands <nome progetto>ion Market](./console_commands.md)
 - [Best Practice <nome progetto>ion Market](./best_practices.md)
 - [Architettura <nome progetto>ion Market](./architecture.md)

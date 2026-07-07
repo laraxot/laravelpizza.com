@@ -8,10 +8,19 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use Modules\Activity\Models\Activity;
 
+/**
+ * @extends Factory<Activity>
+ */
 class ActivityFactory extends Factory
 {
+    /**
+     * @var class-string<Activity>
+     */
     protected $model = Activity::class;
 
+    /**
+     * @return array<string, mixed>
+     */
     public function definition(): array
     {
         return [

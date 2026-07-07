@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Wiki Index"
 module: "Job"
 updated: "2026-04-15T08:28:44Z"
@@ -32,6 +33,8 @@ _No comparisons synthesized yet._
 **Total Pages:** 1  
 **Total Raw Sources:** 0
 =======
+=======
+>>>>>>> origin/dev
 title: "Job Module Wiki Index"
 type: index
 module: Job
@@ -88,4 +91,7 @@ qmd search "Job <topic>" --limit 5
 
 - [model-policy-laravel-contract](./concepts/model-policy-laravel-contract.md)
 - [policy-restoration-incident](./concepts/policy-restoration-incident.md)
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

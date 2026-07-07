@@ -18,11 +18,7 @@ Audience: Developers implementing or maintaining the map widget
 12. ZERO L.geoJson wrapper — create markers directly, add to cluster group
 
 --- Architecture & Design ---
-<<<<<<< HEAD
-Goal: Align /it/tests/segnalazioni-elenco with Design Comuni reference.
-=======
 Goal: Align /it/tests/ticket-list with Design Comuni reference.
->>>>>>> 40b96bcd6 (.)
 Reference: farmshops.eu direktvermarkter.js
 
 Components:
@@ -63,8 +59,4 @@ _loadGeoJson() {
 - [x] laravel/Modules/Fixcity/docs/wiki/concepts/farmshops-clustering-integration.md
 - [x] laravel/Modules/Geo/docs/prompts/geo-map-widget.txt (this file)
 - [ ] Ingest new documents into QMD/Second Brain
-<<<<<<< HEAD
 - [ ] Update LLM Wiki index with new entries
-=======
-- [ ] Update LLM Wiki index with new entries
->>>>>>> 40b96bcd6 (.)

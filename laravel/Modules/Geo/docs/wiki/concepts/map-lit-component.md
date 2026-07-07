@@ -1,11 +1,7 @@
 # Componente: map-lit
 
 ## Panoramica
-<<<<<<< HEAD
-Il componente `<map-lit>` è la conversione fedele in Lit.dev della logica di visualizzazione mappe del progetto `farmshops.eu` (`direktvermarkter.js`). Sostituisce le versioni precedenti di `geo-map-lit` risolvendo criticità di validazione dati e inizializzazione plugin.
-=======
 Il componente `<map-lit>` è la conversione fedele in Lit.dev della logica di visualizzazione mappe del progetto `farmshops.eu` (`direktvermarkter.js`). Sostituisce l'uso di `<geo-map-lit>` nella pagina pubblica elenco segnalazioni, mantenendo validazione dati e bootstrap plugin robusti.
->>>>>>> 40b96bcd6 (.)
 
 ## Caratteristiche Reference (Parità 1:1)
 
@@ -31,14 +27,6 @@ I popup implementano il pattern di caricamento lazy:
 
 ## Integrazione Tecnica
 
-<<<<<<< HEAD
-- **Web Root**: Asset compilati in `/public_html/assets/geo/`.
-- **Git Policy**: Sviluppo lineare "Forward-Only" (nessun revert, solo fix migliorativi).
-- **Zero CDN**: Dipendenze (`leaflet`, `lit`, `markercluster`, `heat`) caricate esclusivamente via npm e bundle Vite.
-
----
-*Ultimo aggiornamento: Aprile 2026*
-=======
 - **Owner markup Sixteen**: `Themes/Sixteen/resources/views/pages/tests/ticket-list.blade.php` include `pub_theme::components.sections.map-lit`, mentre `Themes/Sixteen/resources/views/components/blocks/segnalazioni/layout.blade.php` usa `<map-lit data-url="/data/tickets.json">`.
 - **Partial tema**: `Themes/Sixteen/resources/views/components/sections/map-lit.blade.php` esiste per evitare che `@include('pub_theme::components.sections.map-lit')` diventi un 500 server-side. La partial deve solo emettere il web component, non duplicare logica Leaflet.
 - **Registrazione tema**: `Themes/Sixteen/resources/js/app.js` deve importare `@modules/Geo/resources/js/components/map-lit.js`; se manca, il tag resta un elemento HTML sconosciuto e la mappa non si inizializza.
@@ -65,4 +53,3 @@ Smoke browser: `map-lit` definito, elemento 1108x522, Leaflet container presente
 
 ---
 *Ultimo aggiornamento: 2026-05-08*
->>>>>>> 40b96bcd6 (.)

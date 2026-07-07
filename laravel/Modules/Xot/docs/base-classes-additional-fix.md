@@ -1,7 +1,12 @@
 # Correzione Classi Base Aggiuntive - Modulo Xot
 
+<<<<<<< HEAD
 **Data:** 15 Ottobre 2025
 **Tipo:** Refactoring Architetturale
+=======
+**Data:** 15 Ottobre 2025  
+**Tipo:** Refactoring Architetturale  
+>>>>>>> origin/dev
 **Stato:** ✅ Completato
 
 ## 🎯 Problema Identificato
@@ -80,7 +85,11 @@ abstract class BaseRatingMorph extends XotBaseModel  // ✅
 
 Questi Base vengono usati come parent per modelli concreti nei vari moduli:
 - Modelli di rating
+<<<<<<< HEAD
 - Modelli di commenti
+=======
+- Modelli di commenti  
+>>>>>>> origin/dev
 - Sistemi di feedback polymorphic
 
 **Benefici per i modelli concreti:**
@@ -124,9 +133,18 @@ XotBaseModel (Xot) - Base standard
 
 ## 🔗 Collegamenti
 
+<<<<<<< HEAD
 - [Model Inheritance Complete Fix](../../../docs/model_inheritance_complete_fix.md)
 - [DRY/KISS Analysis](../../../docs/dry_kiss_analysis_[date].md)
+=======
+- [Model Inheritance Complete Fix](../../docs/MODEL_INHERITANCE_COMPLETE_FIX.md)
+- [DRY/KISS Analysis](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
+>>>>>>> origin/dev
 
 ---
 
 **Conclusione:** Anche le classi base specializzate ora seguono l'architettura Laraxot standard.
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/dev

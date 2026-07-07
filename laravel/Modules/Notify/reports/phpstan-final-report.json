@@ -1,0 +1,39 @@
+Note: Using configuration file /var/www/_bases/base_fixcity_fila5_mono/laravel/phpstan.neon.
+PHP Fatal error:  Cannot redeclare non static Filament\Widgets\ChartWidget::$heading as static Modules\Fixcity\Filament\Widgets\TicketChartWidget::$heading in /var/www/_bases/base_fixcity_fila5_mono/laravel/Modules/Fixcity/app/Filament/Widgets/TicketChartWidget.php on line 14
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Cannot redeclare non static Filament\Widgets\ChartWidget::$heading as static Modules\Fixcity\Filament\Widgets\TicketChartWidget::$heading
+
+  at Modules/Fixcity/app/Filament/Widgets/TicketChartWidget.php:14
+     10▕ 
+     11▕ /**
+     12▕  * Widget per visualizzare grafici delle statistiche ticket.
+     13▕  */
+  ➜  14▕ final class TicketChartWidget extends ChartWidget
+     15▕ {
+     16▕     protected static ?string $heading = 'Andamento Segnalazioni';
+     17▕     protected static ?int $sort = 2;
+     18▕     protected int | string | array $columnSpan = 'full';
+
+
+   Whoops\Exception\ErrorException 
+
+  Cannot redeclare non static Filament\Widgets\ChartWidget::$heading as static Modules\Fixcity\Filament\Widgets\TicketChartWidget::$heading
+
+  at Modules/Fixcity/app/Filament/Widgets/TicketChartWidget.php:14
+     10▕ 
+     11▕ /**
+     12▕  * Widget per visualizzare grafici delle statistiche ticket.
+     13▕  */
+  ➜  14▕ final class TicketChartWidget extends ChartWidget
+     15▕ {
+     16▕     protected static ?string $heading = 'Andamento Segnalazioni';
+     17▕     protected static ?int $sort = 2;
+     18▕     protected int | string | array $columnSpan = 'full';
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+

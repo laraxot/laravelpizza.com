@@ -9,7 +9,10 @@ e correggi tutti gli errori che trovi nel codice, non lasciare nulla di intentat
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/dev
 i file di traduzione devono tutti avere la struttura 
  'navigation' => [
         'label' => 'Missing Navigation Label',
@@ -39,5 +42,8 @@ ti ho messo dati di esempio per farti capire
 
 infatti le nostre traduzioni hanno prototipo <namespace>::<contesto>.<collezione>.<chiave>.<tipo>
 
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
   aggiorna studia e migliora le tue docs, le tue rules, le tue memories, le tue skills, ricorda che dopo aver modificato un file devi controllarlo con phpstan,phpmd, phpinsights e pest, ricorda che questo task lo diamo a piu' agenti ai, percio' comportati di conseguenza e cerca di unire le forze con gli altri agenti ai 

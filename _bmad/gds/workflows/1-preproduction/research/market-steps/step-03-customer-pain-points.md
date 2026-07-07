@@ -190,7 +190,7 @@ _Source: [URL]_
 
 - **CONTENT ALREADY WRITTEN TO DOCUMENT**
 - Update frontmatter: `stepsCompleted: [1, 2, 3]`
-- Load: `{project-root}/_bmad/gds/workflows/1-preproduction/research/market-steps/step-04-customer-decisions.md`
+- Load: `./step-04-customer-decisions.md`
 
 ## APPEND TO DOCUMENT:
 
@@ -244,6 +244,6 @@ Content is already written to document when generated in step 4. No additional a
 
 ## NEXT STEP:
 
-After user selects 'C', load `{project-root}/_bmad/gds/workflows/1-preproduction/research/market-steps/step-04-customer-decisions.md` to analyze player decision processes, purchase journeys, and game selection factors for {{research_topic}}.
+After user selects 'C', load `./step-04-customer-decisions.md` to analyze player decision processes, purchase journeys, and game selection factors for {{research_topic}}.
 
 Remember: Always write research content to document immediately and emphasize current player pain point data with rigorous source verification!

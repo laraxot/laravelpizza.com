@@ -212,6 +212,7 @@ trait HasAddress
             }
         }
 
+        /* @phpstan-ignore return.type */
         return $this->addresses()->create($data);
     }
 
@@ -275,8 +276,10 @@ trait HasAddress
 
     /**
      * Initialize the trait.
+     *
+     * @return void
      */
-    protected function initializeHasAddress(): void
+    protected function initializeHasAddress()
     {
         // Automatically create a random token
         /** @var array<int, string> $fields */

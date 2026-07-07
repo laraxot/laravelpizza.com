@@ -36,6 +36,7 @@
 4. **Missing**: Does not use `HasWizard` trait
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### What XotBaseWizardWidget Adds (Legitimate)
 - `wizardMaxStep()` - max step calculation
 - `getWizardSchemaWrapperKey()` - wrapper key for nested state
@@ -44,6 +45,8 @@
 - `queryStepOverrideAllowed()` - security check for step override
 - LangServiceProvider integration notes
 =======
+=======
+>>>>>>> origin/dev
 ### Cosa aggiunge oggi `XotBaseWizardWidget` (legittimo)
 
 > Nota: le sezioni **Issues** sopra sono storiche; il file sorgente attuale **usa** `Filament\Resources\Pages\Concerns\HasWizard` e `final getWizardComponent()`.
@@ -52,7 +55,10 @@
 - `persistStepInQueryString()` sul componente vendor
 - `abstract getSteps()` per delegare allo schema modulo (es. `TicketForm::getSteps()`)
 - **Nessun** `normalizeWizardFormState()` sulla base: la forma dello stato per `create` è schema/dehydrate + widget dominio
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 
 ## Solution: Use HasWizard + Extend
 

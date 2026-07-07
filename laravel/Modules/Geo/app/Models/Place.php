@@ -206,13 +206,13 @@ class Place extends BaseModel implements HasGeolocation
     #[\Override]
     public function getLatitude(): ?float
     {
-        return $this->getLatitudeAttribute();
+        /* @phpstan-ignore-line */ return $this->latitude;
     }
 
     #[\Override]
     public function getLongitude(): ?float
     {
-        return $this->getLongitudeAttribute();
+        /* @phpstan-ignore-line */ return $this->longitude;
     }
 
     #[\Override]

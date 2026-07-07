@@ -41,27 +41,4 @@
 ## Risultato finale
 ✅ **0 errori PHPStan**  
 ✅ **Type safety migliorato**  
-<<<<<<< HEAD
 ✅ **Codice più robusto**
-
-## aggiornamento successivo
-
-### file corretti
-
-1. `app/Filament/Pages/ListLogActivities.php`
-- normalizzazione sicura dei valori array passati a `implode` (niente assunzioni implicite su `array<string>`)
-
-2. `app/Models/Policies/ActivityPolicy.php`
-3. `app/Models/Policies/SnapshotPolicy.php`
-4. `app/Models/Policies/StoredEventPolicy.php`
-- firme metodi allineate al parent `UserBasePolicy` con parametro `Ticket`
-
-5. `lang/it/snapshot.php`
-- rimossi blocchi duplicati (`label`, `plural_label`, `actions`) che producevano `array.duplicateKey`
-
-### risultato verifica
-
-- `./vendor/bin/phpstan analyse Modules/Activity --level=max --no-progress` -> **0 errori**
-=======
-✅ **Codice più robusto**
->>>>>>> 40b96bcd6 (.)

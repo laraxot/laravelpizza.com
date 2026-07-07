@@ -1,11 +1,7 @@
 # GeoMapLit — Farmshops.eu Parity Implementation
 
-<<<<<<< HEAD
-**Last updated**: 2026-04-30
-=======
 **Last updated**: 2026-06-03  
 **Ricostruzione completa:** [geo-map-lit-reconstruction-guide.md](./geo-map-lit-reconstruction-guide.md)
->>>>>>> 40b96bcd6 (.)
 **Story**: 8-81 (COMPLETED ✅)
 **Reference**: https://github.com/CodeforKarlsruhe/farmshops.eu/blob/master/js/direktvermarkter.js
 
@@ -182,8 +178,6 @@ Popup on click → AJAX fetch /api/ticket-details/{id}
 2. Verify cluster rendering at different zoom levels
 3. Test popup content and AJAX detail fetch
 4. Document any remaining issues in Known Issues section
-<<<<<<< HEAD
-=======
 
 ---
 
@@ -246,4 +240,3 @@ Build tema: `laravel/Themes/Sixteen` → `npm run build` → `map-lit-*.js` in `
 
 - [farmshops-cluster-type-icons-study.md](./farmshops-cluster-type-icons-study.md)
 - [architecture-map-farmshops-parity](../../../../docs/wiki/architecture/map-farmshops-parity.md)
->>>>>>> 40b96bcd6 (.)

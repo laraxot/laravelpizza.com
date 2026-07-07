@@ -2,7 +2,11 @@
 
 ## Overview
 
+<<<<<<< HEAD
 Il modulo **Xot** è il nucleo fondativo dell'intero progetto [PROJECT_NAME] platform. Fornisce classi base, trait, servizi e configurazioni condivise da tutti gli altri moduli.
+=======
+Il modulo **Xot** è il nucleo fondativo dell'intero progetto Laraxot PTVX. Fornisce classi base, trait, servizi e configurazioni condivise da tutti gli altri moduli.
+>>>>>>> origin/dev
 
 ## Architettura
 
@@ -15,7 +19,10 @@ Il modulo **Xot** è il nucleo fondativo dell'intero progetto [PROJECT_NAME] pla
 | `XotBaseResource` | Risorse Filament base | `Filament\Resources\Resource` |
 | `XotBaseServiceProvider` | ServiceProvider modulare | `Illuminate\Support\ServiceProvider` |
 | `XotBaseWidget` | Widget Filament base | `Filament\Widgets\Widget` |
+<<<<<<< HEAD
 | `XotBaseWizardWidget` | Widget con form wizard multi-step (Filament `Wizard` / `Step`) | `XotBaseWidget` |
+=======
+>>>>>>> origin/dev
 
 ### Trait Fondamentali
 
@@ -24,9 +31,12 @@ Il modulo **Xot** è il nucleo fondativo dell'intero progetto [PROJECT_NAME] pla
 - `RelationX`: Relazioni many-to-many estese
 
 ## Collegamenti
+<<<<<<< HEAD
 - [Vite Configuration](./vite-configuration.md)
 - [Theme Assets Workflow](./theme-assets-workflow.md)
 - [BMAD Method (progetto)](../../../docs/bmad/setup-guide.md) — processo AI/agile e artefatti `_bmad-output/`
+=======
+>>>>>>> origin/dev
 
 - [Documentazione Root](../../../docs/XOT_MODULE.md)
 - [Regole Architettura](./architecture/)
@@ -43,6 +53,7 @@ Il modulo **Xot** è il nucleo fondativo dell'intero progetto [PROJECT_NAME] pla
 - [User Module](../User/docs/)
 - [UI Module](../UI/docs/)
 - [Tenant Module](../Tenant/docs/)
+<<<<<<< HEAD
 
 ## LLM Wiki Workflow
 
@@ -55,3 +66,5 @@ Il modulo **Xot** è il nucleo fondativo dell'intero progetto [PROJECT_NAME] pla
 - [[BMAD Method](../../../../docs/wiki/concepts/bmad-method.md)]
 - [[Context Engineering](../../../../docs/wiki/concepts/context-engineering.md)]
 - [[LLM Wiki Governance](../../../../docs/wiki/concepts/llm-wiki-governance.md)]
+=======
+>>>>>>> origin/dev

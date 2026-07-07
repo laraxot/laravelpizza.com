@@ -5,28 +5,38 @@
 ### File Eliminati (Duplicati con Date)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 1. ✅ **`Modules/UI/docs/bugfix-icons-missing-2025-01-27.md`**
    - **Motivo**: Duplicato identico di `bugfix-icons-missing.md`
    - **Stato**: Eliminato con successo
 
 2. ✅ **`Modules/UI/docs/bugfix-table-layout-action-2025-01-27.md`**
 =======
+=======
+>>>>>>> origin/dev
 1. ✅ **`Modules/UI/docs/bugfix-icons-missing.md`**
    - **Motivo**: Duplicato identico di `bugfix-icons-missing.md`
    - **Stato**: Eliminato con successo
 
 2. ✅ **`Modules/UI/docs/bugfix-table-layout-action.md`**
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
    - **Motivo**: Duplicato identico di `bugfix-table-layout-action.md`
    - **Stato**: Eliminato con successo
 
 ### File Rinominati (Rimozione Date)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 1. ✅ **`translation-refactor-complete-summary-2025-08-08.md` → `translation-refactor-complete-summary.md`**
 =======
 1. ✅ **`translation-refactor-complete-summary.md` → `translation-refactor-complete-summary.md`**
 >>>>>>> 40b96bcd6 (.)
+=======
+1. ✅ **`translation-refactor-complete-summary.md` → `translation-refactor-complete-summary.md`**
+>>>>>>> origin/dev
    - **Modulo**: Lang
    - **Motivo**: File attivo con data nel nome
    - **Stato**: Rinominato con successo
@@ -78,12 +88,17 @@
 
 ### Modulo Lang
 <<<<<<< HEAD
+<<<<<<< HEAD
 - `riepilogo-correzioni-traduzioni-2025.md` (verificare se esiste `riepilogo-correzioni-traduzioni.md`)
 - `translation-errors-correction-2025.md` (verificare duplicati)
 =======
 - `riepilogo-correzioni-traduzioni.md` (verificare se esiste `riepilogo-correzioni-traduzioni.md`)
 - `translation-errors-correction.md` (verificare duplicati)
 >>>>>>> 40b96bcd6 (.)
+=======
+- `riepilogo-correzioni-traduzioni.md` (verificare se esiste `riepilogo-correzioni-traduzioni.md`)
+- `translation-errors-correction.md` (verificare duplicati)
+>>>>>>> origin/dev
 
 ### Modulo Xot
 - File in cartella `archive/` (valutare se mantenere date per storico)

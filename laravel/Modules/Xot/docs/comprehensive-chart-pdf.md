@@ -15,7 +15,15 @@ This guide provides a comprehensive overview of chart generation and PDF integra
 
 ### Key Components
 - **Chart Module**: Contains chart generation and styling logic
+<<<<<<< HEAD
 - **healthcare_app Module**: Handles survey data and PDF generation
+=======
+<<<<<<< .merge_file_6jTjUn
+- **healthcare_app Module**: Handles survey data and PDF generation
+=======
+- **ModuloEsempio Module**: Handles survey data and PDF generation
+>>>>>>> .merge_file_jepAYk
+>>>>>>> origin/dev
 - **Xot Module**: Provides core services including HTML to PDF conversion
 - **JpGraph Library**: Server-side chart generation
 - **Chart.js**: Client-side chart visualization
@@ -509,7 +517,15 @@ class HtmlService
 PDFs support multi-page layouts with proper headers and footers:
 
 ```blade
+<<<<<<< HEAD
 @include('healthcare_app::pdf.css')
+=======
+<<<<<<< .merge_file_6jTjUn
+@include('healthcare_app::pdf.css')
+=======
+@include('ptvx::pdf.css')
+>>>>>>> .merge_file_jepAYk
+>>>>>>> origin/dev
 
 <page backtop="{{ $pdf->backtop }}mm" backbottom="{{ $pdf->backbottom }}mm">
     <page_header>

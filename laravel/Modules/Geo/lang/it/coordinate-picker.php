@@ -3,29 +3,19 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
-    'search_placeholder' => 'Cerca un luogo...',
-=======
     'search' => 'Cerca indirizzo',
     'search_placeholder' => 'Cerca indirizzo',
     'close_search' => 'Chiudi ricerca',
->>>>>>> 40b96bcd6 (.)
     'use_my_location' => 'Usa la mia posizione',
     'locating' => 'Localizzando...',
     'no_position' => 'Clicca sulla mappa per indicare la posizione',
     'latitude' => 'Latitudine',
     'longitude' => 'Longitudine',
-<<<<<<< HEAD
-    'city' => 'Città',
-    'fullscreen' => 'Schermo intero',
-    'close_fullscreen' => 'Esci da schermo intero',
-=======
     'address' => 'Indirizzo',
     'city' => 'Città',
     'fullscreen' => 'Schermo intero',
     'close_fullscreen' => 'Esci da schermo intero',
     'switch_layer' => 'Cambia livello mappa',
->>>>>>> 40b96bcd6 (.)
     'zoom_in' => 'Aumenta zoom',
     'zoom_out' => 'Diminuisci zoom',
     'address_found' => 'Indirizzo trovato',

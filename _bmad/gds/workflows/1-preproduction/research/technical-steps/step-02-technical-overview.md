@@ -180,7 +180,7 @@ _Source: [URL]_
 
 - **CONTENT ALREADY WRITTEN TO DOCUMENT**
 - Update frontmatter: `stepsCompleted: [1, 2]`
-- Load: `{project-root}/_bmad/gds/workflows/1-preproduction/research/technical-steps/step-03-integration-patterns.md`
+- Load: `./step-03-integration-patterns.md`
 
 ## APPEND TO DOCUMENT:
 
@@ -234,6 +234,6 @@ Content is already written to document when generated in step 4. No additional a
 
 ## NEXT STEP:
 
-After user selects 'C', load `{project-root}/_bmad/gds/workflows/1-preproduction/research/technical-steps/step-03-integration-patterns.md` to analyze online service integration, platform APIs, analytics, and game system interoperability for {{research_topic}}.
+After user selects 'C', load `./step-03-integration-patterns.md` to analyze online service integration, platform APIs, analytics, and game system interoperability for {{research_topic}}.
 
 Remember: Always write research content to document immediately and emphasize current game technology data with rigorous source verification!

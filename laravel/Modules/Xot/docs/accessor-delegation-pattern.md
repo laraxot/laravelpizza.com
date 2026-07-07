@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Accessor Delegation Pattern (SACRO)
 
 Questo documento descrive il pattern di delegazione per gli accessor Eloquent con auto-persistenza, parte degli standard architetturali del modulo.
@@ -44,6 +45,8 @@ protected function getSomeValue(): float
 - [Documento Canonico AI Agents](../../../../.agents/docs/accessor-auto-persistence.md)
 - [00-INDEX.md](00-INDEX.md)
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: accessor-delegation-pattern
@@ -51,4 +54,7 @@ canonical: ../../../Themes/docs/shared-components/accessor-delegation-pattern.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/accessor-delegation-pattern.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

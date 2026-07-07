@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Lang Module LLM Wiki
 
 Indice operativo del wiki Lang.
@@ -58,6 +59,8 @@ Gestione traduzioni, localizzazione, fallback e integrazione mcamara/laravel-loc
 
 Aggiornato: 2026-04-28
 =======
+=======
+>>>>>>> origin/dev
 ---
 title: "Lang Module Wiki Index"
 type: index
@@ -111,4 +114,7 @@ qmd search "Lang <topic>" --limit 5
 ---
 
 Updated: 2026-06-12
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

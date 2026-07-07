@@ -19,8 +19,6 @@
 
 ---
 
-<<<<<<< HEAD
-=======
 ## [2026-06-04] ingest | Filament widget validation + KISS create
 - Updated: `concepts/filament-widget-no-validate-form.md` (alias)
 - RegisterWidget: `getState()` + `XotData::getUserClass()::create()` — rimosso `RegisterFoUserAction`
@@ -28,5 +26,4 @@
 
 ---
 
->>>>>>> 40b96bcd6 (.)
 _Log entries appended chronologically below_

@@ -139,7 +139,11 @@ Questa funzionalità è compatibile con:
 - [FOLIO_VOLT_FILAMENT_INTEGRATION.md](../../folio_volt_filament_integration.md) - Integrazione Folio, Volt e Filament
 - [MODULE_STRUCTURE.md](../../module_structure.md) - Struttura standard dei moduli
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione Filament](https://filamentphp.com/docs/3.x/widgets/installation)
 =======
 - [Documentazione Filament](https://filamentphp.com/docs/3.x/widgets/installation)
 >>>>>>> 40b96bcd6 (.)
+=======
+- [Documentazione Filament](https://filamentphp.com/docs/3.x/widgets/installation)
+>>>>>>> origin/dev

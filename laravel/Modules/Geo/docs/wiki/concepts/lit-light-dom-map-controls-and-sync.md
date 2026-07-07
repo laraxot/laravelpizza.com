@@ -21,13 +21,8 @@ Stabilizzare il `CoordinatePicker` Lit usato in admin (`fixcity/admin/tickets/cr
 
 ### 1) CSS robusto per Light DOM
 
-<<<<<<< HEAD
-- `map-picker-styles.js`: aggiunto export `mapPickerStylesText = mapPickerStyles.cssText`.
-- `coordinate-picker-lit.js`: uso di `mapPickerStylesText` nel blocco `<style>`.
-=======
 - `map/styles.js`: aggiunto export `mapStylesText = mapStyles.cssText`.
 - `coordinate-picker-lit.js`: uso di `mapStylesText` nel blocco `<style>`.
->>>>>>> 40b96bcd6 (.)
 
 Effetto: i controlli overlay ricevono sempre le regole CSS previste (`position`, `size`, `z-index`, icone SVG).
 

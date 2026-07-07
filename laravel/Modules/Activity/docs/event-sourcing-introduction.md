@@ -1,7 +1,9 @@
-# Event Sourcing in `<nome progetto>`
+---
+module: theme
+topic: event-sourcing-introduction
+canonical: ../../../Themes/docs/shared-components/event-sourcing-introduction-duplicate.md
+---
 
-## Introduction to Event Sourcing
-Event Sourcing is an architectural pattern where application state is derived from a sequence of events. Instead of storing the current state in a database, the application stores all events that led to the current state. This approach is particularly beneficial in a healthcare context like `<nome progetto>` for tracking patient activities, medical records, and system interactions with full auditability.
 # Event Sourcing in `<nome progetto>`
 
 ## Introduction to Event Sourcing
@@ -36,8 +38,6 @@ php artisan migrate
 3. **Projectors**: Build read models from events for efficient querying.
 4. **Reactors**: Handle side effects like notifications or external API calls.
 
-## Application in `<nome progetto>`
-In a healthcare system like `<nome progetto>`, event sourcing can be applied to:
 ## Application in `<nome progetto>`
 In a healthcare system like `<nome progetto>`, event sourcing can be applied to:
 - **Patient Management**: Track registration, updates to personal information, and medical history as events.
@@ -140,7 +140,6 @@ public function store(Request $request)
 ```
 
 ## Best Practices for `<nome progetto>`
-## Best Practices for `<nome progetto>`
 1. **Granular Events**: Define specific events for each action (e.g., `PatientRegistered`, `AppointmentScheduled`) to ensure detailed tracking.
 2. **Audit Compliance**: Store events indefinitely to meet healthcare audit requirements.
 3. **Performance Optimization**: Use projectors to build efficient read models for frequent queries, avoiding real-time event replay in production.
@@ -154,4 +153,10 @@ public function store(Request $request)
 - [Larabank Examples](https://github.com/spatie/larabank-traditional)
 
 This introduction to event sourcing sets the foundation for implementing a robust activity tracking system in `<nome progetto>`, ensuring full traceability and compliance with healthcare standards.
-This introduction to event sourcing sets the foundation for implementing a robust activity tracking system in `<nome progetto>`, ensuring full traceability and compliance with healthcare standards.
+---
+module: theme
+topic: event-sourcing-introduction
+canonical: ../../../Themes/docs/shared-components/event-sourcing-introduction-duplicate.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/event-sourcing-introduction-duplicate.md

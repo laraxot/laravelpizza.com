@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Integrazione con Laravel e Best Practices
 
 Questa guida si concentra su come integrare e utilizzare `Html2Pdf` in un'applicazione Laravel, seguendo le best practice specifiche del progetto Laraxot.
@@ -147,3 +148,12 @@ Mail::to('user@example.com')->send(new ReportMail($pdfContent));
 ### Problema: Il testo o una tabella vengono spezzati male tra le pagine
 **Causa:** Contenuto troppo grande per rimanere in una singola pagina.
 **Soluzione:** Usa il tag `<nobreak>` per forzare un blocco di contenuto a rimanere unito, oppure rivedi la struttura per renderla più flessibile.
+=======
+---
+module: theme
+topic: laravel
+canonical: ../../../../Themes/docs/shared-components/laravel.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/laravel.md
+>>>>>>> origin/dev

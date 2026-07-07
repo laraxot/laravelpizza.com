@@ -55,7 +55,11 @@ use Modules\Notify\Models\Traits\HasNotify;
 - [QMD Setup](./QMD-SETUP.md) — Configurazione ricerca locale
 - [Performance](./PERFORMANCE-OPTIMIZATION.md) — Metriche e best practice
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
 =======
 - [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
 >>>>>>> 40b96bcd6 (.)
+=======
+- [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
+>>>>>>> origin/dev

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Xot Module - Product Strategy
 
 **Module:** Xot  
@@ -91,6 +92,8 @@ Maintain high extension standards.
 
 *Last Updated: March 12, 2026*
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: product-strategy-1
@@ -98,4 +101,7 @@ canonical: ../../../Themes/docs/shared-components/PRODUCT_STRATEGY-Modules.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/PRODUCT_STRATEGY-Modules.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

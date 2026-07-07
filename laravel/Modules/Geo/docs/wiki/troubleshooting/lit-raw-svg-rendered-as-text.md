@@ -39,8 +39,4 @@ Nel helper `resources/js/components/geo-heroicons.js` usare un directive esplici
 ## File coinvolti nel fix 2026-04-28
 
 - `laravel/Modules/Geo/resources/js/components/geo-heroicons.js`
-<<<<<<< HEAD
-- `laravel/Modules/Geo/resources/js/components/map-picker-styles.js`
-=======
 - `laravel/Modules/Geo/resources/js/components/map/styles.js`
->>>>>>> 40b96bcd6 (.)

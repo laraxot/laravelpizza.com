@@ -49,6 +49,7 @@
 
 ## 🔗 Collegamenti
 
+- [← Activity Module README](../README.md)
 - [← Activity Module README](../readme.md)
 - [← Root Documentation](../../../docs/index.md)
 

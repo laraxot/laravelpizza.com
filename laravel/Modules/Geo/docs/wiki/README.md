@@ -7,11 +7,4 @@ Structure:
 - wiki/: distilled summaries and canonical pages for LLM
 - archived/: historical/obsolete docs
 
-<<<<<<< HEAD
 Use qmd to serve or convert these documents (https://github.com/tobi/qmd).
-# LLM Wiki
-
-Questa cartella contiene pagine curate per l'uso con LLM (wiki). Mettere qui sintesi, convenzioni e pagine curate.
-=======
-Use qmd to serve or convert these documents (https://github.com/tobi/qmd).
->>>>>>> 40b96bcd6 (.)

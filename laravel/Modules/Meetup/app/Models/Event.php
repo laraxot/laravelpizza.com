@@ -297,28 +297,6 @@ class Event extends BaseModel
     }
 
     /**
-     * Scope: filter events visible to a user.
-     *
-     * @param  Builder<Event>  $query
-     * @param  User|null  $user
-     * @return Builder<Event>
-     */
-    public function scopeVisibleTo(Builder $query, ?User $user = null): Builder
-    {
-        if ($user !== null && $user->hasRole('super-admin')) {
-            return $query;
-        }
-
-        return $query->where(function (Builder $q) use ($user): void {
-            $q->where('status', 'published');
-
-            if ($user !== null) {
-                $q->orWhere('user_id', $user->id);
-            }
-        });
-    }
-
-    /**
      * Scope: only upcoming events (start_date >= now).
      *
      * @param  Builder<Event>  $query

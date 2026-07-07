@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Geo\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Database\Eloquent\Model;
 use Modules\Geo\Models\Province;
 use Modules\Geo\Models\Region;
 
@@ -161,7 +160,7 @@ class ProvinceFactory extends Factory
         return $this->state(
             /** @param array<string, mixed> $attributes */
             /** @return array<string, mixed> */
-            function (array $attributes, ?Model $model = null): array {
+            function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null): array {
                 $provinceNord = [
                     'Milano',
                     'Torino',
@@ -232,7 +231,7 @@ class ProvinceFactory extends Factory
         return $this->state(
             /** @param array<string, mixed> $attributes */
             /** @return array<string, mixed> */
-            function (array $attributes, ?Model $model = null): array {
+            function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null): array {
                 $provinceCentro = [
                     'Roma',
                     'Firenze',
@@ -284,7 +283,7 @@ class ProvinceFactory extends Factory
         return $this->state(
             /** @param array<string, mixed> $attributes */
             /** @return array<string, mixed> */
-            function (array $attributes, ?Model $model = null): array {
+            function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null): array {
                 $provinceSud = [
                     'Napoli',
                     'Salerno',

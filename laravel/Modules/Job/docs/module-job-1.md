@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Modulo Job
 
 ## Informazioni Generali
@@ -120,3 +121,12 @@ composer format        # Formatta il codice
 
 ## Changelog
 Le modifiche vengono tracciate nel repository GitHub.
+=======
+---
+module: theme
+topic: module-job-1
+canonical: ../../../Themes/docs/shared-components/module-job-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/module-job-1.md
+>>>>>>> origin/dev

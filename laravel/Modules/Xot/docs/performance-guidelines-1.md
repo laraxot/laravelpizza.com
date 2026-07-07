@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Performance Guidelines - Xot Module
 
 ## 🎯 Purpose
@@ -443,6 +444,8 @@ This document provides comprehensive performance guidelines for maintaining opti
 
 
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: performance-guidelines-1
@@ -450,4 +453,7 @@ canonical: ../../../Themes/docs/shared-components/PERFORMANCE_GUIDELINES.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/PERFORMANCE_GUIDELINES.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

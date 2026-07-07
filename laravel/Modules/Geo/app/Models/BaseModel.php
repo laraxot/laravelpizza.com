@@ -15,6 +15,7 @@ abstract class BaseModel extends XotBaseModel
 {
     protected $connection = 'geo';
 
+    /** @var string */
     protected $primaryKey = 'id';
 
     /** @var list<string> */

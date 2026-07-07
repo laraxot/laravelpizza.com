@@ -316,10 +316,14 @@ test('it can create and manage tenants', function (): void {
 5. ✅ `TestCase.php` - Fix CreatesApplication, rimosso loadLaravelMigrations()
 6. ✅ `CreatesApplication.php` - Creato trait mancante in `Modules/Xot/tests/`
 <<<<<<< HEAD
+<<<<<<< HEAD
 7. ✅ `phpstan-analysis-2025-01-27.md` - Documentazione aggiornata
 =======
 7. ✅ `phpstan-analysis.md` - Documentazione aggiornata
 >>>>>>> 40b96bcd6 (.)
+=======
+7. ✅ `phpstan-analysis.md` - Documentazione aggiornata
+>>>>>>> origin/dev
 
 ### Errori Rimanenti: 289
 

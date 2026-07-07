@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 🛠️ Filament 5.x Core Migration Guide
 
 This guide outlines the mandatory steps for upgrading Laraxot modules to Filament 5.x.
@@ -36,6 +37,8 @@ Ensure all resources have the following keys in their language files:
 - [ ] `npm run build` generates valid manifest.
 - [ ] No `property_exists()` calls remaining.
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: filament-5-migration-guide
@@ -43,4 +46,7 @@ canonical: ../../../Themes/docs/shared-components/01-filament-5-migration-guide.
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/01-filament-5-migration-guide.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

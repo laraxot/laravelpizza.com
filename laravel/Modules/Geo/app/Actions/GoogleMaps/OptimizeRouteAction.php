@@ -9,7 +9,7 @@ use Illuminate\Http\Client\Response;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use Modules\Geo\Datas\LocationData;
-use Modules\Geo\Datas\RouteData;
+use Modules\Geo\Datas\Routing\RouteData;
 
 /**
  * Action per ottimizzare un percorso utilizzando l'API di Google Maps.

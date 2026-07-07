@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import { css, html } from 'lit';
-=======
 import { css } from 'lit';
 import { geoIcon } from './geo-heroicons.js';
->>>>>>> 40b96bcd6 (.)
 
 export const mapPickerStyles = css`
     :host {
@@ -110,12 +106,6 @@ export const mapPickerStyles = css`
         line-height: 1;
     }
 
-<<<<<<< HEAD
-    .ctrl-btn:not(:has(svg)) .ctrl-fallback {
-        display: inline-block;
-    }
-
-=======
     .ctrl-btn.no-svg .ctrl-fallback {
         display: inline-block;
     }
@@ -124,7 +114,6 @@ export const mapPickerStyles = css`
         display: block;
     }
 
->>>>>>> 40b96bcd6 (.)
     .search-box {
         position: absolute;
         top: 1rem;
@@ -247,13 +236,6 @@ export const mapPickerStyles = css`
         font-family: inherit;
     }
 
-<<<<<<< HEAD
-    .map-picker-marker {
-        display: block;
-        width: 32px;
-        height: 45px;
-        filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-=======
     .leaflet-marker-icon.map-picker-marker {
         background: transparent;
         border: 0;
@@ -265,7 +247,6 @@ export const mapPickerStyles = css`
         width: 44px;
         height: 56px;
         filter: drop-shadow(0 4px 8px rgba(15, 23, 42, 0.32));
->>>>>>> 40b96bcd6 (.)
     }
 
     .map-picker-marker svg {
@@ -400,15 +381,6 @@ export const mapPickerStylesText = mapPickerStyles.cssText;
 // controlIcons: name mapping → geoIcon() in geo-heroicons.js
 // DEPRECATED: use geoIcon('name') directly in templates
 export const controlIcons = {
-<<<<<<< HEAD
-    zoomIn: 'plus',
-    zoomOut: 'minus',
-    fullscreen: 'arrows-pointing-out',
-    fullscreenExit: 'arrows-pointing-in',
-    locate: 'map-pin',
-    layer: 'squares-2x2',
-    crosshair: 'map-pin',
-=======
     zoomIn: geoIcon('plus'),
     zoomOut: geoIcon('minus'),
     fullscreen: geoIcon('arrows-pointing-out'),
@@ -416,5 +388,4 @@ export const controlIcons = {
     locate: geoIcon('map-pin'),
     layer: geoIcon('squares-2x2'),
     crosshair: geoIcon('map-pin'),
->>>>>>> 40b96bcd6 (.)
 };

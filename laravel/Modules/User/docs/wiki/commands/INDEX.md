@@ -43,10 +43,7 @@ Le Commands progettuali vivono qui, nel wiki del Module **User**, e vengono cari
 3. Aggiorna questo indice se la Commands e' ricorrente
 4. Committa: `docs: add commands <nome>`
 
-<<<<<<< HEAD
-=======
 
 ## Console User (2026-06-10)
 
 - [user-super-admin.md](user-super-admin.md) — `--email`, argomento, interattivo; no Prompts WSL
->>>>>>> 40b96bcd6 (.)

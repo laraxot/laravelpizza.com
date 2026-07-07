@@ -2,6 +2,8 @@
 
 ## Collegamenti
 
+- [Modulo Lang](../../Lang/docs/module_lang.md) - Documentazione principale sulle traduzioni
+- [Regole Generali Traduzioni](../../Xot/docs/translations.md)
 - [Modulo Lang](../../lang/docs/module_lang.md) - Documentazione principale sulle traduzioni
 - [Regole Generali Traduzioni](../../xot/docs/translations.md)
 - [Activity Module Fixes](../../.cursor/rules/activity-module-fixes.mdc) - Correzioni applicate dicembre 2024
@@ -190,3 +192,20 @@ Traduzioni specifiche per gli eventi archiviati:
 * [translations.md](laravel/modules/activity/docs/translations.md)
 * [translations.md](laravel/modules/patient/docs/translations.md)
 * [translations.md](laravel/modules/cms/docs/translations.md)
+* [translations.md](laravel/Modules/Chart/docs/translations.md)
+* [translations.md](laravel/Modules/Reporting/docs/translations.md)
+* [translations.md](laravel/Modules/Gdpr/docs/translations.md)
+* [translations.md](laravel/Modules/Notify/docs/translations.md)
+* [translations.md](laravel/Modules/Xot/docs/roadmap/lang/translations.md)
+* [translations.md](laravel/Modules/Xot/docs/translations.md)
+* [translations.md](laravel/Modules/Dental/docs/translations.md)
+* [translations.md](laravel/Modules/User/docs/translations.md)
+* [translations.md](laravel/Modules/UI/docs/translations.md)
+* [translations.md](laravel/Modules/Lang/docs/packages/translations.md)
+* [translations.md](laravel/Modules/Lang/docs/translations.md)
+* [translations.md](laravel/Modules/Job/docs/translations.md)
+* [translations.md](laravel/Modules/Media/docs/translations.md)
+* [translations.md](laravel/Modules/Tenant/docs/translations.md)
+* [translations.md](laravel/Modules/Activity/docs/translations.md)
+* [translations.md](laravel/Modules/Patient/docs/translations.md)
+* [translations.md](laravel/Modules/Cms/docs/translations.md)

@@ -1,6 +1,7 @@
 ---
 title: "Skills Index"
 <<<<<<< HEAD
+<<<<<<< HEAD
 type: index
 created: 2026-05-11
 updated: 2026-05-11
@@ -45,6 +46,8 @@ Le Skills progettuali vivono qui, nel wiki del Module **Lang**, e vengono carica
 4. Committa: `docs: add skills <nome>`
 
 =======
+=======
+>>>>>>> origin/dev
 type: "index"
 tags: [skills, lang, translations, localization]
 module: "Lang"
@@ -68,4 +71,7 @@ qmd search "Lang module skill translation audit" --limit 5
 ---
 
 **Upstream:** [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

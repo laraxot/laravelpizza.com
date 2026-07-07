@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Modules\Activity\Tests\Unit\Actions;
-
-uses(TestCase::class);
-
 use Illuminate\Database\Eloquent\Model;
 use Modules\Activity\Actions\LogModelDeletedAction;
 use Modules\Activity\Tests\TestCase;
-use Modules\User\Models\User;
+use Modules\User\Database\Factories\UserFactory;
+use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 test('LogModelDeletedAction can be instantiated', function () {
     $model = new class extends Model
@@ -18,11 +17,10 @@ test('LogModelDeletedAction can be instantiated', function () {
 
         protected $fillable = ['name'];
     };
-    $user = User::factory()->make();
+    $user = UserFactory::new()->createOne();
+    Assert::assertInstanceOf(Model::class, $user);
 
     $action = new LogModelDeletedAction($model, $user);
 
-    expect($action)->toBeObject()
-        ->and($action->model)->toBe($model)
-        ->and($action->user)->toBe($user);
+    Assert::assertSame($user, $action->user);
 });

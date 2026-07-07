@@ -138,6 +138,7 @@ rm auth_pages.md         # Keep auth-pages.md
 ### Fase 4: Archiviare File Obsoleti
 ```bash
 # Creare cartella archive
+<<<<<<< HEAD
 mkdir -p Modules/ModuleName/docs/archived
 
 # Spostare file obsoleti/datati
@@ -146,6 +147,16 @@ mv Modules/Xot/docs/*-2025-*.md Modules/Xot/docs/archived/
 
 # Mantenere solo l'ultimo se rilevante
 mv Modules/Xot/docs/archived/merge-conflict-resolution-[DATE].md \
+=======
+mkdir -p Modules/ModuleName/docs/archive
+
+# Spostare file obsoleti/datati
+mv Modules/Xot/docs/*-2024-*.md Modules/Xot/docs/archive/
+mv Modules/Xot/docs/*-2025-*.md Modules/Xot/docs/archive/
+
+# Mantenere solo l'ultimo se rilevante
+mv Modules/Xot/docs/archive/merge-conflict-resolution-[DATE].md \
+>>>>>>> origin/dev
    Modules/Xot/docs/merge-conflict-resolution.md
 ```
 

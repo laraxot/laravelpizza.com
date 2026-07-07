@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Skills Index"
 type: index
@@ -45,6 +46,8 @@ Le Skills progettuali vivono qui, nel wiki del Module **Job**, e vengono caricat
 4. Committa: `docs: add skills <nome>`
 
 =======
+=======
+>>>>>>> origin/dev
 # Job Module - skills Index
 
 ## Purpose
@@ -62,4 +65,7 @@ qmd search "Job skills" --limit 5
 
 ---
 *Updated: 2026-05-11*
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

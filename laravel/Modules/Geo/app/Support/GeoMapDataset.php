@@ -11,11 +11,7 @@ use function Safe\file_get_contents;
  * @phpstan-type GeoFeature array{
  *     type: string,
  *     properties: GeoProperties,
-<<<<<<< HEAD
- *     geometry: array{type: string, coordinates: array}
-=======
  *     geometry: array{type: string, coordinates: array<mixed>}
->>>>>>> 40b96bcd6 (.)
  * }
  * @phpstan-type GeoDataset array{type: string, features: list<GeoFeature>}
  * @phpstan-type GeoDatasetStats array{

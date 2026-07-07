@@ -5,7 +5,15 @@
 ### 1. **Missing Module Documentation**
 
 #### Modules Without README.md
+<<<<<<< HEAD
 - [ ] **healthcare_app** - Core business module needs comprehensive documentation
+=======
+<<<<<<< .merge_file_RkJycv
+- [ ] **healthcare_app** - Core business module needs comprehensive documentation
+=======
+- [ ] **ModuloEsempio** - Core business module needs comprehensive documentation
+>>>>>>> .merge_file_pu4ybs
+>>>>>>> origin/dev
 - [ ] **Limesurvey** - External integration documentation missing
 - [ ] **CloudStorage** - Cloud service integration patterns undocumented
 - [ ] **DbForge** - Database tools documentation incomplete
@@ -228,7 +236,15 @@ php artisan laraxot:make:resource CustomerResource --module=CustomerManagement
 ### Phase 1: Critical Gaps (High Priority)
 
 #### 1.1 Module Documentation (Weeks 1-2)
+<<<<<<< HEAD
 - [ ] Create comprehensive README.md for healthcare_app module
+=======
+<<<<<<< .merge_file_RkJycv
+- [ ] Create comprehensive README.md for healthcare_app module
+=======
+- [ ] Create comprehensive README.md for ModuloEsempio module
+>>>>>>> .merge_file_pu4ybs
+>>>>>>> origin/dev
 - [ ] Document Limesurvey integration patterns
 - [ ] Create CloudStorage service documentation
 - [ ] Complete DbForge database tools documentation

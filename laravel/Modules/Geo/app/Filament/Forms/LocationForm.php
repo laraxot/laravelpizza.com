@@ -46,19 +46,9 @@ class LocationForm
             Select::make('province')
                 ->label('geo::fields.province.label')
                 ->placeholder('geo::fields.province.placeholder')
-                ->options(function (Get $get): array {
-                    if (! filled($get('region'))) {
-                        return [];
-                    }
-
-                    $options = [];
-                    foreach (ComuneJson::byRegion((string) $get('region')) as $row) {
-                        /* @var array{provincia: array{codice: string, nome: string}} $row */
-                        $options[$row['provincia']['codice']] = $row['provincia']['nome'];
-                    }
-
-                    return $options;
-                })
+                ->options(fn (Get $get): array => filled($get('region'))
+                    ? /* @phpstan-ignore argument.type */ ComuneJson::getProvincesByRegion($get('region'))->toArray()
+                    : [])
                 ->searchable()
                 ->required()
                 ->live()
@@ -73,7 +63,8 @@ class LocationForm
                     }
 
                     /** @var Collection<int, array{cap: array<int, string>, nome: string}> $cities */
-                    $cities = ComuneJson::byProvince((string) $get('province'));
+                    /** @phpstan-ignore argument.type */
+                    $cities = ComuneJson::byProvince($get('province'));
 
                     return $cities->pluck('nome', 'nome')->toArray();
                 })
@@ -91,7 +82,8 @@ class LocationForm
                     }
 
                     /** @var Collection<int, array{cap: array<int, string>, nome: string}> $cities */
-                    $cities = ComuneJson::byProvince((string) $get('province'))->where('nome', (string) $get('city'));
+                    /** @phpstan-ignore argument.type */
+                    $cities = ComuneJson::byProvince($get('province'))->where('nome', $get('city'));
 
                     if ($cities->isEmpty()) {
                         return [];

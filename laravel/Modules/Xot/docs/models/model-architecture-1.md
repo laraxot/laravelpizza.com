@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Model Architecture - Guida Completa
 
 **Data**: 2025-10-16
@@ -803,6 +804,8 @@ A: Estendi comunque BaseModel, ma usa `setTable()` nel costruttore o in metodi f
 **Ultima revisione**: 2025-10-16
 **Prossimo aggiornamento**: Dopo implementazione auto-discovery in XotBaseModel
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: model-architecture-1
@@ -810,4 +813,7 @@ canonical: ../../../../Themes/docs/shared-components/MODEL_ARCHITECTURE.md
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/MODEL_ARCHITECTURE.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

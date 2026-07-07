@@ -3,10 +3,14 @@
 **Status**: Active  
 **Created**: 2026-04-14  
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Last Updated**: 2026-05-04  
 =======
 **Last Updated**: 2026-04-14  
 >>>>>>> 40b96bcd6 (.)
+=======
+**Last Updated**: 2026-04-14  
+>>>>>>> origin/dev
 **Category**: Architecture / Rules / Filament  
 **Audience**: All developers working with wizard widgets
 
@@ -18,6 +22,7 @@
 
 Questa regola non e negoziabile. E la base del contratto architetturale Laraxot.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 **Nota (Filament pannello)**: su `CreateRecord` il trait `HasWizard` usa `getSteps()` / `hasSkippableSteps()` ([doc](https://filamentphp.com/docs/5.x/resources/creating-records#using-a-wizard)). Qui nel widget: `getWizardSteps()` / `hasSkippableWizardSteps()` su `XotBaseWizardWidget` — stesso componente `Wizard`, contesto frontoffice.
 
@@ -33,6 +38,9 @@ Il widget Livewire `XotBaseWizardWidget` **non** estende `CreateRecord` ne `Page
 =======
 **Nota (Filament pannello)**: su `CreateRecord` il trait `HasWizard` usa `getSteps()` / `hasSkippableSteps()` ([doc](https://filamentphp.com/docs/5.x/resources/creating-records#using-a-wizard)). Qui nel widget: `getSteps()` / `hasSkippableWizardSteps()` su `XotBaseWizardWidget` — stesso componente `Wizard`, contesto frontoffice.
 >>>>>>> 40b96bcd6 (.)
+=======
+**Nota (Filament pannello)**: su `CreateRecord` il trait `HasWizard` usa `getSteps()` / `hasSkippableSteps()` ([doc](https://filamentphp.com/docs/5.x/resources/creating-records#using-a-wizard)). Qui nel widget: `getSteps()` / `hasSkippableWizardSteps()` su `XotBaseWizardWidget` — stesso componente `Wizard`, contesto frontoffice.
+>>>>>>> origin/dev
 
 ---
 
@@ -110,6 +118,7 @@ protected function resolveInitialStepFromQuery(): int
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // ✅ CORRETTO
 $this->wizardStartStep = $this->resolveInitialStepFromQuery();  // Ereditato da XotBaseWizardWidget
 ```
@@ -141,6 +150,8 @@ public function submit(): void
 
 **Perche**: Se il Wizard e wrappato da una chiave (es. `data['wizard']['address']`), devi appiattirlo per accedere a `data['address']`.
 =======
+=======
+>>>>>>> origin/dev
 // ✅ CORRETTO (pattern attuale Filament)
 // Policy e persist query step gestite da XotBaseWizardWidget::getWizardComponent() + HasWizard
 ```
@@ -172,7 +183,10 @@ public function submit(): void
 ```
 
 **Perche**: la forma delle chiavi deve restare **ownership dello schema/dehydrate**. Se servono chiavi flat sul modello, si corregge **`TicketForm`/component** o cast/mutator sul modello — non una “normalizzazione universale” sulla base widget.
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 
 ---
 
@@ -230,16 +244,22 @@ protected function getWizardSubmitAction(): Htmlable
 ---
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### 9. DEFINIRAI `getWizardSteps()` come metodo pubblico
 ```php
 // ✅ CORRETTO
 public function getWizardSteps(): array
 =======
+=======
+>>>>>>> origin/dev
 ### 9. DEFINIRAI `getSteps()` come metodo pubblico
 ```php
 // ✅ CORRETTO
 public function getSteps(): array
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 {
     return [
         $this->makeStepPrivacy(),
@@ -255,10 +275,14 @@ private function makeStepSummary(): Step { /* ... */ }
 
 **Perche**: 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Separazione delle responsabilita: base class chiama `getWizardSteps()`, dominio definisce gli step
 =======
 - Separazione delle responsabilita: base class chiama `getSteps()`, dominio definisce gli step
 >>>>>>> 40b96bcd6 (.)
+=======
+- Separazione delle responsabilita: base class chiama `getSteps()`, dominio definisce gli step
+>>>>>>> origin/dev
 - Ogni step builder e privato (incapsulamento dominio-specifico)
 
 ---
@@ -328,12 +352,17 @@ Prima di committare un wizard widget, verifica:
 - [ ] NO `Log::error()` nel catch block
 - [ ] Usa `$this->resolveInitialStepFromQuery()` nel mount
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [ ] Usa `$this->normalizeWizardFormState()` nel submit (se stato annidato)
 - [ ] `getWizardSteps()` e pubblico
 =======
 - [ ] Submit/persist usa `$this->form->getState()` senza riscrivere tutto il payload in helper generici (solo merge dominio documentati, es. `owner_id`)
 - [ ] `getSteps()` e pubblico
 >>>>>>> 40b96bcd6 (.)
+=======
+- [ ] Submit/persist usa `$this->form->getState()` senza riscrivere tutto il payload in helper generici (solo merge dominio documentati, es. `owner_id`)
+- [ ] `getSteps()` e pubblico
+>>>>>>> origin/dev
 - [ ] Step builders sono privati
 - [ ] Submit button segue pattern corretto (HTML nativo o tema)
 - [ ] Traduzioni seguono pattern `{namespace}::{widget_name}.*`

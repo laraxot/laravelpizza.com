@@ -30,10 +30,14 @@ Senza `XotBaseWizardWidget`, ogni modulo reinventa:
 - Come validare che lo step sia nel range 1..N
 - Come permettere/negare l'override di `?step=` in produzione
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Come appiattire lo stato annidato del form (`data['wizard']['address']` → `data['address']`)
 =======
 - Come allineare stato form e attributi model senza helper post-`getState()` sulla base
 >>>>>>> 40b96bcd6 (.)
+=======
+- Come allineare stato form e attributi model senza helper post-`getState()` sulla base
+>>>>>>> origin/dev
 - Come gestire la navigazione Avanti/Indietro
 - Come renderizzare il pulsante Submit correttamente
 
@@ -42,16 +46,21 @@ Senza `XotBaseWizardWidget`, ogni modulo reinventa:
 **La soluzione**: UNA sola base class che gestisce il **protocollo**, il dominio gestisce il **contenuto**.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Il contratto esplicito sulla base è `abstract public function getWizardSteps(): array` (ordine degli step); `getFormSchema()` consuma solo API definite, così static analysis e IDE non inferiscono metodi fantasma.
 =======
 Il contratto esplicito sulla base è `abstract public function getSteps(): array` (ordine degli step); `getFormSchema()` consuma solo API definite, così static analysis e IDE non inferiscono metodi fantasma.
 >>>>>>> 40b96bcd6 (.)
+=======
+Il contratto esplicito sulla base è `abstract public function getSteps(): array` (ordine degli step); `getFormSchema()` consuma solo API definite, così static analysis e IDE non inferiscono metodi fantasma.
+>>>>>>> origin/dev
 
 ---
 
 #### 2. DRY + KISS
 
 **DRY (Don't Repeat Yourself)**:
+<<<<<<< HEAD
 <<<<<<< HEAD
 - Logica `?step=` scritta UNA volta in `resolveInitialStepFromQuery()`
 - Normalizzazione stato scritta UNA volta in `normalizeWizardFormState()`
@@ -62,13 +71,18 @@ Il contratto esplicito sulla base è `abstract public function getSteps(): array
 - Override solo per comportamento domain-specific (campi, validazione, redirect)
 - Nessun boilerplate ripetuto in ogni modulo
 =======
+=======
+>>>>>>> origin/dev
 - Logica wizard condivisa vive in `XotBaseWizardWidget` (**HasWizard**, view tema, persist `step` dove abilitato)
 - Il contratto dati per `create`/`update` resta **`$this->form->getState()`** + regole schema — niente “normalizzatori” duplicati sulla base
 
 **KISS (Keep It Simple, Stupid)**:
 - Il widget dominio non aggiunge middleware arbitrari sullo stato: correggere struttura allo **schema** quando il modello non accetta l’annidamento
 - Override solo per comportamento domain-specific (redirect, merge campi auth, notifiche)
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 
 ---
 

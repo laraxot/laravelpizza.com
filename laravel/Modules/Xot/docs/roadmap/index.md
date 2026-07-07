@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Xot Module - Roadmap
 
 > Motore core Laraxot. Framework Zero-Config per Laravel 12.
@@ -28,6 +29,8 @@
 
 - [00-index modulo](../00-index.md)
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: index
@@ -35,4 +38,7 @@ canonical: ../../../../Themes/docs/shared-components/00-index-Modules.md
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/00-index-Modules.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

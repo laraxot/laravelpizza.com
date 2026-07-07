@@ -7,10 +7,7 @@ import mapPinSvg from '../../svg/map-pin.svg?raw';
 import squares2x2Svg from '../../svg/squares-2x2.svg?raw';
 import plusSvg from '../../svg/plus.svg?raw';
 import minusSvg from '../../svg/minus.svg?raw';
-<<<<<<< HEAD
-=======
 import xMarkSvg from '../../svg/x-mark.svg?raw';
->>>>>>> 40b96bcd6 (.)
 
 /**
  * geo-heroicons.js — "Filament way" icon system for Lit components.
@@ -29,10 +26,7 @@ const icons = {
     'squares-2x2': html`${unsafeHTML(squares2x2Svg)}`,
     'plus': html`${unsafeHTML(plusSvg)}`,
     'minus': html`${unsafeHTML(minusSvg)}`,
-<<<<<<< HEAD
-=======
     'x-mark': html`${unsafeHTML(xMarkSvg)}`,
->>>>>>> 40b96bcd6 (.)
 };
 
 export function geoIcon(name) {

@@ -7,9 +7,8 @@ namespace Modules\Geo\Tests\Unit\Actions;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
 use Modules\Geo\Actions\GetCoordinatesByAddressAction;
-use Modules\Geo\Tests\LightTestCase;
 
-uses(LightTestCase::class);
+uses(\Modules\Geo\Tests\LightTestCase::class);
 
 beforeEach(function () {
     $action = new GetCoordinatesByAddressAction();

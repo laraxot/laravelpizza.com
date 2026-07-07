@@ -147,6 +147,12 @@ function createTestUser(array $attributes = []): UserContract
 ### **Sistema Folio/Volt**
 - [laravel/Themes/One/docs/folio-pages.md](../laravel/themes/one/docs/folio-pages.md)
 - [laravel/Themes/One/docs/routing_with_folio_volt.md](../laravel/themes/one/docs/routing_with_folio_volt.md)
+- [laravel/Modules/Cms/docs/architecture-xotdata-pattern.md](../laravel/Modules/Cms/docs/architecture-xotdata-pattern.md)
+- [laravel/Modules/Xot/docs/architecture-violations-and-fixes.md](../laravel/Modules/Xot/docs/architecture-violations-and-fixes.md)
+
+### **Sistema Folio/Volt**
+- [laravel/Themes/One/docs/folio-pages.md](../laravel/Themes/One/docs/folio-pages.md)
+- [laravel/Themes/One/docs/routing_with_folio_volt.md](../laravel/Themes/One/docs/routing_with_folio_volt.md)
 
 ### **Test Esistenti di Riferimento**
 - [laravel/Modules/User/tests/Feature/Filament/Widgets/LoginWidgetTest.php](../laravel/Modules/User/tests/Feature/Filament/Widgets/LoginWidgetTest.php)
@@ -166,3 +172,4 @@ function createTestUser(array $attributes = []): UserContract
 3. **SEMPRE** usare pattern XotData
 4. **SEMPRE** approfondire prima di agire
 
+*Ultimo aggiornamento: Dicembre 2024 - Analisi completa struttura login*

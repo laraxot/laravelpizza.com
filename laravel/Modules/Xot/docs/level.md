@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Rapporto PHPStan Livello 9 per il modulo Xot
 
 Data analisi: [DATE] 21:56:07
@@ -142,6 +143,8 @@ aurmich/dev
 * [level_9.md](laravel/modules/patient/docs/phpstan/level_9.md)
 * [level_9.md](laravel/modules/cms/docs/phpstan/level_9.md)
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: level
@@ -149,4 +152,7 @@ canonical: ../../../Themes/docs/shared-components/level-9.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/level-9.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

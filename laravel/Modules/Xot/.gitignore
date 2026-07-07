@@ -158,4 +158,7 @@ packages/temp/
 lang/lang/
 _docs/
 _docs/
+<<<<<<< HEAD
 *.pest.php
+=======
+>>>>>>> origin/dev

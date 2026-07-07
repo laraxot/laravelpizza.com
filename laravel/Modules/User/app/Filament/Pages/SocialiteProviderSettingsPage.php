@@ -37,11 +37,8 @@ use function Safe\chmod;
  */
 class SocialiteProviderSettingsPage extends XotBasePage
 {
-<<<<<<< HEAD
-=======
     protected static ?string $formClass = null;
 
->>>>>>> 40b96bcd6 (.)
     // Navigation properties are inherited from XotBasePage, no need to redeclare
 
     /**
@@ -175,11 +172,7 @@ class SocialiteProviderSettingsPage extends XotBasePage
      */
     public function save(): void
     {
-<<<<<<< HEAD
-        $data = $this->form->getState();
-=======
         $data = $this->data;
->>>>>>> 40b96bcd6 (.)
 
         // Build config array for each provider
         $config = [];

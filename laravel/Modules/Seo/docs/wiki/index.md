@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Seo Module LLM Wiki
-
-=======
 ---
 title: "Seo Module Wiki Index"
 type: index
@@ -32,7 +28,6 @@ related:
 - [second-brain-local-discipline](./concepts/second-brain-local-discipline.md) → canon Xot
 
 
->>>>>>> 40b96bcd6 (.)
 Indice operativo del wiki Seo.
 
 ## Struttura canonica (sacred)

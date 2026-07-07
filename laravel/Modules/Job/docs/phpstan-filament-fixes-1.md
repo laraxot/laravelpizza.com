@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Correzioni PHPStan per Risorse Filament nel Modulo Job
 
 Questo documento traccia gli errori PHPStan identificati nelle risorse Filament del modulo Job e le relative soluzioni implementate.
@@ -81,3 +82,12 @@ Quando si crea una nuova risorsa Filament:
 3. Per il tipo di ritorno:
    - Essere consapevoli del tipo di ritorno atteso dai metodi
    - Utilizzare PHPStan per verificare la correttezza dei tipi
+=======
+---
+module: theme
+topic: phpstan-filament-fixes-1
+canonical: ../../../Themes/docs/shared-components/phpstan-filament-fixes-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-filament-fixes-1.md
+>>>>>>> origin/dev

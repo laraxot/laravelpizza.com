@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Correzione Mapping Classi Filament - 2025-12-23
 
 **Data**: 2025-12-23
@@ -117,6 +118,8 @@ Se in futuro si volesse creare queste classi base:
 **Stato**: ✅ Mapping corretto per riflettere codice esistente
 **Data Correzione**: 2025-12-23
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: filament-class-mapping-correction-1
@@ -124,4 +127,7 @@ canonical: ../../../Themes/docs/shared-components/filament-class-mapping-correct
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/filament-class-mapping-correction-.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

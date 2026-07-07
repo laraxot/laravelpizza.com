@@ -8,99 +8,110 @@ use Modules\Activity\Actions\ActivityLogger;
 use Modules\Activity\Actions\LogActivityAction;
 use Modules\Activity\Actions\LogModelCreatedAction;
 use Modules\Activity\Models\Activity;
+use Modules\Activity\Tests\TestCase;
+use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
-use Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
-beforeEach(function (): void {
-    $this->user = User::factory()->create();
-});
+function createUser(): User
+{
+    return (new UserFactory)->createOne();
+}
 
 describe('ActivityLogger', function (): void {
-    it('logs simple activity', function (): void {
-        $logger = new ActivityLogger;
-        $activity = $logger->log('test_event', $this->user);
 
-        expect($activity)->toBeInstanceOf(Activity::class);
-        expect($activity->event)->toBe('test_event');
-        expect($activity->causer_id)->toBe($this->user->id);
+    test('logs simple activity', function (): void {
+        $user = createUser();
+        $logger = new ActivityLogger;
+        $activity = $logger->log('test_event', $user);
+
+        Assert::assertInstanceOf(Activity::class, $activity);
+        Assert::assertSame('test_event', $activity->event);
+        Assert::assertSame($user->id, $activity->causer_id);
     });
 
-    it('logs created event', function (): void {
+    test('logs created event', function (): void {
+        $user = createUser();
         $logger = new ActivityLogger;
-        $model = User::factory()->create();
+        $model = (new UserFactory)->createOne();
 
-        $activity = $logger->created($model, $this->user);
+        $activity = $logger->created($model, $user);
 
-        expect($activity)->toBeInstanceOf(Activity::class);
-        expect($activity->event)->toBe('created');
-        expect($activity->subject_id)->toBe($model->id);
+        Assert::assertInstanceOf(Activity::class, $activity);
+        Assert::assertSame('created', $activity->event);
+        Assert::assertSame($model->id, $activity->subject_id);
     });
 
-    it('logs updated event', function (): void {
+    test('logs updated event', function (): void {
+        $user = createUser();
         $logger = new ActivityLogger;
-        $model = User::factory()->create();
+        $model = (new UserFactory)->createOne();
 
-        $activity = $logger->updated($model, $this->user);
+        $activity = $logger->updated($model, $user);
 
-        expect($activity)->toBeInstanceOf(Activity::class);
-        expect($activity->event)->toBe('updated');
-        expect($activity->subject_id)->toBe($model->id);
+        Assert::assertInstanceOf(Activity::class, $activity);
+        Assert::assertSame('updated', $activity->event);
+        Assert::assertSame($model->id, $activity->subject_id);
     });
 
-    it('logs deleted event', function (): void {
+    test('logs deleted event', function (): void {
+        $user = createUser();
         $logger = new ActivityLogger;
-        $model = User::factory()->create();
+        $model = (new UserFactory)->createOne();
 
-        $activity = $logger->deleted($model, $this->user);
+        $activity = $logger->deleted($model, $user);
 
-        expect($activity)->toBeInstanceOf(Activity::class);
-        expect($activity->event)->toBe('deleted');
-        expect($activity->subject_id)->toBe($model->id);
+        Assert::assertInstanceOf(Activity::class, $activity);
+        Assert::assertSame('deleted', $activity->event);
+        Assert::assertSame($model->id, $activity->subject_id);
     });
 
-    it('logs login event', function (): void {
+    test('logs login event', function (): void {
+        $user = createUser();
         $logger = new ActivityLogger;
-        $activity = $logger->login($this->user);
+        $activity = $logger->login($user);
 
-        expect($activity)->toBeInstanceOf(Activity::class);
-        expect($activity->event)->toBe('login');
-        expect($activity->description)->toContain('User Test User logged in');
+        Assert::assertInstanceOf(Activity::class, $activity);
+        Assert::assertSame('login', $activity->event);
+        Assert::assertStringContainsString((string) 'User logged in', (string) $activity->description);
     });
 
-    it('logs logout event', function (): void {
+    test('logs logout event', function (): void {
+        $user = createUser();
         $logger = new ActivityLogger;
-        $activity = $logger->logout($this->user);
+        $activity = $logger->logout($user);
 
-        expect($activity)->toBeInstanceOf(Activity::class);
-        expect($activity->event)->toBe('logout');
-        expect($activity->description)->toContain('User Test User logged out');
+        Assert::assertInstanceOf(Activity::class, $activity);
+        Assert::assertSame('logout', $activity->event);
+        Assert::assertStringContainsString((string) 'User logged out', (string) $activity->description);
     });
 });
 
 describe('LogActivityAction', function (): void {
-    it('creates activity with user', function (): void {
-        $action = app(LogActivityAction::class);
-        $activity = $action->execute(
+
+    test('creates activity with user', function (): void {
+        $user = createUser();
+        $action = new LogActivityAction(
             type: 'test_type',
-            user: $this->user,
+            user: $user,
             description: 'Test description'
         );
+        $activity = $action->execute();
 
-        expect($activity->log_name)->toBe('test_type');
-        expect($activity->causer_id)->toBe($this->user->id);
+        Assert::assertSame('test_type', $activity->log_name);
+        Assert::assertSame($user->id, $activity->causer_id);
     });
 });
 
 describe('LogModelCreatedAction', function (): void {
-    it('logs model creation', function (): void {
-        $model = User::factory()->create();
-        $action = app(LogModelCreatedAction::class);
+    test('logs model creation', function (): void {
+        $model = (new UserFactory)->createOne();
+        $action = new LogModelCreatedAction(model: $model);
+        $activity = $action->execute();
 
-        $activity = $action->execute($model);
-
-        expect($activity->event)->toBe('created');
-        expect($activity->subject_id)->toBe($model->id);
+        Assert::assertSame('created', $activity->event);
+        Assert::assertSame($model->id, $activity->subject_id);
     });
 });

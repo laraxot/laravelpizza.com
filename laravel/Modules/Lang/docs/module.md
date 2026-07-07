@@ -62,9 +62,12 @@ The Lang module provides comprehensive localization and translation management:
 - **healthcare_app**: Survey translation
 - **ExternalProject**: Survey translation
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> .merge_file_Z858ew
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 - **Limesurvey**: Question translation
 - **Xot**: Base localization infrastructure
 - **Filament**: Translation management interface

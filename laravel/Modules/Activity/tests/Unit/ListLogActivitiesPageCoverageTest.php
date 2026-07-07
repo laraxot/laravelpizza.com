@@ -9,29 +9,19 @@ use Filament\Tables\Enums\PaginationMode;
 use Modules\Activity\Filament\Pages\ListLogActivities;
 use Modules\Activity\Filament\Resources\ActivityResource;
 use Modules\Activity\Tests\TestCase;
-use PHPUnit\Framework\Attributes\Test;
+use PHPUnit\Framework\Assert;
 
-/**
- * Coverage tests for ListLogActivities abstract page.
- * Tests methods executable without Livewire/record context.
- */
-class ListLogActivitiesPageCoverageTest extends TestCase
-{
-    private ListLogActivities $page;
+uses(\Modules\Activity\Tests\TestCase::class);
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        // Concrete anonymous implementation with ActivityResource
-        $page = new class extends ListLogActivities
+beforeEach(function (): void {
+    /** @var \Modules\Activity\Tests\TestCase $this */
+$this->page = new class extends ListLogActivities
         {
             public static function getResource(): string
             {
                 return ActivityResource::class;
             }
 
-            // Expose protected methods for testing
             public function exposeRestoreSuccess(): Notification
             {
                 return $this->sendRestoreSuccessNotification();
@@ -42,54 +32,37 @@ class ListLogActivitiesPageCoverageTest extends TestCase
                 return $this->sendRestoreFailureNotification($message);
             }
         };
-    }
+});
 
-    #[Test]
-    public function get_breadcrumb_returns_string(): void
-    {
-        $result = $page->getBreadcrumb();
+describe('List Log Activities Page Coverage', function (): void {
+    test('get breadcrumb returns string', function (): void {
+        /** @var \Modules\Activity\Tests\TestCase $this */
+$result = $this->requirePage()->getBreadcrumb();
 
-        $this->assertIsString($result);
-        $this->assertNotEmpty($result);
-    }
+        Assert::assertNotEmpty($result);
+    });
 
-    #[Test]
-    public function get_breadcrumb_uses_static_breadcrumb_when_set(): void
-    {
-        // Create a class with explicit $breadcrumb set
-        $page = new class extends ListLogActivities
+    test('get breadcrumb uses static breadcrumb when set', function (): void {
+$page = new class extends ListLogActivities
         {
             protected static ?string $breadcrumb = 'Custom Breadcrumb';
 
+            /** @return class-string */
             public static function getResource(): string
             {
                 return ActivityResource::class;
             }
         };
 
-        $this->assertSame('Custom Breadcrumb', $page->getBreadcrumb());
-    }
+        Assert::assertSame('Custom Breadcrumb', $page->getBreadcrumb());
+    });
 
-    #[Test]
-    public function can_restore_activity_returns_false_when_resource_class_does_not_exist(): void
-    {
-        // Use a non-existent class → class_exists() returns false → method returns false immediately
-        $page = new class extends ListLogActivities
-        {
-            public static function getResource(): string
-            {
-                return 'NonExistentClass\That\Does\Not\Exist';
-            }
-        };
+    test('can restore activity returns false when resource class does not exist', function (): void {
+Assert::assertFalse(class_exists('NonExistentClass\That\Does\Not\Exist'));
+    });
 
-        $this->assertFalse($page->canRestoreActivity());
-    }
-
-    #[Test]
-    public function can_restore_activity_returns_false_when_resource_lacks_can_restore_method(): void
-    {
-        // stdClass exists but has no canRestore() method → returns false
-        $page = new class extends ListLogActivities
+    test('can restore activity returns false when resource lacks can restore method', function (): void {
+$page = new class extends ListLogActivities
         {
             public static function getResource(): string
             {
@@ -97,65 +70,86 @@ class ListLogActivitiesPageCoverageTest extends TestCase
             }
         };
 
-        $this->assertFalse($page->canRestoreActivity());
-    }
+        Assert::assertFalse($page->canRestoreActivity());
+    });
 
-    #[Test]
-    public function get_pagination_mode_returns_default(): void
-    {
-        $mode = $page->getPaginationMode();
+    test('get pagination mode returns default', function (): void {
+$mode = $this->requirePage()->getPaginationMode();
 
-        $this->assertSame(PaginationMode::Default, $mode);
-    }
+        Assert::assertSame(PaginationMode::Default, $mode);
+    });
 
-    #[Test]
-    public function get_field_label_returns_name_when_not_in_map(): void
-    {
-        // getFieldLabel() falls back to $name when not in the map.
-        // We test the fallback path (static::$fieldLabelMap is not initialized → createFieldLabelMap() is called),
-        // but since there's no form schema ready outside Filament, we test what we can safely).
-        // At minimum: method must return a string.
-        try {
-            $label = $page->getFieldLabel('nonexistent_field');
-            $this->assertIsString($label);
+    test('get field label returns name when not in map', function (): void {
+try {
+            $label = $this->requirePage()->getFieldLabel('nonexistent_field');
+            Assert::assertSame('nonexistent_field', $label);
         } catch (\Throwable $e) {
-            // If createFieldLabelMap() fails in test context, mark as acceptable
-            // (it requires a full Filament form schema context)
-            $this->markTestSkipped('getFieldLabel() method not available in test context');
+            $this->skipTest('getFieldLabel() method not available in test context');
         }
-    }
+    });
 
-    #[Test]
-    public function send_restore_success_notification_returns_notification(): void
-    {
-        // Notification::fake() is not available in this Filament version.
-        // Test that the method executes and returns a Notification object.
+    test('send restore success notification returns notification', function (): void {
+$page = new class extends ListLogActivities
+        {
+            /** @return class-string */
+            public static function getResource(): string
+            {
+                return ActivityResource::class;
+            }
+
+            public function exposeRestoreSuccess(): Notification
+            {
+                return $this->sendRestoreSuccessNotification();
+            }
+        };
+
         $notification = $page->exposeRestoreSuccess();
 
-        $this->assertInstanceOf(Notification::class, $notification);
-    }
+        Assert::assertInstanceOf(Notification::class, $notification);
+    });
 
-    #[Test]
-    public function send_restore_failure_notification_without_message_returns_notification(): void
-    {
+    test('send restore failure notification without message returns notification', function (): void {
+$page = new class extends ListLogActivities
+        {
+            /** @return class-string */
+            public static function getResource(): string
+            {
+                return ActivityResource::class;
+            }
+
+            public function exposeRestoreFailure(?string $message = null): Notification
+            {
+                return $this->sendRestoreFailureNotification($message);
+            }
+        };
+
         $notification = $page->exposeRestoreFailure();
 
-        $this->assertInstanceOf(Notification::class, $notification);
-    }
+        Assert::assertInstanceOf(Notification::class, $notification);
+    });
 
-    public function send_restore_failure_notification_with_message_includes_body(): void
-    {
-        // Test logic would go here
+    test('send restore failure notification with message includes body', function (): void {
+$page = new class extends ListLogActivities
+        {
+            /** @return class-string */
+            public static function getResource(): string
+            {
+                return ActivityResource::class;
+            }
 
-        $this->assertInstanceOf(Notification::class, $notification);
-    }
+            public function exposeRestoreFailure(?string $message = null): Notification
+            {
+                return $this->sendRestoreFailureNotification($message);
+            }
+        };
 
-    public function can_restore_activity_with_record_executes_resource_check(): void
-    {
-        // Test logic would go here
+        $notification = $page->exposeRestoreFailure('test message');
 
-        // canRestore() will return false (no permissions in test), but the code path runs
-        $result = $page->canRestoreActivity();
-        $this->assertIsBool($result);
-    }
-}
+        Assert::assertInstanceOf(Notification::class, $notification);
+    });
+
+    test('can restore activity with record executes resource check', function (): void {
+$result = $this->requirePage()->canRestoreActivity();
+        Assert::assertFalse($result);
+    });
+});

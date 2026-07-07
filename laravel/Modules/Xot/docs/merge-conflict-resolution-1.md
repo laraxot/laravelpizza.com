@@ -81,12 +81,15 @@ at Modules/Xot/app/Providers/RouteServiceProvider.php:155
     - Marker di merge conflict GIT non risolti:
       ```
 <<<<<<< HEAD
+<<<<<<< HEAD
       =======
       >>>>>>> 041533e (.)
       =======
       >>>>>>> 00a34d0 (.)
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
       ```
 
 15. **PasswordResetConfirmWidget.php**
@@ -282,7 +285,11 @@ Questi possono essere corretti in un secondo momento se necessario.
 - [Laraxot Architecture Rules](./laraxot-architecture-rules.md)
 - [Code Quality Standards](./code-quality-standards.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [File Locking Pattern](./file-locking-pattern.md) ← DA CREARE
 =======
 - [File Locking Pattern](./file-locking-pattern.md) ← DA CREARE
 >>>>>>> 40b96bcd6 (.)
+=======
+- [File Locking Pattern](./file-locking-pattern.md) ← DA CREARE
+>>>>>>> origin/dev

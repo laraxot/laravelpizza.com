@@ -8,18 +8,18 @@ use Modules\Activity\Filament\Actions\ListLogActivitiesAction;
 use Modules\Activity\Filament\Pages\ListLogActivities;
 use Modules\Activity\Providers\ActivityServiceProvider;
 use Modules\Activity\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
+use SplFileInfo;
+use function Safe\exec;
+use function Safe\file_get_contents;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
-beforeEach(function () {
-    // Skip if database not available
-    try {
-        \DB::connection()->getPdo();
-    } catch (\Exception $e) {
-        $this->markTestSkipped('Database not available: '.$e->getMessage());
-    }
-});
-
+/**
+ * @return list<string>
+ */
 function activityFindPhpFiles(string $directory): array
 {
     $phpFiles = [];
@@ -29,22 +29,29 @@ function activityFindPhpFiles(string $directory): array
     );
 
     foreach ($iterator as $file) {
+        if (! $file instanceof SplFileInfo) {
+            continue;
+        }
+
         if ($file->isFile() && $file->getExtension() === 'php') {
             $phpFiles[] = $file->getPathname();
         }
     }
 
-    /** @var array<int, string> $phpFiles */
     return $phpFiles;
 }
 
 function activityAssertPhpFileHasValidSyntax(string $filePath): void
 {
-    $output = [];
+    $outputLines = [];
     $resultCode = 0;
-    exec('php -l '.escapeshellarg($filePath).' 2>&1', $output, $resultCode);
+    exec('php -l '.escapeshellarg($filePath).' 2>&1', $outputLines, $resultCode);
 
-    expect($resultCode)->toBe(0, "File {$filePath} ha errori di sintassi: ".implode("\n", $output));
+    Assert::assertIsArray($outputLines);
+    $lines = array_map(static function (mixed $line): string {
+        return is_string($line) ? $line : '';
+    }, $outputLines);
+    Assert::assertSame(0, $resultCode, "File {$filePath} ha errori di sintassi: ".implode("\n", $lines));
 }
 
 test('all php files have valid syntax', function (): void {
@@ -57,54 +64,57 @@ test('all php files have valid syntax', function (): void {
 });
 
 test('main classes exist and are instantiable', function (): void {
-    expect(class_exists(ActivityServiceProvider::class))->toBeTrue();
-    expect(class_exists(ListLogActivitiesAction::class))->toBeTrue();
-    expect(class_exists(ListLogActivities::class))->toBeTrue();
+    Assert::assertTrue(class_exists(ActivityServiceProvider::class));
+    Assert::assertTrue(class_exists(ListLogActivitiesAction::class));
+    Assert::assertTrue(class_exists(ListLogActivities::class));
 });
 
 test('configuration files exist', function (): void {
     $configPath = base_path('Modules/Activity/config/config.php');
-    expect(file_exists($configPath))->toBeTrue();
+    Assert::assertTrue(file_exists($configPath));
 
     $config = include $configPath;
-    expect($config)->toBeArray();
+    Assert::assertIsArray($config);
 });
 
 test('translations exist and are structured', function (): void {
     $actionsTranslationsPath = base_path('Modules/Activity/lang/it/actions.php');
     $activitiesTranslationsPath = base_path('Modules/Activity/lang/it/activities.php');
 
-    expect(file_exists($actionsTranslationsPath))->toBeTrue();
-    expect(file_exists($activitiesTranslationsPath))->toBeTrue();
+    Assert::assertTrue(file_exists($actionsTranslationsPath));
+    Assert::assertTrue(file_exists($activitiesTranslationsPath));
 
     $actionsTranslations = include $actionsTranslationsPath;
     $activitiesTranslations = include $activitiesTranslationsPath;
 
-    expect($actionsTranslations)->toBeArray()->and($actionsTranslations)->toHaveKey('list_log_activities');
-    expect($activitiesTranslations)->toBeArray()->and($activitiesTranslations)->toHaveKey('events');
+    Assert::assertIsArray($actionsTranslations);
+    Assert::assertIsArray($activitiesTranslations);
+    Assert::assertArrayHasKey('list_log_activities', $actionsTranslations);
+    Assert::assertArrayHasKey('events', $activitiesTranslations);
 });
 
 test('views exist and are valid', function (): void {
     $viewPath = base_path('Modules/Activity/resources/views/filament/pages/list-log-activities.blade.php');
-    expect(file_exists($viewPath))->toBeTrue();
+    Assert::assertTrue(file_exists($viewPath));
 
     $viewContent = file_get_contents($viewPath);
-    expect($viewContent)->toBeString()->and($viewContent)->toContain('getActivities()')->toContain('getFieldLabel');
+    Assert::assertStringContainsString('getActivities()', $viewContent);
+    Assert::assertStringContainsString('getFieldLabel', $viewContent);
 });
 
 test('service provider configuration', function (): void {
     $provider = new ActivityServiceProvider(app());
 
-    expect($provider->name)->toBe('Activity')->and($provider->name)->not->toBeEmpty();
+    Assert::assertSame('Activity', $provider->name);
+    Assert::assertNotEmpty($provider->name);
 });
 
 test('documentation is up to date', function (): void {
     $readmePath = base_path('Modules/Activity/docs/README.md');
-    expect(file_exists($readmePath))->toBeTrue();
+    Assert::assertTrue(file_exists($readmePath));
 
     $readmeContent = file_get_contents($readmePath);
-    expect($readmeContent)->toBeString()
-        ->and($readmeContent)->toContain('ListLogActivitiesAction')
-        ->and($readmeContent)->toContain('ListLogActivities')
-        ->and($readmeContent)->toContain('ActivityServiceProvider');
+    Assert::assertStringContainsString('ListLogActivitiesAction', $readmeContent);
+    Assert::assertStringContainsString('ListLogActivities', $readmeContent);
+    Assert::assertStringContainsString('ActivityServiceProvider', $readmeContent);
 });

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Code Quality Improvements - Modulo Xot (Gennaio 2025)
 
 ## Riepilogo Analisi
@@ -91,6 +92,8 @@ use TransTrait {
 - [Code Quality Rules](./code-quality.md)
 - [Best Practices](./best-practices.md)
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: code-quality-improvements-1
@@ -98,4 +101,7 @@ canonical: ../../../Themes/docs/shared-components/code-quality-improvements-01.m
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/code-quality-improvements-01.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

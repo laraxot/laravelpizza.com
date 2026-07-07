@@ -32,19 +32,13 @@ export function scheduleLeafletInvalidate(host, map, redrawFn) {
                                 return;
                         }
 
-<<<<<<< HEAD
-                        map.invalidateSize({ animate: false, pan: false });
-=======
                         map.invalidateSize({ animate: false });
                         recenterOnMarkerAfterResize(host, map, delay);
->>>>>>> 40b96bcd6 (.)
                         redrawFn();
                 }, delay);
         });
 }
 
-<<<<<<< HEAD
-=======
 function recenterOnMarkerAfterResize(host, map, delay) {
         if (!host._shouldRecenterAfterResize || !host._marker) {
                 return;
@@ -62,7 +56,6 @@ function recenterOnMarkerAfterResize(host, map, delay) {
         }
 }
 
->>>>>>> 40b96bcd6 (.)
 export function refreshMapSize(host) {
         if (!host._map) return;
         scheduleLeafletInvalidate(host, host._map, () => {});

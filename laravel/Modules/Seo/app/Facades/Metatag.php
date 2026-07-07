@@ -27,14 +27,16 @@ use Modules\Seo\Services\MetatagService;
  * @method static void setPublishedTime(DateTimeInterface $time)
  * @method static void setModifiedTime(DateTimeInterface $time)
  *
- * @see MetatagService
+ * @see \Modules\Seo\Services\MetatagService
  */
 class Metatag extends Facade
 {
     /**
      * Get the registered name of the component.
+     *
+     * @return string
      */
-    protected static function getFacadeAccessor(): string
+    protected static function getFacadeAccessor()
     {
         return MetatagService::class;
     }

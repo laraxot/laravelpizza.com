@@ -1,12 +1,4 @@
 ---
-<<<<<<< HEAD
-title: "Wiki Index"
-module: "Activity"
-updated: "2026-04-15T08:28:40Z"
----
-
-# Wiki Index — Activity
-=======
 title: "Activity Module Wiki Index"
 type: index
 module: Activity
@@ -34,16 +26,10 @@ related:
 - [ai-harness-module-discipline](../../docs/wiki/concepts/ai-harness-module-discipline.md)
 - [second-brain-local-discipline](./concepts/second-brain-local-discipline.md) → canon Xot
 
->>>>>>> 40b96bcd6 (.)
 
 > **Purpose:** Content-oriented catalog of all wiki pages in this module.  
 > **Replaces embedding-based RAG at moderate scale (~100 sources).**
 
-<<<<<<< HEAD
-## Concepts
-
-_No concepts ingested yet. Drop raw documents in `../raw/articles/` and run ingest._
-=======
 ## Completamento
 
 - [overviews/completion-status.md](./overviews/completion-status.md) — stato modulo post gate chef
@@ -57,7 +43,6 @@ _No concepts ingested yet. Drop raw documents in `../raw/articles/` and run inge
 - [xotbase-resource-zen-pattern](./concepts/xotbase-resource-zen-pattern.md) — pattern corretto per resource XotBase senza override `form()`/`table()`
 - [schemas-tables-pattern](./concepts/schemas-tables-pattern.md) — separazione Schemas/Tables e auto-discovery di XotBase
 - [phpstan-pest-discipline](./concepts/phpstan-pest-discipline.md) — PHPStan su Activity mantenendo test Pest e `phpstan.neon` immutabile
->>>>>>> 40b96bcd6 (.)
 
 ## Entities
 
@@ -65,16 +50,12 @@ _No entities tracked yet._
 
 ## Sources
 
-<<<<<<< HEAD
-_No sources ingested yet._
-=======
 - [activity-core-sources](./sources/activity-core-sources.md) — sorgenti core del modulo per ingest e retrieval
 
 ## On-Demand References
 
 - [rules-index](./rules/INDEX.md) — entrypoint locale per regole ricorrenti del modulo
 - [skills-index](./skills/INDEX.md) — skill on-demand, incluse skill condivise Xot
->>>>>>> 40b96bcd6 (.)
 
 ## Comparisons
 
@@ -82,11 +63,6 @@ _No comparisons synthesized yet._
 
 ---
 
-<<<<<<< HEAD
-**Last Updated:** 2026-04-15T08:28:40Z  
-**Total Pages:** 0  
-**Total Raw Sources:** 0
-=======
 **Last Updated:** 2026-06-10T22:20:00Z  
 **Total Pages:** 5 (concepts: 4, brainstorm: 1)  
 **Total Raw Sources:** 1  
@@ -100,4 +76,3 @@ _No comparisons synthesized yet._
 ## Composer / nwidart
 
 - [composer-root-minimal-nwidart](concepts/composer-root-minimal-nwidart.md) — root skeleton nwidart (modello fixcity)
->>>>>>> 40b96bcd6 (.)

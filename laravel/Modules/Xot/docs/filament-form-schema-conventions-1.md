@@ -135,7 +135,11 @@ class MyResource extends XotBaseResource
 - [Form Components](./form_components.md)
 - [Form Validation](./form_validation.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Filament Best Practices](../../../docs/rules/filament_best_practices.md)
 =======
 - [Filament Best Practices](../../../docs/rules/filament_best_practices.md)
 >>>>>>> 40b96bcd6 (.)
+=======
+- [Filament Best Practices](../../../docs/rules/filament_best_practices.md)
+>>>>>>> origin/dev

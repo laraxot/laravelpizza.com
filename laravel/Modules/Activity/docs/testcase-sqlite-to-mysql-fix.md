@@ -200,6 +200,11 @@ Activity dipende da User per `causedBy()`. Assicurarsi che:
 ---
 
 **Data:** [DATE]
+- Documentazione generale: `laravel/docs/test-corrections-complete-2026-01-09.md`
+
+---
+
+**Data:** 2026-01-09
 **Stato:** Pronto per implementazione
 **Righe:** 156 → ~40 (-74%)
 **Filosofia:** MySQL Production = MySQL Tests ✅

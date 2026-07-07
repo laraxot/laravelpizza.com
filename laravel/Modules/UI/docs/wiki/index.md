@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Wiki Locale Index
 
 =======
+=======
+>>>>>>> origin/dev
 ---
 title: "UI Module Wiki Index"
 type: index
@@ -32,7 +35,10 @@ related:
 - [second-brain-local-discipline](./concepts/second-brain-local-discipline.md) → canon Xot
 
 
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 ## Karpathy LLM Wiki Standard
 
 - [forbidden-folders-rule](../../../../docs/wiki/concepts/forbidden-folders.md): Strict structural constraints.
@@ -56,9 +62,13 @@ related:
 | [.gitkeep](./concepts/.gitkeep) | Concept | - | 2026-04-21 |
 | [module-filament-component-autoload-rule](./concepts/module-filament-component-autoload-rule.md) | Concept | EnumSelect runtime | 2026-04-23 |
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 | [filament-first-blade-canonical](./concepts/filament-first-blade-canonical.md) | Concept | Rule 019 — preferire `<x-filament::*>` | 2026-05-28 |
 >>>>>>> 40b96bcd6 (.)
+=======
+| [filament-first-blade-canonical](./concepts/filament-first-blade-canonical.md) | Concept | Rule 019 — preferire `<x-filament::*>` | 2026-05-28 |
+>>>>>>> origin/dev
 | [enum-select-contract-and-false-friends](./concepts/enum-select-contract-and-false-friends.md) | Concept | runtime + phpstan | 2026-04-23 |
 | [enumselect-filament-api-collisions](./concepts/enumselect-filament-api-collisions.md) | Concept | runtime fatals (make/enum/getLabel) | 2026-04-23 |
 | [model-states-module-ownership](./concepts/model-states-module-ownership.md) | Concept | ownership modulare e vincoli runtime | 2026-04-28 |

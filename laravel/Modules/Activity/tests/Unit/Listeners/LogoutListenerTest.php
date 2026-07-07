@@ -2,35 +2,36 @@
 
 declare(strict_types=1);
 
-namespace Modules\Activity\Tests\Unit\Listeners;
-
 use Illuminate\Auth\Events\Logout;
-use Illuminate\Support\Facades\Event;
+use Modules\Activity\Providers\EventServiceProvider;
 use Modules\Activity\Listeners\LogoutListener;
 use Modules\Activity\Tests\TestCase;
+use Modules\User\Models\User;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
 test('logout listener is registered for logout event', function () {
-    Event::fake();
+    $reflection = new ReflectionClass(EventServiceProvider::class);
+    /** @var array<class-string, list<class-string>> $listen */
+    $listen = $reflection->getDefaultProperties()['listen'] ?? [];
+    /** @var list<class-string> $handlers */
+    $handlers = $listen[Logout::class] ?? [];
 
-    Event::assertListening(
-        Logout::class,
-        LogoutListener::class
-    );
-})->skip('LogoutListener may not be registered in EventServiceProvider');
+    Assert::assertContains(LogoutListener::class, $handlers);
+});
 
 test('logout listener can be instantiated', function () {
     $listener = new LogoutListener;
 
-    expect($listener)->toBeInstanceOf(LogoutListener::class);
+    Assert::assertInstanceOf(LogoutListener::class, $listener);
 });
 
 test('logout listener has handle method', function () {
     $listener = new LogoutListener;
     $reflection = new ReflectionClass($listener);
 
-    expect($reflection->hasMethod('handle'))->toBeTrue();
+    Assert::assertTrue($reflection->hasMethod('handle'));
 });
 
 test('logout listener handle method accepts logout event', function () {
@@ -39,14 +40,18 @@ test('logout listener handle method accepts logout event', function () {
     $method = $reflection->getMethod('handle');
     $parameters = $method->getParameters();
 
-    expect($parameters)->toHaveCount(1);
-    expect($parameters[0]->getType()?->getName())->toBe(Logout::class);
+    Assert::assertCount(1, $parameters);
+    $parameterType = $parameters[0]->getType();
+    Assert::assertInstanceOf(\ReflectionNamedType::class, $parameterType);
+    Assert::assertSame(Logout::class, $parameterType->getName());
 });
 
 test('logout listener handles event without user gracefully', function () {
-    $event = new Logout('web', null);
+    $user = new User;
+    $user->exists = true;
+    $event = new Logout('web', $user);
+    (new ReflectionClass(Logout::class))->getProperty('user')->setValue($event, null);
 
     $listener = new LogoutListener;
-
-    expect(fn () => $listener->handle($event))->not->toThrow(Exception::class);
+    $listener->handle($event);
 });

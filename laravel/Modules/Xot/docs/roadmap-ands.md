@@ -204,7 +204,11 @@ catch (CannotRegisterIconSet $e) {
 ---
 
 ### 2. Helper Functions - No Caching
+<<<<<<< HEAD
 **File**: `Helpers/Helper.php`
+=======
+**File**: `helpers/Helper.php`
+>>>>>>> origin/dev
 
 **Problema**: Chiamate ripetute senza caching
 

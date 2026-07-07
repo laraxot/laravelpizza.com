@@ -1,16 +1,28 @@
+<<<<<<< HEAD
 # PHPStan Action Plan - [DATE]
+=======
+# PHPStan Action Plan - 2025-11-18
+>>>>>>> origin/dev
 
 ## Executive Summary
 
 **Total Issues Identified:** 744 PHPStan errors
+<<<<<<< HEAD
 **Critical Modules:** Chart, <nome progetto>
+=======
+**Critical Modules:** Chart, Quaeris
+>>>>>>> origin/dev
 **Status:** 🔴 **Requires Immediate Action**
 
 ## Quick Start Guide
 
 ### Immediate Actions (Today)
 1. **Add Safe function imports** to all problematic files
+<<<<<<< HEAD
 2. **Comment out quantum code** in <nome progetto> module
+=======
+2. **Comment out quantum code** in Quaeris module
+>>>>>>> origin/dev
 3. **Run PHPStan again** to verify progress
 
 ### Week 1 Goals
@@ -32,7 +44,11 @@
 Modules/Chart/app/Actions/ChartJs/ExportToSvgAction.php
 Modules/Chart/app/Actions/ExportChartToPngAction.php
 Modules/Chart/app/Actions/ExportChartToSvgAction.php
+<<<<<<< HEAD
 Modules/<nome progetto>/app/Actions/Charts/Export/Concerns/HandlesChartWidgetData.php
+=======
+Modules/Quaeris/app/Actions/Charts/Export/Concerns/HandlesChartWidgetData.php
+>>>>>>> origin/dev
 # ... and others identified in analysis
 ```
 
@@ -50,7 +66,11 @@ use function Safe\htmlspecialchars;
 #### Task 1.2: Quantum Code Stabilization
 **Priority:** 🔴 CRITICAL
 **Estimated Time:** 1-2 hours
+<<<<<<< HEAD
 **Files:** <nome progetto> quantum actions
+=======
+**Files:** Quaeris quantum actions
+>>>>>>> origin/dev
 
 **Options:**
 1. **Comment out** quantum features temporarily
@@ -225,7 +245,11 @@ class ChartDataValidator
 - [Safe Library Documentation](https://github.com/thecodingmachine/safe)
 - [PHPStan Configuration](../phpstan.neon)
 - [Chart Module Documentation](../Chart/docs/)
+<<<<<<< HEAD
 - [<nome progetto> Module Documentation](../<nome progetto>/docs/)
+=======
+- [Quaeris Module Documentation](../Quaeris/docs/)
+>>>>>>> origin/dev
 
 ## Emergency Procedures
 
@@ -262,5 +286,11 @@ class ChartDataValidator
 
 ---
 
+<<<<<<< HEAD
 
 **Status**: 🟡 IN PROGRESS
+=======
+**Last Updated**: 2025-11-18
+**Next Review**: 2025-11-25
+**Status**: 🟡 IN PROGRESS
+>>>>>>> origin/dev

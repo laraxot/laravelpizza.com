@@ -47,9 +47,7 @@ class ComuneJson extends GeoJsonModel
     #[\Override]
     public static function all(): Collection
     {
-        $collection = static::loadData();
-
-        /* @var Collection<int, array{
+        /** @var Collection<int, array{
          *     nome: string,
          *     codice: string,
          *     regione: array{codice: string, nome: string},
@@ -57,8 +55,10 @@ class ComuneJson extends GeoJsonModel
          *     cap: array<int, string>,
          *     codiceCatastale: string,
          *     popolazione: int
-         * }> $collection */
-        return $collection;
+         * }> $all */
+        $all = static::loadData();
+
+        return $all;
     }
 
     /**
@@ -86,15 +86,15 @@ class ComuneJson extends GeoJsonModel
          *     cap: array<int, string>,
          *     codiceCatastale: string,
          *     popolazione: int
-         * }> $cached */
-        $cached = Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($regionCode): Collection {
+         * }> $result */
+        $result = Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($regionCode): Collection {
             return static::all()
                 ->where('regione.codice', $regionCode)
                 ->sortBy('nome')
                 ->values();
         });
 
-        return $cached;
+        return $result;
     }
 
     /**
@@ -122,15 +122,15 @@ class ComuneJson extends GeoJsonModel
          *     cap: array<int, string>,
          *     codiceCatastale: string,
          *     popolazione: int
-         * }> $cached */
-        $cached = Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($provinceCode): Collection {
+         * }> $result */
+        $result = Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($provinceCode) {
             return static::all()
                 ->where('provincia.codice', $provinceCode)
                 ->sortBy('nome')
                 ->values();
         });
 
-        return $cached;
+        return $result;
     }
 
     /**
@@ -162,16 +162,17 @@ class ComuneJson extends GeoJsonModel
          *     cap: array<int, string>,
          *     codiceCatastale: string,
          *     popolazione: int
-         * }> $cached */
-        $cached = Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($name, $limit): Collection {
+         * }> $result */
+        $result = Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($name, $limit) {
             $results = static::all()
-                ->filter(static fn (array $item): bool => str_contains(mb_strtolower($item['nome']), $name))
+                /* @phpstan-ignore nullCoalesce.offset */
+                ->filter(static fn ($item) => str_contains(mb_strtolower($item['nome'] ?? ''), $name))
                 ->sortBy('nome');
 
             return $limit > 0 ? $results->take($limit)->values() : $results->values();
         });
 
-        return $cached;
+        return $result;
     }
 
     /**
@@ -199,7 +200,8 @@ class ComuneJson extends GeoJsonModel
          *     popolazione: int
          * }> $filtered */
         $filtered = static::all()
-            ->filter(static fn (array $item): bool => \in_array($cap, $item['cap'], true))
+            /* @phpstan-ignore nullCoalesce.offset */
+            ->filter(static fn ($item) => \in_array($cap, $item['cap'] ?? [], true))
             ->sortBy('nome')
             ->values();
 
@@ -369,7 +371,18 @@ class ComuneJson extends GeoJsonModel
     {
         $cacheKey = 'geo_gerarchia_'.md5($comuneNome);
 
-        return Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($comuneNome): ?array {
+        /** @var array{
+         *     regione: array{codice: string, nome: string}|null,
+         *     provincia: array{codice: string, nome: string}|null,
+         *     comune: array{
+         *         nome: string,
+         *         codice: string|null,
+         *         codiceCatastale: string|null,
+         *         popolazione: int|null
+         *     },
+         *     cap: array<int, string>
+         * }|null $result */
+        $result = Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($comuneNome) {
             /** @var array{
              *     nome: string,
              *     codice: string,
@@ -382,7 +395,7 @@ class ComuneJson extends GeoJsonModel
             $comune = static::searchByName($comuneNome, 1)->first();
 
             if (! $comune) {
-                return null;
+                return;
             }
 
             return [
@@ -397,6 +410,8 @@ class ComuneJson extends GeoJsonModel
                 'cap' => $comune['cap'] ?? [],
             ];
         });
+
+        return $result;
     }
 
     /**
@@ -414,8 +429,9 @@ class ComuneJson extends GeoJsonModel
             'regione_codice' => [
                 $requiredRule,
                 'string',
-                static function (string $_attribute, mixed $value, \Closure $fail): void {
+                static function ($_attribute, $value, $fail): void {
                     if (\is_string($value) && ! static::allRegions()->has($value)) {
+                        /* @phpstan-ignore callable.nonCallable */
                         $fail('La regione selezionata non è valida.');
                     }
                 },
@@ -423,8 +439,9 @@ class ComuneJson extends GeoJsonModel
             'provincia_codice' => [
                 $requiredRule,
                 'string',
-                static function (string $_attribute, mixed $value, \Closure $fail): void {
+                static function ($_attribute, $value, $fail): void {
                     if (\is_string($value) && ! static::allProvinces()->has($value)) {
+                        /* @phpstan-ignore callable.nonCallable */
                         $fail('La provincia selezionata non è valida.');
                     }
                 },
@@ -432,8 +449,9 @@ class ComuneJson extends GeoJsonModel
             'comune_nome' => [
                 $requiredRule,
                 'string',
-                static function (string $_attribute, mixed $value, \Closure $fail): void {
-                    if (\is_string($value) && '' !== $value && static::searchByName($value, 1)->isEmpty()) {
+                static function ($_attribute, $value, $fail): void {
+                    if (\is_string($value) && ! empty($value) && static::searchByName($value, 1)->isEmpty()) {
+                        /* @phpstan-ignore callable.nonCallable */
                         $fail('Il comune selezionato non è valido.');
                     }
                 },
@@ -441,8 +459,9 @@ class ComuneJson extends GeoJsonModel
             'cap' => [
                 $requiredRule,
                 'string',
-                static function (string $_attribute, mixed $value, \Closure $fail): void {
-                    if (\is_string($value) && '' !== $value && ! static::isValidCap($value)) {
+                static function ($_attribute, $value, $fail): void {
+                    if (\is_string($value) && ! empty($value) && ! static::isValidCap($value)) {
+                        /* @phpstan-ignore callable.nonCallable */
                         $fail('Il CAP inserito non è valido.');
                     }
                 },

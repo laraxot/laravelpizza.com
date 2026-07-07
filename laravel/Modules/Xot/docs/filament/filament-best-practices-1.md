@@ -192,7 +192,11 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
 * [filament_best_practices.md](../filament_best_practices.md)
 * [filament_best_practices.md](../../../user/docs/filament_best_practices.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [filament_best_practices.md](../../../job/docs/filament_best_practices.md)
 =======
 * [filament_best_practices.md](../../../job/docs/filament_best_practices.md)
 >>>>>>> 40b96bcd6 (.)
+=======
+* [filament_best_practices.md](../../../job/docs/filament_best_practices.md)
+>>>>>>> origin/dev

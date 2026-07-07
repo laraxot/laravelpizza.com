@@ -81,4 +81,9 @@ The current analysis is incomplete and only shows partial results from PHPMD bef
 ---
 
 **Report Generated**: 2025-11-11
+<<<<<<< HEAD
 **Target Completion**: 2025-11-15
+=======
+**Next Review**: After fixing syntax errors
+**Target Completion**: 2025-11-15
+>>>>>>> origin/dev

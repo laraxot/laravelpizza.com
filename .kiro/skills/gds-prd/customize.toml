@@ -1,0 +1,84 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for gds-prd.
+#
+# Override files (not edited here):
+#   {project-root}/_bmad/custom/gds-prd.toml         (team)
+#   {project-root}/_bmad/custom/gds-prd.user.toml    (personal)
+
+[workflow]
+
+# --- Configurable below. Overrides merge per BMad structural rules: ---
+#   scalars: override wins • arrays: append
+
+# Steps to run before the standard activation (config load, greet).
+# Use for pre-flight loads, compliance checks, etc.
+activation_steps_prepend = []
+
+# Steps to run after greet but before the workflow begins.
+# Use for context-heavy setup that should happen once the user has been acknowledged.
+activation_steps_append = []
+
+# Persistent facts the workflow keeps in mind for the whole run
+# (standards, compliance constraints, stylistic guardrails).
+# Each entry is either a literal sentence, a skill prefixed with `skill:`, or a `file:`-prefixed
+# path/glob whose contents are loaded as facts.
+#
+# Default loads project-context.md if gds-generate-project-context has produced one — this gives
+# the facilitator persistent awareness of the project's tech, domain, and constraints without
+# re-asking. Common opt-ins (set in team/user override TOML):
+#   "skill:acme-studio:terms-and-conditions"                                  # a skill that contains relevant info
+#   "Every PRD requirement must be testable and traceable to a GDD pillar."   # generic agent instruction
+persistent_facts = [
+  "file:{project-root}/**/project-context.md",
+]
+
+# Executed when the workflow completes (after the user has been told the
+# PRD is ready). Accepts either a string scalar (single instruction)
+# or an array of instructions executed in order. Empty for none.
+on_complete = ""
+
+# Default PRD structure. Treated as a starting point — the LLM adapts it
+# to the product, project type, and domain. Override the path in team/user TOML
+# to enforce a different structure (e.g. regulated-industry, internal-tool).
+prd_template = "assets/prd-template.md"
+
+# Validation checklist used at the Validate intent and at Finalize step 3.
+# A subagent walks the checklist against prd.md and returns structured findings.
+# Override the path in team/user TOML to enforce a studio-specific checklist.
+validation_checklist = "assets/prd-validation-checklist.md"
+
+# HTML skeleton the synthesis pass fills directly when consolidating reviewer
+# outputs into a validation report. No substitution engine — the parent LLM
+# writes the final HTML. Fully overridable to match studio branding.
+# Uses inline CSS, no external dependencies, and native HTML <details> for
+# collapse — no JS.
+validation_report_template = "assets/validation-report-template.html"
+
+# Run folder location. The PRD, optional addendum, decision log, and optional
+# validation report all land inside `{output_dir}/{output_folder_name}/`.
+output_dir = "{planning_artifacts}/prds"
+output_folder_name = "prd-{project_name}-{date}"
+
+# Document standards applied to human-consumed docs at Finalize. Each entry is
+# a `skill:`, `file:`, or plain-text directive; the parent LLM applies the
+# findings before the user sees the draft. Empty by default — Game Dev Studio
+# ships no editorial-review skills. Add your own in team/user override TOML:
+#   "skill:my-studio:editorial-review-prose"
+#   "file:{project-root}/_bmad/style-guides/studio-voice.md"
+#   "Convert all dates to ISO 8601 format."
+doc_standards = []
+
+# External-source registry. Natural-language directives describing knowledge
+# bases, MCP tools, or internal systems the LLM may consult during the workflow
+# when a relevant need surfaces. The LLM does NOT query these preemptively —
+# it consults them on demand. If a named MCP tool is unavailable at runtime,
+# the LLM falls back to standard behavior and notes the gap. Empty by default.
+external_sources = []
+
+# External-handoff routing. Natural-language directives the LLM applies at
+# Finalize to route outputs beyond local files (Confluence, Notion, Google
+# Drive, ticket systems, etc.). Handoffs run after the artifact is polished
+# and before the final user-facing message. URLs or IDs returned by the
+# destination are captured and surfaced to the user. Empty by default.
+external_handoffs = []

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Activity Log"
 module: "Job"
@@ -29,6 +30,8 @@ module: "Job"
 **Last Activity:** None  
 **Total Operations:** 0
 =======
+=======
+>>>>>>> origin/dev
 ## [2026-06-30] docs | Second brain — policy incident consolidato
 
 - Memoria datata rimossa; canon in [policy-restoration-incident.md](./concepts/policy-restoration-incident.md)
@@ -56,4 +59,7 @@ module: "Job"
 - Created module index.md
 - Ready for on-demand loading via QMD
 
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

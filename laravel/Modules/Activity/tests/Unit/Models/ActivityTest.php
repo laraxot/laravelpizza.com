@@ -2,46 +2,37 @@
 
 declare(strict_types=1);
 
-namespace Modules\Activity\Tests\Unit\Models;
+use Modules\Activity\Database\Factories\ActivityFactory;
+use Modules\Activity\Models\Activity;
+use Modules\Activity\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
-use Modules\Activity\Models\Activity;
-use Modules\Activity\Tests\TestCase;
-
-beforeEach(function () {
-    // Skip if database not available
-    try {
-        \DB::connection()->getPdo();
-    } catch (\Exception $e) {
-        $this->markTestSkipped('Database not available: '.$e->getMessage());
-    }
-});
-
 test('activity model can be created', function () {
-    $activity = Activity::factory()->make();
+    $activity = ActivityFactory::new()->make();
 
-    expect($activity)->toBeInstanceOf(Activity::class);
+    Assert::assertInstanceOf(Activity::class, $activity);
 });
 
 test('activity model can be saved and retrieved', function () {
-    $activity = Activity::factory()->create([
+    $activity = ActivityFactory::new()->createOne([
         'description' => 'Test action',
         'event' => 'test_event',
     ]);
 
     $retrieved = Activity::find($activity->id);
 
-    expect($retrieved)->toBeInstanceOf(Activity::class)
-        ->and($retrieved->description)->toBe('Test action')
-        ->and($retrieved->event)->toBe('test_event');
+    Assert::assertInstanceOf(Activity::class, $retrieved);
+    Assert::assertSame('Test action', $retrieved->description);
+    Assert::assertSame('test_event', $retrieved->event);
 });
 
 test('activity model has expected attributes', function () {
-    $activity = Activity::factory()->make();
+    $activity = ActivityFactory::new()->make();
 
     // Testiamo solo alcuni attributi per verificare che il modello funzioni
     // Siccome non possiamo usare toHaveProperty direttamente su Eloquent models, usiamo isset
-    expect(isset($activity->description))->toBeTrue()
-        ->and(isset($activity->event))->toBeTrue();
+    Assert::assertTrue(isset($activity->description));
+    Assert::assertTrue(isset($activity->event));
 });

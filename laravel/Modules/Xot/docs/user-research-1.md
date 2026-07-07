@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Xot Module - User Research
 
 **Module:** Xot  
@@ -88,6 +89,8 @@ Users expect vetted extensions.
 
 *Last Updated: March 12, 2026*
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: user-research-1
@@ -95,4 +98,7 @@ canonical: ../../../Themes/docs/shared-components/USER_RESEARCH-Modules.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/USER_RESEARCH-Modules.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

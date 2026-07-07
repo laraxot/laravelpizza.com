@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e0b8ebe3 (.)
@@ -11,6 +12,8 @@
 >>>>>>> 38b70c7ba (.)
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 # Lessons Learned – Consolidated Rules (2025-08-25)
 
 This document consolidates recurring fixes and rules applied across modules. Keep files lowercase (README.md excepted).
@@ -45,6 +48,7 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
@@ -56,6 +60,11 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/docs/` (module).
 >>>>>>> 40b96bcd6 (.)
+=======
+- No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
+- No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
+- No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/docs/` (module).
+>>>>>>> origin/dev
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
 
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
@@ -98,6 +107,7 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/docs/` (module).
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
@@ -156,6 +166,8 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 >>>>>>> 551c768c4 (.)
 >>>>>>> 38b70c7ba (.)
 =======
+=======
+>>>>>>> origin/dev
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
 
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
@@ -168,7 +180,10 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
 - No root `docs/`. Use `docs_project/` (global) and `Modules/<Module>/project_docs/` (module).
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 - All docs filenames lowercase except `README.md`.
 
 ## 7. PHPStan
@@ -196,6 +211,7 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 - Use CLI flags for scope/limits; target level 9+. Keep array key/value types explicit.
 - Use CLI flags for scope/limits; target level 9+. Keep array key/value types explicit.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - Use CLI flags for scope/limits; target level 9+. Keep array key/value types explicit.
 >>>>>>> 17684f52 (.)
@@ -217,12 +233,17 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 >>>>>>> 551c768c4 (.)
 >>>>>>> 38b70c7ba (.)
 =======
+=======
+>>>>>>> origin/dev
 - Use CLI flags for scope/limits; target level 9+. Keep array key/value types explicit.
 - Use CLI flags for scope/limits; target level 9+. Keep array key/value types explicit.
 - Use CLI flags for scope/limits; target level 9+. Keep array key/value types explicit.
 - Use CLI flags for scope/limits; target level 9+. Keep array key/value types explicit.
 - Use CLI flags for scope/limits; target level 10+. Keep array key/value types explicit.
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 
 ## 8. Testing
 - No `RefreshDatabase`.
@@ -236,6 +257,7 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 ## 10. Icons & Assets (<nome progetto>)
 - SVG in `laravel/Modules/<nome progetto>/resources/svg/`, kebab-case; reference as `<nome progetto>-{name}`.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d86d643a (.)
 =======
@@ -246,10 +268,13 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 >>>>>>> ce6fc085 (.)
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 - Content from `config/local/<nome progetto>/database/content/pages/home.json`. Root `/` redirects to `/{locale}`.
 
 ## 10. Icons & Assets ()
 - SVG in `laravel/Modules//resources/svg/`, kebab-case; reference as `<nome progetto>-{name}`.
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 399f46d3 (.)
@@ -306,10 +331,13 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 >>>>>>> e39b54ba7 (.)
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 - Content from `config/local/saluteora/database/content/pages/home.json`. Root `/` redirects to `/{locale}`.
 
 ## 10. Icons & Assets (SaluteOra)
 - SVG in `laravel/Modules/SaluteOra/resources/svg/`, kebab-case; reference as `saluteora-{name}`.
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 399f46d3 (.)
@@ -336,20 +364,26 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 >>>>>>> 7e4835b8e (.)
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 - Content from `config/local/<nome progetto>/database/content/pages/home.json`. Root `/` redirects to `/{locale}`.
 
 ## 10. Icons & Assets ()
 - SVG in `laravel/Modules//resources/svg/`, kebab-case; reference as `<nome progetto>-{name}`.
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 551c768c4 (.)
 >>>>>>> 38b70c7ba (.)
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 - Content from `config/local/<nome progetto>/database/content/pages/home.json`. Root `/` redirects to `/{locale}`.
 
 ## 10. Icons & Assets (<nome progetto>)
 - SVG in `laravel/Modules/<nome progetto>/resources/svg/`, kebab-case; reference as `<nome progetto>-{name}`.
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 43d67f21 (.)
@@ -413,6 +447,8 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 >>>>>>> 38b70c7ba (.)
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 
 ## 11. Translation Hygiene
 - Never remove keys/content; only add.
@@ -437,10 +473,13 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 - Backlinks: see `Modules/<nome modulo>/project_docs/translation-rules-consolidated.md`, `Modules/Xot/project_docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
 - Backlinks: see `Modules/SaluteMo/docs/translation-rules-consolidated.md`, `Modules/Xot/docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 62cc8443 (.)
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 - Backlinks: see `Modules/SaluteMo/project_docs/translation-rules-consolidated.md`, `Modules/Xot/project_docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
 
 - Backlinks: see `Modules/SaluteMo/project_docs/translation-rules-consolidated.md`, `Modules/Xot/project_docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
@@ -483,6 +522,7 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 - Backlinks: see `Modules/SaluteMo/project_docs/translation-rules-consolidated.md`, `Modules/Xot/project_docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
 - Backlinks: see `Modules/SaluteMo/docs/translation-rules-consolidated.md`, `Modules/Xot/docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
 - Backlinks: see `Modules/SaluteMo/project_docs/translation-rules-consolidated.md`, `Modules/Xot/project_docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 - Backlinks: see `Modules/SaluteMo/project_docs/translation-rules-consolidated.md`, `Modules/Xot/project_docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
@@ -572,6 +612,8 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 >>>>>>> 551c768c4 (.)
 >>>>>>> 38b70c7ba (.)
 =======
+=======
+>>>>>>> origin/dev
 - Backlinks: see `Modules/SaluteMo/project_docs/translation-rules-consolidated.md`, `Modules/Xot/project_docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
 
 - Backlinks: see `Modules/SaluteMo/project_docs/translation-rules-consolidated.md`, `Modules/Xot/project_docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
@@ -591,4 +633,7 @@ This document consolidates recurring fixes and rules applied across modules. Kee
 
 - Backlinks: see `Modules/SaluteMo/project_docs/translation-rules-consolidated.md`, `Modules/Xot/project_docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
 - Backlinks: see `Modules/<nome modulo>/project_docs/translation-rules-consolidated.md`, `Modules/Xot/project_docs/translation-structure-expanded.md`, `.windsurf/rules/full_calendar*.mdc`.
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

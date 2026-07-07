@@ -1,0 +1,11 @@
+ConfigurationError: Could not find "stylelint-config-standard". Do you need to install the package or use the "configBasedir" option?
+    at getModulePath (file:///home/zorin/.npm/_npx/69cd2ba96dd4b8d2/node_modules/stylelint/lib/utils/getModulePath.mjs:29:9)
+    at loadExtendedConfig (file:///home/zorin/.npm/_npx/69cd2ba96dd4b8d2/node_modules/stylelint/lib/augmentConfig.mjs:225:21)
+    at extendConfig (file:///home/zorin/.npm/_npx/69cd2ba96dd4b8d2/node_modules/stylelint/lib/augmentConfig.mjs:193:25)
+    at augmentConfigBasic (file:///home/zorin/.npm/_npx/69cd2ba96dd4b8d2/node_modules/stylelint/lib/augmentConfig.mjs:58:26)
+    at augmentConfigFull (file:///home/zorin/.npm/_npx/69cd2ba96dd4b8d2/node_modules/stylelint/lib/augmentConfig.mjs:112:30)
+    at Object.transform (file:///home/zorin/.npm/_npx/69cd2ba96dd4b8d2/node_modules/stylelint/lib/getConfigForFile.mjs:61:37)
+    at search (/home/zorin/.npm/_npx/69cd2ba96dd4b8d2/node_modules/cosmiconfig/dist/Explorer.js:53:54)
+    at async Explorer.search (/home/zorin/.npm/_npx/69cd2ba96dd4b8d2/node_modules/cosmiconfig/dist/Explorer.js:78:20)
+    at async getConfigForFile (file:///home/zorin/.npm/_npx/69cd2ba96dd4b8d2/node_modules/stylelint/lib/getConfigForFile.mjs:69:5)
+    at async resolveOptionValue (file:///home/zorin/.npm/_npx/69cd2ba96dd4b8d2/node_modules/stylelint/lib/utils/resolveOptionValue.mjs:27:24)

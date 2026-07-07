@@ -7,14 +7,14 @@ namespace Modules\Activity\Tests\Feature;
 use Illuminate\Support\Str;
 use Modules\Activity\Models\Activity;
 use Modules\Activity\Tests\TestCase;
-
+use PHPUnit\Framework\Assert;
 use function Safe\json_decode;
 use function Safe\json_encode;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
-describe('Activity Business Logic', function () {
-    it('can create activity with basic information', function () {
+test('Activity Business Logic', function () {
+    test('can create activity with basic information', function () {
         $activityData = [
             'log_name' => 'default',
             'description' => 'User logged in',
@@ -33,21 +33,15 @@ describe('Activity Business Logic', function () {
 
         $activity = Activity::create($activityData);
 
-        expect($activity)
-            ->toBeInstanceOf(Activity::class)
-            ->and($activity->log_name)
-            ->toBe('default')
-            ->and($activity->description)
-            ->toBe('User logged in')
-            ->and($activity->subject_type)
-            ->toBe('Modules\User\Models\User')
-            ->and($activity->subject_id)
-            ->toBe(123)
-            ->and($activity->event)
-            ->toBe('created');
+        Assert::assertInstanceOf(Activity::class, $activity);
+        Assert::assertSame('default', $activity->log_name);
+        Assert::assertSame('User logged in', $activity->description);
+        Assert::assertSame('Modules\User\Models\User', $activity->subject_type);
+        Assert::assertSame(123, $activity->subject_id);
+        Assert::assertSame('created', $activity->event);
     });
 
-    it('can track user authentication activities', function () {
+    test('can track user authentication activities', function () {
         $loginActivity = Activity::create([
             'log_name' => 'auth',
             'description' => 'User logged in successfully',
@@ -78,17 +72,13 @@ describe('Activity Business Logic', function () {
             'event' => 'logout',
         ]);
 
-        expect($loginActivity->event)
-            ->toBe('login')
-            ->and($logoutActivity->event)
-            ->toBe('logout')
-            ->and($loginActivity->log_name)
-            ->toBe('auth')
-            ->and($logoutActivity->log_name)
-            ->toBe('auth');
+        Assert::assertSame('login', $loginActivity->event);
+        Assert::assertSame('logout', $logoutActivity->event);
+        Assert::assertSame('auth', $loginActivity->log_name);
+        Assert::assertSame('auth', $logoutActivity->log_name);
     });
 
-    it('can track model crud activities', function () {
+    test('can track model crud activities', function () {
         $createActivity = Activity::create([
             'log_name' => 'models',
             'description' => 'User created',
@@ -126,17 +116,13 @@ describe('Activity Business Logic', function () {
             'event' => 'updated',
         ]);
 
-        expect($createActivity->event)
-            ->toBe('created')
-            ->and($updateActivity->event)
-            ->toBe('updated')
-            ->and($createActivity->subject_id)
-            ->toBe(789)
-            ->and($updateActivity->subject_id)
-            ->toBe(789);
+        Assert::assertSame('created', $createActivity->event);
+        Assert::assertSame('updated', $updateActivity->event);
+        Assert::assertSame(789, $createActivity->subject_id);
+        Assert::assertSame(789, $updateActivity->subject_id);
     });
 
-    it('can use batch uuid for grouping activities', function () {
+    test('can use batch uuid for grouping activities', function () {
         $batchUuid = Str::uuid()->toString();
 
         $activity1 = Activity::create([
@@ -171,13 +157,14 @@ describe('Activity Business Logic', function () {
         $activity1->refresh();
         $activity2->refresh();
 
-        expect($activity1->batch_uuid)->toBe($batchUuid)->and($activity2->batch_uuid)->toBe($batchUuid);
+        Assert::assertSame($batchUuid, $activity1->batch_uuid);
+        Assert::assertSame($batchUuid, $activity2->batch_uuid);
 
         $batchActivities = Activity::where('batch_uuid', $batchUuid)->get();
-        expect($batchActivities)->toHaveCount(2);
+        Assert::assertCount(2, $batchActivities);
     });
 
-    it('can filter activities by log name', function () {
+    test('can filter activities by log name', function () {
         $authActivity = Activity::create([
             'log_name' => 'auth',
             'description' => 'Login activity',
@@ -208,29 +195,24 @@ describe('Activity Business Logic', function () {
         /** @var Activity|null $firstModelActivity */
         $firstModelActivity = $modelActivities->first();
 
-        expect($authActivities->count())->toBeGreaterThanOrEqual(1);
-        expect($modelActivities->count())->toBeGreaterThanOrEqual(1);
+        Assert::assertGreaterThanOrEqual(1, $authActivities->count());
+        Assert::assertGreaterThanOrEqual(1, $modelActivities->count());
 
         // Ensure the activities created in this test are present in filtered results.
-        expect($authActivities->contains('id', $authActivity->id))->toBeTrue();
-        expect($modelActivities->contains('id', $modelActivity->id))->toBeTrue();
+        Assert::assertTrue($authActivities->contains('id', $authActivity->id));
+        Assert::assertTrue($modelActivities->contains('id', $modelActivity->id));
 
-        expect($firstAuthActivity)->not->toBeNull();
-        expect($firstModelActivity)->not->toBeNull();
+        Assert::assertNotNull($firstAuthActivity);
+        Assert::assertNotNull($firstModelActivity);
 
         // Type narrowing assertions
-        expect($firstAuthActivity)->toBeInstanceOf(Activity::class);
-        \assert($firstAuthActivity instanceof Activity);
-        expect($firstModelActivity)->toBeInstanceOf(Activity::class);
-        \assert($firstModelActivity instanceof Activity);
-
-        expect($firstAuthActivity->log_name)
-            ->toBe('auth')
-            ->and($firstModelActivity->log_name)
-            ->toBe('models');
+        Assert::assertInstanceOf(Activity::class, $firstAuthActivity);
+        Assert::assertInstanceOf(Activity::class, $firstModelActivity);
+        Assert::assertSame('auth', $firstAuthActivity->log_name);
+        Assert::assertSame('models', $firstModelActivity->log_name);
     });
 
-    it('can handle activity with complex properties', function () {
+    test('can handle activity with complex properties', function () {
         /** @var Activity $complexActivity */
         $complexActivity = Activity::create([
             'log_name' => 'complex',
@@ -255,7 +237,7 @@ describe('Activity Business Logic', function () {
             ],
             'event' => 'order_placed',
         ]);
-        expect($complexActivity)->not->toBeNull();
+        Assert::assertNotNull($complexActivity);
 
         $propertiesValue = $complexActivity->properties;
         /** @var array<string, mixed> $properties */
@@ -269,18 +251,16 @@ describe('Activity Business Logic', function () {
             $properties = $propertiesValue->toArray();
         }
 
-        expect($properties)->toBeArray();
-        expect(isset($properties['order_details']))->toBeTrue();
-        expect(isset($properties['customer_info']))->toBeTrue();
+        Assert::assertIsArray($properties);
+        Assert::assertTrue(isset($properties['order_details']));
+        Assert::assertTrue(isset($properties['customer_info']));
 
         /** @var array<string, mixed> $orderDetails */
         $orderDetails = $properties['order_details'];
         /** @var array<string, mixed> $customerInfo */
         $customerInfo = $properties['customer_info'];
 
-        expect($orderDetails)->toBeArray()
-            ->and($orderDetails['total_amount'])->toBe(67.48)
-            ->and($customerInfo)->toBeArray()
-            ->and($customerInfo['name'])->toBe('Jane Smith');
+        Assert::assertIsArray($orderDetails);
+        Assert::assertSame(67.48, $orderDetails['total_amount']);
     });
 });

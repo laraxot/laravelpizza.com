@@ -114,10 +114,14 @@ ps -p $PID  # ✅ Running!
 
 Creati 3 nuovi documenti:
 <<<<<<< HEAD
+<<<<<<< HEAD
 1. `merge-conflict-resolution-2025-11-04.md` - Report tecnico dettagliato
 =======
 1. `merge-conflict-resolution.md` - Report tecnico dettagliato
 >>>>>>> 40b96bcd6 (.)
+=======
+1. `merge-conflict-resolution.md` - Report tecnico dettagliato
+>>>>>>> origin/dev
 2. `file-locking-pattern.md` - Nuova regola fondamentale
 3. `lessons-learned-2025-11-04-merge-conflicts.md` - Questo documento
 
@@ -188,10 +192,13 @@ public null|string $var = null;
 ```php
 // ❌ Conflict markers left in code
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> commit-hash
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 ```
 
 ## 🚀 Risultati
@@ -247,10 +254,14 @@ public null|string $var = null;
 ## 💾 Documentazione Creata
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 1. **merge-conflict-resolution-2025-11-04.md**
 =======
 1. **merge-conflict-resolution.md**
 >>>>>>> 40b96bcd6 (.)
+=======
+1. **merge-conflict-resolution.md**
+>>>>>>> origin/dev
    - Report tecnico completo
    - Pattern identificati
    - Script utilizzati
@@ -327,10 +338,14 @@ Al processo sistematico di **comprensione → studio → dibattito → implement
 ## 📚 References
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Merge Conflict Resolution Report](./merge-conflict-resolution-2025-11-04.md)
 =======
 - [Merge Conflict Resolution Report](./merge-conflict-resolution.md)
 >>>>>>> 40b96bcd6 (.)
+=======
+- [Merge Conflict Resolution Report](./merge-conflict-resolution.md)
+>>>>>>> origin/dev
 - [File Locking Pattern](./file-locking-pattern.md)
 - [Service Providers](./service-providers.md)
 - [Laraxot Architecture Rules](./laraxot-architecture-rules.md)

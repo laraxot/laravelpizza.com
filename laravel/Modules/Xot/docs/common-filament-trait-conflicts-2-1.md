@@ -386,9 +386,12 @@ foreach ($properties as $property) {
 
 **File**: `/Modules/Quaeris/docs/PROPERTY_CONFLICT_RESOLUTION_FILAMENT_TRAITS.md`
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 551c768c4 (.)
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 
 ---
 
@@ -522,6 +525,9 @@ class MyPage extends XotBaseViewRecord
 - `/Modules/Xot/docs/FILAMENT_4_LARAXOT_RULES.md`
 - `/Modules/Quaeris/docs/PROPERTY_CONFLICT_RESOLUTION_FILAMENT_TRAITS.md`
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 551c768c4 (.)
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

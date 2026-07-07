@@ -15,11 +15,13 @@ trait HasPlaceTrait
 {
     // ----- relationship -----
 
+    /** @phpstan-ignore-next-line */
     public function place(): MorphOne
     {
         return $this->morphOne(Place::class, 'model');
     }
 
+    /** @phpstan-ignore-next-line */
     public function places(): MorphMany
     {
         return $this->morphMany(Place::class, 'model');

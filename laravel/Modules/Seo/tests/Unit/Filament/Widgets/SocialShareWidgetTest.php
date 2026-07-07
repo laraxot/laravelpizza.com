@@ -10,8 +10,7 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 it('builds social links and exposes platforms in widget view data', function (): void {
-    $widget = new class extends SocialShareWidget
-    {
+    $widget = new class extends SocialShareWidget {
         public function exposeViewData(): array
         {
             return $this->getViewData();

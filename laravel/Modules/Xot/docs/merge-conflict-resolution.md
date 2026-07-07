@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Risoluzione Merge Conflicts Massivi - [DATE]
+=======
+# Risoluzione Merge Conflicts Massivi - 2025-11-04
+>>>>>>> origin/dev
 
 ## 🔥 Problema Iniziale
 
@@ -64,7 +68,11 @@ at Modules/Xot/app/Providers/RouteServiceProvider.php:155
     - Import duplicati massivi: 13 use statements (Actions, ActionGroup, BulkAction, ecc.)
     - Metodo `getTableHeading()` con versione incompleta + TRE versioni duplicate
     - TRE `if (!app(TableExistsByModelClassActions)->execute())` con solo UNA chiusura
+<<<<<<< HEAD
     - `->columns()` chiamato DUE volte
+=======
+    - `->columns()` chiamato DUE volte  
+>>>>>>> origin/dev
     - Codice `->visible($resource::canEdit(...)); }` duplicato fuori contesto
 
 12. **XotBaseDashboard.php**
@@ -80,7 +88,14 @@ at Modules/Xot/app/Providers/RouteServiceProvider.php:155
 14. **EditProfile.php**
     - Marker di merge conflict GIT non risolti:
       ```
+<<<<<<< HEAD
 
+=======
+      =======
+      >>>>>>> 041533e (.)
+      =======
+      >>>>>>> 00a34d0 (.)
+>>>>>>> origin/dev
       ```
 
 15. **PasswordResetConfirmWidget.php**
@@ -161,7 +176,12 @@ public ?string $super_admin = null;
 ```php
 // ❌ SBAGLIATO
 use Filament\Forms\Form;
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 041533e (.)
+>>>>>>> origin/dev
 use Modules\User\Datas\PasswordData;
 ```
 
@@ -202,6 +222,7 @@ php -l path/to/file.php
 
 ### Principi Applicati
 
+<<<<<<< HEAD
 1. **DRY (Don't Repeat Yourself)**
    Ogni istruzione, proprietà o metodo deve esistere UNA SOLA VOLTA
 
@@ -212,6 +233,18 @@ php -l path/to/file.php
    Ogni `{` deve avere la sua `}` corrispondente
 
 4. **Import Hygiene**
+=======
+1. **DRY (Don't Repeat Yourself)**  
+   Ogni istruzione, proprietà o metodo deve esistere UNA SOLA VOLTA
+
+2. **Type Safety Consistency**  
+   Preferire `?string` a `null|string` per coerenza PSR-12
+
+3. **Defensive Programming**  
+   Ogni `{` deve avere la sua `}` corrispondente
+
+4. **Import Hygiene**  
+>>>>>>> origin/dev
    Nessun use statement duplicato
 
 ## 🔐 Nuova Regola: File Locking
@@ -277,3 +310,7 @@ Questi possono essere corretti in un secondo momento se necessario.
 - [Laraxot Architecture Rules](./laraxot-architecture-rules.md)
 - [Code Quality Standards](./code-quality-standards.md)
 - [File Locking Pattern](./file-locking-pattern.md) ← DA CREARE
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/dev

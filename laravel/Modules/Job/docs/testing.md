@@ -180,11 +180,15 @@ protected function createApplication()
     $app = parent::createApplication();
     
     $app['config']->set([
+<<<<<<< HEAD
 <<<<<<< .merge_file_eokzGG
         'database.connections.job.database' => 'healthcare_app_data_test',
 =======
         'database.connections.job.database' => 'ptvx_data_test',
 >>>>>>> .merge_file_y5J0MO
+=======
+'database.connections.job.database' => 'Quaeris_data_test',
+>>>>>>> origin/dev
     ]);
     
     return $app;

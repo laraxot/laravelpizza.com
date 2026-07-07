@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Boost Skill Fix Summary - Job Module
 
 **Date**: 2026-03-02  
@@ -31,3 +32,12 @@ See `/docs/BOOST_SKILL_SOLUTION_PLAN.md` for complete solution details.
 - Status monitoring
 - Task scheduling
 
+=======
+---
+module: theme
+topic: boost_skill_fix_summary
+canonical: ../../../Themes/docs/shared-components/boost-skill-fix-summary-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/boost-skill-fix-summary-Modules.md
+>>>>>>> origin/dev

@@ -3,13 +3,8 @@ title: "Segnalazioni Elenco — Mappa e Cluster: Diagnosi e Fix"
 type: troubleshooting
 confidence: high
 created: 2026-04-29
-<<<<<<< HEAD
-updated: 2026-04-30
-tags: [geo-map-lit, markercluster, geolocation, cache, bundle, deploy, playwright]
-=======
 updated: 2026-05-08
 tags: [map-lit, geo-map-lit, markercluster, geolocation, cache, bundle, deploy, playwright]
->>>>>>> 40b96bcd6 (.)
 related:
   - concepts/geo-map-controls-unification-rule.md
   - concepts/static-geo-map-widget-pattern.md
@@ -18,10 +13,6 @@ related:
 
 # Segnalazioni Elenco — Mappa e Cluster: Diagnosi e Fix
 
-<<<<<<< HEAD
-**Status**: ✅ RISOLTO 2026-04-30 (cluster visibili + geolocalizzazione iniziale)
-**Story**: [8-82](./../../../.planning/stories/8-82-geo-map-lit-not-visible-diagnosis.story.md)
-=======
 **Status**: ✅ RISOLTO 2026-05-08 — `map-lit` visibile e test Playwright 11/11
 **Storia diagnosi**:
 - Originale: [8-82](./../../../.planning/stories/8-82-geo-map-lit-not-visible-diagnosis.story.md) — risolta 2026-04-30 (bundle obsoleto in cache)
@@ -90,17 +81,12 @@ npx playwright test Modules/Geo/tests/Playwright/ticket-list.spec.js
 ```
 
 Smoke browser: `map-litDefined=true`, elemento 1108x522, Leaflet container 1, tile 15/15, marker 2, cluster 2.
->>>>>>> 40b96bcd6 (.)
 
 ---
 
 ## Sintomo
 
-<<<<<<< HEAD
-L'utente segnalava: "non vedo la mappa in `/it/tests/segnalazioni-elenco`".
-=======
 L'utente segnalava: "non vedo la mappa in `/it/tests/ticket-list`".
->>>>>>> 40b96bcd6 (.)
 
 ---
 
@@ -169,11 +155,7 @@ cp public/assets/$NEWJS ../../../public_html/assets/geo/assets/
 cp public/manifest.json ../../../public_html/assets/geo/manifest.json
 
 echo "Deployed: $NEWJS"
-<<<<<<< HEAD
-curl -s http://127.0.0.1:8000/it/tests/segnalazioni-elenco | grep "geo-map-lit-"
-=======
 curl -s http://127.0.0.1:8000/it/tests/ticket-list | grep "geo-map-lit-"
->>>>>>> 40b96bcd6 (.)
 # Must match $NEWJS
 ```
 
@@ -250,11 +232,7 @@ Bundle unico in public_html: geo-map-lit-WZfa7jvI.js
 ## Playwright Post-Fallback (2026-04-30)
 
 ```
-<<<<<<< HEAD
-tests/Playwright/segnalazioni-elenco.spec.js: 10/10 ✅
-=======
 tests/Playwright/ticket-list.spec.js: 10/10 ✅
->>>>>>> 40b96bcd6 (.)
 - zoom test stabilizzato con fallback anti-flaky (click UI + fallback `_zoomIn()`/`map.zoomIn()`)
 - markers are rendered on the map: PASS
 - cluster icons style check: PASS (quando cluster disponibile)
@@ -263,11 +241,7 @@ tests/Playwright/ticket-list.spec.js: 10/10 ✅
 ## Playwright Post-Cluster-Fix (2026-04-30)
 
 ```
-<<<<<<< HEAD
-Modules/Geo/tests/Playwright/segnalazioni-elenco.spec.js: 10/10 ✅
-=======
 Modules/Geo/tests/Playwright/ticket-list.spec.js: 10/10 ✅
->>>>>>> 40b96bcd6 (.)
 - cluster icons style check: PASS
 - markers are rendered on the map: PASS
 - map controls + zoom + fullscreen: PASS
@@ -282,15 +256,8 @@ Modules/Geo/tests/Playwright/ticket-list.spec.js: 10/10 ✅
 ## Testing
 ```bash
 # Manual verification
-<<<<<<< HEAD
-open http://127.0.0.1:8000/it/tests/segnalazioni-elenco
-
-# Playwright test
-npx playwright test tests/Playwright/segnalazioni-elenco.spec.js
-=======
 open http://127.0.0.1:8000/it/tests/ticket-list
 
 # Playwright test
 npx playwright test tests/Playwright/ticket-list.spec.js
->>>>>>> 40b96bcd6 (.)
 ```

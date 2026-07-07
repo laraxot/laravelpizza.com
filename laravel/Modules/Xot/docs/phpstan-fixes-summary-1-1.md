@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Riassunto delle Correzioni per PHPStan Livello 9
 
 Questo documento riassume i problemi comuni riscontrati con PHPStan livello 9 e le relative soluzioni, basato su un'analisi dettagliata del codice.
@@ -197,6 +198,8 @@ Per una comprensione più completa delle correzioni necessarie, consultare:
 2. [PHPSTAN-LEVEL9-GUIDE.md](./PHPSTAN-LEVEL9-GUIDE.md) - Per dettagli su come gestire errori livello 9
 3. [FILAMENT-TABLES.md](./FILAMENT-TABLES.md) - Per problemi specifici di Filament 
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: phpstan-fixes-summary-1-1
@@ -204,4 +207,7 @@ canonical: ../../../Themes/docs/shared-components/phpstan_fixes_summary.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan_fixes_summary.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

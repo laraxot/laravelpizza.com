@@ -151,6 +151,7 @@ namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
 
 use Modules\SaluteMo\Filament\Resources\ReportResource;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
 
@@ -199,6 +200,8 @@ namespace Modules\<nome modulo>\Filament\Resources\ReportResource\Pages;
 use Modules\<nome modulo>\Filament\Resources\ReportResource;
 >>>>>>> 551c768c4 (.)
 =======
+=======
+>>>>>>> origin/dev
 namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
 
 use Modules\SaluteMo\Filament\Resources\ReportResource;
@@ -223,7 +226,10 @@ use Modules\SaluteMo\Filament\Resources\ReportResource;
 namespace Modules\<nome modulo>\Filament\Resources\ReportResource\Pages;
 
 use Modules\<nome modulo>\Filament\Resources\ReportResource;
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Filament\Actions;
 use Filament\Tables;
@@ -395,6 +401,7 @@ namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
 
 use Modules\SaluteMo\Filament\Resources\AppointmentResource;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
 
@@ -443,6 +450,8 @@ namespace Modules\<nome modulo>\Filament\Resources\AppointmentResource\Pages;
 use Modules\<nome modulo>\Filament\Resources\AppointmentResource;
 >>>>>>> 551c768c4 (.)
 =======
+=======
+>>>>>>> origin/dev
 namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
 
 use Modules\SaluteMo\Filament\Resources\AppointmentResource;
@@ -467,7 +476,10 @@ use Modules\SaluteMo\Filament\Resources\AppointmentResource;
 namespace Modules\<nome modulo>\Filament\Resources\AppointmentResource\Pages;
 
 use Modules\<nome modulo>\Filament\Resources\AppointmentResource;
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 use Filament\Actions;
 
@@ -575,6 +587,7 @@ namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
 
 use Modules\SaluteMo\Filament\Resources\AppointmentResource;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
 
@@ -623,6 +636,8 @@ namespace Modules\<nome modulo>\Filament\Resources\AppointmentResource\Pages;
 use Modules\<nome modulo>\Filament\Resources\AppointmentResource;
 >>>>>>> 551c768c4 (.)
 =======
+=======
+>>>>>>> origin/dev
 namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
 
 use Modules\SaluteMo\Filament\Resources\AppointmentResource;
@@ -647,7 +662,10 @@ use Modules\SaluteMo\Filament\Resources\AppointmentResource;
 namespace Modules\<nome modulo>\Filament\Resources\AppointmentResource\Pages;
 
 use Modules\<nome modulo>\Filament\Resources\AppointmentResource;
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 
 /**
@@ -675,6 +693,7 @@ class CreateAppointment extends XotBaseCreateRecord
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ab5b3a4f (.)
 =======
@@ -691,11 +710,14 @@ declare(strict_types=1);
 >>>>>>> 551c768c4 (.)
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 namespace Modules\<nome modulo>\Filament\Resources;
 
 use Modules\<nome modulo>\Filament\Resources\ReportResource\Pages;
 use Modules\<nome progetto>\Models\Report;
 use Modules\<nome progetto>\Models\Report;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 5a14301c (.)
@@ -730,11 +752,14 @@ use Modules\<nome progetto>\Models\Report;
 >>>>>>> 80bc07e81 (.)
 =======
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 namespace Modules\SaluteMo\Filament\Resources;
 
 use Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
 use Modules\<nome progetto>\Models\Report;
 use Modules\SaluteOra\Models\Report;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> ab5b3a4f (.)
@@ -743,6 +768,9 @@ use Modules\<nome modulo>\Models\Report;
 =======
 use Modules\<nome modulo>\Models\Report;
 >>>>>>> 40b96bcd6 (.)
+=======
+use Modules\<nome modulo>\Models\Report;
+>>>>>>> origin/dev
 use Modules\SaluteOra\Models\Report;
 use Modules\<nome modulo>\Models\Report;
 use Modules\<nome modulo>\Models\Report;
@@ -765,6 +793,7 @@ use Modules\<nome modulo>\Models\Report;
 use Modules\<nome modulo>\Models\Report;
 use Modules\<nome modulo>\Models\Report;
 use Modules\SaluteOra\Models\Report;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 use Modules\<nome modulo>\Models\Report;
@@ -801,6 +830,8 @@ use Modules\<nome progetto>\Models\Report;
 =======
 >>>>>>> 551c768c4 (.)
 =======
+=======
+>>>>>>> origin/dev
 use Modules\<nome modulo>\Models\Report;
 use Modules\<nome modulo>\Models\Report;
 use Modules\<nome modulo>\Models\Report;
@@ -809,7 +840,10 @@ use Modules\<nome modulo>\Models\Report;
 use Modules\<nome modulo>\Models\Report;
 use Modules\SaluteOra\Models\Report;
 use Modules\<nome progetto>\Models\Report;
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Filament\Forms;
 

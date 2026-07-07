@@ -166,13 +166,9 @@ This module has many duplicate files in docs/. Key actions taken:
 
 - For technical questions: Check [architecture](./architecture.md) and [technical docs](./TECHNICAL.md)
 - For implementation issues: Review [code quality analysis](./analysis/code-quality-analysis.md)
-<<<<<<< HEAD
-- For integration help: See [app integration](./app-integration.md) and [Filament rules](./FILAMENT_EXTENSION_RULES.md)
-=======
 - For integration help: See [app integration](./app-integration.md) and [Filament rules](./FILAMENT_EXTENSION_RULES.md)
 ---
 
 ## ⚠️ Architectural Rules
 
 - **[No Http Controllers — Folio + Actions + Filament](../../../../docs/wiki/rules/no-controllers-rule.md)** — Absolute rule: no `Http/Controllers/` in app/ or modules. Geo uses Folio for API endpoints and Actions for business logic.
->>>>>>> 40b96bcd6 (.)

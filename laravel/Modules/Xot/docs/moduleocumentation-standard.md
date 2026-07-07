@@ -116,8 +116,19 @@ public function createUser(array $data): User
 - Document permission and role systems
 - Include social login integration guides
 
+<<<<<<< HEAD
 ### healthcare_app Module
 ### ExternalProject Module
+=======
+<<<<<<< .merge_file_xivVyL
+### healthcare_app Module
+=======
+<<<<<<< HEAD
+### ExternalProject Module
+=======
+### ModuloEsempio Module
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
+>>>>>>> origin/dev
 >>>>>>> .merge_file_DQ6zl7
 
 - Document survey management workflows

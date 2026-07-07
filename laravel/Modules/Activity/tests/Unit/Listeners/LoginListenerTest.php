@@ -2,39 +2,39 @@
 
 declare(strict_types=1);
 
-namespace Modules\Activity\Tests\Unit\Listeners;
-
 use Illuminate\Auth\Events\Login;
-use Illuminate\Support\Facades\Event;
+use Modules\Activity\Providers\EventServiceProvider;
 use Modules\Activity\Listeners\LoginListener;
 use Modules\Activity\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
 test('login listener is registered for login event', function () {
-    Event::fake();
+    $reflection = new ReflectionClass(EventServiceProvider::class);
+    /** @var array<class-string, list<class-string>> $listen */
+    $listen = $reflection->getDefaultProperties()['listen'] ?? [];
+    /** @var list<class-string> $handlers */
+    $handlers = $listen[Login::class] ?? [];
 
-    Event::assertListening(
-        Login::class,
-        LoginListener::class
-    );
-})->skip('LoginListener is not registered in EventServiceProvider');
+    Assert::assertContains(LoginListener::class, $handlers);
+});
 
 test('login listener can be instantiated', function () {
     $listener = new LoginListener;
 
-    expect($listener)->toBeInstanceOf(LoginListener::class);
+    Assert::assertInstanceOf(LoginListener::class, $listener);
 });
 
 test('login listener has handle method', function () {
     $listener = new LoginListener;
     $reflection = new ReflectionClass($listener);
 
-    expect($reflection->hasMethod('handle'))->toBeTrue();
+    Assert::assertTrue($reflection->hasMethod('handle'));
 });
 
 test('login listener handle method is callable', function () {
     $listener = new LoginListener;
 
-    expect(fn () => $listener->handle())->not->toThrow(Exception::class);
+    $listener->handle();
 });

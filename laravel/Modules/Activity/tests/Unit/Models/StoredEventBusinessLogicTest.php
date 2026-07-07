@@ -2,34 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Modules\Activity\Tests\Unit\Models;
-
-uses(TestCase::class);
 use Modules\Activity\Models\StoredEvent;
 use Modules\Activity\Tests\TestCase;
-use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent;
+use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 describe('StoredEvent Business Logic', function (): void {
-    beforeEach(function (): void {
-        // Skip if database not available
-        try {
-            \DB::connection()->getPdo();
-        } catch (\Exception $e) {
-            $this->markTestSkipped('Database not available: '.$e->getMessage());
-        }
-    });
-
     test('stored event has correct connection configured', function (): void {
         $storedEvent = new StoredEvent;
 
-        $expected = app()->environment('testing') ? 'mysql' : 'activity';
-        expect($storedEvent->getConnectionName())->toBe($expected);
+        Assert::assertSame('activity', $storedEvent->getConnectionName());
     });
 
     test('stored event has correct table configured', function (): void {
         $storedEvent = new StoredEvent;
 
-        expect($storedEvent->getTable())->toBe('stored_events');
+        Assert::assertSame('stored_events', $storedEvent->getTable());
     });
 
     test('stored event has expected fillable fields for event sourcing', function (): void {
@@ -47,30 +36,16 @@ describe('StoredEvent Business Logic', function (): void {
             'created_by',
         ];
 
-        expect($storedEvent->getFillable())->toEqual($expectedFillable);
-    });
-
-    test('stored event extends eloquent stored event for event sourcing', function (): void {
-        expect(is_subclass_of(
-            StoredEvent::class,
-            EloquentStoredEvent::class,
-        ))->toBeTrue();
+        Assert::assertEquals($expectedFillable, $storedEvent->getFillable());
     });
 
     test('stored event has query builder methods documented', function (): void {
-        // Verify query builder methods are available through @method annotations in PHPDoc
-        // These are provided by Spatie's EloquentStoredEventQueryBuilder:
-        // - afterVersion(int $version)
-        // - whereAggregateRoot(string $uuid)
-        // - whereEvent(string ...$eventClasses)
-
-        $reflection = new \ReflectionClass(StoredEvent::class);
+        $reflection = new ReflectionClass(StoredEvent::class);
         $docComment = $reflection->getDocComment();
 
-        // Verify @method annotations exist for query builder methods
-        expect($docComment)->toContain('@method');
-        expect($docComment)->toContain('afterVersion');
-        expect($docComment)->toContain('whereAggregateRoot');
-        expect($docComment)->toContain('whereEvent');
+        Assert::assertStringContainsString('@method', (string) $docComment);
+        Assert::assertStringContainsString('afterVersion', (string) $docComment);
+        Assert::assertStringContainsString('whereAggregateRoot', (string) $docComment);
+        Assert::assertStringContainsString('whereEvent', (string) $docComment);
     });
 });

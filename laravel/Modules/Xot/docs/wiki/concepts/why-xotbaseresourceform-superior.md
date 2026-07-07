@@ -42,10 +42,14 @@ class TicketForm extends XotBaseResourceForm {
     }
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function getWizardSteps(): array {
 =======
     public static function getSteps(): array {
 >>>>>>> 40b96bcd6 (.)
+=======
+    public static function getSteps(): array {
+>>>>>>> origin/dev
         return [static::getStepByName('privacy'), ...];
     }
 }
@@ -61,10 +65,14 @@ class TicketForm extends XotBaseResourceForm {
 
 ### 2. Wizard-Ready Architecture
 <<<<<<< HEAD
+<<<<<<< HEAD
 - `getWizardSteps()` returns `array<int, Step>`
 =======
 - `getSteps()` returns `array<int, Step>`
 >>>>>>> 40b96bcd6 (.)
+=======
+- `getSteps()` returns `array<int, Step>`
+>>>>>>> origin/dev
 - `getStepByName()` dynamically resolves steps via `Str::of()` transformation
 - Lang keys auto-generated: `fixcity::ticket-resource.steps.privacy.label`
 - Supports multi-step flows out of the box
@@ -119,10 +127,14 @@ TextEntry::make('review_type')
 1. ✅ All Form classes MUST extend `XotBaseResourceForm`
 2. ✅ NO `->label()` or `->tooltip()` in module code
 <<<<<<< HEAD
+<<<<<<< HEAD
 3. ✅ Use `getWizardSteps()` + `getStepByName()` for multi-step forms
 =======
 3. ✅ Use `getSteps()` + `getStepByName()` for multi-step forms
 >>>>>>> 40b96bcd6 (.)
+=======
+3. ✅ Use `getSteps()` + `getStepByName()` for multi-step forms
+>>>>>>> origin/dev
 4. ✅ Use Infolist entries (`TextEntry`, `ImageEntry`) for summaries
 5. ✅ Use `SafeStringCastAction::cast()` for translation casting
 6. ✅ Use `Get $get` and `Set $set` for dynamic values

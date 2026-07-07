@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Rules Index"
 type: index
@@ -45,6 +46,8 @@ Le Rules progettuali vivono qui, nel wiki del Module **Job**, e vengono caricate
 4. Committa: `docs: add rules <nome>`
 
 =======
+=======
+>>>>>>> origin/dev
 # Job Module - rules Index
 
 ## Purpose
@@ -64,4 +67,7 @@ qmd search "Job rules" --limit 5
 *Updated: 2026-05-11*
 
 - [context-overflow-prevention](../../../../../docs/wiki/rules/context-overflow-prevention.md) — prevenzione 262K token overflow; file vietati; tool output compression
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

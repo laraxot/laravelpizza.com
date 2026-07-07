@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Publish
 
 on:
@@ -37,3 +38,12 @@ jobs:
       with:
         branch: gh-pages
         folder: build_production
+=======
+---
+module: theme
+topic: publish
+canonical: ../../../../../Themes/docs/shared-components/publish-Modules.yml
+---
+
+See canonical documentation: ../../../../../Themes/docs/shared-components/publish-Modules.yml
+>>>>>>> origin/dev

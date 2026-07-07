@@ -2,10 +2,6 @@
 title: GeoMapLit Implementation Guide
 description: Complete implementation guide for GeoMapLit component with farmshops.eu parity
 category: geo-patterns
-<<<<<<< HEAD
----
-
-=======
 deprecated: true
 deprecated_in: 2026-05-08
 deprecated_reason: "Element name <geo-map-lit> superseded by canonical <map-lit>. See concepts/map-lit-canonical-name.md."
@@ -19,7 +15,6 @@ deprecated_reason: "Element name <geo-map-lit> superseded by canonical <map-lit>
 > Per le pagine pubbliche (`/it/tests/ticket-list`, future analoghe) usare SEMPRE `<map-lit>` nei Blade.
 > Questa pagina rimane come archivio storico delle scelte tecniche di clustering/farmshops parity, ma il **tag DOM** è obsoleto.
 
->>>>>>> 40b96bcd6 (.)
 # GeoMapLit Implementation Guide
 
 ## Overview

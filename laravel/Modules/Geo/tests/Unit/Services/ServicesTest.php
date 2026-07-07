@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Services;
 
-uses(TestCase::class);
+uses(\Modules\Geo\Tests\TestCase::class);
 
 use Modules\Geo\Services\GeoService;
 use Modules\Geo\Services\GoogleMapsService;
 use Modules\Geo\Services\HereService;
-use Modules\Geo\Tests\TestCase;
 
 test('GeoService can be instantiated', function () {
     $service = app(GeoService::class);

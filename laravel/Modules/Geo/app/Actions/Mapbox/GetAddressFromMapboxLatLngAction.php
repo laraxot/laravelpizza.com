@@ -7,8 +7,8 @@ namespace Modules\Geo\Actions\Mapbox;
 use GuzzleHttp\Promise\PromiseInterface;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
-use Modules\Geo\Datas\AddressData;
-use Modules\Geo\Datas\MapboxMapData;
+use Modules\Geo\Datas\Geocoding\AddressData;
+use Modules\Geo\Datas\MapPlatforms\MapboxMapData;
 use Modules\Geo\Exceptions\InvalidLocationException;
 
 /**

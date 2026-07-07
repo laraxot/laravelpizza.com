@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 📚 LANG Module - Documentation Index
 
 **Path**: `laravel/Modules/Lang/docs/`  
@@ -30,6 +31,8 @@
 
 **Ultimo Aggiornamento**: 2026-03-24
 =======
+=======
+>>>>>>> origin/dev
 # 📚 **Indice Documentazione Modulo Lang**
 
 **Status**: ✅ PHPStan Level 10 Compliant
@@ -72,5 +75,9 @@
 
 ## Dependency Intelligence
 
+<<<<<<< HEAD
 - [Dependency intelligence](dependency-intelligence.md)
 >>>>>>> 40b96bcd6 (.)
+=======
+- [Dependency intelligence](dependency-intelligence.md)
+>>>>>>> origin/dev

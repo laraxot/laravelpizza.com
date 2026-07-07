@@ -326,7 +326,11 @@ jobs:
 Run this command to see all 169 errors in detail:
 
 ```bash
+<<<<<<< HEAD
 cd ./laravel
+=======
+cd /var/www/_bases/base_laravelpizza/laravel
+>>>>>>> origin/dev
 ./vendor/bin/phpstan analyse Modules --error-format=table > phpstan-full-report.txt
 ```
 

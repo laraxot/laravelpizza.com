@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Funzionalità Avanzate
 
 Questa sezione copre funzionalità avanzate come la generazione di codici a barre, QR code, la creazione di segnalibri (bookmark), indici e altri metodi utili della libreria.
@@ -114,3 +115,12 @@ Imposta il titolo visibile nelle proprietà del file PDF.
 ```php
 $html2pdf->pdf->SetTitle('Il Mio Bel Documento');
 ```
+=======
+---
+module: theme
+topic: advanced
+canonical: ../../../../Themes/docs/shared-components/advanced-Modules.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/advanced-Modules.md
+>>>>>>> origin/dev

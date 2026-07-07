@@ -31,6 +31,12 @@ Prima dell'analisi PHPStan, sono stati risolti conflitti Git nei seguenti moduli
 4. **Modules/Quaeris/app/Filament/Widgets/ContactWidget.php** - Risolto 1 conflitto
 5. **Modules/Quaeris/app/Datas/DashboardFilterData.php** - Risolto 1 conflitto
 6. **Modules/Quaeris/app/Datas/AlertDashboardFilterData.php** - Risolto 1 conflitto
+1. **Modules/<nome progetto>/app/Filament/Pages/AutoPage.php** - Risolti 4 conflitti
+2. **Modules/<nome progetto>/app/Filament/Pages/DashboardV2.php** - Risolti 4 conflitti
+3. **Modules/<nome progetto>/app/Filament/Widgets/BaseTableWidget.php** - Risolto 1 conflitto
+4. **Modules/<nome progetto>/app/Filament/Widgets/ContactWidget.php** - Risolto 1 conflitto
+5. **Modules/<nome progetto>/app/Datas/DashboardFilterData.php** - Risolto 1 conflitto
+6. **Modules/<nome progetto>/app/Datas/AlertDashboardFilterData.php** - Risolto 1 conflitto
 7. **Modules/Xot/app/Actions/Filament/GetModulesNavigationItems.php** - Risolto 1 conflitto
 8. **Modules/Xot/app/Actions/Factory/GetPropertiesFromMethodsByModelAction.php** - Risolto 1 conflitto
 9. **Modules/Xot/tests/Unit/metatagdatatest.php** - Risolto 1 conflitto

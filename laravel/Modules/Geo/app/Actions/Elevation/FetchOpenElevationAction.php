@@ -6,7 +6,7 @@ namespace Modules\Geo\Actions\Elevation;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use Modules\Geo\Datas\ElevationData;
+use Modules\Geo\Datas\Elevation\ElevationData;
 
 use function Safe\json_decode;
 

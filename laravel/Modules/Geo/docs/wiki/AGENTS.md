@@ -138,8 +138,4 @@ Related:
 
 - [Project Wiki Integration](../../docs/wiki/README.md)
 - [Project Wiki Agent Instructions](../../docs/wiki/AGENTS.md)
-<<<<<<< HEAD
 - [Module Documentation](../README.md)
-=======
-- [Module Documentation](../README.md)
->>>>>>> 40b96bcd6 (.)

@@ -23,7 +23,43 @@ php artisan migrate --env=testing
 Esito:
 - `SQLSTATE[HY000] [2002] Unknown error while connecting`
 - connessione `mysql` su `127.0.0.1:3306`
+<<<<<<< HEAD
 - database target `<nome progetto>_data_test` (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)- database target `<nome progetto>_data_test`
+=======
+<<<<<<< .merge_file_sZf36w
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+- database target `<nome progetto>_data_test`
+=======
+- database target `laravelpizza_data_test`
+>>>>>>> a038b0f2 (.)
+=======
+- database target `<nome progetto>_data_test`
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+- database target `laravelpizza_data_test`
+>>>>>>> a038b0f2 (.)
+=======
+- database target `<nome progetto>_data_test`
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+- database target `laravelpizza_data_test`
+>>>>>>> a038b0f2 (.)
+=======
+- database target `<nome progetto>_data_test`
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+- database target `<nome progetto>_data_test` (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)- database target `<nome progetto>_data_test`
+>>>>>>> e3956292 (.)
+=======
+- database target `<nome progetto>_data_test` (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)- database target `<nome progetto>_data_test`
+>>>>>>> .merge_file_Uqe00k
+>>>>>>> origin/dev
 
 Conclusione:
 - blocco infrastrutturale: MySQL testing non raggiungibile nell'ambiente attuale.
@@ -33,7 +69,43 @@ Conclusione:
 Comando:
 
 ```bash
+<<<<<<< HEAD
 DB_CONNECTION=sqlite DB_DATABASE=../../../database/testing.sqlite php artisan migrate --env=testing (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)DB_CONNECTION=sqlite DB_DATABASE=../../../database/testing.sqlite php artisan migrate --env=testing
+=======
+<<<<<<< .merge_file_sZf36w
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+DB_CONNECTION=sqlite DB_DATABASE=/var/www/_bases/base_<nome progetto>/laravel/database/testing.sqlite php artisan migrate --env=testing
+=======
+DB_CONNECTION=sqlite DB_DATABASE=/var/www/_bases/base_laravelpizza/laravel/database/testing.sqlite php artisan migrate --env=testing
+>>>>>>> a038b0f2 (.)
+=======
+DB_CONNECTION=sqlite DB_DATABASE=/var/www/_bases/base_<nome progetto>/laravel/database/testing.sqlite php artisan migrate --env=testing
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+DB_CONNECTION=sqlite DB_DATABASE=/var/www/_bases/base_laravelpizza/laravel/database/testing.sqlite php artisan migrate --env=testing
+>>>>>>> a038b0f2 (.)
+=======
+DB_CONNECTION=sqlite DB_DATABASE=/var/www/_bases/base_<nome progetto>/laravel/database/testing.sqlite php artisan migrate --env=testing
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+DB_CONNECTION=sqlite DB_DATABASE=/var/www/_bases/base_laravelpizza/laravel/database/testing.sqlite php artisan migrate --env=testing
+>>>>>>> a038b0f2 (.)
+=======
+DB_CONNECTION=sqlite DB_DATABASE=/var/www/_bases/base_<nome progetto>/laravel/database/testing.sqlite php artisan migrate --env=testing
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+DB_CONNECTION=sqlite DB_DATABASE=../../../database/testing.sqlite php artisan migrate --env=testing (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)DB_CONNECTION=sqlite DB_DATABASE=../../../database/testing.sqlite php artisan migrate --env=testing
+>>>>>>> e3956292 (.)
+=======
+DB_CONNECTION=sqlite DB_DATABASE=../../../database/testing.sqlite php artisan migrate --env=testing (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)DB_CONNECTION=sqlite DB_DATABASE=../../../database/testing.sqlite php artisan migrate --env=testing
+>>>>>>> .merge_file_Uqe00k
+>>>>>>> origin/dev
 ```
 
 Esito:
@@ -65,7 +137,43 @@ Conclusione:
 
 ## Riferimenti Tecnici
 
+<<<<<<< HEAD
 - `config/local/<nome progetto>/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`) (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)- `config/local/<nome progetto>/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`)
+=======
+<<<<<<< .merge_file_sZf36w
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+- `config/local/<nome progetto>/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`)
+=======
+- `config/local/laravelpizza/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`)
+>>>>>>> a038b0f2 (.)
+=======
+- `config/local/<nome progetto>/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`)
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+- `config/local/laravelpizza/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`)
+>>>>>>> a038b0f2 (.)
+=======
+- `config/local/<nome progetto>/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`)
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+- `config/local/laravelpizza/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`)
+>>>>>>> a038b0f2 (.)
+=======
+- `config/local/<nome progetto>/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`)
+>>>>>>> 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)
+=======
+- `config/local/<nome progetto>/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`) (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)- `config/local/<nome progetto>/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`)
+>>>>>>> e3956292 (.)
+=======
+- `config/local/<nome progetto>/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`) (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)- `config/local/<nome progetto>/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`)
+>>>>>>> .merge_file_Uqe00k
+>>>>>>> origin/dev
 - `Modules/Xot/app/Database/Migrations/XotBaseMigration.php` (`timestamps()` aggiunge anche `user_id`, `updated_by`, `created_by`)
 - `Modules/Meetup/database/migrations/2025_01_01_000008_create_event_user_table.php` (definisce già `user_id` prima di `timestamps()`)
 

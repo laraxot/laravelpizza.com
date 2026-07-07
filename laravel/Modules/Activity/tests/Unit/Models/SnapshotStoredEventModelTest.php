@@ -7,39 +7,38 @@ namespace Modules\Activity\Tests\Unit\Models;
 use Modules\Activity\Models\Snapshot;
 use Modules\Activity\Models\StoredEvent;
 use Modules\Activity\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
-test('snapshot getConnectionName resolves default connection in testing', function (): void {
+test('snapshot getConnectionName resolves activity connection', function (): void {
     $snapshot = new Snapshot;
-    $default = config('database.default');
 
-    expect($snapshot->getConnectionName())->toBe(is_string($default) ? $default : 'mysql');
+    Assert::assertSame('activity', $snapshot->getConnectionName());
 });
 
 test('snapshot has expected table and fillable fields', function (): void {
     $snapshot = new Snapshot;
 
-    expect($snapshot->getTable())->toBe('snapshots')
-        ->and($snapshot->getFillable())->toContain('aggregate_uuid')
-        ->and($snapshot->getFillable())->toContain('state');
+    Assert::assertSame('snapshots', $snapshot->getTable());
+    $fillable = $snapshot->getFillable();
+    Assert::assertContains('aggregate_uuid', $fillable);
+    Assert::assertContains('state', $fillable);
 });
 
-test('stored event constructor aligns connection in testing', function (): void {
+test('stored event constructor aligns activity connection', function (): void {
     $storedEvent = new StoredEvent;
-    $default = config('database.default');
 
-    expect($storedEvent->getConnectionName())->toBe(is_string($default) ? $default : 'mysql');
+    Assert::assertSame('activity', $storedEvent->getConnectionName());
 });
 
 test('stored event has expected casts and metadata behavior', function (): void {
     $storedEvent = new StoredEvent;
     $casts = $storedEvent->getCasts();
 
-    expect($storedEvent->getTable())->toBe('stored_events')
-        ->and($casts)->toHaveKey('event_properties')
-        ->and($casts['event_properties'])->toBe('array')
-        ->and($casts)->toHaveKey('meta_data')
-        ->and($casts['meta_data'])->toBe(SchemalessAttributes::class);
+    Assert::assertArrayHasKey('event_properties', $casts);
+    Assert::assertSame('array', $casts['event_properties']);
+    Assert::assertArrayHasKey('meta_data', $casts);
+    Assert::assertSame(SchemalessAttributes::class, $casts['meta_data']);
 });

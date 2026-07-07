@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Modern Tech Stack Optimization Guide
 ## Filament 4 + Laravel 12 + PHP 8.3 Best Practices
 
@@ -960,6 +961,8 @@ class PerformanceMonitoringMiddleware
 
 Questa guida fornisce una roadmap completa per modernizzare il tech stack e sfruttare al massimo le capacità delle versioni più recenti dei framework utilizzati.
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: modern-tech-stack-optimization-1
@@ -967,4 +970,7 @@ canonical: ../../../Themes/docs/shared-components/MODERN_TECH_STACK_OPTIMIZATION
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/MODERN_TECH_STACK_OPTIMIZATION.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

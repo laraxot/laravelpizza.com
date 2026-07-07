@@ -209,7 +209,11 @@ $rows = $query->get();
 - [Guida Ufficiale Filament 4.x](https://filamentphp.com/docs/4.x/upgrade-guide)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 *Ultimo aggiornamento: 2025-01-27*
 =======
 *Ultimo aggiornamento: 2025-01-27*
 >>>>>>> 40b96bcd6 (.)
+=======
+*Ultimo aggiornamento: 2025-01-27*
+>>>>>>> origin/dev

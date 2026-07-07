@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # PHPStan Livello 10 (MAX) - Report Qualità Codice
 
 ## Data Analisi
@@ -218,6 +219,8 @@ vendor/bin/phpstan analyse --level=8 --error-format=github
 - [PHP Type System](https://www.php.net/manual/en/language.types.php)
 - [Generics in PHP](https://phpstan.org/blog/generics-in-php-using-phpdocs)
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: phpstan-level
@@ -225,4 +228,7 @@ canonical: ../../../Themes/docs/shared-components/phpstan-level-10.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level-10.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

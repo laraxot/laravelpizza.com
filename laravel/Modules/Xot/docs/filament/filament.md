@@ -5,8 +5,12 @@
 ### Estensione delle Classi Base
 - **SEMPRE** estendere `XotBaseResource` invece di `Resource` direttamente
 - **SEMPRE** estendere `XotBaseServiceProvider` invece di `ServiceProvider` direttamente
+<<<<<<< HEAD
 - **SEMPRE** estendere una base Xot per i widget: `XotBaseWidget` per widget generici, `XotBaseWizardWidget` per wizard multi-step
 - **SEMPRE** estendere `XotBaseCreateRecord` invece di `Filament\Resources\Pages\CreateRecord` per le pagine create delle resource (pipeline hook/transazioni/eventi: vedi [create-record-page.md](./pages/create-record-page.md))
+=======
+- **SEMPRE** estendere `XotBaseWidget` per i widget
+>>>>>>> origin/dev
 - **MAI** estendere direttamente le classi Filament
 
 ### 🚨 REGOLA CRITICA: NO METODO TABLE()

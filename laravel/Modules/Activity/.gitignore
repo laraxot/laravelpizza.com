@@ -105,6 +105,8 @@ Thumbs.db
 *.old2
 *.backup
 *.backup.*
+*.backup-*
+*.backup_*
 *.bak
 *.bakcup
 *.new
@@ -121,10 +123,13 @@ Thumbs.db
 # ==============================================
 docs/phpstan/
 docs/cache/
+docs/legacy/
+docs/legacy/**
 
 # ==============================================
 # LANGUAGE FILES
 # ==============================================
+lang/lang/
 resources/lang/
 
 # ==============================================
@@ -166,3 +171,21 @@ _docs/
 tests/coverage/
 tests/coverage.xml/
 activity_coverage.xml
+
+# -----------------------------------------------------------------------------
+# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
+# -----------------------------------------------------------------------------
+*~HEAD
+*~BASE
+*~LOCAL
+*~REMOTE
+*.orig
+*.rej
+*~head
+tests/coverage/
+tests/coverage.xml/
+activity_coverage.xml
+*~head
+agentdb.rvf
+build/
+docs/legacy

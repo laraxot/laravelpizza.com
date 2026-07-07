@@ -26,7 +26,11 @@ This document summarizes the quality improvements made to the PTVX system on Nov
 ### PHP Insights Results
 The system achieved:
 - **Code Quality**: 52.6/100
+<<<<<<< HEAD
 - **Complexity**: 93.1/100
+=======
+- **Complexity**: 93.1/100  
+>>>>>>> origin/dev
 - **Architecture**: 35.3/100
 - **Style**: 60.2/100
 
@@ -77,4 +81,8 @@ The system achieved:
 
 - Update module-specific documentation to reflect the changes made
 - Document the PHPStan compliance process and best practices
+<<<<<<< HEAD
 - Create guidelines for preventing similar issues in the future
+=======
+- Create guidelines for preventing similar issues in the future
+>>>>>>> origin/dev

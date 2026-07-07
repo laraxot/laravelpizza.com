@@ -65,3 +65,14 @@ echo "Note: Some issues may require manual intervention."
 echo "Check the output above for any error messages."
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+>>>>>>> origin/dev

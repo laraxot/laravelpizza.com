@@ -325,8 +325,12 @@ I pattern di type safety implementati possono essere applicati a:
 *Correzioni completate: 6 Gennaio 2025*  
 *Metodologia: Type safety + Riusabilità*  
 <<<<<<< HEAD
+<<<<<<< HEAD
 *Risultato: 0 errori PHPStan Level 9*
 
 =======
 *Risultato: 0 errori PHPStan Level 9*
 >>>>>>> 40b96bcd6 (.)
+=======
+*Risultato: 0 errori PHPStan Level 9*
+>>>>>>> origin/dev

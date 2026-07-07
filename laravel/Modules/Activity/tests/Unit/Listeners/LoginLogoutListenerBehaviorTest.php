@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Unit\Listeners;
-
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Support\Str;
 use Modules\Activity\Listeners\LoginListener;
@@ -11,8 +10,9 @@ use Modules\Activity\Listeners\LogoutListener;
 use Modules\Activity\Models\Activity;
 use Modules\Activity\Tests\TestCase;
 use Modules\User\Models\User;
+use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
 test('login listener handle executes without side effects', function (): void {
     $listener = new LoginListener;
@@ -21,18 +21,21 @@ test('login listener handle executes without side effects', function (): void {
     $listener->handle();
     $after = Activity::query()->count();
 
-    expect($after)->toBe($before);
+    Assert::assertSame($before, $after);
 });
 
 test('logout listener returns early when event has no user', function (): void {
     $listener = new LogoutListener;
-    $event = new Logout('web', null);
+    $user = new User;
+    $event = new Logout('web', $user);
+    $userProperty = new \ReflectionClass(Logout::class)->getProperty('user');
+    $userProperty->setValue($event, null);
 
     $before = Activity::query()->count();
     $listener->handle($event);
     $after = Activity::query()->count();
 
-    expect($after)->toBe($before);
+    Assert::assertSame($before, $after);
 });
 
 test('logout listener creates auth activity with expected properties', function (): void {
@@ -54,11 +57,14 @@ test('logout listener creates auth activity with expected properties', function 
 
     $activity = Activity::query()->latest('id')->first();
 
-    expect($activity)->not->toBeNull()
-        ->and($activity?->event)->toBe('logout')
-        ->and($activity?->log_name)->toBe('auth')
-        ->and($activity?->causer_id)->toBe($user->getKey())
-        ->and($activity?->properties['guard'] ?? null)->toBe('web')
-        ->and($activity?->properties['logout_reason'] ?? null)->toBe('timeout')
-        ->and($activity?->properties)->toHaveKey('session_duration');
+    Assert::assertNotNull($activity);
+    Assert::assertSame('logout', $activity->event);
+    Assert::assertSame('auth', $activity->log_name);
+    Assert::assertSame($user->getKey(), $activity->causer_id);
+    $properties = $activity->properties;
+    Assert::assertNotNull($properties);
+    $propertiesArray = is_array($properties) ? $properties : $properties->all();
+    Assert::assertSame('web', $propertiesArray['guard'] ?? null);
+    Assert::assertSame('timeout', $propertiesArray['logout_reason'] ?? null);
+    Assert::assertArrayHasKey('session_duration', $propertiesArray);
 });

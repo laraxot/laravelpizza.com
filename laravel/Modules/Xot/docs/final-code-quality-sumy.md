@@ -64,7 +64,15 @@ if (property_exists($stateObject, 'name')) {
 - **Xot**: Base engine with 50+ base classes, 20+ service providers, 15+ traits
 - **User**: Authentication with advanced features
 - **Cms**: Content management system
+<<<<<<< HEAD
 - **healthcare_app**: Main application module
+=======
+<<<<<<< .merge_file_Zj4FMs
+- **healthcare_app**: Main application module
+=======
+- **ModuloEsempio**: Main application module
+>>>>>>> .merge_file_W0uvJV
+>>>>>>> origin/dev
 - **UI**: Shared UI components
 - **Activity**: Activity tracking and logging
 - **Tenant**: Multi-tenancy support

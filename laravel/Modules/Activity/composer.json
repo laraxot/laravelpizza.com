@@ -38,12 +38,16 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Modules\\Activity\\Tests\\": "tests/"
+            "Modules\\Activity\\Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
         }
     },
     "require": {
         "spatie/laravel-activitylog": "*",
-        "spatie/laravel-event-sourcing": "*"
+        "spatie/laravel-event-sourcing": "*",
+        "php": "^8.3"
     },
     "require-dev": {},
     "repositories_comment": [

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Skills Index"
 type: index
@@ -43,3 +44,22 @@ Le Skills progettuali vivono qui, nel wiki del Module **Notify**, e vengono cari
 3. Aggiorna questo indice se la Skills e' ricorrente
 4. Committa: `docs: add skills <nome>`
 
+=======
+# Notify Module - skills Index
+
+## Purpose
+Index for Notify module skills.
+
+## On-Demand Loading
+
+```bash
+qmd search "Notify skills" --limit 5
+```
+
+## See Also
+- [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+- [Root Wiki](../../../docs/wiki/)
+
+---
+*Updated: 2026-05-11*
+>>>>>>> origin/dev

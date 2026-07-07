@@ -2,11 +2,7 @@
 type: concept
 module: User
 confidence: high
-<<<<<<< HEAD
-updated: 2026-04-20
-=======
 updated: 2026-06-18
->>>>>>> 40b96bcd6 (.)
 sources:
   - ../../../app/Models/SocialiteUser.php
   - ../../../app/Models/SocialProvider.php
@@ -32,25 +28,16 @@ Questa scelta evita coupling dello schema `users` con singoli vendor OAuth e man
 
 ## flusso tecnico attuale
 
-<<<<<<< HEAD
-1. il pulsante social punta a `socialite.oauth.redirect`
-=======
 1. il pulsante social punta alla route di redirect appropriata (FO o BO)
->>>>>>> 40b96bcd6 (.)
 2. `RedirectToProviderController` valida provider + scopes e invia redirect OAuth
 3. callback su `socialite.oauth.callback`
 4. `ProcessCallbackController` recupera oauth user, collega o registra `SocialiteUser`, applica ruoli default e fa login
 
 Route:
 
-<<<<<<< HEAD
-- `/admin/login/{provider}` (`socialite.oauth.redirect`)
-- `/sso/{provider}/callback` (`socialite.oauth.callback`)
-=======
 - `/admin/login/{provider}` (`socialite.oauth.redirect`) — BO operatori
 - `/auth/social/{provider}` (`socialite.oauth.fo.redirect`) — FO cittadini *(aggiunto STORY-478, 2026-06-18)*
 - `/sso/{provider}/callback` (`socialite.oauth.callback`) — callback condivisa FO e BO
->>>>>>> 40b96bcd6 (.)
 
 ## confini dei modelli
 

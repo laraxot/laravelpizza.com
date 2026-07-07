@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Comprehensive Improvement Recommendations
 ## DRY + KISS + SOLID + Robust + Filament 4 + Laravel 12 + PHP 8.3
 
@@ -699,11 +700,17 @@ class ContactNotificationService
 
 Questa comprehensive analysis fornisce una roadmap dettagliata per trasformare il codebase in un sistema robusto, maintainable e performante seguendo tutti i principi richiesti.
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: comprehensive-improvement-recommendations-1
 canonical: ../../../Themes/docs/shared-components/comprehensive-improvement-recommendations-1-1.md
 ---
 
+<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/comprehensive-improvement-recommendations-1-1.md
 >>>>>>> 40b96bcd6 (.)
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/comprehensive-improvement-recommendations-1-1.md
+>>>>>>> origin/dev

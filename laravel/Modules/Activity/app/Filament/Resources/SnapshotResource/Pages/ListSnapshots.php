@@ -23,7 +23,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
  */
 class ListSnapshots extends XotBaseListRecords
 {
-    public static string $resource = SnapshotResource::class;
+    protected static string $resource = SnapshotResource::class;
 
     /**
      * Get the list table columns.

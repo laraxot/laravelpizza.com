@@ -45,10 +45,13 @@ protected int|string|array $columnSpan = 'full';  // Larghezza del widget
 
 > **IMPORTANTE**: Utilizzare sempre il namespace completo per i traits, incluso il namespace `\Filament\` iniziale
 
+<<<<<<< HEAD
 ## Azioni form
 
 `protected function getFormActions(): array` ha default `[]` e serve alle viste che iterano `$this->getFormActions()`. I widget che lo sovrascrivono possono usare `#[\Override]` (richiede questo metodo sulla base).
 
+=======
+>>>>>>> origin/dev
 ## Form Schema
 
 Ogni widget deve implementare il proprio schema di form:

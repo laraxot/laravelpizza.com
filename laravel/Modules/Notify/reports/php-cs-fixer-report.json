@@ -1,0 +1,10 @@
+PHP CS Fixer 3.88.2 Folding Bike by Fabien Potencier, Dariusz Ruminski and contributors.
+PHP runtime: 8.3.25
+
+In ConfigurationResolver.php line 587:
+                                                
+  Cannot read config file ".php-cs-fixer.php".  
+                                                
+
+fix [--path-mode PATH-MODE] [--allow-risky ALLOW-RISKY] [--config CONFIG] [--dry-run] [--rules RULES] [--using-cache USING-CACHE] [--allow-unsupported-php-version ALLOW-UNSUPPORTED-PHP-VERSION] [--cache-file CACHE-FILE] [--diff] [--format FORMAT] [--stop-on-violation] [--show-progress SHOW-PROGRESS] [--sequential] [--] [<path>...]
+

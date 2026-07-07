@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Correzione Classi Base Aggiuntive - Modulo Xot
 
 **Data:** 15 Ottobre 2025
@@ -132,6 +133,8 @@ XotBaseModel (Xot) - Base standard
 
 **Conclusione:** Anche le classi base specializzate ora seguono l'architettura Laraxot standard.
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: base-classes-additional-fix-2
@@ -139,4 +142,7 @@ canonical: ../../../Themes/docs/shared-components/base-classes-additional-fix-.m
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/base-classes-additional-fix-.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

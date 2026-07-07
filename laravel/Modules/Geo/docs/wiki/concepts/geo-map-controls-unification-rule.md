@@ -10,10 +10,7 @@ related:
   - coordinate-picker-purpose.md
   - map-picker-family-architecture.md
   - geo-component-family-philosophy.md
-<<<<<<< HEAD
-=======
   - map-js-module-naming-rule.md
->>>>>>> 40b96bcd6 (.)
 sources:
   - story 8-79
 ---
@@ -31,14 +28,6 @@ Non è accettabile che `geo-map-lit` (elenco segnalazioni) e `coordinate-picker-
 ```
 Modules/Geo/resources/js/components/
 ├── coordinate-picker-lit.js      ← picker input (form admin + wizard)
-<<<<<<< HEAD
-│   └── import map-picker-controls.js
-├── geo-map-lit.js                ← viewer read-only (pagina pubblica elenco)
-│   └── deve usare STESSO sistema controlli
-└── map-picker-controls.js        ← SOURCE OF TRUTH per logica controlli
-```
-
-=======
 │   └── import map/controls.js
 ├── geo-map-lit.js                ← viewer read-only (pagina pubblica elenco)
 │   └── deve usare STESSO sistema controlli
@@ -52,7 +41,6 @@ Modules/Geo/resources/js/components/
 - **Gruppi** (es. zoom + e −): composizione solo dentro il modulo (`renderZoomGroup` in `zoom-in-out.js`), così in toolbar si importa una voce sola per feature.
 - **Aggiungere un bottone**: implementare `renderButton` nel modulo dedicato → import in `render-controls.js` → append a `OVERLAY_PARTS`.
 
->>>>>>> 40b96bcd6 (.)
 ## Design token dei controlli (canonical)
 
 Definiti in `map-picker-lit-styles.js`:
@@ -127,7 +115,4 @@ Vedere `@/var/www/_bases/base_fixcity_fila5/.planning/stories/8-79-geo-map-contr
 - [coordinate-picker-purpose](./coordinate-picker-purpose.md)
 - [map-picker-family-architecture](./map-picker-family-architecture.md)
 - [geo-component-family-philosophy](./geo-component-family-philosophy.md)
-<<<<<<< HEAD
-=======
 - [map-js-module-naming-rule](./map-js-module-naming-rule.md)
->>>>>>> 40b96bcd6 (.)

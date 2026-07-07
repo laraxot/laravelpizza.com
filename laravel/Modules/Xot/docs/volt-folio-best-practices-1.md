@@ -265,7 +265,11 @@ Seguendo queste best practices per l'utilizzo di Volt e Folio, garantirai che il
 - [Documentazione Folio](https://laravel.com/docs/10.x/folio)
 - [Documentazione Livewire](https://livewire.laravel.com/docs)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione Filament](https://filamentphp.com/docs)
 =======
 - [Documentazione Filament](https://filamentphp.com/docs)
 >>>>>>> 40b96bcd6 (.)
+=======
+- [Documentazione Filament](https://filamentphp.com/docs)
+>>>>>>> origin/dev

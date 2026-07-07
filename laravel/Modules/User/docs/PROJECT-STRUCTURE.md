@@ -10,8 +10,6 @@ tags: [structure, architecture, module]
 
 ## Directory Structure
 
-<<<<<<< HEAD
-=======
 ### ❌ Forbidden Root Folders
 
 At module root level, these folders MUST NOT exist:
@@ -21,7 +19,6 @@ At module root level, these folders MUST NOT exist:
 - ❌ `Listeners/` (move to `app/Listeners/`)
 - ❌ `Database/` (rename to lowercase `database/`)
 
->>>>>>> 40b96bcd6 (.)
 \`\`\`
 ./laravel/Modules/User/docs/
 ├── wiki/                          # Knowledge base locale (LLM Wiki)

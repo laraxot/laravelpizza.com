@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Refactor: Use Filament\Resources\Pages\Concerns\HasWizard in XotBaseWizardWidget
 
 ## Motivation
@@ -46,6 +47,8 @@ By adopting the official `HasWizard` trait, we align with Filament's recommended
 - Verify missing "next" button appears and "vai al contenuto principale" link works correctly
 - Conduct visual parity check between the two wizard instances
 =======
+=======
+>>>>>>> origin/dev
 ---
 title: "Stub storico — alias wizard Xot (non HasWizard su widget)"
 type: concept
@@ -62,4 +65,7 @@ Il nome file richiama ricerche vecchie su “**HasWizard** su **XotBaseWizardWid
 **[filament-wizard-refactoring.md](./filament-wizard-refactoring.md)**
 
 Aggiorna solo quel file come SSoT del wizard widget. Questo nome resta per permalink storici e link esterni.
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Filament 5.x Nested Resources Guide
 
 ## Overview
@@ -290,6 +291,8 @@ $this->assertDatabaseHas('posts', $data->toArray());
 4. **Sanitize user input** before storage
 5. **Implement proper error handling** without information leakage
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: filament-5-nested-resources
@@ -297,4 +300,7 @@ canonical: ../../../../Themes/docs/shared-components/filament-5-nested-resources
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/filament-5-nested-resources.txt
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

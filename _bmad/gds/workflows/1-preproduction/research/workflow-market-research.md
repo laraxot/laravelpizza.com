@@ -15,7 +15,7 @@ description: 'Conduct game market research on competition and players. Use when 
 
 ## CONFIGURATION
 
-Load config from `{project-root}/_bmad/gds/config.yaml` and resolve:
+Load config from `{module_config}` and resolve:
 - `project_name`, `output_folder`, `planning_artifacts`, `user_name`
 - `communication_language`, `document_output_language`, `game_dev_experience`
 - `date` as a system-generated value

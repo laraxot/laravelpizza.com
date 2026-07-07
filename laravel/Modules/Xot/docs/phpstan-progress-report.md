@@ -11,7 +11,11 @@
 ## Completed Fixes
 
 ### Phase 1a: trans_string() Helper (Completed)
+<<<<<<< HEAD
 - Created `trans_string()` helper in `Modules/Xot/Helpers/Helper.php`
+=======
+- Created `trans_string()` helper in `Modules/Xot/helpers/Helper.php`
+>>>>>>> origin/dev
 - Comprehensive documentation in `Modules/Xot/docs/helpers/trans_string.md`
 - **Impact**: Foundation for fixing 374 translation type errors
 

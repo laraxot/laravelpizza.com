@@ -18,6 +18,30 @@ return [
     ],
     /*
      * |--------------------------------------------------------------------------
+     * | Geocoding Driver
+     * |--------------------------------------------------------------------------
+     * |
+     * | Chiave del provider di geocoding preferito, usata da
+     * | GetAddressDataFromFullAddressAction per anteporlo alla catena di
+     * | fallback (google_maps, photon, nominatim, bing_maps, here, mapbox,
+     * | opencage — stesso elenco e stesso ordine dell'array hardcoded
+     * | preesistente). Il default "google_maps" non altera il comportamento
+     * | a runtime; cambiare GEO_DRIVER nell'env permette di preferire un
+     * | altro provider (es. "nominatim", l'unico senza bisogno di API key)
+     * | senza toccare il codice.
+     * |
+     * | La mappa chiave→classe resta letterale dentro
+     * | GetAddressDataFromFullAddressAction (non qui) perché Larastan
+     * | tipizza `app($class)->execute()` solo se `$class` è un
+     * | `class-string<T>` risolto come literal nello stesso scope del
+     * | try/catch che lo consuma: passarlo per config() lo degrada a
+     * | `mixed`. Se la lista provider cambia, va aggiornata in entrambi i
+     * | posti (qui per documentare i driver disponibili, nell'Action per il dispatch).
+     * |
+     */
+    'driver' => Illuminate\Support\Env::get('GEO_DRIVER', 'google_maps'),
+    /*
+     * |--------------------------------------------------------------------------
      * | Rate Limiting
      * |--------------------------------------------------------------------------
      * |

@@ -8,11 +8,7 @@ type: concept
 
 ## Overview
 
-<<<<<<< HEAD
-`geo-map-lit.js` is a Lit Web Component that renders a Leaflet map with marker clustering (using `leaflet.markercluster`) for the segnalazioni-elenco page. It follows the farmshops.eu pattern.
-=======
 `geo-map-lit.js` is a Lit Web Component that renders a Leaflet map with marker clustering (using `leaflet.markercluster`) for the ticket-list page. It follows the farmshops.eu pattern.
->>>>>>> 40b96bcd6 (.)
 
 ## Changes (2026-04-29)
 
@@ -26,11 +22,7 @@ type: concept
 - `<geo-map-lit>` always renders the shared address search UI via `renderSearch(this)`.
 - Do not pass `show-search` to `<geo-map-lit>` in Blade, docs, stories, or tests.
 - The `show-search` API belongs only to picker components that still explicitly support optional search.
-<<<<<<< HEAD
-- If the search box causes layout issues, fix the shared CSS in `map-picker-styles.js`; do not hide search with a component attribute.
-=======
 - If the search box causes layout issues, fix the shared CSS in `map/styles.js`; do not hide search with a component attribute.
->>>>>>> 40b96bcd6 (.)
 
 ## Architecture
 
@@ -59,14 +51,6 @@ npm run build
 npm run copy
 ```
 
-<<<<<<< HEAD
-## References
-
-- `laravel/Modules/Geo/resources/js/components/geo-map-lit.js`
-- `laravel/Modules/Geo/resources/js/components/map-picker-controls.js`
-- `laravel/Modules/Geo/resources/js/components/map-picker-marker-config.js`
-- farmshops.eu pattern: `laravel/Modules/Geo/resources/js/direktvermarkter.js`
-=======
 ## Golden Rule (2026-05-08)
 
 **MapPicker Golden Rule — Auto-Geolocation**: If `latitude == null || longitude == null`, the map MUST auto-geolocate via browser GPS.
@@ -98,4 +82,3 @@ export function requestGeolocation(ctx, options = {}) {
 - `laravel/Modules/Geo/resources/js/components/map-picker-marker-config.js`
 - farmshops.eu pattern: `laravel/Modules/Geo/resources/js/direktvermarkter.js`
 - Golden Rule source: `memory/project_map_golden_rule.md`
->>>>>>> 40b96bcd6 (.)

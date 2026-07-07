@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Traits;
 
+/** @phpstan-ignore trait.unused */
 trait HasSnapshots
 {
     // This trait can be extended to implement snapshot-specific functionality

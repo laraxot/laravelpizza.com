@@ -52,8 +52,19 @@ Themes/[ThemeName]/
 │   │   ├── components/
 │   │   ├── layouts/
 │   │   └── pages/
+<<<<<<< HEAD
 ├── _healthcare_app_fila5_mono.code-workspace
 ├── _app_fila5_mono.code-workspace
+=======
+<<<<<<< .merge_file_F5Y95F
+├── _healthcare_app_fila5_mono.code-workspace
+=======
+<<<<<<< HEAD
+├── _app_fila5_mono.code-workspace
+=======
+├── _ptvx_fila5_mono.code-workspace
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
+>>>>>>> origin/dev
 >>>>>>> .merge_file_SeKRJk
 ├── package.json
 ├── postcss.config.js

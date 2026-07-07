@@ -65,60 +65,6 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
-        'title' => [
-            'label' => 'title',
-            'placeholder' => 'title',
-            'helper_text' => 'title',
-            'description' => 'title',
-        ],
-        'description' => [
-            'label' => 'description',
-            'placeholder' => 'description',
-            'helper_text' => 'description',
-            'description' => 'description',
-        ],
-        'start_date' => [
-            'label' => 'start_date',
-            'placeholder' => 'start_date',
-            'helper_text' => 'start_date',
-            'description' => 'start_date',
-        ],
-        'end_date' => [
-            'label' => 'end_date',
-            'placeholder' => 'end_date',
-            'helper_text' => 'end_date',
-            'description' => 'end_date',
-        ],
-        'location' => [
-            'label' => 'location',
-            'placeholder' => 'location',
-            'helper_text' => 'location',
-            'description' => 'location',
-        ],
-        'status' => [
-            'label' => 'status',
-            'placeholder' => 'status',
-            'helper_text' => 'status',
-            'description' => 'status',
-        ],
-        'attendees_count' => [
-            'label' => 'attendees_count',
-            'placeholder' => 'attendees_count',
-            'helper_text' => 'attendees_count',
-            'description' => 'attendees_count',
-        ],
-        'max_attendees' => [
-            'label' => 'max_attendees',
-            'placeholder' => 'max_attendees',
-            'helper_text' => 'max_attendees',
-            'description' => 'max_attendees',
-        ],
-        'cover_image' => [
-            'label' => 'cover_image',
-            'placeholder' => 'cover_image',
-            'helper_text' => 'cover_image',
-            'description' => 'cover_image',
-        ],
     ],
     'label' => 'Evento',
     'plural_label' => 'Eventi',
@@ -167,11 +113,5 @@ return [
     ],
     'location' => [
         'label' => 'Luogo',
-    ],
-    'sections' => [
-        'Event Details' => [
-            'label' => 'Event Details',
-            'heading' => 'Event Details',
-        ],
     ],
 ];

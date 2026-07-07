@@ -7,7 +7,7 @@ return array (
   array (
     'empty' => 
     array (
-      'label' => 'empty',
+      'label' => 'empty1',
       'heading' => '',
     ),
   ),

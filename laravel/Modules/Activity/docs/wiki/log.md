@@ -1,7 +1,5 @@
 ---
 title: "Activity Log"
-<<<<<<< HEAD
-=======
 type: log
 module: Activity
 tags: [activity, phpstan, pest, qmd]
@@ -108,7 +106,6 @@ discussions:
 
 ---
 title: "Activity Log"
->>>>>>> 40b96bcd6 (.)
 module: "Activity"
 ---
 
@@ -118,25 +115,14 @@ module: "Activity"
 
 ## Log Entries
 
-<<<<<<< HEAD
-_No activity yet. Start by ingesting raw documents._
-
-### Format
-
-```
-=======
 ### Format
 
 ```text
->>>>>>> 40b96bcd6 (.)
 [YYYY-MM-DD HH:MM:SS UTC] [OPERATION] Description
 ```
 
 **Operations:**
-<<<<<<< HEAD
-=======
 
->>>>>>> 40b96bcd6 (.)
 - `INGEST` — Added raw document to wiki
 - `QUERY` — Answered question from wiki
 - `LINT` — Maintained wiki quality
@@ -144,10 +130,6 @@ _No activity yet. Start by ingesting raw documents._
 
 ---
 
-<<<<<<< HEAD
-**Last Activity:** None  
-**Total Operations:** 0
-=======
 [2026-05-12 08:19:00 UTC] [UPDATE] Aggiornati `index.md`, `rules/INDEX.md` e `skills/INDEX.md` per esporre davvero pattern XotBase, sorgenti core e skill condivise caricabili on-demand.
 
 **Last Activity:** 2026-05-12 08:19:00 UTC  
@@ -156,4 +138,3 @@ _No activity yet. Start by ingesting raw documents._
 - 2026-06-10: activity_log consolidato in 2026_06_10_140000_create_activity_table.php; duplicate in _bak/
 
 - 2026-06-10: activity_log — consolidate add/fix/update in 141000_create_activity_table; anti-pattern in _bak/
->>>>>>> 40b96bcd6 (.)

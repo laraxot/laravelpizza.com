@@ -9,20 +9,12 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Modules\Activity\Models\StoredEvent;
 use Modules\Activity\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
 
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
-beforeEach(function () {
-    // Skip if database not available
-    try {
-        \DB::connection()->getPdo();
-    } catch (\Exception $e) {
-        $this->markTestSkipped('Database not available: '.$e->getMessage());
-    }
-});
-
-it('can create stored event with basic information', function (): void {
+test('can create stored event with basic information', function (): void {
     $eventData = [
         'aggregate_uuid' => Str::uuid()->toString(),
         'aggregate_version' => 1,
@@ -41,8 +33,9 @@ it('can create stored event with basic information', function (): void {
     ];
 
     $storedEvent = StoredEvent::create($eventData);
+    Assert::assertInstanceOf(StoredEvent::class, $storedEvent);
 
-    $exists = DB::connection()
+    $exists = DB::connection('activity')
         ->table('stored_events')
         ->where('id', $storedEvent->id)
         ->where('aggregate_uuid', $eventData['aggregate_uuid'])
@@ -50,15 +43,14 @@ it('can create stored event with basic information', function (): void {
         ->where('event_version', 1)
         ->where('event_class', 'App\\Events\\UserCreated')
         ->exists();
-    $this->assertTrue($exists);
+    Assert::assertTrue($exists);
 
-    $this->assertSame($eventData['aggregate_uuid'], $storedEvent->aggregate_uuid);
-    $this->assertSame(1, $storedEvent->aggregate_version);
-    $this->assertSame(1, $storedEvent->event_version);
-    $this->assertSame('App\\Events\\UserCreated', $storedEvent->event_class);
+    Assert::assertSame(1, $storedEvent->aggregate_version);
+    Assert::assertSame(1, $storedEvent->event_version);
+    Assert::assertSame('App\\Events\\UserCreated', $storedEvent->event_class);
 });
 
-it('can create stored event with complex properties', function (): void {
+test('can create stored event with complex properties', function (): void {
     $complexProperties = [
         'order_data' => [
             'order_id' => 'ORD-12345',
@@ -121,51 +113,51 @@ it('can create stored event with complex properties', function (): void {
         ],
         'created_at' => now(),
     ]);
+    Assert::assertInstanceOf(StoredEvent::class, $storedEvent);
 
-    $exists = DB::connection()
+    $exists = DB::connection('activity')
         ->table('stored_events')
         ->where('id', $storedEvent->id)
         ->where('event_class', 'App\\Events\\OrderPlaced')
         ->where('aggregate_version', 5)
         ->where('event_version', 2)
         ->exists();
-    $this->assertTrue($exists);
+    Assert::assertTrue($exists);
 
-    $this->assertSame(5, $storedEvent->aggregate_version);
-    $this->assertSame(2, $storedEvent->event_version);
-    $this->assertSame('App\\Events\\OrderPlaced', $storedEvent->event_class);
+    Assert::assertSame(5, $storedEvent->aggregate_version);
+    Assert::assertSame(2, $storedEvent->event_version);
+    Assert::assertSame('App\\Events\\OrderPlaced', $storedEvent->event_class);
 
     /** @var array<string, mixed> $properties */
     $properties = $storedEvent->event_properties;
-    $this->assertIsArray($properties);
+    Assert::assertIsArray($properties);
 
     /** @var array<string, mixed> $orderData */
     $orderData = $properties['order_data'];
-    $this->assertIsArray($orderData);
+    Assert::assertIsArray($orderData);
     /** @var array<string, mixed> $customer */
     $customer = $orderData['customer'];
-    $this->assertIsArray($customer);
+    Assert::assertIsArray($customer);
     /** @var array<string, mixed> $totals */
     $totals = $orderData['totals'];
-    $this->assertIsArray($totals);
+    Assert::assertIsArray($totals);
     /** @var array<string, mixed> $metadata */
     $metadata = $properties['metadata'];
-    $this->assertIsArray($metadata);
+    Assert::assertIsArray($metadata);
     /** @var array<string, mixed> $deviceInfo */
     $deviceInfo = $metadata['device_info'];
-    $this->assertIsArray($deviceInfo);
+    Assert::assertIsArray($deviceInfo);
 
-    $this->assertSame('ORD-12345', $orderData['order_id']);
-    $this->assertSame('Jane Smith', $customer['name']);
-    $this->assertSame(80.22, $totals['total']);
-    $this->assertSame('mobile_app', $metadata['source']);
-    $this->assertSame('iOS', $deviceInfo['platform']);
+    Assert::assertSame('ORD-12345', $orderData['order_id']);
+    Assert::assertSame('Jane Smith', $customer['name']);
+    Assert::assertSame(80.22, $totals['total']);
+    Assert::assertSame('mobile_app', $metadata['source']);
+    Assert::assertSame('iOS', $deviceInfo['platform']);
 });
 
-it('can manage event versioning', function (): void {
+test('can manage event versioning', function (): void {
     $aggregateUuid = Str::uuid()->toString();
 
-    // Crea eventi con versioni progressive
     $event1 = StoredEvent::create([
         'aggregate_uuid' => $aggregateUuid,
         'aggregate_version' => 1,
@@ -175,6 +167,7 @@ it('can manage event versioning', function (): void {
         'meta_data' => [],
         'created_at' => now(),
     ]);
+    Assert::assertInstanceOf(StoredEvent::class, $event1);
 
     $event2 = StoredEvent::create([
         'aggregate_uuid' => $aggregateUuid,
@@ -185,6 +178,7 @@ it('can manage event versioning', function (): void {
         'meta_data' => [],
         'created_at' => now(),
     ]);
+    Assert::assertInstanceOf(StoredEvent::class, $event2);
 
     $event3 = StoredEvent::create([
         'aggregate_uuid' => $aggregateUuid,
@@ -195,29 +189,29 @@ it('can manage event versioning', function (): void {
         'meta_data' => [],
         'created_at' => now(),
     ]);
+    Assert::assertInstanceOf(StoredEvent::class, $event3);
 
-    $this->assertTrue(DB::connection()->table('stored_events')->where('id', $event1->id)->exists());
-    $this->assertTrue(DB::connection()->table('stored_events')->where('id', $event2->id)->exists());
-    $this->assertTrue(DB::connection()->table('stored_events')->where('id', $event3->id)->exists());
-    // Verifica che tutti gli eventi abbiano lo stesso UUID ma versioni diverse
-    $this->assertSame($aggregateUuid, $event1->aggregate_uuid);
-    $this->assertSame($aggregateUuid, $event2->aggregate_uuid);
-    $this->assertSame($aggregateUuid, $event3->aggregate_uuid);
+    Assert::assertTrue(DB::connection('activity')->table('stored_events')->where('id', $event1->id)->exists());
+    Assert::assertTrue(DB::connection('activity')->table('stored_events')->where('id', $event2->id)->exists());
+    Assert::assertTrue(DB::connection('activity')->table('stored_events')->where('id', $event3->id)->exists());
 
-    $this->assertSame(1, $event1->aggregate_version);
-    $this->assertSame(2, $event2->aggregate_version);
-    $this->assertSame(3, $event3->aggregate_version);
+    Assert::assertSame($aggregateUuid, $event1->aggregate_uuid);
+    Assert::assertSame($aggregateUuid, $event2->aggregate_uuid);
+    Assert::assertSame($aggregateUuid, $event3->aggregate_uuid);
 
-    $this->assertSame(1, $event1->event_version);
-    $this->assertSame(2, $event2->event_version);
-    $this->assertSame(3, $event3->event_version);
+    Assert::assertSame(1, $event1->aggregate_version);
+    Assert::assertSame(2, $event2->aggregate_version);
+    Assert::assertSame(3, $event3->aggregate_version);
+
+    Assert::assertSame(1, $event1->event_version);
+    Assert::assertSame(2, $event2->event_version);
+    Assert::assertSame(3, $event3->event_version);
 });
 
-it('can query events by aggregate uuid', function (): void {
+test('can query events by aggregate uuid', function (): void {
     $uuid1 = Str::uuid()->toString();
     $uuid2 = Str::uuid()->toString();
 
-    // Crea eventi per il primo aggregate
     StoredEvent::create([
         'aggregate_uuid' => $uuid1,
         'aggregate_version' => 1,
@@ -238,7 +232,6 @@ it('can query events by aggregate uuid', function (): void {
         'created_at' => now(),
     ]);
 
-    // Crea evento per il secondo aggregate
     StoredEvent::create([
         'aggregate_uuid' => $uuid2,
         'aggregate_version' => 1,
@@ -249,24 +242,23 @@ it('can query events by aggregate uuid', function (): void {
         'created_at' => now(),
     ]);
 
-    // Query per UUID specifico
     $events1 = StoredEvent::where('aggregate_uuid', $uuid1)->get();
     $events2 = StoredEvent::where('aggregate_uuid', $uuid2)->get();
 
-    $this->assertCount(2, $events1);
-    $this->assertCount(1, $events2);
+    Assert::assertCount(2, $events1);
+    Assert::assertCount(1, $events2);
 
     $first1 = $events1->first();
     $first2 = $events2->first();
-    $this->assertNotNull($first1);
-    $this->assertNotNull($first2);
-    \assert($first1 instanceof StoredEvent);
-    \assert($first2 instanceof StoredEvent);
-    $this->assertSame($uuid1, $first1->aggregate_uuid);
-    $this->assertSame($uuid2, $first2->aggregate_uuid);
+    Assert::assertNotNull($first1);
+    Assert::assertNotNull($first2);
+    Assert::assertInstanceOf(StoredEvent::class, $first1);
+    Assert::assertInstanceOf(StoredEvent::class, $first2);
+    Assert::assertSame($uuid1, $first1->aggregate_uuid);
+    Assert::assertSame($uuid2, $first2->aggregate_uuid);
 });
 
-it('can query events by event class', function (): void {
+test('can query events by event class', function (): void {
     $uuid = Str::uuid()->toString();
 
     StoredEvent::create([
@@ -299,30 +291,29 @@ it('can query events by event class', function (): void {
         'created_at' => now(),
     ]);
 
-    // Query per classe evento specifica
     $userCreatedEvents = StoredEvent::where('event_class', 'App\Events\UserCreated')->get();
     $userUpdatedEvents = StoredEvent::where('event_class', 'App\Events\UserUpdated')->get();
     $userDeletedEvents = StoredEvent::where('event_class', 'App\Events\UserDeleted')->get();
 
-    $this->assertCount(1, $userCreatedEvents);
-    $this->assertCount(1, $userUpdatedEvents);
-    $this->assertCount(1, $userDeletedEvents);
+    Assert::assertCount(1, $userCreatedEvents);
+    Assert::assertCount(1, $userUpdatedEvents);
+    Assert::assertCount(1, $userDeletedEvents);
 
     $firstCreated = $userCreatedEvents->first();
     $firstUpdated = $userUpdatedEvents->first();
     $firstDeleted = $userDeletedEvents->first();
-    $this->assertNotNull($firstCreated);
-    $this->assertNotNull($firstUpdated);
-    $this->assertNotNull($firstDeleted);
-    \assert($firstCreated instanceof StoredEvent);
-    \assert($firstUpdated instanceof StoredEvent);
-    \assert($firstDeleted instanceof StoredEvent);
-    $this->assertSame('App\\Events\\UserCreated', $firstCreated->event_class);
-    $this->assertSame('App\\Events\\UserUpdated', $firstUpdated->event_class);
-    $this->assertSame('App\\Events\\UserDeleted', $firstDeleted->event_class);
+    Assert::assertNotNull($firstCreated);
+    Assert::assertNotNull($firstUpdated);
+    Assert::assertNotNull($firstDeleted);
+    Assert::assertInstanceOf(StoredEvent::class, $firstCreated);
+    Assert::assertInstanceOf(StoredEvent::class, $firstUpdated);
+    Assert::assertInstanceOf(StoredEvent::class, $firstDeleted);
+    Assert::assertSame('App\\Events\\UserCreated', $firstCreated->event_class);
+    Assert::assertSame('App\\Events\\UserUpdated', $firstUpdated->event_class);
+    Assert::assertSame('App\\Events\\UserDeleted', $firstDeleted->event_class);
 });
 
-it('can handle event with empty properties', function (): void {
+test('can handle event with empty properties', function (): void {
     $storedEvent = StoredEvent::create([
         'aggregate_uuid' => Str::uuid()->toString(),
         'aggregate_version' => 1,
@@ -332,18 +323,22 @@ it('can handle event with empty properties', function (): void {
         'meta_data' => [],
         'created_at' => now(),
     ]);
+    Assert::assertInstanceOf(StoredEvent::class, $storedEvent);
 
-    $exists = DB::connection()
+    $exists = DB::connection('activity')
         ->table('stored_events')
         ->where('id', $storedEvent->id)
         ->where('event_class', 'App\\Events\\EmptyEvent')
         ->exists();
-    $this->assertTrue($exists);
-    $this->assertIsArray($storedEvent->event_properties);
-    $this->assertEmpty($storedEvent->event_properties);
+    Assert::assertTrue($exists);
+
+    /** @var array<string, mixed> $props */
+    $props = $storedEvent->event_properties;
+    Assert::assertIsArray($props);
+    Assert::assertEmpty($props);
 });
 
-it('can handle event with null properties', function (): void {
+test('can handle event with null properties', function (): void {
     $storedEvent = StoredEvent::create([
         'aggregate_uuid' => Str::uuid()->toString(),
         'aggregate_version' => 1,
@@ -353,21 +348,24 @@ it('can handle event with null properties', function (): void {
         'meta_data' => [],
         'created_at' => now(),
     ]);
+    Assert::assertInstanceOf(StoredEvent::class, $storedEvent);
 
-    $exists = DB::connection()
+    $exists = DB::connection('activity')
         ->table('stored_events')
         ->where('id', $storedEvent->id)
         ->where('event_class', 'App\\Events\\NullEvent')
         ->exists();
-    $this->assertTrue($exists);
+    Assert::assertTrue($exists);
 
-    $this->assertIsArray($storedEvent->event_properties);
-    $this->assertEmpty($storedEvent->event_properties);
-    $this->assertInstanceOf(SchemalessAttributes::class, $storedEvent->meta_data);
-    $this->assertSame([], $storedEvent->meta_data->toArray());
+    /** @var array<string, mixed> $props */
+    $props = $storedEvent->event_properties;
+    Assert::assertIsArray($props);
+    Assert::assertEmpty($props);
+    Assert::assertInstanceOf(SchemalessAttributes::class, $storedEvent->meta_data);
+    Assert::assertSame([], $storedEvent->meta_data->toArray());
 });
 
-it('can restore event from stored event', function (): void {
+test('can restore event from stored event', function (): void {
     $originalProperties = [
         'user_id' => 789,
         'action' => 'profile_update',
@@ -391,14 +389,14 @@ it('can restore event from stored event', function (): void {
         ],
         'created_at' => now(),
     ]);
+    Assert::assertInstanceOf(StoredEvent::class, $storedEvent);
 
-    // Simula il ripristino dell'evento
     $restoredProperties = $storedEvent->event_properties;
-    $this->assertIsArray($restoredProperties);
-    $this->assertSame($originalProperties, $restoredProperties);
+    Assert::assertIsArray($restoredProperties);
+    Assert::assertSame($originalProperties, $restoredProperties);
 });
 
-it('can compare event versions', function (): void {
+test('can compare event versions', function (): void {
     $uuid = Str::uuid()->toString();
 
     $event1 = StoredEvent::create([
@@ -410,6 +408,7 @@ it('can compare event versions', function (): void {
         'meta_data' => [],
         'created_at' => now(),
     ]);
+    Assert::assertInstanceOf(StoredEvent::class, $event1);
 
     $event2 = StoredEvent::create([
         'aggregate_uuid' => $uuid,
@@ -420,6 +419,7 @@ it('can compare event versions', function (): void {
         'meta_data' => [],
         'created_at' => now(),
     ]);
+    Assert::assertInstanceOf(StoredEvent::class, $event2);
 
     $event3 = StoredEvent::create([
         'aggregate_uuid' => $uuid,
@@ -430,24 +430,31 @@ it('can compare event versions', function (): void {
         'meta_data' => [],
         'created_at' => now(),
     ]);
+    Assert::assertInstanceOf(StoredEvent::class, $event3);
 
-    // Verifica che le versioni siano progressive
-    $this->assertLessThan($event2->aggregate_version, $event1->aggregate_version);
-    $this->assertLessThan($event3->aggregate_version, $event2->aggregate_version);
+    Assert::assertLessThan($event2->aggregate_version, $event1->aggregate_version);
+    Assert::assertLessThan($event3->aggregate_version, $event2->aggregate_version);
 
-    $this->assertLessThan($event2->event_version, $event1->event_version);
-    $this->assertLessThan($event3->event_version, $event2->event_version);
+    Assert::assertLessThan($event2->event_version, $event1->event_version);
+    Assert::assertLessThan($event3->event_version, $event2->event_version);
 
-    $this->assertSame(1, $event1->event_properties['version']);
-    $this->assertSame(2, $event2->event_properties['version']);
-    $this->assertSame(3, $event3->event_properties['version']);
+    /** @var array<string, mixed> $e1Props */
+    $e1Props = $event1->event_properties;
+    /** @var array<string, mixed> $e2Props */
+    $e2Props = $event2->event_properties;
+    /** @var array<string, mixed> $e3Props */
+    $e3Props = $event3->event_properties;
 
-    $this->assertSame('Initial data', $event1->event_properties['data']);
-    $this->assertSame('Updated data', $event2->event_properties['data']);
-    $this->assertSame('Final data', $event3->event_properties['data']);
+    Assert::assertSame(1, $e1Props['version']);
+    Assert::assertSame(2, $e2Props['version']);
+    Assert::assertSame(3, $e3Props['version']);
+
+    Assert::assertSame('Initial data', $e1Props['data']);
+    Assert::assertSame('Updated data', $e2Props['data']);
+    Assert::assertSame('Final data', $e3Props['data']);
 });
 
-it('can handle event with timestamps', function (): void {
+test('can handle event with timestamps', function (): void {
     $now = now();
 
     $storedEvent = StoredEvent::create([
@@ -459,24 +466,25 @@ it('can handle event with timestamps', function (): void {
         'meta_data' => [],
         'created_at' => $now,
     ]);
+    Assert::assertInstanceOf(StoredEvent::class, $storedEvent);
 
-    $exists = DB::connection()
+    $exists = DB::connection('activity')
         ->table('stored_events')
         ->where('id', $storedEvent->id)
         ->where('created_at', $now->toDateTimeString())
         ->exists();
-    $this->assertTrue($exists);
+    Assert::assertTrue($exists);
 
     $createdAt = Carbon::parse((string) $storedEvent->created_at);
-    $this->assertSame($now->timestamp, $createdAt->timestamp);
+    Assert::assertSame($now->timestamp, $createdAt->timestamp);
 });
 
-it('can query events by date range', function (): void {
+test('can query events by date range', function (): void {
     $yesterday = now()->subDay();
     $today = now();
     $tomorrow = now()->addDay();
 
-    StoredEvent::create([
+    $yesterdayEvent = StoredEvent::create([
         'aggregate_uuid' => Str::uuid()->toString(),
         'aggregate_version' => 1,
         'event_version' => 1,
@@ -486,7 +494,7 @@ it('can query events by date range', function (): void {
         'created_at' => $yesterday,
     ]);
 
-    StoredEvent::create([
+    $todayEvent = StoredEvent::create([
         'aggregate_uuid' => Str::uuid()->toString(),
         'aggregate_version' => 1,
         'event_version' => 1,
@@ -496,7 +504,7 @@ it('can query events by date range', function (): void {
         'created_at' => $today,
     ]);
 
-    StoredEvent::create([
+    $tomorrowEvent = StoredEvent::create([
         'aggregate_uuid' => Str::uuid()->toString(),
         'aggregate_version' => 1,
         'event_version' => 1,
@@ -506,20 +514,22 @@ it('can query events by date range', function (): void {
         'created_at' => $tomorrow,
     ]);
 
-    $todayEvents = StoredEvent::whereDate('created_at', today())->get();
-    $this->assertCount(1, $todayEvents);
+    $eventIds = [$yesterdayEvent->id, $todayEvent->id, $tomorrowEvent->id];
+    $todayEvents = StoredEvent::whereKey($eventIds)->whereDate('created_at', today())->get();
+    Assert::assertCount(1, $todayEvents);
     $todayFirst = $todayEvents->first();
-    $this->assertNotNull($todayFirst);
-    \assert($todayFirst instanceof StoredEvent);
+    Assert::assertNotNull($todayFirst);
+    Assert::assertInstanceOf(StoredEvent::class, $todayFirst);
     /** @var array<string, mixed> $todayProps */
     $todayProps = $todayFirst->event_properties;
-    $this->assertSame('today', $todayProps['date']);
+    Assert::assertIsArray($todayProps);
+    Assert::assertSame('today', $todayProps['date']);
 
-    $recentEvents = StoredEvent::whereBetween('created_at', [$yesterday, $today->endOfDay()])->get();
-    $this->assertCount(2, $recentEvents);
+    $recentEvents = StoredEvent::whereKey($eventIds)->whereBetween('created_at', [$yesterday, $today->endOfDay()])->get();
+    Assert::assertCount(2, $recentEvents);
 });
 
-it('can handle event with metadata', function (): void {
+test('can handle event with metadata', function (): void {
     $metadata = [
         'source' => 'web_interface',
         'user_id' => 1010,
@@ -552,27 +562,30 @@ it('can handle event with metadata', function (): void {
         'meta_data' => $metadata,
         'created_at' => now(),
     ]);
+    Assert::assertInstanceOf(StoredEvent::class, $storedEvent);
 
-    $exists = DB::connection()
+    $exists = DB::connection('activity')
         ->table('stored_events')
         ->where('id', $storedEvent->id)
         ->where('event_class', 'App\\Events\\BulkImportCompleted')
         ->exists();
-    $this->assertTrue($exists);
+    Assert::assertTrue($exists);
 
+    /** @var array<string, mixed> $properties */
     $properties = $storedEvent->event_properties;
-    $this->assertSame('IMP-98765', $properties['import_id']);
-    $this->assertSame('completed', $properties['status']);
-    $this->assertSame(1500, $properties['total_records']);
-    $this->assertSame(1485, $properties['successful_records']);
-    $this->assertSame(15, $properties['failed_records']);
+    Assert::assertSame('IMP-98765', $properties['import_id']);
+    Assert::assertSame('completed', $properties['status']);
+    Assert::assertSame(1500, $properties['total_records']);
+    Assert::assertSame(1485, $properties['successful_records']);
+    Assert::assertSame(15, $properties['failed_records']);
 
     $metaAttributes = $storedEvent->meta_data;
     /** @var array<string, mixed> $meta */
     $meta = method_exists($metaAttributes, 'toArray') ? $metaAttributes->toArray() : [];
-    $this->assertSame('web_interface', $meta['source']);
-    $this->assertSame(1010, $meta['user_id']);
-    $this->assertSame('bulk_import', $meta['action']);
-    $this->assertSame(2.5, $meta['processing_time']);
-    $this->assertSame(1500, $meta['records_processed']);
+    Assert::assertIsArray($meta);
+    Assert::assertSame('web_interface', $meta['source']);
+    Assert::assertSame(1010, $meta['user_id']);
+    Assert::assertSame('bulk_import', $meta['action']);
+    Assert::assertSame(2.5, $meta['processing_time']);
+    Assert::assertSame(1500, $meta['records_processed']);
 });

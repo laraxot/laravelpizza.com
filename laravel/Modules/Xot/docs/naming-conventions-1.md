@@ -55,7 +55,11 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 - [Guida all'implementazione di PHPStan](./phpstan-implementation-guide.md)
 - [Best practice per i provider di servizi](./service-provider-best-practices.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Best practice per Filament](./filament-best-practices.md)
 =======
 - [Best practice per Filament](./filament-best-practices.md)
 >>>>>>> 40b96bcd6 (.)
+=======
+- [Best practice per Filament](./filament-best-practices.md)
+>>>>>>> origin/dev

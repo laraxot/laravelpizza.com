@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Activity\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
@@ -26,6 +27,7 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
  * @property string|null $causer_type
  * @property string|null $causer_id
  * @property array<string, mixed>|Collection<array-key, mixed>|null $properties
+ * @property Collection<int, mixed>|null $attribute_changes
  * @property string|null $batch_uuid
  * @property string|null $event
  * @property Carbon|null $created_at
@@ -35,7 +37,7 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
  * @property string|null $deleted_at
  * @property string|null $deleted_by
  * @property-read Model|null $causer
- * @property-read Collection $changes
+ * @property-read Collection<int, mixed> $changes
  * @property-read Model|null $subject
  *
  * @method static ActivityFactory factory($count = null, $state = [])
@@ -64,27 +66,27 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
  * @method static Builder<static>|Activity whereUpdatedAt($value)
  * @method static Builder<static>|Activity whereUpdatedBy($value)
  * @method static Builder<static>|Activity where($column, $operator = null, $value = null, $boolean = 'and')
- * @method static Activity create(array $attributes = [])
+ * @method static Activity create(array<string, mixed> $attributes = [])
  * @method static Builder<static>|Activity clone()
  * @method static Builder<static>|Activity selectRaw(string $expression)
  * @method static Builder<static>|Activity whereDate(string $column, string $operator, mixed $value = null)
- * @method static Builder<static>|Activity whereBetween(string $column, array $values)
+ * @method static Builder<static>|Activity whereBetween(string $column, array<int, mixed> $values)
  * @method static Builder<static>|Activity whereMonth(string $column, string $operator, mixed $value = null)
  * @method static Builder<static>|Activity whereYear(string $column, string $operator, mixed $value = null)
  * @method static Builder<static>|Activity latest(string $column = 'created_at')
  * @method static Builder<static>|Activity limit(int $value)
- * @method static Builder<static>|Activity with(array|string $relations)
+ * @method static Builder<static>|Activity with(array<int, string>|string $relations)
  * @method static int sum(string $column)
- * @method static Collection<int, static>|Builder<static>|Activity get(array|string $columns = ['*'])
- * @method static static|null first(array|string $columns = ['*'])
- * @method static static find(mixed $id, array|string $columns = ['*'])
+ * @method static Collection<int, static>|Builder<static>|Activity get(array<int, string>|string $columns = ['*'])
+ * @method static static|null first(array<int, string>|string $columns = ['*'])
+ * @method static static find(mixed $id, array<int, string>|string $columns = ['*'])
  * @method static static|null firstWhere(string $column, mixed $operator = null, mixed $value = null)
  * @method static Builder<static>|Activity orderBy(string $column, string $direction = 'asc')
- * @method static Builder<static>|Activity groupBy(array|string $groups)
+ * @method static Builder<static>|Activity groupBy(array<int, string>|string $groups)
  * @method static Builder<static>|Activity having(string $column, string $operator, mixed $value)
  * @method static Builder<static>|Activity orWhere(string $column, mixed $operator = null, mixed $value = null)
- * @method static Builder<static>|Activity whereIn(string $column, array $values)
- * @method static Builder<static>|Activity whereNotIn(string $column, array $values)
+ * @method static Builder<static>|Activity whereIn(string $column, array<int, mixed> $values)
+ * @method static Builder<static>|Activity whereNotIn(string $column, array<int, mixed> $values)
  * @method static Builder<static>|Activity whereNull(string $column)
  * @method static Builder<static>|Activity whereNotNull(string $column)
  * @method static int count(string $columns = '*')
@@ -106,9 +108,10 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
  */
 class Activity extends SpatieActivity
 {
+    /** @phpstan-use HasXotFactory<Factory<static>> */
     use HasXotFactory;
 
-    /** @laravel/Modules/UI/docs/bugfix-awstest-undefined-variable.md string */
+    /** @var string */
     protected $connection = 'activity';
 
     protected $table = 'activity_log';
@@ -124,20 +127,9 @@ class Activity extends SpatieActivity
         'causer_type',
         'causer_id',
         'properties',
+        'attribute_changes',
         'batch_uuid',
     ];
-
-    /**
-     * @param  array<string, mixed>  $attributes
-     */
-    public function __construct(array $attributes = [])
-    {
-        parent::__construct($attributes);
-        if (app()->environment('testing')) {
-            $default = config('database.default');
-            $this->connection = is_string($default) ? $default : 'mysql';
-        }
-    }
 
     /**
      * Get the attributes that should be cast.
@@ -148,7 +140,30 @@ class Activity extends SpatieActivity
     {
         return [
             'properties' => SchemalessAttributes::class,
+            'attribute_changes' => 'collection',
         ];
+    }
+
+    /**
+     * Scope activities by batch UUID.
+     *
+     * @param Builder<static> $query
+     * @return Builder<static>
+     */
+    public function scopeForBatch(Builder $query, string $batchUuid): Builder
+    {
+        return $query->where('batch_uuid', $batchUuid);
+    }
+
+    /**
+     * Scope activities that belong to any batch.
+     *
+     * @param Builder<static> $query
+     * @return Builder<static>
+     */
+    public function scopeHasBatch(Builder $query): Builder
+    {
+        return $query->whereNotNull('batch_uuid');
     }
 
     // NOTE

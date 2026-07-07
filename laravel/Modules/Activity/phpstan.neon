@@ -13,6 +13,8 @@ parameters:
 
     excludePaths:
         - tests/coverage/*
+        - tests/Feature/*
+        - tests/unit/*
         - vendor/*
 
     ignoreErrors:

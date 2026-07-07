@@ -4,3 +4,8 @@ CNAME
 # PHPStan documentation
 docs/phpstan/
 _docs/
+maps
+data
+fonts
+webfonts
+agentdb.rvf

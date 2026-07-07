@@ -61,6 +61,7 @@
 
 ## Collegamenti
 
+- [Torna a README](./README.md)
 - [Torna a README](./readme.md)
 - [Vai a Struttura](./structure.md)
 - [Vai a Bottlenecks](./bottlenecks.md)
@@ -203,3 +204,17 @@
 * [roadmap.md](laravel/modules/patient/docs/roadmap.md)
 * [roadmap.md](laravel/modules/cms/docs/roadmap.md)
 * [roadmap.md](laravel/themes/one/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Gdpr/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Notify/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Xot/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Dental/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/User/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/UI/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Lang/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Job/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Media/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Tenant/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Activity/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Patient/docs/roadmap.md)
+* [roadmap.md](laravel/Modules/Cms/docs/roadmap.md)
+* [roadmap.md](laravel/Themes/One/docs/roadmap.md)

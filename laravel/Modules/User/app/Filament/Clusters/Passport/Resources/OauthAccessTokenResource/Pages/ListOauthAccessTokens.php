@@ -4,14 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Clusters\Passport\Resources\OauthAccessTokenResource\Pages;
 
-<<<<<<< HEAD
-use Modules\User\Filament\Clusters\Passport\Resources\OauthAccessTokenResource;
-use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-
-class ListOauthAccessTokens extends XotBaseListRecords
-{
-    protected static string $resource = OauthAccessTokenResource::class;
-=======
 use Filament\Actions\Action;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthAccessTokenResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
@@ -34,5 +26,4 @@ class ListOauthAccessTokens extends XotBaseListRecords
             // 'create' => CreateAction::make(),
         ];
     }
->>>>>>> 40b96bcd6 (.)
 }

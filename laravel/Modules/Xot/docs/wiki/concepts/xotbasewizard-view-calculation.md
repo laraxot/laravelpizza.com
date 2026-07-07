@@ -55,10 +55,14 @@ class MyWizardWidget extends XotBaseWizardWidget
     // NO $view property - inherited from parent
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getWizardSteps(): array
 =======
     public function getSteps(): array
 >>>>>>> 40b96bcd6 (.)
+=======
+    public function getSteps(): array
+>>>>>>> origin/dev
     {
         return [
             Step::make('step1', Step1Form::class),

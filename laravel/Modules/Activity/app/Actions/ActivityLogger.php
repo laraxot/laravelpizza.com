@@ -145,10 +145,14 @@ class ActivityLogger
         }
 
         $userKey = $user->getKey();
-        $userKeyAsInt = (int) $userKey;
+        $userKeyValues = [$userKey];
+        if (is_string($userKey)) {
+            $userKeyValues[] = $userKey;
+        }
 
-        return Activity::with('subject')
-            ->whereIn('causer_id', [$userKey, (string) $userKey, $userKeyAsInt])
+        return Activity::query()
+            ->with('subject')
+            ->whereIn('causer_id', $userKeyValues)
             ->where('causer_type', $user::class)
             ->latest()
             ->limit($limit)
@@ -162,7 +166,8 @@ class ActivityLogger
      */
     public function getModelActivities(Model $model, int $limit = 50): Collection
     {
-        return Activity::with('causer')
+        return Activity::query()
+            ->with('causer')
             ->where('subject_type', $model::class)
             ->where('subject_id', $model->getKey())
             ->latest()
@@ -184,7 +189,8 @@ class ActivityLogger
             throw new InvalidArgumentException('Limit must be positive');
         }
 
-        return Activity::with(['causer', 'subject'])
+        return Activity::query()
+            ->with(['causer', 'subject'])
             ->where('event', $type)
             ->latest()
             ->limit($limit)
@@ -202,7 +208,8 @@ class ActivityLogger
             throw new InvalidArgumentException('Limit must be positive');
         }
 
-        return Activity::with(['causer', 'subject'])
+        return Activity::query()
+            ->with(['causer', 'subject'])
             ->latest()
             ->limit($limit)
             ->get();

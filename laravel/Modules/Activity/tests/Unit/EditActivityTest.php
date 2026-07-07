@@ -7,29 +7,16 @@ namespace Modules\Activity\Tests\Unit;
 use Modules\Activity\Filament\Resources\ActivityResource;
 use Modules\Activity\Filament\Resources\ActivityResource\Pages\EditActivity;
 use Modules\Activity\Tests\TestCase;
-use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
-use PHPUnit\Framework\Attributes\Test;
+use PHPUnit\Framework\Assert;
 
-class EditActivityTest extends TestCase
-{
-    #[Test]
-    public function edit_activity_extends_xot_base_edit_record(): void
-    {
-        $this->assertTrue(
-            is_subclass_of(
-                EditActivity::class,
-                XotBaseEditRecord::class
-            )
-        );
-    }
+uses(\Modules\Activity\Tests\TestCase::class);
 
-    #[Test]
-    public function edit_activity_has_correct_resource(): void
-    {
-        $page = new EditActivity;
-        $this->assertEquals(
+describe('Edit Activity', function (): void {
+    test('edit activity has correct resource', function (): void {
+$page = new EditActivity;
+        Assert::assertEquals(
             ActivityResource::class,
             $page::getResource()
         );
-    }
-}
+    });
+});

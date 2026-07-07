@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Lezioni Apprese - Risoluzione Massiva Merge Conflicts ([DATE])
+=======
+# Lezioni Apprese - Risoluzione Massiva Merge Conflicts (2025-11-04)
+>>>>>>> origin/dev
 
 ## 🎯 Missione Completata
 
@@ -56,8 +60,13 @@ Letto e analizzato:
 
 ### 3. **LITIGIO CON SE STESSI** (Dibattito Dialettico)
 
+<<<<<<< HEAD
 **IO IMPULSIVO:** "Cancelliamo tutto e riscriviamo!"
 **IO RIFLESSIVO:** "No! Capiamo PERCHÉ esistono le duplicazioni!"
+=======
+**IO IMPULSIVO:** "Cancelliamo tutto e riscriviamo!"  
+**IO RIFLESSIVO:** "No! Capiamo PERCHÉ esistono le duplicazioni!"  
+>>>>>>> origin/dev
 **IO SAGGIO:** "Sono merge conflicts. Git merge non completato. Manteniamo la versione più recente."
 
 ### 4. **RAGIONAMENTO SISTEMATICO**
@@ -113,9 +122,15 @@ ps -p $PID  # ✅ Running!
 ### 9. **MIGLIORAMENTO**
 
 Creati 3 nuovi documenti:
+<<<<<<< HEAD
 1. `merge-conflict-resolution-[DATE].md` - Report tecnico dettagliato
 2. `file-locking-pattern.md` - Nuova regola fondamentale
 3. `lessons-learned-[DATE]-merge-conflicts.md` - Questo documento
+=======
+1. `merge-conflict-resolution-2025-11-04.md` - Report tecnico dettagliato
+2. `file-locking-pattern.md` - Nuova regola fondamentale
+3. `lessons-learned-2025-11-04-merge-conflicts.md` - Questo documento
+>>>>>>> origin/dev
 
 ### 10. **AGGIORNAMENTO E STUDIO**
 
@@ -133,7 +148,11 @@ Documentazione aggiornata:
 ```
 
 **Filosofia:**
+<<<<<<< HEAD
 > "Un file alla volta, un maestro alla volta.
+=======
+> "Un file alla volta, un maestro alla volta.  
+>>>>>>> origin/dev
 > Il lock è la chiave, la chiave è il rispetto."
 
 ## 📋 Checklist Pre-Modifica File
@@ -183,6 +202,11 @@ public null|string $var = null;
 ### Pattern 5: Git Markers Non Risolti
 ```php
 // ❌ Conflict markers left in code
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> commit-hash
+>>>>>>> origin/dev
 ```
 
 ## 🚀 Risultati
@@ -237,7 +261,11 @@ public null|string $var = null;
 
 ## 💾 Documentazione Creata
 
+<<<<<<< HEAD
 1. **merge-conflict-resolution-[DATE].md**
+=======
+1. **merge-conflict-resolution-2025-11-04.md**
+>>>>>>> origin/dev
    - Report tecnico completo
    - Pattern identificati
    - Script utilizzati
@@ -254,7 +282,11 @@ public null|string $var = null;
    - Regole PSR-4
    - File locking integration
 
+<<<<<<< HEAD
 4. **lessons-learned-[DATE]-merge-conflicts.md** (questo file)
+=======
+4. **lessons-learned-2025-11-04-merge-conflicts.md** (questo file)
+>>>>>>> origin/dev
    - Processo completo 10-step
    - Filosofia + Implementation
    - Checklist operativa
@@ -313,7 +345,11 @@ Al processo sistematico di **comprensione → studio → dibattito → implement
 
 ## 📚 References
 
+<<<<<<< HEAD
 - [Merge Conflict Resolution Report](./merge-conflict-resolution-[date].md)
+=======
+- [Merge Conflict Resolution Report](./merge-conflict-resolution-2025-11-04.md)
+>>>>>>> origin/dev
 - [File Locking Pattern](./file-locking-pattern.md)
 - [Service Providers](./service-providers.md)
 - [Laraxot Architecture Rules](./laraxot-architecture-rules.md)
@@ -322,6 +358,7 @@ Al processo sistematico di **comprensione → studio → dibattito → implement
 
 ---
 
+<<<<<<< HEAD
 **Data:** [DATE]
 **Autore:** AI Claude + Metodologia Filosofica 10-Step
 **Status:** ✅ COMPLETATO CON SUCCESSO
@@ -653,3 +690,9 @@ Al processo sistematico di **comprensione → studio → dibattito → implement
 **Data:** [DATE]
 **Autore:** AI Claude + Metodologia Filosofica 10-Step
 **Status:** ✅ COMPLETATO CON SUCCESSO
+=======
+**Data:** 2025-11-04  
+**Autore:** AI Claude + Metodologia Filosofica 10-Step  
+**Status:** ✅ COMPLETATO CON SUCCESSO
+
+>>>>>>> origin/dev

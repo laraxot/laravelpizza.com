@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Sessione PHPStan - 2026-01-05
 
 ## Panoramica
@@ -187,6 +188,8 @@ Questa correzione è l'**unico errore** rilevato da PHPStan livello 10 su 1028 f
 **Versione Modulo**: Xot (Laraxot Framework Base)
 **PHPStan**: v2.1+ (Level 10)
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: phpstan-session-1
@@ -194,4 +197,7 @@ canonical: ../../../Themes/docs/shared-components/phpstan-session-.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-session-.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

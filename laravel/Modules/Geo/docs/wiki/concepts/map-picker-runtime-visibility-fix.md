@@ -57,11 +57,7 @@ Replace the current timeout-based approach with a robust `ResizeObserver` combin
    ```
 
 5. **CSS Requirements**
-<<<<<<< HEAD
-   - Add to `map-picker-styles.js`:
-=======
    - Add to `map/styles.js`:
->>>>>>> 40b96bcd6 (.)
      ```css
      .map-container {
          min-height: 300px;

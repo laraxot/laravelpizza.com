@@ -85,7 +85,11 @@ class Foo extends bar
 ### Versione Incoming
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 =======
 ---
 >>>>>>> 40b96bcd6 (.)
+=======
+---
+>>>>>>> origin/dev

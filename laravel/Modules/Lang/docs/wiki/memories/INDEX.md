@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Memories Index"
 type: index
@@ -45,6 +46,8 @@ Le Memories progettuali vivono qui, nel wiki del Module **Lang**, e vengono cari
 4. Committa: `docs: add memories <nome>`
 
 =======
+=======
+>>>>>>> origin/dev
 # Lang Module - memories Index
 
 ## Purpose
@@ -62,4 +65,7 @@ qmd search "Lang memories" --limit 5
 
 ---
 *Updated: 2026-05-11*
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

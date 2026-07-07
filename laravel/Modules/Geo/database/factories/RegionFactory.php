@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Geo\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Database\Eloquent\Model;
 use Modules\Geo\Models\Region;
 
 /**
@@ -70,7 +69,7 @@ class RegionFactory extends Factory
          * @param  array<string, mixed>  $attributes
          * @return array<string, mixed>
          */
-        return $this->state(function (array $attributes, ?Model $model = null) {
+        return $this->state(function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null) {
             $regioniNord = [
                 'Lombardia',
                 'Piemonte',
@@ -103,7 +102,7 @@ class RegionFactory extends Factory
          * @param  array<string, mixed>  $attributes
          * @return array<string, mixed>
          */
-        return $this->state(function (array $attributes, ?Model $model = null) {
+        return $this->state(function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null) {
             $regioniCentro = [
                 'Lazio',
                 'Toscana',
@@ -134,7 +133,7 @@ class RegionFactory extends Factory
          * @param  array<string, mixed>  $attributes
          * @return array<string, mixed>
          */
-        return $this->state(function (array $attributes, ?Model $model = null) {
+        return $this->state(function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null) {
             $regioniSud = [
                 'Campania',
                 'Puglia',

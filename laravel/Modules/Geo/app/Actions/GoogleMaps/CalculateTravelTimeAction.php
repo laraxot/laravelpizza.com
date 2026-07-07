@@ -8,7 +8,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\LocationData;
-use Modules\Geo\Datas\TravelTimeData;
+use Modules\Geo\Datas\Routing\TravelTimeData;
 
 use function Safe\json_decode;
 

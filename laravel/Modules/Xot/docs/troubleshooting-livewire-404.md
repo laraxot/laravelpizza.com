@@ -18,13 +18,29 @@ Failed to load resource: the server responded with a status of 404 (Not Found)
 
 ```bash
 # Configurazione .env
+<<<<<<< HEAD
 APP_URL=http://healthcare_app.local
+=======
+<<<<<<< .merge_file_RoEyv0
+APP_URL=http://healthcare_app.local
+=======
+APP_URL=http://ptvx.local
+>>>>>>> .merge_file_VpEl3g
+>>>>>>> origin/dev
 
 # Browser accede a
 http://127.0.0.1:8000
 ```
 
+<<<<<<< HEAD
 **Risultato**: Livewire genera URL con `healthcare_app.local` ma browser invia richieste a `127.0.0.1:8000` → 404
+=======
+<<<<<<< .merge_file_RoEyv0
+**Risultato**: Livewire genera URL con `healthcare_app.local` ma browser invia richieste a `127.0.0.1:8000` → 404
+=======
+**Risultato**: Livewire genera URL con `ptvx.local` ma browser invia richieste a `127.0.0.1:8000` → 404
+>>>>>>> .merge_file_VpEl3g
+>>>>>>> origin/dev
 
 ## ✅ Soluzioni
 
@@ -40,7 +56,15 @@ APP_URL=http://127.0.0.1:8000
 APP_URL=http://localhost:8000
 
 # Se accedi tramite dominio locale
+<<<<<<< HEAD
 APP_URL=http://healthcare_app.local
+=======
+<<<<<<< .merge_file_RoEyv0
+APP_URL=http://healthcare_app.local
+=======
+APP_URL=http://ptvx.local
+>>>>>>> .merge_file_VpEl3g
+>>>>>>> origin/dev
 ```
 
 **Dopo la modifica**:
@@ -52,19 +76,46 @@ php artisan optimize:clear
 
 ### Soluzione 2: Aggiungere Host al Sistema
 
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_RoEyv0
+>>>>>>> origin/dev
 Se vuoi usare `healthcare_app.local`, aggiungi al file hosts:
 
 **Linux/Mac**: `/etc/hosts`
 ```
 127.0.0.1 healthcare_app.local
+<<<<<<< HEAD
+=======
+=======
+Se vuoi usare `ptvx.local`, aggiungi al file hosts:
+
+**Linux/Mac**: `/etc/hosts`
+```
+127.0.0.1 ptvx.local
+>>>>>>> .merge_file_VpEl3g
+>>>>>>> origin/dev
 ```
 
 **Windows**: `C:\Windows\System32\drivers\etc\hosts`
 ```
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_RoEyv0
+>>>>>>> origin/dev
 127.0.0.1 healthcare_app.local
 ```
 
 Poi accedi tramite: `http://healthcare_app.local:8000`
+<<<<<<< HEAD
+=======
+=======
+127.0.0.1 ptvx.local
+```
+
+Poi accedi tramite: `http://ptvx.local:8000`
+>>>>>>> .merge_file_VpEl3g
+>>>>>>> origin/dev
 
 ### Soluzione 3: Trusted Proxies (Per Ambienti Complessi)
 
@@ -135,14 +186,30 @@ APP_URL=http://127.0.0.1:8000
 
 ```bash
 # .env per sviluppo con virtual host
+<<<<<<< HEAD
 APP_URL=http://healthcare_app.local
+=======
+<<<<<<< .merge_file_RoEyv0
+APP_URL=http://healthcare_app.local
+=======
+APP_URL=http://ptvx.local
+>>>>>>> .merge_file_VpEl3g
+>>>>>>> origin/dev
 ```
 
 ### Produzione
 
 ```bash
 # .env per produzione
+<<<<<<< HEAD
 APP_URL=https://healthcare_app.com
+=======
+<<<<<<< .merge_file_RoEyv0
+APP_URL=https://healthcare_app.com
+=======
+APP_URL=https://ptvx.com
+>>>>>>> .merge_file_VpEl3g
+>>>>>>> origin/dev
 ```
 
 ## 🔧 Comandi Rapidi Fix

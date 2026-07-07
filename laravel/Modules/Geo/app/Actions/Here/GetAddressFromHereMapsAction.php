@@ -7,7 +7,7 @@ namespace Modules\Geo\Actions\Here;
 use GuzzleHttp\Promise\PromiseInterface;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
-use Modules\Geo\Datas\AddressData;
+use Modules\Geo\Datas\Geocoding\AddressData;
 use Modules\Geo\Datas\HereMap\HereMapResponseData;
 
 class GetAddressFromHereMapsAction

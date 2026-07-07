@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Refactoring: Use Filament HasWizard in XotBaseWizardWidget
 
 ## Motivation
@@ -50,6 +51,8 @@ By adopting the official `HasWizard` trait, we align with Filament's recommended
 - Verify missing "next" button appears and "vai al contenuto principale" link works correctly
 - Conduct visual parity check between the two wizard instances
 =======
+=======
+>>>>>>> origin/dev
 ---
 title: "Wizard widget Laraxot — Filament HasWizard + trait modulari Xot"
 type: concept
@@ -104,4 +107,7 @@ Motivo dei doc vecchi/confusi: in passato si parlava davvero **senza `use`** (im
 ## Stub storico nome `HasWizard`
 
 [`XotBaseWizardWidget-HasWizard-refactor.md`](./XotBaseWizardWidget-HasWizard-refactor.md) rimane puntatore permalink esterno → questa pagina.
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

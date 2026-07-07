@@ -483,7 +483,11 @@ php artisan db:analyze-usage --connection=nome_connessione
 - Verificare che ci siano indici appropriati
 - Controllare che i tipi di dati siano ottimali per l'uso previsto
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Utilizzare query builder o raw queries per query complesse
 =======
 - Utilizzare query builder o raw queries per query complesse
 >>>>>>> 40b96bcd6 (.)
+=======
+- Utilizzare query builder o raw queries per query complesse
+>>>>>>> origin/dev

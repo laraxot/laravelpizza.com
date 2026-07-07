@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Geo\Models;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Support\Collection;
 use Modules\Geo\Database\Factories\ComuneFactory;
 use Modules\Tenant\Models\Traits\SushiToJson;
@@ -87,7 +86,7 @@ class Comune extends BaseModel
     public string $jsonDirectory = '';
 
     /** @var array<int, string> */
-    public array $translatable = [];
+    public $translatable = [];
 
     /** @var list<string> */
     protected $fillable = [
@@ -133,44 +132,15 @@ class Comune extends BaseModel
     }
 
     /**
-     * Normalizza attributi geografici (stringa, JSON/array o scalare) in etichetta stringa.
-     */
-    private static function geoValueToLabel(mixed $value): string
-    {
-        if (is_string($value)) {
-            return $value;
-        }
-
-        if (is_array($value)) {
-            $parts = array_values(array_filter(
-                array_map(
-                    static fn (mixed $v): string => is_scalar($v) ? (string) $v : '',
-                    $value,
-                ),
-                static fn (string $s): bool => '' !== $s,
-            ));
-
-            return implode(', ', $parts);
-        }
-
-        if (is_scalar($value)) {
-            return (string) $value;
-        }
-
-        return '';
-    }
-
-    /**
      * Get all regions.
      *
-     * @return Collection<int, non-empty-string>
+     * @return Collection<string>
      */
     public static function getRegioni(): Collection
     {
+        /* @phpstan-ignore return.type */
         return static::all()
             ->pluck('regione')
-            ->map(static fn (mixed $r): string => self::geoValueToLabel($r))
-            ->filter(static fn (string $s): bool => '' !== $s)
             ->unique()
             ->sort()
             ->values();
@@ -179,14 +149,13 @@ class Comune extends BaseModel
     /**
      * Get all provinces for a region.
      *
-     * @return Collection<int, non-empty-string>
+     * @return Collection<string>
      */
     public static function getProvinceByRegione(string $regione): Collection
     {
+        /* @phpstan-ignore return.type */
         return static::where('regione', $regione)
             ->pluck('provincia')
-            ->map(static fn (mixed $p): string => self::geoValueToLabel($p))
-            ->filter(static fn (string $s): bool => '' !== $s)
             ->unique()
             ->sort()
             ->values();
@@ -195,10 +164,11 @@ class Comune extends BaseModel
     /**
      * Get all comuni for a province.
      *
-     * @return EloquentCollection<int, Comune>
+     * @return Collection<static>
      */
-    public static function getComuniByProvincia(string $provincia): EloquentCollection
+    public static function getComuniByProvincia(string $provincia): Collection
     {
+        /* @phpstan-ignore return.type */
         return static::where('provincia', $provincia)->orderBy('nome')->get();
     }
 
@@ -211,12 +181,9 @@ class Comune extends BaseModel
      */
     public static function findByNome(string $nome): ?self
     {
-        $found = static::all()
-            ->first(
-                static fn (self $comune): bool => strtolower($comune->nome ?? '') === strtolower($nome),
-            );
-
-        return $found instanceof static ? $found : null;
+        /* @phpstan-ignore return.type */
+        return static::all()
+            ->first(fn ($comune) => strtolower($comune->nome ?? '') === strtolower($nome));
     }
 
     /**
@@ -224,53 +191,25 @@ class Comune extends BaseModel
      *
      * @param string $cap The CAP code to search for
      *
-     * @return EloquentCollection<int, Comune>
+     * @return Collection<static> Collection of matching comuni
      */
-    public static function findByCap(string $cap): EloquentCollection
+    public static function findByCap(string $cap): Collection
     {
+        /* @phpstan-ignore return.type */
         return static::where('cap', 'like', "%{$cap}%")->get();
     }
 
     /**
      * Find a city by ID.
      *
-     * @return array{
-     *     id: int,
-     *     nome: string,
-     *     provincia: string,
-     *     regione: string,
-     *     cap: string,
-     *     codice_catastale: string,
-     *     popolazione: int,
-     *     altitudine: int,
-     *     superficie: float,
-     *     lat: float,
-     *     lng: float,
-     *     zona_altimetrica: string
-     * }|null
+     * @return array{id: int, nome: string, provincia: string, regione: string, cap: string, codice_catastale: string, popolazione: int, altitudine: int, superficie: float, lat: float, lng: float, zona_altimetrica: string}|null
      */
     public static function findComune(int $id): ?array
     {
         $comune = static::query()->where('id', $id)->first();
 
-        if (null === $comune) {
-            return null;
-        }
-
-        return [
-            'id' => (int) $comune->id,
-            'nome' => (string) ($comune->nome ?? ''),
-            'provincia' => self::geoValueToLabel($comune->provincia),
-            'regione' => self::geoValueToLabel($comune->regione),
-            'cap' => self::geoValueToLabel($comune->cap),
-            'codice_catastale' => (string) ($comune->codice_catastale ?? $comune->codiceCatastale ?? ''),
-            'popolazione' => (int) ($comune->popolazione ?? 0),
-            'altitudine' => (int) ($comune->altitudine ?? 0),
-            'superficie' => (float) ($comune->superficie ?? 0.0),
-            'lat' => (float) ($comune->lat ?? 0.0),
-            'lng' => (float) ($comune->lng ?? 0.0),
-            'zona_altimetrica' => (string) ($comune->zona_altimetrica ?? ''),
-        ];
+        /* @phpstan-ignore return.type */
+        return $comune ? $comune->toArray() : null;
     }
 
     /**

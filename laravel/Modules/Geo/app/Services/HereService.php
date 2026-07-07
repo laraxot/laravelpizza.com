@@ -6,6 +6,7 @@ namespace Modules\Geo\Services;
 
 use Illuminate\Support\Facades\Http;
 use Modules\Tenant\Services\TenantService;
+use Webmozart\Assert\Assert;
 
 class HereService
 {
@@ -37,35 +38,21 @@ class HereService
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 
-        if (! isset($json['routes']) || ! \is_array($json['routes'])) {
+        if (! isset($json['routes'])) {
+            dddx($json);
+
+            return null;
+        }
+        if (! is_array($json['routes'])) {
+            return null;
+        }
+        if (! isset($json['routes'][0])) {
             return null;
         }
 
-        /** @var array<int, mixed> $routes */
-        $routes = $json['routes'];
-        $firstRoute = $routes[0] ?? null;
-        if (! \is_array($firstRoute)) {
-            return null;
-        }
+        // @phpstan-ignore offsetAccess.nonOffsetAccessible, offsetAccess.nonOffsetAccessible, offsetAccess.nonOffsetAccessible
+        Assert::isArray($res = $json['routes'][0]['sections']['0']['summary']);
 
-        if (! isset($firstRoute['sections']) || ! \is_array($firstRoute['sections'])) {
-            return null;
-        }
-
-        /** @var array<int, mixed> $sections */
-        $sections = $firstRoute['sections'];
-        $firstSection = $sections[0] ?? null;
-        if (! \is_array($firstSection)) {
-            return null;
-        }
-
-        if (! isset($firstSection['summary']) || ! \is_array($firstSection['summary'])) {
-            return null;
-        }
-
-        /** @var array<string, mixed> $summary */
-        $summary = $firstSection['summary'];
-
-        return $summary;
+        return $res;
     }
 }

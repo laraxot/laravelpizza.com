@@ -319,6 +319,12 @@ Se `module:enable Activity` non funziona:
 ### Issue Simili
 - [Xot - Module Discovery](../../xot/docs/module-discovery.md)
 - [Deployment Best Practices](../../xot/docs/deployment.md)
+- [Activity Module - README](../README.md)
+- [Service Provider Architecture](../../Xot/docs/service-provider-architecture.md)
+
+### Issue Simili
+- [Xot - Module Discovery](../../Xot/docs/module-discovery.md)
+- [Deployment Best Practices](../../Xot/docs/deployment.md)
 
 ---
 

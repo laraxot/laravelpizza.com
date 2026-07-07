@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # PHPStan Level 10 - Filament Actions String Keys Rule
 
 ## Critical Requirement
@@ -289,6 +290,8 @@ Using string keys for Filament actions is **required** for:
 
 **Always use associative arrays with string keys for all Filament action methods.**
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: phpstan-filament-actions-rule-1
@@ -296,4 +299,7 @@ canonical: ../../../Themes/docs/shared-components/PHPSTAN_FILAMENT_ACTIONS_RULE.
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/PHPSTAN_FILAMENT_ACTIONS_RULE.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

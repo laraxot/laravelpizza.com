@@ -7,7 +7,7 @@ namespace Modules\Geo\Actions\GoogleMaps;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
-use Modules\Geo\Datas\GeocodingData;
+use Modules\Geo\Datas\Geocoding\GeocodingData;
 
 use function Safe\json_decode;
 

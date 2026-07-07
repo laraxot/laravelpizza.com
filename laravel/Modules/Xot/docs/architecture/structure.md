@@ -997,7 +997,11 @@ tests_old
             "Coolsam\\FilamentModules\\": "packages/coolsam/panel-modules/src/"
         },
         "files": [
+<<<<<<< HEAD
             "Helpers/Helper.php"
+=======
+            "helpers/Helper.php"
+>>>>>>> origin/dev
         ]
     },
     "scripts": {

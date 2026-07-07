@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Trait Mancanti e Miglioramenti Architetturali
 
 ## Panoramica
@@ -624,6 +625,8 @@ class AlertWidget extends BaseTableWidget
 **Effort Stimato**: 20-30 ore  
 **Benefici**: ALTI
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: missing-traits-and-improvements-1
@@ -631,4 +634,7 @@ canonical: ../../../Themes/docs/shared-components/MISSING_TRAITS_AND_IMPROVEMENT
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/MISSING_TRAITS_AND_IMPROVEMENTS.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

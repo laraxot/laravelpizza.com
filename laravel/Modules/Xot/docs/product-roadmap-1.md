@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Xot Module - Product Roadmap
 
 **Module:** Xot  
@@ -103,6 +104,8 @@ To provide a **flexible extension framework** that enables rapid development, cu
 
 *Last Updated: March 12, 2026*
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: product-roadmap-1
@@ -110,4 +113,7 @@ canonical: ../../../Themes/docs/shared-components/PRODUCT_ROADMAP-Modules.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/PRODUCT_ROADMAP-Modules.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

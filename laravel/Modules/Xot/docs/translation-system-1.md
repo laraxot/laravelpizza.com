@@ -224,7 +224,11 @@ php artisan view:clear
 - [Filament Form Components](https://filamentphp.com/docs/forms)
 - [Best Practices Filament](../../docs/filament-best-practices.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Schema Conventions](../../docs/schema-conventions.md)
 =======
 - [Schema Conventions](../../docs/schema-conventions.md)
 >>>>>>> 40b96bcd6 (.)
+=======
+- [Schema Conventions](../../docs/schema-conventions.md)
+>>>>>>> origin/dev

@@ -4,49 +4,82 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests;
 
+use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Support\ServiceProvider;
+use Modules\Activity\Filament\Pages\ListLogActivities;
 use Modules\Activity\Providers\ActivityServiceProvider;
+use Modules\Activity\Providers\EventServiceProvider;
+use Modules\User\Models\User;
 use Modules\User\Providers\UserServiceProvider;
-use Modules\Xot\Providers\XotServiceProvider;
-use Modules\Xot\Tests\CreatesApplication;
+use Modules\Xot\Tests\XotBaseTestCase;
 
 /**
  * Base test case for Activity module.
  *
- * Uses MySQL from .env.testing (carbon copy of .env with _test DB names).
- * All module connections are mapped dynamically by TenantServiceProvider.
- * Migrations must be run ONCE externally: php artisan migrate --env=testing
- * DatabaseTransactions handles rollback between tests.
+ * Uses shared fixcity_data.sqlite (no RefreshDatabase / migrate:fresh).
+ * prepareSharedFixcitySqliteForTesting() runs before transactions begin.
+ *
+ * @property ListLogActivities|null $page
  */
-abstract class TestCase extends BaseTestCase
+abstract class TestCase extends XotBaseTestCase
 {
-    use CreatesApplication;
     use DatabaseTransactions;
 
-    /**
-     * Connections to wrap in transactions for automatic rollback.
-     * MANDATORY: must include every connection used by this module's models.
-     * Activity models use $connection = 'activity' (separate PDO handle).
-     * Without this, Activity data is NEVER rolled back between tests.
-     *
-     * @var array<int, string>
-     */
-    protected $connectionsToTransact = [
-        'mysql',
-        'activity',
-        'user',
-    ];
+    public ?ListLogActivities $page = null;
 
     /**
-     * @return array<int, class-string>
+     * Shared test data for Activity entity.
+     *
+     * @var array<string, mixed>
      */
-    protected function getPackageProviders($app): array
+    public array $activityData = [];
+
+    /**
+     * Shared test data for stored event entity.
+     *
+     * @var array<string, mixed>
+     */
+    public array $storedEventData = [];
+
+    /**
+     * Shared test data for snapshot entity.
+     *
+     * @var array<string, mixed>
+     */
+    public array $snapshotData = [];
+
+    /** @var list<string> */
+    protected $connectionsToTransact = ['sqlite', 'activity', 'user'];
+
+    protected function setUp(): void
+    {
+        $this->prepareSharedFixcitySqliteForTesting();
+
+        parent::setUp();
+
+        config(['auth.providers.users.model' => User::class]);
+    }
+
+    /**
+     * @return array<int, class-string<ServiceProvider>>
+     */
+    protected function getPackageProviders(Application $app): array
     {
         return [
-            XotServiceProvider::class,
+            ...parent::getPackageProviders($app),
             UserServiceProvider::class,
             ActivityServiceProvider::class,
+            EventServiceProvider::class,
         ];
+    }
+
+    public function requirePage(): ListLogActivities
+    {
+        if ($this->page === null) {
+            $this->fail('ListLogActivities page is not initialized.');
+        }
+
+        return $this->page;
     }
 }

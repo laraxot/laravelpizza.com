@@ -449,24 +449,54 @@ Analisi sistematica di tutti i moduli del progetto per identificare violazioni d
 ### 1. Violazioni DRY - Duplicazioni di Codice
 
 #### Singleton Pattern Duplicato
+<<<<<<< HEAD
 **File**: `Modules/healthcare_app/app/Services/LimeJsonService.php`, `Modules/healthcare_app/app/Services/healthcare_appService.php`
+=======
+<<<<<<< .merge_file_oDIKP8
+**File**: `Modules/healthcare_app/app/Services/LimeJsonService.php`, `Modules/healthcare_app/app/Services/healthcare_appService.php`
+=======
+**File**: `Modules/ModuloEsempio/app/Services/LimeJsonService.php`, `Modules/ModuloEsempio/app/Services/ModuloEsempioService.php`
+>>>>>>> .merge_file_0JIth3
+>>>>>>> origin/dev
 
 ```php
 // DUPLICATO in LimeJsonService.php
 private static ?self $instance = null;
 public static function getInstance(): self
 {
+<<<<<<< HEAD
     if (! self::$instance instanceof \Modules\healthcare_app\Services\LimeJsonService) {
+=======
+<<<<<<< .merge_file_oDIKP8
+    if (! self::$instance instanceof \Modules\healthcare_app\Services\LimeJsonService) {
+=======
+    if (! self::$instance instanceof \Modules\ModuloEsempio\Services\LimeJsonService) {
+>>>>>>> .merge_file_0JIth3
+>>>>>>> origin/dev
         self::$instance = new self();
     }
     return self::$instance;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_oDIKP8
+>>>>>>> origin/dev
 // DUPLICATO in healthcare_appService.php
 private static ?self $instance = null;
 public static function getInstance(): self
 {
     if (! self::$instance instanceof \Modules\healthcare_app\Services\healthcare_appService) {
+<<<<<<< HEAD
+=======
+=======
+// DUPLICATO in ModuloEsempioService.php
+private static ?self $instance = null;
+public static function getInstance(): self
+{
+    if (! self::$instance instanceof \Modules\ModuloEsempio\Services\ModuloEsempioService) {
+>>>>>>> .merge_file_0JIth3
+>>>>>>> origin/dev
         self::$instance = new self();
     }
     return self::$instance;
@@ -476,13 +506,29 @@ public static function getInstance(): self
 **Soluzione**: Creare trait `SingletonTrait` in `Modules/Xot/app/Traits/SingletonTrait.php`
 
 #### Connection Hardcoded Duplicata
+<<<<<<< HEAD
 **Problema**: `protected $connection = 'healthcare_app';` ripetuto in tutti i modelli healthcare_app
+=======
+<<<<<<< .merge_file_oDIKP8
+**Problema**: `protected $connection = 'healthcare_app';` ripetuto in tutti i modelli healthcare_app
+=======
+**Problema**: `protected $connection = 'modulo_esempio';` ripetuto in tutti i modelli ModuloEsempio
+>>>>>>> .merge_file_0JIth3
+>>>>>>> origin/dev
 **Soluzione**: Centralizzare in BaseModel o configurazione
 
 ### 2. Violazioni SOLID
 
 #### Single Responsibility Principle Violato
+<<<<<<< HEAD
 **File**: `Modules/healthcare_app/app/Models/BaseModel.php`
+=======
+<<<<<<< .merge_file_oDIKP8
+**File**: `Modules/healthcare_app/app/Models/BaseModel.php`
+=======
+**File**: `Modules/ModuloEsempio/app/Models/BaseModel.php`
+>>>>>>> .merge_file_0JIth3
+>>>>>>> origin/dev
 
 ```php
 abstract class BaseModel extends Model implements ModelContract, HasMedia
@@ -530,7 +576,15 @@ abstract class BaseUser extends Authenticatable implements
 ### 3. N+1 Query Problems
 
 #### Customer Model - Lazy Loading
+<<<<<<< HEAD
 **File**: `Modules/healthcare_app/app/Models/Customer.php`
+=======
+<<<<<<< .merge_file_oDIKP8
+**File**: `Modules/healthcare_app/app/Models/Customer.php`
+=======
+**File**: `Modules/ModuloEsempio/app/Models/Customer.php`
+>>>>>>> .merge_file_0JIth3
+>>>>>>> origin/dev
 
 ```php
 public function surveyPdfsActive()
@@ -543,7 +597,15 @@ public function surveyPdfsActive()
 **Soluzione**: Usare query builder o eager loading
 
 #### AlertWidget - Query Complessa
+<<<<<<< HEAD
 **File**: `Modules/healthcare_app/app/Filament/Widgets/AlertWidget.php`
+=======
+<<<<<<< .merge_file_oDIKP8
+**File**: `Modules/healthcare_app/app/Filament/Widgets/AlertWidget.php`
+=======
+**File**: `Modules/ModuloEsempio/app/Filament/Widgets/AlertWidget.php`
+>>>>>>> .merge_file_0JIth3
+>>>>>>> origin/dev
 
 ```php
 return SurveyFlipResponse::where('survey_id', $this->getSurveyId())
@@ -566,7 +628,15 @@ return SurveyFlipResponse::where('survey_id', $this->getSurveyId())
 ### 4. Violazioni KISS - Complessità Eccessiva
 
 #### QuestionChart Model - Metodi Complessi
+<<<<<<< HEAD
 **File**: `Modules/healthcare_app/app/Models/QuestionChart.php`
+=======
+<<<<<<< .merge_file_oDIKP8
+**File**: `Modules/healthcare_app/app/Models/QuestionChart.php`
+=======
+**File**: `Modules/ModuloEsempio/app/Models/QuestionChart.php`
+>>>>>>> .merge_file_0JIth3
+>>>>>>> origin/dev
 
 ```php
 public function participants(): CustomRelation
@@ -593,7 +663,15 @@ public function participants(): CustomRelation
 ### 5. Gestione Errori Inadeguata
 
 #### SendInviteAction - Catch Vuoti
+<<<<<<< HEAD
 **File**: `Modules/healthcare_app/app/Actions/SendInviteAction.php`
+=======
+<<<<<<< .merge_file_oDIKP8
+**File**: `Modules/healthcare_app/app/Actions/SendInviteAction.php`
+=======
+**File**: `Modules/ModuloEsempio/app/Actions/SendInviteAction.php`
+>>>>>>> .merge_file_0JIth3
+>>>>>>> origin/dev
 
 ```php
 try {
@@ -613,7 +691,15 @@ try {
 ### 1. Filament Resources - Pattern Duplicati
 
 #### Schema Duplicato
+<<<<<<< HEAD
 **File**: `Modules/healthcare_app/app/Filament/Resources/ContactResource.php`, `CustomerResource.php`
+=======
+<<<<<<< .merge_file_oDIKP8
+**File**: `Modules/healthcare_app/app/Filament/Resources/ContactResource.php`, `CustomerResource.php`
+=======
+**File**: `Modules/ModuloEsempio/app/Filament/Resources/ContactResource.php`, `CustomerResource.php`
+>>>>>>> .merge_file_0JIth3
+>>>>>>> origin/dev
 
 ```php
 // ContactResource.php
@@ -662,9 +748,21 @@ public function customer(): HasOneThrough
 **File**: Tutti i ServiceProvider dei moduli
 
 ```php
+<<<<<<< HEAD
 class healthcare_appServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'healthcare_app';
+=======
+<<<<<<< .merge_file_oDIKP8
+class healthcare_appServiceProvider extends XotBaseServiceProvider
+{
+    public string $name = 'healthcare_app';
+=======
+class ModuloEsempioServiceProvider extends XotBaseServiceProvider
+{
+    public string $name = 'ModuloEsempio';
+>>>>>>> .merge_file_0JIth3
+>>>>>>> origin/dev
 
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
@@ -764,7 +862,15 @@ trait SingletonTrait
 ```
 
 #### B. Separare BaseModel Responsibilities
+<<<<<<< HEAD
 **File**: `Modules/healthcare_app/app/Models/BaseModel.php`
+=======
+<<<<<<< .merge_file_oDIKP8
+**File**: `Modules/healthcare_app/app/Models/BaseModel.php`
+=======
+**File**: `Modules/ModuloEsempio/app/Models/BaseModel.php`
+>>>>>>> .merge_file_0JIth3
+>>>>>>> origin/dev
 ```php
 abstract class BaseModel extends Model implements ModelContract
 {
@@ -777,7 +883,15 @@ abstract class BaseModel extends Model implements ModelContract
 ```
 
 #### C. Implementare Repository Pattern
+<<<<<<< HEAD
 **File**: `Modules/healthcare_app/app/Repositories/SurveyFlipResponseRepository.php`
+=======
+<<<<<<< .merge_file_oDIKP8
+**File**: `Modules/healthcare_app/app/Repositories/SurveyFlipResponseRepository.php`
+=======
+**File**: `Modules/ModuloEsempio/app/Repositories/SurveyFlipResponseRepository.php`
+>>>>>>> .merge_file_0JIth3
+>>>>>>> origin/dev
 ```php
 class SurveyFlipResponseRepository
 {
@@ -838,10 +952,23 @@ try {
 
 #### B. Configuration Centralization
 ```php
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_oDIKP8
+>>>>>>> origin/dev
 // config/healthcare_app.php
 return [
     'database' => [
         'connection' => env('healthcare_app_DB_CONNECTION', 'healthcare_app'),
+<<<<<<< HEAD
+=======
+=======
+// config/modulo_esempio.php
+return [
+    'database' => [
+        'connection' => env('PTVX_DB_CONNECTION', 'modulo_esempio'),
+>>>>>>> .merge_file_0JIth3
+>>>>>>> origin/dev
     ],
     'limesurvey' => [
         'api' => [

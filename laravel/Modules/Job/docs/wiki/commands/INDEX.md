@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Commands Index"
 type: index
@@ -45,6 +46,8 @@ Le Commands progettuali vivono qui, nel wiki del Module **Job**, e vengono caric
 4. Committa: `docs: add commands <nome>`
 
 =======
+=======
+>>>>>>> origin/dev
 # Job Module - commands Index
 
 ## Purpose
@@ -62,4 +65,7 @@ qmd search "Job commands" --limit 5
 
 ---
 *Updated: 2026-05-11*
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

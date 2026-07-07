@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Merge conflict markers — file list
 
 Elenco dei file trovati contenenti marker di merge (<<<<<<<, >>>>>>>, .merge_file). Seguire la lista per assegnare task agli agenti.
@@ -54,6 +55,8 @@ Elenco dei file trovati contenenti marker di merge (<<<<<<<, >>>>>>>, .merge_fil
 - Quando si risolve un file, aggiornare lo stato nella lista e sincronizzare l'LLM Wiki (qmd embed) per ingestione.
 
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: merge-conflicts-list
@@ -61,4 +64,7 @@ canonical: ../../../Themes/docs/shared-components/merge-conflicts-list.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-list.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

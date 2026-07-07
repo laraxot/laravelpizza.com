@@ -40,9 +40,5 @@ class DomainForm extends XotBaseResourceForm
                 ->minValue(0)
                 ->maxValue(5),
         ];
-<<<<<<< HEAD
-
-=======
->>>>>>> 40b96bcd6 (.)
     }
 }

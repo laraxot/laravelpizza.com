@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # PHPStan Errors - TransTrait.php
 
 **Date**: 2025-12-16
@@ -399,6 +400,8 @@ This fix may also resolve related errors in:
 **Assigned To**: Module Owner
 **Last Updated**: 2025-12-16
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: phpstan-transtrait-errors-1
@@ -406,4 +409,7 @@ canonical: ../../../Themes/docs/shared-components/phpstan-transtrait-errors-.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-transtrait-errors-.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

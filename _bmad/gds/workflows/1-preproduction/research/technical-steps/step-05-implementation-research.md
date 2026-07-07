@@ -206,7 +206,7 @@ Show the generated game implementation research and present continue option:
 
 - Append the final content to the research document
 - Update frontmatter: `stepsCompleted: [1, 2, 3, 4, 5]`
-- Load: `{project-root}/_bmad/gds/workflows/1-preproduction/research/technical-steps/step-06-research-synthesis.md`
+- Load: `./step-06-research-synthesis.md`
 
 ## APPEND TO DOCUMENT:
 
@@ -257,4 +257,4 @@ When 'C' is selected:
 
 ## NEXT STEP:
 
-After user selects 'C', load `{project-root}/_bmad/gds/workflows/1-preproduction/research/technical-steps/step-06-research-synthesis.md` to produce the comprehensive game technical research document with narrative introduction, detailed TOC, and executive summary.
+After user selects 'C', load `./step-06-research-synthesis.md` to produce the comprehensive game technical research document with narrative introduction, detailed TOC, and executive summary.

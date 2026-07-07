@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Utilizzo Base e Layout
 
 Questa sezione descrive l'utilizzo di base della libreria, come istanziare la classe `Html2Pdf` e come gestire il layout delle pagine con i tag speciali.
@@ -119,3 +120,12 @@ Il contenuto all'interno di questo tag non verrà spezzato tra due pagine.
     </table>
 </nobreak>
 ```
+=======
+---
+module: theme
+topic: usage
+canonical: ../../../../Themes/docs/shared-components/usage.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/usage.md
+>>>>>>> origin/dev

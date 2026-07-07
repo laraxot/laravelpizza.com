@@ -112,7 +112,11 @@ architecture-overview.md
 # ❌ SBAGLIATO
 MY_DOCUMENT.md              # UPPERCASE
 my_document.md              # underscore
+<<<<<<< HEAD
 analysis-[DATE].md      # date in name (use CHANGELOG.md)
+=======
+analysis-2025-11-04.md      # date in name (use CHANGELOG.md)
+>>>>>>> origin/dev
 ```
 
 ### 8. DRY Principle
@@ -178,6 +182,11 @@ if (!$condition) {
 }
 
 // ❌ LASCIARE MARKER GIT
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> commit-hash
+>>>>>>> origin/dev
 ```
 
 ### ❌ Import Duplicati
@@ -397,7 +406,15 @@ git push origin feature-branch
 
 ---
 
+<<<<<<< HEAD
 **Creato:** [DATE]
 **Versione:** 1.0
 **Autori:** Team Laraxot + AI Claude Process Filosofico
 **Prossimo Review:** Trimestrale o dopo major changes
+=======
+**Creato:** 2025-11-04  
+**Versione:** 1.0  
+**Autori:** Team Laraxot + AI Claude Process Filosofico  
+**Prossimo Review:** Trimestrale o dopo major changes
+
+>>>>>>> origin/dev

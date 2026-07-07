@@ -196,8 +196,4 @@ Ridefinire `$view` come ereditato da un parent intermedio. Ogni Field è proprie
 | `make(string $name)` | La name è obbligatoria nel mio contesto | Il parent signature è `?string $name = null` |
 | `$view` ereditata da XotBaseField | "La base dovrebbe gestirlo" | XotBaseField NON definisce $view — è astratta |
 | `dehydrated()` opzionale | "Livewire gestisce lo stato" | Senza dehydrated(false), stato duplicato nel submit |
-<<<<<<< HEAD
 | Merge conflict in un file isolato | "Non tocca il mio lavoro" | Bootstrap failure → TUTTA l'analisi fallisce |
-=======
-| Merge conflict in un file isolato | "Non tocca il mio lavoro" | Bootstrap failure → TUTTA l'analisi fallisce |
->>>>>>> 40b96bcd6 (.)

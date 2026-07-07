@@ -26,6 +26,11 @@ L'obiettivo è fornire una panoramica neutra e riutilizzabile dei pattern, dei v
 - [Audit Log](../audit_log/readme.md)
 - [Workflow Approval](../workflow_approval/readme.md)
 - [Task Management](../task_management/readme.md)
+- [Prediction Market](../prediction_market/README.md)
+- [Event Sourcing & CQRS](../event_sourcing_cqrs/README.md)
+- [Audit Log](../audit_log/README.md)
+- [Workflow Approval](../workflow_approval/README.md)
+- [Task Management](../task_management/README.md)
 
 ## Panoramica degli Approcci
 

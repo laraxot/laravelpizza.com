@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Datas;
 
-uses(TestCase::class);
+uses(\Modules\Geo\Tests\TestCase::class);
 
 use Modules\Geo\Datas\Photon\PhotonAddressData;
 use Modules\Geo\Datas\Photon\PhotonFeatureData;
 use Modules\Geo\Datas\Photon\PhotonPropertiesData;
 use Modules\Geo\Datas\Photon\PhotonResponseData;
-use Modules\Geo\Tests\TestCase;
 
 test('PhotonAddressData can be instantiated', function () {
     expect(class_exists(PhotonAddressData::class))->toBeTrue();

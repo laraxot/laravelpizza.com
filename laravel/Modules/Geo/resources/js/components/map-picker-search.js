@@ -36,30 +36,17 @@ export function renderSearch(ctx) {
                     ? html`<svg class="animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" opacity=".25"/><path d="M4 12a8 8 0 018-8" opacity=".75"/></svg>`
                     : geoIcon('magnifying-glass')
                 }
-<<<<<<< HEAD
-                <span class="ctrl-fallback" aria-hidden="true">&#x2715;</span>
-=======
                 <span class="ctrl-fallback" aria-hidden="true">S</span>
->>>>>>> 40b96bcd6 (.)
             </button>
             <button
                 class="ctrl-btn geo-search-close"
                 type="button"
-<<<<<<< HEAD
-                aria-label="Chiudi ricerca"
-                title="Chiudi ricerca"
-                @click="${() => closeSearch(ctx)}"
-            >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" style="display:block;margin:auto;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                <span class="ctrl-fallback" aria-hidden="true">&#x2715;</span>
-=======
                 aria-label="${labels.close_search || 'Chiudi ricerca'}"
                 title="${labels.close_search || 'Chiudi ricerca'}"
                 @click="${() => closeSearch(ctx)}"
             >
                 ${geoIcon('x-mark')}
                 <span class="ctrl-fallback" aria-hidden="true">x</span>
->>>>>>> 40b96bcd6 (.)
             </button>
 
             ${showResults ? html`
@@ -162,21 +149,14 @@ export function selectSearchResult(ctx, result) {
     }
 
     const address = result.display_name || `${lat}, ${lng}`;
-<<<<<<< HEAD
-=======
     const payload = buildLocationPayload(result, lat, lng, address);
->>>>>>> 40b96bcd6 (.)
 
     ctx.searchQuery = address;
     ctx.searchResults = [];
     ctx.showSearchResults = false;
 
     if (typeof ctx._handleSearchSelection === 'function') {
-<<<<<<< HEAD
-        ctx._handleSearchSelection(result, lat, lng);
-=======
         ctx._handleSearchSelection(result, lat, lng, payload);
->>>>>>> 40b96bcd6 (.)
     } else if (typeof ctx._handleMapInteraction === 'function') {
         ctx._handleMapInteraction(lat, lng, 'search');
     } else if (ctx._map) {
@@ -191,10 +171,7 @@ export function selectSearchResult(ctx, result) {
             lng,
             latitude: lat,
             longitude: lng,
-<<<<<<< HEAD
-=======
             payload,
->>>>>>> 40b96bcd6 (.)
         },
         bubbles: true,
         composed: true,
@@ -203,8 +180,6 @@ export function selectSearchResult(ctx, result) {
     ctx.requestUpdate?.();
 }
 
-<<<<<<< HEAD
-=======
 /**
  * Flatten a Nominatim search result into the canonical `location` JSON shape.
  * Keeps the full Nominatim object under `raw` for forensic / future use.
@@ -258,7 +233,6 @@ export function buildLocationPayload(result, lat, lng, address) {
     };
 }
 
->>>>>>> 40b96bcd6 (.)
 async function resolveAddressResults(ctx, query) {
     if (typeof ctx.searchAddress === 'function') {
         return ctx.searchAddress(query);

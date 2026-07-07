@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Correzioni PHPStan - Modulo Xot
 
 Questo documento traccia gli errori PHPStan identificati nel modulo Xot e le relative soluzioni implementate.
@@ -416,6 +417,8 @@ Use null coalescing operator.
 - [PHPStan Level 10 Guidelines](./phpstan-level10-guidelines.md)
 
 =======
+=======
+>>>>>>> origin/dev
 ---
 module: theme
 topic: phpstan-fixes-4
@@ -423,4 +426,7 @@ canonical: ../../../Themes/docs/shared-components/phpstan-fixes-.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixes-.md
+<<<<<<< HEAD
 >>>>>>> 40b96bcd6 (.)
+=======
+>>>>>>> origin/dev

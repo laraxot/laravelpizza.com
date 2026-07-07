@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# User Wiki Log
-
-=======
 ---
 title: "User Wiki Log"
 type: log
@@ -45,7 +41,6 @@ related:
 
 - Nuova pagina [`concepts/ridondanze-docs-legacy-cluster.md`](concepts/ridondanze-docs-legacy-cluster.md): elenco file `redundancy-fixes*.md`, cluster `phpstan-dry-kiss-improvements*`, typo `redundancyes.md`; link verso hub Xot [`ridondanze-cross-cutting-codebase`](../../../Xot/docs/wiki/concepts/ridondanze-cross-cutting-codebase.md).
 
->>>>>>> 40b96bcd6 (.)
 ## [2026-05-06] phpstan | widget property types e schema normalization
 - risolti errori PHPStan mirati su `PassportDashboard`, `EditUserWidget` e `RegistrationWidget`.
 - regola documentata: proprieta' Livewire tipizzate, `class-string` validati prima dell'assegnazione, nessun default stringa vuota per `class-string`.
@@ -74,11 +69,7 @@ related:
 - fix applicato: rimosso `after()` dal create; `after()` resta nel `tableUpdate()`
   idempotente (ALTER path).
 - verifica:
-<<<<<<< HEAD
-  `php artisan migrate --path=Modules/User/database/migrations/2026_04_28_120000_create_profiles_table.php --realpath --force`
-=======
   ~~`migrate ... --force`~~ — **vietato**; owner `profiles` ora Fixcity; usare `php artisan migrate` senza `--force` ([dati sacri](../../../../docs/wiki/rules/data-sacred-no-destructive-db.md))
->>>>>>> 40b96bcd6 (.)
   eseguito con esito `DONE`.
 - docs aggiornati: `concepts/profile-migration-uuid-contract.md`.
 
@@ -151,8 +142,6 @@ related:
 - Best practices documentate: type-hint UserContract, permission dot notation, test con permessi reali
 - Enhancements proposti: canAny(), canAll(), scope(), after() hooks
 - Commit: docs: document policy inheritance boundary decision
-<<<<<<< HEAD
-=======
 
 ## 2026-06-10 — session learnings
 
@@ -165,4 +154,3 @@ related:
 
 - INDEX Folio FO con cross-link Cms
 - Catena notifications: Notify schema → User page → Sixteen link
->>>>>>> 40b96bcd6 (.)
