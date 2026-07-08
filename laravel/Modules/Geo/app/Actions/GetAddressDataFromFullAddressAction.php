@@ -25,7 +25,9 @@ class GetAddressDataFromFullAddressAction
 
     public function __construct()
     {
-        $this->errors = collect();
+        /** @var Collection<int, string> $errors */
+        $errors = collect();
+        $this->errors = $errors;
     }
 
     /**

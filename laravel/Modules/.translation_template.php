@@ -3,13 +3,18 @@
 declare(strict_types=1);
 
 /**
+ * ==============================================
  * LARAXOT TRANSLATION FILE TEMPLATE
+ * ==============================================
  * Template standardizzato per tutti i file di traduzione Laraxot
  * Ultimo aggiornamento: 2025-01-06
+ * ==============================================
  */
 
 return [
+    // ==============================================
     // NAVIGATION & STRUCTURE
+    // ==============================================
     'navigation' => [
         'label' => 'Nome Entità',
         'plural_label' => 'Nome Entità Plurali',
@@ -18,13 +23,17 @@ return [
         'sort' => 10,
         'badge' => 'Descrizione badge opzionale',
     ],
+    // ==============================================
     // MODEL INFORMATION
+    // ==============================================
     'model' => [
         'label' => 'Nome Entità Singolare',
         'plural' => 'Nome Entità Plurali',
         'description' => 'Descrizione dell\'entità',
     ],
+    // ==============================================
     // FIELDS - STRUTTURA ESPANSA OBBLIGATORIA
+    // ==============================================
     'fields' => [
         'id' => [
             'label' => 'ID',
@@ -75,7 +84,9 @@ return [
             'helper_text' => 'Data e ora dell\'ultimo aggiornamento dell\'entità',
         ],
     ],
+    // ==============================================
     // ACTIONS - STRUTTURA ESPANSA OBBLIGATORIA
+    // ==============================================
     'actions' => [
         'create' => [
             'label' => 'Crea Nuovo',
@@ -151,7 +162,9 @@ return [
             ],
         ],
     ],
+    // ==============================================
     // SECTIONS - ORGANIZZAZIONE FORM
+    // ==============================================
     'sections' => [
         'basic_info' => [
             'label' => 'Informazioni Base',
@@ -169,7 +182,9 @@ return [
             'icon' => 'heroicon-o-cog',
         ],
     ],
+    // ==============================================
     // FILTERS - RICERCA E FILTRI
+    // ==============================================
     'filters' => [
         'status' => [
             'label' => 'Stato',
@@ -188,7 +203,9 @@ return [
             'placeholder' => 'Cerca nelle entità...',
         ],
     ],
+    // ==============================================
     // MESSAGES - FEEDBACK UTENTE
+    // ==============================================
     'messages' => [
         'empty_state' => 'Nessuna entità trovata',
         'search_placeholder' => 'Cerca entità...',
@@ -203,7 +220,9 @@ return [
         'error_permission' => 'Non hai i permessi per eseguire questa azione.',
         'success_operation' => 'Operazione completata con successo',
     ],
+    // ==============================================
     // VALIDATION - MESSAGGI DI VALIDAZIONE
+    // ==============================================
     'validation' => [
         'required' => 'Il campo :field è obbligatorio',
         'min' => 'Il campo :field deve essere di almeno :min caratteri',
@@ -214,14 +233,18 @@ return [
         'numeric' => 'Il campo :field deve essere numerico',
         'boolean' => 'Il campo :field deve essere vero o falso',
     ],
+    // ==============================================
     // DESCRIPTIONS - DESCRIZIONI CONTESTUALI
+    // ==============================================
     'descriptions' => [
         'entity_purpose' => 'Scopo e funzionalità dell\'entità',
         'usage_instructions' => 'Istruzioni per l\'utilizzo',
         'best_practices' => 'Migliori pratiche per l\'utilizzo',
         'limitations' => 'Limitazioni e vincoli',
     ],
+    // ==============================================
     // OPTIONS - OPZIONI E VALORI PREDEFINITI
+    // ==============================================
     'options' => [
         'statuses' => [
             'active' => 'Attivo',

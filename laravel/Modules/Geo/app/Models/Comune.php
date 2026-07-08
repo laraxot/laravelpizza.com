@@ -106,6 +106,7 @@ class Comune extends BaseModel
         'lng',
     ];
 
+    /** @var array<string, string> */
     protected array $schema = [
         'id' => 'integer',
         'title' => 'json',
@@ -126,6 +127,7 @@ class Comune extends BaseModel
         return module_path('Geo', 'resources/json/comuni.json');
     }
 
+    /** @return array<int, array<string, mixed>> */
     public function getRows(): array
     {
         return $this->getSushiRows();
@@ -134,7 +136,7 @@ class Comune extends BaseModel
     /**
      * Get all regions.
      *
-     * @return Collection<string>
+     * @return Collection<int, string>
      */
     public static function getRegioni(): Collection
     {
@@ -149,7 +151,7 @@ class Comune extends BaseModel
     /**
      * Get all provinces for a region.
      *
-     * @return Collection<string>
+     * @return Collection<int, string>
      */
     public static function getProvinceByRegione(string $regione): Collection
     {
@@ -164,7 +166,7 @@ class Comune extends BaseModel
     /**
      * Get all comuni for a province.
      *
-     * @return Collection<static>
+     * @return Collection<int, static>
      */
     public static function getComuniByProvincia(string $provincia): Collection
     {
@@ -191,7 +193,7 @@ class Comune extends BaseModel
      *
      * @param string $cap The CAP code to search for
      *
-     * @return Collection<static> Collection of matching comuni
+     * @return Collection<int, static> Collection of matching comuni
      */
     public static function findByCap(string $cap): Collection
     {

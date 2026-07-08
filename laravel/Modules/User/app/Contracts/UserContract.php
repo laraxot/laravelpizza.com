@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Contracts;
 
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -97,9 +98,9 @@ interface UserContract extends \Modules\Xot\Contracts\UserContract
     /**
      * Determine if the user has the given role.
      *
-     * @param string|int|array<int|string>|UserRole|Collection<int, UserRole> $roles
+     * @param string|int|array<int|string>|UserRole|\Illuminate\Database\Eloquent\Collection<int, UserRole> $roles
      */
-    public function hasRole(string|int|array|UserRole|Collection $roles, ?string $guard = null): bool;
+    public function hasRole(string|int|array|UserRole|\Illuminate\Database\Eloquent\Collection $roles, ?string $guard = null): bool;
 
     /**
      * Get the user's authentication logs.

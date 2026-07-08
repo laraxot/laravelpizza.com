@@ -29,12 +29,9 @@ Durante l'analisi del codice è emerso che numerosi file di traduzione nel modul
 - [Regole di Naming per i File di Traduzione](../../Notify/docs/TRANSLATION_FILE_NAMING_RULES.md)
 - [Guida alla Struttura dei File di Traduzione](../../Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md)
 - [Progresso della Standardizzazione](../../Notify/docs/TRANSLATION_STANDARDS_PROGRESS.md)
-<<<<<<< HEAD
 - [Regole di Naming per i File di Traduzione](../../Notify/docs/TRANSLATION_FILE_NAMING_RULES.md)
 - [Guida alla Struttura dei File di Traduzione](../../Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md)
 - [Progresso della Standardizzazione](../../Notify/docs/TRANSLATION_STANDARDS_PROGRESS.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ### Struttura Standard Richiesta
 
@@ -115,12 +112,9 @@ La corretta implementazione degli standard di traduzione garantisce:
 - [Regole Generali per le Traduzioni](./TRANSLATION_KEYS_RULES.md)
 - [Best Practices per le Traduzioni](./TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Convenzioni di Traduzione nel Modulo Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
-<<<<<<< HEAD
 - [Regole Generali per le Traduzioni](./TRANSLATION_KEYS_RULES.md)
 - [Best Practices per le Traduzioni](./TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Convenzioni di Traduzione nel Modulo Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
-=======
->>>>>>> 11c7c7d (.)
 # Standardizzazione Traduzioni Modulo Notify
 
 ## Panoramica delle Problematiche
@@ -152,12 +146,9 @@ Durante l'analisi del codice è emerso che numerosi file di traduzione nel modul
 - [Regole di Naming per i File di Traduzione](../../Notify/docs/TRANSLATION_FILE_NAMING_RULES.md)
 - [Guida alla Struttura dei File di Traduzione](../../Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md)
 - [Progresso della Standardizzazione](../../Notify/docs/TRANSLATION_STANDARDS_PROGRESS.md)
-<<<<<<< HEAD
 - [Regole di Naming per i File di Traduzione](../../Notify/docs/TRANSLATION_FILE_NAMING_RULES.md)
 - [Guida alla Struttura dei File di Traduzione](../../Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md)
 - [Progresso della Standardizzazione](../../Notify/docs/TRANSLATION_STANDARDS_PROGRESS.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ### Struttura Standard Richiesta
 
@@ -237,11 +228,7 @@ La corretta implementazione degli standard di traduzione garantisce:
 - [Convenzioni di Traduzione nel Modulo Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
 - [Regole Generali per le Traduzioni](./TRANSLATION_KEYS_RULES.md)
 - [Best Practices per le Traduzioni](./TRANSLATION_KEYS_BEST_PRACTICES.md)
-<<<<<<< HEAD
 - [Convenzioni di Traduzione nel Modulo Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
 - [Regole Generali per le Traduzioni](./TRANSLATION_KEYS_RULES.md)
 - [Best Practices per le Traduzioni](./TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Convenzioni di Traduzione nel Modulo Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
-=======
-- [Convenzioni di Traduzione nel Modulo Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
->>>>>>> 11c7c7d (.)

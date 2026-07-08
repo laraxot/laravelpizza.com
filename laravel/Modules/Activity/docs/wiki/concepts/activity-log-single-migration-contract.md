@@ -60,5 +60,5 @@ File errati in `database/migrations/_bak/README.md`.
 ## Collegamenti
 
 - [activity-log-attribute-changes-column](./activity-log-attribute-changes-column.md)
-- [notifications-database-contract](../../../Notify/docs/wiki/concepts/notifications-database-contract.md)
+- [notifications-database-contract](../../../../Notify/docs/wiki/concepts/notifications-database-contract.md)
 - [one-migration-per-model](../../../../../docs/wiki/memories/one-migration-per-model-bump-timestamp.md)

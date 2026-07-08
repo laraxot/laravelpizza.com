@@ -54,7 +54,8 @@ class TenantServiceProvider extends XotBaseServiceProvider
             $map = [];
         }
 
-        Relation::morphMap($this->buildMorphMap($map));
+        /** @var array<string, mixed> $map */
+        Relation::morphMap($this->buildMorphMap(ConfigStringKeyFilter::onlyStringKeys($map)));
     }
 
     public function registerDB(): void
@@ -127,6 +128,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
             Arr::set($data, 'connections.user', Arr::get($data, 'connections.user_'.$default));
         }
 
+        /** @var array<string, mixed> $data */
         return ConfigStringKeyFilter::onlyStringKeys($data);
     }
 
@@ -171,7 +173,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
     }
 
     /**
-     * @param  array<mixed, mixed>  $map
+     * @param  array<string, mixed>  $map
      *
      * @return array<string, class-string<Model>>
      */

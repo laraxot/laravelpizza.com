@@ -143,11 +143,8 @@ Se la localizzazione dei path è fondamentale, valuta se usare ancora le rotte c
 - [Guida language switcher](Modules/Lang/project_docs/README.md)
 - [FAQ e problemi comuni](Modules/Lang/project_docs/translations-faq.md)
 - [Guida language switcher](Modules/Lang/project_docs/README.md)
-<<<<<<< HEAD
 - [FAQ e problemi comuni](Modules/Lang/project_docs/translations-faq.md)
 - [Guida language switcher](Modules/Lang/project_docs/README.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ---
 
@@ -300,7 +297,6 @@ Se la localizzazione dei path è fondamentale, valuta se usare ancora le rotte c
 
 ---
 
-<<<<<<< HEAD
 **Se vuoi che aggiorni direttamente la documentazione o vuoi esempi pratici di override/mapping path Folio, chiedi pure!**
 
 ---
@@ -312,6 +308,3 @@ Se la localizzazione dei path è fondamentale, valuta se usare ancora le rotte c
 ---
 
 **Se vuoi che aggiorni direttamente la documentazione o vuoi esempi pratici di override/mapping path Folio, chiedi pure!**
-=======
-**Se vuoi che aggiorni direttamente la documentazione o vuoi esempi pratici di override/mapping path Folio, chiedi pure!**
->>>>>>> 11c7c7d (.)

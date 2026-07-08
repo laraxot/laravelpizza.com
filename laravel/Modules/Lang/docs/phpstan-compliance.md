@@ -4,10 +4,7 @@
 
 **Analysis Date:** September 22, 2025
 **Analysis Date:** September 22, 2025
-<<<<<<< HEAD
 **Analysis Date:** September 22, 2025
-=======
->>>>>>> 11c7c7d (.)
 **PHPStan Level:** 9 (Maximum)
 **Files Analyzed:** 123
 **Errors Found:** 0
@@ -48,12 +45,8 @@ The module maintains:
 - Strict type declarations
 - Comprehensive type hints
 - Internationalization best practices
-<<<<<<< HEAD
 - Modern PHP 8.2+ feature utilization
 - Modern PHP 8.2+ feature utilization
 - Modern PHP 8.2+ feature utilization
 - Modern PHP 8.2+ feature utilization
 - Modern PHP 8.2+ feature utilization
-=======
-- Modern PHP 8.2+ feature utilization
->>>>>>> 11c7c7d (.)

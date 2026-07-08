@@ -37,3 +37,10 @@ Aggiornato `bashscripts/tools/prompts/start.txt`.
   - resi espliciti issue audit GitHub, Skills Index e standard Markdown;
   - rafforzato divieto `persist*` su metodi dominio;
   - rimossa riga utente finita in coda al prompt.
+
+## Sessione 2026-07-08 — v26
+
+- **Ripulito** `start.txt`: da ~1973 righe a ~170 (rimossi append utente, `welcome.txt` e `llm-wiki.txt` incollati).
+- **v26**: §0 `run-session-gate.sh`, §10 task sessione sicuri, **vietato `composer go`** (cancella migrations).
+- **Esecuzione**: `artisan optimize` OK; PHPStan Modules 0 errori / 5907 file.
+- Handoff: `docs/chat/2026-07-08-start-prompt-v26-cleanup.md`

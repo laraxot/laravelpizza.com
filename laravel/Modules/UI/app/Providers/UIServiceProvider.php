@@ -30,15 +30,30 @@ class UIServiceProvider extends XotBaseServiceProvider
     protected string $module_ns = __NAMESPACE__;
 
     /**
+     * Registra i servizi del provider.
+     *
+     * Lega i contratti mappa/geocoding ai fallback Null di default. Quando il
+     * modulo Geo sarà installato, sostituire il binding qui senza toccare
+     * InteractiveMap (vedi docs/wiki/concepts/block-rendering-and-optional-services.md).
+     */
+    public function register(): void
+    {
+        parent::register();
+
+        $this->app->singleton(
+            \Modules\UI\Contracts\MapServiceContract::class,
+            \Modules\UI\Services\Map\NullMapService::class,
+        );
+        $this->app->singleton(
+            \Modules\UI\Contracts\GeocodingServiceContract::class,
+            \Modules\UI\Services\Map\NullGeocodingService::class,
+        );
+    }
+
+    /**
      * Boot del service provider.
      *
      * Configura i componenti Blade e altre funzionalità del modulo UI.
-     *
-     * @return void
-     */
-
-    /**
-     * Registra i servizi del provider.
      *
      * @return void
      */

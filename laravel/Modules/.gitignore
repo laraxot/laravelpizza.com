@@ -1,2 +1,4 @@
-# Ignore alternate data stream artifacts
-*.Zone.Identifier
+
+# Backup files from refactoring
+*.bak
+**/*.bak

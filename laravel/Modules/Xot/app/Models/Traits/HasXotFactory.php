@@ -12,6 +12,7 @@ use Modules\Xot\Actions\Factory\GetFactoryAction;
 trait HasXotFactory
 {
     /** @use EloquentHasFactory<TFactory> */
+    /** @phpstan-ignore-next-line missingType.generics */
     use EloquentHasFactory {
         newFactory as parentNewFactory;
     }
@@ -26,6 +27,7 @@ trait HasXotFactory
         /** @var TFactory $factory */
         $factory = app(GetFactoryAction::class)->execute(static::class);
 
+        /** @phpstan-ignore-next-line return.type */
         return $factory;
     }
 }

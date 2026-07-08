@@ -130,12 +130,8 @@ Per evitare errori nei file di traduzione:
 - [Regole generali per i file di traduzione](/laravel/modules/xot/docs/translation_rules.md)
 - [Documentazione principale sulle traduzioni](/docs/translation_rules.md)
 
-<<<<<<< HEAD
 *Ultimo aggiornamento: 3 Giugno 2025*
 - [Regole generali per i file di traduzione](/laravel/modules/xot/docs/translation_rules.md)
 - [Documentazione principale sulle traduzioni](/docs/translation_rules.md)
 
 *Ultimo aggiornamento: 3 Giugno 2025*
-=======
-*Ultimo aggiornamento: 3 Giugno 2025*
->>>>>>> 11c7c7d (.)

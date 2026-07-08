@@ -14,12 +14,9 @@ class TaskFactory extends Factory
 {
     protected $model = Task::class;
 
-<<<<<<< HEAD
-=======
     /**
      * @return array<string, mixed>
      */
->>>>>>> laraxot/dev
     public function definition(): array
     {
         return [

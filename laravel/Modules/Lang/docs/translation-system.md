@@ -71,12 +71,9 @@ return [
 - [Form Components](../Patient/project_docs/filament-form-components.md)
 - [Wizard Structure](../Patient/project_docs/filament-wizard-structure.md)
 - [Best Practices](../Xot/project_docs/filament-best-practices.md)
-<<<<<<< HEAD
 - [Form Components](../Patient/project_docs/filament-form-components.md)
 - [Wizard Structure](../Patient/project_docs/filament-wizard-structure.md)
 - [Best Practices](../Xot/project_docs/filament-best-practices.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ## Vedi Anche
 - [Laravel Translations](https://laravel.com/project_docs/localization)
@@ -157,7 +154,6 @@ return [
 
 ## Vedi Anche
 - [Laravel Translations](https://laravel.com/docs/localization)
-<<<<<<< HEAD
 - [Filament i18n](https://filamentphp.com/docs/internationalization)
 
 ## Vedi Anche
@@ -170,6 +166,3 @@ return [
 ## Vedi Anche
 - [Laravel Translations](https://laravel.com/docs/localization)
 - [Filament i18n](https://filamentphp.com/docs/internationalization)
-=======
-- [Filament i18n](https://filamentphp.com/docs/internationalization)
->>>>>>> 11c7c7d (.)

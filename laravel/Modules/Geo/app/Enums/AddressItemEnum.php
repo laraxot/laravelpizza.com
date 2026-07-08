@@ -64,6 +64,11 @@ enum AddressItemEnum: string implements HasColor, HasIcon, HasLabel
         return $this->transClass(self::class, $this->value.'.description');
     }
 
+    /**
+     * @return array<int, string>
+     *
+     * @phpstan-return array<int, string>
+     */
     public static function getSearchable(): array
     {
         return array_map(fn ($item) => $item->value, self::cases());

@@ -86,7 +86,12 @@ class MorphMapConfigResolver implements ConfigResolverInterface
     {
         $config = config('morph_map');
 
-        return is_array($config) ? ConfigStringKeyFilter::onlyStringKeys($config) : [];
+        if (is_array($config)) {
+            /** @var array<string, mixed> $config */
+            return ConfigStringKeyFilter::onlyStringKeys($config);
+        }
+
+        return [];
     }
 
     /**
@@ -102,6 +107,11 @@ class MorphMapConfigResolver implements ConfigResolverInterface
 
         $config = File::getRequire($path);
 
-        return is_array($config) ? ConfigStringKeyFilter::onlyStringKeys($config) : [];
+        if (is_array($config)) {
+            /** @var array<string, mixed> $config */
+            return ConfigStringKeyFilter::onlyStringKeys($config);
+        }
+
+        return [];
     }
 }

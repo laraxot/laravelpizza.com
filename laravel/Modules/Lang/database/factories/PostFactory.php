@@ -16,12 +16,9 @@ class PostFactory extends Factory
 {
     protected $model = Post::class;
 
-<<<<<<< HEAD
     /**
      * @return array<string, mixed>
      */
-=======
->>>>>>> 11c7c7d (.)
     public function definition(): array
     {
         return [

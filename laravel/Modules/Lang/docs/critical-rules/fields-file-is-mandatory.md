@@ -1,10 +1,7 @@
 # Regola Critica: fields.php è OBBLIGATORIO
 
 **Data**: 2026-01-09
-<<<<<<< HEAD
 **Data**: 2026-01-09
-=======
->>>>>>> 11c7c7d (.)
 **Severità**: 🔴 **CRITICAL**
 **Status**: ✅ **REGOLA ASSOLUTA**
 
@@ -322,9 +319,6 @@ Prima di considerare un modulo "completo":
 
 **Versione**: 1.0
 **Data**: 2026-01-09
-<<<<<<< HEAD
 **Data**: 2026-01-09
-=======
->>>>>>> 11c7c7d (.)
 **Autore**: System Architect (dopo litigata interna)
 **Status**: ✅ **REGOLA DEFINITIVA**

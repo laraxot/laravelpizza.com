@@ -35,22 +35,15 @@ php artisan module_lang:show-versions
 * [upgrade.md](../../../Cms/docs/upgrade.md)
 * [upgrade.md](../../../Lang/docs/upgrade.md)
 * [upgrade.md](../../../Cms/docs/upgrade.md)
-<<<<<<< HEAD
 * [upgrade.md](../../../Lang/docs/upgrade.md)
 * [upgrade.md](../../../Cms/docs/upgrade.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ### Versione Incoming
 
 ```
 
-<<<<<<< HEAD
 ---
 ---
 ---
 ---
 ---
-=======
----
->>>>>>> 11c7c7d (.)

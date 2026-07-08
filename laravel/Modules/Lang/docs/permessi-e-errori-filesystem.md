@@ -1,12 +1,9 @@
 # Gestione Permessi e Errori Filesystem su File di Lingua (Lang)
 
 > **Backlink:** [Indice e collegamenti root](../../../../docs/links.md)
-<<<<<<< HEAD
 > **Backlink:** [Indice e collegamenti root](../../../docs/links.md)
 > **Backlink:** [Indice e collegamenti root](../../../docs/links.md)
 > **Backlink:** [Indice e collegamenti root](../../../docs/links.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ## Problema
 
@@ -60,15 +57,12 @@ sudo chmod 664 Modules/Lang/lang/it/lang_service.php
 ## Collegamenti
 - [Indice e collegamenti root](../../../../docs/links.md)
 - [Documentazione MCP e gestione errori](../../../../docs/mcp_errors_and_lessons.md)
-<<<<<<< HEAD
 - [Indice e collegamenti root](../../../docs/links.md)
 - [Documentazione MCP e gestione errori](../../../docs/mcp_errors_and_lessons.md)
 - [Indice e collegamenti root](../../../docs/links.md)
 - [Documentazione MCP e gestione errori](../../../docs/mcp_errors_and_lessons.md)
 - [Indice e collegamenti root](../../../docs/links.md)
 - [Documentazione MCP e gestione errori](../../../docs/mcp_errors_and_lessons.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ---
 
@@ -77,12 +71,9 @@ La root `docs/` deve contenere solo il link a questo file, non la guida completa
 # Gestione Permessi e Errori Filesystem su File di Lingua (Lang)
 
 > **Backlink:** [Indice e collegamenti root](../../../../docs/links.md)
-<<<<<<< HEAD
 > **Backlink:** [Indice e collegamenti root](../../../docs/links.md)
 > **Backlink:** [Indice e collegamenti root](../../../docs/links.md)
 > **Backlink:** [Indice e collegamenti root](../../../docs/links.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ## Problema
 
@@ -136,25 +127,18 @@ sudo chmod 664 Modules/Lang/lang/it/lang_service.php
 ## Collegamenti
 - [Indice e collegamenti root](../../../../docs/links.md)
 - [Documentazione MCP e gestione errori](../../../../docs/mcp_errors_and_lessons.md)
-<<<<<<< HEAD
 - [Indice e collegamenti root](../../../docs/links.md)
 - [Documentazione MCP e gestione errori](../../../docs/mcp_errors_and_lessons.md)
 - [Indice e collegamenti root](../../../docs/links.md)
 - [Documentazione MCP e gestione errori](../../../docs/mcp_errors_and_lessons.md)
 - [Indice e collegamenti root](../../../docs/links.md)
 - [Documentazione MCP e gestione errori](../../../docs/mcp_errors_and_lessons.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ---
 
 **Nota:**
-<<<<<<< HEAD
 La root `docs/` deve contenere solo il link a questo file, non la guida completa.
 La root `docs/` deve contenere solo il link a questo file, non la guida completa.
 La root `docs/` deve contenere solo il link a questo file, non la guida completa.
 La root `docs/` deve contenere solo il link a questo file, non la guida completa.
 La root `docs/` deve contenere solo il link a questo file, non la guida completa.
-=======
-La root `docs/` deve contenere solo il link a questo file, non la guida completa.
->>>>>>> 11c7c7d (.)

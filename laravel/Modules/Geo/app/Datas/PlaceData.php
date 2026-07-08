@@ -20,6 +20,13 @@ use Spatie\LaravelData\Data;
  */
 class PlaceData extends Data
 {
+    /**
+     * @param array<string, string> $addressComponents
+     * @param array<string, mixed>  $extraData
+     *
+     * @phpstan-param array<string, string> $addressComponents
+     * @phpstan-param array<string, mixed> $extraData
+     */
     public function __construct(
         public readonly int $placeId,
         public readonly string $displayName,

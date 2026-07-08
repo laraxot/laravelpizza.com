@@ -54,13 +54,14 @@ class ResolveTenantConfigValueAction
         /** @var mixed $extraConf */
         $extraConf = config($configName);
 
-        $originalConfTyped = is_array($originalConf)
-            ? ConfigStringKeyFilter::onlyStringKeys($originalConf)
-            : [];
+        $originalConfArray = is_array($originalConf) ? $originalConf : [];
+        $extraConfArray = is_array($extraConf) ? $extraConf : [];
 
-        $extraConfTyped = is_array($extraConf)
-            ? ConfigStringKeyFilter::onlyStringKeys($extraConf)
-            : [];
+        /** @var array<string, mixed> $originalConfArray */
+        /** @var array<string, mixed> $extraConfArray */
+
+        $originalConfTyped = ConfigStringKeyFilter::onlyStringKeys($originalConfArray);
+        $extraConfTyped = ConfigStringKeyFilter::onlyStringKeys($extraConfArray);
 
         return ConfigStringKeyFilter::mergeRecursive($originalConfTyped, $extraConfTyped);
     }

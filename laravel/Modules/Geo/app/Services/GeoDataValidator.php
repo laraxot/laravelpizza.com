@@ -64,7 +64,7 @@ class GeoDataValidator
     /**
      * Valida i dati geografici.
      *
-     * @param array $data Dati da validare
+     * @param array<string, mixed> $data Dati da validare
      */
     public function validate(array $data): bool
     {
@@ -76,7 +76,7 @@ class GeoDataValidator
     /**
      * Ottiene gli errori di validazione.
      *
-     * @param array $data Dati da validare
+     * @param array<string, mixed> $data Dati da validare
      *
      * @return array<string, array<int, string>>
      */
@@ -93,7 +93,7 @@ class GeoDataValidator
     /**
      * Verifica l'integrità dei dati.
      *
-     * @param array $data Dati da verificare
+     * @param array<string, mixed> $data Dati da verificare
      */
     public function checkIntegrity(array $data): bool
     {

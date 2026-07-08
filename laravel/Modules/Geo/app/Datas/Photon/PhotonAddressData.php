@@ -13,12 +13,16 @@ use Spatie\LaravelData\Mappers\SnakeCaseMapper;
 #[MapOutputName(SnakeCaseMapper::class)]
 class PhotonAddressData extends Data
 {
+    /**
+     * @param array{latitude: float, longitude: float} $coordinates
+     */
     public function __construct(
         public ?string $country,
         public ?string $city,
         public ?string $postcode,
         public ?string $street,
         public ?string $housenumber,
+        /** @var array{latitude: float, longitude: float} */
         public array $coordinates,
     ) {
     }

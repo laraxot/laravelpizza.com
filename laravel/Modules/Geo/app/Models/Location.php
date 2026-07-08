@@ -33,7 +33,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null          $deleted_at
  * @property string|null          $deleted_by
  * @property ProfileContract|null $creator
- * @property array                $location
+ * @property array<string, float> $location
  * @property ProfileContract|null $updater
  *
  * @method static Builder<static>|Location newModelQuery()
@@ -87,6 +87,8 @@ class Location extends BaseModel
 
     /**
      * Get the latitude and longitude attributes.
+     *
+     * @return array<string, string>
      */
     public static function getLatLngAttributes(): array
     {
@@ -107,11 +109,16 @@ class Location extends BaseModel
     /**
      * Scope to filter by a specific distance from a given point.
      */
+    /**
+     * @param Builder<static> $query
+     *
+     * @return Builder<static>
+     */
     public function scopeWithinDistance(Builder $query, float $latitude, float $longitude, float $distanceInKm): Builder
     {
-        $haversine = "(6371 * acos(cos(radians({$latitude})) * cos(radians(lat)) * cos(radians(lng) - radians({$longitude})) + sin(radians({$latitude})) * sin(radians(lat))))";
+        $haversine = '(6371 * acos(cos(radians(?)) * cos(radians(lat)) * cos(radians(lng) - radians(?)) + sin(radians(?)) * sin(radians(lat))))';
 
-        return $query->whereRaw("{$haversine} <= ?", [$distanceInKm]);
+        return $query->whereRaw("{$haversine} <= ?", [$latitude, $longitude, $latitude, $distanceInKm]);
     }
 
     /**
@@ -131,6 +138,8 @@ class Location extends BaseModel
 
     /**
      * Accessor for the "location" attribute.
+     *
+     * @return Attribute<array<string, float>, array<string, float>|null>
      */
     protected function location(): Attribute
     {

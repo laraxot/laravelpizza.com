@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Filament\Forms\Components;
 
+use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
 use Modules\Geo\Filament\Resources\AddressResource;
 
@@ -18,7 +19,6 @@ class AddressField extends Section
     protected function setUp(): void
     {
         parent::setUp();
-        /* @phpstan-ignore argument.type */
         $this->schema($this->getAddressFormSchema());
         $this->columns(2);
     }
@@ -33,16 +33,23 @@ class AddressField extends Section
         return $this;
     }
 
+    /**
+     * @return array<string, Component>
+     */
     protected function getAddressFormSchema(): array
     {
-        $baseSchema = AddressResource::getFormSchema();
+        $baseSchema = [];
 
-        // Rimuovi campi non necessari per relazioni semplici
-        unset($baseSchema['name'], $baseSchema['is_primary']);
+        foreach (AddressResource::getFormSchema() as $key => $component) {
+            if (in_array($key, ['name', 'is_primary'], true) || ! $component instanceof Component) {
+                continue;
+            }
 
-        // Se i live updates sono disabilitati, rimuovi la reattività
+            $baseSchema[$key] = $component;
+        }
+
         if ($this->disableLiveUpdates) {
-            $baseSchema = $this->removeReactivityFromSchema($baseSchema);
+            return $this->removeReactivityFromSchema($baseSchema);
         }
 
         return $baseSchema;
@@ -51,31 +58,25 @@ class AddressField extends Section
     /**
      * Rimuove tutti i pattern reattivi dai campi per prevenire loop infiniti.
      *
-     * @param array<string, mixed> $schema
+     * @param array<string, Component> $schema
      *
-     * @return array<string, mixed>
+     * @return array<string, Component>
      */
     protected function removeReactivityFromSchema(array $schema): array
     {
         foreach ($schema as $key => $field) {
-            /* @phpstan-ignore argument.type */
             if (method_exists($field, 'live')) {
                 // Rimuovi reattività live
-                /* @phpstan-ignore method.nonObject */
                 $field->live(false);
             }
 
-            /* @phpstan-ignore argument.type */
             if (method_exists($field, 'afterStateUpdated')) {
                 // Rimuovi callback afterStateUpdated
-                /* @phpstan-ignore method.nonObject */
                 $field->afterStateUpdated(null);
             }
 
-            /* @phpstan-ignore argument.type */
             if (method_exists($field, 'disabled')) {
                 // Rimuovi condizioni disabled dinamiche
-                /* @phpstan-ignore method.nonObject */
                 $field->disabled(false);
             }
 

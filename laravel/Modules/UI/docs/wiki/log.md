@@ -5,6 +5,12 @@
 
 # UI Wiki Log
 
+## [2026-07-08] phpstan | InteractiveMap/LocationSelector — riapplicato pattern contratti opzionali, rimosso LocationSelector morto
+- Un agent concorrente aveva reintrodotto import diretti `Modules\Geo\Services\MapService` / `GeocodingService` in `InteractiveMap.php` e rimosso il binding `register()` da `UIServiceProvider`, contraddicendo la regola documentata in [block-rendering-and-optional-services](concepts/block-rendering-and-optional-services.md) ("non importare `Modules\Geo\*` nel consumer UI").
+- Ripristinato: `InteractiveMap.php` usa `MapServiceContract`/`GeocodingServiceContract`; `UIServiceProvider::register()` lega i contratti a `NullMapService`/`NullGeocodingService` di default.
+- `LocationSelector.php` (0 consumer in blade/route/test, importava `Modules\Geo\Models\Comune` direttamente, chiavi lang `ui::location_selector.*` inesistenti) rimosso definitivamente — stessa decisione già presa in un commit precedente (`66f7fc1`) e più volte annullata/ripristinata da agent diversi (vedi `docs/conflict-resolution-locationselector.md`). Nessuna evidenza che i tre simboli mancanti (`MapService`, `GeocodingService`, `Comune` in Geo) fossero un requisito reale per questo componente: erano riferimenti a codice mai esistito.
+- Verifica: PHPStan pulito su entrambi i file; container resolve corretto (`app(MapServiceContract::class)` → `NullMapService`); `mount()`/`loadMarkers()`/`searchAddress()` verificati via `php artisan tinker` (DB non raggiungibile in sandbox per Livewire::test()).
+
 ## [2026-05-21] bugfix | auth register focus perso per overlay header mobile
 - Nuova pagina: `concepts/auth-register-focus-loss-overlay.md`.
 - Root cause identificata in `x-ui.marketing.header`: container mobile fullscreen `fixed` che intercettava i click anche a menu chiuso.

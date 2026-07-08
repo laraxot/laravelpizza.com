@@ -122,7 +122,6 @@ Prima di committare:
 
 - [Filament Translations](/.cursor/rules/filament-translations.rule)
 - [Laravel Localization](https://laravel.com/docs/10.x/localization)
-<<<<<<< HEAD
 - [Best Practices](/.cursor/rules/translations.rule)
 # Translation Module PDF Reports
 
@@ -946,6 +945,3 @@ public function generateWithErrorHandling(array $options = []): string
 - [Filament Translations](/.cursor/rules/filament-translations.rule)
 - [Laravel Localization](https://laravel.com/docs/10.x/localization)
 - [Best Practices](/.cursor/rules/translations.rule)
-=======
-- [Best Practices](/.cursor/rules/translations.rule)
->>>>>>> 11c7c7d (.)

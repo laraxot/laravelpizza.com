@@ -198,9 +198,6 @@ Ogni campo deve avere la seguente struttura completa:
 
 **Versione**: 1.0
 **Data**: 2025-08-08
-<<<<<<< HEAD
 **Data**: 2025-08-08
-=======
->>>>>>> 11c7c7d (.)
 **Stato**: Implementazione in corso
 **Responsabile**: Sistema automatico DRY/KISS

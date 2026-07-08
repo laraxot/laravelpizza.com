@@ -14,11 +14,11 @@ use Modules\Xot\Datas\XotData;
  *
  * Wrapper for Laravel Passport DeviceCode model.
  *
- * @property string|null      $user_id
- * @property string           $client_id
- * @property string           $user_code
- * @property OauthClient|null $client
- * @property User|null        $user
+ * @property string|null       $user_id
+ * @property string            $client_id
+ * @property string            $user_code
+ * @property OauthClient|null  $client
+ * @property User|null         $user
  */
 class OauthDeviceCode extends PassportDeviceCode
 {

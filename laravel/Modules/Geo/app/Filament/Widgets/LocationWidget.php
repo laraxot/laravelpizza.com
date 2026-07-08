@@ -20,6 +20,8 @@ class LocationWidget extends XotBaseWidget
 {
     /**
      * Dati del widget.
+     *
+     * @var array<string, mixed>|null
      */
     public ?array $data = [];
 

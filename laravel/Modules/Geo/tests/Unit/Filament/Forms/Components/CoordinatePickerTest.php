@@ -7,22 +7,24 @@ namespace Modules\Geo\Tests\Unit\Filament\Forms\Components;
 use Modules\Geo\Filament\Forms\Components\CoordinatePicker;
 use Modules\Geo\Filament\Forms\Components\LatitudeLongitudeInput;
 use Modules\Geo\Filament\Forms\Components\MapPicker;
+use Modules\Geo\Filament\Forms\Components\XotBaseCoordinateField;
 use Modules\Geo\Tests\UnitTestCase;
 use Modules\Xot\Filament\Forms\Components\XotBaseField;
 use PHPUnit\Framework\Assert;
 
 uses(UnitTestCase::class);
 
-test('CoordinatePicker extends XotBaseField', function (): void {
+test('CoordinatePicker extends XotBaseCoordinateField', function (): void {
+    Assert::assertInstanceOf(XotBaseCoordinateField::class, CoordinatePicker::make('test'));
     Assert::assertInstanceOf(XotBaseField::class, CoordinatePicker::make('test'));
 });
 
-test('LatitudeLongitudeInput extends XotBaseField', function (): void {
-    Assert::assertInstanceOf(XotBaseField::class, LatitudeLongitudeInput::make('test'));
+test('LatitudeLongitudeInput extends XotBaseCoordinateField', function (): void {
+    Assert::assertInstanceOf(XotBaseCoordinateField::class, LatitudeLongitudeInput::make('test'));
 });
 
-test('MapPicker extends XotBaseField', function (): void {
-    Assert::assertInstanceOf(XotBaseField::class, MapPicker::make('test'));
+test('MapPicker extends XotBaseCoordinateField', function (): void {
+    Assert::assertInstanceOf(XotBaseCoordinateField::class, MapPicker::make('test'));
 });
 
 test('CoordinatePicker supports geo-location when empty', function (): void {
@@ -47,7 +49,7 @@ test('LatitudeLongitudeInput has center/zoom methods', function (): void {
     Assert::assertSame(10.0, $field->getCenterLongitude());
 });
 
-test('MapPicker uses center zoom height and latitudeColumn from HasCoordinatePicker', function (): void {
+test('MapPicker uses center zoom height and latitudeColumn from XotBaseCoordinateField', function (): void {
     $field = MapPicker::make('location')
         ->center(45.4642, 9.1900)
         ->zoom(14)
@@ -77,8 +79,8 @@ test('CoordinatePicker can extract coordinates from data', function (): void {
     Assert::assertSame(9.1900, $extracted['longitude']);
 });
 
-test('CoordinatePicker is not dehydrated by default', function (): void {
+test('CoordinatePicker is dehydrated by default (Filament default — state must reach the model)', function (): void {
     $field = CoordinatePicker::make('test');
 
-    Assert::assertFalse($field->isDehydrated());
+    Assert::assertTrue($field->isDehydrated());
 });

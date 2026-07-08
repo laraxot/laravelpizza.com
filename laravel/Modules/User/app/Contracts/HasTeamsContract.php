@@ -19,13 +19,13 @@ use Modules\User\Models\Role;
 /**
  * Modules\User\Contracts\HasTeamsContract.
  *
- * @property int                                      $id
- * @property string                                   $name
- * @property string                                   $two_factor_secret
- * @property TeamContract|null                        $currentTeam
+ * @property int               $id
+ * @property string            $name
+ * @property string            $two_factor_secret
+ * @property TeamContract|null $currentTeam
  * @property Collection<int, \Laravel\Passport\Token> $tokens
- * @property Carbon|null                              $two_factor_confirmed_at
- * @property int                                      $current_team_id
+ * @property Carbon|null       $two_factor_confirmed_at
+ * @property int               $current_team_id
  *
  * @phpstan-require-extends Model
  *

@@ -111,8 +111,8 @@ final class GetAddressFromGoogleMapsAction
     }
 
     /**
-     * @param DataCollection<GoogleMapAddressComponentData> $components
-     * @param array<string>                                 $types
+     * @param DataCollection<int, GoogleMapAddressComponentData> $components
+     * @param array<string>                                      $types
      */
     private function getComponent(DataCollection $components, array $types, bool $short = false): ?string
     {

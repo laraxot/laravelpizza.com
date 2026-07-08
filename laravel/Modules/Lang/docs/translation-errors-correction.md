@@ -35,10 +35,7 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 - `edit_section.php`: `'required' => 'This field is required'`
 
 #### ✅ Modulo <main module>
-<<<<<<< HEAD
 #### ✅ Modulo <main module>
-=======
->>>>>>> 11c7c7d (.)
 #### ✅ Modulo <nome progetto>
 **File Tedeschi (DE):**
 - `doctor_availability_calendar.php`: `'required' => 'Dieses Feld ist erforderlich'`
@@ -55,13 +52,10 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 #### ✅ Modulo Notify
 **File Tedeschi (DE):**
 - `send_email.php`: 
-<<<<<<< HEAD
 - `send_email.php`:
 - `send_email.php`:
 - `send_email.php`:
 - `send_email.php`: 
-=======
->>>>>>> 11c7c7d (.)
   - `'subject_required' => 'Der Betreff ist erforderlich'`
   - `'to_required' => 'Der Empfänger ist erforderlich'`
   - `'content_required' => 'Der Inhalt ist erforderlich'`
@@ -121,13 +115,10 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 #### ✅ Modulo Xot
 **File Tedeschi (DE):**
 - `env.php`: 
-<<<<<<< HEAD
 - `env.php`:
 - `env.php`:
 - `env.php`:
 - `env.php`: 
-=======
->>>>>>> 11c7c7d (.)
   - `'required' => 'Der Wert ist erforderlich'`
   - `'required' => 'Die Umgebung ist erforderlich'`
 - `extra.php`:
@@ -200,20 +191,14 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 ### Moduli con Documentazione Aggiornata
 1. **Lang Module**: `laravel/Modules/Lang/docs/translation_errors_correction_2025.md`
 2. **<main module> Module**: `laravel/Modules/<main module>/docs/translation_refactor_summary_2025.md`
-<<<<<<< HEAD
 2. **<main module> Module**: `laravel/Modules/<main module>/docs/translation_refactor_summary_2025.md`
-=======
->>>>>>> 11c7c7d (.)
 2. **<nome progetto> Module**: `laravel/Modules/<nome progetto>/docs/translation_refactor_summary_2025.md`
 
 ### Collegamenti Bidirezionali
 - [Root Docs: Translation Standards](../../docs/translation_standards.md)
 - [Lang Module: Translation Best Practices](translation_best_practices.md)
 - [<main module> Module: Translation Guidelines](../<main module>/docs/translation_guidelines.md)
-<<<<<<< HEAD
 - [<main module> Module: Translation Guidelines](../<main module>/docs/translation_guidelines.md)
-=======
->>>>>>> 11c7c7d (.)
 - [<nome progetto> Module: Translation Guidelines](../<nome progetto>/docs/translation_guidelines.md)
 
 ## Riepilogo Statistiche
@@ -227,10 +212,7 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 1. Lang Module ✅
 2. DbForge Module ✅
 3. <main module> Module ✅
-<<<<<<< HEAD
 3. <main module> Module ✅
-=======
->>>>>>> 11c7c7d (.)
 3. <nome progetto> Module ✅
 4. Notify Module ✅
 5. FormBuilder Module ✅
@@ -283,12 +265,8 @@ Tutte le traduzioni problematiche sono state corrette seguendo i pattern standar
 
 **Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di Correzione Automatica
-<<<<<<< HEAD
 **Versione**: 1.0
 **Versione**: 1.0
 **Versione**: 1.0
 **Versione**: 1.0
 **Versione**: 1.0
-=======
-**Versione**: 1.0
->>>>>>> 11c7c7d (.)

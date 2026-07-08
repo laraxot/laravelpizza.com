@@ -93,13 +93,8 @@ class ScheduleArguments extends TextColumn
     /**
      * Filter out empty tags from the array.
      *
-<<<<<<< HEAD
-     * @param  array<int, string>  $tags
-     * @return array<int, string>
-=======
      * @param  list<string>  $tags
      * @return list<string>
->>>>>>> laraxot/dev
      */
     protected function filterEmptyTags(array $tags): array
     {

@@ -6,6 +6,7 @@ namespace Modules\Job\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
@@ -58,11 +59,6 @@ use function Safe\json_decode;
  * @method static Builder<static>|Task newModelQuery()
  * @method static Builder<static>|Task newQuery()
  * @method static Builder<static>|Task query()
-<<<<<<< HEAD
- * @method static Builder<static>|Task sortableBy(array<string> $sortableColumns, array<string, string> $defaultSort = [])
-=======
- * @method static Builder<static>|Task sortableBy(array<string> $sortableColumns, array<string, 'asc'|'desc'> $defaultSort = [])
->>>>>>> laraxot/dev
  * @method static Builder<static>|Task whereAutoCleanupNum($value)
  * @method static Builder<static>|Task whereAutoCleanupType($value)
  * @method static Builder<static>|Task whereCommand($value)
@@ -97,9 +93,12 @@ use function Safe\json_decode;
 class Task extends BaseModel
 {
     // use HasFrequencies;
+    /** @use FrontendSortable<static> */
     use FrontendSortable;
-    /** @phpstan-use HasXotFactory<\Illuminate\Database\Eloquent\Factories\Factory<static>> */
+
+    /** @use HasXotFactory<Factory<static>> */
     use HasXotFactory;
+
     use Notifiable;
 
     protected $fillable = [

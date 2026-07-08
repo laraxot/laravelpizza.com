@@ -912,18 +912,12 @@ class UserResourceTest extends TestCase
 
 ### **1. Documentazione**
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 11c7c7d (.)
 - [README.md](readme.md) - Documentazione principale
 - [BEST_PRACTICES.md](best_practices.md) - Best practices
 - [API_REFERENCE.md](api_reference.md) - Riferimento API
 - [TROUBLESHOOTING.md](troubleshooting.md) - Troubleshooting
-<<<<<<< HEAD
 >>>>>>> bebd548 (.)
-=======
->>>>>>> 11c7c7d (.)
 - [README.md](README.md) - Documentazione principale
 - [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices
 - [API_REFERENCE.md](API_REFERENCE.md) - Riferimento API
@@ -937,12 +931,8 @@ class UserResourceTest extends TestCase
 **Ultimo aggiornamento**: Gennaio 2025
 **Versione**: 2.0.0
 **Autore**: Team Laraxot
-<<<<<<< HEAD
 **Mantenuto da**: Community Laraxot
 **Mantenuto da**: Community Laraxot
 **Mantenuto da**: Community Laraxot
 **Mantenuto da**: Community Laraxot
 **Mantenuto da**: Community Laraxot
-=======
-**Mantenuto da**: Community Laraxot
->>>>>>> 11c7c7d (.)

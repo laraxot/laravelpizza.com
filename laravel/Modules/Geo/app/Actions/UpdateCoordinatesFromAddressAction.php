@@ -76,7 +76,11 @@ class UpdateCoordinatesFromAddressAction
             // Raccogli errori dal servizio di geocoding
             $geocodingErrors = $this->getAddressDataAction->getErrors();
             if ($geocodingErrors->isNotEmpty()) {
-                $geocodingErrors->each(fn (string $error): Collection => $this->errors->push($error));
+                foreach ($geocodingErrors as $error) {
+                    if (\is_string($error)) {
+                        $this->errors->push($error);
+                    }
+                }
             } else {
                 $this->errors->push(__('geo::actions.update_coordinates.errors.geocoding_failed'));
             }
@@ -89,11 +93,14 @@ class UpdateCoordinatesFromAddressAction
     }
 
     /**
-     *  Collection<int, string>
+     * @return Collection<int, string>
      */
     private function newErrorCollection(): Collection
     {
-        return new Collection();
+        /** @var Collection<int, string> $errors */
+        $errors = new Collection();
+
+        return $errors;
     }
 
     /**

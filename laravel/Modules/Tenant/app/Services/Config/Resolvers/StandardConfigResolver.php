@@ -102,7 +102,12 @@ class StandardConfigResolver implements ConfigResolverInterface
     {
         $config = config($group);
 
-        return is_array($config) ? ConfigStringKeyFilter::onlyStringKeys($config) : [];
+        if (is_array($config)) {
+            /** @var array<string, mixed> $config */
+            return ConfigStringKeyFilter::onlyStringKeys($config);
+        }
+
+        return [];
     }
 
     /**
@@ -114,7 +119,12 @@ class StandardConfigResolver implements ConfigResolverInterface
         $configName = str_replace('/', '.', $tenantName).'.'.$group;
         $config = config($configName);
 
-        return is_array($config) ? ConfigStringKeyFilter::onlyStringKeys($config) : [];
+        if (is_array($config)) {
+            /** @var array<string, mixed> $config */
+            return ConfigStringKeyFilter::onlyStringKeys($config);
+        }
+
+        return [];
     }
 
     private function handleMissingConfig(string $key): void

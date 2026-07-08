@@ -33,6 +33,9 @@ use Illuminate\Http\Resources\Json\JsonResource as ResCollection;
  */
 class GeoJsonResource extends ResCollection
 {
+    /**
+     * @return array<string, mixed>
+     */
     public function toArray(Request $request): array
     {
         app()->getLocale();

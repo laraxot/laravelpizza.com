@@ -8,11 +8,11 @@ qmd: "folio filesystem routing no web.php pages name middleware folio:list Folio
 issues:
   - https://github.com/laraxot/base_fixcity_fila5/issues/289
 related:
-  - ../../../folio-routing-locale.md
+  - ../../folio-routing-locale.md
   - laravel-folio-module-dependency.md
   - folio-volt-static-mount-contract.md
   - ../troubleshooting/folio-route-not-found.md
-  - ../../../../Themes/Sixteen/docs/wiki/concepts/fo-folio-routing-zen.md
+  - ../../../../../Themes/Sixteen/docs/wiki/concepts/fo-folio-routing-zen.md
   - ../../../../../../docs/wiki/memories/folio-no-web-routes-religion.md
 ---
 
@@ -149,7 +149,7 @@ Se `RouteNotFoundException` persiste con sorgente già corretto → [folio-route
 
 1. `v1.blade.php` conta notifiche (`NotificationSchema::isReadable()`).
 2. Include `user-dropdown` con `route('notifications')` ecc.
-3. Se query DB notifiche **ok** ma `RouteNotFoundException` → quasi sempre **cache Blade stale** o server non riavviato ([route-not-found-view-cache.md](../../../../Themes/Sixteen/docs/wiki/troubleshooting/route-not-found-view-cache.md)).
+3. Se query DB notifiche **ok** ma `RouteNotFoundException` → quasi sempre **cache Blade stale** o server non riavviato ([route-not-found-view-cache.md](../../../../../Themes/Sixteen/docs/wiki/troubleshooting/route-not-found-view-cache.md)).
 
 ## Partial canonici header (Sixteen)
 
@@ -162,7 +162,7 @@ Se `RouteNotFoundException` persiste con sorgente già corretto → [folio-route
 
 ## Collegamenti
 
-- [Folio e locale](../../../folio-routing-locale.md)
-- [Zen routing Sixteen](../../../../Themes/Sixteen/docs/wiki/concepts/fo-folio-routing-zen.md)
-- [Header named routes](../../../../Themes/Sixteen/docs/wiki/concepts/fo-folio-named-routes-header.md)
+- [Folio e locale](../../folio-routing-locale.md)
+- [Zen routing Sixteen](../../../../../Themes/Sixteen/docs/wiki/concepts/fo-folio-routing-zen.md)
+- [Header named routes](../../../../../Themes/Sixteen/docs/wiki/concepts/fo-folio-named-routes-header.md)
 - [Notifiche User](../../../../User/docs/wiki/concepts/notifications-folio-page.md)

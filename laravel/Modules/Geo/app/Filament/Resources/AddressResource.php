@@ -35,6 +35,8 @@ class AddressResource extends XotBaseResource
 
     /**
      * @return array<string, Component>
+     *
+     * @phpstan-return array<string, Component>
      */
     #[\Override]
     public static function getFormSchema(): array
@@ -93,6 +95,11 @@ class AddressResource extends XotBaseResource
         ];
     }
 
+    /**
+     * @return array<string, Component>
+     *
+     * @phpstan-return array<string, Component>
+     */
     public static function getSearchStep(): array
     {
         return [

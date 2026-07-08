@@ -31,8 +31,6 @@ php artisan module:enable Seo
 php artisan migrate
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ### 🎯 **Meta Tags Management**
 ```php
 // Impostazione meta tags
@@ -277,13 +275,8 @@ php artisan seo:validate-schema
 **🌐 Translation**: IT/EN ✅  
 **🚀 SEO Score**: 95/100
 
-
-
-
-=======
 Developers are encouraged to contribute to this documentation to keep it accurate and up-to-date.
->>>>>>> 013c0d2 (.)
-=======
+
 ## ⚙️ Configuration
 
 Publish the configuration file to set up API keys (e.g., OpenAI) and defaults:
@@ -316,4 +309,3 @@ For Filament resources, use the provided SEO trait to add configuration fields t
 Please verify all changes with:
 - `phpstan analyse Modules/Seo` (Level 10)
 - `pest` (Test Suite)
->>>>>>> b33919b (.)

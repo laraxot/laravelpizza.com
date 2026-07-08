@@ -86,7 +86,6 @@
 ## Backlinks
 - [Lang Module Overview](../README.md)
 - [Lang Module Overview](../readme.md)
-<<<<<<< HEAD
 - [Translation System Documentation](./translation-system.md)
 - [Translation System Documentation](./translation-system.md)
 - [Translation System Documentation](./translation-system.md)
@@ -94,6 +93,3 @@
 - [Translation System Documentation](./translation-system.md)
 - [Lang Module Overview](../readme.md)
 - [Translation System Documentation](./translation-system.md)
-=======
-- [Translation System Documentation](./translation-system.md)
->>>>>>> 11c7c7d (.)

@@ -375,7 +375,6 @@ describe('Lang Performance Tests', function () {
 **Last Updated**: 2025-08-28
 
 **Testing Framework**: Pest
-<<<<<<< HEAD
 **Environment**: .env.testing
 
 **Testing Framework**: Pest
@@ -390,6 +389,3 @@ describe('Lang Performance Tests', function () {
 
 **Testing Framework**: Pest
 **Environment**: .env.testing
-=======
-**Environment**: .env.testing
->>>>>>> 11c7c7d (.)

@@ -136,12 +136,9 @@ php artisan lang:find-missing it
 - [Translation System](./translation-system.md)
 - [Lang Module Architecture](./architecture.md)
 - [PHPStan Corrections](../../../../docs/phpstan-fixes.md)
-<<<<<<< HEAD
 - [PHPStan Corrections](../../../docs/phpstan-fixes.md)
 - [PHPStan Corrections](../../../docs/phpstan-fixes.md)
 - [PHPStan Corrections](../../../docs/phpstan-fixes.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ## Note di Sviluppo
 
@@ -155,12 +152,8 @@ php artisan lang:find-missing it
 - Comandi estendono `Illuminate\Console\Command`
 - Utilizzo di assertions per validazione
 - Separazione delle responsabilità per ogni comando
-<<<<<<< HEAD
 - Gestione appropriata degli errori
 - Gestione appropriata degli errori
 - Gestione appropriata degli errori
 - Gestione appropriata degli errori
 - Gestione appropriata degli errori
-=======
-- Gestione appropriata degli errori
->>>>>>> 11c7c7d (.)

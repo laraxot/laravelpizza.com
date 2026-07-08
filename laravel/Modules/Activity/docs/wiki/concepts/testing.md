@@ -12,7 +12,7 @@ discussions:
 related:
   - phpstan-pest-discipline.md
   - ../overviews/completion-status.md
-  - ../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md
+  - ../../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md
 ---
 
 # Testing in Activity
@@ -39,4 +39,4 @@ php -d memory_limit=2048M ./vendor/bin/phpstan analyse Modules/Activity
 | Pest runtime | 🔄 DB test |
 | Roadmap | [completion-status](../overviews/completion-status.md) |
 
-Hub: [platform-completion-roadmap](../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md)
+Hub: [platform-completion-roadmap](../../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md)

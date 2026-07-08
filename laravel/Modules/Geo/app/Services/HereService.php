@@ -6,7 +6,6 @@ namespace Modules\Geo\Services;
 
 use Illuminate\Support\Facades\Http;
 use Modules\Tenant\Services\TenantService;
-use Webmozart\Assert\Assert;
 
 class HereService
 {
@@ -14,6 +13,9 @@ class HereService
 
     // https://router.hereapi.com/v8/routes?transportMode=car&origin=52.5308,13.3847&destination=52.5323,13.3789&return=summary
 
+    /**
+     * @return array<string, mixed>|null
+     */
     public static function getDurationAndLength(float $lat1, float $lon1, float $lat2, float $lon2): ?array
     {
         $api_key = TenantService::config('services.here.api_key');
@@ -46,12 +48,26 @@ class HereService
         if (! is_array($json['routes'])) {
             return null;
         }
-        if (! isset($json['routes'][0])) {
+        if (! isset($json['routes'][0]) || ! is_array($json['routes'][0])) {
             return null;
         }
 
-        // @phpstan-ignore offsetAccess.nonOffsetAccessible, offsetAccess.nonOffsetAccessible, offsetAccess.nonOffsetAccessible
-        Assert::isArray($res = $json['routes'][0]['sections']['0']['summary']);
+        $sections = $json['routes'][0]['sections'] ?? null;
+        if (! is_array($sections) || ! isset($sections[0]) || ! is_array($sections[0])) {
+            return null;
+        }
+
+        $summary = $sections[0]['summary'] ?? null;
+        if (! is_array($summary)) {
+            return null;
+        }
+
+        $res = [];
+        foreach ($summary as $key => $value) {
+            if (\is_string($key)) {
+                $res[$key] = $value;
+            }
+        }
 
         return $res;
     }

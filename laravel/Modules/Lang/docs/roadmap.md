@@ -227,14 +227,11 @@ Lang/
 ---
 
 **Last Updated**: 2026-01-02
-<<<<<<< HEAD
 
 
 
 
 **Last Updated**: 2026-01-02
-=======
->>>>>>> 11c7c7d (.)
 **Maintainer**: Team Laraxot
 **Status**: Active Development
 # Product Roadmap - Lang Module

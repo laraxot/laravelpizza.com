@@ -1,0 +1,70 @@
+{
+    "name": "laraxot/module_ai_fila5",
+    "description": "",
+    "homepage": "https://github.com/laraxot/module_ai_fila5",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "marco sottana",
+            "email": "marco.sottana@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\AI\\": "app/",
+            "Modules\\AI\\Database\\Factories\\": "database/factories/",
+            "Modules\\AI\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\AI\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "openai-php/laravel": "*"
+    },
+    "require-dev_comment": {
+        "codewithkyrian/transformers": "^0.5.2",
+        "laravel/pint": "^1.13",
+        "nunomaduro/phpinsights": "^2.11",
+        "larastan/larastan": "*",
+        "vimeo/psalm": "^5.17",
+        "psalm/plugin-laravel": "^2.8",
+        "enlightn/enlightn": "^2.7",
+        "driftingly/rector-laravel": "^0.26.2",
+        "symplify/phpstan-rules": "*",
+        "rector/rector": "^0.18.12",
+        "thecodingmachine/phpstan-safe-rule": "^1.2"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Xot"
+        },
+        {
+            "type": "path",
+            "url": "../Tenant"
+        },
+        {
+            "type": "path",
+            "url": "../UI"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "codewithkyrian/transformers-libsloader": true
+        }
+    }
+}

@@ -194,17 +194,13 @@ The widget includes robust error handling:
 
 - [Lang Module Documentation](../README.md)
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 11c7c7d (.)
 - [Translation Management](./translations.md)
 - [Internationalization Best Practices](./i18n-best-practices.md)
 - [Widget vs Livewire Components](../../../project_docs/widget_vs_livewire_components.md)
 
 *Last updated: January 2025*
 - [Lang Module Documentation](../readme.md)
-<<<<<<< HEAD
 >>>>>>> bebd548 (.)
 - [Translation Management](./translations.md)
 - [Internationalization Best Practices](./i18n-best-practices.md)
@@ -221,10 +217,3 @@ The widget includes robust error handling:
 - [Widget vs Livewire Components](../../../project_docs/widget_vs_livewire_components.md)
 
 *
-=======
-- [Translation Management](./translations.md)
-- [Internationalization Best Practices](./i18n-best-practices.md)
-- [Widget vs Livewire Components](../../../../docs/project/widget_vs_livewire_components.md)
-
-*
->>>>>>> 11c7c7d (.)

@@ -83,7 +83,7 @@ class GetAddressFromMapboxLatLngAction
             throw InvalidLocationException::invalidData('Risposta di Mapbox non valida');
         }
 
-        /* @var array<string, mixed> $data */
+        /** @var array<string, mixed> $data */
         return $data;
     }
 

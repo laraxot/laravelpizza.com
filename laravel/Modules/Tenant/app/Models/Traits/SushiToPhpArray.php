@@ -14,6 +14,7 @@ use Modules\Tenant\Services\Config\ConfigStringKeyFilter;
 use Modules\Tenant\Services\TenantService;
 use Sushi\Sushi;
 
+/** @phpstan-ignore trait.unused */
 trait SushiToPhpArray
 {
     use Sushi;
@@ -37,6 +38,7 @@ trait SushiToPhpArray
                 continue;
             }
 
+            /** @var array<string, mixed> $item */
             $normalized[] = ConfigStringKeyFilter::onlyStringKeys($item);
         }
 

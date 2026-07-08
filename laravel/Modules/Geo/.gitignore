@@ -192,6 +192,16 @@ laravel/_ide_helper_models.php
 laravel/.php_cs.cache
 laravel/.php-cs-fixer.cache
 
+# Nested monorepo copy accidentally vendored by 71f3ef29c (234MB, unrelated modules/themes,
+# unresolved conflict markers broke PHPStan bootstrap for Modules/) — removed from tracking by
+# 5549eb0db (forward-only, no history rewrite). Never re-track: this repo IS a single module.
+/laravel/
+
+# Self-nested duplicate of this same module (51MB, own module.json/composer.json/.claude-flow —
+# stray isolated agent working-copy never merged/cleaned up), untracked debris found 2026-07-08.
+# This repo IS the Geo module itself: never re-track a "Geo/" copy of itself.
+/Geo/
+
 # -----------------------------------------------------------------------------
 # 7. NODE.JS / NPM - Dipendenze e lock files
 # -----------------------------------------------------------------------------

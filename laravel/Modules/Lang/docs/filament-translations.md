@@ -93,11 +93,8 @@ TextInput::make('title')
 - [Regole Generali](../../Xot/project_docs/README.md) - Best practice e linee guida generali
 - [Convenzioni Namespace Filament](../../Cms/project_docs/convenzioni-namespace-filament.md) - Regole per i namespace e componenti Filament
 - [Regole Generali](../../Xot/project_docs/README.md) - Best practice e linee guida generali
-<<<<<<< HEAD
 - [Convenzioni Namespace Filament](../../Cms/project_docs/convenzioni-namespace-filament.md) - Regole per i namespace e componenti Filament
 - [Regole Generali](../../Xot/project_docs/README.md) - Best practice e linee guida generali
-=======
->>>>>>> 11c7c7d (.)
 
 ---
 
@@ -112,11 +109,8 @@ Questo documento è linkato anche dalla documentazione del modulo Cms per garant
   - [docs Xot](../../Xot/docs/README.md)
   - [docs Modulo Generico](../../<nome modulo>/docs/README.md)
   - [docs Xot](../../Xot/docs/README.md)
-<<<<<<< HEAD
   - [docs Modulo Generico](../../<nome modulo>/docs/README.md)
   - [docs Xot](../../Xot/docs/README.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ## Policy DRY sulle Traduzioni di Disponibilità/Appuntamenti
 
@@ -221,11 +215,8 @@ TextInput::make('title')
 - [Regole Generali](../../Xot/docs/README.md) - Best practice e linee guida generali
 - [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md) - Regole per i namespace e componenti Filament
 - [Regole Generali](../../Xot/docs/README.md) - Best practice e linee guida generali
-<<<<<<< HEAD
 - [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md) - Regole per i namespace e componenti Filament
 - [Regole Generali](../../Xot/docs/README.md) - Best practice e linee guida generali
-=======
->>>>>>> 11c7c7d (.)
 
 ---
 
@@ -240,11 +231,8 @@ Questo documento è linkato anche dalla documentazione del modulo Cms per garant
   - [docs Xot](../../Xot/docs/README.md)
   - [docs <nome progetto>](../../<nome progetto>/docs/README.md)
   - [docs Xot](../../Xot/docs/README.md)
-<<<<<<< HEAD
   - [docs <nome progetto>](../../<nome progetto>/docs/README.md)
   - [docs Xot](../../Xot/docs/README.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ## Policy DRY sulle Traduzioni di Disponibilità/Appuntamenti
 
@@ -253,12 +241,8 @@ Tutte le label, placeholder, messaggi e azioni relativi a disponibilità e appun
 ### Motivazione filosofica, politica, zen
 - Un solo punto di verità: nessuna duplicazione, nessun lock-in
 - DRY, KISS, serenità del codice
-<<<<<<< HEAD
 - Refactoring sicuro, massima estendibilità
 - Refactoring sicuro, massima estendibilità
 - Refactoring sicuro, massima estendibilità
 - Refactoring sicuro, massima estendibilità
 - Refactoring sicuro, massima estendibilità
-=======
-- Refactoring sicuro, massima estendibilità
->>>>>>> 11c7c7d (.)

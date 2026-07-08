@@ -464,13 +464,9 @@ Remember: Good tests are the foundation of reliable software development.
 
 ---
 
-<<<<<<< HEAD
 *Last updated: January 2025*
 *
 *
 *
 *
 *Last updated: January 2025*
-=======
-*Last updated: January 2025*
->>>>>>> 11c7c7d (.)

@@ -39,6 +39,7 @@ class SocialShareWidget extends XotBaseWidget
      * Get the data for the view.
      *
      * @return array<string, mixed>
+     * @SuppressWarnings("PHPMD.StaticAccess")
      */
     protected function getViewData(): array
     {

@@ -7,7 +7,7 @@ namespace Modules\Tenant\Services\Config;
 final class ConfigStringKeyFilter
 {
     /**
-     * @param  array<mixed, mixed>  $config
+     * @param  array<string, mixed>  $config
      * @return array<string, mixed>
      */
     public static function onlyStringKeys(array $config): array
@@ -37,6 +37,7 @@ final class ConfigStringKeyFilter
             $merged = array_replace_recursive($merged, self::onlyStringKeys($config));
         }
 
+        /** @var array<string, mixed> $merged */
         return self::onlyStringKeys($merged);
     }
 }

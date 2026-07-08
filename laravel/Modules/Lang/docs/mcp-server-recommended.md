@@ -39,8 +39,4 @@ Gestione traduzioni, localizzazione e internazionalizzazione.
 ```
 
 ## Note
-<<<<<<< HEAD
 - Estendi la configurazione per supportare traduzioni dinamiche o servizi esterni.
-=======
-- Estendi la configurazione per supportare traduzioni dinamiche o servizi esterni.
->>>>>>> 11c7c7d (.)

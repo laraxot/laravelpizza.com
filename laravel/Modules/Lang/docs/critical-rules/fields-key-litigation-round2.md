@@ -451,10 +451,7 @@ If 'fields' key missing:
 ---
 
 **Version**: 2.0 (Round 2 - Near Miss)
-<<<<<<< HEAD
 **Version**: 2.0 (Round 2 - Near Miss)
-=======
->>>>>>> 11c7c7d (.)
 **Date**: 2026-01-09
 **Author**: AI Assistant (after furious self-litigation)
 **Reviewed By**: User (prevented error before it happened)

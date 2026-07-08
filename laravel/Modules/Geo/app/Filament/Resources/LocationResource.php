@@ -5,6 +5,10 @@ declare(strict_types=1);
 namespace Modules\Geo\Filament\Resources;
 
 use Filament\Forms\Components\TextInput;
+use Filament\Resources\Pages\PageRegistration;
+use Filament\Resources\RelationManagers\RelationGroup;
+use Filament\Resources\RelationManagers\RelationManager;
+use Filament\Resources\RelationManagers\RelationManagerConfiguration;
 use Filament\Support\Components\Component;
 use Modules\Geo\Filament\Resources\LocationResource\Pages\CreateLocation;
 use Modules\Geo\Filament\Resources\LocationResource\Pages\EditLocation;
@@ -31,6 +35,8 @@ class LocationResource extends XotBaseResource
 
     /**
      * @return array<string, Component>
+     *
+     * @phpstan-return array<string, Component>
      */
     #[\Override]
     public static function getFormSchema(): array
@@ -76,7 +82,7 @@ class LocationResource extends XotBaseResource
     /**
      * Definisce le relazioni disponibili per questo resource.
      *
-     * @return array Le relazioni configurate
+     * @return array<class-string<RelationManager>|RelationGroup|RelationManagerConfiguration>
      */
     #[\Override]
     public static function getRelations(): array
@@ -92,7 +98,7 @@ class LocationResource extends XotBaseResource
      * - Creazione nuovo luogo
      * - Modifica luogo esistente
      *
-     * @return array Le pagine configurate
+     * @return array<string, PageRegistration>
      */
     #[\Override]
     public static function getPages(): array

@@ -36,9 +36,12 @@ class DatabaseConfigResolver implements ConfigResolverInterface
         }
 
         $originalConf = config('database');
-        $originalConfTyped = is_array($originalConf)
-            ? ConfigStringKeyFilter::onlyStringKeys($originalConf)
-            : [];
+        if (is_array($originalConf)) {
+            /** @var array<string, mixed> $originalConf */
+            $originalConfTyped = ConfigStringKeyFilter::onlyStringKeys($originalConf);
+        } else {
+            $originalConfTyped = [];
+        }
 
         $default = $this->resolveDefaultConnection($extraConf, $originalConfTyped);
 
@@ -73,6 +76,7 @@ class DatabaseConfigResolver implements ConfigResolverInterface
             return $extraConf;
         }
 
+        /** @var array<string, mixed> $connectionsRaw */
         $connections = ConfigStringKeyFilter::onlyStringKeys($connectionsRaw);
 
         foreach (Module::getOrdered() as $module) {

@@ -5,30 +5,24 @@ Questo documento registra le correzioni PHPStan implementate nel modulo Lang.
 
 **Ultimo aggiornamento**: 2025-01-27
 **Ultimo aggiornamento**: 2025-01-27
-<<<<<<< HEAD
 **Ultimo aggiornamento**: [DATE]
 **Ultimo aggiornamento**: [DATE]
 **Ultimo aggiornamento**: [DATE]
 **Ultimo aggiornamento**: [DATE]
 **Ultimo aggiornamento**: 2025-01-27
 **Ultimo aggiornamento**: 2025-01-27
-=======
->>>>>>> 11c7c7d (.)
 **Status PHPStan Level 10**: ✅ **PASSED** - 0 errori
 
 ## Correzioni Implementate
 
 ### Post.php - Doppio Import PostFactory (2025-01-27)
 ### Post.php - Doppio Import PostFactory (2025-01-27)
-<<<<<<< HEAD
 ### Post.php - Doppio Import PostFactory ([DATE])
 ### Post.php - Doppio Import PostFactory ([DATE])
 ### Post.php - Doppio Import PostFactory ([DATE])
 ### Post.php - Doppio Import PostFactory ([DATE])
 ### Post.php - Doppio Import PostFactory (2025-01-27)
 ### Post.php - Doppio Import PostFactory (2025-01-27)
-=======
->>>>>>> 11c7c7d (.)
 
 **Problema**: Doppio import di `PostFactory` causava conflitto di namespace
 ```php
@@ -112,22 +106,15 @@ if (is_array($value)) {
 - [Translation System](./translation-system.md)
 - [FormBuilder Module PHPStan Corrections](../FormBuilder/docs/phpstan-corrections.md)
 - [FormBuilder Module PHPStan Corrections](../FormBuilder/docs/phpstan-corrections.md)
-<<<<<<< HEAD
 - [FormBuilder Module PHPStan Corrections](../FormBuilder/docs/phpstan-corrections.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ## Note per Sviluppo Futuro
 
 1. **Type Hints**: Utilizzare sempre type hints espliciti
 2. **Mixed Types**: Gestire sempre i tipi `mixed` con type casting
 3. **Assertions**: Validare i tipi con assertions appropriate
-<<<<<<< HEAD
 4. **Documentation**: Documentare sempre i parametri e return types
 4. **Documentation**: Documentare sempre i parametri e return types
 4. **Documentation**: Documentare sempre i parametri e return types
 4. **Documentation**: Documentare sempre i parametri e return types
 4. **Documentation**: Documentare sempre i parametri e return types
-=======
-4. **Documentation**: Documentare sempre i parametri e return types
->>>>>>> 11c7c7d (.)

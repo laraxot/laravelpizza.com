@@ -26,12 +26,9 @@ class ListJobsWaiting extends XotBaseListRecords
     }
 
     #[Override]
-<<<<<<< HEAD
-=======
-    /*
+    /**
      * @return array<string, mixed>
      */
->>>>>>> laraxot/dev
     public function getTableColumns(): array
     {
         return [

@@ -115,30 +115,21 @@ Questo file contiene molteplici occorrenze problematiche:
 - **Struttura corretta**: Confermata in `geo.php` con navigazione appropriata
 - **Documentazione**: [Correzioni Geo](../Modules/Geo/docs/navigation-translations-fixes.md)
 - **Documentazione**: [Correzioni Geo](../modules/geo/docs/navigation-translations-fixes.md)
-<<<<<<< HEAD
 - **Documentazione**: [Correzioni Geo](../modules/geo/docs/navigation-translations-fixes.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ### ✅ Modulo User - RISOLTO
 - **device.php**: Traduzioni corrette (Dispositivi → Sicurezza)
 - **permission.php**: Traduzioni corrette (Permessi → Sicurezza)
 - **Documentazione**: [Correzioni User](../Modules/User/docs/navigation-translations-fixes.md)
 - **Documentazione**: [Correzioni User](../modules/user/docs/navigation-translations-fixes.md)
-<<<<<<< HEAD
 - **Documentazione**: [Correzioni User](../modules/user/docs/navigation-translations-fixes.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ### ✅ Modulo Lang - CONFORME
 - **edit_translation_file.php**: Verificato già conforme agli standard
 - **Nessuna correzione necessaria**: File già strutturato correttamente
 - **Documentazione**: [Verifica Lang](../Modules/Lang/docs/navigation-translations-fixes.md)
 - **Documentazione**: [Verifica Lang](../modules/lang/docs/navigation-translations-fixes.md)
-<<<<<<< HEAD
 - **Documentazione**: [Verifica Lang](../modules/lang/docs/navigation-translations-fixes.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ## Note
 - Ogni file deve essere studiato nel contesto del modulo
@@ -156,7 +147,6 @@ Questo file contiene molteplici occorrenze problematiche:
 
 *Audit creato il: 2025-08-07*
 *Ultimo aggiornamento: 2025-08-07*
-<<<<<<< HEAD
 *Ultimo aggiornamento: [DATE]*
 - [Regole Traduzioni](../Modules/Xot/docs/translation-rules.md)
 - [Standard Qualità Traduzioni](../Modules/<nome progetto>/docs/translation-quality-standards.md)
@@ -169,6 +159,3 @@ Questo file contiene molteplici occorrenze problematiche:
 *Audit creato il: 2025-08-07*
 *Ultimo aggiornamento: 2025-08-07*
 *Ultimo aggiornamento: [DATE]*
-=======
-*Ultimo aggiornamento: [DATE]*
->>>>>>> 11c7c7d (.)

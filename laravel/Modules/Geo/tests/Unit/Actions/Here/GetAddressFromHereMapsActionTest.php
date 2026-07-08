@@ -8,28 +8,30 @@ use Modules\Geo\Tests\LightTestCase;
 
 uses(LightTestCase::class);
 
+use Illuminate\Support\Facades\Http;
 use Modules\Geo\Actions\Here\GetAddressFromHereMapsAction;
 use Modules\Geo\Datas\AddressData;
 
-beforeEach(function () {
-    $action = new GetAddressFromHereMapsAction();
-});
+function subject(): GetAddressFromHereMapsAction
+{
+    return new GetAddressFromHereMapsAction();
+}
 
 it('throws exception when api key is not configured', function (): void {
     config(['services.here.key' => null]);
 
-    expect(fn () => $action->execute('Milano, Italia'))
+    expect(fn () => subject()->execute('Milano, Italia'))
         ->toThrow(Exception::class, 'Here Maps API key not configured');
 });
 
 it('returns null when api response is not successful', function (): void {
     config(['services.here.key' => 'test_key']);
 
-    Http::fake([)
+    Http::fake([
         '*' => Http::response(['statusCode' => 500], 500),
     ]);
 
-    $result = $action->execute('Milano, Italia');
+    $result = subject()->execute('Milano, Italia');
 
     expect($result)->toBeNull();
 });
@@ -37,8 +39,8 @@ it('returns null when api response is not successful', function (): void {
 it('returns null when no position in response', function (): void {
     config(['services.here.key' => 'test_key']);
 
-    Http::fake([)
-        '*' => Http::response([)
+    Http::fake([
+        '*' => Http::response([
             'items' => [[
                 'address' => [
                     'countryName' => 'Italia',
@@ -48,7 +50,7 @@ it('returns null when no position in response', function (): void {
         ], 200),
     ]);
 
-    $result = $action->execute('Milano, Italia');
+    $result = subject()->execute('Milano, Italia');
 
     expect($result)->toBeNull();
 });
@@ -56,8 +58,8 @@ it('returns null when no position in response', function (): void {
 it('returns null when no address in response', function (): void {
     config(['services.here.key' => 'test_key']);
 
-    Http::fake([)
-        '*' => Http::response([)
+    Http::fake([
+        '*' => Http::response([
             'items' => [[
                 'position' => [
                     'lat' => 45.4642,
@@ -67,7 +69,7 @@ it('returns null when no address in response', function (): void {
         ], 200),
     ]);
 
-    $result = $action->execute('Milano, Italia');
+    $result = subject()->execute('Milano, Italia');
 
     expect($result)->toBeNull();
 });
@@ -75,8 +77,8 @@ it('returns null when no address in response', function (): void {
 it('returns address data for valid response', function (): void {
     config(['services.here.key' => 'test_key']);
 
-    Http::fake([)
-        '*' => Http::response([)
+    Http::fake([
+        '*' => Http::response([
             'items' => [[
                 'position' => [
                     'lat' => 45.4642,
@@ -93,7 +95,7 @@ it('returns address data for valid response', function (): void {
         ], 200),
     ]);
 
-    $result = $action->execute('Via Roma 1, Milano, Italia');
+    $result = subject()->execute('Via Roma 1, Milano, Italia');
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)
@@ -109,8 +111,8 @@ it('returns address data for valid response', function (): void {
 it('uses default country when missing', function (): void {
     config(['services.here.key' => 'test_key']);
 
-    Http::fake([)
-        '*' => Http::response([)
+    Http::fake([
+        '*' => Http::response([
             'items' => [[
                 'position' => [
                     'lat' => 45.4642,
@@ -123,7 +125,7 @@ it('uses default country when missing', function (): void {
         ], 200),
     ]);
 
-    $result = $action->execute('Milano');
+    $result = subject()->execute('Milano');
 
     expect($result)
         ->toBeInstanceOf(AddressData::class)

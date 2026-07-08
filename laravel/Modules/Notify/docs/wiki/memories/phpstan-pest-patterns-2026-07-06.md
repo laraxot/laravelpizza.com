@@ -71,6 +71,32 @@ $traits = class_uses($action);
 $traits = \Safe\class_uses($action);
 ```
 
+## 5. `assertReflectionTypeName()` non disponibile senza `uses()`
+
+Funzione definita in `Pest.php` ma **non caricata** per file test senza
+`uses(TestCase::class)`. Causa: Pest bootstrapping condizionale.
+
+Fix: sostituire con inline equivalente:
+```php
+// INVECE DI:
+assertReflectionTypeName($params[0]->getType(), SmsData::class);
+
+// USARE:
+$type = $params[0]->getType();
+/** @phpstan-ignore method.internalClass */
+expect($type)->toBeInstanceOf(\ReflectionNamedType::class);
+/** @phpstan-ignore method.internalClass */
+expect($type instanceof \ReflectionNamedType ? $type->getName() : '')->toBe(SmsData::class);
+```
+
+## 6. `namespace` + `uses(TestCase::class)` = PDOException su test reflection
+
+Qualsiasi `uses(TestCase::class)` carica il bootstrapping completo del
+framework, compreso il tentativo di connessione al database. Per file
+che fanno solo reflection (no DB, no modelli), rimuovere sia il `namespace`
+che il `uses()`. Se il file ha il namespace, Pest non mappa correttamente
+il TestCase dal bootstrap.
+
 ## 4. File SMS action tests — struttura finale corretta
 
 I test dei file `Send*SMSActionTest.php` devono seguire questo pattern:

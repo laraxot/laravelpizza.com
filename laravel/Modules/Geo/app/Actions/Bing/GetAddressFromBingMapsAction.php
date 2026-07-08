@@ -56,6 +56,8 @@ class GetAddressFromBingMapsAction
 
     /**
      * @throws InvalidLocationException
+     *
+     * @return array<string, mixed>
      */
     private function makeApiRequest(float $latitude, float $longitude, string $apiKey): array
     {
@@ -81,7 +83,7 @@ class GetAddressFromBingMapsAction
             throw InvalidLocationException::invalidData('Risposta JSON non valida da Bing Maps');
         }
 
-        /* @var array<string, mixed> $jsonResponse */
+        /** @var array<string, mixed> $jsonResponse */
         return $jsonResponse;
     }
 

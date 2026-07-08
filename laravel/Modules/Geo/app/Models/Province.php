@@ -39,15 +39,18 @@ use Sushi\Sushi;
  */
 class Province extends BaseModel
 {
+    /** @use HasXotFactory<\Illuminate\Database\Eloquent\Factories\Factory<static>> */
     use HasXotFactory;
     use Sushi;
 
+    /** @var array<string, string> */
     protected array $schema = [
         'region_id' => 'integer',
         'id' => 'integer',
         'name' => 'string',
     ];
 
+    /** @return array<mixed> */
     public function getRows(): array
     {
         $rows = Comune::select('regione->codice as region_id', 'provincia->codice as id', 'provincia->nome as name')
@@ -55,20 +58,22 @@ class Province extends BaseModel
             ->orderBy('provincia->nome')
             ->get();
 
-        /* @var array<int, array<string, mixed>> */
         return $rows->toArray();
     }
 
+    /** @return BelongsTo<Region, $this> */
     public function region(): BelongsTo
     {
         return $this->belongsTo(Region::class);
     }
 
+    /** @return HasMany<Locality, $this> */
     public function localities(): HasMany
     {
         return $this->hasMany(Locality::class);
     }
 
+    /** @return array<mixed> */
     public static function getOptions(Get $get): array
     {
         $region = $get('administrative_area_level_1') ?? $get('region');

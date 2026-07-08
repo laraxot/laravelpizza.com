@@ -288,14 +288,11 @@ php artisan test --testsuite=Lang
 - [**Filament Best Practices**](../../../docs/core/filament-best-practices.md)
 - [**Convenzioni Sistema**](../../../docs/core/conventions.md)
 - [**Template Moduli**](../../../docs/templates/)
-<<<<<<< HEAD
 - [**Documentazione Core Sistema**](../../docs/core/)
 - [**PHPStan Guide**](../../docs/core/phpstan-guide.md)
 - [**Filament Best Practices**](../../docs/core/filament-best-practices.md)
 - [**Convenzioni Sistema**](../../docs/core/conventions.md)
 - [**Template Moduli**](../../docs/templates/)
-=======
->>>>>>> 11c7c7d (.)
 
 ---
 
@@ -303,12 +300,8 @@ php artisan test --testsuite=Lang
 **Impatto:** Team Lang e sviluppatori correlati
 **Stato:** In attesa implementazione
 **Responsabile:** Team Lang
-<<<<<<< HEAD
 **Data:** 2025-01-XX
 **Data:** 2025-01-XX
 **Data:** 2025-01-XX
 **Data:** 2025-01-XX
 **Data:** 2025-01-XX
-=======
-**Data:** 2025-01-XX
->>>>>>> 11c7c7d (.)

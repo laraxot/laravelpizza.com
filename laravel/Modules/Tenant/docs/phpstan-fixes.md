@@ -71,7 +71,6 @@ expect()->extend('toBeTenant', fn () => expect($this->value)->toBeInstanceOf(Ten
 beforeEach(function (): void {
     $this->baseModel = new class extends BaseModel { ... };
 });
-
 test('...', function (): void {
     expect($this->baseModel)->...  // PHPStan error
 });
@@ -101,7 +100,6 @@ beforeEach(function (): void {
     $this->testDirectory = storage_path('tests/sushi-json');
     $this->testJsonPath = $this->testDirectory.'/test_sushi.json';
 });
-```
 
 **PHPStan Issue**: Cannot recognize dynamically assigned properties in test context
 
@@ -114,11 +112,9 @@ beforeEach(function (): void {
 
 ## Recommendations
 
-1. **Complete TenantBusinessLogicTest**: Either create the missing models (`TenantDomain`, `TenantSetting`, `TenantSubscription`) or rewrite tests to use existing models only
-
-2. **Refactor Integration Tests**: Convert `beforeEach()`/`setUp()` instance properties to local variables or use helper functions
-
-3. **Review Sushi Pattern**: The Sushi-based tests have complex setup - consider if this pattern is necessary or can be simplified
+1. **Complete remaining 24 errors** by refactoring integration tests
+2. **OR** move to next module and return to Tenant later
+3. **Create missing models** for TenantBusinessLogicTest
 
 ## Files Modified
 
@@ -128,14 +124,45 @@ beforeEach(function (): void {
 4. ✅ `tests/Feature/README.md` - Created documentation
 5. ✅ `tests/Unit/Models/BaseModelTest.php` - Removed beforeEach
 
-## Next Steps
+## Scoped-Analysis False Positives (2026-07-07)
 
-1. Complete remaining 24 errors by refactoring integration tests
-2. OR move to next module and return to Tenant later
-3. Create missing models for TenantBusinessLogicTest
+Running `phpstan analyse Modules/Job Modules/IndennitaCondizioniLavoro Modules/Tenant`
+(a subset of `paths: Modules/` in `phpstan.neon`) surfaces two errors that are not
+real defects in this module, only artifacts of limiting the scan to 3 modules:
 
----
+### 1. `trait.unused` on `SushiToPhpArray`
 
-*Last Updated: 2025-10-13*
-*Progress: 71% complete (24 errors remaining)*
-*Module Status: Partial completion - major issues resolved*
+**File**: `app/Models/Traits/SushiToPhpArray.php`
+
+The trait's only real consumer is `Modules\User\Models\SocialProvider` (outside the
+scanned scope), so PHPStan cannot see it is used and reports `trait.unused`
+(confirmed as expected behaviour by https://phpstan.org/blog/how-phpstan-analyses-traits:
+trait usage is only detected within the analysed path set).
+
+**Fix**: added `/** @phpstan-ignore trait.unused */` above the trait declaration,
+matching the identical, pre-existing pattern already used on the sibling trait
+`SushiToCsv.php` (whose only consumer, `Modules\Sigma\Models\WebService`, is
+likewise outside the scanned scope).
+
+**Cleanup**: removed `tests/Fixtures/Traits/{SushiToPhpArrayPhpstanProbe,
+SushiToCsvPhpstanProbe, SushiToJsonsPhpstanProbe, TenantPhpstanProbeModel}.php`.
+These were dead "probe" classes (banned pattern per repo policy) that referenced
+the traits only from `tests/`, a path excluded from analysis in `phpstan.neon` —
+so they never actually silenced `trait.unused` and served no purpose.
+
+### 2. `larastan.noEnvCallsOutsideOfConfig` reported as unmatched
+
+`phpstan.neon` ignores this identifier project-wide. It legitimately matches
+`env()` calls outside `config/` in `Modules/User`, `Modules/Notify`,
+`Modules/Media`, `Modules/Xot` — none of which are in Job, IndennitaCondizioniLavoro/Tenant.
+When the scan is limited to these 3 modules, the ignore rule has nothing to
+match and PHPStan reports it as an unmatched ignored-error pattern.
+
+**Not fixable within this module set**: there is no `env()` call outside config
+in Job, IndennitaCondizioniLavoro, or Tenant to "fix", and the ignore rule itself
+lives in `phpstan.neon`, which must not be touched. This is a residual, expected
+side effect of scoping the analysis, not a defect.
+
+*Last Updated: 2026-07-07*
+
+NOTE: Per evitare problemi di tipizzazione PHPStan con helper che accettano array generici, usa sempre `@var array<string, mixed>` sui parametri locali prima di passarli a helper con firme di tipo sigillate.

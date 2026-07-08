@@ -21,10 +21,10 @@ related:
 
 ## AI / second brain
 
-- [hackernoon-ai-coding-tips-fixcity-map](../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md)
-- [bmad/architecture](../../../../docs/wiki/bmad/architecture.md)
-- [frontmatter + GitHub](../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md)
-- [ai-harness-module-discipline](../../docs/wiki/concepts/ai-harness-module-discipline.md)
+- [hackernoon-ai-coding-tips-fixcity-map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md)
+- [bmad/architecture](../../../../../docs/wiki/bmad/architecture.md)
+- [frontmatter + GitHub](../../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md)
+- [ai-harness-module-discipline](../../../docs/wiki/concepts/ai-harness-module-discipline.md)
 - [second-brain-local-discipline](./concepts/second-brain-local-discipline.md) → canon Xot
 
 
@@ -43,8 +43,8 @@ Indice operativo del wiki Gdpr.
 
 ## Regole collegate
 
-- [forbidden-folders-rule](../../../../docs/wiki/concepts/forbidden-folders.md): Vincoli strutturali strict.
-- [llm-wiki-standard](../../../../docs/project/karpathy-llm-wiki-adoption.md): Mapping repository e ciclo di vita conoscenza.
+- [forbidden-folders-rule](../../../../../docs/wiki/concepts/forbidden-folders.md): Vincoli strutturali strict.
+- [llm-wiki-standard](../../../../../docs/project/karpathy-llm-wiki-adoption.md): Mapping repository e ciclo di vita conoscenza.
 - [laravel-security-audit](../../../../docs/wiki/concepts/laravel-security-audit.md): Audit sicurezza Laravel.
 
 ## Scopo Gdpr Module
@@ -71,8 +71,8 @@ Gestione conformità GDPR, privacy policy, consensi utente e cookie.
 
 ## False Friends
 
-- `dehydrated(false)` sembra mantenere il campo nei dati ma blocca il salvataggio (vedi [coordinate-picker-filament5-save-pattern](../../Geo/docs/wiki/concepts/coordinate-picker-filament5-save-pattern.md))
-- `live()` in Filament non rende il campo sempre live - serve `$applyStateBindingModifiers()` (vedi [coordinate-picker-state-binding-rule](../../Geo/docs/wiki/concepts/coordinate-picker-state-binding-rule.md))
+- `dehydrated(false)` sembra mantenere il campo nei dati ma blocca il salvataggio (vedi [coordinate-picker-filament5-save-pattern](../../../Geo/docs/wiki/concepts/coordinate-picker-filament5-save-pattern.md))
+- `live()` in Filament non rende il campo sempre live - serve `$applyStateBindingModifiers()` (vedi [coordinate-picker-state-binding-rule](../../../Geo/docs/wiki/concepts/coordinate-picker-state-binding-rule.md))
 
 ## Troubleshooting
 

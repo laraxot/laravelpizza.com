@@ -43,8 +43,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|TeamUser whereDeletedAt($value)
  * @method static Builder|TeamUser whereDeletedBy($value)
  *
- * @property ProfileContract|null         $creator
- * @property ProfileContract|null         $updater
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $updater
+ *
  * @property ProfileContract|null         $deleter
  * @property Team|null                    $team
  * @property User|null                    $user

@@ -810,17 +810,13 @@ public function generateWithErrorHandling(array $options = []): string
 - [Lang Module README](./README.md)
 - [HTML2PDF Best Practices](../Xot/docs/html2pdf-best-practices.md)
 - [Lang Module README](./README.md)
-<<<<<<< HEAD
 - [HTML2PDF Best Practices](../Xot/docs/html2pdf-best-practices.md)
 - [Lang Module README](./README.md)
-=======
->>>>>>> 11c7c7d (.)
 - [Spatie Translatable Documentation](https://github.com/spatie/laravel-translatable)
 - [Laravel Localization](https://laravel.com/docs/localization)
 
 ---
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 **
 =======
@@ -831,15 +827,9 @@ public function generateWithErrorHandling(array $options = []): string
 **HTML2PDF Version:** 5.2.x
 **PHPStan Level:** 10 ✅
 **
-=======
->>>>>>> 11c7c7d (.)
 **Last Updated:** 2025-12-09
 **Last Updated:** 2025-12-09
 **Version:** 1.0.0
 **HTML2PDF Version:** 5.2.x
-<<<<<<< HEAD
 **PHPStan Level:** 10 ✅
 **PHPStan Level:** 10 ✅
-=======
-**PHPStan Level:** 10 ✅
->>>>>>> 11c7c7d (.)

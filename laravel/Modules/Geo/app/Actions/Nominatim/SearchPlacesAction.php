@@ -86,7 +86,7 @@ class SearchPlacesAction
          *     lon: string,
          *     type: string,
          *     importance: float,
-         *     address: array
+         *     address: array<string, mixed>
          * }> $data */
         $data = json_decode($response, true);
 

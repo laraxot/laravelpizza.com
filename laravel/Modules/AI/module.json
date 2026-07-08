@@ -1,0 +1,12 @@
+{
+    "name": "AI",
+    "alias": "ai",
+    "description": "Modulo per l'integrazione di funzionalità di intelligenza artificiale e servizi AI",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\AI\\Providers\\AIServiceProvider",
+        "Modules\\AI\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "files": []
+}

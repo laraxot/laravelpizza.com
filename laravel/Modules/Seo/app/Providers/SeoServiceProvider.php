@@ -11,10 +11,6 @@ class SeoServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'Seo';
 
-    protected string $module_dir = __DIR__;
-
-    protected string $module_ns = __NAMESPACE__;
-
     /**
      * Register the service provider.
      */
@@ -22,8 +18,8 @@ class SeoServiceProvider extends XotBaseServiceProvider
     {
         parent::register();
 
-        $this->app->singleton(MetatagService::class, function ($app) {
-            return new MetatagService;
+        $this->app->singleton(MetatagService::class, function () {
+            return new MetatagService();
         });
     }
 

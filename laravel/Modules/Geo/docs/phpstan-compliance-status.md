@@ -55,3 +55,10 @@ To maintain PHPStan compliance:
 - [Location Services](location-services.md)
 - [Address Handling](address-handling.md)
 - [Map Integration](map-integration.md)
+
+## Aggiornamento 2026-07-06
+
+Rimossa la cartella duplicata non-PSR-4 `tests/fixtures/` (minuscola,
+duplicato byte-identico di `tests/Fixtures/` — il namespace dichiarato nei
+file richiede PascalCase). Rimossi anche i probe PHPStan morti in
+`tests/Fixtures/Traits/`. Ri-verificato a zero errori.

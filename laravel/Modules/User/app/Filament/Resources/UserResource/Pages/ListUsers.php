@@ -48,7 +48,6 @@ class ListUsers extends BaseListUsers
              */
         ];
     }
-
     #[\Override]
     public function getTableActions(): array
     {

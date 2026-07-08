@@ -173,6 +173,13 @@ See `app/Models/` directory for complete list.
   - Best practices
   - Troubleshooting
 
+### Legacy Notes (2026-07-08 root hygiene)
+Root del modulo ripulita da ~130 file `.md` accumulati per errore (root hygiene, vedi `docs/root-files-hygiene.md`). Contenuto preservato, non cancellato:
+- **legacy-notes/** (103 file) — appunti/link personali di studio scollegati da Xot (ffmpeg, webpack, machine-learning, elastic-search, pdf, video-player, ecc.). Perlopiù raccolte di link esterni, **obsoleto/verificare rilevanza** prima di citarli come fonte.
+- File con match tematico chiaro spostati nelle sottocartelle esistenti: `best-practices/` (clean-code, clean-architecture, bad-practices, tips), `quality/` (phpstan-error, code-analyse, php-code-tools, phpstan-link), `tools/` (static-tools, webpack, laravel-mix, xdebug), `testing/` (pest, phpunit), `theme/` (theme-livewire), `packages/` (cashier, payment-gateway, google-drive, datatables, botman, soketi).
+- Duplicati esatti di README/CHANGELOG/LICENSE di root eliminati (nessun contenuto univoco perso).
+- Nota code-workspace: gestione file `.code-workspace` di root demandata ad altro agente che sta consolidando la convenzione su tutti i moduli (`<Modulo>.code-workspace` PascalCase).
+
 ---
 
 ## Key Files Reference

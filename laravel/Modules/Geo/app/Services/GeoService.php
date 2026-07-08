@@ -160,6 +160,8 @@ class GeoService
 
     /**
      * Undocumented function.
+     *
+     * @param array<mixed> $polygon
      */
     public static function is_in_polygon(float $latitude, float $longitude, array $polygon): bool
     {

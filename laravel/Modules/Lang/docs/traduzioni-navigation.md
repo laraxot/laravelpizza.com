@@ -30,13 +30,10 @@ Molte traduzioni utilizzano ancora il pattern `.navigation` invece di traduzioni
 ### Fase 1: Correzione Errori Sintassi UI ✅ COMPLETATO
 1. **UI/lang/it/collection_lang.php** ✅ - Corretto errore linea 55
 2. **UI/lang/it/field.php** ✅ - Corretto errore linea 51  
-<<<<<<< HEAD
 2. **UI/lang/it/field.php** ✅ - Corretto errore linea 51
 2. **UI/lang/it/field.php** ✅ - Corretto errore linea 51
 2. **UI/lang/it/field.php** ✅ - Corretto errore linea 51
 2. **UI/lang/it/field.php** ✅ - Corretto errore linea 51  
-=======
->>>>>>> 11c7c7d (.)
 3. **UI/lang/it/field_option.php** ✅ - Corretto errore linea 72
 
 ### Fase 2: Correzione Traduzioni Navigation ✅ COMPLETATO
@@ -75,13 +72,10 @@ Molte traduzioni utilizzano ancora il pattern `.navigation` invece di traduzioni
 ### Errori Sintassi UI ✅
 - [x] collection_lang.php - Corretto parentesi mancanti
 - [x] field.php - Corretto parentesi mancanti  
-<<<<<<< HEAD
 - [x] field.php - Corretto parentesi mancanti
 - [x] field.php - Corretto parentesi mancanti
 - [x] field.php - Corretto parentesi mancanti
 - [x] field.php - Corretto parentesi mancanti  
-=======
->>>>>>> 11c7c7d (.)
 - [x] field_option.php - Corretto parentesi mancanti
 
 ### Traduzioni Navigation ✅
@@ -117,11 +111,7 @@ Molte traduzioni utilizzano ancora il pattern `.navigation` invece di traduzioni
 *Ultimo aggiornamento: 6 Gennaio 2025*
 - [Best Practices Traduzioni](../../Xot/docs/TRANSLATION_RULES.md)
 
-<<<<<<< HEAD
 *Ultimo aggiornamento: 6 Gennaio 2025*
 - [Best Practices Traduzioni](../../Xot/docs/TRANSLATION_RULES.md)
 
 *Ultimo aggiornamento: 6 Gennaio 2025*
-=======
-*Ultimo aggiornamento: 6 Gennaio 2025*
->>>>>>> 11c7c7d (.)

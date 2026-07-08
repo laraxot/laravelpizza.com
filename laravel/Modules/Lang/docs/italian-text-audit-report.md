@@ -1,10 +1,7 @@
 # Italian Text in Non-Italian Translation Files - Audit Report
 
 **Data**: 2025-08-08 11:19:40
-<<<<<<< HEAD
 **Data**: 2025-08-08 11:19:40
-=======
->>>>>>> 11c7c7d (.)
 
 ## Problemi Identificati
 
@@ -106,12 +103,8 @@
 
 **I file di traduzione non italiani NON devono contenere testi in italiano.**
 
-<<<<<<< HEAD
 Ogni testo deve essere tradotto nella lingua appropriata del file.
 Ogni testo deve essere tradotto nella lingua appropriata del file.
 Ogni testo deve essere tradotto nella lingua appropriata del file.
 Ogni testo deve essere tradotto nella lingua appropriata del file.
 Ogni testo deve essere tradotto nella lingua appropriata del file.
-=======
-Ogni testo deve essere tradotto nella lingua appropriata del file.
->>>>>>> 11c7c7d (.)

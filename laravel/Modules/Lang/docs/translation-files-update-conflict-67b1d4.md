@@ -2,10 +2,7 @@
 
 ## Data Aggiornamento
 2025-01-27
-<<<<<<< HEAD
 2025-01-27
-=======
->>>>>>> 11c7c7d (.)
 [DATE]
 
 ## File Modificati
@@ -129,24 +126,17 @@ return [
 - [Best Practices](../Xot/docs/translations-best-practices.md)
 - [Translation Rules](../xot/docs/translation_rules.md)
 - [Translation Standards](./translation-standards.md)
-<<<<<<< HEAD
 - [Best Practices](../Xot/docs/translations-best-practices.md)
 - [Translation Rules](../xot/docs/translation_rules.md)
 - [Translation Standards](./translation-standards.md)
-=======
->>>>>>> 11c7c7d (.)
 - [Best Practices](../xot/docs/translations-best-practices.md)
 
 ## Prossimi Passi
 
 1. **Test**: Verificare il funzionamento in ambiente di sviluppo
 2. **Documentazione**: Aggiornare la documentazione dei moduli Notify e Lang
-<<<<<<< HEAD
 3. **Review**: Code review per confermare le modifiche
 3. **Review**: Code review per confermare le modifiche
 3. **Review**: Code review per confermare le modifiche
 3. **Review**: Code review per confermare le modifiche
 3. **Review**: Code review per confermare le modifiche
-=======
-3. **Review**: Code review per confermare le modifiche
->>>>>>> 11c7c7d (.)

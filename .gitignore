@@ -104,3 +104,4 @@ laravel/coverage-xot/
 laravel/database/laravelpizza_data.sqlite
 .qwen/
 .kiro
+.planning

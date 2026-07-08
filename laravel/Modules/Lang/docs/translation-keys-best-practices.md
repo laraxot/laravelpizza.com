@@ -10,7 +10,6 @@
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 - [Implementazione Header](/laravel/Modules/User/docs/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md)
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
 ## Panoramica
@@ -322,8 +321,6 @@ Seguire queste best practices per le chiavi di traduzione garantirà un'applicaz
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 - [Implementazione Header](/laravel/Modules/User/docs/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md)
 >>>>>>> bebd548 (.)
-=======
->>>>>>> 11c7c7d (.)
 
 ## Panoramica
 

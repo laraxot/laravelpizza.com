@@ -7,12 +7,9 @@
 - [README modulo Lang](./README.md)
 - [Best Practices Chiavi di Traduzione](./TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md)
-<<<<<<< HEAD
 - [README modulo Lang](./README.md)
 - [Best Practices Chiavi di Traduzione](./TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md)
-=======
->>>>>>> 11c7c7d (.)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica
@@ -250,12 +247,9 @@ Questi middleware sono già configurati  e non è necessario modificarli.
 - [README modulo Lang](./README.md)
 - [Best Practices Chiavi di Traduzione](./TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md)
-<<<<<<< HEAD
 - [README modulo Lang](./README.md)
 - [Best Practices Chiavi di Traduzione](./TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md)
-=======
->>>>>>> 11c7c7d (.)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica
@@ -483,12 +477,8 @@ Questi middleware sono già configurati  e non è necessario modificarli.
 
 - [Documentazione ufficiale mcamara/laravel-localization](https://github.com/mcamara/laravel-localization)
 - [Documentazione Laravel Localization](https://laravel.com/docs/10.x/localization)
-<<<<<<< HEAD
 - [Blade Components Documentation](https://laravel.com/docs/10.x/blade#components)
 - [Blade Components Documentation](https://laravel.com/docs/10.x/blade#components)
 - [Blade Components Documentation](https://laravel.com/docs/10.x/blade#components)
 - [Blade Components Documentation](https://laravel.com/docs/10.x/blade#components)
 - [Blade Components Documentation](https://laravel.com/docs/10.x/blade#components)
-=======
-- [Blade Components Documentation](https://laravel.com/docs/10.x/blade#components)
->>>>>>> 11c7c7d (.)

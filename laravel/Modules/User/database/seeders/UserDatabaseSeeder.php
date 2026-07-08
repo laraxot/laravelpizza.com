@@ -20,6 +20,7 @@ class UserDatabaseSeeder extends Seeder
             $this->command->info('UserDatabaseSeeder: entity seeders…');
         }
 
+
         $this->call([
             AuthenticationSeeder::class,
             AuthenticationLogSeeder::class,

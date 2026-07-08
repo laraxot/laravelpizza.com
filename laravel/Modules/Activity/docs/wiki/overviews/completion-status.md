@@ -12,7 +12,7 @@ discussions:
 related:
   - ../concepts/phpstan-pest-discipline.md
   - ../concepts/activity-log-single-migration-contract.md
-  - ../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md
+  - ../../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md
 ---
 
 # Activity — stato completamento
@@ -73,4 +73,4 @@ Dettaglio: [phpstan-pest-discipline](../concepts/phpstan-pest-discipline.md).
 
 ## Hub piattaforma
 
-[Roadmap completamento piattaforma](../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md)
+[Roadmap completamento piattaforma](../../../../Xot/docs/wiki/overviews/platform-completion-roadmap.md)

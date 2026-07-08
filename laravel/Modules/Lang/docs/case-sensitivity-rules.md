@@ -6,10 +6,7 @@
 
 Riferimento completo: [Xot Module Case Sensitivity Rules](../../Xot/docs/case-sensitivity-rules.md)
 Riferimento completo: [Xot Module Case Sensitivity Rules](../../xot/docs/case-sensitivity-rules.md)
-<<<<<<< HEAD
 Riferimento completo: [Xot Module Case Sensitivity Rules](../../xot/docs/case-sensitivity-rules.md)
-=======
->>>>>>> 11c7c7d (.)
 
 ## File/Directory Rimossi da Lang Module
 
@@ -40,13 +37,9 @@ Laravel usa la convenzione `database/migrations/` (lowercase) per:
 ## Update Log
 
 - **2025-11-04**: Removed `database/Migrations/` uppercase directory
-<<<<<<< HEAD
 - **[DATE]**: Removed `database/Migrations/` uppercase directory
 - **[DATE]**: Removed `database/Migrations/` uppercase directory
 - **[DATE]**: Removed `database/Migrations/` uppercase directory
 - **[DATE]**: Removed `database/Migrations/` uppercase directory
 - **2025-11-04**: Removed `database/Migrations/` uppercase directory
 - **2026-07-01**: Removed nested `database/migrations/Migrations/` (reintroduced per errore automazione in `f840e0cc0`; fix `247054abb`)
-=======
-- **2026-07-01**: Removed nested `database/migrations/Migrations/` (reintroduced per errore automazione in `f840e0cc0`; fix `247054abb`)
->>>>>>> 11c7c7d (.)

@@ -18,7 +18,6 @@ cd laravel && ./vendor/bin/phpstan analyse Modules/Lang
 ## Storico — Level 7 (Gennaio 2025)
 
 Il modulo Lang era a 0 errori Level 7.
-<<<<<<< HEAD
 # Lang Module - PHPStan Level 7 Fixes - Gennaio 2025
 # Lang Module — PHPStan
 
@@ -41,8 +40,6 @@ cd laravel && ./vendor/bin/phpstan analyse Modules/Lang
 ## Storico — Level 7 (Gennaio 2025)
 
 Il modulo Lang era a 0 errori Level 7.
-=======
->>>>>>> 11c7c7d (.)
 
 ## 🔧 **Correzioni Implementate**
 
@@ -130,13 +127,9 @@ private function castWithAction(mixed $value): string
 ---
 *Ultimo aggiornamento: Gennaio 2025*
 *Ultimo aggiornamento: Gennaio 2025*
-<<<<<<< HEAD
 *Stato: ✅ Completato - 0 errori PHPStan*
 *Stato: ✅ Completato - 0 errori PHPStan*
 *Stato: ✅ Completato - 0 errori PHPStan*
 *Stato: ✅ Completato - 0 errori PHPStan*
 *Ultimo aggiornamento: Gennaio 2025*
 *Stato: ✅ Completato - 0 errori PHPStan*
-=======
-*Stato: ✅ Completato - 0 errori PHPStan*
->>>>>>> 11c7c7d (.)

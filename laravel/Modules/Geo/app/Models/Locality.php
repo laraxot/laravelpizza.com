@@ -63,10 +63,13 @@ class Locality extends BaseModel
             ->distinct()
             ->orderBy('nome')
             ->get()
-            ->map(static fn ($row) => $row);
+            ->map(static fn (mixed $row): mixed => $row);
 
-        /* @var array<int, array<string, mixed>> */
-        return $rows->toArray();
+        $rawArray = $rows->toArray();
+        /** @var array<int, array<string, mixed>> $result */
+        $result = $rawArray;
+
+        return $result;
     }
 
     /**

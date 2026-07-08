@@ -1,10 +1,7 @@
 # AutoLabel Flow - Analisi Completa del Flusso
 
 **Data**: 2026-01-09
-<<<<<<< HEAD
 **Data**: 2026-01-09
-=======
->>>>>>> 11c7c7d (.)
 **Tipo**: Documentazione Tecnica Approfondita
 **Audience**: Sviluppatori che devono comprendere il meccanismo interno
 
@@ -858,9 +855,6 @@ Il sistema AutoLabel è un **meccanismo sofisticato ma elegante** che:
 
 **Versione**: 1.0
 **Data**: 2026-01-09
-<<<<<<< HEAD
 **Data**: 2026-01-09
-=======
->>>>>>> 11c7c7d (.)
 **Autore**: System Architect
 **Ultima Revisione**: 2026-01-09

@@ -130,12 +130,8 @@ php artisan tinker
 - [Traduzioni Mancanti Appointment 2025](../../../Themes/One/docs/traduzioni_mancanti_appointment_2025.md)
 - [Translation Updates 2024](../../../Themes/One/docs/translation_updates_20240721.md)
 
-<<<<<<< HEAD
 *Ultimo aggiornamento: 6 Gennaio 2025 - TUTTI I PROBLEMI RISOLTI*
 *Ultimo aggiornamento: 6 Gennaio 2025 - TUTTI I PROBLEMI RISOLTI*
 *Ultimo aggiornamento: 6 Gennaio 2025 - TUTTI I PROBLEMI RISOLTI*
 *Ultimo aggiornamento: 6 Gennaio 2025 - TUTTI I PROBLEMI RISOLTI*
 *Ultimo aggiornamento: 6 Gennaio 2025 - TUTTI I PROBLEMI RISOLTI*
-=======
-*Ultimo aggiornamento: 6 Gennaio 2025 - TUTTI I PROBLEMI RISOLTI*
->>>>>>> 11c7c7d (.)

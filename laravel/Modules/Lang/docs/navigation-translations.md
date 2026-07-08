@@ -103,11 +103,7 @@ Molte traduzioni utilizzano ancora il pattern `.navigation` invece di traduzioni
 *Ultimo aggiornamento: 6 Gennaio 2025*
 - [Best Practices Traduzioni](../../xot/docs/translation_rules.md)
 
-<<<<<<< HEAD
 *Ultimo aggiornamento: 6 Gennaio 2025*
 - [Best Practices Traduzioni](../../xot/docs/translation_rules.md)
 
 *Ultimo aggiornamento: 6 Gennaio 2025*
-=======
-*Ultimo aggiornamento: 6 Gennaio 2025*
->>>>>>> 11c7c7d (.)

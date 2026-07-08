@@ -91,5 +91,5 @@ Shell canon: [folio-page-shell-no-props-extends.md](../../../../../../docs/wiki/
 
 ## Backlink
 
-- [page-component-context-data.md](../../../page-component-context-data.md)
+- [page-component-context-data.md](../../page-component-context-data.md)
 - [x-page-data-bag-only.md](./x-page-data-bag-only.md)

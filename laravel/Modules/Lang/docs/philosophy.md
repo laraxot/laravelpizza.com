@@ -1,10 +1,7 @@
 # Lang Module: Philosophy, Purpose, and Design Principles
 
 **Date:** December 23, 2025
-<<<<<<< HEAD
 **Date:** December 23, 2025
-=======
->>>>>>> 11c7c7d (.)
 
 ## 🎯 Purpose and Core Responsibilities
 

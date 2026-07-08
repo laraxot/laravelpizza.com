@@ -19,6 +19,7 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null  $updated_at
  * @property TeamContract $team
  *
+ *
  * @method static Builder|TeamInvitationContract        newModelQuery()
  * @method static Builder|TeamInvitationContract        newQuery()
  * @method static Builder|TeamInvitationContract        query()

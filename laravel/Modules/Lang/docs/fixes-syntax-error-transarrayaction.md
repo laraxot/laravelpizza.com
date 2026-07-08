@@ -1,10 +1,7 @@
 # Fix Errore Sintassi TransArrayAction
 
 ## Data: 2025-01-27
-<<<<<<< HEAD
 ## Data: 2025-01-27
-=======
->>>>>>> 11c7c7d (.)
 ## Data: [DATE]
 
 ## Problema Identificato
@@ -71,12 +68,8 @@ public function execute(
 
 - Evitare trailing comma nei parametri di funzione PHP
 - Verificare sempre la sintassi prima del commit
-<<<<<<< HEAD
 - Utilizzare PHPStan per validazione continua
 - Utilizzare PHPStan per validazione continua
 - Utilizzare PHPStan per validazione continua
 - Utilizzare PHPStan per validazione continua
 - Utilizzare PHPStan per validazione continua
-=======
-- Utilizzare PHPStan per validazione continua
->>>>>>> 11c7c7d (.)

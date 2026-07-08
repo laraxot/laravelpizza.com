@@ -1,10 +1,7 @@
 # Helper Text Audit Report
 
 **Data**: 2025-08-08 09:15:22
-<<<<<<< HEAD
 **Data**: 2025-08-08 09:15:22
-=======
->>>>>>> 11c7c7d (.)
 
 ## Problemi Identificati
 

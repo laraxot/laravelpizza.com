@@ -34,7 +34,7 @@ Le Skills progettuali vivono qui, nel wiki del Module **Seo**, e vengono caricat
 
 - La sorgente di verita' per le Skills e' sempre il wiki locale
 - Non embeddare Skills nei prompt di avvio
-- Per Skills globali, consulta il [wiki root](../../docs/wiki/skills/INDEX.md)
+- Per Skills globali, consulta il [wiki root](../../../../../../docs/wiki/skills/INDEX.md)
 
 ## Aggiungere una Nuova SKILLS
 

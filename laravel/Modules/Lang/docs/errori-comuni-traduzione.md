@@ -141,12 +141,9 @@ Tutti i campi devono seguire la struttura espansa:
 - [Best Practices Traduzioni](../../Xot/docs/TRANSLATION_RULES.md)
 
 *Ultimo aggiornamento: 6 Gennaio 2025*
-<<<<<<< HEAD
 - [Best Practices Traduzioni](../../Xot/docs/TRANSLATION_RULES.md)
 
 *Ultimo aggiornamento: 6 Gennaio 2025*
-=======
->>>>>>> 11c7c7d (.)
 # Errori comuni nei file di traduzione
 
 ## Errori di sintassi critici identificati
@@ -289,11 +286,7 @@ Tutti i campi devono seguire la struttura espansa:
 *Ultimo aggiornamento: 6 Gennaio 2025*
 - [Best Practices Traduzioni](../../Xot/docs/TRANSLATION_RULES.md)
 
-<<<<<<< HEAD
 *Ultimo aggiornamento: 6 Gennaio 2025*
 - [Best Practices Traduzioni](../../Xot/docs/TRANSLATION_RULES.md)
 
 *Ultimo aggiornamento: 6 Gennaio 2025*
-=======
-*Ultimo aggiornamento: 6 Gennaio 2025*
->>>>>>> 11c7c7d (.)

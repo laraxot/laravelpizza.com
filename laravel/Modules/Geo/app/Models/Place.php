@@ -211,28 +211,28 @@ class Place extends BaseModel implements HasGeolocation
     #[\Override]
     public function getLatitude(): ?float
     {
-        /* @phpstan-ignore-line */ return $latitude;
+        return $this->latitude;
     }
 
     #[\Override]
     public function getLongitude(): ?float
     {
-        /* @phpstan-ignore-line */ return $longitude;
+        return $this->longitude;
     }
 
     #[\Override]
     public function getFormattedAddress(): string
     {
-        return (string) ($formatted_address ?? $this->address->formatted_address ?? '');
+        return (string) ($this->formatted_address ?? $this->address->formatted_address ?? '');
     }
 
     public function getLatitudeAttribute(): ?float
     {
-        if (! isset($attributes['latitude']))
+        if (! isset($this->attributes['latitude'])) {
             return null;
         }
 
-        $latitude = $attributes['latitude'];
+        $latitude = $this->attributes['latitude'];
         if (! is_numeric($latitude)) {
             return null;
         }
@@ -244,11 +244,11 @@ class Place extends BaseModel implements HasGeolocation
 
     public function getLongitudeAttribute(): ?float
     {
-        if (! isset($attributes['longitude']))
+        if (! isset($this->attributes['longitude'])) {
             return null;
         }
 
-        $longitude = $attributes['longitude'];
+        $longitude = $this->attributes['longitude'];
         if (! is_numeric($longitude)) {
             return null;
         }
@@ -260,7 +260,7 @@ class Place extends BaseModel implements HasGeolocation
 
     public function getFormattedAddressAttribute(): string
     {
-        $address = $attributes['formatted_address'] ?? '';
+        $address = $this->attributes['formatted_address'] ?? '';
 
         return is_string($address) ? $address : '';
     }
@@ -268,18 +268,18 @@ class Place extends BaseModel implements HasGeolocation
     #[\Override]
     public function hasValidCoordinates(): bool
     {
-        return null !== $latitude
-            && null !== $longitude
-            && $latitude >= -90
-            && $latitude <= 90
-            && $longitude >= -180
-            && $longitude <= 180;
+        return null !== $this->latitude
+            && null !== $this->longitude
+            && $this->latitude >= -90
+            && $this->latitude <= 90
+            && $this->longitude >= -180
+            && $this->longitude <= 180;
     }
 
     #[\Override]
     public function getMapIcon(): ?string
     {
-        $slug = $placeType->slug ?? null;
+        $slug = $this->placeType->slug ?? null;
         $type = is_string($slug) ? $slug : 'default';
         $markerConfig = config("geo.markers.types.{$type}");
 
@@ -303,7 +303,7 @@ class Place extends BaseModel implements HasGeolocation
     #[\Override]
     public function getLocationType(): ?string
     {
-        $name = $placeType->name ?? null;
+        $name = $this->placeType->name ?? null;
 
         return is_string($name) ? $name : null;
     }
