@@ -1,0 +1,41 @@
+---
+title: "Laravel folders — lowercase naming"
+type: rule
+tags: [laravel, folders, naming, lowercase]
+created: 2026-01-21
+updated: 2026-01-21
+qmd: laravel folders must be lowercase database migrations factories seeders
+issues: []
+discussions: []
+related: []
+---
+
+# Laravel folders — lowercase naming
+
+## Regola
+
+Tutte le cartelle standard Laravel devono essere **lowercase**:
+
+- `database/migrations/` (non `Migrations`)
+- `database/factories/` (non `Factories`)
+- `database/seeders/` (non `Seeders`)
+- `app/Database/Migrations/` → `app/Database/migrations/`
+- `tests/Feature/Database/Migrations/` → `tests/Feature/Database/migrations/`
+
+## Canon Laravel
+
+Laravel usa sempre lowercase per le cartelle standard. Uppercase crea incoerenza e problemi con composer autoloader/PSR-4.
+
+## Fix
+
+```bash
+mv database/Migrations database/migrations
+mv app/Database/Migrations app/Database/migrations
+mv tests/Feature/Database/Migrations tests/Feature/Database/migrations
+```
+
+## Verifica
+
+```bash
+find . -type d -name "*[A-Z]*" | grep -E "(database|app|tests)"
+```

@@ -15,6 +15,11 @@ I collegamenti nei file di documentazione devono **sempre** utilizzare percorsi 
 [Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
 [Regole Generali](../../Xot/project_docs/translations.md)
 [Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
+<<<<<<< HEAD
+[Regole Generali](../../Xot/project_docs/translations.md)
+[Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
+=======
+>>>>>>> 11c7c7d (.)
 ```
 
 ❌ **ERRATO**:
@@ -23,6 +28,11 @@ I collegamenti nei file di documentazione devono **sempre** utilizzare percorsi 
 [Best Practices](Modules/Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 [Regole Generali](Modules/Xot/project_docs/translations.md)
 [Best Practices](Modules/Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+<<<<<<< HEAD
+[Regole Generali](Modules/Xot/project_docs/translations.md)
+[Best Practices](Modules/Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+=======
+>>>>>>> 11c7c7d (.)
 ```
 
 ### 2. Navigazione Tra Cartelle
@@ -36,6 +46,10 @@ Esempi:
 - Per collegare a un file nello stesso modulo: `[File](./altro_file.md)` o `[File](altro_file.md)`
 - Per collegare a un file in un altro modulo: `[File](../../AltroModulo/project_docs/file.md)`
 - Per collegare a un file in un altro modulo: `[File](../../AltroModulo/project_docs/file.md)`
+<<<<<<< HEAD
+- Per collegare a un file in un altro modulo: `[File](../../AltroModulo/project_docs/file.md)`
+=======
+>>>>>>> 11c7c7d (.)
 
 ### 3. Struttura della Documentazione
 
@@ -83,18 +97,30 @@ Prima di fare commit dei documenti:
 ```markdown
 [Convenzioni Notify](../../Notify/project_docs/TRANSLATION_CONVENTIONS.md)
 [Convenzioni Notify](../../Notify/project_docs/TRANSLATION_CONVENTIONS.md)
+<<<<<<< HEAD
+[Convenzioni Notify](../../Notify/project_docs/TRANSLATION_CONVENTIONS.md)
+=======
+>>>>>>> 11c7c7d (.)
 ```
 
 ### Da Modules/Lang/project_docs/ a docs/ nella root
 ```markdown
 [Documentazione Principale](../../../project_docs/README.md)
 [Documentazione Principale](../../../../docs/project/README.md)
+<<<<<<< HEAD
+[Documentazione Principale](../../../../docs/project/README.md)
+=======
+>>>>>>> 11c7c7d (.)
 ```
 
 ### Da Modules/Lang/project_docs/ a un altro file nella stessa cartella
 ```markdown
 [Best Practices](TRANSLATION_KEYS_BEST_PRACTICES.md)
 [Best Practices](TRANSLATION_KEYS_BEST_PRACTICES.md)
+<<<<<<< HEAD
+[Best Practices](TRANSLATION_KEYS_BEST_PRACTICES.md)
+=======
+>>>>>>> 11c7c7d (.)
 ```
 
 ## Vantaggi dei Percorsi Relativi
@@ -117,6 +143,11 @@ I collegamenti nei file di documentazione devono **sempre** utilizzare percorsi 
 [Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
 [Regole Generali](../../Xot/docs/translations.md)
 [Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
+<<<<<<< HEAD
+[Regole Generali](../../Xot/docs/translations.md)
+[Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
+=======
+>>>>>>> 11c7c7d (.)
 ```
 
 ❌ **ERRATO**:
@@ -125,6 +156,11 @@ I collegamenti nei file di documentazione devono **sempre** utilizzare percorsi 
 [Best Practices](Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 [Regole Generali](Modules/Xot/docs/translations.md)
 [Best Practices](Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+<<<<<<< HEAD
+[Regole Generali](Modules/Xot/docs/translations.md)
+[Best Practices](Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+=======
+>>>>>>> 11c7c7d (.)
 ```
 
 ### 2. Navigazione Tra Cartelle
@@ -138,6 +174,10 @@ Esempi:
 - Per collegare a un file nello stesso modulo: `[File](./altro_file.md)` o `[File](altro_file.md)`
 - Per collegare a un file in un altro modulo: `[File](../../AltroModulo/docs/file.md)`
 - Per collegare a un file in un altro modulo: `[File](../../AltroModulo/docs/file.md)`
+<<<<<<< HEAD
+- Per collegare a un file in un altro modulo: `[File](../../AltroModulo/docs/file.md)`
+=======
+>>>>>>> 11c7c7d (.)
 
 ### 3. Struttura della Documentazione
 
@@ -185,18 +225,30 @@ Prima di fare commit dei documenti:
 ```markdown
 [Convenzioni Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
 [Convenzioni Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
+<<<<<<< HEAD
+[Convenzioni Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
+=======
+>>>>>>> 11c7c7d (.)
 ```
 
 ### Da Modules/Lang/docs/ a docs/ nella root
 ```markdown
 [Documentazione Principale](../../../docs/README.md)
 [Documentazione Principale](../../../../docs/README.md)
+<<<<<<< HEAD
+[Documentazione Principale](../../../../docs/README.md)
+=======
+>>>>>>> 11c7c7d (.)
 ```
 
 ### Da Modules/Lang/docs/ a un altro file nella stessa cartella
 ```markdown
 [Best Practices](TRANSLATION_KEYS_BEST_PRACTICES.md)
 [Best Practices](TRANSLATION_KEYS_BEST_PRACTICES.md)
+<<<<<<< HEAD
+[Best Practices](TRANSLATION_KEYS_BEST_PRACTICES.md)
+=======
+>>>>>>> 11c7c7d (.)
 ```
 
 ## Vantaggi dei Percorsi Relativi
@@ -204,4 +256,12 @@ Prima di fare commit dei documenti:
 1. **Portabilità**: La documentazione funziona in qualsiasi ambiente
 2. **Manutenibilità**: Se la struttura cambia, sono necessarie meno modifiche
 3. **Collaborazione**: Facilita il lavoro di più sviluppatori
+<<<<<<< HEAD
 4. **Coerenza**: Rispetta gli standard del progetto <nome progetto>
+4. **Coerenza**: Rispetta gli standard del progetto <nome progetto>
+4. **Coerenza**: Rispetta gli standard del progetto <nome progetto>
+4. **Coerenza**: Rispetta gli standard del progetto <nome progetto>
+4. **Coerenza**: Rispetta gli standard del progetto <nome progetto>
+=======
+4. **Coerenza**: Rispetta gli standard del progetto <nome progetto>
+>>>>>>> 11c7c7d (.)

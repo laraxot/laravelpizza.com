@@ -2,7 +2,7 @@
 
 ## Panoramica
 
-iFlow supporta server MCP tramite pacchetti Python. Questa guida descrive come configurare i server MCP per il progetto healthcare_app Fila4 Mono con iFlow.
+iFlow supporta server MCP tramite pacchetti Python. Questa guida descrive come configurare i server MCP per il progetto Quaeris Fila4 Mono con iFlow.
 
 ## Prerequisiti
 
@@ -240,10 +240,10 @@ Aggiungere al file `~/.cursor/mcp.json`:
         "MINIMAX_API_KEY": "${MINIMAX_API_KEY}"
       }
     },
-    "phpstan-healthcare_app": {
+    "phpstan-quaeris": {
       "url": "http://localhost:8003/sse"
     },
-    "artisan-healthcare_app": {
+    "artisan-quaeris": {
       "url": "http://localhost:8004/sse"
     }
   }

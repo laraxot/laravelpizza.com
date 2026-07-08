@@ -207,9 +207,6 @@ app()->instance(\Modules\Xot\Datas\XotData::class, $mock);
 - [Widget Test Patterns](../Cms/project_docs/tests/widget-test-patterns.md)
 - [Architecture Separation Rules](../Cms/project_docs/tests/architecture-separation-rules.md)
 - [XotData Testing Strategy](XOTDATA_TESTING.md)
-- [Widget Test Patterns](../cms/project_docs/tests/widget-test-patterns.md)
-- [Architecture Separation Rules](../cms/project_docs/tests/architecture-separation-rules.md)
-- [XotData Testing Strategy](xotdata_testing.md)
 
 ---
 

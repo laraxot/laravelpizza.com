@@ -1,0 +1,272 @@
+=== Module: Activity ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Badge ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: CertFisc ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: ContoAnnuale ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: DbForge ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Europa ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Gdpr ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Inail ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Incentivi ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [ERROR] No files found to analyse.                                             
+
+
+---
+
+=== Module: IndennitaCondizioniLavoro ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: IndennitaResponsabilita ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Job ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Lang ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Legge104 ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Legge109 ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Media ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Mensa ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: MobilitaVolontaria ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Notify ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Pdnd ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [ERROR] No files found to analyse.                                             
+
+
+---
+
+=== Module: Performance ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Prenotazioni ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: PresenzeAssenze ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Progressioni ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Ptv ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Questionari ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Rating ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Setting ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Sigma ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [ERROR] No files found to analyse.                                             
+
+
+---
+
+=== Module: Sindacati ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Tenant ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: UI ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: User ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+
+=== Module: Xot ===
+Note: Using configuration file /var/www/_bases/base_ptvx_fila5_mono/laravel/phpstan.neon.
+
+ [OK] No errors                                                                 
+
+
+---
+

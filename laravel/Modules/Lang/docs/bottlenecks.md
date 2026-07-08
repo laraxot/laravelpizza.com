@@ -129,6 +129,10 @@
 - [Roadmap](roadmap.md)
 - [Best Practices](BEST-PRACTICES.md)
 - [Best Practices](BEST-PRACTICES.md)
+<<<<<<< HEAD
+- [Best Practices](BEST-PRACTICES.md)
+=======
+>>>>>>> 11c7c7d (.)
 - [Testing](testing.md)
 - [Testing](testing.md)
 ## Collegamenti tra versioni di bottlenecks.md
@@ -151,4 +155,12 @@
 * [bottlenecks.md](../../Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Activity/docs/bottlenecks.md)
 * [bottlenecks.md](../../Patient/docs/roadmap/bottlenecks.md)
+<<<<<<< HEAD
 * [bottlenecks.md](../../Cms/docs/bottlenecks.md)
+* [bottlenecks.md](../../Cms/docs/bottlenecks.md)
+* [bottlenecks.md](../../Cms/docs/bottlenecks.md)
+* [bottlenecks.md](../../Cms/docs/bottlenecks.md)
+* [bottlenecks.md](../../Cms/docs/bottlenecks.md)
+=======
+* [bottlenecks.md](../../Cms/docs/bottlenecks.md)
+>>>>>>> 11c7c7d (.)

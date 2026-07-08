@@ -1,0 +1,12 @@
+{
+    "name": "Pdnd",
+    "alias": "pdnd",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Pdnd\\Providers\\PdndServiceProvider",
+        "Modules\\Pdnd\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "files": []
+}

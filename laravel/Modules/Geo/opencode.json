@@ -1,0 +1,43 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "@tarquinen/opencode-dcp@latest",
+    "./laravel/node_modules/@dietrichgebert/ponytail/.opencode/plugins/ponytail.mjs"
+  ],
+  "compaction": {
+    "auto": true,
+    "prune": true,
+    "reserved": 56000
+  },
+  "watcher": {
+    "ignore": [
+      ".git/**",
+      ".cache/**",
+      ".cursor/**",
+      ".claude/**",
+      ".opencode/**",
+      ".agents/**",
+      ".windsurf/**",
+      ".roo/**",
+      ".kilocode/**",
+      "_bmad-output/**",
+      "node_modules/**",
+      "vendor/**",
+      "laravel/vendor/**",
+      "laravel/node_modules/**",
+      "laravel/storage/**",
+      "laravel/bootstrap/cache/**",
+      "laravel/public/build/**",
+      "docs/pdf/**",
+      "docs/raw/history/**",
+      "bashscripts/ai/skills/**",
+      "**/paste-cache/**",
+      "**/*.lock",
+      "**/*~HEAD",
+      "**/*~head",
+      "**/*.orig",
+      "**/*.rej"
+    ]
+  },
+  "snapshot": false
+}

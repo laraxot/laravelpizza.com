@@ -105,8 +105,7 @@ LatitudeLongitudeInput::make('location')
     ->hiddenLabel()
     ->defaultCenter(41.9028, 12.4964)  // Roma
     ->defaultZoom(13)
-    ->mapHeight('340px')
-    ->showMap(true),
+    ->mapHeight('340px'),
 ```
 
 **Renderer Selection**:
@@ -123,6 +122,7 @@ LatitudeLongitudeInput::make('location')
 - `lit` è opt-in esplicito e usa un Web Component dedicato
 - Filament/PHP resta il layer di governo del field; il renderer JS cambia solo la UI
 - valori supportati: `blade`, `lit`
+- la mappa è parte strutturale del componente: niente toggle `showMap()`
 
 **Data Structure** (Livewire state):
 ```php

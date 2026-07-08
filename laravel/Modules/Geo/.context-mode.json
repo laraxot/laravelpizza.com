@@ -1,0 +1,53 @@
+{
+  "name": "ptvx-project context-mode config",
+  "version": "1.0",
+  "compression_level": 2,
+  "rules": {
+    "batch_execute": {
+      "max_output_lines": 100,
+      "auto_index": true,
+      "compress_before_context": true,
+      "description": "Batch commands: elaborate computations STAY in sandbox, only summaries return to context"
+    },
+    "execute": {
+      "max_output_lines": 50,
+      "intent_required": true,
+      "description": "Single-file analysis: set 'intent' to filter via semantic search, don't return raw data"
+    },
+    "index_policy": {
+      "auto_purge_old_sessions": true,
+      "max_session_size_kb": 50,
+      "index_only_docs": true,
+      "skip_raw_outputs": true,
+      "description": "Keep knowledge base lean: only index documentation, skip tool outputs"
+    },
+    "avoid_indexing": [
+      "git log output",
+      "git diff output",
+      "package.json dependencies",
+      "test output",
+      "console logs",
+      "API responses",
+      "raw file listings"
+    ]
+  },
+  "workflows": {
+    "research": "query qmd → ctx_search → only summarize findings",
+    "implementation": "read file → implement → write file (no indexing raw code)",
+    "debugging": "ctx_batch_execute with intent + ctx_search for patterns"
+  },
+  "dos_and_donts": {
+    "DO": [
+      "Use ctx_batch_execute for complex research (all processing stays in sandbox)",
+      "Use ctx_search to recall prior work (not raw Read)",
+      "Use ctx_execute_file to analyze large files (intent filters output)",
+      "Set 'intent' on every execute call to enable semantic filtering"
+    ],
+    "DONT": [
+      "Index raw tool output",
+      "Use Read for large analysis (use execute_file + intent instead)",
+      "Call Read + process mentally (compute in sandbox, return summary)",
+      "Rely on conversation context for later sessions (use memory system)"
+    ]
+  }
+}

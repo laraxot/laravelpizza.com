@@ -1,0 +1,1 @@
+https://github.com/jupeter/clean-code-php#use-meaningful-and-pronounceable-variable-names

@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <!-- Used to add dark mode right away, adding here prevents any flicker -->
+        <script>
+            if (typeof(Storage) !== "undefined") {
+                if (localStorage.getItem('dark_mode') && localStorage.getItem('dark_mode') == 'true') {
+                    document.documentElement.classList.add('dark');
+                }
+            }
+        </script>
+        <style>
+            [x-cloak] {
+                display: none !important;
+            }
+        </style>
+                            <link rel="preload" as="style" href="http://127.0.0.1:8000/themes/Sixteen/assets/app-D_IevXgI.css" /><link rel="modulepreload" as="script" href="http://127.0.0.1:8000/themes/Sixteen/assets/app-DoRf-Me2.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/themes/Sixteen/assets/app-D_IevXgI.css" data-navigate-track="reload" /><script type="module" src="http://127.0.0.1:8000/themes/Sixteen/assets/app-DoRf-Me2.js" data-navigate-track="reload"></script>            <script id="browser-logger-active">
+(function() {
+    const ENDPOINT = 'http://127.0.0.1:8000/_boost/browser-logs';
+    const logQueue = [];
+    let flushTimeout = null;
+
+    console.log('🔍 Browser logger active (MCP server detected). Posting to: ' + ENDPOINT);
+
+    // Store original console methods
+    const originalConsole = {
+        log: console.log,
+        info: console.info,
+        error: console.error,
+        warn: console.warn,
+        table: console.table
+    };
+
+    // Helper to safely stringify values
+    function safeStringify(obj) {
+        const seen = new WeakSet();
+        return JSON.stringify(obj, (key, value) => {
+            if (typeof value === 'object' && value !== null) {
+                if (seen.has(value)) return '[Circular]';
+                seen.add(value);
+            }
+            if (value instanceof Error) {
+                return {
+                    name: value.name,
+                    message: value.message,
+                    stack: value.stack
+                };
+            }
+            return value;
+        });
+    }
+
+    // Batch and send logs
+    function flushLogs() {
+        if (logQueue.length === 0) return;
+
+        const batch = logQueue.splice(0, logQueue.length);
+
+        fetch(ENDPOINT, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: JSON.stringify({ logs: batch })
+        }).catch(err => {
+            // Silently fail to avoid infinite loops
+            originalConsole.error('Failed to send logs:', err);
+        });
+    }
+
+    // Debounced flush (100ms)
+    function scheduleFlush() {
+        if (flushTimeout) clearTimeout(flushTimeout);
+        flushTimeout = setTimeout(flushLogs, 100);
+    }
+
+    // Intercept console methods
+    ['log', 'info', 'error', 'warn', 'table'].forEach(method => {
+        console[method] = function(...args) {
+            // Call original method
+            originalConsole[method].apply(console, args);
+
+            // Capture log data
+            try {
+                logQueue.push({
+                    type: method,
+                    timestamp: new Date().toISOString(),
+                    data: args.map(arg => {
+                        try {
+                            return typeof arg === 'object' ? JSON.parse(safeStringify(arg)) : arg;
+                        } catch (e) {
+                            return String(arg);
+                        }
+                    }),
+                    url: window.location.href,
+                    userAgent: navigator.userAgent
+                });
+
+                scheduleFlush();
+            } catch (e) {
+                // Fail silently
+            }
+        };
+    });
+
+    // Global error handlers for uncaught errors
+    const originalOnError = window.onerror;
+    window.onerror = function boostErrorHandler(errorMsg, url, lineNumber, colNumber, error) {
+        try {
+            logQueue.push({
+                type: 'uncaught_error',
+                timestamp: new Date().toISOString(),
+                data: [{
+                    message: errorMsg,
+                    filename: url,
+                    lineno: lineNumber,
+                    colno: colNumber,
+                    error: error ? {
+                        name: error.name,
+                        message: error.message,
+                        stack: error.stack
+                    } : null
+                }],
+                url: window.location.href,
+                userAgent: navigator.userAgent
+            });
+
+            scheduleFlush();
+        } catch (e) {
+            // Fail silently
+        }
+
+        // Call original handler if it exists
+        if (originalOnError && typeof originalOnError === 'function') {
+            return originalOnError(errorMsg, url, lineNumber, colNumber, error);
+        }
+
+        // Let the error continue to propagate
+        return false;
+    }
+    window.addEventListener('error', (event) => {
+        try {
+            logQueue.push({
+                type: 'window_error',
+                timestamp: new Date().toISOString(),
+                data: [{
+                    message: event.message,
+                    filename: event.filename,
+                    lineno: event.lineno,
+                    colno: event.colno,
+                    error: event.error ? {
+                        name: event.error.name,
+                        message: event.error.message,
+                        stack: event.error.stack
+                    } : null
+                }],
+                url: window.location.href,
+                userAgent: navigator.userAgent
+            });
+
+            scheduleFlush();
+        } catch (e) {
+            // Fail silently
+        }
+
+        // Let the error continue to propagate
+        return false;
+    });
+    window.addEventListener('unhandledrejection', (event) => {
+        try {
+            logQueue.push({
+                type: 'error',
+                timestamp: new Date().toISOString(),
+                data: [{
+                    message: 'Unhandled Promise Rejection',
+                    reason: event.reason instanceof Error ? {
+                        name: event.reason.name,
+                        message: event.reason.message,
+                        stack: event.reason.stack
+                    } : event.reason
+                }],
+                url: window.location.href,
+                userAgent: navigator.userAgent
+            });
+
+            scheduleFlush();
+        } catch (e) {
+            // Fail silently
+        }
+
+        // Let the rejection continue to propagate
+        return false;
+    });
+
+    // Flush on page unload
+    window.addEventListener('beforeunload', () => {
+        if (logQueue.length > 0) {
+            navigator.sendBeacon(ENDPOINT, JSON.stringify({ logs: logQueue }));
+        }
+    });
+})();
+</script>
+</head>
+    <body class="">
+        <div class="skiplink">
+        <a class="visually-hidden-focusable" href="#main-container">Vai ai contenuti</a>
+        <a class="visually-hidden-focusable" href="#footer">Vai al footer</a>
+    </div><!-- /skiplink -->
+
+    <header class="it-header-wrapper" data-bs-target="#header-nav-wrapper" style="">
+    <div class="it-header-slim-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="it-header-slim-wrapper-content">
+                        <a class="d-lg-block navbar-brand" target="_blank" href="#" aria-label="Vai al portale {Nome della Regione} - link esterno - apertura nuova scheda" title="Vai al portale {Nome della Regione}">Nome della Regione</a>
+                        <div class="it-header-slim-right-zone" role="navigation">
+                            <div class="nav-item dropdown">
+                                <button type="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="languages" aria-haspopup="true">
+                                    <span class="visually-hidden">Lingua attiva:</span>
+                                    <span>ITA</span>
+                                    <svg class="icon">
+                                        <use href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                                    </svg>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="link-list-wrapper">
+                                                <ul class="link-list">
+                                                    <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
+                                                    <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="btn btn-primary btn-icon btn-full" href="../servizi/accesso-servizio.html" data-element="personal-area-login">
+                                <span class="rounded-icon" aria-hidden="true">
+                                    <svg class="icon icon-primary">
+                                        <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-user"></use>
+                                    </svg>
+                                </span>
+                                <span class="d-none d-lg-block">Accedi all'area personale</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="it-nav-wrapper">
+        <div class="it-header-center-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="it-header-center-content-wrapper">
+                            <div class="it-brand-wrapper">
+                                <a href="homepage.html">
+                                    <svg width="82" height="82" class="icon" aria-hidden="true">
+                                        <image xlink:href="/themes/Sixteen/images/logo.svg"/>
+                                    </svg>
+                                    <div class="it-brand-text">
+                                        <div class="it-brand-title">Il mio Comune</div>
+                                        <div class="it-brand-tagline d-none d-md-block">Un comune da vivere </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="it-right-zone">
+                                <div class="it-socials d-none d-lg-flex">
+                                    <span>Seguici su</span>
+                                    <ul>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <svg class="icon icon-sm icon-white align-top">
+                                                    <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-twitter"></use>
+                                                </svg>
+                                                <span class="visually-hidden">Twitter</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <svg class="icon icon-sm icon-white align-top">
+                                                    <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-facebook"></use>
+                                                </svg>
+                                                <span class="visually-hidden">Facebook</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <svg class="icon icon-sm icon-white align-top">
+                                                    <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-youtube"></use>
+                                                </svg>
+                                                <span class="visually-hidden">YouTube</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <svg class="icon icon-sm icon-white align-top">
+                                                    <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-telegram"></use>
+                                                </svg>
+                                                <span class="visually-hidden">Telegram</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <svg class="icon icon-sm icon-white align-top">
+                                                    <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-whatsapp"></use>
+                                                </svg>
+                                                <span class="visually-hidden">Whatsapp</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <svg class="icon icon-sm icon-white align-top">
+                                                    <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-rss"></use>
+                                                </svg>
+                                                <span class="visually-hidden">RSS</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="it-search-wrapper">
+                                    <span class="d-none d-md-block">Cerca</span>
+                                    <button class="search-link rounded-icon" type="button" data-bs-toggle="modal" data-bs-target="#search-modal" aria-label="Cerca nel sito">
+                                        <svg class="icon">
+                                            <use href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-search"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="it-header-navbar-wrapper" id="header-nav-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="navbar navbar-expand-lg has-megamenu">
+                            <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-target="#nav4" data-bs-toggle="navbarcollapsible">
+                                <svg class="icon">
+                                    <use href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-burger"></use>
+                                </svg>
+                            </button>
+                            <div class="navbar-collapsable" id="nav4">
+                                <div class="overlay" style="display: none;"></div>
+                                <div class="close-div">
+                                    <button class="btn close-menu" type="button">
+                                        <span class="visually-hidden">Nascondi la navigazione</span>
+                                        <svg class="icon">
+                                            <use href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-close-big"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="menu-wrapper">
+                                    <a href="homepage.html" class="logo-hamburger">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-pa"></use>
+                                        </svg>
+                                        <div class="it-brand-text">
+                                            <div class="it-brand-title">Nome del Comune</div>
+                                        </div>
+                                    </a>
+                                    <nav aria-label="Principale">
+                                        <ul class="navbar-nav" data-element="main-navigation">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="../sito/amministrazione.html" data-element="management">
+                                                    <span>Amministrazione</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="../sito/novita.html" data-element="news">
+                                                    <span>Novità</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="../sito/servizi.html" data-element="all-services">
+                                                    <span>Servizi</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="../sito/eventi.html" data-element="live">
+                                                    <span>Vivere il Comune</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <nav aria-label="Secondaria">
+                                        <ul class="navbar-nav navbar-secondary">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="../sito/argomento.html">Iscrizioni</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="../sito/argomento.html">Estate in città</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="../sito/argomento.html">Polizia locale</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="argomenti.html" data-element="all-topics">
+                                                    <span>Tutti gli argomenti 
+                                                        <svg class="icon icon-sm">
+                                                            <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-chevron-right"></use>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <div class="it-socials">
+                                        <span>Seguici su</span>
+                                        <ul>
+                                            <li>
+                                                <a href="#" target="_blank">
+                                                    <svg class="icon icon-sm icon-white align-top">
+                                                        <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-twitter"></use>
+                                                    </svg>
+                                                    <span class="visually-hidden">Twitter</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank">
+                                                    <svg class="icon icon-sm icon-white align-top">
+                                                        <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-facebook"></use>
+                                                    </svg>
+                                                    <span class="visually-hidden">Facebook</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank">
+                                                    <svg class="icon icon-sm icon-white align-top">
+                                                        <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-youtube"></use>
+                                                    </svg>
+                                                    <span class="visually-hidden">YouTube</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank">
+                                                    <svg class="icon icon-sm icon-white align-top">
+                                                        <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-telegram"></use>
+                                                    </svg>
+                                                    <span class="visually-hidden">Telegram</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank">
+                                                    <svg class="icon icon-sm icon-white align-top">
+                                                        <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-whatsapp"></use>
+                                                    </svg>
+                                                    <span class="visually-hidden">Whatsapp</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank">
+                                                    <svg class="icon icon-sm icon-white align-top">
+                                                        <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-rss"></use>
+                                                    </svg>
+                                                    <span class="visually-hidden">RSS</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <main
+                    data-page="appuntamento-01-ufficio"
+            >
+        <div class="container" id="main-container">
+            <section class="stepper-flow-section py-8" x-data="{ currentStep: 1 }">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="mb-8">
+                                    <h2 class="text-2xl font-bold text-gray-900" data-element="stepper-title">Prenotazione appuntamento</h2>
+                                                    <p class="mt-2 text-gray-600" data-element="stepper-description">Compila il form per prenotare un appuntamento presso gli uffici comunali</p>
+                            </div>
+        
+        <div 
+    x-data="{
+        currentStep: 1,
+        totalSteps: 4,
+        canGoNext() {
+            return this.currentStep < this.totalSteps;
+        },
+        canGoPrev() {
+            return this.currentStep > 1;
+        },
+        goToStep(step) {
+            if (step >= 1 && step <= this.totalSteps) {
+                this.currentStep = step;
+                this.$dispatch('step-changed', { step: step });
+            }
+        },
+        next() {
+            if (this.canGoNext()) {
+                this.currentStep++;
+                this.$dispatch('step-next', { step: this.currentStep });
+            }
+        },
+        prev() {
+            if (this.canGoPrev()) {
+                this.currentStep--;
+                this.$dispatch('step-prev', { step: this.currentStep });
+            }
+        }
+    }"
+    class="it-stepper"
+    role="group"
+    aria-label="Procedura guidata a passi"
+    class="" variant="horizontal" size="md" show-description="show-description" show-numbers="show-numbers" theme="primary" x-model="currentStep"
+>
+    
+    <div class="stepper-header" role="tablist">
+        <ul class="stepper-header-group">
+                            <li 
+                    class="stepper-step"
+                    :class="{
+                        'active': currentStep === 1,
+                        'completed': currentStep > 1,
+                        'disabled': currentStep < 1
+                    }"
+                    role="tab"
+                    :aria-selected="currentStep === 1"
+                    :aria-current="currentStep === 1 ? 'step' : null"
+                    :tabindex="currentStep === 1 ? 0 : -1"
+                >
+                    <button 
+                        type="button"
+                        class="stepper-number"
+                        @click="goToStep(1)"
+                        :disabled="currentStep < 1"
+                        :aria-label="'Passo ' + 1 + ': ' + 'Data e orario'"
+                    >
+                        <span class="step-dot">
+                            <span x-show="currentStep > 1" class="sr-only">
+                                Completato
+                            </span>
+                            <svg x-show="currentStep > 1" class="icon icon-sm" aria-hidden="true">
+                                <use href="#it-check"></use>
+                            </svg>
+                            <span x-show="currentStep <= 1">1</span>
+                        </span>
+                        <span class="step-label">Data e orario</span>
+                    </button>
+                </li>
+                            <li 
+                    class="stepper-step"
+                    :class="{
+                        'active': currentStep === 2,
+                        'completed': currentStep > 2,
+                        'disabled': currentStep < 2
+                    }"
+                    role="tab"
+                    :aria-selected="currentStep === 2"
+                    :aria-current="currentStep === 2 ? 'step' : null"
+                    :tabindex="currentStep === 2 ? 0 : -1"
+                >
+                    <button 
+                        type="button"
+                        class="stepper-number"
+                        @click="goToStep(2)"
+                        :disabled="currentStep < 2"
+                        :aria-label="'Passo ' + 2 + ': ' + 'Dettagli'"
+                    >
+                        <span class="step-dot">
+                            <span x-show="currentStep > 2" class="sr-only">
+                                Completato
+                            </span>
+                            <svg x-show="currentStep > 2" class="icon icon-sm" aria-hidden="true">
+                                <use href="#it-check"></use>
+                            </svg>
+                            <span x-show="currentStep <= 2">2</span>
+                        </span>
+                        <span class="step-label">Dettagli</span>
+                    </button>
+                </li>
+                            <li 
+                    class="stepper-step"
+                    :class="{
+                        'active': currentStep === 3,
+                        'completed': currentStep > 3,
+                        'disabled': currentStep < 3
+                    }"
+                    role="tab"
+                    :aria-selected="currentStep === 3"
+                    :aria-current="currentStep === 3 ? 'step' : null"
+                    :tabindex="currentStep === 3 ? 0 : -1"
+                >
+                    <button 
+                        type="button"
+                        class="stepper-number"
+                        @click="goToStep(3)"
+                        :disabled="currentStep < 3"
+                        :aria-label="'Passo ' + 3 + ': ' + 'Dati anagrafici'"
+                    >
+                        <span class="step-dot">
+                            <span x-show="currentStep > 3" class="sr-only">
+                                Completato
+                            </span>
+                            <svg x-show="currentStep > 3" class="icon icon-sm" aria-hidden="true">
+                                <use href="#it-check"></use>
+                            </svg>
+                            <span x-show="currentStep <= 3">3</span>
+                        </span>
+                        <span class="step-label">Dati anagrafici</span>
+                    </button>
+                </li>
+                            <li 
+                    class="stepper-step"
+                    :class="{
+                        'active': currentStep === 4,
+                        'completed': currentStep > 4,
+                        'disabled': currentStep < 4
+                    }"
+                    role="tab"
+                    :aria-selected="currentStep === 4"
+                    :aria-current="currentStep === 4 ? 'step' : null"
+                    :tabindex="currentStep === 4 ? 0 : -1"
+                >
+                    <button 
+                        type="button"
+                        class="stepper-number"
+                        @click="goToStep(4)"
+                        :disabled="currentStep < 4"
+                        :aria-label="'Passo ' + 4 + ': ' + 'Riepilogo'"
+                    >
+                        <span class="step-dot">
+                            <span x-show="currentStep > 4" class="sr-only">
+                                Completato
+                            </span>
+                            <svg x-show="currentStep > 4" class="icon icon-sm" aria-hidden="true">
+                                <use href="#it-check"></use>
+                            </svg>
+                            <span x-show="currentStep <= 4">4</span>
+                        </span>
+                        <span class="step-label">Riepilogo</span>
+                    </button>
+                </li>
+                    </ul>
+        
+        
+        <div class="stepper-progress" role="progressbar" :aria-valuenow="currentStep" aria-valuemin="1" :aria-valuemax="totalSteps">
+            <div class="stepper-progress-bar" :style="'width: ' + ((currentStep - 1) / (totalSteps - 1) * 100) + '%'"></div>
+        </div>
+    </div>
+
+    
+    <div class="stepper-content">
+        
+    </div>
+
+    
+    <nav class="stepper-nav" aria-label="Navigazione tra i passi">
+        <button 
+            type="button" 
+            class="btn btn-outline-primary"
+            @click="prev"
+            x-show="canGoPrev()"
+            :disabled="!canGoPrev()"
+        >
+            <svg class="icon icon-primary icon-sm" aria-hidden="true">
+                <use href="#it-chevron-left"></use>
+            </svg>
+            <span>Indietro</span>
+        </button>
+        
+        <button 
+            type="button" 
+            class="btn btn-primary ms-auto"
+            @click="next"
+            x-show="canGoNext()"
+            :disabled="!canGoNext()"
+        >
+            <span>Avanti</span>
+            <svg class="icon icon-white icon-sm" aria-hidden="true">
+                <use href="#it-chevron-right"></use>
+            </svg>
+        </button>
+        
+        <button 
+            type="submit" 
+            class="btn btn-success ms-auto"
+            x-show="!canGoNext()"
+        >
+            <span>Conferma</span>
+            <svg class="icon icon-white icon-sm" aria-hidden="true">
+                <use href="#it-check"></use>
+            </svg>
+        </button>
+    </nav>
+</div>
+
+<style>
+.it-stepper {
+    --stepper-primary: #0066cc;
+    --stepper-success: #008758;
+    --stepper-gray: #5b6f82;
+    --stepper-light-gray: #e3e7eb;
+}
+
+.stepper-header {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.stepper-header-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.stepper-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.stepper-number {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0;
+    color: var(--stepper-gray);
+    transition: all 0.3s ease;
+}
+
+.stepper-number:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.step-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--stepper-light-gray);
+    color: var(--stepper-gray);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.stepper-step.active .step-dot {
+    background-color: var(--stepper-primary);
+    color: white;
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.2);
+}
+
+.stepper-step.completed .step-dot {
+    background-color: var(--stepper-success);
+    color: white;
+}
+
+.step-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.stepper-step.active .step-label {
+    color: var(--stepper-primary);
+}
+
+.stepper-step.completed .step-label {
+    color: var(--stepper-success);
+}
+
+.stepper-progress {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: var(--stepper-light-gray);
+    z-index: 0;
+    border-radius: 2px;
+}
+
+.stepper-progress-bar {
+    height: 100%;
+    background-color: var(--stepper-primary);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.stepper-content {
+    min-height: 300px;
+    margin-bottom: 2rem;
+}
+
+.stepper-nav {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--stepper-light-gray);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .step-label {
+        font-size: 0.75rem;
+    }
+    
+    .step-dot {
+        width: 32px;
+        height: 32px;
+        font-size: 0.875rem;
+    }
+    
+    .stepper-header-group {
+        gap: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .step-label {
+        display: none;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .it-stepper {
+        --stepper-gray: #a0aec0;
+        --stepper-light-gray: #2d3748;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .step-dot {
+        border: 2px solid currentColor;
+    }
+    
+    .stepper-step.active .step-dot {
+        border-color: var(--stepper-primary);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .step-dot,
+    .stepper-number,
+    .stepper-progress-bar {
+        transition: none;
+    }
+}
+</style>
+    </div>
+</section>            
+        <div class="step-content mt-8">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4" data-element="step-title">Seleziona l&#039;ufficio</h3>
+        
+            <p class="text-gray-600 mb-6" data-element="step-description">Scegli l&#039;ufficio presso cui presentarti</p>
+    
+    <div class="space-y-4" role="radiogroup" aria-label="Selezione ufficio">
+                    <label 
+                class="block p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 hover:border-blue-300 hover:bg-blue-50
+                    border-gray-200 bg-white"
+                role="radio"
+                aria-checked="false"
+            >
+                <input 
+                    type="radio" 
+                    name="office" 
+                    value="anagrafe"
+                    x-model="selectedOffice"
+                    class="sr-only"
+                >
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                        <span 
+                            class="w-5 h-5 rounded-full border-2 flex items-center justify-center
+                                border-gray-300"
+                        >
+                                                    </span>
+                    </div>
+                    <div class="ml-3 flex-1">
+                        <div class="font-medium text-gray-900" data-element="office-name">Ufficio Anagrafe</div>
+                                                    <div class="text-sm text-gray-500 mt-1" data-element="office-address">Via Roma, 1 - Piano 1</div>
+                                                                            <div class="text-sm text-gray-500 mt-1" data-element="office-phone">06 1234567</div>
+                                            </div>
+                </div>
+            </label>
+                    <label 
+                class="block p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 hover:border-blue-300 hover:bg-blue-50
+                    border-gray-200 bg-white"
+                role="radio"
+                aria-checked="false"
+            >
+                <input 
+                    type="radio" 
+                    name="office" 
+                    value="urbanistica"
+                    x-model="selectedOffice"
+                    class="sr-only"
+                >
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                        <span 
+                            class="w-5 h-5 rounded-full border-2 flex items-center justify-center
+                                border-gray-300"
+                        >
+                                                    </span>
+                    </div>
+                    <div class="ml-3 flex-1">
+                        <div class="font-medium text-gray-900" data-element="office-name">Ufficio Urbanistica</div>
+                                                    <div class="text-sm text-gray-500 mt-1" data-element="office-address">Via Milano, 15 - Piano 2</div>
+                                                                            <div class="text-sm text-gray-500 mt-1" data-element="office-phone">06 1234568</div>
+                                            </div>
+                </div>
+            </label>
+                    <label 
+                class="block p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 hover:border-blue-300 hover:bg-blue-50
+                    border-gray-200 bg-white"
+                role="radio"
+                aria-checked="false"
+            >
+                <input 
+                    type="radio" 
+                    name="office" 
+                    value="tesoreria"
+                    x-model="selectedOffice"
+                    class="sr-only"
+                >
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                        <span 
+                            class="w-5 h-5 rounded-full border-2 flex items-center justify-center
+                                border-gray-300"
+                        >
+                                                    </span>
+                    </div>
+                    <div class="ml-3 flex-1">
+                        <div class="font-medium text-gray-900" data-element="office-name">Ufficio Tributi e Tesoreria</div>
+                                                    <div class="text-sm text-gray-500 mt-1" data-element="office-address">Via Napoli, 22 - Piano 1</div>
+                                                                            <div class="text-sm text-gray-500 mt-1" data-element="office-phone">06 1234569</div>
+                                            </div>
+                </div>
+            </label>
+                    <label 
+                class="block p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 hover:border-blue-300 hover:bg-blue-50
+                    border-gray-200 bg-white"
+                role="radio"
+                aria-checked="false"
+            >
+                <input 
+                    type="radio" 
+                    name="office" 
+                    value="tecnico"
+                    x-model="selectedOffice"
+                    class="sr-only"
+                >
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                        <span 
+                            class="w-5 h-5 rounded-full border-2 flex items-center justify-center
+                                border-gray-300"
+                        >
+                                                    </span>
+                    </div>
+                    <div class="ml-3 flex-1">
+                        <div class="font-medium text-gray-900" data-element="office-name">Ufficio Tecnico</div>
+                                                    <div class="text-sm text-gray-500 mt-1" data-element="office-address">Via Engineering, 8 - Piano 3</div>
+                                                                            <div class="text-sm text-gray-500 mt-1" data-element="office-phone">06 1234570</div>
+                                            </div>
+                </div>
+            </label>
+        
+            </div>
+
+    <div class="mt-6 flex justify-end">
+        <button 
+            type="button"
+            class="px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            :disabled="!selectedOffice"
+            @click="currentStep++"
+            data-element="step-next"
+        >
+            Continua
+        </button>
+    </div>
+</div>
+        </div>
+    </main>
+
+    <div class="modal fade search-modal" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content perfect-scrollbar">
+            <div class="modal-body">
+                <form>
+                    <div class="container">
+                        <div class="row variable-gutters">
+                            <div class="col">
+                                <div class="modal-title">
+                                    <button class="search-link d-md-none" type="button" data-bs-toggle="modal" data-bs-target="#search-modal" aria-label="Chiudi e torna alla pagina precedente">
+                                        <svg class="icon icon-md">
+                                            <use href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-arrow-left"></use>
+                                        </svg>
+                                    </button>
+                                    <h2>Cerca</h2>
+                                    <button class="search-link d-none d-md-block" type="button" data-bs-toggle="modal" data-bs-target="#search-modal" aria-label="Chiudi e torna alla pagina precedente">
+                                        <svg class="icon icon-md">
+                                            <use href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-close-big"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="form-group autocomplete-wrapper">
+                                    <label for="autocomplete-two" class="visually-hidden">Cerca nel sito</label>
+                                    <input type="search" class="autocomplete ps-5" placeholder="Cerca nel sito" id="autocomplete-two" name="autocomplete-two" data-bs-autocomplete="[]">
+                                    <span class="autocomplete-icon" aria-hidden="true">
+                                        <svg class="icon"><use href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-search"></use></svg>
+                                    </span>
+                                    <button type="button" class="btn btn-primary">
+                                        <span class="">Cerca</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row variable-gutters">
+                            <div class="col-lg-5">
+                                <div class="searches-list-wrapper">
+                                    <div class="other-link-title">FORSE STAVI CERCANDO</div>
+                                    <ul class="searches-list">
+                                        <li><a href="#">Rilascio Carta Identità Elettronica (CIE)</a></li>
+                                        <li><a href="#">Cambio di residenza</a></li>
+                                        <li><a href="#">Tributi online</a></li>
+                                        <li><a href="#">Prenotazione appuntamenti</a></li>
+                                        <li><a href="#">Rilascio tessera elettorale</a></li>
+                                        <li><a href="#">Voucher connettività</a></li>
+                                    </ul><!-- /searches-list -->
+                                </div><!-- /searches-list-wrapper -->
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer class="it-footer" id="footer">
+    <div class="it-footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 footer-items-wrapper logo-wrapper">
+                    <img class="ue-logo" src="/themes/Sixteen/design-comuni/assets/images/logo-eu-inverted.svg" alt="logo Unione Europea">
+                    <div class="it-brand-wrapper">
+                        <a href="#">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-pa"></use>
+                            </svg>
+                            <div class="it-brand-text">
+                                <h2 class="no_toc">Nome del Comune</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 footer-items-wrapper">
+                    <h4 class="footer-heading-title">Amministrazione</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">Organi di governo</a></li>
+                        <li><a href="#">Aree amministrative</a></li>
+                        <li><a href="#">Uffici</a></li>
+                        <li><a href="#">Enti e fondazioni</a></li>
+                        <li><a href="#">Politici</a></li>
+                        <li><a href="#">Personale amministrativo</a></li>
+                        <li><a href="#">Documenti e dati</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 footer-items-wrapper">
+                    <h4 class="footer-heading-title">Categorie di servizio</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="footer-list">
+                                <li><a href="#">Anagrafe e stato civile</a></li>
+                                <li><a href="#">Cultura e tempo libero</a></li>
+                                <li><a href="#">Vita lavorativa</a></li>
+                                <li><a href="#">Imprese e commercio</a></li>
+                                <li><a href="#">Appalti pubblici</a></li>
+                                <li><a href="#">Catasto e urbanistica</a></li>
+                                <li><a href="#">Turismo</a></li>
+                                <li><a href="#">Mobilità e trasporti</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="footer-list">
+                                <li><a href="#">Educazione e formazione</a></li>
+                                <li><a href="#">Giustizia e sicurezza pubblica</a></li>
+                                <li><a href="#">Tributi, finanze e contravvenzioni</a></li>
+                                <li><a href="#">Ambiente</a></li>
+                                <li><a href="#">Salute, benessere e assistenza</a></li>
+                                <li><a href="#">Autorizzazioni</a></li>
+                                <li><a href="#">Agricoltura e pesca</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 footer-items-wrapper">
+                    <h4 class="footer-heading-title">Novità</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">Notizie</a></li>
+                        <li><a href="#">Comunicati</a></li>
+                        <li><a href="#">Avvisi</a></li>
+                    </ul>
+                    <h4 class="footer-heading-title">Vivere il comune</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">Luoghi</a></li>
+                        <li><a href="#">Eventi</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9 mt-md-4 footer-items-wrapper">
+                    <h4 class="footer-heading-title">Contatti</h4>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p class="footer-info">Comune di Nome Comune<br>
+                                Via Roma 123 - 00100 Comune<br>
+                                Codice fiscale / P. IVA: 00123456789<br><br>
+                                <a href="#">Ufficio Relazioni con il Pubblico</a><br>
+                                Numero verde: 800 016 123<br>
+                                SMS e WhatsApp: +39 320 1234567<br>
+                                Posta Elettronica Certificata<br>
+                                Centralino unico: 012 3456
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="footer-list">
+                                <li><a href="#" data-element="faq">Leggi le FAQ</a></li>
+                                <li><a href="#">Prenotazione appuntamento</a></li>
+                                <li><a href="#" data-element="report-inefficiency">Segnalazione disservizio</a></li>
+                                <li><a href="#">Richiesta d'assistenza</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="footer-list">
+                                <li><a href="#">Amministrazione trasparente</a></li>
+                                <li><a href="#" data-element="privacy-policy-link">Informativa privacy</a></li>
+                                <li><a href="#" data-element="legal-notes">Note legali</a></li>
+                                <li><a href="#" data-element="accessibility-link">Dichiarazione di accessibilità</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-md-4 footer-items-wrapper">
+                    <h4 class="footer-heading-title">Seguici su</h4>
+                    <ul class="list-inline text-start social">
+                        <li class="list-inline-item">
+                            <a class="p-1 text-white" href="#" target="_blank">
+                                <svg class="icon icon-sm icon-white align-top">
+                                    <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-twitter"></use>
+                                </svg>
+                                <span class="visually-hidden">Twitter</span></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="p-1 text-white" href="#" target="_blank">
+                                <svg class="icon icon-sm icon-white align-top">
+                                    <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-facebook"></use>
+                                </svg>
+                                <span class="visually-hidden">Facebook</span></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="p-1 text-white" href="#" target="_blank">
+                                <svg class="icon icon-sm icon-white align-top">
+                                    <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-youtube"></use>
+                                </svg>
+                                <span class="visually-hidden">YouTube</span></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="p-1 text-white" href="#" target="_blank">
+                                <svg class="icon icon-sm icon-white align-top">
+                                    <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-telegram"></use>
+                                </svg>
+                                <span class="visually-hidden">Telegram</span></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="p-1 text-white" href="#" target="_blank">
+                                <svg class="icon icon-sm icon-white align-top">
+                                    <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-whatsapp"></use>
+                                </svg>
+                                <span class="visually-hidden">Whatsapp</span></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="p-1 text-white" href="#" target="_blank">
+                                <svg class="icon icon-sm icon-white align-top">
+                                    <use xlink:href="/themes/Sixteen/design-comuni/assets/bootstrap-italia/dist/svg/sprites.svg#it-rss"></use>
+                                </svg>
+                                <span class="visually-hidden">RSS</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 footer-items-wrapper">
+                    <div class="footer-bottom">
+                        <a href="#">Media policy</a>
+                        <a href="#">Mappa del sito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const darkModeToggle = document.getElementById('darkModeToggle');
+                if (darkModeToggle) {
+                    darkModeToggle.addEventListener('click', function() {
+                        const html = document.documentElement;
+                        const isDark = html.classList.contains('dark');
+                        if (isDark) {
+                            html.classList.remove('dark');
+                            localStorage.setItem('dark_mode', 'false');
+                        } else {
+                            html.classList.add('dark');
+                            localStorage.setItem('dark_mode', 'true');
+                        }
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

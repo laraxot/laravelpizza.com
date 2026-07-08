@@ -87,6 +87,5 @@ use TransTrait {
 ## Collegamenti
 
 - [README Modulo Xot](./README.md)
-- [README Modulo Xot](./readme.md)
 - [Code Quality Rules](./code-quality.md)
 - [Best Practices](./best-practices.md)

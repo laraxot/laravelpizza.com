@@ -1,0 +1,287 @@
+---
+name: Error Correction Workflow
+about: Report and fix an error following the 12-step workflow
+title: "Error: {Brief Description}"
+labels: ["bug", "error-correction", "priority"]
+assignees: ""
+---
+
+## 🚨 Error Correction Workflow
+
+**Error Type**: {Bug | Performance | Security | Other}  
+**Severity**: {Critical | High | Medium | Low}  
+**AI Agent**: {Agent Name}  
+**Date**: {YYYY-MM-DD}
+
+---
+
+### ✅ 12-Step Checklist
+
+**PRIMA DI CORREGGERE:**
+
+- [ ] 1. **STUDIATO** documentazione esistente
+  - [ ] docs/
+  - [ ] Modules/*/docs/
+  - [ ] Themes/*/docs/
+  - [ ] Nessun documento doppio creato
+
+- [ ] 2. **AGGIORNATO DOCS** (prima di codificare)
+  - [ ] File esistenti aggiornati
+  - [ ] Naming kebab-case
+  - [ ] Nessun timestamp nel filename
+
+- [ ] 3. **STUDIATO GIT HISTORY** (forward-only)
+  - [ ] `git log --oneline --all -- <file>`
+  - [ ] `git show <commit>`
+  - [ ] MAI reset/revert effettuati
+
+- [ ] 4. **CAPITO LO SCOPO**
+  - [ ] Business value chiaro
+  - [ ] Users identificati
+  - [ ] Contesto compreso
+
+- [ ] 5. **RAGIONATO**
+  - [ ] Analisi completata
+  - [ ] Alternative considerate
+  - [ ] Decisione documentata
+
+**DURANTE CORREZIONE:**
+
+- [ ] 6. **AGGIORNATO REGOLE**
+  - [ ] QWEN.md (se necessario)
+  - [ ] docs/rules/
+  - [ ] AGENTS.md (se regola generale)
+
+- [ ] 7. **AGGIORNATO MEMORIES**
+  - [ ] ~/.qwen/QWEN.md (globale)
+  - [ ] _bmad/_memory/ (BMAD)
+
+- [ ] 8. **AGGIORNATO/CREATO SKILLS**
+  - [ ] _bmad/core/skills/
+  - [ ] Pattern documentati
+
+- [ ] 9. **AGGIORNATO GUIDELINES**
+  - [ ] docs/ai-guidelines.md
+  - [ ] docs/best-practices/
+
+**DOPO CORREZIONE:**
+
+- [ ] 10. **GITHUB ISSUE**
+  - [ ] Issue creata/aggiornata
+  - [ ] Label assegnate
+  - [ ] Assignee settato
+
+- [ ] 11. **GITHUB ACTIONS** (se necessario)
+  - [ ] Workflow creato per prevenzione
+  - [ ] CI/CD aggiornato
+
+- [ ] 12. **QUALITY GATES**
+  - [ ] PHPStan Level 10: `php -d memory_limit=2G ./vendor/bin/phpstan analyse`
+  - [ ] PHPMD: `./vendor/bin/phpmd <path> text codesize,unusedformalparameters`
+  - [ ] PHPInsights: `./vendor/bin/phpinsights analyse`
+  - [ ] Pest: `./vendor/bin/pest`
+
+---
+
+### 🚫 Regole Critiche
+
+**DATABASE SACRO:**
+- [ ] MAI usato `migrate:refresh`, `migrate:fresh`, `db:wipe`
+- [ ] MAI usato `RefreshDatabase` trait
+- [ ] MAI usato `migrate --force` manualmente
+
+**GIT FORWARD-ONLY:**
+- [ ] MAI fatto `git reset --hard HEAD~N`
+- [ ] MAI fatto `git checkout <old_commit>`
+- [ ] MAI fatto `git revert` (se non forward fix)
+
+**DOCUMENTAZIONE:**
+- [ ] MAI creati documenti doppi (usati indici)
+- [ ] MAI usati timestamp nei filename
+- [ ] MAI numerati file (doc-1.md)
+
+**MULTI-AI COORDINATION:**
+- [ ] Letto docs/ai-agent-coordination.md
+- [ ] Controllate GitHub Issues aperte
+- [ ] Commit piccoli e frequenti
+- [ ] Push eseguito (ogni 5-10 minuti)
+
+**GIT REMOTE:**
+- [ ] Verificato remote con `git remote -v`
+- [ ] Pushato su repo corretta
+
+---
+
+### 📝 Error Description
+
+**What happened:**
+```
+Descrizione dettagliata dell'errore
+```
+
+**Expected behavior:**
+```
+Cosa dovrebbe succedere
+```
+
+**Actual behavior:**
+```
+Cosa succede realmente
+```
+
+---
+
+### 🔍 Investigation
+
+**Files involved:**
+```
+- Path/to/file1.php
+- Path/to/file2.php
+```
+
+**Git history:**
+```bash
+# Comandi eseguiti e output
+git log --oneline --all -- path/to/file
+```
+
+**Documentation reviewed:**
+```
+- docs/related-doc.md
+- Modules/Xot/docs/related.md
+```
+
+---
+
+### 💡 Solution
+
+**Root cause:**
+```
+Analisi della causa radice
+```
+
+**Implementation:**
+```php
+// Codice della fix
+```
+
+**Files modified:**
+```
+- path/to/file1.php (modified)
+- path/to/file2.php (created)
+- docs/updated-doc.md (updated)
+```
+
+---
+
+### 🧪 Testing
+
+**Tests added/updated:**
+```bash
+./vendor/bin/pest tests/Feature/ErrorFixTest.php
+```
+
+**Test coverage:**
+- [ ] Unit tests
+- [ ] Feature tests
+- [ ] Integration tests
+
+---
+
+### 📊 Quality Gates Results
+
+```bash
+# PHPStan
+php -d memory_limit=2G ./vendor/bin/phpstan analyse
+
+# Output:
+{incolla output}
+
+# PHPMD
+./vendor/bin/phpmd <path> text codesize,unusedformalparameters
+
+# Output:
+{incolla output}
+
+# PHPInsights
+./vendor/bin/phpinsights analyse
+
+# Output:
+{incolla output}
+
+# Pest
+./vendor/bin/pest
+
+# Output:
+{incolla output}
+```
+
+**All gates passed:** [ ] YES  [ ] NO
+
+---
+
+### 🔄 Multi-AI Coordination
+
+**AI Agents involved:**
+- [ ] Qwen (Primary)
+- [ ] Gemini (Secondary)
+- [ ] Claude (Tertiary)
+- [ ] BMAD Agents: {list}
+
+**Coordination actions:**
+- [ ] GitHub Issue aggiornata
+- [ ] docs/ai-agent-coordination.md aggiornato
+- [ ] Commit comunicati
+- [ ] Push eseguito
+
+---
+
+### 📚 Documentation Updates
+
+**Docs created/updated:**
+```
+- docs/new-doc.md (created)
+- docs/existing-doc.md (updated)
+- Modules/Xot/docs/updated.md (updated)
+```
+
+**Indices updated:**
+```
+- docs/README.md
+- Modules/Xot/docs/README.md
+```
+
+---
+
+### ✅ Completion
+
+- [ ] Error fixed
+- [ ] All 12 steps completed
+- [ ] Quality gates passed
+- [ ] Documentation updated
+- [ ] Tests passing
+- [ ] Git push eseguito
+- [ ] GitHub Issue aggiornata
+- [ ] AI coordination updated
+
+**Status:** {IN PROGRESS | BLOCKED | COMPLETED}
+
+---
+
+### 📿 Mantra
+
+```
+"Studio prima di agire"
+"Git è forward-only"
+"I dati sono sacri"
+"Docs prima del codice"
+"Quality gates sempre"
+"Coordino con altri AI"
+```
+
+---
+
+**References:**
+- [docs/error-correction-workflow.md](../docs/error-correction-workflow.md)
+- [docs/ai-agent-coordination.md](ai-agent-coordination.md)
+- [AGENTS.md](../AGENTS.md)

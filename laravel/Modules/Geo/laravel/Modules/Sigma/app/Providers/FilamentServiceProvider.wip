@@ -1,0 +1,48 @@
+<?php
+
+namespace Modules\Sigma\Providers;
+
+use Blade;
+use Filament\Facades\Filament;
+use Filament\Navigation\NavigationItem;
+use Savannabits\FilamentModules\ContextServiceProvider;
+
+class FilamentServiceProvider extends ContextServiceProvider
+{
+    public $app;
+    public static string $name = 'sigma-filament';
+    
+    public static string $module = 'Sigma';
+
+    public function packageRegistered(): void
+    {
+        $this->app->booting(function (): void {
+            $this->registerConfigs();
+        });
+    }
+
+    public function registerConfigs(): void {
+        $this->mergeConfigFrom(
+            app('modules')->findOrFail(static::$module)->getExtraPath( 'Config/'.static::$name.'.php'),
+            static::$name
+        );
+    }
+
+    public function boot(): void
+    {
+        Filament::serving(static function () : void {
+            Filament::forContext('filament', static function () : void {
+                Filament::registerNavigationItems([
+                    NavigationItem::make(static::$module)
+                        ->label(static::$module.' ')
+                        ->url(route(static::$name.'.pages.dashboard'))
+                        ->icon('heroicon-o-cube')
+                        ->group('Modules')
+                ]);
+            });
+            Filament::forContext(static::$name, static function () : void {
+                Filament::registerRenderHook('sidebar.start',static fn(): string => Blade::render('<div class="p-2 px-6 bg-primary-100 font-black w-full">'.static::$module.' Module</div>'));
+            });
+        });
+    }
+}

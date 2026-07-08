@@ -140,8 +140,7 @@ return $schema->components($formSchema);
 6. **Geo** - 0 errori
 7. **Job** - 207 file analizzati, 0 errori (4 errori corretti)
 8. **Media** - 0 errori ✨
-9. **healthcare_app** - 0 errori ✨ (USER fix applicati)
-9. **ExternalProject** - 0 errori ✨ (USER fix applicati)
+9. **Quaeris** - 0 errori ✨ (USER fix applicati)
 10. **Tenant** - 57 file analizzati, 0 errori (1 errore corretto)
 
 ### Pattern di Correzione Applicati
@@ -243,8 +242,7 @@ return $schema->components($formSchema);
 1. Lang (40+ errori)
 2. Media (20+ errori)
 3. Notify (60+ errori)
-4. healthcare_app (30+ errori)
-4. ExternalProject (30+ errori)
+4. Quaeris (30+ errori)
 5. Tenant (10+ errori)
 6. UI (50+ errori)
 7. User (20+ errori)

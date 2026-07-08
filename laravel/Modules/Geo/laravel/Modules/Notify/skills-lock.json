@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
+    },
+    "supermemory": {
+      "source": "supermemoryai/skills",
+      "sourceType": "github",
+      "computedHash": "86b968194da4c2dc149df41674d805bdbf4abf009ff85a43752af35449a76fd6"
+    },
+    "supermemory-cli": {
+      "source": "supermemoryai/skills",
+      "sourceType": "github",
+      "computedHash": "df4b22c4148c9b5b4e62f8ba1119e3c2b9a66f4f3dbcfa1855648e244ddc9d78"
+    },
+    "svg-animations": {
+      "source": "supermemoryai/skills",
+      "sourceType": "github",
+      "computedHash": "9be4b3e0afe9d3cbb1bcf238f8504f9a23552f742350fbef9483070112ac1977"
+    }
+  }
+}

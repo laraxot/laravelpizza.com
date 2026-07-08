@@ -1,0 +1,16 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Xot\Filament\Resources\Pages;
+
+use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
+
+/**
+ * ---
+ */
+abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
+{
+    // For now, keep it minimal to avoid trait conflicts
+    // HasXotTable functionality will be added back where needed specifically
+}

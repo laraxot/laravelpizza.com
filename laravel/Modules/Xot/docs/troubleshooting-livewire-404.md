@@ -19,13 +19,13 @@ Failed to load resource: the server responded with a status of 404 (Not Found)
 
 ```bash
 # Configurazione .env
-APP_URL=http://healthcare_app.local
+APP_URL=http://quaeris.local
 
 # Browser accede a
 http://127.0.0.1:8000
 ```
 
-**Risultato**: Livewire genera URL con `healthcare_app.local` ma browser invia richieste a `127.0.0.1:8000` → 404
+**Risultato**: Livewire genera URL con `quaeris.local` ma browser invia richieste a `127.0.0.1:8000` → 404
 
 ## ✅ Soluzioni
 
@@ -41,7 +41,7 @@ APP_URL=http://127.0.0.1:8000
 APP_URL=http://localhost:8000
 
 # Se accedi tramite dominio locale
-APP_URL=http://healthcare_app.local
+APP_URL=http://quaeris.local
 ```
 
 **Dopo la modifica**:
@@ -53,19 +53,19 @@ php artisan optimize:clear
 
 ### Soluzione 2: Aggiungere Host al Sistema
 
-Se vuoi usare `healthcare_app.local`, aggiungi al file hosts:
+Se vuoi usare `quaeris.local`, aggiungi al file hosts:
 
 **Linux/Mac**: `/etc/hosts`
 ```
-127.0.0.1 healthcare_app.local
+127.0.0.1 quaeris.local
 ```
 
 **Windows**: `C:\Windows\System32\drivers\etc\hosts`
 ```
-127.0.0.1 healthcare_app.local
+127.0.0.1 quaeris.local
 ```
 
-Poi accedi tramite: `http://healthcare_app.local:8000`
+Poi accedi tramite: `http://quaeris.local:8000`
 
 ### Soluzione 3: Trusted Proxies (Per Ambienti Complessi)
 
@@ -136,14 +136,14 @@ APP_URL=http://127.0.0.1:8000
 
 ```bash
 # .env per sviluppo con virtual host
-APP_URL=http://healthcare_app.local
+APP_URL=http://quaeris.local
 ```
 
 ### Produzione
 
 ```bash
 # .env per produzione
-APP_URL=https://healthcare_app.com
+APP_URL=https://quaeris.com
 ```
 
 ## 🔧 Comandi Rapidi Fix

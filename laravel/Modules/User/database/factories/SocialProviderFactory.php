@@ -6,6 +6,9 @@ namespace Modules\User\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends Factory<\Modules\User\Models\SocialProvider>
+ */
 class SocialProviderFactory extends Factory
 {
     /**

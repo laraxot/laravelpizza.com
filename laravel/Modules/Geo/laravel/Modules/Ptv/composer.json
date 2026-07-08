@@ -1,0 +1,95 @@
+{
+    "name": "provtv/module_ptv_fila5",
+    "description": "Modulo PTV principale per portale HR e gestione integrata risorse umane nel contesto Laraxot.",
+    "keywords": [
+        "laraxot",
+        "laravel",
+        "filament",
+        "module_ptv",
+        "ptv",
+        "hr",
+        "portale",
+        "risorse-umane"
+    ],
+    "homepage": "https://github.com/provtv/module_ptv_fila5.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Nicola Storgato",
+            "email": "storgatonicola@provincia.treviso.it",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "filament/filament": "^5.0",
+        "spatie/laravel-sluggable": "*",
+        "php": "^8.3"
+    },
+    "suggest": {
+        "awcodes/filament-tiptap-editor": "*"
+    },
+    "require-dev": {},
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Xot"
+        },
+        {
+            "type": "path",
+            "url": "../Tenant"
+        },
+        {
+            "type": "path",
+            "url": "../UI"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\Ptv\\": "app/",
+            "Modules\\Ptv\\Database\\Factories\\": "database/factories/",
+            "Modules\\Ptv\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump_comment": [
+            "@php vendor/bin/testbench package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+        ],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "./vendor/bin/pest --no-coverage",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "wikimedia/composer-merge-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Ptv\\Providers\\PtvServiceProvider",
+                "Modules\\Ptv\\Providers\\Filament\\AdminPanelProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Ptv\\Tests\\": "tests/"
+        }
+    }
+}

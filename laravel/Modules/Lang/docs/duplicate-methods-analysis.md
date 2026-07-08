@@ -2,6 +2,11 @@
 
 **Data Generazione**: 2025-10-15 06:41:17
 **Data Generazione**: 2025-10-15 06:41:17
+<<<<<<< HEAD
+**Data Generazione**: 2025-10-15 06:41:17
+**Data Generazione**: 2025-10-15 06:41:17
+=======
+>>>>>>> 11c7c7d (.)
 **Totale Gruppi di Duplicati**:
 
 ## Sommario Esecutivo
@@ -475,4 +480,12 @@ Indica quanto è probabile che il refactoring sia vantaggioso:
 - **90-100%**: Altamente raccomandato
 - **70-89%**: Raccomandato
 - **50-69%**: Valutare caso per caso
+<<<<<<< HEAD
 - **< 50%**: Richiede analisi dettagliata
+- **< 50%**: Richiede analisi dettagliata
+- **< 50%**: Richiede analisi dettagliata
+- **< 50%**: Richiede analisi dettagliata
+- **< 50%**: Richiede analisi dettagliata
+=======
+- **< 50%**: Richiede analisi dettagliata
+>>>>>>> 11c7c7d (.)

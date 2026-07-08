@@ -1,11 +1,5 @@
 # 🎨 Theme Assets Workflow - CSS/JS Frontend
 
-Related documents:
-- [Vite Configuration](./vite-configuration.md)
-- [Xot Documentation Index](./index.md)
-- [Sixteen Theme Documentation Index](../../Themes/Sixteen/docs/00-index.md)
-
-
 **⚠️ REGOLA CRITICA**: Per modifiche CSS/JS del frontend, lavorare SEMPRE nella cartella del tema, NON nella root Laravel.
 
 ## 📁 Struttura Corretta
@@ -43,7 +37,6 @@ npm run copy
 
 ## ✅ Processo Corretto
 1. **Modifica sorgenti** in `/Themes/[Theme]/resources/`
-2. **Usa `@vite([...], 'themes/[Theme]')`** nei layout del tema per evitare il fallback a `public/build/manifest.json`
 2. **Build assets** con `npm run build` dalla cartella tema
 3. **Copy assets** con `npm run copy` dalla cartella tema
 4. **Verifica risultato** nel browser

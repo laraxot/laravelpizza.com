@@ -59,7 +59,7 @@ Verificare **TUTTI i moduli** per accessor che chiamano `save()` senza guard `if
 ### ⏳ Progressioni - DA VERIFICARE
 
 **File Principali**:
-1. `Models/Scheda.php` - Da verificare
+1. `Models/Schede.php` - Da verificare
 2. `Models/Pesi.php` - Da verificare
 3. `Models/MaxCatecoPosfunAnno.php` - Da verificare
 
@@ -149,7 +149,6 @@ Ogni modulo deve avere:
 ## Collegamenti
 
 - [Regola Globale](../../Xot/docs/accessor-save-guard-global-rule.md)
-- [Regola Globale](../../xot/docs/accessor-save-guard-global-rule.md)
 ```
 
 ## Metriche Target
@@ -174,12 +173,6 @@ Ogni modulo deve avere:
 ## Collegamenti
 
 - [Regola Globale](./accessor-save-guard-global-rule.md)
-- [Sigma Implementation](../../sigma/docs/fix-duplicate-entry-error-summary.md)
-- [Pattern Template](../../sigma/docs/accessor-refactoring-philosophy.md)
-
----
-
-**Creato**: [DATE]
 - [Sigma Implementation](../../Sigma/docs/fix-duplicate-entry-error-summary.md)
 - [Pattern Template](../../Sigma/docs/accessor-refactoring-philosophy.md)
 

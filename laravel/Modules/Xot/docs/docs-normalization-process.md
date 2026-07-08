@@ -27,9 +27,8 @@ Questo documento descrive il processo sistematico per normalizzare i nomi dei fi
 ❌ ERRATO:
 - BugfixIconsMissing.md (maiuscole)
 - bugfix-icons-missing-2025-01-27.md (data nel nome)
-- bugfix-icons-missing-[DATE].md (data nel nome)
 - bugfix_icons_missing.md (underscore invece di trattini)
-- bugfix-icons-missing.md (anno nel nome)
+- bugfix-icons-missing-2025.md (anno nel nome)
 ```
 
 ## Processo di Normalizzazione
@@ -77,9 +76,6 @@ Per ogni file identificato:
 # Esempio: bugfix-icons-missing-2025-01-27.md è identico a bugfix-icons-missing.md
 # Azione: Eliminare file con data
 rm bugfix-icons-missing-2025-01-27.md
-# Esempio: bugfix-icons-missing-[DATE].md è identico a bugfix-icons-missing.md
-# Azione: Eliminare file con data
-rm bugfix-icons-missing-[DATE].md
 ```
 
 #### Caso 2: File con Data (nessun duplicato)
@@ -88,9 +84,6 @@ rm bugfix-icons-missing-[DATE].md
 # Esempio: translation-refactor-complete-summary-2025-08-08.md
 # Azione: Rinominare rimuovendo data
 mv translation-refactor-complete-summary-2025-08-08.md translation-refactor-complete-summary.md
-# Esempio: translation-refactor-complete-summary-[DATE].md
-# Azione: Rinominare rimuovendo data
-mv translation-refactor-complete-summary-[DATE].md translation-refactor-complete-summary.md
 ```
 
 #### Caso 3: File con Maiuscole
@@ -135,7 +128,6 @@ Dopo ogni rinomina:
 
 **Situazione**:
 - `bugfix-icons-missing-2025-01-27.md` (100 righe)
-- `bugfix-icons-missing-[DATE].md` (100 righe)
 - `bugfix-icons-missing.md` (100 righe, identico)
 
 **Azione**:
@@ -144,23 +136,18 @@ Dopo ogni rinomina:
 diff bugfix-icons-missing-2025-01-27.md bugfix-icons-missing.md
 # Se identici, eliminare file con data
 rm bugfix-icons-missing-2025-01-27.md
-diff bugfix-icons-missing-[DATE].md bugfix-icons-missing.md
-# Se identici, eliminare file con data
-rm bugfix-icons-missing-[DATE].md
 ```
 
 ### Esempio 2: File con Data (versione unica)
 
 **Situazione**:
 - `translation-refactor-complete-summary-2025-08-08.md` (contenuto completo)
-- `translation-refactor-complete-summary-[DATE].md` (contenuto completo)
 - `translation-refactor-complete-summary.md` (vuoto o non esiste)
 
 **Azione**:
 ```bash
 # Rinominare file rimuovendo data
 mv translation-refactor-complete-summary-2025-08-08.md translation-refactor-complete-summary.md
-mv translation-refactor-complete-summary-[DATE].md translation-refactor-complete-summary.md
 # Se il file contiene data nel corpo, mantenerla ma non nel nome
 ```
 
@@ -215,8 +202,8 @@ Per processi futuri, considerare script di automazione:
 ## Riferimenti
 
 - [Regole Naming File](../file-naming-rules.md)
-- [Piano Consolidamento Documentazione](../../../../../docs/consolidamento-documentazione.md)
-- [Filosofia DRY + KISS](../../../../../docs/philosophy-guide.md)
+- [Piano Consolidamento Documentazione](../../../../docs/consolidamento-documentazione-2025.md)
+- [Filosofia DRY + KISS](../../../../docs/philosophy-guide.md)
 
 ---
 

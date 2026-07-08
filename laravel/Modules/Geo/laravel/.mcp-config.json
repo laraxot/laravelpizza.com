@@ -1,0 +1,36 @@
+{
+  "project": "Laravel Multi-Module Application",
+  "description": "Filament v3 based Laravel application with modular architecture",
+  "modules": [
+    "Activity", "Badge", "CertFisc", "ContoAnnuale", "DbForge", "Europa", 
+    "Gdpr", "Inail", "Incentivi", "IndennitaResponsabilita", "Job", "Lang",
+    "Legge104", "Legge109", "Media", "Mensa", "MobilitaVolontaria", "Notify",
+    "Prenotazioni", "PresenzeAssenze", "Questionari", "Rating", "Setting",
+    "Sigma", "Sindacati", "Tenant", "UI", "User", "Xot"
+  ],
+  "frameworks": {
+    "laravel": "11.x",
+    "filament": "3.x",
+    "livewire": "3.x",
+    "pest": "3.x",
+    "tailwindcss": "3.x"
+  },
+  "database": "mysql",
+  "testing": "pest",
+  "mcp_servers_enabled": [
+    "filesystem",
+    "github", 
+    "memory",
+    "sequential-thinking",
+    "context7",
+    "browser",
+    "code-runner"
+  ],
+  "project_paths": {
+    "root": "/var/www/html/_bases/base_ptvx_fila5_mono/laravel",
+    "modules": "/var/www/html/_bases/base_ptvx_fila5_mono/laravel/Modules",
+    "config": "/var/www/html/_bases/base_ptvx_fila5_mono/laravel/config",
+    "tests": "/var/www/html/_bases/base_ptvx_fila5_mono/laravel/tests",
+    "scripts": "/var/www/html/_bases/base_ptvx_fila5_mono/bashscripts"
+  }
+}

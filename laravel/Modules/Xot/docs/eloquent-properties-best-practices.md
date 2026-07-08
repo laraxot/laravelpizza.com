@@ -1,7 +1,6 @@
 # Best Practices per Proprietà Modelli Eloquent - Modulo Xot
 
 ## ✅ STATO: property_exists() ELIMINATO (Data: 2025-01-05)
-## ✅ STATO: property_exists() ELIMINATO (Data: [DATE])
 
 **Nel modulo Xot, `property_exists()` è stato completamente eliminato dal codice eseguibile.**
 
@@ -209,7 +208,6 @@ Prima di ogni commit in qualsiasi modulo, verificare:
 - [Regola Cursor](../../.cursor/rules/eloquent-properties.md)
 - [Memoria Cursor](../../.cursor/memories)
 - [Linee Guida AI](../../.ai/guidelines/CORE.md)
-- [Linee Guida AI](../../.ai/guidelines/core.md)
 - [Esempio Corretto](../../Notify/app/Notifications/GenericNotification.php)
 
 ## Esempi di Correzione

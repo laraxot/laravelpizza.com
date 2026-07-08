@@ -1,0 +1,15 @@
+{
+    "name": "Progressioni",
+    "alias": "progressioni",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Progressioni\\Providers\\ProgressioniServiceProvider",
+        "Modules\\Progressioni\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "aliases": [],
+    "files": [],
+    "requires": []
+}

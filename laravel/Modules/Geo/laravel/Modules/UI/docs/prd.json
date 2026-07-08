@@ -1,0 +1,33 @@
+{
+  "name": "UI",
+  "type": "module",
+  "status": "baseline",
+  "purpose": "Fornire componenti, rendering blocks e primitive visuali riusabili per temi e moduli.",
+  "goals": [
+    "Ridurre duplicazioni di rendering",
+    "Stabilizzare contratti tra blocchi e temi",
+    "Supportare componenti visuali coerenti"
+  ],
+  "nonGoals": [
+    "Definire da solo il look and feel di ogni tema"
+  ],
+  "dependencies": [
+    "Xot"
+  ],
+  "qualityGates": [
+    "./vendor/bin/phpstan analyse Modules/UI",
+    "./vendor/bin/phpinsights analyse Modules/UI --min-quality=0 --min-complexity=0 --min-architecture=0 --min-style=0"
+  ],
+  "suiteVersion": "baseline-v1",
+  "sourceFramework": "Notion product template family adapted to repository governance",
+  "companionDocs": [
+    "product-roadmap.md",
+    "product-launch-plan.md",
+    "product-strategy.md",
+    "user-research.md",
+    "sprint-planning-meeting.md"
+  ],
+  "implementationPattern": "action-first",
+  "actionStandard": "spatie/laravel-queueable-action",
+  "architectureRule": "No generic Services for business logic; use Action classes with execute()"
+}

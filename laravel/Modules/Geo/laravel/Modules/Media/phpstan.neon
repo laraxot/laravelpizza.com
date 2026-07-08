@@ -1,0 +1,26 @@
+includes:
+    - ../../vendor/larastan/larastan/extension.neon
+    - ../../vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
+    - ../../vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
+parameters:
+    level: max
+
+    paths:
+        - ./app
+        - ./database
+
+    excludePaths:
+        - ./vendor
+        - ./tests
+        - ./app_old
+
+    scanFiles:
+        - ../../vendor/pbmedia/laravel-ffmpeg/src/Support/FFMpeg.php
+        - ../../vendor/pbmedia/laravel-ffmpeg/src/MediaOpener.php
+        - ../../vendor/pbmedia/laravel-ffmpeg/src/FFMpeg/MediaExporter.php
+
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    treatPhpDocTypesAsCertain: false
+    reportUnmatchedIgnoredErrors: false

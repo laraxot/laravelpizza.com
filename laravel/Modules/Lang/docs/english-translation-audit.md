@@ -13,18 +13,45 @@ Questo documento traccia l'audit e la correzione delle traduzioni inglesi nei fi
    - Conteneva: Tutto il testo in italiano
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
 
 2. **Modules/Notify/lang/en/test_smtp.php** ✅ CORRETTO
    - Status: Tradotto completamente
    - Conteneva: Tutto il testo in italiano
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
 
 3. **Modules/Notify/lang/en/send_email.php** ✅ CORRETTO
    - Status: Tradotto completamente
    - Conteneva: Tutto il testo in italiano
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
 
 ### File con Mix Italiano/Inglese
 
@@ -33,12 +60,30 @@ Questo documento traccia l'audit e la correzione delle traduzioni inglesi nei fi
    - Conteneva: Placeholder in italiano
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
 
 2. **Modules/UI/lang/en/opening_hours_field.php** ✅ CORRETTO
    - Status: Aggiornato completamente
    - Problemi: Mancavano molte voci presenti in italiano + sintassi array() invece di []
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
    - Aggiunte: Tutte le voci mancanti (morning, afternoon, morning_label, afternoon_label, etc.)
    - Convertito: Sintassi short array []
 
@@ -47,6 +92,15 @@ Questo documento traccia l'audit e la correzione delle traduzioni inglesi nei fi
    - Problemi: Sintassi array() invece di [] + molte voci mancanti dalla versione italiana
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
    - Aggiunte: Tutte le voci mancanti (steps, fields, filters, actions, messages, sections, validation, empty_state, specialties)
    - Convertito: Sintassi short array []
    - Struttura: Allineata completamente con la versione italiana
@@ -56,6 +110,15 @@ Questo documento traccia l'audit e la correzione delle traduzioni inglesi nei fi
    - Problemi: Era completamente in italiano invece che in tedesco + sintassi array() invece di []
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
    - Tradotto: Tutto il contenuto in tedesco appropriato
    - Aggiunte: Tutte le voci mancanti dalla versione italiana
    - Convertito: Sintassi short array []
@@ -65,6 +128,15 @@ Questo documento traccia l'audit e la correzione delle traduzioni inglesi nei fi
    - Problemi: Testo in italiano + sintassi array() invece di [] + mancava declare(strict_types=1)
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
    - Traduzioni: Complete in inglese (Doctor, Patient, Administrator)
    - Convertito: Sintassi short array [] + declare(strict_types=1)
 
@@ -73,6 +145,15 @@ Questo documento traccia l'audit e la correzione delle traduzioni inglesi nei fi
    - Problemi: Testo in italiano + sintassi array() invece di [] + mancava declare(strict_types=1)
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
    - Traduzioni: Complete in tedesco (Arzt, Patient, Administrator)
    - Convertito: Sintassi short array [] + declare(strict_types=1)
 
@@ -301,6 +382,14 @@ return array(
 
 ## Collegamenti
 
+<<<<<<< HEAD
+- [Regole Traduzioni](../../docs/translation-standards.md)
+- [Regole Traduzioni](../../docs/translation-standards.md)
+- [Regole Traduzioni](../../docs/translation-standards.md)
+- [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
+=======
+>>>>>>> 11c7c7d (.)
 - [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
 - [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
 
@@ -314,6 +403,19 @@ return array(
 ---
 
 **Ultimo aggiornamento**: 2025-01-06
+<<<<<<< HEAD
+- [Regole Traduzioni](../../../docs/translation-standards.md)
+- [Best Practices Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
+
+---
+
+**Ultimo aggiornamento**: 2025-01-06
+**Ultimo aggiornamento**: [DATE]
+**Ultimo aggiornamento**: [DATE]
+**Ultimo aggiornamento**: [DATE]
+=======
+>>>>>>> 11c7c7d (.)
 **Status**: In corso
 # Audit Traduzioni Inglesi - <nome progetto>
 
@@ -330,18 +432,45 @@ Questo documento traccia l'audit e la correzione delle traduzioni inglesi nei fi
    - Conteneva: Tutto il testo in italiano
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
 
 2. **Modules/Notify/lang/en/test_smtp.php** ✅ CORRETTO
    - Status: Tradotto completamente
    - Conteneva: Tutto il testo in italiano
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
 
 3. **Modules/Notify/lang/en/send_email.php** ✅ CORRETTO
    - Status: Tradotto completamente
    - Conteneva: Tutto il testo in italiano
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
 
 ### File con Mix Italiano/Inglese
 
@@ -350,12 +479,30 @@ Questo documento traccia l'audit e la correzione delle traduzioni inglesi nei fi
    - Conteneva: Placeholder in italiano
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
 
 2. **Modules/UI/lang/en/opening_hours_field.php** ✅ CORRETTO
    - Status: Aggiornato completamente
    - Problemi: Mancavano molte voci presenti in italiano + sintassi array() invece di []
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
    - Aggiunte: Tutte le voci mancanti (morning, afternoon, morning_label, afternoon_label, etc.)
    - Convertito: Sintassi short array []
 
@@ -364,6 +511,15 @@ Questo documento traccia l'audit e la correzione delle traduzioni inglesi nei fi
    - Problemi: Sintassi array() invece di [] + molte voci mancanti dalla versione italiana
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
    - Aggiunte: Tutte le voci mancanti (steps, fields, filters, actions, messages, sections, validation, empty_state, specialties)
    - Convertito: Sintassi short array []
    - Struttura: Allineata completamente con la versione italiana
@@ -373,6 +529,15 @@ Questo documento traccia l'audit e la correzione delle traduzioni inglesi nei fi
    - Problemi: Era completamente in italiano invece che in tedesco + sintassi array() invece di []
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
    - Tradotto: Tutto il contenuto in tedesco appropriato
    - Aggiunte: Tutte le voci mancanti dalla versione italiana
    - Convertito: Sintassi short array []
@@ -382,6 +547,15 @@ Questo documento traccia l'audit e la correzione delle traduzioni inglesi nei fi
    - Problemi: Testo in italiano + sintassi array() invece di [] + mancava declare(strict_types=1)
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
    - Traduzioni: Complete in inglese (Doctor, Patient, Administrator)
    - Convertito: Sintassi short array [] + declare(strict_types=1)
 
@@ -390,6 +564,15 @@ Questo documento traccia l'audit e la correzione delle traduzioni inglesi nei fi
    - Problemi: Testo in italiano + sintassi array() invece di [] + mancava declare(strict_types=1)
    - Risolto: 2025-01-06
    - Risolto: 2025-01-06
+<<<<<<< HEAD
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: [DATE]
+   - Risolto: 2025-01-06
+   - Risolto: 2025-01-06
+=======
+>>>>>>> 11c7c7d (.)
    - Traduzioni: Complete in tedesco (Arzt, Patient, Administrator)
    - Convertito: Sintassi short array [] + declare(strict_types=1)
 
@@ -618,6 +801,33 @@ return array(
 
 ## Collegamenti
 
+<<<<<<< HEAD
+- [Regole Traduzioni](../../docs/translation-standards.md)
+- [Regole Traduzioni](../../docs/translation-standards.md)
+- [Regole Traduzioni](../../docs/translation-standards.md)
+=======
+>>>>>>> 11c7c7d (.)
+- [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
+
+---
+
+**Ultimo aggiornamento**: 2025-01-06
+- [Regole Traduzioni](../../../docs/translation-standards.md)
+- [Best Practices Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
+
+---
+
+**Ultimo aggiornamento**: 2025-01-06
+<<<<<<< HEAD
+**Status**: In corso
+**Ultimo aggiornamento**: [DATE]
+**Status**: In corso
+**Ultimo aggiornamento**: [DATE]
+**Status**: In corso
+**Ultimo aggiornamento**: [DATE]
+**Status**: In corso
 - [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
 - [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
 
@@ -632,3 +842,6 @@ return array(
 
 **Ultimo aggiornamento**: 2025-01-06
 **Status**: In corso
+=======
+**Status**: In corso
+>>>>>>> 11c7c7d (.)

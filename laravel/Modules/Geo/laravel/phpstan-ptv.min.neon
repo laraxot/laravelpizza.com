@@ -1,0 +1,36 @@
+includes:
+    - ./vendor/larastan/larastan/extension.neon
+    - ./vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
+parameters:
+    paths:
+        - Modules/Ptv/
+
+    level: max
+
+    parallel:
+        jobSize: 50
+        maximumNumberOfProcesses: 2
+        minimumNumberOfJobsPerProcess: 1
+
+    ignoreErrors:
+        - '#Cannot cast mixed to (string|float|double|int|bool|boolean).#'
+        - '#Call to method \w+\(\) of internal class Pest\\Mixins\\Expectation#'
+        - '#Call to method \w+\(\) of internal class Pest\\PendingCalls#'
+        - '#Trait Modules\\Ptv\\Models\\Traits\\[a-zA-Z\\]+ is used zero times and is not analysed.#'
+
+    excludePaths:
+        - ./*/vendor/*
+        - ./*/build/*
+        - ./*/docs/*
+        - ./*/*.blade.php
+
+    tmpDir: /tmp/phpstan-ptv-min/
+
+    noUnnecessaryCollectionCall: false
+    checkUnusedViews: false
+    checkModelProperties: false
+    treatPhpDocTypesAsCertain: false
+    checkOctaneCompatibility: false
+
+    scanFiles:

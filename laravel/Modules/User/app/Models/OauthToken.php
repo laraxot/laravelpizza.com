@@ -8,8 +8,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Laravel\Passport\Token as PassportToken;
 use Modules\User\Database\Factories\OauthAccessTokenFactory;
 
+/**
+ * @property string|null $user_id
+ * @property bool        $revoked
+ */
 class OauthToken extends PassportToken
 {
+    /** @use HasFactory<OauthAccessTokenFactory> */
     use HasFactory;
 
     /** @var string */

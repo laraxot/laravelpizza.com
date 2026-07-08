@@ -1,0 +1,14 @@
+{
+  "range": "v1.0.0..HEAD",
+  "commitCount": 2,
+  "contributors": {
+    "marco76tv": 2
+  },
+  "types": {
+    "other": 2
+  },
+  "modules": {
+    "root/other": 2
+  },
+  "generatedAt": "2026-06-03T12:39:12.456Z"
+}

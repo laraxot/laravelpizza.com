@@ -23,6 +23,7 @@ class PassportDashboard extends XotBasePage
 
     public bool $hasPrivateKey = false;
 
+    /** @var array<int, string> */
     public array $output = [];
 
     public string $currentCommand = '';
@@ -127,6 +128,7 @@ class PassportDashboard extends XotBasePage
             ->send();
     }
 
+    /** @return array<string, mixed> */
     protected function getViewData(): array
     {
         return [
@@ -149,6 +151,7 @@ class PassportDashboard extends XotBasePage
         ];
     }
 
+    /** @return array<int, Action> */
     protected function getHeaderActions(): array
     {
         return [

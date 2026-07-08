@@ -1,0 +1,22 @@
+{
+    "name": "laraxot/theme-one",
+    "description": "Tema One",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Themes\\One\\": "app/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Themes\\One\\Providers\\ThemeServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "filament/filament": "*",
+        "filament/tables": "*"
+    }
+}

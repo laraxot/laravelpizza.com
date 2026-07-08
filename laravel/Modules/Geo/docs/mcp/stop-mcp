@@ -1,0 +1,76 @@
+#!/bin/bash
+
+# =====================================================
+# MCP Servers Shutdown Script for Cursor
+# Version: 1.0
+# Date: 2025-05-14
+# =====================================================
+
+# Color definitions for better readability
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+NC='\033[0m' # No Color
+
+echo -e "${BLUE}🛑 Stopping all MCP servers...${NC}"
+
+# Function to stop a specific process
+stop_process() {
+    local process_pattern="$1"
+    local friendly_name="$2"
+    
+    if pgrep -f "$process_pattern" >/dev/null; then
+        echo -e "${YELLOW}⏳ Stopping $friendly_name...${NC}"
+        pkill -f "$process_pattern"
+        sleep 2
+        
+        if pgrep -f "$process_pattern" >/dev/null; then
+            echo -e "${RED}⚠️ $friendly_name is still running, forcing termination...${NC}"
+            pkill -9 -f "$process_pattern"
+            sleep 1
+        fi
+        
+        if pgrep -f "$process_pattern" >/dev/null; then
+            echo -e "${RED}❌ Failed to stop $friendly_name${NC}"
+            return 1
+        else
+            echo -e "${GREEN}✅ $friendly_name stopped successfully${NC}"
+            return 0
+        fi
+    else
+        echo -e "${BLUE}ℹ️ $friendly_name is not running${NC}"
+        return 0
+    fi
+}
+
+# Stop Memory MCP server
+stop_process "memory-mcp-server" "Memory MCP server"
+MEMORY_STATUS=$?
+
+# Stop Puppeteer MCP server
+stop_process "puppeteer-mcp-server" "Puppeteer MCP server"
+PUPPETEER_STATUS=$?
+
+# Stop MySQL MCP server
+stop_process "mysql-db-connector.js" "MySQL MCP server"
+MYSQL_STATUS=$?
+
+# Summary
+echo
+echo -e "${MAGENTA}=== MCP Servers Shutdown Summary ===${NC}"
+echo -e "Memory MCP: $([ $MEMORY_STATUS -eq 0 ] && echo -e "${GREEN}Stopped✅${NC}" || echo -e "${RED}Failed❌${NC}")"
+echo -e "Puppeteer MCP: $([ $PUPPETEER_STATUS -eq 0 ] && echo -e "${GREEN}Stopped✅${NC}" || echo -e "${RED}Failed❌${NC}")"
+echo -e "MySQL MCP: $([ $MYSQL_STATUS -eq 0 ] && echo -e "${GREEN}Stopped✅${NC}" || echo -e "${RED}Failed❌${NC}")"
+echo
+
+if [ $MEMORY_STATUS -eq 0 ] && [ $PUPPETEER_STATUS -eq 0 ] && [ $MYSQL_STATUS -eq 0 ]; then
+    echo -e "${GREEN}✅ All MCP servers have been stopped successfully${NC}"
+else
+    echo -e "${RED}⚠️ Some MCP servers could not be stopped${NC}"
+    echo -e "${YELLOW}ℹ️ You may need to manually terminate remaining processes${NC}"
+    echo -e "${YELLOW}   Run: ps aux | grep -E 'MCP|mysql-db-connector' to identify them${NC}"
+fi
+
+echo -e "${BLUE}ℹ️ To start MCP servers again, run: ${YELLOW}~/start-mcp-servers${NC}"

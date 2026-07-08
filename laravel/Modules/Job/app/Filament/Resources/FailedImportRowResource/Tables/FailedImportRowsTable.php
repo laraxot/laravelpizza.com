@@ -9,6 +9,12 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class FailedImportRowsTable extends XotBaseResourceTable
 {
+<<<<<<< HEAD
+=======
+    /**
+     * @return array<string, mixed>
+     */
+>>>>>>> laraxot/dev
     public function getTableColumns(): array
     {
         return [

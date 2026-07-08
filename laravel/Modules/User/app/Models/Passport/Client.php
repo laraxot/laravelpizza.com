@@ -11,21 +11,16 @@ use Laravel\Passport\Client as PassportClient;
  *
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\OauthAuthCode> $authCodes
  * @property int|null                                                                          $auth_codes_count
- * @property array                                                                             $grant_types
+ * @property array<int, string>                                                                $grant_types
  * @property \Illuminate\Foundation\Auth\User                                                  $owner
  * @property string|null                                                                       $plain_secret
- * @property array                                                                             $redirect_uris
+ * @property array<int, string>                                                                $redirect_uris
  * @property string|null                                                                       $secret
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\OauthToken>    $tokens
  * @property int|null                                                                          $tokens_count
  * @property \Modules\User\Models\User|null                                                    $user
  *
- * <<<<<<< HEAD
- *
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Client existsIn(array $haystack)
- *                                                                                                            =======
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Client existsIn(array<int, string> $haystack)
- *                                                                                                            >>>>>>> 9fa499be (.)
  * @method static \Laravel\Passport\Database\Factories\ClientFactory   factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Client newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Client newQuery()

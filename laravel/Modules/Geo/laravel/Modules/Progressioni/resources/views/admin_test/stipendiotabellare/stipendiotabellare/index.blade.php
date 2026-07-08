@@ -1,0 +1,1 @@
+ude('progressioni::admin.stipendiotabellare.index')

@@ -1,0 +1,59 @@
+# Churn per contributor × estensione + snapshot cloc (HTML + summary).
+# Script: scripts/ci/contributor-lines-report.mjs (no npm deps).
+name: Contributor Lines Report
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+    inputs:
+      since_days:
+        description: Giorni di storia git da analizzare
+        required: false
+        default: '90'
+        type: string
+  release:
+    types: [released]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: contributor-lines-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install cloc
+        run: sudo apt-get update && sudo apt-get install -y cloc
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate report
+        run: |
+          node scripts/ci/contributor-lines-report.mjs \
+            --since=${{ github.event.inputs.since_days || '90' }} \
+            --out=reports/contributor-lines.html \
+            --summary=reports/contributor-lines-summary.md
+
+      - name: Job summary
+        run: cat reports/contributor-lines-summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v4
+        with:
+          name: contributor-lines-report
+          path: |
+            reports/contributor-lines.html
+            reports/contributor-lines-summary.md
+          retention-days: 90

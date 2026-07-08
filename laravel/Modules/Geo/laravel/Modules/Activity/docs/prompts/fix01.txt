@@ -1,0 +1,37 @@
+# Fix: Connessione database 'activity' - Regola corretta
+
+## Regola
+
+1. **database.php**: NON aggiungere 'activity' in config/database.php
+2. **Modelli**: DEVONO avere `protected $connection = 'activity'`
+
+## Perché
+
+TenantServiceProvider crea la connessione 'activity' a runtime per ogni modulo (getSnakeName = 'activity'). La connessione punta allo stesso DB del default, con eventuali override via env (DB_DATABASE_ACTIVITY, ecc.). I modelli devono dichiarare `$connection = 'activity'` per:
+- DatabaseTransactions: sapere quali connessioni wrappare
+- Coerenza: il modulo dichiara quale connessione logica usa
+- Multi-tenant: ogni modulo può avere config dedicata via env
+
+## Modelli che devono avere $connection = 'activity'
+
+- StoredEvent.php
+- Activity.php
+- Snapshot.php
+- BaseModel.php (Activity)
+- BaseActivity.php (Xot)
+
+Pattern PHPDoc: `/** @var string */` (valore sempre 'activity')
+
+## Perché NON $connection = null
+
+$connection = null significa "usa connessione default (mysql)". Nel modulo Activity sarebbe errato:
+- Rompe coerenza con Activity, Snapshot, StoredEvent che usano 'activity'
+- DatabaseTransactions non rollback corretto
+- Perde possibilità DB_DATABASE_ACTIVITY per multi-tenant
+Vedi [basemodel-connection-why-activity-not-null](../basemodel-connection-why-activity-not-null.md)
+
+## Verifica
+
+- database.php NON deve contenere 'activity'
+- I modelli Activity DEVONO avere protected $connection = 'activity'
+- MAI usare protected $connection = null nel modulo Activity

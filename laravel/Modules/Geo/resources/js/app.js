@@ -7,6 +7,8 @@
 require('./bootstrap');
 
 require('./myvue3');
+require('./components/maps/geo-map-widget.element.js');
+require('./components/map-picker-lit.js');
 
 //window.Vue = require('vue');
 

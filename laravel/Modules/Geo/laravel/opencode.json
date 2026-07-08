@@ -1,0 +1,13 @@
+{
+  "name": "base_ptv_fila5",
+  "description": "PTV Laravel monorepo with Ponytail lazy senior dev mode",
+  "plugin": [
+    "@dietrichgebert/ponytail"
+  ],
+  "skills": {
+    "paths": [
+      "./skills",
+      "./Modules/*/docs/skills"
+    ]
+  }
+}

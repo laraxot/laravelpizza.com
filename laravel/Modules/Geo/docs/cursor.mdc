@@ -1,0 +1,63 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Cursor – Regole, Best Practice e Integrazione MCP
+
+## Struttura e Aggiornamento Documentazione
+- Seguire la gerarchia: docs/ (globale), Modules/[Module]/docs/ (modulo), .cursor/rules/ (regole Cursor)
+- Ogni nuova regola va documentata sia nel modulo che nella root, con backlink e motivazione
+- Aggiornare sempre .cursor/rules/ per ogni variazione
+
+## Integrazione MCP (Model Context Protocol)
+```json
+// .cursor/mcp.json
+{
+    "contextProviders": [
+        "tenant",
+        "user",
+        "permissions"
+    ],
+    "contextValidation": true,
+    "contextPropagation": true
+}
+```
+- File di configurazione: `.cursor/mcp.json` (progetto), `~/.cursor/mcp.json` (globale)
+- Supporto stdio (locale) e SSE (remoto)
+- Fino a 40 tool MCP attivi
+- Warning: su SSH/ambienti remoti MCP può non funzionare
+- Documentare ogni tool MCP sviluppato con esempi pratici
+
+## Best Practice MCP
+- Validare sempre il contesto
+- Usare oggetti context immutabili
+- Documentare i requisiti di contesto
+- Implementare propagazione e logging del contesto
+- Audit periodici di sicurezza
+
+## Warning e Lezioni Apprese
+- MCP è un protocollo distribuito, non solo un pattern
+- Supportare interoperabilità, consistenza distribuita, failover, event sourcing
+- Implementazione language-agnostic, sicurezza, monitoring
+
+## Convenzioni Laraxot
+- Namespace senza segmento `app` (es: `Modules\NomeModulo\Models`)
+- Data Object con Spatie Laravel Data in `Modules/NomeModulo/app/Datas/`
+- Azioni asincrone con Spatie QueueableAction in `Modules/NomeModulo/app/Actions/`
+- Tipizzazione rigorosa per PHPStan livello 9+
+
+## Best Practice Generali
+- Aggiornare la documentazione in tempo reale
+- Mantenere coerenza tra docs, moduli e .cursor/rules/
+- Usare collegamenti bidirezionali tra file
+- Validare periodicamente esempi e regole
+
+## Riferimenti e Collegamenti
+- [model_context_protocol.md](mdc:model_context_protocol.md)
+- [mcp_implementation_guide.md](mdc:mcp_implementation_guide.md)
+- [mcp_errors_and_lessons.md](mdc:mcp_errors_and_lessons.md)
+- [laraxot_conventions.md](mdc:laraxot_conventions.md)
+- [links.md](mdc:links.md)
+
+*Ultimo aggiornamento: maggio 2025 – conforme a standard Laraxot, best practice Cursor, e regole di documentazione interna.*

@@ -57,8 +57,8 @@ use Webmozart\Assert\Assert;
  * @method static Builder|Role withoutPermission($permissions)
  * @method static Builder|Role whereDescription($value)
  * @method static Builder|Role whereDisplayName($value)
- * @method static static       firstOrCreate(array $attributes, array $values = [])
- * @method static static       updateOrCreate(array $attributes, array $values = [])
+ * @method static static       firstOrCreate(array<string, mixed> $attributes, array<string, mixed> $values = [])
+ * @method static static       updateOrCreate(array<string, mixed> $attributes, array<string, mixed> $values = [])
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
@@ -71,6 +71,7 @@ use Webmozart\Assert\Assert;
  */
 class Role extends SpatieRole
 {
+    /** @use HasXotFactory<\Illuminate\Database\Eloquent\Factories\Factory<static>> */
     use HasXotFactory;
     use RelationX;
     use Updater;
@@ -109,6 +110,8 @@ class Role extends SpatieRole
 
     /**
      * Get all of the teams the user belongs to.
+     *
+     * @return BelongsTo<Model, $this>
      */
     public function team(): BelongsTo
     {
@@ -121,6 +124,8 @@ class Role extends SpatieRole
 
     /**
      * A role may be given various permissions.
+     *
+     * @return BelongsToMany<Permission, $this>
      */
     public function permissions(): BelongsToMany
     {

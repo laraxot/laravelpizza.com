@@ -1,3 +1,153 @@
-legacy
-archive
-agentdb.rvf
+# ======================================================
+# SISTEMA OPERATIVO / METADATA
+# ======================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+.fuse_hidden*
+*:Zone.Identifier
+*.Zone.Identifier
+**/*.Zone.Identifier
+
+# ======================================================
+# FILE TEMPORANEI / CACHE / LOG
+# ======================================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+*.old
+*.old1
+*.old2
+*_old
+*.rej
+~$*
+~*.*
+*.cache
+*.log
+*.log.*
+error_log
+
+# ======================================================
+# AMBIENTI E CONFIGURAZIONI LOCALI
+# ======================================================
+.env
+.env.*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ======================================================
+# PHP / COMPOSER
+# ======================================================
+vendor/
+composer.lock
+*.phar
+.phpunit.result.cache
+.php-cs-fixer.cache
+.php_cs.cache
+.phpintel
+
+# ======================================================
+# NODE / FRONTEND
+# ======================================================
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+npm-debug.log
+
+# ======================================================
+# BUILD / DIST / OUTPUT
+# ======================================================
+build/
+dist/
+out/
+coverage/
+cache/
+tmp/
+tmp*/
+
+# ======================================================
+# LARAVEL
+# ======================================================
+laravel/vendor/
+laravel/bootstrap/cache/*
+laravel/storage/
+laravel/storage/*
+laravel/build/
+laravel/composer
+laravel/vite-module-loader.js
+laravel/stubs/
+
+laravel/_ide_helper.php
+laravel/_ide_helper_models.php
+
+laravel/resources/lang/vendor/
+laravel/resources/views/vendor/
+laravel/app/View/Components/vendor/
+
+# Moduli / cache specifiche
+laravel/bootstrap/cache/modules.php
+laravel/Modules/<nome progetto>/
+laravel/Modules/User/lang/lang/
+
+# Config DB locali (auto-generati)
+laravel/config/**/database/content/information_schema_tables.json
+
+# Themes / extras
+laravel/Themes/*/extras/
+
+# ======================================================
+# PUBLIC / ASSET GENERATI
+# ======================================================
+public_html/storage/
+public_html/themes/
+public_html/css/
+public_html/js/
+public_html/vendor/
+public_html/plugins/
+public_html/material/
+
+# ======================================================
+# IDE / EDITOR
+# ======================================================
+.idea/
+.vscode/
+.history/
+*.code-workspace
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# ======================================================
+# TEST / CI
+# ======================================================
+junit.xml
+test-output/
+.nyc_output/
+
+# ======================================================
+# BACKUP
+# ======================================================
+.backup_*
+*.backup
+*.backup.*
+backups/
+logs/
+*.conflict
+*.merge
+*.rebase
+
+# ==============================================

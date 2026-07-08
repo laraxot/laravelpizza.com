@@ -113,7 +113,6 @@ class GetCoordinatesByAddressAction
      */
     private function makeHttpRequest(string $url, array $params): Response
     {
-        /* @var Response $response */
         return Http::get($url, $params);
     }
 
@@ -137,6 +136,13 @@ class GetCoordinatesByAddressAction
         );
     }
 
+    /**
+     * Extract coordinates from Bing response.
+     *
+     * @param array<string, mixed> $data
+     *
+     * @return array<int, float>|null
+     */
     private function extractBingCoordinates(array $data): ?array
     {
         $resourceSets = $data['resourceSets'] ?? null;
@@ -167,7 +173,7 @@ class GetCoordinatesByAddressAction
             return null;
         }
 
-        return $coordinates;
+        return [(float) $coordinates[0], (float) $coordinates[1]];
     }
 
     /**

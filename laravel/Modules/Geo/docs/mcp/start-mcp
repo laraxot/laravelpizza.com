@@ -1,0 +1,119 @@
+#!/bin/bash
+
+# =====================================================
+# Cursor MCP Servers Startup Script
+# Version: 2.0
+# Date: 2025-05-14
+# =====================================================
+
+# =====================================================
+# MCP Servers Startup Script for Cursor
+# Version: 1.1
+# Date: 2025-05-14
+# =====================================================
+
+# Color definitions for better readability
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
+
+# Default environment variables to fix terminal dimensions
+export COLUMNS=80
+export LINES=24
+
+# Logs directory
+LOGS_DIR="$HOME/.cursor/mcp_logs"
+mkdir -p "$LOGS_DIR"
+
+# Find the Cursor binary directory
+CURSOR_DIR="$(dirname "$(readlink -f "$(which cursor 2>/dev/null || echo '/usr/bin/cursor')")")"
+MCP_DIR="$HOME/.cursor/mcp"
+
+echo -e "${MAGENTA}🚀 Starting MCP servers for Cursor...${NC}"
+echo -e "${BLUE}📁 Logs will be available in: ${LOGS_DIR}${NC}"
+
+# Stop any existing MCP servers
+echo -e "${BLUE}⚙️ Checking for existing MCP servers...${NC}"
+pkill -f "memory-mcp-server" 2>/dev/null
+pkill -f "puppeteer-mcp-server" 2>/dev/null
+pkill -f "mysql-db-connector.js" 2>/dev/null
+sleep 2
+echo -e "${GREEN}✅ Cleanup completed${NC}"
+
+# Start Memory MCP Server
+echo -e "${CYAN}🧠 Starting Memory MCP server...${NC}"
+export DISPLAY=:0  # Ensure display is set
+COLUMNS=80 LINES=24 cursor --mcp-server memory > "$LOGS_DIR/memory_mcp.log" 2>&1 &
+sleep 3
+
+# Check if memory MCP server is running
+if pgrep -f "memory-mcp-server" >/dev/null; then
+    echo -e "${GREEN}✅ Memory MCP server started successfully${NC}"
+    MEMORY_STATUS=0
+else
+    echo -e "${RED}❌ Failed to start Memory MCP server${NC}"
+    echo -e "${YELLOW}📋 Check logs for details: ${LOGS_DIR}/memory_mcp.log${NC}"
+    MEMORY_STATUS=1
+fi
+
+# Start Puppeteer MCP Server
+echo -e "${CYAN}🌐 Starting Puppeteer MCP server...${NC}"
+COLUMNS=80 LINES=24 cursor --mcp-server puppeteer > "$LOGS_DIR/puppeteer_mcp.log" 2>&1 &
+sleep 5
+
+# Check if puppeteer MCP server is running
+if pgrep -f "puppeteer-mcp-server" >/dev/null; then
+    echo -e "${GREEN}✅ Puppeteer MCP server started successfully${NC}"
+    PUPPETEER_STATUS=0
+else
+    echo -e "${RED}❌ Failed to start Puppeteer MCP server${NC}"
+    echo -e "${YELLOW}📋 Check logs for details: ${LOGS_DIR}/puppeteer_mcp.log${NC}"
+    PUPPETEER_STATUS=1
+fi
+
+# Start MySQL MCP server (if available)
+MYSQL_SCRIPT="/var/www/html/_bases/base_<nome progetto>_fila5_mono/bashscripts/mcp/start-mysql-mcp.sh"
+if [ -f "$MYSQL_SCRIPT" ]; then
+    echo -e "${CYAN}🛢️ Starting MySQL MCP server...${NC}"
+    
+    # Fix screen size issue for MySQL MCP
+    cd "$(dirname "$MYSQL_SCRIPT")" && \
+    COLUMNS=80 LINES=24 bash "$MYSQL_SCRIPT" > "$LOGS_DIR/mysql_mcp.log" 2>&1
+    
+    sleep 3
+    
+    # Check if MySQL MCP server is running
+    if pgrep -f "mysql-db-connector.js" >/dev/null; then
+        echo -e "${GREEN}✅ MySQL MCP server started successfully${NC}"
+        MYSQL_STATUS=0
+    else
+        echo -e "${RED}❌ Failed to start MySQL MCP server${NC}"
+        echo -e "${YELLOW}📋 Check logs for details: ${LOGS_DIR}/mysql_mcp.log${NC}"
+        MYSQL_STATUS=1
+    fi
+else
+    echo -e "${YELLOW}ℹ️ MySQL MCP script not found, skipping${NC}"
+    MYSQL_STATUS=0
+fi
+
+# Summary
+echo
+echo -e "${MAGENTA}=== MCP Servers Status Summary ===${NC}"
+echo -e "Memory MCP: $([ $MEMORY_STATUS -eq 0 ] && echo -e "${GREEN}Running✅${NC}" || echo -e "${RED}Failed❌${NC}")"
+echo -e "Puppeteer MCP: $([ $PUPPETEER_STATUS -eq 0 ] && echo -e "${GREEN}Running✅${NC}" || echo -e "${RED}Failed❌${NC}")"
+[ -f "$MYSQL_SCRIPT" ] && echo -e "MySQL MCP: $([ $MYSQL_STATUS -eq 0 ] && echo -e "${GREEN}Running✅${NC}" || echo -e "${RED}Failed❌${NC}")"
+echo
+
+if [ $MEMORY_STATUS -eq 0 ] && [ $PUPPETEER_STATUS -eq 0 ]; then
+    echo -e "${GREEN}✅ Essential MCP servers are running successfully${NC}"
+    echo -e "${BLUE}ℹ️ You can now use Cursor with MCP server functionality${NC}"
+else
+    echo -e "${RED}❌ Some MCP servers failed to start${NC}"
+    echo -e "${YELLOW}ℹ️ Check the logs for details: ${LOGS_DIR}${NC}"
+fi
+
+echo -e "${BLUE}ℹ️ To stop MCP servers, run: ${YELLOW}~/stop-mcp${NC}"

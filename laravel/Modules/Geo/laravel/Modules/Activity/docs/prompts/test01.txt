@@ -1,0 +1,180 @@
+   FAILED  Modules\Activity\tests\Feature\ActivityEventSourcingTest > activity with batch scope returns…
+  Failed asserting that actual size 40 matches expected size 1.
+
+  at Modules/Activity/tests/Feature/ActivityEventSourcingTest.php:225
+    221▕
+    222▕     $activitiesWithBatch = Activity::hasBatch()->get();
+    223▕
+    224▕     $firstActivity = $activitiesWithBatch->first();
+  ➜ 225▕     $this->assertCount(1, $activitiesWithBatch);
+    226▕     \assert($firstActivity instanceof Activity);
+    227▕     $this->assertNotNull($firstActivity);
+    228▕     $this->assertSame($withBatch->id, $firstActivity->id);
+    229▕ });
+
+  1   Modules/Activity/tests/Feature/ActivityEventSourcingTest.php:225
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────
+   FAILED  Modules\Activity\tests\Feature\ActivityIntegrationTest > activity module handles concurrent o…
+  Failed asserting that actual size 401 matches expected size 10.
+
+  at Modules/Activity/tests/Feature/ActivityIntegrationTest.php:210
+    206▕     $userActivities = Activity::query()
+    207▕         ->where('causer_type', User::class)
+    208▕         ->where('causer_id', (string) $user->id)
+    209▕         ->get();
+  ➜ 210▕     expect($userActivities)->toHaveCount(10);
+    211▕
+    212▕     $createdSnapshots = Snapshot::whereIn('id', $concurrentSnapshots)->get();
+    213▕     expect($createdSnapshots)->toHaveCount(5);
+    214▕ });
+
+  1   Modules/Activity/tests/Feature/ActivityIntegrationTest.php:210
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────
+   FAILED  Modules\Activity\tests\Feature\ActivityIntegrationTest > activity module supports bulk operat…
+  Failed asserting that actual size 400 matches expected size 100.
+
+  at Modules/Activity/tests/Feature/ActivityIntegrationTest.php:375
+    371▕     Activity::insert($activitiesData);
+    372▕
+    373▕     $bulkActivities = Activity::where('log_name', 'bulk_operation')->get();
+    374▕
+  ➜ 375▕     expect($bulkActivities)->toHaveCount(100);
+    376▕
+    377▕     $firstActivity = $bulkActivities->first();
+    378▕     $lastActivity = $bulkActivities->last();
+    379▕
+
+  1   Modules/Activity/tests/Feature/ActivityIntegrationTest.php:375
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────
+   FAILED  Modules\Activity\tests\Feature\SnapshotBusinessLogicTest > it can query snapshots by date ran…
+  Failed asserting that actual size 91 matches expected size 1.
+
+  at Modules/Activity/tests/Feature/SnapshotBusinessLogicTest.php:312
+    308▕         'created_at' => $tomorrow,
+    309▕     ]);
+    310▕
+    311▕     $todaySnapshots = Snapshot::whereDate('created_at', today())->get();
+  ➜ 312▕     expect($todaySnapshots)->toHaveCount(1);
+    313▕     expect($todaySnapshots->first()->state['date'])->toBe('today');
+    314▕
+    315▕     $recentSnapshots = Snapshot::where('created_at', '>=', $yesterday)->get();
+    316▕     expect($recentSnapshots)->toHaveCount(3);
+
+  1   Modules/Activity/tests/Feature/SnapshotBusinessLogicTest.php:312
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────
+   FAILED  Modules\Activity\tests\Feature\StoredEventBusinessLogicTest > it can query events by event cl…
+  Failed asserting that actual size 5 matches expected size 1.
+
+  at Modules/Activity/tests/Feature/StoredEventBusinessLogicTest.php:294
+    290▕     $userCreatedEvents = StoredEvent::where('event_class', 'App\Events\UserCreated')->get();
+    291▕     $userUpdatedEvents = StoredEvent::where('event_class', 'App\Events\UserUpdated')->get();
+    292▕     $userDeletedEvents = StoredEvent::where('event_class', 'App\Events\UserDeleted')->get();
+    293▕
+  ➜ 294▕     $this->assertCount(1, $userCreatedEvents);
+    295▕     $this->assertCount(1, $userUpdatedEvents);
+    296▕     $this->assertCount(1, $userDeletedEvents);
+    297▕
+    298▕     $firstCreated = $userCreatedEvents->first();
+
+  1   Modules/Activity/tests/Feature/StoredEventBusinessLogicTest.php:294
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────
+   FAILED  Modules\Activity\tests\Feature\StoredEventBusinessLogicTest > it can query events by date ran…
+  Failed asserting that actual size 55 matches expected size 1.
+
+  at Modules/Activity/tests/Feature/StoredEventBusinessLogicTest.php:497
+    493▕         'created_at' => $tomorrow,
+    494▕     ]);
+    495▕
+    496▕     $todayEvents = StoredEvent::whereDate('created_at', today())->get();
+  ➜ 497▕     $this->assertCount(1, $todayEvents);
+    498▕     $todayFirst = $todayEvents->first();
+    499▕     $this->assertNotNull($todayFirst);
+    500▕     \assert($todayFirst instanceof StoredEvent);
+    501▕     /** @var array<string, mixed> $todayProps */
+
+  1   Modules/Activity/tests/Feature/StoredEventBusinessLogicTest.php:497
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────
+   FAILED  Modules\Activity\tests\Unit\Actions\ActivityLoggerTest > ActivityLogger can get user activiti…
+  Failed asserting that actual size 10 matches expected size 1.
+
+  at Modules/Activity/tests/Unit/Actions/ActivityLoggerTest.php:127
+    123▕     $logger->log('user_event', $user, null, null, 'User Event');
+    124▕
+    125▕     $userActivities = $logger->getUserActivities($user, 10);
+    126▕
+  ➜ 127▕     expect($userActivities)->toHaveCount(1)
+    128▕         ->and((string) $userActivities->first()->causer_id)->toBe((string) $user->id);
+    129▕ });
+    130▕
+    131▕ test('ActivityLogger can get model activities', function () {
+
+  1   Modules/Activity/tests/Unit/Actions/ActivityLoggerTest.php:127
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────
+   FAILED  Modules\Activity\tests\Unit\Actions\ActivityLoggerTest > ActivityLogger can get activities by…
+  Failed asserting that actual size 4 matches expected size 1.
+
+  at Modules/Activity/tests/Unit/Actions/ActivityLoggerTest.php:155
+    151▕     $logger->log('other_event', null, null, null, 'Other Event');
+    152▕
+    153▕     $byType = $logger->getByType('specific_event', 5);
+    154▕
+  ➜ 155▕     expect($byType)->toHaveCount(1)
+    156▕         ->and($byType->first()->event)->toBe('specific_event');
+    157▕ });
+    158▕
+    159▕ test('ActivityLogger can get recent activities', function () {
+
+  1   Modules/Activity/tests/Unit/Actions/ActivityLoggerTest.php:155
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────
+   FAILED  Modules\Activity\tests\Unit\Actions\ActivityLoggerTest > ActivityLogger can get recent activi…
+  Failed asserting that actual size 5 matches expected size 2.
+
+  at Modules/Activity/tests/Unit/Actions/ActivityLoggerTest.php:168
+    164▕     $logger->log('event2', null, null, null, 'Event 2');
+    165▕
+    166▕     $recent = $logger->getRecent(5);
+    167▕
+  ➜ 168▕     expect($recent)->toHaveCount(2);
+    169▕ });
+    170▕
+    171▕ test('ActivityLogger can clean old activities', function () {
+    172▕     $logger = new ActivityLogger;
+
+  1   Modules/Activity/tests/Unit/Actions/ActivityLoggerTest.php:168
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────
+   FAILED  Modules\Activity\tests\Unit\Models\ActivityBusinessLogicTest > Activity Business Logic → ac…
+  Failed asserting that 'activity' is null.
+
+  at Modules/Activity/tests/Unit/Models/ActivityBusinessLogicTest.php:13
+      9▕ describe('Activity Business Logic', function () {
+     10▕     test('activity uses default connection', function () {
+     11▕         $activity = new Activity;
+     12▕
+  ➜  13▕         expect($activity->getConnectionName())->toBeNull();
+     14▕     });
+     15▕
+     16▕     test('activity has expected fillable fields', function () {
+     17▕         $reflection = new \ReflectionClass(Activity::class);
+
+  1   Modules/Activity/tests/Unit/Models/ActivityBusinessLogicTest.php:13
+
+
+  Tests:    10 failed, 2 skipped, 221 passed (967 assertions)
+  Duration: 36.96s
+
+
+o sistemi velocelemente o uccidi il test, il sito funziona percio' e' il test che sbaglia , come sempre prima di ogni cosa devi ragionare, poi aggiornare studiare e migliorare le cartelle docs, poi implementi, poi controlli
+
+--- RISOLTO ---
+- ActivityBusinessLogicTest, BaseModelTest, OtherModelsTest, StoredEventTest, SnapshotTest, SnapshotBusinessLogicTest, StoredEventBusinessLogicTest, BaseModelBusinessLogicTest: getConnectionName() deve essere 'activity' (non null) - modelli hanno $connection = 'activity'
+- ActivityLoggerTest, ActivityIntegrationTest, SnapshotBusinessLogicTest, StoredEventBusinessLogicTest: test con conteggi resi resilienti filtrando per ID creati nel test (whereIn) per evitare accumulo dati tra test
+- TestCase: rimosso setUp delete che interferiva con DatabaseTransactions rollback

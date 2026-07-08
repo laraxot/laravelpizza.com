@@ -94,9 +94,6 @@ public function processValue(?string $value): string
 - [Best Practices](./BEST-PRACTICES.md)
 - [Code Standards](./CODE-STANDARDS.md)
 - [Risoluzione Conflitti](./CONFLITTI_MERGE_RISOLTI.md)
-- [Best Practices](./best-practices.md)
-- [Code Standards](./code-standards.md)
-- [Risoluzione Conflitti](./conflitti_merge_risolti.md)
 
 # Linee Guida per PHPStan Livello 10 - Regole Comuni
 

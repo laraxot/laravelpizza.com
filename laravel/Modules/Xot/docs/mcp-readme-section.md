@@ -60,7 +60,7 @@ Edita i file di configurazione e inserisci le tue keys.
 ### Debugging con Context
 
 ```text
-Analizza errori PHPStan in Modules/healthcare_app seguendo pattern in .windsurf/rules/
+Analizza errori PHPStan in Modules/Quaeris seguendo pattern in .windsurf/rules/
 ```
 
 ### Refactoring Guidato

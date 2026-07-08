@@ -70,6 +70,11 @@ class OauthClientFactory extends Factory
     /**
      * Create a password client.
      */
+    public function asPersonalAccessTokenClient(): static
+    {
+        return $this->personalAccess();
+    }
+
     public function password(): static
     {
         return $this->state(fn (): array => [

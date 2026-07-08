@@ -1,0 +1,7 @@
+---
+module: theme
+topic: spatie-permissions
+canonical: ../../../Themes/docs/shared-components/spatie_permissions.txt
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/spatie_permissions.txt

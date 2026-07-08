@@ -8,7 +8,6 @@ updated: 2026-06-30
 qmd: "xotSeedModelOnce GetFactoryAction entity seeder phpstan factory"
 related:
   - ../troubleshooting/phpstan-modules-fix.md
-  - ./phpstan-trait-probes.md
 ---
 
 # xotSeedModelOnce

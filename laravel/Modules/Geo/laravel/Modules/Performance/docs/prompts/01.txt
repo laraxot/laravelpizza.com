@@ -1,0 +1,5 @@
+studia @laravel/Modules/Performance/app/Filament/Resources/IndividualeRegionaleResource.php ,
+  @laravel/Modules/Performance/app/Filament/Resources/IndividualeDipResource.php ,
+  @laravel/Modules/Performance/app/Filament/Resources/IndividualeRegionaleResource.php  
+
+  

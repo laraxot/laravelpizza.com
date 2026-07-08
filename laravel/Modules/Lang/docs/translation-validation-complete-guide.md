@@ -186,6 +186,10 @@ php docs/obbligatorio-audit-script.php
 ## Status Progetto <nome progetto>
 
 ### ✅ Validazioni Completate (2025-08-08)
+<<<<<<< HEAD
+### ✅ Validazioni Completate (2025-08-08)
+=======
+>>>>>>> 11c7c7d (.)
 ### ✅ Validazioni Completate ([DATE])
 
 1. **Helper Text Normalizzazione**: ✅ CONFORME
@@ -239,6 +243,27 @@ php docs/obbligatorio-audit-script.php
 - [User Module - City Field Refactor](../modules/user/docs/translation-city-field-refactor-[date].md)
 - [<nome progetto> Module - Refactor Summary](../modules/<nome progetto>/docs/translation-refactor-summary-[date].md)
 - [Geo Module - Helper Text Fix](../modules/geo/docs/helper-text-normalization-fix.md)
+<<<<<<< HEAD
+- [User Module - City Field Refactor](../Modules/User/docs/translation-city-field-refactor-[DATE].md)
+- [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-[DATE].md)
+- [Geo Module - Helper Text Fix](../Modules/Geo/docs/helper-text-normalization-fix.md)
+- [User Module - City Field Refactor](../Modules/User/docs/translation-city-field-refactor-[DATE].md)
+- [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-[DATE].md)
+- [Geo Module - Helper Text Fix](../Modules/Geo/docs/helper-text-normalization-fix.md)
+- [User Module - City Field Refactor](../Modules/User/docs/translation-city-field-refactor-[DATE].md)
+- [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-[DATE].md)
+- [Geo Module - Helper Text Fix](../Modules/Geo/docs/helper-text-normalization-fix.md)
+- [User Module - City Field Refactor](../Modules/User/docs/translation-city-field-refactor-[DATE].md)
+- [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-[DATE].md)
+- [Geo Module - Helper Text Fix](../Modules/Geo/docs/helper-text-normalization-fix.md)
+- [User Module - City Field Refactor](../Modules/User/docs/translation-city-field-refactor-2025-08-08.md)
+- [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-2025-08-08.md)
+- [Geo Module - Helper Text Fix](../Modules/Geo/docs/helper-text-normalization-fix.md)
+- [User Module - City Field Refactor](../modules/user/docs/translation-city-field-refactor-[date].md)
+- [<nome progetto> Module - Refactor Summary](../modules/<nome progetto>/docs/translation-refactor-summary-[date].md)
+- [Geo Module - Helper Text Fix](../modules/geo/docs/helper-text-normalization-fix.md)
+=======
+>>>>>>> 11c7c7d (.)
 
 ### Script e Tool
 - [Helper Text Audit Script](helper-text-audit-script.php)
@@ -250,4 +275,12 @@ php docs/obbligatorio-audit-script.php
 **Data Creazione**: 8 Agosto 2025
 **Ultima Validazione**: 8 Agosto 2025
 **Status**: ✅ TUTTI I CONTROLLI SUPERATI
+<<<<<<< HEAD
 **Conformità**: ✅ PROGETTO COMPLETAMENTE CONFORME
+**Conformità**: ✅ PROGETTO COMPLETAMENTE CONFORME
+**Conformità**: ✅ PROGETTO COMPLETAMENTE CONFORME
+**Conformità**: ✅ PROGETTO COMPLETAMENTE CONFORME
+**Conformità**: ✅ PROGETTO COMPLETAMENTE CONFORME
+=======
+**Conformità**: ✅ PROGETTO COMPLETAMENTE CONFORME
+>>>>>>> 11c7c7d (.)

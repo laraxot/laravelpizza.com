@@ -375,4 +375,21 @@ describe('Lang Performance Tests', function () {
 **Last Updated**: 2025-08-28
 
 **Testing Framework**: Pest
+<<<<<<< HEAD
 **Environment**: .env.testing
+
+**Testing Framework**: Pest
+**Environment**: .env.testing
+
+**Testing Framework**: Pest
+**Environment**: .env.testing
+
+**Testing Framework**: Pest
+**Environment**: .env.testing
+**Last Updated**: 2025-08-28
+
+**Testing Framework**: Pest
+**Environment**: .env.testing
+=======
+**Environment**: .env.testing
+>>>>>>> 11c7c7d (.)

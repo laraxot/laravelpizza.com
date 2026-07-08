@@ -1,0 +1,7 @@
+---
+module: theme
+topic: xotbaseserviceprovider
+canonical: ../../../Themes/docs/shared-components/xotbaseserviceprovider.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/xotbaseserviceprovider.md

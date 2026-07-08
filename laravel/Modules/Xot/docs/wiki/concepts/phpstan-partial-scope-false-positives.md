@@ -6,7 +6,6 @@ tags: [phpstan, trait, scope, cross-module, false-positive, second-brain]
 created: 2026-07-06
 updated: 2026-07-06
 related:
-  - ./phpstan-trait-probes.md
   - ./phpstan-fixes-log.md
 ---
 
@@ -41,8 +40,7 @@ morto.** Prima di eliminare un trait per `trait.unused`:
 1. Verificare con `grep -rl NomeTrait Modules` (whole tree) se esiste un
    `use NomeTrait;` altrove, anche in un modulo diverso da quello del file.
 2. Se sì: il `trait.unused` era un artefatto di scope, non toccare nulla.
-3. Se no: è dead code reale (vedi [phpstan-trait-probes](./phpstan-trait-probes.md)
-   per i probe morti già rimossi con questa verifica).
+3. Se no: è dead code reale; i probe morti sono già stati rimossi con questa verifica.
 
 L'unica esecuzione affidabile al 100% per la baseline reale del progetto è
 
@@ -55,5 +53,4 @@ sull'intero albero, non su sottocartelle.
 
 ## Collegamenti
 
-- [phpstan-trait-probes](./phpstan-trait-probes.md)
 - [phpstan-fixes-log](./phpstan-fixes-log.md)

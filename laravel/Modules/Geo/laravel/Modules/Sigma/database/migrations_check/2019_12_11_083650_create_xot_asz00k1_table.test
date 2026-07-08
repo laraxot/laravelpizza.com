@@ -1,0 +1,33 @@
+<?php
+
+declare(strict_types=1);
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+/**
+* Class CreateXotAsz00k1Table
+*/
+class CreateXotAsz00k1Table extends XotBaseMigration {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up() {
+        Schema::create('xot_asz00k1', function (Blueprint $table) {
+            $table->increments('id');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down() {
+        Schema::drop('xot_asz00k1');
+    }
+}

@@ -17,9 +17,6 @@ E' la libreria di estensione di tutte le altre librerie.
 * [about.md](../../../Xot/docs/about.md)
 * [about.md](../../../Tenant/docs/en/about.md)
 * [about.md](../../../Tenant/docs/it/about.md)
-* [about.md](../../../xot/docs/about.md)
-* [about.md](../../../tenant/docs/en/about.md)
-* [about.md](../../../tenant/docs/it/about.md)
 
 ### Versione Incoming
 

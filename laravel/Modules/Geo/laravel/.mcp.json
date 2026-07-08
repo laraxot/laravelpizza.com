@@ -1,0 +1,87 @@
+{
+    "_comment": "Project-agnostic MCP config. Paths use ${PWD} = project root at launch time.",
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "php",
+            "args": [
+                "${PWD}/laravel/artisan",
+                "boost:mcp"
+            ]
+        },
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "${PWD}/laravel",
+                "${PWD}/docs",
+                "${PWD}/bashscripts"
+            ]
+        },
+        "memory": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-memory"
+            ]
+        },
+        "fetch": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-fetch"
+            ]
+        },
+        "sequential-thinking": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-sequential-thinking"
+            ]
+        },
+        "context7": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@context7/mcp-server"
+            ]
+        },
+        "puppeteer": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@hisma/server-puppeteer"
+            ]
+        },
+        "mysql": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-mysql"
+            ],
+            "env": {
+                "MYSQL_HOST": "${DB_HOST}",
+                "MYSQL_PORT": "${DB_PORT}",
+                "MYSQL_USER": "${DB_USERNAME}",
+                "MYSQL_PASSWORD": "${DB_PASSWORD}",
+                "MYSQL_DATABASE": "${DB_DATABASE}"
+            }
+        },
+        "git": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-git",
+                "--repository",
+                "${PWD}"
+            ]
+        },
+        "qmd": {
+            "command": "qmd",
+            "args": [
+                "mcp",
+                "${PWD}/docs"
+            ]
+        }
+    }
+}

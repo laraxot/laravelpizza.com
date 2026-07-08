@@ -101,7 +101,7 @@ function dddx(mixed $params): string
 ### Documenti Aggiornati
 - `Xot/docs/code-quality-audit-2025-01.md` - Audit generale
 - `Xot/docs/module-quality-status.md` - Status moduli
-- `Xot/docs/code-quality-audit.md` - Questo documento
+- `Xot/docs/code-quality-audit-2025-01-22.md` - Questo documento
 - `Rating/docs/code-quality-analysis.md` - Analisi Rating
 
 ## 🎯 Prossimi Passi

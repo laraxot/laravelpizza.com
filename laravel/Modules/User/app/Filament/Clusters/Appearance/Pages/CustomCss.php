@@ -80,6 +80,7 @@ class CustomCss extends XotBasePage
         $this->form->fill($data);
     }
 
+    /** @return array<int, Action> */
     protected function getUpdateFormActions(): array
     {
         return [

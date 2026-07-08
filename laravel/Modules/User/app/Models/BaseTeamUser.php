@@ -58,6 +58,7 @@ use Parental\HasChildren;
 abstract class BaseTeamUser extends BasePivot
 {
     use HasChildren;
+    /** @use HasXotFactory<\Illuminate\Database\Eloquent\Factories\Factory<static>> */
     use HasXotFactory;
 
     protected $connection = 'user';

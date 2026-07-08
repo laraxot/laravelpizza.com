@@ -17,11 +17,13 @@ class GetProviderScopesAction
 
     /**
      * Execute the action.
+     *
+     * @return array<int, string>
      */
     public function execute(string $provider): array
     {
         /**
-         * @var array|\ArrayAccess
+         * @var array<string, mixed>|\ArrayAccess<string, mixed>
          */
         $services = config('services');
         $scopes = Arr::get($services, $provider.'.scopes');
@@ -29,6 +31,6 @@ class GetProviderScopesAction
             return [];
         }
 
-        return $scopes;
+        return array_values(array_filter($scopes, 'is_string'));
     }
 }

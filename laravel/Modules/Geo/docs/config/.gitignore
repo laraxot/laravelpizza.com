@@ -1,0 +1,118 @@
+# ───────────────────────────────────────────────────────
+# Sistema operativo / File nascosti e metadata
+# ───────────────────────────────────────────────────────
+.fuse_hidden*
+.fuse_hidden**.lock
+*.Zone.Identifier
+**/*.Zone.Identifier
+*:Zone.Identifier
+.DS_Store                 # macOS metadata
+Thumbs.db                 # Windows thumbnail cache
+ehthumbs.db
+desktop.ini
+
+# ───────────────────────────────────────────────────────
+# File temporanei, cache e log
+# ───────────────────────────────────────────────────────
+*.cache
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+*.old
+*.old1
+*.old2
+*_old
+*.rej
+~$*
+*.tmp.*
+~*.*
+.git-rewrite
+.php-cs-fixer.cache
+.git-blame-ignore-revs
+
+# ───────────────────────────────────────────────────────
+# Dipendenze e pacchetti
+# ───────────────────────────────────────────────────────
+
+## Node.js
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+## PHP / Composer
+vendor/
+composer.lock
+*.phar
+
+# ───────────────────────────────────────────────────────
+# Build, dist e output
+# ───────────────────────────────────────────────────────
+build/
+dist/
+out/
+coverage/
+docs/cache/
+cache/
+tmp/
+tmp*/
+
+# ───────────────────────────────────────────────────────
+# Eseguibili e binari
+# ───────────────────────────────────────────────────────
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+*.lock
+
+# ───────────────────────────────────────────────────────
+# Configurazioni e ambienti locali
+# ───────────────────────────────────────────────────────
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ───────────────────────────────────────────────────────
+# IDE / Editor config e workspace
+# ───────────────────────────────────────────────────────
+
+## VSCode
+.vscode/
+.history/
+
+## JetBrains (PhpStorm, WebStorm, etc.)
+.idea/
+
+## Eclipse
+.project
+.classpath
+.settings/
+
+## Sublime
+*.sublime-workspace
+*.sublime-project
+
+## Others
+*.code-workspace
+*.komodoproject
+*.tmproj
+
+# ───────────────────────────────────────────────────────
+# Test output
+# ───────────────────────────────────────────────────────
+junit.xml
+test-output/
+.nyc_output/
+coverage/
+
+# Ignore backup files
+*.backup

@@ -1,0 +1,24 @@
+[wsl2]
+# Ollama Optimization for i5-8400, 30GB RAM system
+# Date: 2026-03-13
+
+# Memory Allocation - 24GB for WSL2 (leave 6GB for Windows)
+memory=24GB
+
+# CPU Allocation - All 6 cores of i5-8400
+processors=6
+
+# Swap - 16GB for model overflow
+swap=16GB
+
+# Enable dynamic memory management
+dynamicMemory=true
+
+# Enable page reporting for better memory management
+pageReporting=true
+
+# Network mode (optional, for better performance)
+# networkingMode=mirrored
+
+# DNS (optional, fix DNS issues if any)
+# dns=8.8.8.8

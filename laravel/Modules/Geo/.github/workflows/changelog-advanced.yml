@@ -1,0 +1,141 @@
+# Changelog avanzato: release-changelog-builder + analytics contributori + grafici Mermaid
+name: Changelog Advanced
+
+on:
+  workflow_run:
+    workflows:
+      - Release
+    types:
+      - completed
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+    inputs:
+      from_tag:
+        description: "Tag inizio (vuoto = tag precedente a HEAD)"
+        required: false
+        type: string
+      to_ref:
+        description: "Ref fine (default HEAD)"
+        required: false
+        type: string
+        default: HEAD
+  schedule:
+    - cron: "0 7 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: read
+
+concurrency:
+  group: changelog-advanced-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  advanced-changelog:
+    if: >-
+      github.event_name == 'schedule' ||
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.workflow_run.head_branch || github.ref }}
+
+      - name: Resolve tag range
+        id: range
+        run: |
+          if [ -n "${{ inputs.from_tag }}" ]; then
+            echo "from=${{ inputs.from_tag }}" >> "$GITHUB_OUTPUT"
+          else
+            FROM=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
+            echo "from=${FROM}" >> "$GITHUB_OUTPUT"
+          fi
+          TO="${{ inputs.to_ref || 'HEAD' }}"
+          echo "to=${TO}" >> "$GITHUB_OUTPUT"
+          echo "to_tag=$(git describe --tags --abbrev=0 ${TO} 2>/dev/null || echo '')" >> "$GITHUB_OUTPUT"
+
+      - name: Build structured changelog (PR/commits)
+        if: steps.range.outputs.from != '' || steps.range.outputs.to_tag != ''
+        id: changelog
+        uses: mikepenz/release-changelog-builder-action@v5
+        with:
+          fromTag: ${{ steps.range.outputs.from }}
+          toTag: ${{ steps.range.outputs.to_tag != '' && steps.range.outputs.to_tag || steps.range.outputs.to }}
+          outputFile: docs/chat/changelog-builder-output.md
+          fetchViaCommits: true
+          includeOpen: false
+          configurationJson: |
+            {
+              "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Contributors</summary>\n\n#{{CONTRIBUTORS}}\n</details>",
+              "categories": [
+                { "title": "## Features", "labels": ["feat", "feature"] },
+                { "title": "## Fixes", "labels": ["fix", "bug"] },
+                { "title": "## Docs", "labels": ["docs"] },
+                { "title": "## Maintenance", "labels": ["chore", "refactor", "ci", "build", "perf", "test"] }
+              ]
+            }
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Analytics report (contributors + charts)
+        env:
+          CHANGELOG_FROM_TAG: ${{ steps.range.outputs.from }}
+          CHANGELOG_TO_REF: ${{ steps.range.outputs.to }}
+          OUTPUT_MD: CHANGELOG-ANALYTICS.md
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: node bashscripts/ci/generate-changelog-report.mjs
+
+      - name: Merge report for release notes
+        run: |
+          {
+            echo "# Release analytics"
+            echo ""
+            cat CHANGELOG-ANALYTICS.md | tail -n +8
+            echo ""
+            echo "---"
+            echo ""
+            echo "# Structured changelog"
+            echo ""
+            cat docs/chat/changelog-builder-output.md 2>/dev/null || echo "_No builder output_"
+          } > docs/chat/changelog-release-report.md
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: changelog-report-${{ github.run_id }}
+          path: |
+            CHANGELOG-ANALYTICS.md
+            CHANGELOG-ANALYTICS.json
+            docs/chat/changelog-release-report.md
+            docs/chat/changelog-builder-output.md
+          if-no-files-found: warn
+
+      - name: Append analytics to latest GitHub Release
+        if: steps.range.outputs.to_tag != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ steps.range.outputs.to_tag }}"
+          BODY_FILE=$(mktemp)
+          gh release view "$TAG" --json body -q .body > "$BODY_FILE" 2>/dev/null || true
+          {
+            cat "$BODY_FILE"
+            echo ""
+            echo "---"
+            echo "## Analytics & contributors"
+            echo ""
+            tail -n +10 CHANGELOG-ANALYTICS.md
+          } > "${BODY_FILE}.new"
+          gh release edit "$TAG" --notes-file "${BODY_FILE}.new"
+
+      - name: Commit reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add CHANGELOG-ANALYTICS.md CHANGELOG-ANALYTICS.json docs/chat/changelog-*.md 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "docs(changelog): analytics report [skip ci]"
+          git push || true

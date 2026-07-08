@@ -194,11 +194,6 @@ Questo documento descrive le convenzioni di denominazione da seguire all'interno
 - Aggiornare questo documento se vengono introdotti nuovi schemi di denominazione o convenzioni.
 
 ## Collegamenti alla documentazione correlata
-- [Qualità del codice](./code_quality.md)
-- [Tipi rigorosi PHP](./php-strict-types.md)
-- [Guida all'implementazione di PHPStan](./phpstan-implementation-guide.md)
-- [Best practice per i provider di servizi](./service-provider-best-practices.md)
-- [Best practice per Filament](./filament-best-practices.md)
 - [Qualità del codice](./CODE_QUALITY.md)
 - [Tipi rigorosi PHP](./PHP-STRICT-TYPES.md)
 - [Guida all'implementazione di PHPStan](./PHPSTAN-IMPLEMENTATION-GUIDE.md)

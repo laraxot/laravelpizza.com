@@ -759,8 +759,7 @@ class ConnectionManagerService
     public static function getConnectionForModule(string $module): string
     {
         return match($module) {
-            'healthcare_app' => 'healthcare_app',
-            'ExternalProject' => '<nome progetto>',
+            'Quaeris' => 'quaeris',
             'User' => 'user',
             'Notify' => 'notify',
             default => 'mysql'
@@ -843,16 +842,14 @@ class ContactValidationService
 **Solution**: Strategy pattern con interfaces
 
 ```php
-// Modules/healthcare_app/Contracts/ChartRendererContract.php
-// Modules/ExternalProject/Contracts/ChartRendererContract.php
+// Modules/Quaeris/Contracts/ChartRendererContract.php
 interface ChartRendererContract
 {
     public function supports(string $type): bool;
     public function render(array $data, array $config): string;
 }
 
-// Modules/healthcare_app/Services/Chart/Renderers/PieChartRenderer.php
-// Modules/ExternalProject/Services/Chart/Renderers/PieChartRenderer.php
+// Modules/Quaeris/Services/Chart/Renderers/PieChartRenderer.php
 class PieChartRenderer implements ChartRendererContract
 {
     public function supports(string $type): bool
@@ -1018,8 +1015,7 @@ $contacts = Contact::forContext('dashboard')->get(); // Optimized loading
 **Solution**: Chunking e memory management
 
 ```php
-// Modules/healthcare_app/Services/BulkProcessingService.php
-// Modules/ExternalProject/Services/BulkProcessingService.php
+// Modules/Quaeris/Services/BulkProcessingService.php
 class BulkProcessingService
 {
     public function processLargeDataset(\Closure $processor, Builder $query, int $chunkSize = 1000): void

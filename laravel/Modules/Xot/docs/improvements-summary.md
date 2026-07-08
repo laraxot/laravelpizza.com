@@ -24,10 +24,10 @@
 - ✅ Creato piano consolidamento documentato
 
 ### 4. Documentazione Creata
-- ✅ `code-improvements-analysis.md` - Analisi miglioramenti
-- ✅ `super-mucca-methodology.md` - Guida metodologia completa
+- ✅ `code-improvements-analysis-2026-01-09.md` - Analisi miglioramenti
+- ✅ `super-mucca-methodology-2026.md` - Guida metodologia completa
 - ✅ `readme-consolidation-plan.md` - Piano consolidamento
-- ✅ `improvements-summary.md` - Questo documento
+- ✅ `improvements-summary-2026-01-09.md` - Questo documento
 
 ---
 
@@ -131,8 +131,8 @@ public function getUpcomingEvents(): Collection
 
 ## 🔗 Documentazione Correlata
 
-- [Code Improvements Analysis](./code-improvements-analysis.md)
-- [Super Mucca Methodology](./super-mucca-methodology.md)
+- [Code Improvements Analysis](./code-improvements-analysis-2026-01-09.md)
+- [Super Mucca Methodology](./super-mucca-methodology-2026.md)
 - [Readme Consolidation Plan](./readme-consolidation-plan.md)
 
 ---

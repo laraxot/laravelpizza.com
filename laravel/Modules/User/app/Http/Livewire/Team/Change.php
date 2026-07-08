@@ -22,6 +22,7 @@ class Change extends Component
 {
     // use HasUserProperty;
 
+    /** @var array<int|string, mixed> */
     public array $teams = [];
 
     public XotData $xot;

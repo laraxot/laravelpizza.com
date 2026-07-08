@@ -1,0 +1,35 @@
+{
+  "mcpServers": {
+    "package-version": {
+      "command": "mcp-package-version",
+      "args": [],
+      "description": "Provides latest package versions for package.json and requirements.txt files"
+    },
+    "mintlify": {
+      "command": "npx",
+      "args": ["@mintlify/mcp"],
+      "description": "Mintlify MCP package manager for documentation"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp"],
+      "description": "Playwright Tools for MCP - browser automation and testing"
+    },
+    "langchain": {
+      "command": "npx",
+      "args": ["@langchain/mcp-adapters"],
+      "description": "LangChain.js adapters for Model Context Protocol"
+    },
+    "remote": {
+      "command": "npx",
+      "args": ["mcp-remote"],
+      "description": "Remote proxy for Model Context Protocol with oAuth support"
+    }
+  },
+  "settings": {
+    "timeout": 30000,
+    "retries": 3,
+    "logLevel": "info"
+  }
+}
+

@@ -10,12 +10,13 @@
     $initialLng = $root !== null ? data_get($root, $scopeKey.'.longitude') : null;
     $mapId = 'latitude-longitude-map-lit-'.$getId();
     $fieldId = 'latitude-longitude-lit-field-'.$getId();
-    $defaultLat = $field->getDefaultLatitude();
-    $defaultLng = $field->getDefaultLongitude();
-    $defaultZoom = $field->getDefaultZoom();
-    $height = $field->getMapHeight();
-    $mapLat = is_numeric($initialLat) ? (float) $initialLat : $defaultLat;
-    $mapLng = is_numeric($initialLng) ? (float) $initialLng : $defaultLng;
+    $centerLat = $field->getLatitude() ?? 41.9028;
+    $centerLng = $field->getLongitude() ?? 12.4964;
+    $zoom = $field->getZoom();
+    $height = $field->getHeight();
+    $mapLat = is_numeric($initialLat) ? (float) $initialLat : $centerLat;
+    $mapLng = is_numeric($initialLng) ? (float) $initialLng : $centerLng;
+    $autoLocateOnInit = !is_numeric($initialLat) || !is_numeric($initialLng);
 @endphp
 
 <x-dynamic-component :component="$getFieldWrapperView()" :field="$field">
@@ -29,9 +30,10 @@
             <geo-latlng-input
                 lat="{{ $mapLat }}"
                 lng="{{ $mapLng }}"
-                zoom="{{ $defaultZoom }}"
+                zoom="{{ $zoom }}"
                 height="{{ $height }}"
                 state-path="{{ $statePath }}"
+                auto-locate-on-init="{{ $autoLocateOnInit ? 'true' : 'false' }}"
             ></geo-latlng-input>
         </div>
 

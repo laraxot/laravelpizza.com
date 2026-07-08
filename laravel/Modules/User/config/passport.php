@@ -19,9 +19,9 @@ return [
     |
     */
     'tokens' => [
-        'access_token' => env('PASSPORT_ACCESS_TOKEN_EXPIRATION_DAYS', 15),
-        'refresh_token' => env('PASSPORT_REFRESH_TOKEN_EXPIRATION_DAYS', 30),
-        'personal_access_token' => env('PASSPORT_PERSONAL_ACCESS_TOKEN_EXPIRATION_MONTHS', 6),
+        'access_token' => 15,
+        'refresh_token' => 30,
+        'personal_access_token' => 6,
     ],
 
     /*
@@ -47,7 +47,7 @@ return [
     | Utile per applicazioni mobile o SPA che necessitano di autenticazione diretta.
     |
     */
-    'enable_password_grant' => env('PASSPORT_ENABLE_PASSWORD_GRANT', true),
+    'enable_password_grant' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -58,7 +58,7 @@ return [
     | Se false, le rotte non vengono registrate automaticamente.
     |
     */
-    'register_routes' => env('PASSPORT_REGISTER_ROUTES', true),
+    'register_routes' => true,
 
     /*
     |--------------------------------------------------------------------------

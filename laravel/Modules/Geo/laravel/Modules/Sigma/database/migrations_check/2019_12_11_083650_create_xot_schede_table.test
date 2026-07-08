@@ -1,0 +1,115 @@
+<?php
+
+declare(strict_types=1);
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+/**
+* Class CreateXotSchedaTable
+*/
+class CreateXotSchedaTable extends XotBaseMigration {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up() {
+        Schema::create('xot_schede', function (Blueprint $table) {
+            $table->integer('id', true);
+            $table->integer('ente')->nullable();
+            $table->integer('matr')->nullable();
+            $table->string('cognome', 250)->nullable();
+            $table->string('nome', 250)->nullable();
+            $table->string('email', 250)->nullable();
+            $table->integer('propro')->nullable();
+            $table->integer('posfun')->nullable();
+            $table->string('categoria_eco', 200)->nullable();
+            $table->integer('posiz')->nullable();
+            $table->string('posiz_txt', 100)->nullable();
+            $table->integer('clafun')->nullable();
+            $table->integer('stabi')->nullable();
+            $table->string('stabi_txt', 250)->nullable();
+            $table->integer('repar')->nullable();
+            $table->string('repar_txt', 250)->nullable();
+            $table->integer('stabival')->nullable();
+            $table->integer('reparval')->nullable();
+            $table->string('indir', 250)->nullable();
+            $table->integer('gg_in_sede')->nullable();
+            $table->integer('n_gg_in_sede')->nullable();
+            $table->integer('gg_fuori_sede')->nullable();
+            $table->integer('n_gg_fuori_sede')->nullable();
+            $table->integer('gg_aspettative_in_sede')->nullable();
+            $table->integer('gg_aspettative_fuori_sede')->nullable();
+            $table->integer('gg_posiz_1_in_sede')->nullable();
+            $table->integer('gg_presenza_anno')->nullable();
+            $table->integer('gg_assenza_anno')->nullable();
+            $table->integer('rep003')->nullable();
+            $table->integer('disci1')->nullable();
+            $table->string('disci1_txt', 50)->nullable();
+            $table->integer('rep2kd')->nullable();
+            $table->integer('rep2ka')->nullable();
+            $table->integer('qua2kd')->nullable();
+            $table->integer('qua2ka')->nullable();
+            $table->integer('st2kas')->default(0);
+            $table->integer('st2kdi')->default(0);
+            $table->integer('dal')->nullable();
+            $table->integer('al')->nullable();
+            $table->integer('gg')->nullable();
+            $table->integer('anno')->nullable();
+            $table->decimal('esperienza_acquisita', 10)->nullable();
+            $table->decimal('peso_esperienza_acquisita', 10)->nullable();
+            $table->decimal('risultati_ottenuti', 10)->nullable();
+            $table->decimal('peso_risultati_ottenuti', 10)->nullable();
+            $table->decimal('arricchimento_professionale', 10)->nullable();
+            $table->decimal('peso_arricchimento_professionale', 10)->nullable();
+            $table->decimal('impegno', 10)->nullable();
+            $table->decimal('peso_impegno', 10)->nullable();
+            $table->decimal('qualita_prestazione', 10)->nullable();
+            $table->decimal('peso_qualita_prestazione', 10)->nullable();
+            $table->decimal('totale', 10, 3)->nullable();
+            $table->decimal('totale_pond', 10, 3)->nullable()->comment('se ha fatto piu\' stabi');
+            $table->integer('ha_diritto')->nullable();
+            $table->string('motivo', 250)->nullable();
+            $table->decimal('gg_aspettative_pond_in_sede', 10, 3)->nullable();
+            $table->decimal('gg_aspettative_pond_fuori_sede', 10, 3)->nullable();
+            $table->string('categoria_ecoval', 50)->nullable();
+            $table->integer('posfunval')->nullable();
+            $table->integer('gg_cateco_in_sede')->nullable();
+            $table->integer('gg_cateco_fuori_sede');
+            $table->integer('gg_cateco_posfun_in_sede');
+            $table->integer('gg_cateco_posfun_fuori_sede');
+            $table->integer('gg_cateco_no_posfun_in_sede');
+            $table->integer('gg_cateco_no_posfun_fuori_sede');
+            $table->integer('gg_no_cateco_in_sede');
+            $table->integer('gg_no_cateco_fuori_sede');
+            $table->integer('gg_no_cateco_posfun_in_sede');
+            $table->integer('gg_no_cateco_posfun_fuori_sede');
+            $table->decimal('gg_tot_pond', 10, 3)->nullable();
+            $table->integer('asz2ka');
+            $table->integer('gg_presenze_in_anno');
+            $table->integer('gg_assenze_in_anno');
+            $table->integer('ore_assenze_in_anno');
+            $table->timestamps();
+            $table->string('updated_by')->nullable();
+            $table->string('created_by')->nullable();
+            $table->softDeletes();
+            $table->string('deleted_by')->nullable();
+            $table->string('deleted_ip')->nullable();
+            $table->string('created_ip')->nullable();
+            $table->string('updated_ip')->nullable();
+            $table->integer('vincitore')->nullable()->default(0);
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down() {
+        Schema::drop('xot_schede');
+    }
+}

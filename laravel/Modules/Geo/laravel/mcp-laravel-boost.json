@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "laravel-boost": {
+      "command": "php",
+      "args": [
+        "/var/www/html/ptvx/laravel/artisan",
+        "boost:mcp"
+      ],
+      "cwd": "/var/www/html/ptvx/laravel",
+      "env": {
+        "APP_ENV": "local"
+      }
+    }
+  }
+}

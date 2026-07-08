@@ -1,0 +1,282 @@
+openapi: 3.0.3
+info:
+  title: Consultazione ANPR API C007
+  description: |-
+    Servizio di verifica di una dichiarazione di esistenza in vita
+    Pattern Model applicati:
+    - [AUDIT_REST_02 ] Inoltro dati tracciati nel dominio del Fruitore REST con correlazione
+    - [BLOCK_REST] Blocking REST
+    - [INTEGRITY_REST_02] Integrità del payload messaggio REST in PDND
+  version: '1.0.0'
+  contact:
+    name: API Support
+    email: Assistenza.anpr@pec.sogei.it
+  termsOfService: 'http://swagger.io/terms/'
+  x-api-id: C007
+  x-summary: Servizio di verifica dichiarazione esistenza in vita
+servers:
+  - url: 'https://modipa-val.anpr.interno.it/govway/rest/in/MinInternoPortaANPR-PDND/C007–servizioVerificaDichEsistenzaVita/v1'
+    description: Url di test per Consultazione Enti C007
+  - url: 'https://modipa.anpr.interno.it/govway/rest/in/MinInternoPortaANPR-PDND/C007–servizioVerificaDichEsistenzaVita/v1'
+    description: Url di esercizio per Consultazione Enti C007
+tags:
+- name: E002 service
+  description: Manage consultazione enti
+security:
+  - bearerAuth: []
+    Agid-JWT-Signature: []
+    Agid-JWT-TrackingEvidence: []
+paths:
+  /status:
+    get:
+      summary: Returns the application status
+      description: |
+        Returns the application status. For testing purposes, it might randomly reply with an error.
+      operationId: get_status
+      tags:
+        - health
+      responses:
+        '200':
+          description: |
+            This is the valid status from the server.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/RispostaKO'
+  /anpr-service-e002:
+    post:
+      tags:
+        - E002 service
+      summary: Trova caso d'uso
+      description: Consultazione di un caso d'uso
+      operationId: e002
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        description: Richiesta da consultare
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RichiestaE002'
+      responses:
+        "200":
+          description: Caso d'uso trovato
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RispostaE002OK'
+        "400":
+          description: Caso d'uso invalido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/RispostaKO'
+        "404":
+          description: Caso d'uso non trovato
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/RispostaKO'
+        "500":
+          description: Internal Server Error
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/RispostaKO'
+components:
+  schemas:
+    RichiestaE002:
+      type: object
+      required:
+        - idOperazioneClient
+        - criteriRicerca
+        - datiRichiesta
+      properties:
+        idOperazioneClient:
+          type: string
+          description: Identificativo univoco attribuito all'operazione dall'ente. Deve essere un alfanumerico. Si consiglia di usare il timestamp o un identificativo della postazione piu' il timestamp
+        criteriRicerca:
+          $ref: '#/components/schemas/TipoCriteriRicercaE002'
+        datiRichiesta:
+          $ref: '#/components/schemas/TipoDatiRichiestaE002'
+    RispostaE002OK:
+      type: object
+      properties:
+        idOperazioneANPR:
+          type: string
+        listaSoggetti:
+          $ref: '#/components/schemas/TipoListaSoggetti'
+        listaAnomalie:
+          type: array
+          items:
+            $ref: '#/components/schemas/TipoErroriAnomalia'
+    RispostaKO:
+      type: object
+      properties:
+        idOperazioneANPR:
+          type: string
+        listaErrori:
+          type: array
+          items:
+            $ref: '#/components/schemas/TipoErroriAnomalia'
+    TipoCriteriRicercaE002:
+      type: object
+      properties:
+        codiceFiscale:
+          type: string
+        idANPR:
+          type: string
+          description: Identificativo Unico Nazionale
+        cognome:
+          type: string
+        senzaCognome:
+          type: string
+        nome:
+          type: string
+        senzaNome:
+          type: string
+        sesso:
+          type: string
+        datiNascita:
+          $ref: '#/components/schemas/TipoDatiNascitaE000'
+    TipoDatiRichiestaE002:
+      type: object
+      required:
+        - dataRiferimentoRichiesta
+        - casoUso
+        - motivoRichiesta
+      properties:
+        dataRiferimentoRichiesta:
+          type: string
+          description: Data cui deve essere riferita la versione della scheda anagrafica
+          format: YYYY-MM-DD
+          example: '2021-11-15'
+        motivoRichiesta:
+          type: string
+          description: campo per l’indicazione obbligatoria del numero di riferimento della pratica per quale è effettuata l’interrogazione (es. numero di protocollo, fascicolo, verbale, etc.)
+        casoUso:
+          type: string
+          description: caso d'uso (es. C001)
+    TipoErroriAnomalia:
+      type: object
+      properties:
+        codiceErroreAnomalia:
+          type: string
+        tipoErroreAnomalia:
+          type: string
+        testoErroreAnomalia:
+          type: string
+        oggettoErroreAnomalia:
+          type: string
+        campoErroreAnomalia:
+          type: string
+        valoreErroreAnomalia:
+          type: string    
+    TipoDatiNascitaE000:
+      type: object
+      properties:
+        dataEvento:
+          type: string
+          format: YYYY-MM-DD
+          example: '2021-11-15'
+        senzaGiorno:
+          type: string
+        senzaGiornoMese:
+          type: string
+        luogoNascita:
+          $ref: '#/components/schemas/TipoLuogoNascita3000'  
+    TipoLuogoNascita3000:
+      type: object
+      properties:
+        luogoEccezionale:
+          type: string
+        comune:
+          $ref: '#/components/schemas/TipoComune'
+        localita:
+          $ref: '#/components/schemas/TipoLocalita'  
+    TipoComune:
+      type: object
+      properties:
+        nomeComune:
+          type: string
+        codiceIstat:
+          type: string
+        siglaProvinciaIstat:
+          type: string
+        descrizioneLocalita:
+          type: string          
+    TipoLocalita:
+      type: object
+      properties:
+        descrizioneLocalita:
+          type: string
+        descrizioneStato:
+          type: string
+        codiceStato:
+          type: string
+        provinciaContea:
+          type: string
+    TipoListaSoggetti:
+      type: object
+      properties:
+        datiSoggetto:
+          type: array
+          items:
+            $ref: '#/components/schemas/TipoDatiSoggettiEnte'
+    TipoDatiSoggettiEnte:
+      type: object
+      properties:
+        infoSoggettoEnte:
+          type: array
+          items:
+            $ref: '#/components/schemas/TipoInfoSoggettoEnte'
+    TipoInfoSoggettoEnte:
+      type: object
+      properties:
+        id:
+          type: string
+        chiave:
+          type: string
+        valore:
+          $ref: '#/components/schemas/TipoInfoValore'
+        valoreTesto:
+          type: string
+        valoreData:
+          type: string
+          format: YYYY-MM-DD
+          example: '2021-11-15'
+        dettaglio:
+          type: string      
+    TipoInfoValore:
+      enum:
+      - N
+      - S
+      type: string          
+  securitySchemes:
+    bearerAuth:
+      type: http
+      description: 'A bearer token in the format of a JWS and conformed to the specifications included in [RFC8725](https://tools.ietf.org/html/RFC8725).'
+      scheme: bearer
+      bearerFormat: JWT          
+    Agid-JWT-Signature:
+      type: apiKey
+      in: header
+      name: Agid-JWT-Signature
+      description: |-
+        Header della firma di JWS.
+        Il valore di questo header è una firma JWS.
+        Vedere Modi  [integrity_rest_02] Integrità del payload del messaggio REST in PDND
+    Agid-JWT-TrackingEvidence:
+      type: apiKey
+      in: header
+      name: Agid-JWT-TrackingEvidence
+      description: |-
+        Header della firma di JWS.
+        Il valore di questo header è una firma JWS.
+        Vedere Modi  [audit_rest_02] Inoltro dati tracciati nel dominio del Fruitore REST con correlazione
+        Claim da includere:
+            userID, un identificativo univoco dell'utente interno al dominio del fruitore che ha determinato l'esigenza della request di accesso all'e-service dell'erogatore;
+            userLocation, un identificativo univoco della postazione interna al dominio del fruitore da cui è avviata l'esigenza della request di accesso all'e-service dell'erogatore;
+            LoA, livello di sicurezza o di garanzia adottato nel processo di autenticazione informatica nel dominio del fruitore.
+            

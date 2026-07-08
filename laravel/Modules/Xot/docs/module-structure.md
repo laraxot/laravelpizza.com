@@ -45,7 +45,6 @@ Per tutti i dati geografici statici (regioni, province, comuni, cap) di dimensio
 
 Per dettagli implementativi e best practice vedi:
 - [Geo/docs/geo-json-model.md](../../Geo/docs/geo-json-model.md)
-- [Geo/docs/geo-json-model.md](../../geo/docs/geo-json-model.md)
 - [<nome progetto>/docs/geo-integration.md](../../<nome progetto>/docs/geo-integration.md)
 - [Questa stessa doc (Xot/module-structure.md)](module-structure.md)
 
@@ -74,16 +73,6 @@ class NomeModuloServiceProvider extends XotBaseServiceProvider {
 ## Collegamenti
 
 ### Documentazione Correlata
-- [README](../readme.md) - Panoramica del modulo Xot
-- [Convenzioni di Naming](./naming-conventions.md) - Regole di naming
-- [Case Sensitivity](./directory-case-sensitivity.md) - Regole per la case sensitivity
-- [Namespace Rules](./namespace-rules.md) - Regole per i namespace
-
-### Moduli Collegati
-- [UI](../ui/project_docs/readme.md) - Componenti di interfaccia
-- [Cms](../cms/project_docs/readme.md) - Gestione contenuti
-- [Lang](../lang/project_docs/readme.md) - Traduzioni
-- [User](../user/project_docs/readme.md) - Gestione utenti
 - [README](../README.md) - Panoramica del modulo Xot
 - [Convenzioni di Naming](./naming-conventions.md) - Regole di naming
 - [Case Sensitivity](./DIRECTORY-CASE-SENSITIVITY.md) - Regole per la case sensitivity
@@ -251,71 +240,6 @@ User/
 ## Collegamenti Moduli
 
 ### Modulo UI
-- [Componenti Volt](../ui/project_docs/components/volt.md)
-- [Layout](../ui/project_docs/layouts.md)
-- [Temi](../ui/project_docs/themes.md)
-- [Best Practices](../ui/project_docs/best-practices.md)
-
-### Modulo Cms
-- [Frontend](../cms/project_docs/frontend.md)
-- [Temi](../cms/project_docs/themes.md)
-- [Contenuti](../cms/project_docs/content.md)
-- [Convenzioni Filament](../cms/project_docs/convenzioni-namespace-filament.md)
-
-### Modulo Lang
-- [Traduzioni](../lang/project_docs/translations.md)
-- [Localizzazione](../lang/project_docs/localization.md)
-- [API Traduzioni](../lang/project_docs/api.md)
-
-### Modulo User
-- [Autenticazione](../user/project_docs/auth.md)
-- [Permessi](../user/project_docs/permissions.md)
-- [Profilo](../user/project_docs/profile.md)
-
-### Modulo Patient
-- [Gestione Pazienti](../patient/project_docs/patients.md)
-- [Cartelle Cliniche](../patient/project_docs/records.md)
-- [Appuntamenti](../patient/project_docs/appointments.md)
-
-### Modulo Dental
-- [Trattamenti](../dental/project_docs/treatments.md)
-- [Pianificazione](../dental/project_docs/planning.md)
-- [Documenti](../dental/project_docs/documents.md)
-
-### Modulo Tenant
-- [Multi-tenant](../tenant/project_docs/multi-tenant.md)
-- [Configurazione](../tenant/project_docs/configuration.md)
-- [Migrazione](../tenant/project_docs/migration.md)
-
-### Modulo Media
-- [Gestione File](../media/project_docs/files.md)
-- [Upload](../media/project_docs/upload.md)
-- [Storage](../media/project_docs/storage.md)
-
-### Modulo Notify
-- [Notifiche](../notify/project_docs/notifications.md)
-- [Email](../notify/project_docs/email.md)
-- [SMS](../notify/project_docs/sms.md)
-
-### Modulo Reporting
-- [Report](../reporting/project_docs/reports.md)
-- [Esportazione](../reporting/project_docs/export.md)
-- [Analytics](../reporting/project_docs/analytics.md)
-
-### Modulo Gdpr
-- [Privacy](../gdpr/project_docs/privacy.md)
-- [Consensi](../gdpr/project_docs/consents.md)
-- [Sicurezza](../gdpr/project_docs/security.md)
-
-### Modulo Job
-- [Jobs](../job/project_docs/jobs.md)
-- [Queue](../job/project_docs/queue.md)
-- [Scheduling](../job/project_docs/scheduling.md)
-
-### Modulo Chart
-- [Grafici](../chart/project_docs/charts.md)
-- [Dashboard](../chart/project_docs/dashboard.md)
-- [Visualizzazione](../chart/project_docs/visualization.md)
 - [Componenti Volt](../UI/project_docs/components/volt.md)
 - [Layout](../UI/project_docs/layouts.md)
 - [Temi](../UI/project_docs/themes.md)
@@ -523,4 +447,4 @@ Se trovi una directory con case errato:
 6. Committa le modifiche
 
 ## Collegamenti tra versioni di module_structure.md
-* [module_structure.md](../../../../../docs/project/error_analysis/module_structure.md)
+* [module_structure.md](../../../../project_docs/error_analysis/module_structure.md)

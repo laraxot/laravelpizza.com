@@ -7,9 +7,10 @@ namespace Modules\User\Filament\Clusters\Passport\Resources;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
@@ -29,10 +30,10 @@ class OauthClientResource extends XotBaseResource
     /**
      * Get the form schema for the resource (XotBaseResource pattern).
      *
-     * @return array<string, Field>
+     * @return array<string, Component>
      */
     /**
-     * @return array<string, Field>
+     * @return array<string, Component>
      */
     public static function getFormSchema(): array
     {
@@ -65,13 +66,13 @@ class OauthClientResource extends XotBaseResource
                 TextColumn::make('user.name')
                     ->searchable()
                     ->label('Owner'),
-                TextColumn::make('personal_access_client')
+                IconColumn::make('personal_access_client')
                     ->boolean()
                     ->label('Personal'),
-                TextColumn::make('password_client')
+                IconColumn::make('password_client')
                     ->boolean()
                     ->label('Password'),
-                TextColumn::make('revoked')
+                IconColumn::make('revoked')
                     ->boolean()
                     ->label('Active'),
                 TextColumn::make('created_at')
@@ -96,7 +97,6 @@ class OauthClientResource extends XotBaseResource
     public static function getModel(): string
     {
         $model = LaravelPassport::clientModel();
-        // @phpstan-ignore-next-line
         if (! class_exists($model)) {
             return \Modules\User\Models\OauthClient::class;
         }
@@ -107,6 +107,7 @@ class OauthClientResource extends XotBaseResource
         return $model;
     }
 
+    /** @return array<string, \Filament\Resources\Pages\PageRegistration> */
     public static function getPages(): array
     {
         return [
@@ -128,6 +129,7 @@ class OauthClientResource extends XotBaseResource
     /**
      * Get resource form components.
      */
+    /** @return array<string, Component> */
     protected static function getResourceFormComponents(): array
     {
         return [];

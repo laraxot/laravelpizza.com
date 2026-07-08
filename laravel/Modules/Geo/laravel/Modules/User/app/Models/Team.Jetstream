@@ -1,0 +1,49 @@
+<?php
+
+namespace Modules\User\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Jetstream\Events\TeamCreated;
+use Laravel\Jetstream\Events\TeamDeleted;
+use Laravel\Jetstream\Events\TeamUpdated;
+use Laravel\Jetstream\Team as JetstreamTeam;
+
+class Team extends JetstreamTeam
+{
+    use \Modules\Xot\Models\Traits\HasXotFactory;
+
+    /** @return array<string, string> */
+    protected function casts(): array
+    {
+        return [
+
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'deleted_at' => 'datetime',
+
+            'updated_by' => 'string',
+            'created_by' => 'string',
+            'deleted_by' => 'string',
+
+        'personal_team' => 'boolean',
+
+        ];
+      }
+
+    /** @var list<string> */
+    protected $fillable = [
+        'name',
+        'personal_team',
+    ];
+
+    /**
+     * The event map for the model.
+     *
+     * @var array<string, class-string>
+     */
+    protected $dispatchesEvents = [
+        'created' => TeamCreated::class,
+        'updated' => TeamUpdated::class,
+        'deleted' => TeamDeleted::class,
+    ];
+}

@@ -25,8 +25,6 @@ Questa non è una raccomandazione, è una **legge del progetto**.
 - Storia preservata SEMPRE
 - Tracciabilità totale
 - Documentare correzioni con commit message chiari
-- Studiare lo storico con `git show` senza ripristinare file completi
-- Reintrodurre solo compatibilita' minima nel codice corrente quando serve
 
 ## Il Perché
 
@@ -52,19 +50,6 @@ Gli errori sono maestri. Non si nascondono, si documentano e si correggono andan
 - Trasparenza assoluta
 
 ## Workflow Corretto
-
-### Scenario 0: Un file attuale e' sbagliato
-
-```bash
-# ❌ SBAGLIATO
-git checkout -- Modules/Foo/app/Bar.php
-git restore Modules/Foo/app/Bar.php
-
-# ✅ CORRETTO
-git show HEAD~3:Modules/Foo/app/Bar.php
-# studio il contratto utile
-# poi modifico il file attuale con una fix forward-only
-```
 
 ### Scenario 1: Ho committato un bug
 
@@ -107,13 +92,15 @@ git push
 git reset --hard HEAD~1
 
 # ✅ CORRETTO
-# Ricrea la modifica corretta sul branch giusto
+# Sposta il commit sul branch giusto
 git checkout correct-branch
-# studia il delta utile e reimplementalo nel presente
+git cherry-pick wrong-branch
 git push
 
-# Sul branch sbagliato fai un nuovo commit di riallineamento
-# senza usare revert automatici
+# Annulla sul branch sbagliato
+git checkout wrong-branch
+git revert HEAD
+git push
 ```
 
 ### Scenario 4: Voglio "annullare" modifiche
@@ -123,19 +110,9 @@ git push
 git reset --hard abc123
 
 # ✅ CORRETTO
-# Studia la differenza e applica una correzione forward-only
-git diff abc123..HEAD -- path/to/file
-# poi fai un nuovo commit con la forma corretta del codice
+# Usa revert per creare un nuovo commit che annulla
+git revert HEAD~2..HEAD
 git push
-```
-
-### Scenario 5: Mi serve un metodo rimosso in un refactor
-
-```bash
-# ✅ CORRETTO
-git show <old-sha>:Modules/Xot/app/Datas/XotData.php
-# identifico la firma storica
-# implemento un wrapper compatibile minimo nel file corrente
 ```
 
 ## Eccezioni Rarissime
@@ -164,7 +141,7 @@ Le UNICHE 3 eccezioni accettabili:
 3. **Team Trust**: Tutti si fidano della storia condivisa
 4. **Compliance**: Soddisfa audit e requisiti legali
 5. **Learning Culture**: Gli errori diventano lezioni documentate
-6. **Correzione Sicura**: Posso sempre produrre un nuovo stato corretto senza distruggere il contesto accumulato
+6. **Rollback Sicuro**: Posso sempre tornare indietro con `git revert`
 
 ## Commit Message Format
 

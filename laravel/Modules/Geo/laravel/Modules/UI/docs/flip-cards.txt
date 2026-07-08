@@ -1,0 +1,7 @@
+---
+module: theme
+topic: flip-cards
+canonical: ../../../Themes/docs/shared-components/flip-cards.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/flip-cards.md

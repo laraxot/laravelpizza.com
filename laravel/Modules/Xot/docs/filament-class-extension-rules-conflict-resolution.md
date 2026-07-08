@@ -1,3 +1,6 @@
+# Risoluzione Conflitti Git - Filament Class Extension Rules
+
+## Data Risoluzione
 2026-01-02
 
 ## Problema Identificato
@@ -69,10 +72,3 @@ Il file `filament-class-extension-rules.md` conteneva conflitti Git multipli:
 
 - [Filament Class Extension Rules](./filament-class-extension-rules.md)
 - [Base Classes Documentation](./consolidated/base-classes.md)
----
-module: theme
-topic: filament-class-extension-rules-conflict-resolution
-canonical: ../../../Themes/docs/shared-components/filament-class-extension-resolution.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/filament-class-extension-resolution.md

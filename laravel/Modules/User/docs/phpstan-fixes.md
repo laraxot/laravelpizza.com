@@ -1,22 +1,15 @@
 # User Module - PHPStan Fixes Session 2025-10-01
 
-<<<<<<< HEAD
-## ⚠️ Stato: IN PROGRESS - 95 errori rimanenti
-=======
 **Last Updated**: 2026-07-07  
 **Status**: ✅ Zero Errors (residual: unmatched global ignore pattern, see below)  
 **PHPStan Level**: max
->>>>>>> 9fa499be (.)
 
-**Data correzione**: 1 Ottobre 2025  
+**Data correzione (sessione iniziale)**: 1 Ottobre 2025  
 **Analizzati**: ~400 file  
 **Errori iniziali**: ~100+ (bloccavano analisi)  
-**Errori attuali**: 95  
+**Errori attuali (sessione 1 Ottobre 2025)**: 95 (poi risolti a 0 nella sessione 2026-07-07, vedi sotto)  
 **Errori critici risolti**: 7 (syntax errors)
 
-<<<<<<< HEAD
----
-=======
 ### 0. Batch Fix — 24 Errors (2026-07-07)
 
 | File | Errors | Fix |
@@ -39,7 +32,6 @@ This is a global `ignoreErrors` pattern in `phpstan.neon` (untouchable) written 
 ## Issues Resolved (earlier sessions)
 
 ### 1. Pest Closure Scope Type Hints
->>>>>>> 9fa499be (.)
 
 ## 🛠️ Correzioni Implementate
 

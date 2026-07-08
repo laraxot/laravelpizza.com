@@ -1,0 +1,1 @@
+https://tighten.com/blog/tidy-up-your-tests-with-class-based-model-factories/

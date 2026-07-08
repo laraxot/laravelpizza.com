@@ -1,0 +1,1 @@
+PHPSTAN_LEVEL10_FIXES_media.md

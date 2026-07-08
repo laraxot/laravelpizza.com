@@ -1,0 +1,11 @@
+{
+    "name": "tools/phpinsights",
+    "require": {
+        "nunomaduro/phpinsights": "^2.13"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

@@ -1,0 +1,134 @@
+# Modulo Patient
+
+## Struttura Attuale
+
+### 1. Models
+```php
+namespace Modules\Patient\Models;
+
+abstract class BaseModel extends XotBaseModel
+{
+    use HasFactory;
+    use InteractsWithMedia;
+    use Updater;
+    
+    protected $connection = 'patient';
+}
+
+class Doctor extends BaseModel
+{
+    public function casts(): array
+    {
+        return array_merge(parent::casts(), [
+            'availability' => 'array',
+            'specialties' => 'array',
+            'certifications' => 'array',
+            'is_active' => 'boolean',
+        ]);
+    }
+}
+```
+
+### 2. Resources
+```php
+namespace Modules\Patient\Filament\Resources;
+
+class DoctorResource extends XotBaseResource
+{
+    public static function getFormSchema(): array
+    {
+        return [
+            Forms\Components\Card::make()
+                ->schema([
+                    Forms\Components\TextInput::make('full_name')
+                        ->required()
+                        ->maxLength(255),
+                    // ... altri campi
+                ])
+                ->columns(['lg' => 3])
+        ];
+    }
+}
+```
+
+### 3. Providers
+```php
+namespace Modules\Patient\Providers;
+
+class PatientServiceProvider extends XotBaseServiceProvider
+{
+    public string $name = 'patient';
+    protected string $module_ns = __NAMESPACE__;
+}
+```
+
+## Workflow Registrazione Dottori
+
+### 1. Stati
+```php
+class DoctorRegistrationWorkflow
+{
+    const STATUS_DRAFT = 'draft';
+    const STATUS_PENDING_MODERATION = 'pending_moderation';
+    const STATUS_APPROVED = 'approved';
+    const STATUS_REJECTED = 'rejected';
+}
+```
+
+### 2. Steps
+```php
+protected static function getSteps(): array
+{
+    return [
+        'personal_info' => [
+            'validation' => ['full_name', 'certification'],
+        ],
+        'moderation' => [
+            'visible' => fn () => auth()->user()->can('moderate_doctors'),
+        ],
+        'contacts' => [
+            'validation' => ['email', 'phone', 'address'],
+        ],
+        'professional' => [
+            'validation' => ['registration_number', 'certifications'],
+        ],
+        'availability' => [
+            'validation' => ['availability'],
+        ],
+    ];
+}
+```
+
+## Traduzioni
+
+### 1. Doctor
+```php
+// lang/it/doctor.php
+return [
+    'fields' => [
+        'full_name' => [
+            'label' => 'Nome Completo',
+            'placeholder' => 'Inserisci nome e cognome',
+            'help' => 'Nome e cognome del dottore',
+        ],
+        // ... altri campi
+    ],
+];
+```
+
+## TODO Specifico
+- [ ] Implementare validazione certificati
+- [ ] Aggiungere gestione appuntamenti
+- [ ] Implementare sistema di rating
+- [ ] Aggiungere notifiche automatiche
+
+## Note Importanti
+1. Tutti i modelli DEVONO estendere BaseModel
+2. Workflow di registrazione con moderazione
+3. Traduzioni in formato array con label
+4. Validazione documenti richiesta
+
+## Collegamenti
+- [Workflow Registrazione](docs/registration-workflow.md)
+- [Gestione Dottori](docs/doctors.md)
+- [Sistema Appuntamenti](docs/appointments.md) 

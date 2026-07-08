@@ -1,5 +1,3 @@
-
-
 # MCP Server Consigliati per il Modulo Xot
 
 ## Scopo del Modulo

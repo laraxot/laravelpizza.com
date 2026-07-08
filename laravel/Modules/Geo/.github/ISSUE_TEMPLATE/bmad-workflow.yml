@@ -1,0 +1,128 @@
+name: BMAD Workflow
+description: Track a BMAD-METHOD workflow execution
+title: "[BMAD] {workflow_name}"
+labels: ["bmad", "workflow"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## BMAD-METHOD Workflow
+        
+        Track the execution of a BMAD-METHOD v6.2.0 workflow.
+        
+        **Documentation**: [docs/bmad/README.md](docs/bmad/README.md)
+
+  - type: dropdown
+    id: workflow_type
+    attributes:
+      label: Workflow Type
+      description: Which BMAD workflow are you executing?
+      options:
+        - bmad-laravel-module-dev
+        - bmad-filament-page-dev
+        - bmad-create-architecture
+        - bmad-dev
+        - bmad-code-review
+        - bmad-qa-generate-e2e-tests
+        - bmad-document-project
+        - bmad-sprint-planning
+        - bmad-retrospective
+        - Other (specify in description)
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: agent
+    attributes:
+      label: BMAD Agent
+      description: Which BMAD agent is leading this workflow?
+      placeholder: "e.g., Winston (Architect), Amelia (Developer)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Workflow Description
+      description: Describe the workflow goal and expected output
+      placeholder: |
+        **Goal**: What are you trying to achieve?
+        
+        **Input**: Requirements, user stories, etc.
+        
+        **Expected Output**: Code, tests, documentation, etc.
+    validations:
+      required: true
+
+  - type: input
+    id: module
+    attributes:
+      label: Related Module(s)
+      description: Which Laravel module(s) does this workflow affect?
+      placeholder: "e.g., Xot, User, Performance"
+    validations:
+      required: false
+
+  - type: textarea
+    id: progress
+    attributes:
+      label: Workflow Progress
+      description: Track workflow steps completion
+      placeholder: |
+        ## Steps
+        
+        - [ ] Step 1: <step-name>
+        - [ ] Step 2: <step-name>
+        - [ ] Step 3: <step-name>
+        - [ ] Quality gates passed
+        - [ ] Documentation updated
+        - [ ] Tests passing
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: quality_gates
+    attributes:
+      label: Quality Gates
+      description: Ensure all quality gates are passed
+      options:
+        - label: PHPStan Level 10 passing
+        - label: Pint formatting applied
+        - label: All tests passing (Pest)
+        - label: Documentation updated
+        - label: AI coordination doc updated
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Workflow Output
+      description: List the files and artifacts created/modified
+      placeholder: |
+        ## Files Created/Modified
+        
+        - `path/to/file1.php`
+        - `path/to/file2.php`
+        - `docs/module/README.md`
+    validations:
+      required: false
+
+  - type: input
+    id: duration
+    attributes:
+      label: Estimated Duration
+      description: How long do you expect this workflow to take?
+      placeholder: "e.g., 2 hours, 1 day"
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any additional context, decisions, or follow-ups
+      placeholder: "Add any relevant notes here..."
+    validations:
+      required: false

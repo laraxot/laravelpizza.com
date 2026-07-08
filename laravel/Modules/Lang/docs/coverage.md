@@ -2,6 +2,11 @@
 
 **Date:** 2026-01-17
 **Date:** 2026-01-17
+<<<<<<< HEAD
+**Date:** 2026-01-17
+**Date:** 2026-01-17
+=======
+>>>>>>> 11c7c7d (.)
 **Lines Coverage:** N/A (Failed to parse)
 **Test Exit Code:** 2
 
@@ -49,6 +54,19 @@
   Failed asserting that exception of type "Error" matches expected exception "Exception". Message was: "Call to undefined method Illuminate\Container\Container::storagePath()" at
 . progetto>_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php:933
 . progetto>_fila5_mono/laravel/Modules/Lang/tests/Unit/Actions/ReadTranslationFileActionTest.php:58
+<<<<<<< HEAD
+/var/www/_bases/base_quaeris_fila4_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php:933
+/var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/Lang/tests/Unit/Actions/ReadTranslationFileActionTest.php:58
+/var/www/_bases/base_quaeris_fila4_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php:933
+/var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/Lang/tests/Unit/Actions/ReadTranslationFileActionTest.php:58
+/var/www/_bases/base_quaeris_fila4_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php:933
+/var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/Lang/tests/Unit/Actions/ReadTranslationFileActionTest.php:58
+/var/www/_bases/base_quaeris_fila4_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php:933
+/var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/Lang/tests/Unit/Actions/ReadTranslationFileActionTest.php:58
+. progetto>_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php:933
+. progetto>_fila5_mono/laravel/Modules/Lang/tests/Unit/Actions/ReadTranslationFileActionTest.php:58
+=======
+>>>>>>> 11c7c7d (.)
 .
 
   ──────────────────────────────────────────────────────────────────────────────────────  
@@ -78,4 +96,12 @@
   Duration: 1.44s
 
 
+<<<<<<< HEAD
 ```
+```
+```
+```
+```
+=======
+```
+>>>>>>> 11c7c7d (.)

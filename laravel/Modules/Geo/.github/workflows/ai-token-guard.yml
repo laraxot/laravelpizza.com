@@ -1,0 +1,17 @@
+name: AI Token Guard (PR)
+on:
+  pull_request:
+    types: [opened, synchronize, edited, reopened]
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Run AI token guard
+        run: |
+          python3 scripts/ai_token_guard.py

@@ -1,0 +1,27 @@
+parameters:
+    level: 10
+    paths:
+        - app
+        - config
+        - database
+        - routes
+    excludePaths:
+        - app_old/*
+        - vendor/*
+        - tests/coverage/*
+    treatPhpDocTypesAsCertain: false
+    reportUnmatchedIgnoredErrors: false
+    checkArgumentsPassedByReference: true
+    checkNullables: true
+    checkFunctionNameCase: true
+    inferPrivatePropertyTypeFromConstructor: true
+
+services:
+    -
+        class: PHPStan\Rules\Methods\ReturnTypeRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: PHPStan\Rules\Properties\TypesAssignedToPropertiesRule
+        tags:
+            - phpstan.rules.rule

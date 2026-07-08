@@ -23,12 +23,12 @@ use Webmozart\Assert\Assert;
  * - Determina dinamicamente la risorsa, il modello e l'action da eseguire
  * - Delega la logica di salvataggio a una UpdateAction specifica del modulo
  *
- * @property string     $type
- * @property string     $resource
- * @property string     $model
- * @property string     $action
- * @property Model      $record
- * @property array|null $data
+ * @property string                    $type
+ * @property string                    $resource
+ * @property string                    $model
+ * @property string                    $action
+ * @property Model                     $record
+ * @property array<string, mixed>|null $data
  */
 class EditUserWidget extends XotBaseWidget
 {
@@ -107,7 +107,8 @@ class EditUserWidget extends XotBaseWidget
         // Se è un nuovo modello, restituisci solo i campi fillable con valori null
         $fillable = $model->getFillable();
         $appends = $model->getAppends();
-        $fields = array_merge($fillable, $appends);
+        $fields = array_values(array_merge($fillable, $appends));
+        Assert::allString($fields);
 
         /** @var array<string, mixed> $result */
         $result = array_fill_keys($fields, null);

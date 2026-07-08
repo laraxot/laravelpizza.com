@@ -227,10 +227,3 @@ $this->commands([
 
 ### Zen finale
 > "Il miglior comando è quello che non devi mai registrare a mano."
----
-module: theme
-topic: xotbaseserviceprovider
-canonical: ../../../Themes/docs/shared-components/xotbaseserviceprovider.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/xotbaseserviceprovider.md

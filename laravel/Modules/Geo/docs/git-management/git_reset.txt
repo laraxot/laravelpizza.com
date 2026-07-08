@@ -1,0 +1,81 @@
+
+
+#!/bin/bash
+
+# 🚀 Importa funzioni di utilità
+source ./bashscripts/lib/custom.sh
+
+# ✅ Verifica prerequisiti
+if [ ! -f .gitmodules ]; then
+    log "error" "File .gitmodules non trovato"
+    exit 1
+fi
+
+# 🔄 Reset submoduli
+log "info" "Inizio reset submoduli..."
+
+git config -f .gitmodules --get-regexp '^submodule\..*\.path$' |
+    while read path_key path; do
+        url_key=$(echo "$path_key" | sed 's/\.path/.url/')
+        url=$(git config -f .gitmodules --get "$url_key")
+        
+        log "info" "Reset submodule: $path"
+        
+        # Rimuovi directory e cache
+        rm -rf "$path" || log "warning" "Impossibile rimuovere $path"
+        rm -rf ".git/modules/$path" || log "warning" "Impossibile rimuovere .git/modules/$path"
+        
+        # Rimuovi dal tracking
+        git rm --cached -r -f "$path" || log "warning" "Impossibile rimuovere $path dal tracking"
+        
+        # Re-inizializza submodule
+        git submodule add -f "$url" "$path" || handle_git_error "submodule add" "Errore nell'aggiunta del submodule $path"
+        
+        log "success" "Submodule $path resettato con successo"
+    done
+
+log "success" "Reset submoduli completato"
+    
+
+
+#!/bin/sh
+set -e
+git config -f .gitmodules --get-regexp '^submodule\..*\.path$' |
+    while read path_key path
+    do
+        url_key=$(echo $path_key | sed 's/\.path/.url/')
+        url=$(git config -f .gitmodules --get "$url_key")
+        echo $path
+        rm -rf $path
+        rm -rf .git/modules/$path
+        git rm --cached -r -f $path || echo $path
+        git submodule add -f $url $path 
+    done
+
+[0;34mℹ️ [2025-04-22 11:23:27] Scelto blocco HEAD (14 linee vs 1)[0m
+
+ cb513be (.)
+
+ 0440c57 (.)
+#!/bin/sh
+set -e
+git config -f .gitmodules --get-regexp '^submodule\..*\.path$' |
+    while read path_key path
+    do
+        url_key=$(echo $path_key | sed 's/\.path/.url/')
+        url=$(git config -f .gitmodules --get "$url_key")
+        echo $path
+        rm -rf $path
+        rm -rf .git/modules/$path
+        git rm --cached -r -f $path || echo $path
+        git submodule add -f $url $path 
+    done
+
+
+[0;34mℹ️ [2025-04-22 11:23:27] Scelto blocco incoming (1 linee vs 1)[0m
+
+    
+ cb513be (.)
+ 43df3e0 (.)
+
+ 0440c57 (.)

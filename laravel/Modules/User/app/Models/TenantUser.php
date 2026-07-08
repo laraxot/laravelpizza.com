@@ -52,6 +52,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  */
 class TenantUser extends BasePivot
 {
+    /** @use HasXotFactory<\Illuminate\Database\Eloquent\Factories\Factory<static>> */
     use HasXotFactory;
 
     protected $connection = 'user';

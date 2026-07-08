@@ -1,0 +1,27 @@
+includes:
+    - ./vendor/larastan/larastan/extension.neon
+    - ./vendor/nesbot/carbon/extension.neon
+
+parameters:
+    level: 9
+
+    ignoreErrors:
+        - '#Static call to instance method Nwidart\\Modules\\Facades\\Module#'
+        - '#Unsafe usage of new static#'
+        - '#PHPDoc tag @mixin contains unknown class #'
+        - '#Static call to instance method Nwidart#'
+        - '#Cannot cast mixed to (string|float|double|int|bool|boolean).#'
+        - identifier: missingType.iterableValue
+        - identifier: missingType.generics
+        - identifier: larastan.noEnvCallsOutsideOfConfig
+        - identifier: trait.unused
+        - identifier: method.unused
+
+    bootstrapFiles:
+        - ./phpstan_constants.php
+        - ./phpstan-bootstrap.php
+
+    tmpDir: /tmp/phpstan
+
+    treatPhpDocTypesAsCertain: false
+    reportUnmatchedIgnoredErrors: false

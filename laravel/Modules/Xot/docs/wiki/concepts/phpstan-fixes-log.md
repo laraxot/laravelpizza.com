@@ -154,4 +154,3 @@ cd laravel && ./vendor/bin/phpstan analyse Modules
 # [OK] No errors — 5357 file
 ```
 
-Trait probe registry: [phpstan-trait-probes](./phpstan-trait-probes.md)

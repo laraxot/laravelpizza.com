@@ -1,0 +1,257 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\User\Models;
+
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Notifications\DatabaseNotification;
+use Illuminate\Notifications\DatabaseNotificationCollection;
+use Illuminate\Support\Carbon;
+use Modules\Media\Models\Media;
+use Modules\User\Contracts\UserContract;
+use Modules\Xot\Contracts\ProfileContract;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
+use Spatie\Permission\Traits\HasRoles;
+use Spatie\SchemalessAttributes\SchemalessAttributes;
+use Spatie\SchemalessAttributes\SchemalessAttributesTrait as HasSchemalessAttributes;
+
+/**
+ * User Profile Model.
+ *
+ * Represents a user profile with relationships to devices, teams, and roles.
+ *
+ * @property int                                                       $id
+ * @property string                                                    $first_name
+ * @property string                                                    $last_name
+ * @property string                                                    $user_name
+ * @property string                                                    $email
+ * @property string|null                                               $phone
+ * @property string|null                                               $bio
+ * @property string|null                                               $avatar
+ * @property string|null                                               $timezone
+ * @property string|null                                               $locale
+ * @property array<string, mixed>                                      $preferences
+ * @property string                                                    $status
+ * @property SchemalessAttributes                                      $extra
+ * @property string                                                    $avatar
+ * @property ProfileContract|null                                      $creator
+ * @property Collection<int, DeviceUser>                               $deviceUsers
+ * @property int|null                                                  $device_users_count
+ * @property ProfileTeam|DeviceProfile|null                            $pivot
+ * @property Collection<int, Device>                                   $devices
+ * @property int|null                                                  $devices_count
+ * @property string|null                                               $first_name
+ * @property string|null                                               $full_name
+ * @property string|null                                               $last_name
+ * @property MediaCollection<int, Media>                               $media
+ * @property int|null                                                  $media_count
+ * @property Collection<int, DeviceUser>                               $mobileDeviceUsers
+ * @property int|null                                                  $mobile_device_users_count
+ * @property Collection<int, Device>                                   $mobileDevices
+ * @property int|null                                                  $mobile_devices_count
+ * @property DatabaseNotificationCollection<int, DatabaseNotification> $notifications
+ * @property int|null                                                  $notifications_count
+ * @property Collection<int, Permission>                               $permissions
+ * @property int|null                                                  $permissions_count
+ * @property Collection<int, Role>                                     $roles
+ * @property int|null                                                  $roles_count
+ * @property Collection<int, Team>                                     $teams
+ * @property int|null                                                  $teams_count
+ * @property ProfileContract|null                                      $updater
+ * @property UserContract|null                                         $user
+ * @property string|null                                               $user_name
+ *
+ * @method static Builder<static>|Profile newModelQuery()
+ * @method static Builder<static>|Profile newQuery()
+ * @method static Builder<static>|Profile permission($permissions, $without = false)
+ * @method static Builder<static>|Profile query()
+ * @method static Builder<static>|Profile role($roles, $guard = null, $without = false)
+ * @method static Builder<static>|Profile withExtraAttributes()
+ * @method static Builder<static>|Profile withoutPermission($permissions)
+ * @method static Builder<static>|Profile withoutRole($roles, $guard = null)
+ *
+ * @property string|null          $user_id
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property ProfileContract|null $deleter
+ *
+ * @method static Builder<static>|Profile                         whereBio($value)
+ * @method static Builder<static>|Profile                         whereCreatedAt($value)
+ * @method static Builder<static>|Profile                         whereCreatedBy($value)
+ * @method static Builder<static>|Profile                         whereDeletedAt($value)
+ * @method static Builder<static>|Profile                         whereDeletedBy($value)
+ * @method static Builder<static>|Profile                         whereEmail($value)
+ * @method static Builder<static>|Profile                         whereFirstName($value)
+ * @method static Builder<static>|Profile                         whereId($value)
+ * @method static Builder<static>|Profile                         whereLastName($value)
+ * @method static Builder<static>|Profile                         wherePhone($value)
+ * @method static Builder<static>|Profile                         whereUpdatedAt($value)
+ * @method static Builder<static>|Profile                         whereUpdatedBy($value)
+ * @method static Builder<static>|Profile                         whereUserId($value)
+ * @method static \Modules\User\Database\Factories\ProfileFactory factory($count = null, $state = [])
+ *
+ * @property string|null $post_type
+ * @property int|null    $ente
+ * @property int|null    $matr
+ * @property string|null $address
+ * @property string|null $premise
+ * @property string|null $premise_short
+ * @property string|null $locality
+ * @property string|null $locality_short
+ * @property string|null $postal_town
+ * @property string|null $postal_town_short
+ * @property string|null $administrative_area_level_3
+ * @property string|null $administrative_area_level_3_short
+ * @property string|null $administrative_area_level_2
+ * @property string|null $administrative_area_level_2_short
+ * @property string|null $administrative_area_level_1
+ * @property string|null $administrative_area_level_1_short
+ * @property string|null $country
+ * @property string|null $country_short
+ * @property string|null $street_number
+ * @property string|null $street_number_short
+ * @property string|null $route
+ * @property string|null $route_short
+ * @property string|null $postal_code
+ * @property string|null $postal_code_short
+ * @property string|null $googleplace_url
+ * @property string|null $googleplace_url_short
+ * @property string|null $point_of_interest
+ * @property string|null $point_of_interest_short
+ * @property string|null $political
+ * @property string|null $political_short
+ * @property string|null $campground
+ * @property string|null $campground_short
+ *
+ * @method static Builder<static>|Profile byUuid(string $uuid)
+ * @method static Builder<static>|Profile childrenWith(list<string> $relations)
+ * @method static Builder<static>|Profile childrenWithCount(list<string> $relations)
+ * @method static Builder<static>|Profile whereAddress($value)
+ * @method static Builder<static>|Profile whereAdministrativeAreaLevel1($value)
+ * @method static Builder<static>|Profile whereAdministrativeAreaLevel1Short($value)
+ * @method static Builder<static>|Profile whereAdministrativeAreaLevel2($value)
+ * @method static Builder<static>|Profile whereAdministrativeAreaLevel2Short($value)
+ * @method static Builder<static>|Profile whereAdministrativeAreaLevel3($value)
+ * @method static Builder<static>|Profile whereAdministrativeAreaLevel3Short($value)
+ * @method static Builder<static>|Profile whereAvatar($value)
+ * @method static Builder<static>|Profile whereCampground($value)
+ * @method static Builder<static>|Profile whereCampgroundShort($value)
+ * @method static Builder<static>|Profile whereCountry($value)
+ * @method static Builder<static>|Profile whereCountryShort($value)
+ * @method static Builder<static>|Profile whereEnte($value)
+ * @method static Builder<static>|Profile whereGoogleplaceUrl($value)
+ * @method static Builder<static>|Profile whereGoogleplaceUrlShort($value)
+ * @method static Builder<static>|Profile whereLocale($value)
+ * @method static Builder<static>|Profile whereLocality($value)
+ * @method static Builder<static>|Profile whereLocalityShort($value)
+ * @method static Builder<static>|Profile whereMatr($value)
+ * @method static Builder<static>|Profile wherePointOfInterest($value)
+ * @method static Builder<static>|Profile wherePointOfInterestShort($value)
+ * @method static Builder<static>|Profile wherePolitical($value)
+ * @method static Builder<static>|Profile wherePoliticalShort($value)
+ * @method static Builder<static>|Profile wherePostType($value)
+ * @method static Builder<static>|Profile wherePostalCode($value)
+ * @method static Builder<static>|Profile wherePostalCodeShort($value)
+ * @method static Builder<static>|Profile wherePostalTown($value)
+ * @method static Builder<static>|Profile wherePostalTownShort($value)
+ * @method static Builder<static>|Profile wherePreferences($value)
+ * @method static Builder<static>|Profile wherePremise($value)
+ * @method static Builder<static>|Profile wherePremiseShort($value)
+ * @method static Builder<static>|Profile whereRoute($value)
+ * @method static Builder<static>|Profile whereRouteShort($value)
+ * @method static Builder<static>|Profile whereStatus($value)
+ * @method static Builder<static>|Profile whereStreetNumber($value)
+ * @method static Builder<static>|Profile whereStreetNumberShort($value)
+ * @method static Builder<static>|Profile whereTimezone($value)
+ *
+ * @property string|null $type
+ * @property string|null $birth_date
+ * @property string|null $gender
+ * @property bool        $is_active
+ *
+ * @method static Builder<static>|Profile whereBirthDate($value)
+ * @method static Builder<static>|Profile whereExtra($value)
+ * @method static Builder<static>|Profile whereGender($value)
+ * @method static Builder<static>|Profile whereIsActive($value)
+ * @method static Builder<static>|Profile whereType($value)
+ * @method static Builder<static>|Profile whereUserName($value)
+ *
+ * @mixin \Eloquent
+ */
+class Profile extends BaseProfile implements HasMedia
+{
+    use HasRoles;
+    use HasSchemalessAttributes;
+    use InteractsWithMedia;
+
+    /**
+     * The table associated with the model.
+     */
+    protected $table = 'profiles';
+
+    /**
+     * Get the teams that the profile belongs to.
+     *
+     * @return BelongsToMany<Team, $this, \Illuminate\Database\Eloquent\Relations\Pivot, 'pivot'>
+     */
+    public function teams(): BelongsToMany
+    {
+        return $this->belongsToManyX(Team::class);
+    }
+
+    /**
+     * Scope a query to include schemaless attributes.
+     *
+     * @param Builder<static> $query
+     *
+     * @return Builder<static>
+     */
+    public function scopeWithExtraAttributes(Builder $query): Builder
+    {
+        return $query; // SchemalessAttributesTrait should handle this, but adding for completeness/test
+    }
+
+    /**
+     * Get the schemaless attributes.
+     *
+     * @return array<int, string>
+     */
+    public function getSchemalessAttributes(): array
+    {
+        return [
+            'extra',
+        ];
+    }
+
+    /**
+     * Generate Schema.org ProfilePage/Person JSON-LD structured data.
+     *
+     * @see https://schema.org/Person
+     * @see https://schema.org/ProfilePage
+     *
+     * @return array<string, mixed>
+     */
+    public function toSchemaOrg(): array
+    {
+        return [
+            '@context' => 'https://schema.org',
+            '@type' => 'Person',
+            'name' => $this->full_name,
+            'givenName' => $this->first_name,
+            'familyName' => $this->last_name,
+            'email' => $this->email,
+            'description' => $this->bio,
+            'image' => $this->avatar ? asset($this->avatar) : null,
+            'url' => url('/profile/'.$this->user_name),
+        ];
+    }
+}

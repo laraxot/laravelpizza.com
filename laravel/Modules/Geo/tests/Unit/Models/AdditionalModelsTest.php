@@ -13,6 +13,8 @@ use Modules\Geo\Models\Place;
 use Modules\Geo\Models\PlaceType;
 use Modules\Geo\Models\State;
 
+uses(TestCase::class);
+
 test('State model can be instantiated', function () {
     $state = new State();
 

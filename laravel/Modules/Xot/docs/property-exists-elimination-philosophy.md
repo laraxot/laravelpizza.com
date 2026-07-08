@@ -271,8 +271,7 @@ if (isset($record->email)) {
 - User/Filament/Resources/BaseProfileResource
 - User/Filament/Resources/UserResource
 - Media/Filament/Resources (3 file)
-- healthcare_app/Filament (2 file)
-- ExternalProject/Filament (2 file)
+- Quaeris/Filament (2 file)
 
 **Impact**: Alto (UI user-facing)
 **Risk**: Medio (bugs visibili)
@@ -400,8 +399,7 @@ if (method_exists($record, 'getUrl')) {
 | Xot | 12 | High | Alta |
 | User | 5 | Critical | Media |
 | Media | 3 | High | Bassa |
-| healthcare_app | 2 | Medium | Bassa |
-| ExternalProject | 2 | Medium | Bassa |
+| Quaeris | 2 | Medium | Bassa |
 | Others | 52 (docs) | Low | Zero |
 
 ### Estimated Effort

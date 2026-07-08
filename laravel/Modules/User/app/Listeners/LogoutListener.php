@@ -100,11 +100,7 @@ class LogoutListener
      */
     public function forgetRememberTokens(Logout $event): void
     {
-<<<<<<< HEAD
-        if ($event->user && $event->user instanceof HasAuthentications) {
-=======
         if ($event->user instanceof BaseUser) {
->>>>>>> 6d3760fe (.)
             try {
                 $event
                     ->user

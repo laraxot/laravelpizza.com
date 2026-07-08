@@ -72,7 +72,7 @@ class UserNameFieldsResolverTest extends TestCase
         $this->assertEquals('Michael Doe', $resolver->lastName);
     }
 
-    private function createMockSocialiteUser(?string $name, ?string $email): SocialiteUser
+    public function createMockSocialiteUser(?string $name, ?string $email): SocialiteUser
     {
         $mock = $this->createMock(SocialiteUser::class);
         $mock->method('getName')->willReturn($name);

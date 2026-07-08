@@ -3,7 +3,7 @@
 ## context
 
 in laraxot, xot is the central abstraction layer that enforces conventions and prevents drift across modules.
-translation is not just a feature: it is part of governance (no hardcoded labels, consistent keys, <nome progetto>able ui).
+translation is not just a feature: it is part of governance (no hardcoded labels, consistent keys, predictable ui).
 
 this debate emerged because php/filament frequently mixes static helpers, traits, and inheritance, which can easily lead to **method signature collisions** (especially with `trans()`).
 
@@ -11,7 +11,6 @@ related docs:
 
 - [trait conflict resolution](./trait-conflict-resolution.md)
 - [filosofia modulo xot](./FILOSOFIA_MODULO_XOT.md)
-- [filosofia modulo xot](./filosofia_modulo_xot.md)
 - [quality tools zen](./quality-tools-zen.md)
 
 ## the furious internal debate
@@ -22,7 +21,7 @@ related docs:
 - **reason**:
   - `trans()` is a foundational primitive.
   - if every trait ships its own `trans()` signature, php will accept it until it doesn’t (collision), and then failures are catastrophic.
-  - a single contract enables type-safety, <nome progetto>able behavior, and prevents “magic divergence”.
+  - a single contract enables type-safety, predictable behavior, and prevents “magic divergence”.
 
 ### position b (local freedom): every trait can define its own trans
 

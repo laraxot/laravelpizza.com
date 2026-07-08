@@ -1,0 +1,82 @@
+<?php return array (
+  'adm_theme' => 'sb-admin-2-bs4',
+  'enable_ads' => '1',
+  'enable_packs' => 
+  array (
+    0 => 'backend',
+    1 => 'badge',
+    2 => 'blog',
+    3 => 'certfisc',
+    4 => 'contoannuale',
+    5 => 'europa',
+    6 => 'extend',
+    7 => 'frontend',
+    8 => 'import',
+    9 => 'inail',
+    10 => 'indennita',
+    11 => 'legge104',
+    12 => 'legge109',
+    13 => 'lu',
+    14 => 'mensa',
+    15 => 'mobilitavolontaria',
+    16 => 'performance',
+    17 => 'prenotazioni',
+    18 => 'presenzeassenze',
+    19 => 'progressioni',
+    20 => 'ptv',
+    21 => 'questionari',
+    22 => 'settings',
+    23 => 'sigma',
+    24 => 'sindacati',
+    25 => 'trasferte',
+    26 => 'trasferte_adm',
+    27 => 'trasferte_dip',
+    28 => 'xot',
+  ),
+  'forcessl' => '',
+  'migrate_packs' => 
+  array (
+    0 => 'backend',
+    1 => 'blog',
+    2 => 'formx',
+    3 => 'import',
+    4 => 'lu',
+    5 => 'seo',
+    6 => 'xot',
+  ),
+  'model' => 
+  array (
+    'article' => 'Modules\Blog\Models\Article',
+    'conf' => 'Modules\Xot\Models\Conf',
+    'home' => 'Modules\Blog\Models\Home',
+    'image' => 'Modules\Xot\Models\Image',
+    'metatag' => 'Modules\Xot\Models\Metatag',
+    'page' => 'Modules\Blog\Models\Page',
+    'photo' => 'Modules\Blog\Models\Photo',
+    'privacy' => 'Modules\Blog\Models\Privacy',
+    'profile' => 'Modules\Blog\Models\Profile',
+    'rating' => 'Modules\Blog\Models\Rating',
+    'settings' => 'Modules\Xot\Models\Settings',
+    'translation' => 'Modules\Xot\Models\Translation',
+    'trasferte_adm' => 'Modules\Trasferte\Models\Trasferte',
+    'trasferte_dip' => 'Modules\Trasferte\Models\Trasferte',
+    'widget' => 'Modules\Xot\Models\Widget',
+  ),
+  'primary_lang' => 'it',
+  'pub_theme' => 'sb-admin-2-bs4',
+  'related' => 
+  array (
+    'home' => 
+    array (
+    ),
+    'postCat' => 
+    array (
+      0 => 'post',
+    ),
+  ),
+  'roots' => 
+  array (
+    0 => 'profile',
+  ),
+  'show_trans_key' => '',
+);

@@ -1,0 +1,3439 @@
+Note: Using configuration file phpstan.neon.
+  0/96 [░░░░░░░░░]   0%[1G[2K 96/96 [▓▓▓▓▓▓▓▓▓] 100%
+
+ ------ -------------- 
+  Line   app/Filament  
+         /Clusters/Te  
+         st/Pages/Guz  
+         zleProxyPage  
+         .php          
+ ------ -------------- 
+  :26    Method        
+         Modules\Pdnd  
+         \Filament\Cl  
+         usters\Test\  
+         Pages\Guzzle  
+         ProxyPage::g  
+         etFormSchema  
+         () has        
+         invalid       
+         return type   
+         Filament\For  
+         ms\Component  
+         s\Component.  
+         🪪            
+         class.notFou  
+         nd            
+         ✏️  app/Filam  
+         ent/Clusters  
+         /Test/Pages/  
+         GuzzleProxyP  
+         age.php       
+  :28    Method        
+         Modules\Pdnd  
+         \Filament\Cl  
+         usters\Test\  
+         Pages\Guzzle  
+         ProxyPage::g  
+         etFormSchema  
+         () should     
+         return array  
+         <string,      
+         Filament\For  
+         ms\Component  
+         s\Component>  
+         but returns   
+         array<string  
+         ,             
+         Filament\For  
+         ms\Component  
+         s\TextInput>  
+         .             
+         🪪            
+         return.type   
+         ✏️  app/Filam  
+         ent/Clusters  
+         /Test/Pages/  
+         GuzzleProxyP  
+         age.php       
+  :154   PHPDoc tag    
+         @var for      
+         variable      
+         $user         
+         contains      
+         unknown       
+         class         
+         Modules\Pdnd  
+         \Filament\Cl  
+         usters\Test\  
+         Pages\User.   
+         🪪            
+         class.notFou  
+         nd            
+         💡  Learn     
+         more at       
+         https://phps  
+         tan.org/user  
+         -guide/disco  
+         vering-symbo  
+         ls            
+         ✏️  app/Filam  
+         ent/Clusters  
+         /Test/Pages/  
+         GuzzleProxyP  
+         age.php       
+  :156   Call to       
+         method        
+         hasRole() on  
+         an unknown    
+         class         
+         Modules\Pdnd  
+         \Filament\Cl  
+         usters\Test\  
+         Pages\User.   
+         🪪            
+         class.notFou  
+         nd            
+         💡  Learn     
+         more at       
+         https://phps  
+         tan.org/user  
+         -guide/disco  
+         vering-symbo  
+         ls            
+         ✏️  app/Filam  
+         ent/Clusters  
+         /Test/Pages/  
+         GuzzleProxyP  
+         age.php       
+  :156   Method        
+         Modules\Pdnd  
+         \Filament\Cl  
+         usters\Test\  
+         Pages\Guzzle  
+         ProxyPage::c  
+         anAccess()    
+         should        
+         return bool   
+         but returns   
+         mixed.        
+         🪪            
+         return.type   
+         ✏️  app/Filam  
+         ent/Clusters  
+         /Test/Pages/  
+         GuzzleProxyP  
+         age.php       
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Filament  
+         /Pages/Servi  
+         zioAccertame  
+         ntoIdUnicoNa  
+         zionalePage.  
+         php           
+ ------ -------------- 
+  :63    Variable      
+         $pdndFormObj  
+         in PHPDoc     
+         tag @var      
+         does not      
+         match         
+         assigned      
+         variable      
+         $state.       
+         🪪            
+         varTag.diffe  
+         rentVariable  
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioAccert  
+         amentoIdUnic  
+         oNazionalePa  
+         ge.php        
+  :78    Cannot        
+         access        
+         offset        
+         'id_anpr' on  
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioAccert  
+         amentoIdUnic  
+         oNazionalePa  
+         ge.php        
+  :78    Cannot        
+         access        
+         offset 0 on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioAccert  
+         amentoIdUnic  
+         oNazionalePa  
+         ge.php        
+  :119   PHPDoc tag    
+         @var for      
+         variable      
+         $user         
+         contains      
+         unknown       
+         class         
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\User.     
+         🪪            
+         class.notFou  
+         nd            
+         💡  Learn     
+         more at       
+         https://phps  
+         tan.org/user  
+         -guide/disco  
+         vering-symbo  
+         ls            
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioAccert  
+         amentoIdUnic  
+         oNazionalePa  
+         ge.php        
+  :121   Call to       
+         method        
+         hasRole() on  
+         an unknown    
+         class         
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\User.     
+         🪪            
+         class.notFou  
+         nd            
+         💡  Learn     
+         more at       
+         https://phps  
+         tan.org/user  
+         -guide/disco  
+         vering-symbo  
+         ls            
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioAccert  
+         amentoIdUnic  
+         oNazionalePa  
+         ge.php        
+  :121   Method        
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\Servizio  
+         Accertamento  
+         IdUnicoNazio  
+         nalePage::ca  
+         nAccess()     
+         should        
+         return bool   
+         but returns   
+         mixed.        
+         🪪            
+         return.type   
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioAccert  
+         amentoIdUnic  
+         oNazionalePa  
+         ge.php        
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Filament  
+         /Pages/Servi  
+         zioAccertame  
+         ntoIdUnicoNa  
+         zionalePageP  
+         ROD.php       
+ ------ -------------- 
+  :76    Cannot        
+         access        
+         offset        
+         'id_anpr' on  
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioAccert  
+         amentoIdUnic  
+         oNazionalePa  
+         gePROD.php    
+  :76    Cannot        
+         access        
+         offset 0 on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioAccert  
+         amentoIdUnic  
+         oNazionalePa  
+         gePROD.php    
+  :113   PHPDoc tag    
+         @var for      
+         variable      
+         $user         
+         contains      
+         unknown       
+         class         
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\User.     
+         🪪            
+         class.notFou  
+         nd            
+         💡  Learn     
+         more at       
+         https://phps  
+         tan.org/user  
+         -guide/disco  
+         vering-symbo  
+         ls            
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioAccert  
+         amentoIdUnic  
+         oNazionalePa  
+         gePROD.php    
+  :115   Call to       
+         method        
+         hasRole() on  
+         an unknown    
+         class         
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\User.     
+         🪪            
+         class.notFou  
+         nd            
+         💡  Learn     
+         more at       
+         https://phps  
+         tan.org/user  
+         -guide/disco  
+         vering-symbo  
+         ls            
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioAccert  
+         amentoIdUnic  
+         oNazionalePa  
+         gePROD.php    
+  :115   Method        
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\Servizio  
+         Accertamento  
+         IdUnicoNazio  
+         nalePagePROD  
+         ::canAccess(  
+         ) should      
+         return bool   
+         but returns   
+         mixed.        
+         🪪            
+         return.type   
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioAccert  
+         amentoIdUnic  
+         oNazionalePa  
+         gePROD.php    
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Filament  
+         /Pages/Servi  
+         zioVerificaD  
+         ichEsistenza  
+         Vita.php      
+ ------ -------------- 
+  :72    Cannot        
+         access        
+         offset        
+         'info_sogget  
+         to_ente' on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVita.php   
+  :72    Cannot        
+         access        
+         offset        
+         'valore' on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVita.php   
+  :72    Cannot        
+         access        
+         offset 0 on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVita.php   
+  :72    Cannot        
+         access        
+         offset 0 on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVita.php   
+  :72    Cannot        
+         access        
+         property      
+         $value on     
+         mixed.        
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVita.php   
+  :109   PHPDoc tag    
+         @var for      
+         variable      
+         $user         
+         contains      
+         unknown       
+         class         
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\User.     
+         🪪            
+         class.notFou  
+         nd            
+         💡  Learn     
+         more at       
+         https://phps  
+         tan.org/user  
+         -guide/disco  
+         vering-symbo  
+         ls            
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVita.php   
+  :111   Call to       
+         method        
+         hasRole() on  
+         an unknown    
+         class         
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\User.     
+         🪪            
+         class.notFou  
+         nd            
+         💡  Learn     
+         more at       
+         https://phps  
+         tan.org/user  
+         -guide/disco  
+         vering-symbo  
+         ls            
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVita.php   
+  :111   Method        
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\Servizio  
+         VerificaDich  
+         EsistenzaVit  
+         a::canAccess  
+         () should     
+         return bool   
+         but returns   
+         mixed.        
+         🪪            
+         return.type   
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVita.php   
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Filament  
+         /Pages/Servi  
+         zioVerificaD  
+         ichEsistenza  
+         VitaPROD.php  
+ ------ -------------- 
+  :50    Constant      
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\Servizio  
+         VerificaDich  
+         EsistenzaVit  
+         aPROD::RISUL  
+         TATO_NON_DIS  
+         PONIBILE is   
+         unused.       
+         🪪            
+         classConstan  
+         t.unused      
+         💡  See:      
+         https://phps  
+         tan.org/deve  
+         loping-exten  
+         sions/always  
+         -used-class-  
+         constants     
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+  :55    Constant      
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\Servizio  
+         VerificaDich  
+         EsistenzaVit  
+         aPROD::TIPO_  
+         ERRORE_BLOCC  
+         ANTE is       
+         unused.       
+         🪪            
+         classConstan  
+         t.unused      
+         💡  See:      
+         https://phps  
+         tan.org/deve  
+         loping-exten  
+         sions/always  
+         -used-class-  
+         constants     
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+  :186   Cannot        
+         access        
+         offset        
+         'info_sogget  
+         to_ente' on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+  :186   Cannot        
+         access        
+         offset        
+         'valore' on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+  :186   Cannot        
+         access        
+         offset 0 on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+  :186   Cannot        
+         access        
+         offset 0 on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+  :186   Cannot        
+         access        
+         property      
+         $value on     
+         mixed.        
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+  :268   Cannot        
+         access        
+         offset        
+         'codiceError  
+         eAnomalia'    
+         on mixed.     
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+  :268   Parameter #2  
+         ...$values    
+         of function   
+         sprintf       
+         expects       
+         bool|float|i  
+         nt|string|nu  
+         ll, mixed     
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+  :269   Cannot        
+         access        
+         offset        
+         'tipoErroreA  
+         nomalia' on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+  :269   Parameter #3  
+         ...$values    
+         of function   
+         sprintf       
+         expects       
+         bool|float|i  
+         nt|string|nu  
+         ll, mixed     
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+  :270   Cannot        
+         access        
+         offset        
+         'testoErrore  
+         Anomalia' on  
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+  :270   Parameter #4  
+         ...$values    
+         of function   
+         sprintf       
+         expects       
+         bool|float|i  
+         nt|string|nu  
+         ll, mixed     
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+  :272   Parameter #1  
+         $array of     
+         function      
+         array_filter  
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+  :273   Cannot        
+         access        
+         offset        
+         'tipoErroreA  
+         nomalia' on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichEsiste  
+         nzaVitaPROD.  
+         php           
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Filament  
+         /Pages/Servi  
+         zioVerificaD  
+         ichGeneralit  
+         a.php         
+ ------ -------------- 
+  :96    Cannot        
+         access        
+         offset        
+         'id_anpr' on  
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         lita.php      
+  :96    Cannot        
+         access        
+         offset 0 on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         lita.php      
+  :114   Cannot        
+         access        
+         offset        
+         'info_sogget  
+         to_ente' on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         lita.php      
+  :114   Cannot        
+         access        
+         offset        
+         'valore' on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         lita.php      
+  :114   Cannot        
+         access        
+         offset 0 on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         lita.php      
+  :114   Cannot        
+         access        
+         offset 0 on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         lita.php      
+  :114   Cannot        
+         access        
+         property      
+         $value on     
+         mixed.        
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         lita.php      
+  :155   PHPDoc tag    
+         @var for      
+         variable      
+         $user         
+         contains      
+         unknown       
+         class         
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\User.     
+         🪪            
+         class.notFou  
+         nd            
+         💡  Learn     
+         more at       
+         https://phps  
+         tan.org/user  
+         -guide/disco  
+         vering-symbo  
+         ls            
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         lita.php      
+  :157   Call to       
+         method        
+         hasRole() on  
+         an unknown    
+         class         
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\User.     
+         🪪            
+         class.notFou  
+         nd            
+         💡  Learn     
+         more at       
+         https://phps  
+         tan.org/user  
+         -guide/disco  
+         vering-symbo  
+         ls            
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         lita.php      
+  :157   Method        
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\Servizio  
+         VerificaDich  
+         Generalita::  
+         canAccess()   
+         should        
+         return bool   
+         but returns   
+         mixed.        
+         🪪            
+         return.type   
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         lita.php      
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Filament  
+         /Pages/Servi  
+         zioVerificaD  
+         ichGeneralit  
+         aPROD.php     
+ ------ -------------- 
+  :101   Cannot        
+         access        
+         offset        
+         'id_anpr' on  
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         litaPROD.php  
+  :101   Cannot        
+         access        
+         offset 0 on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         litaPROD.php  
+  :120   Cannot        
+         access        
+         offset        
+         'info_sogget  
+         to_ente' on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         litaPROD.php  
+  :120   Cannot        
+         access        
+         offset        
+         'valore' on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         litaPROD.php  
+  :120   Cannot        
+         access        
+         offset 0 on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         litaPROD.php  
+  :120   Cannot        
+         access        
+         offset 0 on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         litaPROD.php  
+  :120   Cannot        
+         access        
+         property      
+         $value on     
+         mixed.        
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         litaPROD.php  
+  :200   PHPDoc tag    
+         @var for      
+         variable      
+         $user         
+         contains      
+         unknown       
+         class         
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\User.     
+         🪪            
+         class.notFou  
+         nd            
+         💡  Learn     
+         more at       
+         https://phps  
+         tan.org/user  
+         -guide/disco  
+         vering-symbo  
+         ls            
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         litaPROD.php  
+  :202   Call to       
+         method        
+         hasRole() on  
+         an unknown    
+         class         
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\User.     
+         🪪            
+         class.notFou  
+         nd            
+         💡  Learn     
+         more at       
+         https://phps  
+         tan.org/user  
+         -guide/disco  
+         vering-symbo  
+         ls            
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         litaPROD.php  
+  :202   Method        
+         Modules\Pdnd  
+         \Filament\Pa  
+         ges\Servizio  
+         VerificaDich  
+         GeneralitaPR  
+         OD::canAcces  
+         s() should    
+         return bool   
+         but returns   
+         mixed.        
+         🪪            
+         return.type   
+         ✏️  app/Filam  
+         ent/Pages/Se  
+         rvizioVerifi  
+         caDichGenera  
+         litaPROD.php  
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C003/C003  
+         Service.php   
+ ------ -------------- 
+  :46    Parameter #1  
+         $response of  
+         method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\C003Ser  
+         vice::proces  
+         sE002Respons  
+         e() expects   
+         array<string  
+         , mixed>, ar  
+         ray given.    
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/C  
+         003Service.p  
+         hp            
+  :128   Parameter     
+         $motivoRichi  
+         esta of       
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Request\Tipo  
+         DatiRichiest  
+         aE002         
+         constructor   
+         expects       
+         string,       
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/C  
+         003Service.p  
+         hp            
+  :244   Method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\C003Ser  
+         vice::proces  
+         sE002Respons  
+         e() should    
+         return array  
+         <string,      
+         mixed> but r  
+         eturns        
+         array.        
+         🪪            
+         return.type   
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/C  
+         003Service.p  
+         hp            
+  :247   Method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\C003Ser  
+         vice::proces  
+         sE002Respons  
+         e() should    
+         return array  
+         <string,      
+         mixed> but r  
+         eturns        
+         array.        
+         🪪            
+         return.type   
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/C  
+         003Service.p  
+         hp            
+  :335   Cannot        
+         access        
+         property $id  
+         on mixed.     
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/C  
+         003Service.p  
+         hp            
+  :336   Cannot        
+         access        
+         property      
+         $chiave on    
+         mixed.        
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/C  
+         003Service.p  
+         hp            
+  :337   Cannot        
+         access        
+         property      
+         $valore on    
+         mixed.        
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/C  
+         003Service.p  
+         hp            
+  :338   Cannot        
+         access        
+         property      
+         $valoreTesto  
+         on mixed.     
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/C  
+         003Service.p  
+         hp            
+  :339   Cannot        
+         access        
+         property      
+         $valoreData   
+         on mixed.     
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/C  
+         003Service.p  
+         hp            
+  :340   Cannot        
+         access        
+         property      
+         $dettaglio    
+         on mixed.     
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/C  
+         003Service.p  
+         hp            
+  :391   Parameter #1  
+         $data of      
+         static        
+         method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Shared\Mo  
+         dels\Common\  
+         TipoErroriAn  
+         omalia::from  
+         Array()       
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/C  
+         003Service.p  
+         hp            
+  :399   Parameter #1  
+         $data of      
+         static        
+         method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Shared\Mo  
+         dels\Common\  
+         TipoErroriAn  
+         omalia::from  
+         Array()       
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/C  
+         003Service.p  
+         hp            
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C003/Mode  
+         ls/Common/Ti  
+         poCodiceFisc  
+         ale.php       
+ ------ -------------- 
+  :35    Parameter     
+         $codFiscale   
+         of class      
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Common\TipoC  
+         odiceFiscale  
+         constructor   
+         expects       
+         string,       
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Common  
+         /TipoCodiceF  
+         iscale.php    
+  :37    Parameter     
+         $dataAttribu  
+         zioneValidit  
+         a of class    
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Common\TipoC  
+         odiceFiscale  
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Common  
+         /TipoCodiceF  
+         iscale.php    
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C003/Mode  
+         ls/Common/Ti  
+         poComune.php  
+ ------ -------------- 
+  :45    Parameter     
+         $descrizione  
+         Localita of   
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Common\TipoC  
+         omune         
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Common  
+         /TipoComune.  
+         php           
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C003/Mode  
+         ls/Common/Ti  
+         poGeneralita  
+         .php          
+ ------ -------------- 
+  :111   Parameter     
+         $note of      
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Common\TipoG  
+         eneralita     
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Common  
+         /TipoGeneral  
+         ita.php       
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C003/Mode  
+         ls/Common/Ti  
+         poIdSchedaSo  
+         ggettoComune  
+         .php          
+ ------ -------------- 
+  :33    Parameter     
+         $idSchedaSog  
+         getto of      
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Common\TipoI  
+         dSchedaSogge  
+         ttoComune     
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Common  
+         /TipoIdSched  
+         aSoggettoCom  
+         une.php       
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C003/Mode  
+         ls/Common/Ti  
+         poLocalita.p  
+         hp            
+ ------ -------------- 
+  :45    Parameter     
+         $provinciaCo  
+         ntea of       
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Common\TipoL  
+         ocalita       
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Common  
+         /TipoLocalit  
+         a.php         
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C003/Mode  
+         ls/Request/R  
+         ichiestaE002  
+         .php          
+ ------ -------------- 
+  :36    Parameter     
+         $idOperazion  
+         eClient of    
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Request\Rich  
+         iestaE002     
+         constructor   
+         expects       
+         string,       
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Reques  
+         t/RichiestaE  
+         002.php       
+  :37    Parameter #1  
+         $data of      
+         static        
+         method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Request\Tipo  
+         CriteriRicer  
+         caE002::from  
+         Array()       
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Reques  
+         t/RichiestaE  
+         002.php       
+  :39    Parameter #1  
+         $data of      
+         static        
+         method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Request\Tipo  
+         DatiRichiest  
+         aE002::fromA  
+         rray()        
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Reques  
+         t/RichiestaE  
+         002.php       
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C003/Mode  
+         ls/Request/T  
+         ipoDatiRichi  
+         estaE002.php  
+ ------ -------------- 
+  :29    Parameter     
+         $dataRiferim  
+         entoRichiest  
+         a of class    
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Request\Tipo  
+         DatiRichiest  
+         aE002         
+         constructor   
+         expects       
+         string,       
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Reques  
+         t/TipoDatiRi  
+         chiestaE002.  
+         php           
+  :30    Parameter     
+         $casoUso of   
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Request\Tipo  
+         DatiRichiest  
+         aE002         
+         constructor   
+         expects       
+         string,       
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Reques  
+         t/TipoDatiRi  
+         chiestaE002.  
+         php           
+  :31    Parameter     
+         $motivoRichi  
+         esta of       
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Request\Tipo  
+         DatiRichiest  
+         aE002         
+         constructor   
+         expects       
+         string,       
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Reques  
+         t/TipoDatiRi  
+         chiestaE002.  
+         php           
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C003/Mode  
+         ls/Response/  
+         RispostaE002  
+         OK.php        
+ ------ -------------- 
+  :50    Parameter #2  
+         $array of     
+         function      
+         array_map     
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Respon  
+         se/RispostaE  
+         002OK.php     
+  :57    Parameter     
+         $listaAnomal  
+         ie of class   
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Response\Ris  
+         postaE002OK   
+         constructor   
+         expects       
+         array<int, M  
+         odules\Pdnd\  
+         Services\Anp  
+         r\Shared\Mod  
+         els\Common\T  
+         ipoErroriAno  
+         malia>|null,  
+          array<mixed  
+         >|null given  
+         .             
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Respon  
+         se/RispostaE  
+         002OK.php     
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C003/Mode  
+         ls/Response/  
+         RispostaKO.p  
+         hp            
+ ------ -------------- 
+  :45    Parameter #2  
+         $array of     
+         function      
+         array_map     
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Respon  
+         se/RispostaK  
+         O.php         
+  :51    Parameter     
+         $listaErrori  
+         of class      
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Response\Ris  
+         postaKO       
+         constructor   
+         expects       
+         array<int, M  
+         odules\Pdnd\  
+         Services\Anp  
+         r\Shared\Mod  
+         els\Common\T  
+         ipoErroriAno  
+         malia>|null,  
+          array<mixed  
+         >|null given  
+         .             
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Respon  
+         se/RispostaK  
+         O.php         
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C003/Mode  
+         ls/Response/  
+         TipoDatiSogg  
+         ettiEnte.php  
+ ------ -------------- 
+  :38    Parameter #2  
+         $array of     
+         function      
+         array_map     
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Respon  
+         se/TipoDatiS  
+         oggettiEnte.  
+         php           
+  :42    Parameter     
+         $infoSoggett  
+         oEnte of      
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Response\Tip  
+         oDatiSoggett  
+         iEnte         
+         constructor   
+         expects       
+         array<int, M  
+         odules\Pdnd\  
+         Services\Anp  
+         r\Services\C  
+         003\Models\R  
+         esponse\Tipo  
+         InfoSoggetto  
+         Ente>|null,   
+         array<mixed>  
+         |null given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Respon  
+         se/TipoDatiS  
+         oggettiEnte.  
+         php           
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C003/Mode  
+         ls/Response/  
+         TipoIdentifi  
+         cativi.php    
+ ------ -------------- 
+  :27    Parameter     
+         $idANPR of    
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Response\Tip  
+         oIdentificat  
+         ivi           
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Respon  
+         se/TipoIdent  
+         ificativi.ph  
+         p             
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C003/Mode  
+         ls/Response/  
+         TipoInfoSogg  
+         ettoEnte.php  
+ ------ -------------- 
+  :57    Parameter #1  
+         $value of     
+         static        
+         method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Response\Tip  
+         oInfoValore:  
+         :from()       
+         expects       
+         int|string,   
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Respon  
+         se/TipoInfoS  
+         oggettoEnte.  
+         php           
+  :61    Parameter     
+         $dettaglio    
+         of class      
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Response\Tip  
+         oInfoSoggett  
+         oEnte         
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Respon  
+         se/TipoInfoS  
+         oggettoEnte.  
+         php           
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C003/Mode  
+         ls/Response/  
+         TipoListaSog  
+         getti.php     
+ ------ -------------- 
+  :34    Parameter #1  
+         $callback of  
+         function      
+         array_map     
+         expects       
+         (callable(mi  
+         xed):         
+         mixed)|null,  
+         Closure(arra  
+         y):           
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Response\Tip  
+         oDatiSoggett  
+         iEnte given.  
+         🪪            
+         argument.typ  
+         e             
+         💡  Type #1   
+         from the      
+         union: Type   
+         array of      
+         parameter #1  
+         $data of      
+         passed        
+         callable      
+         needs to be   
+         same or       
+         wider than    
+         parameter     
+         type mixed    
+         of accepting  
+         callable.     
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Respon  
+         se/TipoLista  
+         Soggetti.php  
+  :37    Parameter     
+         $datiSoggett  
+         o of class    
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C003\Models\  
+         Response\Tip  
+         oListaSogget  
+         ti            
+         constructor   
+         expects       
+         array<int, M  
+         odules\Pdnd\  
+         Services\Anp  
+         r\Services\C  
+         003\Models\R  
+         esponse\Tipo  
+         DatiSoggetti  
+         Ente>|null,   
+         array<Module  
+         s\Pdnd\Servi  
+         ces\Anpr\Ser  
+         vices\C003\M  
+         odels\Respon  
+         se\TipoDatiS  
+         oggettiEnte>  
+         |null given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C003/M  
+         odels/Respon  
+         se/TipoLista  
+         Soggetti.php  
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C007/C007  
+         Service.php   
+ ------ -------------- 
+  :45    Parameter #1  
+         $response of  
+         method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\C007Ser  
+         vice::proces  
+         sE002Respons  
+         e() expects   
+         array<string  
+         , mixed>, ar  
+         ray given.    
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/C  
+         007Service.p  
+         hp            
+  :96    Parameter     
+         $motivoRichi  
+         esta of       
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Request\Tipo  
+         DatiRichiest  
+         aE002         
+         constructor   
+         expects       
+         string,       
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/C  
+         007Service.p  
+         hp            
+  :229   Method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\C007Ser  
+         vice::proces  
+         sE002Respons  
+         e() should    
+         return array  
+         <string,      
+         mixed> but r  
+         eturns        
+         array.        
+         🪪            
+         return.type   
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/C  
+         007Service.p  
+         hp            
+  :232   Method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\C007Ser  
+         vice::proces  
+         sE002Respons  
+         e() should    
+         return array  
+         <string,      
+         mixed> but r  
+         eturns        
+         array.        
+         🪪            
+         return.type   
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/C  
+         007Service.p  
+         hp            
+  :248   Array has 2   
+         duplicate     
+         keys with     
+         value         
+         'anomalie'    
+         ('anomalie',  
+         'anomalie').  
+         🪪            
+         array.duplic  
+         ateKey        
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/C  
+         007Service.p  
+         hp            
+  :322   Cannot        
+         access        
+         property $id  
+         on mixed.     
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/C  
+         007Service.p  
+         hp            
+  :323   Cannot        
+         access        
+         property      
+         $chiave on    
+         mixed.        
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/C  
+         007Service.p  
+         hp            
+  :324   Cannot        
+         access        
+         property      
+         $valore on    
+         mixed.        
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/C  
+         007Service.p  
+         hp            
+  :325   Cannot        
+         access        
+         property      
+         $valoreTesto  
+         on mixed.     
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/C  
+         007Service.p  
+         hp            
+  :326   Cannot        
+         access        
+         property      
+         $valoreData   
+         on mixed.     
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/C  
+         007Service.p  
+         hp            
+  :327   Cannot        
+         access        
+         property      
+         $dettaglio    
+         on mixed.     
+         🪪            
+         property.non  
+         Object        
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/C  
+         007Service.p  
+         hp            
+  :379   Cannot call   
+         method        
+         toArray() on  
+         mixed.        
+         🪪            
+         method.nonOb  
+         ject          
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/C  
+         007Service.p  
+         hp            
+  :388   Cannot call   
+         method        
+         toArray() on  
+         mixed.        
+         🪪            
+         method.nonOb  
+         ject          
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/C  
+         007Service.p  
+         hp            
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C007/Mode  
+         ls/Common/Ti  
+         poCodiceFisc  
+         ale.php       
+ ------ -------------- 
+  :35    Parameter     
+         $codFiscale   
+         of class      
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Common\TipoC  
+         odiceFiscale  
+         constructor   
+         expects       
+         string,       
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Common  
+         /TipoCodiceF  
+         iscale.php    
+  :37    Parameter     
+         $dataAttribu  
+         zioneValidit  
+         a of class    
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Common\TipoC  
+         odiceFiscale  
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Common  
+         /TipoCodiceF  
+         iscale.php    
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C007/Mode  
+         ls/Common/Ti  
+         poComune.php  
+ ------ -------------- 
+  :45    Parameter     
+         $descrizione  
+         Localita of   
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Common\TipoC  
+         omune         
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Common  
+         /TipoComune.  
+         php           
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C007/Mode  
+         ls/Common/Ti  
+         poGeneralita  
+         .php          
+ ------ -------------- 
+  :111   Parameter     
+         $note of      
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Common\TipoG  
+         eneralita     
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Common  
+         /TipoGeneral  
+         ita.php       
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C007/Mode  
+         ls/Common/Ti  
+         poIdSchedaSo  
+         ggettoComune  
+         .php          
+ ------ -------------- 
+  :33    Parameter     
+         $idSchedaSog  
+         getto of      
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Common\TipoI  
+         dSchedaSogge  
+         ttoComune     
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Common  
+         /TipoIdSched  
+         aSoggettoCom  
+         une.php       
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C007/Mode  
+         ls/Common/Ti  
+         poLocalita.p  
+         hp            
+ ------ -------------- 
+  :45    Parameter     
+         $provinciaCo  
+         ntea of       
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Common\TipoL  
+         ocalita       
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Common  
+         /TipoLocalit  
+         a.php         
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C007/Mode  
+         ls/Request/R  
+         ichiestaE002  
+         .php          
+ ------ -------------- 
+  :36    Parameter     
+         $idOperazion  
+         eClient of    
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Request\Rich  
+         iestaE002     
+         constructor   
+         expects       
+         string,       
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Reques  
+         t/RichiestaE  
+         002.php       
+  :37    Parameter #1  
+         $data of      
+         static        
+         method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Request\Tipo  
+         CriteriRicer  
+         caE002::from  
+         Array()       
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Reques  
+         t/RichiestaE  
+         002.php       
+  :39    Parameter #1  
+         $data of      
+         static        
+         method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Request\Tipo  
+         DatiRichiest  
+         aE002::fromA  
+         rray()        
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Reques  
+         t/RichiestaE  
+         002.php       
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C007/Mode  
+         ls/Request/T  
+         ipoDatiRichi  
+         estaE002.php  
+ ------ -------------- 
+  :29    Parameter     
+         $dataRiferim  
+         entoRichiest  
+         a of class    
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Request\Tipo  
+         DatiRichiest  
+         aE002         
+         constructor   
+         expects       
+         string,       
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Reques  
+         t/TipoDatiRi  
+         chiestaE002.  
+         php           
+  :30    Parameter     
+         $casoUso of   
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Request\Tipo  
+         DatiRichiest  
+         aE002         
+         constructor   
+         expects       
+         string,       
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Reques  
+         t/TipoDatiRi  
+         chiestaE002.  
+         php           
+  :31    Parameter     
+         $motivoRichi  
+         esta of       
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Request\Tipo  
+         DatiRichiest  
+         aE002         
+         constructor   
+         expects       
+         string,       
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Reques  
+         t/TipoDatiRi  
+         chiestaE002.  
+         php           
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C007/Mode  
+         ls/Response/  
+         RispostaE002  
+         OK.php        
+ ------ -------------- 
+  :50    Parameter #2  
+         $array of     
+         function      
+         array_map     
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Respon  
+         se/RispostaE  
+         002OK.php     
+  :57    Parameter     
+         $listaAnomal  
+         ie of class   
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Response\Ris  
+         postaE002OK   
+         constructor   
+         expects       
+         array<int, M  
+         odules\Pdnd\  
+         Services\Anp  
+         r\Shared\Mod  
+         els\Common\T  
+         ipoErroriAno  
+         malia>|null,  
+          array<mixed  
+         >|null given  
+         .             
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Respon  
+         se/RispostaE  
+         002OK.php     
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C007/Mode  
+         ls/Response/  
+         RispostaKO.p  
+         hp            
+ ------ -------------- 
+  :45    Parameter #2  
+         $array of     
+         function      
+         array_map     
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Respon  
+         se/RispostaK  
+         O.php         
+  :51    Parameter     
+         $listaErrori  
+         of class      
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Response\Ris  
+         postaKO       
+         constructor   
+         expects       
+         array<int, M  
+         odules\Pdnd\  
+         Services\Anp  
+         r\Shared\Mod  
+         els\Common\T  
+         ipoErroriAno  
+         malia>|null,  
+          array<mixed  
+         >|null given  
+         .             
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Respon  
+         se/RispostaK  
+         O.php         
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C007/Mode  
+         ls/Response/  
+         TipoDatiSogg  
+         ettiEnte.php  
+ ------ -------------- 
+  :38    Parameter #2  
+         $array of     
+         function      
+         array_map     
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Respon  
+         se/TipoDatiS  
+         oggettiEnte.  
+         php           
+  :42    Parameter     
+         $infoSoggett  
+         oEnte of      
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Response\Tip  
+         oDatiSoggett  
+         iEnte         
+         constructor   
+         expects       
+         array<int, M  
+         odules\Pdnd\  
+         Services\Anp  
+         r\Services\C  
+         007\Models\R  
+         esponse\Tipo  
+         InfoSoggetto  
+         Ente>|null,   
+         array<mixed>  
+         |null given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Respon  
+         se/TipoDatiS  
+         oggettiEnte.  
+         php           
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C007/Mode  
+         ls/Response/  
+         TipoIdentifi  
+         cativi.php    
+ ------ -------------- 
+  :27    Parameter     
+         $idANPR of    
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Response\Tip  
+         oIdentificat  
+         ivi           
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Respon  
+         se/TipoIdent  
+         ificativi.ph  
+         p             
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C007/Mode  
+         ls/Response/  
+         TipoInfoSogg  
+         ettoEnte.php  
+ ------ -------------- 
+  :57    Parameter #1  
+         $value of     
+         static        
+         method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Response\Tip  
+         oInfoValore:  
+         :from()       
+         expects       
+         int|string,   
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Respon  
+         se/TipoInfoS  
+         oggettoEnte.  
+         php           
+  :61    Parameter     
+         $dettaglio    
+         of class      
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Response\Tip  
+         oInfoSoggett  
+         oEnte         
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Respon  
+         se/TipoInfoS  
+         oggettoEnte.  
+         php           
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C007/Mode  
+         ls/Response/  
+         TipoListaSog  
+         getti.php     
+ ------ -------------- 
+  :34    Parameter #1  
+         $callback of  
+         function      
+         array_map     
+         expects       
+         (callable(mi  
+         xed):         
+         mixed)|null,  
+         Closure(arra  
+         y):           
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Response\Tip  
+         oDatiSoggett  
+         iEnte given.  
+         🪪            
+         argument.typ  
+         e             
+         💡  Type #1   
+         from the      
+         union: Type   
+         array of      
+         parameter #1  
+         $data of      
+         passed        
+         callable      
+         needs to be   
+         same or       
+         wider than    
+         parameter     
+         type mixed    
+         of accepting  
+         callable.     
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Respon  
+         se/TipoLista  
+         Soggetti.php  
+  :37    Parameter     
+         $datiSoggett  
+         o of class    
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C007\Models\  
+         Response\Tip  
+         oListaSogget  
+         ti            
+         constructor   
+         expects       
+         array<int, M  
+         odules\Pdnd\  
+         Services\Anp  
+         r\Services\C  
+         007\Models\R  
+         esponse\Tipo  
+         DatiSoggetti  
+         Ente>|null,   
+         array<Module  
+         s\Pdnd\Servi  
+         ces\Anpr\Ser  
+         vices\C007\M  
+         odels\Respon  
+         se\TipoDatiS  
+         oggettiEnte>  
+         |null given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C007/M  
+         odels/Respon  
+         se/TipoLista  
+         Soggetti.php  
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C030/C030  
+         Service.php   
+ ------ -------------- 
+  :46    Parameter #1  
+         $response of  
+         method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C030\C030Ser  
+         vice::proces  
+         sE002Respons  
+         e() expects   
+         array<string  
+         , mixed>, ar  
+         ray given.    
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/C  
+         030Service.p  
+         hp            
+  :87    Parameter     
+         $motivoRichi  
+         esta of       
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C030\Models\  
+         Request\Tipo  
+         DatiRichiest  
+         aE002         
+         constructor   
+         expects       
+         string,       
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/C  
+         030Service.p  
+         hp            
+  :150   Cannot        
+         access        
+         offset 0 on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/C  
+         030Service.p  
+         hp            
+  :152   Cannot        
+         access        
+         offset        
+         'idANPR' on   
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/C  
+         030Service.p  
+         hp            
+  :152   Cannot        
+         access        
+         offset        
+         'identificat  
+         ivi' on       
+         mixed.        
+         🪪            
+         offsetAccess  
+         .nonOffsetAc  
+         cessible      
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/C  
+         030Service.p  
+         hp            
+  :152   Method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C030\C030Ser  
+         vice::getIdA  
+         npr() should  
+         return        
+         string|null   
+         but returns   
+         mixed.        
+         🪪            
+         return.type   
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/C  
+         030Service.p  
+         hp            
+  :199   Method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C030\C030Ser  
+         vice::proces  
+         sE002Respons  
+         e() should    
+         return array  
+         <string,      
+         mixed> but r  
+         eturns        
+         array.        
+         🪪            
+         return.type   
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/C  
+         030Service.p  
+         hp            
+  :201   Method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C030\C030Ser  
+         vice::proces  
+         sE002Respons  
+         e() should    
+         return array  
+         <string,      
+         mixed> but r  
+         eturns        
+         array.        
+         🪪            
+         return.type   
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/C  
+         030Service.p  
+         hp            
+  :289   Parameter #1  
+         $data of      
+         static        
+         method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Shared\Mo  
+         dels\Common\  
+         TipoErroriAn  
+         omalia::from  
+         Array()       
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/C  
+         030Service.p  
+         hp            
+  :301   Parameter #1  
+         $data of      
+         static        
+         method        
+         Modules\Pdnd  
+         \Services\An  
+         pr\Shared\Mo  
+         dels\Common\  
+         TipoErroriAn  
+         omalia::from  
+         Array()       
+         expects       
+         array, mixed  
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/C  
+         030Service.p  
+         hp            
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C030/Mode  
+         ls/Response/  
+         RispostaE002  
+         OK.php        
+ ------ -------------- 
+  :48    Parameter #1  
+         $callback of  
+         function      
+         array_map     
+         expects       
+         (callable(mi  
+         xed):         
+         mixed)|null,  
+         Closure(arra  
+         y):           
+         Modules\Pdnd  
+         \Services\An  
+         pr\Shared\Mo  
+         dels\Common\  
+         TipoErroriAn  
+         omalia        
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         💡  Type #1   
+         from the      
+         union: Type   
+         array of      
+         parameter #1  
+         $data of      
+         passed        
+         callable      
+         needs to be   
+         same or       
+         wider than    
+         parameter     
+         type mixed    
+         of accepting  
+         callable.     
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/M  
+         odels/Respon  
+         se/RispostaE  
+         002OK.php     
+  :48    Parameter     
+         $listaAnomal  
+         ie of class   
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C030\Models\  
+         Response\Ris  
+         postaE002OK   
+         constructor   
+         expects       
+         array<int, M  
+         odules\Pdnd\  
+         Services\Anp  
+         r\Shared\Mod  
+         els\Common\T  
+         ipoErroriAno  
+         malia>|null,  
+          array<Modul  
+         es\Pdnd\Serv  
+         ices\Anpr\Sh  
+         ared\Models\  
+         Common\TipoE  
+         rroriAnomali  
+         a>|null give  
+         n.            
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/M  
+         odels/Respon  
+         se/RispostaE  
+         002OK.php     
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C030/Mode  
+         ls/Response/  
+         RispostaKO.p  
+         hp            
+ ------ -------------- 
+  :43    Parameter #1  
+         $callback of  
+         function      
+         array_map     
+         expects       
+         (callable(mi  
+         xed):         
+         mixed)|null,  
+         Closure(arra  
+         y):           
+         Modules\Pdnd  
+         \Services\An  
+         pr\Shared\Mo  
+         dels\Common\  
+         TipoErroriAn  
+         omalia        
+         given.        
+         🪪            
+         argument.typ  
+         e             
+         💡  Type #1   
+         from the      
+         union: Type   
+         array of      
+         parameter #1  
+         $data of      
+         passed        
+         callable      
+         needs to be   
+         same or       
+         wider than    
+         parameter     
+         type mixed    
+         of accepting  
+         callable.     
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/M  
+         odels/Respon  
+         se/RispostaK  
+         O.php         
+  :43    Parameter     
+         $listaErrori  
+         of class      
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C030\Models\  
+         Response\Ris  
+         postaKO       
+         constructor   
+         expects       
+         array<int, M  
+         odules\Pdnd\  
+         Services\Anp  
+         r\Shared\Mod  
+         els\Common\T  
+         ipoErroriAno  
+         malia>|null,  
+          array<Modul  
+         es\Pdnd\Serv  
+         ices\Anpr\Sh  
+         ared\Models\  
+         Common\TipoE  
+         rroriAnomali  
+         a>|null give  
+         n.            
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/M  
+         odels/Respon  
+         se/RispostaK  
+         O.php         
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C030/Mode  
+         ls/Response/  
+         TipoIdentifi  
+         cativi.php    
+ ------ -------------- 
+  :27    Parameter     
+         $idANPR of    
+         class         
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C030\Models\  
+         Response\Tip  
+         oIdentificat  
+         ivi           
+         constructor   
+         expects       
+         string|null,  
+         mixed given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/M  
+         odels/Respon  
+         se/TipoIdent  
+         ificativi.ph  
+         p             
+ ------ -------------- 
+
+ ------ -------------- 
+  Line   app/Services  
+         /Anpr/Servic  
+         es/C030/Mode  
+         ls/Response/  
+         TipoListaSog  
+         getti.php     
+ ------ -------------- 
+  :33    Parameter #1  
+         $callback of  
+         function      
+         array_map     
+         expects       
+         (callable(mi  
+         xed):         
+         mixed)|null,  
+         Closure(arra  
+         y):           
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C030\Models\  
+         Response\Tip  
+         oDatiSoggett  
+         iEnte given.  
+         🪪            
+         argument.typ  
+         e             
+         💡  Type #1   
+         from the      
+         union: Type   
+         array of      
+         parameter #1  
+         $data of      
+         passed        
+         callable      
+         needs to be   
+         same or       
+         wider than    
+         parameter     
+         type mixed    
+         of accepting  
+         callable.     
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/M  
+         odels/Respon  
+         se/TipoLista  
+         Soggetti.php  
+  :33    Parameter     
+         $datiSoggett  
+         o of class    
+         Modules\Pdnd  
+         \Services\An  
+         pr\Services\  
+         C030\Models\  
+         Response\Tip  
+         oListaSogget  
+         ti            
+         constructor   
+         expects       
+         array<int, M  
+         odules\Pdnd\  
+         Services\Anp  
+         r\Services\C  
+         030\Models\R  
+         esponse\Tipo  
+         DatiSoggetti  
+         Ente>|null,   
+         array<Module  
+         s\Pdnd\Servi  
+         ces\Anpr\Ser  
+         vices\C030\M  
+         odels\Respon  
+         se\TipoDatiS  
+         oggettiEnte>  
+         |null given.  
+         🪪            
+         argument.typ  
+         e             
+         ✏️  app/Servi  
+         ces/Anpr/Ser  
+         vices/C030/M  
+         odels/Respon  
+         se/TipoLista  
+         Soggetti.php  
+ ------ -------------- 
+
+ [ERROR] Found 147     
+         errors        
+

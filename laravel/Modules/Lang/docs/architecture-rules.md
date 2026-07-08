@@ -10,6 +10,12 @@ For strict coding standards, Filament extension rules, and PHPStan guidelines, p
 -   [Super Cow Methodology](../../Xot/docs/super_cow_methodology.md)
 -   [PHP Quality Guide](../../Xot/docs/php_quality_guide.md)
 -   [Filament Extension Rules](../../Xot/docs/filament_extension_rules.md)
+<<<<<<< HEAD
+-   [Super Cow Methodology](../../Xot/docs/super_cow_methodology.md)
+-   [PHP Quality Guide](../../Xot/docs/php_quality_guide.md)
+-   [Filament Extension Rules](../../Xot/docs/filament_extension_rules.md)
+=======
+>>>>>>> 11c7c7d (.)
 
 **Key Principles:**
 1.  **DRY & KISS**: Don't repeat yourself, keep it simple.
@@ -18,4 +24,12 @@ For strict coding standards, Filament extension rules, and PHPStan guidelines, p
 4.  **Translations**: Use `LangServiceProvider` for automatic label resolution.
 
 ## Collegamenti correlati
+<<<<<<< HEAD
 - [Composer merge plugin](composer-merge-plugin.md)
+- [Composer merge plugin](composer-merge-plugin.md)
+- [Composer merge plugin](composer-merge-plugin.md)
+- [Composer merge plugin](composer-merge-plugin.md)
+- [Composer merge plugin](composer-merge-plugin.md)
+=======
+- [Composer merge plugin](composer-merge-plugin.md)
+>>>>>>> 11c7c7d (.)

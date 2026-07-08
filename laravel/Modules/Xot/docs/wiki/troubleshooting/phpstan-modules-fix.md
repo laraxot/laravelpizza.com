@@ -8,7 +8,6 @@ tags: [phpstan, modules, bootstrap, pest, seeders, xot, trait-probes]
 related:
   - concepts/phpstan-cluster-map-and-false-friends.md
   - concepts/phpstan-level10.md
-  - concepts/phpstan-trait-probes.md
   - concepts/xot-seed-model-once.md
 qmd: "phpstan analyse Modules zero errori pest bridge xotSeedModelOnce"
 ---
@@ -63,10 +62,6 @@ php bashscripts/tools/fix-pest-phpstan-test-patterns.php
 ### Factory — `HasXotFactory`
 
 `newFactory()` annotato `@return TFactory` per risolvere la catena generica sui modelli Xot.
-
-### Trait probe Notify
-
-`Modules/Notify/app/Phpstan/HasContactPhpstanProbe.php` registrato in `xotPhpstanTraitProbeClasses()` (valori `::class`, non stringhe).
 
 ### Test mock User — `RelationX`
 

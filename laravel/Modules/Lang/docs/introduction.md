@@ -31,4 +31,18 @@ quando viene utilizzata in Francia, verrà visualizzato il testo tradotto in fra
 
 ### Versione Incoming
 
+<<<<<<< HEAD
 ---
+
+### Versione Incoming
+
+---
+* [introduction.md](../../../Lang/docs/introduction.md)
+* [introduction.md](../../../Cms/docs/introduction.md)
+
+### Versione Incoming
+
+---
+=======
+---
+>>>>>>> 11c7c7d (.)

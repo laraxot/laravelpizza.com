@@ -1,0 +1,210 @@
+{
+    "name": "Rating",
+    "alias": "rating",
+    "name": "UI",
+    "alias": "ui",
+    "name": "Notify",
+    "alias": "notify",
+    "name": "User",
+    "alias": "user",
+    "name": "Setting",
+    "alias": "setting",
+    "name": "Rating",
+    "alias": "rating",
+    "name": "Media",
+    "alias": "media",
+    "name": "Incentivi",
+    "alias": "incentivi",
+    "name": "IndennitaCondizioniLavoro",
+    "alias": "indennitacondizionilavoro",
+    "name": "IndennitaResponsabilita",
+    "alias": "indennitaresponsabilita",
+    "name": "User",
+    "alias": "user",
+    "name": "User",
+    "alias": "user",
+    "name": "Rating",
+    "alias": "rating",
+    "name": "Activity",
+    "alias": "activity",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Rating\\Providers\\RatingServiceProvider",
+        "Modules\\Rating\\Providers\\Filament\\AdminPanelProvider"
+    "name": "Xot",
+    "alias": "xot",
+    "name": "Tenant",
+    "alias": "tenant",
+    "name": "Tenant",
+    "alias": "tenant",
+    "description": "",
+    "keywords": [],
+    "priority": 2,
+    "active": 1,
+    "order": 2,
+    "providers": [
+        "Modules\\Xot\\Providers\\XotServiceProvider",
+        "Modules\\Xot\\Providers\\Filament\\AdminPanelProvider"
+    "name": "Lang",
+    "alias": "Lang",
+    "description": "label language",
+    "keywords": [],
+    "active": 1,
+    "priority": 4,
+    "order": 5,
+    "providers": [
+        "Modules\\Lang\\Providers\\LangServiceProvider",
+        "Modules\\Lang\\Providers\\Filament\\AdminPanelProvider"
+    "name": "Job",
+    "alias": "job",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "priority": 20,
+    "order": 20,
+    "providers": [
+        "Modules\\Job\\Providers\\JobServiceProvider",
+        "Modules\\Job\\Providers\\Filament\\AdminPanelProvider"
+        "Modules\\Notify\\Providers\\NotifyServiceProvider",
+        "Modules\\Notify\\Providers\\Filament\\AdminPanelProvider"
+        "Modules\\Rating\\Providers\\RatingServiceProvider",
+        "Modules\\Rating\\Providers\\Filament\\AdminPanelProvider"
+        "Modules\\Media\\Providers\\MediaServiceProvider",
+        "Modules\\Media\\Providers\\Filament\\AdminPanelProvider"
+        "Modules\\Tenant\\Providers\\TenantServiceProvider",
+        "Modules\\Tenant\\Providers\\Filament\\AdminPanelProvider"
+        "Modules\\IndennitaCondizioniLavoro\\Providers\\IndennitaCondizioniLavoroServiceProvider",
+        "Modules\\IndennitaCondizioniLavoro\\Providers\\Filament\\AdminPanelProvider"
+        "Modules\\IndennitaResponsabilita\\Providers\\IndennitaResponsabilitaServiceProvider",
+        "Modules\\IndennitaResponsabilita\\Providers\\Filament\\AdminPanelProvider"
+        "Modules\\Tenant\\Providers\\TenantServiceProvider",
+        "Modules\\Tenant\\Providers\\Filament\\AdminPanelProvider"
+        "Modules\\Rating\\Providers\\RatingServiceProvider",
+        "Modules\\Rating\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "aliases": [],
+    "files": [],
+    "requires": []
+}
+}
+        "Modules\\UI\\Providers\\UIServiceProvider",
+        "Modules\\UI\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "files": []
+}
+}
+}
+}
+        "Modules\\User\\Providers\\UserServiceProvider",
+        "Modules\\User\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "migration": {
+        "seeds": [
+            "Modules\\User\\Database\\Seeders\\RolesSeeder"
+        ]
+    },
+    "files": []
+}
+        "Modules\\Setting\\Providers\\SettingServiceProvider",
+        "Modules\\Setting\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "files": []
+}
+}
+}
+}
+    "name": "Badge",
+    "alias": "badge",
+    "name": "CertFisc",
+    "alias": "certfisc",
+    "name": "ContoAnnuale",
+    "alias": "contoannuale",
+    "name": "Europa",
+    "alias": "europa",
+    "name": "Inail",
+    "alias": "inail",
+    "name": "Legge104",
+    "alias": "legge104",
+    "name": "Legge109",
+    "alias": "legge109",
+    "name": "Mensa",
+    "alias": "mensa",
+    "name": "MobilitaVolontaria",
+    "alias": "mobilitavolontaria",
+    "name": "Prenotazioni",
+    "alias": "prenotazioni",
+    "name": "PresenzeAssenze",
+    "alias": "presenzeassenze",
+    "name": "Progressioni",
+    "alias": "progressioni",
+    "name": "Questionari",
+    "alias": "questionari",
+    "name": "Sigma",
+    "alias": "sigma",
+    "name": "Sindacati",
+    "alias": "sindacati",
+    "name": "Performance",
+    "alias": "performance",
+    "name": "Ptv",
+    "alias": "ptv",
+    "name": "Progressioni",
+    "alias": "progressioni",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Badge\\Providers\\BadgeServiceProvider"
+        "Modules\\CertFisc\\Providers\\CertFiscServiceProvider"
+        "Modules\\ContoAnnuale\\Providers\\ContoAnnualeServiceProvider"
+        "Modules\\Europa\\Providers\\EuropaServiceProvider"
+        "Modules\\Inail\\Providers\\InailServiceProvider"
+        "Modules\\Legge104\\Providers\\Legge104ServiceProvider"
+        "Modules\\Legge109\\Providers\\Legge109ServiceProvider"
+        "Modules\\Mensa\\Providers\\MensaServiceProvider"
+        "Modules\\MobilitaVolontaria\\Providers\\MobilitaVolontariaServiceProvider"
+        "Modules\\Prenotazioni\\Providers\\PrenotazioniServiceProvider"
+        "Modules\\PresenzeAssenze\\Providers\\PresenzeAssenzeServiceProvider"
+        "Modules\\Questionari\\Providers\\QuestionariServiceProvider"
+        "Modules\\Sindacati\\Providers\\SindacatiServiceProvider"
+        "Modules\\Performance\\Providers\\PerformanceServiceProvider",
+        "Modules\\Performance\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
+        "Modules\\Incentivi\\Providers\\IncentiviServiceProvider",
+        "Modules\\Incentivi\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "files": []
+}
+}
+}
+        "Modules\\Progressioni\\Providers\\ProgressioniServiceProvider",
+        "Modules\\Progressioni\\Providers\\Filament\\AdminPanelProvider"
+        "Modules\\Sigma\\Providers\\SigmaServiceProvider",
+        "Modules\\Sigma\\Providers\\Filament\\AdminPanelProvider"
+        "Modules\\Ptv\\Providers\\PtvServiceProvider",
+        "Modules\\Ptv\\Providers\\Filament\\AdminPanelProvider"
+        "Modules\\Progressioni\\Providers\\ProgressioniServiceProvider",
+        "Modules\\Progressioni\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "aliases": [],
+    "files": [],
+    "requires": []
+}
+}
+}
+}
+}
+}
+}
+}
+        "Modules\\Activity\\Providers\\ActivityServiceProvider",
+        "Modules\\Activity\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "files": []
+}

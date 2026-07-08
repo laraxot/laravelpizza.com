@@ -5,16 +5,18 @@ declare(strict_types=1);
 namespace Modules\User\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Modules\User\Models\Tenant;
 
+/**
+ * @extends Factory<Tenant>
+ */
 class TenantFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
-     * @var class-string<Model>
+     * @var class-string<Tenant>
      */
     protected $model = Tenant::class;
 

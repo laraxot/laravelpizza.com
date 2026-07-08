@@ -1,0 +1,7 @@
+error: unexpected argument '--format' found
+
+  tip: a similar argument exists: '--format-after-fix'
+
+Usage: mago ast --format-after-fix <FILE>
+
+For more information, try '--help'.

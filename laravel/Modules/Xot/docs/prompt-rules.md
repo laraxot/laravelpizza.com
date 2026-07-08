@@ -32,20 +32,17 @@ La documentazione generica deve essere sempre inserita nella cartella `docs` del
 
 ### Collocazione della documentazione dei componenti UI
 La documentazione dei componenti UI deve essere sempre inserita nella cartella `docs` del modulo `UI`. Vedi [ui-link.md](../UI/project_docs/README.md) per i dettagli.
-La documentazione dei componenti UI deve essere sempre inserita nella cartella `docs` del modulo `UI`. Vedi [ui-link.md](../ui/project_docs/readme.md) per i dettagli.
 
 ## Collegamenti Bidirezionali
 - [Documentazione Generale](./documentation.md)
 - [Regole del Progetto](./rules.md)
 - [Struttura dei Prompt](./prompts.md)
 - [Collegamenti al Modulo Cms](./cms-link.md)
-* [PROMPT_RULES.md](../../../Xot/project_docs/PROMPT_RULES.md)
-* [PROMPT_RULES.md](../../../Xot/project_docs/rules/PROMPT_RULES.md)
-- [Collegamenti alla Root](../../../../docs/project/prompts.md)
+- [Collegamenti alla Root](../../../project_docs/prompts.md)
 
 ## Collegamenti tra versioni di PROMPT_RULES.md
-* [PROMPT_RULES.md](../../../xot/project_docs/prompt_rules.md)
-* [PROMPT_RULES.md](../../../xot/project_docs/rules/prompt_rules.md)
+* [PROMPT_RULES.md](../../../Xot/project_docs/PROMPT_RULES.md)
+* [PROMPT_RULES.md](../../../Xot/project_docs/rules/PROMPT_RULES.md)
 
 ## Collegamenti tra versioni di prompt_rules.md
 * [prompt_rules.md](rules/prompt_rules.md)

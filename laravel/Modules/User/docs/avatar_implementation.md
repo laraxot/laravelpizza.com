@@ -119,8 +119,4 @@ Il sistema di avatar può essere esteso in futuro per includere:
 
 - [Documentazione SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
 - [Blade Components Documentation](https://laravel.com/docs/10.x/blade#components)
-<<<<<<< HEAD
-- [Architettura Modulare Quaeris](/docs/architettura-modulare.md)
-=======
 - [Architettura Modulare healthcare_app](/docs/architettura-modulare.md)
->>>>>>> 6d3760fe (.)

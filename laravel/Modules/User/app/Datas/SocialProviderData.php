@@ -14,8 +14,10 @@ class SocialProviderData extends Data
 {
     public string $name; // ' => 'Facebook',
 
+    /** @var array<int, string>|null */
     public ?array $scopes = null;
 
+    /** @var array<string, mixed>|null */
     public ?array $parameters = null;
 
     public bool $stateless = true;
@@ -36,6 +38,7 @@ class SocialProviderData extends Data
     public static function make(): self
     {
         if (! self::$instance) {
+            /** @var array<string, mixed> $data */
             $data = TenantService::getConfig('social-providers');
             dddx($data);
             self::$instance = self::from($data);

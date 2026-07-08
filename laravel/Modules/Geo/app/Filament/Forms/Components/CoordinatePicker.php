@@ -8,11 +8,12 @@ use Modules\Geo\Filament\Forms\Components\Traits\HasCoordinatePicker;
 use Modules\Xot\Filament\Forms\Components\XotBaseField;
 
 /**
- * CoordinatePicker - Senior Architectural Core for geographic selection.
+ * CoordinatePicker - Geographic selection component.
  *
- * Rule: Extends XotBaseField.
- * Rule: No "Default" prefixes.
- * Rule: Unified state.
+ * View: geo::filament.forms.components.coordinate-picker
+ *
+ * Standardized on 'lat' and 'lng' keys.
+ * JSON-first: saves state as an array/JSON in the defined field.
  */
 class CoordinatePicker extends XotBaseField
 {
@@ -21,7 +22,7 @@ class CoordinatePicker extends XotBaseField
     protected function setUp(): void
     {
         parent::setUp();
+
         $this->setUpCoordinatePicker();
-        $this->dehydrated();
     }
 }

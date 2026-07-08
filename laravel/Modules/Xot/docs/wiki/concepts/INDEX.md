@@ -20,4 +20,3 @@ qmd search "Xot concepts" --limit 5
 ---
 *Updated: 2026-05-11*
 - [xotbase-filament-widget-hierarchy](./xotbase-filament-widget-hierarchy.md)
-- [phpstan-trait-probes](./phpstan-trait-probes.md) — trait `unused` → probe host + registry Helper

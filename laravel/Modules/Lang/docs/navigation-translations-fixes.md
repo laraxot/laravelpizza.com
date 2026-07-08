@@ -2,6 +2,10 @@
 
 ## Data Intervento
 **2025-08-07** - Sistemazione traduzioni secondo regole DRY + KISS
+<<<<<<< HEAD
+**2025-08-07** - Sistemazione traduzioni secondo regole DRY + KISS
+=======
+>>>>>>> 11c7c7d (.)
 **[DATE]** - Sistemazione traduzioni secondo regole DRY + KISS
 
 ## Analisi File
@@ -87,6 +91,18 @@ Il modulo Lang risulta **CONFORME** agli standard di traduzione:
 - [Documentazione Modulo Lang](readme.md)
 - [Sistema Localizzazione](comprehensive_guide.md)
 - [Regole Traduzioni Laraxot](../xot/docs/translation-rules.md)
+<<<<<<< HEAD
+- [Audit Generale Traduzioni Navigation](../../docs/navigation-translations-audit.md)
+- [Documentazione Modulo Lang](README.md)
+- [Documentazione Modulo Lang](README.md)
+- [Sistema Localizzazione](comprehensive_guide.md)
+- [Regole Traduzioni Laraxot](../Xot/docs/translation-rules.md)
+- [Audit Generale Traduzioni Navigation](../../../docs/navigation-translations-audit.md)
+- [Documentazione Modulo Lang](readme.md)
+- [Sistema Localizzazione](comprehensive_guide.md)
+- [Regole Traduzioni Laraxot](../Xot/docs/translation-rules.md)
+=======
+>>>>>>> 11c7c7d (.)
 
 ## Note Tecniche
 
@@ -104,4 +120,17 @@ Il modulo Lang risulta **CONFORME** agli standard di traduzione:
 
 *Verifica completata il: 2025-08-07*
 *Verifica completata il: [DATE]*
+<<<<<<< HEAD
 *Status: CONFORME agli standard*
+*Verifica completata il: [DATE]*
+*Status: CONFORME agli standard*
+*Verifica completata il: [DATE]*
+*Status: CONFORME agli standard*
+*Verifica completata il: [DATE]*
+*Status: CONFORME agli standard*
+*Verifica completata il: 2025-08-07*
+*Verifica completata il: [DATE]*
+*Status: CONFORME agli standard*
+=======
+*Status: CONFORME agli standard*
+>>>>>>> 11c7c7d (.)

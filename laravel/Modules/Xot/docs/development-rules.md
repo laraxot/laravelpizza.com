@@ -2,7 +2,6 @@
 
 ## Collegamenti
 - [Documentazione generale progetto](/docs/README.md)
-- [Documentazione generale progetto](/docs/readme.md)
 - [Regole Filament](filament-best-practices.md)
 - [Convenzioni Namespace](namespace-conventions.md)
 - [Standard di Codice](code-standards.md)

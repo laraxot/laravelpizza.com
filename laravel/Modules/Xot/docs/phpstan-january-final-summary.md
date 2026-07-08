@@ -12,8 +12,7 @@ Prima di procedere con le correzioni, ho studiato approfonditamente:
 
 1. **Filosofia Xot**: DRY + KISS, centralizzazione, opinionated defaults, modularità, type safety, "politica" (mai estendere Filament direttamente), "religione" (Xot layer è sacro), "zen" (armonia e chiarezza)
 
-2. **Filosofia healthcare_app**: Customer è il centro, SurveyPdf è il ponte, Token è sacro, LimeSurvey è eterno, Actions sono immutabili
-2. **Filosofia ModuloEsempio**: Customer è il centro, SurveyPdf è il ponte, Token è sacro, LimeSurvey è eterno, Actions sono immutabili
+2. **Filosofia Quaeris**: Customer è il centro, SurveyPdf è il ponte, Token è sacro, LimeSurvey è eterno, Actions sono immutabili
 
 3. **Filosofia User**: Security-first, customization, extensibility, user-centric, harmony with Xot
 
@@ -24,8 +23,7 @@ Prima di procedere con le correzioni, ho studiato approfonditamente:
 ### Business Logic Compresa
 
 - **Xot**: Framework base, fornisce classi base per tutti i moduli
-- **healthcare_app**: Customer → SurveyPdf → Contact → QuestionChart workflow
-- **ModuloEsempio**: Customer → SurveyPdf → Contact → QuestionChart workflow
+- **Quaeris**: Customer → SurveyPdf → Contact → QuestionChart workflow
 - **User**: Identity and access management (IAM)
 - **Tenant**: Multi-tenancy con connection-based isolation
 - **UI**: Componenti condivisi, design system
@@ -85,8 +83,7 @@ Prima di procedere con le correzioni, ho studiato approfonditamente:
 9. Lang ✅
 10. Media ✅
 11. Notify ✅
-12. healthcare_app ✅ (corretto in questa sessione)
-12. ModuloEsempio ✅ (corretto in questa sessione)
+12. Quaeris ✅ (corretto in questa sessione)
 13. Tenant ✅
 14. UI ✅
 15. User ✅
@@ -98,8 +95,7 @@ Prima di procedere con le correzioni, ho studiato approfonditamente:
 
 ## 🔧 Errori Corretti in Questa Sessione
 
-### healthcare_app - GetAnswersByQuestionChart.php (6 errori)
-### ModuloEsempio - GetAnswersByQuestionChart.php (6 errori)
+### Quaeris - GetAnswersByQuestionChart.php (6 errori)
 
 1. **Type narrowing per getDates()**: Aggiunto PHPDoc `@var array{dateFrom?: string|null, dateTo?: string|null}`
 2. **Array access su mixed**: Aggiunto `Assert::isArray($row)` prima di accesso
@@ -125,8 +121,7 @@ $valueArray = $labelData['value'];
 
 ## 📚 Documentazione Creata
 
-1. `healthcare_app/docs/phpstan-corrections-january-2026-part2.md` - Pattern array access e type narrowing
-1. `ModuloEsempio/docs/phpstan-corrections-january-2026-part2.md` - Pattern array access e type narrowing
+1. `Quaeris/docs/phpstan-corrections-january-2026-part2.md` - Pattern array access e type narrowing
 
 ## 🎯 Pattern Finali Documentati
 
@@ -167,9 +162,6 @@ $result = $model->traitMethod();
 - [Riepilogo Precedente](./phpstan-january-2026-summary.md)
 - [Quaeris Corrections Parte 1](../Quaeris/docs/phpstan-corrections-january-2026.md)
 - [Quaeris Corrections Parte 2](../Quaeris/docs/phpstan-corrections-january-2026-part2.md)
-- [healthcare_app Corrections Parte 1](../healthcare_app/docs/phpstan-corrections-january-2026.md)
-- [healthcare_app Corrections Parte 2](../healthcare_app/docs/phpstan-corrections-january-2026-part2.md)
-- [PHPStan Corrections - Modulo Esempio](../phpstan-code-quality-guide.md)
 
 ---
 

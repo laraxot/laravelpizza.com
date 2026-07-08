@@ -40,10 +40,7 @@ This document serves as the central index for the User module, providing guidanc
 - **Authentication Failures**: Ensure correct configuration of auth providers and middleware for user routes.
 - **Permission Conflicts**: Verify role and permission assignments to avoid access issues.
 - **Session Expiry**: Implement proper session management to handle user logout and timeouts securely.
-<<<<<<< HEAD
-=======
 - **Git "path does not have our version"**: Durante rebase, file "deleted by us" (OauthAccessToken pages). Vedi [git-path-does-not-have-our-version-fix](./git-path-does-not-have-our-version-fix.md).
->>>>>>> 6d3760fe (.)
 
 ## Documentation and Updates
 - Document any custom implementations or deviations from standard User module practices in the relevant documentation folder.
@@ -75,15 +72,7 @@ This document serves as the central index for the User module, providing guidanc
 Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
 
 Ultimo aggiornamento: 14 Maggio 2025
-<<<<<<< HEAD
 
 # Indice Documentazione User
 
 - [filament-best-practices.mdc](./filament-best-practices.mdc) — **Regola fondamentale:** chi estende XotBaseResource NON deve dichiarare $navigationGroup, $navigationLabel, né il metodo statico table(Table $table): Table. Seguire sempre questa regola per evitare errori di override e garantire coerenza tra i moduli.
-=======
-Ultimo aggiornamento: 14 Maggio 2025
-
-# Indice Documentazione User
-
-- [filament-best-practices.mdc](./filament-best-practices.mdc) — **Regola fondamentale:** chi estende XotBaseResource NON deve dichiarare $navigationGroup, $navigationLabel, né il metodo statico table(Table $table): Table. Seguire sempre questa regola per evitare errori di override e garantire coerenza tra i moduli.
->>>>>>> 6d3760fe (.)

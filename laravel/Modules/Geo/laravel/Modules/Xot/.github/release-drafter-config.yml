@@ -1,0 +1,55 @@
+# .github/release-drafter-config.yml
+name: Release Drafter Config
+
+# Configuration for Release Drafter.
+# See https://github.com/release-drafter/release-drafter#configuration
+
+tag-prefix: v
+
+# Define categories for pull requests.
+# Pull requests will be grouped under these headings in the release notes.
+categories:
+  - title: '🚀 Features'
+    labels:
+      - 'feature'
+      - 'feat'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'bug'
+      - 'fix'
+      - 'bugfix'
+  - title: '📝 Documentation'
+    labels:
+      - 'docs'
+  - title: '🧰 Maintenance'
+    labels:
+      - 'chore'
+      - 'refactor'
+      - 'perf'
+      - 'test'
+      - 'build'
+      - 'ci'
+    
+# Specify what happens to PRs that don't match any category.
+# Can be 'default', 'uncategorized', or a custom title.
+exclude-contributors:
+  - 'dependabot'
+  - 'github-actions'
+
+# Automatically close the release drafter PR after a release is published.
+close-unreleased-pr-on-release: true
+
+# If true, drafts a new release every time a PR is merged.
+# If false, drafts only when a new tag is pushed.
+prerelease: true
+
+# Template for the release notes.
+# Variables available: $CHANGES, $CONTRIBUTORS, $VERSION, $DATE
+template: |
+  ## What's Changed
+
+  $CHANGES
+
+  ## New Contributors
+
+  $CONTRIBUTORS

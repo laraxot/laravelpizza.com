@@ -1,0 +1,32 @@
+name: Enforce commit message references
+on:
+  pull_request:
+    types: [opened, synchronize, edited, reopened]
+
+jobs:
+  commit-msg:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify commits reference an issue
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const commits = await github.paginate(github.rest.pulls.listCommits, { owner: context.repo.owner, repo: context.repo.repo, pull_number: pr.number });
+            const issueNumberRe = /#\d+/;
+            let ok = false;
+            for (const c of commits) {
+              if (issueNumberRe.test(c.commit.message)) { ok = true; break; }
+            }
+            if (!ok) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                body: 'One or more commits do not reference an issue (e.g., "Closes #123"). Please amend commit messages or add a linked issue.'
+              });
+              throw new Error('Commits must reference an issue.');
+            } else {
+              console.log('All commits reference an issue.');
+            }

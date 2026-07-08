@@ -37,14 +37,9 @@ Durante l'analisi dell'integrazione Passport, sono emerse tre posizioni:
 ```
 laravel/Modules/User/app/Models/
 ├── BaseUser.php              # Implements OAuthenticatable + HasApiTokens
-<<<<<<< Updated upstream
-├── OauthClient.php          # Extends Laravel\Passport\Client
-├── OauthToken.php           # Extends Laravel\Passport\Token (canonical token model)
-=======
-├── OauthClient.php           # Extends Laravel\Passport.Client + Spatie HasRoles
-├── OauthToken.php            # Extends Laravel\Passport\Token
+├── OauthClient.php           # Extends Laravel\Passport\Client + Spatie HasRoles
+├── OauthToken.php            # Extends Laravel\Passport\Token (canonical token model)
 ├── OauthAccessToken.php     # Local alias/model used by app consumers when needed
->>>>>>> Stashed changes
 ├── OauthRefreshToken.php    # Extends Laravel\Passport\RefreshToken
 ├── OauthAuthCode.php        # Extends Laravel\Passport\AuthCode
 ├── OauthPersonalAccessClient.php  # Local application model for oauth_personal_access_clients

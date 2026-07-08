@@ -1,0 +1,218 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'fields' => [
+        'id' => [
+            'label' => 'id',
+            'placeholder' => 'id',
+            'helper_text' => 'id',
+            'description' => 'id',
+        ],
+        'ente' => [
+            'label' => 'ente',
+            'placeholder' => 'ente',
+            'helper_text' => 'ente',
+            'description' => 'ente',
+        ],
+        'matr' => [
+            'label' => 'matr',
+            'placeholder' => 'matr',
+            'helper_text' => 'matr',
+            'description' => 'matr',
+        ],
+        'cognome' => [
+            'label' => 'cognome',
+            'placeholder' => 'cognome',
+            'helper_text' => 'cognome',
+            'description' => 'cognome',
+        ],
+        'nome' => [
+            'label' => 'nome',
+            'placeholder' => 'nome',
+            'helper_text' => 'nome',
+            'description' => 'nome',
+        ],
+        'stabi' => [
+            'label' => 'stabi',
+            'placeholder' => 'stabi',
+            'helper_text' => 'stabi',
+            'description' => 'stabi',
+        ],
+        'stabi_txt' => [
+            'label' => 'stabi_txt',
+            'placeholder' => 'stabi_txt',
+            'helper_text' => 'stabi_txt',
+            'description' => 'stabi_txt',
+        ],
+        'repar' => [
+            'label' => 'repar',
+            'placeholder' => 'repar',
+            'helper_text' => 'repar',
+            'description' => 'repar',
+        ],
+        'repar_txt' => [
+            'label' => 'repar_txt',
+            'placeholder' => 'repar_txt',
+            'helper_text' => 'repar_txt',
+            'description' => 'repar_txt',
+        ],
+        'qua2kd' => [
+            'label' => 'qua2kd',
+            'placeholder' => 'qua2kd',
+            'helper_text' => 'qua2kd',
+            'description' => 'qua2kd',
+        ],
+        'qua2ka' => [
+            'label' => 'qua2ka',
+            'placeholder' => 'qua2ka',
+            'helper_text' => 'qua2ka',
+            'description' => 'qua2ka',
+        ],
+        'propro' => [
+            'label' => 'propro',
+            'placeholder' => 'propro',
+            'helper_text' => 'propro',
+            'description' => 'propro',
+        ],
+        'posfun' => [
+            'label' => 'posfun',
+            'placeholder' => 'posfun',
+            'helper_text' => 'posfun',
+            'description' => 'posfun',
+        ],
+        'categoria_eco' => [
+            'label' => 'categoria_eco',
+            'placeholder' => 'categoria_eco',
+            'helper_text' => 'categoria_eco',
+            'description' => 'categoria_eco',
+        ],
+        'posiz' => [
+            'label' => 'posiz',
+            'placeholder' => 'posiz',
+            'helper_text' => 'posiz',
+            'description' => 'posiz',
+        ],
+        'posiz_txt' => [
+            'label' => 'posiz_txt',
+            'placeholder' => 'posiz_txt',
+            'helper_text' => 'posiz_txt',
+            'description' => 'posiz_txt',
+        ],
+        'disci1' => [
+            'label' => 'disci1',
+            'placeholder' => 'disci1',
+            'helper_text' => 'disci1',
+            'description' => 'disci1',
+        ],
+        'disci1_txt' => [
+            'label' => 'disci1_txt',
+            'placeholder' => 'disci1_txt',
+            'helper_text' => 'disci1_txt',
+            'description' => 'disci1_txt',
+        ],
+        'dal' => [
+            'label' => 'dal',
+            'placeholder' => 'dal',
+            'helper_text' => 'dal',
+            'description' => 'dal',
+        ],
+        'al' => [
+            'label' => 'al',
+            'placeholder' => 'al',
+            'helper_text' => 'al',
+            'description' => 'al',
+        ],
+        'gg_no_asz' => [
+            'label' => 'gg_no_asz',
+            'placeholder' => 'gg_no_asz',
+            'helper_text' => 'gg_no_asz',
+            'description' => 'gg_no_asz',
+        ],
+        'gg_cateco_posfun_no_asz' => [
+            'label' => 'gg_cateco_posfun_no_asz',
+            'placeholder' => 'gg_cateco_posfun_no_asz',
+            'helper_text' => 'gg_cateco_posfun_no_asz',
+            'description' => 'gg_cateco_posfun_no_asz',
+        ],
+        'gg_cateco_no_posfun_no_asz' => [
+            'label' => 'gg_cateco_no_posfun_no_asz',
+            'placeholder' => 'gg_cateco_no_posfun_no_asz',
+            'helper_text' => 'gg_cateco_no_posfun_no_asz',
+            'description' => 'gg_cateco_no_posfun_no_asz',
+        ],
+        'gg_in_sede' => [
+            'label' => 'gg_in_sede',
+            'placeholder' => 'gg_in_sede',
+            'helper_text' => 'gg_in_sede',
+            'description' => 'gg_in_sede',
+        ],
+        'gg_fuori_sede' => [
+            'label' => 'gg_fuori_sede',
+            'placeholder' => 'gg_fuori_sede',
+            'helper_text' => 'gg_fuori_sede',
+            'description' => 'gg_fuori_sede',
+        ],
+        'gg_cateco_in_sede' => [
+            'label' => 'gg_cateco_in_sede',
+            'placeholder' => 'gg_cateco_in_sede',
+            'helper_text' => 'gg_cateco_in_sede',
+            'description' => 'gg_cateco_in_sede',
+        ],
+        'gg_cateco_fuori_sede' => [
+            'label' => 'gg_cateco_fuori_sede',
+            'placeholder' => 'gg_cateco_fuori_sede',
+            'helper_text' => 'gg_cateco_fuori_sede',
+            'description' => 'gg_cateco_fuori_sede',
+        ],
+        'gg_cateco_posfun_in_sede' => [
+            'label' => 'gg_cateco_posfun_in_sede',
+            'placeholder' => 'gg_cateco_posfun_in_sede',
+            'helper_text' => 'gg_cateco_posfun_in_sede',
+            'description' => 'gg_cateco_posfun_in_sede',
+        ],
+        'gg_cateco_posfun_fuori_sede' => [
+            'label' => 'gg_cateco_posfun_fuori_sede',
+            'placeholder' => 'gg_cateco_posfun_fuori_sede',
+            'helper_text' => 'gg_cateco_posfun_fuori_sede',
+            'description' => 'gg_cateco_posfun_fuori_sede',
+        ],
+        'gg_asz_in_sede' => [
+            'label' => 'gg_asz_in_sede',
+            'placeholder' => 'gg_asz_in_sede',
+            'helper_text' => 'gg_asz_in_sede',
+            'description' => 'gg_asz_in_sede',
+        ],
+        'gg_asz_fuori_sede' => [
+            'label' => 'gg_asz_fuori_sede',
+            'placeholder' => 'gg_asz_fuori_sede',
+            'helper_text' => 'gg_asz_fuori_sede',
+            'description' => 'gg_asz_fuori_sede',
+        ],
+        'gg_asz_cateco_in_sede' => [
+            'label' => 'gg_asz_cateco_in_sede',
+            'placeholder' => 'gg_asz_cateco_in_sede',
+            'helper_text' => 'gg_asz_cateco_in_sede',
+            'description' => 'gg_asz_cateco_in_sede',
+        ],
+        'gg_asz_cateco_fuori_sede' => [
+            'label' => 'gg_asz_cateco_fuori_sede',
+            'placeholder' => 'gg_asz_cateco_fuori_sede',
+            'helper_text' => 'gg_asz_cateco_fuori_sede',
+            'description' => 'gg_asz_cateco_fuori_sede',
+        ],
+        'gg_asz_cateco_posfun_in_sede' => [
+            'label' => 'gg_asz_cateco_posfun_in_sede',
+            'placeholder' => 'gg_asz_cateco_posfun_in_sede',
+            'helper_text' => 'gg_asz_cateco_posfun_in_sede',
+            'description' => 'gg_asz_cateco_posfun_in_sede',
+        ],
+        'gg_asz_cateco_posfun_fuori_sede' => [
+            'label' => 'gg_asz_cateco_posfun_fuori_sede',
+            'placeholder' => 'gg_asz_cateco_posfun_fuori_sede',
+            'helper_text' => 'gg_asz_cateco_posfun_fuori_sede',
+            'description' => 'gg_asz_cateco_posfun_fuori_sede',
+        ],
+    ],
+];

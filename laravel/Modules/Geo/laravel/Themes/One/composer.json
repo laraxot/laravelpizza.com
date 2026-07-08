@@ -1,0 +1,21 @@
+{
+    "name": "laraxot/theme_one",
+    "description": "One theme for Laraxot PTVX: minimal theme skeleton for future frontend development and customization.",
+    "keywords": [
+        "laraxot",
+        "laravel",
+        "filament",
+        "theme_one",
+        "theme",
+        "frontend",
+        "skeleton",
+        "placeholder"
+    ],
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.3"
+    }
+}

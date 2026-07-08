@@ -1,7 +1,6 @@
 # Provider Common Mistakes - Comprehensive Guide
 
 **Last Updated**: 2025-12-16
-
 **Purpose**: Document all common mistakes when creating ServiceProviders in Laraxot modules
 
 ## 🚨 Critical Mistakes (Fix Immediately)
@@ -329,7 +328,6 @@ Before committing ANY ServiceProvider:
 
 - [ServiceProvider Minimal Structure](./serviceprovider-minimal-structure.md) - Official guide
 - [Provider Errors - Lessons Learned](../../Meetup/docs/provider-errors-lessons-learned.md) - Real-world examples
-- [Provider Errors - Lessons Learned](../../meetup/docs/provider-errors-lessons-learned.md) - Real-world examples
 - [XotBaseServiceProvider Source](../../Xot/app/Providers/XotBaseServiceProvider.php) - See what parent does
 - [XotBase Extension Rules](./xotbase-extension-rules.md) - General XotBase patterns
 

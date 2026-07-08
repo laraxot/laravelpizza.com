@@ -10,7 +10,11 @@ class CommandData extends Data
 {
     /**
      * @param  array<int, array<string, mixed>>  $arguments
+<<<<<<< HEAD
      * @param  array<string, mixed>  $options
+=======
+     * @param  array<string, array<mixed>>  $options
+>>>>>>> laraxot/dev
      */
     public function __construct(
         public string $name,

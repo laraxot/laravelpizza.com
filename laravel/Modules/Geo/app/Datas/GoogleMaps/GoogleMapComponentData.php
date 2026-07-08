@@ -8,9 +8,13 @@ use Spatie\LaravelData\Data;
 
 class GoogleMapComponentData extends Data
 {
+    /**
+     * @param array<int, string> $types
+     */
     public function __construct(
         public string $long_name,
         public string $short_name,
+        /** @var array<int, string> */
         public array $types,
     ) {
     }

@@ -1,0 +1,128 @@
+# Modulo Notify
+
+## Struttura Attuale
+
+### 1. Models
+```php
+namespace Modules\Notify\Models;
+
+abstract class BaseModel extends XotBaseModel
+{
+    use HasFactory;
+    use InteractsWithMedia;
+    use Updater;
+    
+    protected $connection = 'notify';
+}
+
+class NotificationTemplate extends BaseModel
+{
+    public function casts(): array
+    {
+        return array_merge(parent::casts(), [
+            'preview_data' => 'array',
+            'body_html' => 'string',
+            'body_text' => 'string',
+            'channels' => 'array',
+            'variables' => 'array',
+            'conditions' => 'array',
+            'metadata' => 'array',
+            'is_active' => 'boolean',
+            'grapesjs_data' => 'array',
+        ]);
+    }
+}
+```
+
+### 2. Resources
+```php
+namespace Modules\Notify\Filament\Resources;
+
+class NotificationTemplateResource extends XotBaseResource
+{
+    public static function getFormSchema(): array
+    {
+        return [
+            Forms\Components\Card::make()
+                ->schema([
+                    Forms\Components\TextInput::make('name')
+                        ->required()
+                        ->maxLength(255),
+                    // ... altri campi
+                ])
+                ->columns(['lg' => 3])
+        ];
+    }
+}
+```
+
+### 3. Providers
+```php
+namespace Modules\Notify\Providers;
+
+class NotifyServiceProvider extends XotBaseServiceProvider
+{
+    public string $name = 'notify';
+    protected string $module_ns = __NAMESPACE__;
+}
+```
+
+## Traduzioni
+
+### 1. Template
+```php
+// lang/it/template.php
+return [
+    'fields' => [
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci il nome',
+            'help' => 'Nome identificativo del template',
+        ],
+        // ... altri campi
+    ],
+];
+```
+
+## GrapesJS Integration
+
+### 1. Configurazione
+```php
+// config/notify.php
+'grapesjs' => [
+    'enabled' => true,
+    'storage' => [
+        'type' => 'remote',
+        'endpoint' => '/api/notify/templates',
+    ],
+],
+```
+
+### 2. Componente
+```php
+use Dotswan\FilamentGrapesjs\Forms\Components\Grapesjs;
+
+Grapesjs::make('grapesjs_data')
+    ->label(__('notify::template.fields.grapesjs_data.label'))
+    ->storage([
+        'type' => config('notify.grapesjs.storage.type'),
+        'endpoint' => config('notify.grapesjs.storage.endpoint'),
+    ])
+```
+
+## TODO Specifico
+- [ ] Completare integrazione GrapesJS
+- [ ] Aggiungere validazione template
+- [ ] Implementare preview in tempo reale
+- [ ] Aggiungere test per compilation
+
+## Note Importanti
+1. Tutti i modelli DEVONO estendere BaseModel
+2. Usare casts() invece di $casts
+3. Traduzioni in formato array con label
+4. GrapesJS richiede configurazione storage
+
+## Collegamenti
+- [Documentazione GrapesJS](docs/grapesjs.md)
+- [Template Management](docs/templates.md)
+- [Notification System](docs/notifications.md) 

@@ -51,15 +51,15 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
  * @property UserContract|null                                         $user
  * @property string|null                                               $user_name
  *
- * @method static Builder|ProfileContract newModelQuery()
- * @method static Builder|ProfileContract newQuery()
- * @method static Builder|ProfileContract permission($permissions, $without = false)
- * @method static Builder|ProfileContract query()
- * @method static Builder|ProfileContract role($roles, $guard = null, $without = false)
- * @method static Builder|ProfileContract byUuid(string $uuid)
- * @method static Builder|BaseProfile     withExtraAttributes()
- * @method static Builder|ProfileContract withoutPermission($permissions)
- * @method static Builder|ProfileContract withoutRole($roles, $guard = null)
+ * @method static Builder<static>|ProfileContract newModelQuery()
+ * @method static Builder<static>|ProfileContract newQuery()
+ * @method static Builder<static>|ProfileContract permission($permissions, $without = false)
+ * @method static Builder<static>|ProfileContract query()
+ * @method static Builder<static>|ProfileContract role($roles, $guard = null, $without = false)
+ * @method static Builder<static>|ProfileContract byUuid(string $uuid)
+ * @method static Builder<static>|BaseProfile     withExtraAttributes()
+ * @method static Builder<static>|ProfileContract withoutPermission($permissions)
+ * @method static Builder<static>|ProfileContract withoutRole($roles, $guard = null)
  *
  * @mixin \Eloquent
  */
@@ -90,6 +90,11 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
 
     /**
      * Scope per lookup da API/Android/Postgres (usa uuid, non id).
+     */
+    /**
+     * @param Builder<static> $query
+     *
+     * @return Builder<static>
      */
     public function scopeByUuid(Builder $query, string $uuid): Builder
     {
@@ -134,7 +139,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         'user',
     ];
 
-    /** @var array */
+    /** @var array<int, string> */
     protected $formlessAttributes = [
         'extra',
     ];

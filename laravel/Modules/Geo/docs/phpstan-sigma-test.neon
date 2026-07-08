@@ -1,0 +1,51 @@
+includes:
+    - ./vendor/larastan/larastan/extension.neon
+    - ./vendor/nesbot/carbon/extension.neon
+    - ./vendor/phpstan/phpstan/conf/bleedingEdge.neon
+    - ./vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
+    - ./vendor/pestphp/pest/extension.neon
+
+parameters:
+    paths:
+        - Modules/Sigma
+
+    level: 10
+
+    # Disable all ignore rules to see actual errors
+    ignoreErrors: []
+
+    excludePaths:
+        - ./*/vendor/*
+        - ./*/Tests/*
+        - ./*/tests/*
+        - ./*/build/*
+        - ./*/docs/*
+        - ./*/Main_files/*
+        - ./*/phpinsights.php
+        - ./*/app_old/*
+        - ./*/_old/*
+        - ./*/rector.php
+        - ./*/*.blade.php
+        - ./config/local/*/database.php
+
+    bootstrapFiles:
+        - ./phpstan_constants.php
+        - ./phpstan-bootstrap.php
+
+    scanFiles:
+        - ./Modules/Xot/Helpers/Helper.php
+
+    mixinExcludeClasses:
+        - ./Modules/Badge/Models
+        - IdeHelperTimbra
+
+    editorUrl: 'vscode://file/%%file%%:%%line%%'
+
+    tmpDir: /tmp
+
+    noUnnecessaryCollectionCall: false
+    checkUnusedViews: false
+    checkModelProperties: true  # Enable model property checking
+    treatPhpDocTypesAsCertain: true
+    reportUnmatchedIgnoredErrors: true
+    checkOctaneCompatibility: false

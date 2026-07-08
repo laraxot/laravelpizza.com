@@ -1,0 +1,36 @@
+=== PHPSTAN ANALYSIS SUMMARY ===
+
+Date: Wed Jul  1 01:15:41 PM CEST 2026
+Memory limit: 2G
+Parallelism: 24 cores
+
+Modules analyzed (excl. Incentivi, Pdnd): 16
+
+=== EXIT CODES BY MODULE ===
+Progressioni: 0
+User: 0
+Performance: 0
+Notify: 0
+Media: 0
+Ptv: 0
+Job: 0
+Xot: 0
+UI: 0
+IndennitaCondizioniLavoro: 0
+Rating: 0
+Tenant: 0
+Sigma: 0
+Activity: 0
+IndennitaResponsabilita: 0
+Lang: 0
+
+=== MODULES WITH ERRORS (EXIT != 0) ===
+None — all modules passed PHPStan ✓
+
+=== PONYTAIL INTEGRATION ===
+✓ opencode.json created with @dietrichgebert/ponytail plugin
+✓ Package installed: laravel/node_modules/@dietrichgebert/ponytail v4.8.4
+✓ getPonytailInstructions() functional
+✓ Modes: lite, full, ultra (default: full)
+
+Report location: laravel/phpstan_reports/

@@ -1,0 +1,27 @@
+name: Theme Quality Check
+
+on:
+  push:
+    paths:
+      - 'Themes/Zero/**'
+  pull_request:
+    paths:
+      - 'Themes/Zero/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+      - name: Install dependencies
+        run: |
+          cd laravel
+          composer install --no-interaction --prefer-dist
+      - name: Pint Style Check
+        run: |
+          cd laravel
+          ./vendor/bin/pint --test Themes/Zero

@@ -34,7 +34,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait as HasSchemalessAttrib
  * @property string|null                                               $avatar
  * @property string|null                                               $timezone
  * @property string|null                                               $locale
- * @property array                                                     $preferences
+ * @property array<string, mixed>                                      $preferences
  * @property string                                                    $status
  * @property SchemalessAttributes                                      $extra
  * @property string                                                    $avatar
@@ -73,8 +73,6 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait as HasSchemalessAttrib
  * @method static Builder<static>|Profile withExtraAttributes()
  * @method static Builder<static>|Profile withoutPermission($permissions)
  * @method static Builder<static>|Profile withoutRole($roles, $guard = null)
- *
- * @mixin IdeHelperProfile
  *
  * @property string|null          $user_id
  * @property Carbon|null          $created_at
@@ -134,8 +132,8 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait as HasSchemalessAttrib
  * @property string|null $campground_short
  *
  * @method static Builder<static>|Profile byUuid(string $uuid)
- * @method static Builder<static>|Profile childrenWith(array $relations)
- * @method static Builder<static>|Profile childrenWithCount(array $relations)
+ * @method static Builder<static>|Profile childrenWith(array<int|string, string> $relations)
+ * @method static Builder<static>|Profile childrenWithCount(array<int|string, string> $relations)
  * @method static Builder<static>|Profile whereAddress($value)
  * @method static Builder<static>|Profile whereAdministrativeAreaLevel1($value)
  * @method static Builder<static>|Profile whereAdministrativeAreaLevel1Short($value)
@@ -196,6 +194,8 @@ class Profile extends BaseProfile implements HasMedia
 
     /**
      * Get the teams that the profile belongs to.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<Team, $this, \Illuminate\Database\Eloquent\Relations\Pivot, 'pivot'>
      */
     public function teams(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
@@ -204,6 +204,9 @@ class Profile extends BaseProfile implements HasMedia
 
     /**
      * Scope a query to include schemaless attributes.
+     */
+    /** @param Builder<static> $query
+     * @return Builder<static>
      */
     public function scopeWithExtraAttributes(Builder $query): Builder
     {

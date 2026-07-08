@@ -124,7 +124,7 @@ class OauthDeviceCodeResource extends XotBaseResource
                     ->modalHeading(static::trans('actions.revoke.label'))
                     ->action(function (mixed $record) {
                         if ($record instanceof OauthDeviceCode) {
-                            $record->revoked = true;
+                            $record->setAttribute('revoked', true);
                             $record->save();
                             Notification::make()
                                 ->title(static::trans('actions.revoke.success'))
@@ -132,7 +132,7 @@ class OauthDeviceCodeResource extends XotBaseResource
                                 ->send();
                         }
                     })
-                    ->visible(fn (mixed $record) => $record instanceof OauthDeviceCode && ! $record->revoked),
+                    ->visible(fn (mixed $record) => $record instanceof OauthDeviceCode && ! (bool) $record->getAttribute('revoked')),
                 \Filament\Actions\DeleteAction::make(),
             ])
             ->defaultSort('expires_at', 'desc');

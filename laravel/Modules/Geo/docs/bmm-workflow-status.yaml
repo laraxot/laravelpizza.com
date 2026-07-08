@@ -1,0 +1,51 @@
+# BMAD Method Workflow Status
+# Generated: 2026-05-27T12:00:00Z
+# Project: base_ptvx_fila5
+
+project_name: "base_ptvx_fila5"
+project_type: "web-app"
+project_level: 4
+communication_language: "Italian"
+output_language: "Italian"
+last_updated: "2026-05-27T12:00:00Z"
+
+workflow_status:
+  - name: product-brief
+    phase: 1
+    status: "optional"
+    description: "Create comprehensive product brief"
+
+  - name: brainstorm-project
+    phase: 1
+    status: "optional"
+    description: "Structured brainstorming session"
+
+  - name: research
+    phase: 1
+    status: "optional"
+    description: "Market and competitive research"
+
+  - name: prd
+    phase: 2
+    status: "_bmad-output/planning-artifacts/prd.md"
+    description: "Product Requirements Document"
+
+  - name: tech-spec
+    phase: 2
+    status: "optional"
+    description: "Technical Specification"
+
+  - name: create-ux-design
+    phase: 2
+    status: "optional"
+    description: "UX/UI design workflow"
+
+  - name: architecture
+    phase: 3
+    status: "_bmad-output/planning-artifacts/architecture.md"
+    description: "System architecture design"
+
+  - name: solutioning-gate-check
+    phase: 3
+    status: "optional"
+    description: "Validate architecture against requirements"

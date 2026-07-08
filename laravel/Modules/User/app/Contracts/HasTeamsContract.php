@@ -19,13 +19,13 @@ use Modules\User\Models\Role;
 /**
  * Modules\User\Contracts\HasTeamsContract.
  *
- * @property int               $id
- * @property string            $name
- * @property string            $two_factor_secret
- * @property TeamContract|null $currentTeam
- * @property Collection        $tokens
- * @property Carbon|null       $two_factor_confirmed_at
- * @property int               $current_team_id
+ * @property int                                      $id
+ * @property string                                   $name
+ * @property string                                   $two_factor_secret
+ * @property TeamContract|null                        $currentTeam
+ * @property Collection<int, \Laravel\Passport\Token> $tokens
+ * @property Carbon|null                              $two_factor_confirmed_at
+ * @property int                                      $current_team_id
  *
  * @phpstan-require-extends Model
  *
@@ -47,6 +47,8 @@ interface HasTeamsContract
 
     /**
      * Get the current team of the user's context.
+     *
+     * @return BelongsTo<Model&TeamContract, Model>
      */
     public function currentTeam(): BelongsTo;
 
@@ -57,16 +59,22 @@ interface HasTeamsContract
 
     /**
      * Get all of the teams the user owns or belongs to.
+     *
+     * @return \Illuminate\Support\Collection<int, Model&TeamContract>
      */
     public function allTeams(): \Illuminate\Support\Collection;
 
     /**
      * Get all of the teams the user owns.
+     *
+     * @return HasMany<Model&TeamContract, Model>
      */
     public function ownedTeams(): HasMany;
 
     /**
      * Get all of the teams the user belongs to.
+     *
+     * @return BelongsToMany<Model&TeamContract, Model>
      */
     public function teams(): BelongsToMany;
 
@@ -97,6 +105,8 @@ interface HasTeamsContract
 
     /**
      * Get the user's permissions for the given team.
+     *
+     * @return array<int, string>
      */
     public function teamPermissions(TeamContract $teamContract): array;
 

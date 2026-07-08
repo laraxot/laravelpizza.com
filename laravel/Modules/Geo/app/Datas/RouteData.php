@@ -13,8 +13,8 @@ use Spatie\LaravelData\Data;
 class RouteData extends Data
 {
     /**
-     * @param Collection<LocationData> $waypoints         Punti del percorso ottimizzato
-     * @param Collection<LocationData> $originalWaypoints Punti del percorso originale
+     * @param Collection<int, LocationData> $waypoints         Punti del percorso ottimizzato
+     * @param Collection<int, LocationData> $originalWaypoints Punti del percorso originale
      * @param array<array{
      *     distance: array{value: int, text: string},
      *     duration: array{value: int, text: string},
@@ -27,8 +27,7 @@ class RouteData extends Data
         public readonly int $totalDistance,
         public readonly int $totalDuration,
         public readonly array $steps,
-    ) {
-    }
+    ) {}
 
     /**
      * Formatta la distanza totale in un formato leggibile.
@@ -90,6 +89,7 @@ class RouteData extends Data
         ];
     }
 
+    /** @param Collection<int, array<string, mixed>> $routeData */
     public function validateRouteData(Collection $routeData): bool
     {
         return $routeData->every(fn (array $data): bool => isset($data['key']));

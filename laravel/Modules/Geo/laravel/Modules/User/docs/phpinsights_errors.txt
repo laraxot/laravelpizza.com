@@ -1,0 +1,7 @@
+---
+module: theme
+topic: phpinsights_errors
+canonical: ../../../Themes/docs/shared-components/phpinsights-errors.txt
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/phpinsights-errors.txt

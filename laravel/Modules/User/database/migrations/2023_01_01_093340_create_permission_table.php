@@ -12,17 +12,17 @@ return new class extends XotBaseMigration {
     public function up(): void
     {
         /**
-         * @var array $tableNames
+         * @var array<string, string> $tableNames
          */
         $tableNames = config('permission.table_names');
         Assert::isArray($tableNames);
         /**
-         * @var array $columnNames
+         * @var array<string, string> $columnNames
          */
         $columnNames = config('permission.column_names');
         Assert::isArray($columnNames);
         /**
-         * @var array $teams
+         * @var bool $teams
          */
         $teams = config('permission.teams');
         Assert::boolean($teams);

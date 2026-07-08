@@ -29,6 +29,7 @@ use Webmozart\Assert\Assert;
  */
 class PasswordResetConfirmWidget extends XotBaseWidget
 {
+    /** @var array<string, mixed>|null */
     public ?array $data = [];
 
     public ?string $token = null;

@@ -499,6 +499,5 @@ rm Modules/<nome progetto>/project_docs/database/migrations.md
 **🔗 Vedi anche**: [database-guidelines.md](database-guidelines.md) | [best-practices.md](best-practices.md)
 
 **Aggiornato**: 2025-08-07
-**Aggiornato**: [DATE]
 **Categoria**: database
 **Priorità**: CRITICA

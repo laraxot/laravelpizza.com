@@ -1,0 +1,31 @@
+# Context overflow guardrails for ripgrep and ad-hoc search.
+# Keep searches out of AI/editor caches, generated vendors, and bulky artifacts.
+
+.git/
+.cache/
+.cursor/
+.claude/
+.opencode/
+.agents/
+.windsurf/
+.roo/
+.kilocode/
+_bmad-output/
+node_modules/
+vendor/
+laravel/vendor/
+laravel/node_modules/
+laravel/storage/
+laravel/bootstrap/cache/
+laravel/public/build/
+docs/pdf/
+docs/raw/history/
+bashscripts/ai/skills/
+bashscripts/ai/rules/*.mdc
+**/paste-cache/
+**/plugins/install-counts-cache.json
+**/*.lock
+**/*~HEAD
+**/*~head
+**/*.orig
+**/*.rej

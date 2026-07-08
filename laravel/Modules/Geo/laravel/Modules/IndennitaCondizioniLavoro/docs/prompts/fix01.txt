@@ -1,0 +1,12 @@
+Corretto:
+
+->action(function (): void {
+                    $tableFilters = is_array($this->tableFilters) ? $this->tableFilters : [];
+
+                    app(ReplicateIndennita::class)->execute($tableFilters);
+                }),
+
+Motivo: `$tableFilters` è già un array indicizzato per chiave filtro (es. `anno/valutatore`),
+quindi non va incapsulato di nuovo in `['anno/valutatore' => $tableFilters]`.
+
+capisci la logica, il perche' poi aggiorna e studia le cartelle docs dentro i moduli e dentro i temi, poi aggiorna anche le tue rules, le tue memories, e le tue skills, poi implementa, poi controlla con phpstan , phpmd, phpinisghts 

@@ -1,0 +1,1 @@
+ude('progressioni::admin.categoriapropro.create')

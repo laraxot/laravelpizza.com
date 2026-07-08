@@ -1,0 +1,3 @@
+sistema /var/www/html/_bases/base_<nome progetto>/laravel/Modules/<nome progetto>/lang/it/patient.php
+
+per fare un lavoro decente , devi studiare le altre migrazioni, poi studi anche le migrazioni degli altri moduli, poi studi le cartelle docs che parlano delle migrazioni, poi ragioni, poi elabori, poi aggiorni e studi le cartelle docs,  non devi piu' aggiornare la cartella docs della root del progetto, la cartella docs della root del progetto, parla solo del progetto, questa cosa che stiamo facendo ora e' una cosa di comportamento, ragiona ancora, aggiorna le tue rules le tue memories , poi ti ricordi che non devi mai togliere pezzi dalle traduzioni , puoi solo aggiungere o migliorare, e gli array vanno scritti in short

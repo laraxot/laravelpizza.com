@@ -8,7 +8,6 @@ Questa documentazione elenca i conflitti comuni che possono verificarsi quando s
 **Versione Filament**: 4.x
 **Versione Laravel**: 12.x
 **Data Creazione**: 2025-09-29
-**Data Creazione**: [DATE]
 
 ## 🎯 Obiettivo
 

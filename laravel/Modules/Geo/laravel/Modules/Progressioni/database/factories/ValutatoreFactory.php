@@ -1,0 +1,30 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Progressioni\Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Progressioni\Models\Valutatore;
+
+/**
+ * @extends Factory<\Modules\Progressioni\Models\Valutatore>
+ */
+class ValutatoreFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     */
+    protected $model = Valutatore::class;
+
+    /**
+     * Define the model's default state.
+     */
+    /**
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [];
+    }
+}

@@ -1,0 +1,808 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'navigation' => [
+        'name' => 'Progressione',
+        'plural' => 'Progressioni',
+        'group' => [
+            'name' => 'Gestione Progressioni',
+            'description' => 'Gestione completa delle progressioni di carriera',
+        ],
+        'sort' => 1,
+        'icon' => 'heroicon-o-chart-bar',
+        'label' => 'Progressioni',
+    ],
+    'actions' => [
+        'import' => [
+            'label' => 'Importa da file',
+            'success' => 'File importato con successo',
+            'error' => 'Errore durante l\'importazione del file',
+            'confirmation' => 'Sei sicuro di voler importare questo file?',
+            'fields' => [
+                'import_file' => [
+                    'label' => 'Seleziona un file XLS o CSV da caricare',
+                    'placeholder' => 'Scegli un file XLS o CSV',
+                    'help' => 'Formati supportati: XLS, XLSX, CSV. Dimensione massima: 10MB',
+                ],
+            ],
+        ],
+        'export' => [
+            'label' => 'Esporta dati',
+            'success' => 'Dati esportati con successo',
+            'error' => 'Errore durante l\'esportazione',
+            'filename_prefix' => 'Progressioni_',
+            'columns' => [
+                'name' => [
+                    'label' => 'Nome progressione',
+                    'help' => 'Nome identificativo della progressione',
+                ],
+                'parent_name' => [
+                    'label' => 'Nome progressione padre',
+                    'help' => 'Nome della progressione di livello superiore',
+                ],
+            ],
+        ],
+        'create' => [
+            'label' => 'Nuova progressione',
+            'success' => 'Progressione creata con successo',
+            'error' => 'Errore durante la creazione della progressione',
+            'tooltip' => 'create',
+            'icon' => 'create',
+        ],
+        'edit' => [
+            'label' => 'Modifica progressione',
+            'success' => 'Progressione aggiornata con successo',
+            'error' => 'Errore durante l\'aggiornamento della progressione',
+            'tooltip' => 'edit',
+            'icon' => 'edit',
+        ],
+        'delete' => [
+            'label' => 'Elimina progressione',
+            'success' => 'Progressione eliminata con successo',
+            'error' => 'Errore durante l\'eliminazione della progressione',
+            'confirmation' => 'Sei sicuro di voler eliminare questa progressione? Questa azione è irreversibile.',
+            'tooltip' => 'delete',
+            'icon' => 'delete',
+        ],
+        'view' => [
+            'label' => 'Visualizza progressione',
+            'tooltip' => 'view',
+            'icon' => 'view',
+        ],
+        'ricalcola' => [
+            'label' => 'ricalcola',
+            'tooltip' => 'ricalcola',
+            'icon' => 'ricalcola',
+        ],
+        'export_xls' => [
+            'label' => 'export_xls',
+            'tooltip' => 'export_xls',
+            'icon' => 'export_xls',
+        ],
+        'merge_double_row_cateco_year' => [
+            'label' => 'merge_double_row_cateco_year',
+            'tooltip' => 'merge_double_row_cateco_year',
+            'icon' => 'merge_double_row_cateco_year',
+        ],
+        'trova_esclusi' => [
+            'label' => 'trova_esclusi',
+            'icon' => 'trova_esclusi',
+            'tooltip' => 'trova_esclusi',
+        ],
+        'populate_year' => [
+            'label' => 'populate_year',
+            'tooltip' => 'populate_year',
+            'icon' => 'populate_year',
+        ],
+        'copy_from_last_year' => [
+            'label' => 'copy_from_last_year',
+        ],
+        'logout' => [
+            'icon' => 'logout',
+            'label' => 'logout',
+            'tooltip' => 'logout',
+        ],
+        'reorderRecords' => [
+            'icon' => 'reorderRecords',
+            'label' => 'reorderRecords',
+            'tooltip' => 'reorderRecords',
+        ],
+        'zip-schede' => [
+            'label' => 'zip-schede',
+            'tooltip' => 'zip-schede',
+            'icon' => 'zip-schede',
+        ],
+        'profile' => [
+            'label' => 'profile',
+            'tooltip' => 'profile',
+            'icon' => 'profile',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
+            'tooltip' => 'openColumnManager',
+            'icon' => 'openColumnManager',
+        ],
+        'gg_integ_params' => [
+            'label' => 'gg_integ_params',
+            'tooltip' => 'gg_integ_params',
+            'icon' => 'gg_integ_params',
+        ],
+        'applyTableColumnManager' => [
+            'label' => 'applyTableColumnManager',
+            'tooltip' => 'applyTableColumnManager',
+            'icon' => 'applyTableColumnManager',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
+            'tooltip' => 'resetFilters',
+            'icon' => 'resetFilters',
+        ],
+        'applyFilters' => [
+            'label' => 'applyFilters',
+            'tooltip' => 'applyFilters',
+            'icon' => 'applyFilters',
+        ],
+        'openFilters' => [
+            'label' => 'openFilters',
+            'tooltip' => 'openFilters',
+            'icon' => 'openFilters',
+        ],
+        'send-mail' => [
+            'label' => 'send-mail',
+            'tooltip' => 'send-mail',
+            'icon' => 'send-mail',
+        ],
+        'layout' => [
+            'label' => 'layout',
+            'tooltip' => 'layout',
+            'icon' => 'layout',
+        ],
+        'gg_cateco_posfun_no_asz' => [
+            'label' => 'gg_cateco_posfun_no_asz',
+            'tooltip' => 'gg_cateco_posfun_no_asz',
+            'icon' => 'gg_cateco_posfun_no_asz',
+        ],
+        'cancel' => [
+            'tooltip' => 'cancel',
+            'icon' => 'cancel',
+            'label' => 'cancel',
+        ],
+        'save' => [
+            'tooltip' => 'save',
+            'icon' => 'save',
+            'label' => 'save',
+        ],
+        'gg_asz_cateco_posfun_fuori_sede' => [
+            'tooltip' => 'gg_asz_cateco_posfun_fuori_sede',
+            'icon' => 'gg_asz_cateco_posfun_fuori_sede',
+            'label' => 'gg_asz_cateco_posfun_fuori_sede',
+        ],
+        'gg_asz_cateco_posfun_in_sede' => [
+            'tooltip' => 'gg_asz_cateco_posfun_in_sede',
+            'icon' => 'gg_asz_cateco_posfun_in_sede',
+            'label' => 'gg_asz_cateco_posfun_in_sede',
+        ],
+        'gg_cateco_posfun' => [
+            'tooltip' => 'gg_cateco_posfun',
+            'icon' => 'gg_cateco_posfun',
+            'label' => 'gg_cateco_posfun',
+        ],
+        'gg_cateco_posfun_fuori_sede' => [
+            'tooltip' => 'gg_cateco_posfun_fuori_sede',
+            'icon' => 'gg_cateco_posfun_fuori_sede',
+            'label' => 'gg_cateco_posfun_fuori_sede',
+        ],
+        'gg_cateco_posfun_in_sede' => [
+            'tooltip' => 'gg_cateco_posfun_in_sede',
+            'icon' => 'gg_cateco_posfun_in_sede',
+            'label' => 'gg_cateco_posfun_in_sede',
+        ],
+        'gg_cateco' => [
+            'tooltip' => 'gg_cateco',
+            'icon' => 'gg_cateco',
+            'label' => 'gg_cateco',
+        ],
+        'gg_cateco_fuori_sede' => [
+            'tooltip' => 'gg_cateco_fuori_sede',
+            'icon' => 'gg_cateco_fuori_sede',
+            'label' => 'gg_cateco_fuori_sede',
+        ],
+        'gg_cateco_in_sede' => [
+            'tooltip' => 'gg_cateco_in_sede',
+            'icon' => 'gg_cateco_in_sede',
+            'label' => 'gg_cateco_in_sede',
+        ],
+        'propro' => [
+            'tooltip' => 'propro',
+            'icon' => 'propro',
+            'label' => 'propro',
+        ],
+        'list_log_activities' => [
+            'tooltip' => 'list_log_activities',
+            'icon' => 'list_log_activities',
+            'label' => 'list_log_activities',
+        ],
+        'resetColumnManager' => [
+            'tooltip' => 'resetColumnManager',
+            'icon' => 'resetColumnManager',
+            'label' => 'resetColumnManager',
+        ],
+        'copy_from_last_year_' => [
+            'label' => 'copy_from_last_year_',
+            'icon' => 'copy_from_last_year_',
+            'tooltip' => 'copy_from_last_year_',
+        ],
+        'export_pdf' => [
+            'label' => 'export_pdf',
+            'icon' => 'export_pdf',
+            'tooltip' => 'export_pdf',
+        ],
+        'compila' => [
+            'label' => 'compila',
+            'icon' => 'compila',
+            'tooltip' => 'compila',
+        ],
+        'pdf' => [
+            'label' => 'pdf',
+            'icon' => 'pdf',
+            'tooltip' => 'pdf',
+        ],
+        'send_mail' => [
+            'label' => 'send_mail',
+            'icon' => 'send_mail',
+            'tooltip' => 'send_mail',
+        ],
+        'zip_schede' => [
+            'label' => 'zip_schede',
+            'icon' => 'zip_schede',
+            'tooltip' => 'zip_schede',
+        ],
+    ],
+    'fields' => [
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci il nome della progressione',
+            'help' => 'Nome identificativo della progressione di carriera',
+        ],
+        'parent' => [
+            'label' => 'Progressione Padre',
+            'placeholder' => 'Seleziona la progressione padre',
+            'help' => 'Progressione di livello superiore nella gerarchia',
+        ],
+        'parent_name' => [
+            'label' => 'Nome Progressione Padre',
+            'help' => 'Nome della progressione di livello superiore',
+        ],
+        'assets' => [
+            'label' => 'Risorse',
+            'help' => 'Risorse associate alla progressione',
+        ],
+        'id' => [
+            'label' => 'ID',
+            'help' => 'Identificativo univoco della progressione',
+            'placeholder' => 'id',
+            'helper_text' => 'id',
+            'description' => 'id',
+        ],
+        'cognome' => [
+            'label' => 'Cognome',
+            'placeholder' => 'Inserisci il cognome del dipendente',
+            'help' => 'Cognome del dipendente interessato dalla progressione',
+            'description' => 'cognome',
+            'helper_text' => 'cognome',
+        ],
+        'nome' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci il nome del dipendente',
+            'help' => 'Nome del dipendente interessato dalla progressione',
+            'helper_text' => 'nome',
+            'description' => 'nome',
+        ],
+        'ente' => [
+            'label' => 'Ente',
+            'placeholder' => 'Seleziona l\'ente di appartenenza',
+            'help' => 'Ente di appartenenza del dipendente',
+        ],
+        'matr' => [
+            'label' => 'Matricola',
+            'placeholder' => 'Inserisci la matricola del dipendente',
+            'help' => 'Numero di matricola del dipendente',
+            'description' => 'matr',
+            'helper_text' => 'matr',
+        ],
+        'stabi' => [
+            'label' => 'Stabilimento',
+            'placeholder' => 'Seleziona lo stabilimento di appartenenza',
+            'help' => 'Stabilimento di appartenenza del dipendente',
+            'helper_text' => 'stabi',
+            'description' => 'stabi',
+        ],
+        'stabi_txt' => [
+            'label' => 'Testo Stabilimento',
+            'help' => 'Descrizione testuale dello stabilimento',
+            'placeholder' => 'stabi_txt',
+            'helper_text' => 'stabi_txt',
+            'description' => 'stabi_txt',
+        ],
+        'repar' => [
+            'label' => 'Reparto',
+            'placeholder' => 'Seleziona il reparto di appartenenza',
+            'help' => 'Reparto di appartenenza del dipendente',
+            'helper_text' => 'repar',
+            'description' => 'repar',
+        ],
+        'repar_txt' => [
+            'label' => 'Testo Reparto',
+            'help' => 'Descrizione testuale del reparto',
+            'placeholder' => 'repar_txt',
+            'helper_text' => 'repar_txt',
+            'description' => 'repar_txt',
+        ],
+        'rep2kd' => [
+            'label' => 'Rep2KD',
+            'help' => 'Codice reparto 2KD',
+        ],
+        'rep2ka' => [
+            'label' => 'Rep2KA',
+            'help' => 'Codice reparto 2KA',
+        ],
+        'propro' => [
+            'label' => 'ProPro',
+            'help' => 'Codice progressione professionale',
+            'placeholder' => 'propro',
+            'helper_text' => 'propro',
+            'description' => 'propro',
+        ],
+        'posfun' => [
+            'label' => 'PosFun',
+            'help' => 'Posizione funzionale del dipendente',
+            'placeholder' => 'posfun',
+            'helper_text' => 'posfun',
+            'description' => 'posfun',
+        ],
+        'qua2kd' => [
+            'label' => 'Qua2KD',
+            'help' => 'Qualifica 2KD del dipendente',
+        ],
+        'qua2ka' => [
+            'label' => 'Qua2KA',
+            'help' => 'Qualifica 2KA del dipendente',
+        ],
+        'categoria_eco' => [
+            'label' => 'Categoria Economica',
+            'help' => 'Categoria economica del dipendente',
+            'placeholder' => 'categoria_eco',
+            'helper_text' => 'categoria_eco',
+            'description' => 'categoria_eco',
+        ],
+        'anno' => [
+            'label' => 'Anno',
+            'placeholder' => 'Inserisci l\'anno di riferimento',
+            'help' => 'Anno di riferimento per la progressione',
+            'description' => 'anno',
+            'helper_text' => 'anno',
+        ],
+        'ha_diritto' => [
+            'label' => 'Ha Diritto',
+            'help' => 'Indica se il dipendente ha diritto alla progressione',
+            'description' => 'ha_diritto',
+            'helper_text' => 'ha_diritto',
+            'placeholder' => 'ha_diritto',
+        ],
+        'motivo' => [
+            'label' => 'Motivo',
+            'placeholder' => 'Inserisci il motivo della progressione',
+            'help' => 'Motivo della valutazione o progressione',
+            'helper_text' => 'motivo',
+            'description' => 'motivo',
+        ],
+        'valutatore_id' => [
+            'label' => 'Valutatore',
+            'placeholder' => 'Seleziona il valutatore',
+            'help' => 'Valutatore assegnato per la progressione',
+            'description' => 'valutatore_id',
+            'helper_text' => 'valutatore_id',
+        ],
+        'anno_valutatore' => [
+            'label' => 'Anno/Valutatore',
+            'help' => 'Anno e valutatore associati',
+        ],
+        'al' => [
+            'label' => 'Data Fine',
+            'placeholder' => 'Seleziona la data di fine',
+            'help' => 'Data di fine del periodo di riferimento',
+            'helper_text' => 'al',
+            'description' => 'al',
+        ],
+        'dal' => [
+            'label' => 'Data Inizio',
+            'placeholder' => 'Seleziona la data di inizio',
+            'help' => 'Data di inizio del periodo di riferimento',
+            'helper_text' => 'dal',
+            'description' => 'dal',
+        ],
+        'periodo' => [
+            'label' => 'Periodo',
+            'help' => 'Periodo di riferimento per la progressione',
+        ],
+        'rep' => [
+            'label' => 'Reparto',
+            'help' => 'Reparto di appartenenza',
+        ],
+        'mail_sended_at' => [
+            'label' => 'Mail inviata il',
+            'help' => 'Data e ora di invio della mail di notifica',
+        ],
+        'lavoratore' => [
+            'label' => 'Lavoratore',
+            'help' => 'Lavoratore associato alla progressione',
+        ],
+        'email' => [
+            'label' => 'E-mail',
+            'placeholder' => 'es: marco@example.com',
+            'help' => 'Indirizzo email del dipendente',
+            'helper_text' => 'email',
+            'description' => 'email',
+        ],
+        'criteri' => [
+            'label' => 'Criteri',
+            'help' => 'Criteri di valutazione per la progressione',
+        ],
+        'gg' => [
+            'label' => 'Giorni',
+            'help' => 'Numero totale di giorni considerati',
+        ],
+        'gg_no_asz' => [
+            'label' => 'Giorni senza ASZ',
+            'help' => 'Giorni lavorati senza ASZ (Assenza per Servizio di Zona)',
+        ],
+        'gg_asz' => [
+            'label' => 'Giorni con ASZ',
+            'help' => 'Giorni lavorati con ASZ (Assenza per Servizio di Zona)',
+        ],
+        'gg_cateco_no_posfun_no_asz' => [
+            'label' => 'Giorni Cateco senza PosFun/ASZ',
+            'help' => 'Giorni in categoria economica senza posizione funzionale e senza ASZ',
+        ],
+        'eta' => [
+            'label' => 'Età',
+            'help' => 'Età del dipendente al momento della valutazione',
+        ],
+        'qua' => [
+            'label' => 'Qualifica',
+            'help' => 'Qualifica attuale del dipendente',
+        ],
+        'categoria_ecoval' => [
+            'label' => 'Categoria EcoVal',
+            'help' => 'Categoria economica valutata',
+            'placeholder' => 'categoria_ecoval',
+            'helper_text' => 'categoria_ecoval',
+            'description' => 'categoria_ecoval',
+        ],
+        'posfunval' => [
+            'label' => 'PosFunVal',
+            'help' => 'Posizione Funzionale Valutata',
+            'placeholder' => 'posfunval',
+            'helper_text' => 'posfunval',
+            'description' => 'posfunval',
+        ],
+        'posiz' => [
+            'label' => 'Posizione',
+            'help' => 'Posizione attuale del dipendente',
+            'placeholder' => 'posiz',
+            'helper_text' => 'posiz',
+            'description' => 'posiz',
+        ],
+        'posiz_txt' => [
+            'label' => 'Testo Posizione',
+            'help' => 'Descrizione testuale della posizione',
+            'placeholder' => 'posiz_txt',
+            'helper_text' => 'posiz_txt',
+            'description' => 'posiz_txt',
+        ],
+        'disci1' => [
+            'label' => 'Disciplina 1',
+            'help' => 'Prima disciplina di riferimento',
+            'placeholder' => 'disci1',
+            'helper_text' => 'disci1',
+            'description' => 'disci1',
+        ],
+        'disci1_txt' => [
+            'label' => 'Testo Disciplina 1',
+            'help' => 'Descrizione testuale della disciplina',
+            'placeholder' => 'disci1_txt',
+            'helper_text' => 'disci1_txt',
+            'description' => 'disci1_txt',
+        ],
+        'applyFilters' => [
+            'label' => 'Applica Filtri',
+            'help' => 'Applica i filtri selezionati',
+        ],
+        'id_placeholder' => ' ',
+        'cognome_placeholder' => ' ',
+        'nome_placeholder' => ' ',
+        'motivo_placeholder' => ' ',
+        'toggleColumns' => [
+            'label' => 'toggleColumns',
+        ],
+        'reorderRecords' => [
+            'label' => 'reorderRecords',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
+        ],
+        'openFilters' => [
+            'label' => 'openFilters',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
+        'edit' => [
+            'label' => 'edit',
+        ],
+        'anno/valutatore' => [
+            'label' => 'anno/valutatore',
+        ],
+        'gg_cateco_posfun_no_asz' => [
+            'description' => 'gg_cateco_posfun_no_asz',
+            'helper_text' => 'gg_cateco_posfun_no_asz',
+            'placeholder' => 'gg_cateco_posfun_no_asz',
+            'label' => 'gg_cateco_posfun_no_asz',
+        ],
+        'gg_asz_cateco_posfun_fuori_sede' => [
+            'description' => 'gg_asz_cateco_posfun_fuori_sede',
+            'helper_text' => 'gg_asz_cateco_posfun_fuori_sede',
+            'placeholder' => 'gg_asz_cateco_posfun_fuori_sede',
+            'label' => 'gg_asz_cateco_posfun_fuori_sede',
+        ],
+        'gg_asz_cateco_posfun_in_sede' => [
+            'description' => 'gg_asz_cateco_posfun_in_sede',
+            'helper_text' => 'gg_asz_cateco_posfun_in_sede',
+            'placeholder' => 'gg_asz_cateco_posfun_in_sede',
+            'label' => 'gg_asz_cateco_posfun_in_sede',
+        ],
+        'gg_cateco_posfun' => [
+            'description' => 'gg_cateco_posfun',
+            'helper_text' => 'gg_cateco_posfun',
+            'placeholder' => 'gg_cateco_posfun',
+            'label' => 'gg_cateco_posfun',
+        ],
+        'gg_cateco_posfun_fuori_sede' => [
+            'description' => 'gg_cateco_posfun_fuori_sede',
+            'label' => 'gg_cateco_posfun_fuori_sede',
+            'placeholder' => 'gg_cateco_posfun_fuori_sede',
+            'helper_text' => 'gg_cateco_posfun_fuori_sede',
+        ],
+        'excellences_2025' => [
+            'label' => 'excellences_2025',
+            'placeholder' => 'excellences_2025',
+            'helper_text' => 'excellences_2025',
+            'description' => 'excellences_2025',
+        ],
+        'excellences_2024' => [
+            'label' => 'excellences_2024',
+            'placeholder' => 'excellences_2024',
+            'helper_text' => 'excellences_2024',
+            'description' => 'excellences_2024',
+        ],
+        'excellences_2023' => [
+            'label' => 'excellences_2023',
+            'placeholder' => 'excellences_2023',
+            'helper_text' => 'excellences_2023',
+            'description' => 'excellences_2023',
+        ],
+        'excellences_2022' => [
+            'label' => 'excellences_2022',
+            'placeholder' => 'excellences_2022',
+            'helper_text' => 'excellences_2022',
+            'description' => 'excellences_2022',
+        ],
+        'excellences_2021' => [
+            'label' => 'excellences_2021',
+            'placeholder' => 'excellences_2021',
+            'helper_text' => 'excellences_2021',
+            'description' => 'excellences_2021',
+        ],
+        'excellences_2020' => [
+            'label' => 'excellences_2020',
+            'placeholder' => 'excellences_2020',
+            'helper_text' => 'excellences_2020',
+            'description' => 'excellences_2020',
+        ],
+        'excellences_2019' => [
+            'label' => 'excellences_2019',
+            'placeholder' => 'excellences_2019',
+            'helper_text' => 'excellences_2019',
+            'description' => 'excellences_2019',
+        ],
+        'excellences_count_last_3_years' => [
+            'label' => 'excellences_count_last_3_years',
+            'placeholder' => 'excellences_count_last_3_years',
+            'helper_text' => 'excellences_count_last_3_years',
+            'description' => 'excellences_count_last_3_years',
+        ],
+        'perf_ind_2025' => [
+            'label' => 'perf_ind_2025',
+            'placeholder' => 'perf_ind_2025',
+            'helper_text' => 'perf_ind_2025',
+            'description' => 'perf_ind_2025',
+        ],
+        'perf_ind_2024' => [
+            'label' => 'perf_ind_2024',
+            'placeholder' => 'perf_ind_2024',
+            'helper_text' => 'perf_ind_2024',
+            'description' => 'perf_ind_2024',
+        ],
+        'perf_ind_2023' => [
+            'label' => 'perf_ind_2023',
+            'placeholder' => 'perf_ind_2023',
+            'helper_text' => 'perf_ind_2023',
+            'description' => 'perf_ind_2023',
+        ],
+        'perf_ind_2022' => [
+            'label' => 'perf_ind_2022',
+            'placeholder' => 'perf_ind_2022',
+            'helper_text' => 'perf_ind_2022',
+            'description' => 'perf_ind_2022',
+        ],
+        'perf_ind_2021' => [
+            'label' => 'perf_ind_2021',
+            'placeholder' => 'perf_ind_2021',
+            'helper_text' => 'perf_ind_2021',
+            'description' => 'perf_ind_2021',
+        ],
+        'perf_ind_2020' => [
+            'label' => 'perf_ind_2020',
+            'placeholder' => 'perf_ind_2020',
+            'helper_text' => 'perf_ind_2020',
+            'description' => 'perf_ind_2020',
+        ],
+        'perf_ind_2019' => [
+            'label' => 'perf_ind_2019',
+            'placeholder' => 'perf_ind_2019',
+            'helper_text' => 'perf_ind_2019',
+            'description' => 'perf_ind_2019',
+        ],
+        'perf_ind_media' => [
+            'label' => 'perf_ind_media',
+            'placeholder' => 'perf_ind_media',
+            'helper_text' => 'perf_ind_media',
+            'description' => 'perf_ind_media',
+        ],
+        'gg_cateco_in_sede' => [
+            'label' => 'gg_cateco_in_sede',
+            'placeholder' => 'gg_cateco_in_sede',
+            'helper_text' => 'gg_cateco_in_sede',
+            'description' => 'gg_cateco_in_sede',
+        ],
+        'gg_cateco_fuori_sede' => [
+            'label' => 'gg_cateco_fuori_sede',
+            'placeholder' => 'gg_cateco_fuori_sede',
+            'helper_text' => 'gg_cateco_fuori_sede',
+            'description' => 'gg_cateco_fuori_sede',
+        ],
+        'gg_cateco' => [
+            'label' => 'gg_cateco',
+            'placeholder' => 'gg_cateco',
+            'helper_text' => 'gg_cateco',
+            'description' => 'gg_cateco',
+        ],
+        'gg_cateco_posfun_in_sede' => [
+            'label' => 'gg_cateco_posfun_in_sede',
+            'placeholder' => 'gg_cateco_posfun_in_sede',
+            'helper_text' => 'gg_cateco_posfun_in_sede',
+            'description' => 'gg_cateco_posfun_in_sede',
+        ],
+        'gg_integ_params' => [
+            'label' => 'gg_integ_params',
+            'placeholder' => 'gg_integ_params',
+            'helper_text' => 'gg_integ_params',
+            'description' => 'gg_integ_params',
+        ],
+        'excellences_2026' => [
+            'label' => 'excellences_2026',
+            'placeholder' => 'excellences_2026',
+            'helper_text' => 'excellences_2026',
+            'description' => 'excellences_2026',
+        ],
+        'perf_ind_2026' => [
+            'label' => 'perf_ind_2026',
+            'placeholder' => 'perf_ind_2026',
+            'helper_text' => 'perf_ind_2026',
+            'description' => 'perf_ind_2026',
+        ],
+        'value' => [
+            'description' => 'value',
+            'label' => 'value',
+            'placeholder' => 'value',
+            'helper_text' => 'value',
+        ],
+        'id/motivo' => [
+            'label' => 'id/motivo',
+        ],
+        'type' => [
+            'label' => 'type',
+        ],
+    ],
+    'schede' => [
+        'field' => [
+            'stabi' => 'Stabilimento',
+            'valutatore_id' => 'Valutatore',
+            'valutatore_id_placeholder' => 'Seleziona il valutatore',
+            'year' => 'Anno',
+            'year_placeholder' => 'anno es 2019',
+            'sort_by_placeholder' => 'Ordina per',
+            'sort_order_placeholder' => 'Ordine',
+        ],
+    ],
+    'tab' => [
+        'index' => [
+            'label' => 'Lista',
+            'help' => 'Visualizza tutte le progressioni',
+        ],
+        'create' => [
+            'label' => 'Aggiungi',
+            'help' => 'Crea una nuova progressione',
+        ],
+    ],
+    'messages' => [
+        'welcome' => 'Benvenuto nel modulo Progressioni',
+        'no_data' => 'Nessuna progressione trovata',
+        'loading' => 'Caricamento in corso...',
+        'error' => 'Si è verificato un errore',
+        'success' => 'Operazione completata con successo',
+    ],
+    'validation' => [
+        'name_required' => 'Il nome della progressione è obbligatorio',
+        'anno_required' => 'L\'anno è obbligatorio',
+        'anno_numeric' => 'L\'anno deve essere un numero',
+        'anno_min' => 'L\'anno deve essere almeno :min',
+        'anno_max' => 'L\'anno non può essere maggiore di :max',
+        'email_email' => 'L\'email deve essere un indirizzo valido',
+        'matr_unique' => 'La matricola deve essere unica',
+    ],
+    'model' => [
+        'label' => 'Modello Progressioni',
+        'placeholder' => 'Seleziona modello progressioni',
+        'tooltip' => 'Modello dati per le progressioni di carriera',
+        'helper_text' => 'Rappresentazione del modello dati utilizzato per gestire le progressioni di carriera del personale',
+        'help' => 'Modello che definisce la struttura dati per le progressioni di carriera',
+    ],
+    'sections' => [
+        'diritto' => [
+            'label' => 'diritto',
+            'heading' => 'diritto',
+        ],
+        'lavoratore' => [
+            'label' => 'lavoratore',
+            'heading' => 'lavoratore',
+        ],
+        'qua' => [
+            'label' => 'qua',
+            'heading' => 'qua',
+        ],
+        'rep' => [
+            'label' => 'rep',
+            'heading' => 'rep',
+        ],
+        'periodo' => [
+            'label' => 'periodo',
+            'heading' => 'periodo',
+        ],
+        'excellences' => [
+            'label' => 'excellences',
+            'heading' => 'excellences',
+        ],
+        'performance' => [
+            'label' => 'performance',
+            'heading' => 'performance',
+        ],
+        '_gg' => [
+            'label' => '_gg',
+            'heading' => '_gg',
+        ],
+    ],
+    'label' => 'progressioni',
+];

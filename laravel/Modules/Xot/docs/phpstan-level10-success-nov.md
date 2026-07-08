@@ -166,9 +166,9 @@ Risultato ottenuto seguendo rigorosamente:
 ## 🔧 Correzioni Principali
 
 ### 1. Conflitti Git Risolti (4 file)
-- `Modules/healthcare_app/app/Filament/Pages/DashboardV2.php`
-- `Modules/healthcare_app/app/Datas/AlertDashboardFilterData.php`
-- `Modules/healthcare_app/app/Datas/DashboardFilterData.php`
+- `Modules/Quaeris/app/Filament/Pages/DashboardV2.php`
+- `Modules/Quaeris/app/Datas/AlertDashboardFilterData.php`
+- `Modules/Quaeris/app/Datas/DashboardFilterData.php`
 
 **Pattern**: Risoluzione manuale sempre scegliendo la versione HEAD con codice funzionante.
 

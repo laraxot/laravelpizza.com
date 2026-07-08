@@ -1,0 +1,30 @@
+# Welcome to Mago!
+# For full documentation, see https://mago.carthage.software/tools/overview
+php-version = "8.2.0"
+
+[source]
+paths = ["Modules/"]
+includes = ["vendor"]
+excludes = ["storage/**", "bootstrap/cache/**"]
+extensions = ["php"]
+
+[formatter]
+print-width = 120
+tab-width = 4
+use-tabs = false
+
+[linter]
+integrations = ["laravel"]
+
+[linter.rules]
+ambiguous-function-call = { enabled = false }
+literal-named-argument = { enabled = false }
+halstead = { effort-threshold = 7000 }
+
+[analyzer]
+find-unused-definitions = false
+find-unused-expressions = false
+analyze-dead-code = true
+check-throws = true
+allow-possibly-undefined-array-keys = true
+perform-heuristic-checks = true

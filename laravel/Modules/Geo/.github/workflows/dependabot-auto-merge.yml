@@ -1,32 +1,41 @@
-name: dependabot-auto-merge
-on: pull_request_target
+name: Auto-merge Dependabot PR
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+      - 'composer.lock'
+      - 'package.json'
+      - 'package-lock.json'
 
 permissions:
   pull-requests: write
   contents: write
 
 jobs:
-  dependabot:
+  auto-merge:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    if: github.actor == 'dependabot[bot]'
+
     steps:
-    
       - name: Dependabot metadata
         id: metadata
-        uses: dependabot/fetch-metadata@v1.3.5
+        uses: dependabot/fetch-metadata@v2
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-          
-      - name: Auto-merge Dependabot PRs for semver-minor updates
-        if: ${{steps.metadata.outputs.update-type == 'version-update:semver-minor'}}
-        run: gh pr merge --auto --merge "$PR_URL"
+
+      - name: Enable auto-merge for Dependabot PR
+        if: |
+          steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
+          steps.metadata.outputs.update-type == 'version-update:semver-minor'
+        run: gh pr merge --auto --squash "$PR_NUMBER"
         env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          
-      - name: Auto-merge Dependabot PRs for semver-patch updates
-        if: ${{steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
-        run: gh pr merge --auto --merge "$PR_URL"
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Approve PR
+        if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
+        run: gh pr review --approve "$PR_NUMBER"
         env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

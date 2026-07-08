@@ -119,8 +119,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|User whereStatus($value)
  * @method static Builder<static>|User whereType($value)
  *
- * @mixin IdeHelperUser
- *
  * @property string|null $facebook_id
  *
  * @method static Builder<static>|User whereFacebookId($value)
@@ -139,8 +137,8 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property Collection<int, OauthClient> $oauthApps
  * @property int|null                     $oauth_apps_count
  *
- * @method static Builder<static>|User childrenWith(array $relations)
- * @method static Builder<static>|User childrenWithCount(array $relations)
+ * @method static Builder<static>|User childrenWith(array<int|string, string> $relations)
+ * @method static Builder<static>|User childrenWithCount(array<int|string, string> $relations)
  * @method static Builder<static>|User whereSurname($value)
  * @method static Builder<static>|User whereTwoFactorConfirmedAt($value)
  * @method static Builder<static>|User whereTwoFactorRecoveryCodes($value)

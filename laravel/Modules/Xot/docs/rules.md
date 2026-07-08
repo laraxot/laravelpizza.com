@@ -6,46 +6,6 @@
 
 ### Collegamenti
 - [Azioni Organizzativa (Performance)](../../Performance/docs/azioni_organizzativa.md)
-- Esempio pratico: vedi la correzione e il ragionamento in [Azioni Organizzativa (Performance)](../../performance/docs/azioni_organizzativa.md).
-
-## 🤖 Regole AI Queueable Actions Pattern
-
-### Regole Fondamentali per il Modulo AI
-- **CRITICAL AI RULE**: Tutte le operazioni AI devono usare Queueable Actions
-- **CRITICAL AI RULE**: MAI creare AI service classes
-- **CRITICAL AI RULE**: AI actions belong in `Modules/Xot/Actions/AI/` o modulo dedicato AI
-- **CRITICAL AI RULE**: Use create-action skill per tutte le operazioni AI-specific
-
-### Pattern di Implementazione per il Modulo AI
-```php
-// ❌ MALE: AI service class
-class OllamaService {
-    public function chat(array $messages) { /* ... */ }
-}
-
-// ✅ BENE: AI Queueable Action
-class ChatOllamaAction extends QueueableAction {
-    public function __construct(
-        protected array $messages,
-        protected string $model = 'qwen2.5-coder:7b'
-    ) {}
-    
-    public function handle(): array {
-        // Logica di business per chat Ollama
-        return $this->processChat();
-    }
-}
-```
-
-### Caratteristiche dei Queueable Actions per il Modulo AI
-- **Single Responsibility**: Ogni azione ha un unico scopo ben definito
-- **Testability**: Tutte le azioni AI sono facilmente testabili con Pest
-- **Reusability**: Azioni AI riutilizzabili in diversi contesti
-- **Queue Support**: Supporto automatico per esecuzione asincrona
-- **Clean Separation**: Separazione netta tra logica AI e altri componenti
-
-### Collegamenti
-- [Azioni Organizzativa (Performance)](../../performance/docs/azioni_organizzativa.md)
 
 ## Regole sui Model
 - Nei moduli, i model devono **sempre** estendere `BaseModel` e **mai** direttamente `Model`.
@@ -78,18 +38,12 @@ class ChatOllamaAction extends QueueableAction {
 - [ ] Validazione phpstan e test di regressione
 
 ### Esempio e motivazione
-- Vedi [Performance/docs/organizzativa-migration-errors.md](../../performance/docs/organizzativa-migration-errors.md) per esempio pratico, motivazione e memoria storica.
-- Queste regole sono obbligatorie per tutti i moduli che implementano action custom Filament.
-
-### Collegamenti
-- [Performance: pattern e anti-pattern Action Filament](../../performance/docs/organizzativa-migration-errors.md)
 - Vedi [Performance/docs/organizzativa-migration-errors.md](../../Performance/docs/organizzativa-migration-errors.md) per esempio pratico, motivazione e memoria storica.
 - Queste regole sono obbligatorie per tutti i moduli che implementano action custom Filament.
 
 ### Collegamenti
 - [Performance: pattern e anti-pattern Action Filament](../../Performance/docs/organizzativa-migration-errors.md)
 - [Indice e collegamenti root](../../../docs/links.md)
-- [Indice e collegamenti root](../../../../docs/links.md)
 
 ## Regole sulle colonne delle tabelle Filament
 - Le colonne delle tabelle Filament devono corrispondere esattamente a quelle del modello e della migrazione.
@@ -98,6 +52,3 @@ class ChatOllamaAction extends QueueableAction {
 - Vedi [Performance/docs/organizzativa_cat_coeffs.md](../../Performance/docs/organizzativa_cat_coeffs.md) per esempio pratico, motivazione, correzione e checklist.
 - Vedi [Performance/docs/organizzativa_cat_coeffs.md](../../Performance/docs/organizzativa_cat_coeffs.md) per esempio pratico, motivazione, correzione e checklist.
 - Vedi [Performance/docs/organizzativa_cat_coeffs.md](../../Performance/docs/organizzativa_cat_coeffs.md) per esempio pratico, motivazione, correzione e checklist.
-- Vedi [Performance/docs/organizzativa_cat_coeffs.md](../../performance/docs/organizzativa_cat_coeffs.md) per esempio pratico, motivazione, correzione e checklist.
-- Vedi [Performance/docs/organizzativa_cat_coeffs.md](../../performance/docs/organizzativa_cat_coeffs.md) per esempio pratico, motivazione, correzione e checklist.
-- Vedi [Performance/docs/organizzativa_cat_coeffs.md](../../performance/docs/organizzativa_cat_coeffs.md) per esempio pratico, motivazione, correzione e checklist.

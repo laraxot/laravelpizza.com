@@ -107,17 +107,10 @@ parameters:
         - ./Modules/Xot/Helpers/Helper.php
 
     editorUrl: 'vscode://file/%%file%%:%%line%%'
-    tmpDir: ./storage/app/phpstan
+    tmpDir: /tmp/phpstan
     treatPhpDocTypesAsCertain: false
     reportUnmatchedIgnoredErrors: false
 ```
-
-## Runtime Rule
-
-- non usare `/tmp/phpstan`;
-- usare `./storage/app/phpstan` come runtime dir;
-- in caso di crash anticipato del tool, il comando di recovery e':
-  `XDEBUG_MODE=off ./vendor/bin/phpstan analyse Modules --memory-limit=-1 --no-progress`
 
 ## Best Practices per PHPStan
 

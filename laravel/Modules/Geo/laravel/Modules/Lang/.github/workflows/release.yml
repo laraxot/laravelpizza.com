@@ -1,0 +1,36 @@
+name: Release & Changelog
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: mbstring, intl
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: composer install --no-interaction --prefer-dist
+      - name: Install Node dependencies
+        run: npm install
+      - name: Run tests
+        run: vendor/bin/phpunit --coverage-text
+      - name: Generate changelog
+        uses: github-changelog-generator/github-changelog-generator-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          owner: ${{ github.owner }}
+          repo: ${{ github.repo }}
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

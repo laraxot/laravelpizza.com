@@ -1,0 +1,44 @@
+# Fix: .env.testing - NON usare variabili DB_*_ACTIVITY
+
+## Azione
+
+NON aggiungere (o rimuovere se presenti) in `.env.testing`:
+- DB_DATABASE_ACTIVITY
+- DB_USERNAME_ACTIVITY
+- DB_PASSWORD_ACTIVITY
+
+## Perché
+
+TenantServiceProvider crea la connessione 'activity' a runtime. Per ogni modulo usa:
+```php
+env("DB_DATABASE_ACTIVITY", $databaseFallback)  // fallback = default connection
+env("DB_USERNAME_ACTIVITY", $usernameFallback)
+env("DB_PASSWORD_ACTIVITY", $passwordFallback)
+```
+
+Se le variabili non sono impostate, usa i valori della connessione default (mysql). In testing:
+- **DRY**: stesso DB per tutto (techplanner_data_test)
+- **Semplicità**: una sola configurazione DB da gestire
+- **Coerenza**: activity e mysql puntano allo stesso database di test
+
+## Regola
+
+.env.testing deve avere solo DB_DATABASE, DB_USERNAME, DB_PASSWORD (e DB_DATABASE_USER per modulo User). NON aggiungere DB_*_ACTIVITY.
+
+## Collegamenti
+
+- [fix01](fix01.txt)
+- [fix02](fix02.txt)
+- [testing-coverage-policy](../testing-coverage-policy.md)
+
+## Modelli Activity - $connection obbligatoria
+
+Nei file Activity.php, BaseModel.php, Snapshot.php, StoredEvent.php deve esserci:
+```php
+/** @var string */
+protected $connection = 'activity';
+```
+
+Regola: fix01. TenantServiceProvider crea la connessione; i modelli la dichiarano.
+
+

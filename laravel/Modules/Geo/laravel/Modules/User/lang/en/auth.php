@@ -1,0 +1,190 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'fields' => [
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'Enter your email',
+            'help' => 'Your email address for authentication',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'password' => [
+            'label' => 'Password',
+            'placeholder' => 'Enter your password',
+            'help' => 'Your account password',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+    ],
+    'actions' => [
+        'login' => [
+            'label' => 'Sign in',
+            'success' => 'Login successful',
+            'error' => 'Invalid credentials',
+        ],
+        'logout' => [
+            'label' => 'Logout',
+            'success' => 'Logout successful',
+            'error' => 'Logout failed',
+        ],
+    ],
+    'messages' => [
+        'failed' => [
+            'key' => 'user::auth.messages.failed',
+            'text' => 'Invalid credentials.',
+            'description' => 'Error message shown when login credentials are invalid',
+            'context' => 'login_form',
+            'placeholder' => '',
+        ],
+        'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+        'unauthorized' => 'You are not authorized to access this resource.',
+    ],
+    'password_reset' => [
+        'email_placeholder' => 'Enter your email address',
+        'send_button' => 'Send reset link',
+        'back_to_login' => 'Back to login',
+        'send_another' => 'Send another link',
+        'email_sent' => [
+            'title' => 'Email sent!',
+            'message' => 'We have sent you a password reset link. Check your email inbox and follow the instructions.',
+        ],
+        'email_failed' => [
+            'title' => 'Sending error',
+            'generic' => 'An error occurred while sending the email. Please try again later.',
+        ],
+        'password_requirements' => 'Password must be at least 8 characters',
+        'processing' => 'Processing...',
+        'instructions' => [
+            'title' => 'Reset instructions',
+            'description' => 'Enter your email and new password to complete the reset.',
+        ],
+        'confirm_button' => 'Confirm new password',
+        'request_new_link' => 'Request a new link',
+        'security' => [
+            'title' => 'Security',
+            'note' => 'The reset link is valid for 60 minutes and can only be used once.',
+        ],
+        'success' => [
+            'title' => 'Password reset successfully!',
+            'message' => 'Your password has been updated. You can now log in with your new password.',
+            'redirect_notice' => 'Automatic redirect in progress...',
+            'go_to_dashboard' => 'Go to dashboard',
+            'go_to_login' => 'Go to login',
+        ],
+        'errors' => [
+            'title' => 'Password reset error',
+            'invalid_token' => 'The reset link is no longer valid or has expired.',
+            'invalid_user' => 'Unable to find a user with this email address.',
+            'generic' => 'An error occurred while resetting the password. Please try again later.',
+            'possible_causes' => 'Possible causes:',
+            'causes' => [
+                'expired_token' => 'The reset link has expired (valid for 60 minutes)',
+                'invalid_email' => 'The email address does not match any account',
+                'already_used' => 'The reset link has already been used',
+            ],
+            'try_again' => 'Try again',
+        ],
+    ],
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'social' => [
+        'title' => 'Or continue with',
+        'google' => 'Sign in with Google',
+        'microsoft' => 'Sign in with Microsoft',
+        'github' => 'Sign in with GitHub',
+        'facebook' => 'Sign in with Facebook',
+    ],
+    'login' => [
+        'page' => [
+            'meta_title' => [
+                'label' => 'Access services',
+                'tooltip' => 'Public login page title',
+                'placeholder' => '',
+                'helper_text' => 'Browser and page title',
+                'description' => 'Meta title for auth page',
+            ],
+            'kicker' => [
+                'label' => 'Personal area',
+                'tooltip' => 'Intro label for login section',
+                'placeholder' => '',
+                'helper_text' => 'Short text above page title',
+                'description' => 'Login page kicker',
+            ],
+            'title' => [
+                'label' => 'Access online services',
+                'tooltip' => 'Main title for login page',
+                'placeholder' => '',
+                'helper_text' => 'Hero title for the access page',
+                'description' => 'Primary heading for login page',
+            ],
+            'description' => [
+                'label' => 'Enter your credentials to continue your request or review active records.',
+                'tooltip' => 'Introductory login page description',
+                'placeholder' => '',
+                'helper_text' => 'Supporting text under the main title',
+                'description' => 'Context description for login flow',
+            ],
+            'support_title' => [
+                'label' => 'Access support',
+                'tooltip' => 'Support card title',
+                'placeholder' => '',
+                'helper_text' => 'Sidebar support section title',
+                'description' => 'Login support card heading',
+            ],
+            'support_item_email' => [
+                'label' => 'Use the email address you used when creating your account.',
+                'tooltip' => 'Hint about correct email',
+                'placeholder' => '',
+                'helper_text' => 'Guidance for email usage',
+                'description' => 'Support message for email usage',
+            ],
+            'support_item_password' => [
+                'label' => 'If you do not remember your password, use the credential recovery flow.',
+                'tooltip' => 'Hint for password recovery',
+                'placeholder' => '',
+                'helper_text' => 'Guidance for forgotten password',
+                'description' => 'Support message for password reset',
+            ],
+            'support_item_help' => [
+                'label' => 'For assistance, contact the relevant office.',
+                'tooltip' => 'Hint for requesting support',
+                'placeholder' => '',
+                'helper_text' => 'Guidance for operational support',
+                'description' => 'General support message',
+            ],
+            'register_cta_text' => [
+                'label' => 'Do not have an account yet?',
+                'tooltip' => 'Registration call-to-action text',
+                'placeholder' => '',
+                'helper_text' => 'Invite text for registration',
+                'description' => 'Intro text for registration CTA',
+            ],
+            'register_cta_link' => [
+                'label' => 'Create your account',
+                'tooltip' => 'Registration CTA link label',
+                'placeholder' => '',
+                'helper_text' => 'Link text to registration page',
+                'description' => 'Registration link text',
+            ],
+        ],
+        'auth_button' => [
+            'login' => 'Sign in',
+            'logout' => 'Sign out',
+            'profile' => 'My profile',
+            'dashboard' => 'Dashboard',
+            'personal_area' => 'Access personal area',
+        ],
+    ],
+];

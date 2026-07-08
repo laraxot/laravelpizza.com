@@ -20,7 +20,13 @@ use Modules\Geo\Datas\AddressData;
  */
 class GetAddressDataFromFullAddressAction
 {
+    /** @var Collection<int, string> */
     public Collection $errors;
+
+    public function __construct()
+    {
+        $this->errors = collect();
+    }
 
     /**
      * Ottiene i dati dell'indirizzo da un indirizzo completo.
@@ -33,7 +39,9 @@ class GetAddressDataFromFullAddressAction
      */
     public function execute(string $fullAddress): ?AddressData
     {
-        $this->errors = collect();
+        /** @var Collection<int, string> $errors */
+        $errors = collect();
+        $this->errors = $errors;
         $services = [
             GetAddressFromGoogleMapsAction::class,
             GetAddressFromPhotonAction::class,
@@ -74,6 +82,7 @@ class GetAddressDataFromFullAddressAction
         return null;
     }
 
+    /** @return Collection<int, string> */
     public function getErrors(): Collection
     {
         return $this->errors;

@@ -692,10 +692,3 @@ test('no memory leaks in repeated operations', function (): void {
 **Ultimo aggiornamento**: Dicembre 2024
 **Framework**: Pest v2.x
 **Coverage Target**: 90%+ per core framework
----
-module: theme
-topic: testing
-canonical: ../../../Themes/docs/shared-components/testing-guide.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/testing-guide.md

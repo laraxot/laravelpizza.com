@@ -1,0 +1,174 @@
+name: Comprehensive Quality Gates
+
+on:
+  push:
+    branches: [main, dev, develop]
+  pull_request:
+    branches: [main, dev, develop]
+
+env:
+  COMPOSER_CACHE_DIR: /tmp/composer-cache
+
+jobs:
+  quality-gates:
+    name: Quality Gates & Reports
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, xml, pdo, pdo_mysql, sqlite3, zip, curl, gd
+          coverage: none
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v5
+        with:
+          path: ${{ env.COMPOSER_CACHE_DIR }}
+          key: composer-quality-${{ hashFiles('laravel/composer.lock') }}
+          restore-keys: composer-quality-
+
+      - name: Add Flux Credentials
+        if: env.FLUX_USERNAME != ''
+        run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
+        env:
+          FLUX_USERNAME: ${{ secrets.FLUX_USERNAME }}
+
+      - name: Install dependencies
+        working-directory: laravel
+        run: |
+          mkdir -p bootstrap/cache
+          chmod -R 777 bootstrap/cache
+          composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - name: Setup environment
+        working-directory: laravel
+        run: |
+          cp .env.example .env || true
+          php artisan key:generate --force || true
+
+      - name: Run quality tools
+        working-directory: laravel
+        run: |
+          mkdir -p storage/app/ci-reports
+
+          {
+            echo "# Comprehensive Quality Report"
+            echo
+            echo "Generated on: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+            echo
+            echo "## PHPStan"
+            ./vendor/bin/phpstan analyse Modules --level=10 --memory-limit=2G --no-progress --error-format=table || true
+            echo
+            echo "## Pint"
+            ./vendor/bin/pint --test --diff || true
+            echo
+            echo "## PHPMD"
+            if [ -f "phpmd.phar" ]; then
+              php phpmd.phar Modules text cleancode,codesize,design,naming,unusedcode --exclude Modules/Limesurvey --exclude Modules/*/packages || true
+            else
+              echo "phpmd.phar not available"
+            fi
+            echo
+            echo "## PHPInsights"
+            if [ -f "vendor/bin/phpinsights" ]; then
+              ./vendor/bin/phpinsights analyse Modules --format=table --no-interaction --min-quality=75 || true
+            else
+              echo "phpinsights not available"
+            fi
+          } > storage/app/ci-reports/quality-report.md
+
+      - name: Upload quality report
+        uses: actions/upload-artifact@v4
+        with:
+          name: comprehensive-quality-report
+          path: laravel/storage/app/ci-reports/quality-report.md
+          retention-days: 30
+
+  test-coverage:
+    name: Test Coverage Snapshot
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: laravelpizza_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, xml, pdo, pdo_mysql, sqlite3, zip, curl, gd, xdebug
+          coverage: xdebug
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v5
+        with:
+          path: ${{ env.COMPOSER_CACHE_DIR }}
+          key: composer-coverage-${{ hashFiles('laravel/composer.lock') }}
+          restore-keys: composer-coverage-
+
+      - name: Add Flux Credentials
+        if: env.FLUX_USERNAME != ''
+        run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
+        env:
+          FLUX_USERNAME: ${{ secrets.FLUX_USERNAME }}
+
+      - name: Install dependencies
+        working-directory: laravel
+        run: |
+          mkdir -p bootstrap/cache
+          chmod -R 777 bootstrap/cache
+          composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - name: Setup environment
+        working-directory: laravel
+        run: |
+          cp .env.example .env || true
+          php artisan key:generate --force || true
+
+      - name: Run tests with coverage snapshot
+        working-directory: laravel
+        env:
+          DB_CONNECTION: mysql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+          DB_DATABASE: laravelpizza_test
+          DB_USERNAME: root
+          DB_PASSWORD: password
+          XDEBUG_MODE: coverage
+        run: |
+          mkdir -p storage/app/ci-reports
+          php artisan test --coverage --coverage-clover=coverage.xml --coverage-html=coverage-html || true
+          if [ -f coverage.xml ]; then
+            cp coverage.xml storage/app/ci-reports/coverage.xml
+          else
+            echo "<coverage />" > storage/app/ci-reports/coverage.xml
+          fi
+
+      - name: Upload coverage snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: comprehensive-coverage-report
+          path: |
+            laravel/storage/app/ci-reports/coverage.xml
+            laravel/coverage-html
+          if-no-files-found: ignore
+          retention-days: 30

@@ -1,0 +1,121 @@
+name: AI Agent Coordination
+description: Coordinate work between multiple AI agents (BMAD, Qwen, Gemini, Claude)
+title: "[AI-COORD] {task_description}"
+labels: ["ai-agent", "coordination"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## AI Agent Coordination
+        
+        Coordinate work between BMAD agents and other AI agents (Qwen, Gemini, Claude).
+        
+        **Documentation**: [docs/ai-agent-coordination.md](docs/ai-agent-coordination.md)
+
+  - type: dropdown
+    id: agent_type
+    attributes:
+      label: Agent Type
+      description: Which type of AI agent is this for?
+      options:
+        - BMAD Specialist Agent
+        - Qwen (Primary)
+        - Gemini (Secondary)
+        - Claude (Tertiary)
+        - Multiple Agents
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: agent_name
+    attributes:
+      label: Agent Name
+      description: Specific agent name (if BMAD)
+      placeholder: "e.g., Mary, Winston, Amelia, Quinn, Paige"
+    validations:
+      required: false
+
+  - type: textarea
+    id: task_description
+    attributes:
+      label: Task Description
+      description: What task needs to be completed?
+      placeholder: "Describe the task clearly and concisely..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: files_involved
+    attributes:
+      label: Files Involved
+      description: List files that will be modified
+      placeholder: |
+        ## Files
+        
+        - `Modules/Xot/app/Models/*.php`
+        - `docs/xot/README.md`
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: coordination_checks
+    attributes:
+      label: Coordination Checks
+      description: Ensure no conflicts with other agents
+      options:
+        - label: Checked ai-agent-coordination.md
+        - label: No conflicting tasks in progress
+        - label: Recent git activity reviewed
+        - label: GitHub Issues checked
+    validations:
+      required: true
+
+  - type: input
+    id: branch
+    attributes:
+      label: Branch Name
+      description: Which branch will you work on?
+      placeholder: "e.g., dev, feature/my-feature"
+      value: "dev"
+    validations:
+      required: true
+
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline
+      description: Expected start and end time
+      placeholder: |
+        **Start**: 2026-03-18 10:00
+        **End**: 2026-03-18 12:00
+    validations:
+      required: false
+
+  - type: textarea
+    id: completion_report
+    attributes:
+      label: Completion Report
+      description: To be filled after task completion
+      placeholder: |
+        ## Completion Report
+        
+        **Status**: ✅ Completed / ❌ Blocked
+        
+        **Files Modified**:
+        - List files...
+        
+        **Quality Gates**:
+        - PHPStan: ✅
+        - Tests: ✅
+        - Pint: ✅
+        
+        **Git Commit**: 
+        ```bash
+        git commit -m "type: message"
+        git push origin dev
+        ```
+        
+        **Coordination Doc Updated**: ✅
+    validations:
+      required: false

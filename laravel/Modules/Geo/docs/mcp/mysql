@@ -1,0 +1,110 @@
+#!/bin/bash
+
+# =====================================================
+# MySQL MCP Server Startup Script for Cursor
+# Version: 1.0
+# Date: 2025-05-14
+# =====================================================
+
+# Color definitions for better readability
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# Fix for screen size issues
+echo -e "${BLUE}Setting terminal dimensions to 80x24...${NC}"
+export COLUMNS=80
+export LINES=24
+stty cols 80 rows 24 2>/dev/null || true
+
+# Logs directory
+LOGS_DIR="$HOME/.cursor/mcp_logs"
+mkdir -p "$LOGS_DIR"
+
+# MySQL MCP Script
+MYSQL_SCRIPT="/var/www/html/_bases/base_<nome progetto>_fila5_mono/bashscripts/mcp/start-mysql-mcp.sh"
+
+if [ ! -f "$MYSQL_SCRIPT" ]; then
+    echo -e "${RED}Error: MySQL MCP script not found at $MYSQL_SCRIPT${NC}"
+    echo -e "${YELLOW}Please ensure the path is correct.${NC}"
+    exit 1
+fi
+
+# Kill any existing MySQL MCP server process
+if pgrep -f "mysql-db-connector.js" >/dev/null; then
+    echo -e "${YELLOW}Found existing MySQL MCP server, stopping it...${NC}"
+    pkill -f "mysql-db-connector.js" 2>/dev/null
+    sleep 2
+    pkill -9 -f "mysql-db-connector.js" 2>/dev/null || true
+    sleep 1
+fi
+
+# Create a fixed version of the MySQL MCP server script
+TMP_SCRIPT="/tmp/fixed-mysql-mcp-$$.sh"
+cat > "$TMP_SCRIPT" << 'EOF'
+#!/bin/bash
+
+# Fixed MySQL MCP Startup Script
+PROJECT_DIR="/var/www/html/_bases/base_<nome progetto>_fila5_mono"
+LOGS_DIR="$PROJECT_DIR/storage/logs/mcp"
+CONNECTOR_SCRIPT="$PROJECT_DIR/bashscripts/mcp/mysql-db-connector.js"
+
+# Crea la directory dei log se non esiste
+mkdir -p "$LOGS_DIR"
+chmod -R 777 "$LOGS_DIR"
+
+# Force correct terminal dimensions
+export COLUMNS=80
+export LINES=24
+stty cols 80 rows 24 2>/dev/null || true
+
+# Verifica se il connector script esiste
+if [ ! -f "$CONNECTOR_SCRIPT" ]; then
+    echo "❌ Script connector MySQL non trovato: $CONNECTOR_SCRIPT"
+    exit 1
+fi
+
+# Avvia il server MCP MySQL personalizzato
+echo "🚀 Avvio del server MCP MySQL personalizzato..."
+
+# Avvia il connector script con dimensioni corrette
+cd "$PROJECT_DIR" && COLUMNS=80 LINES=24 node "$CONNECTOR_SCRIPT" > "$LOGS_DIR/mysql.log" 2>&1 &
+
+# Attendi che il server si avvii
+sleep 3
+
+# Verifica se il server è stato avviato correttamente
+pid=$(ps aux | grep "mysql-db-connector.js" | grep -v grep | awk '{print $2}')
+if [ -n "$pid" ]; then
+    echo "✅ Server MCP MySQL personalizzato avviato con PID $pid"
+    echo "   Le informazioni di connessione sono state lette dal file .env di Laravel"
+else
+    echo "❌ Errore nell'avvio del server MCP MySQL personalizzato"
+    echo "📋 Ultimi log:"
+    tail -n 10 "$LOGS_DIR/mysql.log"
+fi
+EOF
+
+# Make the temporary script executable
+chmod +x "$TMP_SCRIPT"
+
+# Run the fixed script with controlled environment
+echo -e "${BLUE}Starting MySQL MCP server with fixed dimensions...${NC}"
+COLUMNS=80 LINES=24 bash "$TMP_SCRIPT" > "$LOGS_DIR/mysql_mcp.log" 2>&1
+
+# Check if MySQL MCP server started successfully
+if pgrep -f "mysql-db-connector.js" >/dev/null; then
+    echo -e "${GREEN}✅ MySQL MCP server started successfully${NC}"
+    echo -e "${BLUE}📋 Log file: $LOGS_DIR/mysql_mcp.log${NC}"
+else
+    echo -e "${RED}❌ Failed to start MySQL MCP server${NC}"
+    echo -e "${YELLOW}Checking logs for errors:${NC}"
+    tail -n 15 "$LOGS_DIR/mysql_mcp.log"
+fi
+
+# Clean up temporary file
+rm -f "$TMP_SCRIPT"
+
+echo -e "${BLUE}To stop the MySQL MCP server, run: pkill -f mysql-db-connector.js${NC}"

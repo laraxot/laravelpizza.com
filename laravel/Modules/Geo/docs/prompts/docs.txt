@@ -1,0 +1,603 @@
+# Prompt Operativo Completo per Laraxot
+# Regole, pattern, errori, esempi, checklist - Documentazione Aggiornata v4.0
+
+---
+
+# REGOLE FONDAMENTALI
+
+## Architettura e Stack
+- **Laravel Framework**: 12.0+ con PHP 8.2+
+- **Filament**: 3.4+ per admin panels e form components
+- **Frontend Stack**: Folio + Volt + Livewire + Flux 2.1+
+- **Moduli**: Nwidart Laravel Modules 12.0+
+- **CMS**: Lara-Zeus Bolt per content management
+- **Testing**: Pest 3.8+ con Laravel plugin
+- **Static Analysis**: PHPStan livello 9+ obbligatorio
+
+## Struttura Progetto
+- **Root**: `/var/www/html/_bases/base_{project}/`
+- **Laravel**: `/var/www/html/_bases/base_{project}/laravel/`
+- **Moduli**: `/var/www/html/_bases/base_{project}/laravel/Modules/`
+- **Temi**: `/var/www/html/_bases/base_{project}/laravel/Themes/`
+- **Documentazione**: `/var/www/html/_bases/base_{project}/docs/`
+- **Script**: `/var/www/html/_bases/base_{project}/bashscripts/`
+
+## Moduli Core Standard
+- **{ProjectModule}**: Modulo principale del progetto
+- **Xot**: Framework base e utilities
+- **User**: Sistema utenti e autenticazione
+- **UI**: Componenti interfaccia condivisi
+- **Cms**: Content management system
+- **Tenant**: Multi-tenancy support
+- **Geo**: Dati geografici e località
+- **Lang**: Sistema localizzazione
+- **Notify**: Sistema notifiche
+- **Media**: Gestione file e media
+- **Job**: Job asincroni
+- **Chart**: Grafici e visualizzazioni
+- **Gdpr**: Conformità e privacy
+- **Activity**: Logging attività
+
+---
+
+# PATTERN E ANTI-PATTERN
+
+## Namespace e Autoloading
+
+### ✅ CORRETTO - Namespace senza 'App'
+```php
+namespace Modules\{ModuleName}\Models;
+namespace Modules\{ModuleName}\Filament\Resources;
+namespace Modules\{ModuleName}\Actions;
+namespace Modules\{ModuleName}\Enums;
+namespace Modules\{ModuleName}\Datas;
+```
+
+### ❌ ERRATO - Namespace con 'App'
+```php
+namespace Modules\{ModuleName}\App\Models;
+namespace Modules\{ModuleName}\App\Filament\Resources;
+```
+
+**Mappatura PSR-4**:
+```json
+"Modules\\NomeModulo\\": "Modules/NomeModulo/app/"
+```
+
+## Ereditarietà dei Modelli
+
+### ✅ CORRETTO - Estensione BaseModel del modulo
+```php
+namespace Modules\{ModuleName}\Models;
+
+class {ModelName} extends BaseModel
+{
+    /** @var list<string> */
+    protected $fillable = ['name', 'description'];
+
+    /**
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'created_at' => 'datetime',
+            'is_active' => 'boolean',
+            'status' => {ModelName}StatusEnum::class,
+        ];
+    }
+}
+```
+
+### ❌ ERRATO - Estensione diretta
+```php
+// Estensione diretta di Model
+class {ModelName} extends Model
+
+// Estensione di XotBaseModel
+class {ModelName} extends XotBaseModel
+```
+
+## Filament e Componenti UI
+
+### ✅ CORRETTO - XotBaseResource
+```php
+namespace Modules\{ModuleName}\Filament\Resources;
+
+use Modules\Xot\Filament\Resources\XotBaseResource;
+
+class {ModelName}Resource extends XotBaseResource
+{
+    /**
+     * @return array<string, \Filament\Forms\Components\Component>
+     */
+    public static function getFormSchema(): array
+    {
+        return [
+            'name' => TextInput::make('name')->required(),
+            'status' => Select::make('status')
+                ->options({ModelName}StatusEnum::class)
+                ->default({ModelName}StatusEnum::ACTIVE),
+        ];
+    }
+
+    /**
+     * @return array<string, \Filament\Tables\Columns\Column>
+     */
+    public static function getTableColumns(): array
+    {
+        return [
+            'name' => Tables\Columns\TextColumn::make('name'),
+            'status' => Tables\Columns\TextColumn::make('status'),
+        ];
+    }
+}
+```
+
+### ❌ ERRATO - Metodi vietati
+```php
+// MAI usare form() direttamente
+public static function form(Form $form): Form
+
+// MAI usare ->label() nei componenti
+TextInput::make('name')->label('Nome')
+
+// MAI array non associativi
+public static function getTableColumns(): array
+{
+    return [
+        Tables\Columns\TextColumn::make('name'),
+        Tables\Columns\TextColumn::make('status'),
+    ];
+}
+```
+
+## Traduzioni e Localizzazione
+
+### ✅ CORRETTO - Struttura espansa
+```php
+// Modules/{ModuleName}/lang/it/fields.php
+return [
+    'name' => [
+        'label' => 'Nome',
+        'placeholder' => 'Inserisci il nome',
+        'help' => 'Inserisci il nome completo',
+        'description' => 'Nome completo dell\'utente',
+        'helper_text' => '', // Vuoto se diverso da 'name'
+    ],
+    'address' => [
+        'label' => 'Indirizzo',
+        'placeholder' => 'Inserisci il tuo indirizzo',
+        'help' => 'Indica l\'indirizzo di residenza',
+        'helper_text' => 'Indirizzo completo per la spedizione',
+    ],
+];
+
+// Modules/{ModuleName}/lang/it/actions.php
+return [
+    'create' => [
+        'label' => 'Crea nuovo',
+        'success' => 'Elemento creato con successo',
+        'error' => 'Errore durante la creazione',
+        'confirmation' => 'Sei sicuro di voler creare questo elemento?',
+    ],
+];
+```
+
+### ❌ ERRATO - Struttura piatta
+```php
+// MAI struttura piatta
+return [
+    'name_label' => 'Nome',
+    'name_placeholder' => 'Inserisci il nome',
+];
+
+// MAI helper_text uguale a placeholder
+'name' => [
+    'label' => 'Nome',
+    'placeholder' => 'Inserisci il nome',
+    'helper_text' => 'Inserisci il nome', // ERRORE!
+],
+```
+
+## Database e Migrazioni
+
+### ✅ CORRETTO - XotBaseMigration
+```php
+<?php
+
+declare(strict_types=1);
+
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+return new class extends XotBaseMigration
+{
+    public function up(): void
+    {
+        if ($this->hasTable('{table_name}')) {
+            return;
+        }
+
+        Schema::create('{table_name}', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->foreignIdFor(\Modules\{ModuleName}\Models\{RelatedModel}::class);
+            $table->timestamps();
+        });
+    }
+    // MAI implementare down()
+};
+```
+
+### ❌ ERRATO - Migrazioni vietate
+```php
+// MAI estendere Migration direttamente
+use Illuminate\Database\Migrations\Migration;
+
+// MAI implementare down()
+public function down(): void
+{
+    Schema::dropIfExists('table_name');
+}
+
+// MAI creare migrazioni separate per aggiungere colonne
+// Copiare sempre la migrazione originale con nuovo timestamp
+```
+
+## Testing e Qualità
+
+### ✅ CORRETTO - Test separati per architettura
+```php
+// Test per pagina (rendering, layout, middleware)
+class LoginTest extends TestCase
+{
+    public function test_login_page_renders_correctly()
+    {
+        $response = $this->get('/it/auth/login');
+        $response->assertStatus(200);
+    }
+}
+
+// Test per componente Volt (state management, validation)
+class LoginVoltTest extends TestCase
+{
+    public function test_login_component_validation()
+    {
+        // Test solo del componente
+    }
+}
+
+// Test per widget Filament (form logic)
+class LoginWidgetTest extends TestCase
+{
+    public function test_login_widget_form()
+    {
+        // Test solo del widget
+    }
+}
+```
+
+### ❌ ERRATO - Test vietati
+```php
+// MAI usare RefreshDatabase
+class {ModelName}Test extends TestCase
+{
+    use RefreshDatabase; // VIETATO
+}
+
+// MAI test monolitici
+class LoginTest extends TestCase
+{
+    public function test_everything() // VIETATO
+    {
+        // Test di tutto insieme
+    }
+}
+```
+
+## Frontend e Componenti UI
+
+### ✅ CORRETTO - Stack moderno
+```blade
+{{-- Volt e Folio - @volt SEMPRE primo --}}
+@volt
+class LoginPage
+{
+    public string $email = '';
+    public string $password = '';
+}
+
+<x-layouts.app>
+    <x-ui::ui.button>Salva</x-ui::ui.button>
+    <x-ui::ui.card>Contenuto</x-ui::ui.card>
+</x-layouts.app>
+```
+
+### ❌ ERRATO - Componenti vietati
+```blade
+{{-- MAI layout inesistenti --}}
+<x-filament::layouts.app>
+
+{{-- MAI componenti non nativi --}}
+<x-filament::dropdown.list.separator>
+
+{{-- MAI @volt nel markup --}}
+<div>
+    @volt
+    class Component
+    @endvolt
+</div>
+```
+
+## Enum e Casting
+
+### ✅ CORRETTO - Enum con Select
+```php
+// Enum class
+enum {ModelName}StatusEnum: string
+{
+    case ACTIVE = 'active';
+    case INACTIVE = 'inactive';
+    case PENDING = 'pending';
+}
+
+// Select component
+Select::make('status')
+    ->options({ModelName}StatusEnum::class)
+    ->default({ModelName}StatusEnum::ACTIVE)
+    ->required();
+
+// Model casting
+protected function casts(): array
+{
+    return [
+        'status' => {ModelName}StatusEnum::class,
+        'is_active' => 'boolean',
+    ];
+}
+```
+
+### ❌ ERRATO - Array hardcoded
+```php
+// MAI array hardcoded per enum
+Select::make('status')
+    ->options([
+        'active' => 'Active',
+        'inactive' => 'Inactive',
+    ])
+
+// MAI proprietà $casts
+protected $casts = [
+    'status' => {ModelName}StatusEnum::class,
+];
+```
+
+---
+
+# CHECKLIST OPERATIVA
+
+## Pre-Sviluppo
+- [ ] Analizza tutte le cartelle docs (root e moduli) prima di ogni intervento
+- [ ] Verifica namespace senza segmento 'App'
+- [ ] Controlla estensione BaseModel del modulo
+- [ ] Verifica strict types in tutti i file
+- [ ] Controlla struttura traduzioni espansa
+- [ ] Verifica compliance naming convention docs
+
+## Durante Sviluppo
+- [ ] Implementa getFormSchema() con array associativo
+- [ ] Usa NO ->label() nei componenti
+- [ ] Struttura espansa per traduzioni
+- [ ] Verifica enum e casting nei modelli
+- [ ] Controlla migrazioni per conformità alle regole
+- [ ] Usa percorsi relativi nei link documentazione
+- [ ] Implementa test separati per architettura
+- [ ] Usa componenti nativi Filament
+
+## Post-Sviluppo
+- [ ] PHPStan livello 9+ passato
+- [ ] Test senza RefreshDatabase
+- [ ] Controlla traduzioni in tutte le lingue (it, en, de)
+- [ ] Testa funzionalità in ambiente di sviluppo
+- [ ] Verifica helper_text diverso da placeholder
+- [ ] Controlla URL con prefisso lingua
+
+## Documentazione
+- [ ] Aggiorna PRIMA la documentazione nel modulo specifico
+- [ ] Aggiorna i collegamenti bidirezionali nella root e nei moduli
+- [ ] Aggiorna le regole di configurazione IDE (.windsurf/rules, .cursor/rules)
+- [ ] Aggiorna sempre la sezione "Collegamenti correlati" in ogni documento
+- [ ] Distribuisci i documenti per competenza (vedi policy Xot)
+- [ ] File docs in minuscolo (eccetto README.md)
+
+## Validazione Finale
+- [ ] Usa solo percorsi relativi, MAI assoluti
+- [ ] Implementa pre-commit hooks per validazione
+- [ ] Approfondisci sempre: non fermarti alla prima soluzione
+- [ ] Documenta motivazioni architetturali e "perché"
+- [ ] Valida la coerenza tra docs root, moduli, .cursor/rules, .windsurf/rules
+- [ ] Non duplicare documenti: sposta i generici in Xot
+- [ ] Mantieni la coerenza tra docs, codice e configurazioni
+
+---
+
+# ERRORI CRITICI
+
+## Architettura
+- ❌ Namespace con segmento 'App'
+- ❌ Estensione diretta di Model o XotBaseModel
+- ❌ MAI implementare metodo down() nelle migrazioni
+- ❌ MAI creare migrazioni separate per aggiungere colonne
+- ❌ MAI usare RefreshDatabase trait
+
+## Filament
+- ❌ MAI usare ->label() nei form components
+- ❌ MAI usare form() invece di getFormSchema()
+- ❌ MAI array non associativi in getTableColumns()
+- ❌ MAI estendere direttamente classi Filament
+- ❌ MAI componenti inesistenti come x-filament::dropdown.list.separator
+
+## Frontend
+- ❌ MAI layout inesistenti come x-filament::layouts.app
+- ❌ MAI @volt nel markup HTML
+- ❌ MAI componenti UI in resources/views/components/
+- ❌ MAI URL senza prefisso lingua
+
+## Traduzioni
+- ❌ MAI struttura piatta per traduzioni
+- ❌ MAI helper_text uguale a placeholder
+- ❌ MAI stringhe hardcoded nelle interfacce
+- ❌ MAI file di traduzione incompleti
+
+## Documentazione
+- ❌ MAI file docs con maiuscole (eccetto README.md)
+- ❌ MAI percorsi assoluti nei link
+- ❌ MAI documentazione tecnica nella root docs
+- ❌ MAI duplicazione di documenti tra moduli
+
+---
+
+# VALIDAZIONE E CROSS-REFERENCE
+
+## Checklist Validazione Documentazione
+- [ ] Tutti i file e cartelle in docs/ sono in minuscolo (eccetto README.md)
+- [ ] Tutti i link usano percorsi relativi
+- [ ] Collegamenti bidirezionali implementati
+- [ ] Documentazione tecnica solo nei moduli specifici
+- [ ] Root docs contiene solo indici e collegamenti
+- [ ] File collegamenti-documentazione.md aggiornato
+
+## Validazione Traduzioni
+- [ ] Struttura espansa per tutti i campi (label, placeholder, help, helper_text)
+- [ ] Helper_text diverso da placeholder e chiave
+- [ ] File di traduzione in tutte le lingue (it, en, de)
+- [ ] Nessuna stringa hardcoded nelle interfacce
+- [ ] Traduzioni complete per azioni e messaggi
+
+## Validazione Architettura
+- [ ] Namespace senza segmento 'App'
+- [ ] Modelli estendono BaseModel del proprio modulo
+- [ ] Migrazioni estendono XotBaseMigration
+- [ ] Filament Resources estendono XotBaseResource
+- [ ] getFormSchema() implementato con array associativo
+
+## Validazione Testing
+- [ ] Test separati per pagina, Volt, widget
+- [ ] NO RefreshDatabase trait
+- [ ] Enum utilizzati correttamente nei test
+- [ ] PHPStan livello 9+ passato
+- [ ] Test di integrazione PDF implementati
+
+## Cross-Reference Obbligatori
+Ogni documento deve includere:
+
+### Collegamenti Correlati
+```markdown
+## Collegamenti Correlati
+- [Architecture Overview](../../docs/architecture-overview.md)
+- [Coding Standards](../../docs/coding-standards.md)
+- [Testing Guidelines](../../docs/testing-guidelines.md)
+- [Filament Best Practices](../../docs/filament-best-practices.md)
+- [Translation Rules](../../docs/translation-rules.md)
+- [Frontend Guidelines](../../docs/frontend-guidelines.md)
+```
+
+### Documentazione Modulo
+```markdown
+## Documentazione Modulo {ModuleName}
+- [README](../../laravel/Modules/{ModuleName}/docs/README.md)
+- [Implementation Guide](../../laravel/Modules/{ModuleName}/docs/implementation.md)
+- [API Reference](../../laravel/Modules/{ModuleName}/docs/api.md)
+```
+
+### Tools e Script
+```markdown
+## Tools e Script
+- [Naming Convention Audit](../../bashscripts/naming-convention-audit.sh)
+- [Translation Check](../../bashscripts/translation-check.sh)
+- [Documentation Sync](../../bashscripts/documentation-sync.sh)
+- [Laraxot Workflow](../../.windsurf/workflows/laraxot.md)
+```
+
+---
+
+# WORKFLOW E AUTOMAZIONE
+
+## Script di Automazione
+```bash
+# Controllo naming convention
+./bashscripts/naming-convention-audit.sh
+
+# Controllo traduzioni
+./bashscripts/translation-check.sh
+
+# Sincronizzazione documentazione
+./bashscripts/documentation-sync.sh
+
+# Workflow Laraxot completo
+# Usa /laraxot in Windsurf Cascade
+```
+
+## Controlli Pre-Commit
+```bash
+# PHPStan (sempre da /laravel)
+cd /var/www/html/_bases/base_{project}/laravel
+./vendor/bin/phpstan analyze --level=9 --memory-limit=2G
+
+# Test
+php artisan test
+
+# Controllo traduzioni
+./bashscripts/translation-check.sh
+
+# Controllo naming docs
+find docs/ -name "*" | grep '[A-Z]' | grep -v "README.md"
+```
+
+## Configurazione IDE
+- **PHPStorm/VSCode**: Configurazione PHPStan
+- **EditorConfig**: `.editorconfig` per consistenza
+- **PHP CS Fixer**: Configurazione per PSR-12
+- **Prettier**: Configurazione per formattazione
+
+---
+
+# RIFERIMENTI E COLLEGAMENTI
+
+## Documentazione Correlata
+- [Architecture Overview](../../docs/architecture-overview.md)
+- [Coding Standards](../../docs/coding-standards.md)
+- [Testing Guidelines](../../docs/testing-guidelines.md)
+- [Filament Best Practices](../../docs/filament-best-practices.md)
+- [Translation Rules](../../docs/translation-rules.md)
+- [Frontend Guidelines](../../docs/frontend-guidelines.md)
+- [Database Migrations](../../docs/database-migrations.md)
+- [Enum Management](../../docs/enum-management.md)
+- [HTML2PDF Guidelines](../../docs/html2pdf-guidelines.md)
+
+## Moduli Principali
+- [Xot Module](../../laravel/Modules/Xot/docs/README.md)
+- [User Module](../../laravel/Modules/User/docs/README.md)
+- [UI Module](../../laravel/Modules/UI/docs/README.md)
+- [{ProjectModule} Module](../../laravel/Modules/{ProjectModule}/docs/README.md)
+
+## Tools e Script
+- [Naming Convention Audit](../../bashscripts/naming-convention-audit.sh)
+- [Translation Check](../../bashscripts/translation-check.sh)
+- [Documentation Sync](../../bashscripts/documentation-sync.sh)
+- [Laraxot Workflow](../../.windsurf/workflows/laraxot.md)
+
+---
+
+> Consulta sempre [docs/collegamenti-documentazione.md] per la mappa aggiornata dei collegamenti e la policy di bidirezionalità.
+
+**Nota:** Ogni variazione a questa policy va documentata sia nella root che nel modulo coinvolto, con motivazione e collegamenti aggiornati.
+
+**Ultimo aggiornamento:** Giugno 2025
+**Versione:** 4.0
+**Compatibilità:** Laravel 12.x, PHP 8.2+, Filament 3.x
+**Autore:** Analisi approfondita del codice Laraxot
+
+
+facciamo un recfactor radicale di tutte le cartelle docs, in ottica dry + kiss, ti ricordo che dentro le cartelle docs, ne i nomi dei files ne i nomi delle cartelle devono contenere caratteri maiuscoli ad eccezzione di README.md
+dentro le cartelle "docs" ne i nomi dei files ne i nomi delle sottocartelle di "docs" devono contenere caratteri maiuscoli , ad eccezzione di README.md , e non deve esistere readme.md scritto in minuscolo ! questa e' una regola che devi sempre ricordare, adesso va a controllare tutte le cartelle docs e sistemale

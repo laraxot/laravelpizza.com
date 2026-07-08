@@ -42,16 +42,16 @@ README.md
 
 **Prima**:
 ```
-phpstan-fixes.md
-lessons-learned.md
-git-conflicts-resolution.md
+phpstan-fixes-2025-01-06.md
+lessons-learned-2025-08-25.md
+git-conflicts-resolution-2025-01-06.md
 ```
 
 **Dopo**:
 ```
 archive/phpstan/phpstan-fixes-jan2025.md  (archiviato)
-archive/lessons-learned-aug-archive-1.md         (archiviato)
-phpstan-level10-success-nov-archive-1.md         (attuale)
+archive/lessons-learned-aug2025.md         (archiviato)
+phpstan-level10-success-nov2025.md         (attuale)
 ```
 
 ### 3. Consolidamento Duplicati (12 file eliminati)
@@ -78,7 +78,7 @@ phpstan-level10-success-nov-archive-1.md         (attuale)
 **Struttura migliorata**:
 ```
 docs/
-├── phpstan-level10-success-nov-archive-1.md  (attuale)
+├── phpstan-level10-success-nov2025.md  (attuale)
 ├── phpstan-workflow.md                  (procedura)
 └── archive/
     └── phpstan/
@@ -107,7 +107,7 @@ docs/
 **Esempi trovati**:
 ```markdown
 [regole php](docs/standards/php-inheritance-rules.md)
-public static string $projectBasePath = '../../../docs/standards/php-inheritance-rules.md)
+public static string $projectBasePath = '../../docs/standards/php-inheritance-rules.md)
 // Path configurabili tramite env, non hardcoded
 ```
 
@@ -122,7 +122,7 @@ public static string $projectBasePath = '../../../docs/standards/php-inheritance
 ```
 docs/
 ├── README.md                          (indice principale)
-├── phpstan-level10-success-nov-archive-1.md (ultimo successo)
+├── phpstan-level10-success-nov2025.md (ultimo successo)
 ├── phpstan-workflow.md                (procedura corrente)
 ├── eloquent-magic-properties-rule.md  (regole Eloquent)
 ├── git-forward-only-rule.md           (regola Git)
@@ -150,13 +150,12 @@ docs/
 
 ### Da Modules/Xot/docs/ a root docs/
 ```markdown
-[guida principale](../../../../docs/guide.md)
+[guida principale](../../../docs/guide.md)
 ```
 
 ### Tra moduli (Xot → User)
 ```markdown
 [user docs](../../User/docs/user-guide.md)
-[user docs](../../user/docs/user-guide.md)
 ```
 
 ### All'interno dello stesso modulo
@@ -195,7 +194,7 @@ Documentato in: `git-forward-only-rule.md`
 **Vietato**: `git checkout HEAD --`, `git reset`, `git revert` (senza discussione)
 
 ### File .lock Pattern
-Documentato in: `phpstan-level10-success-nov-archive-1.md`
+Documentato in: `phpstan-level10-success-nov2025.md`
 
 **Regola**: Creare `.lock` prima di modificare file
 
@@ -249,7 +248,7 @@ find . -name "readme.md" -o -name "Readme.md"
 
 ## 🔗 Collegamenti Correlati
 
-- [PHPStan Level 10 Success](./phpstan-level10-success-nov-archive-1.md) - Successo PHPStan
+- [PHPStan Level 10 Success](./phpstan-level10-success-nov2025.md) - Successo PHPStan
 - [Eloquent Magic Properties Rule](./eloquent-magic-properties-rule.md) - Regola property_exists
 - [Git Forward Only Rule](./git-forward-only-rule.md) - Regola Git
 - [Naming Conventions](./naming-conventions.md) - Convenzioni naming
@@ -305,16 +304,16 @@ README.md
 
 **Prima**:
 ```
-phpstan-fixes.md
-lessons-learned.md
-git-conflicts-resolution.md
+phpstan-fixes-2025-01-06.md
+lessons-learned-2025-08-25.md
+git-conflicts-resolution-2025-01-06.md
 ```
 
 **Dopo**:
 ```
 archive/phpstan/phpstan-fixes-jan2025.md  (archiviato)
-archive/lessons-learned-aug-archive-1.md         (archiviato)
-phpstan-level10-success-nov-archive-1.md         (attuale)
+archive/lessons-learned-aug2025.md         (archiviato)
+phpstan-level10-success-nov2025.md         (attuale)
 ```
 
 ### 3. Consolidamento Duplicati (12 file eliminati)
@@ -341,7 +340,7 @@ phpstan-level10-success-nov-archive-1.md         (attuale)
 **Struttura migliorata**:
 ```
 docs/
-├── phpstan-level10-success-nov-archive-1.md  (attuale)
+├── phpstan-level10-success-nov2025.md  (attuale)
 ├── phpstan-workflow.md                  (procedura)
 └── archive/
     └── phpstan/
@@ -370,7 +369,7 @@ docs/
 **Esempi trovati**:
 ```markdown
 [regole php](docs/standards/php-inheritance-rules.md)
-public static string $projectBasePath = '../../../docs/standards/php-inheritance-rules.md)
+public static string $projectBasePath = '../../docs/standards/php-inheritance-rules.md)
 // Path configurabili tramite env, non hardcoded
 ```
 
@@ -385,7 +384,7 @@ public static string $projectBasePath = '../../../docs/standards/php-inheritance
 ```
 docs/
 ├── README.md                          (indice principale)
-├── phpstan-level10-success-nov-archive-1.md (ultimo successo)
+├── phpstan-level10-success-nov2025.md (ultimo successo)
 ├── phpstan-workflow.md                (procedura corrente)
 ├── eloquent-magic-properties-rule.md  (regole Eloquent)
 ├── git-forward-only-rule.md           (regola Git)
@@ -413,13 +412,12 @@ docs/
 
 ### Da Modules/Xot/docs/ a root docs/
 ```markdown
-[guida principale](../../../../docs/guide.md)
+[guida principale](../../../docs/guide.md)
 ```
 
 ### Tra moduli (Xot → User)
 ```markdown
 [user docs](../../User/docs/user-guide.md)
-[user docs](../../user/docs/user-guide.md)
 ```
 
 ### All'interno dello stesso modulo
@@ -458,7 +456,7 @@ Documentato in: `git-forward-only-rule.md`
 **Vietato**: `git checkout HEAD --`, `git reset`, `git revert` (senza discussione)
 
 ### File .lock Pattern
-Documentato in: `phpstan-level10-success-nov-archive-1.md`
+Documentato in: `phpstan-level10-success-nov2025.md`
 
 **Regola**: Creare `.lock` prima di modificare file
 
@@ -512,7 +510,7 @@ find . -name "readme.md" -o -name "Readme.md"
 
 ## 🔗 Collegamenti Correlati
 
-- [PHPStan Level 10 Success](./phpstan-level10-success-nov-archive-1.md) - Successo PHPStan
+- [PHPStan Level 10 Success](./phpstan-level10-success-nov2025.md) - Successo PHPStan
 - [Eloquent Magic Properties Rule](./eloquent-magic-properties-rule.md) - Regola property_exists
 - [Git Forward Only Rule](./git-forward-only-rule.md) - Regola Git
 - [Naming Conventions](./naming-conventions.md) - Convenzioni naming

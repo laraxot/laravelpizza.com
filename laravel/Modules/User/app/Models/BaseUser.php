@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
+use Filament\Models\Contracts\FilamentUser;
 use Filament\Models\Contracts\HasName;
 use Filament\Models\Contracts\HasTenants;
 use Filament\Panel;
@@ -27,14 +28,10 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Laravel\Passport\Contracts\OAuthenticatable;
 use Laravel\Passport\HasApiTokens;
-<<<<<<< HEAD
-use Modules\User\Models\Traits\HasAuthenticationLogTrait;
-=======
 use Modules\User\Contracts\HasAuthentications;
 use Modules\User\Models\Traits\HasAuthenticationLogTrait;
-use Modules\User\Models\Traits\HasDevices;
->>>>>>> 6d3760fe (.)
 use Modules\User\Models\Traits\HasModules;
+use Modules\User\Models\Traits\HasSocialite;
 use Modules\User\Models\Traits\HasSpatiePermission;
 use Modules\User\Models\Traits\HasTeams;
 use Modules\Xot\Contracts\ProfileContract;
@@ -45,7 +42,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 use Parental\HasChildren;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Filament\Models\Contracts\FilamentUser;
 
 /**
  * Base User Model.
@@ -133,25 +129,13 @@ use Filament\Models\Contracts\FilamentUser;
  *
  * @mixin \Eloquent
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-abstract class BaseUser extends Authenticatable implements HasMedia, HasName, HasTenants, MustVerifyEmail, OAuthenticatable, UserContract
-=======
-abstract class BaseUser extends Authenticatable implements HasAuthentications, HasMedia, HasName, HasTenants, MustVerifyEmail, OAuthenticatable, UserContract
->>>>>>> 6d3760fe (.)
-=======
 abstract class BaseUser extends Authenticatable implements FilamentUser, HasAuthentications, HasMedia, HasName, HasTenants, MustVerifyEmail, OAuthenticatable, UserContract
->>>>>>> 9fa499be (.)
 {
     use HasApiTokens;
     use HasAuthenticationLogTrait;
     use HasChildren;
     use HasModules;
-<<<<<<< HEAD
-    use HasSpatiePermission;
-    use HasTeams;
-    use HasUuids;
-=======
+
     use HasSocialite;
     use HasSpatiePermission, HasTeams {
         HasSpatiePermission::teams insteadof HasTeams;
@@ -159,8 +143,7 @@ abstract class BaseUser extends Authenticatable implements FilamentUser, HasAuth
     }
     use HasUuids;
 
-    /** @phpstan-use HasXotFactory<Factory<static>> */
->>>>>>> 6d3760fe (.)
+    /** @use HasXotFactory<Factory<static>> */
     use HasXotFactory;
 
     use InteractsWithMedia;
@@ -263,14 +246,14 @@ abstract class BaseUser extends Authenticatable implements FilamentUser, HasAuth
         return (string) ($this->getAttribute('provider') ?? config('auth.guards.api.provider', 'users'));
     }
 
-    /* 
+    /*
     public function canAccessFilament(?Panel $panel = null): bool
     {
          dddx($panel->getId());
         // return $this->role_id === Role::ROLE_ADMINISTRATOR;
         return true;
     }
-    */ 
+    */
     /**
      * Get the user's name for Filament.
      */
@@ -292,22 +275,14 @@ abstract class BaseUser extends Authenticatable implements FilamentUser, HasAuth
         return $fullName;
     }
 
+    /** @return HasOne<Model&ProfileContract, $this> */
     #[\Override]
     public function profile(): HasOne
     {
+        /** @var class-string<Model&ProfileContract> $profileClass */
         $profileClass = XotData::make()->getProfileClass();
-        if (class_exists($profileClass)) {
-            return $this->hasOne($profileClass);
-        }
 
-        // Try direct module class if XotData failed
-        $directClass = 'Modules\User\Models\Profile';
-        if (class_exists($directClass)) {
-            return $this->hasOne($directClass);
-        }
-
-        // Fallback: stay on current model if nothing found
-        return $this->hasOne(static::class, 'id', 'id')->whereRaw('1=0');
+        return $this->hasOne($profileClass);
     }
 
     /**
@@ -329,7 +304,6 @@ abstract class BaseUser extends Authenticatable implements FilamentUser, HasAuth
 
     public function canAccessPanel(Panel $panel): bool
     {
-        
         // $panel->default('admin');
         if ('admin' !== $panel->getId()) {
             $role = $panel->getId();
@@ -354,28 +328,12 @@ abstract class BaseUser extends Authenticatable implements FilamentUser, HasAuth
 
     public function detach(Model $model): void
     {
-<<<<<<< HEAD
-        // @phpstan-ignore function.alreadyNarrowedType
-        if (method_exists($this, 'teams')) {
-            // @phpstan-ignore function.alreadyNarrowedType
-            $this->teams()->detach($model);
-        }
-=======
         $this->membershipTeams()->detach($model);
->>>>>>> 6d3760fe (.)
     }
 
     public function attach(Model $model): void
     {
-<<<<<<< HEAD
-        // @phpstan-ignore function.alreadyNarrowedType
-        if (method_exists($this, 'teams')) {
-            // @phpstan-ignore function.alreadyNarrowedType
-            $this->teams()->attach($model);
-        }
-=======
         $this->membershipTeams()->attach($model);
->>>>>>> 6d3760fe (.)
     }
 
     public function treeLabel(): string
@@ -383,6 +341,7 @@ abstract class BaseUser extends Authenticatable implements FilamentUser, HasAuth
         return (string) ($this->name ?? $this->email);
     }
 
+    /** @return Collection<int, Team> */
     public function treeSons(): Collection
     {
         return $this->membershipTeams ?? new Collection();
@@ -391,7 +350,7 @@ abstract class BaseUser extends Authenticatable implements FilamentUser, HasAuth
     /**
      * Get the devices associated with the user.
      *
-     * @return BelongsToMany<Device, static>
+     * @return BelongsToMany<Device, $this>
      */
     public function devices(): BelongsToMany
     {

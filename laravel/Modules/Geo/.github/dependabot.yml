@@ -1,6 +1,30 @@
 version: 2
 updates:
-  - package-ecosystem: "composer"
+  # Composer (PHP) - Laravel root
+  - package-ecosystem: composer
+    directory: "/laravel"
+    schedule:
+      interval: daily
+      time: "04:00"
+    open-pull-requests-limit: 10
+    allow:
+      - dependency-type: "direct"
+      - dependency-type: "indirect"
+    reviewers:
+      - "marco76tv"
+    target-branch: "develop"
+
+  # npm (Node.js) - Public
+  - package-ecosystem: npm
+    directory: "/public_html"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    target-branch: "develop"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+    open-pull-requests-limit: 5

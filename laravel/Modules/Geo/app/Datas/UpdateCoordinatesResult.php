@@ -67,15 +67,22 @@ class UpdateCoordinatesResult extends Data
     /**
      * Get formatted error messages.
      *
-     * @return array<int, string>
+     * @return list<string>
      */
     public function getErrorMessages(): array
     {
-        /** @var array<int, string> $messages */
-        $messages = $this->errors
-            ->map(fn (array $error): string => "{$error['model']}: {$error['error']}")
-            ->values()
-            ->toArray();
+        $messages = [];
+        foreach ($this->errors as $error) {
+            if (! is_array($error) || ! isset($error['model'], $error['error'])) {
+                continue;
+            }
+            $model = $error['model'];
+            $err = $error['error'];
+            if (! is_string($model) || ! is_string($err)) {
+                continue;
+            }
+            $messages[] = "{$model}: {$err}";
+        }
 
         return $messages;
     }

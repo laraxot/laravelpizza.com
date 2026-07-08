@@ -1,0 +1,5 @@
+studia molto a fondo https://github.com/protonemedia/laravel-ffmpeg  e aggiorna le tue cartelle docs, le tue rules, le tue memories e le tue skills
+
+→ studio consolidato in:
+- `ffmpeg-integration.md` (overview integrazione)
+- `ffmpeg-usage.md` (pattern canonici di utilizzo)

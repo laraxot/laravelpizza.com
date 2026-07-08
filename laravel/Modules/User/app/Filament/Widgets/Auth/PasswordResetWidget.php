@@ -23,6 +23,7 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  */
 class PasswordResetWidget extends XotBaseWidget
 {
+    /** @var array<string, mixed>|null */
     public ?array $data = [];
 
     public bool $emailSent = false;

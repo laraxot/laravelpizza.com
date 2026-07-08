@@ -1,0 +1,82 @@
+<?php
+
+declare(strict_types=1);
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+/**
+* Class CreateQuaAnaTqTable
+*/
+class CreateQuaAnaTqTable extends XotBaseMigration {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up() {
+        Schema::create('qua_ana_tq', function (Blueprint $table) {
+            $table->integer('id', true);
+            $table->text('ente')->nullable();
+            $table->text('cont')->nullable();
+            $table->text('matr')->nullable();
+            $table->text('cognome')->nullable();
+            $table->text('nome')->nullable();
+            $table->text('tipco')->nullable();
+            $table->text('rapp')->nullable();
+            $table->text('ruolo')->nullable();
+            $table->text('propro')->nullable();
+            $table->text('posfun')->nullable();
+            $table->text('codqua')->nullable();
+            $table->text('quanz')->nullable();
+            $table->text('posiz')->nullable();
+            $table->text('sipco')->nullable();
+            $table->text('sapp')->nullable();
+            $table->text('suolo')->nullable();
+            $table->text('sropro')->nullable();
+            $table->text('sosfun')->nullable();
+            $table->text('sodqua')->nullable();
+            $table->text('annise')->nullable();
+            $table->text('prvtip')->nullable();
+            $table->text('prvdat')->nullable();
+            $table->text('prvnum')->nullable();
+            $table->text('datpas')->nullable();
+            $table->text('oree')->nullable();
+            $table->text('oret')->nullable();
+            $table->text('qua2kd_dal')->nullable();
+            $table->text('qua2ka_la')->nullable();
+            $table->text('qua2kz')->nullable();
+            $table->text('prv2kd')->nullable();
+            $table->text('dat2kp_data_passruolo')->nullable();
+            $table->text('sesso')->nullable();
+            $table->text('staciv')->nullable();
+            $table->text('clafun')->nullable();
+            $table->text('titstu_titolo_studio')->nullable();
+            $table->text('tipag_tipo_pagamento')->nullable();
+            $table->text('stabi')->nullable();
+            $table->text('repar')->nullable();
+            $table->text('flagse')->nullable();
+            $table->text('stass_assunzione')->nullable();
+            $table->text('stdim_dimissione')->nullable();
+            $table->text('tipass_tipo_assunzione')->nullable();
+            $table->text('repst1')->nullable();
+            $table->text('repre1')->nullable();
+            $table->text('repst2')->nullable();
+            $table->text('repre2')->nullable();
+            $table->text('desc1')->nullable();
+            $table->text('desc2')->nullable();
+            $table->text('liv')->nullable();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down() {
+        Schema::drop('qua_ana_tq');
+    }
+}

@@ -388,7 +388,7 @@ This fix may also resolve related errors in:
 
 ## Related Documentation
 
-- [PHPStan Analysis Summary](phpstan-analysis.md)
+- [PHPStan Analysis Summary](phpstan-analysis-2025-12-16.md)
 - [XotBase Extension Rules](xotbase-extension-rules.md)
 - [Filament Integration](filament-integration.md)
 

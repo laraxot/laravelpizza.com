@@ -1,0 +1,32 @@
+name: Attest Release Artifacts
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  id-token: write
+  attestations: write
+  contents: write
+
+jobs:
+  attest_and_upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create Artifact
+        run: |
+          zip -r ${{ github.event.repository.name }}.zip . -x ".git/*" ".github/*"
+
+      - name: Attest Build Provenance
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: ${{ github.event.repository.name }}.zip
+
+      - name: Upload Artifact to Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload ${{ github.event.release.tag_name }} ${{ github.event.repository.name }}.zip

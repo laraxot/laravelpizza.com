@@ -12,7 +12,6 @@ use Illuminate\Support\Carbon;
 use Modules\Geo\Contracts\HasGeolocation;
 use Modules\Geo\Database\Factories\PlaceFactory;
 use Modules\Xot\Contracts\ProfileContract;
-
 use function Safe\json_encode;
 
 /**
@@ -181,6 +180,8 @@ class Place extends BaseModel implements HasGeolocation
 
     /**
      * Get the linked model.
+     *
+     * @return MorphTo<Model, $this>
      */
     public function linked(): MorphTo
     {
@@ -189,6 +190,8 @@ class Place extends BaseModel implements HasGeolocation
 
     /**
      * Get the place type.
+     *
+     * @return BelongsTo<PlaceType, $this>
      */
     public function placeType(): BelongsTo
     {
@@ -197,6 +200,8 @@ class Place extends BaseModel implements HasGeolocation
 
     /**
      * Get the address.
+     *
+     * @return BelongsTo<Address, $this>
      */
     public function address(): BelongsTo
     {
@@ -206,28 +211,28 @@ class Place extends BaseModel implements HasGeolocation
     #[\Override]
     public function getLatitude(): ?float
     {
-        /* @phpstan-ignore-line */ return $this->latitude;
+        /* @phpstan-ignore-line */ return $latitude;
     }
 
     #[\Override]
     public function getLongitude(): ?float
     {
-        /* @phpstan-ignore-line */ return $this->longitude;
+        /* @phpstan-ignore-line */ return $longitude;
     }
 
     #[\Override]
     public function getFormattedAddress(): string
     {
-        return (string) ($this->formatted_address ?? $this->address->formatted_address ?? '');
+        return (string) ($formatted_address ?? $this->address->formatted_address ?? '');
     }
 
     public function getLatitudeAttribute(): ?float
     {
-        if (! isset($this->attributes['latitude'])) {
+        if (! isset($attributes['latitude']))
             return null;
         }
 
-        $latitude = $this->attributes['latitude'];
+        $latitude = $attributes['latitude'];
         if (! is_numeric($latitude)) {
             return null;
         }
@@ -239,11 +244,11 @@ class Place extends BaseModel implements HasGeolocation
 
     public function getLongitudeAttribute(): ?float
     {
-        if (! isset($this->attributes['longitude'])) {
+        if (! isset($attributes['longitude']))
             return null;
         }
 
-        $longitude = $this->attributes['longitude'];
+        $longitude = $attributes['longitude'];
         if (! is_numeric($longitude)) {
             return null;
         }
@@ -255,7 +260,7 @@ class Place extends BaseModel implements HasGeolocation
 
     public function getFormattedAddressAttribute(): string
     {
-        $address = $this->attributes['formatted_address'] ?? '';
+        $address = $attributes['formatted_address'] ?? '';
 
         return is_string($address) ? $address : '';
     }
@@ -263,18 +268,18 @@ class Place extends BaseModel implements HasGeolocation
     #[\Override]
     public function hasValidCoordinates(): bool
     {
-        return null !== $this->latitude
-            && null !== $this->longitude
-            && $this->latitude >= -90
-            && $this->latitude <= 90
-            && $this->longitude >= -180
-            && $this->longitude <= 180;
+        return null !== $latitude
+            && null !== $longitude
+            && $latitude >= -90
+            && $latitude <= 90
+            && $longitude >= -180
+            && $longitude <= 180;
     }
 
     #[\Override]
     public function getMapIcon(): ?string
     {
-        $slug = $this->placeType->slug ?? null;
+        $slug = $placeType->slug ?? null;
         $type = is_string($slug) ? $slug : 'default';
         $markerConfig = config("geo.markers.types.{$type}");
 
@@ -298,7 +303,7 @@ class Place extends BaseModel implements HasGeolocation
     #[\Override]
     public function getLocationType(): ?string
     {
-        $name = $this->placeType->name ?? null;
+        $name = $placeType->name ?? null;
 
         return is_string($name) ? $name : null;
     }

@@ -1,8 +1,7 @@
 # MCP (Management Control Panel) Tools for Database Analysis
 
 ## Overview
-MCP (Model Context Protocol) tools provide enhanced capabilities for database analysis, including access to the healthcare_app_survey database used in the Limesurvey integration.
-MCP (Model Context Protocol) tools provide enhanced capabilities for database analysis, including access to the survey database used in the Limesurvey integration.
+MCP (Model Context Protocol) tools provide enhanced capabilities for database analysis, including access to the quaeris_survey database used in the Limesurvey integration.
 
 ## Available MCP Tools for Database Work
 
@@ -13,13 +12,12 @@ MCP (Model Context Protocol) tools provide enhanced capabilities for database an
 {
   "command": "node",
   "args": [
-    "/var/www/_bases/base_techplanner_fila5_mono/bashscripts/mcp/mysql-db-connector.js"
+    "/var/www/_bases/base_techplanner_fila4_mono/bashscripts/mcp/mysql-db-connector.js"
   ]
 }
 ```
 
-**Use Cases for healthcare_app_survey Database**:
-**Use Cases for survey Database**:
+**Use Cases for quaeris_survey Database**:
 - Query Limesurvey tables directly
 - Analyze survey responses in `lime_survey_{sid}` tables
 - Examine question structures in `lime_questions`
@@ -53,7 +51,7 @@ MCP (Model Context Protocol) tools provide enhanced capabilities for database an
 
 ### Direct Database Queries (using MySQL MCP)
 ```sql
--- List all survey tables in healthcare_app_survey database
+-- List all survey tables in quaeris_survey database
 SHOW TABLES LIKE 'lime_survey_%';
 
 -- Analyze question structure
@@ -95,12 +93,12 @@ Ensure database connections are properly configured in:
 ## MCP Configuration File
 Location: `~/.cursor/mcp.json`
 
-Current configuration includes MySQL access that automatically uses Laravel's .env credentials, making it ideal for accessing the healthcare_app_survey database without additional configuration.
+Current configuration includes MySQL access that automatically uses Laravel's .env credentials, making it ideal for accessing the quaeris_survey database without additional configuration.
 
 ## Best Practices for Database Analysis
 
 1. **Always verify survey IDs** before querying dynamic tables like `lime_survey_{id}`
-2. **Use proper connection** (`limesurvey` connection for healthcare_app_survey database)
+2. **Use proper connection** (`limesurvey` connection for quaeris_survey database)
 3. **Limit result sets** when exploring large survey response tables
 4. **Check table existence** before querying survey-specific tables
 5. **Respect data privacy** when handling survey responses

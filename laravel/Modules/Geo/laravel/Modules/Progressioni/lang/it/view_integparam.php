@@ -1,0 +1,14 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'actions' => [
+        'edit' => [
+            'label' => 'edit',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
+    ],
+];

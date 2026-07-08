@@ -4,11 +4,6 @@
 - [**README.md**](README.md) - General overview
 - [**Architecture**](architecture/architecture.md) - System architecture
 - [**Best Practices**](best-practices/best-practices.md) - Development guidelines
-- [**README.md**](readme.md) - General overview
-- [**Architecture**](architecture/architecture.md) - System architecture
-- [**Best Practices**](best-practices/best-practices.md) - Development guidelines
-- Docs-first governance: before editing code, study and improve local module docs and the active theme docs, then align global `docs/*` and evaluate GitHub Issue/Discussion tracking.
-- Post-edit PHP quality gate: after changing a PHP file, run `phpstan`, `phpmd`, `phpinsights`, then review/create the associated Pest test when the behavior is testable.
 
 ## 📖 Documentation by Category
 
@@ -26,8 +21,6 @@
 - [Data Objects](module-development/data-objects.md)
 
 ### 🎨 Filament & UI
-- [Theme Vite Configuration](./vite-configuration.md)
-- [Theme Assets Workflow](./theme-assets-workflow.md)
 - [Filament Best Practices](filament/filament-best-practices.md)
 - [Filament Resource Rules](filament/filament-resource-rules.md)
 - [Filament Tables Guide](filament/filament-tables.md)
@@ -44,7 +37,6 @@
 - [Testing Strategy](testing/testing-strategy.md)
 - [Complete Testing Guide](testing/testing.md)
 - [PHPStan Complete Guide](phpstan/phpstan-complete-guide.md)
-- [PHPStan Runtime Governance](phpstan-runtime-governance.md)
 
 ### 🌐 Translations & Localization
 - [Translation System](translations/translation-system.md)
@@ -53,12 +45,6 @@
 
 ### 🛠️ Bash Scripts & Automation
 - [BashScripts Organization](bashscripts/bashscripts-organization.md)
-
-### 🤖 AI & Development Tools
-- [Claude Context (Laravel)](../../../claude.md)
-- [AI Agents Guide](../../../../agents.md)
-- [Cursor Rules & Skills](../../../../.cursor/readme.md)
-- [Skills di progetto](../../../../.cursor/skills/)
 
 ### 🚨 Troubleshooting
 - [**CCR DeepSeek Fix**](troubleshooting/ccr-deepseek-fix.md) - Resolve 400 API error

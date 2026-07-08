@@ -1,0 +1,33 @@
+{
+  "name": "Job",
+  "type": "module",
+  "status": "baseline",
+  "purpose": "Centralizzare job, code e orchestrazione asincrona per elaborazioni applicative.",
+  "goals": [
+    "Supportare esecuzione asincrona e retry",
+    "Ridurre blocchi sincroni in backoffice e frontoffice",
+    "Stabilizzare job riusabili"
+  ],
+  "nonGoals": [
+    "Contenere UI o dominio business"
+  ],
+  "dependencies": [
+    "Xot"
+  ],
+  "qualityGates": [
+    "./vendor/bin/phpstan analyse Modules/Job",
+    "./vendor/bin/phpinsights analyse Modules/Job --min-quality=0 --min-complexity=0 --min-architecture=0 --min-style=0"
+  ],
+  "suiteVersion": "baseline-v1",
+  "sourceFramework": "Notion product template family adapted to repository governance",
+  "companionDocs": [
+    "product-roadmap.md",
+    "product-launch-plan.md",
+    "product-strategy.md",
+    "user-research.md",
+    "sprint-planning-meeting.md"
+  ],
+  "implementationPattern": "action-first",
+  "actionStandard": "spatie/laravel-queueable-action",
+  "architectureRule": "No generic Services for business logic; use Action classes with execute()"
+}

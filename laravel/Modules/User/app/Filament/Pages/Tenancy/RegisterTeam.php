@@ -17,6 +17,7 @@ class RegisterTeam extends RegisterTenant
         return 'Register team';
     }
 
+    /** @return array<int|string, mixed> */
     public function getFormSchema(): array
     {
         return [

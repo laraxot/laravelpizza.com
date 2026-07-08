@@ -1,0 +1,42 @@
+name: Require linked issue for PRs
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  require-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check PR for linked issue and commits
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const body = pr.body || '';
+            const issueNumberRe = /#\d+/;
+            const issueRefRe = /(Closes|Fixes|Resolves)\s+#\d+/i;
+            let hasIssue = issueRefRe.test(body) || issueNumberRe.test(body);
+            const commits = await github.paginate(github.rest.pulls.listCommits, { owner: context.repo.owner, repo: context.repo.repo, pull_number: pr.number });
+            if (!hasIssue) {
+              for (const c of commits) {
+                if (issueNumberRe.test(c.commit.message)) { hasIssue = true; break; }
+              }
+            }
+            if (!hasIssue) {
+              const issueResp = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `Missing issue for PR #${pr.number}: ${pr.title}`,
+                body: `This PR (${pr.html_url}) was opened without referencing an existing issue. Please link the related issue by editing the PR description (e.g., 'Closes #123').\n\nThis issue was created automatically by CI to avoid missed tracking.`
+              });
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                body: `No linked issue found. An issue has been created: ${issueResp.data.html_url}. Please update the PR body to reference the issue (e.g., 'Closes #${issueResp.data.number}'). CI will fail until PR references an issue.`
+              });
+              throw new Error('PR must reference an issue. Issue created.');
+            } else {
+              console.log('PR references an issue.');
+            }

@@ -1,0 +1,20 @@
+{
+    "name": "laraxot/theme_zero",
+    "description": "Zero theme for Laraxot PTVX: frontend theme with Tailwind, Vite, Flowbite and Alpine.js integration.",
+    "keywords": [
+        "laraxot",
+        "laravel",
+        "filament",
+        "theme_zero",
+        "theme",
+        "frontend",
+        "tailwind",
+        "vite",
+        "flowbite",
+        "alpine"
+    ],
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

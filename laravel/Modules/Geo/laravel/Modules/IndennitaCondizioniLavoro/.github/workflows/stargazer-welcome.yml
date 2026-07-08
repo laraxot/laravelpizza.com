@@ -1,0 +1,31 @@
+# .github/workflows/stargazer-welcome.yml
+name: Stargazer Welcome
+
+on:
+  star:
+    types: [created]
+
+jobs:
+  stargazer_welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            🎉 Welcome to our project! Thank you for starring our repository.
+            We're thrilled to have you as part of our growing community.
+
+            Here are some quick links to get you started:
+            - **Documentation**: [Link to module's README or docs]
+            - **Contributing Guide**: [Link to module's CONTRIBUTING.md]
+            - **Report an Issue**: [Link to module's issue tracker]
+
+            Feel free to explore, contribute, or reach out if you have any questions!
+          pr-message: |
+            👋 Hello there, and thanks for your first Pull Request!
+            We really appreciate you taking the time to contribute to our project.
+
+            Our team will review your PR shortly. In the meantime, please ensure you've followed our [Contributing Guidelines](Link to module's CONTRIBUTING.md).
+
+            Thanks again for making our project better!

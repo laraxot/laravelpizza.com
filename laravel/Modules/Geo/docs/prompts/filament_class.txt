@@ -1,0 +1,20 @@
+non estendiamo mai classi di filament direttamente , estendiamo sempre una classe astratta con lo stesso nome con il prefisso XotBase , questa classe astratta rispetta anche il vecchio percorso percio' 
+non estendiamo Filament\Resources\Pages\CreateRecord ma estendiamo Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
+non estendiamo Filament\Resources\Pages\EditRecord ma estendiamo Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
+non estendiamo Filament\Resources\Pages\ListRecords ma estendiamo Modules\Xot\Filament\Resources\Pages\XotBaseListRecords
+non estendiamo Filament\Resources\Pages\Page ma estendiamo Modules\Xot\Filament\Resources\Pages\XotBasePage
+
+chi estende XotBaseResource non vuole il metodo getTableColumns
+
+chi estende Modules\Xot\Filament\Pages\XotBasePage  non deve avere 
+protected static ?string $navigationIcon
+protected static ?string $title
+protected static ?string $navigationLabel
+
+non usiamo services ma utilizziamo https://github.com/spatie/laravel-queueable-action  
+
+non usiamo ->label( o ->placeholder( o -> tooltip( perche' usiamo i file di traduzione , questo avviene grazie a langserviceprovider
+
+class BadgeColumn e' deprecated — Use TextColumn with the badge() method instead.
+
+queste sono regole che devi seguire sempre , percio' aggiorna le tue rules , le tue memories, le tue ai guidelines, le cartelle docs, aggiorna tutto quello che puoi per ricordartelo sempre e poi implementa correzioni cercando di non fare mai piu' questo errore

@@ -128,13 +128,6 @@ php artisan serve
 - [Regole di Documentazione](documentation-rules.md)
 
 ## Collegamenti tra versioni di installation.md
-* [installation.md](../../../xot/docs/filament/installation.md)
-* [installation.md](../../../xot/docs/installation.md)
-* [installation.md](../../../xot/docs/base/installation.md)
-* [installation.md](../../../user/docs/installation.md)
-* [installation.md](../../../lang/docs/installation.md)
-* [installation.md](../../../cms/docs/installation.md)
-* [installation.md](../../../../themes/one/docs/installation.md)
 * [installation.md](../../../Xot/docs/filament/installation.md)
 * [installation.md](../../../Xot/docs/installation.md)
 * [installation.md](../../../Xot/docs/base/installation.md)

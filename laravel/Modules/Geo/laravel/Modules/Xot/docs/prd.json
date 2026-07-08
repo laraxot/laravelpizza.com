@@ -1,0 +1,31 @@
+{
+  "name": "Xot",
+  "type": "module",
+  "status": "baseline",
+  "purpose": "Fornire il foundation layer condiviso del monolite modulare: base models, actions, migration helpers, resource base e governance tecnica.",
+  "goals": [
+    "Ridurre duplicazioni cross-modulo",
+    "Stabilizzare i contratti infrastrutturali",
+    "Fornire primitive comuni per tutto il repo"
+  ],
+  "nonGoals": [
+    "Assorbire logica specifica dei moduli di dominio"
+  ],
+  "dependencies": [],
+  "qualityGates": [
+    "./vendor/bin/phpstan analyse Modules/Xot",
+    "./vendor/bin/phpinsights analyse Modules/Xot --min-quality=0 --min-complexity=0 --min-architecture=0 --min-style=0"
+  ],
+  "suiteVersion": "baseline-v1",
+  "sourceFramework": "Notion product template family adapted to repository governance",
+  "companionDocs": [
+    "product-roadmap.md",
+    "product-launch-plan.md",
+    "product-strategy.md",
+    "user-research.md",
+    "sprint-planning-meeting.md"
+  ],
+  "implementationPattern": "action-first",
+  "actionStandard": "spatie/laravel-queueable-action",
+  "architectureRule": "No generic Services for business logic; use Action classes with execute()"
+}

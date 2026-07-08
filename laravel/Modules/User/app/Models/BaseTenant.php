@@ -67,7 +67,7 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, Tena
     /**
      * Ottiene tutti i membri associati al tenant.
      *
-     * @return BelongsToMany<Model, BaseTenant>
+     * @return BelongsToMany<Model, $this>
      */
     public function members(): BelongsToMany
     {
@@ -80,7 +80,7 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, Tena
     /**
      * Ottiene tutti gli utenti associati al tenant.
      *
-     * @return BelongsToMany<Model, BaseTenant>
+     * @return BelongsToMany<Model, $this>
      */
     public function users(): BelongsToMany
     {

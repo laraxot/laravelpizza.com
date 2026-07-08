@@ -1,0 +1,15 @@
+{
+    "name": "Performance",
+    "alias": "performance",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Performance\\Providers\\PerformanceServiceProvider",
+        "Modules\\Performance\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

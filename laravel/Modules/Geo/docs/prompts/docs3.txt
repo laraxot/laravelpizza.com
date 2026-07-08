@@ -1,0 +1,468 @@
+# SISTEMA DI DOCUMENTAZIONE LARAXOT – GUIDA MODULARE
+
+## 📋 INDICE GENERALE
+
+### 1. STRUTTURA GERARCHICA E MODULARITÀ
+### 2. COLLEGAMENTI E RIFERIMENTI
+### 3. FRONTEND E COMPONENTI UI
+### 4. TRADUZIONI E LOCALIZZAZIONE
+### 5. BACKEND E ARCHITETTURA
+### 6. TESTING E QUALITÀ
+### 7. HTML2PDF E GENERAZIONE DOCUMENTI
+### 8. GESTIONE ENUMERAZIONI
+### 9. BEST PRACTICES E WORKFLOW
+### 10. CROSS-REFERENCES E VALIDAZIONE
+
+---
+
+## 1. STRUTTURA GERARCHICA E MODULARITÀ
+
+### 1.1 Struttura delle Cartelle
+- **Root docs**: `/docs/` - Solo indici e collegamenti bidirezionali
+- **Docs modulo**: `Modules/{ModuleName}/docs/` - Documentazione tecnica specifica
+- **Docs tema**: `Themes/{Theme}/docs/` - Documentazione frontend specifica
+- **Rule files**: `.windsurf/rules/`, `.cursor/rules/` - Regole per IDE
+
+### 1.2 Principio Fondamentale: Modularità
+- Documentare PRIMA nel modulo specifico, POI creare collegamenti bidirezionali
+- Concentrare conoscenza specializzata nei moduli, non nella root
+- Mantenere la root come indice centrale e sistema di navigazione
+- **Cross-reference**: Vedi [docs2.txt](./docs2.txt#1-architettura-e-struttura) per dettagli completi
+
+### 1.3 Regola Critica: Naming Convention
+- **TUTTI i file e sottocartelle in docs/ devono essere in minuscolo**
+- **UNICA ECCEZIONE: README.md può avere maiuscole**
+- Usare sempre trattini (`-`) invece di underscore (`_`)
+- Nomi descrittivi e concisi (es: `filament-best-practices.md`)
+
+**Esempi**:
+```
+✅ CORRETTO:
+- filament-best-practices.md
+- user-authentication.md
+- database-migrations.md
+
+❌ ERRATO:
+- Filament_Best_Practices.md
+- user_authentication.md
+- DatabaseMigrations.md
+```
+
+## 2. COLLEGAMENTI E RIFERIMENTI
+
+### 2.1 Collegamenti Bidirezionali Obbligatori
+- Ogni documento DEVE avere collegamenti ai documenti correlati
+- Tutti i documenti DEVONO essere referenziati nel file `collegamenti-documentazione.md`
+- Aggiornare SEMPRE entrambe le direzioni dei collegamenti
+- **Cross-reference**: Vedi [docs2.txt](./docs2.txt#15-checklist-operativa-completa) per checklist completa
+
+### 2.2 Percorsi Relativi Obbligatori
+- **MAI utilizzare percorsi assoluti** come `/var/www/html/...`
+- Utilizzare SEMPRE percorsi relativi:
+  - Stesso modulo: `./altro-file.md` o `./sottocartella/altro-file.md`
+  - Modulo a modulo: `../../altro-modulo/docs/file.md`
+  - Modulo a root: `../../../../docs/file.md`
+  - Root a modulo: `./laravel/Modules/nome-modulo/docs/file.md`
+
+**Esempi di percorsi**:
+```markdown
+# Da Modules/User/docs/authentication.md
+- [Coding Standards](../../../../docs/coding-standards.md)
+- [Xot Module](../../Xot/docs/README.md)
+- [UI Components](../../UI/docs/components.md)
+
+# Da docs/README.md
+- [User Authentication](./laravel/Modules/User/docs/authentication.md)
+- [Filament Best Practices](./laravel/Modules/Xot/docs/filament-best-practices.md)
+```
+
+### 2.3 Tag e Categorizzazione
+- Usare tag come `#modulo-{nomemodulo}` e `#categoria-{nomecategoria}`
+- Mantenere coerenza nei tag tra i documenti correlati
+- **Cross-reference**: Vedi [docs2.txt](./docs2.txt#16-riferimenti-e-collegamenti) per esempi completi
+
+## 3. FRONTEND E COMPONENTI UI
+
+### 3.1 Architettura Frontend
+- Frontoffice: Folio + Volt + Livewire + Widget
+- Template in `Themes/{Theme}/resources/views/pages/`
+- **MAI creare rotte in web.php** - Folio gestisce automaticamente
+- Widget devono estendere `XotBaseWidget` con `HasForms`
+- **MAI estendere direttamente classi Filament**
+
+**Cross-reference**: Vedi [docs2.txt](./docs2.txt#7-frontend-e-componenti-ui) per dettagli completi
+
+### 3.2 Componenti UI
+- Usare SEMPRE componenti nativi Filament:
+  - `<x-filament::icon>`
+  - `<x-filament::button>`
+  - `<x-filament::dropdown>`
+  - `<x-filament::avatar>`
+- **MAI utilizzare componenti inesistenti**
+- Per separatori nei dropdown: `<div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>`
+
+**Esempi di componenti**:
+```blade
+{{-- ✅ CORRETTO --}}
+<x-filament::button color="primary" size="lg">
+    {{ __('{modulename}::actions.save.label') }}
+</x-filament::button>
+
+<x-filament::dropdown>
+    <x-filament::dropdown.item>Opzione 1</x-filament::dropdown.item>
+    <div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+    <x-filament::dropdown.item>Opzione 2</x-filament::dropdown.item>
+</x-filament::dropdown>
+
+{{-- ❌ ERRATO --}}
+<x-filament::dropdown.list.separator>
+<x-filament::dropdown.list.divider>
+```
+
+### 3.3 Volt e Folio
+- La direttiva `@volt` DEVE essere SEMPRE la prima cosa nel file Folio
+- **MAI utilizzare `@volt` all'interno del markup HTML**
+- Utilizzare SEMPRE layout corretti:
+  - `<x-layouts.app>`
+  - `<x-layouts.guest>`
+- **MAI utilizzare layout inesistenti** come `<x-filament::layouts.app>`
+
+**Esempio corretto**:
+```php
+<?php
+
+use function Livewire\Volt\{state, mount};
+
+state(['count' => 0]);
+
+mount(function () {
+    // Logica di inizializzazione
+});
+
+?>
+
+<x-layouts.app>
+    <div>
+        <h1>Contenuto della pagina</h1>
+        <button wire:click="$set('count', count + 1)">
+            Count: {{ $count }}
+        </button>
+    </div>
+</x-layouts.app>
+```
+
+## 4. TRADUZIONI E LOCALIZZAZIONE
+
+### 4.1 Sistema di Traduzione
+- File traduzioni in `lang/{locale}/`
+- **MAI usare ->label()** in componenti Filament
+- Convenzione naming chiavi: `modulo::risorsa.fields.campo.label`
+- **Cross-reference**: Vedi [docs2.txt](./docs2.txt#4-traduzioni-e-localizzazione) per struttura espansa completa
+
+### 4.2 Struttura Espansa Obbligatoria
+```php
+<?php
+
+declare(strict_types=1);
+
+return [
+    'fields' => [
+        'field_name' => [
+            'label' => 'Etichetta Campo',
+            'placeholder' => 'Testo segnaposto',
+            'help' => 'Testo di aiuto',
+            'helper_text' => '', // Se uguale a chiave, altrimenti testo descrittivo
+            'validation' => [
+                'required' => 'Campo obbligatorio',
+                'max' => 'Massimo :max caratteri'
+            ]
+        ],
+    ],
+    'actions' => [
+        'save' => [
+            'label' => 'Salva',
+            'success' => 'Salvato con successo',
+            'error' => 'Errore durante il salvataggio',
+            'confirmation' => 'Sei sicuro di voler salvare?'
+        ],
+    ],
+    'messages' => [
+        'created' => 'Elemento creato con successo',
+        'updated' => 'Elemento aggiornato con successo',
+        'deleted' => 'Elemento eliminato con successo',
+    ],
+];
+```
+
+### 4.3 Localizzazione URL
+- **Prefisso lingua obbligatorio**: `/{locale}/{sezione}/{risorsa}`
+- **mcamara/laravel-localization**: per gestione locale
+- **MAI generare URL senza prefisso locale**
+- **Cross-reference**: Vedi [docs2.txt](./docs2.txt#17-routing-e-localizzazione-url) per dettagli
+
+## 5. BACKEND E ARCHITETTURA
+
+### 5.1 Business Logic
+- Usare SEMPRE `spatie/laravel-queueable-action` (MAI Service)
+- Componenti Livewire in `app/Http/Livewire` del modulo
+- **Namespace NON deve MAI includere segmento 'app'**
+- Actions nella directory corretta secondo convenzioni
+
+**Cross-reference**: Vedi [docs2.txt](./docs2.txt#18-business-logic-e-actions) per esempi completi
+
+### 5.2 Struttura Directory
+- Provider in `app/Providers/`
+- Percorso pubblico in `public_html/` (non in `public` di Laravel)
+- Vite config temi: `emptyOutDir: false, manifest: 'manifest.json', build: { outDir: './public' }`
+
+### 5.3 Namespace Patterns
+**REGOLA CRITICA**: I namespace NON devono mai includere il segmento 'App'
+
+✅ **CORRETTO**:
+```php
+namespace Modules\{ModuleName}\Models;
+namespace Modules\{ModuleName}\Filament\Resources;
+namespace Modules\{ModuleName}\Actions;
+namespace Modules\{ModuleName}\Enums;
+namespace Modules\{ModuleName}\Datas;
+```
+
+❌ **ERRATO**:
+```php
+namespace Modules\{ModuleName}\App\Models;
+namespace Modules\{ModuleName}\App\Filament\Resources;
+```
+
+**Cross-reference**: Vedi [docs2.txt](./docs2.txt#1-architettura-e-struttura) per dettagli completi
+
+## 6. TESTING E QUALITÀ
+
+### 6.1 Regole Generali
+- **MAI usare il trait `RefreshDatabase`**
+  - L'ambiente di test utilizza un database MySQL pre-popolato definito in `.env.testing`
+  - Il refresh del database causerebbe perdita di dati
+  - Se si verificano errori 'no such table', verificare la configurazione del database di test
+
+**Cross-reference**: Vedi [docs2.txt](./docs2.txt#5-testing-e-qualità) per dettagli completi
+
+### 6.2 Test con Enumerazioni
+- Per i campi enum, utilizzare direttamente le classi enum nei test
+- **Cross-reference**: Vedi [docs2.txt](./docs2.txt#5-4-enum-nei-test) per esempi
+
+### 6.3 Separazione Test per Architettura
+Implementare test separati per ogni componente architetturale:
+
+```php
+// Test per pagina (rendering, layout, middleware)
+class LoginTest extends TestCase
+{
+    public function test_login_page_renders_correctly()
+    {
+        // Test solo della pagina
+    }
+}
+
+// Test per componente Volt (state management, validation)
+class LoginVoltTest extends TestCase
+{
+    public function test_login_component_validation()
+    {
+        // Test solo del componente
+    }
+}
+
+// Test per widget Filament (form logic)
+class LoginWidgetTest extends TestCase
+{
+    public function test_login_widget_form()
+    {
+        // Test solo del widget
+    }
+}
+```
+
+## 7. HTML2PDF E GENERAZIONE DOCUMENTI
+
+### 7.1 Limitazioni HTML/CSS
+- Supporta solo un sottoinsieme di tag HTML e proprietà CSS
+- Nessun supporto JavaScript nel PDF generato
+- Posizionamento preciso richiede markup specifico
+- Effetti grafici avanzati (gradienti, ombre, trasformazioni) non supportati
+
+**Cross-reference**: Vedi [docs2.txt](./docs2.txt#8-html2pdf-e-generazione-documenti) per dettagli completi
+
+### 7.2 Tag Supportati
+- **Struttura**: `<page>`, `<table>`, `<tr>`, `<td>`, `<div>`, `<br>`, `<p>`, `<span>`
+- **Formattazione**: `<b>`, `<i>`, `<u>`, `<strong>`, `<em>`
+- **Immagini**: `<img>` (con limitazioni)
+- **Liste**: `<ul>`, `<ol>`, `<li>`
+
+### 7.3 Best Practice PDF
+1. Usa tabelle per il layout invece di CSS positioning
+2. Evita effetti visivi complessi
+3. Testa sempre il PDF generato
+4. Usa `<page>` per il controllo della pagina
+5. Evita stili inline complessi
+
+### 7.4 Gestione Multilingua PDF
+- Tutte le stringhe devono provenire da file di traduzione
+- Usa sempre `@lang()` per le traduzioni
+- Verifica che tutte le chiavi esistano in tutte le lingue
+- Non inserire logica di traduzione complessa nei template PDF
+
+## 8. GESTIONE ENUMERAZIONI
+
+### 8.1 Campi Enum nei Modelli
+Tutti i campi booleani devono essere esplicitamente castati a 'boolean' nel metodo `casts()`:
+
+**Cross-reference**: Vedi [docs2.txt](./docs2.txt#6-5-casting-di-modelli-e-enum) per dettagli completi
+
+### 8.2 Campi Array
+Campi che memorizzano più valori (da input multi-select) devono essere castati a 'array':
+
+### 8.3 Implementazione Casting
+```php
+/**
+ * Get the attributes that should be cast.
+ *
+ * @return array<string, string>
+ */
+public function casts(): array
+{
+    return [
+        // Boolean casts
+        'field_name' => 'boolean',
+        
+        // Enum casts (as integers)
+        'enum_field' => 'integer',
+        
+        // Array casts for multiple values
+        'multi_select_field' => 'array',
+        
+        // Integer casts
+        'numeric_field' => 'integer',
+    ];
+}
+```
+
+### 8.4 Enum e Select Components
+**Usare SEMPRE classi Enum con Select**:
+
+```php
+// ✅ CORRETTO
+Components\Select::make('status')
+    ->options(AppointmentStatusEnum::class)
+    ->default(AppointmentStatusEnum::SCHEDULED)
+    ->required();
+
+// ❌ ERRATO
+Components\Select::make('status')
+    ->options([
+        'scheduled' => 'scheduled',
+        'confirmed' => 'confirmed',
+        // ...
+    ])
+```
+
+## 9. BEST PRACTICES E WORKFLOW
+
+### 9.1 Contratti e Pattern
+- Usare `Modules\Xot\Contracts\UserContract`
+- Ottenere classe User con `XotData::make()->getUserClass()`
+- Centralizzare logica in traits riutilizzabili
+- Usare enums per stati e valori predefiniti
+
+**Cross-reference**: Vedi [docs2.txt](./docs2.txt#8-best-practices-e-policy) per dettagli completi
+
+### 9.2 Documentazione e Manutenzione
+- Documentare decisioni architetturali e pattern
+- Enfatizzare il "perché" oltre al "come"
+- Aggiornare documentazione CON ogni modifica di codice
+- Documentare breaking changes con preavviso
+- Ottimizzare per accessibilità, sicurezza e prestazioni
+
+### 9.3 IDE e Validazione
+- Aggiornare prima di implementare correzioni:
+  1. Regole in `.windsurf/rules/*.md` per Windsurf
+  2. Regole in `.cursor/rules/*.md` per Cursor
+  3. Memorie in `.cursor/memories/*.md` per Cursor
+- Implementare pre-commit hooks per validazione
+
+### 9.4 Processo di Correzione e Aggiornamento
+**Ordine obbligatorio per ogni aggiornamento**:
+1. Documentazione nel modulo specifico
+2. Collegamenti bidirezionali nella root
+3. Regole configurazione IDE
+4. Codice effettivo
+
+**Cross-reference**: Vedi [docs2.txt](./docs2.txt#15-checklist-operativa-completa) per checklist completa
+
+## 10. CROSS-REFERENCES E VALIDAZIONE
+
+### 10.1 Collegamenti Bidirezionali Obbligatori
+Ogni documento deve avere collegamenti ai documenti correlati:
+
+```markdown
+# Documentazione Modulo {ModuleName}
+
+## Collegamenti Correlati
+- [Architecture Overview](../../../../docs/architecture-overview.md)
+- [Coding Standards](../../../../docs/coding-standards.md)
+- [Xot Module](../../Xot/docs/README.md)
+- [User Module](../../User/docs/authentication.md)
+- [UI Components](../../UI/docs/components.md)
+- [Filament Best Practices](../../Xot/docs/filament-best-practices.md)
+- [Testing Guidelines](../../../../docs/testing-guidelines.md)
+- [Documentation Rules](../../../../docs/documentation-rules.md)
+
+## Tag
+#modulo-{nomemodulo} #categoria-{nomecategoria} #documentazione
+```
+
+### 10.2 Validazione Regole
+**Checklist di validazione per ogni documento**:
+
+- [ ] File e cartelle in minuscolo (tranne README.md)
+- [ ] Percorsi relativi utilizzati
+- [ ] Collegamenti bidirezionali presenti
+- [ ] Tag di categorizzazione aggiunti
+- [ ] Cross-references a docs2.txt dove appropriato
+- [ ] Esempi pratici inclusi
+- [ ] Anti-pattern documentati
+- [ ] Motivazioni architetturali spiegate
+
+### 10.3 Riferimenti Principali
+- **[docs2.txt](./docs2.txt)**: Guida operativa completa con esempi dettagliati
+- **[docs1.txt](./docs1.txt)**: Regole operative complete con analisi approfondita
+- **[docs4.txt](./docs4.txt)**: Sistema di documentazione con stack tecnologico
+- **[collegamenti-documentazione.md](../../docs/collegamenti-documentazione.md)**: Mappa centrale dei collegamenti
+
+### 10.4 Moduli Core e Riferimenti
+- **[Xot Module](../../laravel/Modules/Xot/docs/README.md)**: Framework base e utilities
+- **[User Module](../../laravel/Modules/User/docs/README.md)**: Gestione utenti e autenticazione
+- **[UI Module](../../laravel/Modules/UI/docs/README.md)**: Componenti UI condivisi
+- **[Cms Module](../../laravel/Modules/Cms/docs/README.md)**: Content management
+- **[Tenant Module](../../laravel/Modules/Tenant/docs/README.md)**: Multi-tenancy
+- **[Lang Module](../../laravel/Modules/Lang/docs/README.md)**: Localizzazione
+- **[Notify Module](../../laravel/Modules/Notify/docs/README.md)**: Sistema notifiche
+- **[Media Module](../../laravel/Modules/Media/docs/README.md)**: Gestione file e media
+- **[Job Module](../../laravel/Modules/Job/docs/README.md)**: Job asincroni
+- **[Chart Module](../../laravel/Modules/Chart/docs/README.md)**: Grafici e visualizzazioni
+- **[Gdpr Module](../../laravel/Modules/Gdpr/docs/README.md)**: Conformità e privacy
+- **[Activity Module](../../laravel/Modules/Activity/docs/README.md)**: Logging attività
+- **[Geo Module](../../laravel/Modules/Geo/docs/README.md)**: Dati geografici
+
+---
+
+> Consulta sempre [docs/collegamenti-documentazione.md](../../docs/collegamenti-documentazione.md) per la mappa aggiornata dei collegamenti e la policy di bidirezionalità.
+
+**Nota:** Ogni variazione a questa policy va documentata sia nella root che nel modulo coinvolto, con motivazione e collegamenti aggiornati.
+
+**Ultimo aggiornamento:** Giugno 2025
+**Versione:** 2.0
+**Compatibilità:** Laravel 12.x, PHP 8.2+, Filament 3.x
+**Cross-references:** docs1.txt, docs2.txt, docs4.txt
+
+
+facciamo un recfactor radicale di tutte le cartelle docs, in ottica dry + kiss, ti ricordo che dentro le cartelle docs, ne i nomi dei files ne i nomi delle cartelle devono contenere caratteri maiuscoli ad eccezzione di README.md
+dentro le cartelle "docs" ne i nomi dei files ne i nomi delle sottocartelle di "docs" devono contenere caratteri maiuscoli , ad eccezzione di README.md , e non deve esistere readme.md scritto in minuscolo ! questa e' una regola che devi sempre ricordare, adesso va a controllare tutte le cartelle docs e sistemale

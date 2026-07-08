@@ -1,0 +1,44 @@
+# Dependencies and packages
+/node_modules/
+/vendor/
+npm-debug.log
+package-lock.json
+
+# Build and compiled files
+*.cache
+*.lock
+*.phar
+/build_*/
+/source/assets/build/
+
+# Laravel specific
+.env
+
+# Backup files
+*.backup
+*.backup.*
+*.bak
+*.old
+*.old1
+
+# Documentation and cache
+docs/phpstan/
+
+# Other
+/build_*/
+/node_modules/
+/vendor/
+/source/assets/build/
+.env
+npm-debug.log
+*.cache
+*.phar
+*.lock
+package-lock.json
+
+# Backup files
+*.bak
+
+# PHPStan documentation
+docs/phpstan/
+

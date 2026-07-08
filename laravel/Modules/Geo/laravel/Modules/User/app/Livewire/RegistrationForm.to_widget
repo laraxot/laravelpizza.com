@@ -1,0 +1,116 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\User\Livewire;
+
+use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Wizard;
+use Filament\Forms\Components\Wizard\Step;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Forms\Form;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\HtmlString;
+use Livewire\Component;
+use Modules\User\Contracts\UserContract;
+
+class RegistrationForm extends Component
+{
+    use InteractsWithForms;
+
+    public ?array $data = [];
+
+    public function mount(): void
+    {
+        $this->form->fill();
+    }
+
+    public function form(\Filament\Schemas\Schema $schema): \Filament\Schemas\Schema
+    {
+        return $form
+            ->schema([
+                Wizard::make([
+                    Step::make('Dati Personali')
+                        ->icon('heroicon-o-user')
+                        ->description('Inserisci i tuoi dati personali')
+                        ->schema([
+                            TextInput::make('name')
+                                ->label('Nome')
+                                ->required()
+                                ->maxLength(255),
+
+                            TextInput::make('last_name')
+                                ->label('Cognome')
+                                ->required()
+                                ->maxLength(255),
+
+                            TextInput::make('email')
+                                ->label('Email')
+                                ->email()
+                                ->required()
+                                ->unique('users')
+                                ->maxLength(255),
+                        ]),
+
+                    Step::make('Credenziali')
+                        ->icon('heroicon-o-key')
+                        ->description('Crea le tue credenziali di accesso')
+                        ->schema([
+                            TextInput::make('password')
+                                ->label('Password')
+                                ->password()
+                                ->required()
+                                ->minLength(8)
+                                ->same('password_confirmation'),
+
+                            TextInput::make('password_confirmation')
+                                ->label('Conferma Password')
+                                ->password()
+                                ->required()
+                                ->minLength(8),
+                        ]),
+
+                    Step::make('Privacy')
+                        ->icon('heroicon-o-lock-closed')
+                        ->description('Informativa sulla privacy')
+                        ->schema([
+                            Checkbox::make('terms')
+                                ->label(new HtmlString('Accetto i <a href="#" class="text-primary-600 hover:underline">Termini di Servizio</a> e l\'<a href="#" class="text-primary-600 hover:underline">Informativa sulla Privacy</a>'))
+                                ->required(),
+
+                            Checkbox::make('newsletter')
+                                ->label('Desidero ricevere aggiornamenti via email sul progetto '),
+                        ]),
+                ])
+                ->skippable(false)
+                ->submitAction(new HtmlString('<button type="submit" class="w-full bg-blue-900 text-white text-lg font-medium py-3 px-6 rounded-full hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-50 shadow-sm hover:shadow-md transition-all duration-200">COMPLETA REGISTRAZIONE</button>'))
+            ])
+            ->statePath('data');
+    }
+
+    public function register(): \Illuminate\Http\RedirectResponse
+    {
+        $state = $this->form->getState();
+
+        /** @var UserContract $user */
+        $user = app(UserContract::class);
+        $user->name = $state['name'] . ' ' . $state['last_name'];
+        $user->email = $state['email'];
+        $user->password = Hash::make($state['password']);
+        $user->save();
+
+        event(new Registered($user));
+
+        Auth::login($user, true);
+
+        return redirect()->intended('/');
+    }
+
+    public function render()
+    {
+        return view('user::livewire.registration-form');
+    }
+}

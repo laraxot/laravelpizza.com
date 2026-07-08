@@ -1,0 +1,14 @@
+<?php
+namespace DummyNamespace;
+
+//---base
+use Modules\Xot\Repositories\XotBaseRepository;
+
+class DummyClass extends XotBaseRepository{
+    /**
+     * Specify Model class name
+     *
+     * @return string
+     */
+    protected $model = 'DummyFullModel';
+}

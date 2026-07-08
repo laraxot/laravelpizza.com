@@ -1,0 +1,14 @@
+{
+    "name": "IndennitaCondizioniLavoro",
+    "alias": "indennitacondizionilavoro",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\IndennitaCondizioniLavoro\\Providers\\IndennitaCondizioniLavoroServiceProvider",
+        "Modules\\IndennitaCondizioniLavoro\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "aliases": [],
+    "files": [],
+    "requires": []
+}

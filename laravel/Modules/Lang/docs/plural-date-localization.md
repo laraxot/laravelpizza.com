@@ -108,6 +108,15 @@ $formatted = $date->translatedFormat('j F Y');
 // Differenza in formato leggibile
 $postDate = Carbon::parse('2023-01-15');
 $postDate = Carbon::parse('2023-01-15');
+<<<<<<< HEAD
+$postDate = Carbon::parse('[DATE]');
+$postDate = Carbon::parse('[DATE]');
+$postDate = Carbon::parse('[DATE]');
+$postDate = Carbon::parse('[DATE]');
+$postDate = Carbon::parse('2023-01-15');
+$postDate = Carbon::parse('2023-01-15');
+=======
+>>>>>>> 11c7c7d (.)
 $diff = $postDate->diffForHumans();
 // Output: "2 mesi fa"
 
@@ -417,6 +426,15 @@ $formatted = $date->translatedFormat('j F Y');
 // Differenza in formato leggibile
 $postDate = Carbon::parse('2023-01-15');
 $postDate = Carbon::parse('2023-01-15');
+<<<<<<< HEAD
+$postDate = Carbon::parse('[DATE]');
+$postDate = Carbon::parse('[DATE]');
+$postDate = Carbon::parse('[DATE]');
+$postDate = Carbon::parse('[DATE]');
+$postDate = Carbon::parse('2023-01-15');
+$postDate = Carbon::parse('2023-01-15');
+=======
+>>>>>>> 11c7c7d (.)
 $diff = $postDate->diffForHumans();
 // Output: "2 mesi fa"
 
@@ -615,4 +633,12 @@ if (!function_exists('trans_choice_with_count')) {
 ### Problemi con le valute
 - Verifica che il codice valuta sia valido (es: 'EUR', 'USD')
 - Controlla che la localizzazione supporti la valuta specificata
+<<<<<<< HEAD
 - Assicurati che il server abbia i dati di localizzazione installati
+- Assicurati che il server abbia i dati di localizzazione installati
+- Assicurati che il server abbia i dati di localizzazione installati
+- Assicurati che il server abbia i dati di localizzazione installati
+- Assicurati che il server abbia i dati di localizzazione installati
+=======
+- Assicurati che il server abbia i dati di localizzazione installati
+>>>>>>> 11c7c7d (.)

@@ -101,10 +101,10 @@ trait TransTrait
      * Ottiene la chiave di traduzione per un dato key.
      * Genera un percorso di traduzione standardizzato basato sul modulo e sul nome della classe.
      *
-     * @param string                               $key         La chiave di traduzione specifica
-     * @param array<string, bool|float|int|string> $replace     Parametri di sostituzione per la traduzione
-     * @param string|null                          $locale      Locale da utilizzare (null = locale corrente)
-     * @param bool                                 $useFallback Se true, utilizza la chiave come fallback se la traduzione non esiste
+     * @param string                                    $key         La chiave di traduzione specifica
+     * @param array<string, bool|float|int|string|null> $replace     Parametri di sostituzione per la traduzione
+     * @param string|null                               $locale      Locale da utilizzare (null = locale corrente)
+     * @param bool                                      $useFallback Se true, utilizza la chiave come fallback se la traduzione non esiste
      *
      * @return string La stringa tradotta o la chiave originale se non trovata
      */
@@ -141,10 +141,10 @@ trait TransTrait
      * Ottiene la chiave di traduzione per un dato key (alias per getTranslatedString).
      * Genera un percorso di traduzione standardizzato basato sul modulo e sul nome della classe.
      *
-     * @param string                               $key         La chiave di traduzione specifica
-     * @param array<string, bool|float|int|string> $replace     Parametri di sostituzione per la traduzione
-     * @param string|null                          $locale      Locale da utilizzare (null = locale corrente)
-     * @param bool                                 $useFallback Se true, utilizza la chiave come fallback se la traduzione non esiste
+     * @param string                                    $key         La chiave di traduzione specifica
+     * @param array<string, bool|float|int|string|null> $replace     Parametri di sostituzione per la traduzione
+     * @param string|null                               $locale      Locale da utilizzare (null = locale corrente)
+     * @param bool                                      $useFallback Se true, utilizza la chiave come fallback se la traduzione non esiste
      *
      * @return string La stringa tradotta o la chiave originale se non trovata
      */

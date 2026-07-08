@@ -15,8 +15,7 @@ This guide provides a comprehensive overview of chart generation and PDF integra
 
 ### Key Components
 - **Chart Module**: Contains chart generation and styling logic
-- **healthcare_app Module**: Handles survey data and PDF generation
-- **ExternalProject Module**: Handles survey data and PDF generation
+- **Quaeris Module**: Handles survey data and PDF generation
 - **Xot Module**: Provides core services including HTML to PDF conversion
 - **JpGraph Library**: Server-side chart generation
 - **Chart.js**: Client-side chart visualization
@@ -429,7 +428,6 @@ class MakePdfAction
         // Create filename
         $survey_date_to = $surveyPdf->date_to;
         if ($survey_date_to === null || $survey_date_to === '0000-00-00') {
-        if ($survey_date_to === null || $survey_date_to === '[DATE]') {
             $survey_date_to = date('W / o');
         } else {
             $survey_date_to = date('W / o', strtotime($survey_date_to));
@@ -511,7 +509,7 @@ class HtmlService
 PDFs support multi-page layouts with proper headers and footers:
 
 ```blade
-@include('healthcare_app::pdf.css')
+@include('quaeris::pdf.css')
 
 <page backtop="{{ $pdf->backtop }}mm" backbottom="{{ $pdf->backbottom }}mm">
     <page_header>

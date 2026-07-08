@@ -1,0 +1,70 @@
+# Continuazione Lavoro Modulo Notify
+
+## Contesto Attuale
+- Stiamo lavorando sul modulo Notify
+- Abbiamo corretto l'estensione dei modelli da Model a BaseModel
+- Abbiamo documentato le regole e le best practices
+
+## Regole Fondamentali da Seguire
+
+### 1. Estensione dei Modelli
+- ✅ SEMPRE estendere BaseModel del proprio modulo
+- ❌ MAI estendere direttamente Illuminate\Database\Eloquent\Model
+- ✅ BaseModel deve essere nello stesso namespace dei modelli che lo estendono
+
+### 2. Namespace
+- ✅ SEMPRE usare Modules\ModuleName\Models
+- ❌ MAI includere 'app' nel namespace
+- ✅ BaseModel deve essere nello stesso namespace dei modelli
+
+### 3. Cast e Configurazioni
+- ✅ USARE il metodo casts() invece della proprietà $casts
+- ✅ Mantenere i cast del modello base con parent::casts()
+- ✅ Non duplicare configurazioni già presenti in BaseModel
+
+### 4. Documentazione
+- ✅ Mantenere aggiornata la documentazione in docs/
+- ✅ Seguire la struttura standard dei file di documentazione
+- ✅ Includere collegamenti bidirezionali
+
+## File da Controllare
+1. /laravel/Modules/Notify/app/Models/BaseModel.php
+2. /laravel/Modules/Notify/app/Models/NotificationTemplate.php
+3. /laravel/Modules/Notify/docs/models.md
+4. /docs/regole/modelli-eloquent.md
+5. /docs/regole/MEMORY.md
+
+## Checklist per Nuovi Modelli
+- [ ] Verificare esistenza BaseModel nel modulo
+- [ ] Controllare funzionalità ereditate
+- [ ] Non duplicare configurazioni
+- [ ] Estendere BaseModel corretto
+- [ ] Importare dal namespace corretto
+
+## Gerarchia di Ereditarietà
+```
+Illuminate\Database\Eloquent\Model
+└── Modules\Xot\Models\XotBaseModel
+    └── Modules\Notify\Models\BaseModel
+        └── Modules\Notify\Models\NotificationTemplate
+```
+
+## Note Importanti
+1. Ogni modulo ha il suo BaseModel
+2. BaseModel estende XotBaseModel
+3. Mai estendere Model direttamente
+4. Verificare sempre il namespace
+5. Mantenere la documentazione aggiornata
+
+## Collegamenti Chiave
+- [Architettura Modelli](../../docs/architecture/models.md)
+- [Struttura Moduli](../../docs/architecture/modules.md)
+- [BaseModel Notify](../../laravel/Modules/Notify/docs/base-model.md)
+- [BaseModel Xot](../../laravel/Modules/Xot/docs/base-model.md)
+
+## Prossimi Passi
+1. Verificare tutti i modelli esistenti nel modulo Notify
+2. Correggere eventuali estensioni errate
+3. Aggiornare la documentazione
+4. Implementare test per verificare il corretto funzionamento
+5. Controllare la coerenza con altri moduli 

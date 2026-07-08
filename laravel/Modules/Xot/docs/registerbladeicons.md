@@ -107,13 +107,6 @@ Config::set('blade-icons.sets.'.$this->nameLower.'.prefix', $this->nameLower);
 
 La stessa filosofia di gestione centralizzata dei path tramite action (es. GetModulePathByGeneratorAction) si applica anche alle traduzioni. Vedi la sezione aggiornata in [XotBaseServiceProvider.md](./XotBaseServiceProvider.md#gestione-dei-path-delle-traduzioni).
 
-## Nota sulla correzione e centralizzazione ([DATE])
-
-- Seguire i pattern e le regole documentate in [XotBaseServiceProvider.md](./xotbaseserviceprovider.md) per la registrazione delle icone Blade.
-- Centralizzare la logica di fallback e logging per i path SVG e la configurazione delle icone.
-- Documentare ogni estensione o personalizzazione.
-
-**Collegamento:** Vedi anche [XotBaseServiceProvider.md](./xotbaseserviceprovider.md)
 ## Nota sulla correzione e centralizzazione (2025-05-13)
 
 - Seguire i pattern e le regole documentate in [XotBaseServiceProvider.md](./XotBaseServiceProvider.md) per la registrazione delle icone Blade.

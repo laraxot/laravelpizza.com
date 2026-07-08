@@ -18,11 +18,12 @@ class GeoJsonCollection extends ResourceCollection
 {
     /**
      * Undocumented variable.
-     *
-     * @var string
      */
     public $collects = GeoJsonResource::class;
 
+    /**
+     * @return array<string, mixed>
+     */
     public function toArray(Request $request): array
     {
         return [

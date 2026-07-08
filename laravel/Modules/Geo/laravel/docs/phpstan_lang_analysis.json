@@ -1,0 +1,140 @@
+PHP Fatal error:  During class fetch: Uncaught ParseError: syntax error, unexpected token "}" in /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/Rating/app/Models/Traits/HasRatingsTrait.php:173
+Stack trace:
+#0 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#1 /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/IndennitaResponsabilita/app/Models/IndennitaResponsabilita.php(343): Composer\Autoload\ClassLoader->loadClass()
+#2 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(576): include('...')
+#3 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#4 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#5 /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/Tenant/app/Providers/TenantServiceProvider.php(59): class_exists()
+#6 /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/Tenant/app/Providers/TenantServiceProvider.php(40): Modules\Tenant\Providers\TenantServiceProvider->registerMorphMap()
+#7 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Modules\Tenant\Providers\TenantServiceProvider->boot()
+#8 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#9 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\Container\Util::unwrapIfClosure()
+#10 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\Container\BoundMethod::callBoundMethod()
+#11 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate\Container\BoundMethod::call()
+#12 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\Container\Container->call()
+#13 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\Foundation\Application->bootProvider()
+#14 [internal function]: Illuminate\Foundation\Application->Illuminate\Foundation\{closure}()
+#15 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk()
+#16 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\Foundation\Application->boot()
+#17 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\Foundation\Bootstrap\BootProviders->bootstrap()
+#18 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate\Foundation\Application->bootstrapWith()
+#19 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/larastan/larastan/bootstrap.php(31): Illuminate\Foundation\Console\Kernel->bootstrap()
+#20 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(503): require_once('...')
+#21 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(504): PHPStan\Command\CommandHelper::PHPStan\Command\{closure}()
+#22 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(424): PHPStan\Command\CommandHelper::executeBootstrapFile()
+#23 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(140): PHPStan\Command\CommandHelper::begin()
+#24 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan\Command\AnalyseCommand->execute()
+#25 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_1734058be\Symfony\Component\Console\Command\Command->run()
+#26 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_1734058be\Symfony\Component\Console\Application->doRunCommand()
+#27 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_1734058be\Symfony\Component\Console\Application->doRun()
+#28 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(103): _PHPStan_1734058be\Symfony\Component\Console\Application->run()
+#29 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(104): _PHPStan_1734058be\{closure}()
+#30 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan(8): require('...')
+#31 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/bin/phpstan(119): include('...')
+#32 {main} in /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/IndennitaResponsabilita/app/Models/IndennitaResponsabilita.php on line 343
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  During class fetch: Uncaught ParseError: syntax error, unexpected token "}" in /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/Rating/app/Models/Traits/HasRatingsTrait.php:173
+Stack trace:
+#0 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#1 /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/IndennitaResponsabilita/app/Models/IndennitaResponsabilita.php(343): Composer\Autoload\ClassLoader->loadClass()
+#2 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(576): include('...')
+#3 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#4 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#5 /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/Tenant/app/Providers/TenantServiceProvider.php(59): class_exists()
+#6 /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/Tenant/app/Providers/TenantServiceProvider.php(40): Modules\Tenant\Providers\TenantServiceProvider->registerMorphMap()
+#7 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Modules\Tenant\Providers\TenantServiceProvider->boot()
+#8 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#9 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\Container\Util::unwrapIfClosure()
+#10 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\Container\BoundMethod::callBoundMethod()
+#11 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate\Container\BoundMethod::call()
+#12 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\Container\Container->call()
+#13 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\Foundation\Application->bootProvider()
+#14 [internal function]: Illuminate\Foundation\Application->Illuminate\Foundation\{closure}()
+#15 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk()
+#16 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\Foundation\Application->boot()
+#17 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\Foundation\Bootstrap\BootProviders->bootstrap()
+#18 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate\Foundation\Application->bootstrapWith()
+#19 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/larastan/larastan/bootstrap.php(31): Illuminate\Foundation\Console\Kernel->bootstrap()
+#20 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(503): require_once('...')
+#21 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(504): PHPStan\Command\CommandHelper::PHPStan\Command\{closure}()
+#22 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(424): PHPStan\Command\CommandHelper::executeBootstrapFile()
+#23 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(140): PHPStan\Command\CommandHelper::begin()
+#24 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan\Command\AnalyseCommand->execute()
+#25 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_1734058be\Symfony\Component\Console\Command\Command->run()
+#26 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_1734058be\Symfony\Component\Console\Application->doRunCommand()
+#27 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_1734058be\Symfony\Component\Console\Application->doRun()
+#28 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(103): _PHPStan_1734058be\Symfony\Component\Console\Application->run()
+#29 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(104): _PHPStan_1734058be\{closure}()
+#30 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan(8): require('...')
+#31 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/bin/phpstan(119): include('...')
+#32 {main}
+
+  at Modules/IndennitaResponsabilita/app/Models/IndennitaResponsabilita.php:343
+    339▕  * @method static Builder<static>|IndennitaResponsabilita whereNote($value)
+    340▕  * @method static Builder<static>|IndennitaResponsabilita withRating()
+    341▕  * @mixin \Eloquent
+    342▕  */
+  ➜ 343▕ class IndennitaResponsabilita extends BaseScheda
+    344▕ {
+    345▕     use FunctionTrait;
+    346▕     use HasRatingsTrait;
+    347▕     use RelationshipTrait;
+
+
+   Whoops\Exception\ErrorException 
+
+  During class fetch: Uncaught ParseError: syntax error, unexpected token "}" in /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/Rating/app/Models/Traits/HasRatingsTrait.php:173
+Stack trace:
+#0 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#1 /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/IndennitaResponsabilita/app/Models/IndennitaResponsabilita.php(343): Composer\Autoload\ClassLoader->loadClass()
+#2 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(576): include('...')
+#3 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#4 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#5 /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/Tenant/app/Providers/TenantServiceProvider.php(59): class_exists()
+#6 /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/Tenant/app/Providers/TenantServiceProvider.php(40): Modules\Tenant\Providers\TenantServiceProvider->registerMorphMap()
+#7 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Modules\Tenant\Providers\TenantServiceProvider->boot()
+#8 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#9 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\Container\Util::unwrapIfClosure()
+#10 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\Container\BoundMethod::callBoundMethod()
+#11 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate\Container\BoundMethod::call()
+#12 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\Container\Container->call()
+#13 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\Foundation\Application->bootProvider()
+#14 [internal function]: Illuminate\Foundation\Application->Illuminate\Foundation\{closure}()
+#15 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk()
+#16 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\Foundation\Application->boot()
+#17 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\Foundation\Bootstrap\BootProviders->bootstrap()
+#18 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate\Foundation\Application->bootstrapWith()
+#19 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/larastan/larastan/bootstrap.php(31): Illuminate\Foundation\Console\Kernel->bootstrap()
+#20 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(503): require_once('...')
+#21 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(504): PHPStan\Command\CommandHelper::PHPStan\Command\{closure}()
+#22 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(424): PHPStan\Command\CommandHelper::executeBootstrapFile()
+#23 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(140): PHPStan\Command\CommandHelper::begin()
+#24 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan\Command\AnalyseCommand->execute()
+#25 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_1734058be\Symfony\Component\Console\Command\Command->run()
+#26 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_1734058be\Symfony\Component\Console\Application->doRunCommand()
+#27 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_1734058be\Symfony\Component\Console\Application->doRun()
+#28 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(103): _PHPStan_1734058be\Symfony\Component\Console\Application->run()
+#29 phar:///var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(104): _PHPStan_1734058be\{closure}()
+#30 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/phpstan/phpstan/phpstan(8): require('...')
+#31 /var/www/_bases/base_ptvx_fila5_mono/laravel/vendor/bin/phpstan(119): include('...')
+#32 {main}
+
+  at Modules/IndennitaResponsabilita/app/Models/IndennitaResponsabilita.php:343
+    339▕  * @method static Builder<static>|IndennitaResponsabilita whereNote($value)
+    340▕  * @method static Builder<static>|IndennitaResponsabilita withRating()
+    341▕  * @mixin \Eloquent
+    342▕  */
+  ➜ 343▕ class IndennitaResponsabilita extends BaseScheda
+    344▕ {
+    345▕     use FunctionTrait;
+    346▕     use HasRatingsTrait;
+    347▕     use RelationshipTrait;
+
+      [2m+1 vendor frames [22m
+
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
+

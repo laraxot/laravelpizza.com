@@ -1,0 +1,81 @@
+{
+    "name": "laraxot/module_indennitacondizionilavoro_fila5",
+    "description": "Work conditions allowances module for the Laraxot ecosystem: hazard pay, shift differentials, and special work conditions compensation.",
+    "keywords": [
+        "laraxot",
+        "laravel",
+        "filament",
+        "module_indennitacondizionilavoro",
+        "allowances",
+        "work-conditions",
+        "hazard-pay",
+        "compensation",
+        "hr"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/laraxot/module_indennitacondizionilavoro_fila5.git",
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com"
+        }
+    ],
+    "require": {
+        "cknow/laravel-money": "^8.1",
+        "spatie/laravel-sluggable": "*",
+        "php": "^8.3"
+    },
+    "require-dev": {},
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Xot"
+        },
+        {
+            "type": "path",
+            "url": "../Tenant"
+        },
+        {
+            "type": "path",
+            "url": "../UI"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\IndennitaCondizioniLavoro\\": "app/",
+            "Modules\\IndennitaCondizioniLavoro\\Database\\Factories\\": "database/factories/",
+            "Modules\\IndennitaCondizioniLavoro\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [],
+        "post-update-cmd": [],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "./vendor/bin/pest --no-coverage",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\IndennitaCondizioniLavoro\\Providers\\IndennitaCondizioniLavoroServiceProvider",
+                "Modules\\IndennitaCondizioniLavoro\\Providers\\Filament\\AdminPanelProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\IndennitaCondizioniLavoro\\Tests\\": "tests/"
+        }
+    }
+}

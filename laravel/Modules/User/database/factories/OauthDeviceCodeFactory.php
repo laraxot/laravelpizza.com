@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\User\Models\OauthDeviceCode;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Modules\User\Models\OauthDeviceCode>
+ * @extends Factory<OauthDeviceCode>
  */
 class OauthDeviceCodeFactory extends Factory
 {

@@ -1,0 +1,165 @@
+<?php
+
+declare(strict_types=1);
+
+use Illuminate\Database\Schema\Blueprint;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+/**
+ * Class CreateAli14fTable.
+ */
+class CreateAli14fTable extends XotBaseMigration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        // -- CREATE --
+        $this->tableCreate(
+            static function (Blueprint $table): void {
+                $table->integer('id', true);
+                $table->text('flag')->nullable();
+                $table->text('flagd')->nullable();
+                $table->text('iarec')->nullable();
+                $table->text('iarecd')->nullable();
+                $table->text('ente')->nullable();
+                $table->text('matr')->nullable();
+                $table->text('conome')->nullable();
+                $table->text('nome')->nullable();
+                $table->text('datn1')->nullable();
+                $table->text('sess1')->nullable();
+                $table->text('codfis')->nullable();
+                $table->text('dtass')->nullable();
+                $table->text('dtast')->nullable();
+                $table->text('asscau')->nullable();
+                $table->text('dtasn')->nullable();
+                $table->text('numass')->nullable();
+                $table->text('dtces')->nullable();
+                $table->text('dtcet')->nullable();
+                $table->text('dimcau')->nullable();
+                $table->text('xdcont')->nullable();
+                $table->text('xdtipc')->nullable();
+                $table->text('xdrapp')->nullable();
+                $table->text('xdruol')->nullable();
+                $table->text('xdpro')->nullable();
+                $table->text('xdpos')->nullable();
+                $table->text('xdcoq')->nullable();
+                $table->text('xdcat')->nullable();
+                $table->text('xdfas')->nullable();
+                $table->text('xdore')->nullable();
+                $table->text('xdort')->nullable();
+                $table->text('xdpsz')->nullable();
+                $table->text('xdstem')->nullable();
+                $table->text('xapdes')->nullable();
+                $table->text('xespr')->nullable();
+                $table->text('xflag')->nullable();
+                $table->text('xarea')->nullable();
+                $table->text('xstab')->nullable();
+                $table->text('xrepa')->nullable();
+                $table->text('xdesar')->nullable();
+                $table->text('xdesst')->nullable();
+                $table->text('xdesre')->nullable();
+                $table->text('codra')->nullable();
+                $table->text('codrad')->nullable();
+                $table->text('idcam')->nullable();
+                $table->text('idcamd')->nullable();
+                $table->text('con11')->nullable();
+                $table->text('tip11')->nullable();
+                $table->text('rap11')->nullable();
+                $table->text('ruo11')->nullable();
+                $table->text('pro11')->nullable();
+                $table->text('pos11')->nullable();
+                $table->text('cod11')->nullable();
+                $table->text('liv11')->nullable();
+                $table->text('fas11')->nullable();
+                $table->text('ore11')->nullable();
+                $table->text('ort11')->nullable();
+                $table->text('qua11')->nullable();
+                $table->text('psz11')->nullable();
+                $table->text('dst11')->nullable();
+                $table->text('rapd11')->nullable();
+                $table->text('desc11')->nullable();
+                $table->text('desc21')->nullable();
+                $table->text('are11')->nullable();
+                $table->text('sta11')->nullable();
+                $table->text('rep11')->nullable();
+                $table->text('desa11')->nullable();
+                $table->text('dess11')->nullable();
+                $table->text('desr11')->nullable();
+                $table->text('cont')->nullable();
+                $table->text('tipco')->nullable();
+                $table->text('rapp')->nullable();
+                $table->text('ruolo')->nullable();
+                $table->text('propro')->nullable();
+                $table->text('posfun')->nullable();
+                $table->text('codqua')->nullable();
+                $table->text('liv')->nullable();
+                $table->text('fascia')->nullable();
+                $table->text('oree')->nullable();
+                $table->text('oret')->nullable();
+                $table->text('qua005')->nullable();
+                $table->text('posiz')->nullable();
+                $table->text('dstem')->nullable();
+                $table->text('rapdes')->nullable();
+                $table->text('desc1')->nullable();
+                $table->text('desc2')->nullable();
+                $table->text('area')->nullable();
+                $table->text('stab')->nullable();
+                $table->text('repa')->nullable();
+                $table->text('desar')->nullable();
+                $table->text('desst')->nullable();
+                $table->text('desre')->nullable();
+                $table->text('idcont')->nullable();
+                $table->text('idtipc')->nullable();
+                $table->text('idrapp')->nullable();
+                $table->text('idruol')->nullable();
+                $table->text('idpro')->nullable();
+                $table->text('idpos')->nullable();
+                $table->text('idcoq')->nullable();
+                $table->text('idcat')->nullable();
+                $table->text('idfas')->nullable();
+                $table->text('idore')->nullable();
+                $table->text('idort')->nullable();
+                $table->text('idpsz')->nullable();
+                $table->text('idstem')->nullable();
+                $table->text('irapde')->nullable();
+                $table->text('idespr')->nullable();
+                $table->text('idesco')->nullable();
+                $table->text('idesdi')->nullable();
+                $table->text('iarea')->nullable();
+                $table->text('istab')->nullable();
+                $table->text('irepa')->nullable();
+                $table->text('idesar')->nullable();
+                $table->text('idesst')->nullable();
+                $table->text('idesse')->nullable();
+                $table->text('idcatp')->nullable();
+                $table->text('idenlo')->nullable();
+                $table->text('idlib1')->nullable();
+                $table->text('idlib2')->nullable();
+                $table->text('idlib3')->nullable();
+                $table->text('idlib4')->nullable();
+                $table->text('datarp')->nullable();
+                $table->text('datara')->nullable();
+                $table->text('ruolop')->nullable();
+                $table->text('arec')->nullable();
+                $table->text('vpnc')->nullable();
+                $table->text('lib1')->nullable();
+                $table->text('lib2')->nullable();
+                $table->text('lib3')->nullable();
+                $table->text('lib4')->nullable();
+                $table->text('lib5')->nullable();
+                $table->text('lib6')->nullable();
+                $table->text('lib7')->nullable();
+            });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    #[Override]
+    public function down(): void
+    {
+        Schema::drop('ali14f');
+    }
+}

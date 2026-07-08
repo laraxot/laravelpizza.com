@@ -1,0 +1,79 @@
+{
+    "name": "laraxot/module_performance_fila5",
+    "description": "Performance evaluation and HR assessment module for the Laraxot ecosystem: employee reviews, KPI tracking, and competency evaluation.",
+    "keywords": [
+        "laraxot",
+        "laravel",
+        "filament",
+        "module_performance",
+        "performance-evaluation",
+        "employee-review",
+        "kpi",
+        "competency-assessment",
+        "hr"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/laraxot/module_performance_fila5.git",
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev": {},
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Xot"
+        },
+        {
+            "type": "path",
+            "url": "../Tenant"
+        },
+        {
+            "type": "path",
+            "url": "../UI"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\Performance\\": "app/",
+            "Modules\\Performance\\Database\\Factories\\": "database/factories/",
+            "Modules\\Performance\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [],
+        "post-update-cmd": [],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "./vendor/bin/pest --no-coverage",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Performance\\Providers\\PerformanceServiceProvider",
+                "Modules\\Performance\\Providers\\Filament\\AdminPanelProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Performance\\Tests\\": "tests/"
+        }
+    }
+}

@@ -28,10 +28,6 @@ class LoginWidget extends XotBaseWidget
     /**
      * @var view-string
      */
-<<<<<<< HEAD
-    /** @phpstan-ignore-next-line property.defaultValue */
-    protected string $view = 'pub_theme::filament.widgets.auth.login';
-=======
     protected string $view;
 
     public function __construct()
@@ -42,7 +38,6 @@ class LoginWidget extends XotBaseWidget
 
         parent::__construct();
     }
->>>>>>> 6d3760fe (.)
 
     /**
      * Inizializza il widget quando viene montato.
@@ -129,8 +124,7 @@ class LoginWidget extends XotBaseWidget
                     $messages = [$messages];
                 }
 
-                /* @var array<int|string, mixed> $messages */
-                $this->addError($field, implode(' ', $messages));
+                $this->addError($field, implode(' ', array_map(static fn (mixed $message): string => (string) $message, $messages)));
             }
         } catch (\Exception $e) {
             report($e);

@@ -14,9 +14,11 @@ use Modules\User\Models\User;
  *
  * Factory for creating OauthToken model instances for testing and seeding.
  */
+/**
+ * @extends Factory<OauthToken>
+ */
 class OauthAccessTokenFactory extends Factory
 {
-    /** @phpstan-ignore-next-line Passport access token is an Eloquent model at runtime, but PHPStan loses that type here. */
     protected $model = OauthToken::class;
 
     /**

@@ -19,8 +19,6 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null  $updated_at
  * @property TeamContract $team
  *
- * <<<<<<< HEAD
- *
  * @method static Builder|TeamInvitationContract        newModelQuery()
  * @method static Builder|TeamInvitationContract        newQuery()
  * @method static Builder|TeamInvitationContract        query()
@@ -30,7 +28,6 @@ use Illuminate\Support\Carbon;
  * @method static Builder|TeamInvitationContract        whereRole($value)
  * @method static Builder|TeamInvitationContract        whereTeamId($value)
  * @method static Builder|TeamInvitationContract        whereUpdatedAt($value)
- *                                                                             =======
  * @method static Builder<Model>|TeamInvitationContract newModelQuery()
  * @method static Builder<Model>|TeamInvitationContract newQuery()
  * @method static Builder<Model>|TeamInvitationContract query()
@@ -40,7 +37,6 @@ use Illuminate\Support\Carbon;
  * @method static Builder<Model>|TeamInvitationContract whereRole($value)
  * @method static Builder<Model>|TeamInvitationContract whereTeamId($value)
  * @method static Builder<Model>|TeamInvitationContract whereUpdatedAt($value)
- *                                                                             >>>>>>> 6d3760fe (.)
  *
  * @phpstan-require-extends Model
  *

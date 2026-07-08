@@ -17,6 +17,7 @@ class GetProviderButtonsAction
     /**
      * Execute the action.
      */
+    /** @return array<int, array<string, mixed>> */
     public function execute(): array
     {
         return [];

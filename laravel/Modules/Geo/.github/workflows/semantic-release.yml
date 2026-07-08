@@ -1,50 +1,49 @@
-name: Semantic Release
+# Post-release: propaga release ai moduli Laravel modificati (reusable module-release)
+# Non crea tag mono — quello è in release.yml (npx semantic-release)
+# Canon: docs/wiki/how-to/github-actions-semantic-release-stack.md
+name: Semantic Release (module propagation)
 
 on:
-  push:
-    branches:
-      - main
-      - master
-      - dev
-  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Release
+    types:
+      - completed
+    branches: ["*"]
 
 permissions:
-  contents: write
-  issues: write
-  pull-requests: write
-
-concurrency:
-  group: semantic-release-${{ github.ref }}
-  cancel-in-progress: false
+  contents: read
+  actions: read
 
 jobs:
-  release:
+  detect-modules:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    outputs:
+      modules: ${{ steps.detect.outputs.modules }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          fetch-tags: true
+          ref: ${{ github.event.workflow_run.head_sha }}
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install semantic-release toolchain
+      - name: Detect changed modules
+        id: detect
         run: |
-          npm install --no-save \
-            semantic-release \
-            @semantic-release/commit-analyzer \
-            @semantic-release/release-notes-generator \
-            @semantic-release/changelog \
-            @semantic-release/github \
-            @semantic-release/git \
-            conventional-changelog-conventionalcommits
+          MODULES=$(git diff --name-only "${{ github.event.workflow_run.head_sha }}^" "${{ github.event.workflow_run.head_sha }}" \
+            | grep -E '^laravel/Modules/[^/]+/' \
+            | cut -d/ -f3 | sort -u | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          echo "modules=${MODULES:-[]}" >> "$GITHUB_OUTPUT"
 
-      - name: Release, changelog and version tag
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+  release-modules:
+    needs: detect-modules
+    if: needs.detect-modules.outputs.modules != '[]'
+    strategy:
+      fail-fast: false
+      matrix:
+        module: ${{ fromJson(needs.detect-modules.outputs.modules) }}
+    uses: ./.github/workflows/module-release.yml
+    with:
+      module-name: ${{ matrix.module }}
+      module-path: laravel/Modules
+    secrets: inherit

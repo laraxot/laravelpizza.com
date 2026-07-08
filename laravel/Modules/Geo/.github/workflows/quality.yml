@@ -1,4 +1,4 @@
-name: Geo Quality Checks
+name: Activity Quality Checks
 
 on:
   push:
@@ -6,13 +6,13 @@ on:
       - develop
       - main
     paths:
-      - 'laravel/Modules/Geo/**'
+      - 'laravel/Modules/Activity/**'
   pull_request:
     branches:
       - develop
       - main
     paths:
-      - 'laravel/Modules/Geo/**'
+      - 'laravel/Modules/Activity/**'
 
 jobs:
   quality:
@@ -20,7 +20,7 @@ jobs:
     environment: Testing
     
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -38,13 +38,13 @@ jobs:
       - name: Run PHPStan
         working-directory: laravel
         run: |
-          ./vendor/bin/phpstan analyse Modules/Geo --level=10 --memory-limit=-1 || true
+          ./vendor/bin/phpstan analyse Modules/Activity --level=10 --memory-limit=-1 || true
 
       - name: Run PHPMD
         working-directory: laravel
         run: |
           if [ -f phpmd.phar ]; then
-            php phpmd.phar Modules/Geo text cleancode,codesize,design,naming,unusedcode || true
+            php phpmd.phar Modules/Activity text cleancode,codesize,design,naming,unusedcode || true
           else
             echo "PHPMD not found, skipping..."
           fi
@@ -52,14 +52,13 @@ jobs:
       - name: Run Pint
         working-directory: laravel
         run: |
-          ./vendor/bin/pint Modules/Geo || true
+          ./vendor/bin/pint Modules/Activity || true
 
       - name: Run PHPInsights
         working-directory: laravel
         run: |
           if [ -f vendor/bin/phpinsights ]; then
-            ./vendor/bin/phpinsights analyse Modules/Geo --format=table --no-interaction || true
+            ./vendor/bin/phpinsights analyse Modules/Activity --format=table --no-interaction || true
           else
             echo "PHPInsights not found, skipping..."
           fi
-

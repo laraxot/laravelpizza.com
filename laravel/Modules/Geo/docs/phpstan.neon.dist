@@ -1,0 +1,13 @@
+# Template PHPStan per pacchetti sotto `docs/` (adatta `paths` / `includes` al tuo layout).
+# Dopo `composer install`, decommentare le righe `includes` che servono.
+
+# includes:
+#     - vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: max
+    paths:
+        - app
+    excludePaths:
+        - vendor
+    reportUnmatchedIgnoredErrors: false

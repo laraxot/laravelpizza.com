@@ -9,6 +9,7 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 abstract class BaseAuthWidget extends XotBaseWidget
 {
+    /** @var array<string, mixed>|null */
     public ?array $data = [];
 
     public function mount(): void
@@ -22,7 +23,7 @@ abstract class BaseAuthWidget extends XotBaseWidget
      * Restituisce lo schema del form per l'autenticazione.
      * Deve essere implementato dalle classi concrete.
      *
-     * @return array<mixed>
+     * @return array<int|string, mixed>
      */
     abstract public function getFormSchema(): array;
 

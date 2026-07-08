@@ -13,6 +13,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 class CreateRole extends XotBaseCreateRecord
 {
     // //
+    /** @var Collection<int, string> */
     public Collection $permissions;
 
     protected static string $resource = RoleResource::class;

@@ -1,28 +1,39 @@
+# Sincronizza CHANGELOG dopo Release (analytics in changelog-advanced.yml)
 name: Update Changelog
 
 on:
-  release:
-    types: [released]
+  workflow_run:
+    workflows:
+      - Release
+    types:
+      - completed
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: write
 
 jobs:
-  update:
+  sync:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          ref: main
+          fetch-depth: 0
+          ref: ${{ github.event.workflow_run.head_branch }}
 
-      - name: Update Changelog
-        uses: stefanzweifel/changelog-updater-action@v1
-        with:
-          latest-version: ${{ github.event.release.name }}
-          release-notes: ${{ github.event.release.body }}
+      - name: Pull latest tags
+        run: git fetch --tags --force
 
-      - name: Commit updated CHANGELOG
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          branch: main
-          commit_message: Update CHANGELOG
-          file_pattern: CHANGELOG.md
+      - name: Ensure CHANGELOG exists
+        run: test -f CHANGELOG.md || echo "# Changelog" > CHANGELOG.md
+
+      - name: Commit if semantic-release left local changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add CHANGELOG.md package.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "chore: sync changelog after release [skip ci]"
+          git push || true

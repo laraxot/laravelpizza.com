@@ -161,9 +161,7 @@ public_html
 lang/lang/
 _docs/
 _docs/
-<<<<<<< HEAD
 docs/archive/
-=======
 
 # Second brain: no-docs-archive (wiki) — non tracciare albero legacy docs/archive/
 **/docs/archive/
@@ -177,10 +175,4 @@ docs/archive/
 *~head
 
 agentdb.rvf
-<<<<<<< HEAD
->>>>>>> 6d3760fe (.)
-=======
-
-
 test-results/
->>>>>>> 9fa499be (.)

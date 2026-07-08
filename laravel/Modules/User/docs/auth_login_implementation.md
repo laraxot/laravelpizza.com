@@ -199,8 +199,4 @@ rules([
 
 ## Conclusione
 
-<<<<<<< HEAD
-Seguendo queste linee guida, è possibile implementare pagine di autenticazione conformi alle regole e alle best practices di Laraxot, garantendo coerenza, manutenibilità e accessibilità in tutto il progetto.
-=======
-Seguendo queste linee guida, è possibile implementare pagine di autenticazione conformi alle regole e alle best practices di healthcare_app, garantendo coerenza, manutenibilità e accessibilità in tutto il progetto.
->>>>>>> 6d3760fe (.)
+Seguendo queste linee guida, è possibile implementare pagine di autenticazione conformi alle regole e alle best practices di Laraxot (healthcare_app), garantendo coerenza, manutenibilità e accessibilità in tutto il progetto.

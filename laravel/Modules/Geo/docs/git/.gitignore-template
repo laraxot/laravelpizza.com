@@ -1,0 +1,55 @@
+# Dipendenze e pacchetti
+/vendor/
+/node_modules/
+/docs/vendor/
+
+# File di lock e cache
+*.lock
+*.cache
+*.phar
+package-lock.json
+yarn-error.log
+npm-debug.log
+.phpunit.result.cache
+.php-cs-fixer.cache
+
+# File di log
+*.log
+
+# Directories di build
+/build/
+/build
+build/
+
+# Laravel specific
+bootstrap/compiled.php
+app/storage/
+public/storage
+public/hot
+public_html/storage
+public_html/hot
+storage/*.key
+.env
+
+# Configurazioni locali
+Homestead.yaml
+Homestead.json
+/.vagrant
+
+# Git specifico
+.git-blame-ignore-revs
+.git-rewrite/
+.git-rewrite
+
+# File temporanei e di sistema
+*.tmp
+*.swp
+*.swo
+*.stackdump
+*.exe
+*:Zone.Identifier
+.DS_Store
+
+# Caches specifiche
+docs/cache/
+cache/

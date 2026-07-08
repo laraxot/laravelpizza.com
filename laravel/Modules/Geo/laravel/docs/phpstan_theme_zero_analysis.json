@@ -1,0 +1,4 @@
+{"totals":{"errors":0,"file_errors":1},"files":{"/var/www/_bases/base_ptvx_fila5_mono/laravel/Themes/Zero/extras/dashboard_klelkoo.blade.php":{"errors":1,"messages":[{"message":"Syntax error, unexpected '}', expecting EOF on line 2732","line":2732,"ignorable":false,"identifier":"phpstan.parse"}]}},"errors":[]}⚠️  Result is incomplete because of severe errors. ⚠️
+   Fix these errors first and then re-run PHPStan
+   to get all reported errors.
+

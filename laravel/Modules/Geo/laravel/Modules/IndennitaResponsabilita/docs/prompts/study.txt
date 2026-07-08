@@ -1,0 +1,50 @@
+studia a fondo 
+https://github.com/spatie/laravel-schemaless-attributes
+https://spatie.be/docs/laravel-data/v4/validation/using-validation-attributes
+https://spatie.be/docs/laravel-data/v4/as-a-resource/appending-properties
+https://laravel-news.com/laravel-schemaless-attributes-package
+https://spatie.be/docs/laravel-site-search/v2/advanced-usage/indexing-extra-properties
+https://spatie.be/docs/laravel-medialibrary/v11/advanced-usage/using-custom-properties
+https://spatie.be/docs/laravel-data/v4/advanced-usage/traits-and-interfaces
+https://laracasts.com/discuss/channels/guides/model-add-custom-columns-dynamically
+https://spatie.be/docs/laravel-data/v4/as-a-data-transfer-object/injecting-property-values
+https://spatie.be/docs/laravel-html/v3/general-usage/element-methods
+https://spatie.be/docs/laravel-data/v4/as-a-resource/lazy-properties
+https://spatie.be/docs/laravel-data/v4/validation/introduction
+https://laravel-news.com/getting-started-with-phpinsights
+https://github.com/nunomaduro/phpinsights
+
+poi aggiorni le varie cartelle docs dentro i moduli e dentro i temi .. ovvio se si parla di un link che parla di media devi aggiornare la cartella docs dentro il modulo media, oltre che ad aggiornare devi anche studiare le cartelle docs dentro i moduli e dentro i temi, hai commesso molti errori di utilizzo di https://github.com/spatie/laravel-schemaless-attributes nel modulo Rating e nel modulo IndennitaResponsabilita , devi trovare gli errori e documentarli bene dentro le cartelle docs dentro i moduli e dentro i temi , poi devi studiare le cartelle docs, sapendo che anche altri agenti ai stanno aggiornando le cartelle docs, poi implementa ma prima di implementare devi controllare nuovamente i files che vuoi modificare perche' probabilmente un altro agente ai ha gia' fatto il lavoro , percio' nei files .php se fai una modifica aggiungi un commento con il link relativo alla sua cartella docs dove spieghi la modifica, quello che facciamo lo facciamo sempre dry + kiss , quando hai modificato un file .php devi controllarlo con phpstan, phpmd, phpinisghts, poi se sei certo che funziona fa anche git commit e git push
+
+noi usiamo sempre phpstan a livello max ovvero livello 10 , questa e' una regola importante che devi sempre ricordare, percio' aggiorna le tue rules, le tue memories, le tue skills, altra cosa importante e' che il file laravel/phpstan.neon non puoi modificarlo e non devi assolutamente creare altre configurazioni per phpstan devi usare quella 
+
+
+controlla tutti i composer.json dentro la root di ogni modulo sotto il nodo "autoload" deve avere
+ "autoload-dev": {
+        "psr-4": {
+            "Modules\\<Modulo>\\Tests\\": "tests/"
+        }
+    },
+
+
+studia https://github.com/nunomaduro/phpinsights  e installa la versione .phar (no docker !), capisci da solo il perche' e avvisa anche gli altri agenti ai 
+
+dentro il file laravel/composer.json hai aggiunto 
+"require-dev": {
+        "nunomaduro/phpinsights": "^2.13"
+    },
+phpinsights non voglio che lo installi con composer, ma voglio che installi la versione standalone .phar 
+
+
+con git andiamo solo in avanti, non ripristiniamo MAI vecchie versioni , certo puoi andare a leggere e studiare le vecchie versioni, ma non devi mai ripristinare le vecchie versioni , capisci da solo il perche' poi aggiorna e studia le cartelle docs dentro i moduli e dentro i temi
+
+
+fare  $rec = $this->record;
+        $modelData = $rec->attributesToArray();
+
+        // Get ratings for the current year
+        $ratings = $rec->ratings()->wherePivot('anno', $rec->anno)->get();
+
+vuol dire che non hai capito che stiamo utilizzando https://github.com/spatie/laravel-schemaless-attributes  e che percio' devi aggiornare meglio le cartelle docs dentro i moduli e dentro i temi, devi studiarle meglio le cartelle docs dentro i moduli e dentro i temi, aggiorna le tue memories, le tue skills, aggiorna le tue regole, aggiorna tutto quello che serve per non commettere piu' questi errori
+
+

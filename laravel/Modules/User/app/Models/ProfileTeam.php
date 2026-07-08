@@ -40,16 +40,14 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|ProfileTeam whereUpdatedBy($value)
  * @method static Builder<static>|ProfileTeam whereUserId($value)
  *
- * @mixin IdeHelperProfileTeam
- *
  * @property ProfileContract|null         $deleter
  * @property Team|null                    $team
  * @property User|null                    $user
  * @property string|null                  $profile_id
  * @property array<array-key, mixed>|null $permissions
  *
- * @method static Builder<static>|ProfileTeam                         childrenWith(array $relations)
- * @method static Builder<static>|ProfileTeam                         childrenWithCount(array $relations)
+ * @method static Builder<static>|ProfileTeam                         childrenWith(array<int|string, string> $relations)
+ * @method static Builder<static>|ProfileTeam                         childrenWithCount(array<int|string, string> $relations)
  * @method static \Modules\User\Database\Factories\ProfileTeamFactory factory($count = null, $state = [])
  * @method static Builder<static>|ProfileTeam                         wherePermissions($value)
  * @method static Builder<static>|ProfileTeam                         whereProfileId($value)

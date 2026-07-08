@@ -1,5 +1,4 @@
 - **2025-11-17 – UserContract Property Map**
-- **[DATE] – UserContract Property Map**
   - Aggiunti i metadata `@property` su `Modules\Xot\Contracts\UserContract` per `name`, `currentTeam`, `roles`, `teams`, `tenants`. PHPStan livello 10 richiede che i contract descrivano le magic properties utilizzate nei moduli esterni (policy, comandi, widget).
   - Quando una proprietà proviene da una relazione Eloquent (es. `currentTeam`), documentarla come `@property TeamContract|null $currentTeam` e ricordare che i consumer dovrebbero comunque utilizzare `getRelationValue()` o i metodi della relazione per evitare accessi diretti.
 
@@ -18,10 +17,8 @@ Documentazione della risoluzione dei conflitti tra contratti e classi Eloquent n
 - `toArray(): array` - Conflitto con signature di Eloquent
 - `forceFill(array $attributes): static` - Conflitto con signature di Eloquent
 - `withoutRelations(): static` - Conflitto con signature di Eloquent
-- `getKey(): mixed` - Rimossa la tipizzazione di ritorno per compatibilità con Eloquent core (che non ha typehint in PHP source)
-- `getRelationValue(string $key): mixed` - Rimossa la tipizzazione per compatibilità con `HasAttributes` trait di Eloquent
 
-**Solution**: Rimossi tutti i metodi che duplicavano funzionalità Eloquent native o che introducevano incompatibilità di signature.
+**Solution**: Rimossi tutti i metodi che duplicavano funzionalità Eloquent native
 
 ### 2. UserContract Simplification
 **Problem**: Il `UserContract` era troppo complesso e conteneva metodi in conflitto

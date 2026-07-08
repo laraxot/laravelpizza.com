@@ -86,16 +86,6 @@ class Foo extends bar
 ### Versione HEAD
 
 ## Collegamenti tra versioni di customizing-your-site.md
-* [customizing-your-site.md](../../../gdpr/project_docs/customizing-your-site.md)
-* [customizing-your-site.md](../../../xot/project_docs/customizing-your-site.md)
-* [customizing-your-site.md](../../../ui/project_docs/customizing-your-site.md)
-* [customizing-your-site.md](../../../tenant/project_docs/it/customizing-your-site.md)
-* [customizing-your-site.md](../../../cms/project_docs/customizing-your-site.md)
-* [customizing-your-site.md](../../../gdpr/docs/customizing-your-site.md)
-* [customizing-your-site.md](../../../xot/docs/customizing-your-site.md)
-* [customizing-your-site.md](../../../ui/docs/customizing-your-site.md)
-* [customizing-your-site.md](../../../tenant/docs/it/customizing-your-site.md)
-* [customizing-your-site.md](../../../cms/docs/customizing-your-site.md)
 * [customizing-your-site.md](../../../Gdpr/project_docs/customizing-your-site.md)
 * [customizing-your-site.md](../../../Xot/project_docs/customizing-your-site.md)
 * [customizing-your-site.md](../../../UI/project_docs/customizing-your-site.md)
@@ -188,11 +178,6 @@ class Foo extends bar
 ### Versione HEAD
 
 ## Collegamenti tra versioni di customizing-your-site.md
-* [customizing-your-site.md](../../../gdpr/project_docs/customizing-your-site.md)
-* [customizing-your-site.md](../../../xot/project_docs/customizing-your-site.md)
-* [customizing-your-site.md](../../../ui/project_docs/customizing-your-site.md)
-* [customizing-your-site.md](../../../tenant/project_docs/it/customizing-your-site.md)
-* [customizing-your-site.md](../../../cms/project_docs/customizing-your-site.md)
 * [customizing-your-site.md](../../../Gdpr/project_docs/customizing-your-site.md)
 * [customizing-your-site.md](../../../Xot/project_docs/customizing-your-site.md)
 * [customizing-your-site.md](../../../UI/project_docs/customizing-your-site.md)

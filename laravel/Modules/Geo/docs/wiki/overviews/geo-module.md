@@ -144,6 +144,7 @@ Region (20) → Province (110) → City/Comune (8000+) → Cap → Address
 
 ## Cross-References
 
+- [[../concepts/inventage-leaflet-map-reference|inventage/leaflet-map (upstream)]] — confronto Web Component Leaflet con `map-picker-lit`
 - [[../../../../../../laravel/Modules/Fixcity/docs/wiki/overviews/fixcity-module|Fixcity Module]] — usa LeafletMarkerMapInput
 - [[../../../../../../laravel/Modules/Xot/docs/wiki/overviews/xot-module|Xot Module]] — XotBaseModel base
 - [[../../../../../../laravel/Modules/Tenant/docs/wiki/index|Tenant Module]] — multi-tenant scoping

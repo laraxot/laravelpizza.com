@@ -197,7 +197,27 @@ Ogni campo deve avere la seguente struttura completa:
 ---
 
 **Versione**: 1.0
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+**Data**: 2025-08-08
+**Data**: 2025-08-08
+>>>>>>> bebd548 (.)
+**Stato**: Implementazione in corso
+**Responsabile**: Sistema automatico DRY/KISS
+**Stato**: Implementazione in corso
+**Responsabile**: Sistema automatico DRY/KISS
+**Stato**: Implementazione in corso
+**Responsabile**: Sistema automatico DRY/KISS
+**Stato**: Implementazione in corso
+**Responsabile**: Sistema automatico DRY/KISS
 **Data**: 2025-08-08
 **Data**: 2025-08-08
 **Stato**: Implementazione in corso
 **Responsabile**: Sistema automatico DRY/KISS
+=======
+**Data**: 2025-08-08
+**Data**: 2025-08-08
+**Stato**: Implementazione in corso
+**Responsabile**: Sistema automatico DRY/KISS
+>>>>>>> 11c7c7d (.)

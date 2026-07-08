@@ -1,0 +1,23 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Sigma\Models\Traits;
+
+/**
+ * SchedaTrait - Pure Orchestrator per Modelli Scheda.
+ *
+ * ⚡ CLEAN ARCHITECTURE: ZERO implementation, SOLO composition
+ *
+ * @see \Modules\Sigma\docs\refactoring\schedatrait-cleanup-complete-analysis.md
+ */
+trait SchedaTrait
+{
+    // ⚡ DELEGATION CASCADE (4 domain-specific trait)
+    use Mutators\SchedaMutator;              // → 83 accessor + CommonMutator + EnteMatr*Mutator + SchedaHelper
+    use Relationships\SchedaRelationship;    // → CommonRelationship + EnteMatr*Relationship + TquRelationship
+    use Scopes\SchedaScope;                  // → CommonScope
+    use Helpers\SchedaHelper;                // → FunctionExtra, MassExtra, 34 helper inline
+
+    // Utility methods da utility section originale (da estrarre manualmente)
+}

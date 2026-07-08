@@ -1,0 +1,159 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Sigma\Models\Traits;
+
+use Carbon\Carbon;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
+use Modules\Sigma\Datas\GgFilterData;
+use Modules\Sigma\Models\Integparam;
+use Modules\Sigma\Models\Qua00f;
+use Modules\Sigma\Models\Traits\Extras\FunctionExtra;
+use Modules\Sigma\Models\Traits\Extras\MassExtra;
+use Modules\Sigma\Models\Traits\Mutators\CommonMutator;
+use Modules\Sigma\Models\Traits\Mutators\EnteMatrAnnoMutator;
+use Modules\Sigma\Models\Traits\Mutators\EnteMatrDateRangeMutator;
+use Modules\Sigma\Models\Traits\Mutators\EnteMatrMutator;
+use Modules\Sigma\Models\Traits\Mutators\EnteStabiMutator;
+use Modules\Sigma\Models\Traits\Mutators\SchedaMutator;
+use Modules\Sigma\Models\Traits\Relationships\CommonRelationship;
+use Modules\Sigma\Models\Traits\Relationships\EnteMatrAnnoRelationship;
+use Modules\Sigma\Models\Traits\Relationships\EnteMatrDateRangeRelationship;
+use Modules\Sigma\Models\Traits\Relationships\EnteMatrRelationship;
+use Modules\Sigma\Models\Traits\Relationships\EnteStabiRelationship;
+use Modules\Sigma\Models\Traits\Relationships\TquRelationship;
+use Modules\Sigma\Models\Traits\Scopes\CommonScope;
+
+/**
+ * SchedaTrait - Pure Orchestrator per Modelli Scheda.
+ *
+ * Responsabilità: SOLO trait composition + utility methods.
+ * Tutti gli accessor, helper, relazioni, scope sono delegati ai trait specifici.
+ *
+ * DELEGATION CASCADE ARCHITECTURE:
+ * - Mutators: SchedaMutator → CommonMutator, EnteMatr*Mutator, SchedaHelper
+ * - Relationships: SchedaRelationship → CommonRelationship, EnteMatr*Relationship, TquRelationship
+ * - Scopes: SchedaScope → CommonScope
+ * - Helpers: SchedaHelper → FunctionExtra, MassExtra, 34 inline helpers
+ *
+ * @see \Modules\Sigma\Models\Traits\Mutators\SchedaMutator
+ * @see \Modules\Sigma\Models\Traits\Relationships\SchedaRelationship
+ * @see \Modules\Sigma\Models\Traits\Scopes\SchedaScope
+ * @see \Modules\Sigma\Models\Traits\Helpers\SchedaHelper
+ * @see \Modules\Sigma\docs\refactoring\ultimate-success-report.md
+ *
+ * @property float $percparttime
+ * @property int $giorni_parttimevert
+ * @property int $giorni_presenza
+ */
+trait SchedaTrait
+{
+    // ⚡ DELEGATION CASCADE PATTERN (Pure Orchestrator)
+    // SchedaTrait = ZERO implementation, SOLO composition
+    
+    use Mutators\SchedaMutator;              // → ALL Mutators + Helpers
+    use Relationships\SchedaRelationship;    // → ALL Relationships
+    use Scopes\SchedaScope;                  // → ALL Scopes
+    use Helpers\SchedaHelper;                // → ALL Helpers (FunctionExtra, MassExtra, inline)
+    
+    // =============================================================================
+    // UTILITY METHODS (6 metodi pubblici non-accessor, non-helper)
+    // Questi sono utility generali che non appartengono a nessuna categoria specifica
+    // =============================================================================
+
+    /**
+     * Calcola punteggio progressione finale.
+     *
+     * @return float Punteggio finale
+     */
+    public function puntProgressioneFinale(): float
+    {
+        $peso_perf_ind_media = $this->peso_perf_ind_media ?? 0;
+        $peso_tot_pond = 1 - $peso_perf_ind_media;
+        $perf_ind_media = $this->perf_ind_media ?? 0;
+        $totale_pond = $this->totale_pond ?? 0;
+
+        return round($peso_perf_ind_media * $perf_ind_media + $peso_tot_pond * $totale_pond, 3);
+    }
+
+    /**
+     * Setter mutator per punt_progressione_finale.
+     *
+     * @param  float|null  $value
+     */
+    public function setPuntProgressioneFinaleAttribute(?float $value): void
+    {
+        $this->attributes['punt_progressione_finale'] = $value;
+    }
+
+    /**
+     * Helper generico per accessor performance annuali.
+     * Chiamato da 16 accessor getPerfIndYYYYAttribute.
+     *
+     * @param  string  $func  Nome funzione/campo anno
+     * @param  float|null  $value  Valore cached
+     * @return float|null Valore performance anno
+     */
+    public function funcYear(string $func, ?float $value): ?float
+    {
+        if ($value > 0 && ! request()->input('refresh', false)) {
+            return $value;
+        }
+
+        $result = $this->perfInd((int) filter_var($func, FILTER_SANITIZE_NUMBER_INT));
+
+        if ($result === null || $result === 0.0) {
+            return null;
+        }
+
+        $this->update([$func => $result]);
+
+        return $result;
+    }
+
+    /**
+     * Wrapper pubblico per getPerfIndMedia helper.
+     *
+     * @return float|null Media performance
+     */
+    public function perfIndMedia(): ?float
+    {
+        return $this->getPerfIndMedia();
+    }
+
+    /**
+     * Conta excellence ultimi 3 anni.
+     *
+     * @return int Count excellence
+     */
+    public function excellencesCountLast3years(): int
+    {
+        $count = 0;
+
+        for ($i = 1; $i <= 3; $i++) {
+            $anno_key = 'perf_ind_'.($this->anno - $i);
+            $perf = $this->$anno_key;
+
+            if ($perf !== null && $perf >= 100) {
+                $count++;
+            }
+        }
+
+        return $count;
+    }
+
+    /**
+     * Recupera opzioni criteri da getCriteriOptions collection.
+     *
+     * @param  string  $name  Nome opzione
+     * @return mixed Valore opzione
+     */
+    public function criteriOptionsArr(string $name): mixed
+    {
+        return $this->getCriteriOptions()?->get($name);
+    }
+}
+

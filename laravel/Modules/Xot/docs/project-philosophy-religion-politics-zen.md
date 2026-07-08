@@ -2,22 +2,8 @@
 
 ## 🧠 Logica del Progetto
 
-Il progetto Laravel Pizza è una conversione e miglioramento di https://<nome progetto>.com/, costruito sull'architettura Laraxot. È un ecosistema completo di meetup, community e tema frontend super curato con i seguenti principi:
+Il progetto Laravel Pizza è una conversione e miglioramento di https://laravelpizza.com/, costruito sull'architettura Laraxot. È un ecosistema completo di meetup, community e tema frontend super curato con i seguenti principi:
 
-- **Conversione e Miglioramento**: Non è una semplice copia, ma un'evoluzione del sito originale.
-- **Architettura Modulare**: Moduli indipendenti (`Modules/*`) e temi separati (`Themes/*`).
-- **Frontoffice con Folio + Volt**: Nessun controller tradizionale, solo routing file-based.
-- **Qualità Maniacale**: PHPStan livello 10 obbligatorio, PHPMD e PHPInsights per la pulizia del codice.
-- **Super Mucca Methodology**: Analisi profonda prima dell'azione, massima confidenza.
-
-## 🧘‍♂️ Filosofia (Philosophy)
-
-- **DRY + KISS estremi**: Niente complicazioni inutili, niente ridondanza. "If it's already there, don't write it again."
-- **Una tabella = una migrazione**: Ogni tabella deve avere una sola migrazione responsabile della sua creazione.
-- **Frontoffice = Folio + Volt**: Pattern: `Request → Folio → Blade Page → Volt Component → Action → Service/Model`.
-- **Docs prima del codice**: Prima si aggiorna/legge `docs/`, poi si scrive codice. Se manca, crealo seguendo lo Zen.
-- **Zero compromessi**: Approccio "fix, don't ignore" - tutti gli errori vanno corretti, nessuno ignorato.
-- **Strict Typing**: Ogni file deve avere `declare(strict_types=1);` e tipi espliciti ovunque.
 - **Conversione e Miglioramento**: Non è una semplice copia, ma un'evoluzione del sito originale
 - **Architettura Modulare**: Moduli indipendenti (`Modules/*`) e temi separati (`Themes/*`)
 - **Frontoffice con Folio + Volt**: Nessun controller tradizionale, solo routing file-based
@@ -65,7 +51,7 @@ Il progetto Laravel Pizza è una conversione e miglioramento di https://<nome pr
 
 ## 🎯 Business Logic Principale
 
-- **Meetup Theme**: Tema principale basato su <nome progetto>.com, con Folio + Volt
+- **Meetup Theme**: Tema principale basato su laravelpizza.com, con Folio + Volt
 - **Folio + Volt**: Architettura obbligatoria per il frontoffice
 - **Filament**: Solo per il backoffice
 - **Laraxot Framework**: "Framework nel framework" con regole rigide

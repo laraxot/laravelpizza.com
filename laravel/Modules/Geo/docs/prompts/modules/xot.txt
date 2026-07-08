@@ -1,0 +1,141 @@
+# Modulo Xot (Core)
+
+## Classi Base Fornite
+
+### 1. XotBaseModel
+```php
+namespace Modules\Xot\Models;
+
+abstract class XotBaseModel extends Model
+{
+    use HasFactory;
+    use SoftDeletes;
+    use Updater;
+    
+    public function casts(): array
+    {
+        return [
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'deleted_at' => 'datetime',
+        ];
+    }
+}
+```
+
+### 2. XotBaseResource
+```php
+namespace Modules\Xot\Filament\Resources;
+
+abstract class XotBaseResource extends Resource
+{
+    final public function form(Form $form): Form;
+    final public function table(Table $table): Table;
+    abstract public static function getFormSchema(): array;
+    abstract public static function getTableColumns(): array;
+}
+```
+
+### 3. XotBaseServiceProvider
+```php
+namespace Modules\Xot\Providers;
+
+abstract class XotBaseServiceProvider extends ServiceProvider
+{
+    public string $name;  // DEVE essere public
+    protected string $module_ns;
+    
+    final public function register(): void;
+    final public function boot(): void;
+}
+```
+
+## Pattern Chiave
+
+### 1. Ereditarietà
+- Ogni modulo DEVE avere il suo BaseModel che estende XotBaseModel
+- Ogni Resource DEVE estendere XotBaseResource
+- Ogni Provider DEVE estendere XotBaseServiceProvider
+
+### 2. Metodi Finali
+- form() in XotBaseResource
+- table() in XotBaseResource
+- register() in XotBaseServiceProvider
+- boot() in XotBaseServiceProvider
+
+### 3. Metodi Astratti
+- getFormSchema() in XotBaseResource
+- getTableColumns() in XotBaseResource
+- getNavigationGroup() in XotBaseResource
+
+## Configurazioni Base
+
+### 1. Database
+```php
+// config/database.php
+'connections' => [
+    'xot' => [
+        'driver' => 'mysql',
+        'prefix' => 'xot_',
+    ],
+],
+```
+
+### 2. Filament
+```php
+// config/filament.php
+'resources' => [
+    'namespace' => 'Modules\\Xot\\Filament\\Resources',
+],
+```
+
+### 3. Moduli
+```php
+// config/modules.php
+'namespace' => 'Modules',
+'paths' => [
+    'modules' => base_path('Modules'),
+],
+```
+
+## Traits Fondamentali
+
+### 1. Updater
+```php
+namespace Modules\Xot\Traits;
+
+trait Updater
+{
+    protected static function bootUpdater(): void
+    {
+        static::creating(function ($model) {
+            $model->created_by = auth()->id();
+        });
+        
+        static::updating(function ($model) {
+            $model->updated_by = auth()->id();
+        });
+    }
+}
+```
+
+### 2. HasXotTable
+```php
+namespace Modules\Xot\Traits;
+
+trait HasXotTable
+{
+    abstract public function getTableColumns(): array;
+}
+```
+
+## Documentazione Essenziale
+- [XotBaseModel](../../Xot/docs/models.md)
+- [XotBaseResource](../../Xot/docs/resources.md)
+- [XotBaseServiceProvider](../../Xot/docs/providers.md)
+
+## Note Importanti
+1. MAI modificare i metodi finali
+2. Implementare TUTTI i metodi astratti
+3. Mantenere la documentazione aggiornata
+4. Seguire i pattern stabiliti 

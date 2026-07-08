@@ -1,0 +1,308 @@
+declare(strict_types=1);
+
+namespace Modules\Xot\Console\Commands;
+
+use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
+use function Safe\json_encode;
+
+class DatabaseSchemaExporterCommand extends Command
+{
+    /**
+     * Il nome e la firma del comando console.
+     *
+     * @var string
+     */
+    protected $signature = 'xot:export-db-schema {connection? : Nome della connessione database}';
+
+    /**
+     * La descrizione del comando console.
+     *
+     * @var string
+     */
+    protected $description = 'Esporta lo schema completo di un database in formato JSON';
+
+    /**
+     * Esegui il comando console.
+     */
+    public function handle(): int
+    {
+        $connection = $this->argument('connection') ?? config('database.default');
+
+        $this->info("Esportazione dello schema del database dalla connessione: {$connection}");
+
+        // Ottieni il nome del database dalla configurazione
+        $databaseName = config("database.connections.{$connection}.database");
+
+        if (empty($databaseName)) {
+            $this->error("Impossibile trovare il database per la connessione {$connection}");
+
+            return 1;
+        }
+
+        $this->info("Database: {$databaseName}");
+
+        // Ottieni la lista di tutte le tabelle
+        $tables = $this->getTables($connection);
+
+        if (empty($tables)) {
+            $this->error("Nessuna tabella trovata nel database {$databaseName}");
+
+            return 1;
+        }
+
+        $this->info('Trovate '.count($tables).' tabelle.');
+
+        // Inizializza l'array che conterrà tutte le informazioni
+        $databaseSchema = [
+            'database' => $databaseName,
+            'connection' => $connection,
+            'tables' => [],
+        ];
+
+        $progressBar = $this->output->createProgressBar(count($tables));
+        $progressBar->start();
+
+        foreach ($tables as $table) {
+            $databaseSchema['tables'][$table] = $this->getTableInfo($connection, $table);
+            $progressBar->advance();
+        }
+
+        $progressBar->finish();
+        $this->newLine();
+
+        // Aggiungi informazioni sulle relazioni tra tabelle
+        $databaseSchema['relationships'] = $this->getRelationships($connection, $tables);
+
+        // Crea directory se non esiste
+        $outputDir = base_path('docs');
+        if (! File::exists($outputDir)) {
+            File::makeDirectory($outputDir, 0755, true);
+        }
+
+        // Salva i dati in un file JSON
+        $filename = "{$outputDir}/{$databaseName}_schema.json";
+        try {
+            $jsonContent = \Safe\json_encode($databaseSchema, JSON_PRETTY_PRINT);
+            File::put($filename, $jsonContent);
+            $this->info("Schema del database esportato con successo in: {$filename}");
+        } catch (\Exception $e) {
+            $this->error("Errore nell'encoding JSON dello schema: " . $e->getMessage());
+            return Command::FAILURE;
+        }
+
+        return 0;
+    }
+
+    /**
+     * Ottieni la lista di tutte le tabelle nel database.
+     *
+     * @return array<int, string>
+     */
+    private function getTables(string $connection): array
+    {
+        // Versione più moderna e compatibile per ottenere l'elenco delle tabelle
+        $databaseName = DB::connection($connection)->getDatabaseName();
+        $tables = DB::connection($connection)
+            ->select("SELECT table_name FROM information_schema.tables WHERE table_schema = ? AND table_type = 'BASE TABLE'", [$databaseName]);
+
+        return array_map(function ($table) {
+            return $table->table_name;
+        }, $tables);
+    }
+
+    /**
+     * Ottieni informazioni dettagliate su una tabella.
+     *
+     * @return array{name: string, columns: array<string, array{type: string, nullable: bool, default: mixed, comment: string, extra: string}>, indexes: array<string, array{columns: array<int, string>, unique: bool}>, primary_key: ?array{name: string, columns: array<int, string>}, foreign_keys: array<string, array{columns: array<int, string>, referenced_table: string, referenced_columns: array<int, string>, on_update: string, on_delete: string}>, record_count: int, sample_data: array<int, array<string, mixed>>}
+     */
+    private function getTableInfo(string $connection, string $table): array
+    {
+        $columns = $this->getTableColumns($connection, $table);
+        $indexes = $this->getTableIndexes($connection, $table);
+        $primaryKey = $this->getTablePrimaryKey($connection, $table);
+        $foreignKeys = $this->getTableForeignKeys($connection, $table);
+        $recordCount = $this->getTableRecordCount($connection, $table);
+        $sampleData = $this->getTableSampleData($connection, $table);
+
+        return [
+            'name' => $table,
+            'columns' => $columns,
+            'indexes' => $indexes,
+            'primary_key' => $primaryKey,
+            'foreign_keys' => $foreignKeys,
+            'record_count' => $recordCount,
+            'sample_data' => $sampleData,
+        ];
+    }
+
+    /**
+     * Ottieni informazioni su tutte le colonne di una tabella.
+     *
+     * @return array<string, array{type: string, nullable: bool, default: mixed, comment: string, extra: string}>
+     */
+    private function getTableColumns(string $connection, string $table): array
+    {
+        $columns = [];
+        $columnInfo = DB::connection($connection)->select("SHOW FULL COLUMNS FROM `{$table}`");
+
+        foreach ($columnInfo as $column) {
+            $columns[$column->Field] = [
+                'type' => $column->Type,
+                'nullable' => 'YES' === $column->Null,
+                'default' => $column->Default,
+                'comment' => $column->Comment ?? '',
+                'extra' => $column->Extra ?? '',
+            ];
+        }
+
+        return $columns;
+    }
+
+    /**
+     * Ottieni gli indici di una tabella.
+     *
+     * @return array<string, array{columns: array<int, string>, unique: bool}>
+     */
+    private function getTableIndexes(string $connection, string $table): array
+    {
+        $indexes = [];
+        $indexInfo = DB::connection($connection)->select("SHOW INDEX FROM `{$table}`");
+
+        foreach ($indexInfo as $index) {
+            if (! isset($indexes[$index->Key_name])) {
+                $indexes[$index->Key_name] = [
+                    'columns' => [],
+                    'unique' => ! $index->Non_unique,
+                ];
+            }
+
+            $indexes[$index->Key_name]['columns'][] = $index->Column_name;
+        }
+
+        return $indexes;
+    }
+
+    /**
+     * Ottieni la chiave primaria di una tabella.
+     *
+     * @return array{name: string, columns: array<int, string>}|null
+     */
+    private function getTablePrimaryKey(string $connection, string $table): ?array
+    {
+        $primaryKey = DB::connection($connection)
+            ->select("SHOW KEYS FROM `{$table}` WHERE Key_name = 'PRIMARY'");
+
+        if (empty($primaryKey)) {
+            return null;
+        }
+
+        $columns = array_map(function ($key) {
+            return $key->Column_name;
+        }, $primaryKey);
+
+        return [
+            'name' => 'PRIMARY',
+            'columns' => $columns,
+        ];
+    }
+
+    /**
+     * Ottieni le chiavi esterne di una tabella.
+     *
+     * @return array<string, array{columns: array<int, string>, referenced_table: string, referenced_columns: array<int, string>, on_update: string, on_delete: string}>
+     */
+    private function getTableForeignKeys(string $connection, string $table): array
+    {
+        $foreignKeys = [];
+        $databaseName = DB::connection($connection)->getDatabaseName();
+
+        $fkInfo = DB::connection($connection)->select("
+            SELECT
+                CONSTRAINT_NAME,
+                COLUMN_NAME,
+                REFERENCED_TABLE_NAME,
+                REFERENCED_COLUMN_NAME,
+                UPDATE_RULE,
+                DELETE_RULE
+            FROM information_schema.KEY_COLUMN_USAGE
+            JOIN information_schema.REFERENTIAL_CONSTRAINTS
+                ON information_schema.REFERENTIAL_CONSTRAINTS.CONSTRAINT_NAME = information_schema.KEY_COLUMN_USAGE.CONSTRAINT_NAME
+            WHERE information_schema.KEY_COLUMN_USAGE.TABLE_SCHEMA = ?
+                AND information_schema.KEY_COLUMN_USAGE.TABLE_NAME = ?
+                AND information_schema.KEY_COLUMN_USAGE.REFERENCED_TABLE_NAME IS NOT NULL
+        ", [$databaseName, $table]);
+
+        foreach ($fkInfo as $fk) {
+            if (! isset($foreignKeys[$fk->CONSTRAINT_NAME])) {
+                $foreignKeys[$fk->CONSTRAINT_NAME] = [
+                    'columns' => [],
+                    'referenced_table' => $fk->REFERENCED_TABLE_NAME,
+                    'referenced_columns' => [],
+                    'on_update' => $fk->UPDATE_RULE,
+                    'on_delete' => $fk->DELETE_RULE,
+                ];
+            }
+
+            $foreignKeys[$fk->CONSTRAINT_NAME]['columns'][] = $fk->COLUMN_NAME;
+            $foreignKeys[$fk->CONSTRAINT_NAME]['referenced_columns'][] = $fk->REFERENCED_COLUMN_NAME;
+        }
+
+        return $foreignKeys;
+    }
+
+    /**
+     * Ottieni il numero di record in una tabella.
+     */
+    private function getTableRecordCount(string $connection, string $table): int
+    {
+        $result = DB::connection($connection)->select("SELECT COUNT(*) as count FROM `{$table}`");
+        return (int) $result[0]->count;
+    }
+
+    /**
+     * Ottieni un campione di dati dalla tabella.
+     *
+     * @return array<int, array<string, mixed>>
+     */
+    private function getTableSampleData(string $connection, string $table, int $limit = 5): array
+    {
+        return DB::connection($connection)
+            ->table($table)
+            ->limit($limit)
+            ->get()
+            ->map(function ($row) {
+                return (array) $row;
+            })
+            ->toArray();
+    }
+
+    /**
+     * Ottieni le relazioni tra le tabelle.
+     *
+     * @param array<int, string> $tables
+     * @return array<int, array{type: string, from_table: string, from_columns: array<int, string>, to_table: string, to_columns: array<int, string>}>
+     */
+    private function getRelationships(string $connection, array $tables): array
+    {
+        $relationships = [];
+        $databaseName = DB::connection($connection)->getDatabaseName();
+
+        foreach ($tables as $table) {
+            $foreignKeys = $this->getTableForeignKeys($connection, $table);
+
+            foreach ($foreignKeys as $fk) {
+                $relationships[] = [
+                    'type' => 'belongs_to',
+                    'from_table' => $table,
+                    'from_columns' => $fk['columns'],
+                    'to_table' => $fk['referenced_table'],
+                    'to_columns' => $fk['referenced_columns'],
+                ];
+            }
+        }
+
+        return $relationships;
+    }
+}

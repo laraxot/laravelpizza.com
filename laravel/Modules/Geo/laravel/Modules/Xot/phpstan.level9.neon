@@ -1,0 +1,77 @@
+parameters:
+    level: 9
+    paths:
+        - app
+        - config
+        - database
+        - routes
+        - tests
+    excludePaths:
+        - app_old/*
+        - vendor/*
+        - tests/coverage/*
+
+    checkMissingIterableValueType: true
+    checkGenericClassInNonGenericObjectType: true
+    checkMissingCallableSignature: true
+    treatPhpDocTypesAsCertain: true
+    reportUnmatchedIgnoredErrors: true
+
+    checkArgumentsPassedByReference: true
+    checkNullables: true
+    checkFunctionNameCase: true
+    checkModelProperties: true
+    inferPrivatePropertyTypeFromConstructor: true
+    checkPhpDocMissingReturn: true
+
+    # Regole aggiuntive per livello 9
+    strictRules:
+        allRules: true
+        strictCalls: true
+        strictMixed: true
+        disallowedLooseComparison: true
+        strictBooleans: true
+
+    # Template e Generics
+    genericClasses:
+        - Illuminate\Database\Eloquent\Collection
+        - Illuminate\Support\Collection
+        - Illuminate\Database\Eloquent\Model
+        - Illuminate\Database\Eloquent\Builder
+
+    typeAliases:
+        TModel: 'Illuminate\Database\Eloquent\Model'
+        TKey: 'array-key'
+        TValue: 'mixed'
+
+    ignoreErrors:
+        # Ignoriamo temporaneamente alcuni errori specifici mentre li correggiamo
+        - '#Method [a-zA-Z0-9\\_]+::[a-zA-Z0-9_]+\(\) has no return type specified#'
+        - '#Property [a-zA-Z0-9\\_]+::\$[a-zA-Z0-9_]+ has no type specified#'
+        - '#Call to an undefined method [a-zA-Z0-9\\_]+::[a-zA-Z0-9_]+\(\)#'
+
+services:
+    -
+        class: PHPStan\Rules\Methods\ReturnTypeRule
+        tags:
+            - phpstan.rules.rule
+
+    -
+        class: PHPStan\Rules\Properties\TypesAssignedToPropertiesRule
+        tags:
+            - phpstan.rules.rule
+
+    -
+        class: PHPStan\Rules\Methods\CallMethodsRule
+        tags:
+            - phpstan.rules.rule
+
+    -
+        class: PHPStan\Rules\Generics\GenericObjectTypeCheck
+        tags:
+            - phpstan.rules.rule
+
+    -
+        class: PHPStan\Rules\Methods\CallStaticMethodsRule
+        tags:
+            - phpstan.rules.rule

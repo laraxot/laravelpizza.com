@@ -1,0 +1,80 @@
+{
+    "name": "laraxot/module_job_fila5",
+    "description": "Background job execution module for the Laraxot ecosystem: queue management, task dispatching, and async processing.",
+    "keywords": [
+        "laraxot",
+        "laravel",
+        "filament",
+        "module_job",
+        "job",
+        "queue",
+        "background-tasks",
+        "async"
+    ],
+    "homepage": "https://github.com/laraxot/module_job_fila5.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev": {},
+    "repositories_comment": [
+        {
+            "type": "path",
+            "url": "../User"
+        },
+        {
+            "type": "path",
+            "url": "../Tenant"
+        },
+        {
+            "type": "path",
+            "url": "../Xot"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\Job\\": "app/",
+            "Modules\\Job\\Database\\Factories\\": "database/factories/",
+            "Modules\\Job\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Job\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump1": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "wikimedia/composer-merge-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Job\\Providers\\JobServiceProvider",
+                "Modules\\Job\\Providers\\Filament\\AdminPanelProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

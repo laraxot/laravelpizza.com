@@ -7,7 +7,7 @@ namespace Modules\Geo\Actions;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
-use Modules\Geo\Datas\Geocoding\AddressData;
+use Modules\Geo\Datas\AddressData;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
@@ -37,13 +37,15 @@ class UpdateCoordinatesFromAddressAction
 
     /**
      * Collection per memorizzare eventuali errori durante l'esecuzione.
+     *
+     * @var Collection<int, string>
      */
     private Collection $errors;
 
     public function __construct(
         private readonly GetAddressDataFromFullAddressAction $getAddressDataAction,
     ) {
-        $this->errors = collect();
+        $this->errors = $this->newErrorCollection();
     }
 
     /**
@@ -56,7 +58,7 @@ class UpdateCoordinatesFromAddressAction
     public function execute(Model $model): bool
     {
         // Reset errori per questa esecuzione
-        $this->errors = collect();
+        $this->errors = $this->newErrorCollection();
 
         // Ottieni l'indirizzo completo dal modello
         $fullAddress = $this->getFullAddressFromModel($model);
@@ -74,7 +76,7 @@ class UpdateCoordinatesFromAddressAction
             // Raccogli errori dal servizio di geocoding
             $geocodingErrors = $this->getAddressDataAction->getErrors();
             if ($geocodingErrors->isNotEmpty()) {
-                $this->errors->merge($geocodingErrors);
+                $geocodingErrors->each(fn (string $error): Collection => $this->errors->push($error));
             } else {
                 $this->errors->push(__('geo::actions.update_coordinates.errors.geocoding_failed'));
             }
@@ -87,7 +89,15 @@ class UpdateCoordinatesFromAddressAction
     }
 
     /**
-     * Restituisce la collezione degli errori verificatisi durante l'esecuzione.
+     *  Collection<int, string>
+     */
+    private function newErrorCollection(): Collection
+    {
+        return new Collection();
+    }
+
+    /**
+     * Restituisce la collezione degli errori verificatisi durante l.esecuzione.
      *
      * @return Collection<int, string>
      */

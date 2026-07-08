@@ -1,0 +1,21 @@
+# BMAD Method Sprint Status (Claude layer)
+# Canonical implementation tracking: _bmad-output/sprint-status.yaml
+# Generated: 2026-05-27T12:00:00Z
+
+project_name: "base_ptvx_fila5"
+sprint_number: 1
+sprint_goal: "Second Brain / wiki foundation (Epic 1 in progress)"
+sprint_start_date: "2026-04-29"
+sprint_end_date: ""
+last_updated: "2026-05-27T12:00:00Z"
+canonical_status_file: "_bmad-output/sprint-status.yaml"
+story_location: "_bmad-output/implementation-artifacts"
+
+epics: []
+
+metrics:
+  total_epics: 0
+  total_stories: 0
+  stories_completed: 0
+  stories_in_progress: 0
+  stories_not_started: 0

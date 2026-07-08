@@ -20,6 +20,8 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @method static CountyFactory factory($count = null, $state = [])
  *
+ * @mixin \Eloquent
+ *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *
@@ -28,6 +30,14 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|County                        newQuery()
  * @method static Builder<static>|County                        query()
  *                                                                                                  >>>>>>> 65bf1208 (.)
+ *
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $updater
+ *
+ * @method static \Modules\Geo\Database\Factories\CountyFactory factory($count = null, $state = [])
+ * @method static Builder<static>|County                        newModelQuery()
+ * @method static Builder<static>|County                        newQuery()
+ * @method static Builder<static>|County                        query()
  *
  * @property string                          $id
  * @property string                          $county

@@ -23,6 +23,9 @@ class CreateUserAction
 {
     use QueueableAction;
 
+    /**
+     * @param array<string, mixed>|null $data
+     */
     public function __construct(
         protected string $name,
         protected string $email,
@@ -63,11 +66,7 @@ class CreateUserAction
     private function sendWelcomeEmail(User $user): void
     {
         // Logica per inviare email di benvenuto
-<<<<<<< HEAD
         Log::info("Invio email di benvenuto a {$user->email}");
-=======
-        Log::info('Invio email di benvenuto a '.$user->email);
->>>>>>> 6d3760fe (.)
     }
 
     private function createAuditLog(User $user): void

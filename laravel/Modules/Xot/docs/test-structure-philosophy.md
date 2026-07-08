@@ -112,10 +112,10 @@ Modules/UI/
 
 ## Why This Matters
 
-### 1. **Autoloader <nome progetto>ability**
+### 1. **Autoloader Predictability**
 - PHP autoloader expects consistent namespace-to-directory mapping
 - Mixed structures create ambiguous class resolution
-- "First found" approach leads to un<nome progetto>able test execution
+- "First found" approach leads to unpredictable test execution
 
 ### 2. **Test Discovery**
 - Pest and PHPUnit rely on consistent directory structures
@@ -125,7 +125,7 @@ Modules/UI/
 ### 3. **Development Workflow**
 - Developers expect consistent test locations
 - IDE autocomplete and navigation work better with consistent structures
-- Code generation tools work <nome progetto>ably
+- Code generation tools work predictably
 
 ### 4. **Module System Compatibility**
 - nwidart/laravel-modules expects traditional structure
@@ -200,7 +200,7 @@ Modules/
 │   │   ├── Feature/
 │   │   └── Unit/
 │   └── app/
-└── healthcare_app/
+└── Quaeris/
     ├── tests/
     │   ├── Feature/
     │   └── Unit/
@@ -262,4 +262,4 @@ Modules/UI/tests/Unit/Widgets/
 
 ---
 
-**Philosophy Summary**: In Laraxot, consistent test structure ensures reliable test execution and <nome progetto>able development workflow. Choose one pattern and apply it consistently across all modules.
+**Philosophy Summary**: In Laraxot, consistent test structure ensures reliable test execution and predictable development workflow. Choose one pattern and apply it consistently across all modules.

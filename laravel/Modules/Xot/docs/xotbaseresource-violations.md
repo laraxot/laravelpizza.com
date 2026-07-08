@@ -300,9 +300,6 @@ return [
 - [Progressioni: XotBaseResource Violations](../laravel/Modules/Progressioni/docs/xotbaseresource-violations-critical.md)
 - [Xot: XotBaseResource Rules](../laravel/Modules/Xot/docs/filament/resources/xot-base-resource.md)
 - [Xot: Filament Resource Guidelines](../laravel/Modules/Xot/docs/rules/filament-resource-guidelines.md)
-- [Progressioni: XotBaseResource Violations](../laravel/modules/progressioni/docs/xotbaseresource-violations-critical.md)
-- [Xot: XotBaseResource Rules](../laravel/modules/xot/docs/filament/resources/xot-base-resource.md)
-- [Xot: Filament Resource Guidelines](../laravel/modules/xot/docs/rules/filament-resource-guidelines.md)
 
 ### Regole Correlate
 - [Sistema Traduzioni](translation-system.md)

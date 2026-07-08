@@ -1,0 +1,7 @@
+---
+module: theme
+topic: translations
+canonical: ../../../Themes/docs/shared-components/translations.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/translations.md

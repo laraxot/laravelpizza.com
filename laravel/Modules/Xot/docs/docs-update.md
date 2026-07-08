@@ -57,7 +57,7 @@ Aggiornamento massivo documentazione progetto con:
 12. `helper-functions-dependency.md` - Dipendenze helper
 
 **Modulo Sigma** (aggiornato):
-13. `phpstan-fixes-archive-1.md` - Aggiornato con fix novembre
+13. `phpstan-fixes-2025.md` - Aggiornato con fix novembre
 
 **bashscripts** (3 file):
 14. `docs/mcp-configuration.md`
@@ -216,15 +216,6 @@ Aggiornamento massivo documentazione progetto con:
 
 ### Documentazione Moduli
 
-- [Xot Module](./readme.md) - Questo file
-- [Tenant Module](../../tenant/docs/readme.md)
-- [IndennitaResponsabilita Module](../../indennitaresponsabilita/docs/readme.md)
-- [Sigma Module](../../sigma/docs/readme.md)
-- [Rating Module](../../rating/docs/readme.md)
-
-### bashscripts
-
-- [bashscripts README](../../../bashscripts/readme.md)
 - [Xot Module](./README.md) - Questo file
 - [Tenant Module](../../Tenant/docs/README.md)
 - [IndennitaResponsabilita Module](../../IndennitaResponsabilita/docs/README.md)

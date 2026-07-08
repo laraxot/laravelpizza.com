@@ -1,0 +1,6 @@
+al posto di 
+ 'compila' => Action::make('compila')
+                ->icon('heroicon-m-pencil-square')
+                ->url(fn ($record): string => IndennitaResponsabilitaResource::getUrl('compila', ['record' => $record])),
+
+creaiamo CompilaAction dentro  laravel/Modules/Ptv/app/Filament/Actions/Scheda  in maniera di fare una azione riutilizzabile            

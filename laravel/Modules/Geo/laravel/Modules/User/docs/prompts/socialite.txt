@@ -1,0 +1,14 @@
+studia 
+https://developers.google.com/identity/protocols/oauth2/web-server?utm_source=chatgpt.com&hl=it
+https://medium.com/@a.dhakal/filament-login-with-google-using-laravel-socialite-83c8bd476ace
+https://github.com/chrisreedio/socialment
+https://filamentphp.com/plugins/chrisreedio-socialment
+https://filamentphp.com/plugins/dododedodonl-socialite
+https://filamentphp.com/plugins/siubie-kaido-kit
+https://github.com/DutchCodingCompany/filament-socialite
+https://filamentmastery.com/articles/how-to-add-github-login-with-filament-socialite/
+https://docs.filamentflow.io/docs/features/socialite
+https://laraveldaily.com/post/filament-sign-in-with-google-using-laravel-socialite
+
+noi non aggiungiamo colonne tipo google_id o facebook_id alla tabella user, perche' i socialite sono tanti e andiamo a sporcare la tabella user , noi utilizziamo modelli come laravel/Modules/User/app/Models/SocialiteUser.php e laravel/Modules/User/app/Models/SocialProvider.php , percio' prima devi analizzare a fondo il modulo user, documentare la tua analisi dentro la cartella docs dentro il modulo user, aggiornare llm wiki e a sto punto dobbiamo pensare anche come mettere GOOGLE_CLIENT_ID e GOOGLE_CLIENT_SECRET tramite un tutorial da amministrazione , la amministrazione backoffice e' fatto con filament 5 a moduli se hai dubbi ti studi a fondo la struttura, documenti studi, migliori le cartelle docs dentro i moduli e dentro i temi ,le tue rules, le tue memories e le tue skills, per aggiornare utilizza indici con collegamenti bidirezionali relativi , capisci la regola, questa regola devi sempre ricordartela percio' aggiorna tutto quello che puoi per ricordartela sempre poi aggiorna studia e migliora le cartelle docs dentro i moduli e dentro i temi , le tue rules, le tue memories, le tue skills, aggiorna sempre utilizzando indici e ottica dry + kiss, poi aggiorna anche llm wiki, ti ricordo che la tua memoria e' llm wiki, se non ricordi cosa sia cerca in internet e assicurati che funzioni llm wiki 
+

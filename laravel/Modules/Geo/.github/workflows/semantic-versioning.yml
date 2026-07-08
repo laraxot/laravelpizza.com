@@ -1,26 +1,53 @@
+# Tag semver da messaggi commit (github-tag-action) — uso manuale o dispatch, non duplica Release su push
+# Canon: docs/wiki/how-to/github-actions-semantic-release-stack.md
 name: Semantic Versioning
 
 on:
+  workflow_dispatch:
+    inputs:
+      default_bump:
+        description: Bump se non deducibile dai commit
+        required: false
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+        default: patch
   push:
-    branches:
-      - main
-    paths:
-      - 'Modules/Geo/**'
+    branches: ["*"]
+  repository_dispatch:
+    types:
+      - semantic-version
 
 permissions:
   contents: write
+  id-token: write
+  attestations: write
 
 jobs:
   tag:
+    # Su push a main/master il tag/release è gestito esclusivamente da release.yml.
+    # Questo job resta attivo su altri branch, via workflow_dispatch e repository_dispatch.
+    if: github.event_name != 'push' || (github.ref_name != 'main' && github.ref_name != 'master')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
+      - name: Build root artifact
+        run: tar -czf project-artifact.tgz --exclude=.git .
+
+      - name: Attest build provenance
+        uses: actions/attest-build-provenance@v4
+        with:
+          subject-path: project-artifact.tgz
+
       - name: Bump version and push tag
         uses: mathieudutour/github-tag-action@v6.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          tag_prefix: Modules/Geo/v
-          release_branches: main
+          fetch_all_tags: true
+          release_branches: main,master
+          default_bump: ${{ inputs.default_bump || 'patch' }}

@@ -1,0 +1,47 @@
+<?php
+
+declare(strict_types=1);
+
+use Illuminate\Database\Schema\Blueprint;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+/**
+ * Migrazione per $DESCRIPTION$.
+ */
+return new class extends XotBaseMigration
+{
+    /**
+     * Nome della tabella.
+     *
+     * @var string
+     */
+    protected string $table = '$TABLE_NAME$';
+
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        // -- CREATE --
+        $this->tableCreate(
+            static function (Blueprint $table): void {
+                $table->id();
+                // Aggiungi qui le colonne della tabella
+                
+                // Chiavi esterne
+                // $table->foreign('column_name')
+                //       ->references('id')
+                //       ->on('related_table')
+                //       ->onDelete('cascade');
+            }
+        );
+        
+        // -- UPDATE --
+        $this->tableUpdate(
+            function (Blueprint $table): void {
+                // Aggiunta dei timestamp
+                $this->updateTimestamps($table, true);
+            }
+        );
+    }
+};

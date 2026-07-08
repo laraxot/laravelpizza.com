@@ -1,0 +1,14 @@
+{
+    "name": "IndennitaResponsabilita",
+    "alias": "indennitaresponsabilita",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\IndennitaResponsabilita\\Providers\\IndennitaResponsabilitaServiceProvider",
+        "Modules\\IndennitaResponsabilita\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "aliases": [],
+    "files": [],
+    "requires": []
+}

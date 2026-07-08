@@ -50,7 +50,7 @@ trait IsProfileTrait
     /**
      * Relazione con l'utente a cui appartiene il profilo.
      *
-     * @return BelongsTo<Model&UserContract, static>
+     * @return BelongsTo<Model&UserContract, Model>
      */
     public function user(): BelongsTo
     {
@@ -221,7 +221,7 @@ trait IsProfileTrait
     /**
      * Relazione con i dispositivi mobili associati al profilo.
      *
-     * @return BelongsToMany<Device, static>
+     * @return BelongsToMany<Device, $this, \Illuminate\Database\Eloquent\Relations\Pivot, 'pivot'>
      */
     public function mobileDevices(): BelongsToMany
     {
@@ -232,7 +232,7 @@ trait IsProfileTrait
     /**
      * Relazione con tutti i dispositivi associati al profilo.
      *
-     * @return BelongsToMany<Device, static>
+     * @return BelongsToMany<Device, $this, \Illuminate\Database\Eloquent\Relations\Pivot, 'pivot'>
      */
     public function devices(): BelongsToMany
     {
@@ -242,7 +242,7 @@ trait IsProfileTrait
     /**
      * Relazione con gli utenti di dispositivi mobili.
      *
-     * @return HasMany<DeviceUser, static>
+     * @return HasMany<DeviceUser, $this>
      */
     public function mobileDeviceUsers(): HasMany
     {
@@ -253,7 +253,7 @@ trait IsProfileTrait
     /**
      * Relazione con gli utenti di dispositivi generici.
      *
-     * @return HasMany<DeviceUser, static>
+     * @return HasMany<DeviceUser, $this>
      */
     public function deviceUsers(): HasMany
     {
@@ -280,6 +280,8 @@ trait IsProfileTrait
     /**
      * Get the user's user_name.
      * Ottiene il nome utente dal modello utente collegato.
+     *
+     * @return Attribute<string|null, never>
      */
     protected function userName(): Attribute
     {
@@ -301,6 +303,8 @@ trait IsProfileTrait
     /**
      * Get the user's avatar URL.
      * Recupera l'URL dell'avatar dell'utente dalla MediaLibrary.
+     *
+     * @return Attribute<string, never>
      */
     protected function avatar(): Attribute
     {

@@ -1,0 +1,17 @@
+grumphp:
+    tasks: {  
+        phpstan: {
+            level: 9,
+            force_patterns: [
+            #    'Modules'
+            ],
+            use_grumphp_paths: true
+            #configuration: phpstan.neon
+            #"autoload_file", "configuration", "force_patterns", "ignore_patterns", "level", "memory_limit", "triggered_by", "use_grumphp_paths"
+        },
+        #phpcsfixer: {
+        #    allow_risky : true 
+             #The option "allow-risky" does not exist. Defined options are: "allow_risky", "cache_file", "config", "config_contains_finder", "diff", "rules", "triggered_by", "using_cache", "verbose".
+        #}
+    }
+

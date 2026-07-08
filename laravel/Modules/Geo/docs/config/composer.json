@@ -1,0 +1,29 @@
+{
+    "name": "laraxot/bashscripts_fila5",
+    "description": "Script di utilità per la gestione dei repository Git e toolkit di automazione Git per progetti Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "marco76tv",
+            "email": "marco.sottana@gmail.com"
+        }
+    ],
+    "require": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require-dev": {
+        
+    }
+}

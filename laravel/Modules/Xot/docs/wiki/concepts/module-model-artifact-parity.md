@@ -37,7 +37,7 @@ Gate sessione: `run-session-gate.sh` §1.1c.
 ## Esclusi dal conteggio
 
 - `abstract` / `Base*`
-- `*PhpstanTraitProbe`, `TestModel`, `TestSushiModel`
+- `TestModel`, `TestSushiModel`
 - Wrapper cross-modulo (es. `Predict\Models\User`)
 
 ## Backlog migrazioni

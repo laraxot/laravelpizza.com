@@ -1,0 +1,83 @@
+{
+    "name": "laraxot/module_rating_fila5",
+    "description": "Rating and evaluation module for the Laraxot ecosystem with schemaless attributes support.",
+    "keywords": [
+        "laraxot",
+        "laravel",
+        "filament",
+        "module_rating",
+        "rating",
+        "evaluation",
+        "schemaless"
+    ],
+    "homepage": "https://github.com/laraxot/module_rating_fila5.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Rating\\Providers\\RatingServiceProvider",
+                "Modules\\Rating\\Providers\\Filament\\AdminPanelProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Rating\\": "app/",
+            "Modules\\Rating\\Database\\Factories\\": "database/factories/",
+            "Modules\\Rating\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Rating\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "spatie/laravel-schemaless-attributes": "*",
+        "php": "^8.3"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Xot"
+        },
+        {
+            "type": "path",
+            "url": "../Tenant"
+        },
+        {
+            "type": "path",
+            "url": "../UI"
+        }
+    ],
+    "scripts": {
+        "post-autoload-dump1": [
+            "@php artisan vendor:publish --provider='Statikbe\\CookieConsent\\CookieConsentServiceProvider' --tag='cookie-public'"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+        ],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "./vendor/bin/pest --no-coverage",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "wikimedia/composer-merge-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

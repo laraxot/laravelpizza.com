@@ -1,0 +1,16 @@
+includes:
+    - ../../phpstan.neon
+
+parameters:
+    paths:
+        - .
+
+    tmpDir: /tmp/phpstan
+
+    excludePaths:
+        - ./vendor/*
+        - ./build/*
+        - ./docs/*
+        - ./Tests/*
+        - ./tests/*
+

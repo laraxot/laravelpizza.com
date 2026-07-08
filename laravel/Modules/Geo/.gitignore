@@ -1,90 +1,13 @@
-# ==============================================
-# LARAXOT MODULE GEO - .GITIGNORE
-# ==============================================
-# Modulo Geo Laraxot - Template standardizzato
-# Ultimo aggiornamento: 2025-01-31
-# ==============================================
+# =============================================================================
+# .gitignore - Laraxot PTVX Project
+# =============================================================================
+# ATTENZIONE: Questo file DEVE rimanere organizzato per categorie.
+# Non aggiungere pattern duplicati - verificare prima di modificare.
+# =============================================================================
 
-# ==============================================
-# DEPENDENCIES & PACKAGES
-# ==============================================
-/vendor/
-/vendor
-/node_modules/
-/node_modules
-package-lock.json
-yarn.lock
-composer.lock
-yarn-error.log
-npm-debug.log
-
-# ==============================================
-# BUILD & COMPILED FILES
-# ==============================================
-/build
-/build/
-build/
-dist/
-cache/
-
-# ==============================================
-# CACHE & TEMPORARY FILES
-# ==============================================
-*.cache
-*.lock
-*.phar
-*.jar
-*.tmp
-*.swp
-*.swo
-*.stackdump
-*:Zone.Identifier
-v8-compile-cache-*
-.php-cs-fixer.cache
-.phpunit.result.cache
-
-# ==============================================
-# LOG FILES
-# ==============================================
-*.log
-error_log
-npm-debug.log*
-yarn-error.log*
-lerna-debug.log*
-
-# ==============================================
-# LARAVEL SPECIFIC
-# ==============================================
-bootstrap/compiled.php
-app/storage/
-public/storage
-public/hot
-public_html/storage
-public_html/hot
-storage/*.key
-.env
-.env.*
-!.env.example
-
-# ==============================================
-# ENVIRONMENT & CONFIGURATION
-# ==============================================
-Homestead.yaml
-Homestead.json
-/.vagrant
-/.idea
-.phpintel
-
-# ==============================================
-# GIT SPECIFIC
-# ==============================================
-.git-rewrite/
-.git-rewrite
-.git-blame-ignore-revs
-
-# ==============================================
-# SYSTEM FILES
-# ==============================================
+# -----------------------------------------------------------------------------
+# 1. SISTEMA OPERATIVO - File di sistema e metadata
+# -----------------------------------------------------------------------------
 .DS_Store
 .DS_Store?
 ._*
@@ -92,72 +15,461 @@ Homestead.json
 .Trashes
 ehthumbs.db
 Thumbs.db
+desktop.ini
+*.lnk
 
-# ==============================================
-# BACKUP FILES
-# ==============================================
+# Linux/Unix
+.fuse_hidden*
+.directory
+
+# Windows
+*:Zone.Identifier
+*.Zone.Identifier
+**/*.Zone.Identifier
+
+# -----------------------------------------------------------------------------
+# 2. EDITOR & IDE - Configurazioni locali
+# -----------------------------------------------------------------------------
+# VSCode
+.vscode/
+.vscode-test/
+.history/
+
+# JetBrains (PhpStorm, WebStorm, IntelliJ)
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Vim/Neovim
+*.swp
+*.swo
+*.swn
+*~
+.~*
+
+# Emacs
+*~
+\#*\#
+\.\#*
+
+# Altri editor
+*.tmproj
+
+# -----------------------------------------------------------------------------
+# 3. AI AGENTS & COPILOT - Directory di contesto AI (NON committare)
+# -----------------------------------------------------------------------------
+# Directory contesto AI - vedi regola: .cursor/rules/cursor-context-discipline.mdc
+.ai/
+.ai-context/
+.aider/
+.agent/
+.agent.*/
+.agents/
+.agents.*/
+.${PWD}/
+.${PWD}
+.amq/
+.amazonq/
+.antigravity/
+.antigravity.*/
+.augment/
+.bolt/
+.claude/
+.clauderules/
+.clawdbot/
+.cline/
+.cline.*/
+.clinerules/
+.clinerules.*/
+.codebuddy/
+.codex/
+.cody/
+.commandcode/
+.continue/
+.crush/
+.devcontainer/
+.devin/
+.factory/
+.gemini/
+.github~HEAD/
+.grok/
+.goose/
+.iflow/
+.junie/
+.kilocode/
+.kiro/
+.lovable/
+.mcpjam/
+.mux/
+.neovate/
+.opencode/
+.opencode.*/
+.openhands/
+.phpive/
+.pi/
+.playcode/
+.qoder/
+.qwen/
+.ralph/
+.replit/
+.roo/
+.tabby/
+.tabnine/
+.trae/
+.vercel/
+.vscode/
+.windsurf/
+!.windsurf/rules/
+!.windsurf/rules/*.md
+.zai/
+.zai.*/
+.zencoder/
+
+# Skill files AI locali
+skills/
+skill/
+
+# -----------------------------------------------------------------------------
+# 4. LOCK FILES - File di coordinamento (AI Agent)
+# Pattern: <filename>.lock per prevenire editing concorrente
+# -----------------------------------------------------------------------------
+*.lock
+!composer.lock
+!package-lock.json
+!yarn.lock
+!pnpm-lock.yaml
+
+# -----------------------------------------------------------------------------
+# 5. AMBIENTE & CONFIGURAZIONI LOCALI
+# -----------------------------------------------------------------------------
+# Artefatti installazione locale (deb estratti, datadir scratch) — usare bashscripts/tools/lamp/
+.local/
+
+# Environment files
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+!.env.testing
+
+# -----------------------------------------------------------------------------
+# 6. PHP / COMPOSER - Dipendenze e cache
+# -----------------------------------------------------------------------------
+/vendor/
+vendor/
+composer.phar
+*.phar
+
+# PHP CS Fixer
+.php_cs.cache
+.php-cs-fixer.cache
+
+# PHPUnit
+.phpunit.result.cache
+.phpunit.cache/
+
+# PHPStorm helpers
+_ide_helper.php
+_ide_helper_models.php
+.phpstorm.meta.php
+
+# Laravel build
+laravel/build/
+laravel/_ide_helper.php
+laravel/_ide_helper_models.php
+laravel/.php_cs.cache
+laravel/.php-cs-fixer.cache
+
+# -----------------------------------------------------------------------------
+# 7. NODE.JS / NPM - Dipendenze e lock files
+# -----------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# -----------------------------------------------------------------------------
+# 8. LARAVEL SPECIFICO
+# -----------------------------------------------------------------------------
+# Storage e cache
+laravel/storage/
+laravel/storage/*
+laravel/storage/cookie.txt
+laravel/bootstrap/cache/*
+laravel/bootstrap/cache/modules.php
+laravel/stubs/
+
+# Vendor resources (auto-generated)
+laravel/resources/lang/vendor/
+laravel/resources/views/vendor/
+laravel/app/View/Components/vendor/
+laravel/lang/vendor/
+
+# Build artifacts
+laravel/vite-module-loader.js
+laravel/public/build/
+laravel/public/hot
+
+# Local config
+laravel/config/local/
+
+# -----------------------------------------------------------------------------
+# 9. TEMI - Themes/Zero specific
+# -----------------------------------------------------------------------------
+public_html/storage/
+public_html/storage/*
+public_html/themes/
+public_html/css/
+public_html/js/
+public_html/vendor/
+public_html/plugins/
+public_html/fonts/
+public_html/material/
+
+# Extras
+laravel/Themes/Zero/extras/
+
+# -----------------------------------------------------------------------------
+# 10. MODULI - Moduli specifici
+# -----------------------------------------------------------------------------
+# Moduli deprecati o locali
+laravel/Modules/Predict/
+
+# Language auto-generated
+laravel/Modules/*/resources/lang/
+laravel/Modules/*/lang/lang/
+
+# Docs private
+laravel/Modules/*/_docs/
+
+# -----------------------------------------------------------------------------
+# 11. ASSETS & BUILD OUTPUT
+# -----------------------------------------------------------------------------
+/public/build
+/public/hot
+/public/storage
+/public_html/build
+
+# Build directories
+build/
+dist/
+out/
+
+# Cache
+/cache/
+cache/*
+tmp/
+tmp*/
+
+# -----------------------------------------------------------------------------
+# 12. LOG & TEMP
+# -----------------------------------------------------------------------------
+*.log
+*.log.*
+error_log
+logs/
+
+# Temp files
+*.tmp
+*.temp
+*.tmp.*
+
+# -----------------------------------------------------------------------------
+# 13. BACKUP & ARCHIVI
+# -----------------------------------------------------------------------------
+# File .backup da script risoluzione conflitti (es. xra.md.backup) — mai in index
+*.bak
+*.backup
+*.backup.*
+*.backup-*
+*.backup_*
+backups/
+# Snapshot locali analisi conflitti (scratch, non versionare)
+analysis/
+analysis/**
 *.old
 *.old1
 *.old2
-*.backup
-*.backup.*
-*.bak
-*.bakcup
-*.new
+*_old
+*.orig
+*.rej
+* copy.*
+* copy/
+*.copy
 
-# ==============================================
-# DEVELOPMENT TOOLS
-# ==============================================
-.windsurf/
-.cursor/
-.phpstorm.meta.php
+# Archivi
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.gz
 
-# ==============================================
-# DOCUMENTATION CACHE
-# ==============================================
+# Git specific
+.git-rewrite/
+.git-rewrite
+.git-blame-ignore-revs
+*.conflict
+*.merge
+*.rebase
 
-# ==============================================
-# LANGUAGE FILES
-# ==============================================
-resources/lang/
+# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
+*~HEAD
+*~BASE
+*~LOCAL
+*~REMOTE
+*.orig
+*.rej
+*~head
 
-# ==============================================
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
-resources/views/Components_old/
-database/Migrations_old/
-database/Seeders_old/
-database/Factories_old/
-database_old/
+# -----------------------------------------------------------------------------
+# 14. DATABASE FILES
+# -----------------------------------------------------------------------------
+*.sqlite
+*.sqlite3
+*.db
+*.sql
 
-# ==============================================
-# MODULE SPECIFIC - GEO
-# ==============================================
-# File di configurazione locale
-config/local.php
-config/development.php
+# -----------------------------------------------------------------------------
+# 15. TEST & COVERAGE
+# -----------------------------------------------------------------------------
+coverage/
+coverage.xml/
+.nyc_output/
+junit.xml
+test-output/
 
-# Dati geografici temporanei
-geo/temp/
-geo/maps/temp/
-geo/data/temp/
+# -----------------------------------------------------------------------------
+# 16. BINARY & ESEGUIBILI
+# -----------------------------------------------------------------------------
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+*.jar
 
-# Cache geografica
-storage/geo/
-storage/maps/
+# -----------------------------------------------------------------------------
+# 17. FILE SPECIFICI PROGETTO
+# -----------------------------------------------------------------------------
+# Backup GitHub
+.github.backup-*/
 
-# File di test geografici
-geo_test_data.json
-test_geo_data.sql
+# Templates
+/templates/
 
-# ==============================================
-# END OF GEO .GITIGNORE
-# ==============================================
+# Configurazioni locali
+laravel/config/local/tv/prov/personale2022/database/content/information_schema_tables.json
+laravel/config/local/ptvx/database/content/information_schema_tables.json
 
-# 🚫 File specifici del progetto
-*.fila2
-laravel
-public_html
-lang/lang/
-_docs/
-_docs/
+# File di test
+* - Copia.php
+test*.php
+
+# Scripts bash locali
+bashscripts/
+
+# Copy files (duplicati temporanei)
+* copy
+* copy.*
+*.copy
+*~
+
+# Altri
+laravel/nunomaduro-phpinsights-ae780a9/
+laravel/phpinsights-standalone
+dump.rdb
+
+# =============================================================================
+# FINE .gitignore
+# =============================================================================
+laravel/database/migrations/
+.qwen/
+docs/legacy/
+.gemini/
+# Cursor: cartelle locali ignorare; eccezione per rule `.mdc` condivise (disciplina agent)
+.cursor/*
+!.cursor/rules/
+!.cursor/rules/**
+# Ponytail upstream clone (bashscripts/tools/ponytail-sync.sh) — non versionare
+ponytail-source/
+.opencode/
+
+# AI Agent directories (Theme-specific)
+laravel/Themes/Zero/.devcontainer/
+laravel/Themes/Zero/.cursor/
+laravel/.claude/
+.kilo/
+*.pest.php
+.tools/
+.claude
+*.*~*
+laravel/Modules/Lang/packages/lara-zeus/
+bashscripts/ai/skills/build-provenance-attestation/scripts/Modules/
+docs/wiki/concepts
+docs/wiki/rules/
+docs/wiki/skills/
+.githooks
+!.githooks/pre-push
+.gsd
+_bmad-output
+_bmad
+bmad
+claude-code-bmad-skills
+bmad-skills
+memory
+templates/github
+.agent
+.agents
+.ai
+.ai-context
+.antigravity
+.claude
+.clauderules
+.codex
+.cursor
+.cline
+.clinerules
+.cursor
+.cursorrules
+.gemini
+.grok
+.iflow
+.junie
+.kilo
+.kilocode
+.kilo.jsonc
+.opencode
+.phive
+.qdrant-initialized
+.qmd-collection.json
+.qwen
+.vscode
+.kilo
+.kilo
+.cursorignore
+.kilocodeignore
+.planning
+_templates
+laravel/.cursor
+laravel/.gemini
+laravel/.claude
+laravel/.qwen
+${PWD}/
+*.Identifier
+laravel/Modules/Notify/.openviking
+laravel/phpstan_reports/
+laravel/Modules/Geo/

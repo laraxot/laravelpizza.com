@@ -1,0 +1,105 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Notify\Jobs;
+
+use Exception;
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
+use Modules\Notify\Services\PushNotificationService;
+use Throwable;
+use Webmozart\Assert\Assert;
+
+/**
+ * Job per l'invio di notifiche push programmate
+ *
+ * Gestisce l'invio di notifiche push in base
+ * a una programmazione temporale.
+ */
+class SendScheduledPushNotification implements ShouldQueue
+{
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
+    public function __construct(
+        private string $jobId
+    ) {}
+
+    /**
+     * Execute the job.
+     */
+    public function handle(PushNotificationService $pushService): void
+    {
+        try {
+            // Recupera dati notifica programmata
+            $notificationData = Cache::get("scheduled_push:{$this->jobId}");
+
+            if (! $notificationData) {
+                Log::warning('Scheduled push notification not found', [
+                    'job_id' => $this->jobId,
+                ]);
+
+                return;
+            }
+
+            Assert::isArray($notificationData, 'Notification data must be array');
+
+            $rawTokens = $notificationData['tokens'] ?? [];
+            Assert::isArray($rawTokens, 'Tokens must be array');
+            /** @var list<string> $tokens */
+            $tokens = array_values(array_filter($rawTokens, is_string(...)));
+
+            $rawNotification = $notificationData['notification'] ?? [];
+            Assert::isArray($rawNotification, 'Notification must be array');
+            /** @var array<string, mixed> $notification */
+            $notification = $rawNotification;
+
+            $rawData = $notificationData['data'] ?? [];
+            Assert::isArray($rawData, 'Data must be array');
+            /** @var array<string, mixed> $data */
+            $data = $rawData;
+
+            $result = $pushService->sendToDevices(
+                $tokens,
+                $notification,
+                $data
+            );
+
+            // Log risultato
+            Log::debug('Scheduled push notification sent', [
+                'job_id' => $this->jobId,
+                'result' => $result,
+            ]);
+
+            // Rimuovi notifica programmata
+            Cache::forget("scheduled_push:{$this->jobId}");
+        } catch (Exception $e) {
+            Log::error('Scheduled push notification failed', [
+                'job_id' => $this->jobId,
+                'error' => $e->getMessage(),
+            ]);
+
+            // Rilancia l'eccezione per il retry
+            throw $e;
+        }
+    }
+
+    /**
+     * Handle a job failure.
+     */
+    public function failed(Throwable $exception): void
+    {
+        Log::error('Scheduled push notification job failed permanently', [
+            'job_id' => $this->jobId,
+            'error' => $exception->getMessage(),
+        ]);
+
+        // Rimuovi notifica programmata anche in caso di fallimento
+        Cache::forget("scheduled_push:{$this->jobId}");
+    }
+}

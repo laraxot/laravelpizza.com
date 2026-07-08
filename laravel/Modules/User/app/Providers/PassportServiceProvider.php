@@ -151,7 +151,7 @@ class PassportServiceProvider extends ServiceProvider
 
         if (! empty($scopes)) {
             // PHPStan: dopo i controlli Assert, l'array è garantito essere array<string, string>
-            /** @var array<string, string> $typedScopes */
+            /** @var non-empty-array<non-empty-string, non-empty-string> $typedScopes */
             $typedScopes = $scopes;
             Passport::tokensCan($typedScopes);
         }

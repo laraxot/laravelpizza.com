@@ -8,7 +8,7 @@ use Filament\Facades\Filament;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Navigation\NavigationItem;
 use Illuminate\Support\Facades\Auth;
-use Modules\Xot\Support\PanelModuleSupport;
+use Modules\Xot\Support\PanelModuleResolver;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
@@ -28,10 +28,10 @@ class GetPanelsNavigationItems
         foreach (Filament::getPanels() as $panel) {
             $navs[] = NavigationItem::make($panel->getId())
                 ->url('/'.$panel->getPath())
-                ->icon(PanelModuleSupport::navigationIcon($panel))
+                ->icon(PanelModuleResolver::navigationIcon($panel))
                 ->group('Modules')
-                ->label(PanelModuleSupport::navigationLabel($panel))
-                ->sort(PanelModuleSupport::navigationSort($panel))
+                ->label(PanelModuleResolver::navigationLabel($panel))
+                ->sort(PanelModuleResolver::navigationSort($panel))
                 ->visible(static function () use ($panel): bool {
                     /** @var FilamentUser|null $user */
                     $user = Auth::user();

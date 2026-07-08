@@ -1,0 +1,61 @@
+# Contesto Modulo Notify
+
+## Struttura Base
+- Modulo: Notify
+- Namespace Base: Modules\Notify
+- Directory Base: laravel/Modules/Notify
+
+## Regole Fondamentali
+
+### 1. Modelli
+- NON estendere mai direttamente Illuminate\Database\Eloquent\Model
+- Ogni modello deve estendere BaseModel del proprio modulo
+- BaseModel è nello stesso namespace dei modelli (non serve use)
+- Usare casts() invece di $casts per ereditare configurazioni base
+
+### 2. Resources Filament
+- NON estendere mai direttamente le classi Filament
+- Estendere sempre le classi XotBase* corrispondenti
+- Implementare getFormSchema() invece di form()
+- Implementare getTableColumns() invece di table()
+
+### 3. Service Providers
+- NON estendere mai ServiceProvider direttamente
+- Estendere XotBaseServiceProvider
+- Proprietà $name deve essere public
+- Non reimplementare funzionalità già presenti in XotBaseServiceProvider
+
+### 4. Traduzioni
+- Gestite tramite LangServiceProvider
+- Struttura: 'field' => ['label' => 'Label', 'placeholder' => '...']
+- Non usare ->label() direttamente nei form
+
+### 5. Documentazione
+- Mantenere docs/ aggiornata in ogni modulo
+- Creare collegamenti bidirezionali tra docs
+- Documentare ogni modifica importante
+- Aggiungere best practices e anti-patterns
+
+## Stato Attuale
+- NotificationTemplate estende correttamente BaseModel
+- Documentazione aggiornata in docs/models.md
+- Implementata struttura corretta per form e table
+- GrapesJS in fase di integrazione
+
+## TODO
+- [ ] Completare integrazione GrapesJS
+- [ ] Verificare tutte le estensioni nel modulo
+- [ ] Aggiornare documentazione per nuove funzionalità
+- [ ] Implementare test per template compilation
+
+## Collegamenti Importanti
+- docs/models.md: Documentazione modelli
+- docs/filament-resources.md: Risorse Filament
+- docs/service-providers.md: Service Provider
+- ../../Xot/docs/: Documentazione modulo base
+
+## Note
+- Mantenere coerenza con architettura esistente
+- Seguire pattern stabiliti
+- Documentare ogni deviazione dalle regole
+- Aggiornare questo prompt per nuovi pattern 

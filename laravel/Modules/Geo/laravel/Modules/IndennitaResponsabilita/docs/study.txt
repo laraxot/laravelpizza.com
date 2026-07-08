@@ -1,0 +1,15 @@
+studia a fondo 
+https://github.com/spatie/laravel-schemaless-attributes
+https://spatie.be/docs/laravel-data/v4/validation/using-validation-attributes
+https://spatie.be/docs/laravel-data/v4/as-a-resource/appending-properties
+https://laravel-news.com/laravel-schemaless-attributes-package
+https://spatie.be/docs/laravel-site-search/v2/advanced-usage/indexing-extra-properties
+https://spatie.be/docs/laravel-medialibrary/v11/advanced-usage/using-custom-properties
+https://spatie.be/docs/laravel-data/v4/advanced-usage/traits-and-interfaces
+https://laracasts.com/discuss/channels/guides/model-add-custom-columns-dynamically
+https://spatie.be/docs/laravel-data/v4/as-a-data-transfer-object/injecting-property-values
+https://spatie.be/docs/laravel-html/v3/general-usage/element-methods
+https://spatie.be/docs/laravel-data/v4/as-a-resource/lazy-properties
+https://spatie.be/docs/laravel-data/v4/validation/introduction
+
+poi aggiorni le varie cartelle docs dentro i moduli e dentro i temi .. ovvio se si parla di un link che parla di media devi aggiornare la cartella docs dentro il modulo media, oltre che ad aggiornare devi anche studiare le cartelle docs dentro i moduli e dentro i temi 

@@ -1,0 +1,38 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'id' => 'id',
+    'matr' => 'matr',
+    'cognome' => 'cognome',
+    'nome' => 'nome',
+    'email' => 'email',
+    'propro' => 'propro',
+    'posfun' => 'posfun',
+    'posizione_eco' => 'posizione_eco',
+    'stabi' => 'stabi',
+    'stabi_txt' => 'stabi_txt',
+    'repar' => 'repar',
+    'repar_txt' => 'repar_txt',
+    'disci1' => 'disci1',
+    'disci1_txt' => 'disci1_txt',
+    'dal' => 'dal',
+    'al' => 'al',
+    'anno' => 'anno',
+    'ha_diritto' => 'ha_diritto',
+    'motivo' => 'motivo',
+    'last_data_assunz' => 'last_data_assunz',
+    'perc_parttime_anno' => 'perc_parttime_anno',
+    'gg_parttimevert_anno' => 'gg_parttimevert_anno',
+    'perc_parttimepond_anno' => 'perc_parttimepond_anno',
+    'gg_presenza_anno' => 'gg_presenza_anno',
+    'gg_assenza_anno' => 'gg_assenza_anno',
+    'perc_parttime_dalal' => 'perc_parttime_dalal',
+    'gg_parttimevert_dalal' => 'gg_parttimevert_dalal',
+    'perc_parttimepond_dalal' => 'perc_parttimepond_dalal',
+    'gg_presenza_dalal' => 'gg_presenza_dalal',
+    'gg_assenza_dalal' => 'gg_assenza_dalal',
+    'hh_assenza_anno' => 'hh_assenza_anno',
+    'hh_assenza_dalal' => 'hh_assenza_dalal',
+];

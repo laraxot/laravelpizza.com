@@ -1,0 +1,72 @@
+includes:
+    - ./phpstan-baseline.neon
+    - ./vendor/nesbot/carbon/extension.neon
+    - ./vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
+    - ./vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
+parameters:
+
+    paths:
+        - Modules
+        - Themes
+
+    level: 9
+
+    ignoreErrors:
+        # -
+        #   message: '#PHPDoc tag @mixin contains unknown class Modules\\Badge\\Models\\IdeHelper(.*)+\.#'
+        # - '#No error to ignore is reported on line#'
+        - '#Static call to instance method Nwidart\\Modules\\Facades\\Module#'
+        - '#Unsafe usage of new static#'
+        - '#PHPDoc tag @mixin contains unknown class #'
+        - '#Static call to instance method Nwidart#'
+        - '#Cannot cast mixed to (string|float|double|int|bool|boolean).#' # Ignora errori di cast da mixed a tipi specifici
+        - identifier: missingType.iterableValue
+        - identifier: missingType.generics
+        - identifier: larastan.noEnvCallsOutsideOfConfig
+        - identifier: trait.unused 
+        - identifier: method.unused
+
+    excludePaths:
+        - ./*/vendor/*
+        - ./*/Tests/*
+        - ./*/tests/*
+        - ./*/build/*
+        - ./*/docs/*
+        - ./*/Main_files/*
+        - ./*/phpinsights.php
+        - ./*/app_old/*
+        - ./*/_old/*
+        - ./*/rector.php
+        - ./*/*.blade.php
+        - ./config/local/*/database.php
+        #- ./Modules/Incentivi/*
+        #- ./Modules/Pdnd/*
+        - ./Modules/Media/app/Actions/Image/Merge.php
+        - ./Modules/Xot/app/Filament/Traits/HasXotTable.php
+        - ./Modules/Xot/app/Resources/views/factory-generator/*
+        #- ./Modules/IndennitaCondizioniLavoro/*
+        #- ./Modules/IndennitaResponsabilita/*
+        #- ./Modules/Performance/*
+        #- ./Modules/Ptv/*
+        #- ./Modules/Sigma/*
+        #- ./Modules/*/fix_factories.php
+
+    bootstrapFiles:
+        - ./phpstan_constants.php
+        - ./phpstan-bootstrap.php
+        #- ./vendor/amenadiel/jpgraph/src/config.inc.php
+
+    scanFiles:
+        - ./Modules/Xot/Helpers/Helper.php
+
+    mixinExcludeClasses:
+        - ./Modules/Badge/Models
+        - IdeHelperTimbra
+
+    editorUrl: 'vscode://file/%%file%%:%%line%%'
+
+    tmpDir: /tmp/phpstan
+
+    treatPhpDocTypesAsCertain: false
+    reportUnmatchedIgnoredErrors: false

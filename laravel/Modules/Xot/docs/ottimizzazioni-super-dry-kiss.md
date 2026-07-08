@@ -58,7 +58,7 @@ Documento completo di ottimizzazioni per il modulo Xot seguendo i principi **SUP
 - `test.txt` (0 bytes, inutile)
 - `CHANGELOG.md.backup` (backup non necessario)
 - `phpstan-baseline.neon` (0 bytes, inutile)
-- `_activity.code-workspace` (duplicato errato — ogni modulo deve avere UN SOLO file `_<snake_case_module_name>.code-workspace`, ad es. `_xot.code-workspace`)
+- `_xot.code-workspace` e `_activity.code-workspace` (workspace specifici)
 
 **Soluzione SUPER DRY + KISS:**
 1. **Eliminare** file vuoti e backup
@@ -291,10 +291,10 @@ class ExampleService implements ServiceInterface
 
 ## 🔗 Collegamenti
 
-- [Documentazione Core](../../../../docs/core/)
-- [Best Practices Filament](../../../../docs/core/filament-best-practices.md)
-- [Convenzioni Sistema](../../../../docs/core/conventions.md)
-- [Template Modulo](../../../../docs/templates/module-template.md)
+- [Documentazione Core](../../../docs/core/)
+- [Best Practices Filament](../../../docs/core/filament-best-practices.md)
+- [Convenzioni Sistema](../../../docs/core/conventions.md)
+- [Template Modulo](../../../docs/templates/module-template.md)
 
 ---
 

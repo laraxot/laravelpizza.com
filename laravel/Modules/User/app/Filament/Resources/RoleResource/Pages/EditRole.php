@@ -18,6 +18,7 @@ use Webmozart\Assert\Assert;
 class EditRole extends XotBaseEditRecord
 {
     // //
+    /** @var Collection<int, string> */
     public Collection $permissions;
 
     // public Role $record;

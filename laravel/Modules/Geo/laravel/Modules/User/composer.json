@@ -1,0 +1,99 @@
+{
+  "name": "laraxot/module_user_fila5",
+  "description": "User management module for the Laraxot ecosystem: authentication, roles, teams, tenants, and OAuth.",
+  "keywords": [
+    "laraxot",
+    "laravel",
+    "filament",
+    "module_user",
+    "user",
+    "authentication",
+    "roles",
+    "teams",
+    "passport",
+    "oauth"
+  ],
+  "homepage": "https://github.com/laraxot/module_user_fila5",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marco Sottana",
+      "email": "marco.sottana@gmail.com"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Livewire\\LivewireServiceProvider",
+        "Modules\\User\\Providers\\UserServiceProvider",
+        "Modules\\User\\Providers\\Filament\\AdminPanelProvider",
+        "Modules\\User\\Providers\\PassportServiceProvider",
+        "Modules\\User\\Providers\\SocialiteServiceProvider"
+      ],
+      "aliases": {}
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Modules\\User\\": "app/",
+      "Modules\\User\\Database\\Factories\\": "database/factories/",
+      "Modules\\User\\Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Modules\\User\\Tests\\": "tests/"
+    },
+    "files": [
+      "tests/Support/helpers.php"
+    ]
+  },
+  "require": {
+    "flowframe/laravel-trend": "*",
+    "jenssegers/agent": "*",
+    "laravel/passport": "*",
+    "socialiteproviders/auth0": "*",
+    "spatie/laravel-personal-data-export": "*",
+    "socialiteproviders/microsoft": "^4.8"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^2.1",
+    "phpstan/phpstan-deprecation-rules": "^2.0"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../Xot"
+    },
+    {
+      "type": "path",
+      "url": "../Tenant"
+    },
+    {
+      "type": "path",
+      "url": "../UI"
+    }
+  ],
+  "scripts": {
+    "post-autoload-dump1": [
+      "@php vendor/bin/testbench package:discover --ansi"
+    ],
+    "post-update-cmd": [
+      "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+    ],
+    "analyse": "vendor/bin/phpstan analyse",
+    "test": "./vendor/bin/pest --no-coverage",
+    "test-coverage": "vendor/bin/pest --coverage-html coverage",
+    "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "wikimedia/composer-merge-plugin": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

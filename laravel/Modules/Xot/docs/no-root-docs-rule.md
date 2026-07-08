@@ -40,7 +40,6 @@ find var/www/html/_bases/base_<nome progetto>/docs$|^docs$)"
 
 ## DATA IMPLEMENTAZIONE:
 2025-08-08 - Regola implementata e verificata
-[DATE] - Regola implementata e verificata
 
 ## RESPONSABILITÀ:
 Tutti gli sviluppatori e AI devono rispettare questa regola senza eccezioni.

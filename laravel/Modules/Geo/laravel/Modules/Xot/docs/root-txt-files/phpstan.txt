@@ -1,0 +1,1 @@
+https://laravel-news.com/running-phpstan-on-max-with-laravel

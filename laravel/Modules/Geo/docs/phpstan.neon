@@ -1,0 +1,41 @@
+includes:
+    - ./phpstan-baseline.neon
+    - ./../../vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: max
+    paths:
+        - .
+    
+    ignoreErrors:
+        - '#PHPDoc tag @mixin contains unknown class #'
+        - identifier: missingType.iterableValue
+        - identifier: missingType.generics
+
+    excludePaths:
+        - ./vendor/*
+        - ./build/*
+        - ./docs/*
+        - ./*/build/*
+        - ./*/vendor/*
+        - ./*/docs/*
+        - ./*/Tests/*
+        - ./*/_ide_helper.php
+
+    bootstrapFiles:
+        - ./phpstan_constants.php
+        - ../../vendor/autoload.php
+
+    scanFiles:
+    
+    scanDirectories:
+        - ../../vendor/
+
+    editorUrl: 'vscode://file/%%file%%:%%line%%'
+
+    tmpDir: ./build/phpstan
+    checkUnusedViews: false
+    treatPhpDocTypesAsCertain: false
+    reportUnmatchedIgnoredErrors: false
+    checkOctaneCompatibility: false
+    checkModelProperties: false

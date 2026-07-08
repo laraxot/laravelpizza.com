@@ -1,0 +1,81 @@
+{
+    "name": "laraxot/module_sigma_fila5",
+    "description": "Sigma HR system integration module for the Laraxot ecosystem: data import/export, payroll sync, and external HR software interoperability.",
+    "keywords": [
+        "laraxot",
+        "laravel",
+        "filament",
+        "module_sigma",
+        "sigma",
+        "hr-integration",
+        "payroll-sync",
+        "data-import",
+        "interoperability"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/laraxot/module_sigma_fila5.git",
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com"
+        }
+    ],
+    "require": {
+        "spatie/laravel-sluggable": "*",
+        "php": "^8.3"
+    },
+    "require-dev": {},
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Xot"
+        },
+        {
+            "type": "path",
+            "url": "../Tenant"
+        },
+        {
+            "type": "path",
+            "url": "../UI"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\Sigma\\": "app/",
+            "Modules\\Sigma\\Database\\Factories\\": "database/factories/",
+            "Modules\\Sigma\\Database\\Seeders\\": "database/seeders/",
+            "Modules\\Sigma\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [],
+        "post-update-cmd": [],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "./vendor/bin/pest --no-coverage",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Sigma\\Providers\\SigmaServiceProvider",
+                "Modules\\Sigma\\Providers\\Filament\\AdminPanelProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Sigma\\Tests\\": "tests/"
+        }
+    }
+}

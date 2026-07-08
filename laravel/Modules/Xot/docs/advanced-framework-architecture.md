@@ -2,7 +2,7 @@
 
 ## Introduzione
 
-Basandoci sui principi architetturali osservati nel pacchetto `filament-spatie-laravel-database-mail-templates`, questo documento illustra come applicare questi concetti al modulo Xot, che funge da infrastruttura centrale per tutti gli altri moduli del progetto <nome progetto>.
+Basandoci sui principi architetturali osservati nel pacchetto `filament-spatie-laravel-database-mail-templates`, questo documento illustra come applicare questi concetti al modulo Xot, che funge da infrastruttura centrale per tutti gli altri moduli del progetto LaravelPizza.
 
 ## Sistema di Plugin Centralizzato
 

@@ -4,37 +4,41 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Actions\IPGeolocation;
 
-use Modules\Geo\Tests\LightTestCase;
-
-uses(LightTestCase::class);
-
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use Modules\Geo\Actions\IPGeolocation\FetchIPLocationAction;
 use Modules\Geo\Datas\IPLocationData;
+use Modules\Geo\Tests\LightTestCase;
+
+uses(LightTestCase::class);
 
 beforeEach(function () {
-    $mockHandler = new MockHandler();
-    $handlerStack = HandlerStack::create($mockHandler);
+    $this->mockHandler = new MockHandler();
+    $handlerStack = HandlerStack::create($this->mockHandler);
     $client = new Client(['handler' => $handlerStack]);
 
-    $action = new FetchIPLocationAction($client);
+    $this->action = new FetchIPLocationAction();
+
+    $reflection = new ReflectionClass($this->action);
+    $property = $reflection->getProperty('client');
+    $property->setAccessible(true);
+    $property->setValue($this->action, $client);
 });
 
 it('throws exception when ip-api returns failure status', function (): void {
-    $mockHandler->append(new Response(200, [], json_encode([)))
+    $this->mockHandler->append(new Response(200, [], json_encode([
         'status' => 'fail',
         'message' => 'invalid query',
     ])));
 
-    expect(fn () => $action->execute('8.8.8.8'))
+    expect(fn () => $this->action->execute('8.8.8.8'))
         ->toThrow(RuntimeException::class, 'Failed to get IP location: invalid query');
 });
 
 it('returns ip location data for valid response', function (): void {
-    $mockHandler->append(new Response(200, [], json_encode([)))
+    $this->mockHandler->append(new Response(200, [], json_encode([
         'status' => 'success',
         'country' => 'United States',
         'countryCode' => 'US',
@@ -47,7 +51,7 @@ it('returns ip location data for valid response', function (): void {
         'isp' => 'Google LLC',
     ])));
 
-    $result = $action->execute('8.8.8.8');
+    $result = $this->action->execute('8.8.8.8');
 
     expect($result)
         ->toBeInstanceOf(IPLocationData::class)
@@ -63,11 +67,11 @@ it('returns ip location data for valid response', function (): void {
 });
 
 it('handles response with null values', function (): void {
-    $mockHandler->append(new Response(200, [], json_encode([)))
+    $this->mockHandler->append(new Response(200, [], json_encode([
         'status' => 'success',
     ])));
 
-    $result = $action->execute('127.0.0.1');
+    $result = $this->action->execute('127.0.0.1');
 
     expect($result)
         ->toBeInstanceOf(IPLocationData::class)

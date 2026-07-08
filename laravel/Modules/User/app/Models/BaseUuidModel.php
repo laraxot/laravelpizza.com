@@ -19,6 +19,7 @@ abstract class BaseUuidModel extends XotBaseUuidModel
 
     // use Searchable;
     // //use Cachable;
+    /** @use HasXotFactory<\Illuminate\Database\Eloquent\Factories\Factory<static>> */
     use HasXotFactory;
     use Updater;
 

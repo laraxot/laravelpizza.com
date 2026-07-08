@@ -1,0 +1,7 @@
+---
+module: theme
+topic: two_factor
+canonical: ../../../Themes/docs/shared-components/two_factor.txt
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/two_factor.txt

@@ -1,0 +1,1131 @@
+Note: Using configuration file /var/www/_bases/base_ptv_fila5_mono/laravel/phpstan.neon.
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Actions/UpdateProjectActivitiesAction.php                
+ ------ ----------------------------------------------------------------------- 
+  27     Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$componente_incentivante.          
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Actions/UpdateProjectActivitiesAction.php            
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/ActivityResource.php                  
+ ------ ----------------------------------------------------------------------- 
+  52     Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$project.                          
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/ActivityResource.php              
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/ActivityResource/Pages/EditActivity.  
+         php                                                                    
+ ------ ----------------------------------------------------------------------- 
+  43     Cannot call method getAttribute() on                                   
+         int|Modules\Incentivi\Models\Activity|string|null.                     
+         🪪  method.nonObject                                                   
+         ✏️  Incentivi/app/Filament/Resources/ActivityResource/Pages/EditActivi  
+         ty.php                                                                 
+  45     Cannot access property $project on                                     
+         int|Modules\Incentivi\Models\Activity|string|null.                     
+         🪪  property.nonObject                                                 
+         ✏️  Incentivi/app/Filament/Resources/ActivityResource/Pages/EditActivi  
+         ty.php                                                                 
+  55     Cannot access property $project_id on                                  
+         int|Modules\Incentivi\Models\Activity|string|null.                     
+         🪪  property.nonObject                                                 
+         ✏️  Incentivi/app/Filament/Resources/ActivityResource/Pages/EditActivi  
+         ty.php                                                                 
+  56     Cannot access property $project_id on                                  
+         int|Modules\Incentivi\Models\Activity|string|null.                     
+         🪪  property.nonObject                                                 
+         ✏️  Incentivi/app/Filament/Resources/ActivityResource/Pages/EditActivi  
+         ty.php                                                                 
+  57     Cannot access property $id on                                          
+         int|Modules\Incentivi\Models\Activity|string|null.                     
+         🪪  property.nonObject                                                 
+         ✏️  Incentivi/app/Filament/Resources/ActivityResource/Pages/EditActivi  
+         ty.php                                                                 
+  58     Cannot access property $id on                                          
+         int|Modules\Incentivi\Models\Activity|string|null.                     
+         🪪  property.nonObject                                                 
+         ✏️  Incentivi/app/Filament/Resources/ActivityResource/Pages/EditActivi  
+         ty.php                                                                 
+  64     Parameter #1 $record of method                                         
+         Modules\Incentivi\Actions\UpdateActivitiesEmployeesAction::execute()   
+         expects Illuminate\Database\Eloquent\Model|null,                       
+         int|Modules\Incentivi\Models\Activity|string|null given.               
+         🪪  argument.type                                                      
+         ✏️  Incentivi/app/Filament/Resources/ActivityResource/Pages/EditActivi  
+         ty.php                                                                 
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/ActivityResource/RelationManagers/Em  
+         ployeesRelationManager.php                                             
+ ------ ----------------------------------------------------------------------- 
+  63     Call to an undefined method                                            
+         Illuminate\Database\Eloquent\Model::employees().                       
+         🪪  method.notFound                                                    
+         ✏️  Incentivi/app/Filament/Resources/ActivityResource/RelationManagers  
+         /EmployeesRelationManager.php                                          
+  110    Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$project.                          
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/ActivityResource/RelationManagers  
+         /EmployeesRelationManager.php                                          
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/CapitalPercentageResource/Pages/List  
+         CapitalPercentages.php                                                 
+ ------ ----------------------------------------------------------------------- 
+  19     Method                                                                 
+         Modules\Incentivi\Filament\Resources\CapitalPercentageResource\Pages\  
+         ListCapitalPercentages::getHeaderActions() should return array<string  
+         , Filament\Actions\Action> but returns non-empty-array<0|string, Fila  
+         ment\Actions\Action>.                                                  
+         🪪  return.type                                                        
+         ✏️  Incentivi/app/Filament/Resources/CapitalPercentageResource/Pages/L  
+         istCapitalPercentages.php                                              
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/DefaultActivityResource.php           
+ ------ ----------------------------------------------------------------------- 
+  29     Method                                                                 
+         Modules\Incentivi\Filament\Resources\DefaultActivityResource::getForm  
+         Schema() should return array<string, Filament\Forms\Components\Compon  
+         ent> but returns array<int|string, Filament\Forms\Components\Radio|Fi  
+         lament\Forms\Components\Select|Filament\Forms\Components\TextInput>.   
+         🪪  return.type                                                        
+         ✏️  Incentivi/app/Filament/Resources/DefaultActivityResource.php       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/DefaultActivityResource/Pages/ListDe  
+         faultActivities.php                                                    
+ ------ ----------------------------------------------------------------------- 
+  22     Method                                                                 
+         Modules\Incentivi\Filament\Resources\DefaultActivityResource\Pages\Li  
+         stDefaultActivities::getHeaderActions() should return array<string, F  
+         ilament\Actions\Action> but returns non-empty-array<0|string, Filamen  
+         t\Actions\Action>.                                                     
+         🪪  return.type                                                        
+         ✏️  Incentivi/app/Filament/Resources/DefaultActivityResource/Pages/Lis  
+         tDefaultActivities.php                                                 
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/DepartmentResource/Pages/ListDepartm  
+         ents.php                                                               
+ ------ ----------------------------------------------------------------------- 
+  29     Method                                                                 
+         Modules\Incentivi\Filament\Resources\DepartmentResource\Pages\ListDep  
+         artments::getHeaderActions() should return array<string, Filament\Act  
+         ions\Action> but returns non-empty-array<0|string, Filament\Actions\A  
+         ction>.                                                                
+         🪪  return.type                                                        
+         ✏️  Incentivi/app/Filament/Resources/DepartmentResource/Pages/ListDepa  
+         rtments.php                                                            
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/EmployeeResource.php                  
+ ------ ----------------------------------------------------------------------- 
+  139    Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$cognome.                          
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/EmployeeResource.php              
+  139    Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$nome.                             
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/EmployeeResource.php              
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/PhaseResource/Pages/EditPhase.php     
+ ------ ----------------------------------------------------------------------- 
+  22     Cannot call method getAttribute() on                                   
+         Illuminate\Database\Eloquent\Model|int|string|null.                    
+         🪪  method.nonObject                                                   
+         ✏️  Incentivi/app/Filament/Resources/PhaseResource/Pages/EditPhase.php  
+  22     Parameter #1 $value of function strval expects                         
+         bool|float|int|resource|string|null, mixed given.                      
+         🪪  argument.type                                                      
+         ✏️  Incentivi/app/Filament/Resources/PhaseResource/Pages/EditPhase.php  
+  23     Cannot access property $project on                                     
+         Illuminate\Database\Eloquent\Model|int|string|null.                    
+         🪪  property.nonObject                                                 
+         ✏️  Incentivi/app/Filament/Resources/PhaseResource/Pages/EditPhase.php  
+  28     Cannot access property $project_id on                                  
+         Illuminate\Database\Eloquent\Model|int|string|null.                    
+         🪪  property.nonObject                                                 
+         ✏️  Incentivi/app/Filament/Resources/PhaseResource/Pages/EditPhase.php  
+  29     Cannot access property $project_id on                                  
+         Illuminate\Database\Eloquent\Model|int|string|null.                    
+         🪪  property.nonObject                                                 
+         ✏️  Incentivi/app/Filament/Resources/PhaseResource/Pages/EditPhase.php  
+  30     Cannot access property $id on                                          
+         Illuminate\Database\Eloquent\Model|int|string|null.                    
+         🪪  property.nonObject                                                 
+         ✏️  Incentivi/app/Filament/Resources/PhaseResource/Pages/EditPhase.php  
+  31     Cannot access property $id on                                          
+         Illuminate\Database\Eloquent\Model|int|string|null.                    
+         🪪  property.nonObject                                                 
+         ✏️  Incentivi/app/Filament/Resources/PhaseResource/Pages/EditPhase.php  
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/PhaseResource/Pages/ManagePhaseSettl  
+         ements.php                                                             
+ ------ ----------------------------------------------------------------------- 
+  41     Method                                                                 
+         Modules\Incentivi\Filament\Resources\PhaseResource\Pages\ManagePhaseS  
+         ettlements::getTableColumns() should return array<string, Filament\Ta  
+         bles\Columns\TextColumn> but returns array<int, Filament\Tables\Colum  
+         ns\TextColumn>.                                                        
+         🪪  return.type                                                        
+         ✏️  Incentivi/app/Filament/Resources/PhaseResource/Pages/ManagePhaseSe  
+         ttlements.php                                                          
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/ProjectResource.php                   
+ ------ ----------------------------------------------------------------------- 
+  164    Parameter #1 $record of method                                         
+         Modules\Incentivi\Actions\SpareImportoTotaleAction::execute() expects  
+         Illuminate\Database\Eloquent\Model,                                    
+         Illuminate\Database\Eloquent\Model|null given.                         
+         🪪  argument.type                                                      
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource.php               
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/ProjectResource/Actions/GeneratePDFP  
+         rojectReportAction.php                                                 
+ ------ ----------------------------------------------------------------------- 
+  34     Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$activities.                       
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Actions/GenerateP  
+         DFProjectReportAction.php                                              
+  42     Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$activities.                       
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Actions/GenerateP  
+         DFProjectReportAction.php                                              
+  44     Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$phases.                           
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Actions/GenerateP  
+         DFProjectReportAction.php                                              
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/ProjectResource/Actions/GeneratePDFW  
+         orkgroupCompositionAction.php                                          
+ ------ ----------------------------------------------------------------------- 
+  33     Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$activities.                       
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Actions/GenerateP  
+         DFWorkgroupCompositionAction.php                                       
+  41     Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$employees.                        
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Actions/GenerateP  
+         DFWorkgroupCompositionAction.php                                       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/ProjectResource/Actions/Table/Attach  
+         GroupAction.php                                                        
+ ------ ----------------------------------------------------------------------- 
+  38     Access to an undefined property                                        
+         Filament\Tables\Contracts\HasTable::$record.                           
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Actions/Table/Att  
+         achGroupAction.php                                                     
+  41     Cannot call method employees() on                                      
+         Illuminate\Database\Eloquent\Collection<int, Modules\Incentivi\Models  
+         \Workgroup>|Modules\Incentivi\Models\Workgroup|null.                   
+         🪪  method.nonObject                                                   
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Actions/Table/Att  
+         achGroupAction.php                                                     
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/ProjectResource/Actions/Table/Attach  
+         SingleEmployeeAction.php                                               
+ ------ ----------------------------------------------------------------------- 
+  34     Access to an undefined property                                        
+         Filament\Tables\Contracts\HasTable::$record.                           
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Actions/Table/Att  
+         achSingleEmployeeAction.php                                            
+  36     Cannot call method projects() on                                       
+         Illuminate\Database\Eloquent\Collection<int, Modules\Incentivi\Models  
+         \Employee>|Modules\Incentivi\Models\Employee|null.                     
+         🪪  method.nonObject                                                   
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Actions/Table/Att  
+         achSingleEmployeeAction.php                                            
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/ProjectResource/Pages/CreateProject.  
+         php                                                                    
+ ------ ----------------------------------------------------------------------- 
+  22     Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$tipo.                             
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/CreateProje  
+         ct.php                                                                 
+  24     Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$componente_incentivante.          
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/CreateProje  
+         ct.php                                                                 
+  33     Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$id.                               
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/CreateProje  
+         ct.php                                                                 
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageActivity  
+         Employees.php                                                          
+ ------ ----------------------------------------------------------------------- 
+  72     Method                                                                 
+         Modules\Incentivi\Filament\Resources\ProjectResource\Pages\ManageActi  
+         vityEmployees::getTableColumns() should return array<string, Filament  
+         \Tables\Columns\TextColumn> but returns array<int, Filament\Tables\Co  
+         lumns\TextColumn>.                                                     
+         🪪  return.type                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageActiv  
+         ityEmployees.php                                                       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProjectA  
+         ctivities.php                                                          
+ ------ ----------------------------------------------------------------------- 
+  63     Method                                                                 
+         Modules\Incentivi\Filament\Resources\ProjectResource\Pages\ManageProj  
+         ectActivities::getTableColumns() should return array<string, Filament  
+         \Tables\Columns\TextColumn> but returns array<int, Filament\Tables\Co  
+         lumns\TextColumn|Filament\Tables\Columns\TextInputColumn>.             
+         🪪  return.type                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProje  
+         ctActivities.php                                                       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProjectE  
+         mployees.php                                                           
+ ------ ----------------------------------------------------------------------- 
+  30     Method                                                                 
+         Modules\Incentivi\Filament\Resources\ProjectResource\Pages\ManageProj  
+         ectEmployees::getTableActions() should return array<string, Filament\  
+         Tables\Actions\Action> but returns array{Filament\Tables\Actions\Deta  
+         chAction}.                                                             
+         🪪  return.type                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProje  
+         ctEmployees.php                                                        
+  64     Method                                                                 
+         Modules\Incentivi\Filament\Resources\ProjectResource\Pages\ManageProj  
+         ectEmployees::sumPerColumn() has parameter $livewire with no type      
+         specified.                                                             
+         🪪  missingType.parameter                                              
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProje  
+         ctEmployees.php                                                        
+  78     Method                                                                 
+         Modules\Incentivi\Filament\Resources\ProjectResource\Pages\ManageProj  
+         ectEmployees::sumPerColumnTotal() has parameter $livewire with no      
+         type specified.                                                        
+         🪪  missingType.parameter                                              
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProje  
+         ctEmployees.php                                                        
+  110    Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$activities.                       
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProje  
+         ctEmployees.php                                                        
+  128    Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$activities.                       
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProje  
+         ctEmployees.php                                                        
+  132    Undefined variable: $livewire                                          
+         🪪  variable.undefined                                                 
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProje  
+         ctEmployees.php                                                        
+  136    Method                                                                 
+         Modules\Incentivi\Filament\Resources\ProjectResource\Pages\ManageProj  
+         ectEmployees::getTableColumns() should return array<string, Filament\  
+         Tables\Columns\TextColumn> but returns array<int, Filament\Tables\Col  
+         umns\TextColumn>.                                                      
+         🪪  return.type                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProje  
+         ctEmployees.php                                                        
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProjectS  
+         ettlements.php                                                         
+ ------ ----------------------------------------------------------------------- 
+  35     Method                                                                 
+         Modules\Incentivi\Filament\Resources\ProjectResource\Pages\ManageProj  
+         ectSettlements::getHeaderActions() should return array<string, Filame  
+         nt\Actions\Action> but returns array{Modules\Incentivi\Filament\Resou  
+         rces\ProjectResource\Actions\GeneratePDFProjectReportAction}.          
+         🪪  return.type                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProje  
+         ctSettlements.php                                                      
+  65     Method                                                                 
+         Modules\Incentivi\Filament\Resources\ProjectResource\Pages\ManageProj  
+         ectSettlements::getTableColumns() should return array<string, Filamen  
+         t\Tables\Columns\TextColumn> but returns array<int, Filament\Tables\C  
+         olumns\TextColumn>.                                                    
+         🪪  return.type                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProje  
+         ctSettlements.php                                                      
+  82     Method                                                                 
+         Modules\Incentivi\Filament\Resources\ProjectResource\Pages\ManageProj  
+         ectSettlements::getTableActions() should return array<string, Filamen  
+         t\Tables\Actions\Action> but returns array{Filament\Tables\Actions\Ac  
+         tion}.                                                                 
+         🪪  return.type                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProje  
+         ctSettlements.php                                                      
+  96     Method                                                                 
+         Modules\Incentivi\Filament\Resources\ProjectResource\Pages\ManageProj  
+         ectSettlements::getTableHeaderActions() should return array<string, F  
+         ilament\Tables\Actions\Action> but returns array{Filament\Tables\Acti  
+         ons\CreateAction}.                                                     
+         🪪  return.type                                                        
+         ✏️  Incentivi/app/Filament/Resources/ProjectResource/Pages/ManageProje  
+         ctSettlements.php                                                      
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Http/Controllers/PdfDownloadController.php               
+ ------ ----------------------------------------------------------------------- 
+  24     Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$employees.                        
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Http/Controllers/PdfDownloadController.php           
+  24     Using nullsafe property access on non-nullable type                    
+         Illuminate\Database\Eloquent\Model. Use -> instead.                    
+         🪪  nullsafe.neverNull                                                 
+         ✏️  Incentivi/app/Http/Controllers/PdfDownloadController.php           
+  24     Using nullsafe property access on non-nullable type mixed. Use ->      
+         instead.                                                               
+         🪪  nullsafe.neverNull                                                 
+         ✏️  Incentivi/app/Http/Controllers/PdfDownloadController.php           
+  81     Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$employees.                        
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Http/Controllers/PdfDownloadController.php           
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Incentivi/app/Models/Employee.php                                      
+ ------ ----------------------------------------------------------------------- 
+  141    Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$tqu00f.                           
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Models/Employee.php                                  
+  142    Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$tqu00f.                           
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Incentivi/app/Models/Employee.php                                  
+  154    Cannot access property $tqu00f on                                      
+         Illuminate\Database\Eloquent\Model|null.                               
+         🪪  property.nonObject                                                 
+         ✏️  Incentivi/app/Models/Employee.php                                  
+  155    Cannot access property $tqu00f on                                      
+         Illuminate\Database\Eloquent\Model|null.                               
+         🪪  property.nonObject                                                 
+         ✏️  Incentivi/app/Models/Employee.php                                  
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------ 
+  Line   Notify/app/Services/NotificationManager.php                 
+ ------ ------------------------------------------------------------ 
+  118    PHPDoc tag @param references unknown parameter: $template   
+         🪪  parameter.notFound                                      
+         ✏️  Notify/app/Services/NotificationManager.php             
+  147    PHPDoc tag @param references unknown parameter: $recipient  
+         🪪  parameter.notFound                                      
+         ✏️  Notify/app/Services/NotificationManager.php             
+ ------ ------------------------------------------------------------ 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Progressioni/app/Filament/Resources/ProgressioniResource/Pages/ViewPr  
+         ogressioni.php                                                         
+ ------ ----------------------------------------------------------------------- 
+  24     Cannot access property $anno on                                        
+         Illuminate\Database\Eloquent\Model|int|string|null.                    
+         🪪  property.nonObject                                                 
+         ✏️  Progressioni/app/Filament/Resources/ProgressioniResource/Pages/Vie  
+         wProgressioni.php                                                      
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Progressioni/app/Filament/Resources/SchedeResource/Actions/Header/Mak  
+         ePdfAction.php                                                         
+ ------ ----------------------------------------------------------------------- 
+  104    Parameter #1 $view of function view expects view-string|null, string   
+         given.                                                                 
+         🪪  argument.type                                                      
+         ✏️  Progressioni/app/Filament/Resources/SchedeResource/Actions/Header/  
+         MakePdfAction.php                                                      
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Progressioni/app/Http/Middleware/FilamentMiddleware.php                
+ ------ ----------------------------------------------------------------------- 
+  39     Parameter #1 $name of method                                           
+         Illuminate\Contracts\Auth\Factory::guard() expects string|null, mixed  
+         given.                                                                 
+         🪪  argument.type                                                      
+         ✏️  Progressioni/app/Http/Middleware/FilamentMiddleware.php            
+  44     Unreachable statement - code above always terminates.                  
+         🪪  deadCode.unreachable                                               
+         ✏️  Progressioni/app/Http/Middleware/FilamentMiddleware.php            
+  48     Parameter #1 $name of method                                           
+         Illuminate\Contracts\Auth\Factory::shouldUse() expects string, mixed   
+         given.                                                                 
+         🪪  argument.type                                                      
+         ✏️  Progressioni/app/Http/Middleware/FilamentMiddleware.php            
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------- 
+  Line   Progressioni/app/Imports/CedDiffImport.php     
+ ------ ----------------------------------------------- 
+  17     Cannot call method toArray() on mixed.         
+         🪪  method.nonObject                           
+         ✏️  Progressioni/app/Imports/CedDiffImport.php  
+ ------ ----------------------------------------------- 
+
+ ------ --------------------------------------------------------------------- 
+  Line   Progressioni/app/Mail/SchedaMail.php                                 
+ ------ --------------------------------------------------------------------- 
+  41     Parameter #1 $string of function strip_tags expects string,          
+         string|null given.                                                   
+         🪪  argument.type                                                    
+         ✏️  Progressioni/app/Mail/SchedaMail.php                             
+  71     Parameter #1 $path of static method                                  
+         Illuminate\Mail\Attachment::fromPath() expects string, mixed given.  
+         🪪  argument.type                                                    
+         ✏️  Progressioni/app/Mail/SchedaMail.php                             
+ ------ --------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/Assenze.php                                    
+ ------ ----------------------------------------------------------------------- 
+  49     PHPDoc tag @method for method                                          
+         Modules\Progressioni\Models\Assenze::factory() return type contains    
+         unknown class Modules\Progressioni\Database\Factories\AssenzeFactory.  
+         🪪  class.notFound                                                     
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols   
+         ✏️  Progressioni/app/Models/Assenze.php                                
+  67     Call to static method make() on an unknown class                       
+         Modules\Xot\Services\ModelService.                                     
+         🪪  class.notFound                                                     
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols   
+         ✏️  Progressioni/app/Models/Assenze.php                                
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/CategoriaPropro.php                           
+ ------ ---------------------------------------------------------------------- 
+  41     PHPDoc tag @method for method                                         
+         Modules\Progressioni\Models\CategoriaPropro::factory() return type    
+         contains unknown class                                                
+         Modules\Progressioni\Database\Factories\CategoriaProproFactory.       
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  Progressioni/app/Models/CategoriaPropro.php                       
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/Coeff.php                                     
+ ------ ---------------------------------------------------------------------- 
+  49     PHPDoc tag @method for method                                         
+         Modules\Progressioni\Models\Coeff::factory() return type contains     
+         unknown class Modules\Progressioni\Database\Factories\CoeffFactory.   
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  Progressioni/app/Models/Coeff.php                                 
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/CriteriOption.php                              
+ ------ ----------------------------------------------------------------------- 
+  47     PHPDoc type array of property                                          
+         Modules\Progressioni\Models\CriteriOption::$fillable is not covariant  
+         with PHPDoc type list<string> of overridden property Illuminate\Datab  
+         ase\Eloquent\Model::$fillable.                                         
+         🪪  property.phpDocType                                                
+         💡  You can fix 3rd party PHPDoc types with stub files:                
+         💡  https://phpstan.org/user-guide/stub-files                          
+         ✏️  Progressioni/app/Models/CriteriOption.php                          
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/CriteriPrecedenza.php                         
+ ------ ---------------------------------------------------------------------- 
+  47     PHPDoc tag @method for method                                         
+         Modules\Progressioni\Models\CriteriPrecedenza::factory() return type  
+         contains unknown class                                                
+         Modules\Progressioni\Database\Factories\CriteriPrecedenzaFactory.     
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  Progressioni/app/Models/CriteriPrecedenza.php                     
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/CriteriValutazione.php                         
+ ------ ----------------------------------------------------------------------- 
+  46     PHPDoc tag @method for method                                          
+         Modules\Progressioni\Models\CriteriValutazione::factory() return type  
+         contains unknown class                                                 
+         Modules\Progressioni\Database\Factories\CriteriValutazioneFactory.     
+         🪪  class.notFound                                                     
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols   
+         ✏️  Progressioni/app/Models/CriteriValutazione.php                     
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/EsclusiExtra.php                              
+ ------ ---------------------------------------------------------------------- 
+  56     PHPDoc tag @method for method                                         
+         Modules\Progressioni\Models\EsclusiExtra::factory() return type       
+         contains unknown class                                                
+         Modules\Progressioni\Database\Factories\EsclusiExtraFactory.          
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  Progressioni/app/Models/EsclusiExtra.php                          
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/MaxCatecoPosfunAnno.php                       
+ ------ ---------------------------------------------------------------------- 
+  49     PHPDoc tag @method for method                                         
+         Modules\Progressioni\Models\MaxCatecoPosfunAnno::factory() return     
+         type contains unknown class                                           
+         Modules\Progressioni\Database\Factories\MaxCatecoPosfunAnnoFactory.   
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  Progressioni/app/Models/MaxCatecoPosfunAnno.php                   
+  132    Property                                                              
+         Modules\Progressioni\Models\MaxCatecoPosfunAnno::$aventi_diritto_eff  
+         (int) does not accept float.                                          
+         🪪  assign.propertyType                                               
+         ✏️  Progressioni/app/Models/MaxCatecoPosfunAnno.php                   
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/Message.php                                    
+ ------ ----------------------------------------------------------------------- 
+  39     PHPDoc tag @method for method                                          
+         Modules\Progressioni\Models\Message::factory() return type contains    
+         unknown class Modules\Progressioni\Database\Factories\MessageFactory.  
+         🪪  class.notFound                                                     
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols   
+         ✏️  Progressioni/app/Models/Message.php                                
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/Pesi.php                                      
+ ------ ---------------------------------------------------------------------- 
+  47     PHPDoc tag @method for method                                         
+         Modules\Progressioni\Models\Pesi::factory() return type contains      
+         unknown class Modules\Progressioni\Database\Factories\PesiFactory.    
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  Progressioni/app/Models/Pesi.php                                  
+ ------ ---------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/Policies/SchedePolicy.php                   
+ ------ -------------------------------------------------------------------- 
+  13     Method Modules\Progressioni\Models\Policies\SchedePolicy::before()  
+         has parameter $ability with no type specified.                      
+         🪪  missingType.parameter                                           
+         ✏️  Progressioni/app/Models/Policies/SchedePolicy.php               
+  13     Method Modules\Progressioni\Models\Policies\SchedePolicy::before()  
+         has parameter $user with no type specified.                         
+         🪪  missingType.parameter                                           
+         ✏️  Progressioni/app/Models/Policies/SchedePolicy.php               
+ ------ -------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/SchedaCriteri.php                             
+ ------ ---------------------------------------------------------------------- 
+  55     PHPDoc tag @method for method                                         
+         Modules\Progressioni\Models\SchedaCriteri::factory() return type      
+         contains unknown class                                                
+         Modules\Progressioni\Database\Factories\SchedaCriteriFactory.         
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  Progressioni/app/Models/SchedaCriteri.php                         
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/Schede.php                                     
+ ------ ----------------------------------------------------------------------- 
+  416    PHPDoc tag @method for method                                          
+         Modules\Progressioni\Models\Schede::factory() return type contains     
+         unknown class Modules\Progressioni\Database\Factories\SchedeFactory.   
+         🪪  class.notFound                                                     
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols   
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  524    Parameter #3 $messages of static method                                
+         Illuminate\Support\Facades\Validator::make() expects array,            
+         Illuminate\Database\Eloquent\Collection<int, Modules\Progressioni\Mod  
+         els\Message> given.                                                    
+         🪪  argument.type                                                      
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  729    Binary operation "." between '<h3> Vincitori : ' and mixed results in  
+          an error.                                                             
+         🪪  binaryOp.invalid                                                   
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  947    Cannot call method get() on                                            
+         Illuminate\Database\Eloquent\Relations\HasMany|null.                   
+         🪪  method.nonObject                                                   
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  948    Cannot call method first() on                                          
+         Illuminate\Database\Eloquent\Relations\HasMany|null.                   
+         🪪  method.nonObject                                                   
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  950    Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$propro.                           
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  951    Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$posfun.                           
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  952    Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$posiz.                            
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  955    Cannot call method count() on                                          
+         Illuminate\Database\Eloquent\Relations\HasMany|null.                   
+         🪪  method.nonObject                                                   
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  960    Cannot call method toSql() on                                          
+         Illuminate\Database\Eloquent\Relations\HasMany|null.                   
+         🪪  method.nonObject                                                   
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  962    Cannot call method qua00f() on mixed.                                  
+         🪪  method.nonObject                                                   
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  1007   PHPDoc tag @return with type mixed is not subtype of native type       
+         string.                                                                
+         🪪  return.phpDocType                                                  
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  1023   Parameter #1 $view of function view expects view-string|null, string   
+         given.                                                                 
+         🪪  argument.type                                                      
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  1027   Parameter #1 $html of static method                                    
+         Modules\Xot\Services\HtmlService::toPdf() expects string, array<strin  
+         g, int|string> given.                                                  
+         🪪  argument.type                                                      
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  1036   Cannot access property $data_presenza_dal on mixed.                    
+         🪪  property.nonObject                                                 
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  1038   Call to an undefined method object::format().                          
+         🪪  method.notFound                                                    
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  1041   Cannot access property $data_presenza_al on mixed.                     
+         🪪  property.nonObject                                                 
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  1069   Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$qua2kd.                           
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  1071   Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$qua2kd.                           
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  1075   Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$qua2ka.                           
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  1087   Method Modules\Progressioni\Models\Schede::ggInSedeTot() should        
+         return int|null but returns float|int.                                 
+         🪪  return.type                                                        
+         ✏️  Progressioni/app/Models/Schede.php                                 
+  1096   Method Modules\Progressioni\Models\Schede::asz() has no return type    
+         specified.                                                             
+         🪪  missingType.return                                                 
+         ✏️  Progressioni/app/Models/Schede.php                                 
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/StabiDirigente.php                            
+ ------ ---------------------------------------------------------------------- 
+  74     PHPDoc tag @method for method                                         
+         Modules\Progressioni\Models\StabiDirigente::factory() return type     
+         contains unknown class                                                
+         Modules\Progressioni\Database\Factories\StabiDirigenteFactory.        
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  Progressioni/app/Models/StabiDirigente.php                        
+ ------ ---------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/StipendioTabellare.php                         
+ ------ ----------------------------------------------------------------------- 
+  53     PHPDoc tag @method for method                                          
+         Modules\Progressioni\Models\StipendioTabellare::factory() return type  
+         contains unknown class                                                 
+         Modules\Progressioni\Database\Factories\StipendioTabellareFactory.     
+         🪪  class.notFound                                                     
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols   
+         ✏️  Progressioni/app/Models/StipendioTabellare.php                     
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------ 
+  Line   Progressioni/app/Models/Traits/ConvertedTrait.php (in context of  
+         class Modules\Progressioni\Models\Progressioni)                   
+ ------ ------------------------------------------------------------------ 
+  76     Binary operation "/" between (float|int) and mixed results in an  
+         error.                                                            
+         🪪  binaryOp.invalid                                              
+         ✏️  Progressioni/app/Models/Traits/ConvertedTrait.php             
+  85     Binary operation "/" between int and mixed results in an error.   
+         🪪  binaryOp.invalid                                              
+         ✏️  Progressioni/app/Models/Traits/ConvertedTrait.php             
+ ------ ------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------ 
+  Line   Progressioni/app/Models/Traits/ConvertedTrait.php (in context of  
+         class Modules\Progressioni\Models\Schede)                         
+ ------ ------------------------------------------------------------------ 
+  76     Binary operation "/" between (float|int) and mixed results in an  
+         error.                                                            
+         🪪  binaryOp.invalid                                              
+         ✏️  Progressioni/app/Models/Traits/ConvertedTrait.php             
+  85     Binary operation "/" between int and mixed results in an error.   
+         🪪  binaryOp.invalid                                              
+         ✏️  Progressioni/app/Models/Traits/ConvertedTrait.php             
+ ------ ------------------------------------------------------------------ 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php (in       
+         context of class Modules\Progressioni\Models\Progressioni)             
+ ------ ----------------------------------------------------------------------- 
+  52     Method Modules\Progressioni\Models\Progressioni::getOption() should    
+         return array|int|null but returns Carbon\Carbon|int|list<string>|stri  
+         ng|null.                                                               
+         🪪  return.type                                                        
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  64     Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$txt.                              
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  69     Binary operation "." between mixed and '-' results in an error.        
+         🪪  binaryOp.invalid                                                   
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  69     Binary operation "." between non-falsy-string and mixed results in an  
+         error.                                                                 
+         🪪  binaryOp.invalid                                                   
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  95     Method Modules\Progressioni\Models\Progressioni::criteriOptionsArr()   
+         has no return type specified.                                          
+         🪪  missingType.return                                                 
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  114    Cannot access property $value on array<mixed>|Modules\Progressioni\Mo  
+         dels\CriteriOption|null.                                               
+         🪪  property.nonObject                                                 
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  320    Parameter #1 $date_start of method                                     
+         Illuminate\Database\Eloquent\Builder<Modules\Sigma\Models\Asz00k1>::o  
+         fRangeDate() expects int, string given.                                
+         🪪  argument.type                                                      
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  320    Parameter #2 $date_end of method Illuminate\Database\Eloquent\Builder  
+         <Modules\Sigma\Models\Asz00k1>::ofRangeDate() expects int, string giv  
+         en.                                                                    
+         🪪  argument.type                                                      
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  321    Binary operation "." between mixed and '-' results in an error.        
+         🪪  binaryOp.invalid                                                   
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  321    Binary operation "." between non-falsy-string and mixed results in an  
+         error.                                                                 
+         🪪  binaryOp.invalid                                                   
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  321    Cannot access offset 'aszcod' on mixed.                                
+         🪪  offsetAccess.nonOffsetAccessible                                   
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  321    Cannot access offset 'asztip' on mixed.                                
+         🪪  offsetAccess.nonOffsetAccessible                                   
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  321    Parameter #1 $items of method                                          
+         Illuminate\Support\Collection<(int|string),string>::intersect()        
+         expects Illuminate\Contracts\Support\Arrayable<(int|string),           
+         non-falsy-string>|iterable<(int|string), non-falsy-string>,            
+         non-empty-list<string> given.                                          
+         🪪  argument.type                                                      
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  360    Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$totale_punteggio.                 
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  377    Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$perf_ind.                         
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php (in       
+         context of class Modules\Progressioni\Models\Schede)                   
+ ------ ----------------------------------------------------------------------- 
+  52     Method Modules\Progressioni\Models\Schede::getOption() should return   
+         array|int|null but returns Carbon\Carbon|int|list<string>|string|null  
+         .                                                                      
+         🪪  return.type                                                        
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  64     Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$txt.                              
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  69     Binary operation "." between mixed and '-' results in an error.        
+         🪪  binaryOp.invalid                                                   
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  69     Binary operation "." between non-falsy-string and mixed results in an  
+         error.                                                                 
+         🪪  binaryOp.invalid                                                   
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  95     Method Modules\Progressioni\Models\Schede::criteriOptionsArr() has no  
+         return type specified.                                                 
+         🪪  missingType.return                                                 
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  114    Cannot access property $value on array<mixed>|Modules\Progressioni\Mo  
+         dels\CriteriOption|null.                                               
+         🪪  property.nonObject                                                 
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  321    Parameter #1 $items of method                                          
+         Illuminate\Support\Collection<(int|string),string>::intersect()        
+         expects Illuminate\Contracts\Support\Arrayable<(int|string),           
+         non-falsy-string>|iterable<(int|string), non-falsy-string>,            
+         non-empty-list<string> given.                                          
+         🪪  argument.type                                                      
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  321    Unable to resolve the template type TKey in call to function collect   
+         🪪  argument.templateType                                              
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-error-unable-to-resolve-temp  
+         late-type                                                              
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  321    Unable to resolve the template type TValue in call to function         
+         collect                                                                
+         🪪  argument.templateType                                              
+         💡  See:                                                               
+         https://phpstan.org/blog/solving-phpstan-error-unable-to-resolve-temp  
+         late-type                                                              
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  360    Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$totale_punteggio.                 
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+  377    Access to an undefined property                                        
+         Illuminate\Database\Eloquent\Model::$perf_ind.                         
+         🪪  property.notFound                                                  
+         💡  Learn more: https://phpstan.org/blog/solving-phpstan-access-to-und  
+         efined-property                                                        
+         ✏️  Progressioni/app/Models/Traits/ProgressioniFunctionTrait.php       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Progressioni/app/Models/Traits/ProgressioniRelationshipTrait.php (in   
+         context of class Modules\Progressioni\Models\Progressioni)             
+ ------ ----------------------------------------------------------------------- 
+  246    Method Modules\Progressioni\Models\Progressioni::asz() should return   
+         Illuminate\Database\Eloquent\Relations\HasMany<Modules\Sigma\Models\A  
+         sz00k1, Modules\Progressioni\Models\Progressioni> but returns Illumin  
+         ate\Database\Eloquent\Relations\HasMany<Modules\Sigma\Models\Asz00k1,  
+          $this(Modules\Progressioni\Models\Progressioni)>.                     
+         🪪  return.type                                                        
+         💡  Template type TDeclaringModel on class                             
+         Illuminate\Database\Eloquent\Relations\HasMany is not covariant.       
+         Learn more: https://phpstan.org/blog/whats-up-with-template-covariant  
+         ✏️  Progressioni/app/Models/Traits/ProgressioniRelationshipTrait.php   
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Tenant/app/Actions/GetTenantNameAction.php                             
+ ------ ----------------------------------------------------------------------- 
+  37     Parameter #1 $callback of method Illuminate\Support\Collection<int,st  
+         ring>::map() expects callable(string, int): string, Closure(string, s  
+         tring=, string|null=, array<string, string>=): string given.           
+         🪪  argument.type                                                      
+         ✏️  Tenant/app/Actions/GetTenantNameAction.php                         
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------- 
+  Line   UI/app/Filament/Forms/Components/LocationSelector.php                 
+ ------ ---------------------------------------------------------------------- 
+  224    Call to static method select() on an unknown class                    
+         Modules\Geo\Models\Comune.                                            
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  UI/app/Filament/Forms/Components/LocationSelector.php             
+  250    Call to static method query() on an unknown class                     
+         Modules\Geo\Models\Comune.                                            
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  UI/app/Filament/Forms/Components/LocationSelector.php             
+  279    Call to static method query() on an unknown class                     
+         Modules\Geo\Models\Comune.                                            
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  UI/app/Filament/Forms/Components/LocationSelector.php             
+  336    Call to static method query() on an unknown class                     
+         Modules\Geo\Models\Comune.                                            
+         🪪  class.notFound                                                    
+         💡  Learn more at https://phpstan.org/user-guide/discovering-symbols  
+         ✏️  UI/app/Filament/Forms/Components/LocationSelector.php             
+ ------ ---------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------- 
+  Line   User/app/Filament/Pages/MyProfilePage.php          
+ ------ --------------------------------------------------- 
+  97     Creating callable from a non-native static method  
+         Illuminate\Support\Facades\Hash::make().           
+         🪪  callable.nonNativeMethod                       
+         ✏️  User/app/Filament/Pages/MyProfilePage.php      
+ ------ --------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   User/app/Models/BaseUser.php                                           
+ ------ ----------------------------------------------------------------------- 
+  488    Creating callable from a non-native method                             
+         Illuminate\Database\Eloquent\Builder<Illuminate\Database\Eloquent\Mod  
+         el>::exists().                                                         
+         🪪  callable.nonNativeMethod                                           
+         ✏️  User/app/Models/BaseUser.php                                       
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------ 
+  Line   User/app/Models/Traits/HasTenants.php (in context of class  
+         Modules\User\Models\BaseUser)                               
+ ------ ------------------------------------------------------------ 
+  42     PHPDoc tag @param references unknown parameter: $panel      
+         🪪  parameter.notFound                                      
+         ✏️  User/app/Models/Traits/HasTenants.php                   
+ ------ ------------------------------------------------------------ 
+
+ ------ ----------------------------------------------------------------------- 
+  Line   Xot/app/Filament/Actions/Form/FieldRefreshAction.php                   
+ ------ ----------------------------------------------------------------------- 
+  32     Parameter #1 $value of static method Illuminate\Support\Str::studly()  
+         expects string, string|null given.                                     
+         🪪  argument.type                                                      
+         ✏️  Xot/app/Filament/Actions/Form/FieldRefreshAction.php               
+  34     Parameter #1 $path of callable Filament\Forms\Set expects              
+         Filament\Forms\Components\Component|string, string|null given.         
+         🪪  argument.type                                                      
+         ✏️  Xot/app/Filament/Actions/Form/FieldRefreshAction.php               
+ ------ ----------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------- 
+  Line   Xot/app/Filament/Resources/ModuleResource/Pages/EditModule.php     
+ ------ ------------------------------------------------------------------- 
+  36     Cannot access property $path on                                    
+         int|Modules\Xot\Models\Module|string|null.                         
+         🪪  property.nonObject                                             
+         ✏️  Xot/app/Filament/Resources/ModuleResource/Pages/EditModule.php  
+  41     Cannot call method toArray() on                                    
+         int|Modules\Xot\Models\Module|string|null.                         
+         🪪  method.nonObject                                               
+         ✏️  Xot/app/Filament/Resources/ModuleResource/Pages/EditModule.php  
+ ------ ------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------- 
+  Line   Xot/app/Filament/Tables/Actions/XotBaseTableAction.php               
+ ------ --------------------------------------------------------------------- 
+  21     Method                                                               
+         Modules\Xot\Filament\Tables\Actions\XotBaseTableAction::getRecord()  
+         should return Illuminate\Database\Eloquent\Model|null but returns    
+         Closure|Illuminate\Database\Eloquent\Model|null.                     
+         🪪  return.type                                                      
+         ✏️  Xot/app/Filament/Tables/Actions/XotBaseTableAction.php           
+ ------ --------------------------------------------------------------------- 
+
+ [ERROR] Found 152 errors                                                       
+

@@ -1,0 +1,8 @@
+*.pdf
+*.png
+*.txt
+venv/
+ocr_tmp/
+
+# Ignore backup files
+*.backup

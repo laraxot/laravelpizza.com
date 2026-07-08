@@ -6,6 +6,7 @@ return [
     'actions' => [
         'fullscreen_enter' => 'Visualizza a schermo intero',
         'fullscreen_exit' => 'Esci da schermo intero',
+        'use_current_position' => 'Usa posizione corrente',
     ],
     'layers' => [
         'osm' => 'Mappa',

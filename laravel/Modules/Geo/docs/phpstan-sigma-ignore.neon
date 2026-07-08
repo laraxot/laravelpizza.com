@@ -1,0 +1,13 @@
+# Specifico per i problemi di covarianza nei modelli Eloquent
+# Questi sono errori noti che non rappresentano problemi reali nel codice
+
+parameters:
+    ignoreErrors:
+        -
+            message: '#Template type TDeclaringModel on class Illuminate\\Database\\Eloquent\\Relations\\HasMany is not covariant#'
+            paths:
+                - 'Modules/Sigma/app/Models/*'
+        -
+            message: '#Template type TDeclaringModel on class Illuminate\\Database\\Eloquent\\Relations\\HasOne is not covariant#'
+            paths:
+                - 'Modules/Sigma/app/Models/*'

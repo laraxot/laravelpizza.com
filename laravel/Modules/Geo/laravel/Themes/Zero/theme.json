@@ -1,0 +1,11 @@
+{
+    "name": "Zero",
+    "type": "pub",
+    "description": "Zero Theme",
+    "keywords": [],
+    "active": true,
+    "order": 0,
+    "aliases": [],
+    "files": [],
+    "requires": []
+}

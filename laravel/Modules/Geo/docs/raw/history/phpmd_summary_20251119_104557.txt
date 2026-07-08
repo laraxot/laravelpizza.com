@@ -1,0 +1,40 @@
+=== PHPMD Analysis Summary ===
+Data: Wed Nov 19 10:45:57 CET 2025
+
+⚠️  Activity: 59 violazioni
+⚠️  Badge: 10 violazioni
+⚠️  CertFisc: 5 violazioni
+⚠️  ContoAnnuale: 5 violazioni
+⚠️  DbForge: 185 violazioni
+⚠️  Europa: 5 violazioni
+⚠️  Gdpr: 81 violazioni
+⚠️  Inail: 6 violazioni
+⚠️  IndennitaCondizioniLavoro: 233 violazioni
+⚠️  IndennitaResponsabilita: 297 violazioni
+⚠️  Job: 318 violazioni
+⚠️  Lang: 128 violazioni
+⚠️  Legge104: 12 violazioni
+⚠️  Legge109: 5 violazioni
+⚠️  Media: 264 violazioni
+⚠️  Mensa: 17 violazioni
+⚠️  MobilitaVolontaria: 15 violazioni
+⚠️  Notify: 456 violazioni
+⚠️  Performance: 522 violazioni
+⚠️  Prenotazioni: 12 violazioni
+⚠️  PresenzeAssenze: 5 violazioni
+⚠️  Progressioni: 876 violazioni
+⚠️  Ptv: 462 violazioni
+⚠️  Questionari: 5 violazioni
+⚠️  Rating: 95 violazioni
+⚠️  Setting: 54 violazioni
+⚠️  Sindacati: 5 violazioni
+⚠️  Tenant: 174 violazioni
+⚠️  UI: 153 violazioni
+⚠️  User: 1095 violazioni
+⚠️  Xot: 00 violazioni
+
+=== Statistiche PHPMD ===
+Moduli analizzati: 31
+Moduli clean: 0
+Moduli con violazioni: 31
+Totale violazioni: 5559

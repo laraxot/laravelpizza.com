@@ -1,0 +1,36 @@
+<?php
+
+namespace Modules\User\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+/**
+ * Modules\User\Models\Project
+ *
+ * @property-read \Modules\Xot\Contracts\UserContract|null $user
+ * @method static \Illuminate\Database\Eloquent\Builder|Project newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Project newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Project query()
+ * @mixin \Eloquent
+ */
+class Project extends Model
+{
+    use \Modules\Xot\Models\Traits\HasXotFactory;
+
+    protected $fillable = [
+        'name',
+        'description',
+        'start_date',
+        'deadline',
+        'user_id'
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(\Modules\Xot\Datas\XotData::make()->getUserClass());
+    }
+
+}
+
+

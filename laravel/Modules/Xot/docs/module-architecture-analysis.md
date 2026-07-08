@@ -36,8 +36,7 @@
 - Multi-tenant aware models
 - Social authentication integration
 
-#### 3. **healthcare_app Module - Business Core**
-#### 3. **ExternalProject Module - Business Core**
+#### 3. **Quaeris Module - Business Core**
 **Role**: Survey management, reporting, analytics
 **Priority**: 0 (Standard priority)
 **Dependencies**: Xot, User, Geo, Media
@@ -229,8 +228,7 @@
 #### 15. **Limesurvey Module - External Integration**
 **Role**: Limesurvey integration, survey synchronization
 **Priority**: 0 (Standard priority)
-**Dependencies**: Xot, healthcare_app
-**Dependencies**: Xot, ExternalProject
+**Dependencies**: Xot, Quaeris
 
 **Key Components**:
 - `LimeSurvey`, `LimeQuestion` models
@@ -278,8 +276,7 @@
 Xot (Foundation)
 ├── User (Security)
 │   └── Tenant (Multi-tenancy)
-├── healthcare_app (Business Core)
-├── ExternalProject (Business Core)
+├── Quaeris (Business Core)
 │   ├── Geo (Locations)
 │   ├── Media (Files)
 │   └── Limesurvey (External Integration)
@@ -388,8 +385,7 @@ public function register(): void
 #### ⚠️ Needs Attention
 - **Cms**: Mixed file structure issues
 - **UI**: Mixed test structure issues
-- **healthcare_app**: Missing module.json description
-- **ExternalProject**: Missing module.json description
+- **Quaeris**: Missing module.json description
 
 #### 🔧 Technical Debt
 - **Translation consistency**: Some .navigation placeholders
@@ -400,8 +396,7 @@ public function register(): void
 
 #### High-Usage Modules
 - **User**: Authentication checks on every request
-- **healthcare_app**: Survey processing and reporting
-- **ExternalProject**: Survey processing and reporting
+- **Quaeris**: Survey processing and reporting
 - **Media**: File uploads and conversions
 - **Job**: Background processing
 
@@ -433,6 +428,5 @@ public function register(): void
 ---
 
 **Analysis Date**: 2025-11-17
-**Analysis Date**: [DATE]
 **Architecture Health**: Good with some technical debt
 **Recommendations**: Address file structure inconsistencies, complete documentation, optimize performance-critical modules

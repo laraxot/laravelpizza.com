@@ -27,13 +27,5 @@
 ---
 
 **Ultimo aggiornamento:** 2025-05-13
-  - [Patient: Regole Modelli](../../patient/project_docs/models.md)
-  - [Notify Namespace Rules](../../notify/project_docs/namespace_rules.md)
-
-## Collegamenti
-- [Regole Namespace Moduli - Root Docs](../../../../docs/project/namespace-moduli.md)
-
----
-
 
 **Link bidirezionale:** Aggiornare anche la root docs e la docs dei moduli coinvolti.

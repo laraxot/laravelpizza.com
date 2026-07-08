@@ -43,6 +43,7 @@ final class RecentLoginsWidget extends BaseWidget
     /**
      * Define the query to fetch recent logins.
      */
+    /** @return Builder<AuthenticationLog> */
     protected function getTableQuery(): Builder
     {
         return AuthenticationLog::query()

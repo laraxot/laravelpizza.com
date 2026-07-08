@@ -1,0 +1,58 @@
+{
+    "libraries": {
+        "spatie": {
+            "laravel-data": {
+                "namespace": "Spatie\\LaravelData",
+                "version": "^4.0",
+                "dependencies": ["php", "laravel/framework"],
+                "conflict_patterns": [
+                    "use Spatie\\\\LaravelData",
+                    "extends Data",
+                    "implements DataObject"
+                ]
+            },
+            "laravel-queueable-action": {
+                "namespace": "Spatie\\QueueableAction",
+                "version": "^3.0",
+                "dependencies": ["php", "laravel/framework"],
+                "conflict_patterns": [
+                    "use Spatie\\\\QueueableAction",
+                    "extends Action",
+                    "implements ShouldQueue"
+                ]
+            }
+        },
+        "laraxot": {
+            "core": {
+                "namespace": "Modules\\Xot",
+                "version": "^1.0",
+                "dependencies": ["laravel/framework", "spatie/laravel-data"],
+                "conflict_patterns": [
+                    "use Modules\\\\Xot",
+                    "extends XotBase",
+                    "implements XotInterface"
+                ]
+            }
+        }
+    },
+    "common_patterns": {
+        "namespace": [
+            "namespace Modules\\\\",
+            "use Modules\\\\"
+        ],
+        "class": [
+            "class [A-Za-z]+ extends",
+            "class [A-Za-z]+ implements"
+        ],
+        "trait": [
+            "use [A-Za-z]+Trait;"
+        ]
+    },
+    "exclude_patterns": [
+        "vendor/",
+        "node_modules/",
+        "storage/",
+        "public/",
+        ".git/"
+    ]
+} 
