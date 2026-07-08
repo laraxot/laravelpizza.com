@@ -1,7 +1,0 @@
----
-module: theme
-topic: phpmd_errors
-canonical: ../../../Themes/docs/shared-components/phpmd-errors.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/phpmd-errors.md

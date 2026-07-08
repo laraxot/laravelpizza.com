@@ -104,7 +104,7 @@ Se il docblock usa `@phpstan-param` o `@phpstan-return`, formattare su righe sep
 
 ### 6. Riferimenti a classi/file inesistenti
 
-- `Modules/Xot/app/Helpers/Helper.php`: corretto il path di `require_once` da `../helpers/Helper.php` (inesistente) a `../../helpers/Helper.php`.
+- `Modules/Xot/app/helpers/Helper.php`: corretto il path di `require_once` da `../helpers/Helper.php` (inesistente) a `../../helpers/Helper.php`.
 - `Modules/Xot/app/Providers/FilamentOptimizationServiceProvider.php`: rimosso il riferimento a `FilamentMemoryMonitorMiddleware` che non esisteva più.
 
 ## Moduli toccati

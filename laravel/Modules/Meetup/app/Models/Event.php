@@ -6,6 +6,7 @@ namespace Modules\Meetup\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Carbon;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Activity\Traits\HasEvents;
@@ -13,6 +14,7 @@ use Modules\Activity\Traits\HasSnapshots;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\User\Models\User;
+use Modules\Meetup\Database\Factories\EventFactory;
 use Modules\Xot\Models\Traits\HasXotFactory;
 
 /**
@@ -134,6 +136,8 @@ class Event extends BaseModel
 {
     use HasEvents;
     use HasSnapshots;
+
+    /** @use HasXotFactory<EventFactory> */
     use HasXotFactory;
 
     /**
@@ -198,27 +202,26 @@ class Event extends BaseModel
         'is_accessible_for_free' => 1,
     ];
 
+    /**
+     * @return BelongsTo<User, $this>
+     */
     public function owner(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
-    public function creator(): BelongsTo
-    {
-        return $this->belongsTo(User::class, 'created_by', 'id');
-    }
-
-    public function updater(): BelongsTo
-    {
-        return $this->belongsTo(User::class, 'updated_by', 'id');
-    }
-
+    /**
+     * @return BelongsTo<User, $this>
+     */
     public function organizer(): BelongsTo
     {
         return $this->belongsTo(User::class, 'organizer_id', 'id');
     }
 
-    public function attendees(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    /**
+     * @return BelongsToMany<User, $this, EventUser, 'pivot'>
+     */
+    public function attendees(): BelongsToMany
     {
         return $this->belongsToManyX(User::class, 'event_user')
             ->withTimestamps()
@@ -241,10 +244,10 @@ class Event extends BaseModel
     }
 
     /**
-     * Scope: filter events visible to a user.
+     * Scope: events visible to a specific user.
+     * Super-admin sees all; published events are public; draft/pending only for owner.
      *
      * @param  Builder<Event>  $query
-     * @param  User|null  $user
      * @return Builder<Event>
      */
     public function scopeVisibleTo(Builder $query, ?User $user = null): Builder
@@ -257,7 +260,10 @@ class Event extends BaseModel
             $q->where('status', 'published');
 
             if ($user !== null) {
-                $q->orWhere('user_id', $user->id);
+                $q->orWhere(function (Builder $sub) use ($user): void {
+                    $sub->whereIn('status', ['pending', 'draft'])
+                        ->where('user_id', $user->id);
+                });
             }
         });
     }
@@ -271,29 +277,6 @@ class Event extends BaseModel
     public function scopePublished(Builder $query): Builder
     {
         return $query->where('status', 'published');
-    }
-
-    /**
-     * Scope: events visible to a specific user.
-     * Published events are visible to all.
-     * Pending events are visible only to their owner.
-     *
-     * @param  Builder<Event>  $query
-     * @param  User|null  $user
-     * @return Builder<Event>
-     */
-    public function scopeVisibleTo(Builder $query, ?User $user): Builder
-    {
-        return $query->where(function (Builder $q) use ($user): void {
-            $q->where('status', 'published');
-
-            if ($user !== null) {
-                $q->orWhere(function (Builder $sub) use ($user): void {
-                    $sub->where('status', 'pending')
-                        ->where('user_id', $user->id);
-                });
-            }
-        });
     }
 
     /**

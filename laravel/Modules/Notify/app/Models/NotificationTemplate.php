@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Blade;
 use Modules\Media\Models\Media;
 use Modules\Notify\Database\Factories\NotificationTemplateFactory;
 use Modules\Notify\Enums\NotificationTypeEnum;
+use Modules\Xot\Models\Traits\HasCommonScopes;
 use Modules\Xot\Contracts\ProfileContract;
 use Override;
 use Spatie\MediaLibrary\HasMedia;
@@ -96,6 +97,7 @@ use Spatie\Translatable\HasTranslations;
  */
 class NotificationTemplate extends BaseModel implements HasMedia
 {
+    use HasCommonScopes;
     use HasTranslations;
     use InteractsWithMedia;
 
@@ -222,18 +224,6 @@ class NotificationTemplate extends BaseModel implements HasMedia
         $mergedData = array_merge($previewData, $data);
 
         return $this->compile($mergedData);
-    }
-
-    /**
-     * Scope a query to only include active templates.
-     */
-    /**
-     * @param  Builder<static>  $query
-     * @return Builder<static>
-     */
-    public function scopeActive(Builder $query): Builder
-    {
-        return $query->where('is_active', true);
     }
 
     /**

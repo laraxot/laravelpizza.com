@@ -1,7 +1,0 @@
----
-module: theme
-topic: page-builder
-canonical: ../../../Themes/docs/shared-components/page-builder.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/page-builder.md

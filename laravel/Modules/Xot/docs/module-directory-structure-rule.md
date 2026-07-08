@@ -169,7 +169,7 @@ php -d memory_limit=-1 ./vendor/bin/phpstan analyse [target] --memory-limit=-1
 
 ### 4. Helpers nella Root
 
-**Violazione**: `Modules/Xot/Helpers/Helper.php` o `Modules/Xot/helpers/Helper.php`
+**Violazione**: `Modules/Xot/helpers/Helper.php` o `Modules/Xot/helpers/Helper.php`
 
 **Fix**: Se sono helper moderni, spostare in `Modules/Xot/app/Helpers/`. Se sono legacy, rimuovere.
 

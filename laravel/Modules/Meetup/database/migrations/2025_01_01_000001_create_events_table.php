@@ -56,7 +56,7 @@ return new class extends XotBaseMigration
                 // Series
                 $table->unsignedBigInteger('super_event_id')->nullable()->index();
 
-                $this->timestamps($table);
+                $this->updateTimestamps($table);
             });
         } elseif ($this->hasColumn('title')) {
             $this->tableUpdate(function (Blueprint $table) {

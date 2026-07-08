@@ -1,1 +1,0 @@
-msg['mail_testo_responsabilita_i']->txt !!}

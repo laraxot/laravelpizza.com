@@ -1,2 +1,0 @@
-providers:
-  - Modules\Lang\Providers\LangServiceProvider

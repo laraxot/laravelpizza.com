@@ -1,7 +1,0 @@
----
-module: theme
-topic: eav
-canonical: ../../../Themes/docs/shared-components/eav.txt
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/eav.txt

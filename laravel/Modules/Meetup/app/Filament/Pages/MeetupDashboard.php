@@ -26,7 +26,7 @@ class MeetupDashboard extends XotBasePage
         ];
     }
 
-    public function getColumns(): int|string|array
+    public function getColumns(): int
     {
         return 1;
     }

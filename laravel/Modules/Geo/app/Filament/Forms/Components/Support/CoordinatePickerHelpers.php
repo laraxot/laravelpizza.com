@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Http;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 
 /**
- * Typed helpers for {@see \Modules\Geo\Filament\Forms\Components\Traits\HasCoordinatePicker}.
+ * Typed helpers for {@see \Modules\Geo\Filament\Forms\Components\XotBaseCoordinateField}.
  *
  * ponytail: extracted from trait so PHPStan L10 sees array generics on a concrete class.
  */

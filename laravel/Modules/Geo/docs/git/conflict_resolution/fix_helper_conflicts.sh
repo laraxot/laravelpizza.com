@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE_PATH="Modules/Xot/Helpers/Helper.php"
+FILE_PATH="Modules/Xot/helpers/Helper.php"
 
 echo "Risoluzione completa conflitti Git in $FILE_PATH..."
 

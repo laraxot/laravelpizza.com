@@ -359,7 +359,7 @@ Traits ......................................................... 1.4 %
   Xot/app/Services/Trend/Adapters/AbstractAdapter.php:7: Superfluous prefix "Abstract".
 
 • [Architecture] Define `globals` is prohibited:
-  Xot/Helpers/Helper.php: LARAVEL_START
+  Xot/helpers/Helper.php: LARAVEL_START
   Xot/app/Services/ArtisanService.php: STDIN
   Xot/phpstan_constants.php: LARAVEL_DIR
   +7 issues omitted

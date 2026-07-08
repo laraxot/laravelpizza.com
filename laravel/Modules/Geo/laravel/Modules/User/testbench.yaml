@@ -1,3 +1,0 @@
-providers:
-  - Modules\User\Providers\UserServiceProvider
-  - Modules\User\Providers\Filament\AdminPanelProvider

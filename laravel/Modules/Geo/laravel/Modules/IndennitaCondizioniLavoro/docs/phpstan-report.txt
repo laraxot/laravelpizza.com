@@ -1,2 +1,0 @@
-Note: Using configuration file phpstan.neon.
-  0/90 [░░░░░░░░░]   0%

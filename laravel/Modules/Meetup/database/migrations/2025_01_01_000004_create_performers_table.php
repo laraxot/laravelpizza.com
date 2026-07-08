@@ -29,7 +29,7 @@ return new class extends XotBaseMigration
                 $table->string('linkedin')->nullable();
                 $table->string('github')->nullable();
                 $table->json('meta_data')->nullable();
-                $this->timestamps($table);
+                $this->updateTimestamps($table);
             });
         } else {
             $this->tableUpdate(function (Blueprint $table): void {

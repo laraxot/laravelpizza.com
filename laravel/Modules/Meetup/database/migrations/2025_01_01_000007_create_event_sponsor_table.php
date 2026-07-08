@@ -24,7 +24,7 @@ return new class extends XotBaseMigration
                 $table->unsignedInteger('order')->default(0);
                 $table->json('sponsorship_details')->nullable();
                 $table->unique(['event_id', 'sponsor_id']);
-                $this->timestamps($table);
+                $this->updateTimestamps($table);
             });
         } else {
             $this->tableUpdate(function (Blueprint $table): void {

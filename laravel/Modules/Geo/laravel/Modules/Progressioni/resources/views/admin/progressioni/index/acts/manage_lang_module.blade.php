@@ -1,1 +1,0 @@
-ude('xot::admin.index.acts.manage_lang_module')

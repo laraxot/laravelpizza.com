@@ -12,9 +12,9 @@ return [
      * |
      */
     'api_keys' => [
-        'google_maps' => env('GOOGLE_MAPS_API_KEY'),
-        'bing_maps' => env('BING_MAPS_API_KEY'),
-        'mapbox' => env('MAPBOX_API_KEY'),
+        'google_maps' => Illuminate\Support\Env::get('GOOGLE_MAPS_API_KEY'),
+        'bing_maps' => Illuminate\Support\Env::get('BING_MAPS_API_KEY'),
+        'mapbox' => Illuminate\Support\Env::get('MAPBOX_API_KEY'),
     ],
     /*
      * |--------------------------------------------------------------------------

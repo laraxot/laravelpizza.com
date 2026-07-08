@@ -1,7 +1,0 @@
----
-module: theme
-topic: passport
-canonical: ../../../../Themes/docs/shared-components/passport.txt
----
-
-See canonical documentation: ../../../../Themes/docs/shared-components/passport.txt

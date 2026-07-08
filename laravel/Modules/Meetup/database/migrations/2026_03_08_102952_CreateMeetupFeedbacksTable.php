@@ -20,7 +20,7 @@ return new class extends XotBaseMigration
                 $table->unsignedBigInteger('event_id')->nullable()->index(); // Event ID is BigInt
                 $table->integer('rating')->default(0);
                 $table->text('comment')->nullable();
-                $this->timestamps($table, hasSoftDeletes: true);
+                $this->updateTimestamps($table, hasSoftDeletes: true);
             });
         }
     }

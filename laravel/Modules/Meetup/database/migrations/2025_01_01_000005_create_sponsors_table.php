@@ -27,7 +27,7 @@ return new class extends XotBaseMigration
                 $table->string('contact_name')->nullable();
                 $table->integer('order')->nullable();
                 $table->json('meta_data')->nullable();
-                $this->timestamps($table);
+                $this->updateTimestamps($table);
             });
         } else {
             $this->tableUpdate(function (Blueprint $table): void {

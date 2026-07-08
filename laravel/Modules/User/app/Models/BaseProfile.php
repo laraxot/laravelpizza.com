@@ -12,6 +12,7 @@ use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
+use Modules\Geo\Models\Traits\HasPlaceTrait;
 use Modules\Media\Models\Media;
 use Modules\User\Models\Traits\IsProfileTrait;
 use Modules\Xot\Contracts\ProfileContract;
@@ -67,6 +68,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
 abstract class BaseProfile extends BaseModel implements ProfileContract
 {
     use HasChildren;
+    use HasPlaceTrait;
     use HasRoles;
 
     // use HasUuids;

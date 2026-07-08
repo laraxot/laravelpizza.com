@@ -21,8 +21,8 @@ return [
      * |
      */
     'cache' => [
-        'enabled' => env('SUSHI_CACHE_ENABLED', true),
-        'duration' => env('SUSHI_CACHE_DURATION', 60 * 24 * 7), // 7 giorni
+        'enabled' => Illuminate\Support\Env::get('SUSHI_CACHE_ENABLED', true),
+        'duration' => Illuminate\Support\Env::get('SUSHI_CACHE_DURATION', 60 * 24 * 7), // 7 giorni
     ],
     /*
      * |--------------------------------------------------------------------------
@@ -33,8 +33,8 @@ return [
      * |
      */
     'database' => [
-        'connection' => env('SUSHI_DB_CONNECTION', 'mysql'),
-        'database' => env('SUSHI_DB_DATABASE', 'quaeris_data_test'),
+        'connection' => Illuminate\Support\Env::get('SUSHI_DB_CONNECTION', 'mysql'),
+        'database' => Illuminate\Support\Env::get('SUSHI_DB_DATABASE', 'quaeris_data_test'),
     ],
     /*
      * |--------------------------------------------------------------------------

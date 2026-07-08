@@ -42,7 +42,7 @@ Questa sezione contiene la documentazione per la configurazione e l'utilizzo di 
 
 ### File di Bootstrap
 - `./phpstan_constants.php`
-- `./Modules/Xot/Helpers/Helper.php`
+- `./Modules/Xot/helpers/Helper.php`
 
 ## Processo di Analisi
 

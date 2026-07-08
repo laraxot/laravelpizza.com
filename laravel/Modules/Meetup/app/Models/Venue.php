@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Models;
 
+use Modules\Geo\Models\Traits\HasAddress;
+use Modules\Geo\Models\Traits\GeoTrait;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -21,7 +23,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property string|null $website
  * @property string|null $phone
  * @property string|null $description
- * @property array|null $meta_data
+ * @property array<string, mixed>|null $meta_data
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null $created_by
@@ -57,6 +59,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class Venue extends BaseModel
 {
+    use GeoTrait;
+    use HasAddress;
+
     /** @var list<string> */
     protected $fillable = [
         'name',

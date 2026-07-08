@@ -7,6 +7,7 @@ namespace Modules\Geo\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Modules\Geo\Database\Factories\ComuneFactory;
+use Modules\Geo\Models\Traits\HasPlaceTrait;
 use Modules\Tenant\Models\Traits\SushiToJson;
 use Modules\Xot\Contracts\ProfileContract;
 
@@ -81,6 +82,7 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class Comune extends BaseModel
 {
+    use HasPlaceTrait;
     use SushiToJson;
 
     public string $jsonDirectory = '';

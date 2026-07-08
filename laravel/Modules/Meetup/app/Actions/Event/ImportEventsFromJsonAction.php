@@ -126,6 +126,8 @@ class ImportEventsFromJsonAction
 
     /**
      * Process a single event from array data.
+     *
+     * @param  array<string, mixed>  $item
      */
     protected function processSingleEvent(array $item, string $locale): Event
     {
@@ -181,6 +183,8 @@ class ImportEventsFromJsonAction
 
     /**
      * Parse start date from item array.
+     *
+     * @param  array<string, mixed>  $item
      */
     private function parseStart(array $item): Carbon
     {
@@ -202,6 +206,8 @@ class ImportEventsFromJsonAction
 
     /**
      * Parse end date from item array.
+     *
+     * @param  array<string, mixed>  $item
      */
     private function parseEnd(array $item, Carbon $start): Carbon
     {

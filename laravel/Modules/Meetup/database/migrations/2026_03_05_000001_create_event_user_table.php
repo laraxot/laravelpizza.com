@@ -23,7 +23,7 @@ return new class extends XotBaseMigration
                 $table->string('status')->default('attending')->index();
                 $table->timestamp('registered_at')->nullable();
                 $table->unique(['event_id', 'user_id']);
-                $this->timestamps($table);
+                $this->updateTimestamps($table);
             });
         } else {
             $this->tableUpdate(function (Blueprint $table): void {

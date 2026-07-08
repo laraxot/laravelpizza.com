@@ -13,6 +13,8 @@ use Modules\Geo\Enums\AddressItemEnum;
 use Modules\Geo\Models\Address;
 use Webmozart\Assert\Assert;
 
+use function Safe\preg_replace;
+
 /**
  * Trait HasAddress.
  *
@@ -26,6 +28,8 @@ trait HasAddress
 {
     /**
      * Ottiene gli indirizzi associati al modello.
+     *
+     * @return MorphMany<Address, $this>
      */
     public function addresses(): MorphMany
     {
@@ -34,6 +38,8 @@ trait HasAddress
 
     /**
      * Ottiene indirizzo associato al modello.
+     *
+     * @return MorphOne<Address, $this>
      */
     public function address(): MorphOne
     {
@@ -46,7 +52,7 @@ trait HasAddress
     public function primaryAddress(): ?Address
     {
         $res = $this->addresses()->where('is_primary', true)->first();
-        if (null === $res) {
+        if ($res === null) {
             return $res;
         }
         Assert::isInstanceOf($res, Address::class);
@@ -66,19 +72,26 @@ trait HasAddress
 
     public function getFullAddressAttribute(?string $value): string
     {
-        if (null !== $value) {
+        if ($value !== null) {
             return $value;
         }
-        $address = sprintf(
+
+        $route = $this->getAttribute('route');
+        $streetNumber = $this->getAttribute('street_number');
+        $postalCode = $this->getAttribute('postal_code');
+        $city = $this->getAttribute('city');
+        $province = $this->getAttribute('province');
+
+        $formatted = sprintf(
             '%s, %s - %s, %s (%s)',
-            $this->route,
-            $this->street_number,
-            $this->postal_code,
-            $this->city,
-            $this->province,
+            is_string($route) ? $route : '',
+            is_string($streetNumber) ? $streetNumber : '',
+            is_string($postalCode) ? $postalCode : '',
+            is_string($city) ? $city : '',
+            is_string($province) ? $province : '',
         );
 
-        return trim(preg_replace('/[,\s]+/', ' ', $address));
+        return trim(preg_replace('/[,\s]+/', ' ', $formatted));
     }
 
     public function getFullAddressesAttribute(?string $value): ?string
@@ -87,13 +100,13 @@ trait HasAddress
             return $value;
         }
         $address = $this->address()->first();
-        if (null === $address) {
+        if ($address === null) {
             return null;
         }
         Assert::isInstanceOf($address, Address::class);
 
         $locality = $address->getLocality();
-        if (null === $locality) {
+        if ($locality === null) {
             return null;
         }
 
@@ -188,6 +201,8 @@ trait HasAddress
 
     /**
      * Ottiene gli indirizzi di un determinato tipo.
+     *
+     * @return Collection<int, Address>
      */
     public function getAddressesByType(string $type): Collection
     {
@@ -197,13 +212,13 @@ trait HasAddress
     /**
      * Aggiunge un nuovo indirizzo al modello.
      *
-     * @param array<string, mixed> $data
-     * @param bool                 $setPrimary Se impostare questo indirizzo come principale
+     * @param  array<string, mixed>  $data
+     * @param  bool  $setPrimary  Se impostare questo indirizzo come principale
      */
     public function addAddress(array $data, bool $setPrimary = false): Address
     {
         // Se è il primo indirizzo o è richiesto esplicitamente, impostalo come principale
-        if ($setPrimary || 0 === $this->addresses()->count()) {
+        if ($setPrimary || $this->addresses()->count() === 0) {
             $data['is_primary'] = true;
 
             // Rimuovi il flag is_primary da tutti gli altri indirizzi
@@ -212,13 +227,16 @@ trait HasAddress
             }
         }
 
-        return $this->addresses()->create($data);
+        $address = $this->addresses()->create($data);
+        Assert::isInstanceOf($address, Address::class);
+
+        return $address;
     }
 
     /**
      * Aggiorna l'indirizzo principale.
      *
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public function updatePrimaryAddress(array $data): ?Address
     {
@@ -235,6 +253,9 @@ trait HasAddress
 
     /**
      * Scope per filtrare i modelli in base alla città dell'indirizzo.
+     *
+     * @param  Builder<static>  $query
+     * @return Builder<static>
      */
     public function scopeInCity(Builder $query, string $city): Builder
     {
@@ -245,6 +266,9 @@ trait HasAddress
 
     /**
      * Scope per filtrare i modelli in base alla provincia dell'indirizzo.
+     *
+     * @param  Builder<static>  $query
+     * @return Builder<static>
      */
     public function scopeInProvince(Builder $query, string $province): Builder
     {
@@ -255,6 +279,9 @@ trait HasAddress
 
     /**
      * Scope per filtrare i modelli in base alla regione dell'indirizzo.
+     *
+     * @param  Builder<static>  $query
+     * @return Builder<static>
      */
     public function scopeInRegion(Builder $query, string $region): Builder
     {
@@ -265,6 +292,9 @@ trait HasAddress
 
     /**
      * Scope per filtrare i modelli in base al CAP dell'indirizzo.
+     *
+     * @param  Builder<static>  $query
+     * @return Builder<static>
      */
     public function scopeInPostalCode(Builder $query, string $postalCode): Builder
     {
@@ -279,8 +309,8 @@ trait HasAddress
     protected function initializeHasAddress(): void
     {
         // Automatically create a random token
-        /** @var array<int, string> $fields */
-        $fields = Arr::map(AddressItemEnum::cases(), fn (AddressItemEnum $item): string => $item->value);
+        /** @var list<string> $fields */
+        $fields = array_values(Arr::map(AddressItemEnum::cases(), fn (AddressItemEnum $item): string => $item->value));
         $this->mergeFillable($fields);
     }
 }

@@ -1,1 +1,0 @@
-ude('progressioni::admin.stipendiotabellare.create')

@@ -66,7 +66,7 @@ echo "3. FASE 3: Correzione file Helper.php mancante"
 echo "=============================================="
 
 # Verifica e corregge il problema del file Helper.php mancante
-HELPER_FILE="$LARAVEL_ROOT/Modules/Xot/Helpers/Helper.php"
+HELPER_FILE="$LARAVEL_ROOT/Modules/Xot/helpers/Helper.php"
 if [[ ! -f "$HELPER_FILE" ]]; then
     echo "⚠️  File Helper.php mancante: $HELPER_FILE"
     

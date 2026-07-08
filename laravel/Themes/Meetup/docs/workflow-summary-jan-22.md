@@ -115,7 +115,7 @@ Seguire le raccomandazioni degli altri agenti AI leggendo le cartelle `docs/` de
 ### Conflitti Git Risolti
 
 **File risolti**:
-- `Modules/Xot/Helpers/Helper.php` (124 marker)
+- `Modules/Xot/helpers/Helper.php` (124 marker)
 - `Modules/Xot/app/Providers/*.php` (7 file)
 - `Modules/User/app/Providers/UserServiceProvider.php`
 - `Modules/Tenant/app/Providers/TenantServiceProvider.php`

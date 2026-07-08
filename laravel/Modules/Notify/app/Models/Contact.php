@@ -6,6 +6,7 @@ namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
+use Modules\Notify\Models\Traits\HasContact;
 use Modules\Notify\Database\Factories\ContactFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Override;
@@ -123,6 +124,8 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  */
 class Contact extends BaseModel
 {
+    use HasContact;
+
     /** @var list<string> */
     protected $fillable = [
         'model_id',

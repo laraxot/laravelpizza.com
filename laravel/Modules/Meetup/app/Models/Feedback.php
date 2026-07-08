@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace Modules\Meetup\Models;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
 use Modules\User\Models\User;
+use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * @property int $id
@@ -16,14 +19,15 @@ use Modules\User\Models\User;
  * @property User|null $user
  * @property Event|null $event
  * @property string|null $uuid
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
- * @property \Illuminate\Support\Carbon|null $deleted_at
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ * @property Carbon|null $deleted_at
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $deleter
+ * @property-read ProfileContract|null $updater
+ *
  * @method static \Modules\Meetup\Database\Factories\FeedbackFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Feedback newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Feedback newQuery()
@@ -39,6 +43,7 @@ use Modules\User\Models\User;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Feedback whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Feedback whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Feedback whereUuid($value)
+ *
  * @mixin \Eloquent
  */
 class Feedback extends BaseModel
@@ -50,11 +55,26 @@ class Feedback extends BaseModel
         'comment',
     ];
 
+    protected static function booted(): void
+    {
+        static::creating(static function (self $model): void {
+            if (empty($model->uuid)) {
+                $model->uuid = (string) Str::uuid();
+            }
+        });
+    }
+
+    /**
+     * @return BelongsTo<User, $this>
+     */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
+    /**
+     * @return BelongsTo<Event, $this>
+     */
     public function event(): BelongsTo
     {
         return $this->belongsTo(Event::class);

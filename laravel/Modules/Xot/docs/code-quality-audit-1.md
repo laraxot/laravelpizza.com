@@ -14,10 +14,10 @@
 
 ### Fix Implementati Oggi
 
-#### 1. Xot/Helpers/Helper.php - `dddx()` Function
+#### 1. Xot/helpers/Helper.php - `dddx()` Function
 **Problema**: Funzione `dddx()` dichiarata con return type `string` ma senza return statement
 **Fix**: Aggiunto return statement con `Safe\json_encode()`
-**File**: `laravel/Modules/Xot/Helpers/Helper.php:205`
+**File**: `laravel/Modules/Xot/helpers/Helper.php:205`
 
 ```php
 // Prima

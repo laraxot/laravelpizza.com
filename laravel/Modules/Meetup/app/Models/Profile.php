@@ -47,8 +47,8 @@ use Modules\User\Models\BaseProfile;
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @property-read \Modules\User\Models\User|null $user
  * @property-read string|null $user_name
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile childrenWith(array $relations)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile childrenWithCount(array $relations)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile childrenWith(array<string, mixed> $relations)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile childrenWithCount(array<string, mixed> $relations)
  * @method static \Modules\Meetup\Database\Factories\ProfileFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile newQuery()

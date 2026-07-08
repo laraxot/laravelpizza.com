@@ -167,7 +167,7 @@
 
 **Perché**: Convenience + Type Safety + DRY
 
-**Dove**: `Xot/Helpers/Helper.php` (10 funzioni)
+**Dove**: `Xot/helpers/Helper.php` (10 funzioni)
 
 **Docs**:
 - `helper-functions-complete-list.md` - Lista completa

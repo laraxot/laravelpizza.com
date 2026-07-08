@@ -29,7 +29,7 @@ return new class extends XotBaseMigration
                 $table->string('phone')->nullable();
                 $table->text('description')->nullable();
                 $table->json('meta_data')->nullable();
-                $this->timestamps($table);
+                $this->updateTimestamps($table);
             });
         } else {
             $this->tableUpdate(function (Blueprint $table): void {

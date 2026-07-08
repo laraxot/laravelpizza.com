@@ -1,1 +1,0 @@
-ude('progressioni::admin.schede.show.pdf')

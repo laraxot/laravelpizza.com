@@ -23,7 +23,7 @@ return new class extends XotBaseMigration
                 $table->string('role')->nullable();
                 $table->unsignedInteger('order')->default(0);
                 $table->unique(['event_id', 'performer_id']);
-                $this->timestamps($table);
+                $this->updateTimestamps($table);
             });
         } else {
             $this->tableUpdate(function (Blueprint $table): void {

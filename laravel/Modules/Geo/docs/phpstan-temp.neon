@@ -58,7 +58,7 @@ parameters:
         #- ./vendor/amenadiel/jpgraph/src/config.inc.php
 
     scanFiles:
-        - ./Modules/Xot/Helpers/Helper.php
+        - ./Modules/Xot/helpers/Helper.php
 
     mixinExcludeClasses:
         - ./Modules/Badge/Models

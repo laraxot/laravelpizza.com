@@ -23,7 +23,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property string|null $twitter
  * @property string|null $linkedin
  * @property string|null $github
- * @property array|null $meta_data
+ * @property array<string, mixed>|null $meta_data
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null $created_by
@@ -89,12 +89,13 @@ class Performer extends BaseModel
     /**
      * Get events where this performer is scheduled.
      *
-     * @return BelongsToMany<Event, EventPerformer>
+     * @return BelongsToMany<Event, $this, EventPerformer, 'pivot'>
      */
     public function events(): BelongsToMany
     {
         return $this->belongsToManyX(Event::class, 'event_performer')
             ->withPivot(['role', 'order'])
+            ->using(EventPerformer::class)
             ->withTimestamps();
     }
 

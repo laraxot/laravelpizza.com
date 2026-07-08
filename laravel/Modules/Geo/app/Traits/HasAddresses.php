@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Modules\Geo\Enums\AddressTypeEnum;
 use Modules\Geo\Models\Address;
+use Webmozart\Assert\Assert;
 
 /**
  * Trait HasAddresses.
@@ -19,6 +20,8 @@ trait HasAddresses
 {
     /**
      * Relazione a tutti gli indirizzi.
+     *
+     * @return MorphMany<Address, $this>
      */
     public function addresses(): MorphMany
     {
@@ -27,6 +30,8 @@ trait HasAddresses
 
     /**
      * Relazione all'indirizzo principale.
+     *
+     * @return MorphOne<Address, $this>
      */
     public function primaryAddress(): MorphOne
     {
@@ -35,6 +40,8 @@ trait HasAddresses
 
     /**
      * Relazione all'indirizzo di casa.
+     *
+     * @return MorphOne<Address, $this>
      */
     public function homeAddress(): MorphOne
     {
@@ -43,6 +50,8 @@ trait HasAddresses
 
     /**
      * Relazione all'indirizzo di lavoro.
+     *
+     * @return MorphOne<Address, $this>
      */
     public function workAddress(): MorphOne
     {
@@ -51,6 +60,8 @@ trait HasAddresses
 
     /**
      * Relazione all'indirizzo di fatturazione.
+     *
+     * @return MorphOne<Address, $this>
      */
     public function billingAddress(): MorphOne
     {
@@ -59,6 +70,8 @@ trait HasAddresses
 
     /**
      * Relazione all'indirizzo di spedizione.
+     *
+     * @return MorphOne<Address, $this>
      */
     public function shippingAddress(): MorphOne
     {
@@ -86,7 +99,7 @@ trait HasAddresses
     /**
      * Aggiunge un nuovo indirizzo.
      *
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public function addAddress(array $data, bool $isPrimary = false): Address
     {
@@ -98,11 +111,16 @@ trait HasAddresses
         // Crea il nuovo indirizzo
         $data['is_primary'] = $isPrimary;
 
-        return $this->addresses()->create($data);
+        $address = $this->addresses()->create($data);
+        Assert::isInstanceOf($address, Address::class);
+
+        return $address;
     }
 
     /**
      * Ottiene gli indirizzi per tipo.
+     *
+     * @return Collection<int, Address>
      */
     public function getAddressesByType(AddressTypeEnum|string $type): Collection
     {

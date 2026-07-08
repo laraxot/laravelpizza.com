@@ -1,7 +1,0 @@
----
-module: theme
-topic: create-user.jpg
-canonical: ../../../../Themes/docs/shared-components/create-user.jpg
----
-
-See canonical documentation: ../../../../Themes/docs/shared-components/create-user.jpg
