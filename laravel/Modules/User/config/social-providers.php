@@ -2,6 +2,23 @@
 
 declare(strict_types=1);
 
+/**
+ * Social OAuth providers catalogue for the User module (Filament login / Socialite).
+ *
+ * Each provider key maps to:
+ * - name: human-readable label in auth UI
+ * - scopes, parameters: Socialite driver options (null = driver default)
+ * - stateless: OAuth without server-side session state
+ * - active: enable only when tenant credentials are configured
+ * - socialite: true when a Laravel Socialite driver exists for the provider
+ * - svg: brand icon markup for login buttons (theme may replace with meetup-* icons)
+ * - client_id, client_secret: populated from env / tenant config at runtime, never in repo
+ *
+ * Business rule: all providers ship inactive — credentials are tenant-specific secrets.
+ *
+ * @see docs/wiki/concepts/socialite-architecture.md
+ */
+
 return [
     'facebook' => [
         'name' => 'Facebook',

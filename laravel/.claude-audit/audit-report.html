@@ -96,30 +96,30 @@
 
   <div class="header">
     <div class="logo"><span>Claude</span> Audit</div>
-    <div class="subtitle">AI-Powered Codebase Audit Report · 7/8/2026, 11:22:40 PM</div>
+    <div class="subtitle">AI-Powered Codebase Audit Report · 7/8/2026, 11:45:48 PM</div>
   </div>
 
   <div class="overview">
     <div class="card big-score">
       <h2>Overall Score</h2>
-      <div class="score-ring" style="--score:67">
+      <div class="score-ring" style="--score:79">
         <svg viewBox="0 0 120 120">
           <circle class="bg" cx="60" cy="60" r="54"/>
-          <circle class="fg" cx="60" cy="60" r="54" style="stroke:#facc15;stroke-dasharray:339;stroke-dashoffset:111.87"/>
+          <circle class="fg" cx="60" cy="60" r="54" style="stroke:#facc15;stroke-dasharray:339;stroke-dashoffset:71.19"/>
         </svg>
         <div class="score-number">
-          <span class="num" style="color:#facc15">67</span>
+          <span class="num" style="color:#facc15">79</span>
           <span class="label">/ 100</span>
         </div>
       </div>
-      <div class="grade-badge" style="background:#facc1522;color:#facc15">C</div>
+      <div class="grade-badge" style="background:#facc1522;color:#facc15">B</div>
     </div>
 
     <div class="card">
       <h2>Findings Breakdown</h2>
       <div class="stats-grid">
         <div class="stat-item">
-          <div class="count" style="color:#ef4444">2</div>
+          <div class="count" style="color:#ef4444">0</div>
           <div class="slabel">🔴 Critical</div>
         </div>
         <div class="stat-item">
@@ -127,11 +127,11 @@
           <div class="slabel">🟠 High</div>
         </div>
         <div class="stat-item">
-          <div class="count" style="color:#eab308">3</div>
+          <div class="count" style="color:#eab308">1</div>
           <div class="slabel">🟡 Medium</div>
         </div>
         <div class="stat-item">
-          <div class="count" style="color:#60a5fa">6</div>
+          <div class="count" style="color:#60a5fa">5</div>
           <div class="slabel">🔵 Low</div>
         </div>
       </div>
@@ -142,10 +142,10 @@
     <h2>Project Info</h2>
     <table class="info-table">
       <tr><td>Project</td><td><strong>laravel</strong></td></tr>
-      <tr><td>Languages</td><td>JSON (78), PHP (129), Shell (7), XML (38), JavaScript (57), Markdown (134), YAML (24), Python (5), TOML (1), HTML (3), Docker (7), SQL (1), CSS (1)</td></tr>
+      <tr><td>Languages</td><td>JSON (78), PHP (128), Shell (5), XML (38), JavaScript (54), Markdown (140), YAML (24), Python (5), TOML (1), HTML (3), Docker (7), SQL (1), CSS (1)</td></tr>
       <tr><td>Frameworks</td><td>TailwindCSS</td></tr>
       <tr><td>Files Scanned</td><td>485</td></tr>
-      <tr><td>Lines of Code</td><td>41,230</td></tr>
+      <tr><td>Lines of Code</td><td>52,511</td></tr>
       <tr><td>Tests</td><td>✅ Yes</td></tr>
       <tr><td>Package Manager</td><td>npm</td></tr>
       <tr><td>Analysis</td><td>⚡ Static Only</td></tr>
@@ -164,37 +164,17 @@
           <h3>Security</h3>
         </div>
         <div class="cat-score">
-          <div class="score-circle" style="--score:40;--color:#f87171">
-            <span>40</span>
+          <div class="score-circle" style="--score:80;--color:#4ade80">
+            <span>80</span>
           </div>
-          <span class="grade" style="color:#f87171">F</span>
+          <span class="grade" style="color:#4ade80">B</span>
         </div>
       </div>
       <div class="score-bar-wrap">
-        <div class="score-bar-fill" style="width:40%;background:#f87171"></div>
+        <div class="score-bar-fill" style="width:80%;background:#4ade80"></div>
       </div>
       
-      <div class="findings-list">
-      <div class="finding">
-        <div class="finding-header">
-          <span class="sev-badge" style="background:#ef4444">CRITICAL</span>
-          <strong>Hardcoded Secret / Password</strong>
-        </div>
-        <p class="finding-desc">Potential Hardcoded Secret / Password found in source code.</p>
-        <div class="finding-file">📄 <code>docker/mariadb/create-testing-database.sh:3</code></div>
-        <pre class="snippet">/usr/bin/mariadb --user=root --password=&quot;$MYSQL_ROOT_PASSWORD&quot; &lt;&lt;-EOSQL</pre>
-        <div class="finding-fix">✅ <strong>Fix:</strong> Use environment variables or a secrets manager (e.g. HashiCorp Vault, AWS Secrets Manager)</div>
-      </div>
-      <div class="finding">
-        <div class="finding-header">
-          <span class="sev-badge" style="background:#ef4444">CRITICAL</span>
-          <strong>Hardcoded Secret / Password</strong>
-        </div>
-        <p class="finding-desc">Potential Hardcoded Secret / Password found in source code.</p>
-        <div class="finding-file">📄 <code>docker/mysql/create-testing-database.sh:3</code></div>
-        <pre class="snippet">mysql --user=root --password=&quot;$MYSQL_ROOT_PASSWORD&quot; &lt;&lt;-EOSQL</pre>
-        <div class="finding-fix">✅ <strong>Fix:</strong> Use environment variables or a secrets manager (e.g. HashiCorp Vault, AWS Secrets Manager)</div>
-      </div></div>
+      <p class="clean">✅ No issues found</p>
     </div>
     <div class="cat-card">
       <div class="cat-header">
@@ -203,47 +183,17 @@
           <h3>Quality</h3>
         </div>
         <div class="cat-score">
-          <div class="score-circle" style="--score:68;--color:#facc15">
-            <span>68</span>
+          <div class="score-circle" style="--score:80;--color:#4ade80">
+            <span>80</span>
           </div>
-          <span class="grade" style="color:#facc15">C</span>
+          <span class="grade" style="color:#4ade80">B</span>
         </div>
       </div>
       <div class="score-bar-wrap">
-        <div class="score-bar-fill" style="width:68%;background:#facc15"></div>
+        <div class="score-bar-fill" style="width:80%;background:#4ade80"></div>
       </div>
       
-      <div class="findings-list">
-      <div class="finding">
-        <div class="finding-header">
-          <span class="sev-badge" style="background:#eab308">MEDIUM</span>
-          <strong>Deep Nesting Detected</strong>
-        </div>
-        <p class="finding-desc">vite-module-loader.js:36 — nesting depth of 6. This hurts readability and testability.</p>
-        <div class="finding-file">📄 <code>vite-module-loader.js:36</code></div>
-        
-        <div class="finding-fix">✅ <strong>Fix:</strong> Use early returns, extract functions, or restructure logic to reduce nesting. Aim for max depth of 3.</div>
-      </div>
-      <div class="finding">
-        <div class="finding-header">
-          <span class="sev-badge" style="background:#60a5fa">LOW</span>
-          <strong>Duplicate Imports</strong>
-        </div>
-        <p class="finding-desc">Modules/Geo/vite.config.js imports the same module multiple times: path</p>
-        <div class="finding-file">📄 <code>Modules/Geo/vite.config.js</code></div>
-        
-        <div class="finding-fix">✅ <strong>Fix:</strong> Consolidate imports from the same module into a single import statement.</div>
-      </div>
-      <div class="finding">
-        <div class="finding-header">
-          <span class="sev-badge" style="background:#eab308">MEDIUM</span>
-          <strong>Production Leftovers Detected</strong>
-        </div>
-        <p class="finding-desc">Modules/Notify/test-homepage.js contains 6 production leftover debug statements. These are helpful for debugging but should be removed before deployment.</p>
-        <div class="finding-file">📄 <code>Modules/Notify/test-homepage.js</code></div>
-        
-        <div class="finding-fix">✅ <strong>Fix:</strong> Remove remaining debug statements or replace them with proper logging before shipping.</div>
-      </div></div>
+      <p class="clean">✅ No issues found</p>
     </div>
     <div class="cat-card">
       <div class="cat-header">
@@ -325,7 +275,7 @@
           <span class="sev-badge" style="background:#eab308">MEDIUM</span>
           <strong>Low Test Coverage</strong>
         </div>
-        <p class="finding-desc">Only 1% of source files have corresponding tests (1 test files for 188 source files).</p>
+        <p class="finding-desc">Only 1% of source files have corresponding tests (1 test files for 184 source files).</p>
         
         
         <div class="finding-fix">✅ <strong>Fix:</strong> Add unit tests for critical business logic. Aim for at least 70% code coverage.</div>

@@ -60,7 +60,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Venue extends BaseModel
 {
     use GeoTrait;
-    use HasAddress;
+    use HasAddress {
+        GeoTrait::getFullAddressAttribute insteadof HasAddress;
+    }
 
     /** @var list<string> */
     protected $fillable = [

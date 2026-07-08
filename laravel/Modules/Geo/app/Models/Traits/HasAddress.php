@@ -11,9 +11,10 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Support\Arr;
 use Modules\Geo\Enums\AddressItemEnum;
 use Modules\Geo\Models\Address;
-use Webmozart\Assert\Assert;
 
 use function Safe\preg_replace;
+
+use Webmozart\Assert\Assert;
 
 /**
  * Trait HasAddress.
@@ -53,7 +54,7 @@ trait HasAddress
     public function primaryAddress(): ?Address
     {
         $res = $this->addresses()->where('is_primary', true)->first();
-        if ($res === null) {
+        if (null === $res) {
             return $res;
         }
         Assert::isInstanceOf($res, Address::class);
@@ -73,7 +74,7 @@ trait HasAddress
 
     public function getFullAddressAttribute(?string $value): string
     {
-        if ($value !== null) {
+        if (null !== $value) {
             return $value;
         }
 
@@ -101,13 +102,13 @@ trait HasAddress
             return $value;
         }
         $address = $this->address()->first();
-        if ($address === null) {
+        if (null === $address) {
             return null;
         }
         Assert::isInstanceOf($address, Address::class);
 
         $locality = $address->getLocality();
-        if ($locality === null) {
+        if (null === $locality) {
             return null;
         }
 
@@ -216,7 +217,7 @@ trait HasAddress
     {
         $payload = $data;
 
-        if ($setPrimary || $this->addresses()->count() === 0) {
+        if ($setPrimary || 0 === $this->addresses()->count()) {
             $payload = array_merge($payload, ['is_primary' => true]);
 
             if ($this->addresses()->count() > 0) {

@@ -135,12 +135,12 @@ php docs/helper-text-audit-script.php
 
 ### 2. Italian Text Validation
 ```bash
-php docs/italian-text-validation-refined.php
+php docs/raw/root-import/italian-text-validation-refined.php
 ```
 
 ### 3. Obbligatorio Specific Audit
 ```bash
-php docs/obbligatorio-audit-script.php
+php docs/raw/root-import/obbligatorio-audit-script.php
 ```
 
 ## Processo DRY + KISS
@@ -238,8 +238,8 @@ php docs/obbligatorio-audit-script.php
 
 ### Script e Tool
 - [Helper Text Audit Script](helper-text-audit-script.php)
-- [Italian Text Validation Script](italian-text-validation-refined.php)
-- [Obbligatorio Audit Script](obbligatorio-audit-script.php)
+- [Italian Text Validation Script](raw/root-import/italian-text-validation-refined.php)
+- [Obbligatorio Audit Script](raw/root-import/obbligatorio-audit-script.php)
 
 ---
 

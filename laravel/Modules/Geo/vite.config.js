@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite';
 import laravel, { refreshPaths } from 'laravel-vite-plugin';
-import path from 'path';
+import path, { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
-import { dirname, resolve } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

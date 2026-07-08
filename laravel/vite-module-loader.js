@@ -2,6 +2,24 @@ import fs from 'fs/promises';
 import path from 'path';
 import { pathToFileURL } from 'url';
 
+async function collectModulePaths(modulesPath, moduleDir) {
+  const viteConfigPath = path.join(modulesPath, moduleDir, 'vite.config.js');
+
+  try {
+    await fs.access(viteConfigPath);
+    // Convert to a file URL for Windows compatibility
+    const moduleConfigURL = pathToFileURL(viteConfigPath);
+
+    // Import the module-specific Vite configuration
+    const moduleConfig = await import(moduleConfigURL.href);
+
+    return Array.isArray(moduleConfig.paths) ? moduleConfig.paths : [];
+  } catch (error) {
+    // vite.config.js does not exist, skip this module
+    return [];
+  }
+}
+
 async function collectModuleAssetsPaths(paths, modulesPath) {
   modulesPath = path.join(__dirname, modulesPath);
 
@@ -22,24 +40,11 @@ async function collectModuleAssetsPaths(paths, modulesPath) {
       }
 
       // Check if the module is enabled (status is true)
-      if (moduleStatuses[moduleDir] === true) {
-        const viteConfigPath = path.join(modulesPath, moduleDir, 'vite.config.js');
-
-        try {
-          await fs.access(viteConfigPath);
-          // Convert to a file URL for Windows compatibility
-          const moduleConfigURL = pathToFileURL(viteConfigPath);
-
-          // Import the module-specific Vite configuration
-          const moduleConfig = await import(moduleConfigURL.href);
-
-          if (moduleConfig.paths && Array.isArray(moduleConfig.paths)) {
-            paths.push(...moduleConfig.paths);
-          }
-        } catch (error) {
-          // vite.config.js does not exist, skip this module
-        }
+      if (moduleStatuses[moduleDir] !== true) {
+        continue;
       }
+
+      paths.push(...(await collectModulePaths(modulesPath, moduleDir)));
     }
   } catch (error) {
     console.error(`Error reading module statuses or module configurations: ${error}`);

@@ -291,7 +291,7 @@ it('stores user data correctly after successful registration', function () {
 });
 
 it('hashes the password after registration', function () {
-    $plainPassword = 'MySecurePassword123!';
+    $plainPassword = Str::password(16, symbols: true);
 
     gdprPost('/en/auth/register', [
         'first_name' => 'Bob',
