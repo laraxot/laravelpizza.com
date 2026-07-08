@@ -18,7 +18,9 @@ related:
 
 ### File .txt
 - **VIETATO**: Nessun file `.txt` nella root del modulo
-- Tutti i file `.txt` devono essere rimossi o convertiti in `.md` e spostati in `docs/`
+- Path canonico dopo spostamento: `docs/raw/root-import/<nome-normalizzato>.txt`
+- Remediation: `bash bashscripts/tools/fix-module-root-hygiene.sh` (non cancellare: **spostare** in `docs/raw/root-import/`)
+- Verifica: `find . -maxdepth 1 -name '*.txt' -type f` → output vuoto
 
 ### File .md
 - **OBBLIGATORIO**: Solo `README.md` nella root del modulo
