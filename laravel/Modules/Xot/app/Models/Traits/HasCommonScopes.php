@@ -69,9 +69,10 @@ trait HasCommonScopes
      */
     public function scopePublished(Builder $query): Builder
     {
-        return $query
-            ->whereNotNull('published_at')
-            ->where('published_at', '<=', now());
+        $query->whereNotNull('published_at');
+        $query->where('published_at', '<=', now());
+
+        return $query;
     }
 
     /**

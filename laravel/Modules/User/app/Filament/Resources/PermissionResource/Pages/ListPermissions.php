@@ -93,7 +93,7 @@ class ListPermissions extends XotBaseListRecords
 
                         // Poi verifichiamo che il modello abbia il metodo roles() prima di chiamarlo
                         if (method_exists($record, 'roles')) {
-                            /** @var BelongsToMany<\Modules\User\Models\Role, \Modules\User\Models\Permission, \Illuminate\Database\Eloquent\Relations\Pivot, 'pivot'> $rolesRelation */
+                            /** @var BelongsToMany<Role, \Modules\User\Models\Permission, \Illuminate\Database\Eloquent\Relations\Pivot, 'pivot'> $rolesRelation */
                             $rolesRelation = $record->roles();
                             $roleData = $data['role'];
                             if (is_array($roleData) || is_int($roleData) || is_string($roleData)) {

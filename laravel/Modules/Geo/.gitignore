@@ -483,3 +483,5 @@ ${PWD}/
 laravel/Modules/Notify/.openviking
 laravel/phpstan_reports/
 laravel/Modules/Geo/
+laravel/
+public_html/

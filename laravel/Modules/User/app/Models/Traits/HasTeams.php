@@ -54,7 +54,6 @@ trait HasTeams
      */
     public function allTeams(): Collection
     {
-
         /** @var Collection<int, TeamContract> $teams */
         $teams = $this->ownedTeams->merge($this->membershipTeams)->sortBy('name');
 
@@ -182,10 +181,9 @@ trait HasTeams
      *
      * @return Collection<int, User>
      */
-
     public function allTeamUsers(): Collection // @phpstan-ignore return.type
     {/** @var Collection<int, mixed> $teams */
-                        $teams = $this->membershipTeams; // @phpstan-ignore property.nonObject
+                            $teams = $this->membershipTeams; // @phpstan-ignore property.nonObject
         /** @var Collection<int, User> $result */
         $result = $teams->flatMap( // @phpstan-ignore argument.type
             /** @param mixed $team @return array<int,User>|Collection<int,User> */
@@ -468,7 +466,6 @@ trait HasTeams
     }
 
     /**
-
      * Laraxot team membership (Jetstream-style pivot).
      * Su {@see BaseUser} esposto come {@see membershipTeams()} — {@see HasRoles::teams()} resta Spatie.
      *

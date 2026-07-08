@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'Getting Started' => [
         'url' => 'docs/getting-started',

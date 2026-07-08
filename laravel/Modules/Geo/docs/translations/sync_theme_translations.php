@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 /**
  * Script per sincronizzare le traduzioni dei temi One e Two
- * Copia le traduzioni italiane in inglese e tedesco per i temi
+ * Copia le traduzioni italiane in inglese e tedesco per i temi.
  */
 
-require_once __DIR__ . '/../../laravel/vendor/autoload.php';
-
-use Illuminate\Support\Arr;
+require_once __DIR__.'/../../laravel/vendor/autoload.php';
 
 class ThemeTranslationSynchronizer
 {
@@ -19,11 +17,11 @@ class ThemeTranslationSynchronizer
 
     public function __construct()
     {
-        $this->basePath = __DIR__ . '/../../laravel/Themes';
+        $this->basePath = __DIR__.'/../../laravel/Themes';
     }
 
     /**
-     * Sincronizza le traduzioni per tutti i temi
+     * Sincronizza le traduzioni per tutti i temi.
      */
     public function syncAllThemes(): void
     {
@@ -37,51 +35,54 @@ class ThemeTranslationSynchronizer
     }
 
     /**
-     * Sincronizza le traduzioni per un tema specifico
+     * Sincronizza le traduzioni per un tema specifico.
      */
     private function syncTheme(string $theme): void
     {
-        $themePath = $this->basePath . '/' . $theme;
-        $langPath = $themePath . '/lang';
+        $themePath = $this->basePath.'/'.$theme;
+        $langPath = $themePath.'/lang';
 
         echo "📁 Tema: {$theme}\n";
 
         // Verifica se il tema esiste
-        if (!is_dir($themePath)) {
+        if (! is_dir($themePath)) {
             echo "   ⚠️  Tema {$theme} non trovato, saltando...\n\n";
+
             return;
         }
 
         // Crea la cartella lang se non esiste
-        if (!is_dir($langPath)) {
+        if (! is_dir($langPath)) {
             mkdir($langPath, 0755, true);
             echo "   📁 Creata cartella lang per il tema {$theme}\n";
         }
 
         // Verifica se esistono traduzioni italiane
-        $italianPath = $langPath . '/it';
-        if (!is_dir($italianPath)) {
+        $italianPath = $langPath.'/it';
+        if (! is_dir($italianPath)) {
             echo "   ⚠️  Nessuna traduzione italiana trovata per il tema {$theme}, saltando...\n\n";
+
             return;
         }
 
         $italianFiles = $this->getTranslationFiles($italianPath);
         if (empty($italianFiles)) {
             echo "   ⚠️  Nessun file di traduzione italiano trovato per il tema {$theme}, saltando...\n\n";
+
             return;
         }
 
-        echo "   📄 File di traduzione italiani trovati: " . count($italianFiles) . "\n";
+        echo '   📄 File di traduzione italiani trovati: '.count($italianFiles)."\n";
 
         $totalKeys = 0;
         $totalFiles = 0;
 
         // Sincronizza per ogni lingua target
         foreach ($this->targetLanguages as $targetLang) {
-            $targetPath = $langPath . '/' . $targetLang;
-            
+            $targetPath = $langPath.'/'.$targetLang;
+
             // Crea la cartella della lingua target se non esiste
-            if (!is_dir($targetPath)) {
+            if (! is_dir($targetPath)) {
                 mkdir($targetPath, 0755, true);
                 echo "   📁 Creata cartella {$targetLang} per il tema {$theme}\n";
             }
@@ -93,7 +94,7 @@ class ThemeTranslationSynchronizer
                 $result = $this->syncTranslationFile($italianPath, $targetPath, $file);
                 if ($result['synced']) {
                     $langKeys += $result['keys'];
-                    $langFiles++;
+                    ++$langFiles;
                 }
             }
 
@@ -114,7 +115,7 @@ class ThemeTranslationSynchronizer
     }
 
     /**
-     * Ottiene la lista dei file di traduzione in una directory
+     * Ottiene la lista dei file di traduzione in una directory.
      */
     private function getTranslationFiles(string $path): array
     {
@@ -122,24 +123,25 @@ class ThemeTranslationSynchronizer
         if (is_dir($path)) {
             $items = scandir($path);
             foreach ($items as $item) {
-                if ($item !== '.' && $item !== '..' && is_file($path . '/' . $item)) {
+                if ('.' !== $item && '..' !== $item && is_file($path.'/'.$item)) {
                     $extension = pathinfo($item, PATHINFO_EXTENSION);
-                    if ($extension === 'php') {
+                    if ('php' === $extension) {
                         $files[] = $item;
                     }
                 }
             }
         }
+
         return $files;
     }
 
     /**
-     * Sincronizza un singolo file di traduzione
+     * Sincronizza un singolo file di traduzione.
      */
     private function syncTranslationFile(string $sourcePath, string $targetPath, string $filename): array
     {
-        $sourceFile = $sourcePath . '/' . $filename;
-        $targetFile = $targetPath . '/' . $filename;
+        $sourceFile = $sourcePath.'/'.$filename;
+        $targetFile = $targetPath.'/'.$filename;
 
         // Carica le traduzioni italiane
         $italianTranslations = $this->loadTranslations($sourceFile);
@@ -164,30 +166,32 @@ class ThemeTranslationSynchronizer
 
         return [
             'synced' => true,
-            'keys' => $newKeys
+            'keys' => $newKeys,
         ];
     }
 
     /**
-     * Carica le traduzioni da un file
+     * Carica le traduzioni da un file.
      */
     private function loadTranslations(string $filepath): array
     {
-        if (!file_exists($filepath)) {
+        if (! file_exists($filepath)) {
             return [];
         }
 
         try {
             $translations = require $filepath;
+
             return is_array($translations) ? $translations : [];
         } catch (Throwable $e) {
-            echo "   ⚠️  Errore nel caricamento del file {$filepath}: " . $e->getMessage() . "\n";
+            echo "   ⚠️  Errore nel caricamento del file {$filepath}: ".$e->getMessage()."\n";
+
             return [];
         }
     }
 
     /**
-     * Unisce le traduzioni mantenendo quelle esistenti
+     * Unisce le traduzioni mantenendo quelle esistenti.
      */
     private function mergeTranslations(array $source, array $target): array
     {
@@ -195,12 +199,12 @@ class ThemeTranslationSynchronizer
 
         foreach ($source as $key => $value) {
             if (is_array($value)) {
-                if (!isset($merged[$key]) || !is_array($merged[$key])) {
+                if (! isset($merged[$key]) || ! is_array($merged[$key])) {
                     $merged[$key] = [];
                 }
                 $merged[$key] = $this->mergeTranslations($value, $merged[$key]);
             } else {
-                if (!isset($merged[$key])) {
+                if (! isset($merged[$key])) {
                     $merged[$key] = $value;
                 }
             }
@@ -210,19 +214,19 @@ class ThemeTranslationSynchronizer
     }
 
     /**
-     * Salva le traduzioni in un file
+     * Salva le traduzioni in un file.
      */
     private function saveTranslations(string $filepath, array $translations): void
     {
         $content = "<?php\n\n";
         $content .= "declare(strict_types=1);\n\n";
-        $content .= "return " . $this->arrayToString($translations) . ";\n";
+        $content .= 'return '.$this->arrayToString($translations).";\n";
 
         file_put_contents($filepath, $content);
     }
 
     /**
-     * Converte un array in stringa PHP
+     * Converte un array in stringa PHP.
      */
     private function arrayToString(array $array, int $indent = 0): string
     {
@@ -230,18 +234,18 @@ class ThemeTranslationSynchronizer
         $result = "[\n";
 
         foreach ($array as $key => $value) {
-            $result .= $indentStr . "    ";
-            
+            $result .= $indentStr.'    ';
+
             if (is_string($key)) {
-                $result .= "'" . addslashes($key) . "' => ";
+                $result .= "'".addslashes($key)."' => ";
             } else {
-                $result .= $key . " => ";
+                $result .= $key.' => ';
             }
 
             if (is_array($value)) {
                 $result .= $this->arrayToString($value, $indent + 1);
             } elseif (is_string($value)) {
-                $result .= "'" . addslashes($value) . "'";
+                $result .= "'".addslashes($value)."'";
             } elseif (is_bool($value)) {
                 $result .= $value ? 'true' : 'false';
             } elseif (is_null($value)) {
@@ -253,27 +257,28 @@ class ThemeTranslationSynchronizer
             $result .= ",\n";
         }
 
-        $result .= $indentStr . "]";
+        $result .= $indentStr.']';
+
         return $result;
     }
 
     /**
-     * Conta le nuove chiavi aggiunte
+     * Conta le nuove chiavi aggiunte.
      */
     private function countNewKeys(array $source, array $target): int
     {
         $count = 0;
-        
+
         foreach ($source as $key => $value) {
             if (is_array($value)) {
-                if (!isset($target[$key]) || !is_array($target[$key])) {
-                    $count++;
+                if (! isset($target[$key]) || ! is_array($target[$key])) {
+                    ++$count;
                 } else {
                     $count += $this->countNewKeys($value, $target[$key]);
                 }
             } else {
-                if (!isset($target[$key])) {
-                    $count++;
+                if (! isset($target[$key])) {
+                    ++$count;
                 }
             }
         }
@@ -287,6 +292,6 @@ try {
     $synchronizer = new ThemeTranslationSynchronizer();
     $synchronizer->syncAllThemes();
 } catch (Throwable $e) {
-    echo "❌ Errore durante la sincronizzazione: " . $e->getMessage() . "\n";
+    echo '❌ Errore durante la sincronizzazione: '.$e->getMessage()."\n";
     exit(1);
-} 
+}

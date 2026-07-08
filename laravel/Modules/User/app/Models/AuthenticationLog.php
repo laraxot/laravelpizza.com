@@ -15,23 +15,23 @@ use Illuminate\Support\Carbon;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
- * @property int                  $id
- * @property string               $authenticatable_type
- * @property int                  $authenticatable_id
- * @property string|null          $ip_address
- * @property string|null          $user_agent
- * @property Carbon|null          $login_at
- * @property bool                 $login_successful
- * @property Carbon|null          $logout_at
- * @property bool                 $cleared_by_user
+ * @property int                       $id
+ * @property string                    $authenticatable_type
+ * @property int                       $authenticatable_id
+ * @property string|null               $ip_address
+ * @property string|null               $user_agent
+ * @property Carbon|null               $login_at
+ * @property bool                      $login_successful
+ * @property Carbon|null               $logout_at
+ * @property bool                      $cleared_by_user
  * @property array<string, mixed>|null $location
- * @property Carbon|null          $created_at
- * @property Carbon|null          $updated_at
- * @property string|null          $updated_by
- * @property string|null          $created_by
- * @property Model|\Eloquent      $authenticatable
- * @property ProfileContract|null $creator
- * @property ProfileContract|null $updater
+ * @property Carbon|null               $created_at
+ * @property Carbon|null               $updated_at
+ * @property string|null               $updated_by
+ * @property string|null               $created_by
+ * @property Model|\Eloquent           $authenticatable
+ * @property ProfileContract|null      $creator
+ * @property ProfileContract|null      $updater
  *
  * @method static Builder|AuthenticationLog newModelQuery()
  * @method static Builder|AuthenticationLog newQuery()

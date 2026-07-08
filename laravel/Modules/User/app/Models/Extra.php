@@ -41,7 +41,6 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
  * @property ProfileContract|null $deleter
  *
  * @method static \Modules\User\Database\Factories\ExtraFactory factory($count = null, $state = [])

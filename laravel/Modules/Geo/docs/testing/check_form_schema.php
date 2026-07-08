@@ -46,15 +46,15 @@ function findXotBaseResourceClasses(string $directory): array
     $phpFiles = new RegexIterator($iterator, '/\.php$/');
 
     foreach ($phpFiles as $file) {
-        if (!$file instanceof SplFileInfo) {
+        if (! $file instanceof SplFileInfo) {
             continue;
         }
 
         $fileContent = file_get_contents($file->getPathname());
 
-        if (strpos($fileContent, 'extends XotBaseResource') !== false) {
+        if (false !== strpos($fileContent, 'extends XotBaseResource')) {
             $check = checkFormSchemaMethod($file->getPathname());
-            if ($check !== null) {
+            if (null !== $check) {
                 $results[] = $check;
             }
         }

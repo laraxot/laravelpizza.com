@@ -22,7 +22,8 @@ use function Safe\preg_replace;
  * Questo trait implementa la relazione polimorfica con il modello Address
  * e offre metodi di utilità per la gestione degli indirizzi.
  *
- * @property Collection<int, Address> $addresses
+ * @property MorphMany<Address, $this> $addresses
+ * @property MorphOne<Address, $this>  $address
  */
 trait HasAddress
 {
@@ -184,18 +185,15 @@ trait HasAddress
      */
     public function setAsPrimaryAddress(Address $address): bool
     {
-        // Verifica che l'indirizzo appartenga a questo modello
         if ($address->model_id !== $this->id || $address->model_type !== static::class) {
             return false;
         }
 
-        // Rimuovi il flag is_primary da tutti gli altri indirizzi
         $this->addresses()
             ->where('id', '!=', $address->id)
             ->where('is_primary', true)
             ->update(['is_primary' => false]);
 
-        // Imposta questo indirizzo come principale
         return $address->update(['is_primary' => true]);
     }
 
@@ -212,22 +210,21 @@ trait HasAddress
     /**
      * Aggiunge un nuovo indirizzo al modello.
      *
-     * @param  array<string, mixed>  $data
-     * @param  bool  $setPrimary  Se impostare questo indirizzo come principale
+     * @param array<string, mixed> $data
      */
     public function addAddress(array $data, bool $setPrimary = false): Address
     {
-        // Se è il primo indirizzo o è richiesto esplicitamente, impostalo come principale
-        if ($setPrimary || $this->addresses()->count() === 0) {
-            $data['is_primary'] = true;
+        $payload = $data;
 
-            // Rimuovi il flag is_primary da tutti gli altri indirizzi
+        if ($setPrimary || $this->addresses()->count() === 0) {
+            $payload = array_merge($payload, ['is_primary' => true]);
+
             if ($this->addresses()->count() > 0) {
                 $this->addresses()->update(['is_primary' => false]);
             }
         }
 
-        $address = $this->addresses()->create($data);
+        $address = $this->addresses()->create($payload);
         Assert::isInstanceOf($address, Address::class);
 
         return $address;
@@ -236,7 +233,7 @@ trait HasAddress
     /**
      * Aggiorna l'indirizzo principale.
      *
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function updatePrimaryAddress(array $data): ?Address
     {
@@ -254,53 +251,65 @@ trait HasAddress
     /**
      * Scope per filtrare i modelli in base alla città dell'indirizzo.
      *
-     * @param  Builder<static>  $query
+     * @param Builder<static> $query
+     *
      * @return Builder<static>
      */
     public function scopeInCity(Builder $query, string $city): Builder
     {
-        return $query->whereHas('addresses', function ($q) use ($city): void {
+        $query->whereHas('addresses', function ($q) use ($city): void {
             $q->where('locality', $city);
         });
+
+        return $query;
     }
 
     /**
      * Scope per filtrare i modelli in base alla provincia dell'indirizzo.
      *
-     * @param  Builder<static>  $query
+     * @param Builder<static> $query
+     *
      * @return Builder<static>
      */
     public function scopeInProvince(Builder $query, string $province): Builder
     {
-        return $query->whereHas('addresses', function ($q) use ($province): void {
+        $query->whereHas('addresses', function ($q) use ($province): void {
             $q->where('administrative_area_level_3', $province);
         });
+
+        return $query;
     }
 
     /**
      * Scope per filtrare i modelli in base alla regione dell'indirizzo.
      *
-     * @param  Builder<static>  $query
+     * @param Builder<static> $query
+     *
      * @return Builder<static>
      */
     public function scopeInRegion(Builder $query, string $region): Builder
     {
-        return $query->whereHas('addresses', function ($q) use ($region): void {
+        $query->whereHas('addresses', function ($q) use ($region): void {
             $q->where('administrative_area_level_2', $region);
         });
+
+        return $query;
     }
 
     /**
      * Scope per filtrare i modelli in base al CAP dell'indirizzo.
      *
-     * @param  Builder<static>  $query
+     * @param Builder<static> $query
+     *
      * @return Builder<static>
      */
     public function scopeInPostalCode(Builder $query, string $postalCode): Builder
     {
-        return $query->whereHas('addresses', function ($q) use ($postalCode): void {
+        $query->whereHas('addresses', function ($q) use ($postalCode): void {
             $q->where('postal_code', $postalCode);
         });
+
+        return $query;
     }
 
     /**
@@ -308,9 +317,9 @@ trait HasAddress
      */
     protected function initializeHasAddress(): void
     {
-        // Automatically create a random token
-        /** @var list<string> $fields */
-        $fields = array_values(Arr::map(AddressItemEnum::cases(), fn (AddressItemEnum $item): string => $item->value));
-        $this->mergeFillable($fields);
+        $this->mergeFillable(Arr::map(
+            AddressItemEnum::cases(),
+            static fn (AddressItemEnum $item): string => $item->value,
+        ));
     }
 }

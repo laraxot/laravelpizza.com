@@ -49,7 +49,6 @@ use Modules\Xot\Datas\XotData;
  *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
  * @property ProfileContract|null $deleter
  * @property Carbon|null          $accepted_at
  * @property Carbon|null          $declined_at

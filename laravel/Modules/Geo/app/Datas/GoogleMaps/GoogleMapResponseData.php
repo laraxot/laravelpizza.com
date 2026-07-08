@@ -19,5 +19,6 @@ class GoogleMapResponseData extends Data
     public function __construct(
         public readonly DataCollection $results,
         public readonly string $status,
-    ) {}
+    ) {
+    }
 }

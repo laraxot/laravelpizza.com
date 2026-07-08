@@ -7,10 +7,10 @@ use Rector\TypeDeclaration\Rector\ClassMethod\AddVoidReturnTypeWhereNoReturnRect
 
 return RectorConfig::configure()
     ->withPaths([
-        __DIR__ . "/",
+        __DIR__.'/',
     ])
     ->withSkip([
-        __DIR__ . "/vendor",
+        __DIR__.'/vendor',
     ])
     ->withPhpSets()
     ->withRules([

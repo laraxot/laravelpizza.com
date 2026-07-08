@@ -55,7 +55,6 @@ use Modules\Xot\Datas\XotData;
  *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
  * @property ProfileContract|null $deleter
  *
  * @method static \Modules\User\Database\Factories\SocialiteUserFactory factory($count = null, $state = [])

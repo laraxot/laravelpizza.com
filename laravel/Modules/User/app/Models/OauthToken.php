@@ -10,7 +10,7 @@ use Modules\User\Database\Factories\OauthAccessTokenFactory;
 
 /**
  * @property string|null $user_id
- * @property bool $revoked
+ * @property bool        $revoked
  */
 class OauthToken extends PassportToken
 {

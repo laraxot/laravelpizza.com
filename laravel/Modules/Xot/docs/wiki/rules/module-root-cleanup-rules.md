@@ -61,4 +61,5 @@ find . -maxdepth 1 -type d | grep -E "[A-Z]"
 ## Canon
 
 - Questa regola deve essere applicata a tutti i moduli
-- Check periodico prima di commit
+- Check periodico **prima di commit nel repo modulo** (`cd laravel/Modules/<Nome>`)
+- Dopo cleanup: commit + push nel repo owner — vedi `docs/wiki/rules/multi-repo-modules-themes-map.md`

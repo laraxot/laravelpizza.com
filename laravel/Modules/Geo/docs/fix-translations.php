@@ -1,15 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * Script per correggere i file di traduzione che contengono ".navigation"
- * 
+ * Script per correggere i file di traduzione che contengono ".navigation".
+ *
  * Questo script:
  * 1. Cerca in tutti i file di traduzione la presenza di ".navigation"
  * 2. Sostituisce i valori con le etichette appropriate
  * 3. Mantiene la struttura corretta per la navigazione
  */
-
-$basePath = __DIR__ . '/../laravel/Modules';
+$basePath = __DIR__.'/../laravel/Modules';
 
 // Mappatura dei valori di default per la navigazione
 $defaultNavigation = [
@@ -61,46 +62,48 @@ $defaultNavigation = [
 ];
 
 // Funzione per processare i file PHP
-function processFile($filePath, $defaults) {
+function processFile($filePath, $defaults)
+{
     $content = file_get_contents($filePath);
     $originalContent = $content;
-    
+
     // Cerca la chiave 'navigation' nel file
     if (preg_match("/'navigation'\s*=>\s*(\[.*?\])/s", $content, $matches)) {
         $navigationBlock = $matches[1];
-        
+
         // Estrai il nome del file senza estensione
         $fileName = basename($filePath, '.php');
-        
+
         // Se il file è nella cartella it/en, prendi il nome della cartella genitore
         $dirName = basename(dirname($filePath));
         $moduleName = basename(dirname(dirname($filePath)));
-        
+
         // Determina le impostazioni di default in base al nome del file
         $settings = $defaults[$fileName] ?? [
             'label' => ucfirst(str_replace('_', ' ', $fileName)),
             'group' => 'Altro',
             'icon' => 'heroicon-o-document',
         ];
-        
+
         // Costruisci il nuovo blocco di navigazione
         $newNavigation = "[\n";
-        $newNavigation .= "        'label' => '" . $settings['label'] . "',\n";
-        $newNavigation .= "        'group' => '" . $settings['group'] . "',\n";
-        $newNavigation .= "        'icon' => '" . $settings['icon'] . "',\n";
-        $newNavigation .= "    ]";
-        
+        $newNavigation .= "        'label' => '".$settings['label']."',\n";
+        $newNavigation .= "        'group' => '".$settings['group']."',\n";
+        $newNavigation .= "        'icon' => '".$settings['icon']."',\n";
+        $newNavigation .= '    ]';
+
         // Sostituisci il blocco di navigazione
         $content = str_replace($matches[1], $newNavigation, $content);
     }
-    
+
     // Se il contenuto è cambiato, salva il file
     if ($content !== $originalContent) {
         file_put_contents($filePath, $content);
-        echo "Aggiornato: " . $filePath . "\n";
+        echo 'Aggiornato: '.$filePath."\n";
+
         return true;
     }
-    
+
     return false;
 }
 
@@ -113,16 +116,16 @@ $files = new RecursiveIteratorIterator(
 $updatedFiles = 0;
 
 foreach ($files as $file) {
-    if ($file->isFile() && $file->getExtension() === 'php') {
+    if ($file->isFile() && 'php' === $file->getExtension()) {
         $filePath = $file->getRealPath();
-        
+
         // Leggi il contenuto del file
         $content = file_get_contents($filePath);
-        
+
         // Cerca la presenza di .navigation nel file
-        if (strpos($content, '.navigation') !== false) {
+        if (false !== strpos($content, '.navigation')) {
             if (processFile($filePath, $defaultNavigation)) {
-                $updatedFiles++;
+                ++$updatedFiles;
             }
         }
     }

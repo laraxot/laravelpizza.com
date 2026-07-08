@@ -34,7 +34,6 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
  * @property ProfileContract|null $deleter
  *
  * @mixin \Eloquent

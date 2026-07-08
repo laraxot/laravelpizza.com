@@ -15,6 +15,13 @@ use Webmozart\Assert\Assert;
  * Trait HasAddresses.
  *
  * Questo trait fornisce funzionalità per gestire indirizzi multipli su qualsiasi modello.
+ *
+ * @property MorphMany<Address, $this> $addresses
+ * @property MorphOne<Address, $this>  $primaryAddress
+ * @property MorphOne<Address, $this>  $homeAddress
+ * @property MorphOne<Address, $this>  $workAddress
+ * @property MorphOne<Address, $this>  $billingAddress
+ * @property MorphOne<Address, $this>  $shippingAddress
  */
 trait HasAddresses
 {
@@ -83,15 +90,12 @@ trait HasAddresses
      */
     public function setPrimaryAddress(Address $address): void
     {
-        // Assicurati che l'indirizzo appartenga a questo modello
         if ($address->model_id !== $this->id || $address->model_type !== static::class) {
             throw new \InvalidArgumentException('L\'indirizzo non appartiene a questo modello.');
         }
 
-        // Rimuovi lo stato primario da tutti gli altri indirizzi
         $this->addresses()->update(['is_primary' => false]);
 
-        // Imposta questo indirizzo come primario
         $address->is_primary = true;
         $address->save();
     }
@@ -99,19 +103,17 @@ trait HasAddresses
     /**
      * Aggiunge un nuovo indirizzo.
      *
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function addAddress(array $data, bool $isPrimary = false): Address
     {
-        // Se l'indirizzo deve essere primario, rimuovi lo stato primario dagli altri
         if ($isPrimary) {
             $this->addresses()->update(['is_primary' => false]);
         }
 
-        // Crea il nuovo indirizzo
-        $data['is_primary'] = $isPrimary;
+        $payload = array_merge($data, ['is_primary' => $isPrimary]);
 
-        $address = $this->addresses()->create($data);
+        $address = $this->addresses()->create($payload);
         Assert::isInstanceOf($address, Address::class);
 
         return $address;
