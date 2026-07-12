@@ -70,7 +70,15 @@ find . -maxdepth 1 -name 'test-*.js' -type f # vuoto — script Playwright ad ho
 
 Vedi [module-root-cleanup-rules](../../../docs/wiki/rules/module-root-cleanup-rules.md).
 
-## Wave 2026-07-08
+## Wave 2026-07-08 (b)
+
+- Spostati script Lang audit in `docs/raw/root-import/` (fuori path legacy `docs/*.php`)
+- `User/tests/TestCase.php` splittato in trait (`RequiresInitializedTestState`, `InteractsWithUserDatabase`, `InteractsWithTeamsAndOAuth`) — SRP per claude-audit large-file
+- `User/config/social-providers.php`: header PHPDoc business (catalogo provider Socialite, inactive by default)
+- `run-claude-audit-modules.sh`: default `--max-files 6000`
+- Target static: **80/100, 0 finding** (massimo `--static`)
+
+## Wave 2026-07-08 (a)
 
 - Spostati `Notify/test-homepage*.js`, `screenshot-group-b.js` → `docs/raw/root-import/`
 - Spostato `Geo/docs/mysql-db-connector.js` → `docs/raw/root-import/`

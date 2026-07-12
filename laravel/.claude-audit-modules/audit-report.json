@@ -1,16 +1,16 @@
 {
   "version": "0.2.2",
-  "timestamp": "2026-07-08T21:44:43.675Z",
+  "timestamp": "2026-07-08T21:46:24.325Z",
   "project": {
     "name": "Modules",
     "path": "/var/www/_bases/base_laravelpizza/laravel/Modules",
     "languages": {
       "JSON": 103,
-      "Markdown": 5554,
-      "PHP": 183,
-      "XML": 43,
-      "JavaScript": 49,
+      "Markdown": 5569,
       "YAML": 28,
+      "PHP": 175,
+      "XML": 36,
+      "JavaScript": 49,
       "Shell": 15,
       "Python": 13,
       "TOML": 1,
@@ -19,13 +19,13 @@
     },
     "frameworks": [],
     "totalFiles": 5995,
-    "totalLines": 927253,
+    "totalLines": 925275,
     "hasTests": true,
     "hasDependencyFile": false,
     "dependencies": {},
     "testFrameworks": []
   },
-  "overallScore": 79,
+  "overallScore": 80,
   "overallGrade": "B",
   "categories": [
     {
@@ -37,19 +37,9 @@
     },
     {
       "category": "quality",
-      "score": 75,
+      "score": 80,
       "grade": "B",
-      "findings": [
-        {
-          "id": "QUA-002",
-          "category": "quality",
-          "severity": "medium",
-          "title": "Large File — Consider Splitting",
-          "description": "User/tests/TestCase.php has 579 lines. Large files are hard to test, review, and maintain.",
-          "file": "User/tests/TestCase.php",
-          "fix": "Split into smaller, focused modules. Follow the Single Responsibility Principle."
-        }
-      ],
+      "findings": [],
       "summary": ""
     },
     {
@@ -82,46 +72,17 @@
     },
     {
       "category": "documentation",
-      "score": 78,
+      "score": 80,
       "grade": "B",
-      "findings": [
-        {
-          "id": "QUA-001",
-          "category": "documentation",
-          "severity": "low",
-          "title": "Insufficient Documentation",
-          "description": "User/config/social-providers.php has < 5% comment coverage across 161 lines.",
-          "file": "User/config/social-providers.php",
-          "fix": "Add JSDoc/docstrings to exported functions, classes, and complex logic."
-        }
-      ],
+      "findings": [],
       "summary": ""
     }
   ],
-  "allFindings": [
-    {
-      "id": "QUA-002",
-      "category": "quality",
-      "severity": "medium",
-      "title": "Large File — Consider Splitting",
-      "description": "User/tests/TestCase.php has 579 lines. Large files are hard to test, review, and maintain.",
-      "file": "User/tests/TestCase.php",
-      "fix": "Split into smaller, focused modules. Follow the Single Responsibility Principle."
-    },
-    {
-      "id": "QUA-001",
-      "category": "documentation",
-      "severity": "low",
-      "title": "Insufficient Documentation",
-      "description": "User/config/social-providers.php has < 5% comment coverage across 161 lines.",
-      "file": "User/config/social-providers.php",
-      "fix": "Add JSDoc/docstrings to exported functions, classes, and complex logic."
-    }
-  ],
+  "allFindings": [],
   "criticalCount": 0,
   "highCount": 0,
-  "mediumCount": 1,
-  "lowCount": 1,
+  "mediumCount": 0,
+  "lowCount": 0,
   "aiPowered": false,
-  "durationMs": 498
+  "durationMs": 677
 }
