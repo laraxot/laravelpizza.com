@@ -121,3 +121,4 @@ laravel/.codex
 laravel/.continue
 laravel/.grok
 laravel/.opencode
+laravel/coverage_*.*
